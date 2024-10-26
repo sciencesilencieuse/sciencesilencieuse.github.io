@@ -11,7 +11,7 @@
     <loc>https://sciencesilencieuse.github.io/maths/geometrie/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>https://sciencesilencieuse.github.io/info/</loc>
+    <loc>https://sciencesilencieuse.github.io/logique/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/meca/</loc>
@@ -32,7 +32,7 @@
     <loc>https://sciencesilencieuse.github.io/physique/electromag/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>https://sciencesilencieuse.github.io/maths/</loc>
+    <loc>https://sciencesilencieuse.github.io/info/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/optique/</loc>
@@ -59,9 +59,6 @@
     <loc>https://sciencesilencieuse.github.io/info/ia/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>https://sciencesilencieuse.github.io/logique/</loc>
-    <lastmod>2021-03-06T14:20:50+01:00</lastmod>
-  </url><url>
     <loc>https://sciencesilencieuse.github.io/logique/godel/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
@@ -72,6 +69,9 @@
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/logique/logique6/</loc>
+    <lastmod>2021-03-06T14:20:50+01:00</lastmod>
+  </url><url>
+    <loc>https://sciencesilencieuse.github.io/maths/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/maths/probastat/</loc>
