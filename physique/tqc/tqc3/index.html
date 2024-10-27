@@ -8,7 +8,7 @@
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
-    <title>TQC-3 - Science</title>
+    <title>TQC-3 - Science en vrac</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
 
@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1730029935" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1730029935" rel="stylesheet">
-    <link href="/css/hybrid.css?1730029935" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1730029935" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1730029935" rel="stylesheet">
-    <link href="/css/auto-complete.css?1730029935" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1730029935" rel="stylesheet">
-    <link href="/css/theme.css?1730029935" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1730029935" rel="stylesheet">
+    <link href="/css/nucleus.css?1730042702" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1730042702" rel="stylesheet">
+    <link href="/css/hybrid.css?1730042702" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1730042702" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1730042702" rel="stylesheet">
+    <link href="/css/auto-complete.css?1730042702" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1730042702" rel="stylesheet">
+    <link href="/css/theme.css?1730042702" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1730042702" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1730029935" rel="stylesheet">
+    <link href="/css/theme-blue.css?1730042702" rel="stylesheet">
     
-    <link href="/css/foo.css?1730029935" rel="stylesheet"><link href="/css/bar.css?1730029935" rel="stylesheet">
+    <link href="/css/foo.css?1730042702" rel="stylesheet"><link href="/css/bar.css?1730042702" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1730029935"></script>
+    <script src="/js/jquery-3.3.1.min.js?1730042702"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1730029935"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1730029935"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1730042702"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1730042702"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1730029935"></script>
+<script type="text/javascript" src="/js/search.js?1730042702"></script>
 
     
   </div>
@@ -1313,7 +1313,7 @@ $$</p>
 <p>Translations dans l&rsquo;espace-temps, rotations et boosts de Lorentz et leurs combinaisons sont tous des éléments du groupe de Poincaré et peuvent tous être représentés par des opérateurs unitaires.</p>
 </details>
 </div>
-<p>La rotation  non plus d&rsquo;un état mais d&rsquo;un opérateur est donnée par :</p>
+<p>La rotation, non plus d&rsquo;un état, mais d&rsquo;un opérateur, est donnée par :</p>
 <div id="theo">
 <div id="grosseformule">
 <p>$$
@@ -1443,6 +1443,35 @@ $$</p>
 <p>Pour les rotations $T^i = J^i$ et $f^{ijk}=\varepsilon^{ijk}$.</p>
 <br>
 <h4 id="transformations-dun-champ-quantique">Transformations d&rsquo;un champ quantique</h4>
+<p>Commençons par translater un champ scalaire.<br>
+Si on translate à la fois un état et un opérateur du même vecteur $\boldsymbol{a}$, alors rien ne devrait changer :</p>
+<div id="grosseformule">
+<p>$$
+\langle\boldsymbol{y}| \hat{\phi}(\boldsymbol{x})|\boldsymbol{y}\rangle=\langle\boldsymbol{y}+\boldsymbol{a}| \hat{\phi}(\boldsymbol{x}+\boldsymbol{a})|\boldsymbol{y}+\boldsymbol{a}\rangle
+$$</p>
+</div>
+<p>Or $|\boldsymbol{y}+\boldsymbol{a}\rangle=\hat{U}(\boldsymbol{a})|\boldsymbol{y}\rangle$, donc $\hat{\phi}(\boldsymbol{x}) = \hat{U}^\dagger (\boldsymbol{a}) \hat{\phi}(\boldsymbol{x}+\boldsymbol{a}) \hat{U}(\boldsymbol{a})$ et par conséquent :</p>
+<div id="theo">
+<div id="grosseformule">
+<p>$$
+\hat{U}^{\dagger}(\boldsymbol{a}) \hat{\phi}(\boldsymbol{x}) \hat{U}(\boldsymbol{a})=\hat{\phi}(\boldsymbol{x}-\boldsymbol{a})
+$$</p>
+</div>
+</div>
+<p>En passant aux rotations, on doit se rappeler que transformer le champ agit à la fois sur le point sur lequel le champ agit et aussi sur la polarisation du champ. Et cette modification de la polarisation du champ se fait via la représentation appropriée de l&rsquo;opérateur rotation (pour un champ scalaire, par exemple, $D(\boldsymbol{\theta})=1$).</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+<img src="/tqcrot.png">
+</div>
+<div id="theo">
+<div id="grosseformule">
+<p>$$
+\hat{U}^{\dagger}(\boldsymbol{\theta}) \hat{\boldsymbol{\Phi}}(x) \hat{U}(\boldsymbol{\theta})=D(\boldsymbol{\theta}) \hat{\boldsymbol{\Phi}}\left(\mathbf{R}^{-1}(\boldsymbol{\theta}) x\right)
+$$</p>
+</div>
+</div>
+<p>Remarque : dans le dessin, $D(\boldsymbol{\theta}) $ s&rsquo;occupe de tourner la flèche rouge à sa nouvelle place.</p>
+<br>
+<h4 id="transformations-de-lorentz">Transformations de Lorentz</h4>
 <br>
 <br>
 <p style="font-size:1.5em;text-align:center;font-weight:bold;"><a href="../tqc4">Chapitre suivant</a></p>
@@ -1967,16 +1996,16 @@ $$</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1730029935"></script>
-    <script src="/js/perfect-scrollbar.min.js?1730029935"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1730029935"></script>
-    <script src="/js/jquery.sticky.js?1730029935"></script>
-    <script src="/js/featherlight.min.js?1730029935"></script>
-    <script src="/js/highlight.pack.js?1730029935"></script>
+    <script src="/js/clipboard.min.js?1730042702"></script>
+    <script src="/js/perfect-scrollbar.min.js?1730042702"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1730042702"></script>
+    <script src="/js/jquery.sticky.js?1730042702"></script>
+    <script src="/js/featherlight.min.js?1730042702"></script>
+    <script src="/js/highlight.pack.js?1730042702"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1730029935"></script>
-    <script src="/js/learn.js?1730029935"></script>
-    <script src="/js/hugo-learn.js?1730029935"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1730042702"></script>
+    <script src="/js/learn.js?1730042702"></script>
+    <script src="/js/hugo-learn.js?1730042702"></script>
     
     
 
