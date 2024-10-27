@@ -165,7 +165,7 @@
 	"title": "Maths",
 	"tags": [],
 	"description": "",
-	"content": " Un peu de maths Géométrie Le triangle Cercle et triangle Aires et volumes Dimensions Poursuites Pythagore Thalès Droite d'Euler Trigonométrie Angle inscrit Algèbre Équations Identités remarquables Algèbre de Boole Algèbre linéaire Combinatoire et graphes Théorie des groupes Multiplication de polynômes et FFT Arithmétique Infinis dénombrables et indénombrables Numération Nombres algébriques Fractions continues Algorithme d'Euclide Triplets pythagoriciens Divisibilité et nombres premiers Probabilités Loi binomiale Loi normale Densité de probabilités Probabilités conditionnelles et Bayes Chaînes de Markov Curiosités et énigmes Spaghetti et inégalité triangulaire Anniversaires simultanés Paradoxe des deux enfants Statistiques Les différentes moyennes Monte Carlo Paradoxe de Simpson Test d'hypothèse Analyse en composante principale p-hacking Pourquoi n-1 ? Théorie des jeux Attaque/Défense "
+	"content": " Un peu de maths Géométrie Le triangle Cercle et triangle Aires et volumes Dimensions Poursuites Pythagore Thalès Droite d'Euler Trigonométrie Angle inscrit Algèbre Équations Identités remarquables Algèbre de Boole Algèbre linéaire Combinatoire et graphes Théorie des groupes Multiplication de polynômes et FFT Arithmétique Infinis dénombrables et indénombrables Numération Nombres algébriques Fractions continues Algorithme d'Euclide Triplets pythagoriciens Divisibilité et nombres premiers Probabilités Loi binomiale Loi normale Densité de probabilités Probabilités conditionnelles et Bayes Chaînes de Markov Curiosités et énigmes Spaghetti et inégalité triangulaire Anniversaires simultanés Paradoxe des deux enfants Statistiques Les différentes moyennes Monte Carlo Paradoxe de Simpson Test d'hypothèse Analyse en composante principale p-hacking Écart-type expérimental Théorie des jeux Attaque/Défense "
 },
 {
 	"uri": "https://sciencesilencieuse.github.io/maths/probastat/",
@@ -200,7 +200,7 @@
 	"title": "Physique",
 	"tags": [],
 	"description": "",
-	"content": " Plus de physique Mécanique Électromagnétisme Optique Relativité restreinte Relativité générale Mécanique quantique Théorie quantique des champs Physique statistique Chaos Curiosités "
+	"content": " Physique Mécanique Électromagnétisme Optique Relativité restreinte Relativité générale Mécanique quantique Théorie quantique des champs Physique statistique Chaos Curiosités "
 },
 {
 	"uri": "https://sciencesilencieuse.github.io/physique/relatge/",
