@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1730042702" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1730042702" rel="stylesheet">
-    <link href="/css/hybrid.css?1730042702" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1730042702" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1730042702" rel="stylesheet">
-    <link href="/css/auto-complete.css?1730042702" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1730042702" rel="stylesheet">
-    <link href="/css/theme.css?1730042702" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1730042702" rel="stylesheet">
+    <link href="/css/nucleus.css?1730248933" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1730248933" rel="stylesheet">
+    <link href="/css/hybrid.css?1730248933" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1730248933" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1730248933" rel="stylesheet">
+    <link href="/css/auto-complete.css?1730248933" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1730248933" rel="stylesheet">
+    <link href="/css/theme.css?1730248933" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1730248933" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1730042702" rel="stylesheet">
+    <link href="/css/theme-blue.css?1730248933" rel="stylesheet">
     
-    <link href="/css/foo.css?1730042702" rel="stylesheet"><link href="/css/bar.css?1730042702" rel="stylesheet">
+    <link href="/css/foo.css?1730248933" rel="stylesheet"><link href="/css/bar.css?1730248933" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1730042702"></script>
+    <script src="/js/jquery-3.3.1.min.js?1730248933"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1730042702"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1730042702"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1730248933"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1730248933"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1730042702"></script>
+<script type="text/javascript" src="/js/search.js?1730248933"></script>
 
     
   </div>
@@ -688,6 +688,9 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
             
             
           
+            
+            
+          
         
         </ul>
       
@@ -820,6 +823,8 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
       <ul>
         <li><a href="#évolution-temporelle">Évolution temporelle</a></li>
         <li><a href="#transformations-continues">Transformations continues</a></li>
+        <li><a href="#symétrie">Symétrie</a></li>
+        <li><a href="#quantification-canonique-des-champs">Quantification canonique des champs</a></li>
       </ul>
     </li>
   </ul>
@@ -1146,7 +1151,7 @@ L'opérateur de translation est <b>unitaire</b>.
 <div id="preuve">
 <p>Un <strong>groupe</strong> est un ensemble $G$ muni d&rsquo;une loi de composition interne $\bullet$ associative admettant un élément neutre et, pour chaque élément de l&rsquo;ensemble, un élément symétrique :</p>
 <ul>
-<li>$\forall a, b \in G, a \bullet b \in G$ (clôture)</li>
+<li>$\forall a, b \in G, a \bullet b \in G$ (loi de composition interne assurant la fermeture du groupe)</li>
 <li>$\forall a, b, c \in G, a \bullet(b \bullet c)=(a \bullet b) \bullet c$ (associativité)</li>
 <li>$\exists e \in G$ tel que $\forall a \in G, a \bullet e=e \bullet a=a$ (élément neutre)</li>
 <li>$\forall a \in G, \exists a^{-1} \in G$ tel que $a \bullet a^{-1}=a^{-1} \bullet a=e$ (inverse)</li>
@@ -1472,6 +1477,303 @@ $$</p>
 <p>Remarque : dans le dessin, $D(\boldsymbol{\theta}) $ s&rsquo;occupe de tourner la flèche rouge à sa nouvelle place.</p>
 <br>
 <h4 id="transformations-de-lorentz">Transformations de Lorentz</h4>
+<p>Après les translations et les rotations cherchons à exprimer les <strong>boosts</strong> de Lorentz.</p>
+<p>Une transformation de Lorentz selon l&rsquo;axe $x$ est donnée par $x^{\prime \mu}=\boldsymbol{\Lambda}\left(\beta^1\right)_{\;\nu}^\mu x^\nu$ où :</p>
+<div id="grosseformule">
+<p>$$
+\boldsymbol{\Lambda}\left(\beta^1\right)=\left(\begin{array}{cccc}
+\gamma^1 &amp; \beta^1 \gamma^1 &amp; 0 &amp; 0 \\
+\beta^1 \gamma^1 &amp; \gamma^1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{array}\right)
+$$</p>
+</div>
+<p>Cette transformation connecte deux référentiels inertiels en mouvement relatif avec une vitesse $v=c\beta^1$ selon $x$. En introduisant la <strong>rapidité</strong> $\phi^i$ définie par $\tanh \phi^i=\beta^i$, la matrice devient :</p>
+<div id="grosseformule">
+<p>$$
+\boldsymbol{\Lambda}\left(\phi^1\right)=\left(\begin{array}{cccc}
+\cosh \phi^1 &amp; \sinh \phi^1 &amp; 0 &amp; 0 \\
+\sinh \phi^1 &amp; \cosh \phi^1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{array}\right)
+$$</p>
+</div>
+<p>Introduisons un opérateur pour cette transformation dans l&rsquo;espace de Hilbert :</p>
+<div id="def">
+<div id="grosseformule">
+<p>$$
+\hat{U}(\boldsymbol{\phi})|\boldsymbol{p}\rangle=|\boldsymbol{\Lambda}(\boldsymbol{\phi}) \boldsymbol{p}\rangle
+$$</p>
+</div>
+</div>
+<p>Et sur le modèle des rotations, donnons une forme générale matricielle pour les représentations de la transformation de Lorentz :</p>
+<div id="grosseformule">
+<p>$$
+D(\phi)=\mathrm{e}^{\mathrm{i} \boldsymbol{K} \cdot \boldsymbol{\phi}}
+$$</p>
+</div>
+<p>Les générateurs de la transformation sont donnés par :</p>
+<div id="grosseformule">
+<p>$$
+K^i=\left.\frac{1}{\mathrm{i}} \frac{\partial D\left(\phi^i\right)}{\partial \phi^i}\right|_{\phi^i=0}
+$$</p>
+</div>
+<p>Un champ quantique se transforme sous l&rsquo;action d&rsquo;un boost comme :</p>
+<div id="theo">
+<div id="grosseformule">
+<p>$$
+\hat{U}^{\dagger}(\boldsymbol{\phi}) \hat{\boldsymbol{\Phi}}(x) \hat{U}(\boldsymbol{\phi})=D(\boldsymbol{\phi}) \hat{\boldsymbol{\Phi}}\left(\boldsymbol{\Lambda}^{-1}(\boldsymbol{\phi}) x\right)
+$$</p>
+</div>
+</div>
+<p>Enfin, en jouant avec un jeu de générateurs, on obtient la surprenante relation de commutation suivante :</p>
+<div id="grosseformule">
+<p>$$
+\left[K^1, K^2\right]=K^1 K^2-K^2 K^1=-\mathrm{i} J^3
+$$</p>
+ </div> 
+<p>La différence entre un boost selon les $x$ suivi d&rsquo;un boost selon les $y$ et un boost selon les $y$ suivi d&rsquo;un boost selon les $x$ est une rotation autour des $z$ !</p>
+<p>Mathématiquement, cela implique que l&rsquo;algèbre de Lie des transformations de Lorentz n&rsquo;est pas fermée et que ses générateurs ne forment pas un groupe.</p>
+<p>En généralisant, les relations de commutations s&rsquo;écrivent :</p>
+<div id="theo">
+<div id="grosseformule">
+<p>$$
+\left[J^i, K^j\right]=\mathrm{i} \varepsilon^{i j k} K^k
+$$</p>
+</div>
+</div>
+<p>Pris ensemble, les boosts et les rotations forment une algèbre de Lie fermée et c&rsquo;est ce groupe élargi qu&rsquo;on appelle le <strong>groupe de Lorentz</strong>. Et de fait, une transformation générale de Lorentz s&rsquo;écrit :</p>
+<div id="theo">
+<div id="grosseformule">
+<p>$$
+D(\boldsymbol{\theta}, \boldsymbol{\phi})=\mathrm{e}^{-\mathrm{i}(\boldsymbol{J} \cdot \boldsymbol{\theta}-\boldsymbol{K} \cdot \boldsymbol{\phi})}
+$$</p>
+</div>
+</div>
+<p>Et en ajoutant les rotations à la fête, on obtient le <strong>groupe de Poincaré</strong>.</p>
+<br>
+<h3 id="symétrie">Symétrie</h3>
+<h4 id="invariance-et-conservation">Invariance et conservation</h4>
+<div id="def">
+<p>Une quantité est <strong>invariante</strong> lorsqu&rsquo;elle garde la même valeur après une transformation. On dit alors qu&rsquo;elle présente une certaine <strong>symétrie</strong>. Un cylindre par exemple est invariant par rotation autour de son axe et on dit alors qu&rsquo;il possède une symétrie de rotation autour de cet axe.</p>
+</div>
+<br>
+<div id="def">
+<p>Une quantité est <strong>conservée</strong> lorsqu&rsquo;elle garde la même valeur avant et après un évènement. Dans une collision entre particules par exemple, la quadri-impulsion est conservée dans un référentiel donné.</p>
+</div>
+<p>Ce sont ces deux notions différentes que le théorème de Noether lie entre elles en stipulant qu&rsquo;une invariance conduit à une loi de conservation.</p>
+<p>Paramétrons par une quantité $\lambda$ les variations du champ $\phi(x^\mu)$ soumis à une transformation continue.</p>
+<p>Pour une transformation infinitésimale, on va noter :</p>
+<div id="grosseformule">
+<p>$$
+D \phi=\left.\frac{\partial \phi}{\partial \lambda}\right|_{\lambda=0}
+$$</p>
+</div>
+<p>de telle façon que le changement infinitésimal $\delta\phi$ du champ induit par $\delta\lambda$ puisse se noter :</p>
+<div id="grosseformule">
+<p>$$
+\delta \phi=D \phi \delta \lambda
+$$</p>
+</div>
+<div id="preuve">
+<p>Pour une translation d&rsquo;un quadrivecteur $a^\mu$, par exemple, on peut écrire :</p>
+<div id="grosseformule">
+<p>$$
+\phi\left(x^\mu\right) \rightarrow \phi\left(x^\mu+\lambda a^\mu\right)
+$$</p>
+</div>
+<p>Et en posant $y^\mu=x^\mu+\lambda a^\mu$, on obtient :</p>
+<div id="grosseformule">
+<p>$$
+\frac{\partial \phi}{\partial \lambda}=\frac{\partial \phi}{\partial y^\mu} \frac{\partial y^\mu}{\partial \lambda}=\frac{\partial \phi}{\partial y^\mu} a^\mu
+$$</p>
+ </div> 
+<p>Et en prenant la limite $\lambda\rightarrow 0$, on a finalement :</p>
+<div id="grosseformule">
+<p>$$
+D \phi=a^\mu \partial_\mu \phi
+$$</p>
+</div>
+</div>
+<br>
+<h4 id="théorème-de-noether">Théorème de Noether</h4>
+<p>Considérons une petite variation du champ $\phi(x)\rightarrow\phi(x)+\delta\phi(x)$ où $\delta\phi(x) = 0$ sur les bords de la région d&rsquo;espace-temps considérée (ce sont les conditions aux limites de Dirichlet imposant un champ fixe sur les bords permettant d&rsquo;avoir un principe variationnel bien défini).</p>
+<p>La petite variation de la densité lagrangienne $\mathcal{L}$ s&rsquo;écrit :</p>
+<div id="grosseformule">
+<p>$$
+\delta \mathcal{L}=\frac{\partial \mathcal{L}}{\partial \phi} \delta \phi+\frac{\partial \mathcal{L}}{\partial\left(\partial_\mu \phi\right)} \delta\left(\partial_\mu \phi\right)
+$$</p>
+</div>
+<p>Posons :</p>
+<div id="def">
+<div id="grosseformule">
+<p>$$
+\Pi^\mu(x)=\frac{\partial \mathcal{L}}{\partial\left(\partial_\mu \phi\right)}
+$$</p>
+<p>$\Pi^\mu(x)$ est  la <strong>densité d&rsquo;impulsion</strong>.</p>
+</div>
+</div>
+<p>C&rsquo;est une généralisation quadrivectorielle du moment conjugué $\pi(x)=\delta \mathcal{L} / \delta \dot{\phi}$. Et d&rsquo;ailleurs, le moment conjugué est la composante temporelle de la densité d&rsquo;impulsion : $\Pi^0(x)=\pi(x)$.</p>
+<p>La variation de la densité lagrangienne peut maintenant s&rsquo;écrire :</p>
+<div id="grosseformule">
+<p>$$
+\delta \mathcal{L}=\frac{\partial \mathcal{L}}{\partial \phi} \delta \phi+\Pi^\mu \delta\left(\partial_\mu \phi\right)
+$$</p>
+</div>
+<p>En utilisant $\delta\left(\partial_\mu \phi\right)=\partial_\mu(\delta \phi)$ et $\partial_\mu\left(\Pi^\mu \delta \phi\right)=\Pi^\mu \partial_\mu(\delta \phi)+\left(\partial_\mu \Pi^\mu\right) \delta \phi$, on obtient :</p>
+<div id="grosseformule">
+<p>$$
+\delta \mathcal{L}=\left(\frac{\partial \mathcal{L}}{\partial \phi}-\partial_\mu \Pi^\mu\right) \delta \phi+\partial_\mu\left(\Pi^\mu \delta \phi\right)
+$$</p>
+</div>
+<p>Supposons que l&rsquo;action n&rsquo;est pas modifiée par la transformation :</p>
+<div id="grosseformule">
+<p>$$
+\begin{aligned}
+\delta S &amp;= \int \mathrm{d}^4 x\, \delta \mathcal{L}\\
+&amp;=\int \mathrm{d}^4 x\left(\frac{\partial \mathcal{L}}{\partial \phi}-\partial_\mu \Pi^\mu\right) \delta \phi+\cancel{\int \mathrm{d}^4 x\, \partial_\mu\left(\Pi^\mu \delta \phi\right)}\\
+&amp;=0
+\end{aligned}
+$$</p>
+</div>
+<div id="preuve">
+<div id="grosseformule">
+<p>Pourquoi  $\int \mathrm{d}^4 x\, \partial_\mu\left(\Pi^\mu \delta \phi\right)=0$ ?</p>
+<p>Le théorème de la divergence (Gauss-Ostrogradski) nous dit que la variation d&rsquo;une quantité dans un volume vaut le flux de cette quantité à travers les parois du volume :</p>
+<div id="grosseformule">
+<p>$$
+\int_\mathcal{V} \mathrm{d}^4 x\, \partial_\mu\left(\Pi^\mu \delta \phi\right) = \int_\mathcal{\partial V} \mathrm{d}\mathcal{A} \ n_\mu \left(\Pi^\mu \delta \phi\right)
+$$</p>
+<p>où $n_\mu$ est le vecteur normal à la surface $\mathcal{A}$ qui délimite le volume d&rsquo;intégration.</p>
+<p>Or, comme stipulée plus haut, les variations du champ $\delta\phi$ s&rsquo;évanouissent sur la frontière.</p>
+</div>
+</div>
+</div>
+<p>Par conséquent, on obtient :</p>
+<div id="theo">
+<div id="grosseformule">
+<p>$$
+\frac{\partial \mathcal{L}}{\partial \phi}=\partial_\mu \Pi^\mu
+$$</p>
+<p>C&rsquo;est l&rsquo;<strong>équation d&rsquo;Euler-Lagrange</strong>.</p>
+</div>
+</div>
+<p>Partons maintenant du fait que le champ respecte l&rsquo;équation du mouvement :</p>
+<div id="grosseformule">
+<p>$$
+\delta\mathcal{L}=\cancel{\left(\frac{\partial \mathcal{L}}{\partial \phi}-\partial_\mu \Pi^\mu\right) \delta \phi}+\partial_\mu\left(\Pi^\mu \delta \phi\right)
+$$</p>
+</div>
+<p>En utilisant $\delta \phi=D \phi \delta \lambda$, on obtient :</p>
+<div id="grosseformule">
+<p>$$
+\delta \mathcal{L}=\partial_\mu\left(\Pi^\mu D \phi\right) \delta \lambda
+$$</p>
+</div>
+<p>Comme la transformation est sensée être une symétrie du système, son action doit restée inchangée. Cela implique une densité lagrangienne inchangée à la quadri-divergence d&rsquo;une fonction $W^\mu(x)$ près :</p>
+<div id="grosseformule">
+<p>$$
+\delta \mathcal{L}=\left(\partial_\mu W^\mu\right) \delta \lambda
+$$</p>
+</div>
+<p>En effet, l&rsquo;intégration sur l&rsquo;espace d&rsquo;une divergence totale va donner une constante. L&rsquo;action sera donc la même à une constante près, ce qui sera sans effet sur ses variations (de même qu&rsquo;en mécanique des particules, le lagrangien est défini à une dérivée totale du temps près).</p>
+<p>Finalement, une action stationnaire implique :</p>
+<div id="grosseformule">
+<p>$$
+\partial_\mu\left(\Pi^\mu D \phi-W^\mu\right)=0
+$$</p>
+</div>
+<p>Ou encore $\partial_\mu J_{\mathrm{N}}^\mu=0$ où</p>
+<div id="theo">
+<div id="grosseformule">
+<p>$$
+J_{\mathrm{N}}^\mu(x)=\Pi^\mu(x) D \phi(x)-W^\mu(x)
+$$</p>
+<p>est le <strong>courant de Noether.</strong></p>
+</div>
+</div>
+<p>Le courant de Noether est donc conservé localement.</p>
+<div id="theo">
+<p><strong>Théorème de Noether</strong> :</p>
+<p>Si une transformation de symétrie continue $\phi\rightarrow\phi+D\phi$ ne change $\mathcal{L}$ que par l&rsquo;addition d&rsquo;une quadridivergence ($D\mathcal{L}=\partial_\mu W^\mu$) pour un $\phi$ arbitraire, alors cela implique l&rsquo;existence d&rsquo;un courant $J_{\mathrm{N}}^\mu(x)=\Pi^\mu(x) D \phi(x)-W^\mu(x)$.<br>
+Si $\phi$ obéit aux équations du mouvement, alors le courant est conservé : $\partial_\mu J_{\mathrm{N}}^\mu=0$.</p>
+</div>
+<br>
+<div id="theo">
+<p>Les champs conservés donnent naissance à des <strong>charges conservées</strong> $Q_{\mathrm{N}}=\int J_{\mathrm{N}}^\mu \,\mathrm{d} \mathcal{A}_\mu$ aussi appelées <strong>charges de Noether</strong>.</p>
+</div>
+<br>
+<div id="preuve">
+<p>En effet, si on fixe le temps, la &ldquo;surface&rdquo; d&rsquo;intégration devient le volume tridimensionnel et donc :
+$Q_{\mathrm{N}}=\int \mathrm{d}^3 x J_{\mathrm{N}}^0$ où $J^0_N$ est la composante temporelle (normale à la surface).</p>
+<p>Et comme $\partial_\mu J^\mu_N=0$,</p>
+<div id="grosseformule">
+<p>$$
+\int \mathrm{d}^3 x\left(\partial_\mu J_{\mathrm{N}}^\mu\right)=\int \mathrm{d}^3 x\left(\partial_0 J_{\mathrm{N}}^0+\partial_k J_{\mathrm{N}}^k\right)=0
+$$</p>
+</div>
+<p>En utilisant le théorème de la divergence, le second terme devient :</p>
+<div id="grosseformule">
+<p>$$
+\int \mathrm{d}^3 x \,\partial_k J_{\mathrm{N}}^k=\int \mathrm{d} \mathcal{A}_k J_{\mathrm{N}}^k
+$$</p>
+</div>
+<p>Et il disparaît si le volume est assez grand.</p>
+<p>On a donc finalement :</p>
+<div id="grosseformule">
+<p>$$
+\int \mathrm{d}^3 x\, \partial_0 J_{\mathrm{N}}^0=\frac{\mathrm{d} Q_{\mathrm{N}} }{ \mathrm{d} t} = 0
+$$</p>
+</div>
+<p>Ça correspond bien à une charge conservée.</p>
+</div>
+<br>
+<h4 id="application--translations-de-lespace-temps">Application : translations de l&rsquo;espace-temps</h4>
+<p>Supposons une translation de l&rsquo;espace-temps $x^{\prime \mu}=x^\mu+a^\mu$ qui nous donne $D \phi=a^\mu \partial_\mu \phi$. On a aussi $D \mathcal{L}=a^\mu \partial_\mu \mathcal{L}=\partial_\mu\left(a^\mu \mathcal{L}\right)$.</p>
+<p>On reconnait alors que $D \mathcal{L}=\partial_\mu W^\mu$ avec $W^\mu=a^\mu \mathcal{L}$. Le courant conservé s&rsquo;en déduit :</p>
+<div id="grosseformule">
+<p>$$
+\begin{aligned}
+J_{\mathrm{N}}^\mu &amp; =\Pi^\mu D \phi-W^\mu \\
+&amp; =\Pi^\mu a^\nu \partial_\nu \phi-a^\mu \mathcal{L} \\
+&amp; =a^\nu\left[\Pi^\mu \partial_\nu \phi-\delta_\nu^\mu \mathcal{L}\right] \\
+&amp; =a_\nu T^{\mu \nu}
+\end{aligned}
+$$</p>
+</div>
+<p>où $T^{\mu \nu}=\Pi^\mu \partial^\nu \phi-g^{\mu \nu} \mathcal{L}$ est le <strong>tenseur énergie-impulsion</strong>.</p>
+<p>La charge conservée correspondante peut s&rsquo;écrire :</p>
+<div id="grosseformule">
+<p>$$
+P^\alpha=\int \mathrm{d}^3 x \,T^{0 \alpha}
+$$</p>
+</div>
+<p>La composante temporelle de cette charge est :</p>
+<div id="grosseformule">
+<p>$$
+P^0=\int \mathrm{d}^3 x \,T^{00}=\int \mathrm{d}^3 x[\pi(x) \dot{\phi}(x)-\mathcal{L}(x)]=\int \mathrm{d}^3 x\, \mathcal{H}
+$$</p>
+</div>
+<p>On reconnaît l&rsquo;énergie du champ (on a utilisé $g^{00} = 1$).</p>
+<p>Et les composantes spatiales nous donnent :</p>
+<div id="grosseformule">
+<p>$$
+P^k=\int \mathrm{d}^3 x\, T^{0 k}=\int \mathrm{d}^3 x\, \pi(x) \partial^k \phi(x)
+$$</p>
+</div>
+<p>On reconnaît là l&rsquo;impulsion du champ (on a utilisé $g^{0k}=0$).</p>
+<div id="theo">
+<p>Un champ symétrique par rapport aux translations voit son énergie et son impulsion conservées.</p>
+</div>
+<br>
+<h4 id="symétries-internes">Symétries internes</h4>
+<p>Pour des champs plus complexes que des champs scalaires réels, en plus des symétries de l&rsquo;espace-temps, il faudra se préoccuper de la façon dont les symétries affecte les champ eux-mêmes. On verra par exemple <a href="">un peu plus loin</a> que la symétrie $U(1)$ d&rsquo;un champ scalaire complexe entraîne la conservation du nombre de particules !</p>
+<br>
+<h3 id="quantification-canonique-des-champs">Quantification canonique des champs</h3>
+<p>La théorie quantique des champs nous permet de décrire un monde où des particules indistinguables peuvent être créées ou détruites par interaction entre elles ou avec des entités extérieures. L&rsquo;idée est de considérer les particules comme de simples excitations de champs quantiques.</p>
+<p>Mais pour que des particules émergent des champs, il va falloir réussir à quantifier les champs classiques qu&rsquo;on a étudié jusqu&rsquo;ici.</p>
 <br>
 <br>
 <p style="font-size:1.5em;text-align:center;font-weight:bold;"><a href="../tqc4">Chapitre suivant</a></p>
@@ -1924,6 +2226,11 @@ $$</p>
             
         
                     
+                        
+            
+            
+        
+                    
             
         
                     
@@ -1996,16 +2303,16 @@ $$</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1730042702"></script>
-    <script src="/js/perfect-scrollbar.min.js?1730042702"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1730042702"></script>
-    <script src="/js/jquery.sticky.js?1730042702"></script>
-    <script src="/js/featherlight.min.js?1730042702"></script>
-    <script src="/js/highlight.pack.js?1730042702"></script>
+    <script src="/js/clipboard.min.js?1730248933"></script>
+    <script src="/js/perfect-scrollbar.min.js?1730248933"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1730248933"></script>
+    <script src="/js/jquery.sticky.js?1730248933"></script>
+    <script src="/js/featherlight.min.js?1730248933"></script>
+    <script src="/js/highlight.pack.js?1730248933"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1730042702"></script>
-    <script src="/js/learn.js?1730042702"></script>
-    <script src="/js/hugo-learn.js?1730042702"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1730248933"></script>
+    <script src="/js/learn.js?1730248933"></script>
+    <script src="/js/hugo-learn.js?1730248933"></script>
     
     
 

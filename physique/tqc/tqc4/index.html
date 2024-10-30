@@ -8,7 +8,7 @@
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
-    <title>Arithmétique - Science en vrac</title>
+    <title>TQC-4 - Science en vrac</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
 
@@ -81,7 +81,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 
 	
   </head>
-  <body class="" data-url="/maths/arithmetique/">
+  <body class="" data-url="/physique/tqc/tqc4/">
     <nav id="sidebar" class="">
 
 
@@ -333,7 +333,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/maths/" title="Maths" class="dd-item
-        parent
+        
         
         
         ">
@@ -412,7 +412,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
  
   
     
-      <li data-nav-id="/maths/arithmetique/" title="Arithmétique" class="dd-item active">
+      <li data-nav-id="/maths/arithmetique/" title="Arithmétique" class="dd-item ">
         <a href="/maths/arithmetique/">
         Arithmétique
         
@@ -507,7 +507,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/" title="Physique" class="dd-item
-        
+        parent
         
         
         ">
@@ -662,7 +662,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/tqc/" title="Théorie quantique des champs" class="dd-item
-        
+        parent
         
         
         ">
@@ -810,7 +810,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
                   <span class="links">
                  
                  
-                   Arithmétique
+                   TQC-4
                  
                   </span>
                 </div>
@@ -819,14 +819,11 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#infinis-dénombrables-et-indénombrables">Infinis dénombrables et indénombrables</a></li>
-    <li><a href="#numération">Numération</a></li>
-    <li><a href="#nombres-algébriques">Nombres algébriques</a></li>
-    <li><a href="#fractions-continues">Fractions continues</a></li>
-    <li><a href="#algorithme-deuclide">Algorithme d&rsquo;Euclide</a></li>
-    <li><a href="#triplets-pythagoriciens">Triplets pythagoriciens</a></li>
-    <li><a href="#divisibilité-et-nombres-premiers">Divisibilité et nombres premiers</a></li>
-    <li><a href="#complexes-et-quaternions">Complexes et quaternions</a></li>
+    <li><a href="#partie-4-">Partie 4 :</a>
+      <ul>
+        <li><a href="#évolution-temporelle">Évolution temporelle</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -865,204 +862,74 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   {
     color: #006C65;
   }
+  #grosseformule 
+{
+    overflow-x: auto; 
+}
+#preuve
+{
+    background-color:#EAEAEA;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#def
+{
+    background-color:#DCEFFE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#theo
+{
+    background-color:#FBE1DE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+h2
+{
+color:#970E53 !important;
+}
+h3
+{
+color:#004D80 !important;
+}
+ul
+{
+margin-top:-0.5em;
+}
 </style>
-<h1 id="arithmétique-et-théorie-des-nombresnbsp">Arithmétique et théorie des nombres :</h1>
-<h2 id="infinis-dénombrables-et-indénombrables">Infinis dénombrables et indénombrables</h2>
-<p>Des entiers aux transcendants en passant par l&rsquo;hypothèse du continu ($\aleph_0 = 2^{\aleph_1}$) :<br></p>
-<br>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/0hB95JwlzBY?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<h2 id="numération">Numération</h2>
-<p>De nombreux systèmes de numération à bases entières ont été utilisés par différents peuples et à différentes époques.</p>
-<p>Par exemple :</p>
-<ul>
-<li>
-<p>système binaire (base 2) utilisé dans des langues d&rsquo;Amérique du Sud et d&rsquo;Océanie, et utilisé de nos jours en informatique.</p>
-</li>
-<li>
-<p>système quinaire (base 5) dont il reste des traces jusqu&rsquo;au xxe siècle dans des langues africaines, mais aussi, partiellement, dans les notations tchouvache, suzhou, romaine et maya. Le nom des chiffres 6, 7, 8 et 9 dans de nombreuses langues témoignent de ce système quinaire: ils se disent 5+1, 5+2, 5+3 et 5+4 en wolof (langue de la famille nigéro-congolaise), en khmer (langue austro-asiatique), en nahuatl (langue uto-aztèque), et, dans de nombreuses langues austronésiennes telles qu&rsquo;en lote ou en ngadha (sous forme partielle). La base quinaire apparait parfois comme base auxiliaire ou sous-base de la base décimale, comme dans le système romain, ou de la base vigésimale.</p>
-</li>
-</ul>
-<p><img src="/romain.png?width=600px" alt=""></p>
-<ul>
-<li>
-<p>système duodécimal (base 12), déjà utilisé par les Sumériens et Assyro-babyloniens pour des mesures de longueur et de temps. On le retrouve dans un certain nombre de monnaies et d&rsquo;unités de compte courantes en Europe au Moyen Âge, notamment dans le système impérial d&rsquo;unités (il faut 12 pouces pour faire un pied), et dans le commerce. Il sert encore, par exemple, pour compter les mois, les heures, les fleurs, les huîtres et les œufs.</p>
-</li>
-<li>
-<p>système hexadécimal (base 16), très couramment utilisé en électronique ainsi qu&rsquo;en informatique. Son intérêt réside dans les conversions triviales avec la base 2, tout en permettant une écriture plus compacte des nombres.</p>
-</li>
-<li>
-<p>système vigésimal (ou vicésimal, base 20) existe au Bhoutan en langue dzongkha, et était en usage chez les Aztèques vers 1200 et, quoiqu&rsquo;irrégulier, pour la numération maya. Il était aussi présent en vieux français, ce qui explique l&rsquo;usage du mot quatre-vingts pour le nombre 80, ou encore le nom de l&rsquo;hôpital des Quinze-Vingts, qui pouvait accueillir 300 patients.</p>
-</li>
-</ul>
-<p><img src="/base20.png?width=600px" alt="">
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script
+  type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
+<h1 id="théorie-quantique-des-champs">Théorie quantique des champs</h1>
 
 <div class="notices note" style="--title: 'note';">
   <p style="display: none;">note</p>
   <div class="notice-body">
-    <p>Chiffres de Kaktovik :<br>
-Toutes les langues eskimo-aléoutes d&rsquo;Alaska et du Canada utilisent un système vigésimal pour compter. Les chiffres arabes, qui ont été conçus pour un système décimal, sont inadéquats pour l&rsquo;iñupiaq et les autres langues inuites. Pour remédier à ce problème, des élèves d&rsquo;une école de Kaktovik, en Alaska, ont inventé un système à base 20 en 1994, qui s&rsquo;est répandu parmi les Iñupiat en Alaska et a été envisagé au Canada.</p>
-
-  </div>
-</div>
-
-</p>
-<ul>
-<li>système sexagésimal (base 60) était utilisé pour la numération babylonienne et en Mésopotamie vers 3300 av. J.-C., ainsi que par les Indiens et les Arabes en trigonométrie. Il sert encore actuellement dans la mesure du temps et certaines mesures des angles.</li>
-</ul>
-<p>Les chiffres et nombres mésopotamiens de 1 à 59 :
-<img src="/mesopot.png?width=600px" alt=""></p>
-<p><i>Source : Wikipedia</i></p>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/OVe7XwVPB04?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<br>
-<h2 id="nombres-algébriques">Nombres algébriques</h2>
-<p>Un nombre algébrique est un nombre réel ou complexe solution d&rsquo;une équation polynomiale à coefficients dans le corps $\mathbb{Q}$ des rationnels.</p>
-<p>Traçons l&rsquo;ensemble des racines des $2^{21}$ (≈ 2 millions) polytnômes de degré 20 possible si chacun des coefficients vaut soit 1, soit -1.<br>
-Exemple d&rsquo;un de ces polynômes : $-x^{20}+x^{19}+x^{18}+x^{17}-x^{16}-x^{15}-x^{14}-x^{13}+x^{12}-x^{11}+x^{10}-x^{9}+x^{8}+x^{7}+x^{6}-x^{5}-x^{4}-x^{3}-x^{2}+x+1$<br>
-Un polynôme de degré 20 a 20 racines complexes. On se retrouve donc avec 40 millions de points (dont beaucoups sont aux mêmes endroits)&hellip; Et cela donne ça :</p>
-<p><img src="/racine0.png" alt=""></p>
-<p>Sont tracés ci-dessous les racines pour des degrés croissants de ces polynômes à coefficients unitaires.</p>
-<p><img src="/racdegres.png" alt=""></p>
-
-<div class="notices note" style="--title: 'note';">
-  <p style="display: none;">note</p>
-  <div class="notice-body">
-    <p><a href="https://math.ucr.edu/home/baez/roots/">Cette page</a> pour en savoir plus. Ça parle même de dragons !</p>
+    <p>Notes de lecture du livre <em>Quantum field theory for the gifted amateur</em> de Thomas Lancaster et Stephen Blundell. Très souvent une simple traduction.</p>
 
   </div>
 </div>
 
 
-<p>En représentant dans le plan complexe les racines d&rsquo;un polynôme de degré 2 dont on fait varier chacun des trois coefficients entre -100 et 100, on obtient la jolie figure suivante (ici dans une zone centrée sur zéro et de rayon 1,7) :</p>
-<p><img src="/racinarithm.png?width=800px" alt=""></p>
+<p style="font-size:1.2em;text-align:center;font-weight:bold;"><a href="../">Retour sommaire</a></p>
 <br>
-<h2 id="fractions-continues">Fractions continues</h2>
+<h2 id="partie-4-">Partie 4 :</h2>
+<h3 id="évolution-temporelle">Évolution temporelle</h3>
 <br>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/zSnFffFo9bk?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
 <br>
-<div style="position:relative; width:640px; max-width:100%; height:480px; margin-left: auto; margin-right: auto;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-<iframe width="640" height="480"  src="https://www.youtube.com/embed/_V4GjyvDTfI" title="Ératosthène : mesure de la circonférence terrestre" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="max-width:100%"></iframe>
-</div>
-<br>
-<h2 id="algorithme-deuclide">Algorithme d&rsquo;Euclide</h2>
-<p>Une écriture récursive de l&rsquo;algo en Python :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">pgcd</span>(a,b):
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> b <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> a
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> pgcd(b,a<span style="color:#f92672">%</span>b)
-</span></span></code></pre></div><p>Un des plus anciens algorithmes connus, très simple dans sa formulation mais qui recèle des surpises comme l&rsquo;apparition du nombre d&rsquo;or dans la détermination de sa complexité temporelle (nombre d&rsquo;étapes de calcul en fonction des entiers a et b ).</p>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/70jd0Mthyl8?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<br>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/X6WnBdmNYiM?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<br>
-<h2 id="triplets-pythagoriciens">Triplets pythagoriciens</h2>
-<br>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/cQ2N0CX7a-4?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<br>
-<h2 id="divisibilité-et-nombres-premiers">Divisibilité et nombres premiers</h2>
-<br>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/bpvzvnsjjDE?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<br>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/fUNvIVBX2kQ?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<br>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/IOGpTFJduaA?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<br>
-<h2 id="complexes-et-quaternions">Complexes et quaternions</h2>
-
-<div class="notices note" style="--title: 'note';">
-  <p style="display: none;">note</p>
-  <div class="notice-body">
-    <p><a href="https://www.youtube.com/playlist?list=PLiaHhY2iBX9g6KIvZ_703G3KJXapKkNaF">Jolie série de vidéos</a> sur les complexes.</p>
-
-  </div>
-</div>
-
-
-<video width="1200" controls style="display:block;max-width:100%;position:relative;margin-left:auto;margin-right: auto;">
-  <source src="/mandelbrot.mp4" type="video/mp4">
-</video>
-
+<p style="font-size:1.5em;text-align:center;font-weight:bold;"><a href="../tqc5">Chapitre suivant</a></p>
+<p style="font-size:1.5em;text-align:center;font-weight:bold;"><a href="../">Sommaire</a></p>
 
 <footer class="footline">
 	
@@ -1244,7 +1111,6 @@ Un polynôme de degré 20 a 20 racines complexes. On se retrouve donc avec 40 mi
             
                 
                     
-                    
                 
                 
 
@@ -1259,9 +1125,6 @@ Un polynôme de degré 20 a 20 racines complexes. On se retrouve donc avec 40 mi
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1304,7 +1167,6 @@ Un polynôme de degré 20 a 20 racines complexes. On se retrouve donc avec 40 mi
             
                 
                     
-                    
                 
                 
 
@@ -1320,9 +1182,6 @@ Un polynôme de degré 20 a 20 racines complexes. On se retrouve donc avec 40 mi
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1380,6 +1239,7 @@ Un polynôme de degré 20 a 20 racines complexes. On se retrouve donc avec 40 mi
             
                 
                     
+                    
                 
                 
 
@@ -1395,21 +1255,8 @@ Un polynôme de degré 20 a 20 racines complexes. On se retrouve donc avec 40 mi
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
+                        
                     
                 
                 
@@ -1499,6 +1346,23 @@ Un polynôme de degré 20 a 20 racines complexes. On se retrouve donc avec 40 mi
                     
 
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
                         
             
             
@@ -1526,6 +1390,9 @@ Un polynôme de degré 20 a 20 racines complexes. On se retrouve donc avec 40 mi
             
             
                 
+                    
+                        
+                        
                     
                 
                 
