@@ -30,31 +30,38 @@
       <description>Mécanique Énergie cinétique et travail Une approche historique sur l&amp;rsquo;émergence du concept d&amp;rsquo;énergie en mécanique, de Descartes à Einstein.&#xA;Pourquoi une énergie cinétique en $v^2$ ? Trois démonstrations de la formule de l&amp;rsquo;énergie cinétique.&#xA;Je trouve la deuxième (celle de Johann Bernoulli) fabuleuse d&amp;rsquo;intuition géométrique (elle utilise l&amp;rsquo;escargot de Pythagore).&#xA;Chute libre et paraboles Étudier la chute libre, c&amp;rsquo;est jouer avec des paraboles.&#xA;Force de Coriolis La force de Coriolis n&amp;rsquo;est pas une force mais traduit juste la galère d&amp;rsquo;aller droit dans un référentiel tournant.</description>
     </item>
     <item>
+      <title>TQC-0</title>
+      <link>https://sciencesilencieuse.github.io/physique/tqc/tqc0/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/tqc/tqc0/</guid>
+      <description>Théorie quantique des champs &amp;ndash; Partie 0 note&#xA;Notes de lecture du livre Quantum field theory for the gifted amateur de Thomas Lancaster et Stephen Blundell.&#xA;Lagrangien et principe de moindre action La détermination de la trajectoire $x(t)$ d&amp;rsquo;une particule entre A et B par intégration de la 2e loi de Newton, $F=m\ddot{x}$, ne cadre pas avec les enseignements de la mécanique quantique. Car si on peut bien mesurer la particule en A à $t=0$ et en B à $t=\tau$, un voile impénétrable nous empèche de savoir précisément ce qui s&amp;rsquo;est passé entre les deux.</description>
+    </item>
+    <item>
       <title>TQC-1</title>
       <link>https://sciencesilencieuse.github.io/physique/tqc/tqc1/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/physique/tqc/tqc1/</guid>
-      <description>Théorie quantique des champs note&#xA;Notes de lecture du livre Quantum field theory for the gifted amateur de Thomas Lancaster et Stephen Blundell.&#xA;Partie 1 : un univers d&amp;rsquo;oscillateurs harmoniques Lagrangien et principe de moindre action La détermination de la trajectoire $x(t)$ d&amp;rsquo;une particule entre A et B par intégration de la 2e loi de Newton, $F=m\ddot{x}$, ne cadre pas avec les enseignements de la mécanique quantique. Car si on peut bien mesurer la particule en A à $t=0$ et en B à $t=\tau$, un voile impénétrable nous empèche de savoir précisément ce qui s&amp;rsquo;est passé entre les deux.</description>
-    </item>
-    <item>
-      <title>TQC-2</title>
-      <link>https://sciencesilencieuse.github.io/physique/tqc/tqc2/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/tqc/tqc2/</guid>
-      <description>Théorie quantique des champs note&#xA;Notes de lecture du livre Quantum field theory for the gifted amateur de Thomas Lancaster et Stephen Blundell. Très souvent une simple traduction.&#xA;Le premier encadré gris est issu de No-Nonsense Classical Mechanics de Jakob Schwichtenberg.&#xA;Retour sommaire&#xA;Partie 2 : le bon Lagrangien Revenons dans un premier temps à la mécanique du 19e siècle, en particulier la mécanique hamiltonienne pour constater sa similarité avec la mécanique quantique avant de présenter la théorie classique des champs.</description>
+      <description>Théorie quantique des champs &amp;ndash; Partie 1 note&#xA;Notes de lecture du livre Quantum field theory for the gifted amateur de Thomas Lancaster et Stephen Blundell.&#xA;Les oscillateurs harmoniques Une vidéo vieille comme tout sur l&amp;rsquo;oscillateur harmonique quantique qui traite pas mal des points de ce chapitre :&#xA;Première quantification : les particules se comportent comme des ondes.&#xA;Seconde quantification : les ondes se comportent comme des particules.&#xA;Partons d&amp;rsquo;une masse $m$ accrochée à un ressort de constante de raideur $K$.</description>
     </item>
     <item>
       <title>TQC-3</title>
       <link>https://sciencesilencieuse.github.io/physique/tqc/tqc3/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/physique/tqc/tqc3/</guid>
-      <description>Théorie quantique des champs note&#xA;Notes de lecture du livre Quantum field theory for the gifted amateur de Thomas Lancaster et Stephen Blundell. Très souvent une simple traduction.&#xA;Retour sommaire&#xA;Partie 3 : champs quantiques Évolution temporelle Deux représentations de la mécanique quantique s&amp;rsquo;opposent quant à la description de l&amp;rsquo;évolution temporelle d&amp;rsquo;un système : la représentation de Schrödinger et la représentation d&amp;rsquo;Heisenberg.&#xA;Représentation de Schrödinger Dans la représentation de Schrödinger, ce sont les fonctions d&amp;rsquo;onde qui dépendent du temps et leur évolution est déterminée par l&amp;rsquo;équation de Schrödinger :</description>
+      <description>Théorie quantique des champs &amp;ndash; Partie 3 note&#xA;Notes de lecture du livre Quantum field theory for the gifted amateur de Thomas Lancaster et Stephen Blundell. Très souvent une simple traduction.&#xA;Retour sommaire&#xA;Évolution temporelle Deux représentations de la mécanique quantique s&amp;rsquo;opposent quant à la description de l&amp;rsquo;évolution temporelle d&amp;rsquo;un système : la représentation de Schrödinger et la représentation d&amp;rsquo;Heisenberg.&#xA;Représentation de Schrödinger Dans la représentation de Schrödinger, ce sont les fonctions d&amp;rsquo;onde qui dépendent du temps et leur évolution est déterminée par l&amp;rsquo;équation de Schrödinger :</description>
     </item>
     <item>
       <title>TQC-4</title>
       <link>https://sciencesilencieuse.github.io/physique/tqc/tqc4/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/physique/tqc/tqc4/</guid>
+      <description>Théorie quantique des champs &amp;ndash; Partie 4 note&#xA;Notes de lecture du livre Quantum field theory for the gifted amateur de Thomas Lancaster et Stephen Blundell. Très souvent une simple traduction.&#xA;Retour sommaire&#xA;Quantification canonique des champs La théorie quantique des champs nous permet de décrire un monde où des particules indistinguables peuvent être créées ou détruites par interaction entre elles ou avec des entités extérieures. L&amp;rsquo;idée est de considérer les particules comme de simples excitations de champs quantiques.</description>
+    </item>
+    <item>
+      <title>TQC-4</title>
+      <link>https://sciencesilencieuse.github.io/physique/tqc/tqcd/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/tqc/tqcd/</guid>
       <description>Théorie quantique des champs note&#xA;Notes de lecture du livre Quantum field theory for the gifted amateur de Thomas Lancaster et Stephen Blundell. Très souvent une simple traduction.&#xA;Retour sommaire&#xA;Partie 4 : Évolution temporelle Chapitre suivant&#xA;Sommaire</description>
     </item>
     <item>
@@ -98,6 +105,13 @@
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/maths/geometrie/geo1/</guid>
       <description>Le triangle Pythagore Pythagore a vécu à Samos (une île grecque) au 6e siècle avant notre ère. Malgré le nom qu&amp;rsquo;on lui donne, le théorème de Pythagore était connu et utilisé par les Babyloniens et les Indiens des siècles avant Pythagore. Mais peut-être que Pythagore a été le premier à l&amp;rsquo;introduire en Grèce et cela a suffi à lui octroyer une reconnaissance éternelle.&#xA;Théorème de Pythagore :&#xA;Si un triangle est rectangle, alors le carré de la longueur de l’hypoténuse est égal à la somme des carrés des longueurs des deux autres côtés.</description>
+    </item>
+    <item>
+      <title>TQC-2</title>
+      <link>https://sciencesilencieuse.github.io/physique/tqc/tqc2/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/tqc/tqc2/</guid>
+      <description>Théorie quantique des champs &amp;ndash; Partie 2 note&#xA;Notes de lecture du livre Quantum field theory for the gifted amateur de Thomas Lancaster et Stephen Blundell. Très souvent une simple traduction.&#xA;Le premier encadré gris est issu de No-Nonsense Classical Mechanics de Jakob Schwichtenberg.&#xA;Retour sommaire&#xA;Revenons dans un premier temps à la mécanique du 19e siècle, en particulier la mécanique hamiltonienne pour constater sa similarité avec la mécanique quantique avant de présenter la théorie classique des champs.</description>
     </item>
     <item>
       <title>Algèbre</title>
@@ -212,13 +226,6 @@
       <description>Mécanique quantique Le paradoxe EPR (et plus généralement le concept d&amp;rsquo;intrication quantique) est le vortex autour duquel tourne les différentes interprétations de la quantique puisqu&amp;rsquo;il met en porte-à-faux nos deux explications les plus abouties du monde : la quantique et la relativité. La relativité est par nature une théorie locale alors que le paradoxe EPR démontre la non localité quantique.&#xA;Un joli test de la non-localité quantique sans utiliser d&amp;rsquo;inégalités.</description>
     </item>
     <item>
-      <title>Physique statistique</title>
-      <link>https://sciencesilencieuse.github.io/physique/phistat/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/phistat/</guid>
-      <description>Physique statistique Petite série de vidéo sur la physique statistique, de la définition de la température à l&amp;rsquo;entropie en passant par le facteur de Boltzmann et la loi de Planck :&#xA;L&amp;rsquo;entropie est une notion passionnante qui ramifie dans différents champs.&#xA;En théorie de l&amp;rsquo;information, Claude Shannon a appelé entropie la mesure de la quantité d&amp;rsquo;information contenu dans un message. Ramenée à la physique, l&amp;rsquo;entropie de Shannon mesure le nombre de questions binaires (dont la réponse est oui ou non) auxquelles il faudrait répondre pour spécifier le microétat du système pour un macroétat donné.</description>
-    </item>
-    <item>
       <title>Poursuites</title>
       <link>https://sciencesilencieuse.github.io/maths/geometrie/geo5/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
@@ -231,6 +238,13 @@
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/maths/jeux/</guid>
       <description>Un peu de théorie des jeux note&#xA;Cette page est très inspirée du livre Chases and Escapes The Mathematics of Pursuit and Evasion de Paul Nahin.&#xA;Attaque - Défense Un petit problème mathématique qui fleure bon la Guerre Froide :&#xA;Deux bombardiers bleus sont en mission. L&amp;rsquo;un transporte une bombe H et l&amp;rsquo;autre des équipements pour brouiller les radars. Leur plan de vol est tel qu&amp;rsquo;un des deux bombardiers est mieux protégé par les mitrailleuses de l&amp;rsquo;autre.</description>
+    </item>
+    <item>
+      <title>Thermodynamique</title>
+      <link>https://sciencesilencieuse.github.io/physique/phistat/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/phistat/</guid>
+      <description>Thermodynamique et physique statistique Physique statistique Petite série de vidéo sur la physique statistique, de la définition de la température à l&amp;rsquo;entropie en passant par le facteur de Boltzmann et la loi de Planck :&#xA;Entropie note&#xA;PW Atkins a écrit un petit livre merveilleux sur l&amp;rsquo;entropie : The Second Law. Il fait partie de la collection Scientific American Library qui est bourré de pépites.&#xA;L&amp;rsquo;entropie est une notion passionnante qui ramifie dans différents champs.</description>
     </item>
     <item>
       <title>Chaos</title>
