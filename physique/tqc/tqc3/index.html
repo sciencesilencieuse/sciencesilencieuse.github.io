@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1730248933" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1730248933" rel="stylesheet">
-    <link href="/css/hybrid.css?1730248933" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1730248933" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1730248933" rel="stylesheet">
-    <link href="/css/auto-complete.css?1730248933" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1730248933" rel="stylesheet">
-    <link href="/css/theme.css?1730248933" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1730248933" rel="stylesheet">
+    <link href="/css/nucleus.css?1730336979" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1730336979" rel="stylesheet">
+    <link href="/css/hybrid.css?1730336979" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1730336979" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1730336979" rel="stylesheet">
+    <link href="/css/auto-complete.css?1730336979" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1730336979" rel="stylesheet">
+    <link href="/css/theme.css?1730336979" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1730336979" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1730248933" rel="stylesheet">
+    <link href="/css/theme-blue.css?1730336979" rel="stylesheet">
     
-    <link href="/css/foo.css?1730248933" rel="stylesheet"><link href="/css/bar.css?1730248933" rel="stylesheet">
+    <link href="/css/foo.css?1730336979" rel="stylesheet"><link href="/css/bar.css?1730336979" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1730248933"></script>
+    <script src="/js/jquery-3.3.1.min.js?1730336979"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1730248933"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1730248933"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1730336979"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1730336979"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1730248933"></script>
+<script type="text/javascript" src="/js/search.js?1730336979"></script>
 
     
   </div>
@@ -1402,9 +1402,9 @@ Pour un champ vectoriel, la représentation matricielle des rotations est plus f
 <div id="grosseformule">
 <p>$$
 D^{(1)}(\theta^z)=\mathbf{R}\left(\theta^z\right)=\left(\begin{array}{cccc}
-0 &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; \cos \theta^x &amp; -\sin \theta^x &amp; 0 \\
-0 &amp; \sin \theta^x &amp;  \cos \theta^x &amp; 0  \\
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; \cos \theta^z &amp; -\sin \theta^z &amp; 0 \\
+0 &amp; \sin \theta^z &amp;  \cos \theta^z &amp; 0  \\
 0 &amp; 0 &amp; 0 &amp; 1
 \end{array}\right)
 $$</p>
@@ -1646,6 +1646,9 @@ $$</p>
 <p>$$
 \int_\mathcal{V} \mathrm{d}^4 x\, \partial_\mu\left(\Pi^\mu \delta \phi\right) = \int_\mathcal{\partial V} \mathrm{d}\mathcal{A} \ n_\mu \left(\Pi^\mu \delta \phi\right)
 $$</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+<img src="/tqcdiv.png">
+</div>
 <p>où $n_\mu$ est le vecteur normal à la surface $\mathcal{A}$ qui délimite le volume d&rsquo;intégration.</p>
 <p>Or, comme stipulée plus haut, les variations du champ $\delta\phi$ s&rsquo;évanouissent sur la frontière.</p>
 </div>
@@ -1708,6 +1711,9 @@ Si $\phi$ obéit aux équations du mouvement, alors le courant est conservé : 
 <div id="preuve">
 <p>En effet, si on fixe le temps, la &ldquo;surface&rdquo; d&rsquo;intégration devient le volume tridimensionnel et donc :
 $Q_{\mathrm{N}}=\int \mathrm{d}^3 x J_{\mathrm{N}}^0$ où $J^0_N$ est la composante temporelle (normale à la surface).</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+<img src="/tqcj0.png">
+</div>
 <p>Et comme $\partial_\mu J^\mu_N=0$,</p>
 <div id="grosseformule">
 <p>$$
@@ -1728,6 +1734,17 @@ $$</p>
 $$</p>
 </div>
 <p>Ça correspond bien à une charge conservée.</p>
+</div>
+<br>
+<div id="def">
+<p>Recette pour trouver des charges conservées à partir du théorème de Noether :</p>
+<ul>
+<li>déterminer $D \phi=\left.\frac{\partial \phi}{\partial \lambda}\right|_{\lambda \rightarrow 0}$</li>
+<li>déterminer $\Pi^\mu(x)=\frac{\partial \mathcal{L}}{\partial\left(\partial_\mu \phi\right)}$</li>
+<li>déterminer $\partial_\mu W^\mu=D \mathcal{L}$</li>
+<li>écrire $J_{\mathrm{N}}^\mu=D \phi \Pi^\mu-W^\mu$</li>
+<li>déterminer $Q_{\mathrm{N}}=\int \mathrm{d}^3 x J_{\mathrm{N}}^0$</li>
+</ul>
 </div>
 <br>
 <h4 id="application--translations-de-lespace-temps">Application : translations de l&rsquo;espace-temps</h4>
@@ -1774,6 +1791,130 @@ $$</p>
 <h3 id="quantification-canonique-des-champs">Quantification canonique des champs</h3>
 <p>La théorie quantique des champs nous permet de décrire un monde où des particules indistinguables peuvent être créées ou détruites par interaction entre elles ou avec des entités extérieures. L&rsquo;idée est de considérer les particules comme de simples excitations de champs quantiques.</p>
 <p>Mais pour que des particules émergent des champs, il va falloir réussir à quantifier les champs classiques qu&rsquo;on a étudié jusqu&rsquo;ici.</p>
+<br>
+<h4 id="la-recette-de-la-quantification-canonique">La recette de la quantification canonique</h4>
+<p>Pour obtenir une théorie quantique des champs à partir d&rsquo;une théorie des champs classique, on suit la méthode suivante :</p>
+<ul>
+<li><b>Étape 1 :</b> écrire la densité lagrangienne classique en termes de champs. C&rsquo;est la partie &ldquo;créative&rdquo;, le reste est algorithmisé.</li>
+<li><b>Étape 2 :</b> calculer la densité d&rsquo;impulsion et déterminer la densité hamiltonienne en termes de champs.</li>
+<li><b>Étape 3 :</b> considérer les champs et la densité d&rsquo;impulsion comme des opérateurs et leur appliquer les relations de commutation pour les rendre quantique.</li>
+<li><b>Étape 4 :</b> décomposer les champs en termes d&rsquo;opérateurs de création et d&rsquo;annihilation.</li>
+<li><b>Étape 5 :</b> respecter l&rsquo;ordre normal pour se débarrasser des infinis.</li>
+</ul>
+<p>Illustrons en quantifiant la théorie du champs scalaire avec masse.</p>
+<p><b>Étape 1 :</b></p>
+<p>Le Lagrangien :</p>
+<div id="grosseformule">
+<p>$$
+\mathcal{L}=\frac{1}{2}\left[\partial_\mu \phi(x)\right]^2-\frac{1}{2} m^2[\phi(x)]^2
+$$</p>
+</div>
+<p><b>Étape 2 :</b></p>
+<p>La densité d&rsquo;impulsion :</p>
+<div id="grosseformule">
+<p>$$
+\Pi^\mu(x)=\frac{\partial \mathcal{L}}{\partial\left(\partial_\mu \phi(x)\right)}
+$$</p>
+</div>
+<p>Ici, cela donne $\Pi^\mu(x)=\partial^\mu \phi(x)$. La composante temporelle donne $\Pi^0(x)=\pi(x)=\partial^0 \phi(x)$ (on utilise la métrique $(+- - -)$).</p>
+<p>On peut maintenant écrire l&rsquo;Hamiltonien :</p>
+<div id="grosseformule">
+<p>$$
+\begin{aligned}
+\mathcal{H}&amp;=\Pi^0(x) \partial_0 \phi(x)-\mathcal{L}\\
+&amp;=\partial^0 \phi(x) \partial_0 \phi(x)-\mathcal{L} \\
+&amp;=\frac{1}{2}\left[\partial_0 \phi(x)\right]^2+\frac{1}{2}[\nabla \phi(x)]^2+\frac{1}{2} m^2[\phi(x)]^2
+\end{aligned}
+$$</p>
+</div>
+<p>Cet Hamiltonien a l&rsquo;aspect rassurant d&rsquo;une somme d&rsquo;une énergie cinétique et d&rsquo;une énergie potentielle où le potentiel se décompose en deux termes ; un terme de gradient (coût d&rsquo;une variation spatiale du champ) et un terme de masse (coût d&rsquo;avoir un champ plutôt que rien).</p>
+<p><b>Étape 3 :</b></p>
+<p>Changeons les champs en opérateurs : $\phi(x) \rightarrow \hat{\phi}(x)$ et $\Pi^0(x) \rightarrow \hat{\Pi}^0(x)$.</p>
+<p>Et pour les rendre quantique, utilisons les commutateurs. En mécanique quantique à une particule, on a $[\hat{x}, \hat{p}]=\mathrm{i} \hbar$. Par analogie, on définit le <strong>commutateur à temps égaux</strong> pour les opérateurs champ :</p>
+<div id="def">
+<div id="grosseformule">
+<p>$$
+\left[\hat{\phi}(t, \boldsymbol{x}), \hat{\Pi}^0(t, \boldsymbol{y})\right]=\mathrm{i} \delta^{(3)}(\boldsymbol{x}-\boldsymbol{y})
+$$</p>
+</div>
+</div>
+<p>Si les instants sont différents, les champs commutent, et on a aussi $[\hat{\phi}(x), \hat{\phi}(y)]=\left[\hat{\Pi}^0(x), \hat{\Pi}^0(y)\right]=0$.</p>
+<p>Exprimée à partir de ces champs, la densité hamiltonienne $\mathcal{H}$ se mue en opérateur $\hat{\mathcal{H}}$ agissant sur les vecteurs d&rsquo;état.</p>
+<p>Mais on ne sait pas encore comment un opérateur comme $\hat{\phi}(x)$ agit sur un état nombre d&rsquo;occupation $|n_1n_2n_3\ldots\rangle$. Par contre, on sait comment les opérateurs de création et d&rsquo;annihilation, eux, agissent sur ces vecteurs&hellip;</p>
+<p><b>Étape 4 :</b></p>
+<p>Décomposons les opérateurs de champ en termes d&rsquo;opérateurs de création et d&rsquo;annihilation.</p>
+<p>Retour <a href="../tqc1/#oscillcoup">au premier chapitre</a>, au moment d&rsquo;évoqués les oscillateurs couplés : en combinant la décomposition en modes de Fourier de $x_j$, $x_j=\frac{1}{\sqrt{N}} \sum_k \tilde{x}_k \mathrm{e}^{\mathrm{i}kj a}$ et l&rsquo;écriture de l&rsquo;opérateur correspondant à un de ces mode en fonction des opérateurs de création et d&rsquo;annihilation, $\hat{\tilde{x}}_k=\sqrt{\frac{\hbar}{2 m \omega_k}}\left(\hat{a}_k+\hat{a}_{-k}^{\dagger}\right)$, on obtient :</p>
+<div id="grosseformule">
+<p>$$
+\hat{x}_j=\left(\frac{\hbar}{m}\right)^{\frac{1}{2}} \sum_k \frac{1}{\left(2 \omega_k N\right)^{\frac{1}{2}}}\left[\hat{a}_k \mathrm{e}^{\mathrm{i} k j a}+\hat{a}_k^{\dagger} \mathrm{e}^{-\mathrm{i} k j a}\right]
+$$</p>
+ </div>
+<p>Par analogie, on peut écrire la version continue d&rsquo;un opérateur champ :</p>
+<div id="grosseformule">
+<p>$$
+\hat{\phi}(\boldsymbol{x})=\int \frac{\mathrm{d}^3 p}{(2 \pi)^{\frac{3}{2}}} \frac{1}{\left(2 E_{\boldsymbol{p}}\right)^{\frac{1}{2}}}\left(\hat{a}_{\boldsymbol{p}} \mathrm{e}^{\mathrm{i} \boldsymbol{p} \cdot \boldsymbol{x}}+\hat{a}_{\boldsymbol{p}}^{\dagger} \mathrm{e}^{-\mathrm{i} \boldsymbol{p} \cdot \boldsymbol{x}}\right)
+$$</p>
+</div>
+<p>où on est passé de $\boldsymbol{k}$ à $\boldsymbol{p}$ pour les moments, et de $\omega_{\boldsymbol{k}}$ à $E_\boldsymbol{p}$ pour l&rsquo;énergie. La normalisation impose de ne garder que les racines positives pour l&rsquo;énergie : $E_{\boldsymbol{p}}=+\left(\boldsymbol{p}^2+m^2\right)^{\frac{1}{2}}$.</p>
+<p>Il faudrait maintenant ajouter une dépendance temporelle à notre champ, i.e. le rendre dynamique. Pour cela, on utilise la méthode d&rsquo;Heisenberg :</p>
+<div id="grosseformule">
+<p>$$
+\hat{\phi}(x)=\hat{\phi}(t, \boldsymbol{x})=\hat{U}^{\dagger}(t, 0) \hat{\phi}(\boldsymbol{x}) \hat{U}(t, 0)=\mathrm{e}^{\mathrm{i} \hat{H} t} \hat{\phi}(\boldsymbol{x}) \mathrm{e}^{-\mathrm{i} \hat{H} t}
+$$</p>
+</div>
+<p>Seuls les opérateurs de création et annihilation sont affectés par l&rsquo;opérateur d&rsquo;évolution $\hat{U}(t, 0)=\mathrm{e}^{-\mathrm{i} \hat{H} t}$  :</p>
+<div id="grosseformule">
+<p>$$
+\begin{aligned}
+\hat{U}^{\dagger}(t, 0) \hat{a}_{\boldsymbol{p}} \hat{U}(t, 0)&amp;=\mathrm{e}^{-\mathrm{i} E_p t} \hat{a}_{\boldsymbol{p}}\\
+\hat{U}^{\dagger}(t, 0) \hat{a}^\dagger_{\boldsymbol{p}} \hat{U}(t, 0)&amp;=\mathrm{e}^{\mathrm{i} E_p t} \hat{a}^\dagger_{\boldsymbol{p}}
+\end{aligned}
+$$</p>
+</div>
+<div id="preuve">
+<details>
+<summary><a>Preuve&nbsp;:</a></summary>
+<p>Convainquons-nous sur un cas simplifié :</p>
+<div id="grosseformule">
+<p>$$
+\begin{aligned}
+&amp; \mathrm{e}^{\mathrm{i} \hat{H} t} \hat{a}_{\boldsymbol{q}} \mathrm{e}^{\mathrm{i} \boldsymbol{q} \cdot \boldsymbol{x}} \mathrm{e}^{-\mathrm{i} \hat{H} t}\left|n_{\boldsymbol{p}} n_{\boldsymbol{q}} n_{\boldsymbol{r}}\right\rangle \\
+= &amp; \mathrm{e}^{\mathrm{i} \hat{H} t} \hat{a}_{\boldsymbol{q}}\left|n_{\boldsymbol{p}} n_{\boldsymbol{q}} n_{\boldsymbol{r}}\right\rangle \mathrm{e}^{\mathrm{i} \boldsymbol{q} \cdot \boldsymbol{x}} \mathrm{e}^{-\mathrm{i}\left(n_{\boldsymbol{p}} E_{\boldsymbol{p}}+n_{\boldsymbol{q}} E_{\boldsymbol{q}}+n_{\boldsymbol{r}} E_{\boldsymbol{r}}\right) t} \\
+= &amp; \sqrt{n_{\boldsymbol{q}}} \mathrm{e}^{\mathrm{i} \hat{H} t}\left|n_{\boldsymbol{p}}\left(n_{\boldsymbol{q}}-1\right) n_{\boldsymbol{r}}\right\rangle \mathrm{e}^{\mathrm{i} \boldsymbol{q} \cdot \boldsymbol{x}} \mathrm{e}^{-\mathrm{i}\left(n_{\boldsymbol{p}} E_{\boldsymbol{p}}+n_{\boldsymbol{q}} E_{\boldsymbol{q}}+n_{\boldsymbol{r}} E_{\boldsymbol{r}}\right) t} \\
+= &amp; \sqrt{n_{\boldsymbol{q}}}\left|n_{\boldsymbol{p}}\left(n_{\boldsymbol{q}}-1\right) n_{\boldsymbol{r}}\right\rangle \mathrm{e}^{\mathrm{i}\left(n_{\boldsymbol{p}} E_{\boldsymbol{p}}+\left(n_{\boldsymbol{q}}-1\right) E_{\boldsymbol{q}}+n_{\boldsymbol{r}} E_{\boldsymbol{r}}\right) t} \mathrm{e}^{\mathrm{i} \boldsymbol{q} \cdot \boldsymbol{x}} \mathrm{e}^{-\mathrm{i}\left(n_{\boldsymbol{p}} E_{\boldsymbol{p}}+n_{\boldsymbol{q}} E_{\boldsymbol{q}}+n_{\boldsymbol{r}} E_{\boldsymbol{r}}\right) t} \\
+= &amp; \sqrt{n_{\boldsymbol{q}}}\left|n_{\boldsymbol{p}}\left(n_{\boldsymbol{q}}-1\right) n_{\boldsymbol{r}}\right\rangle \mathrm{e}^{-\mathrm{i} E_{\boldsymbol{q}} t} \mathrm{e}^{\mathrm{i} \boldsymbol{q} \cdot \boldsymbol{x}} .
+\end{aligned}
+$$</p>
+<p>Avec $\hat{a}_\boldsymbol{q}$ seul, on aurait obtenu $\sqrt{n_{\boldsymbol{q}}}\left|n_{\boldsymbol{p}}\left(n_{\boldsymbol{q}}-1\right) n_{\boldsymbol{r}}\right\rangle$. Rendre l&rsquo;opérateur dynamique a pour effet de multiplier le résultat par un facteur $\mathrm{e}^{\mathrm{i}E_\boldsymbol{q}t}$.</p>
+<p>On obtient au bout du compte :</p>
+<div id="grosseformule">
+<p>$$
+\hat{a}_{\boldsymbol{q}} \mathrm{e}^{-\mathrm{i}\left(E_{\boldsymbol{q}} t-\boldsymbol{q} \cdot \boldsymbol{x}\right)}=\hat{a}_{\boldsymbol{q}} \mathrm{e}^{-\mathrm{i} q \cdot x}
+$$</p>
+ </div>
+</div>
+</details>
+</div>
+<p>Au final, la <strong>décomposition en modes</strong> du champ scalaire est donnée par :</p>
+<div id="theo">
+<div id="grosseformule">
+<p>$$
+\hat{\phi}(x)=\int \frac{\mathrm{d}^3 p}{(2 \pi)^{\frac{3}{2}}} \frac{1}{\left(2 E_{\boldsymbol{p}}\right)^{\frac{1}{2}}}\left(\hat{a}_{\boldsymbol{p}} \mathrm{e}^{-\mathrm{i} p \cdot x}+\hat{a}_{\boldsymbol{p}}^{\dagger} \mathrm{e}^{\mathrm{i} p \cdot x}\right)
+$$</p>
+<p>avec $E_{\boldsymbol{p}}=+\left(\boldsymbol{p}^2+m^2\right)^{\frac{1}{2}}$</p>
+</div>
+</div>
+<p>La décomposition du champ position nous offre en prime celle de l&rsquo;impulsion puisque pour ce champ scalaire $\Pi^\mu(x)=\partial^\mu \phi(x)$.</p>
+<br>
+<p>Au tour de l&rsquo;Hamiltonien de subir la quantification. Il va suffir d&rsquo;y substituer la décomposition en mode de $\hat{\phi}(x)$.</p>
+<p>L&rsquo;Hamiltonien est donné par l&rsquo;intégrale sur le volume de la densité hamiltonienne :</p>
+<div id="preuve">
+<div id="grosseformule">
+<p>$$
+\hat{H}=\int \mathrm{d}^3 x \frac{1}{2}\left\{\left[\partial_0 \hat{\phi}(x)\right]^2+[\boldsymbol{\nabla} \hat{\phi}(x)]^2+m^2[\hat{\phi}(x)]^2\right\}
+$$</p>
+</div>
+</div>
 <br>
 <br>
 <p style="font-size:1.5em;text-align:center;font-weight:bold;"><a href="../tqc4">Chapitre suivant</a></p>
@@ -2303,16 +2444,16 @@ $$</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1730248933"></script>
-    <script src="/js/perfect-scrollbar.min.js?1730248933"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1730248933"></script>
-    <script src="/js/jquery.sticky.js?1730248933"></script>
-    <script src="/js/featherlight.min.js?1730248933"></script>
-    <script src="/js/highlight.pack.js?1730248933"></script>
+    <script src="/js/clipboard.min.js?1730336979"></script>
+    <script src="/js/perfect-scrollbar.min.js?1730336979"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1730336979"></script>
+    <script src="/js/jquery.sticky.js?1730336979"></script>
+    <script src="/js/featherlight.min.js?1730336979"></script>
+    <script src="/js/highlight.pack.js?1730336979"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1730248933"></script>
-    <script src="/js/learn.js?1730248933"></script>
-    <script src="/js/hugo-learn.js?1730248933"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1730336979"></script>
+    <script src="/js/learn.js?1730336979"></script>
+    <script src="/js/hugo-learn.js?1730336979"></script>
     
     
 
