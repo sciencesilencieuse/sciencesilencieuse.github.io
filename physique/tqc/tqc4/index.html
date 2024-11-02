@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1730462154" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1730462154" rel="stylesheet">
-    <link href="/css/hybrid.css?1730462154" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1730462154" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1730462154" rel="stylesheet">
-    <link href="/css/auto-complete.css?1730462154" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1730462154" rel="stylesheet">
-    <link href="/css/theme.css?1730462154" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1730462154" rel="stylesheet">
+    <link href="/css/nucleus.css?1730563970" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1730563970" rel="stylesheet">
+    <link href="/css/hybrid.css?1730563970" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1730563970" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1730563970" rel="stylesheet">
+    <link href="/css/auto-complete.css?1730563970" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1730563970" rel="stylesheet">
+    <link href="/css/theme.css?1730563970" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1730563970" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1730462154" rel="stylesheet">
+    <link href="/css/theme-blue.css?1730563970" rel="stylesheet">
     
-    <link href="/css/foo.css?1730462154" rel="stylesheet"><link href="/css/bar.css?1730462154" rel="stylesheet">
+    <link href="/css/foo.css?1730563970" rel="stylesheet"><link href="/css/bar.css?1730563970" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1730462154"></script>
+    <script src="/js/jquery-3.3.1.min.js?1730563970"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1730462154"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1730462154"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1730563970"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1730563970"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1730462154"></script>
+<script type="text/javascript" src="/js/search.js?1730563970"></script>
 
     
   </div>
@@ -828,8 +828,15 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <li><a href="#quantification-canonique-des-champs">Quantification canonique des champs</a>
       <ul>
         <li><a href="#la-recette-de-la-quantification-canonique">La recette de la quantification canonique</a></li>
-        <li><a href="#illustration">Illustration</a></li>
-        <li><a href="#et-lhamiltonien-alorsnbsp">Et l&rsquo;Hamiltonien alors ?</a></li>
+        <li><a href="#quantification-du-champ-scalaire-avec-masse">Quantification du champ scalaire avec masse</a></li>
+        <li><a href="#énergie-infinienbsp">Énergie infinie ?</a></li>
+        <li><a href="#ordre-normal">Ordre normal</a></li>
+        <li><a href="#signification-de-la-décomposition-en-modes">Signification de la décomposition en modes</a></li>
+      </ul>
+    </li>
+    <li><a href="#quantification-canonique-dun-champ-scalaire-complexe">Quantification canonique d&rsquo;un champ scalaire complexe</a>
+      <ul>
+        <li><a href="#application-de-la-recette">Application de la recette</a></li>
       </ul>
     </li>
   </ul>
@@ -948,14 +955,15 @@ MathJax = {
 <li><b>Étape 5&nbsp;:</b> respecter l'ordre normal pour se débarrasser des infinis.</li>
 </div>
 <br>
-<h3 id="illustration">Illustration</h3>
-<p>Utilisons la recette pour quantifier la théorie du champs scalaire avec masse.</p>
+<h3 id="quantification-du-champ-scalaire-avec-masse">Quantification du champ scalaire avec masse</h3>
 <h4 id="étapenbsp1nbsp">Étape 1 :</h4>
 <p>Le Lagrangien :</p>
+<div id="def">
 <div id="grosseformule">
 <p>$$
 \mathcal{L}=\frac{1}{2}\left[\partial_\mu \phi(x)\right]^2-\frac{1}{2} m^2[\phi(x)]^2
 $$</p>
+</div>
 </div>
 <h4 id="étapenbsp2nbsp">Étape 2 :</h4>
 <p>La densité d&rsquo;impulsion :</p>
@@ -970,16 +978,23 @@ $$</p>
 <p>$$
 \begin{aligned}
 \mathcal{H}&amp;=\Pi^0(x) \partial_0 \phi(x)-\mathcal{L}\\
-&amp;=\partial^0 \phi(x) \partial_0 \phi(x)-\mathcal{L} \\
-&amp;=\frac{1}{2}\left[\partial_0 \phi(x)\right]^2+\frac{1}{2}[\nabla \phi(x)]^2+\frac{1}{2} m^2[\phi(x)]^2
+&amp;=\partial^0 \phi(x) \partial_0 \phi(x)-\mathcal{L}
 \end{aligned}
 $$</p>
+</div>
+<p>On obtient :</p>
+<div id="theo">
+<div id="grosseformule">
+<p>$$
+\mathcal{H}=\frac{1}{2}\left[\partial_0 \phi(x)\right]^2+\frac{1}{2}[\nabla \phi(x)]^2+\frac{1}{2} m^2[\phi(x)]^2
+$$</p>
+</div>
 </div>
 <p>Cet Hamiltonien a un aspect rassurant puisqu&rsquo;on y retrouve la somme d&rsquo;une énergie cinétique (coût d&rsquo;une variation temporelle du champ) et d&rsquo;une énergie potentielle, elle-même décomposée en deux termes : un terme de gradient (coût d&rsquo;une variation spatiale du champ) et un terme de masse (coût d&rsquo;avoir un champ plutôt que rien).</p>
 <br>
 <h4 id="étapenbsp3nbsp">Étape 3 :</h4>
-<p>Changeons les champs en opérateurs : $\phi(x) \rightarrow \hat{\phi}(x)$ et $\Pi^0(x) \rightarrow \hat{\Pi}^0(x)$.</p>
-<p>Et pour les rendre quantique, utilisons les commutateurs. En mécanique quantique à une particule, on a $[\hat{x}, \hat{p}]=\mathrm{i} \hbar$. Par analogie, on définit le <strong>commutateur à temps égaux</strong> pour les opérateurs champ :</p>
+<p>On promeut les champs en opérateurs : $\phi(x) \rightarrow \hat{\phi}(x)$ et $\Pi^0(x) \rightarrow \hat{\Pi}^0(x)$.</p>
+<p>Et pour les rendre quantiques, on leur impose des relations de commutation. En mécanique quantique à une particule, on a $[\hat{x}, \hat{p}]=\mathrm{i} \hbar$. Par analogie, on définit le <strong>commutateur à temps égaux</strong> pour les opérateurs champ :</p>
 <div id="def">
 <div id="grosseformule">
 <p>$$
@@ -1056,8 +1071,8 @@ $$</p>
 </div>
 <p>La décomposition du champ position nous offre en prime celle de l&rsquo;impulsion puisque pour ce champ scalaire $\Pi^\mu(x)=\partial^\mu \phi(x)$.</p>
 <br>
-<h3 id="et-lhamiltonien-alorsnbsp">Et l&rsquo;Hamiltonien alors ?</h3>
-<p>Au tour de l&rsquo;Hamiltonien de subir la quantification. Il va suffir d&rsquo;y substituer la décomposition en modes de $\hat{\phi}(x)$.</p>
+<h3 id="énergie-infinienbsp">Énergie infinie ?</h3>
+<p>Au tour de l&rsquo;Hamiltonien de subir la quantification. Il va suffire d&rsquo;y substituer la décomposition en modes de $\hat{\phi}(x)$.</p>
 <div id="preuve">
 <p>L&rsquo;Hamiltonien est donné par l&rsquo;intégrale sur le volume de la densité hamiltonienne :</p>
 <div id="grosseformule">
@@ -1065,7 +1080,195 @@ $$</p>
 \hat{H}=\int \mathrm{d}^3 x \frac{1}{2}\left\{\left[\partial_0 \hat{\phi}(x)\right]^2+[\boldsymbol{\nabla} \hat{\phi}(x)]^2+m^2[\hat{\phi}(x)]^2\right\}
 $$</p>
 </div>
+<p>Commençons par déterminer la densité d&rsquo;impulsion :</p>
+<div id="grosseformule">
+<p>$$
+\hat{\Pi}_\mu(x)=\partial_\mu \hat{\phi}(x)=\int \frac{\mathrm{d}^3 p}{(2 \pi)^{\frac{3}{2}}\left(2 E_\boldsymbol{p}\right)^{\frac{1}{2}}}\left(-\mathrm{i} p_\mu\right)\left(\hat{a}_\boldsymbol{p} \mathrm{e}^{-\mathrm{i} p \cdot x}-\hat{a}_\boldsymbol{p}^{\dagger} \mathrm{e}^{\mathrm{i} p \cdot x}\right)
+$$</p>
 </div>
+<p>La composante temporelle :</p>
+<div id="grosseformule">
+<p>$$
+\partial_0 \hat{\phi}(x)=\int \frac{d^3 p}{(2 \pi)^{\frac{3}{2}}\left(2 E_\boldsymbol{p}\right)^{\frac{1}{2}}}\left(-\mathrm{i} E_\boldsymbol{p}\right)\left(\hat{a}_\boldsymbol{p} \mathrm{e}^{-\mathrm{i} p \cdot x}-\hat{a}_\boldsymbol{p}^{\dagger} \mathrm{e}^{\mathrm{i} p \cdot x}\right)
+$$</p>
+</div>
+<p>Et la composante spatiale :</p>
+<div id="grosseformule">
+<p>$$
+\boldsymbol{\nabla} \hat{\phi}(x)=\int \frac{\mathrm{d}^3 p}{(2 \pi)^{\frac{3}{2}}\left(2 E_{\boldsymbol{p}}\right)^{\frac{1}{2}}}(\mathrm{i} \boldsymbol{p})\left(\hat{a}_{\boldsymbol{p}} \mathrm{e}^{-\mathrm{i} p \cdot x}-\hat{a}_{\boldsymbol{p}}^{\dagger} \mathrm{e}^{\mathrm{i} p \cdot x}\right)
+$$</p>
+</div>
+<p>On a maintenant tous les ingrédients pour calculer l&rsquo;Hamiltonien :</p>
+<div id="grosseformule">
+<p>$$
+\hat{H}=  \frac{1}{2} \int^{} \frac{\mathrm{~d}^3 x \mathrm{~d}^3 p \mathrm{~d}^3 q}{(2 \pi)^3\left(2 E_{\boldsymbol{p}}\right)^{\frac{1}{2}}\left(2 E_{\boldsymbol{q}}\right)^{\frac{1}{2}}}
+\left[ (-E_{\boldsymbol{p}} E_{\boldsymbol{q}}-\boldsymbol{p} \cdot \boldsymbol{q})[\hat{a}_{\boldsymbol{p}} \mathrm{e}^{-\mathrm{i} p \cdot x}-\hat{a}_{\boldsymbol{p}}^{\dagger} \mathrm{e}^{\mathrm{i} p \cdot x}]
+\times [\hat{a}_{\boldsymbol{q}} \mathrm{e}^{-\mathrm{i} q \cdot x}-\hat{a}_{\boldsymbol{q}}^{\dagger} \mathrm{e}^{\mathrm{i} q \cdot x}]+m^2 [\hat{a}_{\boldsymbol{p}} \mathrm{e}^{-\mathrm{i} p \cdot x}+\hat{a}_{\boldsymbol{p}}^{\dagger} \mathrm{e}^{\mathrm{i} p \cdot x}] [\hat{a}_{\boldsymbol{q}} \mathrm{e}^{-\mathrm{i} q \cdot x}+\hat{a}_{\boldsymbol{q}}^{\dagger} \mathrm{e}^{\mathrm{i} q \cdot x}] \right]
+$$</p>
+</div>
+<p>On commence par l&rsquo;intégrations sur les $x$ en utilisant $\int \mathrm{d}^3 x \mathrm{e}^{\mathrm{i} \boldsymbol{p} \cdot \boldsymbol{x}}=(2 \pi)^3 \delta^{(3)}(\boldsymbol{p})$ :</p>
+<div id="grosseformule">
+<p>$$
+\hat{H}=  \frac{1}{2} \int \frac{\mathrm{~d}^3 p \mathrm{~d}^3 q}{\left(2 E_{\boldsymbol{p}}\right)^{\frac{1}{2}}\left(2 E_{\boldsymbol{q}}\right)^{\frac{1}{2}}}
+\times\left[\delta^{(3)}(\boldsymbol{p}-\boldsymbol{q})
+(E_{\boldsymbol{p}} E_{\boldsymbol{q}}+\boldsymbol{p} \cdot \boldsymbol{q}+m^2)
+[\hat{a}_{\boldsymbol{p}}^{\dagger} \hat{a}_{\boldsymbol{q}} \mathrm{e}^{\mathrm{i}(E_{\boldsymbol{p}}-E_{\boldsymbol{q}}) t}+\hat{a}_{\boldsymbol{p}} \hat{a}_{\boldsymbol{q}}^{\dagger} \mathrm{e}^{-\mathrm{i}(E_{\boldsymbol{p}}-E_{\boldsymbol{q}}) t}]
++\delta^{(3)}(\boldsymbol{p}+\boldsymbol{q})(-E_{\boldsymbol{p}} E_{\boldsymbol{q}}-\boldsymbol{p} \cdot \boldsymbol{q}+m^2)[\hat{a}_{\boldsymbol{p}}^{\dagger} \hat{a}_{\boldsymbol{q}}^{\dagger} \mathrm{e}^{\mathrm{i}(E_{\boldsymbol{p}}+E_{\boldsymbol{q}}) t}+\hat{a}_{\boldsymbol{p}} \hat{a}_{\boldsymbol{q}} \mathrm{e}^{-\mathrm{i}(E_{\boldsymbol{p}}+E_{\boldsymbol{q}}) t}]\right]
+$$</p>
+</div>
+<p>Ensuite, l&rsquo;intégrale sur les $q$ permet de se débarrasser des distributions de Dirac :</p>
+<div id="grosseformule">
+<p>$$
+\hat{H}=  \frac{1}{2} \int \mathrm{~d}^3 p \frac{1}{2 E_{\boldsymbol{p}}}\left[(E_{\boldsymbol{p}}^2+\boldsymbol{p}^2+m^2)
+(\hat{a}_{\boldsymbol{p}}^{\dagger} \hat{a}_{\boldsymbol{p}}+\hat{a}_{\boldsymbol{p}} \hat{a}_{\boldsymbol{p}}^{\dagger}) + (-E_{\boldsymbol{p}}^2+\boldsymbol{p}^2+m^2)
+(\hat{a}_{\boldsymbol{p}}^{\dagger} \hat{a}_{-\boldsymbol{p}}^{\dagger} \mathrm{e}^{2 \mathrm{i} E_{\boldsymbol{p}} t}+\hat{a}_{\boldsymbol{p}} \hat{a}_{-\boldsymbol{p}} \mathrm{e}^{-2 \mathrm{i} E_{\boldsymbol{p}} t})\right]
+$$</p>
+</div>
+<p>Et puisque $E_{\boldsymbol{p}}^2=\boldsymbol{p}^2+m^2$, cela se simplifie en :</p>
+<div id="grosseformule">
+<p>$$
+\hat{H}=\frac{1}{2} \int \mathrm{~d}^3 p\, E_{\boldsymbol{p}}\left(\hat{a}_{\boldsymbol{p}} \hat{a}_{\boldsymbol{p}}^{\dagger}+\hat{a}_{\boldsymbol{p}}^{\dagger} \hat{a}_{\boldsymbol{p}}\right)
+$$</p>
+</div>
+<p>On termine en utilisant $\left[\hat{a}_{\boldsymbol{p}}, \hat{a}_{\boldsymbol{q}}^{\dagger}\right]=\delta^{(3)}(\boldsymbol{p}-\boldsymbol{q})$.</p>
+</div>
+<p>On obtient :</p>
+<div id="theo">
+<div id="grosseformule">
+<p>$$
+\hat{H}=\int \mathrm{d}^3 p \,E_{\boldsymbol{p}}\left(\hat{a}_{\boldsymbol{p}}^{\dagger} \hat{a}_{\boldsymbol{p}}+\frac{1}{2} \delta^{(3)}(0)\right)
+$$</p>
+</div>
+</div>
+<p>Le terme $\langle0|\hat{H}|0\rangle = \frac{1}{2} \int\!\! \mathrm{~d}^3 p \, \delta^3(0)$ donne une énergie infinie pour le vide 😱 Mais ce n&rsquo;est pas si alarmant si on se convainc qu&rsquo;en pratique, seul ce qui est mesurable nous intéresse. Or on ne mesure que des différences d&rsquo;énergie. Et ces différences auront évidemment le bon goût de faire disparaître les infinis (en annulant les vilains $\frac{1}{2} \delta^{(3)}(0)$). L&rsquo;infini obtenu ne correspondrait finalement qu&rsquo;à une mauvaise définition de l&rsquo;énergie du niveau zéro.</p>
+<p>Malgré tout, ces infinis qui traînent partout, ça fait maison mal tenue. En ordonnant savamment les opérateurs, on va pouvoir les glisser discrètement sous le tapis.</p>
+<br>
+<h3 id="ordre-normal">Ordre normal</h3>
+<p>L&rsquo;<strong>ordre normal</strong> consiste simplement à placer tous les opérateurs de création à gauche.</p>
+<p>C&rsquo;est sans douleur pour les champs de Bose, mais pour les champs de Fermi, on doit multiplier par un terme $(-1)^P$ où $P$ est le nombre de permutations nécessaires pour obtenir un ordre normal.</p>
+<div id="preuve">
+<p>Exemples :</p>
+<p>$\color{#D41876 }N\left[\color{#000 }\hat{a} \hat{a}^{\dagger}\color{#D41876 }\right]\color{#000 }=\hat{a}^{\dagger} \hat{a}$, $\color{#D41876 }N\left[\color{#000 }\hat{a}^{\dagger} \hat{a}\color{#D41876 }\right]\color{#000 }=\hat{a}^{\dagger} \hat{a}$, $\color{#D41876 }N\left[\color{#000 }\hat{a}^{\dagger} \hat{a} \hat{a} \hat{a}^{\dagger} \hat{a}^{\dagger}\color{#D41876 }\right]\color{#000 }=\hat{a}^{\dagger} \hat{a}^{\dagger} \hat{a}^{\dagger} \hat{a} \hat{a}$, $\color{#D41876 }N[\color{#000 }\hat{a}_{\boldsymbol{p}} \hat{a}_{\boldsymbol{q}}^{\dagger} \hat{a}_{\boldsymbol{r}}\color{#D41876 }]\color{#000 }=\hat{a}_{\boldsymbol{q}}^{\dagger} \hat{a}_{\boldsymbol{p}} \hat{a}_{\boldsymbol{r}}$, $\color{#D41876 }N[\color{#000 }\hat{c}_{\boldsymbol{p}} \hat{c}_{\boldsymbol{q}}^{\dagger} \hat{c}_r\color{#D41876 }]\color{#000 }=-\hat{c}_{\boldsymbol{q}}^{\dagger} \hat{c}_{\boldsymbol{p}} \hat{c}_r$.</p>
+</div>
+<h4 id="étape-5nbsp">Étape 5 :</h4>
+<p>On arrive finalement au bout du programme en mettant dans l&rsquo;ordre normal les opérateurs de l&rsquo;Hamiltonien :</p>
+<div id="grosseformule">
+<p>$$
+\begin{aligned}
+\color{#D41876 }N[\color{#000 }\hat{H}\color{#D41876 }] \color{#000 }&amp; =\frac{1}{2} \int \mathrm{d}^3 p E_{\boldsymbol{p}} \,\color{#D41876 }N\left[\color{#000 }\hat{a}_{\boldsymbol{p}} \hat{a}_{\boldsymbol{p}}^{\dagger}+\hat{a}_{\boldsymbol{p}}^{\dagger} \hat{a}_{\boldsymbol{p}}\color{#D41876 }\right] \\
+&amp; =\frac{1}{2} \int \mathrm{d}^3 p E_{\boldsymbol{p}} 2 \hat{a}_{\boldsymbol{p}}^{\dagger} \hat{a}_{\boldsymbol{p}}
+\end{aligned}
+$$</p>
+</div>
+<p>D&rsquo;où :</p>
+<div id="theo">
+<div id="grosseformule">
+<p>$$
+\color{#D41876 }N[\color{#000 }\hat{H}\color{#D41876 }] \color{#000 }=\int \mathrm{d}^3 p E_{\boldsymbol{p}} \hat{n}_{\boldsymbol{p}}
+$$</p>
+</div>
+</div>
+<p>$\hat{n}_{\boldsymbol{p}}=\hat{a}_{\boldsymbol{p}}^{\dagger} \hat{a}_{\boldsymbol{p}}$ est l&rsquo;opérateur nombre. $\hat{n}_{\boldsymbol{p}}|\boldsymbol{p}\rangle$ nous dit combien il y a d&rsquo;excitations dans cet état à impulsion $\boldsymbol{p}$.</p>
+<p>Notre niveau zéro, le vide, a maintenant une énergie bien mieux définie :</p>
+<div id="grosseformule">
+<p>$$
+\langle0|N[\hat{H}]|0\rangle = 0
+$$</p>
+</div>
+<p>On retrouve le même Hamiltonien que pour des particules indépendantes. Les états d&rsquo;excitation de l&rsquo;équation d&rsquo;onde peuvent être vues comme des particules possédant une impulsion quantifiée. Ce sont des bosons avec un spin $S=0$.</p>
+<br>
+<h3 id="signification-de-la-décomposition-en-modes">Signification de la décomposition en modes</h3>
+<p>Généralisons un poil la décomposition en modes de l&rsquo;opérateur champ en changeant $\hat{a}_{\boldsymbol{p}}^{\dagger}$ en $\hat{b}_{\boldsymbol{p}}^{\dagger}$ :</p>
+<div id="grosseformule">
+<p>$$
+\hat{\phi}(x)=\int \frac{\mathrm{d}^3 p}{(2 \pi)^{\frac{3}{2}}} \frac{1}{\left(2 E_{\boldsymbol{p}}\right)^{\frac{1}{2}}}\left(\hat{a}_{\boldsymbol{p}} \mathrm{e}^{-\mathrm{i} p \cdot x}+\hat{b}_{\boldsymbol{p}}^{\dagger} \mathrm{e}^{\mathrm{i} p \cdot x}\right)
+$$</p>
+</div>
+<p>Pour coller à l&rsquo;interprétation de Feynman des énergies négatives</p>
+<div id="grosseformule">
+<p>$$
+\phi(x) = \sum_\boldsymbol{p}\left[
+\begin{array}{c}
+\text{annihilation d&rsquo;une particule} \\
+\text{incidente d&rsquo;énergie positive }E_\boldsymbol{p} \\
+\end{array}
+\right]
++
+\sum_\boldsymbol{p}\left[
+\begin{array}{c}
+\text{création d&rsquo;une antiparticule} \\
+\text{sortante d&rsquo;énergie positive }E_\boldsymbol{p}\\
+\end{array}
+\right]$$</p>
+</div>
+<p>il faut que $\hat{a}_{\boldsymbol{p}}$ annihile les particules et $\hat{a}_{\boldsymbol{p}}^{\dagger}$ les crée, alors que $\hat{b}_{\boldsymbol{p}}$ doit annihiler les antiparticules et $\hat{b}_{\boldsymbol{p}}^{\dagger}$ les créer. Et l&rsquo;énergie des particules et antiparticules vaut $E_{\boldsymbol{p}}=+\left(\boldsymbol{p}^2+m^2\right)^{\frac{1}{2}}$.</p>
+<p>Dans le cas du champ scalaire, chaque particule est sa propre antiparticule. Et donc $\hat{b}_{\boldsymbol{p}}^{\dagger}=\hat{a}_{\boldsymbol{p}}^{\dagger}$.</p>
+<div id="preuve">
+<p>Regardons ce qu&rsquo;il advient lorsqu&rsquo;on fait agir l&rsquo;opérateur champ sur le vide.</p>
+<p>Comme $\hat{a}_{\boldsymbol{p}}^{\dagger}|0\rangle=|\boldsymbol{p}\rangle$, on a :</p>
+<div id="grosseformule">
+<p>$$
+\hat{\phi}(x)|0\rangle=\int \frac{\mathrm{d}^3 p}{(2 \pi)^{\frac{3}{2}}\left(2 E_{\boldsymbol{p}}\right)^{\frac{1}{2}}} \mathrm{e}^{\mathrm{i} p \cdot x}|\boldsymbol{p}\rangle
+$$</p>
+</div>
+<p>On obtient une superposition de modes sortant. Cherchons l&rsquo;amplitude correspondant à un de ces états $\langle q|=(2 \pi)^{\frac{3}{2}}\left(2 E_{\boldsymbol{q}}\right)^{\frac{1}{2}}\langle\boldsymbol{q}|$ correctement normalisé :</p>
+<div id="grosseformule">
+<p>$$
+(2 \pi)^{\frac{3}{2}}\left(2 E_{\boldsymbol{q}}\right)^{\frac{1}{2}}\langle\boldsymbol{q}| \hat{\phi}(x)|0\rangle=\int \mathrm{d}^3 p\, \mathrm{e}^{\mathrm{i} p \cdot x}\langle\boldsymbol{q} \mid \boldsymbol{p}\rangle=\int \mathrm{d}^3 p\, \mathrm{e}^{\mathrm{i} p \cdot x} \delta^{(3)}(\boldsymbol{q}-\boldsymbol{p})=\mathrm{e}^{\mathrm{i}\left(E_{\boldsymbol{q}} t-\boldsymbol{q} \cdot \boldsymbol{x}\right)}=\mathrm{e}^{\mathrm{i} q \cdot x}
+$$</p>
+</div>
+<p>On a ainsi obtenu l&rsquo;amplitude dans le $q$<sup>e</sup> mode lorsqu&rsquo;on crée une particule scalaire au point $x$ de l&rsquo;espace-temps.</p>
+</div>
+<p>La recette de quantification canonique fonctionne que sur des Lagrangiens de théories sans interaction car ils peuvent s&rsquo;écrire quadratiquement en termes de champ et de ses dérivées. Les théories avec interaction échoueront, elles, à être diagonalisées par la quantification canonique.</p>
+<br>
+<h2 id="quantification-canonique-dun-champ-scalaire-complexe">Quantification canonique d&rsquo;un champ scalaire complexe</h2>
+<h3 id="application-de-la-recette">Application de la recette</h3>
+<h4 id="étape-1nbsp">Étape 1 :</h4>
+<p>Le Lagrangien d&rsquo;un champ scalaire complexe est un exemple d&rsquo;une théorie avec plus d&rsquo;une composante :</p>
+<div id="def">
+<div id="grosseformule">
+<p>$$
+\mathcal{L}= \frac{1}{2}\left[\partial_\mu \phi_1(x)\right]^2-\frac{1}{2} m^2\left[\phi_1(x)\right]^2  +\frac{1}{2}\left[\partial_\mu \phi_2(x)\right]^2-\frac{1}{2} m^2\left[\phi_2(x)\right]^2
+$$</p>
+</div>
+</div>
+<p>On peut simplifier le Lagrangien en posant :</p>
+<div id="grosseformule">
+<p>$$
+\psi=\frac{1}{\sqrt{2}}\left[\phi_1(x)+\mathrm{i} \phi_2(x)\right] \qquad \psi^{\dagger}=\frac{1}{\sqrt{2}}\left[\phi_1(x)-\mathrm{i} \phi_2(x)\right]
+$$</p>
+</div>
+<p>On obtient un Lagrangien qui ressemble beaucoup à celui du champ scalaire massif mais sans le facteur $\frac{1}{2}$ :</p>
+<div id="def">
+<div id="grosseformule">
+<p>$$
+\mathcal{L}=\partial^\mu \psi^{\dagger}(x) \partial_\mu \psi(x)-m^2 \psi^{\dagger}(x) \psi(x)
+$$</p>
+</div>
+</div>
+<h4 id="étape-2nbsp">Étape 2 :</h4>
+<p>Chaque composante $\sigma$ du champ ($\sigma=\psi$ ou $\psi^\dagger$) a une densité d&rsquo;impulsion différente :</p>
+<div id="grosseformule">
+<p>$$
+\Pi_{\sigma=\psi}^0=\frac{\partial \mathcal{L}}{\partial\left(\partial_0 \psi\right)}=\partial^0 \psi^{\dagger}
+\qquad \Pi_{\sigma=\psi^{\dagger}}^0=\frac{\partial \mathcal{L}}{\partial\left(\partial_0 \psi^{\dagger}\right)}=\partial^0 \psi
+$$</p>
+</div>
+<p>Déterminons l&rsquo;Hamiltonien :</p>
+<div id="grosseformule">
+<p>$$
+\mathcal{H}  =\sum_\sigma \Pi_\sigma^0(x) \partial_0 \psi^\sigma(x)-\mathcal{L}
+$$</p>
+</div>
+<p>On obtient après simplification :</p>
+<div id="theo">
+<div id="grosseformule">
+<p>$$
+\mathcal{H}=\partial_0 \psi^{\dagger}(x) \partial_0 \psi(x)+\nabla \psi^{\dagger}(x) \cdot \nabla \psi(x)+m^2 \psi^{\dagger}(x) \psi(x)
+$$</p>
+</div>
+</div>
+<h4 id="étape-3nbsp">Étape 3 :</h4>
 <br>
 <br>
 <p style="font-size:1.5em;text-align:center;font-weight:bold;"><a href="../tqc5">Chapitre suivant</a></p>
@@ -1605,16 +1808,16 @@ $$</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1730462154"></script>
-    <script src="/js/perfect-scrollbar.min.js?1730462154"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1730462154"></script>
-    <script src="/js/jquery.sticky.js?1730462154"></script>
-    <script src="/js/featherlight.min.js?1730462154"></script>
-    <script src="/js/highlight.pack.js?1730462154"></script>
+    <script src="/js/clipboard.min.js?1730563970"></script>
+    <script src="/js/perfect-scrollbar.min.js?1730563970"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1730563970"></script>
+    <script src="/js/jquery.sticky.js?1730563970"></script>
+    <script src="/js/featherlight.min.js?1730563970"></script>
+    <script src="/js/highlight.pack.js?1730563970"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1730462154"></script>
-    <script src="/js/learn.js?1730462154"></script>
-    <script src="/js/hugo-learn.js?1730462154"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1730563970"></script>
+    <script src="/js/learn.js?1730563970"></script>
+    <script src="/js/hugo-learn.js?1730563970"></script>
     
     
 
