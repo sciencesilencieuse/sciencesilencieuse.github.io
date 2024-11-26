@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1732623112" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1732623112" rel="stylesheet">
-    <link href="/css/hybrid.css?1732623112" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1732623112" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1732623112" rel="stylesheet">
-    <link href="/css/auto-complete.css?1732623112" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1732623112" rel="stylesheet">
-    <link href="/css/theme.css?1732623112" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1732623112" rel="stylesheet">
+    <link href="/css/nucleus.css?1732649619" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1732649619" rel="stylesheet">
+    <link href="/css/hybrid.css?1732649619" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1732649619" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1732649619" rel="stylesheet">
+    <link href="/css/auto-complete.css?1732649619" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1732649619" rel="stylesheet">
+    <link href="/css/theme.css?1732649619" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1732649619" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1732623112" rel="stylesheet">
+    <link href="/css/theme-blue.css?1732649619" rel="stylesheet">
     
-    <link href="/css/foo.css?1732623112" rel="stylesheet"><link href="/css/bar.css?1732623112" rel="stylesheet">
+    <link href="/css/foo.css?1732649619" rel="stylesheet"><link href="/css/bar.css?1732649619" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1732623112"></script>
+    <script src="/js/jquery-3.3.1.min.js?1732649619"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1732623112"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1732623112"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1732649619"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1732649619"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1732623112"></script>
+<script type="text/javascript" src="/js/search.js?1732649619"></script>
 
     
   </div>
@@ -1074,12 +1074,13 @@ $$</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:480px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/volcross.png" style="box-shadow:none;background:none;">
 </div>
-<p>Le volume en question vaut $V=\sigma \overline{v_{rel}}\Delta t = \pi d^2 \sqrt{2} \overline{v}\Delta t$. Et le nombre de particules rencontrées vaut donc $nV=n\sqrt{2}\pi d^2 \overline{v}\Delta t$.</p>
+<p>Le volume en question vaut $V=\sigma \overline{v_{rel}}\Delta t = \pi d^2 \sqrt{2} \overline{v}\Delta t$. Et le nombre de particules rencontrées vaut donc $nV=n\, \overline{v_{rel}}\,\Delta t=\sqrt{2}\pi d^2 \overline{v}\Delta t$.</p>
 <p>Le <strong>libre parcours moyen</strong> $\lambda$ va alors correspondre à la distance parcourue pendant $\Delta t$ divisée par le nombre de collisions ayant eu lieu pendant ce laps de temps. D&rsquo;où :</p>
 <div id="grosseformule">
 <p>$$
 \begin{aligned}
-\lambda &amp;= \frac{\cancel{\overline{v}\Delta t}}{\sqrt{2}n\pi d^2 {\cancel{\overline{v}\Delta t}}}\\
+\lambda &amp;= \frac{\cancel{\overline{v}\Delta t}}{\sqrt{2}n\sigma {\cancel{\overline{v}\Delta t}}}\\
+&amp;=\frac{1}{\sqrt{2}n\sigma}\\
 &amp;=\frac{1}{\sqrt{2}n\pi d^2}
 \end{aligned}
 $$</p>
@@ -1091,12 +1092,20 @@ $$</p>
 \lambda = \frac{k_B T}{\sqrt{2}P\pi d^2}
 $$</p>
 </div>
-<p>Une molécule de diazote a un diamètre $d=\pu{0,37 nm}$ et pour une pression $P=\pu{1 bar}$ et une température $T = \pu{293 K}$, on obtient un libre parcours moyen $\lambda\approx \pu{66 nm}$. On peut remarquer que c&rsquo;est plus de 200 fois plus grand que la distance moyenne entre particules donnée par $n^{\frac{1}{3}}=\left(\frac{P}{k_B T}\right)^{\frac{1}{3}}\approx \pu{3,4 nm}$.</p>
+<p>Une molécule de diazote a un diamètre $d=\pu{0,37 nm}$ et pour une pression $P=\pu{1 bar}$ et une température $T = \pu{293 K}$, on obtient un libre parcours moyen $\lambda\approx \pu{66 nm}$. On peut remarquer que c&rsquo;est plus de 200 fois plus grand que la distance moyenne entre particules donnée par $1/n^{\frac{1}{3}}=\left(\frac{k_B T}{P}\right)^{\frac{1}{3}}\approx \pu{3,4 nm}$.</p>
 </div>
 <p>Pour un électron, on peut reprendre la formule du libre parcours moyen en modifiant seulement un peu la section efficace puisque $\sigma=\pi\left(r_\text{molécule}+r_\text{électron}\right)^2\approx \left(r_\text{molécule}\right)^2 = \pi d^2 /4$.</p>
 <p>Et donc $\lambda= \frac{2\sqrt{2}k_B T}{P\pi d^2}\approx 0,27 \text{ μm}$.</p>
 <p>Notre électron devant récupérer une énergie d&rsquo;environ $\pu{16 eV}$ sur la distance $\lambda$ pour réussir à ioniser la prochaine molécule de diazote rencontrée, le champ doit donc être de $\pu{16 V}/\lambda$, soit à peu près $\pu{16 V}$ pour $0,27 \text{ μm}$ $\rightarrow$ $0,59\text{ MV/cm.}$ C&rsquo;est plus d&rsquo;un ordre de grandeur au-dessus de ce qu&rsquo;on aurait aimé obtenir 😢</p>
-<p>Mais sur un tel processus statistique, on peut raisonnablement penser que seule une fraction de collisions &ldquo;efficaces&rdquo; est nécessaire pour déclencher la cascade de ionisations, surtout pour une distance très supérieure au libre parcours moyen. Il n&rsquo;est donc pas choquant qu&rsquo;un champ plus faible fasse l&rsquo;affaire.</p>
+<p>Une des raisons possibles est notre trop grand optimisme quant à l&rsquo;efficacité des collisions ; il est peu probable que chaque collision aboutisse à une ionisation, en particulier pour des électrons ayant une énergie à peine au-dessus du minimum nécessaire. Cela revient à surestimer la section efficace de collision. Cherchons alors dans la littérature une section efficace plus réaliste&hellip;</p>
+<p>Le graphique suivant rapporte un tas de sections efficaces différentes pour des collisions électron-N<sub>2</sub> (donnant lieu à des rotations, des vibrations, ou, pour ce qui nous intéresse, des ionisations) :</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+<img src="/crosssec.png" style="box-shadow:none;background:none;">
+</div>
+<p style="font-size:0.9em;">
+Source&nbsp;: G. L. Davis, E. R. Cohen, and B. N. Taylor, <a href="https://srd.nist.gov/jpcrdreprint/1.555762.pdf">"The 1986 adjustment of the fundamental physical constants"</a>, <i>J. Phys. Chem. Ref. Data</i>, vol. 19, no. 5, pp. 1123–1249, 1990. DOI: 10.1063/1.555762.
+</p>
+<p>Pour des électrons de $\pu{20 eV}$, la section efficace semble donc être d&rsquo;environ $\pu{3e-16 cm2} = \pu{3e-20 m2}$. Cela nous donne un libre parcours moyen de $7\text{ μm}$. Et hop, $\pu{30 kV/cm}$, youpi !</p>
 
 
 <footer class="footline">
@@ -1638,16 +1647,16 @@ $$</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1732623112"></script>
-    <script src="/js/perfect-scrollbar.min.js?1732623112"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1732623112"></script>
-    <script src="/js/jquery.sticky.js?1732623112"></script>
-    <script src="/js/featherlight.min.js?1732623112"></script>
-    <script src="/js/highlight.pack.js?1732623112"></script>
+    <script src="/js/clipboard.min.js?1732649619"></script>
+    <script src="/js/perfect-scrollbar.min.js?1732649619"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1732649619"></script>
+    <script src="/js/jquery.sticky.js?1732649619"></script>
+    <script src="/js/featherlight.min.js?1732649619"></script>
+    <script src="/js/highlight.pack.js?1732649619"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1732623112"></script>
-    <script src="/js/learn.js?1732623112"></script>
-    <script src="/js/hugo-learn.js?1732623112"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1732649619"></script>
+    <script src="/js/learn.js?1732649619"></script>
+    <script src="/js/hugo-learn.js?1732649619"></script>
     
     
 
