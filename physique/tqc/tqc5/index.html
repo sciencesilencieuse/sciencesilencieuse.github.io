@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1732837994" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1732837994" rel="stylesheet">
-    <link href="/css/hybrid.css?1732837994" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1732837994" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1732837994" rel="stylesheet">
-    <link href="/css/auto-complete.css?1732837994" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1732837994" rel="stylesheet">
-    <link href="/css/theme.css?1732837994" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1732837994" rel="stylesheet">
+    <link href="/css/nucleus.css?1732980234" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1732980234" rel="stylesheet">
+    <link href="/css/hybrid.css?1732980234" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1732980234" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1732980234" rel="stylesheet">
+    <link href="/css/auto-complete.css?1732980234" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1732980234" rel="stylesheet">
+    <link href="/css/theme.css?1732980234" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1732980234" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1732837994" rel="stylesheet">
+    <link href="/css/theme-blue.css?1732980234" rel="stylesheet">
     
-    <link href="/css/foo.css?1732837994" rel="stylesheet"><link href="/css/bar.css?1732837994" rel="stylesheet">
+    <link href="/css/foo.css?1732980234" rel="stylesheet"><link href="/css/bar.css?1732980234" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1732837994"></script>
+    <script src="/js/jquery-3.3.1.min.js?1732980234"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1732837994"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1732837994"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1732980234"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1732980234"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1732837994"></script>
+<script type="text/javascript" src="/js/search.js?1732980234"></script>
 
     
   </div>
@@ -831,12 +831,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <li><a href="#champs-de-jauge-et-théorie-de-jauge">Champs de jauge et théorie de jauge</a>
       <ul>
         <li><a href="#théorie-de-jauge-la-plus-simplenbsp-lélectromagnétisme">Théorie de jauge la plus simple : l&rsquo;électromagnétisme</a></li>
-        <li><a href="#canonisation-canonique-du-champ-électromagnétique">Canonisation canonique du champ électromagnétique</a></li>
+        <li><a href="#quantification-canonique-du-champ-électromagnétique">Quantification canonique du champ électromagnétique</a></li>
       </ul>
     </li>
     <li><a href="#symétries-discrètes">Symétries discrètes</a>
       <ul>
         <li><a href="#conjugaison-de-charge">Conjugaison de charge</a></li>
+        <li><a href="#parité">Parité</a></li>
+        <li><a href="#renversement-du-temps">Renversement du temps</a></li>
       </ul>
     </li>
   </ul>
@@ -940,8 +942,8 @@ MathJax = {
 <p style="font-size:1.2em;text-align:center;font-weight:bold;"><a href="../">Retour sommaire</a></p>
 <br>
 <h2 id="champs-de-jauge-et-théorie-de-jauge">Champs de jauge et théorie de jauge</h2>
-<p>Une invariance de jauge dénote moins une symétrie du système qu&rsquo;une redondance dans sa description, différentes configurations du champ aboutissant à des observables identiques. Cette redondance nous laisse une certaine latitude quant au choix de la meilleure formulation, c&rsquo;est le choix de jauge. Une transformation d&rsquo;une description à une autre est appelée <strong>transformation de jauge</strong> et l&rsquo;invariance sous-jacente est l&rsquo;<strong>invariance de jauge</strong>.</p>
-<p>L&rsquo;invariance de jauge n&rsquo;est pas une symétrie ; point question ici de curseurs internes permettant de passer d&rsquo;une particule à une autre. C&rsquo;est plutôt l&rsquo;affirmation de notre incapacité à trouver une description unique du système. On peut citer comme exemple l&rsquo;indétermination de l&rsquo;origine des potentiels électriques (le choix d&rsquo;associer 0 V à la terre est arbitraire), celle de l&rsquo;origine des phases en mécanique quantique (on peut passer de $\psi(x)$ à $\psi(x)\mathrm{e}^{\mathrm{i}\alpha}$ sans changer la physique), et en électromagnétisme, la transformation $A \rightarrow A+\nabla \chi$ (où $\chi(\boldsymbol{x})$ est une fonction de la position) est sans effet sur $\boldsymbol{B}=\boldsymbol{\nabla} \times \boldsymbol{A}$. On verra que ces trois indéterminations sont en fait liées entre elles, et à chaque fois, on se trouve dans des situations physiques où seules des variations peuvent faire l&rsquo;objet d&rsquo;observations.</p>
+<p>Une invariance de jauge trahit moins une symétrie du système qu&rsquo;une redondance dans sa description (différentes configurations du champ aboutissent à des observables identiques). Cette redondance nous laisse une certaine latitude quant au choix de la meilleure formulation, c&rsquo;est le choix de jauge. Une transformation d&rsquo;une description à une autre est appelée <strong>transformation de jauge</strong> et l&rsquo;invariance sous-jacente est l&rsquo;<strong>invariance de jauge</strong>.</p>
+<p>L&rsquo;invariance de jauge n&rsquo;est pas une symétrie dans le sens où il n&rsquo;est pas question ici de curseurs internes permettant de passer d&rsquo;une particule à une autre. C&rsquo;est plutôt l&rsquo;affirmation de notre incapacité à trouver une description unique du système. On peut citer comme exemple l&rsquo;indétermination de l&rsquo;origine des potentiels électriques (le choix d&rsquo;associer 0 V à la terre est arbitraire), celle de l&rsquo;origine des phases en mécanique quantique (on peut passer de $\psi(x)$ à $\psi(x)\mathrm{e}^{\mathrm{i}\alpha}$ sans changer la physique), et, en électromagnétisme, la liberté sur le choix de $A$ laissé par la transformation $A \rightarrow A+\nabla \chi$ (où $\chi(\boldsymbol{x})$ est une fonction de la position) qui est sans effet sur $\boldsymbol{B}=\boldsymbol{\nabla} \times \boldsymbol{A}$. On verra que ces trois indéterminations sont en fait liées entre elles. On constate aussi que dans les trois cas, seules des variations de la grandeur indéterminée peuvent faire l&rsquo;objet d&rsquo;observations.</p>
 <p>Pour avoir des définitions propres, on doit lever toute ambiguïté en fixant des jauges.</p>
 <p>De plus, il faut distinguer des choix de jauges identiques en tout point et des choix locaux, susceptibles de variés d&rsquo;un point à l&rsquo;autre.</p>
 <p>Partons du Lagrangien du champ scalaire complexe :</p>
@@ -953,7 +955,7 @@ $$</p>
 </div>
 </div>
 <p>Comme on l&rsquo;a vu, la symétrie $U(1)$ se traduit par la non variation du Lagrangien (et par extension des équations du mouvement) lors de la transformation $\psi(x) \rightarrow \psi(x) \mathrm{e}^{\mathrm{i} \alpha}$. Il s&rsquo;agit là d&rsquo;une <strong>transformation globale</strong> puisqu&rsquo;elle change le champ d&rsquo;une même valeur en tout point de l&rsquo;espace-temps. La théorie est donc dite invariante par transformation $U(1)$ globale.</p>
-<p>Que se passerait-il si on imposait une invariance <strong>locale</strong> par rapport à la phase ? Il faudrait que la transformation $\psi(x) \rightarrow \psi(x) \mathrm{e}^{\mathrm{i} \alpha(x)}$ (où $\alpha(x)$ peut maintenant différer d&rsquo;un point à l&rsquo;autre) soit sans effet sur les équations du mouvement. Cela semble une demande un peu extrême, mais elles se révèle ultra féconde : l&rsquo;électromagnétisme en découle !</p>
+<p>Que se passerait-il si on imposait une invariance <strong>locale</strong> par rapport à la phase ? Il faudrait que la transformation $\psi(x) \rightarrow \psi(x) \mathrm{e}^{\mathrm{i} \alpha(x)}$ (où $\alpha(x)$ peut maintenant différer d&rsquo;un point à l&rsquo;autre) soit sans effet sur les équations du mouvement. Cela semble une demande un peu extrême, mais elles se révèle surprenemment féconde : l&rsquo;électromagnétisme en découle !</p>
 <p>On n&rsquo;est pas embêté par le terme de masse : $m^2\psi^\dagger\psi\rightarrow m^2\psi^\dagger \mathrm{e}^{-\mathrm{i} \alpha(x)} \mathrm{e}^{\mathrm{i} \alpha(x)} \psi = m^2\psi^\dagger\psi $. Par contre, le terme contenant les dérivées pose problème puisque la dérivée agit maintenant sur $\alpha(x)$ :</p>
 <div id="theo">
 <div id="grosseformule">
@@ -1134,7 +1136,7 @@ $$</p>
 <p>Le couplage entre le champ $A^\mu$ et les champs $\psi$ et $\psi^\dagger$ est contenu dans le dernier terme et l&rsquo;importance du couplage est fixée par $q$, la charge électromagnétique.</p>
 <p>On appelle <strong>principe de jauge</strong> la notion selon laquelle un champ de jauge introduit pour assurer une symétrie locale va dicter la forme du couplage, c&rsquo;est-à-dire des interactions, dans la théorie.</p>
 <br>
-<h3 id="canonisation-canonique-du-champ-électromagnétique">Canonisation canonique du champ électromagnétique</h3>
+<h3 id="quantification-canonique-du-champ-électromagnétique">Quantification canonique du champ électromagnétique</h3>
 <p>Le terme de masse du champ massif de spin 1 <a href="../tqc4/#quantification-canonique-dun-champ-%C3%A0-plusieurs-composantes">vu précédemment</a> lui ôtait toute possibilité d&rsquo;invariance de jauge alors que la nature non massive du champ de jauge lui confère cette invariance et lui retire une composante.</p>
 <p>On obtient <i>in fine</i> :</p>
 <div id="theo">
@@ -1154,12 +1156,163 @@ $$</p>
 </div>
 </div>
 <p>Les excitations du champ électromagnétique sont des <strong>photons</strong> qu&rsquo;on peut observer dans deux états de polarisation transverse.</p>
-<p>Ces particules ont un spin $S=1$ et on en trouve deux types : $\hat{a}_{\boldsymbol{p} 1}^{\dagger}|0\rangle$ et $\hat{a}_{\boldsymbol{p} 2}^{\dagger}|0\rangle$.</p>
-<p>Considérons un photon se propageant selon la direction $z$ avec l&rsquo;impulsion $q^\mu=(|\boldsymbol{q}|, 0,0,|\boldsymbol{q}|)$. Dans une base de polarisation circulaire, on peut écrire $\epsilon_{\lambda=\mathrm{R}}^*(q)=-\frac{1}{\sqrt{2}}(0,1, \mathrm{i}, 0)$ (correspondant à $S_z = 1$) et $\epsilon_{\lambda=\mathrm{L}}^*(q)=\frac{1}{\sqrt{2}}(0,1,-\mathrm{i}, 0)$ (correspondant à $S_z = -1$). Il n&rsquo;y a pas de photon avec $S^z = 0$ puisque cela correspondrait à une polarisation longitudinale interdite $\epsilon_{\lambda=3}^*(p)=(0,0,0,1)$.</p>
+<p>Ces particules ont un spin $S=1$ et on en trouve deux types : $\hat{a}_{\boldsymbol{p} 1}^{\dagger}|0\rangle$ et $\hat{a}_{\boldsymbol{p} 2}^{\dagger}|0\rangle.$</p>
+<p>Considérons un photon se propageant selon la direction $z$ avec l&rsquo;impulsion $q^\mu=(|\boldsymbol{q}|, 0,0,|\boldsymbol{q}|)$. Dans une base de polarisation circulaire, on peut écrire $\epsilon_{\lambda=\mathrm{R}}^*(q)=-\frac{1}{\sqrt{2}}(0,1, \mathrm{i}, 0)$ (correspondant à $S_z = 1$) et $\epsilon_{\lambda=\mathrm{L}}^*(q)=\frac{1}{\sqrt{2}}(0,1,-\mathrm{i}, 0)$ (correspondant à $S_z = -1$). Il n&rsquo;y a pas de photon avec $S^z = 0$ puisque cela correspondrait à une polarisation longitudinale interdite $\epsilon_{\lambda=3}^*(p)=(0,0,0,1).$</p>
 <br>
 <h2 id="symétries-discrètes">Symétries discrètes</h2>
 <p>On a rencontré jusque-là des symétries portées par des transformations continues (translations, rotations) représentées par des groupes continus (groupes de Lie). Mais on peut aussi rencontrer des symétries correspondant à des transformations discrètes représentées cette fois-ci par des groupes finis.</p>
 <h3 id="conjugaison-de-charge">Conjugaison de charge</h3>
+<p>On appelle conjugaison de charge la transformation qui change une particule en son antiparticule. C&rsquo;est l&rsquo;opérateur $\text { C }$ qui se charge de cette prouesse. Il ne permute pas seulement la charge d&rsquo;une particule, mais aussi son nombre leptonique, son hypercharge et tout autre &ldquo;nombre de charge&rdquo;. On a alors :</p>
+<div id="def">
+<div id="grosseformule">
+<p>$$
+\mathrm{C}|p\rangle=|\bar{p}\rangle
+$$</p>
+</div>
+</div>
+<p>La charge d&rsquo;une particule $p$ de charge $q$ est mesurée par un opérateur $\hat{Q}$ : $\hat{Q}|p\rangle=q|p\rangle$. Par contre : $\hat{Q}|\bar{p}\rangle=-q|\bar{p}\rangle$. On peut donc écrire $\mathrm{C} \hat{Q}|p\rangle=q \mathrm{C}|p\rangle=q|\bar{p}\rangle$, mais $\hat{Q} \mathrm{C}|p\rangle=\hat{Q}|\bar{p}\rangle=-q|\bar{p}\rangle$, ce qui implique que $\hat{Q} \mathrm{C}=-\mathrm{C} \hat{Q}$, ou de manière équivalente :</p>
+<div id="theo">
+<div id="grosseformule">
+<p>$$
+\mathrm{C}^{-1} \hat{Q} \mathrm{C}=-\hat{Q}
+$$</p>
+</div>
+</div>
+<p>L&rsquo;échange entre particule et antiparticule impose :</p>
+<div id="theo">
+<div id="grosseformule">
+<p>$$
+\mathrm{C}^{-1} \hat{a}_{\boldsymbol{p}} \mathrm{C}=\hat{b}_{\boldsymbol{p}} \quad\quad \mathrm{C}^{-1} \hat{b}_{\boldsymbol{p}}^{\dagger} \mathrm{C}=\hat{a}_{\boldsymbol{p}}^{\dagger}
+$$</p>
+</div>
+</div>
+<p>Et comme un champ scalaire $\hat{\psi}(x)$ peut s&rsquo;écrire $\hat{\psi}(x)=\int_{\boldsymbol{p}}\left(\hat{a}_{\boldsymbol{p}} \mathrm{e}^{-\mathrm{i} p \cdot x}+\hat{b}_{\boldsymbol{p}}^{\dagger} \mathrm{e}^{\mathrm{i} p \cdot x}\right)$, on doit avoir $\mathrm{C}^{-1} \hat{\psi} \mathrm{C}=\hat{\psi}^{\dagger}$ ($\hat{\psi}^{\dagger}=\int_{\boldsymbol{p}}\left(\hat{a}_{\boldsymbol{p}}^{\dagger} \mathrm{e}^{\mathrm{i} p \cdot x}+\hat{b}_{\boldsymbol{p}} \mathrm{e}^{-\mathrm{i} p \cdot x}\right)$).</p>
+<div id="preuve">
+<p>Comme $\mathrm{C}^2=I$, les valeurs propre de $\mathrm{C}$ ne peuvent être que $\pm 1$. La plupart des particules ne sont pas des états propres de $\mathrm{C}$ puisque si elles l&rsquo;étaient, on aurait $\mathrm{C}|p\rangle=|\bar{p}\rangle= \pm|p\rangle$, ce qui impliquerait que $|\bar{p}\rangle$ est le même état que $|p\rangle$ et donc que la particule est sa propre antiparticule. C&rsquo;est vrai pour les particules sans charge quantique.</p>
+<p>Le photon $\gamma$, lui, est un état propre de $\mathrm{C}$ avec la valeur propre $-1$, puisqu&rsquo;en changeant totues les particules en leurs antiparticules, le champ électromagnétique est renversé ($A^\mu \rightarrow-A^\mu$). C&rsquo;est aussi le cas pour le pion neutre $\pi^0$, mais avec la valeur propre $+1$. Cela explique pourquoi la réaction $\pi^0 \rightarrow \gamma+\gamma$ est autorisée alors que $\pi^0 \rightarrow \gamma+\gamma+\gamma$ est impossible.</p>
+</div>
+<br>
+<h3 id="parité">Parité</h3>
+<p>Une symétrie miroir inverse la direction de l&rsquo;axe perpendiculaire au miroir et conserve les autres. Si on fait suivre cette transformation d&rsquo;une rotation à 180° autour de l&rsquo;axe perpendiculaire au miroir, on aura inversé toutes les directions spatiales, opérant ainsi une <strong>inversion spatiale</strong> ($\boldsymbol{x}\rightarrow-\boldsymbol{x}$). Cette transformation, appelée <strong>parité</strong>, est prise en charge par l&rsquo;opérateur $\mathrm{P}$. L&rsquo;opérateur position va donc anticommuter avec l&rsquo;opérateur parité :</p>
+<div id="def">
+<div id="grosseformule">
+<p>$$
+\hat{\boldsymbol{x}} \mathrm{P}=-\mathrm{P} \hat{\boldsymbol{x}}
+$$</p>
+</div>
+</div>
+<p>Ou de manière équivalente :</p>
+<div id="def">
+<div id="grosseformule">
+<p>$$
+\mathrm{P}^{-1} \hat{\boldsymbol{x}} \mathrm{P}=-\hat{\boldsymbol{x}}
+$$</p>
+</div>
+</div>
+<p>L&rsquo;effet sur les coordonnées de l&rsquo;impulsion est le même ($p \rightarrow-\boldsymbol{p}$) et donc :</p>
+<div id="def">
+<div id="grosseformule">
+<p>$$
+\mathrm{P}^{-1} \hat{\boldsymbol{p}} \mathrm{P}=-\hat{\boldsymbol{p}}
+$$</p>
+</div>
+</div>
+<p>L&rsquo;opérateur $\mathrm{P}$ est hermitien et son propre inverse ($\mathrm{P}^2=I$), donc $\mathrm{P}$ est aussi un opérateur unitaire.</p>
+<p>L&rsquo;opérateur de parité est sans effet sur les scalaires mais renverse les vecteurs. Mais il existe une classe spéciale de scalaire et de vecteurs (même si pas réellement des scalaires et des vecteurs mais plutôt des ojets composites) pour lesquels ce n&rsquo;est pas vrai : les <strong>pseudoscalaires</strong> formés par un produit mixte et les <strong>pseudovecteurs</strong> (aussi appelés vecteurs axiaux) formés par un produit vectoriel entre vecteurs ordinaires (aussi appelés vecteurs polaires).</p>
+<p>Le champ électrique $\boldsymbol{E}$ agit comme un vecteur ordianaire (polaire) alors que le champ magnitique et le moment cinétique $\boldsymbol{L}$ sont des pesudovecteurs (vecteurs axiaux).</p>
+<div id="def">
+<div id="grosseformule">
+<p>$$
+\begin{aligned}
+\mathrm{P}(\text { scalaire })&amp;=\text { scalaire }\\
+\mathrm{P}(\text { pseudoscalaire })&amp;=-\text { pseudoscalaire }\\
+\mathrm{P}(\text {\bf vecteur })&amp;=- \text {\bf vecteur }\\
+\mathrm{P}(\text {\bf pseudovecteur })&amp;= \text {\bf pseudovecteur }
+\end{aligned}
+$$</p>
+</div>
+</div>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:450px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+<img src="/tqcparite.png" style="box-shadow:none;background:none;">
+</div>
+<p>Comme $\mathrm{P}^2 = I$, sous la multiplication, le groupe ${I, P}$ est isomorphe à $\mathbb{Z}_2$, le groupe cyclique d&rsquo;ordre 2.</p>
+<div id="grosseformule">
+<p>$$
+\begin{array}{c|cc}
+&amp; I &amp; \mathrm{P} \\
+\hline I &amp; I &amp; \mathrm{P} \\
+\mathrm{P} &amp; \mathrm{P} &amp; I
+\end{array}
+$$</p>
+</div>
+<p>Comme pour $\mathrm{C}$, cela signifie que les valeurs propres de $\mathrm{P}$ sont $\pm1$. Les scalaires et pseudovecteurs ont une valeur de parité de $+1$ alors que pseudoscalaires et vecteurs ont une parité de $-1$.</p>
+<p>Le photon étant une excitation d&rsquo;un champ vectoriel non massique, il possède une parité intrinsèque de $-1$. Le pion est, lui, décrit par un champ pseudoscalaire et a donc aussi une parité de $-1$. On verra plus tard que la parité d&rsquo;un fermion est opposée à celle de son antiparticule.</p>
+<p>La complication avec l&rsquo;opérateur de parité est qu&rsquo;il agit à la fois sur les coordonnées du champ et sur la nature même du champ.</p>
+<div id="preuve">
+<p>Prenons le cas d&rsquo;un champ scalaire. La parité va faire en sorte que $\phi(t, \boldsymbol{x}) \rightarrow \phi(t,-\boldsymbol{x})$. Étudions maintenant son action sur les opérateurs de création et d&rsquo;annihilation :</p>
+<div id="grosseformule">
+<p>$$
+\mathrm{P}^{-1} \hat{\phi}(t, \boldsymbol{x}) \mathrm{P}=\hat{\phi}(t,-\boldsymbol{x})=\int_{\boldsymbol{p}} \hat{a}_{\boldsymbol{p}} \mathrm{e}^{-\mathrm{i}(E t+\boldsymbol{p} \cdot \boldsymbol{x})}+\hat{a}_{\boldsymbol{p}}^{\dagger} \mathrm{e}^{\mathrm{i}(E t+\boldsymbol{p} \cdot \boldsymbol{x})}
+$$</p>
+</div>
+<p>C&rsquo;est possible si $\mathrm{P}^{-1} \hat{a}_{\boldsymbol{p}} \mathrm{P}=\hat{a}_{-{\boldsymbol{p}}}$ et $\mathrm{P}^{-1} \hat{a}_{\boldsymbol{p}}^{\dagger} \mathrm{P}=\hat{a}_{-\boldsymbol{p}}^{\dagger}$. L&rsquo;opérateur de parité renverse simplement les impulsions pour les opérateurs de création et d&rsquo;annihilation.</p>
+</div>
+<br>
+<h3 id="renversement-du-temps">Renversement du temps</h3>
+<p>L&rsquo;opérateur renversement du temps $\mathrm{T}$ transforme un champ scalaire $\phi(t, \boldsymbol{x})$ en $\phi(-t, \boldsymbol{x})$. Elle laisse donc le vecteur position tranquille :</p>
+<div id="def">
+<div id="grosseformule">
+<p>$$
+\mathrm{T}^{-1} \hat{\boldsymbol{x}} \mathrm{~T}=\hat{\boldsymbol{x}}
+$$</p>
+</div>
+</div>
+<p>Mais elle renverse l&rsquo;impulsion :</p>
+<div id="def">
+<div id="grosseformule">
+<p>$$
+\mathrm{T}^{-1} \hat{\boldsymbol{p}} \mathrm{~T}=-\hat{\boldsymbol{p}}
+$$</p>
+</div>
+</div>
+<p>La seule possibilité pour préserver la relation de commutation $\left[\hat{x}, \hat{p}_x\right]=\mathrm{i}$ est que $\mathrm{T}$ soit antiunitaire puisqu&rsquo;il faut que $\mathrm{T}^{-1} \mathrm{i} \mathrm{~T}=-\mathrm{i}$.</p>
+<div id="preuve">
+<p>Pour un opérateur antiunitaire, $\mathrm{T}^2=-I$. On peut noter aussi que $\mathrm{T}^{-1} \mathrm{i} \mathrm{~T}=-\mathrm{i}$ équivaut à $\mathrm{i} T=-\mathrm{Ti}$ ce qui signifie que $\mathrm{i}$ anticommute avec $\mathrm{T}$.</p>
+</div>
+<p>L&rsquo;opérateur antiunitaire archétypal est $\mathrm{K}$, l&rsquo;opérateur de conjugaison complexe. Et on peut construire un opérateur antiunitaire général par le produit d&rsquo;un opérateur unitaire $\mathrm{U}$ et de $\mathrm{K}$. Écrivons ainsi $\mathrm{T}=\mathrm{UK}$, qui équivaut (en multipliant les deux membres à droite par $\mathrm{K}$) à $\mathrm{U}=\mathrm{T} \mathrm{K}$.</p>
+<div id="preuve">
+<p>Pour des particules sans spin, on peut choisir $\mathrm{U}=I$ et $\mathrm{U}=\mathrm{K}$. Ce n&rsquo;est pas surprenant si on regarde l&rsquo;effet de la conjugaison complexe sur l&rsquo;équation de Schrödinger :</p>
+<div id="grosseformule">
+<p>$$
+\begin{gathered}
+\hat{H} \psi=\mathrm{i} \frac{\partial \psi}{\partial t} \\
+\hat{H} \psi^*=-\mathrm{i} \frac{\partial \psi^*}{\partial t}=\mathrm{i} \frac{\partial \psi^*}{\partial(-t)}
+\end{gathered}
+$$</p>
+</div>
+<p>La combinaison d&rsquo;un renversement du temps et d&rsquo;une conjugaison complexe laisse invariante l&rsquo;équation de Schrödinger. Ça semble bien montrer que $\mathrm{K}$ et $\mathrm{T}$ sont une seule et même chose.</p>
+</div>
+<br>
+<div id="preuve">
+<p>Pour des particules avec spin, les choses se compliquent puisque le moment cinétique est renversé lorsqu&rsquo;on change le sens d&rsquo;écoulement du temps. Et donc l&rsquo;action de $\mathrm{T}$ sur l&rsquo;opérateur de spin $\hat{\boldsymbol{S}}$ s&rsquo;écrit :</p>
+<div id="grosseformule">
+<p>$$
+\mathrm{T}^{-1} \hat{\boldsymbol{S}} \mathrm{~T}=-\hat{\boldsymbol{S}}
+$$</p>
+</div>
+<p>En se rappelant que seul la matrice de Pauli $\sigma_y$ a des composantes complexes, l&rsquo;action de l&rsquo;opérateur de conjugaison complexe sur les opérateurs de spin est plus tordue :</p>
+<div id="grosseformule">
+<p>$$
+\mathrm{K}^{-1} \hat{S}_x \mathrm{~K}=\hat{S}_x, \quad \mathrm{~K}^{-1} \hat{S}_y \mathrm{~K}=-\hat{S}_y, \quad \mathrm{~K}^{-1} \hat{S}_z \mathrm{~K}=\hat{S}_z
+$$</p>
+</div>
+<p>Une forme appropriée pour $\mathrm{U}$ serait donc $\mathrm{U}=\exp \left(-\mathrm{i} \pi \hat{S}_y\right)$ de telle sorte que :</p>
+<div id="grosseformule">
+<p>$$
+\mathrm{T}=\exp \left(-\mathrm{i} \pi \hat{S}_y\right) \mathrm{K}
+$$</p>
+</div>
+</div>
 <br>
 <br>
 <p style="font-size:1.5em;text-align:center;font-weight:bold;"><a href="../tqc5">Chapitre suivant</a></p>
@@ -1704,16 +1857,16 @@ $$</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1732837994"></script>
-    <script src="/js/perfect-scrollbar.min.js?1732837994"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1732837994"></script>
-    <script src="/js/jquery.sticky.js?1732837994"></script>
-    <script src="/js/featherlight.min.js?1732837994"></script>
-    <script src="/js/highlight.pack.js?1732837994"></script>
+    <script src="/js/clipboard.min.js?1732980234"></script>
+    <script src="/js/perfect-scrollbar.min.js?1732980234"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1732980234"></script>
+    <script src="/js/jquery.sticky.js?1732980234"></script>
+    <script src="/js/featherlight.min.js?1732980234"></script>
+    <script src="/js/highlight.pack.js?1732980234"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1732837994"></script>
-    <script src="/js/learn.js?1732837994"></script>
-    <script src="/js/hugo-learn.js?1732837994"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1732980234"></script>
+    <script src="/js/learn.js?1732980234"></script>
+    <script src="/js/hugo-learn.js?1732980234"></script>
     
     
 
