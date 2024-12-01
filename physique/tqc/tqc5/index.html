@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1732980234" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1732980234" rel="stylesheet">
-    <link href="/css/hybrid.css?1732980234" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1732980234" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1732980234" rel="stylesheet">
-    <link href="/css/auto-complete.css?1732980234" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1732980234" rel="stylesheet">
-    <link href="/css/theme.css?1732980234" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1732980234" rel="stylesheet">
+    <link href="/css/nucleus.css?1733084399" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1733084399" rel="stylesheet">
+    <link href="/css/hybrid.css?1733084399" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1733084399" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1733084399" rel="stylesheet">
+    <link href="/css/auto-complete.css?1733084399" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1733084399" rel="stylesheet">
+    <link href="/css/theme.css?1733084399" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1733084399" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1732980234" rel="stylesheet">
+    <link href="/css/theme-blue.css?1733084399" rel="stylesheet">
     
-    <link href="/css/foo.css?1732980234" rel="stylesheet"><link href="/css/bar.css?1732980234" rel="stylesheet">
+    <link href="/css/foo.css?1733084399" rel="stylesheet"><link href="/css/bar.css?1733084399" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1732980234"></script>
+    <script src="/js/jquery-3.3.1.min.js?1733084399"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1732980234"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1732980234"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1733084399"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1733084399"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1732980234"></script>
+<script type="text/javascript" src="/js/search.js?1733084399"></script>
 
     
   </div>
@@ -1226,8 +1226,8 @@ $$</p>
 \begin{aligned}
 \mathrm{P}(\text { scalaire })&amp;=\text { scalaire }\\
 \mathrm{P}(\text { pseudoscalaire })&amp;=-\text { pseudoscalaire }\\
-\mathrm{P}(\text {\bf vecteur })&amp;=- \text {\bf vecteur }\\
-\mathrm{P}(\text {\bf pseudovecteur })&amp;= \text {\bf pseudovecteur }
+\mathrm{P}(\textbf{ vecteur })&amp;=- \text {\bf vecteur }\\
+\mathrm{P}(\textbf{ pseudovecteur })&amp;= \text {\bf pseudovecteur }
 \end{aligned}
 $$</p>
 </div>
@@ -1290,7 +1290,7 @@ $$</p>
 \end{gathered}
 $$</p>
 </div>
-<p>La combinaison d&rsquo;un renversement du temps et d&rsquo;une conjugaison complexe laisse invariante l&rsquo;équation de Schrödinger. Ça semble bien montrer que $\mathrm{K}$ et $\mathrm{T}$ sont une seule et même chose.</p>
+<p>La combinaison d&rsquo;un renversement du temps et d&rsquo;une conjugaison complexe laisse invariante l&rsquo;équation de Schrödinger. Ça semble bien montrer que dans ce cas, $\mathrm{K}$ et $\mathrm{T}$ sont une seule et même transformation.</p>
 </div>
 <br>
 <div id="preuve">
@@ -1306,12 +1306,20 @@ $$</p>
 \mathrm{K}^{-1} \hat{S}_x \mathrm{~K}=\hat{S}_x, \quad \mathrm{~K}^{-1} \hat{S}_y \mathrm{~K}=-\hat{S}_y, \quad \mathrm{~K}^{-1} \hat{S}_z \mathrm{~K}=\hat{S}_z
 $$</p>
 </div>
-<p>Une forme appropriée pour $\mathrm{U}$ serait donc $\mathrm{U}=\exp \left(-\mathrm{i} \pi \hat{S}_y\right)$ de telle sorte que :</p>
+<p>Une forme appropriée pour $\mathrm{U}$ serait donc $\mathrm{U}=\exp \left(-\mathrm{i} \pi \hat{S}_y\right)$ correspondant à une rotation de π autour de la direction $y$  de telle sorte qu&rsquo;en combinant $\mathrm{U}$ et $\mathrm{K}$, on renverse bien les trois composantes du spin. On a ainsi :</p>
 <div id="grosseformule">
 <p>$$
 \mathrm{T}=\exp \left(-\mathrm{i} \pi \hat{S}_y\right) \mathrm{K}
 $$</p>
 </div>
+<p>On obtient alors :</p>
+<div id="grosseformule">
+<p>$$
+\mathrm{T}^2=\mathrm{U}\mathrm{K}\mathrm{U}\mathrm{K}=\exp \left(- \mathrm{i} \pi \hat{S}_y\right)\exp \left(+\mathrm{i} \pi (-\hat{S}_y)\right)=\exp \left(- 2\mathrm{i} \pi \hat{S}_y\right)=(-1)^{2S}
+$$</p>
+</div>
+<p>Pour un électron unique, on a $S=\frac{1}{2}$ et donc $\mathrm{T}^2=-1$. Cela reste le cas si on a un nombre impair d&rsquo;électrons, mais si le nombre est pair, alors $\mathrm{T}^2=1$.</p>
+<p>Plaçons-nous dans le cas où le nombre d&rsquo;électrons est impair et supposons que l&rsquo;Hamiltonien $\mathcal{H}$ du système est invariant par rapport à une inversion temporelle ($\mathcal{H}$ commute avec $\mathrm{T}$). Les états $|\psi\rangle$ et $\mathrm{T}|\psi\rangle$ ont alors la même énergie. Mais correspondent-ils au même état ? S&rsquo;ils l&rsquo;étaient, on aurait $\mathrm{T}|\psi\rangle=\alpha|\psi\rangle$ où $\alpha$ est un nombre complexe. Mais alors, $\mathrm{T}^2|\psi\rangle=\mathrm{T} \alpha|\psi\rangle=\alpha^* \mathrm{~T}|\psi\rangle=|\alpha|^2|\psi\rangle$ et comme $\mathrm{T}^2=-1$, on aboutit à une contradiction $|\alpha|^2=-1$. Conclusion, $|\psi\rangle$ et $\mathrm{T}|\psi\rangle$ sont linéairement indépendants et sont appelés <strong>doublets de Kramers</strong>. On vient ainsi de déduire que les niveaux d&rsquo;énergie d&rsquo;un système temporellement symétrique avec un nombre impair d&rsquo;électrons sont $n$-fois dégénérés avec un $n$ pair. C&rsquo;est le <strong>théorème de Kramers</strong>. Pour séparer ces paires, il faut introduire une perturbation qui brise la symétrie temporelle, comme un champ magnétique.</p>
 </div>
 <br>
 <br>
@@ -1857,16 +1865,16 @@ $$</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1732980234"></script>
-    <script src="/js/perfect-scrollbar.min.js?1732980234"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1732980234"></script>
-    <script src="/js/jquery.sticky.js?1732980234"></script>
-    <script src="/js/featherlight.min.js?1732980234"></script>
-    <script src="/js/highlight.pack.js?1732980234"></script>
+    <script src="/js/clipboard.min.js?1733084399"></script>
+    <script src="/js/perfect-scrollbar.min.js?1733084399"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1733084399"></script>
+    <script src="/js/jquery.sticky.js?1733084399"></script>
+    <script src="/js/featherlight.min.js?1733084399"></script>
+    <script src="/js/highlight.pack.js?1733084399"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1732980234"></script>
-    <script src="/js/learn.js?1732980234"></script>
-    <script src="/js/hugo-learn.js?1732980234"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1733084399"></script>
+    <script src="/js/learn.js?1733084399"></script>
+    <script src="/js/hugo-learn.js?1733084399"></script>
     
     
 
