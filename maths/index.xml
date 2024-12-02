@@ -9,6 +9,13 @@
     <lastBuildDate>Sat, 06 Mar 2021 14:20:50 +0100</lastBuildDate>
     <atom:link href="https://sciencesilencieuse.github.io/maths/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Inférences bayésiennes</title>
+      <link>https://sciencesilencieuse.github.io/maths/bayes/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/maths/bayes/</guid>
+      <description>Inférences bayésiennes L&amp;rsquo;intelligence artificielle vise à simuler l&amp;rsquo;intelligence humaine. Mais la compréhension du fonctionnement de notre cerveau en est elle-même encore qu&amp;rsquo;à ses prémices.&#xA;Tel un programme informatique, le cerveau produit de nouvelles informations à partir de l&amp;rsquo;information qu&amp;rsquo;il reçoit (les données). Un changement de paradigme a eu lieu récemment dans la communauté scentifique concernant la modalité même de ce traitement de l&amp;rsquo;information par le cerveau. Stanislas Dehaene, un psychologue spécialisé en neuropsychologie, résume cette nouvelle façon d&amp;rsquo;apréhender l&amp;rsquo;information dans ses leçons au Collège de France :</description>
+    </item>
+    <item>
       <title>Arithmétique</title>
       <link>https://sciencesilencieuse.github.io/maths/arithmetique/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
