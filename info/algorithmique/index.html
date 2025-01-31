@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1738276109" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1738276109" rel="stylesheet">
-    <link href="/css/hybrid.css?1738276109" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1738276109" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1738276109" rel="stylesheet">
-    <link href="/css/auto-complete.css?1738276109" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1738276109" rel="stylesheet">
-    <link href="/css/theme.css?1738276109" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1738276109" rel="stylesheet">
+    <link href="/css/nucleus.css?1738281715" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1738281715" rel="stylesheet">
+    <link href="/css/hybrid.css?1738281715" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1738281715" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1738281715" rel="stylesheet">
+    <link href="/css/auto-complete.css?1738281715" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1738281715" rel="stylesheet">
+    <link href="/css/theme.css?1738281715" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1738281715" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1738276109" rel="stylesheet">
+    <link href="/css/theme-blue.css?1738281715" rel="stylesheet">
     
-    <link href="/css/foo.css?1738276109" rel="stylesheet"><link href="/css/bar.css?1738276109" rel="stylesheet">
+    <link href="/css/foo.css?1738281715" rel="stylesheet"><link href="/css/bar.css?1738281715" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1738276109"></script>
+    <script src="/js/jquery-3.3.1.min.js?1738281715"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1738276109"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1738276109"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1738281715"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1738281715"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1738276109"></script>
+<script type="text/javascript" src="/js/search.js?1738281715"></script>
 
     
   </div>
@@ -855,7 +855,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <li>
       <ul>
         <li><a href="#généralités">Généralités</a></li>
-        <li><a href="#quelques-algorithmes">Quelques algorithmes</a></li>
+        <li><a href="#quelques-algorithmes-importants">Quelques algorithmes importants</a></li>
       </ul>
     </li>
   </ul>
@@ -909,7 +909,36 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     </div>
 
 </div>
-<br>
+<p>La notion de complexité permet de classer des algorithmes réalisant la même tâche comme dans la vidéo suivante.</p>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/-73jokmqmd0?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+</div>
+<p>La notion est aussi au centre d&rsquo;une des plus importantes conjectures des mathématiques : $\mathrm{P}\stackrel{?}{=}\mathrm{NP}$.</p>
+<p>Grossièrement, la conjecture revient à se demander si l&rsquo;ensemble $\mathrm{NP}$ des problèmes dont les solutions sont facilement vérifiables (en temps polynomial) est le même que l&rsquo;ensemble $\mathrm{P}$ des problèmes faciles (qu&rsquo;on peut résoudre en temps polynomial).</p>
+<p>Prenons l&rsquo;exemple classique du voyageur de commerce.<br>
+Le problème (dans sa version décisionnelle) demande s&rsquo;il existe un trajet de longueur inférieure à une valeur $K$ passant une et une seule fois par un ensemble de villes. Pour valider une solution, il suffit donc de vérifier que chaque ville est bien là une et une seule fois, calculer la distance et la comparer à $K$. Cela se fait bien sûr en temps polynomial rendant le problème $\mathrm{NP}$.<br>
+Par contre, aucun algorithme connu à ce jour ne sait aboutir à la solution en un temps mieux qu&rsquo;exponentiel&hellip;<br>
+Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial existe bel et bien.</p>
+<p>La grande majorité des chercheurs se rangent dans le camp pessimiste $\mathrm{P≠NP}$.</p>
+<p>Le meilleur algorithme (non quantique) permettant de résoudre le problème du voyageur de commerce utilise la programmation dynamique qui est présentée dans la vidéo suivante.</p>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/F48AbiZGds0?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+</div>
+<p>Un algorithme de programmation dynamique peut souvent sembler de prime abord mystérieux voire abscons, surtout dans sa forme non-récursive. Mais c&rsquo;est rare que la forme itérative d&rsquo;un algorithme vole la vedette à sa forme récursive tant la récursivité sait insuffler un air de magie aux algorithmes en permettant à de tout petits codes de réaliser des tâches étonnamment complexes.</p>
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
 
@@ -922,13 +951,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 </div>
 <br>
 <hr>
-<h3 id="quelques-algorithmes">Quelques algorithmes</h3>
-<br>
-<details>
-<summary>
-<big><a>Présentation et détails de quelques algorithmes importants&nbsp;:</a></big>
-</summary>
-<blockquote>
+<h3 id="quelques-algorithmes-importants">Quelques algorithmes importants</h3>
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
 
@@ -939,7 +962,79 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     </div>
 
 </div>
-<br>
+<p>Un code Python possible pour cette variante :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> random <span style="color:#f92672">import</span> randint
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">partition</span>(L, g, d):
+</span></span><span style="display:flex;"><span>    p <span style="color:#f92672">=</span> L[g]
+</span></span><span style="display:flex;"><span>    i <span style="color:#f92672">=</span> g<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(g<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,d<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> L[j] <span style="color:#f92672">&lt;</span> p:
+</span></span><span style="display:flex;"><span>            permute(L,i,j)
+</span></span><span style="display:flex;"><span>            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    permute(L,g,i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tri_rapide_gd</span>(L, g, d):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> g <span style="color:#f92672">&lt;</span> d: 
+</span></span><span style="display:flex;"><span>        pivot <span style="color:#f92672">=</span> randint(g,d)
+</span></span><span style="display:flex;"><span>        permute(L,pivot,g)
+</span></span><span style="display:flex;"><span>        pivot <span style="color:#f92672">=</span> partition(L, g, d)
+</span></span><span style="display:flex;"><span>        tri_rapide(L, g, pivot<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        tri_rapide(L, pivot<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, d)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> L
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tri_rapide</span>(L):
+</span></span><span style="display:flex;"><span>    g <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    d <span style="color:#f92672">=</span> len(L)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    tri_rapide_gd(L, g, d)
+</span></span></code></pre></div><p>Une version danse hongroise de Quicksort qui implémente une version plus classique de l&rsquo;algorithme (sans hasard) :</p>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ywWBy6J5gz8?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+</div>
+<p>Dans cette version, le premier élément est systématiquement choisi comme pivot et la partition marche un peu différemment : le chapeau rouge, élément comparé au pivot, est donné au voisin le plus proche du pivot et quand le pivot récupère le chapeau rouge, il se trouve à la bonne place.</p>
+<p>Un code Python possible pour cette variante :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">partition</span>(L):
+</span></span><span style="display:flex;"><span>    p <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>         <span style="color:#75715e"># pivot (chapeau noir)</span>
+</span></span><span style="display:flex;"><span>    i <span style="color:#f92672">=</span> len(L)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>  <span style="color:#75715e"># chapeau rouge</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">!=</span> p:
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (L[p]<span style="color:#f92672">-</span>L[i])<span style="color:#f92672">*</span>(p<span style="color:#f92672">-</span>i) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        L[p],L[i] <span style="color:#f92672">=</span> L[i],L[p]
+</span></span><span style="display:flex;"><span>        p,i <span style="color:#f92672">=</span> i,p
+</span></span><span style="display:flex;"><span>      i <span style="color:#f92672">-=</span> (i<span style="color:#f92672">-</span>p)<span style="color:#f92672">//</span>abs(i<span style="color:#f92672">-</span>p)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> p
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">trirapide</span>(L):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(L) <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> L
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>      p <span style="color:#f92672">=</span> partition(L)
+</span></span><span style="display:flex;"><span>      L[:p] <span style="color:#f92672">=</span> trirapide(L[:p])
+</span></span><span style="display:flex;"><span>      L[p<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:] <span style="color:#f92672">=</span> trirapide(L[p<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:])
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> L
+</span></span></code></pre></div><p>Les algorithmes gloutons sont très facile à comprendre et à implémenter. Si on devait leur trouver un défaut, c&rsquo;est que leur correction est généralement pas si simple à démontrer.</p>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/yrOj8XvroIE?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+</div>
+<p>Suivent deux algorithmes gloutons très ressemblants qui résolvent des problèmes d&rsquo;optimisation sur des graphes :</p>
+<ul>
+<li>Dijkstra cherche le plus court chemin entre deux nœuds,</li>
+<li>Prim construit l&rsquo;arbre couvrant de poids minimal.</li>
+</ul>
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
 
@@ -961,18 +1056,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     </div>
 
 </div>
-<br>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/yrOj8XvroIE?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<br>
+<p>La suite de Fibonacci est un peu la tarte à la crème du mathématicien de série télévisée avec ses spirales dans les coquillages&hellip; Mais c&rsquo;est bien cette fameuse suite qui montre sa tête là où on ne l&rsquo;attendait pas dans cette vidéo sur la complexité de l&rsquo;algorithme d&rsquo;Euclide.</p>
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
 
@@ -983,18 +1067,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     </div>
 
 </div>
-<br>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/-73jokmqmd0?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<br>
+<p>Polyominos et Sudoku ont le droit à leur algorithme au nom aussi succinct que sibyllin : X.</p>
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
 
@@ -1005,8 +1078,6 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     </div>
 
 </div>
-</blockquote>
-</details>
 
 
 <footer class="footline">
@@ -1566,16 +1637,16 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1738276109"></script>
-    <script src="/js/perfect-scrollbar.min.js?1738276109"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1738276109"></script>
-    <script src="/js/jquery.sticky.js?1738276109"></script>
-    <script src="/js/featherlight.min.js?1738276109"></script>
-    <script src="/js/highlight.pack.js?1738276109"></script>
+    <script src="/js/clipboard.min.js?1738281715"></script>
+    <script src="/js/perfect-scrollbar.min.js?1738281715"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1738281715"></script>
+    <script src="/js/jquery.sticky.js?1738281715"></script>
+    <script src="/js/featherlight.min.js?1738281715"></script>
+    <script src="/js/highlight.pack.js?1738281715"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1738276109"></script>
-    <script src="/js/learn.js?1738276109"></script>
-    <script src="/js/hugo-learn.js?1738276109"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1738281715"></script>
+    <script src="/js/learn.js?1738281715"></script>
+    <script src="/js/hugo-learn.js?1738281715"></script>
     
     
 

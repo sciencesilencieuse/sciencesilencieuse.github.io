@@ -13,7 +13,7 @@
       <link>https://sciencesilencieuse.github.io/info/algorithmique/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/info/algorithmique/</guid>
-      <description> Algorithmique Généralités Quelques algorithmes Présentation et détails de quelques algorithmes importants&amp;nbsp;: </description>
+      <description>Algorithmique Généralités La notion de complexité permet de classer des algorithmes réalisant la même tâche comme dans la vidéo suivante.&#xA;La notion est aussi au centre d&amp;rsquo;une des plus importantes conjectures des mathématiques : $\mathrm{P}\stackrel{?}{=}\mathrm{NP}$.&#xA;Grossièrement, la conjecture revient à se demander si l&amp;rsquo;ensemble $\mathrm{NP}$ des problèmes dont les solutions sont facilement vérifiables (en temps polynomial) est le même que l&amp;rsquo;ensemble $\mathrm{P}$ des problèmes faciles (qu&amp;rsquo;on peut résoudre en temps polynomial).</description>
     </item>
     <item>
       <title>Calcul des propositions</title>
