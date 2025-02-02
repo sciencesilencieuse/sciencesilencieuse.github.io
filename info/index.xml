@@ -13,7 +13,7 @@
       <link>https://sciencesilencieuse.github.io/info/algorithmique/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/info/algorithmique/</guid>
-      <description>Algorithmique Généralités La notion de complexité permet de classer des algorithmes réalisant la même tâche comme dans la vidéo suivante. C&amp;rsquo;est finalement une sorte d&amp;rsquo;échelle de raffinement ; descendre d&amp;rsquo;un barreau la complexité temporelle ou spatiale demande le plus souvent de pousser la réflexion plus loin voire de repenser entièrement le problème. Et c&amp;rsquo;est ainsi qu&amp;rsquo;une recherche de doublons dans une liste se transforme en la chasse de cycles sur un graphe dans l&amp;rsquo;ultime mouture pour atteindre le Graal ($O(n)$ en temps et $O(1)$ en espace sans mutation).</description>
+      <description>Algorithmique Généralités La notion de complexité permet de classer des algorithmes réalisant la même tâche comme dans la vidéo suivante. C&amp;rsquo;est finalement une sorte d&amp;rsquo;échelle de raffinement ; descendre d&amp;rsquo;un barreau la complexité temporelle ou spatiale demande le plus souvent de pousser la réflexion plus loin voire de repenser entièrement le problème. Et c&amp;rsquo;est ainsi qu&amp;rsquo;une recherche de doublons dans une liste se transforme en la chasse de cycles sur un graphe dans l&amp;rsquo;ultime mouture pour atteindre le Graal ($\mathcal{O}(n)$ en temps et $\mathcal{O}(1)$ en espace sans mutation).</description>
     </item>
     <item>
       <title>Ordinateur</title>
