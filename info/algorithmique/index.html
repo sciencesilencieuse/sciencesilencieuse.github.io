@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1738570891" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1738570891" rel="stylesheet">
-    <link href="/css/hybrid.css?1738570891" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1738570891" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1738570891" rel="stylesheet">
-    <link href="/css/auto-complete.css?1738570891" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1738570891" rel="stylesheet">
-    <link href="/css/theme.css?1738570891" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1738570891" rel="stylesheet">
+    <link href="/css/nucleus.css?1738706043" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1738706043" rel="stylesheet">
+    <link href="/css/hybrid.css?1738706043" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1738706043" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1738706043" rel="stylesheet">
+    <link href="/css/auto-complete.css?1738706043" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1738706043" rel="stylesheet">
+    <link href="/css/theme.css?1738706043" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1738706043" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1738570891" rel="stylesheet">
+    <link href="/css/theme-blue.css?1738706043" rel="stylesheet">
     
-    <link href="/css/foo.css?1738570891" rel="stylesheet"><link href="/css/bar.css?1738570891" rel="stylesheet">
+    <link href="/css/foo.css?1738706043" rel="stylesheet"><link href="/css/bar.css?1738706043" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1738570891"></script>
+    <script src="/js/jquery-3.3.1.min.js?1738706043"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1738570891"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1738570891"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1738706043"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1738706043"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1738570891"></script>
+<script type="text/javascript" src="/js/search.js?1738706043"></script>
 
     
   </div>
@@ -1199,6 +1199,43 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> Vus[sommet]:
 </span></span><span style="display:flex;"><span>            DFS(G,sommet,Vus,Sommets)
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> Sommets
+</span></span></code></pre></div><p>On peut voir Dijkstra comme un parcours de graphe où la structure de donnée n&rsquo;est plus une file ou une pile mais une file de priorité (qui donne en $\mathcal{O}(1)$ l&rsquo;élément stocké de plus grand score).</p>
+<p>Pour implémenter une file de priorité, on peut utiliser un tas (heap), arbre binaire presque ordonné dont la racine est l&rsquo;élément prioritaire.</p>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/JRzTS8zPwSE?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+</div>
+<p>Une implémentation possible de Dijkstra :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> heapq <span style="color:#75715e"># heapq est un tas</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">Dijkstra_tas</span>(G, depart):
+</span></span><span style="display:flex;"><span>    Scores <span style="color:#f92672">=</span> {sommet: float(<span style="color:#e6db74">&#39;infinity&#39;</span>) <span style="color:#66d9ef">for</span> sommet <span style="color:#f92672">in</span> G}
+</span></span><span style="display:flex;"><span>    Preds <span style="color:#f92672">=</span> {sommet: <span style="color:#66d9ef">None</span> <span style="color:#66d9ef">for</span> sommet <span style="color:#f92672">in</span> G}
+</span></span><span style="display:flex;"><span>    Scores[depart] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    tas <span style="color:#f92672">=</span> [(<span style="color:#ae81ff">0</span>, depart)]
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># liste de tuples contenant le score et le sommet associé</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># le score correspond alors à la priorité du tas</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> tas:
+</span></span><span style="display:flex;"><span>        score_actuel, sommet_actuel <span style="color:#f92672">=</span> heapq<span style="color:#f92672">.</span>heappop(tas)
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># on retire le sommet prioritaire du tas</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> score_actuel <span style="color:#f92672">==</span> Scores[sommet_actuel]:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># permet de vérifier que le sommet correspond bien à la dernière mise-à-jour        </span>
+</span></span><span style="display:flex;"><span>            score_voisins <span style="color:#f92672">=</span> G[sommet_actuel]
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> voisin <span style="color:#f92672">in</span> score_voisins:
+</span></span><span style="display:flex;"><span>                score <span style="color:#f92672">=</span> score_actuel <span style="color:#f92672">+</span> score_voisins[voisin]
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> score <span style="color:#f92672">&lt;</span> Scores[voisin]:
+</span></span><span style="display:flex;"><span>                    Scores[voisin] <span style="color:#f92672">=</span> score
+</span></span><span style="display:flex;"><span>                    Preds[voisin] <span style="color:#f92672">=</span> sommet_actuel
+</span></span><span style="display:flex;"><span>                    heapq<span style="color:#f92672">.</span>heappush(tas, (score, voisin))
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e"># on ajoute le score et le sommet au tas</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e"># le même sommet peut être ajouté plusieurs fois avec des scores différents</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> Preds,Scores
 </span></span></code></pre></div><br>
 <h4 id="algorithme-deuclide">Algorithme d&rsquo;Euclide</h4>
 <p>Une des plus vieux algorithmes ($\approx$-300).</p>
@@ -1795,16 +1832,16 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1738570891"></script>
-    <script src="/js/perfect-scrollbar.min.js?1738570891"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1738570891"></script>
-    <script src="/js/jquery.sticky.js?1738570891"></script>
-    <script src="/js/featherlight.min.js?1738570891"></script>
-    <script src="/js/highlight.pack.js?1738570891"></script>
+    <script src="/js/clipboard.min.js?1738706043"></script>
+    <script src="/js/perfect-scrollbar.min.js?1738706043"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1738706043"></script>
+    <script src="/js/jquery.sticky.js?1738706043"></script>
+    <script src="/js/featherlight.min.js?1738706043"></script>
+    <script src="/js/highlight.pack.js?1738706043"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1738570891"></script>
-    <script src="/js/learn.js?1738570891"></script>
-    <script src="/js/hugo-learn.js?1738570891"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1738706043"></script>
+    <script src="/js/learn.js?1738706043"></script>
+    <script src="/js/hugo-learn.js?1738706043"></script>
     
     
 
