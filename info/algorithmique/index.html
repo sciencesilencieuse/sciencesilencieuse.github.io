@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1738854690" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1738854690" rel="stylesheet">
-    <link href="/css/hybrid.css?1738854690" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1738854690" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1738854690" rel="stylesheet">
-    <link href="/css/auto-complete.css?1738854690" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1738854690" rel="stylesheet">
-    <link href="/css/theme.css?1738854690" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1738854690" rel="stylesheet">
+    <link href="/css/nucleus.css?1738858884" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1738858884" rel="stylesheet">
+    <link href="/css/hybrid.css?1738858884" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1738858884" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1738858884" rel="stylesheet">
+    <link href="/css/auto-complete.css?1738858884" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1738858884" rel="stylesheet">
+    <link href="/css/theme.css?1738858884" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1738858884" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1738854690" rel="stylesheet">
+    <link href="/css/theme-blue.css?1738858884" rel="stylesheet">
     
-    <link href="/css/foo.css?1738854690" rel="stylesheet"><link href="/css/bar.css?1738854690" rel="stylesheet">
+    <link href="/css/foo.css?1738858884" rel="stylesheet"><link href="/css/bar.css?1738858884" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1738854690"></script>
+    <script src="/js/jquery-3.3.1.min.js?1738858884"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1738854690"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1738854690"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1738858884"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1738858884"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1738854690"></script>
+<script type="text/javascript" src="/js/search.js?1738858884"></script>
 
     
   </div>
@@ -939,24 +939,70 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
 
 </div>
 <p>Une implémentation de l&rsquo;algorithme de Held-Karp est donnée ci-dessous. Elle utilise la technique du masquage pour parcourir tous les sous-ensembles de villes visitées possibles et pour pouvoir tester rapidement l&rsquo;appartenance ou non d&rsquo;une ville à ce sous-ensemble.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tsp_chemin</span>(distance, depart<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>): <span style="color:#75715e"># tsp pour travelling salesman problem</span>
+<details>
+<summary><a>Code</a></summary>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tsp_chemin</span>(distance, depart<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Résout le problème du voyageur de commerce (TSP) en utilisant une programmation dynamique basée sur les masques binaires.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Cette fonction calcule, pour chaque sous-ensemble de villes et pour chaque ville terminale, le coût minimal pour parcourir l&#39;ensemble des villes spécifié par le masque et terminer dans cette ville.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Elle permet également de reconstruire le chemin optimal en stockant, pour chaque état, la ville précédente.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Paramètres
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ----------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    distance : list[list[float]]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Matrice des distances entre les villes, où distance[i][j] représente la distance allant de la ville i à la ville j.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    depart : int, optionnel
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Indice de la ville de départ (par défaut 0).
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Retourne
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    --------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    tuple
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Un tuple (dp, parent) contenant :
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          - dp : list[list[float]]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            Tableau à deux dimensions de taille (2^n x n) où dp[masque][j] est le coût minimum pour visiter
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            l&#39;ensemble de villes indiqué par le masque (représenté en binaire) et terminer à la ville j.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          - parent : list[list[int]]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            Tableau à deux dimensions de taille (2^n x n) permettant de reconstruire le chemin optimal.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            Pour chaque état (masque, j), parent[masque][j] stocke l&#39;indice de la ville qui précède j dans le chemin optimal.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Description
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    -----------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    L&#39;algorithme initialise une table dp avec des valeurs infinies, sauf pour l&#39;état correspondant au départ.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Il parcourt ensuite tous les masques possibles (correspondant aux 2^n sous-ensembles de villes) et, pour chaque ville déjà visitée, il tente de mettre à jour le coût minimal pour atteindre chaque ville non encore visitée.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    La structure parent est utilisée pour enregistrer les transitions effectuées, ce qui permet ultérieurement
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    de reconstruire le chemin optimal.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Exemple d&#39;utilisation
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ---------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &gt;&gt;&gt; distance = [
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ...     [0, 10, 15, 20],
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ...     [10, 0, 35, 25],
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ...     [15, 35, 0, 30],
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ...     [20, 25, 30, 0]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ... ]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &gt;&gt;&gt; dp, parent = tsp_chemin(distance, depart=0)
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
 </span></span><span style="display:flex;"><span>    n <span style="color:#f92672">=</span> len(distance)
 </span></span><span style="display:flex;"><span>    INF <span style="color:#f92672">=</span> float(<span style="color:#e6db74">&#39;inf&#39;</span>)
 </span></span><span style="display:flex;"><span>    dp <span style="color:#f92672">=</span> [[INF] <span style="color:#f92672">*</span> n <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> n)] 
 </span></span><span style="display:flex;"><span>    parent <span style="color:#f92672">=</span> [[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> n <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> n)]
 </span></span><span style="display:flex;"><span>    
 </span></span><span style="display:flex;"><span>    dp[<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> depart][depart] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> masque <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> n): <span style="color:#75715e"># 2^n possibilités (chaque ville est visitée ou non visitée)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> masque <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> n):  <span style="color:#75715e"># 2^n possibilités (chaque ville est visitée ou non visitée)</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> masque <span style="color:#f92672">&amp;</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> i): <span style="color:#75715e"># si la ville i est visitée</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> masque <span style="color:#f92672">&amp;</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> i):  <span style="color:#75715e"># si la ville i est visitée</span>
 </span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(n):
-</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> (masque <span style="color:#f92672">&amp;</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> j)): <span style="color:#75715e"># si la ville j n&#39;est pas encore visitée</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> (masque <span style="color:#f92672">&amp;</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> j)):  <span style="color:#75715e"># si la ville j n&#39;est pas encore visitée</span>
 </span></span><span style="display:flex;"><span>                        nv_masque <span style="color:#f92672">=</span> masque <span style="color:#f92672">|</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> j)
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> dp[nv_masque][j] <span style="color:#f92672">&gt;</span> dp[masque][i] <span style="color:#f92672">+</span> distance[i][j]: 
-</span></span><span style="display:flex;"><span>                            dp[nv_masque][j] <span style="color:#f92672">=</span> dp[masque][i] <span style="color:#f92672">+</span> distance[i][j] 
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> dp[nv_masque][j] <span style="color:#f92672">&gt;</span> dp[masque][i] <span style="color:#f92672">+</span> distance[i][j]:
+</span></span><span style="display:flex;"><span>                            dp[nv_masque][j] <span style="color:#f92672">=</span> dp[masque][i] <span style="color:#f92672">+</span> distance[i][j]
 </span></span><span style="display:flex;"><span>                            parent[nv_masque][j] <span style="color:#f92672">=</span> i
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> dp, parent
-</span></span></code></pre></div><p>Comme à chaque fois en programmation dynamique, la matrice <code>dp</code> contient toutes les informations nécessaires et pour reconstruire le plus petit chemin et obtenir son coût, on peut utiliser le code suivant :</p>
+</span></span></code></pre></div></details>
+<p>Comme à chaque fois en programmation dynamique, la matrice <code>dp</code> contient toutes les informations nécessaires et pour reconstruire le plus petit chemin et obtenir son coût, on peut utiliser le code suivant :</p>
+<details>
+<summary><a>Code</a></summary>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reconstr_chemin</span>(parent, masque, dernier):
 </span></span><span style="display:flex;"><span>    chemin <span style="color:#f92672">=</span> []
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> dernier <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
@@ -976,7 +1022,9 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
 </span></span><span style="display:flex;"><span>        coût_min <span style="color:#f92672">=</span> coût_total
 </span></span><span style="display:flex;"><span>        chemin_min <span style="color:#f92672">=</span> reconstr_chemin(parent, masque_final, i)
 </span></span><span style="display:flex;"><span>        chemin_min<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">0</span>)  <span style="color:#75715e"># Fermer le cycle</span>
-</span></span></code></pre></div><video width="500" controls style="display:block;max-width:100%;position:relative;margin-left:auto;margin-right: auto; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+</span></span></code></pre></div></details>
+<br>
+<video width="500" controls style="display:block;max-width:100%;position:relative;margin-left:auto;margin-right: auto; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
   <source src="/tps_vid.mp4" type="video/mp4">
 </video>
 <p>Il est basée sur la relation de récurrence suivante : $C(S,i) = \min_{j \in S,\ j \neq i} \left\{ C\left(S \setminus \{i\}, j\right) + \mathrm{d}(j,i) \right\}$ où $C(S,i)$ représente la plus petite distance pour parcourir chaque ville de l&rsquo;ensemble $S$ et terminer dans la ville $i$ et $d(i,j)$ est la distance entre la ville $i$ et la ville $j$.</p>
@@ -1021,6 +1069,8 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
 
 </div>
 <p>Un code Python possible pour la version détaillée dans la vidéo :</p>
+<details>
+<summary><a>Code</a></summary>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> random <span style="color:#f92672">import</span> randint
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">partition</span>(L, g, d):
@@ -1046,7 +1096,8 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
 </span></span><span style="display:flex;"><span>    g <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
 </span></span><span style="display:flex;"><span>    d <span style="color:#f92672">=</span> len(L)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
 </span></span><span style="display:flex;"><span>    tri_rapide_gd(L, g, d)
-</span></span></code></pre></div><p>La danse hongroise ci-dessous implémente une version de l&rsquo;algorithme sans hasard :</p>
+</span></span></code></pre></div></details>
+<p>La danse hongroise ci-dessous implémente une version de l&rsquo;algorithme sans hasard :</p>
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
 
@@ -1068,6 +1119,8 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
 <li>On coupe ensuite la liste en deux sur le pivot et on recommence récursivement.</li>
 </ul>
 <p>Un code Python possible pour cette variante :</p>
+<details>
+<summary><a>Code</a></summary>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">partition</span>(L):
 </span></span><span style="display:flex;"><span>    p <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>         <span style="color:#75715e"># pivot (chapeau noir)</span>
 </span></span><span style="display:flex;"><span>    i <span style="color:#f92672">=</span> len(L)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>  <span style="color:#75715e"># chapeau rouge</span>
@@ -1086,7 +1139,8 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
 </span></span><span style="display:flex;"><span>      L[:p] <span style="color:#f92672">=</span> tri_rapide(L[:p])
 </span></span><span style="display:flex;"><span>      L[p<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:] <span style="color:#f92672">=</span> tri_rapide(L[p<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:])
 </span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> L
-</span></span></code></pre></div><p>Un tirage non aléatoire du pivot rend l&rsquo;algorithme moins robuste sur certaines entrées. Avec le choix systématique du premier élément (par exemple), on se retrouve avec une complexité en $O(n^2)$ sur des données déjà triées ou presque. Le tirage aléatoire rend extrêmement peu probable un scénario &ldquo;défavorable&rdquo;.</p>
+</span></span></code></pre></div></details>
+<p>Un tirage non aléatoire du pivot rend l&rsquo;algorithme moins robuste sur certaines entrées. Avec le choix systématique du premier élément (par exemple), on se retrouve avec une complexité en $O(n^2)$ sur des données déjà triées ou presque. Le tirage aléatoire rend extrêmement peu probable un scénario &ldquo;défavorable&rdquo;.</p>
 <p>Si en plus de choisir le premier élément comme pivot, on ne s&rsquo;occupe même plus d&rsquo;avoir un tri en place (c&rsquo;est-à-dire qu&rsquo;on s&rsquo;autorise des copies de la liste de départ plutôt que de permuter directement ses éléments), Quicksort peut s&rsquo;écrire de manière très compacte :</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">triRapide</span>(elements):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(elements) <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>:
@@ -1213,6 +1267,8 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
 </div>
 <br>
 <p>Une implémentation possible de Dijkstra :</p>
+<details>
+<summary><a>Code</a></summary>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> heapq
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">Dijkstra</span>(G, depart):
@@ -1248,7 +1304,8 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
 </span></span><span style="display:flex;"><span>                predecesseurs[voisin] <span style="color:#f92672">=</span> sommet_actuel
 </span></span><span style="display:flex;"><span>                heapq<span style="color:#f92672">.</span>heappush(tas, (nouvelle_distance, voisin))
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> predecesseurs, distances
-</span></span></code></pre></div><br>
+</span></span></code></pre></div></details>
+<br>
 <h4 id="algorithme-deuclide">Algorithme d&rsquo;Euclide</h4>
 <p>Une des plus vieux algorithmes ($\approx$-300).</p>
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
@@ -1271,6 +1328,14 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
       ></iframe>
     </div>
 
+</div>
+<p>On peut utiliser le pulvérisateur (algorithme d&rsquo;Euclide étendu) ci-dessous. Le code est corrigé par rapport à celui de la vidéo qui présente une erreur dans la cas de base (on doit retourner <code>b, 0, 1</code> comme Euclide bien sûr et non <code>a,0,1</code>).</p>
+<div style="position:relative; width:600px; max-width: 100%; margin-left: auto;margin-right: auto;">
+<iframe src="https://trinket.io/embed/python/3b3e65fdb249?toggleCode=true" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+</div>
+<p>Et le petit programme qui donne la décomposition en fraction continue :</p>
+<div style="position:relative; width:600px; max-width: 100%; margin-left: auto;margin-right: auto;">
+<iframe src="https://trinket.io/embed/python/a4aefb96ba1e?toggleCode=true" width="100%" height="250" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 <br>
 <h4 id="algorithme-x">Algorithme X</h4>
@@ -1844,16 +1909,16 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1738854690"></script>
-    <script src="/js/perfect-scrollbar.min.js?1738854690"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1738854690"></script>
-    <script src="/js/jquery.sticky.js?1738854690"></script>
-    <script src="/js/featherlight.min.js?1738854690"></script>
-    <script src="/js/highlight.pack.js?1738854690"></script>
+    <script src="/js/clipboard.min.js?1738858884"></script>
+    <script src="/js/perfect-scrollbar.min.js?1738858884"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1738858884"></script>
+    <script src="/js/jquery.sticky.js?1738858884"></script>
+    <script src="/js/featherlight.min.js?1738858884"></script>
+    <script src="/js/highlight.pack.js?1738858884"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1738854690"></script>
-    <script src="/js/learn.js?1738854690"></script>
-    <script src="/js/hugo-learn.js?1738854690"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1738858884"></script>
+    <script src="/js/learn.js?1738858884"></script>
+    <script src="/js/hugo-learn.js?1738858884"></script>
     
     
 
