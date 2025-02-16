@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1739631046" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1739631046" rel="stylesheet">
-    <link href="/css/hybrid.css?1739631046" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1739631046" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1739631046" rel="stylesheet">
-    <link href="/css/auto-complete.css?1739631046" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1739631046" rel="stylesheet">
-    <link href="/css/theme.css?1739631046" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1739631046" rel="stylesheet">
+    <link href="/css/nucleus.css?1739705697" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1739705697" rel="stylesheet">
+    <link href="/css/hybrid.css?1739705697" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1739705697" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1739705697" rel="stylesheet">
+    <link href="/css/auto-complete.css?1739705697" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1739705697" rel="stylesheet">
+    <link href="/css/theme.css?1739705697" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1739705697" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1739631046" rel="stylesheet">
+    <link href="/css/theme-blue.css?1739705697" rel="stylesheet">
     
-    <link href="/css/foo.css?1739631046" rel="stylesheet"><link href="/css/bar.css?1739631046" rel="stylesheet">
+    <link href="/css/foo.css?1739705697" rel="stylesheet"><link href="/css/bar.css?1739705697" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1739631046"></script>
+    <script src="/js/jquery-3.3.1.min.js?1739705697"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1739631046"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1739631046"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1739705697"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1739705697"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1739631046"></script>
+<script type="text/javascript" src="/js/search.js?1739705697"></script>
 
     
   </div>
@@ -896,6 +896,10 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   {
     color: #006C65;
   }
+ #debord
+{
+overflow-x: auto; 
+}
 </style>
 <h1 id="algorithmique">Algorithmique</h1>
 <h3 id="généralités">Généralités</h3>
@@ -1057,6 +1061,12 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
 </span></span></code></pre></div><br>
 <hr>
 <h3 id="quelques-algorithmes-remarquables">Quelques algorithmes remarquables</h3>
+<p>Les tris sont omniprésents en informatique et Tim Roughgarden (auteur des géniaux d’<em>Algorithms illuminated</em>) en parle même comme de la “mère de tous les problèmes algorithmiques”.</p>
+<p>Ci-dessous, vous pourrez comparer l&rsquo;efficacité de différents tris par comparaison en les voyant se débattre courageusement avec les données.</p>
+<div style="position:relative; width: 810px; max-width: 100%; margin-left: auto;margin-right: auto;">
+<iframe src="https://trinket.io/embed/glowscript/3d9576597b?outputOnly=true&start=result" width="100%" height="665" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+</div>
+<p><img src="https://imgs.xkcd.com/comics/ineffective_sorts.png" alt=""></p>
 <h4 id="quicksort">Quicksort</h4>
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
@@ -1141,7 +1151,7 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
 </span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> L
 </span></span></code></pre></div></details>
 <p>Un tirage non aléatoire du pivot rend l&rsquo;algorithme moins robuste sur certaines entrées. Avec le choix systématique du premier élément (par exemple), on se retrouve avec une complexité en $O(n^2)$ sur des données déjà triées ou presque. Le tirage aléatoire rend extrêmement peu probable un scénario &ldquo;défavorable&rdquo;.</p>
-<p>Si en plus de choisir le premier élément comme pivot, on ne s&rsquo;occupe même plus d&rsquo;avoir un tri en place (c&rsquo;est-à-dire qu&rsquo;on s&rsquo;autorise des copies de la liste de départ plutôt que de permuter directement ses éléments), Quicksort peut s&rsquo;écrire de manière très compacte :</p>
+<p>Si en plus de choisir le premier élément comme pivot, on ne s&rsquo;occupe même plus d&rsquo;avoir un tri en place (c&rsquo;est-à-dire qu&rsquo;on s&rsquo;autorise des copies de la liste de départ), Quicksort peut s&rsquo;écrire de manière très compacte :</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">triRapide</span>(elements):
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(elements) <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> elements
@@ -1153,6 +1163,8 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
 </span></span></code></pre></div><div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;">
 <img src="/hannibal.png" style="box-shadow:none;background:none;">
 </div>
+<p>Mais attention, l&rsquo;élégance de ce code cache sa lâcheté puisqu&rsquo;en ne rangeant plus en place, il esquive la principale difficulté d&rsquo;un algorithme de tri. S&rsquo;interdire la création de nouvelles listes oblige en effet à gérer astucieusement les permutations au sein de la liste de départ. Et si cela donne souvent des codes plus verbeux, il n&rsquo;en sont pas moins beaucoup plus fins.</p>
+<br>
 <h4 id="algorithmes-gloutons">Algorithmes gloutons</h4>
 <p>Les algorithmes gloutons sont très faciles à comprendre et à implémenter. Si on devait leur trouver un défaut, elle est à chercher du côté de leur correction, pas toujours simple à démontrer&hellip;</p>
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
@@ -1909,16 +1921,16 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1739631046"></script>
-    <script src="/js/perfect-scrollbar.min.js?1739631046"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1739631046"></script>
-    <script src="/js/jquery.sticky.js?1739631046"></script>
-    <script src="/js/featherlight.min.js?1739631046"></script>
-    <script src="/js/highlight.pack.js?1739631046"></script>
+    <script src="/js/clipboard.min.js?1739705697"></script>
+    <script src="/js/perfect-scrollbar.min.js?1739705697"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1739705697"></script>
+    <script src="/js/jquery.sticky.js?1739705697"></script>
+    <script src="/js/featherlight.min.js?1739705697"></script>
+    <script src="/js/highlight.pack.js?1739705697"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1739631046"></script>
-    <script src="/js/learn.js?1739631046"></script>
-    <script src="/js/hugo-learn.js?1739631046"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1739705697"></script>
+    <script src="/js/learn.js?1739705697"></script>
+    <script src="/js/hugo-learn.js?1739705697"></script>
     
     
 
