@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1739831208" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1739831208" rel="stylesheet">
-    <link href="/css/hybrid.css?1739831208" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1739831208" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1739831208" rel="stylesheet">
-    <link href="/css/auto-complete.css?1739831208" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1739831208" rel="stylesheet">
-    <link href="/css/theme.css?1739831208" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1739831208" rel="stylesheet">
+    <link href="/css/nucleus.css?1739834667" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1739834667" rel="stylesheet">
+    <link href="/css/hybrid.css?1739834667" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1739834667" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1739834667" rel="stylesheet">
+    <link href="/css/auto-complete.css?1739834667" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1739834667" rel="stylesheet">
+    <link href="/css/theme.css?1739834667" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1739834667" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1739831208" rel="stylesheet">
+    <link href="/css/theme-blue.css?1739834667" rel="stylesheet">
     
-    <link href="/css/foo.css?1739831208" rel="stylesheet"><link href="/css/bar.css?1739831208" rel="stylesheet">
+    <link href="/css/foo.css?1739834667" rel="stylesheet"><link href="/css/bar.css?1739834667" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1739831208"></script>
+    <script src="/js/jquery-3.3.1.min.js?1739834667"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1739831208"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1739831208"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1739834667"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1739834667"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1739831208"></script>
+<script type="text/javascript" src="/js/search.js?1739834667"></script>
 
     
   </div>
@@ -967,13 +967,14 @@ $$
 </div>
 <details>
 <summary><a style="color:#004D80">Dérivées fonctionnelles utilisées dans la suite&nbsp;:</a></summary>
+<br>
 <ul>
 <li>$F[f]=\int_a^b g[f(x)]\mathrm{d}x$ avec $g'=\mathrm{d}g/\mathrm{d}f$
 <div id="grosseformule">
 $$
 \begin{aligned}
 \frac{\delta F[f]}{\delta f(x_0)}&=\lim_{\epsilon \to 0}\frac{1}{\epsilon}\left[\int g[f(x)+\epsilon \delta(x-x_0)]dx-\int g[f(x)]\mathrm{d}x\right]\\\\
-&=\lim_{\epsilon \to 0}\frac{1}{\epsilon}\left[\int (g[f(x)+\epsilon\delta(x-x_0)g'[f(x)])\mathrm{d}x - \int g[f(x)]\mathrm{d}x\right]\\\\
+&=\lim_{\epsilon \to 0}\frac{1}{\epsilon}\left[\int (g[f(x)]+\epsilon\delta(x-x_0)g'[f(x)])\mathrm{d}x - \int g[f(x)]\mathrm{d}x\right]\\\\
 &=\int \delta(x-x_0) g'[f(x)] \mathrm{d}x\\\\
 &= g'[f(x_0)]
 \end{aligned}
@@ -988,7 +989,7 @@ $$\frac{\delta F[f]}{\delta f(x)}=\lim_{\epsilon \to 0}\frac{1}{\epsilon}\left[\
 </div>
 <p>Par un développement de Taylor au premier ordre, on obtient :</p>
 <div id="grosseformule">
-$$g\left(\frac{\partial}{\partial y}[f(y)+\epsilon\delta(y-x)]\right)=f(f'+\epsilon\delta'(y-x))\approx g(f')+\epsilon\delta'(y-x)\frac{\mathrm{d}g(f')}{\mathrm{d} f'}$$
+$$g\left(\frac{\partial}{\partial y}[f(y)+\epsilon\delta(y-x)]\right)=g(f'+\epsilon\delta'(y-x))\approx g(f')+\epsilon\delta'(y-x)\frac{\mathrm{d}g(f')}{\mathrm{d} f'}$$
 </div>
 <p>On aboutit à :</p>
 <div id="grosseformule">
@@ -1002,7 +1003,7 @@ Si $x$ se balade sur l'intervalle d'intégration, le terme entre crochets est de
 <p>$$\frac{\delta F[f]}{\delta f(x)}=-\frac{\mathrm{d}}{\mathrm{d} x}\left(\frac{\mathrm{d}g(f&rsquo;)}{\mathrm{d}f&rsquo;}\right)$$</p>
 <p>On détermine ainsi que $\displaystyle \frac{\delta \bar{T}[x]}{\delta x(t)}=-\frac{m\ddot{x}}{\tau}$.</p>
 <p>D&rsquo;autre part, si on a $F[\phi]=\int\left(\frac{\partial\phi}{\partial y}\right)^2\mathrm{d}y$, on obtient $\displaystyle \frac{\delta F[\phi]}{\delta\phi(x)}=-2\frac{\partial^2\phi}{\partial x^2}$.</p>
-<p>Résultat qui se généralise à 3 dimensions pour donner un résultat très utile :</p>
+<p>Résultat qui se généralise à 3 dimensions pour donner un truc plutôt utile :</p>
 <p>Si $\displaystyle I=\int(\nabla\phi)^2\mathrm{d}^3 x$, alors $\displaystyle\frac{\delta I}{\delta\phi}=-2\nabla^2\phi$.</p>
 </li>
 </ul>
@@ -1643,16 +1644,16 @@ $$
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1739831208"></script>
-    <script src="/js/perfect-scrollbar.min.js?1739831208"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1739831208"></script>
-    <script src="/js/jquery.sticky.js?1739831208"></script>
-    <script src="/js/featherlight.min.js?1739831208"></script>
-    <script src="/js/highlight.pack.js?1739831208"></script>
+    <script src="/js/clipboard.min.js?1739834667"></script>
+    <script src="/js/perfect-scrollbar.min.js?1739834667"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1739834667"></script>
+    <script src="/js/jquery.sticky.js?1739834667"></script>
+    <script src="/js/featherlight.min.js?1739834667"></script>
+    <script src="/js/highlight.pack.js?1739834667"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1739831208"></script>
-    <script src="/js/learn.js?1739831208"></script>
-    <script src="/js/hugo-learn.js?1739831208"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1739834667"></script>
+    <script src="/js/learn.js?1739834667"></script>
+    <script src="/js/hugo-learn.js?1739834667"></script>
     
     
 
