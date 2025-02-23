@@ -8,7 +8,7 @@
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
-    <title>Calcul des propositions - Science en vrac</title>
+    <title>Statistiques - Science en vrac</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
 
@@ -81,7 +81,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 
 	
   </head>
-  <body class="" data-url="/logique/logique1/">
+  <body class="" data-url="/maths/stat/">
     <nav id="sidebar" class="">
 
 
@@ -142,7 +142,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/logique/" title="Logique" class="dd-item
-        parent
+        
         
         
         ">
@@ -168,7 +168,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
  
   
     
-      <li data-nav-id="/logique/logique1/" title="Calcul des propositions" class="dd-item active">
+      <li data-nav-id="/logique/logique1/" title="Calcul des propositions" class="dd-item ">
         <a href="/logique/logique1/">
         Calcul des propositions
         
@@ -333,7 +333,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/maths/" title="Maths" class="dd-item
-        
+        parent
         
         
         ">
@@ -499,7 +499,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
  
   
     
-      <li data-nav-id="/maths/stat/" title="Statistiques" class="dd-item ">
+      <li data-nav-id="/maths/stat/" title="Statistiques" class="dd-item active">
         <a href="/maths/stat/">
         Statistiques
         
@@ -864,7 +864,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
                   <span class="links">
                  
                  
-                   Calcul des propositions
+                   Statistiques
                  
                   </span>
                 </div>
@@ -873,11 +873,15 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#syntaxe">Syntaxe</a>
+    <li><a href="#les-différentes-moyennes">Les différentes moyennes</a></li>
+    <li><a href="#monte-carlo">Monte Carlo</a></li>
+    <li><a href="#paradoxe-de-simpson">Paradoxe de Simpson</a></li>
+    <li><a href="#test-dhypothèse">Test d&rsquo;hypothèse</a></li>
+    <li><a href="#analyse-en-composante-principale">Analyse en composante principale</a></li>
+    <li><a href="#p-hacking">p-hacking</a></li>
+    <li><a href="#écart-type-expérimental-estimateur-de-lécart-type-non-biaisé">Écart-type expérimental (estimateur de l&rsquo;écart-type non biaisé)</a>
       <ul>
-        <li><a href="#langage">Langage</a></li>
-        <li><a href="#formules">Formules</a></li>
-        <li><a href="#linéarisation-dune-formule">Linéarisation d&rsquo;une formule</a></li>
+        <li></li>
       </ul>
     </li>
   </ul>
@@ -918,171 +922,158 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   {
     color: #006C65;
   }
-  #preuve
+  #grosseformule 
 {
-    background-color:#EAEAEA;
-    border-radius:10px;
-    padding:5px 20px 5px 20px;
-}
-#def
-{
-    background-color:#DCEFFE;
-    border-radius:10px;
-    padding:5px 20px 5px 20px;
-}
-#theo
-{
-    background-color:#FBE1DE;
-    border-radius:10px;
-    padding:5px 20px 5px 20px;
-}
-table {
-  border-collapse: collapse;
-  border: 0;
-}
-td, th {
-  border-collapse: collapse;
-  text-align: center;
-  vertical-align: middle;
+    overflow-x: auto; 
 }
 </style>
-<script>
-MathJax = {
-  tex: {
-    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
-  },
-  svg: {
-    fontCache: 'global'
-  }
-};
-</script>
-<script
-  type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-</script>
-<br>
-<div style="position:relative; width:200px; max-width: 100%; margin-left: auto;margin-right: auto;border-radius:10px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-<img src="/duparc.png" style="border-radius:10px;">
-</div>
-
-<div class="notices info" style="--title: 'info';">
-  <p style="display: none;">info</p>
-  <div class="notice-body">
-    <p>Notes de lecture du livre <em>La logique pas à pas</em> de Jacques Duparc que je paraphrase allégrement.</p>
-
-  </div>
-</div>
-
-
-<br>
-<h1 id="calcul-des-propositions">Calcul des propositions</h1>
-<div style="overflow-x: auto;">
-<table>
-  <tr>
-    <th><a href="../logique1/">Syntaxe</a></th>
-    <th><a href="../logique2/">Sémantique</a></th>
-    <th><a href="../logique3/">Preuve</a></th>
-  </tr>
-</table>
-</div>
-<br>
-<p>Le calcul des propositions (ou <strong>calcul propositionnel</strong> ou <strong>logique des propositions</strong>) permet de modéliser des raisonnements simples. Son pouvoir expressif est assez limité mais c&rsquo;est sur ses fondations que se construisent les logiques plus évoluées.</p>
-<br>
-<h2 id="syntaxe">Syntaxe</h2>
-<br>
-<h3 id="langage">Langage</h3>
-<br>
-<div id="def">
-<p style="margin-bottom:-1.1em;">Le <b>langage</b> du calcul des propositions est constitué </p>
-<ul>
-<li>de variables propositionnelles $P$, $Q$, $R$,..., </li>
-<li>de connecteurs logiques $\neg, \lor, \land, \rightarrow, \leftrightarrow$</li>
-<li>et de parenthèses.</li>
-</ul>
-</div>
-<p>On désigna par $VAR=\Set{P,Q,R\dots}$ l&rsquo;ensemble des variables propositionnelles, potentiellement infini.</p>
-<div id="def">
-<ul>
-<li>Le connectecteur logique $\neg$ est unaire (ou d'arité 1) puisqu'il transforme à lui seul une formule en une autre formule. C'est le symbole de <b>négation</b> et il se dit <b>non</b>.</li>
-<li>Les autres connecteurs logiques sont binaires (d'arité 2) puisqu'ils lient deux formules en une nouvelle.</li>
-<ul>
-    <li>$\lor$ est le symbole de <b>disjonction</b> ("<b>ou</b>")</li>
-    <li>$\land$ est le symbole de <b>conjonction</b> ("<b>et</b>")</li>
-    <li>$\rightarrow$ est le symbole d'<b>implication</b> ("<b>mplique</b>")</li>
-    <li>$\leftrightarrow$ est le symbole de <b>double implication</b> ou d'<b>équivalence</b> ("<b>si et seulement si</b>" ou "<b>équivaut à</b>")</li>
-</ul>
-</ul>
-</div>
-<br>
-<div id="def">
-<p>Le <b>langage</b> du calcul des propositions est alors l&rsquo;ensemble suivant : $\mathcal{L} = VAR\cup\Set{\neg,\lor,\land,\rightarrow,\leftrightarrow,(,)}$</p>
-</div>
-<br>
-<h3 id="formules">Formules</h3>
-<br>
-<p>On peut représenter les formules du calcul propositionnel par des <strong>arbres</strong> dont les feuilles sont des variables propositionnelles et les nœuds sont des connecteurs.</p>
-<div id="def">
-<p style="margin-bottom:-1.1em;">L'ensemble $\mathcal{F}$ des formules du calcul propositionnel est le plus petit ensemble d'arbres qui</p>
-<ul>
-<li>contient chaque arbre réduit à sa racine qui est une variable propositionnelle.</li>
-<li>chaque fois qu'il contient des formules $\phi$ et $\psi$ contient également  les formules suivantes&nbsp;:
-<div style="position:relative; width:500px; max-width: 100%; margin-left: auto;margin-right: auto;">
-<img src="/ensformules.png"></div>
-</li>
-</ul>
-</div>
-<p>La <strong>hauteur</strong> d&rsquo;une formule est la longueur de sa plus longue branche.</p>
+<h1 id="statistiques">Statistiques</h1>
 
 <div class="notices tip" style="--title: 'tip';">
   <p style="display: none;">tip</p>
   <div class="notice-body">
-    <p>C&rsquo;est une définition par <strong>récurrence</strong> (ou <strong>inductive</strong>) : on a d&rsquo;abord défini les feuilles, cas de base de hauteur 0, puis on a donné la recette pour passer d&rsquo;un arbre de hauteur $n$ à un arbre de hauteur $n+1$.</p>
+    <p>Les probabilités sont des calculs a priori, visant à prédire les issues d’évènements n’ayant pas encore eu lieu, alors que les statistiques sont des calculs a posteriori qui analysent les issues d’évènements déjà réalisés.</p>
 
   </div>
 </div>
 
 
-<p>Une <strong>sous formule</strong> d&rsquo;une formule $\phi$ est un sous-arbre de $\phi$ dont l&rsquo;un des nœuds de $\phi$ est la racine.</p>
-<p><img src="/sousformules.png?width=600px" alt=""></p>
-<p>La formule de hauteur 5 ci-dessus contient :</p>
-<ul>
-<li>5 feuilles, sous-formules de hauteur 0 (en vert),</li>
-<li>3 sous-formules de hauteur 1 (en rouge),</li>
-<li>2 sous-formules de hauteur 2 (en bleu),</li>
-<li>1 sous-formule de hauteur 3 (en rose),</li>
-<li>1 sous-formule de hauteur 4 (en jaune).</li>
-</ul>
-<p>Lorsqu&rsquo;une sous-formule apparaît plusieurs fois dans une formule, on dit qu&rsquo;elle a plusieurs <strong>occurences</strong>.</p>
+<h2 id="les-différentes-moyennes">Les différentes moyennes</h2>
 <br>
-<h3 id="linéarisation-dune-formule">Linéarisation d&rsquo;une formule</h3>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/v5NTpB6DGbQ?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+</div>
 <br>
-<p>La linéarisation d&rsquo;une formule $\theta$ peut s&rsquo;obtenir par induction :</p>
-<ul>
-<li>une feuille $\color{#007100}P$ se linéarise en $\color{#007100}P$ : $\theta=\color{#007100}P$</li>
-<li>les linéarisations des sous-formules suivantes <img src="/ensformules.png?width=500px" alt="">
-sont données respectivement par $\theta=\left(\color{#B51700}{\neg}\color{#007100}{\phi}\color{#000} \right)$, $\theta=\left(\color{#007100}{\phi} \color{#B51700}{\lor} \color{#007100}{\psi} \color{#000} \right)$, $\theta=\left( \color{#007100}{\phi} \color{#B51700}{\land} \color{#007100}{\psi} \color{#000} \right)$, $\theta=\left( \color{#007100}{\phi} \color{#B51700}{\rightarrow} \color{#007100}{\psi} \color{#000} \right)$, $\theta=\left( \color{#007100}{\phi} \color{#B51700}{\leftrightarrow} \color{#007100} \psi  \color{#000} \right)$.</li>
-</ul>
-<p>Exemple :</p>
-<p>La linéarisation de cette formule $\phi$ donne :</p>
-<p><img src="/linearisationformule.png?width=600px" alt=""></p>
-<p>$$\displaystyle
-\phi =  ( \color{#B51700}{\neg}\color{#000}  ( \color{#007100}{P} \color{#B51700}{\lor} \color{#007100}{R}\color{#000}  ) ) \color{#B51700}{\land} \color{#000} (\color{#007100}{P} \color{#B51700}{\lor}\color{#000}  ( ( \color{#B51700}{\neg} \color{#007100}{R}\color{#000}  ) \color{#B51700}{\rightarrow} \color{#000}( ( \color{#B51700}{\neg} \color{#007100}{Q}\color{#000} ) \color{#B51700}{\leftrightarrow} \color{#007100}{P} \color{#000} ) ))
-$$</p>
+<h2 id="monte-carlo">Monte Carlo</h2>
+<p>Dans la duxième partie de la vidéo, on cherche à répondre à la grande question suivante : comment s&rsquo;assurer d&rsquo;avoir suffisamment d&rsquo;échantillons pour obtenir des statistiques fiables ? Ou plus prosaïquement : à partir de combien est-ce suffisant ? On utilise d&rsquo;abord les propriétés de la loi normale puis on construit un estimateur à partir de l&rsquo;<strong>inégalité de Bienaymé-Tchebychev</strong>.</p>
 <br>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/t1X1Agp1CWA?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+</div>
+<br>
+<h2 id="paradoxe-de-simpson">Paradoxe de Simpson</h2>
+<p>Ce paradoxe a fait des dégâts lors de la campagne de vaccination pour le Covid. Les chiffres de la vidéo sont proches des chiffres communiqués par l&rsquo;état d&rsquo;Israël qui était un des premiers pays à pouvoir vacciner.</p>
+<p><a href="https://www.covid-datascience.com/post/israeli-data-how-can-efficacy-vs-severe-disease-be-strong-when-60-of-hospitalized-are-vaccinated">L&rsquo;article</a> qui a servi en partie pour la vidéo.</p>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Bu3znAquSuk?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+</div>
+<br>
+<h2 id="test-dhypothèse">Test d&rsquo;hypothèse</h2>
+<p>Les statistiques au service de la prise de décision en science.</p>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/9TxSmOK6GWA?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+</div>
+<br>
+<h2 id="analyse-en-composante-principale">Analyse en composante principale</h2>
+<p>L&rsquo;analyse en composante principale permet de faire parler les données.</p>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/sRMplEDuEig?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+</div>
+<br>
+<div style="overflow-x: auto;">
+<table>
+  <tr>
+<th rowspan="1" style="text-align:center;"><a href="../pca/"><b>Un autre exemple + tuto avec des données INSEE départementales</b></a></th>
+</tr>
+  </table>
+</div>
+<br>
+<h2 id="p-hacking">p-hacking</h2>
+
+<div class="notices def" style="--title: 'Extrait traduit du livre \27 Everything is predictable\27  de Tom Chivers';">
+  <p style="display: none;">Extrait traduit du livre &#39;Everything is predictable&#39; de Tom Chivers</p>
+  <div class="notice-body">
+    <p>Peut-être que l’exemple le plus célèbre est celui du scientifique de l&rsquo;alimentation Brian Wansink, une star de l’Université Cornell qui a reçu des millions de dollars de financement du gouvernement fédéral américain sous l’administration Obama. Il a publié beaucoup d’études sur notre comportement alimentaire, notamment une sur la façon dont les hommes mangent plus en compagnie de femmes (probablement pour les impressionner) ; une autre sur comment donner des noms plus “attractifs” aux légumes (appeler les carottes “carottes à vision X-ray,” par exemple) permet que les enfants d’école primaire en mangent deux fois plus.
+<br><br>
+Puis, en 2016, il a commis l’erreur de publier un billet de blog intitulé &ldquo;The Grad Student Who Never Said &lsquo;No.&rsquo;&rdquo;.
+<br><br>
+L’étudiante en question était une doctorante turque. Lorsqu’elle est arrivée à Cornell, Wansink “lui a donné un ensemble de données d’une étude autofinancée, sans résultats probants” - une étude qui examinait le comportement alimentaire dans un buffet italien à volonté pendant un mois. Selon ses propres termes, il lui a dit : “Cela nous a coûté beaucoup de temps et  d&rsquo;argent à collecter. Il doit y avoir quelque chose ici que nous pouvons sauver parce que cet ensemble de données est cool (riche et unique).” L’étudiante s’est donc mise au travail et a découpé l’ensemble de données de nombreuses façons différentes. Et, inévitablement, elle a trouvé de nombreuses corrélations p &lt; 0,05 - suffisamment pour qu&rsquo;elle et Wansink publient cinq articles (y compris l’article “les hommes mangent trop pour impressionner les femmes”).
+<br><br>
+Cela a éveillé la suspicion de certains scientifiques et journalistes scientifiques, et ils ont commencé à passer au crible les autres recherches de Wansink. De plus, Stephanie Lee, une journaliste scientifique de BuzzFeed, a mis la main sur ses emails, dans lesquels - il s’est avéré - il demanda à sa doctorante de découper les données en “mâles, femelles, mangeurs de déjeuner, mangeurs de dîner, personnes mangeant seules, personnes mangeant en groupe de 2, personnes mangeant en groupe de 2+, personnes commandant de l’alcool, personnes commandant des boissons non alcoolisées, personnes restant près du buffet, personnes s’asseyant loin, etc.” pour “essorer le jeu de données jusqu&rsquo;à en extraire tous les résultats significatifs possibles” et faire en sorte que cela “devienne viral à grande échelle.”
+<br><br>
+En conséquence, dix-huit des articles de Wansink ont été rétractés ; sept ont reçu des &ldquo;expressions of concern” que les revues ajoutent aux études qu’elles ne pensent pas pouvoir être totalement fiables, mais qu’elles ne sont pas prêtes à rétracter complètement ; et quinze ont été corrigés. Wansink, entre-temps, a démissionné de Cornell en 2019, après que l’université a conclu qu’il avait commis une faute scientifique et lui a interdit l’enseignement et la recherche.
+<br><br>
+C&rsquo;est un exemple particulièrement frappant, mais d’une certaine manière Wansink a eu la malchance d’être détruit publiquement pour quelque chose qui était presque une pratique standard. Le p-hacking se produit tout le temps, de manière beaucoup moins dramatique - et beaucoup de scientifiques n’ont absolument aucune idée qu’ils font quelque chose de mal. Daryl Bem, dans un chapitre d&rsquo;un livre de 1987 écrit comme un guide pour aider les étudiants à publier leurs recherches, a écrit qu’il “y a deux articles que vous pouvez écrire : l’article que vous aviez prévu d’écrire lorsque vous avez conçu votre étude ; l’article qui a le plus de sens maintenant que vous avez vu les résultats. La bonne réponse est le second.” Il a appelé les chercheurs à “analyser les sexes séparément, créer de nouveaux index composites… réorganiser les données pour les mettre en relief de manière plus audacieuse… Les données peuvent être suffisamment solides pour justifier de recentrer votre article autour des nouvelles découvertes et de subordonner ou même d’ignorer vos hypothèses originales.&rdquo;</p>
+
+  </div>
+</div>
+
+
+<p><img src="https://imgs.xkcd.com/comics/significant.png" alt=""></p>
+<p>Comme on l&rsquo;a vu sur les <a href="../geometrie/geo4/#the-average-man">espaces de données à grande dimension </a>, plus on a d&rsquo;axes (de catégories, d&rsquo;entrées,&hellip;), plus on a de chance d&rsquo;obtenir un résultat hors norme sur au moins l&rsquo;un d&rsquo;eux.</p>
+<p>Ce <a href="https://tylervigen.com/spurious-correlations">chouette site</a> met le phénomène à profit pour débusquer des corrélations amusantes (avec pour chacune des p-values inférieures à 1%&hellip;).</p>
+<br>
+<h2 id="écart-type-expérimental-estimateur-de-lécart-type-non-biaisé">Écart-type expérimental (estimateur de l&rsquo;écart-type non biaisé)</h2>
+<p>L&rsquo;<b>écart-type</b> pour une variable quantitative dont les relevés $(x_1,\ldots,x_N)$ sont pris sur la population complète (avec pour moyenne $\mu$) est donné par la racine carrée de la variance :<br>
+$$\sigma = \sqrt{V}=\sqrt{\frac{1}{N}\sum_{i=1}^N (x_i-\mu)^2}$$</p>
+<p>C&rsquo;est donc la racine-carrée des carrés des écarts à la moyenne divisé par $N$. On obtient bien ainsi une moyenne des écarts à la moyenne en empèchant qu&rsquo;un écart en-dessous  ne compense une écart au-dessus.</p>
+<p>Mais si les relevés ne concernent qu&rsquo;un échantillon $n&lt;N$ de la population et non la population complète (ce qui est le cas pour une série de mesures expérimentales), on passe des probas aux stats et on a alors besoin d&rsquo;un estimateur de l&rsquo;écart-type ($\sigma\rightarrow S$).</p>
+<p>L&rsquo;<b>estimateur de l&rsquo;écart-type non biaisé</b> (aussi appelé écart-type expérimental) est alors donné par :<br></p>
+<div id="grosseformule" style="border:solid 2px red;width:fit-content;margin:auto;padding-left:20px;padding-right:20px">
+$$S_{n-1} =\sqrt{\frac{1}{n-1}\sum_{i=1}^n (x_i-\bar{x})^2}$$
+</div>
 
 <div class="notices note" style="--title: 'note';">
   <p style="display: none;">note</p>
   <div class="notice-body">
-    <p>La <strong>syntaxe</strong>, c&rsquo;est l&rsquo;articulation des symboles. La <strong>sémantique</strong>, c&rsquo;est ce que ça raconte.</p>
+    <p>L&rsquo;estimateur non biaisé de l&rsquo;écart-type est parfois appelé écart-type expérimental et noté $\sigma_{exp}$. C&rsquo;est particulièrement le cas dans l&rsquo;enseignement de la physique au lycée.</p>
 
   </div>
 </div>
 
 
-<br>
-<p style="text-align:center;">
-<a href="../logique2" style="font-size:2em;">Suite : <b>la sémantique</b></a>
-</p>
+<h4 id="pourquoi-non-biaisénbsp-et-pourquoi-passer-de-n-à--n-1nbsp">Pourquoi &ldquo;non biaisé&rdquo; ? Et pourquoi passer de &ldquo;$n$&rdquo; à  &ldquo;$n-1$&quot; ?</h4>
+<p>Notre problème est qu&rsquo;on ne connaît plus la valeur vraie de la moyenne $\mu$ mais seulement son estimation $m=\frac{1}{n}\sum_{i=1}^n x_i$.</p>
+<p>Et en substituant $m$ à $\mu$ dans la variance, on biaise son espérance&hellip;<br>
+En effet :</p>
+<div id="grosseformule">
+$$
+\begin{aligned}
+E\left(\frac{1}{n}\sum_{i=1}^n (x_i-m)^2\right) &= E \left( \frac{1}{n}\sum_{i=1}^n x_i^2 - m^2 \right) &&\text{car } -2 \frac{1}{n}\sum_{i=1}^n x_i\times m = -2  m^2\\
+& = \frac{1}{n}\sum_{i=1}^n E(x_i^2)-E(m^2)\\
+& = E(x^2)-E(m^2) &&\text{car }E(x_i)=E(x)\text{ ne dépend pas de }i\\
+&= \left(V(x)+E(x)^2\right)-\left(V(m)+E(m)^2\right)&&\text{car }V(x)=E(x^2)-E(x)^2\\
+&= \left(V(x)+E(x)^2\right)-\left(\frac{1}{n}V(x)+E(x)^2\right)&&\text{car }V(m)=\frac{1}{n}V(x)\\
+&= \frac{n-1}{n}V(x)
+\end{aligned}
+$$
+</div>
+<p>Par conséquent, on multiplie par $\frac{n}{n-1}$ pour se débarrasser du biais&hellip;</p>
 
 
 <footer class="footline">
@@ -1120,88 +1111,8 @@ $$</p>
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1230,6 +1141,16 @@ $$</p>
                         
             
             
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
                 
                     
                 
@@ -1246,16 +1167,20 @@ $$</p>
                         
             
             
-                
+        
                     
-                
-                
-
+                        
+            
+            
+        
                     
+                        
+            
+            
+        
                     
-                    
-
-                    
+                        
+            
             
         
                     
@@ -1272,51 +1197,8 @@ $$</p>
 
                     
                     
-                        
-                    
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-            
-        
                     
                         
             
@@ -1366,8 +1248,66 @@ $$</p>
             
         
                     
+            
+        
+                    
                         
             
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
             
         
                     
@@ -1407,6 +1347,63 @@ $$</p>
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 

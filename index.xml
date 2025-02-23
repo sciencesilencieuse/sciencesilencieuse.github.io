@@ -191,13 +191,6 @@
       <description>Logique modale Syntaxe et sémantique Systèmes logiques Différentes logiques modales Petit condensé de logique modale&amp;nbsp;: En logique modale, un &amp;ldquo;monde possible&amp;rdquo; contient les propositions qui sont vraies dans ce monde. Il correspond à un modèle du calcul des propositions (à une ligne d&amp;rsquo;une table de vérité). Ces mondes possibles sont connectés entre eux par des relations d&amp;rsquo;accessibilité, et les opérateurs de modalité permettent d&amp;rsquo;explorer ces relations. Si $P$ est vraie dans tous les mondes accessibles depuis le monde $a$, alors on écrit $a\Vdash \Box P$ et si $P$ est vraie dans au moins un de ces mondes, on utilise $a\Vdash \Diamond P$.</description>
     </item>
     <item>
-      <title>Probabilités / Statistiques</title>
-      <link>https://sciencesilencieuse.github.io/maths/probastat/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/maths/probastat/</guid>
-      <description>Probabilités Loi Binomiale D&amp;rsquo;une épreuve de Bernoulli à la loi binomiale :&#xA;Loi normale La célèbre gaussienne (ou courbe en cloche) :&#xA;Densité de probabilités Nouvelle énigme permettant de parler des densités de probabilité :&#xA;Quelle est la distance moyenne entre deux points pris au hasard sur un segment ?&#xA;On peut vérifier la solution statistiquement avec un petit programme simplissime :&#xA;Probabilités conditionnelles et Bayes Les probabilités conditionnelles au tribunal, chez le médecin et dans un vieux jeu télévisé américain :</description>
-    </item>
-    <item>
       <title>Propositions - Preuve</title>
       <link>https://sciencesilencieuse.github.io/logique/logique3/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
@@ -217,6 +210,13 @@
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/maths/geometrie/geo3/</guid>
       <description> Aires et volumes </description>
+    </item>
+    <item>
+      <title>Probabilités</title>
+      <link>https://sciencesilencieuse.github.io/maths/proba/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/maths/proba/</guid>
+      <description>Probabilités Loi Binomiale D&amp;rsquo;une épreuve de Bernoulli à la loi binomiale :&#xA;Loi normale La célèbre gaussienne (ou courbe en cloche) :&#xA;Densité de probabilités Nouvelle énigme permettant de parler des densités de probabilité :&#xA;Quelle est la distance moyenne entre deux points pris au hasard sur un segment ?&#xA;On peut vérifier la solution statistiquement avec un petit programme simplissime :&#xA;Probabilités conditionnelles et Bayes Les probabilités conditionnelles au tribunal, chez le médecin et dans un vieux jeu télévisé américain :</description>
     </item>
     <item>
       <title>Relativité générale</title>
@@ -245,6 +245,13 @@
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/physique/quantique/</guid>
       <description>Mécanique quantique Le paradoxe EPR (et plus généralement le concept d&amp;rsquo;intrication quantique) est le vortex autour duquel tourne les différentes interprétations de la quantique puisqu&amp;rsquo;il met en porte-à-faux nos deux explications les plus abouties du monde : la quantique et la relativité. La relativité est par nature une théorie locale alors que le paradoxe EPR démontre la non localité quantique.&#xA;Un joli test de la non-localité quantique sans utiliser d&amp;rsquo;inégalités.</description>
+    </item>
+    <item>
+      <title>Statistiques</title>
+      <link>https://sciencesilencieuse.github.io/maths/stat/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/maths/stat/</guid>
+      <description>Statistiques tip&#xA;Les probabilités sont des calculs a priori, visant à prédire les issues d’évènements n’ayant pas encore eu lieu, alors que les statistiques sont des calculs a posteriori qui analysent les issues d’évènements déjà réalisés.&#xA;Les différentes moyennes Monte Carlo Dans la duxième partie de la vidéo, on cherche à répondre à la grande question suivante : comment s&amp;rsquo;assurer d&amp;rsquo;avoir suffisamment d&amp;rsquo;échantillons pour obtenir des statistiques fiables ? Ou plus prosaïquement : à partir de combien est-ce suffisant ?</description>
     </item>
     <item>
       <title>Poursuites</title>

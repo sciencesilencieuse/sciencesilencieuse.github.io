@@ -37,11 +37,18 @@
       <description>Analyse en composantes principales Les axes qui tiraillent territorialement la France Détaillons un exemple sur le modèle de celui des prénoms dans la vidéo.&#xA;L&amp;rsquo;idée ici est de récupérer plein de séries de données départementales disparates sur le site de l&amp;rsquo;INSEE pour voir si les composantes principales font ou non ressurgir une géographie identifiable de ce brouillard de chiffres. On peut alors s&amp;rsquo;amuser à balbutier des interprétations pour ces axes de différentiation territoriaux et probablement irriter ainsi fortement tout sociologue un tant soit peu éduqué.</description>
     </item>
     <item>
-      <title>Probabilités / Statistiques</title>
-      <link>https://sciencesilencieuse.github.io/maths/probastat/</link>
+      <title>Probabilités</title>
+      <link>https://sciencesilencieuse.github.io/maths/proba/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/maths/probastat/</guid>
+      <guid>https://sciencesilencieuse.github.io/maths/proba/</guid>
       <description>Probabilités Loi Binomiale D&amp;rsquo;une épreuve de Bernoulli à la loi binomiale :&#xA;Loi normale La célèbre gaussienne (ou courbe en cloche) :&#xA;Densité de probabilités Nouvelle énigme permettant de parler des densités de probabilité :&#xA;Quelle est la distance moyenne entre deux points pris au hasard sur un segment ?&#xA;On peut vérifier la solution statistiquement avec un petit programme simplissime :&#xA;Probabilités conditionnelles et Bayes Les probabilités conditionnelles au tribunal, chez le médecin et dans un vieux jeu télévisé américain :</description>
+    </item>
+    <item>
+      <title>Statistiques</title>
+      <link>https://sciencesilencieuse.github.io/maths/stat/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/maths/stat/</guid>
+      <description>Statistiques tip&#xA;Les probabilités sont des calculs a priori, visant à prédire les issues d’évènements n’ayant pas encore eu lieu, alors que les statistiques sont des calculs a posteriori qui analysent les issues d’évènements déjà réalisés.&#xA;Les différentes moyennes Monte Carlo Dans la duxième partie de la vidéo, on cherche à répondre à la grande question suivante : comment s&amp;rsquo;assurer d&amp;rsquo;avoir suffisamment d&amp;rsquo;échantillons pour obtenir des statistiques fiables ? Ou plus prosaïquement : à partir de combien est-ce suffisant ?</description>
     </item>
     <item>
       <title>Théorie des jeux</title>
