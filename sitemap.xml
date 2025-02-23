@@ -2,146 +2,149 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:60457/info/algorithmique/</loc>
+    <loc>https://sciencesilencieuse.github.io/info/algorithmique/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/logique/logique1/</loc>
+    <loc>https://sciencesilencieuse.github.io/logique/logique1/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/maths/geometrie/</loc>
+    <loc>https://sciencesilencieuse.github.io/maths/geometrie/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/maths/bayes/</loc>
+    <loc>https://sciencesilencieuse.github.io/maths/bayes/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/logique/</loc>
+    <loc>https://sciencesilencieuse.github.io/logique/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/physique/meca/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/meca/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/physique/tqc/tqc0/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/tqc/tqc0/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/physique/tqc/tqc1/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/tqc/tqc1/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/physique/tqc/tqc3/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/tqc/tqc3/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/physique/tqc/tqc4/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/tqc/tqc4/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/physique/tqc/tqcd/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/tqc/tqcd/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/physique/tqc/tqc5/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/tqc/tqc5/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/physique/tqc/tqc6/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/tqc/tqc6/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/maths/arithmetique/</loc>
+    <loc>https://sciencesilencieuse.github.io/maths/arithmetique/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/physique/electromag/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/electromag/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/info/</loc>
+    <loc>https://sciencesilencieuse.github.io/info/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/physique/optique/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/optique/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/info/ordinateur/</loc>
+    <loc>https://sciencesilencieuse.github.io/info/ordinateur/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/logique/logique2/</loc>
+    <loc>https://sciencesilencieuse.github.io/logique/logique2/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/maths/geometrie/geo1/</loc>
+    <loc>https://sciencesilencieuse.github.io/maths/geometrie/geo1/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/physique/tqc/tqc2/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/tqc/tqc2/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/maths/algebre/</loc>
+    <loc>https://sciencesilencieuse.github.io/maths/algebre/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/maths/pca/</loc>
+    <loc>https://sciencesilencieuse.github.io/maths/pca/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/maths/geometrie/geo2/</loc>
+    <loc>https://sciencesilencieuse.github.io/maths/geometrie/geo2/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/info/ia/</loc>
+    <loc>https://sciencesilencieuse.github.io/info/ia/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/logique/godel/</loc>
+    <loc>https://sciencesilencieuse.github.io/logique/godel/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/logique/logique4/</loc>
+    <loc>https://sciencesilencieuse.github.io/logique/logique4/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/logique/logique5/</loc>
+    <loc>https://sciencesilencieuse.github.io/logique/logique5/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/logique/logique6/</loc>
+    <loc>https://sciencesilencieuse.github.io/logique/logique6/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/maths/</loc>
+    <loc>https://sciencesilencieuse.github.io/maths/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/maths/probastat/</loc>
+    <loc>https://sciencesilencieuse.github.io/logique/logique3/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/logique/logique3/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/relatres/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/physique/relatres/</loc>
+    <loc>https://sciencesilencieuse.github.io/maths/geometrie/geo3/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/maths/geometrie/geo3/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/physique/</loc>
+    <loc>https://sciencesilencieuse.github.io/maths/proba/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/physique/relatge/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/relatge/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/maths/geometrie/geo4/</loc>
+    <loc>https://sciencesilencieuse.github.io/maths/geometrie/geo4/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/logique/logique-c/</loc>
+    <loc>https://sciencesilencieuse.github.io/logique/logique-c/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/physique/quantique/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/quantique/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/physique/tqc/</loc>
+    <loc>https://sciencesilencieuse.github.io/maths/stat/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/maths/geometrie/geo5/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/tqc/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/maths/jeux/</loc>
+    <loc>https://sciencesilencieuse.github.io/maths/geometrie/geo5/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/physique/phistat/</loc>
+    <loc>https://sciencesilencieuse.github.io/maths/jeux/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/physique/chaos/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/phistat/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/physique/jeux/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/chaos/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/jeux/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/categories/</loc>
+    <loc>https://sciencesilencieuse.github.io/</loc>
+    <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:60457/tags/</loc>
+    <loc>https://sciencesilencieuse.github.io/categories/</loc>
+  </url><url>
+    <loc>https://sciencesilencieuse.github.io/tags/</loc>
   </url>
 </urlset>
