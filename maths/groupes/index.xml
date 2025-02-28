@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Groupes on Science en vrac</title>
+    <link>https://sciencesilencieuse.github.io/maths/groupes/</link>
+    <description>Recent content in Groupes on Science en vrac</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <lastBuildDate>Sat, 06 Mar 2021 14:20:50 +0100</lastBuildDate>
+    <atom:link href="https://sciencesilencieuse.github.io/maths/groupes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Groupes discrets</title>
+      <link>https://sciencesilencieuse.github.io/maths/groupes/groupe1/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/maths/groupes/groupe1/</guid>
+      <description>Les groupes Un groupe est un club privé, un entre-soi monarchique d’éléments se reproduisant entre eux&amp;hellip;&#xA;Généralités Définition d&amp;rsquo;un groupe Comme son nom l’indique, un groupe désigne un ensemble d’éléments. Mais pour que cet ensemble soit promu groupe, on doit le munir d’une loi de composition interne (un truc qui dit comment les éléments jouent entre eux et rien qu’entre eux). Quand on compose un élément du groupe avec un autre élément du groupe, on obtient encore un élément du groupe.</description>
+    </item>
+    <item>
+      <title>Représentations</title>
+      <link>https://sciencesilencieuse.github.io/maths/groupes/groupe2/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/maths/groupes/groupe2/</guid>
+      <description> Les représentations </description>
+    </item>
+  </channel>
+</rss>

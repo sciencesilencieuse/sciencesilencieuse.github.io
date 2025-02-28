@@ -23,6 +23,13 @@
       <description>info&#xA;Notes de lecture du livre La logique pas à pas de Jacques Duparc que je paraphrase allégrement.&#xA;Calcul des propositions Syntaxe Sémantique Preuve Le calcul des propositions (ou calcul propositionnel ou logique des propositions) permet de modéliser des raisonnements simples. Son pouvoir expressif est assez limité mais c&amp;rsquo;est sur ses fondations que se construisent les logiques plus évoluées.&#xA;Syntaxe Langage Le langage du calcul des propositions est constitué de variables propositionnelles $P$, $Q$, $R$,.</description>
     </item>
     <item>
+      <title>Groupes discrets</title>
+      <link>https://sciencesilencieuse.github.io/maths/groupes/groupe1/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/maths/groupes/groupe1/</guid>
+      <description>Les groupes Un groupe est un club privé, un entre-soi monarchique d’éléments se reproduisant entre eux&amp;hellip;&#xA;Généralités Définition d&amp;rsquo;un groupe Comme son nom l’indique, un groupe désigne un ensemble d’éléments. Mais pour que cet ensemble soit promu groupe, on doit le munir d’une loi de composition interne (un truc qui dit comment les éléments jouent entre eux et rien qu’entre eux). Quand on compose un élément du groupe avec un autre élément du groupe, on obtient encore un élément du groupe.</description>
+    </item>
+    <item>
       <title>Inférences bayésiennes</title>
       <link>https://sciencesilencieuse.github.io/maths/bayes/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
@@ -35,6 +42,13 @@
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/physique/meca/</guid>
       <description>Mécanique Énergie cinétique et travail Une approche historique sur l&amp;rsquo;émergence du concept d&amp;rsquo;énergie en mécanique, de Descartes à Einstein.&#xA;Pourquoi une énergie cinétique en $v^2$ ? Trois démonstrations de la formule de l&amp;rsquo;énergie cinétique.&#xA;Je trouve la deuxième (celle de Johann Bernoulli) fabuleuse d&amp;rsquo;intuition géométrique (elle utilise l&amp;rsquo;escargot de Pythagore).&#xA;Chute libre et paraboles Étudier la chute libre, c&amp;rsquo;est jouer avec des paraboles.&#xA;Force de Coriolis La force de Coriolis n&amp;rsquo;est pas une force mais traduit juste la galère d&amp;rsquo;aller droit dans un référentiel tournant.</description>
+    </item>
+    <item>
+      <title>Représentations</title>
+      <link>https://sciencesilencieuse.github.io/maths/groupes/groupe2/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/maths/groupes/groupe2/</guid>
+      <description> Les représentations </description>
     </item>
     <item>
       <title>TQC-0</title>
