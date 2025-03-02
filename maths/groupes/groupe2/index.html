@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1740772209" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1740772209" rel="stylesheet">
-    <link href="/css/hybrid.css?1740772209" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1740772209" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1740772209" rel="stylesheet">
-    <link href="/css/auto-complete.css?1740772209" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1740772209" rel="stylesheet">
-    <link href="/css/theme.css?1740772209" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1740772209" rel="stylesheet">
+    <link href="/css/nucleus.css?1740948318" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1740948318" rel="stylesheet">
+    <link href="/css/hybrid.css?1740948318" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1740948318" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1740948318" rel="stylesheet">
+    <link href="/css/auto-complete.css?1740948318" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1740948318" rel="stylesheet">
+    <link href="/css/theme.css?1740948318" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1740948318" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1740772209" rel="stylesheet">
+    <link href="/css/theme-blue.css?1740948318" rel="stylesheet">
     
-    <link href="/css/foo.css?1740772209" rel="stylesheet"><link href="/css/bar.css?1740772209" rel="stylesheet">
+    <link href="/css/foo.css?1740948318" rel="stylesheet"><link href="/css/bar.css?1740948318" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1740772209"></script>
+    <script src="/js/jquery-3.3.1.min.js?1740948318"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1740772209"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1740772209"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1740948318"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1740948318"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1740772209"></script>
+<script type="text/javascript" src="/js/search.js?1740948318"></script>
 
     
   </div>
@@ -949,7 +949,13 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#réductibilité-et-irréductibilité">Réductibilité et irréductibilité</a></li>
+    <li><a href="#représentation-unitaire">Représentation unitaire</a></li>
+    <li><a href="#conditions-dorthonormalité-et-de-complétude-pour-les-représentations-irréductibles">Conditions d’orthonormalité et de complétude pour les représentations irréductibles</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -989,9 +995,321 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   #grosseformule 
 {
     overflow-x: auto; 
-  }
+}
+#preuve
+{
+    background-color:#EAEAEA;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#def
+{
+    background-color:#DCEFFE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#theo
+{
+    background-color:#FBE1DE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+h2
+{
+color:#970E53 !important;
+}
+h3
+{
+color:#004D80 !important;
+}
+ul
+{
+margin-top:-0.5em;
+}
 </style>
 <h1 id="les-représentations">Les représentations</h1>
+<p style="font-size:1.2em;text-align:center;font-weight:bold;"><a href="../">Retour sommaire</a></p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+<img src="/gralice.png" style="box-shadow:none;background:none;">
+</div>
+<br>
+<p>La physique semble soumise aux symétries (jamais les solutions d&rsquo;un problème ne s&rsquo;affranchissent des symétries qui contraignent le système). Essence des symétries, les groupes sont l&rsquo;objet idéal pour décoder ce lien indéfectible.</p>
+<p>Mais on ne manipule pas &ldquo;la physique&rdquo;, seulement des objets mathématiques sensés modéliser la réalité sous-jacente. Ces objets sont toujours les solutions d’équations différentielles ou intégrales et vivent donc dans des espaces vectoriels. Le mariage entre physique et espaces vectoriels fut même entièrement consommé à l’avènement de la physique quantique puisqu’ils constituent le cadre fondamental de la théorie.</p>
+<p>Cela serait donc sympa que l’on réussisse à balancer nos symétries dans ces espaces vectoriels&hellip; Les représentations sont là pour ça.</p>
+<p>Une <b>représentation</b>, c’est la description d’un groupe dans un <b>espace vectoriel</b>.</p>
+<p>Mais maintenant qu’on a un peu de vocabulaire, disons qu&rsquo;une représentation d&rsquo;un groupe est le résultat d’un homomorphisme de ce groupe vers le groupe des opérateurs linéaires sur les espaces vectoriels (espace des états physiques pour ce qui nous intéresse). Ces opérateurs sont incarnés par des matrices dès qu’on a une base.</p>
+<div id="preuve">
+Remarque&nbsp;:<br>
+<p>on peut vérifier que les matrices carrées d’un ordre donné forment bien des groupes vis-à-vis de la loi de multiplication entre matrices si néanmoins elles ont le bon goût d’être inversibles :</p>
+<ul>
+<li>à toute matrice inversible d’ordre n correspond bien sûr une matrice inverse, elle-même inversible et d’ordre $n$,</li>
+<li>matrice inversible d’ordre $n$ $\times$ matrice inversible d’ordre $n$ $=$ matrice inversible d’ordre $n$,</li>
+<li>la multiplication de matrices est bien associative,</li>
+<li>la matrice identité d’ordre $n$ sert d’élément neutre.</li>
+</ul>
+</div>
+<br>
+<p>Définition &ldquo;technique&rdquo; d&rsquo;une représentation :</p>
+<div id="def">
+Une représentation est une application $g \in G \stackrel{U}{\longmapsto} U(g)$ où $U(g)$ est un opérateur linéaire sur un espace vectoriel $V$, tel que&nbsp;:
+<p>$U\left(g_1\right) U\left(g_1\right)=U\left(g_1 \cdot g_2\right)$</p>
+<p>Et sur une base orthonormée de l’espace vectoriel (de dimension finie), l’opérateur $U$ est associé à une matrice $D$ :</p>
+<p>$U(g)\left|e_i\right\rangle=\left|e_j\right\rangle D(g)^j_{\,i}$</p>
+</div>
+<br>
+<div id="preuve">
+Exemple du groupe de symétrie de la molécule d’ammoniac $\ce{NH3}$&nbsp;:
+<div style="position:relative;margin-left:auto;margin-right:auto;width:150px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+<img src="/grnh3.png" style="box-shadow:none;background:none;">
+</div>
+Appelons $\mathrm{s}_1$, $\mathrm{s}_2$, $\mathrm{s}_3$, les orbitales 1s des atomes d’hydrogène et $\mathrm{s_N}$ l’orbitale 2s de l’atome d’azote. 
+<p>On dénombre 6 éléments de symétrie dans le groupe :</p>
+<ul>
+<li>on peut tout laisser à l’identique (élément neutre) ,</li>
+<li>on peut permuter circulairement les orbitales $\mathrm{s}_i$ des hydrogènes dans un sens ou dans l’autre&nbsp;: $\mathrm{s}_1 \rightarrow \mathrm{s}_2 \rightarrow \mathrm{s}_3 \rightarrow \mathrm{s}_1$&nbsp;, $\mathrm{s}_1 \rightarrow \mathrm{s}_3 \rightarrow \mathrm{s}_2 \rightarrow \mathrm{s}_1$,</li>
+<li> on peut permuter deux à deux les orbitales 1s, ça fait 3 possibilités.</li>
+</ul>
+<p>On vérifie à nouveau l&rsquo;isomorphisme entre $\boldsymbol{S_3}$ et $\boldsymbol{D_3}$ puisque si la molécule de $\ce{NH3}$ a les symétries de $\boldsymbol{S_3}$, elle a bien aussi celles du triangle équilatéral, groupe $\boldsymbol{D_3}$ (mêmes transformations invariantes : l’identité, les 2 rotations $2\pi/3$ et $-2\pi/3$, et les 3 réflexions par rapport aux hauteurs).</p>
+<p>L’atome d’azote est, lui, toujours laissé invariant.</p>
+<p>On peut partir de la table de multiplication de ce groupe (voir <a href="../groupe1#ancre">chapitre précédent</a>) pour construire certaines représentations.</p>
+<ul>
+<li>Représentations de dimension 1&nbsp;:</li>
+<ul>
+<li>La table est respectée par une première représentation de dimension 1 plutôt triviale consistant à associer le nombre 1 à chaque élément du groupe.</li>
+<li>Une autre représentation de dimension 1 un peu plus intéressante consiste à représenter les rotations par des $1$ et les réflexions par des $-1$.<br>Une rotation suivie d’une rotation donne bien une autre rotation ($1\times 1=1$), de même qu’une réflexion suivi d’une autre réflexion ($(-1)\times (-1)=1$), alors que les compositions croisées correspondent effectivement toutes à des réflexions ($1\times(-1)=-1$).</li>
+</ul>
+<li>
+En munissant le plan d’un repère orthonormé, on peut aussi écrire les matrices 2×2 de chacune des transformations et obtenir ainsi une représentation de dimension 2&nbsp;:</li>
+<ul>
+<li>
+l’identité est alors représentée par&nbsp;:<br>
+$\left(\begin{array}{ll}
+1 & 0 \\
+0 & 1
+\end{array}\right)$
+</li>
+<li>
+les deux permutations circulaires (ou rotation de $\pm2\pi/3$) par&nbsp;:
+<p>$\left(\begin{array}{cc}
+\cos (2 \pi / 3) &amp; -\sin (2 \pi / 3) \\
+\sin (2 \pi / 3) &amp; \cos (2 \pi / 3)
+\end{array}\right)$,
+$\left(\begin{array}{cc}
+\cos (4 \pi / 3) &amp; -\sin (4 \pi / 3) \\
+\sin (4 \pi / 3) &amp; \cos (4 \pi / 3)
+\end{array}\right)$</p>
+</li>
+<li>
+et les 3 permutation deux à deux (réflexions) par&nbsp;:
+<p>$\left(\begin{array}{cc}
+1 &amp; 0 \\
+0 &amp; -1
+\end{array}\right)$,
+$\left(\begin{array}{cc}
+\cos (2 \pi / 3) &amp; \sin (2 \pi / 3) \\
+\sin (2 \pi / 3) &amp; -\cos (2 \pi / 3)
+\end{array}\right)$,
+$
+\left(\begin{array}{cc}
+\cos (4 \pi / 3) &amp; \sin (4 \pi / 3) \\
+\sin (4 \pi / 3) &amp; -\cos (4 \pi / 3)
+\end{array}\right)
+$</p>
+</li>
+</ul>
+<li>
+On aurait aussi pu simplement partir de la base formée des 4 orbitales ($\mathrm{s_N}$, $\mathrm{s_1}$, $\mathrm{s_2}$, $\mathrm{s_3}$) et regarder ce qu’il advient de chacune. On obtient alors une représentation de dimension 4 de ce groupe de transformations&nbsp;:
+</li>
+<ul>
+<li>
+l’identité s'écrit ainsi&nbsp;:<br>
+<p>$
+\left(\begin{array}{llll}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{array}\right)
+$</p>
+ </li>
+ <li>
+les deux permutations circulaires (ou rotations)&nbsp;:
+<p>$
+\left(\begin{array}{llll}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0
+\end{array}\right)
+$,
+$
+\left(\begin{array}{llll}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 1 &amp; 0 &amp; 0
+\end{array}\right)
+$</p>
+</li>
+<li>
+et les 3 permutation deux à deux (réflexions)&nbsp;:
+<p>$
+\left(\begin{array}{llll}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 0
+\end{array}\right)
+$,
+$
+\left(\begin{array}{llll}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0
+\end{array}\right)
+$,
+$
+\left(\begin{array}{llll}
+1 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{array}\right)
+$</p>
+</li>
+</div>
+<p>Cet exemple illustre le bazar que le monde des représentations peut vite devenir&hellip;</p>
+<p>On va voir comment ranger tout ça en regroupant les représentations par classe et surtout en décomposant les représentations d’un groupe en représentations irréductibles, atomes de la théorie.</p>
+<h2 id="réductibilité-et-irréductibilité">Réductibilité et irréductibilité</h2>
+<p>Pour la plupart des groupes susceptibles d’intéresser un physicien, les diverses façon de les représenter sont limitées et peuvent être répertoriées. Cela structure fortement l’espace vectoriel dans lequel joue le système physique.</p>
+<p>Afin de classer les représentations, il faut d’abord être sûr qu’elles sont bien différentes. Pour cela, il faut vérifier qu’elles n’appartiennent pas à la même <b>classe d’équivalence</b> :</p>
+<div id="def">
+<p>Soit $U(G)$ est une représentation du groupe $G$ sur l’espace vectoriel $V$ et $S$ n’importe quelle opérateur inversible sur $V$.<br>
+Alors la représentation $U^{\prime}(G)$ telle que $U^{\prime}(G)=S U(G) S^{-1}$ (les matrices associées sont alors semblables) forme aussi une représentation de $G$ sur $V$, de même dimension. On dit que $U(G)$ et $U^{\prime}(G)$ sont <b>équivalentes</b> (on note alors $U \sim U^{\prime}$).</p>
+<p>Et l’ensemble des représentations équivalentes forme une <b>classe d’équivalence</b>. Il suffit de connaître un élément de chaque classe puisqu’on peut générer tous les autres à partir de celui-ci.</p>
+</div>
+<p>On n’a fait là qu’importer la notion de classes des groupes aux représentations.</p>
+<p>Pour répertorier les différentes représentation d’un groupe, on se concentre donc sur les représentations non équivalentes.</p>
+<p>Et pour s’assurer que deux représentations sont équivalentes ou non, il faut une grandeur variant d’une classe à l’autre mais pas à l’intérieur d’une classe. On appelle une telle quantité un <b>invariant de similitude</b> (puisqu’il est identique pour deux matrices semblables). La trace en est un (ça lui donne d’ailleurs son nom : indépendante d’un changement de base, la trace caractérise la matrice) !</p>
+<p>Mais chez les représentations, le vocabulaire s’enrichit :</p>
+<div id="def">
+<p>Le <b>caractère</b> $\chi(G)$ d’un élément  de $G$ dans une représentation $U(g)$ est défini comme $\chi(g)=\operatorname{Tr} U(g)$. Tous les éléments du groupe d’une même classe ont le même caractère.</p>
+<p>Le caractère caractérise donc une classe.</p>
+</div>
+<p>Les différentes représentations équivalentes sont autant de doublons à balayer mais une autre redondance pollue aussi l’analyse : une représentation donnée peut être décrite comme la somme de ses sous-parties.</p>
+<p>Supposons que l’on ait deux représentations $U_1(G)$ et $U_2(G)$ dans deux espaces orthogonaux $V_1$ et $V_2$. On peut alors construire une nouvelle représentation dans l’espace somme directe de $V_1$ et $V_2$ : $V_1 \oplus V_2$. La représentations est alors dite <b>somme directe</b> des représentations : $U(G)=U_1(G) \oplus U_2(G)$. Chacun des deux sous-espaces reste invariant sous l’action de $U$ par construction (on dit plutôt qu’ils sont laissés stables).</p>
+<p>C’est l’opération inverse qui va nous intéresser : quand une représentation donnée peut être décomposée en sous-représentations laissant stables certains sous-espaces. La représentation est alors dites <b>réductibles</b>.</p>
+<p>Précisons le vocabulaire :</p>
+<div id="def">
+<p>Un <b>sous-espace</b> $V_1$ de $V$ est dit <b>stable</b> par l’action de $U(G)$ si pour tout $g\in G$, et pour tout $x \in V_1$, $U(g) x \in V_1$.</p>
+</div>
+<br>
+<div id="def">
+<p>Une <b>représentation</b> $U(G)$ sur $V$ est dite <b>irréductible</b> s’il n’y a pas dans $V$ de sous-espace laissé stable par l’action de $U(G)$.</p>
+</div>
+<br>
+<div id="def">
+<p>Si un tel sous-espace invariant existe et si le sous-espace orthogonal est aussi invariant, alors la représentation est dite <b>complètement réductible</b>.</p>
+</div>
+<br>
+<div id="preuve">
+Exemple de représentation réductible non complètement réductible&nbsp;:
+<p>c’est le cas des représentations du groupe des translations  à une dimension :</p>
+<p>$D(a)=\left(\begin{array}{ll}
+1 &amp; a \\
+0 &amp; 1
+\end{array}\right)$</p>
+<p>Elle laisse invariant tout vecteur $(x,0)$ mais n’a pas de sous-espace supplémentaire invariant (tentons par exemple $(0,1)$ comme sous-espace complémentaire, on se retrouve avec $D(a)(0,1)=\binom{a}{1}$ qui n&rsquo;appartient pas au sous-espace $\{(0,1)\}$ (sauf pour $a=0$).</p>
+</div>
+<h2 id="représentation-unitaire">Représentation unitaire</h2>
+<p>Une <b>représentation unitaire</b> $U(g)$ est définie sur un espace vectoriel muni d’un produit scalaire (donnant une norme définie positive). Un tel espace est dit préhilbertien.</p>
+<p>La représentation unitaire doit respecter $U^{\dagger} U=1$ (où $U^\dagger$ est l’opérateur adjoint de $U$). Elle préserve les longueurs, les angles et le produit scalaire, et est donc <b>naturellement associée aux transformations de symétrie</b> (d’où son intérêt).</p>
+<div id="def">
+<p>Techniquement, une représentation $U(g)$ sur un espace préhilbertien $V$ est <b>unitaire</b> si pour tout $g\in G$, $\langle U(g) x \mid U(g) y\rangle=\langle x \mid y\rangle$ pour tout $x,y \in V$, avec $\langle x \mid y\rangle$ désignant le produit scalaire entre les vecteurs $|x\rangle$ et $|y\rangle$.</p>
+</div>
+<p>On peut retrouver le lien entre représentation unitaire et opération de symétrie en partant d’un état physique quelconque :</p>
+<p>Soit $|\psi\rangle$ un «vecteur d’état» d’un système sur un espace vectoriel d’états physiques. Une opération de symétrie transforme $|\psi\rangle$ en $|\psi^\prime\rangle$. Les deux ensembles de vecteurs $\{|\psi\rangle\}$ et $\{|\psi^\prime\rangle\}$ doivent fournir des descriptions équivalentes du système physique ce qui implique que l’opérateur de symétrie soit linéaire.</p>
+<p>De plus, toute observable physique doit rester invariante sous la transformation or ces observable sont toujours exprimées sous la forme de produits scalaires du type $\langle\phi \mid \psi\rangle$. Et des transformations linéaires qui préservent le produit scalaire sont induites par des opérateurs unitaires !</p>
+<p>Les représentations unitaires ont une propriété remarquable qui va beaucoup nous occuper :</p>
+<div id="theo">
+<p>Si une <b>représentation unitaire</b> est <b>réductible</b> alors elle est <b>complètement réductible</b>.</p>
+</div>
+<br>
+<div id="preuve">
+Preuve&nbsp;:
+<p>Soit $U(G)$ une représentation unitaire réductible sur $G$ et soit $V_1$ un sous-espace stable par l’action de $U(G)$, et $V_2$ le complément orthogonal à $V_1$. Il faut montrer que $V_2$ est lui aussi stable par l’action de $U(G)$.</p>
+<p>Quels que soient $x\in V_1$ et $y\in V_2$,</p>
+<p>$
+\begin{aligned}
+\langle x \mid U(g) y\rangle &amp; =\left\langle U\left(g^{-1}\right) x \mid U\left(g^{-1}\right) U(g) y\right\rangle \\
+&amp; =\left\langle U\left(g^{-1}\right) x \mid U^{-1}(g) U(g) y\right\rangle \\
+&amp; =\left\langle U\left(g^{-1}\right) x \mid y\right\rangle=0
+\end{aligned}
+$</p>
+<p>car $U\left(g^{-1}\right) x \in V_1$ comme $U(g)(x)$.</p>
+<p>Par conséquent $U(g)y$ appartient à l’espace orthogonal à $V_1$, c’est-à-dire $V_2$, et ce pour tout $g\in G$.</p>
+<p>Conclusion, l’espace $V_2$ est stable sous l’action de $G$.</p>
+</div>
+<p>Donc une représentation unitaire pourra toujours s’écrire comme la somme directe de ses représentations irréductibles et non équivalentes (des représentations équivalentes vivent dans le même sous-espace) :</p>
+<div id="theo">
+<p>$
+\begin{aligned}
+U(G)&amp;=\underbrace{U^1(G) \oplus \cdots \oplus U^1(G)}_{n_1\text{ termes}} \oplus \underbrace{U^2(G) \oplus \cdots \oplus U^2(G)}_{n_2\text{ termes}} \oplus \cdots\\
+&amp;=\sum_{\mu \oplus} n_\mu U^\mu(g)
+\end{aligned}
+$</p>
+<p>où $n_\mu$ est le nombre de fois que la représentation irréductible $\mu$ apparaît dans la décomposition.</p>
+</div>
+<p>Tout ce qui va suivre découle de cette décomposition&hellip;</p>
+<p>Avec le bon choix de base, les matrices de la représentation $U(g)$ apparaîtront donc <strong>diagonales par bloc</strong>.</p>
+<p>$
+D(g)=\left(\begin{array}{cccc}
+D^1(g) &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; D^2(g) &amp; \cdots &amp; \vdots \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; D^k(g)
+\end{array}\right)
+$</p>
+<p>Pour tout $g,g^\prime \in G$,</p>
+<p>$
+D(g) D(g^{\prime})=\left(\begin{array}{cccc}
+D^1(g) D^1(g^{\prime}) &amp; 0 &amp; \cdots &amp; 0 \\
+0 &amp; D^2(g) D^2(g^{\prime}) &amp; \cdots &amp; \vdots \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; \cdots &amp; D^k(g) D^k(g^{\prime})
+\end{array}\right)
+$</p>
+<p>Le non croisement des termes montre que $D(G)$ ne contient pas de nouvelles informations par rapport à l’ensemble des $D_i(G)$ justifiant que l’on puisse parler de redondance entre une représentation et l’ensemble de ses représentations irréductibles.</p>
+<p>Cette décomposition n’est a priori possible que pour des représentations unitaires mais c’est finalement peu restreignant car outre le fait que les groupes de symétrie qui intéressent le physicien sont naturellement associés à des transformations unitaires, toute représentation d’un groupe fini ou compact (éléments variant sur un espace compact) est équivalente à une représentation unitaire.</p>
+<div id="theo">
+<p>En effet, <b>toute représentation d’un groupe fini</b> sur un espace doté d’un produit scalaire est <b>équivalent à une représentation unitaire</b>.</p>
+</div>
+<br>
+<div id="preuve">
+Preuve&nbsp;:
+<p>À partir du produit scalaire $\langle x \mid y\rangle$ défini sur l’espace vectoriel $V$, on en construit un nouveau, toujours sur $V$, en opérant une sorte de moyennage sur l’action du groupe $G$ (cette astuce de passage par la moyenne va beaucoup nous servir) :</p>
+<p>$(x, y) \equiv \sum_g\langle D(g) x \mid D(g) y\rangle$</p>
+<p>$(.\,,.)$ a bien les propriétés d’un produit scalaire : bilinéaire, symétrique, positif, défini.</p>
+<p>Passons maintenant de la base orthonormée $\{e_i\}$ adaptée à l’ancien produit scalaire, telle que $\left\langle e_i \mid e_j\right\rangle=\delta_{i j}$ à une base $\{f_i\}$ adaptée au nouveau, telle que $\left(f_i, f_j\right)=\delta_{i j}$. Soit $S$ la matrice de changement de base : $f_i=S_i^{\,j} e_j$.</p>
+<p>On a ainsi : $(x, y)=\langle S x \mid S y\rangle$ pour tout $x$ et $y$ dans $V$.</p>
+<p>La représentation $U(g)=S D(g) S^{-1}$, équivalente à $D(g)$, est alors unitaire.</p>
+<p>En effet :</p>
+<div id="grosseformule">
+$\begin{aligned}
+\langle U(g) x \mid U(g) y\rangle & =\left\langle S D(g) S^{-1} x \mid S D(g) S^{-1} y\right\rangle \\
+& =\left(D(g) S^{-1} x, D(g) S^{-1} y\right) \\
+& =\sum_{g^{\prime}}\left\langle D\left(g^{\prime}\right) D(g) S^{-1} x \mid D\left(g^{\prime}\right) D(g) S^{-1} y\right\rangle \\
+& =\sum_{g^{\prime \prime}}\left\langle D\left(g^{\prime \prime}\right) S^{-1} x \mid D\left(g^{\prime \prime}\right) S^{-1} y\right\rangle \\
+& =\left(S^{-1} x, S^{-1} y\right) \\
+& =\langle x \mid y\rangle
+\end{aligned}$
+</div>
+</div>
+<p>La preuve précédente est généralisable aux groupes compacts en remplaçant la somme dans la moyenne par une intégrale mais ça devient un peu plus technique.</p>
+<p>Savoir qu’une représentation est réductible nous fait une belle jambe tant qu’on ne sait pas distinguer une représentation déjà réduite d’une représentation pouvant l’être. Car si la matrice associée n’a pas le bon goût d’être d’ores et déjà diagonale par bloc, comment fait-on ? Et quand s’arrête-t-on d’essayer de réduire ?</p>
+<p>Une propriété capitale de la théorie des représentations va nous donner les clés pour opérer cette diagonalisation par bloc jusqu’au bout : <b>les représentations irréductibles froment une base orthonormale de l’espace des représentation du groupe</b>.</p>
+<h2 id="conditions-dorthonormalité-et-de-complétude-pour-les-représentations-irréductibles">Conditions d’orthonormalité et de complétude pour les représentations irréductibles</h2>
 
 
 <footer class="footline">
@@ -1622,16 +1940,16 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1740772209"></script>
-    <script src="/js/perfect-scrollbar.min.js?1740772209"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1740772209"></script>
-    <script src="/js/jquery.sticky.js?1740772209"></script>
-    <script src="/js/featherlight.min.js?1740772209"></script>
-    <script src="/js/highlight.pack.js?1740772209"></script>
+    <script src="/js/clipboard.min.js?1740948318"></script>
+    <script src="/js/perfect-scrollbar.min.js?1740948318"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1740948318"></script>
+    <script src="/js/jquery.sticky.js?1740948318"></script>
+    <script src="/js/featherlight.min.js?1740948318"></script>
+    <script src="/js/highlight.pack.js?1740948318"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1740772209"></script>
-    <script src="/js/learn.js?1740772209"></script>
-    <script src="/js/hugo-learn.js?1740772209"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1740948318"></script>
+    <script src="/js/learn.js?1740948318"></script>
+    <script src="/js/hugo-learn.js?1740948318"></script>
     
     
 
