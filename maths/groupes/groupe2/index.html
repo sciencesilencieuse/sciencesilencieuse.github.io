@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1740948731" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1740948731" rel="stylesheet">
-    <link href="/css/hybrid.css?1740948731" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1740948731" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1740948731" rel="stylesheet">
-    <link href="/css/auto-complete.css?1740948731" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1740948731" rel="stylesheet">
-    <link href="/css/theme.css?1740948731" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1740948731" rel="stylesheet">
+    <link href="/css/nucleus.css?1741139807" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1741139807" rel="stylesheet">
+    <link href="/css/hybrid.css?1741139807" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1741139807" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1741139807" rel="stylesheet">
+    <link href="/css/auto-complete.css?1741139807" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1741139807" rel="stylesheet">
+    <link href="/css/theme.css?1741139807" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1741139807" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1740948731" rel="stylesheet">
+    <link href="/css/theme-blue.css?1741139807" rel="stylesheet">
     
-    <link href="/css/foo.css?1740948731" rel="stylesheet"><link href="/css/bar.css?1740948731" rel="stylesheet">
+    <link href="/css/foo.css?1741139807" rel="stylesheet"><link href="/css/bar.css?1741139807" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1740948731"></script>
+    <script src="/js/jquery-3.3.1.min.js?1741139807"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1740948731"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1740948731"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1741139807"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1741139807"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1740948731"></script>
+<script type="text/javascript" src="/js/search.js?1741139807"></script>
 
     
   </div>
@@ -1310,6 +1310,49 @@ $\begin{aligned}
 <p>Savoir qu’une représentation est réductible nous fait une belle jambe tant qu’on ne sait pas distinguer une représentation déjà réduite d’une représentation pouvant l’être. Car si la matrice associée n’a pas le bon goût d’être d’ores et déjà diagonale par bloc, comment fait-on ? Et quand s’arrête-t-on d’essayer de réduire ?</p>
 <p>Une propriété capitale de la théorie des représentations va nous donner les clés pour opérer cette diagonalisation par bloc jusqu’au bout : <b>les représentations irréductibles froment une base orthonormale de l’espace des représentation du groupe</b>.</p>
 <h2 id="conditions-dorthonormalité-et-de-complétude-pour-les-représentations-irréductibles">Conditions d’orthonormalité et de complétude pour les représentations irréductibles</h2>
+<p>On obtient de haute lutte les relations suivantes :</p>
+<div id="theo">
+<br>
+<ul>
+<li>Une condition d’orthonormalité entre les représentations irréductibles (le «produit scalaire» entre deux représentations irréductibles identiques vaut 1, c’est ce qu’on nomme normalité, et est nul dans les autres cas, c’est l’orthogonalité)&nbsp;:
+<p>$\displaystyle \frac{n_\mu}{n_G} \sum_g  D_\mu^{\dagger}(g)^k{ }_i  \, D^\nu(g)^j{ }_l=\delta^\nu{ }_\mu \, \delta^j{ }_i \,\delta^k{ }_l$</p>
+</li>
+<br>
+<li>Et une conditions de complétude (le mot a beau sonné vilain, il traduit que le pavage de l’espace des représentations par les morceaux irréductibles est complet)&nbsp;:
+<p>$\displaystyle \sum_{\mu, l, k} \frac{n_\mu}{n_G} D^\mu(g)^l{ }_k \, D_\mu^{\dagger}\left(g^{\prime}\right)^k{ }_l=\delta^g{ }_{g^{\prime}}$</p>
+</li>
+<br>
+<li>Le caractère complet est démontré par la très importante ultime relation&nbsp;:
+<p>$\displaystyle\sum_\mu n_\mu^2=n_G$</li></p>
+</ul>
+Les $\mu$ et $\nu$ étiquettent les représentations irréductibles non équivalentes de $G$, $n_\mu$ est la dimension de chacune de ces représentations, et $n_G$ est le nombre d’éléments dans le groupe $G$.<br>
+<br>
+</div>
+<p>Les conditions d’orthonormalité sont élevées au rang de <strong>Great Orthogonality Theorem</strong> (<strong>GOT</strong>) chez les anglo-saxons.</p>
+<p>On peut les réécrire en notant à la manière quantique $\langle g \mid \nu, j, l\rangle=\sqrt{\frac{n_\nu}{n_G}} D^\nu(g)^j{ }_l$ pour insister sur la nature «vectorielle» de ces relations :</p>
+<div id="theo">
+<p>$$\displaystyle\sum_g\langle\mu, i, k \mid g\rangle\langle g \mid \nu, j, l\rangle=\delta^\nu{ }_\mu \,\delta^j{ }_i \, \delta^k{ }_l$$</p>
+</div>
+<p>Cette forme permet d&rsquo;appréhender plus facilement son interprétation géométrique. Il faut s’imaginer un espace vectoriel complexe à $n_G$ dimensions où chaque axe correspond à un élément du groupe.<br>
+Chaque $D^\mu(g)^j{ }_i$ peut donc être vues comme un «vecteur» à $n_G$ composantes (avec $g$ parcourant $G$), tous orthogonaux entre eux. Le premier de ces vecteurs serait par exemple :<br>
+$\left(D^1(e)^1{ }_1, D^1\left(g_1\right)^1{ }_1, D^1\left(g_2\right)^1{ }_1, \ldots, D^1\left(g_{n_G}\right)^1{ }_1\right)$</p>
+<p>On peut aussi réécrire à la manière quantique la relation de complétude :</p>
+<div id="theo">
+<p>$$\sum_{\mu, l, k}\langle g \mid \mu, l, k\rangle\left\langle\mu, l, k \mid g^{\prime}\right\rangle=\delta^g{ }_{g^{\prime}}$$</p>
+</div>
+
+<div class="notices note" style="--title: 'note';">
+  <p style="display: none;">note</p>
+  <div class="notice-body">
+    <p>On s’applique en mécanique quantique à vérifier des relations du même type sur les vecteurs de base de l’espace vectoriel des états (c’est d’ailleurs une des motivations pour la notation compacte en bra-ket adoptée ici). Mais au terme «complétude», les quanticiens préfèrent la mieux tournée «<strong>relation de fermeture</strong>» dont le contenu est le même ; il s’agit de prouver que l’espace ainsi décomposé est complet, c’est-à-dire que tout état peut se décomposer sur les vecteurs de base.</p>
+
+  </div>
+</div>
+
+
+<p>La démonstration de l’orthonormalité s’appuie sur le lemme de Schur qu’on va détailler tout de suite (les relations précédentes sont d’ailleurs parfois appelées relations d’orthogonalité de Schur) et la complétude repose sur les représentations régulières qu’on décrira plus loin.</p>
+<p>Avant d’arriver au lemme de Schur, il nous faut introduire un nouvel opérateur qui généralise la notion d’homomorphisme d’une représentation à une autre.</p>
+<p>Prenons une représentation $U_1(G)$ d’un groupe $G$ dans un espace vectoriel $V_1$ envoyant un vecteur $v_1$ quelconque vers un vecteur $v^\prime_1$ pour un certain élément $g$ de $G$ et une représentation $U_2(G)$ du même groupe $G$ dans un espace $V_2$ envoyant un vecteur $v_2$ vers un vecteur $v^\prime_2$ toujours pour le même élément $g$. On aimerait qu’un homomorphisme $A$ de l’une à l’autre de ces représentations conserve leurs actions en associant parallèlement les vecteurs modifiés pour chaque $g$.<br>Pour être plus clair : si $A$ envoie $v_1$ sur $v_2$, on voudrait alors du même coup que $v^\prime_1$ soit envoyé sur $v^\prime_2$.</p>
 
 
 <footer class="footline">
@@ -1940,16 +1983,16 @@ $\begin{aligned}
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1740948731"></script>
-    <script src="/js/perfect-scrollbar.min.js?1740948731"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1740948731"></script>
-    <script src="/js/jquery.sticky.js?1740948731"></script>
-    <script src="/js/featherlight.min.js?1740948731"></script>
-    <script src="/js/highlight.pack.js?1740948731"></script>
+    <script src="/js/clipboard.min.js?1741139807"></script>
+    <script src="/js/perfect-scrollbar.min.js?1741139807"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1741139807"></script>
+    <script src="/js/jquery.sticky.js?1741139807"></script>
+    <script src="/js/featherlight.min.js?1741139807"></script>
+    <script src="/js/highlight.pack.js?1741139807"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1740948731"></script>
-    <script src="/js/learn.js?1740948731"></script>
-    <script src="/js/hugo-learn.js?1740948731"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1741139807"></script>
+    <script src="/js/learn.js?1741139807"></script>
+    <script src="/js/hugo-learn.js?1741139807"></script>
     
     
 
