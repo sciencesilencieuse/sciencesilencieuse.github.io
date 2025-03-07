@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1741388192" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1741388192" rel="stylesheet">
-    <link href="/css/hybrid.css?1741388192" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1741388192" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1741388192" rel="stylesheet">
-    <link href="/css/auto-complete.css?1741388192" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1741388192" rel="stylesheet">
-    <link href="/css/theme.css?1741388192" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1741388192" rel="stylesheet">
+    <link href="/css/nucleus.css?1741390130" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1741390130" rel="stylesheet">
+    <link href="/css/hybrid.css?1741390130" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1741390130" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1741390130" rel="stylesheet">
+    <link href="/css/auto-complete.css?1741390130" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1741390130" rel="stylesheet">
+    <link href="/css/theme.css?1741390130" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1741390130" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1741388192" rel="stylesheet">
+    <link href="/css/theme-blue.css?1741390130" rel="stylesheet">
     
-    <link href="/css/foo.css?1741388192" rel="stylesheet"><link href="/css/bar.css?1741388192" rel="stylesheet">
+    <link href="/css/foo.css?1741390130" rel="stylesheet"><link href="/css/bar.css?1741390130" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1741388192"></script>
+    <script src="/js/jquery-3.3.1.min.js?1741390130"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1741388192"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1741388192"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1741390130"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1741390130"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1741388192"></script>
+<script type="text/javascript" src="/js/search.js?1741390130"></script>
 
     
   </div>
@@ -1400,7 +1400,7 @@ Par conséquent, $A V_1$ est un sous-espace stable non nul de $V_2$ par rapport 
 </li>
 <li>Montrons que $A$ est injectif&nbsp;:
 soit maintenant $W$ le noyau de $A$. $A$ est une application linéaire, or le noyau d’une application linéaire change un tantinet de ceux côtoyés jusqu’ici puisque l’élément neutre n’est plus l’identité mais le vecteur nul (la composition interne considérée est l’addition). Le noyau étant définit comme l’ensemble aboutissant à l’élément neutre, on a $W=\left\{v_1 \in V_1 ; A v_1=0\right\}$.<br>  
-Prenons un élément $v_1$ de ce noyau. Alors $A\left(U_1(g) v_1\right)=U_2(g) A v_1=U_2(g) 0=0$, donc $U_1(g) v_1$  appartient à $W$ et ce, pour tout $g$. Ce qui implique que $W$ est un sous-espace invariant de $V_1$ pour $G$, or comme $U_1$ est irréductible, $W=\{0\}$ (injection) (ou $W=V_1$ mais alors $A=0$).</li>
+Prenons un élément $v_1$ de ce noyau. Alors $A\left(U_1(g) v_1\right)=U_2(g) A v_1=U_2(g) 0=0$, donc $U_1(g) v_1$  appartient à $W$ et ce, pour tout $g$. Ce qui implique que $W$ est un sous-espace invariant de $V_1$ pour $U_1$, or comme $U_1$ est irréductible, soit $W=V_1$ mais alors $A=0$, soit $W=\{0\}$ (injection).</li>
 </ul>
 <p>$A$ est donc une application bijective entre $V_1$ et $V_2$, ce qui implique que ces deux espaces soient isomorphes.</p>
 <p>D’autre part, comme le noyau de $A$ est le vecteur nul, $A$ est inversible et de $U_2(g) A v_1=A\left(U_1(g) v_1\right)$, on déduit $U_2(g)=A U_1(g) A^{-1}$ pour tout $g\in G$.<br>
@@ -1417,7 +1417,7 @@ Preuve&nbsp;:
 Mais par définition d’une valeur propre, $A- λE$ n’est pas inversible donc d’après le lemme, il ne peut s’agir que de l’élément nul (le lemme dit : soit isomorphisme soit zéro).</p>
 </div>
 <p>Remarque :<br>
-’est la première fois qu’on s’impose de travailler sur un espace vectoriel complexe. Lui-seul permet d’affirmer qu’un opérateur linéaire sur un espace vectoriel de dimension fini possède une valeur propre. C’est une conséquence de l’existence d’une racine pour tout polynôme dans $\mathbb{C}$, en particulier, le polynôme caractéristique de l’opérateur a une racine.<br>
+C’est la première fois qu’on s’impose de travailler sur un espace vectoriel complexe. Lui-seul permet d’affirmer qu’un opérateur linéaire sur un espace vectoriel de dimension finie possède une valeur propre. C’est une conséquence de l’existence d’une racine pour tout polynôme de degré ≥ 1 dans $\mathbb{C}$ (le théorème fondamental de l&rsquo;algèbre dit bien qu&rsquo;un polynôme de degré $n$ a $n$ racines). En particulier, le polynôme caractéristique de l’opérateur a donc une racine.<br>
 Et cela marche aussi pour un espace vectoriel complexe de dimension infinie mais clôt, ce qui permet d’étendre la propriété aux cas qu’on rencontrera dans les chapitres suivants.</p>
 <p>Notons que l’automorphisme d’une représentations commute, par définition, avec tous les éléments de cette représentation.<br>
 Par conséquent, la propriété peut se reformuler ainsi :</p>
@@ -1436,12 +1436,13 @@ Preuve&nbsp;:
 <p>Soit $U(G)$ une représentation irréductible du groupe abélien $G$. Soit $p$ un élément de $G$. Comme $G$ est abélien, on a $U(p) U(g)=U(g) U(p)$ pour tout $g\in G$.<br>
 D’après le lemme de Schur, on a alors $U(p)=\lambda_p E$. Et cela marche pour tout les $p\in G$. Par conséquent, la représentation $U(G)$ est équivalente à la représentation unidimensionnelle $p \rightarrow \lambda_p \in \mathbb{C}$ pour tous les $p\in G$.</p>
 </div>
-<p>En physique, ces considérations généralisent un résultat bien connu : des opérateurs qui commutent possèdent un jeu complet de vecteurs propres commun (cf. la recherche d’un «<strong>ECOC</strong>», ensemble complet d’observables qui commutent, en mécanique quantique).</p>
+<p>En physique, ces considérations généralisent un résultat bien connu : des opérateurs qui commutent possèdent un jeu complet de vecteurs propres communs (cf. la recherche d’un «<strong>ECOC</strong>», ensemble complet d’observables qui commutent, en mécanique quantique).</p>
 <p>Précisons cela dans le cas de l’<strong>Hamiltonien</strong>.<br>
 La dynamique d’un système physique est déterminée par un opérateur appelé l’Hamiltonien $H$ et cet opérateur doit, par définition, rester invariant sous les opérations de symétrie laissant invariant le système physique lui-même.<br>
 Mathématiquement, cela revient à dire que $H$ commute avec les opérateurs unitaires de la symétrie considérée. Et par conséquent, dans une représentation irréductible donnée du groupe de symétrie, l’Hamiltonien a pour représentation un multiple de la matrice identité.<br>
 En d’autres mots, tous les vecteurs de la représentation irréductible sont des vecteurs propres de l’Hamiltonien pour la même valeur propre.<br>
 Cette valeur propre de l’Hamiltonien n’est autre que l’énergie du système et donc l’ensemble des états symétriques qu’on obtient (les vecteurs de la représentation irréductible) sont à énergie fixée.</p>
+<br>
 <p>On est maintenant armé pour prouver l’<strong>orthonormalité</strong> des représentations irréductibles :</p>
 <div id="preuve">
 On veut prouver $ \frac{n_\mu}{n_G} \sum_g  D_\mu^{\dagger}(g)^k_i  \, D^\nu(g)^j_l=\delta^\nu_\mu \, \delta^j_i \,\delta^k_l$.
@@ -2105,16 +2106,16 @@ pour le membre de gauche, on obtient $n_\mu c_l^k$ et pour le membre de droite $
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1741388192"></script>
-    <script src="/js/perfect-scrollbar.min.js?1741388192"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1741388192"></script>
-    <script src="/js/jquery.sticky.js?1741388192"></script>
-    <script src="/js/featherlight.min.js?1741388192"></script>
-    <script src="/js/highlight.pack.js?1741388192"></script>
+    <script src="/js/clipboard.min.js?1741390130"></script>
+    <script src="/js/perfect-scrollbar.min.js?1741390130"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1741390130"></script>
+    <script src="/js/jquery.sticky.js?1741390130"></script>
+    <script src="/js/featherlight.min.js?1741390130"></script>
+    <script src="/js/highlight.pack.js?1741390130"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1741388192"></script>
-    <script src="/js/learn.js?1741388192"></script>
-    <script src="/js/hugo-learn.js?1741388192"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1741390130"></script>
+    <script src="/js/learn.js?1741390130"></script>
+    <script src="/js/hugo-learn.js?1741390130"></script>
     
     
 
