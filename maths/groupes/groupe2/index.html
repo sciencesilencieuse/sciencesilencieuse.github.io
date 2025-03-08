@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1741437610" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1741437610" rel="stylesheet">
-    <link href="/css/hybrid.css?1741437610" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1741437610" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1741437610" rel="stylesheet">
-    <link href="/css/auto-complete.css?1741437610" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1741437610" rel="stylesheet">
-    <link href="/css/theme.css?1741437610" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1741437610" rel="stylesheet">
+    <link href="/css/nucleus.css?1741439916" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1741439916" rel="stylesheet">
+    <link href="/css/hybrid.css?1741439916" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1741439916" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1741439916" rel="stylesheet">
+    <link href="/css/auto-complete.css?1741439916" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1741439916" rel="stylesheet">
+    <link href="/css/theme.css?1741439916" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1741439916" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1741437610" rel="stylesheet">
+    <link href="/css/theme-blue.css?1741439916" rel="stylesheet">
     
-    <link href="/css/foo.css?1741437610" rel="stylesheet"><link href="/css/bar.css?1741437610" rel="stylesheet">
+    <link href="/css/foo.css?1741439916" rel="stylesheet"><link href="/css/bar.css?1741439916" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1741437610"></script>
+    <script src="/js/jquery-3.3.1.min.js?1741439916"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1741437610"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1741437610"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1741439916"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1741439916"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1741437610"></script>
+<script type="text/javascript" src="/js/search.js?1741439916"></script>
 
     
   </div>
@@ -953,7 +953,15 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   <ul>
     <li><a href="#réductibilité-et-irréductibilité">Réductibilité et irréductibilité</a></li>
     <li><a href="#représentation-unitaire">Représentation unitaire</a></li>
-    <li><a href="#conditions-dorthonormalité-et-de-complétude-pour-les-représentations-irréductibles">Conditions d’orthonormalité et de complétude pour les représentations irréductibles</a></li>
+    <li><a href="#conditions-dorthonormalité-et-de-complétude-pour-les-représentations-irréductibles">Conditions d’orthonormalité et de complétude pour les représentations irréductibles</a>
+      <ul>
+        <li><a href="#opérateur-dentrelacement">Opérateur d&rsquo;entrelacement</a></li>
+        <li><a href="#lemme-de-schur">Lemme de Schur </a></li>
+        <li><a href="#démonstration-de-lorthonormalité">Démonstration de l&rsquo;orthonormalité</a></li>
+        <li><a href="#applications-de-lorthonormalité">Applications de l&rsquo;orthonormalité</a></li>
+      </ul>
+    </li>
+    <li><a href="#conditions-dorthonormalité-et-de-complétude-pour-les-caractères-irréductibles">Conditions d’orthonormalité et de complétude pour les caractères irréductibles</a></li>
   </ul>
 </nav>
     </div>
@@ -1372,6 +1380,7 @@ $</p>
 
 
 <p>La démonstration de l’orthonormalité s’appuie sur le lemme de Schur qu’on va détailler tout de suite (les relations précédentes sont d’ailleurs parfois appelées relations d’orthogonalité de Schur) et la complétude repose sur les représentations régulières qu’on décrira plus loin.</p>
+<h3 id="opérateur-dentrelacement">Opérateur d&rsquo;entrelacement</h3>
 <p>Avant d’arriver au lemme de Schur, il nous faut introduire un nouvel opérateur qui généralise la notion d’homomorphisme d’une représentation à une autre.</p>
 <p>Prenons une représentation $U_1(G)$ d’un groupe $G$ dans un espace vectoriel $V_1$ envoyant un vecteur $v_1$ quelconque vers un vecteur $v^\prime_1$ pour un certain élément $g$ de $G$ et une représentation $U_2(G)$ du même groupe $G$ dans un espace $V_2$ envoyant un vecteur $v_2$ vers un vecteur $v^\prime_2$ toujours pour le même élément $g$. On aimerait qu’un homomorphisme $A$ de l’une à l’autre de ces représentations conserve leurs actions en associant parallèlement les vecteurs modifiés pour chaque $g$.<br>Pour être plus clair : si $A$ envoie $v_1$ sur $v_2$, on voudrait alors du même coup que $v^\prime_1$ soit envoyé sur $v^\prime_2$.</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:250px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
@@ -1383,7 +1392,8 @@ Soient $U_1(G) \in V_1$ et $U_2(G) \in V_2$ deux représentations. L’<strong>o
 <div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/schur2.png" style="box-shadow:none;background:none;">
 </div>
-<p>L’ensemble de tous les opérateurs d’entrelacement de $U_1$ à $U_2$ est noté $\operatorname{Hom}_G\left(U_1, U_2\right)$. </p>
+<p>L’ensemble de tous les opérateurs d’entrelacement de $U_1$ à $U_2$ est noté $\operatorname{Hom}_G\left(U_1, U_2\right)$.</p>
+<h3 id="lemme-de-schur">Lemme de Schur </h3>
 <div id="theo">
 <b>Lemme de Schur</b>&nbsp;:
 <p>Soit $U_1(G)$ et $U_2(G)$ deux représentations irréductible d’un groupe $G$ sur des espaces vectoriels $V_1$ et $V_2$ et $A \in \operatorname{Hom}_G\left(U_1, U_2\right)$, un opérateur d’entrelacement.<br> On a alors : soit $A=0$, soit $V_1$ et $V_2$ sont isomorphes et les représentations $U_1$ et $U_2$ sont équivalentes.</p>
@@ -1442,7 +1452,7 @@ La dynamique d’un système physique est déterminée par un opérateur appelé
 Mathématiquement, cela revient à dire que $H$ commute avec les opérateurs unitaires de la symétrie considérée. Et par conséquent, dans une représentation irréductible donnée du groupe de symétrie, l’Hamiltonien a pour représentation un multiple de la matrice identité.<br>
 En d’autres mots, tous les vecteurs de la représentation irréductible sont des vecteurs propres de l’Hamiltonien pour la même valeur propre.<br>
 Cette valeur propre de l’Hamiltonien n’est autre que l’énergie du système et donc l’ensemble des états symétriques qu’on obtient (les vecteurs de la représentation irréductible) sont à énergie fixée.</p>
-<br>
+<h3 id="démonstration-de-lorthonormalité">Démonstration de l&rsquo;orthonormalité</h3>
 <p>On est maintenant armé pour prouver l’<strong>orthonormalité</strong> des représentations irréductibles :</p>
 <div id="preuve">
 On veut prouver $ \frac{n_\mu}{n_G} \sum_g  D_\mu^{\dagger}(g)^k_i  \, D^\nu(g)^j_l=\delta^\nu_\mu \, \delta^j_i \,\delta^k_l$.
@@ -1476,6 +1486,70 @@ $\left(M_l^k\right)^i_j=\sum_g D_\mu^{\dagger}(g)^i_m\left(X_l^k\right)^m_n D^\n
 pour le membre de gauche, on obtient $n_\mu c_l^k$ et pour le membre de droite $\sum_g\left[D_\mu^{\dagger}(g) D^\mu(g)\right]_l^k=n_G \delta_l^k$.</p>
 <p>Finalement, $c_l^k=\left(n_G / n_\mu\right) \delta_l^k$.</p>
 </div>
+<br>
+<p>Remarque :<br>
+l’orthonormalité entre représentations irréductibles inéquivalentes est insuffisante pour obtenir la relation $\Sigma_\mu n_\mu^2=n_G$.<br>
+En effet, en considérant les $D^\mu(g)_j^i$, $g \in G$ comme un ensemble de vecteurs orthogonaux étiquetés par les $(\mu,i,j)$, on se retrouve avec $\Sigma_\mu n_\mu^2$ «vecteurs» dans cet ensemble puisque les $(i,j)$ prennent $n_\mu^2$ valeurs différentes et chacun de ces vecteurs est formé de $n_G$ composantes. Or le nombre de vecteurs mutuellement orthogonaux (donc linéairement indépendants) doit être au mieux égal à la dimension de l’espace vectoriel, ici $n_G$.<br>
+On a donc seulement $\sum_\mu n_\mu^2 \leq n_G$.<br>
+Cela rend néanmoins déjà possible la quête principale de la théorie des représentations : le recensement de toutes les représentations irréductibles non équivalentes d’un groupe donné.<br>
+Bien qu’anticipant la preuve, on sait déjà que l’inégalité est en réalité toujours saturée. Les «vecteurs» étiquetés par $(\mu,i,j)$ et formés de la collection ordonnée de  $n_G$ $D^\mu(g)_j^i$, forment donc bien un ensemble complet en plus d’être orthogonal.</p>
+<h3 id="applications-de-lorthonormalité">Applications de l&rsquo;orthonormalité</h3>
+<p>Voyons maintenant comment utiliser l’orthogonalité pour construire de nouvelles représentations irréductibles.</p>
+<div id="preuve">
+Exemple&nbsp;:
+<p>$\mathrm{C}_2$, groupe le plus simple, a, comme tout les groupes, une représentations évidentes : l’identité $d_1$ définit comme $(e, a) \xrightarrow{d_1}(1,1)$ (notation signifiant $d_1(e)=1$ et $d_1(a)=1$). La notation réduite prend tout son sens avec la relation d’orthogonalité où les représentations sont vues comme des vecteurs). Si une deuxième représentation non équivalente $d_2$ est aussi regardé comme un vecteur a deux composantes, alors il doit être orthogonal à $(1,1)$. $(1,-1)$ est la seule possibilité à la fois orthogonale et normalisable. Donc le seul candidat pour une seconde représentation irréductible est $(e, a) \xrightarrow{d_2}(1,-1)$.<br>
+On ne peut trouver d’autres vecteurs orthogonaux, on a donc l’ensemble des représentation irréductibles de $\mathrm{C}_2$.</p>
+</div>
+<p>Partir de représentations simples comme l’identité est une des astuces.</p>
+<p>Pour faire progresser l’investigation sur des groupes plus gros, on va avoir recours à une autre astuce liée aux <strong>groupes quotients</strong> mais cela va nous amener à digresser un peu&hellip;</p>
+<p>Les <a href="../groupe1/#groupes-quotients">groupes quotients</a> fournissent de nouvelles représentations et permettent en outre de rendre fidèle une représentation dégénérée.</p>
+<div id="theo">
+<p>Représentations d’un groupe quotient :</p>
+<p>Si un groupe $G$ a un sous-groupe invariant $H$ non trivial, alors toute représentation du <b>groupe quotient</b> $K=G/H$ est aussi une représentation de $G$, mais cette <b>représentation</b> de $G$ est <b>dégénérée</b>.<br>
+À l’inverse, si $U(G)$ est une représentation dégénérée de $G$, alors $G$ contient au moins un sous-groupe invariant $H$ tel que $U(G)$ définisse une représentation <b>fidèle</b> (non dégénérée) du groupe quotient $G/H$.</p>
+</div>
+<br>
+<div id="preuve">
+Exemple&nbsp;:
+<p>On a déjà vu que $\mathrm{S_3}$ a un sous-groupe invariant $H=\{e,(123),(321)\}$. Le groupe quotient est isomorphe à $\mathrm{C_2}=\{e,a\}$. Or $\mathrm{C_2} $a une représentation assez simple $\{(e, a) \rightarrow(1,-1)\}$ (on reviendra plus loin sur ce type de notation et la méthode pour trouver une représentation autrement que par tâtonnement).<br>
+Cela induit une représentation unidimensionnelle de $\mathrm{S_3}$ associant $1$ aux éléments $\{e,(123),(321)\}$ et $-1$ à $\{(12),(23),(31)\}$. C’est bien une des possibilités trouvées dans l’exemple précédent en jouant avec la table de multiplication du groupe. Cette représentation, dégénérée pour $\mathrm{S_3}$, est bien une représentation fidèle pour $S_3 / H \simeq C_2$.</p>
+</div>
+<p>Remarque :<br>
+les représentations dégénérées et la manière de les rendre fidèle (ces choix sémantiques traduisent-ils une croisade morale de certains mathématiciens ?) reviendront sur le devant de la scène quand on parlera des groupes compacts (comme les rotations) et des topologies associées.</p>
+<p>Ce nouvel outil peut faciliter grandement la recherche de représentations irréductibles comme on va le voir dans l’exemple suivant.</p>
+<div id="preuve">
+Exemple&nbsp;: 
+<p>considérons le groupe dihédral $\mathrm{D_2}$ dont la table de multiplication est :</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+<img src="/tabd2.png" style="box-shadow:none;background:none;">
+</div>
+Le groupe correspond aux symétries de la figure suivante :
+<div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+<img src="/d2sym.png" style="box-shadow:none;background:none;">
+</div>
+Les 4 éléments de symétrie sont l’identité, les deux réflexions $(13)$ et $(24)$ et la rotation d’angle π. Associés deux à deux, ça redonne un des 4. Et comme ils commutent tous, le groupe est abélien. Par conséquent, on s’attend à des représentations unidimensionnelle.<br>
+La première de ces représentations est la triviale identité&nbsp;: $(e, a, b, c) \xrightarrow{d_1}(1,1,1,1)$.
+<p>Maintenant, l’astuce : les éléments $\{e,a\}$ forment un sous-groupe invariant et le groupe quotient $\{\{e, a\},\{b, c\}\}$ est isomorphe à $\mathrm{C_2}$ (il n’y a qu’un groupe à deux éléments) dont on connait déjà les deux représentations irréductibles. Les deux représentations de $\mathrm{C_2}$ induisent deux représentations dégénérées sur $\mathrm{D_2}$. La première est la perpétuelle représentation identité, la deuxième associe $-1$ à $b$ et $c$ : $(e, a, b, c) \xrightarrow{d_2}(1,1,-1,-1)$.</p>
+<p>On peut ensuite tenir le même raisonnement en partant du sous-groupe invariant $\{e,b\}$ qui nous amène la troisième représentation : $(e, a, b, c) \xrightarrow{d_3}(1,-1,1,-1)$.</p>
+<p>Enfin, le sous-groupe invariant $\{e,c\}$ nous donne la quatrième et dernière : $(e, a, b, c) \xrightarrow{d_4}(1,-1,-1,1)$.</p>
+<p>On vérifie bien que les 4 «vecteur» sont orthonornaux comme il se doit et qu’aucun autre ne peut exister par la même condition.</p>
+</div>
+<p>Remarques :</p>
+<ul>
+<li>
+La relation $\Sigma_\mu n_\mu^2=n_G$ (que l’on démontrera plus loin) nous assure que pour tout groupe abélien (représentation unidimensionnelle $\Leftrightarrow n_\mu=1$), il y a autant de représentation que d’éléments ($n_G$) et les vecteurs formés par les représentations (étiquetés par $\mu$) forment alors un ensemble orthogonal complet.<br>
+Les représentations de $\mathrm{C_2}$ et $\mathrm{D_2}$ débusquées dans les exemples précédents illustrent bien ce point.<br>
+Plus besoin dans ce cas de guillemets au mot vecteur, il ne s’agit plus d’une collection pachydermique de $n_G$ objets de dimension $n_\mu^2$ mais bien d’une collection ordonnée de $n_G$ nombres qu’on désigne plus volontiers ainsi (ou des tenseurs de rang 1 si on veut fanfaronner), même si techniquement, les gros objets formés par une représentation quelconque peuvent tout autant revendiquer l’appellation.
+</li>
+<li style="margin-top:0.5em;">
+On s’intéressera dans les chapitres suivants à des groupes infinis et par chance, en dépit de quelques ajustements cosmétiques (les intégrales remplaceront les sommes discrètes), la condition d’orthonormalité des représentations irréductibles tient le choc.<br>
+Pour le groupe infini le plus simple, abélien et à une dimension, elle se confond avec le théorème de Fourier des fonctions périodiques et aiguise alors notre vision des choses ; la condition d’orthonormalité est en fin de compte une <b>puissante extension du théorème de Fourier</b>.
+</li>
+</ul>
+<p>Comme on l’a déjà évoqué, les matrices des représentations dépendent de la base. Pour les représentations 1D des groupes abéliens, pas de soucis, mais chez les groupes plus complexes, les dimensions supplémentaires n’apporteront que tracas et confusion.<br>
+Grâce aux caractères, indépendants de la base, on pourrait maintenir un traitement équivalent aux douillettes représentations 1D quelle que soit la dimension. Transposer les relations d’orthonormalité chez les caractères, bien plus engageants, semble donc une entreprise judicieuse.</p>
+<br>
+<h2 id="conditions-dorthonormalité-et-de-complétude-pour-les-caractères-irréductibles">Conditions d’orthonormalité et de complétude pour les caractères irréductibles</h2>
 
 
 <footer class="footline">
@@ -2106,16 +2180,16 @@ pour le membre de gauche, on obtient $n_\mu c_l^k$ et pour le membre de droite $
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1741437610"></script>
-    <script src="/js/perfect-scrollbar.min.js?1741437610"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1741437610"></script>
-    <script src="/js/jquery.sticky.js?1741437610"></script>
-    <script src="/js/featherlight.min.js?1741437610"></script>
-    <script src="/js/highlight.pack.js?1741437610"></script>
+    <script src="/js/clipboard.min.js?1741439916"></script>
+    <script src="/js/perfect-scrollbar.min.js?1741439916"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1741439916"></script>
+    <script src="/js/jquery.sticky.js?1741439916"></script>
+    <script src="/js/featherlight.min.js?1741439916"></script>
+    <script src="/js/highlight.pack.js?1741439916"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1741437610"></script>
-    <script src="/js/learn.js?1741437610"></script>
-    <script src="/js/hugo-learn.js?1741437610"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1741439916"></script>
+    <script src="/js/learn.js?1741439916"></script>
+    <script src="/js/hugo-learn.js?1741439916"></script>
     
     
 
