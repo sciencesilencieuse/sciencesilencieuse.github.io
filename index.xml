@@ -23,6 +23,13 @@
       <description>info&#xA;Notes de lecture du livre La logique pas à pas de Jacques Duparc que je paraphrase allégrement.&#xA;Calcul des propositions Syntaxe Sémantique Preuve Le calcul des propositions (ou calcul propositionnel ou logique des propositions) permet de modéliser des raisonnements simples. Son pouvoir expressif est assez limité mais c&amp;rsquo;est sur ses fondations que se construisent les logiques plus évoluées.&#xA;Syntaxe Langage Le langage du calcul des propositions est constitué de variables propositionnelles $P$, $Q$, $R$,.</description>
     </item>
     <item>
+      <title>Diagrammes d&#39;Epstein</title>
+      <link>https://sciencesilencieuse.github.io/physique/relatres/epstein/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/relatres/epstein/</guid>
+      <description>Diagrammes d&#39;espace-temps propre Lewis epstein a proposé dans ce petit livre d&amp;rsquo;utiliser les diagrammes d&amp;rsquo;epsace-&amp;ldquo;temps propre&amp;rdquo; en lieu et place des diagrammes d&amp;rsquo;espace-temps de Minkowski pour expliquer le plus naturellement possible les étrangetés de la relativité restreinte.&#xA;Ces diagrammes ont en effet certaines vertus pédagogiques indéniables (mais aussi quelques défauts rédhibitoires).</description>
+    </item>
+    <item>
       <title>Groupes discrets</title>
       <link>https://sciencesilencieuse.github.io/maths/algebre/groupes/groupe1/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
@@ -203,13 +210,6 @@
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/logique/logique3/</guid>
       <description>info&#xA;Notes de lecture du livre La logique pas à pas de Jacques Duparc que je paraphrase allégrement.&#xA;Calcul des propositions Syntaxe Sémantique Preuve Théorie de la démonstration Une preuve ou une démonstration&amp;nbsp;:&#xA;est de longueur finie, est vérifiable mécaniquement, s&amp;rsquo;appuie sur des hypothèses, aboutit à une conclusion. Une démonstration permet de mettre au jour une vérité syntaxique (s&amp;rsquo;appuyant sur un jeu de règles) plutôt que sémantique (faisant intervenir les modèles d&amp;rsquo;une théorie).</description>
-    </item>
-    <item>
-      <title>Relativité restreinte</title>
-      <link>https://sciencesilencieuse.github.io/physique/relatres/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/relatres/</guid>
-      <description>Relativité restreinte Vision géométrique Série de vidéos sur la relativité restreinte avec un angle plutôt géométrique.&#xA;Source : le génial petit livre &amp;ldquo;Very special relativity - An illustrated guide&amp;rdquo; de Sander Bais.&#xA;FloatHeadPhysics communique bien dans la vidéo suivante la joie de la découverte d&amp;rsquo;un modèle explicatif simple.&#xA;Ici, elle vient de ce merveilleux petit livre illustré : Relativity visualized de Lewis Caroll Epstein.&#xA;Masse du photon Paradoxe des jumeaux Champ magnétique Il n&amp;rsquo;y a pas de champ magnétique, seulement un champ électrique et du mouvement.</description>
     </item>
     <item>
       <title>Aires et Volumes</title>
