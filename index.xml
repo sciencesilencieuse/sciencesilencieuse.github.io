@@ -37,13 +37,6 @@
       <description>Inférences bayésiennes L&amp;rsquo;intelligence artificielle vise à simuler l&amp;rsquo;intelligence humaine. Mais la compréhension du fonctionnement de notre cerveau en est elle-même encore qu&amp;rsquo;à ses prémices.&#xA;Tel un programme informatique, le cerveau produit de nouvelles informations à partir de l&amp;rsquo;information qu&amp;rsquo;il reçoit (les données). Un changement de paradigme a eu lieu récemment dans la communauté scentifique concernant la modalité même de ce traitement de l&amp;rsquo;information par le cerveau. Stanislas Dehaene, un psychologue spécialisé en neuropsychologie, résume cette nouvelle façon d&amp;rsquo;apréhender l&amp;rsquo;information dans ses leçons au Collège de France :</description>
     </item>
     <item>
-      <title>Mécanique</title>
-      <link>https://sciencesilencieuse.github.io/physique/meca/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/meca/</guid>
-      <description>Mécanique Énergie cinétique et travail Une approche historique sur l&amp;rsquo;émergence du concept d&amp;rsquo;énergie en mécanique, de Descartes à Einstein.&#xA;Pourquoi une énergie cinétique en $v^2$ ? Trois démonstrations de la formule de l&amp;rsquo;énergie cinétique.&#xA;Je trouve la deuxième (celle de Johann Bernoulli) fabuleuse d&amp;rsquo;intuition géométrique (elle utilise l&amp;rsquo;escargot de Pythagore).&#xA;Chute libre et paraboles Étudier la chute libre, c&amp;rsquo;est jouer avec des paraboles.&#xA;Force de Coriolis La force de Coriolis n&amp;rsquo;est pas une force mais traduit juste la galère d&amp;rsquo;aller droit dans un référentiel tournant.</description>
-    </item>
-    <item>
       <title>Représentations</title>
       <link>https://sciencesilencieuse.github.io/maths/algebre/groupes/groupe2/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
@@ -128,6 +121,13 @@
       <description>Dans la bête Ordinateur Petite série de vidéo sur le fonctionnement simplifié d&amp;rsquo;un ordinateur.&#xA;note&#xA;Source : &amp;ldquo;But how do it know?&amp;rdquo; de J. Clark Scott&#xA;Portes et logique Article de Fredkin et Toffoli de 1981 sur la possibilité d&amp;rsquo;un ordinateur réversible démontrée par l&amp;rsquo;implémentation de portes à base de boules de billard !&#xA;Plus récemment, une équipe japonaise a remplacé les boules de billard par des crabes&amp;hellip;</description>
     </item>
     <item>
+      <title>Paraboles</title>
+      <link>https://sciencesilencieuse.github.io/physique/meca/paraboles/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/meca/paraboles/</guid>
+      <description> Chutes libres et paraboles </description>
+    </item>
+    <item>
       <title>Propositions - Sémantique</title>
       <link>https://sciencesilencieuse.github.io/logique/logique2/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
@@ -163,11 +163,32 @@
       <description>Cercle et triangle Trigonométrie La loi des sinus a contribué à la définition du mètre, la première unité &amp;ldquo;universelle&amp;rdquo; lors de la révolution française.&#xA;Delambre et Méchain furent missionner pour mesurer le plus précisément possible un bout de méridien entre Dunkerque et Barcelone, la toute neuve définition du mètre étant :&#xA;un mètre est la dix millionième partie d&amp;rsquo;un quart de méridien terrestre&#xA;Le cercle répétiteur de Borda fut leur arme secrète.</description>
     </item>
     <item>
+      <title>Coriolis</title>
+      <link>https://sciencesilencieuse.github.io/physique/meca/coriolis/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/meca/coriolis/</guid>
+      <description>Coriolis Simulations de Troyens dans un système où la grosse masse $M$ et la petite masse $m$ sont dans les proportions $m=M\frac{\mu}{1-\mu} $ avec $\mu=1/200$&#xA;Explication des bandes de vents dominants (thèse + planètes).</description>
+    </item>
+    <item>
+      <title>Hamilton</title>
+      <link>https://sciencesilencieuse.github.io/physique/meca/hamilton/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/meca/hamilton/</guid>
+      <description> De Newton à Hamilton </description>
+    </item>
+    <item>
       <title>IA</title>
       <link>https://sciencesilencieuse.github.io/info/ia/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/info/ia/</guid>
       <description>Intelligence Artificielle Avant de parler d&amp;rsquo;intelligence artificielle, il convient de s&amp;rsquo;interroger sur le terme intelligence.&#xA;L&amp;rsquo;intelligence arificielle (IA) est une discipline scientifique qui a vu officiellement le jour en 1956. Elle repose sur la conjecture selon laquelle toutes les fonctions cognitives, en particulier l&amp;rsquo;apprentissage, le raisonnement, le calcul, la perception, la mémorisation, voire la découverte scientifique ou la créativité artistique, peuvent être décrites avec une précision telle qu&amp;rsquo;il serait possible de les reproduire sur des ordinateurs.</description>
+    </item>
+    <item>
+      <title>Lagrange</title>
+      <link>https://sciencesilencieuse.github.io/physique/meca/lagrange/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/meca/lagrange/</guid>
+      <description>Principe de moindre action Maupertuis propose le principe de moindre action en 1744 :&#xA;Lorsqu’il arrive quelque changement dans la nature, la quantité d’action, nécessaire pour ce changement, est la plus petite qui soit possible.&#xA;Il reprenait ainsi le flambeau de Fermat qui avait introduit dès 1657 le principe de moindre temps pour expliquer les trajets des rayons lumineux en optique géométrique.&#xA;Ces principes de parcimonie se révélèrent prémonitoires. La révolution quantique du 20e siècle plaça en effet l&amp;rsquo;action et surtout sa minimisation, au centre du jeu.</description>
     </item>
     <item>
       <title>Logique modale</title>
@@ -209,7 +230,7 @@
       <link>https://sciencesilencieuse.github.io/physique/relatres/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/physique/relatres/</guid>
-      <description>Relativité restreinte Vision géométrique Série de vidéos sur la relativité restreinte avec un angle plutôt géométrique.&#xA;Source : le génial petit livre &amp;ldquo;Very special relativity - An illustrated guide&amp;rdquo; de Sander Bais.&#xA;Diagrammes d&amp;rsquo;espace-&amp;ldquo;temps propre&amp;rdquo; FloatHeadPhysics communique bien dans la vidéo suivante la joie de la découverte d&amp;rsquo;un modèle explicatif simple.&#xA;Ici, elle vient de ce merveilleux petit livre illustré : Relativity visualized de Lewis Caroll Epstein.&#xA;Néanmoins, si les diagrammes utilisant le temps propre permettent de bonnes intuitions, ils ne peuvent pas réellement se substituer aux diagrammes de Minkowski comme outil de travail.</description>
+      <description>Relativité restreinte Vision géométrique Série de vidéos sur la relativité restreinte avec un angle plutôt géométrique.&#xA;Source : le génial petit livre &amp;ldquo;Very special relativity - An illustrated guide&amp;rdquo; de Sander Bais.&#xA;Diagrammes d&amp;rsquo;espace-&amp;ldquo;temps propre&amp;rdquo; FloatHeadPhysics communique bien dans la vidéo suivante la joie de la découverte d&amp;rsquo;un modèle explicatif simple.&#xA;Ici, elle vient de ce merveilleux petit livre illustré : Relativity visualized de Lewis Caroll Epstein.&#xA;note&#xA;Néanmoins, si les diagrammes utilisant le temps propre permettent de bonnes intuitions, ils ne peuvent pas réellement se substituer aux diagrammes de Minkowski comme outil de travail.</description>
     </item>
     <item>
       <title>Aires et Volumes</title>

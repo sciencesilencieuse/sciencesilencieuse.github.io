@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mécanique on Science en vrac</title>
+    <link>https://sciencesilencieuse.github.io/physique/meca/</link>
+    <description>Recent content in Mécanique on Science en vrac</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <lastBuildDate>Sat, 06 Mar 2021 14:20:50 +0100</lastBuildDate>
+    <atom:link href="https://sciencesilencieuse.github.io/physique/meca/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paraboles</title>
+      <link>https://sciencesilencieuse.github.io/physique/meca/paraboles/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/meca/paraboles/</guid>
+      <description> Chutes libres et paraboles </description>
+    </item>
+    <item>
+      <title>Coriolis</title>
+      <link>https://sciencesilencieuse.github.io/physique/meca/coriolis/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/meca/coriolis/</guid>
+      <description>Coriolis Simulations de Troyens dans un système où la grosse masse $M$ et la petite masse $m$ sont dans les proportions $m=M\frac{\mu}{1-\mu} $ avec $\mu=1/200$&#xA;Explication des bandes de vents dominants (thèse + planètes).</description>
+    </item>
+    <item>
+      <title>Hamilton</title>
+      <link>https://sciencesilencieuse.github.io/physique/meca/hamilton/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/meca/hamilton/</guid>
+      <description> De Newton à Hamilton </description>
+    </item>
+    <item>
+      <title>Lagrange</title>
+      <link>https://sciencesilencieuse.github.io/physique/meca/lagrange/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/meca/lagrange/</guid>
+      <description>Principe de moindre action Maupertuis propose le principe de moindre action en 1744 :&#xA;Lorsqu’il arrive quelque changement dans la nature, la quantité d’action, nécessaire pour ce changement, est la plus petite qui soit possible.&#xA;Il reprenait ainsi le flambeau de Fermat qui avait introduit dès 1657 le principe de moindre temps pour expliquer les trajets des rayons lumineux en optique géométrique.&#xA;Ces principes de parcimonie se révélèrent prémonitoires. La révolution quantique du 20e siècle plaça en effet l&amp;rsquo;action et surtout sa minimisation, au centre du jeu.</description>
+    </item>
+  </channel>
+</rss>

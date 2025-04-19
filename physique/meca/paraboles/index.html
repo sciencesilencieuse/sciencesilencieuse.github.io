@@ -8,7 +8,7 @@
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
-    <title>Groupes - Science en vrac</title>
+    <title>Paraboles - Science en vrac</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
 
@@ -81,7 +81,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 
 	
   </head>
-  <body class="" data-url="/maths/algebre/groupes/">
+  <body class="" data-url="/physique/meca/paraboles/">
     <nav id="sidebar" class="">
 
 
@@ -333,7 +333,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/maths/" title="Maths" class="dd-item
-        parent
+        
         
         
         ">
@@ -362,7 +362,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/maths/algebre/" title="Algèbre" class="dd-item
-        parent
+        
         
         
         ">
@@ -392,7 +392,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     
     <li data-nav-id="/maths/algebre/groupes/" title="Groupes" class="dd-item
         
-        active
+        
         
         ">
       <a href="/maths/algebre/groupes/">
@@ -608,7 +608,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/" title="Physique" class="dd-item
-        
+        parent
         
         
         ">
@@ -637,7 +637,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/meca/" title="Mécanique" class="dd-item
-        
+        parent
         
         
         ">
@@ -663,7 +663,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
  
   
     
-      <li data-nav-id="/physique/meca/paraboles/" title="Paraboles" class="dd-item ">
+      <li data-nav-id="/physique/meca/paraboles/" title="Paraboles" class="dd-item active">
         <a href="/physique/meca/paraboles/">
         Paraboles
         
@@ -1022,7 +1022,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
                   <span class="links">
                  
                  
-                   Groupes
+                   Paraboles
                  
                   </span>
                 </div>
@@ -1047,59 +1047,51 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
         
 
 
-
-	<style>
-h2 {
-  text-align: center;
-}
-ul {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-  width: fit-content;
-  list-style-position: inside;
-}
-table {
-  border-collapse: collapse;
-  border: 0;
-}
-td, th {
-  border-collapse: collapse;
-  text-align: center;
-  vertical-align: middle;
-}
- #gris {
-     border: 0;
+<style>
+ #correc
+  {
+    color: #006C65;
+    border-left: solid 10px #C7DDDC;
+  }
+ #comm
+  {
+    color: #004D80;
+    border-left: solid 10px #B3CAD9;
+  }
+ #commsum
+  {
+    color: #004D80;
+  }
+ #correcsum
+  {
+    color: #006C65;
   }
 </style>
-<h1 id="miettes-de-théorie-des-groupes-pour-physicien">Miettes de théorie des groupes pour physicien</h1>
-<p>Trois sources majoritairement plagiées pour les pages qui suivent :</p>
-<ul>
-<li>le précieux livre de Wu-Ki Tung «Group Theory in Physics»</li>
-<li><a href="https://cel.hal.science/cel-00092924v1/file/DEA-TH-GROUPES-2efinal.pdf">le fabuleux cours en ligne de Bertrand Delamotte :</a>
-«Un soupçon de théorie des groupes: groupe des rotations et groupe de Poincaré»</li>
-<li><a href="https://www.lpthe.jussieu.fr/~zuber/Cours/grL2023.pdf">les très clairs et fournis cours en ligne de Jean-Bernard Zuber :</a>
-«Invariances en physique et théorie des groupes» et «Introduction à la théorie des groupes et de leurs représentations»</li>
-</ul>
-<br>
-<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-4em;margin-top:-5em;">
-<img src="/couvgroupe.png" style="box-shadow:none;background:none;border-radius:10px;">
+<h1 id="chutes-libres-et-paraboles">Chutes libres et paraboles</h1>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/qjz9s7dY4gQ?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
 </div>
 <br>
-<p>La théorie des groupes découpe et structure les représentations physiques que l’on se fait du monde. Elle prescrit le choix même des grandeurs physique. Son importance est phénoménale.</p>
-<p>Mais il faut abandonner tout espoir de trouver ici rigueur mathématique ou exhaustivité. Vous serez en échange comblés de graves approximations, voir errances, émaillées d’«inclartés». Je tente seulement de faire apparaître, en paraphrasant souvent mal mes source, les angles de ce qu’il a été pour moi important de comprendre.
-Les deux premiers chapitres décrivent les résultats généraux obtenus sur les groupes discrets. Leur rédaction s’appuie grandement sur le Wu-Ki Tung, très très grandement&hellip;</p>
-<p>Les deux premiers chapitres décrivent les résultats généraux obtenus sur les groupes discrets. Leur rédaction s’appuie grandement sur le Wu-Ki Tung, très très grandement&hellip;</p>
-<ul>
-<li><a href="./groupe1/"><strong>Les groupes discrets</strong></a></li>
-<li><a href="./groupe2/"><strong>Leurs représentations</strong></a></li>
-</ul>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;">
+<iframe src="https://trinket.io/embed/glowscript/1a020d68e4?toggleCode=true&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+</div>
+<br>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;">
+<iframe src="https://trinket.io/embed/glowscript/76310605a0?toggleCode=true&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+</div>
+<br>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;">
+<iframe src="https://trinket.io/embed/glowscript/bb4f971617?toggleCode=true&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+</div>
 
-
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1279,7 +1271,6 @@ Les deux premiers chapitres décrivent les résultats généraux obtenus sur les
             
                 
                     
-                    
                 
                 
 
@@ -1295,7 +1286,6 @@ Les deux premiers chapitres décrivent les résultats généraux obtenus sur les
             
                 
                     
-                    
                 
                 
 
@@ -1310,7 +1300,6 @@ Les deux premiers chapitres décrivent les résultats généraux obtenus sur les
             
             
                 
-                    
                     
                 
                 
@@ -1340,9 +1329,6 @@ Les deux premiers chapitres décrivent les résultats généraux obtenus sur les
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1473,6 +1459,7 @@ Les deux premiers chapitres décrivent les résultats généraux obtenus sur les
             
                 
                     
+                    
                 
                 
 
@@ -1488,6 +1475,7 @@ Les deux premiers chapitres décrivent les résultats généraux obtenus sur les
             
                 
                     
+                    
                 
                 
 
@@ -1500,6 +1488,7 @@ Les deux premiers chapitres décrivent les résultats généraux obtenus sur les
             
             
                 
+                    
                     
                 
                 
@@ -1516,6 +1505,9 @@ Les deux premiers chapitres décrivent les résultats généraux obtenus sur les
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1780,3 +1772,4 @@ Les deux premiers chapitres décrivent les résultats généraux obtenus sur les
 
   </body>
 </html>
+

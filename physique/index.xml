@@ -9,13 +9,6 @@
     <lastBuildDate>Sat, 06 Mar 2021 14:20:50 +0100</lastBuildDate>
     <atom:link href="https://sciencesilencieuse.github.io/physique/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Mécanique</title>
-      <link>https://sciencesilencieuse.github.io/physique/meca/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/meca/</guid>
-      <description>Mécanique Énergie cinétique et travail Une approche historique sur l&amp;rsquo;émergence du concept d&amp;rsquo;énergie en mécanique, de Descartes à Einstein.&#xA;Pourquoi une énergie cinétique en $v^2$ ? Trois démonstrations de la formule de l&amp;rsquo;énergie cinétique.&#xA;Je trouve la deuxième (celle de Johann Bernoulli) fabuleuse d&amp;rsquo;intuition géométrique (elle utilise l&amp;rsquo;escargot de Pythagore).&#xA;Chute libre et paraboles Étudier la chute libre, c&amp;rsquo;est jouer avec des paraboles.&#xA;Force de Coriolis La force de Coriolis n&amp;rsquo;est pas une force mais traduit juste la galère d&amp;rsquo;aller droit dans un référentiel tournant.</description>
-    </item>
-    <item>
       <title>Électromagnétisme</title>
       <link>https://sciencesilencieuse.github.io/physique/electromag/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
@@ -34,7 +27,7 @@
       <link>https://sciencesilencieuse.github.io/physique/relatres/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/physique/relatres/</guid>
-      <description>Relativité restreinte Vision géométrique Série de vidéos sur la relativité restreinte avec un angle plutôt géométrique.&#xA;Source : le génial petit livre &amp;ldquo;Very special relativity - An illustrated guide&amp;rdquo; de Sander Bais.&#xA;Diagrammes d&amp;rsquo;espace-&amp;ldquo;temps propre&amp;rdquo; FloatHeadPhysics communique bien dans la vidéo suivante la joie de la découverte d&amp;rsquo;un modèle explicatif simple.&#xA;Ici, elle vient de ce merveilleux petit livre illustré : Relativity visualized de Lewis Caroll Epstein.&#xA;Néanmoins, si les diagrammes utilisant le temps propre permettent de bonnes intuitions, ils ne peuvent pas réellement se substituer aux diagrammes de Minkowski comme outil de travail.</description>
+      <description>Relativité restreinte Vision géométrique Série de vidéos sur la relativité restreinte avec un angle plutôt géométrique.&#xA;Source : le génial petit livre &amp;ldquo;Very special relativity - An illustrated guide&amp;rdquo; de Sander Bais.&#xA;Diagrammes d&amp;rsquo;espace-&amp;ldquo;temps propre&amp;rdquo; FloatHeadPhysics communique bien dans la vidéo suivante la joie de la découverte d&amp;rsquo;un modèle explicatif simple.&#xA;Ici, elle vient de ce merveilleux petit livre illustré : Relativity visualized de Lewis Caroll Epstein.&#xA;note&#xA;Néanmoins, si les diagrammes utilisant le temps propre permettent de bonnes intuitions, ils ne peuvent pas réellement se substituer aux diagrammes de Minkowski comme outil de travail.</description>
     </item>
     <item>
       <title>Relativité générale</title>

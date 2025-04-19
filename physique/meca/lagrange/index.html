@@ -8,7 +8,7 @@
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
-    <title>Groupes - Science en vrac</title>
+    <title>Lagrange - Science en vrac</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
 
@@ -81,7 +81,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 
 	
   </head>
-  <body class="" data-url="/maths/algebre/groupes/">
+  <body class="" data-url="/physique/meca/lagrange/">
     <nav id="sidebar" class="">
 
 
@@ -333,7 +333,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/maths/" title="Maths" class="dd-item
-        parent
+        
         
         
         ">
@@ -362,7 +362,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/maths/algebre/" title="Algèbre" class="dd-item
-        parent
+        
         
         
         ">
@@ -392,7 +392,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     
     <li data-nav-id="/maths/algebre/groupes/" title="Groupes" class="dd-item
         
-        active
+        
         
         ">
       <a href="/maths/algebre/groupes/">
@@ -608,7 +608,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/" title="Physique" class="dd-item
-        
+        parent
         
         
         ">
@@ -637,7 +637,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/meca/" title="Mécanique" class="dd-item
-        
+        parent
         
         
         ">
@@ -726,7 +726,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
  
   
     
-      <li data-nav-id="/physique/meca/lagrange/" title="Lagrange" class="dd-item ">
+      <li data-nav-id="/physique/meca/lagrange/" title="Lagrange" class="dd-item active">
         <a href="/physique/meca/lagrange/">
         Lagrange
         
@@ -1022,7 +1022,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
                   <span class="links">
                  
                  
-                   Groupes
+                   Lagrange
                  
                   </span>
                 </div>
@@ -1047,59 +1047,256 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
         
 
 
-
-	<style>
-h2 {
-  text-align: center;
-}
-ul {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-  width: fit-content;
-  list-style-position: inside;
-}
-table {
-  border-collapse: collapse;
-  border: 0;
-}
-td, th {
-  border-collapse: collapse;
-  text-align: center;
-  vertical-align: middle;
-}
- #gris {
-     border: 0;
+<style>
+ #correc
+  {
+    color: #006C65;
+    border-left: solid 10px #C7DDDC;
+  }
+ #comm
+  {
+    color: #004D80;
+    border-left: solid 10px #B3CAD9;
+  }
+ #commsum
+  {
+    color: #004D80;
+  }
+ #correcsum
+  {
+    color: #006C65;
   }
 </style>
-<h1 id="miettes-de-théorie-des-groupes-pour-physicien">Miettes de théorie des groupes pour physicien</h1>
-<p>Trois sources majoritairement plagiées pour les pages qui suivent :</p>
-<ul>
-<li>le précieux livre de Wu-Ki Tung «Group Theory in Physics»</li>
-<li><a href="https://cel.hal.science/cel-00092924v1/file/DEA-TH-GROUPES-2efinal.pdf">le fabuleux cours en ligne de Bertrand Delamotte :</a>
-«Un soupçon de théorie des groupes: groupe des rotations et groupe de Poincaré»</li>
-<li><a href="https://www.lpthe.jussieu.fr/~zuber/Cours/grL2023.pdf">les très clairs et fournis cours en ligne de Jean-Bernard Zuber :</a>
-«Invariances en physique et théorie des groupes» et «Introduction à la théorie des groupes et de leurs représentations»</li>
-</ul>
+<h1 id="principe-de-moindre-action">Principe de moindre action</h1>
+<p>Maupertuis propose le principe de moindre action en 1744 :</p>
+<blockquote>
+<p>Lorsqu’il arrive quelque changement dans la nature, la quantité d’action, nécessaire pour ce changement, est la plus petite qui soit possible.</p>
+</blockquote>
+<p>Il reprenait ainsi le flambeau de Fermat qui avait introduit dès 1657 le principe de moindre temps pour expliquer les trajets des rayons lumineux en optique géométrique.</p>
+<p><img src="/fermatmiroir.png" alt=""></p>
+<p>Ces principes de parcimonie se révélèrent prémonitoires. La révolution quantique du 20<sup>e</sup> siècle plaça en effet l&rsquo;action et surtout sa minimisation, au centre du jeu.</p>
+<p>Reprenons l&rsquo;idée de Fermat pour déterminer le chemin d&rsquo;un rayon lumineux réfracté d&rsquo;un milieu à l&rsquo;autre. L&rsquo;idée clé de cette manière de calculer par minimisation est de se donner un point de départ I et un point d&rsquo;arrivée F et de chercher, <strong>parmi toutes les trajectoires possibles les rejoignant</strong>, la plus courte.</p>
+<p>On constate déjà que si I et F sont dans le même milieu homogène, le trajectoire la plus courte sera le segment de droite [IF] et donc le principe de Fermat prédit bien que la lumière se propage rectilignement dans un milieu homogène.</p>
+<p>Et quand le point d&rsquo;arrivée F est dans un autre milieu que le point de départ I, la prise en compte de l&rsquo;effet du milieu comme un ralentissement apparent de la vitesse de la lumière (dans un milieu d&rsquo;indice optique $n$, la lumière voyage à la vitesse $c/n$ où $c$ est sa célérité dans le vite, soit $300\,000$ km/s) permet de retrouver le phénomène de réfraction : la lumière change de direction en passant d&rsquo;un milieu à l&rsquo;autre. La déviation est telle que le trajet global sera le moins long possible et donc la partie du trajet dans le milieu d&rsquo;indice optique supérieur sera plus petite que l&rsquo;autre.</p>
 <br>
-<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-4em;margin-top:-5em;">
-<img src="/couvgroupe.png" style="box-shadow:none;background:none;border-radius:10px;">
+<div style="position:relative;margin:auto;width:100%;max-width:100%">
+<iframe src="https://trinket.io/embed/glowscript/46485010b9?toggleCode=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 <br>
-<p>La théorie des groupes découpe et structure les représentations physiques que l’on se fait du monde. Elle prescrit le choix même des grandeurs physique. Son importance est phénoménale.</p>
-<p>Mais il faut abandonner tout espoir de trouver ici rigueur mathématique ou exhaustivité. Vous serez en échange comblés de graves approximations, voir errances, émaillées d’«inclartés». Je tente seulement de faire apparaître, en paraphrasant souvent mal mes source, les angles de ce qu’il a été pour moi important de comprendre.
-Les deux premiers chapitres décrivent les résultats généraux obtenus sur les groupes discrets. Leur rédaction s’appuie grandement sur le Wu-Ki Tung, très très grandement&hellip;</p>
-<p>Les deux premiers chapitres décrivent les résultats généraux obtenus sur les groupes discrets. Leur rédaction s’appuie grandement sur le Wu-Ki Tung, très très grandement&hellip;</p>
-<ul>
-<li><a href="./groupe1/"><strong>Les groupes discrets</strong></a></li>
-<li><a href="./groupe2/"><strong>Leurs représentations</strong></a></li>
-</ul>
+<p>C&rsquo;est très élégant, mais n&rsquo;est-ce pas que cela ? une raffinerie calculatoire ? Comment en effet la lumière pourrait-elle aller explorer les différents chemins avant de choisir le moins long ? Cela paraît saugrenu&hellip; Du moins du côté particulaire de notre description de la lumière. Car pour une onde, ça n&rsquo;est pas si bizarre. Une onde est en effet intrinsèquement la modélisation  d&rsquo;un comportement collectif. Considérer une onde, c&rsquo;est donc bien considérer différents trajets pris &ldquo;à la fois&rdquo;.</p>
+<p>En 1678, Hygens s&rsquo;est dit qu&rsquo;en décomposant ce mouvement collectif en une multitudes d&rsquo;ondelettes individuelles, on pourrait déterminer l&rsquo;évolution de la forme de l&rsquo;onde principale par sommation de toutes ces petites ondes. On obtient en particulier des fronts d&rsquo;onde capables d&rsquo;expliquer les propagation circulaire et rectiligne de lumière ainsi que la réfraction.</p>
+ <style>
+    /* Le canvas conserve une résolution interne fixe de 800×600 
+       et est affiché en responsive (largeur = min(800px, 100%)) */
+    canvas {
+      border: 1px solid #ccc;
+      display: block;
+      margin: 20px auto;
+      width: min(800px, 100%);
+      height: auto;
+    }
+  </style>
+  <!-- Résolution interne fixe : le canvas aura 800px de largeur et 600px de hauteur -->
+<p><canvas id="canvas" width="800" height="600"></canvas></p>
+  <script>
+     // --- Paramètres fixes de la simulation ---
+    const baseWidth = 800;
+    const baseHeight = 600;
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    
+    // --- Paramètres de simulation (ceux que vous appréciez) ---
+    const dt = 0.08;              // Intervalle de temps (frame update)
+    const v1 = 8;                   // Vitesse dans le milieu 1 (pixels/frame)
+    const v2 = 4;                   // Vitesse dans le milieu 2 (pixels/frame)
+    const fadeRate = 0.004;         // Taux de disparition des ondelettes inactives (par frame)
+    const frontUpdateInterval = 2;  // Intervalle (en unités de temps) entre la création d’un nouveau front
+
+    // Le segment initial est orienté à 70° par rapport à l’horizontal.
+    // Sa normale (direction de propagation initiale) est donc : 70° - 90° = -20°.
+    const initialAngleDeg = 70;
+    const initialAngle = initialAngleDeg * Math.PI / 180;
+    // La direction de propagation (normale) reste fixe dans cette version (aucun rebond)
+    const normalAngle = initialAngle - Math.PI / 2; // ici -20° en radians
+
+    // Pour le front initial, on choisit 10 sources réparties sur un segment de longueur donnée.
+    const nbSources = 10;
+    const frontLength = 400;
+    const startX = 100, startY = 250;
+    
+    // L'interface entre les milieux 
+    const interfaceX = baseWidth*3 / 5;  
+
+    // --- Classe Wavelet (ondelette) ---
+    // Chaque ondelette est représentée par un ensemble de particules réparties uniformément.
+    // La propriété propDir correspond à la direction de propagation effective qui reste fixe ici.
+    class Wavelet {
+      constructor(center, propDir) {
+        this.center = { x: center.x, y: center.y };
+        // Si aucune direction n'est spécifiée, on prend la direction par défaut (normalAngle)
+        this.propDir = (propDir !== undefined ? propDir : normalAngle);
+        this.opacity = 1;      // Opacité pour l'effet de disparition progressive
+        this.isActive = true;  // Indique si l'ondelette peut servir à générer un nouveau front
+        this.nParticles = 50;  // Nombre de particules constituant l'ondelette
+        this.particles = [];
+        // Distribution angulaire homogène sur [0, 2π)
+        for (let i = 0; i < this.nParticles; i++) {
+          let angle = 2 * Math.PI * i / this.nParticles;
+          // Chaque particule commence exactement depuis le centre
+          this.particles.push({ angle: angle, x: center.x, y: center.y });
+        }
+      }
+      update(dt) {
+        // Mise à jour de la position de chaque particule
+        // La vitesse locale dépend de la position horizontale par rapport à l'interface (fixée au milieu)
+        for (let p of this.particles) {
+          let localSpeed = (p.x >= interfaceX) ? v2 : v1;
+          p.x += localSpeed * Math.cos(p.angle) * dt;
+          p.y += localSpeed * Math.sin(p.angle) * dt;
+          // Sans rebond, on ne modifie pas p.angle, même si la particule quitte le canvas
+        }
+        // Si l’ondelette a été marquée inactive (pour le front suivant), diminuer son opacité
+        if (!this.isActive) {
+          this.opacity -= fadeRate;
+          if (this.opacity < 0) this.opacity = 0;
+        }
+      }
+      draw(ctx) {
+        ctx.save();
+        ctx.globalAlpha = this.opacity;
+        // Couleur des ondelettes en #D75595
+        ctx.strokeStyle = "#D75595";
+        ctx.beginPath();
+        if (this.particles.length > 0) {
+          ctx.moveTo(this.particles[0].x, this.particles[0].y);
+          for (let i = 1; i < this.particles.length; i++) {
+            ctx.lineTo(this.particles[i].x, this.particles[i].y);
+          }
+          ctx.closePath();
+          ctx.stroke();
+        }
+        ctx.restore();
+      }
+      // Retourne la particule ayant la plus grande projection dans la direction de propagation fixe (propDir)
+      getFurthestPoint() {
+        let maxProj = -Infinity;
+        let chosenParticle = null;
+        const ux = Math.cos(this.propDir);
+        const uy = Math.sin(this.propDir);
+        for (let p of this.particles) {
+          const dx = p.x - this.center.x;
+          const dy = p.y - this.center.y;
+          const proj = dx * ux + dy * uy;
+          if (proj > maxProj) {
+            maxProj = proj;
+            chosenParticle = p;
+          }
+        }
+        if (chosenParticle) {
+          // Ici, on conserve la direction initiale (propDir) car on ne souhaite pas de rebond
+          return { pt: { x: chosenParticle.x, y: chosenParticle.y }, newDir: this.propDir };
+        } else {
+          return null;
+        }
+      }
+    }
+    
+    // --- Fonction d'initialisation des ondelettes de départ ---
+    function initWavelets() {
+      let initialWavelets = [];
+      for (let i = 0; i < nbSources; i++) {
+        const t = i / (nbSources - 1);
+        const x = startX + t * frontLength * Math.cos(initialAngle);
+        const y = startY + t * frontLength * Math.sin(initialAngle);
+        initialWavelets.push(new Wavelet({ x: x, y: y }, normalAngle));
+      }
+      return initialWavelets;
+    }
+    
+    // Initialisation de la simulation
+    let wavelets = initWavelets();
+    let timeSinceLastFront = 0;
+    
+    // --- Fonction utilitaire pour vérifier la visibilité d'une ondelette ---
+    function isWaveletVisible(wavelet) {
+      for (let p of wavelet.particles) {
+        if (p.x >= 0 && p.x <= baseWidth && p.y >= 0 && p.y <= baseHeight) {
+          return true;
+        }
+      }
+      return false;
+    }
+    
+    // --- Boucle d'animation ---
+    function update() {
+      timeSinceLastFront += dt;
+      
+      // Mise à jour de toutes les ondelettes
+      for (let w of wavelets) {
+        w.update(dt);
+      }
+      
+      // Création d'un nouveau front dès que l'intervalle est dépassé
+      if (timeSinceLastFront > frontUpdateInterval) {
+        let newSources = [];
+        // Pour chaque ondelette active, déterminer la particule la plus avancée dans la direction fixe
+        for (let w of wavelets) {
+          if (w.isActive) {
+            let result = w.getFurthestPoint();
+            if (result) {
+              newSources.push(result);
+              // Marquer l'ondelette comme inactive afin qu'elle commence à disparaître
+              w.isActive = false;
+            }
+          }
+        }
+        // À partir des nouveaux points, créer de nouvelles ondelettes en utilisant la direction fixe (propDir)
+        newSources.forEach(result => {
+          wavelets.push(new Wavelet(result.pt, result.newDir));
+        });
+        timeSinceLastFront = 0;
+      }
+      
+      // Filtrer les ondelettes dont l'opacité est tombée à 0
+      wavelets = wavelets.filter(w => w.opacity > 0);
+      
+      // Si aucune ondelette n'est visible à l'écran, réinitialiser la simulation
+      if (!wavelets.some(isWaveletVisible)) {
+        wavelets = initWavelets();
+        timeSinceLastFront = 0;
+      }
+      
+      // --- Dessin du fond ---
+      // Fond gauche (milieu 1) : jaune clair (#FFF36A)
+      // Fond droit (milieu 2) : bleu clair (#DEF6FE)
+      ctx.clearRect(0, 0, baseWidth, baseHeight);
+      ctx.fillStyle = "#FFF36A";
+      ctx.fillRect(0, 0, interfaceX, baseHeight);
+      ctx.fillStyle = "#DEF6FE";
+      ctx.fillRect(interfaceX, 0, baseWidth - interfaceX, baseHeight);
+      
+      // Dessiner la frontière entre les milieux (en noir)
+      ctx.strokeStyle = "black";
+      ctx.beginPath();
+      ctx.moveTo(interfaceX, 0);
+      ctx.lineTo(interfaceX, baseHeight);
+      ctx.stroke();
+      
+      // --- Dessin des ondelettes ---
+      for (let w of wavelets) {
+        w.draw(ctx);
+      }
+      
+      requestAnimationFrame(update);
+    }
+    
+    update();
+</script>
+<p>En 1818, Fresnel ajouta un élément clé à cette vision des choses : les interférences entre ces multitudes ondelettes. Les interférences destructives peuvent créer des zones noires même là où la lumière s&rsquo;est propagée. Fresnel fut alors en mesure d&rsquo;expliquer la plupart des phénomènes optiques.</p>
+<p>Le paramètre primordial devient ainsi la phase $\phi=\omega t-\vec{k}\cdot\vec{r}$ (avec $\|\vec{k}\|=k=\frac{n \omega}{c}$. À un instant donné, son extrémisation ($\nabla \phi =0$) peut nous donner un $\vec{k}$ constant dans le cas d&rsquo;un milieu homogène où la loi de Snell de la réfraction ($n_1\sin(\theta_1)=n_1\sin(\theta_2)$) au niveau d&rsquo;une interface.</p>
 
 
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1279,7 +1476,6 @@ Les deux premiers chapitres décrivent les résultats généraux obtenus sur les
             
                 
                     
-                    
                 
                 
 
@@ -1295,7 +1491,6 @@ Les deux premiers chapitres décrivent les résultats généraux obtenus sur les
             
                 
                     
-                    
                 
                 
 
@@ -1310,7 +1505,6 @@ Les deux premiers chapitres décrivent les résultats généraux obtenus sur les
             
             
                 
-                    
                     
                 
                 
@@ -1340,9 +1534,6 @@ Les deux premiers chapitres décrivent les résultats généraux obtenus sur les
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1473,6 +1664,7 @@ Les deux premiers chapitres décrivent les résultats généraux obtenus sur les
             
                 
                     
+                    
                 
                 
 
@@ -1488,6 +1680,7 @@ Les deux premiers chapitres décrivent les résultats généraux obtenus sur les
             
                 
                     
+                    
                 
                 
 
@@ -1500,6 +1693,9 @@ Les deux premiers chapitres décrivent les résultats généraux obtenus sur les
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1549,6 +1745,7 @@ Les deux premiers chapitres décrivent les résultats généraux obtenus sur les
             
                 
                     
+                    
                 
                 
 
@@ -1567,6 +1764,9 @@ Les deux premiers chapitres décrivent les résultats généraux obtenus sur les
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1780,3 +1980,4 @@ Les deux premiers chapitres décrivent les résultats généraux obtenus sur les
 
   </body>
 </html>
+
