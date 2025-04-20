@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1745069067" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745069067" rel="stylesheet">
-    <link href="/css/hybrid.css?1745069067" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745069067" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745069067" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745069067" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745069067" rel="stylesheet">
-    <link href="/css/theme.css?1745069067" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745069067" rel="stylesheet">
+    <link href="/css/nucleus.css?1745192007" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1745192007" rel="stylesheet">
+    <link href="/css/hybrid.css?1745192007" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1745192007" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1745192007" rel="stylesheet">
+    <link href="/css/auto-complete.css?1745192007" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1745192007" rel="stylesheet">
+    <link href="/css/theme.css?1745192007" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1745192007" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1745069067" rel="stylesheet">
+    <link href="/css/theme-blue.css?1745192007" rel="stylesheet">
     
-    <link href="/css/foo.css?1745069067" rel="stylesheet"><link href="/css/bar.css?1745069067" rel="stylesheet">
+    <link href="/css/foo.css?1745192007" rel="stylesheet"><link href="/css/bar.css?1745192007" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1745069067"></script>
+    <script src="/js/jquery-3.3.1.min.js?1745192007"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745069067"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745069067"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1745192007"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1745192007"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745069067"></script>
+<script type="text/javascript" src="/js/search.js?1745192007"></script>
 
     
   </div>
@@ -1041,6 +1041,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
         <li><a href="#spaghetti-et-inégalité-triangulaire">Spaghetti et inégalité triangulaire</a></li>
         <li><a href="#anniversaires-simultanés">Anniversaires simultanés</a></li>
         <li><a href="#paradoxe-des-deux-enfants">Paradoxe des deux enfants</a></li>
+        <li><a href="#paradoxe-de-cover">Paradoxe de Cover</a></li>
       </ul>
     </li>
   </ul>
@@ -1228,6 +1229,45 @@ C&rsquo;est d&rsquo;ailleurs assez fréquent que notre intuition soit aux fraise
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;">
 <iframe src="https://trinket.io/embed/python/4dae14528c?toggleCode=true" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
+<br>
+<h3 id="paradoxe-de-cover">Paradoxe de Cover</h3>
+<p>Où comment un tirage aléatoire permet de gagner de l&rsquo;information !</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:600px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+<img src="/coverparadox.png" style="box-shadow:none;background:none;border-radius:10px;">
+</div>
+<p>On vous présente deux papiers pliés où sont écrits deux nombres choisis aléatoirement $a$ et $b$.</p>
+<p>Vous choisissez un des deux papiers et l&rsquo;ouvrez pour découvrir le nombre $X$ (soit $a$, soit $b$). Puis on vous demande lequel des deux papiers contient le plus grand nombre.</p>
+<p>Cela semble du 50-50, et pourtant&hellip; Si vous tirez un nombre aléatoire $Z$ selon une <strong>distribution continue</strong> sur $\mathbb{R}$, vous pouvez augmenter vos chances ! Il suffit de comparer $Z$ à $X$ : si $Z&gt;X$ vous choisissez $Y$ comme plus grand nombre (l&rsquo;autre papier) et si $Z&lt;X$, vous choisissez $X$.</p>
+<p>Dans le code ci-dessous, on tire deux nombres aléatoires $a$ et $b$ selon une distribution normale centrée sur 0 et d&rsquo;écart-type 100, puis on tire au sort le nombre $X$. Petite différence par rapport à ce qui précède, on se sert d&rsquo;une fonction logistique pour &ldquo;envoyer&rdquo; $X$ entre 0 et 1 puis on le compare à un $Z$ tiré uniformément entre 0 et 1.<br>
+On voit qu&rsquo;on obtient alors un taux de succès autour de 75% !</p>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;">
+<iframe src="https://trinket.io/embed/python/03c4d9f9ffa3?toggleCode=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+</div>
+<p>Par quel miracle ?</p>
+<p>Déjà, comme $Z$ est issue d&rsquo;une loi continues, on n&rsquo;aura jamais $Z=a$ ou $Z=b$ et pour que la méthode permette de deviner correctement, il faut que :</p>
+<ul>
+<li>$X=\max(a,b)$ (une chance sur deux) <strong>et</strong> $Z&lt;X$</li>
+<li>$X=\min(a,b)$ (une chance sur deux)  <strong>et</strong> $Z&gt;X$</li>
+</ul>
+<p>La probabilité de succès est donc :<br></p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:500px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+<img src="/democover.png" style="box-shadow:none;background:none;">
+</div>
+D'où $P_\text { succ }=\frac{1}{2}P(Z<\max (a, b))+\frac{1}{2}[1-P(Z<\min (a, b))]=\frac{1}{2}+\frac{1}{2}[P(Z<\max (a, b))-P(Z < \min (a, b))]=\frac{1}{2}+\color{#970E53}P\left(\min(a,b) < Z<\max(a,b)\right)$<br>
+Puisque $Z$ suit une loi continue ${\color{#970E53}P\left(\min(a,b) < Z<\max(a,b)\right)}>0$. On se retrouve donc bien avec une probabilité supérieure à $\tfrac12$.
+<p>Dans une démonstration similaire (qu&rsquo;on retrouve dans <a href="https://johncarlosbaez.wordpress.com/2015/07/20/the-game-of-googol/?utm_source=chatgpt.com">cet article</a> de John Baez retraçant l&rsquo;origine du paradoxe), Greg Egan utilise une fonction $f:\mathbb{R}\rightarrow ]0,1[$ strictement croissante (si $x&lt;y$, $f(x)&lt;f(y)$)  pour ramener $X$ dans $]0,1[$. C&rsquo;est en suivant cette méthode qu&rsquo;on a utilisé dans le code la fonction logistique $f(x)=\frac{\mathrm{e}^x}{\mathrm{e}^x +1}$.<br>
+Le nombre aléatoire $Z$ est alors choisi uniformément entre $0$ et $1$ et on compare $Z$ à $f(X)$ plutôt qu&rsquo;à $X$.<br>
+Supposons $a&gt;b$.<br>La probabilité de deviner correctement devient :</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+<img src="/demoegan.png" style="box-shadow:none;background:none;">
+</div>
+On obtient ainsi $P_\text { succ }=\frac{1}{2}+\frac{1}{2}(f(a)-f(b))>\frac{1}{2}$ puisque $f(a)>f(b)$ par croissance stricte de $f$. 
+<p>Les deux démonstrations sont équivalentes. Suffit de poser $f(x)=P(Z&lt;x)$ (bien strictement croissante) pour s&rsquo;en convaincre. $P_\text { succ }$ devient alors $\frac{1}{2}+\frac{1}{2}(P(Z&lt;\max(a,b))-P(Z&lt;\min(a,b))$.</p>
+<p>Dans le code ci-dessus, les nombres $a$ et $b$ sont volontairement très éloignés de 0 ($\sigma=100$). La fonction logistique donne alors soit $\approx 0$ (nombre $\ll 0$), soit $\approx 1$ (nombre $\gg 0$). Donc $f(a)-f(b)$ va donner $1$ lorsque $a$ et $b$ sont de signes différents (50% des cas) et $0$ dans les autres cas. Ça nous donne une espérance de succès de $\tfrac12+\tfrac12\tfrac12=\tfrac34$.<br>
+En diminuant $\sigma$, on diminue le pourcentage de succès (on retrouve que l&rsquo;efficacité de la méthode est d&rsquo;autant plus grande que $Z$ a de chances d&rsquo;être entre $a$ et $b$).</p>
+<p>Si $a$, $b$ et $Z$ sont tirés uniformément dans $[0,1]$, on obtient une espérance de succès de $\tfrac23$. En effet, on a alors $P_\text { succ }(a,b)=\tfrac12 + \tfrac12|a-b|$. Or comme on l&rsquo;a vu <a href="./#densit%C3%A9-de-probabilit%C3%A9s">plus haut</a>, $\mathbb{E}[|a-b|]=\tfrac13$, donc $\mathbb{E}[P_\text{succ}(a,b)]=\tfrac12+\tfrac12\tfrac13=\tfrac23$.</p>
+<p>Cela finit par sérieusement perdre de sa magie&hellip; Si la loi d&rsquo;où est tiré $Z$ est adaptée aux valeurs de $a$ et $b$, tout va pour le mieux, mais dès que ce n&rsquo;est plus le cas, on se retrouve bêtement autour de 50%&hellip; Il suffit par exemple d&rsquo;un $\mu\gg\sigma$ dans loi normale du code. La fonction logistique va envoyer tout le monde sur $\approx 1$ et on n&rsquo;aura quasi jamais $Z&gt;f(a)$.</p>
+<p>Certes, le hasard permet d&rsquo;augmenter ses chances, mais tant que la distribution des nombres sur les papiers et celle du nombre aléatoire tiré ne se correspondent pas, l&rsquo;avantage obtenu sera infinitésimal&hellip; Le tirage n&rsquo;apporte donc en soit aucune information importante. Celle-ci viendrait plutôt du choix adéquat de la distribution de $Z$ puisqu&rsquo;il impliquerait de connaître celle de $a$ et $b$ !</p>
 
 
 <footer class="footline">
@@ -1898,16 +1938,16 @@ C&rsquo;est d&rsquo;ailleurs assez fréquent que notre intuition soit aux fraise
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745069067"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745069067"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745069067"></script>
-    <script src="/js/jquery.sticky.js?1745069067"></script>
-    <script src="/js/featherlight.min.js?1745069067"></script>
-    <script src="/js/highlight.pack.js?1745069067"></script>
+    <script src="/js/clipboard.min.js?1745192007"></script>
+    <script src="/js/perfect-scrollbar.min.js?1745192007"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1745192007"></script>
+    <script src="/js/jquery.sticky.js?1745192007"></script>
+    <script src="/js/featherlight.min.js?1745192007"></script>
+    <script src="/js/highlight.pack.js?1745192007"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745069067"></script>
-    <script src="/js/learn.js?1745069067"></script>
-    <script src="/js/hugo-learn.js?1745069067"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1745192007"></script>
+    <script src="/js/learn.js?1745192007"></script>
+    <script src="/js/hugo-learn.js?1745192007"></script>
     
     
 
