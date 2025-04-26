@@ -170,25 +170,11 @@
       <description>Coriolis Simulations de Troyens dans un système où la grosse masse $M$ et la petite masse $m$ sont dans les proportions $m=M\frac{\mu}{1-\mu} $ avec $\mu=1/200$&#xA;Explication des bandes de vents dominants (thèse + planètes).</description>
     </item>
     <item>
-      <title>Hamilton</title>
-      <link>https://sciencesilencieuse.github.io/physique/meca/hamilton/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/meca/hamilton/</guid>
-      <description> De Newton à Hamilton </description>
-    </item>
-    <item>
       <title>IA</title>
       <link>https://sciencesilencieuse.github.io/info/ia/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/info/ia/</guid>
       <description>Intelligence Artificielle Avant de parler d&amp;rsquo;intelligence artificielle, il convient de s&amp;rsquo;interroger sur le terme intelligence.&#xA;L&amp;rsquo;intelligence arificielle (IA) est une discipline scientifique qui a vu officiellement le jour en 1956. Elle repose sur la conjecture selon laquelle toutes les fonctions cognitives, en particulier l&amp;rsquo;apprentissage, le raisonnement, le calcul, la perception, la mémorisation, voire la découverte scientifique ou la créativité artistique, peuvent être décrites avec une précision telle qu&amp;rsquo;il serait possible de les reproduire sur des ordinateurs.</description>
-    </item>
-    <item>
-      <title>Lagrange</title>
-      <link>https://sciencesilencieuse.github.io/physique/meca/lagrange/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/meca/lagrange/</guid>
-      <description>Principe de moindre action Maupertuis propose le principe de moindre action en 1744 :&#xA;Lorsqu’il arrive quelque changement dans la nature, la quantité d’action, nécessaire pour ce changement, est la plus petite qui soit possible.&#xA;Il reprenait ainsi le flambeau de Fermat qui avait introduit dès 1657 le principe de moindre temps pour expliquer les trajets des rayons lumineux en optique géométrique.&#xA;Ces principes de parcimonie se révélèrent prémonitoires. La révolution quantique du 20e siècle plaça en effet l&amp;rsquo;action et surtout sa minimisation, au centre du jeu.</description>
     </item>
     <item>
       <title>Logique modale</title>
@@ -219,6 +205,13 @@
       <description>Logique modale Syntaxe et sémantique Systèmes logiques Différentes logiques modales Petit condensé de logique modale&amp;nbsp;: En logique modale, un &amp;ldquo;monde possible&amp;rdquo; contient les propositions qui sont vraies dans ce monde. Il correspond à un modèle du calcul des propositions (à une ligne d&amp;rsquo;une table de vérité). Ces mondes possibles sont connectés entre eux par des relations d&amp;rsquo;accessibilité, et les opérateurs de modalité permettent d&amp;rsquo;explorer ces relations. Si $P$ est vraie dans tous les mondes accessibles depuis le monde $a$, alors on écrit $a\Vdash \Box P$ et si $P$ est vraie dans au moins un de ces mondes, on utilise $a\Vdash \Diamond P$.</description>
     </item>
     <item>
+      <title>Moindre action</title>
+      <link>https://sciencesilencieuse.github.io/physique/meca/lagrange/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/meca/lagrange/</guid>
+      <description>Principe de moindre action Maupertuis formule ainsi le principe de moindre action en 1744 :&#xA;Lorsqu’il arrive quelque changement dans la nature, la quantité d’action, nécessaire pour ce changement, est la plus petite qui soit possible.&#xA;Il reprenait ainsi le flambeau de Fermat qui avait introduit dès 1657 le principe de moindre temps pour expliquer les trajets des rayons lumineux en optique géométrique.&#xA;De manière plus moderne, on pourrait décrire le principe de moindre action comme consistant à minimiser le transfert d&amp;rsquo;énergie entre les réservoirs cinétique et potentiel au cours du temps dévolu au trajet entre deux points.</description>
+    </item>
+    <item>
       <title>Propositions - Preuve</title>
       <link>https://sciencesilencieuse.github.io/logique/logique3/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
@@ -238,6 +231,13 @@
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/maths/geometrie/geo3/</guid>
       <description> Aires et volumes </description>
+    </item>
+    <item>
+      <title>Hamilton</title>
+      <link>https://sciencesilencieuse.github.io/physique/meca/hamilton/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/meca/hamilton/</guid>
+      <description> De Newton à Hamilton </description>
     </item>
     <item>
       <title>Probabilités</title>
