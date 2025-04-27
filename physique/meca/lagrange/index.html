@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1745723377" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745723377" rel="stylesheet">
-    <link href="/css/hybrid.css?1745723377" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745723377" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745723377" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745723377" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745723377" rel="stylesheet">
-    <link href="/css/theme.css?1745723377" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745723377" rel="stylesheet">
+    <link href="/css/nucleus.css?1745765215" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1745765215" rel="stylesheet">
+    <link href="/css/hybrid.css?1745765215" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1745765215" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1745765215" rel="stylesheet">
+    <link href="/css/auto-complete.css?1745765215" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1745765215" rel="stylesheet">
+    <link href="/css/theme.css?1745765215" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1745765215" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1745723377" rel="stylesheet">
+    <link href="/css/theme-blue.css?1745765215" rel="stylesheet">
     
-    <link href="/css/foo.css?1745723377" rel="stylesheet"><link href="/css/bar.css?1745723377" rel="stylesheet">
+    <link href="/css/foo.css?1745765215" rel="stylesheet"><link href="/css/bar.css?1745765215" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1745723377"></script>
+    <script src="/js/jquery-3.3.1.min.js?1745765215"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745723377"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745723377"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1745765215"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1745765215"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745723377"></script>
+<script type="text/javascript" src="/js/search.js?1745765215"></script>
 
     
   </div>
@@ -1366,7 +1366,7 @@ Les courbes de niveau de la fonction caractéristique ne sont autre que les fron
 <p>$$\nabla^2 \Psi(\vec{r})+k^2 n^2(\vec{r}) \Psi(\vec{r})=0$$</p>
 <p>L&rsquo;animation ci-dessous est calculée à partir de cette seule équation. Une série verticale de sources sur la gauche, un obstacle sphérique où l&rsquo;onde vaut zéro et on laisse la magie (ou la physique, c&rsquo;est selon) opérer.</p>
 <div style="position:relative;margin:auto;width:700px;max-width:100%;">
-<video controls preload="metadata" style="width:100%;border-radius:5px;">
+<video controls preload="metadata"  poster="/fresnelposter.png" style="width:100%;border-radius:5px;">
   <source src="/fresnel.mp4" type="video/mp4">
   Votre navigateur ne prend pas en charge la balise <code>video</code>.
 </video>
@@ -1569,14 +1569,14 @@ Par identification, on voit que l&rsquo;énergie $E$ agit sur la fonction d&rsqu
 <p>On obtient alors l’équation de Schrödinger dépendant du temps :<br>
 $$\color{#D41876}\mathrm{i} \hbar \frac{\partial}{\partial t} \Psi(q, t)=\left(-\frac{\hbar^2}{2 m} \nabla^2+V(q)\right) \Psi(q, t)$$</p>
 <div style="position:relative;margin:auto;width:700px;max-width:100%;">
-<video controls preload="metadata" style="width:100%;border-radius:5px;">
+<video controls preload="metadata" poster="/schrodi.png" style="width:100%;border-radius:5px;">
   <source src="/schrodi.mp4" type="video/mp4">
   Votre navigateur ne prend pas en charge la balise <code>video</code>.
 </video>
 </div>
 <p>Sur la vidéo précédente, j&rsquo;ai envoyé un paquet d&rsquo;onde gaussien à la rencontre d&rsquo;une marche de potentiel (un petit potentiel uniforme positif règne à droite alors qu&rsquo;il est nul à gauche).</p>
 <div style="position:relative;margin:auto;width:700px;max-width:100%;">
-<video controls preload="metadata" style="width:100%;border-radius:5px;">
+<video controls preload="metadata" poster="/refrquantique.png" style="width:100%;border-radius:5px;">
   <source src="/refrquantique.mp4" type="video/mp4">
   Votre navigateur ne prend pas en charge la balise <code>video</code>.
 </video>
@@ -1596,11 +1596,25 @@ $$\color{#D41876}\mathrm{i} \hbar \frac{\partial}{\partial t} \Psi(q, t)=\left(-
 Découpons le chemin en tronçons infinitésimaux : sur un de ces intervalles, la phase $\phi$ varie de $\mathrm{d}\phi=k \mathrm{d}q - \omega\mathrm{d}t$. Comme $p=\hbar k$ et $E=\hbar\omega$, la petite variation de phase devient $\mathrm{d}\phi=\frac{1}{\hbar}(p\mathrm{d}q-E\mathrm{d}t)$.<br>
 Et en mettant $\mathrm{d}t$ en facteur :  $\mathrm{d}\phi=\frac{1}{\hbar} ( p \frac{ \mathrm{d} q }{ \mathrm{d} t } - E ) \mathrm{d}t=\frac{1}{\hbar}(p\dot{q}-E)\mathrm{d}t$. En remplaçant $E$ par l&rsquo;hamiltonien $H$, on retrouve la formule du Lagrangien ! Donc $\mathrm{d}\phi=\frac{1}{\hbar}\mathcal{L}\mathrm{d}t$.<br>
 Et pour obtenir la variation de phase sur l&rsquo;entièreté du chemin, on somme ce qu&rsquo;on obtient sur chaque tronçon infinitésimal, ce qui correspond donc à intégrer le Lagrangien le long du chemin : $\Delta\phi=\frac{1}{\hbar}\int_\text{chemin}\mathcal{L}\mathrm{d}t$. C&rsquo;est bien l&rsquo;action qui fait ici son apparition et la variation de phase sur le chemin s&rsquo;écrit finalement $\Delta\phi=\frac{1}{\hbar}S_\text{chemin}$.</p>
+ <div style="position:relative;margin-left:auto;margin-right:auto;width:500px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+ <img src="/chemins.png" style="box-shadow:none;background:none;">
+ </div>
 <p>Mais pour Feynman, la particule n&rsquo;emprunte pas qu&rsquo;un chemin pour aller de I à F, elle emprunte tous les chemins possibles !<br>
 Chaque chemin contribue à la probabilité finale de retrouver la particule au point F après être partie du point I.<br>
-Pour obtenir la probabilité totale, on se retrouve à additionner entre eux les déphasages obtenus sur chacun des chemins (cela revient à additionner des $\mathrm{e}^{\mathrm{i}\frac{S_\text{chemin}}{\hbar}}$).<br>
+Pour obtenir la probabilité totale, on se retrouve à additionner entre eux les déphasages obtenus sur chacun des chemins (cela revient à additionner des termes $\mathrm{e}^{\mathrm{i}\frac{S_\text{chemin}}{\hbar}}$).<br>
 Feynman aime décrire cette opération comme une somme de petites flèches dans un plan (l&rsquo;angle de la flèche représente le déphasage). La grande majorité des chemins fournissent des déphasages variant largement les uns par rapport aux autres (la division par $\hbar$ fait gigoter ça très très vite) et sommer des flèches dont l&rsquo;angle varie quasi aléatoirement ne mêne pas très loin&hellip; Seuls les chemins où la phase varie très peu de l&rsquo;un à l&rsquo;autre vont contribuer efficacement, constructivement, à la somme finale. Or les chemins où la phase varie peu sont les chemins où l&rsquo;action varie peu. On se retrouve à chercher les trajectoires où l&rsquo;action est stationnaire redécouvrant le principe de moindre action via le principe de superposition !</p>
 <p>Feynman marie ainsi d&rsquo;une façon nouvelle l&rsquo;optique ondulatoire à la mécanique en passant directement par la phase et le principe de superposition de Fresnel plutôt que par l&rsquo;équation d&rsquo;onde d&rsquo;Helmholtz et met dans le même mouvement l&rsquo;action au centre de son formalisme.</p>
+<p>Bouclons la boucle en reprenant un exemple donné par Feynman dans <em>QED</em>.<br>
+On a une source de photons monochromatiques (leur énergie $E$ est donc fixe) et un détecteur. Un écran cache la source au détecteur mais un miroir est placé en dessous.<br>
+La probabilité que le détecteur capte un photon doit être calculée en utilisant tous les chemins possibles. Pour simplifier, Feynman découpe le miroir en 13 et ne s&rsquo;autorise que les trajets rectilignes.</p>
+<div style="position:relative;margin:auto;width:700px;max-width:100%;">
+<video controls preload="metadata" poster="/feynm.jpg" style="width:100%;border-radius:5px;">
+  <source src="/feynm.mp4" type="video/mp4">
+  Votre navigateur ne prend pas en charge la balise <code>video</code>.
+</video>
+</div>
+<p>Dans cette situation l&rsquo;action obtenu sur chaque chemin dépend seulement de la longueur du trajet (en effet, à énergie constante l&rsquo;action se réduit $\int p\mathrm{d}q$ (action réduite) et pour un photon, $p=\frac{E}{c}$.  Donc $E\frac{L}{c}$ ou encore $E\tau$, l&rsquo;action et donc  le déphasage de chaque chemin est proportionnel au temps de parcours.<br>
+En sommant les chemins, on constate bien que ce qui contribuent le plus (car de phase quasi constante) sont ceux correspondants à la trajectoire classique (on a retrouvé Fermat !).</p>
  <br>
 <p><b><i> Sources :</b></i></p>
 <ul>
@@ -2296,16 +2310,16 @@ Feynman aime décrire cette opération comme une somme de petites flèches dans 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745723377"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745723377"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745723377"></script>
-    <script src="/js/jquery.sticky.js?1745723377"></script>
-    <script src="/js/featherlight.min.js?1745723377"></script>
-    <script src="/js/highlight.pack.js?1745723377"></script>
+    <script src="/js/clipboard.min.js?1745765215"></script>
+    <script src="/js/perfect-scrollbar.min.js?1745765215"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1745765215"></script>
+    <script src="/js/jquery.sticky.js?1745765215"></script>
+    <script src="/js/featherlight.min.js?1745765215"></script>
+    <script src="/js/highlight.pack.js?1745765215"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745723377"></script>
-    <script src="/js/learn.js?1745723377"></script>
-    <script src="/js/hugo-learn.js?1745723377"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1745765215"></script>
+    <script src="/js/learn.js?1745765215"></script>
+    <script src="/js/hugo-learn.js?1745765215"></script>
     
     
 
