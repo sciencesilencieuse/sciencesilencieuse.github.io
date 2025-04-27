@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1745719578" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745719578" rel="stylesheet">
-    <link href="/css/hybrid.css?1745719578" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745719578" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745719578" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745719578" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745719578" rel="stylesheet">
-    <link href="/css/theme.css?1745719578" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745719578" rel="stylesheet">
+    <link href="/css/nucleus.css?1745720915" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1745720915" rel="stylesheet">
+    <link href="/css/hybrid.css?1745720915" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1745720915" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1745720915" rel="stylesheet">
+    <link href="/css/auto-complete.css?1745720915" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1745720915" rel="stylesheet">
+    <link href="/css/theme.css?1745720915" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1745720915" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1745719578" rel="stylesheet">
+    <link href="/css/theme-blue.css?1745720915" rel="stylesheet">
     
-    <link href="/css/foo.css?1745719578" rel="stylesheet"><link href="/css/bar.css?1745719578" rel="stylesheet">
+    <link href="/css/foo.css?1745720915" rel="stylesheet"><link href="/css/bar.css?1745720915" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1745719578"></script>
+    <script src="/js/jquery-3.3.1.min.js?1745720915"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745719578"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745719578"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1745720915"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1745720915"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745719578"></script>
+<script type="text/javascript" src="/js/search.js?1745720915"></script>
 
     
   </div>
@@ -1466,7 +1466,11 @@ $\dot{q}_i=\frac{\partial H}{\partial p_i}, \quad \dot{p}_i=-\frac{\partial H}{\
 <h3 id="hamilton-jacobi">Hamilton-Jacobi</h3>
 <p>Le principe de moindre action à la Lagrange consistant à chercher un chemin dans l&rsquo;espace des configurations qui rende stationnaire l&rsquo;action est tout à fait analogue au principe de Fermat.<br>
 Huygens ayant réussi à reproduire les résultats de Fermat avec ses ondelettes, Hamilton se demande si on ne pourrait pas trouver une formulation équivalente en mécanique. Une mécanique à base d&rsquo;ondelettes et de fronts d&rsquo;onde !</p>
-<p>Hamilton y parvient en envisageant l&rsquo;action sous un nouvel aspect. Plutôt que de fixer les points de départ ($q_0,t_0$) et d&rsquo;arrivée ($q_F,t_F$), il laisse ce dernier libre ($q,t$). Il obtient alors $\frac{\partial}{\partial q}=p$ et l&rsquo;équation d&rsquo;Hamilton-Jacobi : $\frac{\partial S}{\partial t}=-H$.<br></p>
+<p>Hamilton y parvient en envisageant l&rsquo;action sous un nouvel aspect. Plutôt que de fixer les points de départ ($q_0,t_0$) et d&rsquo;arrivée ($q_F,t_F$), il laisse ce dernier libre ($q,t$). Il obtient alors :</p>
+<ul style="margin-top:-0.5em;">
+<li><b style="color:#D41876;">$\displaystyle\frac{\partial S}{\partial q}=p$</b></li>
+<li style="margin-top:0.5em;"><b style="color:#D41876;">$\displaystyle\frac{\partial S}{\partial t}=-H$</b> (équation d'Hamilton-Jacobi)</li>
+</ul>
 <div id="preuve">
 <details>
 <summary><a>► démonstration :</a></summary>
@@ -1486,9 +1490,10 @@ Or on a vu que $\frac{\partial S}{\partial q}=p$, d&rsquo;où $\mathcal{L}\mathr
 <p>On en déduit donc que $\frac{\partial S}{\partial t}=\mathcal{L}-p \dot{q}=-H$.</p>
 </details>
 </div>
-<p>Dans le cas d&rsquo;un système conservatif, on obtient $S(q, t)=S_{q_0}(q)-E t$<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>.<br>
+<p>Dans le cas d&rsquo;un système conservatif, on déduit de l&rsquo;équation de Hamilton-Jacobi<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> :
+$$S(q, t)=S_{0}(q)-E t$$
 Hamilton a alors l&rsquo;intuition géniale d&rsquo;y voir une phase $\phi(\vec{r},t) = \vec{k} \cdot\vec{r}-\omega t$. Mais sa quête n&rsquo;est pas celle d&rsquo;une mécanique purement aléatoire (il faudra attendre Schrödinger pour ça), il souhaite la &ldquo;forme Huygens&rdquo; de l&rsquo;équivalence entre la mécanique et l&rsquo;optique géométrique.</p>
-<p>Par analogie avec la limite de l&rsquo;optique ondulatoire aux petites longueurs d&rsquo;onde et le principe de Huygens, on peut identifier $S_{q_0}(q)$ avec la fonction caractéristique donnant la longueur du chemin optique de $q_0$ à $q$.<br>
+<p>Par analogie avec la limite de l&rsquo;optique ondulatoire aux petites longueurs d&rsquo;onde et le principe de Huygens, on peut identifier $S_{0}(q)$ avec la fonction caractéristique donnant la longueur du chemin optique de $q_0$ à $q$.<br>
 Comme $\partial S_0(q) / \partial q=p$, le vecteur normal à la surface $S_0(q)=\text{cst}$, $\vec{\nabla} S_0(q)$ n&rsquo;est autre que le vecteur impulsion $\vec{p}$.</p>
 <p>La trajectoire mécanique suit les rayons (donnés par l&rsquo;impulsion) normaux aux fronts d&rsquo;onde constitués par les surfaces d&rsquo;action réduite constante !</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-top:-40px;">
@@ -1531,12 +1536,12 @@ Comme $\partial S_0(q) / \partial q=p$, le vecteur normal à la surface $S_0(q)=
 <p>La nouvelle dynamique du point matériel (incluant le photon d’Einstein) est à l’ancienne (dynamique classique) ce que l’optique ondulatoire est à l’optique géométrique.</p>
 </blockquote>
 <h3 id="schrödinger">Schrödinger</h3>
-<p>Schrödinger suit les pas d&rsquo;Hamilton pour aboutir à son équation.</p>
+<p>Schrödinger va suivre les pas d&rsquo;Hamilton pour aboutir à son équation d&rsquo;onde.</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/portraitschrodinger.png" style="box-shadow:none;background:none;">
 </div>
-<p>L&rsquo;équation de Hamilton-Jacobi s&rsquo;écrit $\frac{\partial S}{\partial t}+H(q, \nabla S)=0$ en notant $\nabla S = \frac{\partial S}{\partial q}$.</p>
-<p>Pour une particule libre, $H=p^2 / 2 m$ et on obtient : $\frac{\partial S}{\partial t}+\frac{1}{2 m}|\nabla S|^2=0$.</p>
+<p>L&rsquo;équation de Hamilton-Jacobi peut s&rsquo;écrire $\frac{\partial S}{\partial t}+H(q, \nabla S)=0$ en notant $\nabla S = \frac{\partial S}{\partial q}$.</p>
+<p>Pour une particule libre, $H=p^2 / 2 m$ et on obtient : $\frac{\partial S}{\partial t}+\frac{1}{2 m}|\nabla S|^2=0$ (car $\frac{\partial S}{\partial q}$ vaut aussi l&rsquo;impulsion $p$).</p>
 <p>On se rappelle que l&rsquo;éikonale de l&rsquo;optique géométrique vérifie $|\nabla S|^2=n^2(\mathbf{r})$ lorsque l&rsquo;onde scalaire $\Psi \propto e^{i k_0 S}$ satisfait une équation de Helmholtz $\nabla^2 \Psi+k_0^2 n^2 \Psi=0$.</p>
 <p>L&rsquo;idée-clé de Schrödinger est de remplacer dans l’équation de Helmholtz l’indice optique $n$ par une fonction liée à l’énergie potentielle $V(q)$ pour trouver l’équation qui régit la « phase » d’une onde mécanique.</p>
 <p>Construction de l&rsquo;équation stationnaire :<br>
@@ -2289,16 +2294,16 @@ Feynman aime décrire cette opération comme une somme de petites flèches dans 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745719578"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745719578"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745719578"></script>
-    <script src="/js/jquery.sticky.js?1745719578"></script>
-    <script src="/js/featherlight.min.js?1745719578"></script>
-    <script src="/js/highlight.pack.js?1745719578"></script>
+    <script src="/js/clipboard.min.js?1745720915"></script>
+    <script src="/js/perfect-scrollbar.min.js?1745720915"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1745720915"></script>
+    <script src="/js/jquery.sticky.js?1745720915"></script>
+    <script src="/js/featherlight.min.js?1745720915"></script>
+    <script src="/js/highlight.pack.js?1745720915"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745719578"></script>
-    <script src="/js/learn.js?1745719578"></script>
-    <script src="/js/hugo-learn.js?1745719578"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1745720915"></script>
+    <script src="/js/learn.js?1745720915"></script>
+    <script src="/js/hugo-learn.js?1745720915"></script>
     
     
 
