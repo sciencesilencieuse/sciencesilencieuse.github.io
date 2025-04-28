@@ -206,9 +206,9 @@
     </item>
     <item>
       <title>Moindre action</title>
-      <link>https://sciencesilencieuse.github.io/physique/meca/lagrange/</link>
+      <link>https://sciencesilencieuse.github.io/physique/meca/action/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/meca/lagrange/</guid>
+      <guid>https://sciencesilencieuse.github.io/physique/meca/action/</guid>
       <description>Principe de moindre action Maupertuis formule ainsi le principe de moindre action en 1744 :&#xA;Lorsqu’il arrive quelque changement dans la nature, la quantité d’action, nécessaire pour ce changement, est la plus petite qui soit possible.&#xA;Une formulation plus moderne serait la minimisation du transfert d&amp;rsquo;énergie entre les réservoirs cinétique et potentiel au cours du temps dévolu au trajet entre deux points.&#xA;Maupertuis reprenait ainsi le flambeau de Fermat qui avait introduit dès 1657 le principe de moindre temps pour expliquer les trajets des rayons lumineux en optique géométrique.</description>
     </item>
     <item>
@@ -245,6 +245,13 @@
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/maths/proba/</guid>
       <description>Probabilités Loi Binomiale D&amp;rsquo;une épreuve de Bernoulli à la loi binomiale :&#xA;Le petit programme ci-dessous permet de déterminer l&amp;rsquo;intervalle de fluctuation pour un seuil donné.&#xA;Et on pourra vérifier l&amp;rsquo;intervalle graphiquement avec l&amp;rsquo;applet suivant.&#xA;Loi normale La célèbre gaussienne (ou courbe en cloche) :&#xA;On peut à nouveau tirer profit de l&amp;rsquo;applet géogebra qui précède pour obtenir des intervalles de fluctuation.&#xA;Densité de probabilités Nouvelle énigme permettant de parler des densités de probabilité :</description>
+    </item>
+    <item>
+      <title>QED</title>
+      <link>https://sciencesilencieuse.github.io/physique/meca/qed/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/meca/qed/</guid>
+      <description>Réflexion vitreuse Pourquoi lors d’une réflexion sur un milieu transparent (eau, verre, etc.), la lumière semble-t-elle se réfléchir uniquement sur la surface, alors que la transparence même du milieu assure que la lumière pénètre bien à l’intérieur ? Qu’a donc de si particulier la surface ? Rien assurément. Mais POURQUOI ALORS crie le curieux désespéré face au Grand Téton.&#xA;photo : Chascar (Parc national du Grand Teton près du Jackson Lake Lodge)</description>
     </item>
     <item>
       <title>Relativité générale</title>
