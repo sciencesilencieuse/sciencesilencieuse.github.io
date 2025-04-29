@@ -2,9 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://sciencesilencieuse.github.io/maths/algebre/</loc>
-    <lastmod>2021-03-06T14:20:50+01:00</lastmod>
-  </url><url>
     <loc>https://sciencesilencieuse.github.io/info/algorithmique/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
@@ -78,6 +75,9 @@
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/tqc/tqc2/</loc>
+    <lastmod>2021-03-06T14:20:50+01:00</lastmod>
+  </url><url>
+    <loc>https://sciencesilencieuse.github.io/maths/algebre/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/maths/pca/</loc>
