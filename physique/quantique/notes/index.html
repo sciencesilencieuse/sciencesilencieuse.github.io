@@ -8,7 +8,7 @@
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
-    <title>Statistiques - Science en vrac</title>
+    <title>Fourre-tout - Science en vrac</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
 
@@ -81,7 +81,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 
 	
   </head>
-  <body class="" data-url="/maths/stat/">
+  <body class="" data-url="/physique/quantique/notes/">
     <nav id="sidebar" class="">
 
 
@@ -333,7 +333,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/maths/" title="Maths" class="dd-item
-        parent
+        
         
         
         ">
@@ -558,7 +558,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
  
   
     
-      <li data-nav-id="/maths/stat/" title="Statistiques" class="dd-item active">
+      <li data-nav-id="/maths/stat/" title="Statistiques" class="dd-item ">
         <a href="/maths/stat/">
         Statistiques
         
@@ -608,7 +608,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/" title="Physique" class="dd-item
-        
+        parent
         
         
         ">
@@ -844,7 +844,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/quantique/" title="Mécanique quantique" class="dd-item
-        
+        parent
         
         
         ">
@@ -1043,7 +1043,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
                   <span class="links">
                  
                  
-                   Statistiques
+                   Fourre-tout
                  
                   </span>
                 </div>
@@ -1052,17 +1052,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#les-différentes-moyennes">Les différentes moyennes</a></li>
-    <li><a href="#monte-carlo">Monte Carlo</a></li>
-    <li><a href="#paradoxe-de-simpson">Paradoxe de Simpson</a></li>
-    <li><a href="#test-dhypothèse">Test d&rsquo;hypothèse</a></li>
-    <li><a href="#analyse-en-composante-principale">Analyse en composante principale</a></li>
-    <li><a href="#p-hacking">p-hacking</a></li>
-    <li><a href="#écart-type-expérimental-estimateur-de-lécart-type-non-biaisé">Écart-type expérimental (estimateur de l&rsquo;écart-type non biaisé)</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#nécessité-de-3n-dimensions-quand-n-particules">Nécessité de $3N$ dimensions quand $N$ particules</a></li>
   </ul>
 </nav>
     </div>
@@ -1101,162 +1091,31 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   {
     color: #006C65;
   }
-  #grosseformule 
-{
-    overflow-x: auto; 
-}
 </style>
-<h1 id="statistiques">Statistiques</h1>
-
-<div class="notices tip" style="--title: 'tip';">
-  <p style="display: none;">tip</p>
-  <div class="notice-body">
-    <p>Les probabilités sont des calculs a priori, visant à prédire les issues d’évènements n’ayant pas encore eu lieu, alors que les statistiques sont des calculs a posteriori qui analysent les issues d’évènements déjà réalisés.</p>
-
-  </div>
+<h1 id="fourre-tout">Fourre-tout</h1>
+<h2 id="nécessité-de-3n-dimensions-quand-n-particules">Nécessité de $3N$ dimensions quand $N$ particules</h2>
+<blockquote>
+<p>Ney, A. « <em><a href="https://link.springer.com/content/pdf/10.1007/s13194-023-00554-5.pdf">Three arguments for wave function realism</a></em> », European Journal for Philosophy of Science, vol. 13, art. 50 (24 octobre 2023).</p>
+</blockquote>
+<p>En mécanique quantique, la fonction d&rsquo;onde est construite comme un champ sur un espace de $3N$ dimensions où $N$ est le nombre de particules.</p>
+<p>Pourquoi s&rsquo;embêter avec ces dimensions supplémentaires ?</p>
+<p>L&rsquo;intrication donne un argument intéressant.</p>
+<p>Supposons que l&rsquo;on ait deux particules préparées dans un état singulet de spin. Les particules sont ensuite envoyée dans des directions opposées vers deux Stern-Gerlach qui vont les dévier vers le haut ou vers le bas en fonction de leur spin $z$.</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:500px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/doublestern.png" style="box-shadow:none;background:none;">
 </div>
-
-
-<h2 id="les-différentes-moyennes">Les différentes moyennes</h2>
-<br>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/v5NTpB6DGbQ?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<br>
-<h2 id="monte-carlo">Monte Carlo</h2>
-<p>Dans la duxième partie de la vidéo, on cherche à répondre à la grande question suivante : comment s&rsquo;assurer d&rsquo;avoir suffisamment d&rsquo;échantillons pour obtenir des statistiques fiables ? Ou plus prosaïquement : à partir de combien est-ce suffisant ? On utilise d&rsquo;abord les propriétés de la loi normale puis on construit un estimateur à partir de l&rsquo;<strong>inégalité de Bienaymé-Tchebychev</strong>.</p>
-<br>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/t1X1Agp1CWA?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<br>
-<h2 id="paradoxe-de-simpson">Paradoxe de Simpson</h2>
-<p>Ce paradoxe a fait des dégâts lors de la campagne de vaccination pour le Covid. Les chiffres de la vidéo sont proches des chiffres communiqués par l&rsquo;état d&rsquo;Israël qui était un des premiers pays à pouvoir vacciner.</p>
-<p><a href="https://www.covid-datascience.com/post/israeli-data-how-can-efficacy-vs-severe-disease-be-strong-when-60-of-hospitalized-are-vaccinated">L&rsquo;article</a> qui a servi en partie pour la vidéo.</p>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Bu3znAquSuk?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<br>
-<h2 id="test-dhypothèse">Test d&rsquo;hypothèse</h2>
-<p>Les statistiques au service de la prise de décision en science.</p>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/9TxSmOK6GWA?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<br>
-<h2 id="analyse-en-composante-principale">Analyse en composante principale</h2>
-<p>L&rsquo;analyse en composante principale permet de faire parler les données.</p>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/sRMplEDuEig?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<br>
-<div style="overflow-x: auto;">
-<table>
-  <tr>
-<th rowspan="1" style="text-align:center;"><a href="../pca/"><b>Un autre exemple + tuto avec des données INSEE départementales</b></a>
-<div style="position:relative;margin-left:auto;margin-right:auto;width:400px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
-<img src="/cartefrancepca.png" style="box-shadow:none;background:none;">
-</div>
-</th>
-</tr>
-  </table>
-</div>
-<br>
-<h2 id="p-hacking">p-hacking</h2>
-
-<div class="notices def" style="--title: 'Extrait traduit du livre \27 Everything is predictable\27  de Tom Chivers';">
-  <p style="display: none;">Extrait traduit du livre &#39;Everything is predictable&#39; de Tom Chivers</p>
-  <div class="notice-body">
-    <p>Peut-être que l’exemple le plus célèbre est celui du scientifique de l&rsquo;alimentation Brian Wansink, une star de l’Université Cornell qui a reçu des millions de dollars de financement du gouvernement fédéral américain sous l’administration Obama. Il a publié beaucoup d’études sur notre comportement alimentaire, notamment une sur la façon dont les hommes mangent plus en compagnie de femmes (probablement pour les impressionner) ; une autre sur comment donner des noms plus “attractifs” aux légumes (appeler les carottes “carottes à vision X-ray,” par exemple) permet que les enfants d’école primaire en mangent deux fois plus.
-<br><br>
-Puis, en 2016, il a commis l’erreur de publier un billet de blog intitulé &ldquo;The Grad Student Who Never Said &lsquo;No.&rsquo;&rdquo;.
-<br><br>
-L’étudiante en question était une doctorante turque. Lorsqu’elle est arrivée à Cornell, Wansink “lui a donné un ensemble de données d’une étude autofinancée, sans résultats probants” - une étude qui examinait le comportement alimentaire dans un buffet italien à volonté pendant un mois. Selon ses propres termes, il lui a dit : “Cela nous a coûté beaucoup de temps et  d&rsquo;argent à collecter. Il doit y avoir quelque chose ici que nous pouvons sauver parce que cet ensemble de données est cool (riche et unique).” L’étudiante s’est donc mise au travail et a découpé l’ensemble de données de nombreuses façons différentes. Et, inévitablement, elle a trouvé de nombreuses corrélations p &lt; 0,05 - suffisamment pour qu&rsquo;elle et Wansink publient cinq articles (y compris l’article “les hommes mangent trop pour impressionner les femmes”).
-<br><br>
-Cela a éveillé la suspicion de certains scientifiques et journalistes scientifiques, et ils ont commencé à passer au crible les autres recherches de Wansink. De plus, Stephanie Lee, une journaliste scientifique de BuzzFeed, a mis la main sur ses emails, dans lesquels - il s’est avéré - il demanda à sa doctorante de découper les données en “mâles, femelles, mangeurs de déjeuner, mangeurs de dîner, personnes mangeant seules, personnes mangeant en groupe de 2, personnes mangeant en groupe de 2+, personnes commandant de l’alcool, personnes commandant des boissons non alcoolisées, personnes restant près du buffet, personnes s’asseyant loin, etc.” pour “essorer le jeu de données jusqu&rsquo;à en extraire tous les résultats significatifs possibles” et faire en sorte que cela “devienne viral à grande échelle.”
-<br><br>
-En conséquence, dix-huit des articles de Wansink ont été rétractés ; sept ont reçu des &ldquo;expressions of concern” que les revues ajoutent aux études qu’elles ne pensent pas pouvoir être totalement fiables, mais qu’elles ne sont pas prêtes à rétracter complètement ; et quinze ont été corrigés. Wansink, entre-temps, a démissionné de Cornell en 2019, après que l’université a conclu qu’il avait commis une faute scientifique et lui a interdit l’enseignement et la recherche.
-<br><br>
-C&rsquo;est un exemple particulièrement frappant, mais d’une certaine manière Wansink a eu la malchance d’être détruit publiquement pour quelque chose qui était presque une pratique standard. Le p-hacking se produit tout le temps, de manière beaucoup moins dramatique - et beaucoup de scientifiques n’ont absolument aucune idée qu’ils font quelque chose de mal. Daryl Bem, dans un chapitre d&rsquo;un livre de 1987 écrit comme un guide pour aider les étudiants à publier leurs recherches, a écrit qu’il “y a deux articles que vous pouvez écrire : l’article que vous aviez prévu d’écrire lorsque vous avez conçu votre étude ; l’article qui a le plus de sens maintenant que vous avez vu les résultats. La bonne réponse est le second.” Il a appelé les chercheurs à “analyser les sexes séparément, créer de nouveaux index composites… réorganiser les données pour les mettre en relief de manière plus audacieuse… Les données peuvent être suffisamment solides pour justifier de recentrer votre article autour des nouvelles découvertes et de subordonner ou même d’ignorer vos hypothèses originales.&rdquo;</p>
-
-  </div>
-</div>
-
-
-<p><img src="https://imgs.xkcd.com/comics/significant.png" alt=""></p>
-<p>Comme on l&rsquo;a vu sur les <a href="../geometrie/geo4/#the-average-man">espaces de données à grande dimension </a>, plus on a d&rsquo;axes (de catégories, d&rsquo;entrées,&hellip;), plus on a de chance d&rsquo;obtenir un résultat hors norme sur au moins l&rsquo;un d&rsquo;eux.</p>
-<p>Ce <a href="https://tylervigen.com/spurious-correlations">chouette site</a> met le phénomène à profit pour débusquer des corrélations amusantes (avec pour chacune des p-values inférieures à 1%&hellip;).</p>
-<br>
-<h2 id="écart-type-expérimental-estimateur-de-lécart-type-non-biaisé">Écart-type expérimental (estimateur de l&rsquo;écart-type non biaisé)</h2>
-<p>L&rsquo;<b>écart-type</b> pour une variable quantitative dont les relevés $(x_1,\ldots,x_N)$ sont pris sur la population complète (avec pour moyenne $\mu$) est donné par la racine carrée de la variance :<br>
-$$\sigma = \sqrt{V}=\sqrt{\frac{1}{N}\sum_{i=1}^N (x_i-\mu)^2}$$</p>
-<p>C&rsquo;est donc la racine-carrée des carrés des écarts à la moyenne divisé par $N$. On obtient bien ainsi une moyenne des écarts à la moyenne en empèchant qu&rsquo;un écart en-dessous  ne compense une écart au-dessus.</p>
-<p>Mais si les relevés ne concernent qu&rsquo;un échantillon $n&lt;N$ de la population et non la population complète (ce qui est le cas pour une série de mesures expérimentales), on passe des probas aux stats et on a alors besoin d&rsquo;un estimateur de l&rsquo;écart-type ($\sigma\rightarrow S$).</p>
-<p>L&rsquo;<b>estimateur de l&rsquo;écart-type non biaisé</b> (aussi appelé écart-type expérimental) est alors donné par :<br></p>
-<div id="grosseformule" style="border:solid 2px red;width:fit-content;margin:auto;padding-left:20px;padding-right:20px">
-$$S_{n-1} =\sqrt{\frac{1}{n-1}\sum_{i=1}^n (x_i-\bar{x})^2}$$
-</div>
-
-<div class="notices note" style="--title: 'note';">
-  <p style="display: none;">note</p>
-  <div class="notice-body">
-    <p>L&rsquo;estimateur non biaisé de l&rsquo;écart-type est parfois appelé écart-type expérimental et noté $\sigma_{exp}$. C&rsquo;est particulièrement le cas dans l&rsquo;enseignement de la physique au lycée.</p>
-
-  </div>
-</div>
-
-
-<h4 id="pourquoi-non-biaisénbsp-et-pourquoi-passer-de-n-à--n-1nbsp">Pourquoi &ldquo;non biaisé&rdquo; ? Et pourquoi passer de &ldquo;$n$&rdquo; à  &ldquo;$n-1$&quot; ?</h4>
-<p>Notre problème est qu&rsquo;on ne connaît plus la valeur vraie de la moyenne $\mu$ mais seulement son estimation $m=\frac{1}{n}\sum_{i=1}^n x_i$.</p>
-<p>Et en substituant $m$ à $\mu$ dans la variance, on biaise son espérance&hellip;<br>
-En effet :</p>
-<div id="grosseformule">
-$$
-\begin{aligned}
-E\left(\frac{1}{n}\sum_{i=1}^n (x_i-m)^2\right) &= E \left( \frac{1}{n}\sum_{i=1}^n x_i^2 - m^2 \right) &&\text{car } -2 \frac{1}{n}\sum_{i=1}^n x_i\times m = -2  m^2\\
-& = \frac{1}{n}\sum_{i=1}^n E(x_i^2)-E(m^2)\\
-& = E(x^2)-E(m^2) &&\text{car }E(x_i)=E(x)\text{ ne dépend pas de }i\\
-&= \left(V(x)+E(x)^2\right)-\left(V(m)+E(m)^2\right)&&\text{car }V(x)=E(x^2)-E(x)^2\\
-&= \left(V(x)+E(x)^2\right)-\left(\frac{1}{n}V(x)+E(x)^2\right)&&\text{car }V(m)=\frac{1}{n}V(x)\\
-&= \frac{n-1}{n}V(x)
-\end{aligned}
-$$
-</div>
-<p>Par conséquent, on multiplie par $\frac{n}{n-1}$ pour se débarrasser du biais&hellip;</p>
+<p>On appelle A, B, C et D les 4 localisations possibles après les déflections.</p>
+<p>Comme les particules deviennent intriquées avec les appareils de mesure, elles se trouvent au final dans un état intriqué non pas seulement par rapport à leurs spins mais aussi par rapport à leurs positions :</p>
+<p>$$\psi=\frac{1}{\sqrt{2}}\left[\left|\uparrow_z, A\right\rangle_1\left|\downarrow_z, D\right\rangle_2+\left|\downarrow_z, B\right\rangle_1\left|\uparrow_z, C\right\rangle_2\right]$$</p>
+<p>À 3 dimensions, on ne peut pas interpréter cet état quantique comme un seul champ si on veut qu&rsquo;il attribue des propriétés intrinsèques et séparables à chaque particule. Il faut donc deux champs dont les composantes correspondront aux différentes positions.</p>
+<p>Supposons maintenant que les deux particules ne soient pas dans un état intriqué mais dans un état produit $|\uparrow_x\rangle_1\otimes |\uparrow_x\rangle_2$. Après les Stern-Gerlach, on a :</p>
+<p>$\psi^{\prime}=\frac{1}{2}\left[\left|\uparrow_z, A\right\rangle_1\left|\uparrow_z, C\right\rangle_2+\left|\uparrow_z, A\right\rangle_1\left|\downarrow_z, D\right\rangle_2+\left|\downarrow_z, B\right\rangle_1\left|\uparrow_z, C\right\rangle_2+\left|\downarrow_z, B\right\rangle_1\left|\downarrow_z, D\right\rangle_2\right]$</p>
+<p>On peut essayer à nouveau de décrire cet état par deux champs à 3 dimensions.</p>
+<p>Mais comment alors peut-on distinguer les deux états quantiques ?  Les deux champs obtenus ont bien, chacun, la même densité sur A, B, C et D ; en 3D on ne voit donc aucune différence.</p>
+<p>Par contre, si on interprète ces états  quantiques non plus comme deux champs à 3D mais un champ à 6D, on capture la correspondance entre les états de $\psi$ et donc la distinction avec $\psi&rsquo;$.</p>
+<p>Il suffit pour cela de considérer 4 points dans l&rsquo;espace à 6D désignés de manière transparente par AC, AD, BC et BD (le point AC dans l&rsquo;espace 6D des configurations correspond à la situation dans l&rsquo;espace 3D où la particule 1 est localisée en A et la particule 2 est localisée en C).</p>
+<p>Dans cet espace à 3N dimensions, $\psi$ décrit un champ avec seulement des composantes en AD et BC. $\psi^\prime$, lui, décrit un champ avec des composantes aux 4 points AC, AD, BC, BD.</p>
+<p>Le schéma bi-champ efface la corrélation “si et seulement si” entre la localisation de 1 et celle de 2.</p>
 
 
 <footer class="footline">
@@ -1439,7 +1298,6 @@ $$
             
                 
                     
-                    
                 
                 
 
@@ -1454,9 +1312,6 @@ $$
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1596,7 +1451,6 @@ $$
             
                 
                     
-                    
                 
                 
 
@@ -1612,9 +1466,6 @@ $$
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1635,6 +1486,7 @@ $$
             
                 
                     
+                    
                 
                 
 
@@ -1649,6 +1501,9 @@ $$
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1799,6 +1654,7 @@ $$
             
                 
                     
+                    
                 
                 
 
@@ -1819,6 +1675,9 @@ $$
             
             
                 
+                    
+                        
+                        
                     
                 
                 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mécanique quantique on Science en vrac</title>
+    <link>https://sciencesilencieuse.github.io/physique/quantique/</link>
+    <description>Recent content in Mécanique quantique on Science en vrac</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <lastBuildDate>Sat, 06 Mar 2021 14:20:50 +0100</lastBuildDate>
+    <atom:link href="https://sciencesilencieuse.github.io/physique/quantique/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fourre-tout</title>
+      <link>https://sciencesilencieuse.github.io/physique/quantique/notes/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/quantique/notes/</guid>
+      <description>Fourre-tout Nécessité de $3N$ dimensions quand $N$ particules Ney, A. « Three arguments for wave function realism », European Journal for Philosophy of Science, vol. 13, art. 50 (24 octobre 2023).&#xA;En mécanique quantique, la fonction d&amp;rsquo;onde est construite comme un champ sur un espace de $3N$ dimensions où $N$ est le nombre de particules.&#xA;Pourquoi s&amp;rsquo;embêter avec ces dimensions supplémentaires ?&#xA;L&amp;rsquo;intrication donne un argument intéressant.&#xA;Supposons que l&amp;rsquo;on ait deux particules préparées dans un état singulet de spin.</description>
+    </item>
+  </channel>
+</rss>
