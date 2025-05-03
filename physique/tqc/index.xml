@@ -9,34 +9,6 @@
     <lastBuildDate>Sat, 06 Mar 2021 14:20:50 +0100</lastBuildDate>
     <atom:link href="https://sciencesilencieuse.github.io/physique/tqc/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>TQC-0</title>
-      <link>https://sciencesilencieuse.github.io/physique/tqc/tqc0/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/tqc/tqc0/</guid>
-      <description>Théorie quantique des champs &amp;ndash; Partie 0 note&#xA;Notes de lecture du livre Quantum field theory for the gifted amateur de Thomas Lancaster et Stephen Blundell.&#xA;Lagrangien et principe de moindre action La détermination de la trajectoire $x(t)$ d&amp;rsquo;une particule entre A et B par intégration de la 2e loi de Newton, $F=m\ddot{x}$, ne cadre pas avec les enseignements de la mécanique quantique. Car si on peut bien mesurer la particule en A à $t=0$ et en B à $t=\tau$, un voile impénétrable nous empèche de savoir précisément ce qui s&amp;rsquo;est passé entre les deux.</description>
-    </item>
-    <item>
-      <title>TQC-1</title>
-      <link>https://sciencesilencieuse.github.io/physique/tqc/tqc1/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/tqc/tqc1/</guid>
-      <description>Théorie quantique des champs &amp;ndash; Partie 1 note&#xA;Notes de lecture du livre Quantum field theory for the gifted amateur de Thomas Lancaster et Stephen Blundell.&#xA;Les oscillateurs harmoniques Une vidéo vieille comme tout sur l&amp;rsquo;oscillateur harmonique quantique qui traite pas mal des points de ce chapitre :&#xA;Première quantification : les particules se comportent comme des ondes.&#xA;Seconde quantification : les ondes se comportent comme des particules.&#xA;Partons d&amp;rsquo;une masse $m$ accrochée à un ressort de constante de raideur $K$.</description>
-    </item>
-    <item>
-      <title>TQC-3</title>
-      <link>https://sciencesilencieuse.github.io/physique/tqc/tqc3/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/tqc/tqc3/</guid>
-      <description>Théorie quantique des champs &amp;ndash; Partie 3 note&#xA;Notes de lecture du livre Quantum field theory for the gifted amateur de Thomas Lancaster et Stephen Blundell. Très souvent une simple traduction.&#xA;Retour sommaire&#xA;Évolution temporelle Deux représentations de la mécanique quantique s&amp;rsquo;opposent quant à la description de l&amp;rsquo;évolution temporelle d&amp;rsquo;un système : la représentation de Schrödinger et la représentation d&amp;rsquo;Heisenberg.&#xA;Représentation de Schrödinger Dans la représentation de Schrödinger, ce sont les fonctions d&amp;rsquo;onde qui dépendent du temps et leur évolution est déterminée par l&amp;rsquo;équation de Schrödinger :</description>
-    </item>
-    <item>
-      <title>TQC-4</title>
-      <link>https://sciencesilencieuse.github.io/physique/tqc/tqc4/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/tqc/tqc4/</guid>
-      <description>Théorie quantique des champs &amp;ndash; Partie 4 note&#xA;Notes de lecture du livre Quantum field theory for the gifted amateur de Thomas Lancaster et Stephen Blundell. Très souvent une simple traduction.&#xA;Retour sommaire&#xA;La recette de la quantification canonique des champs La théorie quantique des champs nous permet de décrire un monde où des particules indistinguables peuvent être créées ou détruites lors d&amp;rsquo;interactions (entre elles ou avec des entités extérieures), un monde foncièrement non linéaire donc.</description>
-    </item>
-    <item>
       <title>TQC-4</title>
       <link>https://sciencesilencieuse.github.io/physique/tqc/tqcd/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
@@ -44,25 +16,11 @@
       <description>Théorie quantique des champs note&#xA;Notes de lecture du livre Quantum field theory for the gifted amateur de Thomas Lancaster et Stephen Blundell. Très souvent une simple traduction.&#xA;Retour sommaire&#xA;Partie 4 : Évolution temporelle Chapitre suivant&#xA;Sommaire</description>
     </item>
     <item>
-      <title>TQC-5</title>
-      <link>https://sciencesilencieuse.github.io/physique/tqc/tqc5/</link>
+      <title>QED</title>
+      <link>https://sciencesilencieuse.github.io/physique/tqc/qed/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/tqc/tqc5/</guid>
-      <description>Théorie quantique des champs &amp;ndash; Partie 5 note&#xA;Notes de lecture du livre Quantum field theory for the gifted amateur de Thomas Lancaster et Stephen Blundell. Très souvent une simple traduction.&#xA;Retour sommaire&#xA;Champs de jauge et théorie de jauge Une invariance de jauge trahit moins une symétrie du système qu&amp;rsquo;une redondance dans sa description (différentes configurations du champ aboutissent à des observables identiques). Cette redondance nous laisse une certaine latitude quant au choix de la meilleure formulation, c&amp;rsquo;est le choix de jauge.</description>
-    </item>
-    <item>
-      <title>TQC-5</title>
-      <link>https://sciencesilencieuse.github.io/physique/tqc/tqc6/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/tqc/tqc6/</guid>
-      <description>Théorie quantique des champs &amp;ndash; Partie 6 note&#xA;Notes de lecture du livre Quantum field theory for the gifted amateur de Thomas Lancaster et Stephen Blundell. Très souvent une simple traduction.&#xA;Retour sommaire&#xA;Propagateurs et fonctions de Green Chapitre suivant&#xA;Sommaire</description>
-    </item>
-    <item>
-      <title>TQC-2</title>
-      <link>https://sciencesilencieuse.github.io/physique/tqc/tqc2/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/tqc/tqc2/</guid>
-      <description>Théorie quantique des champs &amp;ndash; Partie 2 note&#xA;Notes de lecture du livre Quantum field theory for the gifted amateur de Thomas Lancaster et Stephen Blundell. Très souvent une simple traduction.&#xA;Le premier encadré gris est issu de No-Nonsense Classical Mechanics de Jakob Schwichtenberg.&#xA;Retour sommaire&#xA;Revenons dans un premier temps à la mécanique du 19e siècle, en particulier la mécanique hamiltonienne pour constater sa similarité avec la mécanique quantique avant de présenter la théorie classique des champs.</description>
+      <guid>https://sciencesilencieuse.github.io/physique/tqc/qed/</guid>
+      <description>Réflexion vitreuse Pourquoi lors d’une réflexion sur un milieu transparent (eau, verre, etc.), la lumière semble-t-elle se réfléchir uniquement sur la surface, alors que la transparence même du milieu assure que la lumière pénètre bien à l’intérieur ? Qu’a donc de si particulier la surface ? Rien assurément. Mais POURQUOI ALORS crie le curieux désespéré face au Grand Téton.&#xA;photo : Chascar (Parc national du Grand Teton près du Jackson Lake Lodge)</description>
     </item>
   </channel>
 </rss>

@@ -32,25 +32,25 @@
     <loc>https://sciencesilencieuse.github.io/maths/algebre/groupes/groupe2/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>https://sciencesilencieuse.github.io/physique/tqc/tqc0/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/tqc/qft/tqc0/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>https://sciencesilencieuse.github.io/physique/tqc/tqc1/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/tqc/qft/tqc1/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>https://sciencesilencieuse.github.io/physique/tqc/tqc3/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/tqc/qft/tqc3/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>https://sciencesilencieuse.github.io/physique/tqc/tqc4/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/tqc/qft/tqc4/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/tqc/tqcd/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>https://sciencesilencieuse.github.io/physique/tqc/tqc5/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/tqc/qft/tqc5/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>https://sciencesilencieuse.github.io/physique/tqc/tqc6/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/tqc/qft/tqc6/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/maths/arithmetique/</loc>
@@ -77,7 +77,7 @@
     <loc>https://sciencesilencieuse.github.io/maths/geometrie/geo1/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>https://sciencesilencieuse.github.io/physique/tqc/tqc2/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/tqc/qft/tqc2/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/maths/pca/</loc>
@@ -128,7 +128,7 @@
     <loc>https://sciencesilencieuse.github.io/maths/proba/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>https://sciencesilencieuse.github.io/physique/meca/qed/</loc>
+    <loc>https://sciencesilencieuse.github.io/physique/tqc/qed/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/relatge/</loc>
@@ -144,6 +144,9 @@
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/quantique/</loc>
+    <lastmod>2021-03-06T14:20:50+01:00</lastmod>
+  </url><url>
+    <loc>https://sciencesilencieuse.github.io/physique/tqc/qft/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/maths/stat/</loc>
