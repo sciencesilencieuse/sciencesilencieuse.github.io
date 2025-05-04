@@ -9,11 +9,11 @@
     <lastBuildDate>Sat, 06 Mar 2021 14:20:50 +0100</lastBuildDate>
     <atom:link href="https://sciencesilencieuse.github.io/physique/quantique/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Fourre-tout</title>
-      <link>https://sciencesilencieuse.github.io/physique/quantique/notes/</link>
+      <title>3N dimensions</title>
+      <link>https://sciencesilencieuse.github.io/physique/quantique/3ndimensions/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/quantique/notes/</guid>
-      <description>Interpréter la mécanique quantique Vis-à-vis de la bizarrerie quantique, certains choisissent une approche entièrement épistémique (la théorie est source d&amp;rsquo;informations) centrée sur les résultats des expériences. C&amp;rsquo;est le cas des instrumentalistes (école de Copenhague) qui se limitent à une utilisation de la théorie comme un outil prédictif expérimental sans lui demander de décrire une quelconque réalité. C&amp;rsquo;est le célèbre &amp;ldquo;Shut up and calculate&amp;rdquo;.&#xA;D&amp;rsquo;autres, les réalistes, tentent d&amp;rsquo;associer une ontologie à la théorie (la théorie traduit une réalité).</description>
+      <guid>https://sciencesilencieuse.github.io/physique/quantique/3ndimensions/</guid>
+      <description>Une ontologie à 3N dimensions Le monde de l&amp;rsquo;interprétation de la mécanique quantique est un grand cirque disparate. Pénétrer sous le chapiteau, c&amp;rsquo;est tenter de trouver une solution au problème de la mesure, donner un sens aux probabilités, etc.&#xA;Parmi les différentes familles d&amp;rsquo;interprétation, on trouve :&#xA;la théorie des mondes multiples (Everett, Deutsch), la théorie de l&amp;rsquo;onde pilote (Bohm, Dürr), la théorie GRW de l&amp;rsquo;effondrement spontané (Ghirardi, Rimini, Weber), l&amp;rsquo;interprétation relationnelle (Rovelli), théories stochastiques réalistes (Barandes), etc.</description>
     </item>
   </channel>
 </rss>
