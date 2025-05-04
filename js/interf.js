@@ -9,7 +9,7 @@
 
   const dotSize    = 2;        // diamètre en px
   const dotsPerSec = 240;      // cadence d’apparition
-  const maxDots    = 5000;    // RAZ après ce nombre d’impacts
+  const maxDots    = 5000;     // RAZ après ce nombre d’impacts
   const period_px  = W / 5;    // période des franges
   const k          = 2 * Math.PI / period_px;
 
@@ -44,7 +44,8 @@
   let last = performance.now();
 
   function addDots(n) {
-    ctx.fillStyle = '#333393';
+    // impacts en blanc
+    ctx.fillStyle = '#ffffff';
     for (let i = 0; i < n; i++) {
       const x = sampleX();
       const y = Math.random() * H;
@@ -54,10 +55,15 @@
   }
 
   function resetCanvas() {
-    ctx.clearRect(0, 0, W, H); // fond devient transparent, CSS le rend blanc
+    // fond en #333393
+    ctx.fillStyle = '#333393';
+    ctx.fillRect(0, 0, W, H);
     impactsDrawn = 0;
     last = performance.now();
   }
+
+  // on initialise tout de suite le fond
+  resetCanvas();
 
   function step(now) {
     const dt = (now - last) / 1000;
