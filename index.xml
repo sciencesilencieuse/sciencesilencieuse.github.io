@@ -93,18 +93,18 @@
       <description>Théorie quantique des champs &amp;ndash; Partie 6 note&#xA;Notes de lecture du livre Quantum field theory for the gifted amateur de Thomas Lancaster et Stephen Blundell. Très souvent une simple traduction.&#xA;Retour sommaire&#xA;Propagateurs et fonctions de Green Chapitre suivant&#xA;Sommaire</description>
     </item>
     <item>
+      <title>Arcs électriques</title>
+      <link>https://sciencesilencieuse.github.io/physique/electromag/arcs/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/electromag/arcs/</guid>
+      <description>Arcs électriques Le champ disruptif d&amp;rsquo;un isolant, ou plutôt sa rigidité diélectrique, désigne la valeur maximum du champ électrique que le milieu peut supporter avant le déclenchement d’un arc électrique, ou claquage.&#xA;Pour l&amp;rsquo;air, la valeur fréquemment admise est de $\pu{36 kV/cm}$ dans l&amp;rsquo;air sec et tombe à $\pu{10 kV/cm}$ pour un air saturé en humidité. Cela signifie qu&amp;rsquo;il faut, dans l&amp;rsquo;air sec, une tension d&amp;rsquo;au moins $\pu{36 kV}$ entre deux électrodes séparées d&amp;rsquo;un centimètre pour qu&amp;rsquo;une étincelle se crée entre elles.</description>
+    </item>
+    <item>
       <title>Arithmétique</title>
       <link>https://sciencesilencieuse.github.io/maths/arithmetique/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/maths/arithmetique/</guid>
       <description>Arithmétique et théorie des nombres : Infinis dénombrables et indénombrables Des entiers aux transcendants en passant par l&amp;rsquo;hypothèse du continu ($\aleph_0 = 2^{\aleph_1}$) :&#xA;Numération De nombreux systèmes de numération à bases entières ont été utilisés par différents peuples et à différentes époques.&#xA;Par exemple :&#xA;système binaire (base 2) utilisé dans des langues d&amp;rsquo;Amérique du Sud et d&amp;rsquo;Océanie, et utilisé de nos jours en informatique.&#xA;système quinaire (base 5) dont il reste des traces jusqu&amp;rsquo;au xxe siècle dans des langues africaines, mais aussi, partiellement, dans les notations tchouvache, suzhou, romaine et maya.</description>
-    </item>
-    <item>
-      <title>Électromagnétisme</title>
-      <link>https://sciencesilencieuse.github.io/physique/electromag/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/electromag/</guid>
-      <description>Électromagnétisme Rayonnement Code Python pour cette dernière vidéo : import numpy as np import matplotlib.pyplot as plt from scipy.optimize import fsolve import os x0 = 0.2 def beta_function(t): return np.array([0.,-x0*c*np.sin(np.pi*t),0]) def beta_dot_function(t): return np.array([0,-x0*c*np.pi*np.cos(np.pi*t),0]) c = 1 def r_0(t): return np.array([float(0.),float(x0*c/np.pi*np.cos(np.pi*t)),0]) def determinetprime(r,r_0,t): &#34;&#34;&#34; r_0(t_prime) est la fonction donnant la position au cours du temps r est le point où on cherche la valeur du champ &#34;&#34;&#34; def func(t_prime): return t - t_prime - np.</description>
     </item>
     <item>
       <title>Optique</title>
@@ -233,7 +233,7 @@
       <description> Aires et volumes </description>
     </item>
     <item>
-      <title>Hamilton</title>
+      <title>Bypass vers Hamilton</title>
       <link>https://sciencesilencieuse.github.io/physique/meca/hamilton/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/physique/meca/hamilton/</guid>

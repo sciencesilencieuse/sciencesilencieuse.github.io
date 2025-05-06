@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Électromagnétisme on Science en vrac</title>
+    <link>https://sciencesilencieuse.github.io/physique/electromag/</link>
+    <description>Recent content in Électromagnétisme on Science en vrac</description>
+    <generator>Hugo</generator>
+    <language>fr</language>
+    <lastBuildDate>Sat, 06 Mar 2021 14:20:50 +0100</lastBuildDate>
+    <atom:link href="https://sciencesilencieuse.github.io/physique/electromag/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arcs électriques</title>
+      <link>https://sciencesilencieuse.github.io/physique/electromag/arcs/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/electromag/arcs/</guid>
+      <description>Arcs électriques Le champ disruptif d&amp;rsquo;un isolant, ou plutôt sa rigidité diélectrique, désigne la valeur maximum du champ électrique que le milieu peut supporter avant le déclenchement d’un arc électrique, ou claquage.&#xA;Pour l&amp;rsquo;air, la valeur fréquemment admise est de $\pu{36 kV/cm}$ dans l&amp;rsquo;air sec et tombe à $\pu{10 kV/cm}$ pour un air saturé en humidité. Cela signifie qu&amp;rsquo;il faut, dans l&amp;rsquo;air sec, une tension d&amp;rsquo;au moins $\pu{36 kV}$ entre deux électrodes séparées d&amp;rsquo;un centimètre pour qu&amp;rsquo;une étincelle se crée entre elles.</description>
+    </item>
+  </channel>
+</rss>
