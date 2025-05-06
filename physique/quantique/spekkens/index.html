@@ -8,7 +8,7 @@
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
-    <title>Algorithmique - Science en vrac</title>
+    <title>Modèle jouet de Spekkens - Science en vrac</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
 
@@ -81,7 +81,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 
 	
   </head>
-  <body class="" data-url="/info/algorithmique/">
+  <body class="" data-url="/physique/quantique/spekkens/">
     <nav id="sidebar" class="">
 
 
@@ -236,7 +236,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/info/" title="Informatique" class="dd-item
-        parent
+        
         
         
         ">
@@ -262,7 +262,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
  
   
     
-      <li data-nav-id="/info/algorithmique/" title="Algorithmique" class="dd-item active">
+      <li data-nav-id="/info/algorithmique/" title="Algorithmique" class="dd-item ">
         <a href="/info/algorithmique/">
         Algorithmique
         
@@ -608,7 +608,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/" title="Physique" class="dd-item
-        
+        parent
         
         
         ">
@@ -841,7 +841,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/quantique/" title="Mécanique quantique" class="dd-item
-        
+        parent
         
         
         ">
@@ -888,7 +888,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
  
   
     
-      <li data-nav-id="/physique/quantique/spekkens/" title="Modèle jouet de Spekkens" class="dd-item ">
+      <li data-nav-id="/physique/quantique/spekkens/" title="Modèle jouet de Spekkens" class="dd-item active">
         <a href="/physique/quantique/spekkens/">
         Modèle jouet de Spekkens
         
@@ -1138,23 +1138,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
                   <span class="links">
                  
                  
-                   Algorithmique
+                   Modèle jouet de Spekkens
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#généralités">Généralités</a></li>
-        <li><a href="#quelques-algorithmes-remarquables">Quelques algorithmes remarquables</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1191,472 +1182,21 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   {
     color: #006C65;
   }
- #debord
-{
-overflow-x: auto; 
-}
 </style>
-<h1 id="algorithmique">Algorithmique</h1>
-<h3 id="généralités">Généralités</h3>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<h1 id="modèle-jouet-de-spekkens">Modèle jouet de Spekkens</h1>
 
-
+<div class="notices note" style="--title: 'note';">
+  <p style="display: none;">note</p>
+  <div class="notice-body">
     
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/sNJbVamAQ6A?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
+  </div>
 </div>
-<p>La notion de complexité permet de classer des algorithmes réalisant la même tâche comme dans la vidéo suivante. C&rsquo;est finalement une sorte d&rsquo;échelle de raffinement ; descendre d&rsquo;un barreau la complexité temporelle ou spatiale demande le plus souvent de pousser la réflexion plus loin voire de repenser entièrement le problème. Et c&rsquo;est ainsi qu&rsquo;une recherche de doublons dans une liste se transforme en la chasse de cycles sur un graphe dans l&rsquo;ultime mouture pour atteindre le Graal ($\mathcal{O}(n)$ en temps et $\mathcal{O}(1)$ en espace sans mutation).</p>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 
 
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/-73jokmqmd0?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<p>La notion est aussi au centre d&rsquo;une des plus importantes conjectures des mathématiques : $\mathrm{P}\stackrel{?}{=}\mathrm{NP}$.</p>
-<p>Grossièrement, la conjecture revient à se demander si l&rsquo;ensemble $\mathrm{NP}$ des problèmes dont les solutions sont facilement vérifiables (en temps polynomial) est le même que l&rsquo;ensemble $\mathrm{P}$ des problèmes faciles (qu&rsquo;on peut résoudre en temps polynomial).</p>
-<p>Prenons l&rsquo;exemple classique du voyageur de commerce.<br>
-Le problème (dans sa version décisionnelle) demande s&rsquo;il existe un trajet de longueur inférieure à une valeur $K$ passant une et une seule fois par un ensemble de villes. Pour valider une solution, il suffit donc de vérifier que chaque ville est bien là une et une seule fois, calculer la distance et la comparer à $K$. Cela se fait bien sûr en temps polynomial rendant le problème $\mathrm{NP}$.<br>
-Par contre, aucun algorithme connu à ce jour ne sait aboutir à la solution en un temps mieux qu&rsquo;exponentiel&hellip;<br>
-Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial existe bel et bien.</p>
-<p>La grande majorité des chercheurs se rangent dans le camp pessimiste $\mathrm{P≠NP}$.</p>
-<p>Le meilleur algorithme (non quantique) permettant de résoudre de manière exacte le problème du voyageur de commerce, l&rsquo;algorithme de Held-Karp, utilise la programmation dynamique dont la logique est présentée dans la vidéo suivante.</p>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/F48AbiZGds0?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<p>Une implémentation de l&rsquo;algorithme de Held-Karp est donnée ci-dessous. Elle utilise la technique du masquage pour parcourir tous les sous-ensembles de villes visitées possibles et pour pouvoir tester rapidement l&rsquo;appartenance ou non d&rsquo;une ville à ce sous-ensemble.</p>
-<details>
-<summary><a>Code</a></summary>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tsp_chemin</span>(distance, depart<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>):
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Résout le problème du voyageur de commerce (TSP) en utilisant une programmation dynamique basée sur les masques binaires.
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Cette fonction calcule, pour chaque sous-ensemble de villes et pour chaque ville terminale, le coût minimal pour parcourir l&#39;ensemble des villes spécifié par le masque et terminer dans cette ville.
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Elle permet également de reconstruire le chemin optimal en stockant, pour chaque état, la ville précédente.
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Paramètres
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ----------
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    distance : list[list[float]]
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Matrice des distances entre les villes, où distance[i][j] représente la distance allant de la ville i à la ville j.
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    depart : int, optionnel
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Indice de la ville de départ (par défaut 0).
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Retourne
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    --------
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    tuple
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        Un tuple (dp, parent) contenant :
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          - dp : list[list[float]]
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            Tableau à deux dimensions de taille (2^n x n) où dp[masque][j] est le coût minimum pour visiter
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            l&#39;ensemble de villes indiqué par le masque (représenté en binaire) et terminer à la ville j.
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          - parent : list[list[int]]
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            Tableau à deux dimensions de taille (2^n x n) permettant de reconstruire le chemin optimal.
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">            Pour chaque état (masque, j), parent[masque][j] stocke l&#39;indice de la ville qui précède j dans le chemin optimal.
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Description
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    -----------
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    L&#39;algorithme initialise une table dp avec des valeurs infinies, sauf pour l&#39;état correspondant au départ.
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Il parcourt ensuite tous les masques possibles (correspondant aux 2^n sous-ensembles de villes) et, pour chaque ville déjà visitée, il tente de mettre à jour le coût minimal pour atteindre chaque ville non encore visitée.
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    La structure parent est utilisée pour enregistrer les transitions effectuées, ce qui permet ultérieurement
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    de reconstruire le chemin optimal.
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Exemple d&#39;utilisation
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ---------------------
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &gt;&gt;&gt; distance = [
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ...     [0, 10, 15, 20],
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ...     [10, 0, 35, 25],
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ...     [15, 35, 0, 30],
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ...     [20, 25, 30, 0]
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    ... ]
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &gt;&gt;&gt; dp, parent = tsp_chemin(distance, depart=0)
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>    n <span style="color:#f92672">=</span> len(distance)
-</span></span><span style="display:flex;"><span>    INF <span style="color:#f92672">=</span> float(<span style="color:#e6db74">&#39;inf&#39;</span>)
-</span></span><span style="display:flex;"><span>    dp <span style="color:#f92672">=</span> [[INF] <span style="color:#f92672">*</span> n <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> n)] 
-</span></span><span style="display:flex;"><span>    parent <span style="color:#f92672">=</span> [[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> n <span style="color:#66d9ef">for</span> _ <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> n)]
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    dp[<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> depart][depart] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> masque <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> n):  <span style="color:#75715e"># 2^n possibilités (chaque ville est visitée ou non visitée)</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(n):
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> masque <span style="color:#f92672">&amp;</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> i):  <span style="color:#75715e"># si la ville i est visitée</span>
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(n):
-</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> (masque <span style="color:#f92672">&amp;</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> j)):  <span style="color:#75715e"># si la ville j n&#39;est pas encore visitée</span>
-</span></span><span style="display:flex;"><span>                        nv_masque <span style="color:#f92672">=</span> masque <span style="color:#f92672">|</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> j)
-</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span> dp[nv_masque][j] <span style="color:#f92672">&gt;</span> dp[masque][i] <span style="color:#f92672">+</span> distance[i][j]:
-</span></span><span style="display:flex;"><span>                            dp[nv_masque][j] <span style="color:#f92672">=</span> dp[masque][i] <span style="color:#f92672">+</span> distance[i][j]
-</span></span><span style="display:flex;"><span>                            parent[nv_masque][j] <span style="color:#f92672">=</span> i
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> dp, parent
-</span></span></code></pre></div></details>
-<p>Comme à chaque fois en programmation dynamique, la matrice <code>dp</code> contient toutes les informations nécessaires et pour reconstruire le plus petit chemin et obtenir son coût, on peut utiliser le code suivant :</p>
-<details>
-<summary><a>Code</a></summary>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reconstr_chemin</span>(parent, masque, dernier):
-</span></span><span style="display:flex;"><span>    chemin <span style="color:#f92672">=</span> []
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> dernier <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
-</span></span><span style="display:flex;"><span>        chemin<span style="color:#f92672">.</span>append(dernier)
-</span></span><span style="display:flex;"><span>        temp <span style="color:#f92672">=</span> parent[masque][dernier]
-</span></span><span style="display:flex;"><span>        masque <span style="color:#f92672">=</span> masque <span style="color:#f92672">&amp;</span> <span style="color:#f92672">~</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> dernier)
-</span></span><span style="display:flex;"><span>        dernier <span style="color:#f92672">=</span> temp
-</span></span><span style="display:flex;"><span>    chemin<span style="color:#f92672">.</span>reverse()
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> chemin
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>dp, parent <span style="color:#f92672">=</span> tsp(distance, depart<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
-</span></span><span style="display:flex;"><span>masque_final <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span> <span style="color:#f92672">&lt;&lt;</span> len(distance)) <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(distance)):
-</span></span><span style="display:flex;"><span>    coût_total <span style="color:#f92672">=</span> dp[masque_final][i] <span style="color:#f92672">+</span> distance[i][<span style="color:#ae81ff">0</span>] 
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> coût_total <span style="color:#f92672">&lt;</span> coût_min:
-</span></span><span style="display:flex;"><span>        coût_min <span style="color:#f92672">=</span> coût_total
-</span></span><span style="display:flex;"><span>        chemin_min <span style="color:#f92672">=</span> reconstr_chemin(parent, masque_final, i)
-</span></span><span style="display:flex;"><span>        chemin_min<span style="color:#f92672">.</span>append(<span style="color:#ae81ff">0</span>)  <span style="color:#75715e"># Fermer le cycle</span>
-</span></span></code></pre></div></details>
-<br>
-<video width="500" controls style="display:block;max-width:100%;position:relative;margin-left:auto;margin-right: auto; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-  <source src="/tps_vid.mp4" type="video/mp4">
-</video>
-<p>Il est basée sur la relation de récurrence suivante : $C(S,i) = \min_{j \in S,\ j \neq i} \left\{ C\left(S \setminus \{i\}, j\right) + \mathrm{d}(j,i) \right\}$ où $C(S,i)$ représente la plus petite distance pour parcourir chaque ville de l&rsquo;ensemble $S$ et terminer dans la ville $i$ et $d(i,j)$ est la distance entre la ville $i$ et la ville $j$.</p>
-<p>Sa complexité temporelle est en $\mathcal{O(n^22^n)}$. En effet, tous les sous-ensembles de villes sont inspectés $\mathcal{O}(2^n)$ et pour chacun, on parcourt toutes les paires ville de départ - ville d&rsquo;arrivée possibles $\mathcal{O}(n)\times\mathcal{O}(n)$ sans jamais faire autre chose que des opérations en temps constant $\mathcal{O}(1)$ pour chaque paire.</p>
-<p>Un algorithme de programmation dynamique ne se laisse pas approcher facilement, particulièrement dans sa forme non-récursive avec sa grosse matrice mystérieuse. Mais c&rsquo;est plutôt rare que la forme itérative d&rsquo;un algorithme vole la vedette à sa forme récursive tant la récursivité sait insuffler un air de magie aux algorithmes en permettant à de tout petits codes de réaliser des tâches étonnamment complexes.</p>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/lIIXLQvcd4Q?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<br>
-<div style="position:relative; width:600px; max-width: 100%; margin-left: auto;margin-right: auto;">
-<iframe src="https://trinket.io/embed/glowscript/6659c29c40?outputOnly=true&start=result" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
-<p>Fonction centrale du programme ci-dessus :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">Hanoi</span>(n, depart, cible, inter):
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>:
-</span></span><span style="display:flex;"><span>      deplacement(depart,cible)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> :
-</span></span><span style="display:flex;"><span>      Hanoi(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,depart,inter,cible)
-</span></span><span style="display:flex;"><span>      Hanoi(<span style="color:#ae81ff">1</span>,depart,cible,inter)
-</span></span><span style="display:flex;"><span>      Hanoi(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,inter,cible,depart)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Hanoi(<span style="color:#ae81ff">6</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">1</span>)
-</span></span></code></pre></div><br>
-<hr>
-<h3 id="quelques-algorithmes-remarquables">Quelques algorithmes remarquables</h3>
-<p>Les tris sont omniprésents en informatique et Tim Roughgarden (auteur des géniaux <em>Algorithms illuminated</em>) en parle même comme de la “mère de tous les problèmes algorithmiques”.</p>
-<p>Ci-dessous, vous pourrez comparer l&rsquo;efficacité de différents tris par comparaison en les voyant se débattre courageusement avec les données.</p>
-<div style="position:relative; width: 810px; max-width: 100%; margin-left: auto;margin-right: auto;">
-<iframe src="https://trinket.io/embed/glowscript/3d9576597b?outputOnly=true&start=result" width="100%" height="665" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
-<p><img src="https://imgs.xkcd.com/comics/ineffective_sorts.png" alt=""></p>
-<h4 id="quicksort">Quicksort</h4>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Cubuk-9gzvk?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<p>Un code Python possible pour la version détaillée dans la vidéo :</p>
-<details>
-<summary><a>Code</a></summary>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> random <span style="color:#f92672">import</span> randint
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">partition</span>(L, g, d):
-</span></span><span style="display:flex;"><span>    p <span style="color:#f92672">=</span> L[g]
-</span></span><span style="display:flex;"><span>    i <span style="color:#f92672">=</span> g<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(g<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>,d<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> L[j] <span style="color:#f92672">&lt;</span> p:
-</span></span><span style="display:flex;"><span>            permute(L,i,j)
-</span></span><span style="display:flex;"><span>            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>    permute(L,g,i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tri_rapide_gd</span>(L, g, d):
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> g <span style="color:#f92672">&lt;</span> d: 
-</span></span><span style="display:flex;"><span>        pivot <span style="color:#f92672">=</span> randint(g,d)
-</span></span><span style="display:flex;"><span>        permute(L,pivot,g)
-</span></span><span style="display:flex;"><span>        pivot <span style="color:#f92672">=</span> partition(L, g, d)
-</span></span><span style="display:flex;"><span>        tri_rapide(L, g, pivot<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
-</span></span><span style="display:flex;"><span>        tri_rapide(L, pivot<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, d)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> L
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tri_rapide</span>(L):
-</span></span><span style="display:flex;"><span>    g <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>    d <span style="color:#f92672">=</span> len(L)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span>    tri_rapide_gd(L, g, d)
-</span></span></code></pre></div></details>
-<p>La danse hongroise ci-dessous implémente une version de l&rsquo;algorithme sans hasard :</p>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/ywWBy6J5gz8?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<p>Dans cette version, le premier élément est systématiquement choisi comme pivot (chapeau noir) et la partition marche un peu différemment :<br></p>
-<ul>
-<li>Le chapeau rouge <code>i</code> est d'abord donné au dernier élément de la partition puis comparé au pivot <code>p</code>.</li>
-<ul>
-<li>Si le chapeau rouge est plus petit que le pivot, les deux éléments échangent leur place et le chapeau rouge est donné au plus proche voisin du côté du pivot.</li>
-<li>Sinon le pivot reste à sa place et le chapeau rouge est là aussi donné au voisin immédiat le plus proche du pivot.</li>
-</ul>
-<li>Lorsque le pivot récupère le chapeau rouge, il est bien placé.</li>
-<li>On coupe ensuite la liste en deux sur le pivot et on recommence récursivement.</li>
-</ul>
-<p>Un code Python possible pour cette variante :</p>
-<details>
-<summary><a>Code</a></summary>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">partition</span>(L):
-</span></span><span style="display:flex;"><span>    p <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>         <span style="color:#75715e"># pivot (chapeau noir)</span>
-</span></span><span style="display:flex;"><span>    i <span style="color:#f92672">=</span> len(L)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>  <span style="color:#75715e"># chapeau rouge</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">!=</span> p:
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (L[p]<span style="color:#f92672">-</span>L[i])<span style="color:#f92672">*</span>(p<span style="color:#f92672">-</span>i) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">0</span>:
-</span></span><span style="display:flex;"><span>        L[p],L[i] <span style="color:#f92672">=</span> L[i],L[p]
-</span></span><span style="display:flex;"><span>        p,i <span style="color:#f92672">=</span> i,p
-</span></span><span style="display:flex;"><span>      i <span style="color:#f92672">-=</span> (i<span style="color:#f92672">-</span>p)<span style="color:#f92672">//</span>abs(i<span style="color:#f92672">-</span>p)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> p
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">tri_rapide</span>(L):
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(L) <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>:
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> L
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
-</span></span><span style="display:flex;"><span>      p <span style="color:#f92672">=</span> partition(L)
-</span></span><span style="display:flex;"><span>      L[:p] <span style="color:#f92672">=</span> tri_rapide(L[:p])
-</span></span><span style="display:flex;"><span>      L[p<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:] <span style="color:#f92672">=</span> tri_rapide(L[p<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>:])
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> L
-</span></span></code></pre></div></details>
-<p>Un tirage non aléatoire du pivot rend l&rsquo;algorithme moins robuste sur certaines entrées. Avec le choix systématique du premier élément (par exemple), on se retrouve avec une complexité en $O(n^2)$ sur des données déjà triées ou presque. Le tirage aléatoire rend extrêmement peu probable un scénario &ldquo;défavorable&rdquo;.</p>
-<p>Si en plus de choisir le premier élément comme pivot, on ne s&rsquo;occupe même plus d&rsquo;avoir un tri en place (c&rsquo;est-à-dire qu&rsquo;on s&rsquo;autorise des copies de la liste de départ), Quicksort peut s&rsquo;écrire de manière très compacte :</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">triRapide</span>(elements):
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(elements) <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>:
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> elements
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>: 
-</span></span><span style="display:flex;"><span>        pivot <span style="color:#f92672">=</span> elements[<span style="color:#ae81ff">0</span>]
-</span></span><span style="display:flex;"><span>        plusPetit <span style="color:#f92672">=</span> triRapide([e <span style="color:#66d9ef">for</span> e <span style="color:#f92672">in</span> elements[<span style="color:#ae81ff">1</span>:] <span style="color:#66d9ef">if</span> e <span style="color:#f92672">&lt;=</span> pivot])
-</span></span><span style="display:flex;"><span>        plusGrand <span style="color:#f92672">=</span> triRapide([e <span style="color:#66d9ef">for</span> e <span style="color:#f92672">in</span> elements[<span style="color:#ae81ff">1</span>:] <span style="color:#66d9ef">if</span> e <span style="color:#f92672">&gt;</span> pivot])
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> plusPetit <span style="color:#f92672">+</span> [pivot] <span style="color:#f92672">+</span> plusGrand
-</span></span></code></pre></div><div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;">
-<img src="/hannibal.png" style="box-shadow:none;background:none;">
-</div>
-<p>Mais attention, l&rsquo;élégance de ce code cache sa lâcheté puisqu&rsquo;en ne rangeant plus en place, il esquive la principale difficulté d&rsquo;un algorithme de tri. S&rsquo;interdire la création de nouvelles listes oblige en effet à gérer astucieusement les permutations au sein de la liste de départ. Et si cela donne souvent des codes plus verbeux, il n&rsquo;en sont pas moins beaucoup plus fins.</p>
-<br>
-<h4 id="algorithmes-gloutons">Algorithmes gloutons</h4>
-<p>Les algorithmes gloutons sont très faciles à comprendre et à implémenter. Si on devait leur trouver un défaut, elle est à chercher du côté de leur correction, pas toujours simple à démontrer&hellip;</p>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/yrOj8XvroIE?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<p>Sont présentés ci-dessous deux algorithmes gloutons très similaires qui permettent de résoudre des problèmes d&rsquo;optimisation sur des graphes :</p>
-<ul>
-<li><strong>Dijkstra</strong> cherche le plus court chemin entre deux nœuds.</li>
-<li><strong>Prim</strong> construit l&rsquo;arbre couvrant de poids minimal.</li>
-</ul>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Bku9EfWqQC0?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<br>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/6ctSw0eQJkw?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<br>
-<h4 id="parcours-dun-graphe">Parcours d&rsquo;un graphe</h4>
-<p>Pour inventorier les sommets d&rsquo;un graphe, deux stratégies sont possibles :</p>
-<ul>
-<li>le <strong>parcours en largeur (BFS)</strong>,</li>
-<li>et le <strong>parcours en profondeur (DFS)</strong>.</li>
-</ul>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/QCj7VijRkiM?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<p>Le code est identique entre les deux algorithmes à la structure de donnée utilisée près ! On utilise une <strong>file</strong> (queue en anglais) pour le parcours en largeur et une <strong>pile</strong> pour le parcours en profondeur.</p>
-<p><img src="https://info-tsi-vieljeux.github.io/queue.png?width=600" alt=""></p>
-<p>Avec sa logique FIFO (premier arrivé, premier parti, comme dans une file d&rsquo;attente), BFS explore le graphe de proche en proche.</p>
-<p><img src="https://info-tsi-vieljeux.github.io/gifbreadth.gif?width=700" alt=""></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> collections <span style="color:#f92672">import</span> deque
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># deque est une file à double extrémités (double-ended queue) avec la primitive popleft() pour retirer à gauche comme une file et pop() pour retirer à droite comme une pile.</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">BFS</span>(G,depart):
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    graphe G(S,A) représenté par une liste d&#39;adjacence implémentée par un dictionnaire et depart un sommet de S
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>    file <span style="color:#f92672">=</span> deque()
-</span></span><span style="display:flex;"><span>    file<span style="color:#f92672">.</span>append(depart)
-</span></span><span style="display:flex;"><span>    Vus <span style="color:#f92672">=</span> {s : <span style="color:#66d9ef">False</span> <span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> G}
-</span></span><span style="display:flex;"><span>    Sommets <span style="color:#f92672">=</span> []
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> file: <span style="color:#75715e"># tant que la file n&#39;est pas vide</span>
-</span></span><span style="display:flex;"><span>        sommet <span style="color:#f92672">=</span> file<span style="color:#f92672">.</span>popleft() <span style="color:#75715e"># méthode de la classe deque permettant de défiler</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> Vus[sommet]:
-</span></span><span style="display:flex;"><span>            file <span style="color:#f92672">+=</span> G[sommet]
-</span></span><span style="display:flex;"><span>            Vus[sommet] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
-</span></span><span style="display:flex;"><span>            Sommets<span style="color:#f92672">.</span>append(sommet) 
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> Sommets
-</span></span></code></pre></div><p>Avec sa logique LIFO (dernier, arrivée, premier parti, comme pour une pile d&rsquo;assiette pendant la vaisselle), DFS s&rsquo;enfonce dans une branche du graphe jusqu&rsquo;à son extrémité puis revient à la dernière jonction rencontrée et explore une nouvelle branche, et ainsi de suite.</p>
-<p><img src="https://info-tsi-vieljeux.github.io/piles.png?width=550" alt=""></p>
-<p><img src="https://info-tsi-vieljeux.github.io/gifdepth.gif?width=700" alt=""></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">DFS</span>(G,depart):
-</span></span><span style="display:flex;"><span>    pile <span style="color:#f92672">=</span> deque()
-</span></span><span style="display:flex;"><span>    pile<span style="color:#f92672">.</span>append(depart)
-</span></span><span style="display:flex;"><span>    Vus <span style="color:#f92672">=</span> {s : <span style="color:#66d9ef">False</span> <span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> G}
-</span></span><span style="display:flex;"><span>    Sommets <span style="color:#f92672">=</span> []
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> pile:
-</span></span><span style="display:flex;"><span>        sommet <span style="color:#f92672">=</span> pile<span style="color:#f92672">.</span>pop()
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> Vus[sommet]:
-</span></span><span style="display:flex;"><span>            pile <span style="color:#f92672">+=</span> G[sommet]
-</span></span><span style="display:flex;"><span>            Vus[sommet] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
-</span></span><span style="display:flex;"><span>            Sommets<span style="color:#f92672">.</span>append(sommet) 
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> Sommets
-</span></span></code></pre></div><p>Comme la récursivité utilise naturellement une pile via la pile d&rsquo;exécution, il y a une écriture récursive naturelle de la recherche en profondeur.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">DFS</span>(G,depart,Vus,Sommets<span style="color:#f92672">=</span>[]):
-</span></span><span style="display:flex;"><span>    Sommets<span style="color:#f92672">.</span>append(depart)
-</span></span><span style="display:flex;"><span>    Vus[depart] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> sommet <span style="color:#f92672">in</span> G[depart]:
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> Vus[sommet]:
-</span></span><span style="display:flex;"><span>            DFS(G,sommet,Vus,Sommets)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> Sommets
-</span></span></code></pre></div><p>On peut voir Dijkstra comme un parcours de graphe où la structure de donnée n&rsquo;est plus une file ou une pile mais une file de priorité (qui donne en $\mathcal{O}(1)$ l&rsquo;élément stocké de plus grand score).</p>
-<p>Pour implémenter une file de priorité, on peut utiliser un tas (heap), arbre binaire presque ordonné dont la racine est l&rsquo;élément prioritaire.</p>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/JRzTS8zPwSE?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<br>
-<p>Une implémentation possible de Dijkstra :</p>
-<details>
-<summary><a>Code</a></summary>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> heapq
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">Dijkstra</span>(G, depart):
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Calcule les plus courts chemins dans un graphe pondéré à partir d&#39;un sommet de départ.
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Paramètres :
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      - G : dict, représentation du graphe où les clés sont les sommets et les valeurs sont des dictionnaires {voisin: poids}.
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      - depart : le sommet de départ.
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Retourne :
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      - predecesseurs : dict, permettant de reconstruire les plus courts chemins.
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      - distances : dict, distances minimales depuis le sommet de départ.
-</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    &#34;&#34;&#34;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> depart <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> G:
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;Le sommet de départ n&#39;est pas présent dans le graphe&#34;</span>)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    distances <span style="color:#f92672">=</span> {sommet: float(<span style="color:#e6db74">&#39;infinity&#39;</span>) <span style="color:#66d9ef">for</span> sommet <span style="color:#f92672">in</span> G}
-</span></span><span style="display:flex;"><span>    predecesseurs <span style="color:#f92672">=</span> {sommet: <span style="color:#66d9ef">None</span> <span style="color:#66d9ef">for</span> sommet <span style="color:#f92672">in</span> G}
-</span></span><span style="display:flex;"><span>    distances[depart] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    tas <span style="color:#f92672">=</span> [(<span style="color:#ae81ff">0</span>, depart)]
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> tas:
-</span></span><span style="display:flex;"><span>        distance_actuelle, sommet_actuel <span style="color:#f92672">=</span> heapq<span style="color:#f92672">.</span>heappop(tas)
-</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># On ignore l&#39;entrée obsolète si un meilleur chemin a été trouvé</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> distance_actuelle <span style="color:#f92672">&gt;</span> distances[sommet_actuel]:
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> voisin, poids <span style="color:#f92672">in</span> G[sommet_actuel]<span style="color:#f92672">.</span>items():
-</span></span><span style="display:flex;"><span>            nouvelle_distance <span style="color:#f92672">=</span> distance_actuelle <span style="color:#f92672">+</span> poids
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> nouvelle_distance <span style="color:#f92672">&lt;</span> distances[voisin]:
-</span></span><span style="display:flex;"><span>                distances[voisin] <span style="color:#f92672">=</span> nouvelle_distance
-</span></span><span style="display:flex;"><span>                predecesseurs[voisin] <span style="color:#f92672">=</span> sommet_actuel
-</span></span><span style="display:flex;"><span>                heapq<span style="color:#f92672">.</span>heappush(tas, (nouvelle_distance, voisin))
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> predecesseurs, distances
-</span></span></code></pre></div></details>
-<br>
-<h4 id="algorithme-deuclide">Algorithme d&rsquo;Euclide</h4>
-<p>Une des plus vieux algorithmes ($\approx$-300).</p>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/70jd0Mthyl8?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<p>La suite de Fibonacci est un peu la tarte à la crème du mathématicien de série télévisée avec ses spirales dans les coquillages&hellip; Mais c&rsquo;est bien elle qui montre le bout de son nez là où on ne l&rsquo;attendait pas vraiment dans cette vidéo sur la complexité de l&rsquo;algorithme d&rsquo;Euclide.</p>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/X6WnBdmNYiM?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
-<p>On peut utiliser le pulvérisateur (algorithme d&rsquo;Euclide étendu) ci-dessous. Le code est corrigé par rapport à celui de la vidéo qui présente une erreur dans la cas de base (on doit retourner <code>b, 0, 1</code> comme Euclide bien sûr et non <code>a,0,1</code>).</p>
-<div style="position:relative; width:600px; max-width: 100%; margin-left: auto;margin-right: auto;">
-<iframe src="https://trinket.io/embed/python/3b3e65fdb249?toggleCode=true" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
-<p>Et le petit programme qui donne la décomposition en fraction continue :</p>
-<div style="position:relative; width:600px; max-width: 100%; margin-left: auto;margin-right: auto;">
-<iframe src="https://trinket.io/embed/python/a4aefb96ba1e?toggleCode=true" width="100%" height="250" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
-<br>
-<h4 id="algorithme-x">Algorithme X</h4>
-<p>Polyominos et Sudoku ont le droit à leur algorithme au nom aguicheur : X.</p>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/NTzoLEB7lO0?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-</div>
+<p>Spekkens, Robert W. (March 19, 2007). &ldquo;Evidence for the epistemic view of quantum states: A toy theory&rdquo;. Physical Review A. 75 (3): 032110 <a href="https://arxiv.org/pdf/quant-ph/0401052">🌐</a><br>
+Leifer, M. S. « Is the Quantum State Real? An Extended Review of ψ-ontology Theorems », Quanta, vol. 3, no 1, p. 67–155 (2014) <a href="https://core.ac.uk/reader/293168970">🌐</a></p>
+<p>Spekkens propose en 2007 un modèle jouet  qui reproduit qualitativement la physique d’une particule de spin 1/2 (ou, plus généralement, d’un qubit) préparée et mesurée dans les bases x, y et z. La version complète inclut la dynamique et les systèmes composés — elle recrée même certains phénomènes d’intrication — mais, à titre illustratif, on se limite ici au cas élémentaire d’un seul bit-jouet.</p>
+<p>Le but de ce modèle est de faire la démonstration du pouvoir explicatif de l&rsquo;interprétations ψ-épistémique en rendant quasi naturel des phénomènes quantiques qu&rsquo;une interprétation ψ-ontique rend bien plus mystérieux.</p>
 
 
 <footer class="footline">
@@ -1775,7 +1315,6 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
             
                 
                     
-                    
                 
                 
 
@@ -1788,7 +1327,6 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
             
             
                 
-                    
                     
                 
                 
@@ -1805,9 +1343,6 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2032,6 +1567,7 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
             
                 
                     
+                    
                 
                 
 
@@ -2047,34 +1583,8 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
                     
                 
                 
@@ -2083,44 +1593,6 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
                     
                         
             
@@ -2186,6 +1658,9 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
             
         
                     
+            
+        
+                    
                         
             
             
@@ -2198,6 +1673,9 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
                     
                     
 
+                    
+            
+        
                     
                         
             
@@ -2231,6 +1709,19 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -2238,6 +1729,62 @@ Or si $\mathrm{P=NP}$, cela voudrait dire qu&rsquo;un algorithme polynomial exis
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 

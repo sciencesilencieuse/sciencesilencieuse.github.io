@@ -15,5 +15,12 @@
       <guid>https://sciencesilencieuse.github.io/physique/quantique/3ndimensions/</guid>
       <description>Une ontologie à 3N dimensions Le monde de l&amp;rsquo;interprétation de la mécanique quantique est un grand cirque disparate. Pénétrer sous le chapiteau, c&amp;rsquo;est tenter de trouver une solution au problème de la mesure, donner un sens aux probabilités, etc.&#xA;Parmi les différentes familles d&amp;rsquo;interprétation, on trouve :&#xA;la théorie des mondes multiples (Everett, Deutsch), la théorie de l&amp;rsquo;onde pilote (Bohm, Dürr), la théorie GRW de l&amp;rsquo;effondrement spontané (Ghirardi, Rimini, Weber), l&amp;rsquo;interprétation relationnelle (Rovelli), théories stochastiques réalistes (Barandes), etc.</description>
     </item>
+    <item>
+      <title>Modèle jouet de Spekkens</title>
+      <link>https://sciencesilencieuse.github.io/physique/quantique/spekkens/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/quantique/spekkens/</guid>
+      <description>Modèle jouet de Spekkens note&#xA;Spekkens, Robert W. (March 19, 2007). &amp;ldquo;Evidence for the epistemic view of quantum states: A toy theory&amp;rdquo;. Physical Review A. 75 (3): 032110 🌐&#xA;Leifer, M. S. « Is the Quantum State Real? An Extended Review of ψ-ontology Theorems », Quanta, vol. 3, no 1, p. 67–155 (2014) 🌐&#xA;Spekkens propose en 2007 un modèle jouet qui reproduit qualitativement la physique d’une particule de spin 1/2 (ou, plus généralement, d’un qubit) préparée et mesurée dans les bases x, y et z.</description>
+    </item>
   </channel>
 </rss>
