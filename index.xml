@@ -23,6 +23,13 @@
       <description>info&#xA;Notes de lecture du livre La logique pas à pas de Jacques Duparc que je paraphrase allégrement.&#xA;Calcul des propositions Syntaxe Sémantique Preuve Le calcul des propositions (ou calcul propositionnel ou logique des propositions) permet de modéliser des raisonnements simples. Son pouvoir expressif est assez limité mais c&amp;rsquo;est sur ses fondations que se construisent les logiques plus évoluées.&#xA;Syntaxe Langage Le langage du calcul des propositions est constitué de variables propositionnelles $P$, $Q$, $R$,.</description>
     </item>
     <item>
+      <title>Fondations</title>
+      <link>https://sciencesilencieuse.github.io/physique/quantique/fondations/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/quantique/fondations/</guid>
+      <description>Fondations de la mécanique quantique Source : Knee, G. C. « Isolation of the Conceptual Ingredients of Quantum Theory by Toy Theory Comparison », mémoire de Master of Science, Imperial College London, soutenu le 20 septembre 2010 🌐&#xA;Un jeu d&amp;rsquo;axiomes L&amp;rsquo;interprétation de la mécanique quantique qui sert encore de référence en physique à l&amp;rsquo;heure actuelle, l&amp;rsquo;école de Copenhague, repose sur un jeu d&amp;rsquo;axiomes1 :&#xA;Axiome 1 : État quantique</description>
+    </item>
+    <item>
       <title>Groupes discrets</title>
       <link>https://sciencesilencieuse.github.io/maths/algebre/groupes/groupe1/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
@@ -107,6 +114,13 @@
       <description>Arithmétique et théorie des nombres : Infinis dénombrables et indénombrables Des entiers aux transcendants en passant par l&amp;rsquo;hypothèse du continu ($\aleph_0 = 2^{\aleph_1}$) :&#xA;Numération De nombreux systèmes de numération à bases entières ont été utilisés par différents peuples et à différentes époques.&#xA;Par exemple :&#xA;système binaire (base 2) utilisé dans des langues d&amp;rsquo;Amérique du Sud et d&amp;rsquo;Océanie, et utilisé de nos jours en informatique.&#xA;système quinaire (base 5) dont il reste des traces jusqu&amp;rsquo;au xxe siècle dans des langues africaines, mais aussi, partiellement, dans les notations tchouvache, suzhou, romaine et maya.</description>
     </item>
     <item>
+      <title>Modèle jouet de Spekkens</title>
+      <link>https://sciencesilencieuse.github.io/physique/quantique/spekkens/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/quantique/spekkens/</guid>
+      <description>Modèle jouet de Spekkens note&#xA;Spekkens, Robert W. (March 19, 2007). &amp;ldquo;Evidence for the epistemic view of quantum states: A toy theory&amp;rdquo;. Physical Review A. 75 (3): 032110 🌐&#xA;Leifer, M. S. « Is the Quantum State Real? An Extended Review of ψ-ontology Theorems », Quanta, vol. 3, no 1, p. 67–155 (2014) 🌐&#xA;Spekkens propose en 2007 un modèle jouet qui reproduit qualitativement la physique d’une particule de spin 1/2 (ou, plus généralement, d’un qubit) préparée et mesurée dans les bases x, y et z.</description>
+    </item>
+    <item>
       <title>Optique</title>
       <link>https://sciencesilencieuse.github.io/physique/optique/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
@@ -168,6 +182,13 @@
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/physique/meca/coriolis/</guid>
       <description>Coriolis Simulations de Troyens dans un système où la grosse masse $M$ et la petite masse $m$ sont dans les proportions $m=M\frac{\mu}{1-\mu} $ avec $\mu=1/200$&#xA;Explication des bandes de vents dominants (thèse + planètes).</description>
+    </item>
+    <item>
+      <title>Épistémique vs. ontique</title>
+      <link>https://sciencesilencieuse.github.io/physique/quantique/epistovsonto/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/quantique/epistovsonto/</guid>
+      <description>Épistémique vs. ontiques En mécanique quantique, l’évolution d’un système isolé est unitaire, c’est‑à‑dire décrite par un opérateur qui conserve la norme (ou la probabilité totale) du vecteur d’état ; cette dynamique, entièrement déterministe, est gouvernée par l’équation de Schrödinger. Dès qu’une mesure intervient, toutefois, la règle de Born (postulat de projection) impose une seconde loi : l’état s’effondre de façon non unitaire et aléatoire pour livrer l’un des résultats possibles, puis se fige afin que le même résultat soit retrouvé si l’on répète immédiatement la mesure.</description>
     </item>
     <item>
       <title>IA</title>
@@ -265,7 +286,7 @@
       <link>https://sciencesilencieuse.github.io/physique/quantique/3ndimensions/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/physique/quantique/3ndimensions/</guid>
-      <description>Une ontologie à 3N dimensions Le monde de l&amp;rsquo;interprétation de la mécanique quantique est un grand cirque disparate. Pénétrer sous le chapiteau, c&amp;rsquo;est tenter de trouver une solution au problème de la mesure, donner un sens aux probabilités, etc.&#xA;Parmi les différentes familles d&amp;rsquo;interprétation, on trouve :&#xA;la théorie des mondes multiples (Everett, Deutsch), la théorie de l&amp;rsquo;onde pilote (Bohm, Dürr), la théorie GRW de l&amp;rsquo;effondrement spontané (Ghirardi, Rimini, Weber), l&amp;rsquo;interprétation relationnelle (Rovelli), théories stochastiques réalistes (Barandes), etc.</description>
+      <description>Une ontologie à 3N dimensions Ontologie de la fonction d&amp;rsquo;onde Ney, A. « Three arguments for wave function realism », European Journal for Philosophy of Science, vol. 13, art. 50 (24 octobre 2023).&#xA;Donner une réalité à la fonction d&amp;rsquo;onde $\psi$, c&amp;rsquo;est accepter que notre espace 3D ne soit qu&amp;rsquo;une projection de l&amp;rsquo;espace à 3N dimensions dans lequel $\psi$ vit.&#xA;Pourquoi 3N dimensions ? En mécanique quantique, la fonction d&amp;rsquo;onde est construite comme un champ sur un espace de $3N$ dimensions où $N$ est le nombre de particules.</description>
     </item>
     <item>
       <title>Dimensions</title>
@@ -282,18 +303,18 @@
       <description>Logique Algèbre de Boole L&amp;rsquo;algèbre de Boole permet d&amp;rsquo;algébriser la logique.&#xA;Logique des propositions L&amp;rsquo;implication $A\rightarrow B$ signifie que si $A$ est vraie alors $B$ est vraie.&#xA;$A$ $B$ $A\rightarrow B$ 0 0 1 0 1 1 1 0 0 1 1 1 L&amp;rsquo;implication réciproque s&amp;rsquo;écrit $B\rightarrow A$. On peut la lire : $B$ est vraie seulement si $A$ est vraie.&#xA;$A$ $B$ $B\rightarrow A$ 0 0 1 0 1 0 1 0 1 1 1 1 S&amp;rsquo;il y a conjonction entre l&amp;rsquo;implication ($B$ si $A$) et sa réciproque ($B$ seulement si $A$), ce qui s&amp;rsquo;écrit $(A\rightarrow B) \land (B\rightarrow A)$, alors les propositions $A$ et $B$ sont dites matériellement équivalentes $A \leftrightarrow B$.</description>
     </item>
     <item>
-      <title>Modèle jouet de Spekkens</title>
-      <link>https://sciencesilencieuse.github.io/physique/quantique/spekkens/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/quantique/spekkens/</guid>
-      <description>Modèle jouet de Spekkens note&#xA;Spekkens, Robert W. (March 19, 2007). &amp;ldquo;Evidence for the epistemic view of quantum states: A toy theory&amp;rdquo;. Physical Review A. 75 (3): 032110 🌐&#xA;Leifer, M. S. « Is the Quantum State Real? An Extended Review of ψ-ontology Theorems », Quanta, vol. 3, no 1, p. 67–155 (2014) 🌐&#xA;Spekkens propose en 2007 un modèle jouet qui reproduit qualitativement la physique d’une particule de spin 1/2 (ou, plus généralement, d’un qubit) préparée et mesurée dans les bases x, y et z.</description>
-    </item>
-    <item>
       <title>Statistiques</title>
       <link>https://sciencesilencieuse.github.io/maths/stat/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/maths/stat/</guid>
       <description>Statistiques tip&#xA;Les probabilités sont des calculs a priori, visant à prédire les issues d’évènements n’ayant pas encore eu lieu, alors que les statistiques sont des calculs a posteriori qui analysent les issues d’évènements déjà réalisés.&#xA;Les différentes moyennes Monte Carlo Dans la duxième partie de la vidéo, on cherche à répondre à la grande question suivante : comment s&amp;rsquo;assurer d&amp;rsquo;avoir suffisamment d&amp;rsquo;échantillons pour obtenir des statistiques fiables ? Ou plus prosaïquement : à partir de combien est-ce suffisant ?</description>
+    </item>
+    <item>
+      <title>ER = EPR</title>
+      <link>https://sciencesilencieuse.github.io/physique/quantique/erepr/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/quantique/erepr/</guid>
+      <description>ER = EPR Le paradoxe EPR est depuis quelques temps au cœur d&amp;rsquo;avancées prometteuses vers le graal de la physique théorique : une théorie de la gravité quantique. En effet, la conjecture ER = EPR proposée en 2013 par Léonard Susskind et Joan Maldacena connecterait les particules intriquées par des trou de vers (pont d’Einstein-Rosen)1.&#xA;C&amp;rsquo;est la géométrie même de l&amp;rsquo;espace-temps qui serait déterminée par l&amp;rsquo;intrication quantique.&#xA;Ces articles de Quanta Magazine permettent de creuser ces questions au centre de la physique théorique aujourd&amp;rsquo;hui :</description>
     </item>
     <item>
       <title>Poursuites</title>

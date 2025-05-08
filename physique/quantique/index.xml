@@ -9,11 +9,11 @@
     <lastBuildDate>Sat, 06 Mar 2021 14:20:50 +0100</lastBuildDate>
     <atom:link href="https://sciencesilencieuse.github.io/physique/quantique/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>3N dimensions</title>
-      <link>https://sciencesilencieuse.github.io/physique/quantique/3ndimensions/</link>
+      <title>Fondations</title>
+      <link>https://sciencesilencieuse.github.io/physique/quantique/fondations/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/quantique/3ndimensions/</guid>
-      <description>Une ontologie à 3N dimensions Le monde de l&amp;rsquo;interprétation de la mécanique quantique est un grand cirque disparate. Pénétrer sous le chapiteau, c&amp;rsquo;est tenter de trouver une solution au problème de la mesure, donner un sens aux probabilités, etc.&#xA;Parmi les différentes familles d&amp;rsquo;interprétation, on trouve :&#xA;la théorie des mondes multiples (Everett, Deutsch), la théorie de l&amp;rsquo;onde pilote (Bohm, Dürr), la théorie GRW de l&amp;rsquo;effondrement spontané (Ghirardi, Rimini, Weber), l&amp;rsquo;interprétation relationnelle (Rovelli), théories stochastiques réalistes (Barandes), etc.</description>
+      <guid>https://sciencesilencieuse.github.io/physique/quantique/fondations/</guid>
+      <description>Fondations de la mécanique quantique Source : Knee, G. C. « Isolation of the Conceptual Ingredients of Quantum Theory by Toy Theory Comparison », mémoire de Master of Science, Imperial College London, soutenu le 20 septembre 2010 🌐&#xA;Un jeu d&amp;rsquo;axiomes L&amp;rsquo;interprétation de la mécanique quantique qui sert encore de référence en physique à l&amp;rsquo;heure actuelle, l&amp;rsquo;école de Copenhague, repose sur un jeu d&amp;rsquo;axiomes1 :&#xA;Axiome 1 : État quantique</description>
     </item>
     <item>
       <title>Modèle jouet de Spekkens</title>
@@ -21,6 +21,27 @@
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/physique/quantique/spekkens/</guid>
       <description>Modèle jouet de Spekkens note&#xA;Spekkens, Robert W. (March 19, 2007). &amp;ldquo;Evidence for the epistemic view of quantum states: A toy theory&amp;rdquo;. Physical Review A. 75 (3): 032110 🌐&#xA;Leifer, M. S. « Is the Quantum State Real? An Extended Review of ψ-ontology Theorems », Quanta, vol. 3, no 1, p. 67–155 (2014) 🌐&#xA;Spekkens propose en 2007 un modèle jouet qui reproduit qualitativement la physique d’une particule de spin 1/2 (ou, plus généralement, d’un qubit) préparée et mesurée dans les bases x, y et z.</description>
+    </item>
+    <item>
+      <title>Épistémique vs. ontique</title>
+      <link>https://sciencesilencieuse.github.io/physique/quantique/epistovsonto/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/quantique/epistovsonto/</guid>
+      <description>Épistémique vs. ontiques En mécanique quantique, l’évolution d’un système isolé est unitaire, c’est‑à‑dire décrite par un opérateur qui conserve la norme (ou la probabilité totale) du vecteur d’état ; cette dynamique, entièrement déterministe, est gouvernée par l’équation de Schrödinger. Dès qu’une mesure intervient, toutefois, la règle de Born (postulat de projection) impose une seconde loi : l’état s’effondre de façon non unitaire et aléatoire pour livrer l’un des résultats possibles, puis se fige afin que le même résultat soit retrouvé si l’on répète immédiatement la mesure.</description>
+    </item>
+    <item>
+      <title>3N dimensions</title>
+      <link>https://sciencesilencieuse.github.io/physique/quantique/3ndimensions/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/quantique/3ndimensions/</guid>
+      <description>Une ontologie à 3N dimensions Ontologie de la fonction d&amp;rsquo;onde Ney, A. « Three arguments for wave function realism », European Journal for Philosophy of Science, vol. 13, art. 50 (24 octobre 2023).&#xA;Donner une réalité à la fonction d&amp;rsquo;onde $\psi$, c&amp;rsquo;est accepter que notre espace 3D ne soit qu&amp;rsquo;une projection de l&amp;rsquo;espace à 3N dimensions dans lequel $\psi$ vit.&#xA;Pourquoi 3N dimensions ? En mécanique quantique, la fonction d&amp;rsquo;onde est construite comme un champ sur un espace de $3N$ dimensions où $N$ est le nombre de particules.</description>
+    </item>
+    <item>
+      <title>ER = EPR</title>
+      <link>https://sciencesilencieuse.github.io/physique/quantique/erepr/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/quantique/erepr/</guid>
+      <description>ER = EPR Le paradoxe EPR est depuis quelques temps au cœur d&amp;rsquo;avancées prometteuses vers le graal de la physique théorique : une théorie de la gravité quantique. En effet, la conjecture ER = EPR proposée en 2013 par Léonard Susskind et Joan Maldacena connecterait les particules intriquées par des trou de vers (pont d’Einstein-Rosen)1.&#xA;C&amp;rsquo;est la géométrie même de l&amp;rsquo;espace-temps qui serait déterminée par l&amp;rsquo;intrication quantique.&#xA;Ces articles de Quanta Magazine permettent de creuser ces questions au centre de la physique théorique aujourd&amp;rsquo;hui :</description>
     </item>
   </channel>
 </rss>

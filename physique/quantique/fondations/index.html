@@ -8,7 +8,7 @@
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
-    <title>Tags - Science en vrac</title>
+    <title>Fondations - Science en vrac</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
 
@@ -81,7 +81,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 
 	
   </head>
-  <body class="" data-url="/tags/">
+  <body class="" data-url="/physique/quantique/fondations/">
     <nav id="sidebar" class="">
 
 
@@ -608,7 +608,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/" title="Physique" class="dd-item
-        
+        parent
         
         
         ">
@@ -877,7 +877,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/quantique/" title="Mécanique quantique" class="dd-item
-        
+        parent
         
         
         ">
@@ -903,7 +903,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
  
   
     
-      <li data-nav-id="/physique/quantique/fondations/" title="Fondations" class="dd-item ">
+      <li data-nav-id="/physique/quantique/fondations/" title="Fondations" class="dd-item active">
         <a href="/physique/quantique/fondations/">
         Fondations
         
@@ -1237,14 +1237,29 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
                   <span class="links">
                  
                  
-                   Tags
+                   Fondations
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#un-jeu-daxiomes">Un jeu d&rsquo;axiomes</a></li>
+    <li><a href="#information-quantique">Information quantique</a>
+      <ul>
+        <li><a href="#le-bit-classique">Le bit classique</a></li>
+        <li><a href="#le-qubit">Le qubit</a></li>
+        <li><a href="#matrice-densité">Matrice densité</a></li>
+      </ul>
+    </li>
+    <li><a href="#sphère-de-bloch">Sphère de Bloch</a></li>
+    <li><a href="#paire-de-qubits">Paire de Qubits</a></li>
+    <li><a href="#non-clonage-quantique">Non-clonage quantique</a></li>
+    <li><a href="#téléportation-quantique">Téléportation quantique</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1262,15 +1277,181 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
         
 
 
-
-
-
+<style>
+ #correc
+  {
+    color: #006C65;
+    border-left: solid 10px #C7DDDC;
+  }
+ #comm
+  {
+    color: #004D80;
+    border-left: solid 10px #B3CAD9;
+  }
+ #commsum
+  {
+    color: #004D80;
+  }
+ #correcsum
+  {
+    color: #006C65;
+  }
+</style>
+<h1 id="fondations-de-la-mécanique-quantique">Fondations de la mécanique quantique</h1>
+<blockquote>
+<p>Source : Knee, G. C. « Isolation of the Conceptual Ingredients of Quantum Theory by Toy Theory Comparison », mémoire de Master of Science, Imperial College London, soutenu le 20 septembre 2010 <a href="https://www.imperial.ac.uk/media/imperial-college/research-centres-and-groups/theoretical-physics/msc/dissertations/2010/George-Knee-Dissertation.pdf">🌐</a></p>
+</blockquote>
+<h2 id="un-jeu-daxiomes">Un jeu d&rsquo;axiomes</h2>
+<p>L&rsquo;interprétation de la mécanique quantique qui sert encore de référence en physique à l&rsquo;heure actuelle, l&rsquo;<strong>école de Copenhague</strong>, repose sur un jeu d&rsquo;axiomes<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> :</p>
 <ul>
-	
+<li>
+<p><strong>Axiome 1 : État quantique</strong><br>
+À un instant fixé, l’état d’un système quantique est un vecteur $\lvert \psi\rangle$ dans un <strong>espace de Hilbert</strong> $\mathcal{H}$.</p>
+</li>
+<li>
+<p><strong>Axiome 2 : Évolution unitaire</strong><br>
+L’évolution d’un système quantique est toujours unitaire, c’est-à-dire décrite par un <strong>opérateur unitaire</strong> $\hat U$ (tel que $\hat U^\dagger = \hat U^{-1}$), parfois appelé « porte », agissant selon $\lvert \psi\rangle \;\longmapsto\;\hat U \lvert \psi\rangle$.<br>
+En particulier, l’évolution dans le temps obéit à l’<strong>équation de Schrödinger</strong>
+$$\mathrm{i}\,\frac{\partial}{\partial t}\lvert \psi\rangle \;=\; \hat H \lvert \psi\rangle ,$$
+où $\hat H$ est l’opérateur <strong>Hamiltonien</strong>.</p>
+</li>
+<li>
+<p><strong>Axiome 3 : Règle de Born</strong><br>
+Une mesure sur un système quantique est décrite par un opérateur hermitien $\hat A$ (i.e. $\hat A = \hat A^\dagger$), appelé &ldquo;<strong>observable</strong>&rdquo;.<br>
+Cette observable possède une décomposition spectrale
+$$\hat A \;=\; \sum_i \lambda_i \,\lvert e_i\rangle\langle e_i\rvert$$
+où les valeurs propres $\lambda_i$ sont les résultats possibles de la mesure et les projecteurs $\lvert e_i\rangle\langle e_i\rvert$ en sont les opérateurs associés.<br>
+Si l’on mesure l’état $\lvert \psi\rangle$, la probabilité d’obtenir le résultat $i$ est
+$$p(i) \;=\; \langle \psi \rvert e_i\rangle\langle e_i \lvert \psi\rangle$$</p>
+</li>
+<li>
+<p><strong>Axiome 4 : Postulat de réduction du paquet d&rsquo;onde</strong><br>
+Après la mesure, l’état du système s’effondre sur l’état propre associé au résultat obtenu. Si l’issue $i$ est observée, l’état devient
+$$\frac{\lvert e_i\rangle\langle e_i \lvert \psi\rangle}{\sqrt{p(i)}}$$</p>
+</li>
+<li>
+<p><strong>Axiome 5 : Relation de complétude</strong><br>Les projecteurs satisfont la relation
+$$\sum_i \lvert e_i\rangle\langle e_i\rvert \;=\; \mathbb{I}$$
+où $\mathbb{I}$ est l’opérateur identité sur $\mathcal{H}$.</p>
+</li>
 </ul>
+<h2 id="information-quantique">Information quantique</h2>
+<h3 id="le-bit-classique">Le bit classique</h3>
+<p>Un bit est la plus petite unité d’information : il distingue entre deux possibilités (le résultat d’un pile ou face, l’état marche/arrêt d’une lampe, le niveau de tension haut/bas dans un circuit, etc.). On les note habituellement « zéro logique » et « un logique » : $0, 1$.</p>
+<p>Pour représenter plus d’information, on considère une chaîne de bits : avec $n$ bits, on a $2^n$ possibilités (par exemple, pour 3 bits : $000,001, \dots,111$).</p>
+<h3 id="le-qubit">Le qubit</h3>
+<p>L’analogue quantique du bit est le qubit. C’est le système quantique non trivial le plus simple. À l’issue d’une mesure, il distingue également deux possibilités, correspondant aux éléments d’une base orthonormale de l’espace de Hilbert à deux dimensions $\mathcal{H}_2$. On note $\lvert0\rangle$ (par exemple spin haut) et $\lvert1\rangle$ (spin bas) les deux vecteurs de base. On peut les réaliser physiquement de plein de façons : le premier et deuxième niveau d&rsquo;énergie d&rsquo;un atome d&rsquo;hydrogène, le spin haut et le spin bas d&rsquo;une particule de spin $1/2$, la polarisation horizontale et verticale d&rsquo;un photon.</p>
+<p>La grande différence avec un bit classique est qu&rsquo;entre deux mesures, le qubit existe comme une superposition des deux possibilités :
+$$\lvert\psi\rangle = \alpha\,\lvert0\rangle + \beta\,\lvert1\rangle$$
+avec $\alpha,\beta\in\mathbb{C}$ et $\lvert\alpha\rvert^2 + \lvert\beta\rvert^2 = 1$.</p>
+<p>Une autre différence importante est qu&rsquo;on peut tout à fait mesurer le qubit dans une direction qui ne distingue pas $|0\rangle$ de $|1\rangle$.</p>
+<p>On identifie deux états qui ne diffèrent que par une phase globale étant donné qu&rsquo;ils produisent des prédictions physiques identiques. Cela permet de spécifier un qubit par un poids relatif et une phase relative. En ne considérant que des poids égaux dans la superposition, on peut écrire :
+$$|\psi\rangle = \frac{|0\rangle+\mathrm{e}^{\mathrm{i}\theta} |1\rangle}{\sqrt{2}}$$</p>
+<p>Les cas particuliers $\theta=0$ et $\theta=\pi$ donnent respectivement les deux états suivants :
+$$|+\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}$$
+$$|-\rangle = \frac{|0\rangle - |1\rangle}{\sqrt{2}}$$</p>
+<p>Il est possible de réaliser une mesure distinguant $|+\rangle$ de $|-\rangle$ en choisissant l’observable
+$$\hat X \;=\; |+\rangle\langle+| \;-\; |-\rangle\langle-|
+\tag{12}$$</p>
+<p>Contrairement au cas classique, le résultat d&rsquo;une mesure n&rsquo;est pas toujours entièrement déterminé par la mesure elle-même et l&rsquo;état $|\psi\rangle$.</p>
+<p>L’information contenue dans un système binaire classique est quantifiée par un bit, c’est-à-dire la quantité nécessaire pour spécifier complètement l’un des deux états possibles. En revanche, pour un état quantique, les coefficients complexes $\alpha$ et $\beta$ peuvent varier de façon continue, de sorte qu’il faudrait une quantité infinie d’information classique pour décrire exactement un qubit.</p>
+<h3 id="matrice-densité">Matrice densité</h3>
+<p>On définit la matrice densité $\rho_\psi$ associée à un état pur $\lvert\psi\rangle$ par :
+$$ \rho_\psi = \lvert\psi\rangle\langle\psi\rvert$$</p>
+<p>Si $\lvert\psi\rangle = \alpha,\lvert0\rangle + \beta,\lvert1\rangle$, alors
+$$\rho_\psi =
+\begin{pmatrix}
+|\alpha|^2 &amp; \alpha^*\beta\\
+\beta^* \alpha &amp; |\beta|^2
+\end{pmatrix}$$</p>
+<p>La condition de normalisation $\langle\psi|\psi\rangle=1$ entraîne que la trace de la matrice densité vaut 1 ($\mathrm{Tr}\,\rho_\psi = 1$).</p>
+<h4 id="fidélité">Fidélité</h4>
+<p>Pour deux états purs $\lvert\psi\rangle$ et$ \lvert\chi\rangle$, la <strong>fidélité</strong> est définie par
+$F = \bigl|\langle\psi|\chi\rangle\bigr|^2$.<br>
+Ou pour deux états dont les matrices de densité sont $\rho$ et $\sigma$,
+$F = \mathrm{Tr}\,\sqrt{\rho}\,\sqrt{\sigma}$.</p>
+<h4 id="orthogonalité">Orthogonalité</h4>
+<p>Deux états $\lvert\psi\rangle$ et $\lvert\chi\rangle$ sont dits <strong>orthogonaux</strong> si
+$\langle\psi|\chi\rangle = 0$.
+Les deux états ont alors une fidélité nulle.</p>
+<h4 id="état-pur-et-état-mixte">État pur et état mixte</h4>
+<ul>
+<li>
+<p>Un <strong>état pur</strong> est un vecteur dans l’espace de Hilbert. Toute combinaison linéaire normalisée des vecteurs de base est un état pur :
+$$|\psi\rangle = \sum_i\alpha_i|i\rangle$$
+Les $\alpha_i\in\mathbb{C}$ sont appelés poids.<br>
+Toute combinaison linéaire d&rsquo;états purs est encore un état pur.</p>
+</li>
+<li>
+<p>Un <strong>état mixte</strong> est une combinaison convexe de matrices densité :
+$$
+\rho = \sum_i p_i\,\rho_i
+$$
+où chaque $\rho_i$ représente un état pur, et les $p_i$ sont des probabilités telles que $\sum_i p_i=1$.<br>
+Il existe de nombreuses décompositions convexes d’un état mixte : par exemple, l’état mixte maximal
+$$
+\rho \;=\;\tfrac12\bigl(|0\rangle\langle0| + |1\rangle\langle1|\bigr)
+\;=\;\tfrac12\bigl(|+\rangle\langle+| + |-\rangle\langle-|\bigr)
+\;=\;\tfrac{\mathbb{I}}2
+$$
+Un état mixte ne peut pas s’écrire comme une somme d’états de base à poids complexes.</p>
+</li>
+</ul>
+<p>La différence sémantique entre un état « pur » et un état « mixte » tient au fait que l’incertitude pour le premier est une incertitude purement quantique, tandis que pour le second une part d’incertitude classique est introduite. Un état mixte apparaît si l’on prépare un état quantique en fonction du résultat d’un pile ou face classique, en assignant un certain état pour pile et un autre pour face. On peut aussi interpréter cette incertitude classique comme une forme d’erreur expérimentale.</p>
+<h2 id="sphère-de-bloch">Sphère de Bloch</h2>
+<p>Il existe une représentation géométrique élégante des qubits, qui facilite grandement la visualisation des opérations de mesure, d’évolution et de similarité des états dans l’espace de Hilbert.</p>
+<p>Dans la représentation par matrice densité d’un état pur, on compte à première vue deux coefficients complexes, soit quatre nombres réels. La condition de normalisation (trace = 1) en élimine un. Il reste donc trois degrés de liberté réels pour un état mixte. Et comme on a vu que deux états purs ne se différentiant que par une phase globale sont en fait identiques,  il ne reste que deux degrés de liberté pour un état pur<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. Cela permet de représenter les états purs sur la surface d’une sphère et les états mixtes dans son intérieur.</p>
+<p>On définit le vecteur de Bloch $\vec{r} = [r_x,\,r_y,\,r_z]$ associé à un état $\rho$ par
+$$
+\rho = \frac12\bigl(\mathbb{I} + \vec{r}\!\cdot\!\vec{\sigma}\bigr)
+=\frac12
+\begin{pmatrix}
+1 + r_z &amp; r_x - \mathrm{i}\,r_y \\
+r_x + \mathrm{i}\,r_y &amp; 1 - r_z
+\end{pmatrix}
+$$
+où $\boldsymbol{\sigma} = [\hat X,\,\hat Y,\,\hat Z]$ est le triplet de matrices de Pauli.</p>
+<p>Grâce à ce vecteur, tout qubit peut être visualisé comme un point de la sphère de Bloch :</p>
+<ul style="margin-top:-0.5em;margin-bottom:-0.5em;">
+<li>les états purs correspondent aux points de la surface&nbsp;;</li>
+<li>les états mixtes se situent à l’intérieur&nbsp;;</li>
+<li>deux états orthogonaux apparaissent comme des points diamétralement opposés.</li>
+</ul>
+<p>Par construction, les vecteurs propres des matrices de Pauli occupent trois paires de points antipodaux sur la sphère :
+$$\hat X|+\rangle = |+\rangle,\quad \hat X|-\rangle = -|-\rangle$$
+$$\hat Y|{+}\mathrm{i}\rangle = |{+}\mathrm{i}\rangle=\frac{|0\rangle+\mathrm{i}|1\rangle}{\sqrt{2}},\quad \hat Y|{-}\mathrm{i}\rangle = -|{-}\mathrm{i}\rangle=\frac{|0\rangle-\mathrm{i}|1\rangle}{\sqrt{2}}$$
+$$\hat Z|0\rangle = |0\rangle,\quad \hat Z|1\rangle = -|1\rangle$$</p>
+<p>Chaque paire de vecteurs propres est une base de l&rsquo;espace de Hilbert qui définit un axe orthogonal dans la sphère de Bloch.</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:400px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+<img src="/blochsph.png" style="box-shadow:none;background:none;">
+</div>
+<p>Attention, ça ne veut pas dire que ces trois bases sont orthogonales (ça n&rsquo;aurait pas de sens puisque chacune est complète) ; elles sont <strong>mutuellement non biaisées</strong><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> (c&rsquo;est ça que traduit géométriquement les axes orthogonaux de la sphère de Bloch).</p>
+<p>Par combinaison convexe, on fait passer les états purs situés sur la surface de la sphère de Bloch vers des états mixtes à l’intérieur de celle‑ci. L’état maximalement mixte, $\mathbb{I}/2$, se situe au centre de la sphère de Bloch.</p>
+<h2 id="paire-de-qubits">Paire de Qubits</h2>
+<h2 id="non-clonage-quantique">Non-clonage quantique</h2>
+<h2 id="téléportation-quantique">Téléportation quantique</h2>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>D&rsquo;une source à l&rsquo;autre, l&rsquo;ordre et le nombre d&rsquo;axiomes varient.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>La normalisation $|\alpha|^2+|\beta|^2=1$ contraint de vivre à la surface d&rsquo;une sphère $S^3$ dans $\mathbb{R}^4$. Multiplier par une phase globale $\mathrm{e}^{\mathrm{i}\gamma}$ fait parcourir un cercle $S_1$ dans cette sphère. Puisqu&rsquo;on identifie tous ces points, on quotiente $S^3$ par $S^1$. Et $S^3/S^1\simeq S^2$, la sphère ordinaire.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>Deux bases $\{e_i\}$ et $\{f_i\}$ sont mutuellement non biaisées si, pour tout $i,j$ :
+$\bigl|\langle e_i | f_j\rangle\bigr|^2 \;=\;\text{cste}$.<br>
+Pour des bases orthonormales, on peut démontrer que la constante vaut $\frac 1 d$ où $d=\dim\mathcal H$ grâce à la relation suivante $\langle e_i|\Bigl(\sum_j |f_j\rangle\langle f_j|\Bigr)|e_i\rangle
+\;=\;\sum_j \bigl|\langle f_j|e_i\rangle\bigr|^2
+\;=\;\langle e_i|\mathbb I|e_i\rangle\;=\;1$ où on a utilisé la complétude de la base $\{f_i\}$, $\sum_j |f_j\rangle\langle f_j| = \mathbb I$, et la normalité des éléments $\{e_i\}$. Si tous les termes $\bigl|\langle f_j|e_i\rangle\bigr|^2$ sont en plus égaux (définition de bases non biaisées), chacun vaut forcément $\frac1d$ (puisqu&rsquo;il y a autant de vecteurs dans chaque base que de dimensions).<br>
+La conséquence géométrique est que des états mutuellement non biaisés sont équidistances sur la sphère de Bloch puisque les angles entre eux sont identiques.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
 
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1638,6 +1819,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
             
                 
                     
+                    
                 
                 
 
@@ -1653,34 +1835,8 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
                     
                 
                 
@@ -1689,76 +1845,6 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
                     
                         
             
@@ -1821,6 +1907,44 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
                     
 
                     
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
                         
             
             
@@ -1841,6 +1965,72 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -2075,3 +2265,4 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 
   </body>
 </html>
+
