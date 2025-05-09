@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1746828815" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1746828815" rel="stylesheet">
-    <link href="/css/hybrid.css?1746828815" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1746828815" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1746828815" rel="stylesheet">
-    <link href="/css/auto-complete.css?1746828815" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1746828815" rel="stylesheet">
-    <link href="/css/theme.css?1746828815" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1746828815" rel="stylesheet">
+    <link href="/css/nucleus.css?1746831303" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1746831303" rel="stylesheet">
+    <link href="/css/hybrid.css?1746831303" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1746831303" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1746831303" rel="stylesheet">
+    <link href="/css/auto-complete.css?1746831303" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1746831303" rel="stylesheet">
+    <link href="/css/theme.css?1746831303" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1746831303" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1746828815" rel="stylesheet">
+    <link href="/css/theme-blue.css?1746831303" rel="stylesheet">
     
-    <link href="/css/foo.css?1746828815" rel="stylesheet"><link href="/css/bar.css?1746828815" rel="stylesheet">
+    <link href="/css/foo.css?1746831303" rel="stylesheet"><link href="/css/bar.css?1746831303" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1746828815"></script>
+    <script src="/js/jquery-3.3.1.min.js?1746831303"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1746828815"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1746828815"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1746831303"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1746831303"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1746828815"></script>
+<script type="text/javascript" src="/js/search.js?1746831303"></script>
 
     
   </div>
@@ -1428,7 +1428,47 @@ $$\hat Z|0\rangle = |0\rangle,\quad \hat Z|1\rangle = -|1\rangle$$</p>
 <p>Attention, ça ne veut pas dire que ces trois bases sont orthogonales (ça n&rsquo;aurait pas de sens puisque chacune est complète) ; elles sont <strong>mutuellement non biaisées</strong><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> (c&rsquo;est ça que traduit géométriquement les axes orthogonaux de la sphère de Bloch).</p>
 <p>Par combinaison convexe, on fait passer les états purs situés sur la surface de la sphère de Bloch vers des états mixtes à l’intérieur de celle‑ci. L’état maximalement mixte, $\mathbb{I}/2$, se situe au centre de la sphère de Bloch.</p>
 <h2 id="paire-de-qubits">Paire de Qubits</h2>
+<p>Lorsqu’il faut décrire plusieurs systèmes quantiques simultanément, on a recours au <strong>produit tensoriel</strong> $\otimes$. Supposons, par exemple, qu’on souhaite modéliser à la fois un qubit situé à La Rochelle et un autre à Paris ; on écrit alors
+$$
+|\psi\rangle_{\text{La Rochelle}}\;\otimes\;|\phi\rangle_{\text{Paris}}
+$$
+où $|\psi\rangle$ désigne l’état du premier qubit et $|\phi\rangle$ celui du second. Une fois qu’un ordre conventionnel est adopté, il est d’usage de supprimer les indices géographiques (et même de fusionner les deux kets en un seul) :
+$$
+|\psi\rangle_{\text{La Rochelle}}\otimes|\phi\rangle_{\text{Paris}}
+\;=\;
+|\psi\rangle\otimes|\phi\rangle
+\;=\;
+|\psi\phi\rangle
+$$</p>
+<p>Cette expression est appelée un <strong>état produit</strong> ; elle vit dans l’espace de Hilbert tensoriel $H_1\otimes H_2$. Ainsi, si $|\psi\rangle\in H_1$ possède la base $\{|L\rangle,|R\rangle\}$ et $|\phi\rangle\in H_2$ la base $\{|P\rangle,|S\rangle\}$, alors $|\psi\rangle\otimes|\phi\rangle$ appartient à $H_1\otimes H_2$ et la base combinée devient $\{|LP\rangle,|LS\rangle,|RP\rangle,|RS\rangle\}$.</p>
+<p>De même qu’un qubit unique peut passer par une porte (unitaire), un état produit peut être soumis à l’action d’un opérateur tensoriel
+$$
+\bigl(\hat A_{\text{La Rochelle}}\otimes\hat B_{\text{Paris}}\bigr)\,
+|\psi\rangle\otimes|\phi\rangle
+$$
+Si l’on prend $\hat A=\mathbb{I}$, on agit uniquement sur le qubit de Paris ; si c’est $\hat B=\mathbb{I}$, on agit seulement sur celui de La Rochelle.</p>
+<p>La base computationnelle $\{|0\rangle,|1\rangle\}$ d’un qubit se prolonge naturellement en une base de l’espace bipartite : $\{|00\rangle,\;|01\rangle,\;|10\rangle,\;|11\rangle\}$.
+Un état général de deux qubits est donc une combinaison linéaire de ces quatre kets.</p>
+<p>Au cours de l’évolution, un tel état bipartite peut devenir un <strong>état intriqué</strong> comme, par exemple, l&rsquo;état de Bell :
+$$
+|{\rm Bell}\rangle
+\frac{1}{\sqrt{2}}\bigl(|00\rangle+|11\rangle\bigr)
+$$
+On remarque que l&rsquo;état de Bell ne contient pas les « termes croisés » $|01\rangle$ et $|10\rangle$ (leurs poids sont nuls). Il est donc impossible de l’écrire comme produit de deux qubits séparés ! Les états intriqués comme celui‑ci jouent un rôle central dans la plupart des protocoles de l’information quantique.</p>
 <h2 id="non-clonage-quantique">Non-clonage quantique</h2>
+<p>Maintenant qu’un espace produit bipartite a été introduit, on peut l’utiliser pour illustrer certains traits particulièrement surprenants de la mécanique quantique. Supposons que l’on veuille copier – cloner – un état quantique. Un cloneur universel opère simultanément sur un qubit de données $|\psi\rangle$ et sur un qubit ancillaire initialisé dans un état fixe (par exemple l’état « vierge » |0\rangle), de sorte que l’état final soit le produit de deux exemplaires du qubit de données :</p>
+<p>$$U\,|\psi\rangle|0\rangle \;=\; |\psi\rangle|\psi\rangle$$</p>
+<p>et, par le même procédé, pour tout autre état $|\phi\rangle$ :</p>
+<p>$$
+U\,|\phi\rangle|0\rangle \;=\; |\phi\rangle|\phi\rangle
+$$</p>
+<p>En prenant le produit scalaire des deux relations précédentes, on obtient :</p>
+<p>$$
+\langle\psi|\phi\rangle \;=\; \bigl(\langle\psi|\phi\rangle\bigr)^{2}
+$$</p>
+<p>équation qui n’admet de solution que si les états sont identiques ($\langle\psi|\phi\rangle = 1$) ou orthogonaux ($\langle\psi|\phi\rangle = 0$). Il en découle qu’un cloneur universel – capable de copier n’importe quel état – est impossible.</p>
+<p>En d’autres termes, la seule procédure qui conserve les produits scalaires (et donc la structure de l’espace de Hilbert) ne peut cloner qu’un état unique ou, au mieux, un ensemble d’états orthogonaux. Le point crucial est qu’un processus de clonage universel violerait l’évolution unitaire prescrite par l’Axiome 2 : il ne préserverait pas les produits scalaires et ne pourrait donc être représenté par un opérateur unitaire.</p>
+<p>Pour cloner un état, l’appareil devrait accéder à toute l’information qui le caractérise sans le perturber. Les états classiques satisfont cette condition : ils peuvent être entièrement déterminés par une quantité finie d’informations et restent intacts lors d’une mesure, de sorte qu’il suffit de les identifier puis de préparer un second système identique. En revanche, un état quantique ne peut être déterminé qu’au prix d’un nombre infini de mesures et, surtout, le processus de mesure le détruit. Cette impossibilité fondamentale d’extraire toutes les informations sans perturber le système explique pourquoi un état quantique arbitraire ne peut jamais être cloné.</p>
 <h2 id="téléportation-quantique">Téléportation quantique</h2>
 <div class="footnotes" role="doc-endnotes">
 <hr>
@@ -2250,16 +2290,16 @@ La conséquence géométrique est que des états mutuellement non biaisés sont 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1746828815"></script>
-    <script src="/js/perfect-scrollbar.min.js?1746828815"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1746828815"></script>
-    <script src="/js/jquery.sticky.js?1746828815"></script>
-    <script src="/js/featherlight.min.js?1746828815"></script>
-    <script src="/js/highlight.pack.js?1746828815"></script>
+    <script src="/js/clipboard.min.js?1746831303"></script>
+    <script src="/js/perfect-scrollbar.min.js?1746831303"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1746831303"></script>
+    <script src="/js/jquery.sticky.js?1746831303"></script>
+    <script src="/js/featherlight.min.js?1746831303"></script>
+    <script src="/js/highlight.pack.js?1746831303"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1746828815"></script>
-    <script src="/js/learn.js?1746828815"></script>
-    <script src="/js/hugo-learn.js?1746828815"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1746831303"></script>
+    <script src="/js/learn.js?1746831303"></script>
+    <script src="/js/hugo-learn.js?1746831303"></script>
     
     
 
