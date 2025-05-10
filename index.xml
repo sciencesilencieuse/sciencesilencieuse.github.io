@@ -23,13 +23,6 @@
       <description>info&#xA;Notes de lecture du livre La logique pas à pas de Jacques Duparc que je paraphrase allégrement.&#xA;Calcul des propositions Syntaxe Sémantique Preuve Le calcul des propositions (ou calcul propositionnel ou logique des propositions) permet de modéliser des raisonnements simples. Son pouvoir expressif est assez limité mais c&amp;rsquo;est sur ses fondations que se construisent les logiques plus évoluées.&#xA;Syntaxe Langage Le langage du calcul des propositions est constitué de variables propositionnelles $P$, $Q$, $R$,.</description>
     </item>
     <item>
-      <title>Fondations</title>
-      <link>https://sciencesilencieuse.github.io/physique/quantique/fondations/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/quantique/fondations/</guid>
-      <description>Fondations de la mécanique quantique Source : Knee, G. C. « Isolation of the Conceptual Ingredients of Quantum Theory by Toy Theory Comparison », mémoire de Master of Science, Imperial College London, soutenu le 20 septembre 2010 🌐&#xA;Un jeu d&amp;rsquo;axiomes L&amp;rsquo;interprétation de la mécanique quantique qui sert encore de référence à l&amp;rsquo;heure actuelle, l&amp;rsquo;école de Copenhague, repose sur un jeu d&amp;rsquo;axiomes1 :&#xA;Axiome 1 : État quantique&#xA;À un instant fixé, l’état d’un système quantique est un vecteur $\lvert \psi\rangle$ dans un espace de Hilbert $\mathcal{H}$.</description>
-    </item>
-    <item>
       <title>Groupes discrets</title>
       <link>https://sciencesilencieuse.github.io/maths/algebre/groupes/groupe1/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
@@ -42,6 +35,13 @@
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/maths/bayes/</guid>
       <description>Inférences bayésiennes L&amp;rsquo;intelligence artificielle vise à simuler l&amp;rsquo;intelligence humaine. Mais la compréhension du fonctionnement de notre cerveau en est elle-même encore qu&amp;rsquo;à ses prémices.&#xA;Tel un programme informatique, le cerveau produit de nouvelles informations à partir de l&amp;rsquo;information qu&amp;rsquo;il reçoit (les données). Un changement de paradigme a eu lieu récemment dans la communauté scentifique concernant la modalité même de ce traitement de l&amp;rsquo;information par le cerveau. Stanislas Dehaene, un psychologue spécialisé en neuropsychologie, résume cette nouvelle façon d&amp;rsquo;apréhender l&amp;rsquo;information dans ses leçons au Collège de France :</description>
+    </item>
+    <item>
+      <title>Notions fondamentales</title>
+      <link>https://sciencesilencieuse.github.io/physique/quantique/fondations/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/quantique/fondations/</guid>
+      <description>Notions fondamentales en mécanique quantique Source : Knee, G. C. « Isolation of the Conceptual Ingredients of Quantum Theory by Toy Theory Comparison », mémoire de Master of Science, Imperial College London, soutenu le 20 septembre 2010 🌐&#xA;Un jeu d&amp;rsquo;axiomes L&amp;rsquo;interprétation de la mécanique quantique qui sert encore de référence à l&amp;rsquo;heure actuelle, l&amp;rsquo;école de Copenhague, repose sur un jeu d&amp;rsquo;axiomes1 :&#xA;Axiome 1 : État quantique&#xA;À un instant fixé, l’état d’un système quantique est un vecteur $\lvert \psi\rangle$ dans un espace de Hilbert $\mathcal{H}$.</description>
     </item>
     <item>
       <title>Représentations</title>
