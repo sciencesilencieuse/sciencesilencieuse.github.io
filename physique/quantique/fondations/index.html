@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1746837168" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1746837168" rel="stylesheet">
-    <link href="/css/hybrid.css?1746837168" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1746837168" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1746837168" rel="stylesheet">
-    <link href="/css/auto-complete.css?1746837168" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1746837168" rel="stylesheet">
-    <link href="/css/theme.css?1746837168" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1746837168" rel="stylesheet">
+    <link href="/css/nucleus.css?1746882779" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1746882779" rel="stylesheet">
+    <link href="/css/hybrid.css?1746882779" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1746882779" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1746882779" rel="stylesheet">
+    <link href="/css/auto-complete.css?1746882779" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1746882779" rel="stylesheet">
+    <link href="/css/theme.css?1746882779" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1746882779" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1746837168" rel="stylesheet">
+    <link href="/css/theme-blue.css?1746882779" rel="stylesheet">
     
-    <link href="/css/foo.css?1746837168" rel="stylesheet"><link href="/css/bar.css?1746837168" rel="stylesheet">
+    <link href="/css/foo.css?1746882779" rel="stylesheet"><link href="/css/bar.css?1746882779" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1746837168"></script>
+    <script src="/js/jquery-3.3.1.min.js?1746882779"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1746837168"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1746837168"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1746882779"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1746882779"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1746837168"></script>
+<script type="text/javascript" src="/js/search.js?1746882779"></script>
 
     
   </div>
@@ -1470,6 +1470,71 @@ $$</p>
 <p>En d’autres termes, la seule procédure qui conserve les produits scalaires (et donc la structure de l’espace de Hilbert) ne peut cloner qu’un état unique ou, au mieux, un ensemble d’états orthogonaux. Le point crucial est qu’un processus de clonage universel violerait l’évolution unitaire prescrite par l’Axiome 2 : il ne préserverait pas les produits scalaires et ne pourrait donc être représenté par un opérateur unitaire.</p>
 <p>Pour cloner un état, l’appareil devrait accéder à toute l’information qui le caractérise sans le perturber. Les états classiques satisfont cette condition : ils peuvent être entièrement déterminés par une quantité finie d’informations et restent intacts lors d’une mesure, de sorte qu’il suffit de les identifier puis de préparer un second système identique. En revanche, un état quantique ne peut être déterminé qu’au prix d’un nombre infini de mesures et, surtout, le processus de mesure le détruit. Cette impossibilité fondamentale d’extraire toutes les informations sans perturber le système explique pourquoi un état quantique arbitraire ne peut jamais être cloné.</p>
 <h2 id="téléportation-quantique">Téléportation quantique</h2>
+<p>La téléportation quantique est un autre phénomène étonnant : il s’accorde parfaitement avec le théorème d’interdiction du clonage, puisqu’on y transfère un état sans jamais en créer une copie supplémentaire.</p>
+<p>La description du protocole exige un espace de Hilbert tripartite qu&rsquo;on peut voir comme le produit tensoriel de trois qubits :
+$$
+\mathcal H = \underbrace{\mathcal H_1 \otimes \mathcal H_2}_{\text{Alice}}
+\otimes \underbrace{\mathcal H_3}_{\text{Bob}}
+$$</p>
+<p>Alice possède l’état inconnu $|\psi\rangle = \alpha|0\rangle + \beta|1\rangle$ qu’elle veut transmettre à Bob. Aucune ligne « quantique » directe ne relie les deux laboratoires.<br>
+Les amplitudes $\alpha$, $\beta$ sont inconnues des deux parties ; un simple message classique ne suffit donc pas.<br>
+Alice et Bob partagent toutefois à l’avance une paire intriquée de Bell
+$|{\rm Bell}\rangle
+= \frac{1}{\sqrt2}\bigl(|00\rangle+|11\rangle\bigr)$. </p>
+<p>Le système complet est alors initialement
+$$|{\text{teleport}}\rangle
+= |\psi\rangle\,|{\rm Bell}\rangle
+= \frac{1}{\sqrt2}\,|\psi\rangle\bigl(|00\rangle+|11\rangle\bigr)$$
+On peut le développer pour bien distinguer la <span style="color:#00AB8E;">partie Alice</span> et la <span style="color:#F27200;">partie Bob</span> :
+$$
+|{\rm teleport}\rangle
+= \tfrac1{\sqrt2}\bigl(
+\alpha  {\color{#00AB8E}|00\rangle} {\color{#F27200}|0\rangle} + \alpha {\color{#00AB8E}|01\rangle}  {\color{#F27200}|1\rangle} + \beta {\color{#00AB8E}|10\rangle} {\color{#F27200}|0\rangle} + \beta {\color{#00AB8E}|11\rangle} {\color{#F27200}|1\rangle}\bigr)
+$$</p>
+<p>Alice effectue maintenant sur ses deux qubits la mesure définie par l’observable
+$A=\sum_{i=I,X,Y,Z}\lambda_i P_i$ dont les quatre issues possibles équiprobables sont associées aux projecteurs suivants :
+$$
+\begin{aligned}
+P_{\mathbb{I}} &amp; =\frac{1}{2}(|00\rangle+|11\rangle)(\langle 00|+\langle 11|) \\
+P_X &amp; =\frac{1}{2}(|00\rangle-|11\rangle)(\langle 00|-\langle 11|) \\
+P_Y &amp; =\frac{1}{2}(|01\rangle+|10\rangle)(\langle 01|+\langle 10|) \\
+P_Z &amp; =\frac{1}{2}(|01\rangle-|10\rangle)(\langle 01|-\langle 10|) \\
+\end{aligned}
+$$</p>
+<p>Ces projecteurs vérifient $\sum P_i = \mathbb{I}$ en accord avec l&rsquo;Axiome 5 et, par la règle de Born (Axiome 3), chaque résultat apparaît avec la  probabilité 1/4.</p>
+<p>Après la mesure, suivant $\lambda_i$, l’état devient
+$$|{\rm teleport^\prime_\mathbb{I}}\rangle = {\color{#00AB8E} P_\mathbb{I}}\otimes {\color{#F27200}\mathbb{I}}\,|{\rm teleport}\rangle
+= {\color{#00AB8E}|{\rm Bell}\rangle}\,\bigl({\color{#F27200}|\psi\rangle}\bigr)$$
+$$|{\rm teleport^\prime_\sigma}\rangle = {\color{#00AB8E} P_\sigma}\otimes{\color{#F27200}\mathbb{I}}\,|{\rm teleport}\rangle
+= {\color{#00AB8E}|{\rm Bell^\prime}\rangle}\,\bigl({\color{#F27200}\sigma|\psi\rangle}\bigr)$$</p>
+<p>Avec $\sigma\in{\hat{X},\hat{Y},\hat{Z}}$ (opérateurs de Pauli) et où $|{\text{Bell}^\prime}\rangle$ est l&rsquo;état de Bell où une rotation unitaire de l&rsquo;état de Bell.<br>
+Dans 25 % des cas ($P_\mathbb{I}$), le qubit de Bob est déjà le bon et la téléportation est donc déjà achevée ; sinon il en diffère d’un opérateur de Pauli.</p>
+<p>Exemple : supposons que $i=X$ :</p>
+<div style="overflow-x:auto;">
+<p>$$
+\begin{aligned}
+|{\rm teleport^\prime_X}\rangle &amp;= P_X\otimes\mathbb{I}\,|{\text{teleport}}\rangle \\
+&amp;= \bigl( \tfrac 12({\color{#00AB8E}|00\rangle-|11\rangle})( {\color{#00AB8E}\langle 00| - \langle 11|})\otimes {\color{#F27200}\mathbb{I}}\bigr) \tfrac1{\sqrt2}\bigl(
+\alpha  {\color{#00AB8E}|00\rangle} {\color{#F27200}|0\rangle} + \alpha {\color{#00AB8E}|01\rangle}  {\color{#F27200}|1\rangle} + \beta {\color{#00AB8E}|10\rangle} {\color{#F27200}|0\rangle} + \beta {\color{#00AB8E}|11\rangle} {\color{#F27200}|1\rangle}\bigr) \\
+&amp; =  \tfrac 12({\color{#00AB8E}|00\rangle-|11\rangle})\otimes\tfrac 1{\sqrt2}(\alpha{\color{#F27200}|0\rangle}-\beta{\color{#F27200}|1\rangle})\\
+&amp; =  \tfrac 1{\sqrt2}({\color{#00AB8E}|00\rangle-|11\rangle}) \otimes \tfrac 12 \hat{Z} (\alpha{\color{#F27200}|0\rangle}+\beta{\color{#F27200}|1\rangle})\\
+&amp; = \tfrac 1{\sqrt2}({\color{#00AB8E}|00\rangle-|11\rangle}) \otimes \tfrac 12 {\color{#F27200}\hat{Z}|\psi\rangle}
+\end{aligned}
+$$</p>
+</div>
+<p>La partie Alice est bien un état de Bell et Bob se retrouve avec une transformation de l&rsquo;état à télétransporter.</p>
+<p>Alice téléphone alors à Bob et lui envoie deux bits d&rsquo;information classique pour indiquer son résultat :</p>
+<ul style="margin-top:-0.5em;">
+<li>«&nbsp;$00$&nbsp;» pour un succès direct ($P_\mathbb{I}$)&nbsp;;</li>
+<li>«&nbsp;$01$&nbsp;», «&nbsp;$10$&nbsp;», «&nbsp;$11$&nbsp;» pour préciser respectivement $\hat{X}$, $\hat{Y}$ ou $\hat{Z}$, l'opérateur de Pauli à utiliser.</li>
+</ul>
+<p>Bob applique alors la correction sur son qubit avec l&rsquo;opérateur de Pauli approprié $\sigma$ :</p>
+<p>$${\color{#00AB8E}\mathbb{I}}\otimes{\color{#00AB8E}\mathbb{I}}\otimes{\color{#F27200}\sigma}\,|{\text{teleport}^\prime_{\sigma}}\rangle
+={ \color{#00AB8E}|{\rm Bell^\prime}\rangle}\,{\color{#F27200}|\psi\rangle}$$</p>
+<p>où on suppose l&rsquo;involution de l&rsquo;opérateur de Pauli $\sigma^2=\mathbb{I}$.</p>
+<p>À l&rsquo;issue de l&rsquo;algorithme et conformément au paradigme LOCC (opérations locales + communication classique), on a réalisé :
+$$|\psi\rangle\,|{\text{Bell}}\rangle \;\longrightarrow\;
+|{\text{Bell}^\prime}\rangle\,|\psi\rangle$$</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -2290,16 +2355,16 @@ La conséquence géométrique est que des états mutuellement non biaisés sont 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1746837168"></script>
-    <script src="/js/perfect-scrollbar.min.js?1746837168"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1746837168"></script>
-    <script src="/js/jquery.sticky.js?1746837168"></script>
-    <script src="/js/featherlight.min.js?1746837168"></script>
-    <script src="/js/highlight.pack.js?1746837168"></script>
+    <script src="/js/clipboard.min.js?1746882779"></script>
+    <script src="/js/perfect-scrollbar.min.js?1746882779"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1746882779"></script>
+    <script src="/js/jquery.sticky.js?1746882779"></script>
+    <script src="/js/featherlight.min.js?1746882779"></script>
+    <script src="/js/highlight.pack.js?1746882779"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1746837168"></script>
-    <script src="/js/learn.js?1746837168"></script>
-    <script src="/js/hugo-learn.js?1746837168"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1746882779"></script>
+    <script src="/js/learn.js?1746882779"></script>
+    <script src="/js/hugo-learn.js?1746882779"></script>
     
     
 
