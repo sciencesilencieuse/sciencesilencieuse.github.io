@@ -114,13 +114,6 @@
       <description>Arithmétique et théorie des nombres : Infinis dénombrables et indénombrables Des entiers aux transcendants en passant par l&amp;rsquo;hypothèse du continu ($\aleph_0 = 2^{\aleph_1}$) :&#xA;Numération De nombreux systèmes de numération à bases entières ont été utilisés par différents peuples et à différentes époques.&#xA;Par exemple :&#xA;système binaire (base 2) utilisé dans des langues d&amp;rsquo;Amérique du Sud et d&amp;rsquo;Océanie, et utilisé de nos jours en informatique.&#xA;système quinaire (base 5) dont il reste des traces jusqu&amp;rsquo;au xxe siècle dans des langues africaines, mais aussi, partiellement, dans les notations tchouvache, suzhou, romaine et maya.</description>
     </item>
     <item>
-      <title>Modèle jouet de Spekkens</title>
-      <link>https://sciencesilencieuse.github.io/physique/quantique/spekkens/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/physique/quantique/spekkens/</guid>
-      <description>Modèle jouet de Spekkens note&#xA;Spekkens, Robert W. (March 19, 2007). &amp;ldquo;Evidence for the epistemic view of quantum states: A toy theory&amp;rdquo;. Physical Review A. 75 (3): 032110 🌐&#xA;Leifer, M. S. « Is the Quantum State Real? An Extended Review of ψ-ontology Theorems », Quanta, vol. 3, no 1, p. 67–155 (2014) 🌐&#xA;Knee, G. C. « Isolation of the Conceptual Ingredients of Quantum Theory by Toy Theory Comparison », mémoire de Master of Science, Imperial College London, soutenu le 20 septembre 2010 🌐</description>
-    </item>
-    <item>
       <title>Optique</title>
       <link>https://sciencesilencieuse.github.io/physique/optique/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
@@ -154,6 +147,13 @@
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/maths/geometrie/geo1/</guid>
       <description>Le triangle Pythagore Pythagore a vécu à Samos (une île grecque) au 6e siècle avant notre ère. Malgré le nom qu&amp;rsquo;on lui donne, le théorème de Pythagore était connu et utilisé par les Babyloniens et les Indiens des siècles avant Pythagore. Mais peut-être que Pythagore a été le premier à l&amp;rsquo;introduire en Grèce et cela a suffi à lui octroyer une reconnaissance éternelle.&#xA;Théorème de Pythagore :&#xA;Si un triangle est rectangle, alors le carré de la longueur de l’hypoténuse est égal à la somme des carrés des longueurs des deux autres côtés.</description>
+    </item>
+    <item>
+      <title>Théorie-jouet de Spekkens</title>
+      <link>https://sciencesilencieuse.github.io/physique/quantique/spekkens/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/physique/quantique/spekkens/</guid>
+      <description>Théorie-jouet de Spekkens note&#xA;Spekkens, Robert W. (March 19, 2007). &amp;ldquo;Evidence for the epistemic view of quantum states: A toy theory&amp;rdquo;. Physical Review A. 75 (3): 032110 🌐&#xA;Leifer, M. S. « Is the Quantum State Real? An Extended Review of ψ-ontology Theorems », Quanta, vol. 3, no 1, p. 67–155 (2014) 🌐&#xA;Knee, G. C. « Isolation of the Conceptual Ingredients of Quantum Theory by Toy Theory Comparison », mémoire de Master of Science, Imperial College London, soutenu le 20 septembre 2010 🌐</description>
     </item>
     <item>
       <title>TQC-2</title>
