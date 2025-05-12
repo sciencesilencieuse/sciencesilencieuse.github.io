@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1747007353" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1747007353" rel="stylesheet">
-    <link href="/css/hybrid.css?1747007353" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1747007353" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1747007353" rel="stylesheet">
-    <link href="/css/auto-complete.css?1747007353" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1747007353" rel="stylesheet">
-    <link href="/css/theme.css?1747007353" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1747007353" rel="stylesheet">
+    <link href="/css/nucleus.css?1747073626" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1747073626" rel="stylesheet">
+    <link href="/css/hybrid.css?1747073626" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1747073626" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1747073626" rel="stylesheet">
+    <link href="/css/auto-complete.css?1747073626" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1747073626" rel="stylesheet">
+    <link href="/css/theme.css?1747073626" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1747073626" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1747007353" rel="stylesheet">
+    <link href="/css/theme-blue.css?1747073626" rel="stylesheet">
     
-    <link href="/css/foo.css?1747007353" rel="stylesheet"><link href="/css/bar.css?1747007353" rel="stylesheet">
+    <link href="/css/foo.css?1747073626" rel="stylesheet"><link href="/css/bar.css?1747073626" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1747007353"></script>
+    <script src="/js/jquery-3.3.1.min.js?1747073626"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1747007353"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1747007353"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1747073626"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1747073626"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1747007353"></script>
+<script type="text/javascript" src="/js/search.js?1747073626"></script>
 
     
   </div>
@@ -1252,6 +1252,9 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
         <li><a href="#le-bit-classique">Le bit classique</a></li>
         <li><a href="#le-qubit">Le qubit</a></li>
         <li><a href="#matrice-densité">Matrice densité</a></li>
+        <li><a href="#fidélité">Fidélité</a></li>
+        <li><a href="#orthogonalité">Orthogonalité</a></li>
+        <li><a href="#état-pur-et-état-mixte">État pur et état mixte</a></li>
       </ul>
     </li>
     <li><a href="#sphère-de-bloch">Sphère de Bloch</a></li>
@@ -1296,6 +1299,24 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   {
     color: #006C65;
   }
+#preuve
+{
+    background-color:#EAEAEA;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#def
+{
+    background-color:#DCEFFE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#theo
+{
+    background-color:#FBE1DE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
 </style>
 <h1 id="notions-fondamentales-en-mécanique-quantique">Notions fondamentales en mécanique quantique</h1>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
@@ -1310,47 +1331,58 @@ Les lignes qui suivent en résument brièvement les axiomes et en illustrent que
 </blockquote>
 <h2 id="un-jeu-daxiomes">Un jeu d&rsquo;axiomes</h2>
 <p>L&rsquo;interprétation de la mécanique correspondant à l&rsquo;<strong>école de Copenhague</strong>, repose sur un jeu d&rsquo;axiomes<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> :</p>
-<ul>
-<li>
-<p><strong>Axiome 1 : État quantique</strong><br>
-À un instant fixé, l’état d’un système quantique est un vecteur $\lvert \psi\rangle$ dans un <strong>espace de Hilbert</strong> $\mathcal{H}$.</p>
-</li>
-<li>
-<p><strong>Axiome 2 : Évolution unitaire</strong><br>
-L’évolution d’un système quantique est toujours unitaire, c’est-à-dire décrite par un <strong>opérateur unitaire</strong> $\hat U$ (tel que $\hat U^\dagger = \hat U^{-1}$), parfois appelé « porte », agissant selon $\lvert \psi\rangle \;\longmapsto\;\hat U \lvert \psi\rangle$.<br>
-En particulier, l’évolution dans le temps obéit à l’<strong>équation de Schrödinger</strong>
-$$\mathrm{i}\,\hbar\frac{\partial}{\partial t}\lvert \psi\rangle \;=\; \hat H \lvert \psi\rangle ,$$
-où $\hat H$ est l’opérateur <strong>Hamiltonien</strong>.</p>
-</li>
-<li>
-<p><strong>Axiome 3 : Règle de Born</strong><br>
-Une mesure sur un système quantique est décrite par un opérateur hermitien $\hat A$ (i.e. $\hat A = \hat A^\dagger$), appelé &ldquo;<strong>observable</strong>&rdquo;.<br>
+<div id="def">
+<ul><li>Axiome 1&nbsp;: <b>État quantique</b><br>
+À un instant fixé, l’état d’un système quantique est un <b>vecteur</b> $\lvert \psi\rangle$ dans un <b>espace de Hilbert</b> $\mathcal{H}$.
+</li></ul>
+</div>
+<br>
+<div id="def">
+<ul><li>Axiome 2&nbsp;: <b>Évolution unitaire</b><br>
+L’évolution d’un système quantique est toujours unitaire, c’est-à-dire décrite par un <b>opérateur unitaire</b> $\hat U$ (tel que $\hat U^\dagger = \hat U^{-1}$), parfois appelé « porte », agissant selon $\lvert \psi\rangle \;\longmapsto\;\hat U \lvert \psi\rangle$.<br>
+En particulier, l’évolution dans le temps obéit à l’<b>équation de Schrödinger</b>
+<p>$$\mathrm{i}\,\hbar\frac{\partial}{\partial t}\lvert \psi\rangle \;=\; \hat H \lvert \psi\rangle ,$$</p>
+<p>où $\hat H$ est l’opérateur <b>Hamiltonien</b>.</p>
+</li></ul>
+</div>
+<br>
+<div id="def">
+<ul><li>Axiome 3&nbsp;: <b>Règle de Born</b><br>
+Une mesure sur un système quantique est décrite par un opérateur hermitien $\hat A$ (i.e. $\hat A = \hat A^\dagger$), appelé "<b>observable</b>".<br>
 Cette observable possède une décomposition spectrale
-$$\hat A \;=\; \sum_i \lambda_i \,\lvert e_i\rangle\langle e_i\rvert$$
-où les valeurs propres $\lambda_i$ sont les résultats possibles de la mesure et les projecteurs $\lvert e_i\rangle\langle e_i\rvert$ en sont les opérateurs associés.<br>
+<p>$$\hat A \;=\; \sum_i \lambda_i \,\lvert e_i\rangle\langle e_i\rvert$$</p>
+<p>où les valeurs propres $\lambda_i$ sont les résultats possibles de la mesure et les projecteurs $\lvert e_i\rangle\langle e_i\rvert$ en sont les opérateurs associés.<br>
 Si l’on mesure l’état $\lvert \psi\rangle$, la probabilité d’obtenir le résultat $i$ est
 $$p(i) \;=\; \langle \psi \rvert e_i\rangle\langle e_i \lvert \psi\rangle$$</p>
-</li>
-<li>
-<p><strong>Axiome 4 : Postulat de réduction du paquet d&rsquo;onde</strong><br>
+</li></ul>
+</div>
+<br>
+<div id="def">
+<ul><li>Axiome 4&nbsp;: <b>Postulat de réduction du paquet d'onde</b><br>
 Après la mesure, l’état du système s’effondre sur l’état propre associé au résultat obtenu. Si l’issue $i$ est observée, l’état devient
-$$\frac{\lvert e_i\rangle\langle e_i \lvert \psi\rangle}{\sqrt{p(i)}}$$</p>
-</li>
-<li>
-<p><strong>Axiome 5 : Relation de complétude</strong><br>Les projecteurs satisfont la relation
-$$\sum_i \lvert e_i\rangle\langle e_i\rvert \;=\; \mathbb{I}$$
-où $\mathbb{I}$ est l’opérateur identité sur $\mathcal{H}$.</p>
-</li>
-</ul>
+<p>$$\frac{\lvert e_i\rangle\langle e_i \lvert \psi\rangle}{\sqrt{p(i)}}$$</p>
+</li></ul>
+</div>
+<br>
+<div id="def">
+<ul><li>Axiome 5&nbsp;: <b>Relation de complétude</b><br>
+Les <b>projecteurs</b> satisfont la relation
+<p>$$\sum_i \lvert e_i\rangle\langle e_i\rvert \;=\; \mathbb{I}$$</p>
+<p>où $\mathbb{I}$ est l’opérateur identité sur $\mathcal{H}$.</p>
+</li></ul>
+</div>
 <h2 id="information-quantique">Information quantique</h2>
 <h3 id="le-bit-classique">Le bit classique</h3>
 <p>Un bit est la plus petite unité d’information : il distingue entre deux possibilités (le résultat d’un pile ou face, l’état marche/arrêt d’une lampe, le niveau de tension haut/bas dans un circuit, etc.). On note habituellement  ces possibilités « zéro logique » et « un logique » : $0, 1$.</p>
 <p>Pour représenter plus d’information, on considère une chaîne de bits : avec $n$ bits, on a $2^n$ possibilités (par exemple, pour 3 bits : $000,001, \dots,111$).</p>
 <h3 id="le-qubit">Le qubit</h3>
-<p>L’analogue quantique du bit est le qubit. C’est le système quantique non trivial le plus simple. À l’issue d’une mesure, il distingue également deux possibilités, correspondant aux éléments d’une base orthonormale de l’espace de Hilbert à deux dimensions $\mathcal{H}_2$. On note $\lvert0\rangle$ et $\lvert1\rangle$ les deux vecteurs de base. On peut les réaliser physiquement de plein de façons : le premier et deuxième niveau d&rsquo;énergie d&rsquo;un atome d&rsquo;hydrogène, le spin haut et le spin bas d&rsquo;une particule de spin $1/2$, la polarisation horizontale et verticale d&rsquo;un photon, etc.</p>
-<p>La grande différence avec un bit classique est qu&rsquo;entre deux mesures, le qubit existe comme une superposition des deux possibilités :
+<p>L’analogue quantique du bit est le <b>qubit</b>. C’est le système quantique non trivial le plus simple. À l’issue d’une mesure, il distingue également deux possibilités, correspondant aux éléments d’une base orthonormale de l’espace de Hilbert à deux dimensions $\mathcal{H}_2$.</p>
+<p>On note $\lvert0\rangle$ et $\lvert1\rangle$ les deux vecteurs de base. On peut les réaliser physiquement de plein de façons : le premier et deuxième niveau d&rsquo;énergie d&rsquo;un atome d&rsquo;hydrogène, le spin haut et le spin bas d&rsquo;une particule de spin $1/2$, la polarisation horizontale et verticale d&rsquo;un photon, etc.</p>
+<div id="theo">
+<p>La grande différence avec un bit classique est qu&rsquo;entre deux mesures, le qubit existe comme une <b>superposition des deux possibilités</b> :
 $$\lvert\psi\rangle = \alpha\,\lvert0\rangle + \beta\,\lvert1\rangle$$
 avec $\alpha,\beta\in\mathbb{C}$ et $\lvert\alpha\rvert^2 + \lvert\beta\rvert^2 = 1$.</p>
+</div>
 <p>Une autre différence importante est qu&rsquo;on peut tout à fait mesurer le qubit dans une direction qui ne distingue pas $|0\rangle$ de $|1\rangle$.</p>
 <p>On identifie deux états qui ne diffèrent que par une phase globale étant donné qu&rsquo;ils produisent des prédictions physiques identiques. Cela permet de spécifier un qubit par un poids relatif et une phase relative. En ne considérant que des poids égaux dans la superposition, on peut écrire :
 $$|\psi\rangle = \frac{|0\rangle+\mathrm{e}^{\mathrm{i}\theta} |1\rangle}{\sqrt{2}}$$</p>
@@ -1359,10 +1391,11 @@ $$|+\rangle = \frac{|0\rangle + |1\rangle}{\sqrt{2}}$$
 $$|-\rangle = \frac{|0\rangle - |1\rangle}{\sqrt{2}}$$</p>
 <p>Il est possible de réaliser une mesure distinguant $|+\rangle$ de $|-\rangle$ en choisissant l’observable
 $$\hat X \;=\; |+\rangle\langle+| \;-\; |-\rangle\langle-|
-\tag{12}$$</p>
+$$</p>
 <p>Contrairement au cas classique, le résultat d&rsquo;une mesure n&rsquo;est pas toujours entièrement déterminé par la mesure elle-même et l&rsquo;état $|\psi\rangle$.</p>
-<p>L’information contenue dans un système binaire classique est quantifiée par un bit, c’est-à-dire la quantité nécessaire pour spécifier complètement l’un des deux états possibles. En revanche, pour un état quantique, les coefficients complexes $\alpha$ et $\beta$ peuvent varier de façon continue, de sorte qu’il faudrait une quantité infinie d’information classique pour décrire exactement un qubit.</p>
+<p>L’information contenue dans un système binaire classique est quantifiée par un bit, soit la quantité nécessaire pour spécifier complètement l’un des deux états possibles. En revanche, pour un état quantique, les coefficients complexes $\alpha$ et $\beta$ peuvent varier de façon continue, de sorte qu’il faudrait une quantité infinie d’information classique pour décrire exactement un qubit.</p>
 <h3 id="matrice-densité">Matrice densité</h3>
+<div id="def">
 <p>On définit la matrice densité $\rho_\psi$ associée à un état pur $\lvert\psi\rangle$ par :
 $$ \rho_\psi = \lvert\psi\rangle\langle\psi\rvert$$</p>
 <p>Si $\lvert\psi\rangle = \alpha\,\lvert0\rangle + \beta\,\lvert1\rangle$, alors
@@ -1371,53 +1404,59 @@ $$\rho_\psi =
 |\alpha|^2 &amp; \alpha^*\beta\\
 \beta^* \alpha &amp; |\beta|^2
 \end{pmatrix}$$</p>
+</div>
 <p>La condition de normalisation $\langle\psi|\psi\rangle=1$ entraîne que la trace de la matrice densité vaut un ($\mathrm{Tr}\,\rho_\psi = 1$).</p>
-<h4 id="fidélité">Fidélité</h4>
-<p>Pour deux états purs $\lvert\psi\rangle$ et $\lvert\chi\rangle$, la <strong>fidélité</strong> est définie par
-$F = \bigl|\langle\psi|\chi\rangle\bigr|^2$.<br>
-Ou pour deux états dont les matrices de densité sont $\rho$ et $\sigma$,
+<h3 id="fidélité">Fidélité</h3>
+<div id="def">
+<p>Pour deux états purs $\lvert\psi\rangle$ et $\lvert\chi\rangle$, la <b>fidélité</b> est définie par
+$F = \bigl|\langle\psi|\chi\rangle\bigr|^2$.<br></p>
+<p>Ou pour deux états dont les matrices de densité sont $\rho$ et $\sigma$,
 $F = \mathrm{Tr}\,\sqrt{\rho}\,\sqrt{\sigma}$.</p>
-<h4 id="orthogonalité">Orthogonalité</h4>
-<p>Deux états $\lvert\psi\rangle$ et $\lvert\chi\rangle$ sont dits <strong>orthogonaux</strong> si
+</div>
+<h3 id="orthogonalité">Orthogonalité</h3>
+<div id="def">
+<p>Deux états $\lvert\psi\rangle$ et $\lvert\chi\rangle$ sont dits <b>orthogonaux</b> si
 $\langle\psi|\chi\rangle = 0$.
 Les deux états ont alors une fidélité nulle.</p>
-<h4 id="état-pur-et-état-mixte">État pur et état mixte</h4>
-<ul>
-<li>
-<p>Un <strong>état pur</strong> est un vecteur dans l’espace de Hilbert. Toute combinaison linéaire normalisée des vecteurs de base est un état pur :
+</div>
+<h3 id="état-pur-et-état-mixte">État pur et état mixte</h3>
+<div id="def">
+<p>Un <b>état pur</b> est un vecteur dans l’espace de Hilbert. Toute combinaison linéaire normalisée des vecteurs de base est un état pur :
 $$|\psi\rangle = \sum_i\alpha_i|i\rangle$$
 Les $\alpha_i\in\mathbb{C}$ sont appelés poids.<br>
 Toute combinaison linéaire d&rsquo;états purs est encore un état pur.</p>
-</li>
-<li>
-<p>Un <strong>état mixte</strong> est une combinaison convexe de matrices densité :
-$$
+</div>
+<br>
+<div id="def">
+<p>Un <b>état mixte</b> est une combinaison convexe de matrices densité :</p>
+<p>$$
 \rho = \sum_i p_i\,\rho_i
-$$
-où chaque $\rho_i$ représente un état pur, et les $p_i$ sont des probabilités telles que $\sum_i p_i=1$.<br>
-Il existe de nombreuses décompositions convexes d’un état mixte : par exemple, l’état mixte maximal
-$$
+$$</p>
+<p>où chaque $\rho_i$ représente un état pur, et les $p_i$ sont des probabilités telles que $\sum_i p_i=1$.<br></p>
+</div>
+<p>Il existe de nombreuses décompositions convexes d’un état mixte : par exemple, l’état mixte maximal</p>
+<p>$$
 \rho \;=\;\tfrac12\bigl(|0\rangle\langle0| + |1\rangle\langle1|\bigr)
 \;=\;\tfrac12\bigl(|+\rangle\langle+| + |-\rangle\langle-|\bigr)
 \;=\;\tfrac{\mathbb{I}}2
-$$
-Un état mixte ne peut pas s’écrire comme une somme d’états de base à poids complexes.</p>
-</li>
-</ul>
+$$</p>
+<p>Un état mixte ne peut pas s’écrire comme une somme d’états de base à poids complexes.</p>
 <p>La différence sémantique entre un état « pur » et un état « mixte » tient au fait que l’incertitude pour le premier est une incertitude purement quantique, tandis que pour le second une part d’incertitude classique est introduite. Un état mixte apparaît si l’on prépare un état quantique en fonction du résultat d’un pile ou face classique, en assignant un certain état pour pile et un autre pour face. On peut aussi interpréter cette incertitude classique comme une forme d’erreur expérimentale.</p>
 <h2 id="sphère-de-bloch">Sphère de Bloch</h2>
 <p>Il existe une représentation géométrique élégante des qubits qui facilite grandement la visualisation des opérations de mesure, d’évolution et de similarité des états dans l’espace de Hilbert.</p>
 <p>Dans la représentation par matrice densité d’un état pur, on compte à première vue deux coefficients complexes, soit quatre nombres réels. La condition de normalisation (trace = 1) en élimine un. Il reste donc trois degrés de liberté réels pour un état mixte. Et comme on a vu que deux états purs ne se différentiant que par une phase globale sont en fait identiques,  il ne reste que deux degrés de liberté pour un état pur<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. Cela permet de représenter les états purs sur la surface d’une sphère et les états mixtes dans son intérieur.</p>
-<p>On définit le vecteur de Bloch $\vec{r} = [r_x,\,r_y,\,r_z]$ associé à un état $\rho$ par
-$$
+<div id="def">
+<p>On définit le vecteur de Bloch $\vec{r} = [r_x,\,r_y,\,r_z]$ associé à un état $\rho$ par</p>
+<p>$$
 \rho = \frac12\bigl(\mathbb{I} + \vec{r}\!\cdot\!\vec{\sigma}\bigr)
 =\frac12
 \begin{pmatrix}
 1 + r_z &amp; r_x - \mathrm{i}\,r_y \\
 r_x + \mathrm{i}\,r_y &amp; 1 - r_z
 \end{pmatrix}
-$$
-où $\boldsymbol{\sigma} = [\hat X,\,\hat Y,\,\hat Z]$ est le triplet de matrices de Pauli.</p>
+$$</p>
+<p>où $\boldsymbol{\sigma} = [\hat X,\,\hat Y,\,\hat Z]$ est le triplet de matrices de Pauli.</p>
+</div>
 <p>Grâce à ce vecteur, tout qubit peut être visualisé comme un point de la sphère de Bloch :</p>
 <ul style="margin-top:-0.5em;margin-bottom:-0.5em;">
 <li>les états purs correspondent aux points de la surface&nbsp;;</li>
@@ -2362,16 +2401,16 @@ La conséquence géométrique est que des états mutuellement non biaisés sont 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1747007353"></script>
-    <script src="/js/perfect-scrollbar.min.js?1747007353"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1747007353"></script>
-    <script src="/js/jquery.sticky.js?1747007353"></script>
-    <script src="/js/featherlight.min.js?1747007353"></script>
-    <script src="/js/highlight.pack.js?1747007353"></script>
+    <script src="/js/clipboard.min.js?1747073626"></script>
+    <script src="/js/perfect-scrollbar.min.js?1747073626"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1747073626"></script>
+    <script src="/js/jquery.sticky.js?1747073626"></script>
+    <script src="/js/featherlight.min.js?1747073626"></script>
+    <script src="/js/highlight.pack.js?1747073626"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1747007353"></script>
-    <script src="/js/learn.js?1747007353"></script>
-    <script src="/js/hugo-learn.js?1747007353"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1747073626"></script>
+    <script src="/js/learn.js?1747073626"></script>
+    <script src="/js/hugo-learn.js?1747073626"></script>
     
     
 
