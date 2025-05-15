@@ -38,22 +38,22 @@
     
 
     
-    <link href="/css/nucleus.css?1747177561" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1747177561" rel="stylesheet">
-    <link href="/css/hybrid.css?1747177561" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1747177561" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1747177561" rel="stylesheet">
-    <link href="/css/auto-complete.css?1747177561" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1747177561" rel="stylesheet">
-    <link href="/css/theme.css?1747177561" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1747177561" rel="stylesheet">
+    <link href="/css/nucleus.css?1747328777" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1747328777" rel="stylesheet">
+    <link href="/css/hybrid.css?1747328777" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1747328777" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1747328777" rel="stylesheet">
+    <link href="/css/auto-complete.css?1747328777" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1747328777" rel="stylesheet">
+    <link href="/css/theme.css?1747328777" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1747328777" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1747177561" rel="stylesheet">
+    <link href="/css/theme-blue.css?1747328777" rel="stylesheet">
     
-    <link href="/css/foo.css?1747177561" rel="stylesheet"><link href="/css/bar.css?1747177561" rel="stylesheet">
+    <link href="/css/foo.css?1747328777" rel="stylesheet"><link href="/css/bar.css?1747328777" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1747177561"></script>
+    <script src="/js/jquery-3.3.1.min.js?1747328777"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +107,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1747177561"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1747177561"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1747328777"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1747328777"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1747177561"></script>
+<script type="text/javascript" src="/js/search.js?1747328777"></script>
 
     
   </div>
@@ -1248,6 +1248,8 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   <ul>
     <li><a href="#le-système-élémentaire">Le système élémentaire</a></li>
     <li><a href="#le-principe-déquilibre-de-la-connaissance">Le principe d&rsquo;équilibre de la connaissance</a></li>
+    <li><a href="#analogue-dun-qubit-état-pur">Analogue d&rsquo;un qubit état pur</a></li>
+    <li><a href="#transformations">Transformations</a></li>
   </ul>
 </nav>
     </div>
@@ -1409,6 +1411,102 @@ Pour le système élémentaire : $K=I=1$. Une seule question peut être résolu
 </div>
 <p>En ajoutant l&rsquo;état d&rsquo;ignorance maximale, on complète l&rsquo;ensemble des sept états épistémiques autorisés pour un seul système élémentaire.</p>
 <p>Ce déficit de connaissance, imposé <em>a priori</em>, suffit à reproduire plusieurs effets clés de la mécanique quantique sans quitter un cadre fondamentalement classique.</p>
+<h2 id="analogue-dun-qubit-état-pur">Analogue d&rsquo;un qubit état pur</h2>
+<p>On peut établir une correspondance bi‑univoque entre les sept états permis d’un bit‑jouet (épistémiques) et sept états particulièrement importants en information quantique : les six états propres $±1$ des trois matrices de Pauli $X$, $Y$, $Z$ et l’état maxim­alement mixte. Le « dictionnaire » est :</p>
+<p>$$
+\begin{array}{rcl}
+1\lor2 &amp;\longleftrightarrow&amp; \lvert0\rangle \\
+3\lor4 &amp;\longleftrightarrow&amp; \lvert1\rangle \\
+1\lor3 &amp;\longleftrightarrow&amp; \lvert+\rangle \\
+2\lor4 &amp;\longleftrightarrow&amp; \lvert-\rangle \\
+2\lor3 &amp;\longleftrightarrow&amp; \lvert{+\mathrm i}\rangle \\
+1\lor4 &amp;\longleftrightarrow&amp; \lvert{-\mathrm i}\rangle \\
+1\lor2\lor3\lor4 &amp;\longleftrightarrow&amp; \tfrac{\mathbb I}{2}
+\end{array}
+$$</p>
+<p>Représentations géométriques :</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:800px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/spek5.png" style="box-shadow:none;background:none;">
+</div>
+<div id="def">
+<p>Deux états épistémiques sont <b>disjoints</b> si leurs bases ontiques n’ont aucun élément commun.</p>
+</div>
+<p>Les couples analogues aux paires orthogonales ($\lvert0\rangle$, $\lvert1\rangle$), ($\lvert+\rangle$, $\lvert-\rangle$), ($\lvert{+\mathrm i}\rangle$, $\lvert{-\mathrm i}\rangle$) deviennent ainsi trois paires de bits‑jouets diamétralement opposées, leur intersection vide se lisant d’un coup d’œil (aucune case colorées en commun).</p>
+<div id="def">
+<p>La <b>fidélité</b> $\mathcal{F}[\bar{p},\bar{q}]$ entre deux états $a\lor b\lor c\lor d$ et $e\lor f\lor g\lor h$, où $p_k$ est un vecteur de probabilités uniformes pour $a$, $b$, $c$ et $d$ de somme unité, et $q_k$ est un vecteur de probabilités uniformes pour $e$, $f$, $g$ et $h$ de somme unité est définie par :
+$$\mathcal{F}[\bar{p},\bar{q}] \;=\; \sum_{k}\sqrt{p_k}\sqrt{q_k}$$</p>
+</div>
+<p>La <strong>fidélité</strong> est une mesure de la non disjonction. La disjonction et l&rsquo;égalité sont deux cas particuliers de fidélités respectives $\mathcal{F}=0$ et $\mathcal{F}=1$.</p>
+<div id="preuve">
+<p>Exemple :</p>
+<p>Pour les états épistémiques $1\lor 3$ et $1\lor 2$. Chaque état autorise exactement deux états ontiques et, par le principe d’uniformité, leur assigne la probabilité $1/2$.</p>
+<p>Les valeurs de $p_k$ et $q_k$ sont donc :</p>
+<table style="text-align:center;">
+<tr>
+<th style="text-align:center;">État ontique</th><th style="text-align:center;">$p_k$</th><th style="text-align:center;">$q_k$</th>
+</tr>
+<tr>
+<td>$1$</td><td>$1/2$</td><td>$1/2$</td>
+</tr>
+<tr>
+<td>$1$</td><td>$0$</td><td>$1/2$</td>
+</tr>
+<tr>
+<td>$1$</td><td>$1/2$</td><td>$0$</td>
+</tr>
+<tr>
+<td>$1$</td><td>$0$</td><td>$0$</td>
+</tr>
+</table>
+<p>Calcul de la fidélité :</p>
+<div style="overflow-x:auto;margin-top:-1.5em;">
+<p>$$
+\begin{aligned}
+\mathcal{F}[\bar{p},\bar{q}] &amp;= \sum_{k=1}^{4}\sqrt{p_k}\,\sqrt{q_k}\\
+&amp;=\sqrt{\tfrac12}\sqrt{\tfrac12}  \;+\;
+\sqrt{0}\sqrt{\tfrac12}         \;+\;
+\sqrt{\tfrac12}\sqrt{0}         \;+\;
+\sqrt{0}\sqrt{0} \\
+&amp;= \tfrac12 \;+\; 0 \;+\; 0 \;+\; 0 \\
+&amp;= \tfrac12
+\end{aligned}
+$$</p>
+</div>
+ correspondant à l'état ontique commun ($1$) : la seule ontique commune est l’état 1.
+<p>Et c’est bien la même valeur que la fidélité quantique entre les états qubits correspondants, $1\lor3 \;\longleftrightarrow\; |+\rangle$, $1\lor2 \;\longleftrightarrow\; |0\rangle$, puisque $|\langle+|0\rangle|^{2} = 1/2$.</p>
+</div>
+<br>
+<div id="def">
+<p>La <b>combinaison convexe</b> de deux états épistémiques disjoints est l&rsquo;union de leurs bases ontiques si cette union forme un état épistémique valide. Sinon, et pour les états non-disjonoints, la combinaison convexe est non définie.</p>
+</div>
+<br>
+<div id="def">
+<p>La <b>superposition cohérente</b> de deux états épistémiques disjoints $(a\lor b)$ et $(c\lor d)$ avec $a,b≠c,d$, et $a&lt;b,c&lt;d$ est définie par :</p>
+<div style="overflow-x:auto;margin-top:-1.5em;">
+<p>$$
+\begin{aligned}
+(a\lor b)\; +_1 \; (c\lor d) &amp;= a\lor c,\\
+(a\lor b)\; +_2 \; (c\lor d) &amp;= b\lor d,\\
+(a\lor b)\; +_3 \; (c\lor d) &amp;= b\lor c,\\
+(a\lor b)\; +_4 \; (c\lor d) &amp;= a\lor d
+\end{aligned}
+$$</p>
+</div>
+</div>
+<p>Les opérations binaires cohérentes associent des bits-jouets purs à d&rsquo;autres bits-jouets purs (générant un analogue de la superposition cohérente de la mécanique quantique). Dans la représentation graphique, on associe à deux états diamétralement opposés (donc disjoints) un des quatre autres états.<br>
+Les quatre opérations binaires cohérentes $+_1$, $+_2$, $+_3$, $+_4$ sont analogues aux superpositions de poids égaux de deux états purs de mécanique quantique avec une phase relative $\theta$ valant respectivement $0$, $\pi$, $\pi/2$, $3\pi/2$.</p>
+<p>Exemple : en théorie jouet, $(1\lor 2)+_4(3\lor 4)=(1\lor 4)$, et en mécanique quantique, $\tfrac1{\sqrt{2}} (|0\rangle + \mathrm{e}^{\mathrm{i}\frac{3\pi}{2}} |1\rangle)=\tfrac1{\sqrt{2}} (|0\rangle -\mathrm{i} |1\rangle)=|-\mathrm{i}\rangle$.</p>
+<h2 id="transformations">Transformations</h2>
+<p>Dans la théorie-jouet, <b>toute transformation valable doit conserver la fidélité</b> entre états épistémiques. C’est l’analogue exact de la conservation du produit scalaire par les transformations unitaires en mécanique quantique. Autrement dit, si deux états ont une fidélité $\mathcal{F}$ avant l’opération, ils auront la même fidélité après.</p>
+<p>Les transformations permises sont donc seulement les permutations des quatre états ontiques. En effet, si une transformation envoyait plusieurs états ontiques sur un seul, elle pourrait faire passer un état épistémique légal (respectant le principe d’équilibre des connaissances) vers un état illégal qui le viole.</p>
+<div id="preuve">
+<p>Exemple de la permutation $(123)(4)$ (permutation cyclique des états ontiques 1, 2 et 3 et absence de permutation pour l&rsquo;état 4).</p>
+<p>De $1\lor 2$, on obtient $2 \lor 3$. Et de $3\lor 4$, on obtient $1\lor 4$. La fidélité entre états initiaux (0 ici) est bien conservée entre les états finaux.</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/spek6.png" style="box-shadow:none;background:none;">
+</div>
+<p>Et cela reste vrai pour les 24 permutations des états ontiques éléments du groupe $S_4$.</p>
+</br>
 
 
 <footer class="footline">
@@ -2213,16 +2311,16 @@ Pour le système élémentaire : $K=I=1$. Une seule question peut être résolu
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1747177561"></script>
-    <script src="/js/perfect-scrollbar.min.js?1747177561"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1747177561"></script>
-    <script src="/js/jquery.sticky.js?1747177561"></script>
-    <script src="/js/featherlight.min.js?1747177561"></script>
-    <script src="/js/highlight.pack.js?1747177561"></script>
+    <script src="/js/clipboard.min.js?1747328777"></script>
+    <script src="/js/perfect-scrollbar.min.js?1747328777"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1747328777"></script>
+    <script src="/js/jquery.sticky.js?1747328777"></script>
+    <script src="/js/featherlight.min.js?1747328777"></script>
+    <script src="/js/highlight.pack.js?1747328777"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1747177561"></script>
-    <script src="/js/learn.js?1747177561"></script>
-    <script src="/js/hugo-learn.js?1747177561"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1747328777"></script>
+    <script src="/js/learn.js?1747328777"></script>
+    <script src="/js/hugo-learn.js?1747328777"></script>
     
     
 
