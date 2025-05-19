@@ -12,40 +12,44 @@
     
     
 
-
 <script>
-MathJax = {
+window.MathJax = {
   tex: {
-    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']]
   },
-  svg: {
-    fontCache: 'global'
-  }
+
+   
+  displayOverflow: 'linebreak',   
 };
 </script>
-<script
-  type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@4/es5/tex-svg.js">
-</script>
+
+
+<script async
+  src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0-beta.7/tex-chtml.js"
+  id="MathJax-script"></script>
+
+
+
     
 
     
-    <link href="/css/nucleus.css?1747640535" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1747640535" rel="stylesheet">
-    <link href="/css/hybrid.css?1747640535" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1747640535" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1747640535" rel="stylesheet">
-    <link href="/css/auto-complete.css?1747640535" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1747640535" rel="stylesheet">
-    <link href="/css/theme.css?1747640535" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1747640535" rel="stylesheet">
+    <link href="/css/nucleus.css?1747677070" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1747677070" rel="stylesheet">
+    <link href="/css/hybrid.css?1747677070" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1747677070" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1747677070" rel="stylesheet">
+    <link href="/css/auto-complete.css?1747677070" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1747677070" rel="stylesheet">
+    <link href="/css/theme.css?1747677070" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1747677070" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1747640535" rel="stylesheet">
+    <link href="/css/theme-blue.css?1747677070" rel="stylesheet">
     
-    <link href="/css/foo.css?1747640535" rel="stylesheet"><link href="/css/bar.css?1747640535" rel="stylesheet">
+    <link href="/css/foo.css?1747677070" rel="stylesheet"><link href="/css/bar.css?1747677070" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1747640535"></script>
+    <script src="/js/jquery-3.3.1.min.js?1747677070"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -99,14 +103,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1747640535"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1747640535"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1747677070"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1747677070"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1747640535"></script>
+<script type="text/javascript" src="/js/search.js?1747677070"></script>
 
     
   </div>
@@ -1320,20 +1324,6 @@ ul
 margin-top:-0.5em;
 }
 </style>
-<script>
-MathJax = {
-  tex: {
-    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
-  },
-  svg: {
-    fontCache: 'global'
-  }
-};
-</script>
-<script
-  type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
-</script>
 <h1 id="théorie-quantique-des-champs----partie-1">Théorie quantique des champs &ndash; Partie 1</h1>
 
 <div class="notices note" style="--title: 'note';">
@@ -1853,14 +1843,13 @@ $</p>
 <a>Détaillons juste l'action de l'Hamiltonien sur $|\uparrow\downarrow,0\rangle$ pour s'en convaincre&nbsp;:</a>
 </summary>
 <p>Terme potentiel : $U \hat{n}_{1\uparrow}\hat{n}_{1\downarrow}|\uparrow\downarrow,0\rangle = U\times 1\times 1=U$ et $U \hat{n}_{2\uparrow}\hat{n}_{2\downarrow}|\uparrow\downarrow,0\rangle = U\times 0\times 0=0$ (puisque l&rsquo;opérateur $\hat{n}$ ne fait que compter le nombres de particules dans un site donné).</p>
-<p>Terme cinétique : comme $i$ et $j$ doivent être différents, on a 4 termes dans la somme $(-t) \hat{c}^\dagger_{1\uparrow} \hat{c}_{2\uparrow}+(-t) \hat{c}^\dagger_{2\uparrow} \hat{c}_{1\uparrow}+(-t) \hat{c}^\dagger_{1\downarrow} \hat{c}_{2\downarrow}+(-t) \hat{c}^\dagger_{2\downarrow} \hat{c}_{1\downarrow}$.<br>
+<p>Terme cinétique : comme $i$ et $j$ doivent être différents, on a 4 termes dans la somme : $(-t) \hat{c}^\dagger_{1\uparrow} \hat{c}_{2\uparrow}+(-t) \hat{c}^\dagger_{2\uparrow} \hat{c}_{1\uparrow}+(-t) \hat{c}^\dagger_{1\downarrow} \hat{c}_{2\downarrow}+(-t) \hat{c}^\dagger_{2\downarrow} \hat{c}_{1\downarrow}$.<br>
 Seuls les deux termes contenant un opérateur d&rsquo;annihilation sur le site 1 ne donneront pas un résultat nul. Il nous reste $-t(\hat{c}^\dagger_{2\uparrow} \hat{c}_{1\uparrow} +\hat{c}^\dagger_{2\downarrow} \hat{c}_{1\downarrow})$.<br>
-Appliquons cette somme d&rsquo;opérateurs à $|\uparrow\downarrow,0\rangle$ qu&rsquo;on peut aussi écrire $\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{1\downarrow}|0\rangle$. <br>
-Le premier terme nous donne<br></p>
-<div style="overflow-x:auto;">
-$-t\hat{c}^\dagger_{2\uparrow} \hat{c}\_{1\uparrow} \hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{1\downarrow}|0\rangle=-t\hat{c}^\dagger_{2\uparrow} (1-\hat{n}\_{1\uparrow})\hat{c}^\dagger_{1\downarrow}|0\rangle=-t\hat{c}^\dagger_{2\uparrow}\hat{c}^\dagger_{1\downarrow}|0\rangle+t\hat{c}^\dagger_{2\uparrow} \cancel{\hat{n}\_{1\uparrow}|\downarrow,0\rangle}=-t\hat{c}^\dagger_{2\uparrow}|\downarrow,0\rangle=t|\downarrow,\uparrow\rangle$</div> <br>
-Le dernier changement de signe venant du fait qu'il y ait déjà un fermion à gauche de celui créé dans l'état 2 ($(-1)^{n_1+n_2+\cdots+n_{i-1}}=(-1)^1=-1$).<br>
-Et le deuxième terme donne 
+Appliquons cette somme d&rsquo;opérateurs à $|\uparrow\downarrow,0\rangle$ qu&rsquo;on peut aussi écrire $\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{1\downarrow}|0\rangle$.</p>
+<p>Le premier terme nous donne</p>
+<div style="overflow-x:auto;">$-t\hat{c}^\dagger_{2\uparrow} \hat{c}\_{1\uparrow} \hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{1\downarrow}|0\rangle=-t\hat{c}^\dagger_{2\uparrow} (1-\hat{n}\_{1\uparrow})\hat{c}^\dagger_{1\downarrow}|0\rangle=-t\hat{c}^\dagger_{2\uparrow}\hat{c}^\dagger_{1\downarrow}|0\rangle+t\hat{c}^\dagger_{2\uparrow} \cancel{\hat{n}\_{1\uparrow}|\downarrow,0\rangle}=-t\hat{c}^\dagger_{2\uparrow}|\downarrow,0\rangle=t|\downarrow,\uparrow\rangle$</div> <br>
+Le dernier changement de signe venant du fait qu'il y ait déjà un fermion à gauche de celui créé dans l'état 2 ($(-1)^{n_1+n_2+\cdots+n_{i-1}}=(-1)^1=-1$).
+<p>Et pour le deuxième terme, on obtient :</p>
 <div style="overflow-x:auto;">$-t\hat{c}^\dagger_{2\downarrow} \hat{c}\_{1\downarrow}\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{1\downarrow}|0\rangle=t\hat{c}^\dagger_{2\downarrow} \hat{c}\_{1\downarrow}\hat{c}^\dagger_{1\downarrow}\hat{c}^\dagger_{1\uparrow}|0\rangle=t\hat{c}^\dagger_{2\downarrow} (1-\hat{n}\_{1\downarrow})\hat{c}^\dagger_{1\uparrow}|0\rangle=t\hat{c}^\dagger_{2\downarrow}\hat{c}^\dagger_{1\uparrow}|0\rangle-t\hat{c}^\dagger_{2\downarrow}\cancel{\hat{n}\_{1\downarrow}|\uparrow,0\rangle}=-t|\uparrow,\downarrow\rangle$</div>
 </details>
 <p>La matrice peut se diagonaliser et l&rsquo;état fondamental s&rsquo;écrit $|\psi\rangle = N(|\uparrow\downarrow,0\rangle+W|\uparrow,\downarrow\rangle-W|\downarrow,\uparrow\rangle+|0,\uparrow\downarrow\rangle)$ où $N$ est une constante de normalisation et $W=\frac{U}{4t}+\frac{1}{4t}\sqrt{U^2+16t^2}$ pour une énergie $E=\frac{U}{2}-\frac{1}{2}\sqrt{U^2+16t^2}$. C&rsquo;est déjà un résultat étonament complexe pour un système si simple (deux électrons sur deux sites)&hellip;</p>
@@ -2674,16 +2663,16 @@ Les modèles considérés se restreignaient à des réseaux discrets adaptés à
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1747640535"></script>
-    <script src="/js/perfect-scrollbar.min.js?1747640535"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1747640535"></script>
-    <script src="/js/jquery.sticky.js?1747640535"></script>
-    <script src="/js/featherlight.min.js?1747640535"></script>
-    <script src="/js/highlight.pack.js?1747640535"></script>
+    <script src="/js/clipboard.min.js?1747677070"></script>
+    <script src="/js/perfect-scrollbar.min.js?1747677070"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1747677070"></script>
+    <script src="/js/jquery.sticky.js?1747677070"></script>
+    <script src="/js/featherlight.min.js?1747677070"></script>
+    <script src="/js/highlight.pack.js?1747677070"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1747640535"></script>
-    <script src="/js/learn.js?1747640535"></script>
-    <script src="/js/hugo-learn.js?1747640535"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1747677070"></script>
+    <script src="/js/learn.js?1747677070"></script>
+    <script src="/js/hugo-learn.js?1747677070"></script>
     
     
 
