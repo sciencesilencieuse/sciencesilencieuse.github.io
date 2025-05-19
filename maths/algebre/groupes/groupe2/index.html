@@ -11,40 +11,41 @@
     <title>Représentations - Science en vrac</title>
     
     
+
+
 <script>
-window.MathJax = {
+MathJax = {
   tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']],
-    displayMath: [['$$', '$$'], ['\\[', '\\]']],
-    packages: {'[+]': ['ams','color','bbox','mhchem']} 
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
   },
-  svg: {fontCache: 'local'}  
+  svg: {
+    fontCache: 'global'
+  }
 };
 </script>
-
-
-<script async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+<script
+  type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
 </script>
     
 
     
-    <link href="/css/nucleus.css?1747637254" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1747637254" rel="stylesheet">
-    <link href="/css/hybrid.css?1747637254" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1747637254" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1747637254" rel="stylesheet">
-    <link href="/css/auto-complete.css?1747637254" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1747637254" rel="stylesheet">
-    <link href="/css/theme.css?1747637254" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1747637254" rel="stylesheet">
+    <link href="/css/nucleus.css?1747638480" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1747638480" rel="stylesheet">
+    <link href="/css/hybrid.css?1747638480" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1747638480" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1747638480" rel="stylesheet">
+    <link href="/css/auto-complete.css?1747638480" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1747638480" rel="stylesheet">
+    <link href="/css/theme.css?1747638480" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1747638480" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1747637254" rel="stylesheet">
+    <link href="/css/theme-blue.css?1747638480" rel="stylesheet">
     
-    <link href="/css/foo.css?1747637254" rel="stylesheet"><link href="/css/bar.css?1747637254" rel="stylesheet">
+    <link href="/css/foo.css?1747638480" rel="stylesheet"><link href="/css/bar.css?1747638480" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1747637254"></script>
+    <script src="/js/jquery-3.3.1.min.js?1747638480"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -98,14 +99,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1747637254"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1747637254"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1747638480"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1747638480"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1747637254"></script>
+<script type="text/javascript" src="/js/search.js?1747638480"></script>
 
     
   </div>
@@ -1242,7 +1243,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <li><a href="#conditions-dorthonormalité-et-de-complétude-pour-les-représentations-irréductibles">Conditions d’orthonormalité et de complétude pour les représentations irréductibles</a>
       <ul>
         <li><a href="#opérateur-dentrelacement">Opérateur d&rsquo;entrelacement</a></li>
-        <li><a href="#lemme-de-schur">Lemme de Schur </a></li>
+        <li><a href="#lemme-de-schur">Lemme de Schur</a></li>
         <li><a href="#démonstration-de-lorthonormalité">Démonstration de l&rsquo;orthonormalité</a></li>
         <li><a href="#applications-de-lorthonormalité">Applications de l&rsquo;orthonormalité</a></li>
       </ul>
@@ -1678,15 +1679,19 @@ $</p>
 </div>
 <p>On aurait ainsi $v_2^{\prime}=U_2(g) v_2=U_2(g) A v_1=A v_1^{\prime}=A U_1(g) v_1$.</p>
 <p>Formalisons :
-Soient $U_1(G) \in V_1$ et $U_2(G) \in V_2$ deux représentations. L’<strong>opérateur d’entrelacement</strong> $A$ (ou homomorphisme de représentations) est une application linéaire de $V_1$ sur $V_2$ tel que $A U_1(g)=U_2(g) A$ pour tout $g\in G$.<br> On dit que $A$ entrelace $U_1$ et $U_2$ ce qui est plutôt mignon.<br> On dit aussi que $A$ est une application G-équivariante, sobriquet assez parlant bien que moins poétique.<br> Et pour les esprits schématiques, l’opérateur d’entrelacement peut aussi être définit tel que le diagramme suivant commute pour tout $g\in G$, le chemin rouge et le chemin bleu arrivant au même endroit :</p>
+Soient $U_1(G) \in V_1$ et $U_2(G) \in V_2$ deux représentations. L’<strong>opérateur d’entrelacement</strong> $A$ (ou homomorphisme de représentations) est une application linéaire de $V_1$ sur $V_2$ tel que $A U_1(g)=U_2(g) A$ pour tout $g\in G$.<br>
+On dit que $A$ entrelace $U_1$ et $U_2$ ce qui est plutôt mignon.<br>
+On dit aussi que $A$ est une application G-équivariante, sobriquet assez parlant bien que moins poétique.<br>
+Et pour les esprits schématiques, l’opérateur d’entrelacement peut aussi être définit tel que le diagramme suivant commute pour tout $g\in G$, le chemin rouge et le chemin bleu arrivant au même endroit :</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/schur2.png" style="box-shadow:none;background:none;">
 </div>
 <p>L’ensemble de tous les opérateurs d’entrelacement de $U_1$ à $U_2$ est noté $\operatorname{Hom}_G\left(U_1, U_2\right)$.</p>
-<h3 id="lemme-de-schur">Lemme de Schur </h3>
+<h3 id="lemme-de-schur">Lemme de Schur</h3>
 <div id="theo">
 <b>Lemme de Schur</b>&nbsp;:
-<p>Soit $U_1(G)$ et $U_2(G)$ deux représentations irréductible d’un groupe $G$ sur des espaces vectoriels $V_1$ et $V_2$ et $A \in \operatorname{Hom}_G\left(U_1, U_2\right)$, un opérateur d’entrelacement.<br> On a alors : soit $A=0$, soit $V_1$ et $V_2$ sont isomorphes et les représentations $U_1$ et $U_2$ sont équivalentes.</p>
+<p>Soit $U_1(G)$ et $U_2(G)$ deux représentations irréductible d’un groupe $G$ sur des espaces vectoriels $V_1$ et $V_2$ et $A \in \operatorname{Hom}_G\left(U_1, U_2\right)$, un opérateur d’entrelacement.<br>
+On a alors : soit $A=0$, soit $V_1$ et $V_2$ sont isomorphes et les représentations $U_1$ et $U_2$ sont équivalentes.</p>
 </div>
 <br>
 <div id="preuve">
@@ -1854,7 +1859,7 @@ Preuve&nbsp;:
 </div>
 <p>Ça va nous permettre de  démontrer les relations d’orthonormalité et de complétude sur le groupe des caractères. Mais d’abord, énonçons-les&hellip;</p>
 <div id="theo">
-<p>Les caractères de représentations irréductibles non équivalentes d’un groupe $G$ satisfont les relations suivantes : </p>
+<p>Les caractères de représentations irréductibles non équivalentes d’un groupe $G$ satisfont les relations suivantes :</p>
 <div id="grosseformule" style="margin-top:-0em;margin-bottom:-0em;">
 <p>$$
 \sum_i \frac{n_i}{n_G} \chi_\mu^{\dagger i} \chi_i^\nu=\delta_\mu^\nu \quad \text { orthonormalité }
@@ -1864,7 +1869,9 @@ $$</p>
 <p>$$
 \frac{n_i}{n_G} \sum_\mu \chi_i^\mu \chi_\mu^{\dagger j}=\delta_i^j \quad \text { complétude }
 $$</p>
-</div> <p style="text-align:center;margin-top:-1.5em;">où par convention $\chi_\mu^{\dagger i}=\left(\chi_i^\mu\right)^*$</p> Les $i$ courent sur les différentes classes du groupe et les $\mu$ sur les différentes représentations irréductibles non équivalentes.
+</div>
+<p style="text-align:center;margin-top:-1.5em;">où par convention $\chi_\mu^{\dagger i}=\left(\chi_i^\mu\right)^*$</p>
+Les $i$ courent sur les différentes classes du groupe et les $\mu$ sur les différentes représentations irréductibles non équivalentes.
 </div>
 <br>
 <div id="preuve">
@@ -2702,16 +2709,16 @@ $$</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1747637254"></script>
-    <script src="/js/perfect-scrollbar.min.js?1747637254"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1747637254"></script>
-    <script src="/js/jquery.sticky.js?1747637254"></script>
-    <script src="/js/featherlight.min.js?1747637254"></script>
-    <script src="/js/highlight.pack.js?1747637254"></script>
+    <script src="/js/clipboard.min.js?1747638480"></script>
+    <script src="/js/perfect-scrollbar.min.js?1747638480"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1747638480"></script>
+    <script src="/js/jquery.sticky.js?1747638480"></script>
+    <script src="/js/featherlight.min.js?1747638480"></script>
+    <script src="/js/highlight.pack.js?1747638480"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1747637254"></script>
-    <script src="/js/learn.js?1747637254"></script>
-    <script src="/js/hugo-learn.js?1747637254"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1747638480"></script>
+    <script src="/js/learn.js?1747638480"></script>
+    <script src="/js/hugo-learn.js?1747638480"></script>
     
     
 
