@@ -10,50 +10,41 @@
     <link rel="icon" href="/images/favicon.png" type="image/png">
     <title>TQC-1 - Science en vrac</title>
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
-
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js" integrity="sha384-RTN08a0AXIioPBcVosEqPUfKK+rPp+h1x/izR7xMkdMyuwkcZCWdxO+RSwIFtJXN"  crossorigin="anonymous"></script>
-
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-
-
-
+    
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-            delimiters: [
-                {left: "$$", right: "$$", display: true},
-                {left: "$", right: "$", display: false}
-            ]
-        });
-    });
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    packages: {'[+]': ['ams','color','bbox','mhchem']} 
+  },
+  svg: {fontCache: 'local'}  
+};
 </script>
 
 
+<script async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
     
 
     
-    <link href="/css/nucleus.css?1747569001" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1747569001" rel="stylesheet">
-    <link href="/css/hybrid.css?1747569001" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1747569001" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1747569001" rel="stylesheet">
-    <link href="/css/auto-complete.css?1747569001" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1747569001" rel="stylesheet">
-    <link href="/css/theme.css?1747569001" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1747569001" rel="stylesheet">
+    <link href="/css/nucleus.css?1747637254" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1747637254" rel="stylesheet">
+    <link href="/css/hybrid.css?1747637254" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1747637254" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1747637254" rel="stylesheet">
+    <link href="/css/auto-complete.css?1747637254" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1747637254" rel="stylesheet">
+    <link href="/css/theme.css?1747637254" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1747637254" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1747569001" rel="stylesheet">
+    <link href="/css/theme-blue.css?1747637254" rel="stylesheet">
     
-    <link href="/css/foo.css?1747569001" rel="stylesheet"><link href="/css/bar.css?1747569001" rel="stylesheet">
+    <link href="/css/foo.css?1747637254" rel="stylesheet"><link href="/css/bar.css?1747637254" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1747569001"></script>
+    <script src="/js/jquery-3.3.1.min.js?1747637254"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +98,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1747569001"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1747569001"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1747637254"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1747637254"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1747569001"></script>
+<script type="text/javascript" src="/js/search.js?1747637254"></script>
 
     
   </div>
@@ -1841,7 +1832,8 @@ $</p>
 </summary>
 Pour la partie potentiel, on obtient bien 0 puisque $U (\hat{n}_{1\uparrow} \hat{n}_{1\downarrow}+\hat{n}_{2\uparrow} \hat{n}_{2\downarrow})|\uparrow,\uparrow\rangle=U(1\times 0+1\times 0)|\uparrow,\uparrow\rangle = 0$ (puisque l'opérateur qui compte les spins bas trouve toujours zéro).<br>
 Et pour la partie cinétique, on ne garde que les termes de spin haut de l'Hamiltonien&nbsp;: $-t (\hat{c}^\dagger_{1\uparrow} \hat{c}_{2\uparrow}+\hat{c}^\dagger_{2\uparrow} \hat{c}_{1\uparrow})$. Et on réécrit $|\uparrow,\uparrow\rangle$ comme $\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{2\uparrow}|0\rangle$.<br>
-$-t (\hat{c}^\dagger_{1\uparrow} \hat{c}_{2\uparrow}+\hat{c}^\dagger_{2\uparrow} \hat{c}_{1\uparrow})\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{2\uparrow}|0\rangle=-t \hat{c}^\dagger_{1\uparrow} \hat{c}_{2\uparrow}\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{2\uparrow}|0\rangle-t\hat{c}^\dagger_{2\uparrow} \hat{c}_{1\uparrow}\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{2\uparrow}|0\rangle=t \hat{c}^\dagger_{1\uparrow} \hat{c}_{2\uparrow}\hat{c}^\dagger_{2\uparrow}\hat{c}^\dagger_{1\uparrow}|0\rangle-t\hat{c}^\dagger_{2\uparrow} \hat{c}_{1\uparrow}\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{2\uparrow}|0\rangle=t \hat{c}^\dagger_{1\uparrow}(1-\hat{n}_{2\uparrow})\hat{c}^\dagger_{1\uparrow}|0\rangle-t\hat{c}^\dagger_{2\uparrow}(1-\hat{n}_{1\uparrow})\hat{c}^\dagger_{2\uparrow}|0\rangle = t  \cancel{\hat{c}^\dagger_{1\uparrow}  \hat{c}^\dagger_{1\uparrow} }|0\rangle - t\hat{c}^\dagger_{1\uparrow}\cancel{\hat{n}_{2\uparrow}|\uparrow,0\rangle}- t\cancel{\hat{c}^\dagger_{2\uparrow}\hat{c}^\dagger_{2\uparrow}}|0\rangle+t\hat{c}^\dagger_{2\uparrow}\cancel{\hat{n}_{1\uparrow}|0,\uparrow\rangle}=0$
+<div style="overflow-x:auto;">
+$-t (\hat{c}^\dagger_{1\uparrow} \hat{c}_{2\uparrow}+\hat{c}^\dagger_{2\uparrow} \hat{c}_{1\uparrow})\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{2\uparrow}|0\rangle=-t \hat{c}^\dagger_{1\uparrow} \hat{c}_{2\uparrow}\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{2\uparrow}|0\rangle-t\hat{c}^\dagger_{2\uparrow} \hat{c}_{1\uparrow}\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{2\uparrow}|0\rangle=t \hat{c}^\dagger_{1\uparrow} \hat{c}_{2\uparrow}\hat{c}^\dagger_{2\uparrow}\hat{c}^\dagger_{1\uparrow}|0\rangle-t\hat{c}^\dagger_{2\uparrow} \hat{c}_{1\uparrow}\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{2\uparrow}|0\rangle=t \hat{c}^\dagger_{1\uparrow}(1-\hat{n}_{2\uparrow})\hat{c}^\dagger_{1\uparrow}|0\rangle-t\hat{c}^\dagger_{2\uparrow}(1-\hat{n}_{1\uparrow})\hat{c}^\dagger_{2\uparrow}|0\rangle = t  \cancel{\hat{c}^\dagger_{1\uparrow}  \hat{c}^\dagger_{1\uparrow} }|0\rangle - t\hat{c}^\dagger_{1\uparrow}\cancel{\hat{n}_{2\uparrow}|\uparrow,0\rangle}- t\cancel{\hat{c}^\dagger_{2\uparrow}\hat{c}^\dagger_{2\uparrow}}|0\rangle+t\hat{c}^\dagger_{2\uparrow}\cancel{\hat{n}_{1\uparrow}|0,\uparrow\rangle}=0$</div>
 </details>
 <p>S&rsquo;ils sont de spins opposés, une base possible est $\{|\uparrow\downarrow,0\rangle,|\uparrow,\downarrow\rangle,|\downarrow,\uparrow\rangle,|0,\uparrow\downarrow\rangle\}$. Et dans cette base, l&rsquo;Hamiltonien de Hubbard s&rsquo;écrit :</p>
 <p>$
@@ -1862,8 +1854,12 @@ $</p>
 <p>Terme cinétique : comme $i$ et $j$ doivent être différents, on a 4 termes dans la somme $(-t) \hat{c}^\dagger_{1\uparrow} \hat{c}_{2\uparrow}+(-t) \hat{c}^\dagger_{2\uparrow} \hat{c}_{1\uparrow}+(-t) \hat{c}^\dagger_{1\downarrow} \hat{c}_{2\downarrow}+(-t) \hat{c}^\dagger_{2\downarrow} \hat{c}_{1\downarrow}$.<br>
 Seuls les deux termes contenant un opérateur d&rsquo;annihilation sur le site 1 ne donneront pas un résultat nul. Il nous reste $-t(\hat{c}^\dagger_{2\uparrow} \hat{c}_{1\uparrow} +\hat{c}^\dagger_{2\downarrow} \hat{c}_{1\downarrow})$.<br>
 Appliquons cette somme d&rsquo;opérateurs à $|\uparrow\downarrow,0\rangle$ qu&rsquo;on peut aussi écrire $\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{1\downarrow}|0\rangle$. <br>
-Le permier terme nous donne $-t\hat{c}^\dagger_{2\uparrow} \hat{c}_{1\uparrow} \hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{1\downarrow}|0\rangle=-t\hat{c}^\dagger_{2\uparrow} (1-\hat{n}_{1\uparrow})\hat{c}^\dagger_{1\downarrow}|0\rangle=-t\hat{c}^\dagger_{2\uparrow}\hat{c}^\dagger_{1\downarrow}|0\rangle+t\hat{c}^\dagger_{2\uparrow} \cancel{\hat{n}_{1\uparrow}|\downarrow,0\rangle}=-t\hat{c}^\dagger_{2\uparrow}|\downarrow,0\rangle=t|\downarrow,\uparrow\rangle$. Le dernier changement de signe venant du fait qu&rsquo;il y ait déjà un fermion à gauche de celui créé dans l&rsquo;état 2 ($(-1)^{n_1+n_2+\cdots+n_{i-1}}=(-1)^1=-1$).<br>
-Et le deuxième terme donne $-t\hat{c}^\dagger_{2\downarrow} \hat{c}_{1\downarrow}\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{1\downarrow}|0\rangle=t\hat{c}^\dagger_{2\downarrow} \hat{c}_{1\downarrow}\hat{c}^\dagger_{1\downarrow}\hat{c}^\dagger_{1\uparrow}|0\rangle=t\hat{c}^\dagger_{2\downarrow} (1-\hat{n}_{1\downarrow})\hat{c}^\dagger_{1\uparrow}|0\rangle=t\hat{c}^\dagger_{2\downarrow}\hat{c}^\dagger_{1\uparrow}|0\rangle-t\hat{c}^\dagger_{2\downarrow}\cancel{\hat{n}_{1\downarrow}|\uparrow,0\rangle}=-t|\uparrow,\downarrow\rangle$.</p>
+Le premier terme nous donne<br></p>
+<div style="overflow-x:auto;">
+$-t\hat{c}^\dagger_{2\uparrow} \hat{c}\_{1\uparrow} \hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{1\downarrow}|0\rangle=-t\hat{c}^\dagger_{2\uparrow} (1-\hat{n}\_{1\uparrow})\hat{c}^\dagger_{1\downarrow}|0\rangle=-t\hat{c}^\dagger_{2\uparrow}\hat{c}^\dagger_{1\downarrow}|0\rangle+t\hat{c}^\dagger_{2\uparrow} \cancel{\hat{n}\_{1\uparrow}|\downarrow,0\rangle}=-t\hat{c}^\dagger_{2\uparrow}|\downarrow,0\rangle=t|\downarrow,\uparrow\rangle$</div> <br>
+Le dernier changement de signe venant du fait qu'il y ait déjà un fermion à gauche de celui créé dans l'état 2 ($(-1)^{n_1+n_2+\cdots+n_{i-1}}=(-1)^1=-1$).<br>
+Et le deuxième terme donne 
+<div style="overflow-x:auto;">$-t\hat{c}^\dagger_{2\downarrow} \hat{c}\_{1\downarrow}\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{1\downarrow}|0\rangle=t\hat{c}^\dagger_{2\downarrow} \hat{c}\_{1\downarrow}\hat{c}^\dagger_{1\downarrow}\hat{c}^\dagger_{1\uparrow}|0\rangle=t\hat{c}^\dagger_{2\downarrow} (1-\hat{n}\_{1\downarrow})\hat{c}^\dagger_{1\uparrow}|0\rangle=t\hat{c}^\dagger_{2\downarrow}\hat{c}^\dagger_{1\uparrow}|0\rangle-t\hat{c}^\dagger_{2\downarrow}\cancel{\hat{n}\_{1\downarrow}|\uparrow,0\rangle}=-t|\uparrow,\downarrow\rangle$</div>
 </details>
 <p>La matrice peut se diagonaliser et l&rsquo;état fondamental s&rsquo;écrit $|\psi\rangle = N(|\uparrow\downarrow,0\rangle+W|\uparrow,\downarrow\rangle-W|\downarrow,\uparrow\rangle+|0,\uparrow\downarrow\rangle)$ où $N$ est une constante de normalisation et $W=\frac{U}{4t}+\frac{1}{4t}\sqrt{U^2+16t^2}$ pour une énergie $E=\frac{U}{2}-\frac{1}{2}\sqrt{U^2+16t^2}$. C&rsquo;est déjà un résultat étonament complexe pour un système si simple (deux électrons sur deux sites)&hellip;</p>
 </div>
@@ -2676,16 +2672,16 @@ Les modèles considérés se restreignaient à des réseaux discrets adaptés à
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1747569001"></script>
-    <script src="/js/perfect-scrollbar.min.js?1747569001"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1747569001"></script>
-    <script src="/js/jquery.sticky.js?1747569001"></script>
-    <script src="/js/featherlight.min.js?1747569001"></script>
-    <script src="/js/highlight.pack.js?1747569001"></script>
+    <script src="/js/clipboard.min.js?1747637254"></script>
+    <script src="/js/perfect-scrollbar.min.js?1747637254"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1747637254"></script>
+    <script src="/js/jquery.sticky.js?1747637254"></script>
+    <script src="/js/featherlight.min.js?1747637254"></script>
+    <script src="/js/highlight.pack.js?1747637254"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1747569001"></script>
-    <script src="/js/learn.js?1747569001"></script>
-    <script src="/js/hugo-learn.js?1747569001"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1747637254"></script>
+    <script src="/js/learn.js?1747637254"></script>
+    <script src="/js/hugo-learn.js?1747637254"></script>
     
     
 

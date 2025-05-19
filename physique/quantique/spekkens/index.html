@@ -10,50 +10,41 @@
     <link rel="icon" href="/images/favicon.png" type="image/png">
     <title>Théorie-jouet de Spekkens - Science en vrac</title>
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
-
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js" integrity="sha384-RTN08a0AXIioPBcVosEqPUfKK+rPp+h1x/izR7xMkdMyuwkcZCWdxO+RSwIFtJXN"  crossorigin="anonymous"></script>
-
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-
-
-
+    
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-            delimiters: [
-                {left: "$$", right: "$$", display: true},
-                {left: "$", right: "$", display: false}
-            ]
-        });
-    });
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    packages: {'[+]': ['ams','color','bbox','mhchem']} 
+  },
+  svg: {fontCache: 'local'}  
+};
 </script>
 
 
+<script async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
     
 
     
-    <link href="/css/nucleus.css?1747569001" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1747569001" rel="stylesheet">
-    <link href="/css/hybrid.css?1747569001" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1747569001" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1747569001" rel="stylesheet">
-    <link href="/css/auto-complete.css?1747569001" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1747569001" rel="stylesheet">
-    <link href="/css/theme.css?1747569001" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1747569001" rel="stylesheet">
+    <link href="/css/nucleus.css?1747637254" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1747637254" rel="stylesheet">
+    <link href="/css/hybrid.css?1747637254" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1747637254" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1747637254" rel="stylesheet">
+    <link href="/css/auto-complete.css?1747637254" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1747637254" rel="stylesheet">
+    <link href="/css/theme.css?1747637254" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1747637254" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1747569001" rel="stylesheet">
+    <link href="/css/theme-blue.css?1747637254" rel="stylesheet">
     
-    <link href="/css/foo.css?1747569001" rel="stylesheet"><link href="/css/bar.css?1747569001" rel="stylesheet">
+    <link href="/css/foo.css?1747637254" rel="stylesheet"><link href="/css/bar.css?1747637254" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1747569001"></script>
+    <script src="/js/jquery-3.3.1.min.js?1747637254"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +98,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1747569001"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1747569001"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1747637254"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1747637254"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1747569001"></script>
+<script type="text/javascript" src="/js/search.js?1747637254"></script>
 
     
   </div>
@@ -1250,6 +1241,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <li><a href="#le-principe-déquilibre-de-la-connaissance">Le principe d&rsquo;équilibre de la connaissance</a></li>
     <li><a href="#analogue-dun-qubit-état-pur">Analogue d&rsquo;un qubit état pur</a></li>
     <li><a href="#transformations">Transformations</a></li>
+    <li><a href="#mesure">Mesure</a></li>
   </ul>
 </nav>
     </div>
@@ -1313,6 +1305,20 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     padding:5px 20px 5px 20px;
 }
 </style>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ]
+  },
+  svg: {
+    fontCache: 'global'
+  }
+};
+</script>
+<script
+  type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script>
 <h1 id="théorie-jouet-de-spekkens">Théorie-jouet de Spekkens</h1>
 
 <div class="notices note" style="--title: 'note';">
@@ -1438,24 +1444,24 @@ $$\mathcal{F}[\bar{p},\bar{q}] \;=\; \sum_{k}\sqrt{p_k}\sqrt{q_k}$$</p>
 </div>
 <p>La <strong>fidélité</strong> est une mesure de la non disjonction. La disjonction et l&rsquo;égalité sont deux cas particuliers de fidélités respectives $\mathcal{F}=0$ et $\mathcal{F}=1$.</p>
 <div id="preuve">
-<p>Exemple :</p>
-<p>Pour les états épistémiques $1\lor 3$ et $1\lor 2$. Chaque état autorise exactement deux états ontiques et, par le principe d’uniformité, leur assigne la probabilité $1/2$.</p>
+<p>Exemple pour les états épistémiques $1\lor 3$ et $1\lor 2$ :</p>
+<p>Chaque état autorise exactement deux états ontiques et, par le principe d’uniformité, leur assigne la probabilité $1/2$.</p>
 <p>Les valeurs de $p_k$ et $q_k$ sont donc :</p>
 <table style="text-align:center;">
 <tr>
-<th style="text-align:center;">État ontique</th><th style="text-align:center;">$p_k$</th><th style="text-align:center;">$q_k$</th>
+<th style="text-align:center;">État ontique</th><th style="text-align:center;">$p_k$ pour $1\lor 3$</th><th style="text-align:center;">$q_k$ pour $1\lor 2$</th>
 </tr>
 <tr>
 <td>$1$</td><td>$1/2$</td><td>$1/2$</td>
 </tr>
 <tr>
-<td>$1$</td><td>$0$</td><td>$1/2$</td>
+<td>$2$</td><td>$0$</td><td>$1/2$</td>
 </tr>
 <tr>
-<td>$1$</td><td>$1/2$</td><td>$0$</td>
+<td>$3$</td><td>$1/2$</td><td>$0$</td>
 </tr>
 <tr>
-<td>$1$</td><td>$0$</td><td>$0$</td>
+<td>$4$</td><td>$0$</td><td>$0$</td>
 </tr>
 </table>
 <p>Calcul de la fidélité :</p>
@@ -1472,8 +1478,7 @@ $$\mathcal{F}[\bar{p},\bar{q}] \;=\; \sum_{k}\sqrt{p_k}\sqrt{q_k}$$</p>
 \end{aligned}
 $$</p>
 </div>
- correspondant à l'état ontique commun ($1$) : la seule ontique commune est l’état 1.
-<p>Et c’est bien la même valeur que la fidélité quantique entre les états qubits correspondants, $1\lor3 \;\longleftrightarrow\; |+\rangle$, $1\lor2 \;\longleftrightarrow\; |0\rangle$, puisque $|\langle+|0\rangle|^{2} = 1/2$.</p>
+<p>Et on obtient bien la même valeur de fidélité quantique entre les états qubits correspondants, $1\lor3 \;\longleftrightarrow\; |+\rangle$, $1\lor2 \;\longleftrightarrow\; |0\rangle$ : $|\langle+|0\rangle|^{2} = 1/2$.</p>
 </div>
 <br>
 <div id="def">
@@ -1501,12 +1506,62 @@ Les quatre opérations binaires cohérentes $+_1$, $+_2$, $+_3$, $+_4$ sont anal
 <p>Les transformations permises sont donc seulement les permutations des quatre états ontiques. En effet, si une transformation envoyait plusieurs états ontiques sur un seul, elle pourrait faire passer un état épistémique légal (respectant le principe d’équilibre des connaissances) vers un état illégal qui le viole.</p>
 <div id="preuve">
 <p>Exemple de la permutation $(123)(4)$ (permutation cyclique des états ontiques 1, 2 et 3 et absence de permutation pour l&rsquo;état 4).</p>
-<p>De $1\lor 2$, on obtient $2 \lor 3$. Et de $3\lor 4$, on obtient $1\lor 4$. La fidélité entre états initiaux (0 ici) est bien conservée entre les états finaux.</p>
+<p>De $1\lor 2$, on obtient $2 \lor 3$. Et de $3\lor 4$, on obtient $1\lor 4$. La fidélité entre états initiaux (nulle ici) est bien conservée entre les états finaux.</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/spek6.png" style="box-shadow:none;background:none;">
 </div>
 <p>Et cela reste vrai pour les 24 permutations des états ontiques éléments du groupe $S_4$.</p>
-</br>
+</div>
+<h2 id="mesure">Mesure</h2>
+<p>Dans la théorie-jouet comme en mécanique quantique, une mesure se doit de fournir un résultat mais aussi un état post-mesure.</p>
+<p>En quantique, l&rsquo;état post-mesure est le vecteur propre de l&rsquo;observable associé à la valeur propre mesurée.</p>
+<p>En théorie-jouet, l&rsquo;état post-mesure doit continuer à obéir au principe d&rsquo;équilibre de la connaissance. Autrement dit, la mise à jour doit éliminer tous les états ontiques incompatibles avec l’issue observée mais sans jamais laisser moins de deux états ontiques possibles pour un bit-jouet.</p>
+<p>Le système élémentaire possède 4 états ontiques ; une mesure ne peut donc que les scinder en deux paquets de deux, ce qui donne $\binom{4}{2}=6$ partitions possibles. Mais certaines de ces partitions ne sont qu&rsquo;un réétiquetage comme $\{a,b\}\,|\,\{c,d\}$ et $\{c,d\}\,|\,\{a,b\}$ qui sont équivalentes. Il ne reste finalement que trois directions de mesure analogues aux trois axes $X$, $Y$, $Z$ de mesure d’un qubit.</p>
+<p>On note la mesure permettant de distinguer $a\lor b$ de $c\lor d$ avec les chiffres romains $\color{#1DB100}\text{I}$ et $\color{#D41876}\text{II}$ :</p>
+<div id="def" style="overflow-x:auto;">
+<p>$$
+\begin{array}{|c|c|c|c|}
+\hline
+\color{#1DB100}\text{I} &amp; \color{#1DB100}\text{I} &amp;\color{#D41876} \text{II} &amp;\color{#D41876} \text{II}\\
+\hline
+\end{array} = \{1\lor 2,3\lor 4\} \leftrightarrow \text{mesure sur l&rsquo;axe }Z
+$$</p>
+<p>$$
+\begin{array}{|c|c|c|c|}
+\hline
+\color{#1DB100}\text{I} &amp;\color{#D41876} \text{II} &amp; \color{#1DB100}\text{I} &amp;\color{#D41876} \text{II}\\
+\hline
+\end{array} = \{1\lor 3,2\lor 4\} \leftrightarrow \text{mesure sur l&rsquo;axe }X
+$$</p>
+<p>$$
+\begin{array}{|c|c|c|c|}
+\hline
+\color{#1DB100}\text{I} &amp;\color{#D41876} \text{II} &amp;\color{#D41876} \text{II} &amp; \color{#1DB100}\text{I}\\
+\hline
+\end{array} = \{1\lor 4,2\lor 3\} \leftrightarrow \text{mesure sur l&rsquo;axe }Y
+$$</p>
+</div>
+<p>Deux états épistémiques disjoints (tout comme des états quantiques orthogonaux) sont parfaitement distinguables par un choix appropriés de la direction de mesure. La mesure $\begin{array}{|c|c|c|c|}
+\hline
+\color{#1DB100} \text{I} &amp;\color{#D41876} \text{II} &amp;\color{#1DB100} \text{I} &amp; \color{#D41876}\text{II}\\
+\hline
+\end{array}$ permet par exemple de séparer avec certitude $1\lor 3$ et $2\lor 4$.</p>
+<p>Donc si on utilise $\begin{array}{|c|c|c|c|}
+\hline
+\color{#1DB100} \text{I} &amp;\color{#D41876} \text{II} &amp;\color{#1DB100} \text{I} &amp; \color{#D41876}\text{II}\\
+\hline
+\end{array}$ sur $2\lor 4$, l&rsquo;état post-mesure est toujours $2\lor 4$.</p>
+<p>Certaines mesures peuvent laisser une ambigüité comme $\begin{array}{|c|c|c|c|}
+\hline
+\color{#1DB100}\text{I} &amp;\color{#D41876} \text{II} &amp;\color{#1DB100} \text{I} &amp;\color{#D41876} \text{II}\\
+\hline
+\end{array}$ sur $1\lor 2$. Puisque l&rsquo;état ontique est soit en $1$, soit en $2$, les deux résultats de mesures $1\lor 3$ et $2\lor 4$ sont possibles et obtenus avec la même probabilité.</p>
+<p>Il est important de noter que l&rsquo;incertitude ici n&rsquo;est pas fondamentale mais la conséquence du manque de connaissance initiale sur la position de l&rsquo;état ontique.</p>
+<p>Imaginons que $\begin{array}{|c|c|c|c|}
+\hline
+\color{#1DB100}\text{I} &amp;\color{#D41876} \text{II} &amp;\color{#1DB100} \text{I} &amp;\color{#D41876} \text{II}\\
+\hline
+\end{array}$ sur $1\lor 2$ donne $1\lor 3$. Cela nous indique où était l&rsquo;état ontique (en $1$) mais le principe d&rsquo;équilibre de la connaissance nous interdisant de connaître l&rsquo;état ontique actuel, cela impose que la mesure ait perturbé le système en distribuant l&rsquo;état ontique aléatoirement sur les deux états possibles mesurés $1$ ou $3$.</p>
 
 
 <footer class="footline">
@@ -2311,16 +2366,16 @@ Les quatre opérations binaires cohérentes $+_1$, $+_2$, $+_3$, $+_4$ sont anal
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1747569001"></script>
-    <script src="/js/perfect-scrollbar.min.js?1747569001"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1747569001"></script>
-    <script src="/js/jquery.sticky.js?1747569001"></script>
-    <script src="/js/featherlight.min.js?1747569001"></script>
-    <script src="/js/highlight.pack.js?1747569001"></script>
+    <script src="/js/clipboard.min.js?1747637254"></script>
+    <script src="/js/perfect-scrollbar.min.js?1747637254"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1747637254"></script>
+    <script src="/js/jquery.sticky.js?1747637254"></script>
+    <script src="/js/featherlight.min.js?1747637254"></script>
+    <script src="/js/highlight.pack.js?1747637254"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1747569001"></script>
-    <script src="/js/learn.js?1747569001"></script>
-    <script src="/js/hugo-learn.js?1747569001"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1747637254"></script>
+    <script src="/js/learn.js?1747637254"></script>
+    <script src="/js/hugo-learn.js?1747637254"></script>
     
     
 

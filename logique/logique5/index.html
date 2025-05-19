@@ -10,50 +10,41 @@
     <link rel="icon" href="/images/favicon.png" type="image/png">
     <title>Logique modale - Science en vrac</title>
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css" integrity="sha384-Xi8rHCmBmhbuyyhbI88391ZKP2dmfnOl4rT9ZfRI7mLTdk1wblIUnrIq35nqwEvC" crossorigin="anonymous">
-
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js" integrity="sha384-X/XCfMm41VSsqRNQgDerQczD69XqmjOOOwYQvr/uuC+j4OPoNhVgjdGFwhvN02Ja" crossorigin="anonymous"></script>
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js" integrity="sha384-RTN08a0AXIioPBcVosEqPUfKK+rPp+h1x/izR7xMkdMyuwkcZCWdxO+RSwIFtJXN"  crossorigin="anonymous"></script>
-
-
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"
-        onload="renderMathInElement(document.body);"></script>
-
-
-
+    
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-            delimiters: [
-                {left: "$$", right: "$$", display: true},
-                {left: "$", right: "$", display: false}
-            ]
-        });
-    });
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    packages: {'[+]': ['ams','color','bbox','mhchem']} 
+  },
+  svg: {fontCache: 'local'}  
+};
 </script>
 
 
+<script async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
     
 
     
-    <link href="/css/nucleus.css?1747569001" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1747569001" rel="stylesheet">
-    <link href="/css/hybrid.css?1747569001" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1747569001" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1747569001" rel="stylesheet">
-    <link href="/css/auto-complete.css?1747569001" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1747569001" rel="stylesheet">
-    <link href="/css/theme.css?1747569001" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1747569001" rel="stylesheet">
+    <link href="/css/nucleus.css?1747637254" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1747637254" rel="stylesheet">
+    <link href="/css/hybrid.css?1747637254" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1747637254" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1747637254" rel="stylesheet">
+    <link href="/css/auto-complete.css?1747637254" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1747637254" rel="stylesheet">
+    <link href="/css/theme.css?1747637254" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1747637254" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1747569001" rel="stylesheet">
+    <link href="/css/theme-blue.css?1747637254" rel="stylesheet">
     
-    <link href="/css/foo.css?1747569001" rel="stylesheet"><link href="/css/bar.css?1747569001" rel="stylesheet">
+    <link href="/css/foo.css?1747637254" rel="stylesheet"><link href="/css/bar.css?1747637254" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1747569001"></script>
+    <script src="/js/jquery-3.3.1.min.js?1747637254"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -107,14 +98,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1747569001"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1747569001"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1747637254"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1747637254"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1747569001"></script>
+<script type="text/javascript" src="/js/search.js?1747637254"></script>
 
     
   </div>
@@ -1384,14 +1375,14 @@ MathJax = {
 </div>
 <br>
 <div id="def">
-<p>Soient $I$ un ensemble non vide, $\phi$ une formule et $\text{\bf S}$ un système formel.<br>
-Une <b>preuve</b> de la formule $\varphi$ dans le système formel $\text{\bf S}$ est une suite finie de formule $\langle\varphi_1,\varphi_2,\ldots,\varphi_n\rangle$ telle que :</p>
+<p>Soient $I$ un ensemble non vide, $\phi$ une formule et $\textbf{S}$ un système formel.<br>
+Une <b>preuve</b> de la formule $\varphi$ dans le système formel $\textbf{S}$ est une suite finie de formule $\langle\varphi_1,\varphi_2,\ldots,\varphi_n\rangle$ telle que :</p>
 <ul>
 <li>$\varphi_n=\phi$</li>
 <br>
 <li>chaque $\varphi_l$ vérifie l'une des quatre conditions suivantes&nbsp;:
 <ul>
-<li>$\varphi_l \in \text{\bf S}$ ($\varphi_l$ est un axiome)</li>
+<li>$\varphi_l \in \textbf{S}$ ($\varphi_l$ est un axiome)</li>
 <li>$\varphi_l$ est obtenue par application de la règle du <i>modus ponens</i> à deux formules d'indice inférieurs $\varphi_j$ et $\varphi_k$ où $j , k < l$ ($\varphi_j = \varphi_k\rightarrow\varphi_l$)</li>
 <li>$\varphi_l = \varphi_k[\theta /P]$ où $k < l$ (substitution d'une variable $P$ quelconque par une formule $\theta$ quelconque dans une formule d'indice inférieure)</li>
 <li>$\varphi_l = [i]\varphi_j$ où $j < l$ ($\varphi_l$ est obtenue à partir de l'application de la règle de nécessitation appliquée à une formule d'indice inférieure pour une étiquette $i\in I$ quelconque)</li>
@@ -1402,15 +1393,18 @@ Une <b>preuve</b> de la formule $\varphi$ dans le système formel $\text{\bf S}$
 <br>
 <div id="preuve">
 <p>Exemple 1 :</p>
-<p>Si $\text{\bf S}$ désigne l&rsquo;ensemble des tautologies du calcul des propositions, alors la suite $\langle P\rightarrow(P\lor\neg P),\Diamond  Q\rightarrow(\Diamond Q\rightarrow\lor\neg\Diamond Q),\Box (\Diamond  Q\rightarrow(\Diamond Q\rightarrow\lor\neg\Diamond Q)),\Box (\Diamond  \phi\rightarrow(\Diamond \phi\rightarrow\lor\neg\Diamond \phi))\rangle$ est une preuve de $\Box (\Diamond  Q\rightarrow(\Diamond Q\rightarrow\lor\neg\Diamond Q)),\Box (\Diamond  \phi\rightarrow(\Diamond \phi\rightarrow\lor\neg\Diamond \phi)$ dans ce système.</p>
+<p>Si $\textbf{S}$ désigne l&rsquo;ensemble des tautologies du calcul des propositions, alors la suite</p>
+<div style="overflow-x:auto;margin-top:-1em;">
+$$\langle P\rightarrow(P\lor\neg P),\Diamond  Q\rightarrow(\Diamond Q\rightarrow\lor\neg\Diamond Q),\Box (\Diamond  Q\rightarrow(\Diamond Q\rightarrow\lor\neg\Diamond Q)),\Box (\Diamond  \phi\rightarrow(\Diamond \phi\rightarrow\lor\neg\Diamond \phi))\rangle$$
+</div>
+est une preuve de $\Box (\Diamond  Q\rightarrow(\Diamond Q\rightarrow\lor\neg\Diamond Q)),\Box (\Diamond  \phi\rightarrow(\Diamond \phi\rightarrow\lor\neg\Diamond \phi)$ dans ce système.
 <p>En effet :</p>
-<ul>
-<li>$\varphi_1=P\rightarrow(P\lor\neg P)$ est une tautologie du calcul des propositions et donc un axiome du sydtème formel $\text{\bf S}$,</li>
+<ul style="margin-top:-0.5em;">
+<li>$\varphi_1=P\rightarrow(P\lor\neg P)$ est une tautologie du calcul des propositions et donc un axiome du système formel $\textbf{S}$,</li>
 <li>$\varphi_2 = \Diamond  Q\rightarrow(\Diamond Q\rightarrow\lor\neg\Diamond Q) = P\rightarrow(P\lor\neg P)[\Diamond Q /P]$ est la substitution de la formule $\Diamond Q$ à $P$ dans $\varphi_0$,</li>
 <li>$\varphi_3 = \Box (\Diamond  Q\rightarrow(\Diamond Q\rightarrow\lor\neg\Diamond Q))$ est obtenu par nécessitation de $\varphi_1$,</li>
 <li>$\varphi_4 = \Box (\Diamond  \phi\rightarrow(\Diamond \phi\rightarrow\lor\neg\Diamond \phi) = \varphi_3[\phi/Q]$</li>
 </ul>
-<br>
 <p>C&rsquo;est plus élégant de représenter l&rsquo;enchaînement sous forme d&rsquo;arbre :</p>
 <div id="grosseformule">
 $$
@@ -1431,24 +1425,24 @@ $$
 <br>
 <div id="preuve">
 <p>Exemple 2 :</p>
-<p>Si $\text{\bf S}$ désigne l&rsquo;ensemble des tautologies du calcul des propositions auquel on ajoute la formule $P\rightarrow\Diamond P$, alors l&rsquo;arbre ci-dessous décrit une preuve de $\Box(\phi\rightarrow\Diamond\Diamond\phi)$ dans ce système :</p>
+<p>Si $\textbf{S}$ désigne l&rsquo;ensemble des tautologies du calcul des propositions auquel on ajoute la formule $P\rightarrow\Diamond P$, alors l&rsquo;arbre ci-dessous décrit une preuve de $\Box(\phi\rightarrow\Diamond\Diamond\phi)$ dans ce système :</p>
 <div style="position:relative;width:1300px;max-width:100%;margin-left:auto;margin-right:auto;">
 <img src="/exple260.png">
 </div>
 </div>
 <br>
 <div id="def">
-<p>Soient $\text{\bf S}$ un système formel et $\Gamma$ un ensemble de formules appelées hypothèses.<br>
-On écrit $\Gamma\vdash_\text{\bf S} \phi$ s&rsquo;il existe un ensemble fini de formules $\set{\psi_1,\psi_2,\ldots,\psi_n}\subseteq\Gamma$ tel que la formule $(\psi_1\land\psi_2\land\ldots\land\psi_n)\rightarrow\phi$ puisse être prouvée dans le système formel $\text{\bf S}$. Autrement dit le séquent $\vdash_\text{\bf S}(\psi_1\land\psi_2\land\ldots\land\psi_n)\rightarrow\phi$ est vérifiée pour un nombre fini de formules bien choisies de $\Gamma$.</p>
+<p>Soient $\textbf{S}$ un système formel et $\Gamma$ un ensemble de formules appelées hypothèses.<br>
+On écrit $\Gamma\vdash_\textbf{S}\phi$ s&rsquo;il existe un ensemble fini de formules $\set{\psi_1,\psi_2,\ldots,\psi_n}\subseteq\Gamma$ tel que la formule $(\psi_1\land\psi_2\land\ldots\land\psi_n)\rightarrow\phi$ puisse être prouvée dans le système formel $\textbf{S}$. Autrement dit le séquent $\vdash_\textbf{S}(\psi_1\land\psi_2\land\ldots\land\psi_n)\rightarrow\phi$ est vérifiée pour un nombre fini de formules bien choisies de $\Gamma$.</p>
 </div>
 <br>
 
 <div class="notices info" style="--title: 'info';">
   <p style="display: none;">info</p>
   <div class="notice-body">
-    <p>Attention, ici les hypothèses n&rsquo;ont pas le même sens qu&rsquo;en logique des propositions. En effet, pour prouver le séquent $\phi\vdash_\text{\bf S}\psi$, on ne peut pas ajouter $\phi$ aux axiomes et tenter d&rsquo;atteindre $\psi$ à partir des règles (<em>modus ponens</em>, substitution uniforme et nécessitation). Il faut ici réussir à prouver la formule $\phi\rightarrow\psi$ sur la base des seuls axiomes.
+    <p>Attention, ici les hypothèses n&rsquo;ont pas le même sens qu&rsquo;en logique des propositions. En effet, pour prouver le séquent $\phi\vdash_\textbf{S}\psi$, on ne peut pas ajouter $\phi$ aux axiomes et tenter d&rsquo;atteindre $\psi$ à partir des règles (<em>modus ponens</em>, substitution uniforme et nécessitation). Il faut ici réussir à prouver la formule $\phi\rightarrow\psi$ sur la base des seuls axiomes.
 <br><br>
-Si on pouvait faire comme en logique des propositions, prouver $\phi\vdash_\text{\bf S}\Box\phi$ deviendrait évident : on place $\phi$ dans les axiomes et on applique la règle de nécessitation. Mais non, il faut pouvoir prouver $\vdash_\text{\bf S}\phi\rightarrow\Box\phi$ et comme on va le voir, dans le système $\text{\bf K}$, la formule $P\rightarrow\Box P$ n&rsquo;est pas prouvable ($P\nvdash_\text{\bf K}\Box P$).</p>
+Si on pouvait faire comme en logique des propositions, prouver $\phi\vdash_\textbf{S}\Box\phi$ deviendrait évident : on place $\phi$ dans les axiomes et on applique la règle de nécessitation. Mais non, il faut pouvoir prouver $\vdash_\textbf{S}\phi\rightarrow\Box\phi$ et comme on va le voir, dans le système $\textbf{K}$, la formule $P\rightarrow\Box P$ n&rsquo;est pas prouvable ($P\nvdash_\textbf{K}\Box P$).</p>
 
   </div>
 </div>
@@ -1458,7 +1452,7 @@ Si on pouvait faire comme en logique des propositions, prouver $\phi\vdash_\text
 <h3 id="le-système-k">Le système K</h3>
 <br>
 <div id="def">
-<p>Le système $\text{\bf K}$ est le plus petit système formel qui contient :</p>
+<p>Le système $\textbf{K}$ est le plus petit système formel qui contient :</p>
 <ul>
 <li>chaque tautologie du calcul des propositions</li>
 <li>$\text{(K)}$&nbsp;: $\Box(P\rightarrow Q)\rightarrow (\Box P\rightarrow \Box Q)$</li>
@@ -1467,7 +1461,7 @@ Si on pouvait faire comme en logique des propositions, prouver $\phi\vdash_\text
 </div>
 <br>
 <div id="theo">
-<p>Le système $\text{\bf K}$ est <strong>minimal</strong> en ce sens qu&rsquo;il est validé dans tout modèle.</p>
+<p>Le système $\textbf{K}$ est <strong>minimal</strong> en ce sens qu&rsquo;il est validé dans tout modèle.</p>
 </div>
 <br>
 <div id="preuve">
@@ -1475,7 +1469,7 @@ Si on pouvait faire comme en logique des propositions, prouver $\phi\vdash_\text
 </div>
 <br>
 <div id="preuve">
-<p>Pour montrer que $P\rightarrow\Box P$ n&rsquo;est pas prouvable dans $\text{\bf K}$, il suffit donc de présenter un modèle (et le système $\text{\bf K}$ autorise tous les systèmes de transition) où l&rsquo;implication est fausse pour au moins un nœud. Or on a déjà vu un tel modèle :</p>
+<p>Pour montrer que $P\rightarrow\Box P$ n&rsquo;est pas prouvable dans $\textbf{K}$, il suffit donc de présenter un modèle (et le système $\textbf{K}$ autorise tous les systèmes de transition) où l&rsquo;implication est fausse pour au moins un nœud. Or on a déjà vu un tel modèle :</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:500px;max-width:100%;">
 <img src="/preuvecsqsem.png">
 </div>
@@ -1491,7 +1485,7 @@ Ces deux relations soulignent bien la nature duale des opérateurs $\Diamond$ et
 <h3 id="logique-modale-normale">Logique modale normale</h3>
 <br>
 <div id="def">
-<p>Une <b>logique modale normale</b> $\mathbb{L}$ est un ensemble de formules qui contient le système formel $\text{\bf K}$ et qui est clos par :</p>
+<p>Une <b>logique modale normale</b> $\mathbb{L}$ est un ensemble de formules qui contient le système formel $\textbf{K}$ et qui est clos par :</p>
 <ul>
 <li><i>modus ponens</i>
 $$
@@ -1524,8 +1518,8 @@ $$
 </ul>
 </div>
 <br>
-<p>Toute logique modale normale contient chaque formule $\phi$ prouvable dans le système formel $\text{\bf K}$ (si $\vdash_\text{\bf K}\phi$ alors $\phi$ fait partie de toute logique modale normale).</p>
-<p>La plus petite logique modale normale est construite sur la base du système formel $\text{\bf K}$. On la note $\mathbb{L}_\text{\bf K}$. Le lien entre la logique normale $\mathbb{L}_\text{\bf K}$ et le système formel $\text{\bf K}$ est le suivant : $\phi \in \mathbb{L}_\text{\bf K}$ ssi $\vdash_\text{\bf K}\phi$.</p>
+<p>Toute logique modale normale contient chaque formule $\phi$ prouvable dans le système formel $\textbf{K}$ (si $\vdash_\textbf{K}\phi$ alors $\phi$ fait partie de toute logique modale normale).</p>
+<p>La plus petite logique modale normale est construite sur la base du système formel $\textbf{K}$. On la note $\mathbb{L}_\textbf{K}$. Le lien entre la logique normale $\mathbb{L}_\textbf{K}$ et le système formel $\textbf{K}$ est le suivant : $\phi \in \mathbb{L}_\textbf{K}$ ssi $\vdash_\textbf{K}\phi$.</p>
 <br>
 <h3 id="quelques-axiomes-usuels">Quelques axiomes usuels</h3>
 <br>
@@ -1604,35 +1598,35 @@ On appelle $\text{(5)}$ l&rsquo;axiome d&rsquo;introspection négative dans le c
 <p><br><br></p>
 <h2 id="quelques-systèmes-formels-et-logiques-usuels">Quelques systèmes formels et logiques usuels</h2>
 <br>
-<p>Par la suite, nous confonderons un système formel et la logique qu&rsquo;il induit par clôture. Les systèmes formels qu&rsquo;on va introduire sont tous des extensions du système $\text{\bf K}$.</p>
+<p>Par la suite, nous confonderons un système formel et la logique qu&rsquo;il induit par clôture. Les systèmes formels qu&rsquo;on va introduire sont tous des extensions du système $\textbf{K}$.</p>
 <div id="def">
 <div style="pos:relative;margin-right:auto;margin-left:auto;width:fit-content;">
 <ul>
-<li>$\text{\bf K}$</li>
-<li>$\text{\bf KD}$&nbsp;: $\text{\bf K}\cup\set{\text{(D)}}$</li>
-<li>$\text{\bf KB}$&nbsp;: $\text{\bf K}\cup\set{\text{(B)}}$</li>
-<li>$\text{\bf KT}$&nbsp;: $\text{\bf K}\cup\set{\text{(T)}}$</li>
-<li>$\text{\bf K4}$&nbsp;: $\text{\bf K}\cup\set{\text{(4)}}$</li>
-<li>$\text{\bf KB4}$&nbsp;: $\text{\bf K}\cup\set{\text{(B),(4)}}$</li>
-<li>$\text{\bf KD4}$&nbsp;: $\text{\bf K}\cup\set{\text{(D),(4)}}$</li>
-<li>$\text{\bf KDB}$&nbsp;: $\text{\bf K}\cup\set{\text{(D),(B)}}$</li>
-<li>$\text{\bf KTB}$&nbsp;: $\text{\bf K}\cup\set{\text{(T),(B)}}$</li>
-<li>$\text{\bf S4} = \text{\bf KT4}$&nbsp;: $\text{\bf K}\cup\set{\text{(T),(4)}}$</li>
-<li>$\text{\bf S5} = \text{\bf KT5}$&nbsp;: $\text{\bf K}\cup\set{\text{(T),(5)}}$</li>
+<li>$\textbf{K}$</li>
+<li>$\textbf{KD}$&nbsp;: $\textbf{K}\cup\set{\text{(D)}}$</li>
+<li>$\textbf{KB}$&nbsp;: $\textbf{K}\cup\set{\text{(B)}}$</li>
+<li>$\textbf{KT}$&nbsp;: $\textbf{K}\cup\set{\text{(T)}}$</li>
+<li>$\textbf{K4}$&nbsp;: $\textbf{K}\cup\set{\text{(4)}}$</li>
+<li>$\textbf{KB4}$&nbsp;: $\textbf{K}\cup\set{\text{(B),(4)}}$</li>
+<li>$\textbf{KD4}$&nbsp;: $\textbf{K}\cup\set{\text{(D),(4)}}$</li>
+<li>$\textbf{KDB}$&nbsp;: $\textbf{K}\cup\set{\text{(D),(B)}}$</li>
+<li>$\textbf{KTB}$&nbsp;: $\textbf{K}\cup\set{\text{(T),(B)}}$</li>
+<li>$\textbf{S4} = \textbf{KT4}$&nbsp;: $\textbf{K}\cup\set{\text{(T),(4)}}$</li>
+<li>$\textbf{S5} = \textbf{KT5}$&nbsp;: $\textbf{K}\cup\set{\text{(T),(5)}}$</li>
 </ul>
 </div>
 </div>
 <br>
-<p>Convainquons-nous dans un premier temps que ces axiomes apportent bien quelque chose de plus en montrant par exemple que la logique $\text{\bf KB}$ ne permet pas de prouver l&rsquo;axiome $\text{(4)}$.</p>
+<p>Convainquons-nous dans un premier temps que ces axiomes apportent bien quelque chose de plus en montrant par exemple que la logique $\textbf{KB}$ ne permet pas de prouver l&rsquo;axiome $\text{(4)}$.</p>
 <div id="preuve">
-<p>Comme $\text{(B)}$ est vraie dans tout système de transition symétrique, il suffit de trouver un modèle symétrique où au moins un nœud ne satisfait pas $\text{(4)}=\Box P\rightarrow\Box\Box P$ pour montrer que $\text{\bf K4}\not\subseteq \text{\bf KB}$.</p>
+<p>Comme $\text{(B)}$ est vraie dans tout système de transition symétrique, il suffit de trouver un modèle symétrique où au moins un nœud ne satisfait pas $\text{(4)}=\Box P\rightarrow\Box\Box P$ pour montrer que $\textbf{K4}\not\subseteq \textbf{KB}$.</p>
 <div style="position:relative;width:350px;max-width:100%;margin-left:auto;margin-right:auto;">
 <img src="/preuvekbpask4.png">
 </div>
 Comme $P$ est satisfait dans tout les successeurs de $a$, $a\Vdash\Box P$. Mais pour avoir $a\Vdash\Box\Box P$, il faudrait que tous les successeurs de $a$ satisfassent $\Box P$, or ce n'est pas le cas de $b$ (qui a pour successeur $a$ lui-même par symétrie et $a\nVdash P$). D'où $a\nVdash \Box\Box P$.
 </div>
 <br>
-<p>De même, montrons que $\text{\bf KTB}$ ne peut prouver ni $\text{(4)}$ ni $\text{(5)}$.</p>
+<p>De même, montrons que $\textbf{KTB}$ ne peut prouver ni $\text{(4)}$ ni $\text{(5)}$.</p>
 <div id="preuve">
 <p>$\text{(T)}$ et $\text{(B)}$ seront vraies ensemble dans tout système de transition à la fois réflexif et symétrique. Exhibons un tel modèle où au moins un nœud ne satisfait ni $\text{(4)}=\Box P\rightarrow\Box\Box P$ ni $\text{(5)}=\Diamond P\rightarrow\Box\Diamond P$.</p>
 <div style="position:relative;width:600px;max-width:100%;margin-left:auto;margin-right:auto;">
@@ -1643,56 +1637,56 @@ On constate que dans ce modèle réflexif et symétrique, $a$ ne satisfait pas $
 <br>
 <p>Mais on va préférer dans la suite mettre au jour les inclusions inverses (qui contient qui) grâce à la notion de <strong>réduction</strong>.</p>
 <div id="def">
-<p>Soient $\text{\bf S}$ et $\text{\bf S&rsquo;}$ deux systèmes formels et $\phi$ une formule quelconque,<br></p>
+<p>Soient $\textbf{S}$ et $\textbf{S&rsquo;}$ deux systèmes formels et $\phi$ une formule quelconque,<br></p>
 <p style="text-align:center;">
-$\text{\bf S}≤\text{\bf S'}$ si et seulement si $\vdash_\text{\bf S}\phi\rightarrow \,\vdash_\text{\bf S'}\phi$
+$\textbf{S}≤\textbf{S'}$ si et seulement si $\vdash_\textbf{S}\phi\rightarrow \,\vdash_\textbf{S'}\phi$
 </p>
 </div>
-<p>Cette relation est réflexive ($\text{\bf S}≤\text{\bf S}$) et transitive (si $\text{\bf S}≤\text{\bf S&rsquo;}$ et $\text{\bf S&rsquo;}≤\text{\bf S&rsquo;&rsquo;}$ alors $\text{\bf S}≤\text{\bf S&rsquo;&rsquo;}$).</p>
-<p>$\text{\bf S}≤\text{\bf S&rsquo;}$ se lit $\text{\bf S}$ <strong>se réduit à</strong> $\text{\bf S&rsquo;}$. Tout ce qui est prouvé à l&rsquo;aide de $\text{\bf S}$ peut également l&rsquo;être à l&rsquo;aide de $\text{\bf S&rsquo;}$.</p>
-<p>Si $\text{\bf S}$ se réduit à $\text{\bf S&rsquo;}$, cela signifie que $\text{\bf S&rsquo;}$ permet de prouver au moins autant de formules (appelées <strong>théorèmes</strong>) que $\text{\bf S}$ et par conséquent, que la classe des systèmes de transition dans lesquels tous les théorèmes de $\text{\bf S&rsquo;}$ sont valides est incluse dans celle des systèmes de transition qui tous valident les théorèmes de $\text{\bf S}$ (c&rsquo;est plus dur de raconter plus de choses, ça restreint l&rsquo;ensemble des modèles possibles).<br></p>
+<p>Cette relation est réflexive ($\textbf{S}≤\textbf{S}$) et transitive (si $\textbf{S}≤\textbf{S&rsquo;}$ et $\textbf{S&rsquo;}≤\textbf{S&rsquo;&rsquo;}$ alors $\textbf{S}≤\textbf{S&rsquo;&rsquo;}$).</p>
+<p>$\textbf{S}≤\textbf{S&rsquo;}$ se lit $\textbf{S}$ <strong>se réduit à</strong> $\textbf{S&rsquo;}$. Tout ce qui est prouvé à l&rsquo;aide de $\textbf{S}$ peut également l&rsquo;être à l&rsquo;aide de $\textbf{S&rsquo;}$.</p>
+<p>Si $\textbf{S}$ se réduit à $\textbf{S&rsquo;}$, cela signifie que $\textbf{S&rsquo;}$ permet de prouver au moins autant de formules (appelées <strong>théorèmes</strong>) que $\textbf{S}$ et par conséquent, que la classe des systèmes de transition dans lesquels tous les théorèmes de $\textbf{S&rsquo;}$ sont valides est incluse dans celle des systèmes de transition qui tous valident les théorèmes de $\textbf{S}$ (c&rsquo;est plus dur de raconter plus de choses, ça restreint l&rsquo;ensemble des modèles possibles).<br></p>
 <p>Autrement dit,</p>
 <div id="theo">
-<p>si $\mathscr{C}_\text{\bf S}$ et $\mathscr{C}_\text{\bf S&rsquo;}$ désignent respectivement la classe de tous les systèmes de transition qui valident $\text{\bf S}$ et $\text{\bf S&rsquo;}$ :<br></p>
+<p>si $\mathscr{C}_\textbf{S}$ et $\mathscr{C}_\textbf{S&rsquo;}$ désignent respectivement la classe de tous les systèmes de transition qui valident $\textbf{S}$ et $\textbf{S&rsquo;}$ :<br></p>
 <p style="text-align:center;">
-$\text{\bf S}≤\text{\bf S'}$ si et seulement si $\mathscr{C}_\text{\bf S'}\subseteq\mathscr{C}_\text{\bf S}$.
+$\textbf{S}≤\textbf{S'}$ si et seulement si $\mathscr{C}_\textbf{S'}\subseteq\mathscr{C}_\textbf{S}$.
 </p>
 </div>
 <br>
 <p>Par contre, les logiques modales normales étant des ensembles de formules satisfaites, pour elles l&rsquo;inclusion est dans l&rsquo;autre sens :</p>
 <div id="theo">
-<p>Lorsque $\text{\bf S}$ et $\text{\bf S&rsquo;}$ contiennent tous les deux le système formel $\text{\bf K}$, les logiques modales normales qu&rsquo;ils engendrent ($\mathbb{L}_\text{\bf S}$ et $\mathbb{L}_\text{\bf S&rsquo;}$) vérifient la relation suivante :<br></p>
+<p>Lorsque $\textbf{S}$ et $\textbf{S&rsquo;}$ contiennent tous les deux le système formel $\textbf{K}$, les logiques modales normales qu&rsquo;ils engendrent ($\mathbb{L}_\textbf{S}$ et $\mathbb{L}_\textbf{S&rsquo;}$) vérifient la relation suivante :<br></p>
 <p style="text-align:center;">
-$\text{\bf S}≤\text{\bf S'}$ si et seulement si $\mathbb{L}_\text{\bf S}\subseteq\mathbb{L}_\text{\bf S'}$.
+$\textbf{S}≤\textbf{S'}$ si et seulement si $\mathbb{L}_\textbf{S}\subseteq\mathbb{L}_\textbf{S'}$.
 </p>
 </div>
 <p>On obtient alors immédiatement les réductions suivantes :</p>
 <div id="theo">
 <div style="pos:relative;margin-right:auto;margin-left:auto;width:fit-content;">
 <ul>
-<li>$\text{\bf K}≤\text{\bf K4}$</li>
-<li>$\text{\bf K}≤\text{\bf KB}$</li>
-<li>$\text{\bf K}≤\text{\bf KD}$</li>
-<li>$\text{\bf K4}≤\text{\bf KB4}$</li>
-<li>$\text{\bf K4}≤\text{\bf KD4}$</li>
-<li>$\text{\bf KB}≤\text{\bf KB4}$</li>
-<li>$\text{\bf KB}≤\text{\bf KDB}$</li>
-<li>$\text{\bf KD}≤\text{\bf KDB}$</li>
-<li>$\text{\bf KD}≤\text{\bf KD4}$</li>
-<li>$\text{\bf KT}≤\text{\bf KTB}$</li>
-<li>$\text{\bf KT}≤\text{\bf KT4}$</li>
+<li>$\textbf{K}≤\textbf{K4}$</li>
+<li>$\textbf{K}≤\textbf{KB}$</li>
+<li>$\textbf{K}≤\textbf{KD}$</li>
+<li>$\textbf{K4}≤\textbf{KB4}$</li>
+<li>$\textbf{K4}≤\textbf{KD4}$</li>
+<li>$\textbf{KB}≤\textbf{KB4}$</li>
+<li>$\textbf{KB}≤\textbf{KDB}$</li>
+<li>$\textbf{KD}≤\textbf{KDB}$</li>
+<li>$\textbf{KD}≤\textbf{KD4}$</li>
+<li>$\textbf{KT}≤\textbf{KTB}$</li>
+<li>$\textbf{KT}≤\textbf{KT4}$</li>
 </ul>
 </div>
 </div>
 <p>Montrons maintenant que :</p>
 <div id="theo">
 <p style="text-align:center">
-$\text{\bf KD}≤\text{\bf KT}$
+$\textbf{KD}≤\textbf{KT}$
 </p>
 </div>
 <br>
 <div id="preuve">
-<p>Il suffit de montrer que la formule $\text{(D)}$ peut être prouvée grâce au système $\text{\bf KT}$, c&rsquo;est-à-dire : $\vdash_\text{\bf KT} \Box P\rightarrow\Diamond P$.</p>
+<p>Il suffit de montrer que la formule $\text{(D)}$ peut être prouvée grâce au système $\textbf{KT}$, c&rsquo;est-à-dire : $\vdash_\textbf{KT} \Box P\rightarrow\Diamond P$.</p>
 <div style="position:relative;width:1100px;max-width:100%;margin-left:auto;margin-right:auto;">
 <img src="/preuvekdkt.png">
 </div>
@@ -1701,8 +1695,8 @@ $\text{\bf KD}≤\text{\bf KT}$
 <div id="theo">
 <div style="pos:relative;margin-right:auto;margin-left:auto;width:fit-content;">
 <ul>
-<li>$\text{\bf KDB}≤\text{\bf KTB}$</li>
-<li>$\text{\bf KD4}≤\text{\bf KT4=S4}$</li>
+<li>$\textbf{KDB}≤\textbf{KTB}$</li>
+<li>$\textbf{KD4}≤\textbf{ KT4=S4}$</li>
 </ul>
 </div>
 </div>
@@ -1710,17 +1704,17 @@ $\text{\bf KD}≤\text{\bf KT}$
 <p>On peut aussi montrer que :</p>
 <div id="theo">
 <p style="text-align:center">
-$\text{\bf KTB}≤\text{\bf S5}$
+$\textbf{KTB}≤\textbf{S5}$
 </p>
 </div>
 <br>
 <div id="preuve">
-<p>Il suffit de montrer que la formule $\text{(B)}$ peut être prouvée grâce au système $\text{\bf KT5}$, c&rsquo;est-à-dire : $\vdash_\text{\bf S5} P\rightarrow\Box\Diamond P$.</p>
-<p>Montrons d&rsquo;abord que $\vdash_\text{\bf KT}P\rightarrow\Diamond P$, ce qui montre également que $\vdash_\text{\bf KT5}P\rightarrow\Diamond P$.</p>
+<p>Il suffit de montrer que la formule $\text{(B)}$ peut être prouvée grâce au système $\textbf{KT5}$, c&rsquo;est-à-dire : $\vdash_\textbf{S5} P\rightarrow\Box\Diamond P$.</p>
+<p>Montrons d&rsquo;abord que $\vdash_\textbf{KT}P\rightarrow\Diamond P$, ce qui montre également que $\vdash_\textbf{KT5}P\rightarrow\Diamond P$.</p>
 <div style="position:relative;width:550px;max-width:100%;margin-left:auto;margin-right:auto;">
 <img src="/preuvektbs51.png">
 </div>
-Puis utilisons ce résultat pour montrer que $\vdash_\text{\bf S5}P\rightarrow\Box\Diamond P$
+Puis utilisons ce résultat pour montrer que $\vdash_\textbf{S5}P\rightarrow\Box\Diamond P$
 <div style="position:relative;width:800px;max-width:100%;margin-left:auto;margin-right:auto;">
 <img src="/preuvektbs52.png">
 </div>
@@ -1728,13 +1722,13 @@ Puis utilisons ce résultat pour montrer que $\vdash_\text{\bf S5}P\rightarrow\B
 <br>
 <div id="theo">
 <p style="text-align:center">
-$\text{\bf S4}≤\text{\bf S5}$
+$\textbf{S4}≤\textbf{S5}$
 </p>
 </div>
 <br>
 <div id="preuve">
-<p>Il suffit de montrer que la formule $\text{(4)}$ peut être prouvée grâce au système $\text{\bf KT5}$, c&rsquo;est-à-dire : $\vdash_\text{\bf S5} \Box P\rightarrow\Box\Box P$.<br></p>
-<p>On commence par montrer $\vdash_\text{\bf S5} \Box P\rightarrow\Box\Diamond\Box P$ en ajoutant juste une substitution au théorème précédant :</p>
+<p>Il suffit de montrer que la formule $\text{(4)}$ peut être prouvée grâce au système $\textbf{KT5}$, c&rsquo;est-à-dire : $\vdash_\textbf{S5} \Box P\rightarrow\Box\Box P$.<br></p>
+<p>On commence par montrer $\vdash_\textbf{S5} \Box P\rightarrow\Box\Diamond\Box P$ en ajoutant juste une substitution au théorème précédant :</p>
 <div id="grosseformule">
 $$
 \begin{prooftree}
@@ -1746,11 +1740,11 @@ $$
 \end{prooftree}
 $$
 </div>
-On montre ensuite $\vdash_\text{\bf S5} \Diamond\Box P\rightarrow \Box P$
+On montre ensuite $\vdash_\textbf{S5} \Diamond\Box P\rightarrow \Box P$
 <div style="position:relative;width:650px;max-width:100%;margin-left:auto;margin-right:auto;">
 <img src="/preuves4s51.png">
 </div>
-Puis on montre $\vdash_\text{\bf S5} \Box\Diamond\Box P\rightarrow \Box\Box P$
+Puis on montre $\vdash_\textbf{S5} \Box\Diamond\Box P\rightarrow \Box\Box P$
 <div style="position:relative;width:620px;max-width:100%;margin-left:auto;margin-right:auto;">
 <img src="/preuves4s52.png">
 </div>
@@ -1762,19 +1756,19 @@ Pour enfin pouvoir conclure&nbsp;:
 <br>
 <div id="theo">
 <p style="text-align:center">
-$\text{\bf KB4}≤\text{\bf S5}$
+$\textbf{KB4}≤\textbf{S5}$
 </p>
 </div>
 <br>
 <div id="preuve">
 <p>Il faut montrer à la fois que :</p>
 <ul>
-<li>la formule $\text{(4)}$ peut être prouvée dans le système $\text{\bf S5}$ et on l'a fait dans la démonstration de la réduction de $\text{\bf S4}$ à $\text{\bf S5}$,</li>
-<li>la formule $\text{(B)}$ peut être prouvée dans le système $\text{\bf S5}$ et on l'a fait dans la démonstration de la réduction de $\text{\bf KTB}$ à $\text{\bf S5}$,</li>
+<li>la formule $\text{(4)}$ peut être prouvée dans le système $\textbf{S5}$ et on l'a fait dans la démonstration de la réduction de $\textbf{S4}$ à $\textbf{S5}$,</li>
+<li>la formule $\text{(B)}$ peut être prouvée dans le système $\textbf{S5}$ et on l'a fait dans la démonstration de la réduction de $\textbf{KTB}$ à $\textbf{S5}$,</li>
 </ul>
 </div>
 <br>
-<p>Représentons tout ça graphiquement en utilisant le code suivant : une flèche allant de $\text{\bf S}$ à $\text{\bf S&rsquo;}$ signifie que la relation $\text{\bf S}≤\text{\bf S&rsquo;}$ est avérée ($\text{\bf S}$ se réduit à $\text{\bf S&rsquo;}$).</p>
+<p>Représentons tout ça graphiquement en utilisant le code suivant : une flèche allant de $\textbf{S}$ à $\textbf{S&rsquo;}$ signifie que la relation $\textbf{S}≤\textbf{S&rsquo;}$ est avérée ($\textbf{S}$ se réduit à $\textbf{S&rsquo;}$).</p>
 <p><img src="/compsystformels.png?width=600px" alt=""></p>
 <p>Et comme on l&rsquo;a vu, la réduction d&rsquo;un système formel à un autre implique l&rsquo;inclusion inverse entre les classes de tous les systèmes de transition qui valident ces systèmes formels.<br>
 Dans le graphique suivant, une flèche allant de $\mathscr{C}$ à $\mathscr{C&rsquo;}$ désigne donc l&rsquo;inclusion inverse $\mathscr{C}\supseteq\mathscr{C&rsquo;}$.</p>
@@ -1792,25 +1786,25 @@ $$\text{si } \vdash_\mathbb{L}\phi \text{ alors }\models_{\mathscr{C}}\phi$$</p>
 <div id="theo">
 <div style="pos:relative;margin-right:auto;margin-left:auto;width:fit-content;">
 <ul>
-<li>si $\vdash_\text{\bf K}\phi$ alors $\models_{\mathscr{C}}\phi$</li>
-<li>si $\vdash_\text{\bf K4}\phi$ alors $\models_{\mathscr{C}_{tr.}}\phi$</li>
-<li>si $\vdash_\text{\bf KD}\phi$ alors $\models_{\mathscr{C}_{n.b.d.}}\phi$</li>
-<li>si $\vdash_\text{\bf KD4}\phi$ alors $\models_{\mathscr{C}_{tr.,n.b.d.}}\phi$</li>
-<li>si $\vdash_\text{\bf KT}\phi$ alors $\models_{\mathscr{C}_{ref.}}\phi$</li>
-<li>si $\vdash_\text{\bf S4}\phi$ alors $\models_{\mathscr{C}_{ref.,tr.}}\phi$</li>
-<li>si $\vdash_\text{\bf KB}\phi$ alors $\models_{\mathscr{C}_{sym.}}\phi$</li>
-<li>si $\vdash_\text{\bf KB4}\phi$ alors $\models_{\mathscr{C}_{sym.,tr.}}\phi$</li>
-<li>si $\vdash_\text{\bf KDB}\phi$ alors $\models_{\mathscr{C}_{sym.,n.b.d.}}\phi$</li>
-<li>si $\vdash_\text{\bf KTB}\phi$ alors $\models_{\mathscr{C}_{ref.,sym.}}\phi$</li>
-<li>si $\vdash_\text{\bf S5}\phi$ alors $\models_{\mathscr{C}_{ref.,sym.,tr.}}\phi$</li>
+<li>si $\vdash_\textbf{K}\phi$ alors $\models_{\mathscr{C}}\phi$</li>
+<li>si $\vdash_\textbf{K4}\phi$ alors $\models_{\mathscr{C}_{tr.}}\phi$</li>
+<li>si $\vdash_\textbf{KD}\phi$ alors $\models_{\mathscr{C}_{n.b.d.}}\phi$</li>
+<li>si $\vdash_\textbf{KD4}\phi$ alors $\models_{\mathscr{C}_{tr.,n.b.d.}}\phi$</li>
+<li>si $\vdash_\textbf{KT}\phi$ alors $\models_{\mathscr{C}_{ref.}}\phi$</li>
+<li>si $\vdash_\textbf{S4}\phi$ alors $\models_{\mathscr{C}_{ref.,tr.}}\phi$</li>
+<li>si $\vdash_\textbf{KB}\phi$ alors $\models_{\mathscr{C}_{sym.}}\phi$</li>
+<li>si $\vdash_\textbf{KB4}\phi$ alors $\models_{\mathscr{C}_{sym.,tr.}}\phi$</li>
+<li>si $\vdash_\textbf{KDB}\phi$ alors $\models_{\mathscr{C}_{sym.,n.b.d.}}\phi$</li>
+<li>si $\vdash_\textbf{KTB}\phi$ alors $\models_{\mathscr{C}_{ref.,sym.}}\phi$</li>
+<li>si $\vdash_\textbf{S5}\phi$ alors $\models_{\mathscr{C}_{ref.,sym.,tr.}}\phi$</li>
 </ul>
 </div>
 </div>
 <br>
 <div id="preuve">
 <p>On a déjà en fait déjà tout démontré.<br>
-En effet, on a montré que les axiomes de la logique normale minimale (tautologies du calcul des propositions, $\text{(K)}$ et $\text{(dual)}$) sont satisfaites en tout nœud et pour toute valuation de tous les systèmes de transitions. Et on a montré que les trois opérations utilisés pour les preuves (la nécéssitation, la substitution uniforme et le <i>modus ponens</i>) préservent la validité. Donc une formule prouvable dans $\text{\bf K}$ est valide dans tout système de transition ( $\text{\bf K}$ est $\mathscr{C}$-correcte).</p>
-<p>Ensuite, on a montré que chacun des axiomes modaux supplémentaires ajoutés à $\text{\bf K}$ pour obtenir les autres logiques normales ont une validité limitée à une classe spécifique de systèmes de transition.</p>
+En effet, on a montré que les axiomes de la logique normale minimale (tautologies du calcul des propositions, $\text{(K)}$ et $\text{(dual)}$) sont satisfaites en tout nœud et pour toute valuation de tous les systèmes de transitions. Et on a montré que les trois opérations utilisés pour les preuves (la nécéssitation, la substitution uniforme et le <i>modus ponens</i>) préservent la validité. Donc une formule prouvable dans $\textbf{K}$ est valide dans tout système de transition ( $\textbf{K}$ est $\mathscr{C}$-correcte).</p>
+<p>Ensuite, on a montré que chacun des axiomes modaux supplémentaires ajoutés à $\textbf{K}$ pour obtenir les autres logiques normales ont une validité limitée à une classe spécifique de systèmes de transition.</p>
 <ul>
 <li>$\text{(T)}$ est valide dans tout système de transition réflexif.</li>
 <li>$\text{(B)}$ est valide dans tout système de transition symétrique.</li>
@@ -1820,7 +1814,7 @@ En effet, on a montré que les axiomes de la logique normale minimale (tautologi
 </ul>
 <p>Et on a montré qu&rsquo;un graphe est à la fois réflexif et euclidien si et seulement si il est réflexif, symétrique et transitif.</p>
 </div>
-<p>On représente graphiquement par une flèche &ldquo;$\text{\bf X}\longrightarrow\mathscr{C}_x$&rdquo; la relation de correction : &ldquo;si $\vdash_\text{\bf X}\phi$, alors $\models_{\mathscr{C}_x}\phi$&rdquo;.</p>
+<p>On représente graphiquement par une flèche &ldquo;$\textbf{X}\longrightarrow\mathscr{C}_x$&rdquo; la relation de correction : &ldquo;si $\vdash_\textbf{X}\phi$, alors $\models_{\mathscr{C}_x}\phi$&rdquo;.</p>
 <p><img src="/compsolide.png?width=1200px" alt=""></p>
 <p>On va essayer maintenant d&rsquo;associer les classe aux logiques, la sémantique à la syntaxe.</p>
 <div id="def">
@@ -1837,28 +1831,28 @@ $$\text{si } \Gamma \models_\mathscr{C}\phi \text{ alors } \Gamma \vdash_\mathbb
 <div id="theo">
 <div style="pos:relative;margin-right:auto;margin-left:auto;width:fit-content;">
 <ol>
-<li>si $\Gamma\models_{\mathscr{C}}\phi$ alors $\Gamma\vdash_\text{\bf K}\phi$</li>
-<li>si $\Gamma\models_{\mathscr{C}_{tr.}}\phi$ alors $\Gamma\vdash_\text{\bf K4}\phi$</li>
-<li>si $\Gamma\models_{\mathscr{C}_{n.b.d.}}\phi$ alors $\Gamma\vdash_\text{\bf KD}\phi$</li>
-<li>si $\Gamma\models_{\mathscr{C}_{tr.,n.b.d.}}\phi$ alors $\Gamma\vdash_\text{\bf KD4}\phi$</li>
-<li>si $\Gamma\models_{\mathscr{C}_{ref.}}\phi$ alors $\Gamma\vdash_\text{\bf KT}\phi$</li>
-<li>si $\Gamma\models_{\mathscr{C}_{ref.,tr.}}\phi$ alors $\Gamma\vdash_\text{\bf S4}\phi$</li>
-<li>si $\Gamma\models_{\mathscr{C}_{sym.}}\phi$ alors $\Gamma\vdash_\text{\bf KB}\phi$</li>
-<li>si $\Gamma\models_{\mathscr{C}_{sym.,tr.}}\phi$ alors $\Gamma\vdash_\text{\bf KB4}\phi$</li>
-<li>si $\Gamma\models_{\mathscr{C}_{sym.,n.b.d.}}\phi$ alors $\Gamma\vdash_\text{\bf KDB}\phi$</li>
-<li>si $\Gamma\models_{\mathscr{C}_{ref.,sym.}}\phi$ alors $\Gamma\vdash_\text{\bf KTB}\phi$</li>
-<li>si $\Gamma\models_{\mathscr{C}_{ref.,sym.,tr.}}\phi$ alors $\Gamma\vdash_\text{\bf S5}\phi$</li>
+<li>si $\Gamma\models_{\mathscr{C}}\phi$ alors $\Gamma\vdash_\textbf{K}\phi$</li>
+<li>si $\Gamma\models_{\mathscr{C}_{tr.}}\phi$ alors $\Gamma\vdash_\textbf{K4}\phi$</li>
+<li>si $\Gamma\models_{\mathscr{C}_{n.b.d.}}\phi$ alors $\Gamma\vdash_\textbf{KD}\phi$</li>
+<li>si $\Gamma\models_{\mathscr{C}_{tr.,n.b.d.}}\phi$ alors $\Gamma\vdash_\textbf{KD4}\phi$</li>
+<li>si $\Gamma\models_{\mathscr{C}_{ref.}}\phi$ alors $\Gamma\vdash_\textbf{KT}\phi$</li>
+<li>si $\Gamma\models_{\mathscr{C}_{ref.,tr.}}\phi$ alors $\Gamma\vdash_\textbf{S4}\phi$</li>
+<li>si $\Gamma\models_{\mathscr{C}_{sym.}}\phi$ alors $\Gamma\vdash_\textbf{KB}\phi$</li>
+<li>si $\Gamma\models_{\mathscr{C}_{sym.,tr.}}\phi$ alors $\Gamma\vdash_\textbf{KB4}\phi$</li>
+<li>si $\Gamma\models_{\mathscr{C}_{sym.,n.b.d.}}\phi$ alors $\Gamma\vdash_\textbf{KDB}\phi$</li>
+<li>si $\Gamma\models_{\mathscr{C}_{ref.,sym.}}\phi$ alors $\Gamma\vdash_\textbf{KTB}\phi$</li>
+<li>si $\Gamma\models_{\mathscr{C}_{ref.,sym.,tr.}}\phi$ alors $\Gamma\vdash_\textbf{S5}\phi$</li>
 </ol>
 </div>
 </div>
 <br>
 <p>Pour le démontrer on va avoir besoin de nouvelles définitions et de plusieurs lemmes.</p>
 <div id="def">
-<p>Soient $\text{\bf S}$ un système formel et $\Gamma$ un ensemble de formules,<br></p>
+<p>Soient $\textbf{S}$ un système formel et $\Gamma$ un ensemble de formules,<br></p>
 <p style="text-align:center;">
-$\Gamma$ est $\text{\bf S}$<b>-consistant</b> si et seulement si $\Gamma\nvdash_\text{\bf S}\bot$.
+$\Gamma$ est $\textbf{S}$<b>-consistant</b> si et seulement si $\Gamma\nvdash_\textbf{S}\bot$.
 </p>
-Dans le cas contraire, $\Gamma$ est dit $\text{\bf S}$-inconsistant.
+Dans le cas contraire, $\Gamma$ est dit $\textbf{S}$-inconsistant.
 </div>
 <br>
 <div id="theo">
@@ -1924,7 +1918,7 @@ Soit $\mathbb{L}$ une logique modale normale, le <b>modèle canonique</b> $\math
 <ul>
 <li>$N_\mathbb{L}=\set{\Gamma|\Gamma\text{ maximal }\mathbb{L}\text{-consistant}}$</li>
 <li>$A_\mathbb{L}$ défini par $\Gamma\longrightarrow\Gamma'$ si et seulement si pour toute formule $\phi$, si $\phi\in\Gamma'$ alors $\Diamond\phi\in\Gamma$ (c.-à-d. $\Gamma\supseteq\set{\Diamond\phi : \phi\in\Gamma'}$)</li>
-<li>$\mathcal{V}_\mathbb{L}$ est défini par $\mathcal{V}_\mathbb{L}(P)=\set{\Gamma\in\N_\mathbb{L}|P\in\Gamma}$ (c.-à-d. $\Gamma\Vdash P$ si et seulement si $P\in\Gamma$)</li>
+<li>$\mathcal{V}_\mathbb{L}$ est défini par $\mathcal{V}_\mathbb{L}(P)=\set{\Gamma\in N_\mathbb{L}|P\in\Gamma}$ (c.-à-d. $\Gamma\Vdash P$ si et seulement si $P\in\Gamma$)</li>
 </ul>
 </div>
 </div>
@@ -1994,45 +1988,45 @@ Par hypothèse d'induction, $\Gamma\Vdash\psi_1$ ssi $\psi_1\in\Gamma$ et $\Gamm
 <p>Pour chaque logique normale, nous allons choisir le modèle canonique $\mathcal{M}_\mathbb{L}=\langle N_\mathbb{L},A_\mathbb{L},\mathcal{V}_\mathbb{L}\rangle$ associé. Et pour le nœud $a$, nous allons prendre $\Gamma_{max}$. Le lemme de vérité nous dit alors que $\langle\mathcal{M}_\mathbb{L},\Gamma_{max}\rangle\Vdash\phi$ ssi $\phi\in\Gamma_{max}$. En conséquence, puisque $\Gamma\subseteq\Gamma_{max}$, il ressort que $\langle\mathcal{M}_\mathbb{L},\Gamma_{max}\rangle\Vdash\Gamma$.</p>
 <p>Il ne reste plus qu&rsquo;à vérifier à chaque fois que le modèle canonique est bien construit sur la base d&rsquo;un système de transition de la classe $\mathscr{C}$ considérée.</p>
 <ol>
-<li>$\mathcal{M}_\text{\bf K}\in\mathscr{C}$&nbsp;: comme $\mathscr{C}$ désigne la classe de tous les systèmes de transition, il n'ya rien à montrer.</li>
-<li>$\mathcal{M}_\text{\bf K4}\in\mathscr{C}_{tr.}$&nbsp;:<br>
-il faut montrer que pour tout nœud $\Xi_1$, $\Xi_2$ et $\Xi_3$ de $\mathcal{M}_\text{\bf K4}$, si $\Xi_1\longrightarrow \Xi_2$ et $\Xi_2\longrightarrow \Xi_3$, alors $\Xi_1\longrightarrow \Xi_3$.<br>
+<li>$\mathcal{M}_\textbf{K}\in\mathscr{C}$&nbsp;: comme $\mathscr{C}$ désigne la classe de tous les systèmes de transition, il n'ya rien à montrer.</li>
+<li>$\mathcal{M}_\textbf{K4}\in\mathscr{C}_{tr.}$&nbsp;:<br>
+il faut montrer que pour tout nœud $\Xi_1$, $\Xi_2$ et $\Xi_3$ de $\mathcal{M}_\textbf{K4}$, si $\Xi_1\longrightarrow \Xi_2$ et $\Xi_2\longrightarrow \Xi_3$, alors $\Xi_1\longrightarrow \Xi_3$.<br>
 La formule $\text{(4)}=\Box p\rightarrow\Box\Box P$ est équivalente (par dualité) à la formule $\neg\Diamond\neg P\rightarrow\neg\Diamond\neg\neg\Diamond\neg P$ elle même équivalente à $\Diamond\Diamond\neg P\rightarrow\Diamond\neg P$ (en passant par la contraposée et en éliminant les doubles négations). Comme $\Diamond\Diamond\neg P\rightarrow\Diamond\neg P\in\Gamma$, on a aussi $\Diamond\Diamond\neg P\rightarrow\Diamond\neg P\in\Xi_1$ et puisque $\Xi_1$ est clos par substitution uniforme, $\Diamond\Diamond\neg \neg\phi\rightarrow\Diamond\neg \neg\phi\in\Xi_1$. Et donc chaque formule $\Diamond\Diamond\rightarrow\Diamond$ appartient à $\Xi_1$.<br>
 Par définition de $\Xi_1\longrightarrow \Xi_2$ et $\Xi_2\longrightarrow \Xi_3$, pour une formule $\phi$ quelconque, si $\phi\in\Xi_3$, alors $\Diamond\phi\in\Xi_2$ et $\Diamond\Diamond\phi\in\Xi_1$. Et comme $\Xi_1$ est clos par <i>modus ponens</i>, si à la fois $\Diamond\Diamond\phi\in\Xi_1$ et $\Diamond\Diamond\phi\rightarrow\Diamond\phi\in\Xi_1$, alors $\Diamond\phi\in\Xi_1$. Cela prouve que pour toute formule $\phi$, si $\phi\in\Xi_3$, alors $\Diamond\phi\in\Xi_1$, et par conséquent $\Xi_1\longrightarrow\Xi_3$.
 </li>
-<li>$\mathcal{M}_\text{\bf KD}\in\mathscr{C}_{n.b.d.}$&nbsp;:<br>
-il faut montrer que pour tout nœud $\Xi_1$ de $\mathcal{M}_\text{\bf KD}$, il existe $\Xi_2$ tel que $\Xi_1\longrightarrow \Xi_2$.<br>
+<li>$\mathcal{M}_\textbf{KD}\in\mathscr{C}_{n.b.d.}$&nbsp;:<br>
+il faut montrer que pour tout nœud $\Xi_1$ de $\mathcal{M}_\textbf{KD}$, il existe $\Xi_2$ tel que $\Xi_1\longrightarrow \Xi_2$.<br>
 D'après le lemme ($\longrightarrow$ et $\Diamond$), si $\Diamond\phi\in\Xi_1$, alors il existe $\Xi_2$ tel que $\Xi_1\longrightarrow \Xi_2$ et $\phi\in\Xi_2$. Or l'axiome $\text{(D)}$ dit précisément $\Box P\rightarrow\Diamond P$. Comme $\Xi_1$ est clos par substitution uniforme, la formule $\Box\top\rightarrow\Diamond\top$ est dans $\Xi_1$. Or $\Xi_1$ vérifie nécessairement $\Box\top$ (car une tautologie est vraie partout) et comme $\Xi_1$ est clos par <i>modus ponens</i>, $\Diamond\top\in\Xi_1$, et donc d'après le lemme ($\longrightarrow$ et $\Diamond$), il existe $\Xi_2$ tel que $\Xi_1\longrightarrow \Xi_2$ et $\top\in\Xi_2$.
 </li>
-<li>$\mathcal{M}_\text{\bf KD4}\in\mathscr{C}_{tr.,n.b.d.}$&nbsp;:<br>
+<li>$\mathcal{M}_\textbf{KD4}\in\mathscr{C}_{tr.,n.b.d.}$&nbsp;:<br>
 Conséquence de 2. et 3.
 </li>
-<li>$\mathcal{M}_\text{\bf KT}\in\mathscr{C}_{ref.}$&nbsp;:<br>
-Il faut montrer que $\Xi\longrightarrow \Xi$ est vérifié pour tout nœud $\Xi$ de $\mathcal{M}_\text{\bf KT}$.<br>
+<li>$\mathcal{M}_\textbf{KT}\in\mathscr{C}_{ref.}$&nbsp;:<br>
+Il faut montrer que $\Xi\longrightarrow \Xi$ est vérifié pour tout nœud $\Xi$ de $\mathcal{M}_\textbf{KT}$.<br>
 La formule $\text{(T)}=\Box P\rightarrow P$ est équivalente à $\neg\Diamond\neg P\rightarrow P$ et par contraposition à $\neg P\rightarrow\diamond\neg P$. Comme $\Xi$ est clos par substitution uniforme, la formule $\neg \neg \phi\rightarrow\diamond\neg \neg\phi$ est dans $\Xi$ et donc $\phi\rightarrow\Diamond\phi$ est dans $\Xi$. La cloture par <i>modus ponens</i> permet alors de déduire que pour toute formule $\phi\in\Xi$, $\Diamond\phi\in\Xi$, ce qui est la condition nécessaire à la relation $\Xi\longrightarrow \Xi$.
 </li>
-<li>$\mathcal{M}_\text{\bf S4}\in\mathscr{C}_{ref.,tr.}$&nbsp;:<br>
+<li>$\mathcal{M}_\textbf{S4}\in\mathscr{C}_{ref.,tr.}$&nbsp;:<br>
 Conséquence de 2. et 5.
 </li>
-<li>$\mathcal{M}_\text{\bf KB}\in\mathscr{C}_{sym.}$&nbsp;:<br>
-il faut montrer que pour tout couple de nœuds $\Xi_1$ et $\Xi_2$ de $\mathcal{M}_\text{\bf KB}$, $\Xi_1\longrightarrow \Xi_2$ alors $\Xi_2\longrightarrow \Xi_1$.<br>
+<li>$\mathcal{M}_\textbf{KB}\in\mathscr{C}_{sym.}$&nbsp;:<br>
+il faut montrer que pour tout couple de nœuds $\Xi_1$ et $\Xi_2$ de $\mathcal{M}_\textbf{KB}$, $\Xi_1\longrightarrow \Xi_2$ alors $\Xi_2\longrightarrow \Xi_1$.<br>
 $\text{(B)}= P\rightarrow \Box\Diamond P$ . Comme $\Xi_1$ est clos par substitution uniforme, les formules $\phi\rightarrow\Box\Diamond\phi$ sont dans $\Xi_1$. La cloture par <i>modus ponens</i> de $\Xi_1$ nous dit alors que si $\phi\in\Xi_1$, alors $\Box\Diamond\phi\in\Xi_1$. Or d'après le lemme ($\longrightarrow$ et $\Box$), si $\Xi_1\longrightarrow\Xi_2$ alors pour toute formule $\phi$, si $\Box\phi\in\Xi_1$, alors $\phi\in\Xi_2$. Par conséquent, pour tout $\phi\in\Xi_1$, $\Diamond\phi\in\Xi_2$, ce qui est la condition nécessaire pour définir $\Xi_2\longrightarrow\Xi_1$.
 </li>
-<li>$\mathcal{M}_\text{\bf KB4}\in\mathscr{C}_{sym.tr.}$&nbsp;:<br>
+<li>$\mathcal{M}_\textbf{KB4}\in\mathscr{C}_{sym.tr.}$&nbsp;:<br>
 Conséquence de 2. et 7.
 </li>
-<li>$\mathcal{M}_\text{\bf KDB}\in\mathscr{C}_{sym.,n.b.d.}$&nbsp;:<br>
+<li>$\mathcal{M}_\textbf{KDB}\in\mathscr{C}_{sym.,n.b.d.}$&nbsp;:<br>
 Conséquence de 3. et 7.
 </li>
-<li>$\mathcal{M}_\text{\bf KTB}\in\mathscr{C}_{ref.sym.}$&nbsp;:<br>
+<li>$\mathcal{M}_\textbf{KTB}\in\mathscr{C}_{ref.sym.}$&nbsp;:<br>
 Conséquence de 5. et 7.
 </li>
-<li>$\mathcal{M}_\text{\bf S5}\in\mathscr{C}_{ref.,sym.tr.}$&nbsp;:<br>
+<li>$\mathcal{M}_\textbf{S5}\in\mathscr{C}_{ref.,sym.tr.}$&nbsp;:<br>
 Conséquence de 2. et 5. et 7.
 </li>
 </ol>
 </div>
-<p>On représente graphiquement par une flèche &ldquo;$\mathscr{C}_x\longrightarrow\text{\bf X}$&rdquo; la relation de forte-complétude : &ldquo;si $\Gamma\models_{\mathscr{C}_x}\phi$, alors $\Gamma\vdash_\text{\bf X}\phi$&rdquo;.</p>
+<p>On représente graphiquement par une flèche &ldquo;$\mathscr{C}_x\longrightarrow\textbf{X}$&rdquo; la relation de forte-complétude : &ldquo;si $\Gamma\models_{\mathscr{C}_x}\phi$, alors $\Gamma\vdash_\textbf{X}\phi$&rdquo;.</p>
 <p><img src="/compcomplet.png?width=1200px" alt=""></p>
 
 <div class="notices note" style="--title: 'note';">
@@ -2845,16 +2839,16 @@ On peut trouver d&rsquo;ailleurs un peu douloureux que la correspondance de loin
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1747569001"></script>
-    <script src="/js/perfect-scrollbar.min.js?1747569001"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1747569001"></script>
-    <script src="/js/jquery.sticky.js?1747569001"></script>
-    <script src="/js/featherlight.min.js?1747569001"></script>
-    <script src="/js/highlight.pack.js?1747569001"></script>
+    <script src="/js/clipboard.min.js?1747637254"></script>
+    <script src="/js/perfect-scrollbar.min.js?1747637254"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1747637254"></script>
+    <script src="/js/jquery.sticky.js?1747637254"></script>
+    <script src="/js/featherlight.min.js?1747637254"></script>
+    <script src="/js/highlight.pack.js?1747637254"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1747569001"></script>
-    <script src="/js/learn.js?1747569001"></script>
-    <script src="/js/hugo-learn.js?1747569001"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1747637254"></script>
+    <script src="/js/learn.js?1747637254"></script>
+    <script src="/js/hugo-learn.js?1747637254"></script>
     
     
 
