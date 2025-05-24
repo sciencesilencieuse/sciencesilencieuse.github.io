@@ -33,22 +33,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1747804370" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1747804370" rel="stylesheet">
-    <link href="/css/hybrid.css?1747804370" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1747804370" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1747804370" rel="stylesheet">
-    <link href="/css/auto-complete.css?1747804370" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1747804370" rel="stylesheet">
-    <link href="/css/theme.css?1747804370" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1747804370" rel="stylesheet">
+    <link href="/css/nucleus.css?1748125347" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1748125347" rel="stylesheet">
+    <link href="/css/hybrid.css?1748125347" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1748125347" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1748125347" rel="stylesheet">
+    <link href="/css/auto-complete.css?1748125347" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1748125347" rel="stylesheet">
+    <link href="/css/theme.css?1748125347" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1748125347" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1747804370" rel="stylesheet">
+    <link href="/css/theme-blue.css?1748125347" rel="stylesheet">
     
-    <link href="/css/foo.css?1747804370" rel="stylesheet"><link href="/css/bar.css?1747804370" rel="stylesheet">
+    <link href="/css/foo.css?1748125347" rel="stylesheet"><link href="/css/bar.css?1748125347" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1747804370"></script>
+    <script src="/js/jquery-3.3.1.min.js?1748125347"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -102,14 +102,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1747804370"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1747804370"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1748125347"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1748125347"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1747804370"></script>
+<script type="text/javascript" src="/js/search.js?1748125347"></script>
 
     
   </div>
@@ -1385,7 +1385,7 @@ $$</p>
 $$\left\{
 \begin{array}{l}
 \text{ &lsquo;Est-ce 1 ou 2 ?&rsquo;},\\
-\text{ &lsquo;Est-ce 3 ou 4 ?&rsquo;}
+\text{ &lsquo;Est-ce 2 ou 3 ?&rsquo;}
 \end{array}\right\}
 $$</p>
 <p>Chaque question coupe l’espace des possibles en deux. Pour un système élémentaire à 4 états, 2 questions suffisent donc (pas forcément ces deux là).</p>
@@ -1489,8 +1489,11 @@ $$</p>
 $$</p>
 </div>
 </div>
-<p>Les opérations binaires cohérentes associent des bits-jouets purs à d&rsquo;autres bits-jouets purs (générant un analogue de la superposition cohérente de la mécanique quantique). Dans la représentation graphique, on associe à deux états diamétralement opposés (donc disjoints) un des quatre autres états.<br>
-Les quatre opérations binaires cohérentes $+_1$, $+_2$, $+_3$, $+_4$ sont analogues aux superpositions de poids égaux de deux états purs de mécanique quantique avec une phase relative $\theta$ valant respectivement $0$, $\pi$, $\pi/2$, $3\pi/2$.</p>
+<p>Les opérations binaires cohérentes associent des bits-jouets purs à d&rsquo;autres bits-jouets purs (générant un analogue de la superposition cohérente de la mécanique quantique). Dans la représentation graphique, on associe à deux états diamétralement opposés (donc disjoints) un des quatre autres états.</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:400px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/spek8.png" style="box-shadow:none;background:none;">
+</div>
+<p>Les quatre opérations binaires cohérentes $+_1$, $+_2$, $+_3$, $+_4$ sont analogues aux superpositions de poids égaux de deux états purs de mécanique quantique avec une phase relative $\theta$ valant respectivement $0$, $\pi$, $\pi/2$, $3\pi/2$.</p>
 <p>Exemple : en théorie jouet, $(1\lor 2)+_4(3\lor 4)=(1\lor 4)$, et en mécanique quantique, $\tfrac1{\sqrt{2}} (|0\rangle + \mathrm{e}^{\mathrm{i}\frac{3\pi}{2}} |1\rangle)=\tfrac1{\sqrt{2}} (|0\rangle -\mathrm{i} |1\rangle)=|-\mathrm{i}\rangle$.</p>
 <h2 id="transformations">Transformations</h2>
 <p>Dans la théorie-jouet, <b>toute transformation valable doit conserver la fidélité</b> entre états épistémiques. C’est l’analogue exact de la conservation du produit scalaire par les transformations unitaires en mécanique quantique. Autrement dit, si deux états ont une fidélité $\mathcal{F}$ avant l’opération, ils auront la même fidélité après.</p>
@@ -1557,7 +1560,39 @@ $$</p>
 <img src="/spek7.png" style="box-shadow:none;background:none;">
 </div>
 <h2 id="paires-de-systèmes-élémentaires">Paires de systèmes élémentaires</h2>
-
+<div id="theo">
+<p>Tout système se construit à partir de systèmes élémentaires.<br>
+Pour un assemblage de $n$ éléments :</p>
+<ul style="margin-top:-0.5em;">
+<li>l’ensemble canonique comporte $2n$ questions&nbsp;;</li>
+<li>il existe $2^{2n}$ états ontiques possibles (chaque question divisant par 2 l’ensemble des possibilités).</li>
+</ul>
+</div>
+<p>Considérons deux systèmes élémentaires simultanément : leurs états ontiques forment le produit cartésien des états individuels, exactement comme un produit tensoriel en mécanique quantique.<br>
+Il y a donc 16 couples possibles notés $(a\cdot b)$ où $a$ et $b$ sont les états ontiques du premier et deuxième système respectivement :</p>
+<p>$$
+\left\{
+\begin{array}{llll}
+(4 \cdot 1), &amp; (4 \cdot 2), &amp; (4 \cdot 3), &amp; (4 \cdot 4), \\
+(3 \cdot 1), &amp; (3 \cdot 2), &amp; (3 \cdot 3), &amp; (3 \cdot 4), \\
+(2 \cdot 1), &amp; (2 \cdot 2), &amp; (2 \cdot 3), &amp; (2 \cdot 4), \\
+(1 \cdot 1), &amp; (1 \cdot 2), &amp; (1 \cdot 3), &amp; (1 \cdot 4)
+\end{array}
+\right\}
+$$</p>
+<p>On peut représenter ces 16 états ontiques sur une grille :</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/spek9.png" style="box-shadow:none;background:none;">
+</div>
+<p>Exemple : l&rsquo;état joint $(1\cdot 1)$ (système 1 dans l&rsquo;état 1 et système 2 dans l&rsquo;état 1).</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:150px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/spek10.png" style="box-shadow:none;background:none;">
+</div>
+<p>Ce n&rsquo;est pas un état épistémique valide pour deux raisons :</p>
+<ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+<li>L'état épistémique "marginal" n'obéit pas au principe d'équilibre de la connaissance&nbsp;: si on regarde isolément un des systèmes (ce qui revient à projeter sur une ligne ou sur une colonne), on n'obtient qu'un seul état ontique et donc on peut répondre à plus de la moitié des questions pour l'ensemble canonique de ce sous-système. Cette façon d'ignorer une partie de l'information d'un état bipartite est analogue à la trace partielle en mécanique quantique. Dans la théorie-jouet, cela revient à projeter toutes les rangées sur une seule si on néglige l'information du système 1 ou toutes les colonnes sur une seule si on néglige l'information du système 2.</li>
+<li style="margin-top:0.5em; ">En appliquant le principe d'équilibre des connaissance au système composite entier, on est sensé ne pouvoir répondre qu'à $2$ des $2n=4$ questions. Or un état ontique unique fixe d'un coup les $4$ réponses.</li>
+</ul>
 
 <footer class="footline">
 	
@@ -2361,16 +2396,16 @@ $$</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1747804370"></script>
-    <script src="/js/perfect-scrollbar.min.js?1747804370"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1747804370"></script>
-    <script src="/js/jquery.sticky.js?1747804370"></script>
-    <script src="/js/featherlight.min.js?1747804370"></script>
-    <script src="/js/highlight.pack.js?1747804370"></script>
+    <script src="/js/clipboard.min.js?1748125347"></script>
+    <script src="/js/perfect-scrollbar.min.js?1748125347"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1748125347"></script>
+    <script src="/js/jquery.sticky.js?1748125347"></script>
+    <script src="/js/featherlight.min.js?1748125347"></script>
+    <script src="/js/highlight.pack.js?1748125347"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1747804370"></script>
-    <script src="/js/learn.js?1747804370"></script>
-    <script src="/js/hugo-learn.js?1747804370"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1748125347"></script>
+    <script src="/js/learn.js?1748125347"></script>
+    <script src="/js/hugo-learn.js?1748125347"></script>
     
     
 
