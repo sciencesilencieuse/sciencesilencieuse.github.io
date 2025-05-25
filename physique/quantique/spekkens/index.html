@@ -33,22 +33,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1748125347" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1748125347" rel="stylesheet">
-    <link href="/css/hybrid.css?1748125347" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1748125347" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1748125347" rel="stylesheet">
-    <link href="/css/auto-complete.css?1748125347" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1748125347" rel="stylesheet">
-    <link href="/css/theme.css?1748125347" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1748125347" rel="stylesheet">
+    <link href="/css/nucleus.css?1748193755" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1748193755" rel="stylesheet">
+    <link href="/css/hybrid.css?1748193755" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1748193755" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1748193755" rel="stylesheet">
+    <link href="/css/auto-complete.css?1748193755" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1748193755" rel="stylesheet">
+    <link href="/css/theme.css?1748193755" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1748193755" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1748125347" rel="stylesheet">
+    <link href="/css/theme-blue.css?1748193755" rel="stylesheet">
     
-    <link href="/css/foo.css?1748125347" rel="stylesheet"><link href="/css/bar.css?1748125347" rel="stylesheet">
+    <link href="/css/foo.css?1748193755" rel="stylesheet"><link href="/css/bar.css?1748193755" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1748125347"></script>
+    <script src="/js/jquery-3.3.1.min.js?1748193755"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -102,14 +102,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1748125347"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1748125347"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1748193755"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1748193755"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1748125347"></script>
+<script type="text/javascript" src="/js/search.js?1748193755"></script>
 
     
   </div>
@@ -1247,6 +1247,9 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <li><a href="#transformations">Transformations</a></li>
     <li><a href="#mesure">Mesure</a></li>
     <li><a href="#paires-de-systèmes-élémentaires">Paires de systèmes élémentaires</a></li>
+    <li><a href="#mesures-sur-des-états-bipartites">Mesures sur des états bipartites</a></li>
+    <li><a href="#états-corrélés">États corrélés</a></li>
+    <li><a href="#cardinalité-des-états">Cardinalité des états</a></li>
   </ul>
 </nav>
     </div>
@@ -1556,8 +1559,11 @@ $$</p>
 \color{#1DB100}\text{I} &amp;\color{#D41876} \text{II} &amp;\color{#1DB100} \text{I} &amp;\color{#D41876} \text{II}\\
 \hline
 \end{array}$ opérée sur l&rsquo;état $1\lor 2$ donne $1\lor 3$. Cela nous indique avec certitude où était l&rsquo;état ontique (en $1$) ! Jusque-là, rien ne viole réellement le principe d&rsquo;équilibre de la connaissance puisqu&rsquo;il nous interdit de connaître l&rsquo;état ontique actuel et ne dit rien sur l&rsquo;état ontique passé. Par contre, il impose de fait que l&rsquo;état post-mesure ne puisse pas être simplement $1$. Il faut alors s&rsquo;imaginer que la mesure ait perturbé le système en distribuant l&rsquo;état ontique aléatoirement sur les deux états possibles mesurés $1$ ou $3$. Il y a donc un déplacement caché de l&rsquo;état ontique post-mesure.</p>
-<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:650px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/spek7.png" style="box-shadow:none;background:none;">
+</div>
+<div id="theo">
+<p>Lorsque les états mesurés ne contiennent qu&rsquo;un seul état ontique, la mesure distribue uniformément l&rsquo;état ontique sur les deux états mesurés.</p>
 </div>
 <h2 id="paires-de-systèmes-élémentaires">Paires de systèmes élémentaires</h2>
 <div id="theo">
@@ -1590,9 +1596,97 @@ $$</p>
 </div>
 <p>Ce n&rsquo;est pas un état épistémique valide pour deux raisons :</p>
 <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
-<li>L'état épistémique "marginal" n'obéit pas au principe d'équilibre de la connaissance&nbsp;: si on regarde isolément un des systèmes (ce qui revient à projeter sur une ligne ou sur une colonne), on n'obtient qu'un seul état ontique et donc on peut répondre à plus de la moitié des questions pour l'ensemble canonique de ce sous-système. Cette façon d'ignorer une partie de l'information d'un état bipartite est analogue à la trace partielle en mécanique quantique. Dans la théorie-jouet, cela revient à projeter toutes les rangées sur une seule si on néglige l'information du système 1 ou toutes les colonnes sur une seule si on néglige l'information du système 2.</li>
+<li>si on regarde isolément un des systèmes en ignorant l'autre, on n'obtient qu'un seul état ontique et donc on peut répondre à plus de la moitié des questions pour l'ensemble canonique de ce sous-système.  </li>
 <li style="margin-top:0.5em; ">En appliquant le principe d'équilibre des connaissance au système composite entier, on est sensé ne pouvoir répondre qu'à $2$ des $2n=4$ questions. Or un état ontique unique fixe d'un coup les $4$ réponses.</li>
 </ul>
+<p>Cet exemple nous montre que :</p>
+<div id="theo">
+<p>Dans un système bipartite de bits-jouets, au moins quatre cases doivent être colorées pour respecter le principe d&rsquo;équilibre des connaissances.</p>
+</div>
+<p>Cela implique qu&rsquo;il y ait $\binom{16}{4}=1820$ états épistémiques « de connaissance maximale » pour le système composite.</p>
+<p>Lorsqu&rsquo;on ignore l’information concernant un sous-système, on obtient une distribution <strong>marginale</strong><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> du système composite :</p>
+<ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+<li>ignorer le système 1 revient à projeter toutes les lignes sur une sous-ligne unique,</li>
+<li>ignorer le système 2 revient à projeter toutes les colonnes sur une sous-colonne unique.</li>
+</ul>
+<p>Cette opération joue un rôle analogue à la <strong>trace partielle</strong> en mécanique quantique.</p>
+<div id="theo">
+<p>Le principe d&rsquo;équilibre doit être respecté à la fois sur le système composite et sur ses marginales. Et une marginale admissible doit contenir plus de 2 états ontiques.</p>
+</div>
+<p>Cela permet de rejeter certains des $1820$ états à 4 cases colorées puisqu&rsquo;ils violent le principe d&rsquo;équilibre des connaissance sur l&rsquo;un de leurs sous-systèmes.<br>
+Les deux exemples ci-dessous sont par exemple invalides ; dans l&rsquo;exemple de gauche, le principe est violé pour le système 1 et dans l&rsquo;exemple de droite, c&rsquo;est pour le système 2.</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:380px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/spek11.png" style="box-shadow:none;background:none;">
+</div>
+<p>D’autres états doivent être écartés car ils mèneraient, après certaines mesures, à un post-état qui ne respecterait pas le principe d&rsquo;équilibre de la connaissance.</p>
+<h2 id="mesures-sur-des-états-bipartites">Mesures sur des états bipartites</h2>
+<div id="def">
+<p>On appelle <b>état produit</b> tout état bipartite dans lequel on possède la quantité maximale d’information autorisée sur chaque sous-système, en tenant compte du principe d&rsquo;équilibre de la connaissance appliqué :</p>
+<ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+<li>au système composite,</li>
+<li>et à chacun des deux sous-systèmes pris isolément</li>
+</ul>
+<p>Si le système 1 a pour marginale $a\lor b$ et le système 2 la marginale $c\lor d$, l’état produit s’écrit</p>
+<p>$$(a\lor b)\,\cdot\,(c\lor d)\;=\;
+(a\cdot c)\;\lor\;(b\cdot c)\;\lor\;(a\cdot d)\;\lor\;(b\cdot d)$$</p>
+<p>c’est-à-dire qu’on distribue la disjonction sur la conjonction exactement comme on développe $(x+a)(y+b)=xy+ay+xb+ab$ en algèbre élémentaire  .</p>
+</div>
+<br>
+<div id="theo">
+<p>Règle de mise à jour post-mesure :<br></p>
+<ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+<li>la distribution marginale du sous-système est projetée sur la zone du résultat ($\color{#1DB100}\text{I}$ ou $\color{#D41876}\text{II}$),</li>
+<li>l'autre marginale devient l'intersection entre la marginale avant mesure et la zone compatible avec le résultat obtenu.</li>
+</ul>
+<p>L&rsquo;état global est donné par le produit des deux marginales mises à jour.</p>
+</div>
+<p>Premier exemple :</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:650px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/spek12.png" style="box-shadow:none;background:none;">
+</div>
+<p>Les deux états obtenus sont invalides ce qui permet de retirer l&rsquo;état de départ des états bipartites possibles.</p>
+<p>Deuxième exemple :</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:500px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/spek13.png" style="box-shadow:none;background:none;">
+</div>
+<p>Ici, seule l&rsquo;issue $\color{#D41876}\text{II}$ est invalide mais cela suffit pour écarter là encore l&rsquo;état de départ.</p>
+<p>L&rsquo;interdiction de pouvoir localiser simultanément les deux états ontiques imposant qu&rsquo;au final au moins 4 possibilités demeurent impose finalement un tri sévère.</p>
+<h2 id="états-corrélés">États corrélés</h2>
+<div id="def">
+<p>Un <b>état corrélé</b> est un état biparti dans lequel on possède une connaissance complète de la relation entre les deux sous-systèmes, mais aucune information sur l’état ontique de chacun pris séparément : leurs marginales sont donc l’ignorance totale (quatre possibilités chacune).</p>
+</div>
+<p>L’exemple canonique est $(1·1)\;\lor\;(2·2)\;\lor\;(3·3)\;\lor\;(4·4)$, ainsi que tous les états obtenus par permutation des lignes ou des colonnes.</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:150px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/spek14.png" style="box-shadow:none;background:none;">
+</div>
+<p>Cet état n’est pas factorisable puisqu&rsquo;il lui manque les « termes croisés » $(1·2),\,(2·1),\dots$, exactement comme un état intriqué en mécanique quantique ne peut s’écrire sous forme de produit de deux fonctions d’onde locales.</p>
+<h2 id="cardinalité-des-états">Cardinalité des états</h2>
+<p>Pour un composé de n systèmes élémentaires, il existe $4^{n}$ états ontiques possibles et $2n$ questions binaires dans un ensemble canonique.</p>
+<p>Si l’on répond à la moitié de ces questions ($n$ réponses), on réduit l’incertitude à $2^{n}$ états ontiques. Tout état épistémique « de connaissance maximale » contient donc exactement $2^{n}$ cases colorées.</p>
+<p>Le nombre total d’états qui satisfont ainsi le principe d&rsquo;équilibre de la connaissance est $\bar{\Omega}_n=\binom{4^n}{2^n}$.</p>
+<p>Pour deux bits-jouets ($4^{2}=16$ cases, $2^{2}=4$ cases à colorier), cela donne les 1820 possibles évoqués plus haut mais comme on l&rsquo;a vu, beaucoup de ces états sont en réalité illégaux.</p>
+<div id="theo">
+<p>Au final, les seuls états bipartites de connaissance maximale autorisés (bits-jouets bipartites purs) sont :</p>
+<ul style="margin-top:-0.5em;">
+<li>les états produits,</li>
+<li>les états corrélés.</li>
+</ul>
+</div>
+<p>Comptage détaillé :</p>
+<ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+<li>états produits&nbsp;: on choisit 2 lignes parmi 4 et 2 colonnes parmi 4 et on colore l'intersection ce qui représente $\binom{4}{2} \cdot\binom{4}{2}=36$ possibilités.</li>
+<li>états corrélés&nbsp;: on choisit une permutation complète des 4 indices ce qui représente $4!=24$ possibilités.</li>
+</ul>
+<p>Cela donne en tout $60$ bits-jouets purs pour deux systèmes élémentaires.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://www.unige.ch/math/mgene/cours/slides7.pdf">Petit cours</a> sur les distribution conjointe et marginale en probabilité.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
 
 <footer class="footline">
 	
@@ -2396,16 +2490,16 @@ $$</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1748125347"></script>
-    <script src="/js/perfect-scrollbar.min.js?1748125347"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1748125347"></script>
-    <script src="/js/jquery.sticky.js?1748125347"></script>
-    <script src="/js/featherlight.min.js?1748125347"></script>
-    <script src="/js/highlight.pack.js?1748125347"></script>
+    <script src="/js/clipboard.min.js?1748193755"></script>
+    <script src="/js/perfect-scrollbar.min.js?1748193755"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1748193755"></script>
+    <script src="/js/jquery.sticky.js?1748193755"></script>
+    <script src="/js/featherlight.min.js?1748193755"></script>
+    <script src="/js/highlight.pack.js?1748193755"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1748125347"></script>
-    <script src="/js/learn.js?1748125347"></script>
-    <script src="/js/hugo-learn.js?1748125347"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1748193755"></script>
+    <script src="/js/learn.js?1748193755"></script>
+    <script src="/js/hugo-learn.js?1748193755"></script>
     
     
 
