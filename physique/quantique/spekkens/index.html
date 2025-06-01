@@ -33,22 +33,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1748204753" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1748204753" rel="stylesheet">
-    <link href="/css/hybrid.css?1748204753" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1748204753" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1748204753" rel="stylesheet">
-    <link href="/css/auto-complete.css?1748204753" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1748204753" rel="stylesheet">
-    <link href="/css/theme.css?1748204753" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1748204753" rel="stylesheet">
+    <link href="/css/nucleus.css?1748798429" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1748798429" rel="stylesheet">
+    <link href="/css/hybrid.css?1748798429" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1748798429" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1748798429" rel="stylesheet">
+    <link href="/css/auto-complete.css?1748798429" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1748798429" rel="stylesheet">
+    <link href="/css/theme.css?1748798429" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1748798429" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1748204753" rel="stylesheet">
+    <link href="/css/theme-blue.css?1748798429" rel="stylesheet">
     
-    <link href="/css/foo.css?1748204753" rel="stylesheet"><link href="/css/bar.css?1748204753" rel="stylesheet">
+    <link href="/css/foo.css?1748798429" rel="stylesheet"><link href="/css/bar.css?1748798429" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1748204753"></script>
+    <script src="/js/jquery-3.3.1.min.js?1748798429"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -102,14 +102,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1748204753"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1748204753"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1748798429"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1748798429"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1748204753"></script>
+<script type="text/javascript" src="/js/search.js?1748798429"></script>
 
     
   </div>
@@ -1250,6 +1250,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <li><a href="#mesures-sur-des-états-bipartites">Mesures sur des états bipartites</a></li>
     <li><a href="#états-corrélés">États corrélés</a></li>
     <li><a href="#cardinalité-des-états">Cardinalité des états</a></li>
+    <li><a href="#interdiction-du-clonage">Interdiction du clonage</a></li>
+    <li><a href="#formalisme-stabilisateur">Formalisme stabilisateur</a>
+      <ul>
+        <li><a href="#3-portes-quantiques">3 portes quantiques</a></li>
+        <li><a href="#matrices-de-pauli">Matrices de Pauli</a></li>
+      </ul>
+    </li>
+    <li><a href="#une-réalisation-possible-de-la-théorie-jouet">Une réalisation possible de la théorie-jouet</a></li>
   </ul>
 </nav>
     </div>
@@ -1499,7 +1507,10 @@ $$</p>
 <p>Les quatre opérations binaires cohérentes $+_1$, $+_2$, $+_3$, $+_4$ sont analogues aux superpositions de poids égaux de deux états purs de mécanique quantique avec une phase relative $\theta$ valant respectivement $0$, $\pi$, $\pi/2$, $3\pi/2$.</p>
 <p>Exemple : en théorie jouet, $(1\lor 2)+_4(3\lor 4)=(1\lor 4)$, et en mécanique quantique, $\tfrac1{\sqrt{2}} (|0\rangle + \mathrm{e}^{\mathrm{i}\frac{3\pi}{2}} |1\rangle)=\tfrac1{\sqrt{2}} (|0\rangle -\mathrm{i} |1\rangle)=|-\mathrm{i}\rangle$.</p>
 <h2 id="transformations">Transformations</h2>
-<p>Dans la théorie-jouet, <b>toute transformation valable doit conserver la fidélité</b> entre états épistémiques. C’est l’analogue exact de la conservation du produit scalaire par les transformations unitaires en mécanique quantique. Autrement dit, si deux états ont une fidélité $\mathcal{F}$ avant l’opération, ils auront la même fidélité après.</p>
+<div id="theo">
+<p>Dans la théorie-jouet, <b>toute transformation valable doit conserver la fidélité</b> entre états épistémiques.</p>
+</div>
+<p>C’est l’analogue exact de la conservation du produit scalaire par les transformations unitaires en mécanique quantique. Autrement dit, si deux états ont une fidélité $\mathcal{F}$ avant l’opération, ils auront la même fidélité après.</p>
 <p>Les transformations permises sont donc seulement les permutations des quatre états ontiques. En effet, si une transformation envoyait plusieurs états ontiques sur un seul, elle pourrait faire passer un état épistémique légal (respectant le principe d’équilibre des connaissances) vers un état illégal qui le viole.</p>
 <div id="preuve">
 <p>Exemple de la permutation $(123)(4)$ (permutation cyclique des états ontiques 1, 2 et 3 et absence de permutation pour l&rsquo;état 4).</p>
@@ -1660,6 +1671,14 @@ Les deux exemples ci-dessous sont par exemple invalides ; dans l&rsquo;exemple 
 <img src="/spek14.png" style="box-shadow:none;background:none;">
 </div>
 <p>Cet état n’est pas factorisable puisqu&rsquo;il lui manque les « termes croisés » $(1·2),\,(2·1),\dots$, exactement comme un état intriqué en mécanique quantique ne peut s’écrire sous forme de produit de deux fonctions d’onde locales.</p>
+<p>Que peut-on dire de l&rsquo;état suivant ?</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:150px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/spek17.png" style="box-shadow:none;background:none;">
+</div>
+<p>Il respecte le principe d&rsquo;équilibre de la connaissance (nombre d&rsquo;états quantiques $&gt;4$ sur le système composite et $&gt;2$ sur chaque marginale) et comme on a 8 états ontiques plutôt que les 4 attendus pour un bit-jouet pur, on est en présence d&rsquo;un état mixte.<br>
+Les marginales sont toutes deux $1\lor 2\lor 3\lor 4$, ce qui correspond à une ignorance totale. Leur produit cartésien serait la grille complète de 16 cases, pas seulement 8. Il ne s&rsquo;agit donc pas d&rsquo;un état produit mais d&rsquo;un état corrélé.<br>
+C&rsquo;est une corrélation &ldquo;par blocs&rdquo; : connaître un des deux états-jouets détermine le demi-espace de l&rsquo;autre mais pas une valeur unique. Et chaque bloc est un état produit de deux états purs ($(1\lor 2)\cdot(1\lor 2)$ pour le bloc du bas et $(3\lor 4)\cdot(3\lor 4)$ pour celui de haut).<br>
+On a donc au final une corrélation statistique plutôt qu&rsquo;une corrélation pure, un mélange classique de deux états produits.</p>
 <h2 id="cardinalité-des-états">Cardinalité des états</h2>
 <p>Pour un composé de n systèmes élémentaires, il existe $4^{n}$ états ontiques possibles et $2n$ questions binaires dans un ensemble canonique.</p>
 <p>Si l’on répond à la moitié de ces questions ($n$ réponses), on réduit l’incertitude à $2^{n}$ états ontiques. Tout état épistémique « de connaissance maximale » contient donc exactement $2^{n}$ cases colorées.</p>
@@ -1686,6 +1705,112 @@ Les deux exemples ci-dessous sont par exemple invalides ; dans l&rsquo;exemple 
 </li>
 </ul>
 <p>Cela donne en tout $60$ bits-jouets purs pour deux systèmes élémentaires.</p>
+<h2 id="interdiction-du-clonage">Interdiction du clonage</h2>
+<p>Dans la théorie-jouet, « cloner » un état de connaissance incomplète signifie appliquer ce même état épistémique à un second système tout en le conservant pour le premier.  Il ne s’agit pas de « dupliquer une part de la réalité » puisque les états épistémiques ne font pas partie de la réalité physique mais seulement de notre interprétation. Tout comme les états quantiques, les états-jouets sont également non-clonables.</p>
+<p>Un cloneur idéal devrait réaliser la transformation</p>
+<p>$$(a\lor b)\;\cdot\;(c\lor d)\;\longrightarrow\;(a\lor b)\;\cdot\;(a\lor b) \tag{a}$$</p>
+<p>où ($a\lor b$) est le bit-jouet de données et ($c\lor d$) un état ancillaire arbitraire.</p>
+<p>Pour être universel, le même dispositif devrait aussi accomplir</p>
+<p>$$(e\lor f)\;\cdot\;(c\lor d)\;\longrightarrow\;(e\lor f)\;\cdot\;(e\lor f)\tag{b}$$</p>
+<p>pour tout autre bit-jouet ($e\lor f$).</p>
+<p>En regardant la fidélité entre $(a)$ et $(b)$, on obtient</p>
+<p>$$
+\mathcal{F}\!\bigl[(a\lor b),(e\lor f)\bigr]\;
+\longrightarrow\;
+\bigl[\mathcal{F}\!\bigl[(a\lor b),(e\lor f)\bigr]\bigr]^{2}
+$$</p>
+<p>où on suppose
+$\mathcal{F}\!\bigl[(a\lor b)\cdot(c\lor d),(e\lor f)\cdot(c\lor d)\bigr]
+=\;
+\mathcal{F}\!\bigl[(a\lor b),(e\lor f)\bigr]\;\times\;\mathcal{F}\!\bigl[(c\lor d),(c\lor d)\bigr]$.</p>
+<p>La relation obtenue n&rsquo;a de solution que si :</p>
+<ul style="margin-top:-0.5em;">
+<li>$\mathcal{F} = 1$ (les deux états sont identiques)</li>
+<li>$\mathcal{F} = 0$ (les deux états sont disjoints)</li>
+</ul>
+<div id="theo">
+<p>Comme les seules transformations autorisées dans la théorie-jouet sont celles qui préservent la fidélité, on conclut qu’<b>un cloneur universel est impossible</b>.</p>
+</div>
+<h2 id="formalisme-stabilisateur">Formalisme stabilisateur</h2>
+<p>Une restriction discrète de la mécanique quantique permet de dresser un parallèle assez fort avec la théorie jouet : le formalisme stabilisateur. Il a été inventé pour décrire les codes correcteurs d’erreurs quantiques, mais il sert aujourd’hui aussi à la simulation efficace de certains circuits quantiques, à la cryptographie, à l’algorithmique et à l’informatique “à état magique”.</p>
+<p>Deux points d&rsquo;entrée complémentaire pour présenter ce formalisme :</p>
+<ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+<li>par les portes quantiques,</li>
+<li>par les matrices de Pauli.</li>
+</ul>
+<h3 id="3-portes-quantiques">3 portes quantiques</h3>
+<div id="def">
+<p>Les 3 portes élémentaires Hadamard ($H=\frac{1}{\sqrt{2}}\left[\begin{array}{cc}
+1 &amp; 1 \\
+1 &amp; -1
+\end{array}\right]$), phase ($P=\frac{1}{\sqrt{2}}\left[\begin{array}{cc}
+1 &amp; 0 \\
+0 &amp; \mathrm{i}
+\end{array}\right]$) et CNOT (retourne le qubit cible si et seulement si le qubit de contrôle est $|1\rangle$), sont appelées portes stabilisatrices.</p>
+</div>
+<br>
+<div id="def">
+<p>Un circuit quantique composé entièrement de portes stabilisatrices est un circuit stabilisateur.</p>
+</div>
+<br>
+<div id="def">
+<p>Un état stabilisateur est un état qu&rsquo;un circuit stabilisateur peut générer à partir de l&rsquo;état $|00\ldots 0\rangle$.</p>
+</div>
+<p>Voyons ce que l&rsquo;on obtient à partir d&rsquo;un seul qubit et des portes $H$ et $P$ :</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:450px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/spek18.png" style="box-shadow:none;background:none;">
+</div>
+<p>Ces 6 qubits sont les 1-qubits stabilisateurs.</p>
+<p>À partir de deux qubits, la porte CNOT nous permet d&rsquo;atteindre des états intriqués comme les états de Bell. Montrons par exemple comment fabriquer $\frac{|00\rangle+|11\rangle}{\sqrt{2}}$ en partant de $|00\rangle$ :</p>
+<ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+ <li>on crée une superposition locale sur le premier qubit (qubit de contrôle) grâce à $H$&nbsp;: 
+ $
+(H \otimes I)|00\rangle=\frac{|0\rangle+|1\rangle}{\sqrt{2}} \otimes|0\rangle=\frac{|00\rangle+|10\rangle}{\sqrt{2}}
+$,
+</li>
+ <li>puis on crée l'intrication grâce à CNOT (contrôle = qubit 0, cible = qubit 1) $\Rightarrow \frac{|00\rangle+|11\rangle}{\sqrt{2}}$.</li>
+ </ul> 
+<p>Il y a 60 états atteignables à 2 qubits ! Et pour chacun, une mesure dans la base $\{|0\rangle,|1\rangle\}$ donne soit $|0\rangle$, soit $|1\rangle$, soit $|0\rangle$ et $|1\rangle$ avec des probablités égales.</p>
+<h3 id="matrices-de-pauli">Matrices de Pauli</h3>
+<div id="def">
+<p>On dit qu&rsquo;un opérateur unitaire $U$ stabilise un état pur $|\Psi\rangle$ si $U|\Psi\rangle=|\Psi\rangle$ ($|\Psi\rangle$ est donc un état propre de $U$ pour la valeur propre +1).</p>
+</div>
+<p>Attention, la phase est importante ici : si $U|\Psi\rangle=-|\Psi\rangle$, alors $U$ ne stabilise pas $|\Psi\rangle$.</p>
+<p>Si $U$ et $V$ stabilisent tous deux $|\Psi\rangle$, alors $UV$ et $VU$ aussi, ainsi que $U^{-1}$ et $V^{-1}$. Et comme $I$ stabilise tout, l&rsquo;ensemble des opérateurs unitaires qui stabilisent $|\Psi\rangle$ forment un groupe multiplicatif.</p>
+<p>Vérifions maintenant que chacun des six états stabilisateurs à 1 qubit correspondent à une matrice de Pauli qui le stabilise :</p>
+<ul style="margin-top:-0.5em;">
+<li>$I$ stabilise tout</li>
+<li>$-I$ ne stabilise rien</li>
+<li>$X$ stabilise $|+\rangle$</li>
+<li>$-X$ stabilise $|-\rangle$</li>
+<li>$Z$ stabilise $|0\rangle$</li>
+<li>$-Z$ stabilise $|1\rangle$</li>
+<li>$Y$ stabilise $|\mathrm{i}\rangle$</li>
+<li>$-Y$ stabilise $|-\mathrm{i}\rangle$</li>
+</ul>
+<div id="preuve">
+<p>Les matrices de Pauli permettent d&rsquo;opérer chaque type d&rsquo;erreur de code (d&rsquo;où leur omniprésence dans le monde des codes correcteurs) :</p>
+<ul style="margin-top:-0.5em;">
+<li>pas d'erreur&nbsp;: $I|1\rangle = |1\rangle$</li>
+<li>retournement de bit&nbsp;: $X|1\rangle = |0\rangle$</li>
+<li>retournement de phase&nbsp;: $Z|1\rangle = -|1\rangle$</li>
+<li>les deux à la fois&nbsp;: $Y|1\rangle = -\mathrm{i}|0\rangle$</li>
+</ul>
+</div>
+<br>
+<div id="def">
+<p>Pour un $n$-qubit $|\Psi\rangle$, on définit le groupe stabilisateur de $|\Psi\rangle$ comme le groupe de tous les produits tensoriels de matrices de Pauli qui stabilisent $|\Psi\rangle$.</p>
+</div>
+<p>Exemple : quel est le groupe stabilisateur de l&rsquo;état de Bell $\frac{|00\rangle+|11\rangle}{\sqrt{2}}$ ?<br>
+$XX$ est dedans puisque $\frac{X|0\rangle \otimes X|0\rangle+X|1\rangle \otimes X|1\rangle}{\sqrt{2}}=\frac{|11\rangle+|00\rangle}{\sqrt{2}}=\frac{|00\rangle+|11\rangle}{\sqrt{2}}$.<br>
+De même pour $-YY$ et le résultat de la multiplication $XX\cdot-YY = -(\mathrm{i}Z)(\mathrm{i}Z) = ZZ$.<br>
+Le groupe au complet est alors $\{II,XX,-YY-ZZ\}$.</p>
+<div id="theo">
+<p>Les états stabilisateurs à $n$-qubits sont exactement les états à $n$-qubits qui ont un groups stabilisateur de taille $2^n$.</p>
+</div>
+<p>Les états stabilisateurs à 1 qubit sont ainsi les états ayant un groupe stabilisateur à 2 éléments,  les états stabilisateurs à 2 qubits sont ceux avec un groupe à 4 éléments, etc.</p>
+<p>On a ainsi caractériser les états stabilisateurs d&rsquo;une manière complètement différente, sans mention de circuit stabilisateur. Cela nous a permis de gagner de l&rsquo;information sur l&rsquo;invariant que les circuits stabilisateurs préserve.</p>
+<h2 id="une-réalisation-possible-de-la-théorie-jouet">Une réalisation possible de la théorie-jouet</h2>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -2498,16 +2623,16 @@ Les deux exemples ci-dessous sont par exemple invalides ; dans l&rsquo;exemple 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1748204753"></script>
-    <script src="/js/perfect-scrollbar.min.js?1748204753"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1748204753"></script>
-    <script src="/js/jquery.sticky.js?1748204753"></script>
-    <script src="/js/featherlight.min.js?1748204753"></script>
-    <script src="/js/highlight.pack.js?1748204753"></script>
+    <script src="/js/clipboard.min.js?1748798429"></script>
+    <script src="/js/perfect-scrollbar.min.js?1748798429"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1748798429"></script>
+    <script src="/js/jquery.sticky.js?1748798429"></script>
+    <script src="/js/featherlight.min.js?1748798429"></script>
+    <script src="/js/highlight.pack.js?1748798429"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1748204753"></script>
-    <script src="/js/learn.js?1748204753"></script>
-    <script src="/js/hugo-learn.js?1748204753"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1748798429"></script>
+    <script src="/js/learn.js?1748798429"></script>
+    <script src="/js/hugo-learn.js?1748798429"></script>
     
     
 
