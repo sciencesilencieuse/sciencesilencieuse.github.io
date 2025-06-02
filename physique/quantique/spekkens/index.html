@@ -33,22 +33,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1748798429" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1748798429" rel="stylesheet">
-    <link href="/css/hybrid.css?1748798429" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1748798429" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1748798429" rel="stylesheet">
-    <link href="/css/auto-complete.css?1748798429" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1748798429" rel="stylesheet">
-    <link href="/css/theme.css?1748798429" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1748798429" rel="stylesheet">
+    <link href="/css/nucleus.css?1748848555" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1748848555" rel="stylesheet">
+    <link href="/css/hybrid.css?1748848555" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1748848555" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1748848555" rel="stylesheet">
+    <link href="/css/auto-complete.css?1748848555" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1748848555" rel="stylesheet">
+    <link href="/css/theme.css?1748848555" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1748848555" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1748798429" rel="stylesheet">
+    <link href="/css/theme-blue.css?1748848555" rel="stylesheet">
     
-    <link href="/css/foo.css?1748798429" rel="stylesheet"><link href="/css/bar.css?1748798429" rel="stylesheet">
+    <link href="/css/foo.css?1748848555" rel="stylesheet"><link href="/css/bar.css?1748848555" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1748798429"></script>
+    <script src="/js/jquery-3.3.1.min.js?1748848555"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -102,14 +102,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1748798429"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1748798429"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1748848555"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1748848555"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1748798429"></script>
+<script type="text/javascript" src="/js/search.js?1748848555"></script>
 
     
   </div>
@@ -1713,7 +1713,7 @@ On a donc au final une corrélation statistique plutôt qu&rsquo;une corrélatio
 <p>Pour être universel, le même dispositif devrait aussi accomplir</p>
 <p>$$(e\lor f)\;\cdot\;(c\lor d)\;\longrightarrow\;(e\lor f)\;\cdot\;(e\lor f)\tag{b}$$</p>
 <p>pour tout autre bit-jouet ($e\lor f$).</p>
-<p>En regardant la fidélité entre $(a)$ et $(b)$, on obtient</p>
+<p>La fidélité entre $(a)$ et $(b)$ nous donne</p>
 <p>$$
 \mathcal{F}\!\bigl[(a\lor b),(e\lor f)\bigr]\;
 \longrightarrow\;
@@ -1740,27 +1740,27 @@ $\mathcal{F}\!\bigl[(a\lor b)\cdot(c\lor d),(e\lor f)\cdot(c\lor d)\bigr]
 </ul>
 <h3 id="3-portes-quantiques">3 portes quantiques</h3>
 <div id="def">
-<p>Les 3 portes élémentaires Hadamard ($H=\frac{1}{\sqrt{2}}\left[\begin{array}{cc}
+<p>Les 3 portes élémentaires <b>Hadamard</b> ($H=\frac{1}{\sqrt{2}}\left[\begin{array}{cc}
 1 &amp; 1 \\
 1 &amp; -1
-\end{array}\right]$), phase ($P=\frac{1}{\sqrt{2}}\left[\begin{array}{cc}
+\end{array}\right]$), <b>phase</b> ($P=\frac{1}{\sqrt{2}}\left[\begin{array}{cc}
 1 &amp; 0 \\
 0 &amp; \mathrm{i}
-\end{array}\right]$) et CNOT (retourne le qubit cible si et seulement si le qubit de contrôle est $|1\rangle$), sont appelées portes stabilisatrices.</p>
+\end{array}\right]$) et <b>CNOT</b> (retourne le qubit cible si et seulement si le qubit de contrôle est $|1\rangle$), sont appelées <b>portes stabilisatrices</b>.</p>
 </div>
 <br>
 <div id="def">
-<p>Un circuit quantique composé entièrement de portes stabilisatrices est un circuit stabilisateur.</p>
+<p>Un circuit quantique composé entièrement de portes stabilisatrices est un <b>circuit stabilisateur</b>.</p>
 </div>
 <br>
 <div id="def">
-<p>Un état stabilisateur est un état qu&rsquo;un circuit stabilisateur peut générer à partir de l&rsquo;état $|00\ldots 0\rangle$.</p>
+<p>Un <b>état stabilisateur</b> est un état qu&rsquo;un circuit stabilisateur peut générer à partir de l&rsquo;état $|00\ldots 0\rangle$.</p>
 </div>
 <p>Voyons ce que l&rsquo;on obtient à partir d&rsquo;un seul qubit et des portes $H$ et $P$ :</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:450px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/spek18.png" style="box-shadow:none;background:none;">
 </div>
-<p>Ces 6 qubits sont les 1-qubits stabilisateurs.</p>
+<p>Ces 6 qubits qui, comme on l&rsquo;a vu, ont leur contrepartie chez les jouets, sont les 1-qubits stabilisateurs.</p>
 <p>À partir de deux qubits, la porte CNOT nous permet d&rsquo;atteindre des états intriqués comme les états de Bell. Montrons par exemple comment fabriquer $\frac{|00\rangle+|11\rangle}{\sqrt{2}}$ en partant de $|00\rangle$ :</p>
 <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
  <li>on crée une superposition locale sur le premier qubit (qubit de contrôle) grâce à $H$&nbsp;: 
@@ -1768,15 +1768,15 @@ $\mathcal{F}\!\bigl[(a\lor b)\cdot(c\lor d),(e\lor f)\cdot(c\lor d)\bigr]
 (H \otimes I)|00\rangle=\frac{|0\rangle+|1\rangle}{\sqrt{2}} \otimes|0\rangle=\frac{|00\rangle+|10\rangle}{\sqrt{2}}
 $,
 </li>
- <li>puis on crée l'intrication grâce à CNOT (contrôle = qubit 0, cible = qubit 1) $\Rightarrow \frac{|00\rangle+|11\rangle}{\sqrt{2}}$.</li>
+ <li>puis on ajoute l'intrication grâce à CNOT (contrôle = qubit 0, cible = qubit 1) $\Rightarrow \frac{|00\rangle+|11\rangle}{\sqrt{2}}$.</li>
  </ul> 
-<p>Il y a 60 états atteignables à 2 qubits ! Et pour chacun, une mesure dans la base $\{|0\rangle,|1\rangle\}$ donne soit $|0\rangle$, soit $|1\rangle$, soit $|0\rangle$ et $|1\rangle$ avec des probablités égales.</p>
+<p>Il y a 60 états atteignables à 2 qubits (autant que les bits-jouets à nouveau). Et pour chacun, une mesure dans la base $\{|0\rangle,|1\rangle\}$ donne soit $|0\rangle$, soit $|1\rangle$, soit $|0\rangle$ et $|1\rangle$ avec des probablités égales.</p>
 <h3 id="matrices-de-pauli">Matrices de Pauli</h3>
 <div id="def">
-<p>On dit qu&rsquo;un opérateur unitaire $U$ stabilise un état pur $|\Psi\rangle$ si $U|\Psi\rangle=|\Psi\rangle$ ($|\Psi\rangle$ est donc un état propre de $U$ pour la valeur propre +1).</p>
+<p>On dit qu&rsquo;un <b>opérateur unitaire</b> $U$ <b>stabilise</b> un état pur $|\Psi\rangle$ si $U|\Psi\rangle=|\Psi\rangle$ ($|\Psi\rangle$ est donc un état propre de $U$ pour la valeur propre +1).</p>
 </div>
 <p>Attention, la phase est importante ici : si $U|\Psi\rangle=-|\Psi\rangle$, alors $U$ ne stabilise pas $|\Psi\rangle$.</p>
-<p>Si $U$ et $V$ stabilisent tous deux $|\Psi\rangle$, alors $UV$ et $VU$ aussi, ainsi que $U^{-1}$ et $V^{-1}$. Et comme $I$ stabilise tout, l&rsquo;ensemble des opérateurs unitaires qui stabilisent $|\Psi\rangle$ forment un groupe multiplicatif.</p>
+<p>Si $U$ et $V$ stabilisent tous deux $|\Psi\rangle$, alors $UV$ et $VU$ aussi, ainsi que $U^{-1}$ et $V^{-1}$. Et comme $I$ stabilise tout, l&rsquo;ensemble des opérateurs unitaires qui stabilisent $|\Psi\rangle$ forment un <b>groupe</b> multiplicatif.</p>
 <p>Vérifions maintenant que chacun des six états stabilisateurs à 1 qubit correspondent à une matrice de Pauli qui le stabilise :</p>
 <ul style="margin-top:-0.5em;">
 <li>$I$ stabilise tout</li>
@@ -1799,7 +1799,7 @@ $,
 </div>
 <br>
 <div id="def">
-<p>Pour un $n$-qubit $|\Psi\rangle$, on définit le groupe stabilisateur de $|\Psi\rangle$ comme le groupe de tous les produits tensoriels de matrices de Pauli qui stabilisent $|\Psi\rangle$.</p>
+<p>Pour un $n$-qubit $|\Psi\rangle$, on définit le <b>groupe stabilisateur</b> de $|\Psi\rangle$ comme le groupe de tous les produits tensoriels de matrices de Pauli qui stabilisent $|\Psi\rangle$.</p>
 </div>
 <p>Exemple : quel est le groupe stabilisateur de l&rsquo;état de Bell $\frac{|00\rangle+|11\rangle}{\sqrt{2}}$ ?<br>
 $XX$ est dedans puisque $\frac{X|0\rangle \otimes X|0\rangle+X|1\rangle \otimes X|1\rangle}{\sqrt{2}}=\frac{|11\rangle+|00\rangle}{\sqrt{2}}=\frac{|00\rangle+|11\rangle}{\sqrt{2}}$.<br>
@@ -1809,7 +1809,7 @@ Le groupe au complet est alors $\{II,XX,-YY-ZZ\}$.</p>
 <p>Les états stabilisateurs à $n$-qubits sont exactement les états à $n$-qubits qui ont un groups stabilisateur de taille $2^n$.</p>
 </div>
 <p>Les états stabilisateurs à 1 qubit sont ainsi les états ayant un groupe stabilisateur à 2 éléments,  les états stabilisateurs à 2 qubits sont ceux avec un groupe à 4 éléments, etc.</p>
-<p>On a ainsi caractériser les états stabilisateurs d&rsquo;une manière complètement différente, sans mention de circuit stabilisateur. Cela nous a permis de gagner de l&rsquo;information sur l&rsquo;invariant que les circuits stabilisateurs préserve.</p>
+<p>On a ainsi caractériser les états stabilisateurs d&rsquo;une manière complètement différente, sans mention de circuit stabilisateur. Cela nous a permis d&rsquo;en savoir plus sur l&rsquo;invariant que les circuits stabilisateurs préservent.</p>
 <h2 id="une-réalisation-possible-de-la-théorie-jouet">Une réalisation possible de la théorie-jouet</h2>
 <div class="footnotes" role="doc-endnotes">
 <hr>
@@ -2623,16 +2623,16 @@ Le groupe au complet est alors $\{II,XX,-YY-ZZ\}$.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1748798429"></script>
-    <script src="/js/perfect-scrollbar.min.js?1748798429"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1748798429"></script>
-    <script src="/js/jquery.sticky.js?1748798429"></script>
-    <script src="/js/featherlight.min.js?1748798429"></script>
-    <script src="/js/highlight.pack.js?1748798429"></script>
+    <script src="/js/clipboard.min.js?1748848555"></script>
+    <script src="/js/perfect-scrollbar.min.js?1748848555"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1748848555"></script>
+    <script src="/js/jquery.sticky.js?1748848555"></script>
+    <script src="/js/featherlight.min.js?1748848555"></script>
+    <script src="/js/highlight.pack.js?1748848555"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1748798429"></script>
-    <script src="/js/learn.js?1748798429"></script>
-    <script src="/js/hugo-learn.js?1748798429"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1748848555"></script>
+    <script src="/js/learn.js?1748848555"></script>
+    <script src="/js/hugo-learn.js?1748848555"></script>
     
     
 
