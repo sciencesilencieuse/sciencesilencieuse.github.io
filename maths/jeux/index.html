@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1754527756" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1754527756" rel="stylesheet">
-    <link href="/css/hybrid.css?1754527756" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1754527756" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1754527756" rel="stylesheet">
-    <link href="/css/auto-complete.css?1754527756" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1754527756" rel="stylesheet">
-    <link href="/css/theme.css?1754527756" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1754527756" rel="stylesheet">
+    <link href="/css/nucleus.css?1755519305" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1755519305" rel="stylesheet">
+    <link href="/css/hybrid.css?1755519305" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1755519305" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1755519305" rel="stylesheet">
+    <link href="/css/auto-complete.css?1755519305" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1755519305" rel="stylesheet">
+    <link href="/css/theme.css?1755519305" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1755519305" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1754527756" rel="stylesheet">
+    <link href="/css/theme-blue.css?1755519305" rel="stylesheet">
     
-    <link href="/css/foo.css?1754527756" rel="stylesheet"><link href="/css/bar.css?1754527756" rel="stylesheet">
+    <link href="/css/foo.css?1755519305" rel="stylesheet"><link href="/css/bar.css?1755519305" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1754527756"></script>
+    <script src="/js/jquery-3.3.1.min.js?1755519305"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1754527756"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1754527756"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1755519305"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1755519305"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1754527756"></script>
+<script type="text/javascript" src="/js/search.js?1755519305"></script>
 
     
   </div>
@@ -1317,18 +1317,47 @@ Si Rouge joue sa première stratégie, il perd au pire 6 alors qu&rsquo;avec la 
 <p>En résumé, Bleu choisi la ligne contenant le plus grand des gains minimums et Rouge choisit la colonne contenant le plus petit gain maximum possible.</p>
 <p>Le résultat de la partie est ici un gain de 5 pour Bleu.</p>
 <p>Lorsque, comme dans cet exemple, le gain minimal sur la ligne comportant le plus grand minimum possible est égal au gain maximal sur la colonne contenant le plus petit maximum possible, on dit que le jeu est <strong>stable</strong>. Aucun des joueurs ne sera inciter à changer de stratégie. Le jeu possède alors un <strong>point col</strong> (ou point-selle en référence à une selle de cheval). On a en effet, un minimum local dans une direction et un maximum local dans l&rsquo;autre.</p>
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
- <div style="position:relative; width:600px; max-width:100%; margin-left: auto; margin-right: auto; ">
-<div id="monGraphique" style="width:100%"></div>
+<script src="https://cdn.plot.ly/plotly-3.1.0.min.js"></script>
+<style>
+  /* Conteneur centré, borné, et réactif */
+  .plot-wrap{
+    position: relative;
+    width: 800px;
+    max-width:100%;
+    max-height: 90vh;        /* ne dépasse pas la hauteur visible */
+    aspect-ratio: 1/1;    /* gère la hauteur automatiquement */
+    margin: 0 auto;
+  }
+  /* Le div Plotly occupe 100% du conteneur */
+  #monGraphique{ width:100%; height:100%; }
+</style>
+<div class="plot-wrap">
+  <div id="monGraphique"></div>
 </div>
 <script>
-fetch('/selledecheval.json')
-  .then(response => response.json())
-  .then(data => {
-    var layoutUpdate = data.layout || {};
-    layoutUpdate.responsive = true;
-    Plotly.newPlot('monGraphique', data.data, layoutUpdate);
-  });
+(async ()=>{
+  const resp = await fetch('/selledecheval.json');
+  const data = await resp.json();
+
+  // Layout : pas de width/height figées, autosize activé
+  const layout = { ...(data.layout || {}) };
+  delete layout.width; delete layout.height;
+  layout.autosize = true;
+
+  // Config : responsive ICI (3e argument)
+  const config = { ...(data.config || {}), responsive: true };
+
+  const el = document.getElementById('monGraphique');
+  await Plotly.newPlot(el, data.data, layout, config);
+
+  // Robuste : resize aussi quand le conteneur change (iframe/Reveal, etc.)
+  const wrap = document.querySelector('.plot-wrap');
+  if ('ResizeObserver' in window){
+    new ResizeObserver(()=>Plotly.Plots.resize(el)).observe(wrap);
+  }
+  // Sécurité : resize sur fenêtre
+  window.addEventListener('resize', ()=>Plotly.Plots.resize(el), {passive:true});
+})();
 </script>
 <p>Changeons de matrice de gain :</p>
 <p><img src="/poursuitematrice3.png?width=500px" alt=""></p>
@@ -2180,16 +2209,16 @@ On a alors $\displaystyle V\left(\frac{1}{3},\frac{2}{3}\right) = 60+40\left(\fr
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1754527756"></script>
-    <script src="/js/perfect-scrollbar.min.js?1754527756"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1754527756"></script>
-    <script src="/js/jquery.sticky.js?1754527756"></script>
-    <script src="/js/featherlight.min.js?1754527756"></script>
-    <script src="/js/highlight.pack.js?1754527756"></script>
+    <script src="/js/clipboard.min.js?1755519305"></script>
+    <script src="/js/perfect-scrollbar.min.js?1755519305"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1755519305"></script>
+    <script src="/js/jquery.sticky.js?1755519305"></script>
+    <script src="/js/featherlight.min.js?1755519305"></script>
+    <script src="/js/highlight.pack.js?1755519305"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1754527756"></script>
-    <script src="/js/learn.js?1754527756"></script>
-    <script src="/js/hugo-learn.js?1754527756"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1755519305"></script>
+    <script src="/js/learn.js?1755519305"></script>
+    <script src="/js/hugo-learn.js?1755519305"></script>
     
     
 
