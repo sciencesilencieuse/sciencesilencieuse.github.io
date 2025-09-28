@@ -8,7 +8,7 @@
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
-    <title>Cercle et Trigo - Science en vrac</title>
+    <title>Entropie - Science en vrac</title>
     
     
 
@@ -75,7 +75,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 
 	
   </head>
-  <body class="" data-url="/maths/geometrie/geo2/">
+  <body class="" data-url="/physique/phistat/entropie/">
     <nav id="sidebar" class="">
 
 
@@ -327,7 +327,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/maths/" title="Maths" class="dd-item
-        parent
+        
         
         
         ">
@@ -436,7 +436,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/maths/geometrie/" title="Géométrie" class="dd-item
-        parent
+        
         
         
         ">
@@ -602,7 +602,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/" title="Physique" class="dd-item
-        
+        parent
         
         
         ">
@@ -871,7 +871,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/phistat/" title="Thermo et φ stat" class="dd-item
-        
+        parent
         
         
         ">
@@ -918,7 +918,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
  
   
     
-      <li data-nav-id="/physique/phistat/entropie/" title="Entropie" class="dd-item ">
+      <li data-nav-id="/physique/phistat/entropie/" title="Entropie" class="dd-item active">
         <a href="/physique/phistat/entropie/">
         Entropie
         
@@ -1330,7 +1330,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
                   <span class="links">
                  
                  
-                   Cercle et Trigo
+                   Entropie
                  
                   </span>
                 </div>
@@ -1339,8 +1339,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#trigonométrie">Trigonométrie</a></li>
-    <li><a href="#théorème-de-langle-inscrit-et-de-langle-au-centre">Théorème de l&rsquo;angle inscrit et de l&rsquo;angle au centre</a></li>
+    <li><a href="#information-et-thermodynamique-dans-la-physique-théorique-contemporaine">Information et thermodynamique dans la physique théorique contemporaine</a></li>
   </ul>
 </nav>
     </div>
@@ -1379,66 +1378,94 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   {
     color: #006C65;
   }
+    #grosseformule 
+{
+    overflow-x: auto; 
+}
+#preuve
+{
+    background-color:#EAEAEA;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#def
+{
+    background-color:#DCEFFE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#theo
+{
+    background-color:#FBE1DE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+
+ul
+{
+margin-top:-0.5em;
+}
 </style>
-<h1 id="cercle-et-triangle">Cercle et triangle</h1>
-<h2 id="trigonométrie">Trigonométrie</h2>
-<p><img src="/deroule.gif" alt=""></p>
-<p><img src="/cercleder.png?width=1000" alt=""></p>
-<p><img src="/cerclecos.gif" alt=""></p>
-<br>
-<hr>
-<br>
+<h1 id="entropie-et-information">Entropie et information</h1>
+<p>Qu&rsquo;est-ce que l&rsquo;entropie ?</p>
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/4-EClV7U8nM?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/rtgSC2Bw70c?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+</div>
+
+<div class="notices note" style="--title: 'note';">
+  <p style="display: none;">note</p>
+  <div class="notice-body">
+    <p>PW Atkins a écrit un livre merveilleux sur l&rsquo;entropie : <em>The Second Law</em>.<br>
+Il fait partie de la vieille collection <a href="https://en.wikipedia.org/wiki/Scientific_American_Library"><em>Scientific American Library</em></a> qui est bourrée de pépites.</p>
+
+  </div>
+</div>
+
+
+<p>L&rsquo;<strong>entropie</strong> est une notion passionnante qui ramifie dans différents champs.</p>
+<div id="def">
+<p>En théorie de l&rsquo;information, Claude <strong>Shannon</strong> a appelé entropie la mesure de la quantité d&rsquo;<strong>information</strong> contenu dans un message. Ramenée à la physique, l&rsquo;entropie de Shannon mesure le nombre de questions binaires (dont la réponse est oui ou non) auxquelles il faudrait répondre pour spécifier le microétat du système pour un macroétat donné.</p>
+</div>
+<p>Cherchant une réponse au paradoxe de Maxwell, Leó Szilárd a formulé en 1929 une équivalence entre l&rsquo;énergie et l&rsquo;information grâce à une version simplifiée du <strong>démon de Maxwell</strong>. Il en a déduit l&rsquo;énergie nécessaire au démon pour faire varier l&rsquo;information d&rsquo;un bit. <strong>Landauer</strong> en a fait un principe (en 1961) qui stipule que l&rsquo;énergie dissipée lors de l&rsquo;effacement d&rsquo;un bit d&rsquo;information vaut au minimum $k_BT \ln(2)$.</p>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/XY-mbr-aAZE?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
     </div>
 
 </div>
 <br>
-<p>La <strong>loi des sinus</strong> a contribué à la définition du <strong>mètre</strong>, la première unité &ldquo;<strong>universelle</strong>&rdquo; lors de la révolution française.</p>
-<p>Delambre et Méchain furent missionner pour mesurer le plus précisément possible un bout de méridien entre Dunkerque et Barcelone, la toute neuve définition du <strong>mètre</strong> étant :</p>
-<blockquote>
-<p><strong>un mètre est la dix millionième partie d&rsquo;un quart de méridien terrestre</strong></p></blockquote>
-<p>Le cercle répétiteur de Borda fut leur arme secrète. Il permettait alors de mesurer des angles avec une incertitude de quelques secondes seulement. Mesurer des distances avec cette précision est beaucoupl plus difficile ! L&rsquo;idée fut alors de réaliser des triangulations : on vise des sommets faciles à repérer et on note les angles entre eux. Ils réalisèrent des dizaines de visées tout le long du bout de méridien étudié et le recouvrit de triangles.</p>
-<p><img src="/metremeridien.png" alt=""></p>
-<p>Une seule distance mesurée avec une grande précision permit alors de déterminer toutes les autres.
-En effet, grâce à la <strong>loi des sinus</strong>, la connaissance de la longueur d&rsquo;un côté et de deux angles dans un triangle permet de déterminer les longueurs des deux autres côtés.</p>
-<p>Thalès l&rsquo;avait  semble-t-il déjà réalisé puisqu&rsquo;il aurait mis au point la méthode suivante pour connaître la distance entre un navire et la côte : deux observateurs $A$ et $C$ s&rsquo;éloignent en direction opposée le long du trait de côte et mesurent les angles $\alpha = \widehat{CAB}$ et $\gamma = \widehat{ACB}$ entre la direction du bateau et la côte ainsi que la distance $AC$ qui les sépare l&rsquo;un de l&rsquo;autre. On a alors $d=AC\times\frac{\sin\left(\gamma\right)\sin\left(\alpha\right)}{\sin\left(\pi-(\alpha+\gamma)\right)}$ !</p>
-<p>Preuve :</p>
-<div style="position:relative; width:600px; max-width: 100%; margin-left: auto; margin-right: auto; border-radius:10px">
-<img src="/trigula.png" style="border-radius:10px">
+<div id="preuve">
+<p><b>Lien entre l&rsquo;entropie de Shannon et l&rsquo;entropie thermodynamique</b> dans le cas d&rsquo;un gaz parfait à l&rsquo;équilibre (composé de $N$ particules) dans une enceinte de volume $V$ à la température $T$ :<br><br>
+L&rsquo;information sur une particule consiste à connaître sa position et sa vitesse. L&rsquo;additivité de l&rsquo;entropie permet de distinguer ces deux contributions.<br><br>
+Appelons $H_p(V)$ l&rsquo;entropie de Shannon liée la position d&rsquo;une particule du gaz.<br>
+Après avoir doublé le volume de l&rsquo;enceinte, on peut revenir à la situtation de départ (en terme d&rsquo;information) en posant à la particule la question binaire  &ldquo;es-tu dans l&rsquo;enceinte de gauche ou celle de droite ?&rdquo;. <br>
+On a par conséquent $H_p(2V) = H_p(V) + 1$ (il faut 1 bit d&rsquo;information en plus). La seule fonction ayant cette propriété est le logarithme en base deux : $\log_2$. D&rsquo;où $H_p(V) = \log_2(V)+cste$.<br><br>
+À l&rsquo;équilibre thermique, l&rsquo;énergie cinétique pour chacun des degrés de liberté possibles (3 pour une particule monatomique, et 5 ou 7 pour une particule diatomique en ajoutant les rotations et vibrations) est proportionnelle à la température. Mais notre information porte sur la vitesse. La vitesse pour chaque réservoir d&rsquo;énergie cinétique est donc proportionnelle à la racine carrée de la température. En quadruplant la température, on double donc la vitesse dans chacun des réservoirs. Il faudra alors autant de questions binaires que de réservoirs (3 pour une particule monoatomique) pour revenir à la situation informationnelle de départ.<br>
+En appelant $H_v(T)$ l&rsquo;entropie de Shannon liée à la vitesse d&rsquo;une particule, on a : $H_v(4T) = H_v(T)+3$. La fonction ayant cette propriété est $3\log_4$ ou $\frac{3}{2}\log_2$.<br>
+D&rsquo;où $\displaystyle H_v(T)=\frac{3}{2}\log_2(T) + cste$.<br><br>
+L&rsquo;entropie de Shannon totale de la particule vaut donc $\displaystyle  H(V,T)=H_v(V)+H_p(T) = \frac{3}{2}\log_2(T)+\log_2(V)+cste$<br><br>
+Et pour $N$ particules ? Si les particules sont supposées indiscernables, multiplier $H$ par $N$ nous ferait tomber dans le paradoxe de Gibbs. Comme toutes les permutations de particules amènent à la même quantité d&rsquo;infomation, il faut retirer $\log_2(N!)$ à l&rsquo;entropie obtenue : $\displaystyle H_{gaz}(V,T) = N H(V,T) - \log_2(N!) \approx \frac{3N}{2}\log_2(T) + N\log_2(V) + Ncste - N\log_2(N) + N$.<br><br>
+En utilisant le principe de Landauer, on peut convertir ces bits en énergie par unité de température en multipliant par $k_B \ln_2$. On passe alors de $H$ à $S$, l&rsquo;entropie thermodynamique :<br>
+$\displaystyle  S(V,T) = \frac{3Nk_B}{2}\ln(T) + Nk_B\ln(V) - Nk_B\ln(N)+CNk_B$ (où $C$ est une constante).<br><br>
+Source : <a href="https://www.youtube.com/watch?v=H71WR50stm4">vidéo de Lê Nguyên Hoang sur l&rsquo;entropie</a></p>
 </div>
-<p>$$\beta=180^\circ - (\alpha+\gamma)$$
-$$AB = AC\times\frac{\sin\gamma}{\sin\beta}$$
-$$d=AB\sin\alpha$$</p>
 <br>
-<hr>
-<h2 id="théorème-de-langle-inscrit-et-de-langle-au-centre">Théorème de l&rsquo;angle inscrit et de l&rsquo;angle au centre</h2>
+<h2 id="information-et-thermodynamique-dans-la-physique-théorique-contemporaine">Information et thermodynamique dans la physique théorique contemporaine</h2>
+<p>On observe depuis quelques temps une convergence de la recherche en informatique et en physique théorique sur les questions de l&rsquo;<strong>entropie</strong> et de la <strong>complexité</strong>.</p>
+<p>John Wheeler est un des premiers à militer pour qu&rsquo;on s&rsquo;oriente vers <a href="https://philpapers.org/archive/WHEIPQ.pdf">une explication de l&rsquo;univers basée sur son contenu en information</a>, le bit élémentaire, ce qu&rsquo;il résume par la formule &ldquo;<strong>it from bit</strong>&rdquo; (Wheeler a un certain talent pour les formules, en plus du reste&hellip;).</p>
+<p>Le fait qu&rsquo;un trou noir ait une entropie proportionnelle à son aire et non à sa masse, comme l&rsquo;ont montré Stephen Hawking et Jacob Bekenstein, semble donner corps à cette idée que le bit est l&rsquo;atome de notre compréhension de l&rsquo;univers. Tout horizon se présenterait en effet comme une sorte d&rsquo;écran sur lequel s&rsquo;écrit l&rsquo;information qu&rsquo;il contient. C&rsquo;est le <strong>principe holographique</strong>.</p>
 <br>
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/IO6ZVNXkk4U?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-    </div>
-
-</div>
-<p>Nom d&rsquo;un théorème et système éducatif :</p>
-<blockquote>
-<p>L&rsquo;éducation secondaire se démocratise au cours du xixe siècle. La géométrie, qui a souvent pour but d&rsquo;exercer à la logique, en est un élément important. Les manuels se répandent, et leurs auteurs se mettent à introduire plus ou moins systématiquement des éléments historiques, en particulier en attribuant des noms de mathématicien aux théorèmes. L&rsquo;époque est également au renouveau des recherches historiques sur les mathématiques de la Grèce antique. C&rsquo;est dans ce contexte qu&rsquo;à partir de la fin du xixe siècle le nom de Thalès est attribué à deux théorèmes distincts. En France puis en Italie c&rsquo;est à un théorème du livre VI des Éléments d&rsquo;Euclide, soit celui sur la proportionnalité des segments découpés par une ligne parallèle à un côté dans un triangle, soit sa généralisation pour deux sécantes. En Allemagne c&rsquo;est au théorème de l&rsquo;angle inscrit dans un demi-cercle. Ces dénominations sont bien établies dans les années 1920, époque à laquelle d&rsquo;autres pays adoptent l&rsquo;une ou l&rsquo;autre (mais pas l&rsquo;Angleterre ni les États-Unis).<br><br>
-Ces choix correspondent à des traditions différentes d&rsquo;enseignement de la géométrie, plutôt fidèle à Euclide et à l&rsquo;ordre d&rsquo;exposition des Éléments en Allemagne, alors qu&rsquo;une tradition plus anti-euclidienne s&rsquo;est développée en France depuis La Ramée. Le choix s&rsquo;est porté en France et en Italie, sur un théorème qui met en évidence un invariant de la géométrie affine, le rapport de mesures algébriques sur une droite, ce qui correspond au développement en Europe de la géométrie projective et affine au xixe siècle. Ce théorème est mis en avant dans les débuts de l&rsquo;apprentissage de la géométrie, alors que l&rsquo;Allemagne privilégie le théorème de Pythagore, et choisit de donner le nom de Thalès à un théorème lié au triangle rectangle.<br><br>
-Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas obéi a des considérations strictement historiques. L&rsquo;histoire est instrumentalisée au service d&rsquo;un choix didactique : il s&rsquo;agit de mettre un théorème en avant, en lui attribuant le nom d&rsquo;un mathématicien célèbre, d&rsquo;où des choix différents dans des traditions d&rsquo;enseignement différentes.</p></blockquote>
-<p style="text-align:right">
-<i>Source : <a href="https://fr.wikipedia.org/wiki/Angle_inscrit_dans_un_demi-cercle#Appellation">Wikipédia</a></i>
-</p>
-<br>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/tFel-c8dKH0?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/RIqVnFtOSr4?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
     </div>
 
 </div>
 <br>
-<p><img src="/delahire.gif" alt=""></p>
-<br>
+<p>Et plus récemment, Leonard Suskind a jeté un nouveau pont entre physique et information en <a href="https://www.quantamagazine.org/in-new-paradox-black-holes-appear-to-evade-heat-death-20230606/">liant le volume d&rsquo;un trou noir et sa complexité</a>.</p>
 
 
 <footer class="footline">
@@ -1621,7 +1648,6 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
                 
                     
-                    
                 
                 
 
@@ -1636,9 +1662,6 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1684,7 +1707,6 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
                 
                     
-                    
                 
                 
 
@@ -1725,9 +1747,6 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1817,6 +1836,7 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
                 
                     
+                    
                 
                 
 
@@ -1832,34 +1852,8 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
                     
                 
                 
@@ -1868,76 +1862,6 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
                     
                         
             
@@ -2000,6 +1924,60 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
                     
 
                     
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
             
             
@@ -2036,6 +2014,59 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 

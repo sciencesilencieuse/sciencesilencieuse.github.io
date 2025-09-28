@@ -8,7 +8,7 @@
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
-    <title>Cercle et Trigo - Science en vrac</title>
+    <title>Transitions de phase - Science en vrac</title>
     
     
 
@@ -75,7 +75,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 
 	
   </head>
-  <body class="" data-url="/maths/geometrie/geo2/">
+  <body class="" data-url="/physique/phistat/chgt/">
     <nav id="sidebar" class="">
 
 
@@ -327,7 +327,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/maths/" title="Maths" class="dd-item
-        parent
+        
         
         
         ">
@@ -436,7 +436,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/maths/geometrie/" title="Géométrie" class="dd-item
-        parent
+        
         
         
         ">
@@ -602,7 +602,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/" title="Physique" class="dd-item
-        
+        parent
         
         
         ">
@@ -871,7 +871,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/phistat/" title="Thermo et φ stat" class="dd-item
-        
+        parent
         
         
         ">
@@ -939,7 +939,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
  
   
     
-      <li data-nav-id="/physique/phistat/chgt/" title="Transitions de phase" class="dd-item ">
+      <li data-nav-id="/physique/phistat/chgt/" title="Transitions de phase" class="dd-item active">
         <a href="/physique/phistat/chgt/">
         Transitions de phase
         
@@ -1330,7 +1330,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
                   <span class="links">
                  
                  
-                   Cercle et Trigo
+                   Transitions de phase
                  
                   </span>
                 </div>
@@ -1339,8 +1339,8 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#trigonométrie">Trigonométrie</a></li>
-    <li><a href="#théorème-de-langle-inscrit-et-de-langle-au-centre">Théorème de l&rsquo;angle inscrit et de l&rsquo;angle au centre</a></li>
+    <li><a href="#fluide-supercritique">Fluide supercritique</a></li>
+    <li><a href="#transitions-de-phase">Transitions de phase</a></li>
   </ul>
 </nav>
     </div>
@@ -1379,66 +1379,73 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   {
     color: #006C65;
   }
+    #grosseformule 
+{
+    overflow-x: auto; 
+}
+#preuve
+{
+    background-color:#EAEAEA;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#def
+{
+    background-color:#DCEFFE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#theo
+{
+    background-color:#FBE1DE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+
+ul
+{
+margin-top:-0.5em;
+}
 </style>
-<h1 id="cercle-et-triangle">Cercle et triangle</h1>
-<h2 id="trigonométrie">Trigonométrie</h2>
-<p><img src="/deroule.gif" alt=""></p>
-<p><img src="/cercleder.png?width=1000" alt=""></p>
-<p><img src="/cerclecos.gif" alt=""></p>
-<br>
-<hr>
-<br>
+<h1 id="phase-et-transition">Phase et transition</h1>
+<h2 id="fluide-supercritique">Fluide supercritique</h2>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:1000px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+<img src="/diagCO2.png">
+</div>
+<p>On place un échantillon d&rsquo;eau dans un récipient hermétique à 25 °C. On fait le vide d&rsquo;air, et on laisse l&rsquo;équilibre de vaporisation-condensation s&rsquo;établir. On obtient un mélange d&rsquo;eau liquide et de vapeur d&rsquo;eau à une pression de 0,03 atm. Une frontière distincte entre le liquide plus dense et le gaz moins dense est clairement observable. En augmentant la température, la pression de la vapeur d&rsquo;eau augmente, comme décrit par la courbe liquide-gaz du diagramme de phase de l&rsquo;eau, et un équilibre diphasique entre les phases liquide et gazeuse persiste. À une température de 374 °C, la pression de vapeur a atteint 218 atm, et toute augmentation supplémentaire de la température entraîne la disparition de la frontière entre les phases liquide et vapeur. Toute l&rsquo;eau dans le récipient est maintenant présente dans une phase unique dont les propriétés physiques sont intermédiaires entre celles des états gazeux et liquide, le fluide supercritique. Au-dessus de sa température critique, un gaz ne peut pas être liquéfié, quelle que soit la pression appliquée. La pression requise pour liquéfier un gaz à sa température critique est appelée pression critique.</p>
+<p>En contournant le point critique, on peut passer de l&rsquo;état liquide à l&rsquo;état gazeux (et inversement) <strong>continument</strong>, sans seuil. On parle alors de <strong>transition de phase du deuxième ordre</strong>. Au moment du contournement du point critique (lorsque $P&gt;P_C$ et $T&gt;T_C$), on dit que la matière est dans un nouvel état (un 5<sup>e</sup> état avec les solides, liquides, gaz et plasmas), le <strong>fluide supercritique</strong>.</p>
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/4-EClV7U8nM?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/P9EftqFYaHg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+</div>
+<p>Cet état possède à la fois des propriétés d&rsquo;un gaz et d&rsquo;un liquide ; comme un gaz, il occupe tout l&rsquo;espace disponible, possède une grande diffusivité mais pas de tension superficielle, et comme un liquide, il a une grand pouvoir de dissolution de solutés non volatils. Il peut donc pénétrer plus efficacement les petites ouvertures d&rsquo;un mélange solide et en extraire les composants solubles. Ces propriétés font des fluides supercritiques des solvants extrêmement utiles pour un large éventail d&rsquo;applications. Par exemple, le dioxyde de carbone supercritique est devenu un solvant très populaire dans l&rsquo;industrie alimentaire, étant utilisé pour décaféiner le café, éliminer les graisses des chips et extraire les composés aromatiques et les fragrances des huiles d&rsquo;agrumes. Il est non toxique et relativement peu coûteux. Après utilisation, le $\ce{CO2}$ peut être facilement récupéré en réduisant la pression et en collectant le gaz résultant.</p>
+<p>On comprend assez bien les propriétés du fluide superfluide aux vues des conditions pour y parvenir. La grande température rend l&rsquo;agitation cinétique supérieure aux liaisons intermoléculaires, empêchant l&rsquo;agglomération, mais la grande pression donne malgré tout au fluide une densité de liquide. Les molécules sont très proches mais ne &ldquo;collent&rdquo; pas.</p>
+<div id="preuve">
+<p>En agitant un extincteur par une journée fraiche, on sent et entend le liquide remuer à l&rsquo;intérieur. Mais si on répète l&rsquo;expérience par une journée très chaude, on ne sent plus aucun liquide à l&rsquo;intérieur de l&rsquo;extincteur. Où est-il passé ?<br>
+À une température supérieure à la température critique du $\ce{CO2}$ (31 °C), aucune pression n&rsquo;est plus suffisante pour le liquéfier.</p>
+</div>
+<p>On voit dans la vidéo que la proximité du point critique peut se traduire (lors du passage de superfluide à gaz+liquide) par un phénomène spectaculaire : le fluide devient &ldquo;brouillardeux&rdquo;. On appelle ce phénomène l&rsquo;<strong>opalescence critique</strong>. Lorsque la température ou la pression d&rsquo;un superfluide passe sous sa valeur critique, on assiste en tout point du fluide à une hésitation de la matière entre liquide et gaz provoquant des fluctuations de densité de toutes tailles. Ces fluctuations de densité entraînent des fluctuations d&rsquo;indice optique et les plus petites fluctuations (échelles de taille de la longueur d&rsquo;onde de la lumière visible) vont entraîner la forte diffusion qui caractérise le phénomène (un peu comme les micro-gouttes d&rsquo;huile dans le lait ou le pastis allongé).</p>
+<p>Techniquement, la transition de phase du deuxième ordre que subit alors le superfluide est caractérisée par la divergence de la longueur de corrélation $\xi$ qui traduit la distance sur laquelle une perturbation locale peut influencer le système. Près du point critique, les fluctuations deviennent corrélées sur des distances de plus en plus grandes. Plus précisément, la longueur de corrélation évolue alors en loi de puissance : $\xi=|T-T_C|^\nu$ ($\nu$ est appelé exposant critique). Au point critique, la longueur de corrélation devient théoriquement infinie ; il y a des fluctuations (ici de densité) à toutes les échelles.</p>
+<div id="theo">
+<p>Les transitions du premier ordre sont des transitions <em>avec sauts</em> alors que celles du deuxième ordre sont des transitions <em>avec divergences</em>.</p>
+</div>
+<h2 id="transitions-de-phase">Transitions de phase</h2>
+<p>Deux vidéos impressionnantes de qualité sur les transitions de phase :</p>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/itRV2jEtV8Q?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
     </div>
 
 </div>
 <br>
-<p>La <strong>loi des sinus</strong> a contribué à la définition du <strong>mètre</strong>, la première unité &ldquo;<strong>universelle</strong>&rdquo; lors de la révolution française.</p>
-<p>Delambre et Méchain furent missionner pour mesurer le plus précisément possible un bout de méridien entre Dunkerque et Barcelone, la toute neuve définition du <strong>mètre</strong> étant :</p>
-<blockquote>
-<p><strong>un mètre est la dix millionième partie d&rsquo;un quart de méridien terrestre</strong></p></blockquote>
-<p>Le cercle répétiteur de Borda fut leur arme secrète. Il permettait alors de mesurer des angles avec une incertitude de quelques secondes seulement. Mesurer des distances avec cette précision est beaucoupl plus difficile ! L&rsquo;idée fut alors de réaliser des triangulations : on vise des sommets faciles à repérer et on note les angles entre eux. Ils réalisèrent des dizaines de visées tout le long du bout de méridien étudié et le recouvrit de triangles.</p>
-<p><img src="/metremeridien.png" alt=""></p>
-<p>Une seule distance mesurée avec une grande précision permit alors de déterminer toutes les autres.
-En effet, grâce à la <strong>loi des sinus</strong>, la connaissance de la longueur d&rsquo;un côté et de deux angles dans un triangle permet de déterminer les longueurs des deux autres côtés.</p>
-<p>Thalès l&rsquo;avait  semble-t-il déjà réalisé puisqu&rsquo;il aurait mis au point la méthode suivante pour connaître la distance entre un navire et la côte : deux observateurs $A$ et $C$ s&rsquo;éloignent en direction opposée le long du trait de côte et mesurent les angles $\alpha = \widehat{CAB}$ et $\gamma = \widehat{ACB}$ entre la direction du bateau et la côte ainsi que la distance $AC$ qui les sépare l&rsquo;un de l&rsquo;autre. On a alors $d=AC\times\frac{\sin\left(\gamma\right)\sin\left(\alpha\right)}{\sin\left(\pi-(\alpha+\gamma)\right)}$ !</p>
-<p>Preuve :</p>
-<div style="position:relative; width:600px; max-width: 100%; margin-left: auto; margin-right: auto; border-radius:10px">
-<img src="/trigula.png" style="border-radius:10px">
-</div>
-<p>$$\beta=180^\circ - (\alpha+\gamma)$$
-$$AB = AC\times\frac{\sin\gamma}{\sin\beta}$$
-$$d=AB\sin\alpha$$</p>
-<br>
-<hr>
-<h2 id="théorème-de-langle-inscrit-et-de-langle-au-centre">Théorème de l&rsquo;angle inscrit et de l&rsquo;angle au centre</h2>
-<br>
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/IO6ZVNXkk4U?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/yEcysu5xZH0?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
     </div>
 
 </div>
-<p>Nom d&rsquo;un théorème et système éducatif :</p>
-<blockquote>
-<p>L&rsquo;éducation secondaire se démocratise au cours du xixe siècle. La géométrie, qui a souvent pour but d&rsquo;exercer à la logique, en est un élément important. Les manuels se répandent, et leurs auteurs se mettent à introduire plus ou moins systématiquement des éléments historiques, en particulier en attribuant des noms de mathématicien aux théorèmes. L&rsquo;époque est également au renouveau des recherches historiques sur les mathématiques de la Grèce antique. C&rsquo;est dans ce contexte qu&rsquo;à partir de la fin du xixe siècle le nom de Thalès est attribué à deux théorèmes distincts. En France puis en Italie c&rsquo;est à un théorème du livre VI des Éléments d&rsquo;Euclide, soit celui sur la proportionnalité des segments découpés par une ligne parallèle à un côté dans un triangle, soit sa généralisation pour deux sécantes. En Allemagne c&rsquo;est au théorème de l&rsquo;angle inscrit dans un demi-cercle. Ces dénominations sont bien établies dans les années 1920, époque à laquelle d&rsquo;autres pays adoptent l&rsquo;une ou l&rsquo;autre (mais pas l&rsquo;Angleterre ni les États-Unis).<br><br>
-Ces choix correspondent à des traditions différentes d&rsquo;enseignement de la géométrie, plutôt fidèle à Euclide et à l&rsquo;ordre d&rsquo;exposition des Éléments en Allemagne, alors qu&rsquo;une tradition plus anti-euclidienne s&rsquo;est développée en France depuis La Ramée. Le choix s&rsquo;est porté en France et en Italie, sur un théorème qui met en évidence un invariant de la géométrie affine, le rapport de mesures algébriques sur une droite, ce qui correspond au développement en Europe de la géométrie projective et affine au xixe siècle. Ce théorème est mis en avant dans les débuts de l&rsquo;apprentissage de la géométrie, alors que l&rsquo;Allemagne privilégie le théorème de Pythagore, et choisit de donner le nom de Thalès à un théorème lié au triangle rectangle.<br><br>
-Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas obéi a des considérations strictement historiques. L&rsquo;histoire est instrumentalisée au service d&rsquo;un choix didactique : il s&rsquo;agit de mettre un théorème en avant, en lui attribuant le nom d&rsquo;un mathématicien célèbre, d&rsquo;où des choix différents dans des traditions d&rsquo;enseignement différentes.</p></blockquote>
-<p style="text-align:right">
-<i>Source : <a href="https://fr.wikipedia.org/wiki/Angle_inscrit_dans_un_demi-cercle#Appellation">Wikipédia</a></i>
-</p>
-<br>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/tFel-c8dKH0?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-    </div>
-
-</div>
-<br>
-<p><img src="/delahire.gif" alt=""></p>
-<br>
 
 
 <footer class="footline">
@@ -1621,7 +1628,6 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
                 
                     
-                    
                 
                 
 
@@ -1636,9 +1642,6 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1684,7 +1687,6 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
                 
                     
-                    
                 
                 
 
@@ -1725,9 +1727,6 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1817,6 +1816,7 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
                 
                     
+                    
                 
                 
 
@@ -1832,34 +1832,8 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
                     
                 
                 
@@ -1868,76 +1842,6 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
                     
                         
             
@@ -2000,6 +1904,12 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
                     
 
                     
+            
+        
+                    
+            
+        
+                    
                         
             
             
@@ -2012,6 +1922,22 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -2052,6 +1978,91 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
             
                 
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 

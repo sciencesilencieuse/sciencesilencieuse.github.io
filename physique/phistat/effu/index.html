@@ -8,7 +8,7 @@
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
-    <title>Cercle et Trigo - Science en vrac</title>
+    <title>Effusivité - Science en vrac</title>
     
     
 
@@ -75,7 +75,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 
 	
   </head>
-  <body class="" data-url="/maths/geometrie/geo2/">
+  <body class="" data-url="/physique/phistat/effu/">
     <nav id="sidebar" class="">
 
 
@@ -327,7 +327,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/maths/" title="Maths" class="dd-item
-        parent
+        
         
         
         ">
@@ -436,7 +436,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/maths/geometrie/" title="Géométrie" class="dd-item
-        parent
+        
         
         
         ">
@@ -602,7 +602,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/" title="Physique" class="dd-item
-        
+        parent
         
         
         ">
@@ -871,7 +871,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/phistat/" title="Thermo et φ stat" class="dd-item
-        
+        parent
         
         
         ">
@@ -960,7 +960,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
  
   
     
-      <li data-nav-id="/physique/phistat/effu/" title="Effusivité" class="dd-item ">
+      <li data-nav-id="/physique/phistat/effu/" title="Effusivité" class="dd-item active">
         <a href="/physique/phistat/effu/">
         Effusivité
         
@@ -1330,19 +1330,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
                   <span class="links">
                  
                  
-                   Cercle et Trigo
+                   Effusivité
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#trigonométrie">Trigonométrie</a></li>
-    <li><a href="#théorème-de-langle-inscrit-et-de-langle-au-centre">Théorème de l&rsquo;angle inscrit et de l&rsquo;angle au centre</a></li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1379,67 +1374,165 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   {
     color: #006C65;
   }
+    #grosseformule 
+{
+    overflow-x: auto; 
+}
+#preuve
+{
+    background-color:#EAEAEA;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#def
+{
+    background-color:#DCEFFE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#theo
+{
+    background-color:#FBE1DE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+
+ul
+{
+margin-top:-0.5em;
+}
+
+td
+{
+text-align:center;
+}
+
+th
+{
+text-align:center;
+}
 </style>
-<h1 id="cercle-et-triangle">Cercle et triangle</h1>
-<h2 id="trigonométrie">Trigonométrie</h2>
-<p><img src="/deroule.gif" alt=""></p>
-<p><img src="/cercleder.png?width=1000" alt=""></p>
-<p><img src="/cerclecos.gif" alt=""></p>
-<br>
-<hr>
-<br>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/4-EClV7U8nM?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-    </div>
-
-</div>
-<br>
-<p>La <strong>loi des sinus</strong> a contribué à la définition du <strong>mètre</strong>, la première unité &ldquo;<strong>universelle</strong>&rdquo; lors de la révolution française.</p>
-<p>Delambre et Méchain furent missionner pour mesurer le plus précisément possible un bout de méridien entre Dunkerque et Barcelone, la toute neuve définition du <strong>mètre</strong> étant :</p>
-<blockquote>
-<p><strong>un mètre est la dix millionième partie d&rsquo;un quart de méridien terrestre</strong></p></blockquote>
-<p>Le cercle répétiteur de Borda fut leur arme secrète. Il permettait alors de mesurer des angles avec une incertitude de quelques secondes seulement. Mesurer des distances avec cette précision est beaucoupl plus difficile ! L&rsquo;idée fut alors de réaliser des triangulations : on vise des sommets faciles à repérer et on note les angles entre eux. Ils réalisèrent des dizaines de visées tout le long du bout de méridien étudié et le recouvrit de triangles.</p>
-<p><img src="/metremeridien.png" alt=""></p>
-<p>Une seule distance mesurée avec une grande précision permit alors de déterminer toutes les autres.
-En effet, grâce à la <strong>loi des sinus</strong>, la connaissance de la longueur d&rsquo;un côté et de deux angles dans un triangle permet de déterminer les longueurs des deux autres côtés.</p>
-<p>Thalès l&rsquo;avait  semble-t-il déjà réalisé puisqu&rsquo;il aurait mis au point la méthode suivante pour connaître la distance entre un navire et la côte : deux observateurs $A$ et $C$ s&rsquo;éloignent en direction opposée le long du trait de côte et mesurent les angles $\alpha = \widehat{CAB}$ et $\gamma = \widehat{ACB}$ entre la direction du bateau et la côte ainsi que la distance $AC$ qui les sépare l&rsquo;un de l&rsquo;autre. On a alors $d=AC\times\frac{\sin\left(\gamma\right)\sin\left(\alpha\right)}{\sin\left(\pi-(\alpha+\gamma)\right)}$ !</p>
-<p>Preuve :</p>
-<div style="position:relative; width:600px; max-width: 100%; margin-left: auto; margin-right: auto; border-radius:10px">
-<img src="/trigula.png" style="border-radius:10px">
-</div>
-<p>$$\beta=180^\circ - (\alpha+\gamma)$$
-$$AB = AC\times\frac{\sin\gamma}{\sin\beta}$$
-$$d=AB\sin\alpha$$</p>
-<br>
-<hr>
-<h2 id="théorème-de-langle-inscrit-et-de-langle-au-centre">Théorème de l&rsquo;angle inscrit et de l&rsquo;angle au centre</h2>
-<br>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/IO6ZVNXkk4U?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-    </div>
-
-</div>
-<p>Nom d&rsquo;un théorème et système éducatif :</p>
-<blockquote>
-<p>L&rsquo;éducation secondaire se démocratise au cours du xixe siècle. La géométrie, qui a souvent pour but d&rsquo;exercer à la logique, en est un élément important. Les manuels se répandent, et leurs auteurs se mettent à introduire plus ou moins systématiquement des éléments historiques, en particulier en attribuant des noms de mathématicien aux théorèmes. L&rsquo;époque est également au renouveau des recherches historiques sur les mathématiques de la Grèce antique. C&rsquo;est dans ce contexte qu&rsquo;à partir de la fin du xixe siècle le nom de Thalès est attribué à deux théorèmes distincts. En France puis en Italie c&rsquo;est à un théorème du livre VI des Éléments d&rsquo;Euclide, soit celui sur la proportionnalité des segments découpés par une ligne parallèle à un côté dans un triangle, soit sa généralisation pour deux sécantes. En Allemagne c&rsquo;est au théorème de l&rsquo;angle inscrit dans un demi-cercle. Ces dénominations sont bien établies dans les années 1920, époque à laquelle d&rsquo;autres pays adoptent l&rsquo;une ou l&rsquo;autre (mais pas l&rsquo;Angleterre ni les États-Unis).<br><br>
-Ces choix correspondent à des traditions différentes d&rsquo;enseignement de la géométrie, plutôt fidèle à Euclide et à l&rsquo;ordre d&rsquo;exposition des Éléments en Allemagne, alors qu&rsquo;une tradition plus anti-euclidienne s&rsquo;est développée en France depuis La Ramée. Le choix s&rsquo;est porté en France et en Italie, sur un théorème qui met en évidence un invariant de la géométrie affine, le rapport de mesures algébriques sur une droite, ce qui correspond au développement en Europe de la géométrie projective et affine au xixe siècle. Ce théorème est mis en avant dans les débuts de l&rsquo;apprentissage de la géométrie, alors que l&rsquo;Allemagne privilégie le théorème de Pythagore, et choisit de donner le nom de Thalès à un théorème lié au triangle rectangle.<br><br>
-Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas obéi a des considérations strictement historiques. L&rsquo;histoire est instrumentalisée au service d&rsquo;un choix didactique : il s&rsquo;agit de mettre un théorème en avant, en lui attribuant le nom d&rsquo;un mathématicien célèbre, d&rsquo;où des choix différents dans des traditions d&rsquo;enseignement différentes.</p></blockquote>
-<p style="text-align:right">
-<i>Source : <a href="https://fr.wikipedia.org/wiki/Angle_inscrit_dans_un_demi-cercle#Appellation">Wikipédia</a></i>
-</p>
-<br>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/tFel-c8dKH0?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-    </div>
-
-</div>
-<br>
-<p><img src="/delahire.gif" alt=""></p>
-<br>
-
+<h1 id="effusivité">Effusivité</h1>
+<p>Pourquoi du carrelage va nous paraître froid au toucher au contraire d&rsquo;une moquette ?</p>
+<p>Car la température de contact ne sera pas la même ! Et comment détermine-t-on cette température de contact ? Grâce à l&rsquo;effusivité.</p>
+<p>Considérons un seul semi-espace $x&gt;0$ initialement à $T_i$. À $t=0$, la température de la surface $x=0$ est brusquement imposée à $T_s$.<br>
+L’équation de la chaleur s&rsquo;écrit alors</p>
+<p>$$\frac{\partial T}{\partial t}=\alpha\,\frac{\partial^2 T}{\partial x^2}$$</p>
+<p>avec $T(x,0)=T_i$ et $T(0,t)=T_s$.<br>
+Elle admet pour solution la fonction erreur ($\operatorname{erf}(x)=\frac{2}{\sqrt{\pi}} \int_0^x \mathrm{e}^{-t^2} \mathrm{~d} t$) :</p>
+<p>$$T(x,t)=T_s+(T_i-T_s)\,\mathrm{erf}\!\left(\frac{x}{2\sqrt{\alpha t}}\right).$$</p>
+<p>Le flux à la surface vaut :</p>
+<p>$$q(t)=-k\,\left.\frac{\partial T}{\partial x}\right|_{x=0}
+= \frac{k}{\sqrt{\pi\,\alpha\,t}}\,(T_s-T_i)$$</p>
+<p>On voit apparaître le facteur $k/\sqrt{\alpha}$. On définit l’<strong>effusivité</strong> thermique comme :</p>
+<p>$$\boxed{ \; e \;\equiv\; \frac{k}{\sqrt{\alpha}} \;=\; \sqrt{k\,\rho\,c}\; }$$</p>
+<p>Unité : $e$ en $\pu{J m^-2 K^-1 s^{-1/2}}$</p>
+<p>Pour un échelon de température à la surface d’un semi-espace, on a alors :</p>
+<p>$$ \boxed{ \; q(t)=\dfrac{e}{\sqrt{\pi\,t}}\,(T_s-T_i) \;}$$</p>
+<p>L&rsquo;effusivité mesure la « capacité à échanger rapidement de la chaleur lors d’un contact transitoire ».<br></p>
+<p>Maintenant, mettons en contact deux semi-espaces 1 (pour $x&lt;0$) et 2 (pour $x&gt;0$), initialement à $T_{1i}$ et $T_{2i}$. On cherche la température d’interface $T_{s}$ après contact.</p>
+<p>Pour chacun, la situation locale est équivalente à un semi-espace soumis à une température de surface imposée $T_{s}$, donc les flux (positifs vers l’interface) sont :</p>
+<p>$$
+\begin{aligned}
+q_1(t)&amp;=\frac{e_1}{\sqrt{\pi t}}\,(T_{s}-T_{1i})\\
+q_2(t)&amp;=\frac{e_2}{\sqrt{\pi t}}\,(T_{2i}-T_{s}).
+\end{aligned}
+$$</p>
+<p>La conservation impose $q_1=q_2$ (ce qui vaut pour tout $t&gt;0$ car les deux flux décroissent en $t^{-1/2}$).</p>
+<p>On obtient alors :</p>
+<p>$$e_1\,(T_{s}-T_{1i})=e_2\,(T_{2i}-T_{s})$$
+$$\Downarrow$$
+$$\boxed{\; T_{s}=\frac{e_1\,T_{1i}+e_2\,T_{2i}}{e_1+e_2}\; }$$</p>
+<p>Si $e_2\gg e_1$ (inox vs. peau par exemple), alors $T_{s}\approx T_{2i}$. L’interface reste proche de la température du matériau « effusif », d’où la sensation de froid.</p>
+<p>Dans le cas d&rsquo;un contact carrelage/peau, on a $e_\mathrm{carrelage}/e_\mathrm{peau}\approx 1,4$, ce qui donne $T_s\approx 25^\circ\mathrm{C}$ pour un carrelage à $20^\circ\mathrm{C}$ et une peau à $33^\circ\mathrm{C}$, alors qu&rsquo;un parquet caractérisé par $e_\mathrm{parquet}/e_\mathrm{peau}\approx 0,36$ donnerait une température de contact de $30^\circ\mathrm{C}$ dans les mêmes conditions.</p>
+<p><u>Rq</u> :</p>
+<ul>
+<li>on constate que $T_s$ est indépendant du temps (cela reste valable tant que l&rsquo;on peut continuer à considérer les demi-espaces comme infinis).</li>
+<li>la division par racine de $t$ peut sembler pathologique puisque $q(t)\to\infty$ quand $t\to0^+$, mais cette divergence est intégrable $Q(t)=\int_0^t q(\tau)\,\mathrm{d}\tau
+=\frac{2e}{\sqrt{\pi}}\;\Delta T\,\sqrt{t}\;\xrightarrow[t\to 0^+]{}\;0$. L&rsquo;énergie échangée reste finie et tend vers zéro.</li>
+</ul>
+<p>Une résistance de contact $R_c$ (modélisant une éventuelle rugosité, ou une couche d&rsquo;air ou d&rsquo;humidité) a pour effet de faire chuter le flux et ainsi décaler la température de contact. On peut traiter ce cas facilement avec des impédances en série.</p>
+<p>En effet, on peut introduire les impédances $Z(t)$ :</p>
+<p>$$q=\frac{e}{\sqrt{\pi t}}\,(T_{s}-T_i)
+\;\Longleftrightarrow\;
+T_{s}-T_i=\underbrace{\frac{\sqrt{\pi t}}{e}}_{Z(t)}\,q$$</p>
+<p>Cela permet d&rsquo;écrire un équivalent à la loi d&rsquo;Ohm où les impédances $Z_1$, $Z_2$ et $R_c$ s&rsquo;ajouteraient en série :</p>
+<p>$$\Delta T_i
+= (T_{1i}-T_{2i})
+= Z_1\,q + R_c\,q + Z_2\,q
+= \big(Z_1+R_c+Z_2\big)\,q $$</p>
+<p>On en déduit :</p>
+<p>$$\boxed{\;
+q(t)=\frac{\Delta T_i}{R_c+\sqrt{\pi t}\Big(\tfrac{1}{e_1}+\tfrac{1}{e_2}\Big)}\;}$$</p>
+<p>Les températures de surface côté 1 et côté 2 sont alors :</p>
+<p>$$\boxed{\;
+\begin{aligned}
+T_{s1}(t)&amp;=T_{1i}-Z_1\,q
+= T_{1i}-\frac{\sqrt{\pi t}}{e_1}\,q(t)\\
+T_{s2}(t)&amp;=T_{2i}+Z_2\,q
+= T_{2i}+\frac{\sqrt{\pi t}}{e_2}\,q(t)
+\end{aligned}}
+$$</p>
+<p>Et le saut à travers le contact vaut :</p>
+<p>$$
+\boxed{\;T_{s1}(t)-T_{s2}(t)=R_c\,q(t)\;}$$</p>
+<ul>
+<li>si $t\to0^+$ :<br>$q(0^+)=\dfrac{\Delta T_i}{R_c}$ est fini et $T_{s1} (0^+)\to T_{1i},\;T_{s2}(0^+)\to T_{2i}$. La quasi-totalité de la chute de température se fait à travers la résistance de contact ; les surfaces des deux solides restent proches de leurs températures initiales.</li>
+<li>si $t\to \infty$ :<br>
+le terme $\propto\sqrt{t}$ domine :
+$q(t)\sim \frac{\Delta T_i}{\sqrt{\pi t}\big(\tfrac{1}{e_1}+\tfrac{1}{e_2}\big)}
+=\frac{e_1e_2}{e_1+e_2}\,\frac{\Delta T_i}{\sqrt{\pi t}}$.  $T_1$ et $T_2$ coïncident et tendent vers la “température de contact” sans résistance : $T_s=\frac{e_1T_{1i}+e_2T_{2i}}{e_1+e_2}$.</li>
+<li>on définit un temps charnière $t_c$ en égalant $R_c$ et $Z_1(t_c) +Z_2(t_c)$. Cela donne $
+t_c=\frac{R_c^{\,2}}{\pi}\left(\frac{e_1e_2}{e_1+e_2}\right)^{\!2}$.</li>
+</ul>
+<p>Exemple d&rsquo;un contact peau sur carrelage :</p>
+<ul>
+<li>peau : $e_1\simeq \pu{1400 J m^-2  K^-1  s^{-1/2}}$, $T_{1i}=33^\circ\mathrm{C}$</li>
+<li>carrelage : $e_2\simeq \pu{2000 J m^-2  K^-1  s^{-1/2}}$, $T_{2i}=20^\circ\mathrm{C}$</li>
+<li>contact sec modérément appuyé : $R_c=\pu{3,0E-3 m^2 K W^-1}$</li>
+</ul>
+<p>On a donc : $\Delta T_i=13\ \mathrm{K}$, et $t_c\approx 1,9\ \mathrm{s}$.</p>
+<table>
+  <thead>
+    <tr>
+      <th>t</th>
+      <th>q(t) <small class="units">[kW·m<sup>−2</sup>]</small></th>
+      <th>T<sub>s1</sub> <small class="units">[°C]</small></th>
+      <th>T<sub>s2</sub> <small class="units">[°C]</small></th>
+      <th>T<sub>s1</sub> − T<sub>s2</sub> <small class="units">[K]</small></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1 ms</td>
+      <td class="num">4,2</td>
+      <td class="num">33</td>
+      <td class="num">20</td>
+      <td class="num">13</td>
+    </tr>
+    <tr>
+      <td>0,1 s</td>
+      <td class="num">3,5</td>
+      <td class="num">32</td>
+      <td class="num">21</td>
+      <td class="num">11</td>
+    </tr>
+    <tr>
+      <td>1 s</td>
+      <td class="num">2,5</td>
+      <td class="num">30</td>
+      <td class="num">22</td>
+      <td class="num">7,6</td>
+    </tr>
+    <tr>
+      <td>10 s</td>
+      <td class="num">1,3</td>
+      <td class="num">28</td>
+      <td class="num">24</td>
+      <td class="num">4,0</td>
+    </tr>
+  </tbody>
+</table>
 
 <footer class="footline">
 	
@@ -1621,7 +1714,6 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
                 
                     
-                    
                 
                 
 
@@ -1636,9 +1728,6 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1684,7 +1773,6 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
                 
                     
-                    
                 
                 
 
@@ -1725,9 +1813,6 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1817,6 +1902,7 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
                 
                     
+                    
                 
                 
 
@@ -1831,6 +1917,9 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1992,6 +2081,7 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
                 
                     
+                    
                 
                 
 
@@ -2004,6 +2094,9 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2053,6 +2146,7 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
                 
                     
+                    
                 
                 
 
@@ -2071,6 +2165,9 @@ Dans un cas comme dans l&rsquo;autre, le choix du nom n&rsquo;a finalement pas o
             
             
                 
+                    
+                        
+                        
                     
                 
                 
