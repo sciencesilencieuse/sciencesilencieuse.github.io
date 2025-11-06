@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.147.8">
+    <meta name="generator" content="Hugo 0.150.1">
     <meta name="description" content="">
 
 
@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1759090816" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1759090816" rel="stylesheet">
-    <link href="/css/hybrid.css?1759090816" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1759090816" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1759090816" rel="stylesheet">
-    <link href="/css/auto-complete.css?1759090816" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1759090816" rel="stylesheet">
-    <link href="/css/theme.css?1759090816" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1759090816" rel="stylesheet">
+    <link href="/css/nucleus.css?1762432623" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1762432623" rel="stylesheet">
+    <link href="/css/hybrid.css?1762432623" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1762432623" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1762432623" rel="stylesheet">
+    <link href="/css/auto-complete.css?1762432623" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1762432623" rel="stylesheet">
+    <link href="/css/theme.css?1762432623" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1762432623" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1759090816" rel="stylesheet">
+    <link href="/css/theme-blue.css?1762432623" rel="stylesheet">
     
-    <link href="/css/foo.css?1759090816" rel="stylesheet"><link href="/css/bar.css?1759090816" rel="stylesheet">
+    <link href="/css/foo.css?1762432623" rel="stylesheet"><link href="/css/bar.css?1762432623" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1759090816"></script>
+    <script src="/js/jquery-3.3.1.min.js?1762432623"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1759090816"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1759090816"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1762432623"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1762432623"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1759090816"></script>
+<script type="text/javascript" src="/js/search.js?1762432623"></script>
 
     
   </div>
@@ -1339,20 +1339,22 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
+    <li><a href="#quest-ce-que-lintelligence">Qu&rsquo;est-ce que l&rsquo;intelligence ?</a></li>
+    <li><a href="#un-cerveau-pas-si-rationnel">Un cerveau pas si rationnel</a></li>
     <li><a href="#histoire-de-lia">Histoire de l&rsquo;IA</a>
       <ul>
         <li></li>
       </ul>
     </li>
     <li><a href="#apprentissage-machine--apprendre-à-prédire">Apprentissage Machine : apprendre à prédire</a></li>
-    <li><a href="#algorithme-des-k-plus-proches-voisins--exemple-dapprentissage-supervisé">Algorithme des <em>k</em> plus proches voisins &ndash; Exemple d&rsquo;apprentissage supervisé</a>
+    <li><a href="#algorithme-des-k-plus-proches-voisins--exemple-dapprentissage-supervisé">Algorithme des <em>k</em> plus proches voisins – Exemple d’apprentissage supervisé</a>
       <ul>
         <li><a href="#principe">Principe</a></li>
         <li><a href="#choix-de-k">Choix de <em>k</em></a></li>
         <li><a href="#validation--matrice-de-confusion">Validation &ndash; Matrice de confusion</a></li>
       </ul>
     </li>
-    <li><a href="#algorithme-des-k-moyennes--exemple-dapprentissage-non-supervisé">Algorithme des <em>k</em>-moyennes &ndash; Exemple d&rsquo;apprentissage non supervisé</a>
+    <li><a href="#algorithme-des-k-moyennes--exemple-dapprentissage-non-supervisé">Algorithme des <em>k</em>-moyennes – Exemple d’apprentissage non supervisé</a>
       <ul>
         <li><a href="#principe-1">Principe</a></li>
         <li><a href="#choix-de-k-1">Choix de <em>k</em></a></li>
@@ -1360,6 +1362,8 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
         <li><a href="#applications">Applications</a></li>
       </ul>
     </li>
+    <li><a href="#apprentissage-par-renforcement">Apprentissage par renforcement</a></li>
+    <li><a href="#apprentissage-profond">Apprentissage profond</a></li>
     <li><a href="#jeux-daccessibilité-sur-un-graphe">Jeux d&rsquo;accessibilité sur un graphe</a>
       <ul>
         <li><a href="#larène">L&rsquo;arène</a></li>
@@ -1369,7 +1373,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
       </ul>
     </li>
     <li><a href="#sac-à-dos-et-heuristique">Sac à dos et heuristique</a></li>
-    <li><a href="#apprentissage-profond">Apprentissage profond</a>
+    <li><a href="#apprentissage-profond-1">Apprentissage profond</a>
       <ul>
         <li><a href="#avènement-des-grands-modèles-de-langage">Avènement des grands modèles de langage</a></li>
       </ul>
@@ -1422,6 +1426,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   }
 </style>
 <h1 id="intelligence-artificielle">Intelligence Artificielle</h1>
+<h2 id="quest-ce-que-lintelligence">Qu&rsquo;est-ce que l&rsquo;intelligence ?</h2>
 <p>Avant de parler d&rsquo;intelligence artificielle, il convient de s&rsquo;interroger sur le terme <strong>intelligence</strong>.</p>
 <br>
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
@@ -1431,9 +1436,17 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 
 </div>
 <br>
-<p>L&rsquo;<strong>intelligence arificielle</strong> (IA) est une discipline  scientifique qui a vu officiellement le jour en 1956. Elle repose sur la conjecture selon laquelle toutes les fonctions cognitives, en particulier l&rsquo;apprentissage, le raisonnement, le calcul, la perception, la mémorisation, voire la découverte scientifique ou la créativité artistique, peuvent être décrites avec une précision telle qu&rsquo;il serait possible de les reproduire sur des ordinateurs.</p>
+<p>Processus qui permettent d&rsquo;apprendre, de comprendre ou de s&rsquo;adapter à des situations nouvelles ? Faculté de modifier son environnement pour l&rsquo;adapter à ses besoins ? Capacité à traiter les informations pour atteindre ses objectifs ?<br>La définition de l&rsquo;intelligence ne fait pas consensus parmi les scientifiques, mais l&rsquo;intelligence artificielle semble cocher aujourd&rsquo;hui toutes les cases.</p>
+<br>
+<h2 id="un-cerveau-pas-si-rationnel">Un cerveau pas si rationnel</h2>
+<p>Les psychologues Kahneman et Tverski ont montré à partir des années 1960 que la capacité des humains à prendre les décisions les plus rationnelles est en réalité très limitée. La belle mécanique logique du raisonnement humain est en réalité criblée de grains de sable qui déraillent la machine, les biais, ou illusions cognitives. Ces recherches ont contribué à détruire le mythe de l&rsquo;agent rationnel parfait au centre des théories économiques et valurent le prix Nobel d&rsquo;économie à Kahneman, 6 ans après la mort de Tverski.</p>
+<br>
+<p style="text-align:center;font-size: 25px;border-top:solid  lightgray 5px;padding-top:20px;border-bottom:solid  lightgray 5px;padding-bottom:20px;font-weight:bold"><a href="https://presentationssite.github.io/tspe/nucleaire">Quelques exemples de biais cognitifs</a></p>
+<br>
+<p>L&rsquo;intelligence artificielle hérite-t-elle de nos biais cognitifs ? On reviendra dessus plus loin.</p>
 <br>
 <h2 id="histoire-de-lia">Histoire de l&rsquo;IA</h2>
+<p>L&rsquo;<strong>intelligence arificielle</strong> (IA) est une discipline  scientifique qui a vu officiellement le jour en 1956. Elle repose sur la conjecture selon laquelle toutes les fonctions cognitives, en particulier l&rsquo;apprentissage, le raisonnement, le calcul, la perception, la mémorisation, voire la découverte scientifique ou la créativité artistique, peuvent être reproduite par des ordinateurs.</p>
 <h4 id="la-première-programmeuse--ada-lovelace">La première programmeuse : Ada Lovelace</h4>
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
@@ -1451,26 +1464,33 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 <br>
 <br>
 <h2 id="apprentissage-machine--apprendre-à-prédire">Apprentissage Machine : apprendre à prédire</h2>
-<p>L&rsquo;<strong>apprentissage automatique</strong> (Machine Learning) est à l&rsquo;intersection de l&rsquo;IA et d&rsquo;un autre champ scientifique : la science des données (data science).</p>
 <p><img src="/vennia.png?width=600px" alt=""></p>
+<p>La capacité d&rsquo;apprentissage est une caractéristique fréquemment attribuée à l&rsquo;intelligence et la notion s&rsquo;est très vite retrouvée au centre des recherches en intelligence artificielle.</p>
+<p>L&rsquo;<strong>apprentissage automatique</strong> (Machine Learning) est un champ d&rsquo;étude de l&rsquo;intelligence artificielle qui vise à donner aux machines la capacité d&rsquo;« apprendre » à partir de données, via des modèles mathématiques.</p>
+<p>L&rsquo;apprentissage automatique est à l&rsquo;intersection de l&rsquo;IA et d&rsquo;un autre champ scientifique : la science des données (data science).</p>
 <p>Arthur Samuel définit l&rsquo;apprentissage automatique ainsi en 1959 :</p>
 <blockquote>
 <p>La capacité à apprendre sans avoir été spécifiquement programmé pour.</p></blockquote>
-<p>En pratique, il s&rsquo;agit de produire des réponses adaptées aux données fournies en entrée (identifier des motifs, des tendances, construire des modèles, faire des prédictions). L&rsquo;apprentissage automatique n&rsquo;est donc ni plus ni moins que du traitement de données visant à prédire des résultats en fonction des données entrantes.</p>
-<p>Le diagramme suivant<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> survole le domaine.</p>
-<div style=" position: relative;overflow: hidden;max-width: max(100%,900px);margin: auto; padding-bottom: min(100%,900px);"> 
-<iframe src="//plotly.com/~Chinasky/10.embed" style="position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 100%;height: 100%;border:none"></iframe>
+<p>En pratique, il s&rsquo;agit de produire des réponses adaptées aux données fournies en entrée (identifier des motifs, des tendances, construire des modèles, faire des prédictions). L&rsquo;apprentissage automatique n&rsquo;est donc ni plus ni moins que du traitement de données visant à prédire des résultats en fonction des données entrantes. Mais d&rsquo;aucuns disent qu&rsquo;il s&rsquo;agit là d&rsquo;une définition comme une autre de l&rsquo;intelligence.</p>
+<p>L&rsquo;infographie suivante survole le domaine.</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="https://substackcdn.com/image/fetch/$s_!Vb3J!,w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff42e7c30-4c5d-49c7-ab10-24c3f777cb55_3072x2304.png" style="box-shadow:none;background:none;">
 </div>
-<p>On va s&rsquo;intéresser à l&rsquo;apprentissage automatique dit &ldquo;classique&rdquo;<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> qui regroupe des algorithmes très simples nés dans les années 50 et toujours utilisés aujourd&rsquo;hui à peu près partout. <br>
-Cette branche de l&rsquo;apprentissage automatique se décompose prinicipalement en deux familles d&rsquo;algorithmes : <strong>l&rsquo;apprentissage supervisé</strong> et son pendant, <strong>l&rsquo;apprentissage non supervisé</strong>. Nous allons étudier un algorithme star de chacune de ces familles.
+<p>On va s&rsquo;intéresser à l&rsquo;apprentissage automatique dit &ldquo;classique&rdquo;<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> qui regroupe des algorithmes très simples nés dans les années 50 et toujours utilisés aujourd&rsquo;hui à peu près partout. <br>
+Cette branche de l&rsquo;apprentissage automatique se décompose principalement en deux familles d&rsquo;algorithmes : <strong>l&rsquo;apprentissage supervisé</strong> (on apprend à la machine) et son pendant, <strong>l&rsquo;apprentissage non supervisé</strong> (la machine apprend par elle-même). Nous allons étudier un algorithme star de chacune de ces familles.
 <img src="https://i.vas3k.ru/7w1.jpg?width=800px" alt=""></p>
 <br>
 <h2 id="algorithme-des-k-plus-proches-voisins--exemple-dapprentissage-supervisé">Algorithme des <em>k</em> plus proches voisins &ndash; Exemple d&rsquo;apprentissage supervisé</h2>
+<table>
+<tr>
+<th style="text-align:center;"><a href="/act-knn.pdf"><b>Activité 1</b></a></th>
+</tr>
+</table>
 <p>L&rsquo;algorithme des <em>k</em> plus proches voisin (<em>k</em>-nearest neighbors ou KNN) est une des techniques les plus simples en apprentissage automatique. Sa facilité d&rsquo;utilisation et sa rapidité en font un outil de choix dans l&rsquo;industrie.</p>
 <p>KNN est un algorithme d&rsquo;apprentissage supervisé ; cela signifie que l&rsquo;algorithme nécessite des données classifiées en amont qui vont lui servir à trouver la bonne étiquette pour d&rsquo;autres données non encore classifiées.</p>
 <p>Suivant la nature de l&rsquo;étiquette, KNN peut servir à :</p>
 <ul>
-<li>une <strong>classification</strong> des nouvelles données si les étiquettes sont des catagories ;</li>
+<li>une <strong>classification</strong> des nouvelles données si les étiquettes sont des catégories ;</li>
 <li>une <strong>régression</strong> si les étiquettes sont des nombres.</li>
 </ul>
 <br>
@@ -1491,33 +1511,19 @@ Cela signifie qu&rsquo;on ne présuppose rien de particulier sur les données (�
 <li>En augmentant <em>k</em>, les résultats obtenus se stabilisent (vote de la majorité) et les erreurs diminuent, jusqu&rsquo;au moment où la boule à l&rsquo;intérieur de laquelle se fait le moyennage devient trop grosse, amenant in fine l&rsquo;algorithme a choisir systématiquement la catégorie majoritaire, quel que soit le point&hellip; On augmente alors le <strong>biais</strong> (ici, le biais est le préjudice en faveur du plus grand nombre). L&rsquo;ajustement ne suit plus les variations, on parle de sous-apprentissage (<strong>underfitting</strong>).</li>
 </ul>
 <p>Pour résumer :</p>
+<div style="overflow-x:auto;">
 <table>
-  <thead>
-      <tr>
-          <th style="text-align: center"></th>
-          <th style="text-align: center">variance</th>
-          <th style="text-align: center">biais</th>
-          <th style="text-align: center">Cas d&rsquo;une régression</th>
-          <th style="text-align: center">Cas d&rsquo;une classification</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center"><strong>k trop petit</strong> $\rightarrow$ <strong>overfitting</strong></td>
-          <td style="text-align: center">forte</td>
-          <td style="text-align: center">faible</td>
-          <td style="text-align: center"><img src="/overfreg.png?width=200px" alt=""></td>
-          <td style="text-align: center"><img src="/overfclas.png?width=200px" alt=""></td>
-      </tr>
-      <tr>
-          <td style="text-align: center"><strong>k trop grand</strong> $\rightarrow$ <strong>underfitting</strong></td>
-          <td style="text-align: center">faible</td>
-          <td style="text-align: center">fort</td>
-          <td style="text-align: center"><img src="/underfreg.png?width=200px" alt=""></td>
-          <td style="text-align: center"><img src="/underfclas.png?width=200px" alt=""></td>
-      </tr>
-  </tbody>
+<tr>
+<th></th><th> variance</th><th> biais</th><th>Cas d'une régression</th><th>Cas d'une classification</th>
+</tr>
+<tr>
+<td><b>k trop petit $\rightarrow$ overfitting</b></td><td>forte</td><td>faible</td><td><img src="/overfreg.png" style="max-width:150px;"></td><td><img src="/overfclas.png" style="max-width:150px;"></td>
+</tr><tr>
+<td><b>k trop grand $\rightarrow$ underfitting</b></td><td>faible</td><td>fort</td><td><img src="/underfreg.png" style="max-width:150px;"></td><td><img src="/underfclas.png" style="max-width:150px;"></td>
+</tr>
 </table>
+</div>
+<br>
 
 <div class="notices tip" style="--title: 'tip';">
   <p style="display: none;">tip</p>
@@ -1603,10 +1609,15 @@ $$\frac{VP}{VP+FN}$$<br></p>
 <img src="/meilleurk.png?width=600px" alt="">
 Si notre but est de reconnaître le mieux possible les 9 manuscrits, il semblerait que la valeur de <em>k</em> optimale soit 18.</p>
 <br>
-<a href="https://presentationssite.github.io/tes/ia/#/" style="font-weight:bold;">Exemple d'utilisation de KNN pour reconnaître un chiffre</a>
+<a href="https://presentationssite.github.io/tes/knn/#/" style="font-weight:bold;">Exemple d'utilisation de KNN pour reconnaître un chiffre</a>
 <br>
 <br>
 <h2 id="algorithme-des-k-moyennes--exemple-dapprentissage-non-supervisé">Algorithme des <em>k</em>-moyennes &ndash; Exemple d&rsquo;apprentissage non supervisé</h2>
+<table>
+<tr>
+<th style="text-align:center;"><a href="/act-kmeans.pdf"><b>Activité 2</b></a></th>
+</tr>
+</table>
 <p>Le boulot de l&rsquo;algorithme des <strong><em>k</em>-moyennes</strong> (k-means) n&rsquo;est pas d&rsquo;étiqueter les données, mais de les regrouper par famille. C&rsquo;est donc un algorithme de <strong>partitionnement</strong> des données (clustering).</p>
 <p>Contrairement à KNN, l&rsquo;algorithme des <em>k</em>-moyennes ne nécessite pas de données préétiquetées. Il fait ainsi parti des algorithmes d&rsquo;apprentissage automatique <strong>non-supervisé</strong> (il se débrouille tout seul avec les données mystères).<br></p>
 <p>Par contre, l&rsquo;algorithme partage avec KNN sa grande simplicité d&rsquo;emploi et son efficacité qui le rendent lui aussi très populaire dans l&rsquo;industrie.</p>
@@ -1614,16 +1625,6 @@ Si notre but est de reconnaître le mieux possible les 9 manuscrits, il semblera
 <h3 id="principe-1">Principe</h3>
 <p>L&rsquo;algorithme dépend d&rsquo;un seul paramètre en plus des données : le nombre de partitions (clusters) <em>k</em>.</p>
 <p>On commence par choisir <em>k</em> points au hasard dans l&rsquo;espace des données (il peut s&rsquo;agir de <em>k</em> points de données ou de <em>k</em> autres points). Ce sont les <em>k</em> centres (ou centroïdes).</p>
-
-<div class="notices tip" style="--title: 'tip';">
-  <p style="display: none;">tip</p>
-  <div class="notice-body">
-    <p>Plus les points choisis au départ sont éloignés les uns des autres, mieux c&rsquo;est. Une amélioration de l&rsquo;algorithme de base proposée en 2007, k-means++, s&rsquo;en assure.</p>
-
-  </div>
-</div>
-
-
 <p>On attribue ensuite à chaque centre tous les points de données qui lui sont le plus proches, formant ainsi <em>k</em> groupes.</p>
 <p>Enfin, on déplace chaque centre au barycentre de son groupe.</p>
 <p>On répète les deux dernières opérations (attribution des points les plus près et déplacement des centres) tant que les centres bougent d&rsquo;une itération à l&rsquo;autre.</p>
@@ -1638,7 +1639,7 @@ où $\mu_i$ est le barycentre des points dans $S_i$.</p>
 <p>Choisir le bon nombre de clusters est crucial pour l&rsquo;algorithme des <em>k</em>-moyennes, comme l&rsquo;illustre l&rsquo;exemple suivant :</p>
 <p><img src="/choixdek.png" alt=""></p>
 <p>Mais ce n&rsquo;est pas toujours simple (contrairement à l&rsquo;exemple) de deviner le bon nombre de clusters juste en inspectant les données. Alors comment faire ?</p>
-<p>On pourrait se dire qu&rsquo;il suffit de prendre le modèle avec la plus faible inertie. Mais malheureusement, l&rsquo;inertie n&rsquo;est pas une métrique adaptée au choix de <em>k</em> puisqu&rsquo;elle ne fait que descendre quand <em>k</em> augmente&hellip; Logique : plus il y a de clusters, plus la distance intra-cluster diminue&amp;nbsp!</p>
+<p>On pourrait se dire qu&rsquo;il suffit de prendre le modèle avec la plus faible inertie. Mais malheureusement, l&rsquo;inertie n&rsquo;est pas une métrique adaptée au choix de <em>k</em> puisqu&rsquo;elle ne fait que descendre quand <em>k</em> augmente&hellip; Logique : plus il y a de clusters, plus la distance intra-cluster diminue !</p>
 <p>Traçons l&rsquo;inertie en fonction de <em>k</em> pour y voir plus clair :
 <img src="/inertiefctk3.png?width=700px" alt=""></p>
 <p>On remarque qu&rsquo;ici, le nombre de clusters idéal correspond au point d&rsquo;inflexion de la courbe (ou, si on imagine un bras, au coude).</p>
@@ -1669,11 +1670,206 @@ On semble donc avoir trouver une tactique utilisable lorsqu&rsquo;on n&rsquo;a p
 <br>
 <h3 id="applications">Applications</h3>
 <p>L&rsquo;algorithme des <em>k</em>-moyennes ne présuppose rien sur les données et peut s&rsquo;avérer, par le fait, très utile en première approche dans un rôle de défricheur.</p>
-<p>L&rsquo;algorithme permet aussi de trancher des débats de la plus haute importance sur les couleurs comme  &ldquo;<font color=#00aaaa>est-ce plus vert que bleu ?</font>&rdquo; en organisant un combat entre les centroïdes de chaque couleur.<br>
-Dans la même veine, on peut utiliser <em>k</em>-moyennes pour <strong>segmenter une image</strong> par couleur, ce qui peut s&rsquo;avérer intéressant pour identfier des zones (comme des forêts) sur des données satellite ou pour compresser des images. Le choix de <em>k</em> correspond alors au nombre de couleurs qu&rsquo;on veut garder.</p>
+<p>L&rsquo;algorithme permet aussi de trancher des débats de la plus haute importance sur les couleurs comme  &ldquo;<font color=#00aaaa>est-ce plus vert que bleu ?</font>&rdquo; en organisant un combat entre les centroïdes de chaque couleur.</p>
+<style>
+    .container {
+      position: relative;
+      margin: auto;
+      width: 700px;
+      max-width: 90%;
+      text-align: center;
+    }
+    /* Canvas responsive et centré */
+    canvas {
+      display: block;
+      border: 1px solid #ccc;
+      margin: auto;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3 / 1;
+    }
+    /* Boutons responsives et centrés */
+    button {
+      position: relative;
+      display: block;
+      margin: 10px auto;
+      padding: 10px 15px;
+      font-size: 1em;
+      width: 100%;
+      max-width: 100%;
+    }
+  </style>
+  <div class="container">
+    <canvas id="colorRect"></canvas>
+    <button id="generateBtn">Générer une couleur</button>
+    <button id="runKMeansBtn" disabled>Lancer k-means</button>
+    <p id="result" style="font-family: Courier New;"></p>
+  </div>
+  <script>
+    /* --- Fonction k-means commune --- */
+    function distance(c1, c2) {
+      return Math.sqrt(
+        Math.pow(c1[0] - c2[0], 2) +
+        Math.pow(c1[1] - c2[1], 2) +
+        Math.pow(c1[2] - c2[2], 2)
+      );
+    }
+
+    /**
+     * Fonction k-means.
+     * @param {Array} data - Tableau de points, ex: [[r, g, b]]
+     * @param {number} k - Nombre de clusters
+     * @param {number} maxIterations - Nombre maximal d'itérations
+     * @param {Array|null} initialCenters - Si fourni, tableau de centres initiaux (de longueur k)
+     * @returns {Object} { assignments, centers }
+     */
+    function kMeans(data, k, maxIterations = 10, initialCenters = null) {
+      let centers = [];
+      if (initialCenters && initialCenters.length === k) {
+        centers = initialCenters.map(center => center.slice());
+      } else {
+        // Initialisation aléatoire
+        for (let i = 0; i < k; i++) {
+          centers.push(data[Math.floor(Math.random() * data.length)].slice());
+        }
+      }
+      let assignments = new Array(data.length).fill(-1);
+
+      for (let iter = 0; iter < maxIterations; iter++) {
+        let changed = false;
+        let newAssignments = new Array(data.length).fill(-1);
+
+        // Affectation de chaque point au centre le plus proche
+        for (let i = 0; i < data.length; i++) {
+          let minDist = Infinity;
+          let bestCluster = -1;
+          for (let j = 0; j < k; j++) {
+            let d = distance(data[i], centers[j]);
+            if (d < minDist) {
+              minDist = d;
+              bestCluster = j;
+            }
+          }
+          newAssignments[i] = bestCluster;
+          if (newAssignments[i] !== assignments[i]) {
+            changed = true;
+          }
+        }
+        assignments = newAssignments;
+        if (!changed) {
+          console.log("k-means convergé à l'itération", iter);
+          break;
+        }
+        // Mise à jour des centres
+        let sums = Array.from({ length: k }, () => [0, 0, 0]);
+        let counts = new Array(k).fill(0);
+        for (let i = 0; i < data.length; i++) {
+          let cluster = assignments[i];
+          sums[cluster][0] += data[i][0];
+          sums[cluster][1] += data[i][1];
+          sums[cluster][2] += data[i][2];
+          counts[cluster]++;
+        }
+        for (let j = 0; j < k; j++) {
+          if (counts[j] > 0) {
+            centers[j] = [
+              sums[j][0] / counts[j],
+              sums[j][1] / counts[j],
+              sums[j][2] / counts[j]
+            ];
+          }
+        }
+      }
+      return { assignments, centers };
+    }
+
+    /* --- Partie principale : Couleur ambiguë entre bleu et vert --- */
+    const colorRect = document.getElementById('colorRect');
+    const ctx = colorRect.getContext('2d');
+    const generateBtn = document.getElementById('generateBtn');
+    const runKMeansBtn = document.getElementById('runKMeansBtn');
+    const resultP = document.getElementById('result');
+
+    // Variable pour stocker la couleur actuelle (tableau [r, g, b] normalisé)
+    let currentColor = null;
+
+    // Fonction utilitaire pour contraindre une valeur entre min et max
+    function clamp(val, min, max) {
+      return Math.min(Math.max(val, min), max);
+    }
+
+    // Génère une couleur ambiguë entre bleu et vert.
+    // Le rouge est entre 0.0 et 0.3, et les valeurs de vert et de bleu sont proches.
+    function generateAmbiguousColor() {
+      const r = Math.random()*0.3 ;
+      // Choix aléatoire du vert entre 0.3 et 0.7
+      const g = Math.random() * (0.7 - 0.3) + 0.3;
+      // Un petit offset pour le bleu, entre -0.05 et 0.05
+      const offset = Math.random() * 0.1 - 0.05;
+      const b = clamp(g + offset, 0, 1);
+      currentColor = [r, g, b];
+
+      // Conversion en valeurs 0-255
+      const rVal = Math.round(r * 255);
+      const gVal = Math.round(g * 255);
+      const bVal = Math.round(b * 255);
+
+      // Dessiner le rectangle
+      ctx.fillStyle = `rgb(${rVal}, ${gVal}, ${bVal})`;
+      ctx.fillRect(0, 0, colorRect.width, colorRect.height);
+      resultP.textContent = "Une couleur a été générée.";
+      runKMeansBtn.disabled = false;
+    }
+
+    generateBtn.addEventListener('click', generateAmbiguousColor);
+
+    // Bouton pour lancer k-means
+    runKMeansBtn.addEventListener('click', () => {
+      if (!currentColor) {
+        alert("Veuillez d'abord générer une couleur.");
+        return;
+      }
+      // Ensemble de données : un seul point
+      const data = [currentColor];
+      // Centres initiaux pour 2 clusters : index 0 pour le vert, index 1 pour le bleu
+      const initialCenters = [
+        [0, 1, 0], // Centre vert
+        [0, 0, 1]  // Centre bleu
+      ];
+      const result = kMeans(data, 2, 10, initialCenters);
+      const labels = ["vert", "bleu"];
+      const cluster = result.assignments[0];
+      resultP.textContent = `k-means a tranché : c'est du ${labels[cluster]}.`;
+    });
+
+    // Générer une couleur dès le chargement de la page
+    generateAmbiguousColor();
+  </script>
+<p>Dans la même veine, on peut utiliser <em>k</em>-moyennes pour <strong>segmenter une image</strong> par couleur, ce qui peut s&rsquo;avérer intéressant pour identifier des zones (comme des forêts) sur des données satellite ou pour compresser des images. Le choix de <em>k</em> correspond alors au nombre de couleurs qu&rsquo;on veut garder.</p>
 <p><img src="/segimage.png?width=700" alt=""></p>
 <p><img src="/moswebb.png" alt=""></p>
 <p>La simplicité de <em>k</em>-moyennes en fait un bon outil de dégrossissage des données, y compris sur des données déjà étiquetées. Cela permet de réduire leur dimensionnalité, avant d&rsquo;utiliser des algorithmes plus complexes d&rsquo;apprentissage supervisé.</p>
+<br>
+<h2 id="apprentissage-par-renforcement">Apprentissage par renforcement</h2>
+<table>
+<tr>
+<th style="text-align:center;"><a href="/act-renforcement.pdf"><b>Activité 3</b></a></th>
+</ter>
+</table>
+<p>En plus de l&rsquo;apprentissage supervisé (utilisé par exemple dans la reconnaissance d&rsquo;image) et non supervisé (utilisé par exemple dans les systèmes de recommandation), une machine peut aussi apprendre <strong>par renforcement</strong> (utilisé dans les prises de décision). Dans la plupart des applications, les trois sont mélangés.</p>
+<p>L&rsquo;apprentissage par renforcement a permis à la machine de maîtriser de nombreux jeux et l&rsquo;activité suivante permet de comprendre le mécanisme général derrière un tel apprentissage.</p>
+<br>
+<h2 id="apprentissage-profond">Apprentissage profond</h2>
+<p>L&rsquo;apprentissage profond (deep learning) révolutionne le secteur de l&rsquo;IA dans les années 2010. Il consiste à entraîner un ordinateur à “apprendre” en analysant un grand nombre d’exemples. Il fait cela à l’aide de structures mathématiques appelées réseaux de neurones, qui s’inspirent vaguement du fonctionnement du cerveau humain. L’idée de “profondeur” vient du fait que les réseaux de neurones utilisés dans le deep learning ont de nombreuses couches. Chaque couche effectue une partie de l’analyse et transmet ses résultats à la suivante. C’est un peu comme si un problème complexe était résolu par une série d’étapes simples, chacune se concentrant sur un détail particulier.</p>
+<p>Quoi de mieux que la leçon inaugurale au Collège de France d&rsquo;un de ses fondateurs, Yann Le Cun, pour nous expliquer de quoi il retourne ?</p>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/TdLa5h-x2nA?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+</div>
+<p>Malheureusement, le mème qui suit résume aujourd&rsquo;hui assez bien notre compréhension fine du fonctionnement des modèles de deep learning : on est devant une boite noire qui fait le job demandé sans que l&rsquo;on comprenne trop comment&hellip;</p>
+<p><img src="/resumdeeplearning.png?width=500px" alt=""></p>
 <br>
 <h2 id="jeux-daccessibilité-sur-un-graphe">Jeux d&rsquo;accessibilité sur un graphe</h2>
 <p>Cette partie du cours a moins à voir avec les jeux vidéo qu&rsquo;avec la modélisation de systèmes réactifs (automate bancaire, système-environnement), les problèmes de contrôle, la théorie de la décision, les problèmes de routage sur Internet, l&rsquo;économie&hellip; Autant de domaînes admettant une description en terme d&rsquo;opposition entre adversaires sur une arêne (un des adversaires pouvant modéliser l&rsquo;environnement). La détermination d&rsquo;une stratégie gagnante résout alors le problème posé en assurant sa correction.</p>
@@ -1900,7 +2096,7 @@ La valeur est au final transmise à la racine (la position depuis laquelle on a 
 <p><img src="/minimaxgif.gif" alt=""></p>
 <p>L&rsquo;arbre total du morpion n&rsquo;est pas si gros ; le <strong>facteur de ramification</strong> $b$ est de 5 en moyenne et il y a au plus 9 niveaux (9 coups), ce qui donne $\approx 5^9 = 1\,953\,125$ (à titre de comparaison, aux échecs, $b\approx35$ et un partie dure en moyenne 100 coups, ce qui donne $b^m\approx10^{54}$ sommets à inspecter&hellip;).</p>
 <p>L&rsquo;algorithme minimax appliqué au morpion inspecte en réalité environ 4 fois moins de sommets que les deux millions prédits, car ce chiffre ne tient pas compte des nombreuses parties potentielles se terminant avant le neuvième coup. Il en inspecte néanmoins beaucoup plus qu&rsquo;il ne faudrait (il n&rsquo;y a que $9!=362\,880$ coups possibles si l&rsquo;ordi commence et seulement $8!=40\,320$ si l&rsquo;humain a l&rsquo;honneur), ce qui illustre le fait qu&rsquo;un arbre contient beaucoup de sommets redondants par rapport au graphe du jeu dont il est tiré (c&rsquo;est le prix à payer pour casser les cycles).</p>
-<p>La taille modéré de l&rsquo;arbre permet de l&rsquo;explorer jusqu&rsquo;aux parties finales, mais on peut constater en jouant avec le petit programme ci-dessous que la réduction à une profondeur d&rsquo;un seul niveau grâce à l&rsquo;heuristique<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> est tout autant redoutable en inspectant presque 4000 fois moins de sommets !</p>
+<p>La taille modéré de l&rsquo;arbre permet de l&rsquo;explorer jusqu&rsquo;aux parties finales, mais on peut constater en jouant avec le petit programme ci-dessous que la réduction à une profondeur d&rsquo;un seul niveau grâce à l&rsquo;heuristique<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> est tout autant redoutable en inspectant presque 4000 fois moins de sommets !</p>
 <p>
 <iframe src="https://trinket.io/embed/python/5a7f499742" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </p>
@@ -2025,7 +2221,7 @@ L&rsquo;autre idée est d&rsquo;utiliser la détermination de la valeur optimale
     </div>
 
 <br>
-<h2 id="apprentissage-profond">Apprentissage profond</h2>
+<h2 id="apprentissage-profond-1">Apprentissage profond</h2>
 <p>L&rsquo;apprentissage profond (deep learning) révolutionne le secteur de l&rsquo;IA dans les années 2010. Il consiste à entraîner un ordinateur à “apprendre” en analysant un grand nombre d’exemples. Il fait cela à l’aide de structures mathématiques appelées réseaux de neurones, qui s’inspirent vaguement du fonctionnement du cerveau humain. L’idée de “profondeur” vient du fait que les réseaux de neurones utilisés dans le deep learning ont de nombreuses couches. Chaque couche effectue une partie de l’analyse et transmet ses résultats à la suivante. C’est un peu comme si un problème complexe était résolu par une série d’étapes simples, chacune se concentrant sur un détail particulier.</p>
 <p>Quoi de mieux que la leçon inaugurale au Collège de France d&rsquo;un de ses fondateurs, Yann Le Cun, pour nous expliquer de quoi il retourne.</p>
 <br>
@@ -2140,13 +2336,10 @@ Au-delà du genre, ces modèles peuvent renforcer un large éventail de stéréo
 <hr>
 <ol>
 <li id="fn:1">
-<p>adapté de <a href="https://medium.com/@solclover">cet auteur</a>.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>graphe issue de <a href="https://vas3k.com/blog/machine_learning/">cette introduction assez sympa</a> à l&rsquo;apprentissage automatique.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2">
-<p>graphe issue de <a href="https://vas3k.com/blog/machine_learning/">cette introduction assez sympa</a> à l&rsquo;apprentissage automatique.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:3">
-<p>2-ply minimax en anglais&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>2-ply minimax en anglais&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
@@ -3014,16 +3207,16 @@ Au-delà du genre, ces modèles peuvent renforcer un large éventail de stéréo
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1759090816"></script>
-    <script src="/js/perfect-scrollbar.min.js?1759090816"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1759090816"></script>
-    <script src="/js/jquery.sticky.js?1759090816"></script>
-    <script src="/js/featherlight.min.js?1759090816"></script>
-    <script src="/js/highlight.pack.js?1759090816"></script>
+    <script src="/js/clipboard.min.js?1762432623"></script>
+    <script src="/js/perfect-scrollbar.min.js?1762432623"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1762432623"></script>
+    <script src="/js/jquery.sticky.js?1762432623"></script>
+    <script src="/js/featherlight.min.js?1762432623"></script>
+    <script src="/js/highlight.pack.js?1762432623"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1759090816"></script>
-    <script src="/js/learn.js?1759090816"></script>
-    <script src="/js/hugo-learn.js?1759090816"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1762432623"></script>
+    <script src="/js/learn.js?1762432623"></script>
+    <script src="/js/hugo-learn.js?1762432623"></script>
     
     
 
