@@ -163,6 +163,13 @@
       <description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;  #grosseformule &#xA;{&#xA;    overflow-x: auto; &#xA;}&#xA;#preuve&#xA;{&#xA;    background-color:#EAEAEA;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#def&#xA;{&#xA;    background-color:#DCEFFE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#theo&#xA;{&#xA;    background-color:#FBE1DE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;h2&#xA;{&#xA;color:#970E53 !important;&#xA;}&#xA;h3&#xA;{&#xA;color:#004D80 !important;&#xA;}&#xA;ul&#xA;{&#xA;margin-top:-0.5em;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;théorie-quantique-des-champs--partie-2&#34;&gt;Théorie quantique des champs &amp;ndash; Partie 2&lt;/h1&gt;&#xA;&#xA;&lt;div class=&#34;notices note&#34; style=&#34;--title: &#39;note&#39;;&#34;&gt;&#xA;  &lt;p style=&#34;display: none;&#34;&gt;note&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Algèbre</title>
+      <link>https://sciencesilencieuse.github.io/maths/algebre/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/maths/algebre/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Analyse en composantes principales</title>
       <link>https://sciencesilencieuse.github.io/maths/pca/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
