@@ -9,13 +9,6 @@
     <lastBuildDate>Sat, 06 Mar 2021 14:20:50 +0100</lastBuildDate>
     <atom:link href="https://sciencesilencieuse.github.io/maths/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Inférences bayésiennes</title>
-      <link>https://sciencesilencieuse.github.io/maths/bayes/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/maths/bayes/</guid>
-      <description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;  #grosseformule &#xA;{&#xA;    overflow-x: auto; &#xA;  }&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;inférences-bayésiennes&#34;&gt;Inférences bayésiennes&lt;/h1&gt;&#xA;&lt;p&gt;L&amp;rsquo;intelligence artificielle vise à simuler l&amp;rsquo;intelligence humaine. Mais la compréhension du fonctionnement de notre cerveau en est elle-même encore qu&amp;rsquo;à ses prémices.&lt;br&gt;&lt;/p&gt;&#xA;&lt;div style=&#34;position:relative; width:600px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius:10px; &#34;&gt;&#xA;&lt;img src=&#34;https://sciencesilencieuse.github.io/dehaene.png&#34; style=&#34;border-radius:10px;&#34;&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Tel un programme informatique, le cerveau produit de nouvelles informations à partir de l&amp;rsquo;information qu&amp;rsquo;il reçoit (les données). Un changement de paradigme a eu lieu récemment dans la communauté scentifique concernant la modalité même de ce traitement de l&amp;rsquo;information par le cerveau. Stanislas Dehaene, un psychologue spécialisé en neuropsychologie, résume cette nouvelle façon d&amp;rsquo;apréhender l&amp;rsquo;information dans &lt;a href=&#34;https://www.college-de-france.fr/chaire/stanislas-dehaene-psychologie-cognitive-experimentale-chaire-statutaire/annual-summaries&#34;&gt;ses leçons au Collège de France&lt;/a&gt; :&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Arithmétique</title>
       <link>https://sciencesilencieuse.github.io/maths/arithmetique/</link>
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
@@ -42,6 +35,13 @@
       <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
       <guid>https://sciencesilencieuse.github.io/maths/stat/</guid>
       <description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;  #grosseformule &#xA;{&#xA;    overflow-x: auto; &#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;statistiques&#34;&gt;Statistiques&lt;/h1&gt;&#xA;&#xA;&lt;div class=&#34;notices tip&#34; style=&#34;--title: &#39;tip&#39;;&#34;&gt;&#xA;  &lt;p style=&#34;display: none;&#34;&gt;tip&lt;/p&gt;&#xA;  &lt;div class=&#34;notice-body&#34;&gt;&#xA;    &lt;p&gt;Les probabilités sont des calculs a priori, visant à prédire les issues d’évènements n’ayant pas encore eu lieu, alors que les statistiques sont des calculs a posteriori qui analysent les issues d’évènements déjà réalisés.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Inférence bayésienne</title>
+      <link>https://sciencesilencieuse.github.io/maths/bayes/</link>
+      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+      <guid>https://sciencesilencieuse.github.io/maths/bayes/</guid>
+      <description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;  #grosseformule &#xA;{&#xA;    overflow-x: auto; &#xA;  }&#xA;  /* 1. Rétablir la déclaration que votre reset a écrasée */&#xA;details &gt; summary:first-of-type {&#xA;  display: list-item;     /* remet le triangle + l’accessibilité */&#xA;  cursor: pointer;        /* optionnel : feedback visuel */&#xA;}&#xA;&#xA;/* 2. Si vous aviez aussi supprimé le list-style */&#xA;details &gt; summary:first-of-type {&#xA;  list-style: disclosure-closed inside;&#xA;}&#xA;details[open] &gt; summary:first-of-type {&#xA;  list-style-type: disclosure-open;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;inférence-bayésienne&#34;&gt;Inférence bayésienne&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;En s&amp;rsquo;appuyant sur le théorème de Bayes, l&amp;rsquo;inférence bayésienne permet de structurer et mathématiser le &lt;b&gt;raisonnement inductif&lt;/b&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Théorie des jeux</title>
