@@ -8,7 +8,7 @@
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
-    <title>Coriolis - Science en vrac</title>
+    <title>Limites de la non localité - Science en vrac</title>
     
     
 
@@ -75,7 +75,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 
 	
   </head>
-  <body class="" data-url="/physique/meca/coriolis/">
+  <body class="" data-url="/physique/quantique/nonlocale/">
     <nav id="sidebar" class="">
 
 
@@ -631,7 +631,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/meca/" title="Mécanique" class="dd-item
-        parent
+        
         
         
         ">
@@ -678,7 +678,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
  
   
     
-      <li data-nav-id="/physique/meca/coriolis/" title="Coriolis" class="dd-item active">
+      <li data-nav-id="/physique/meca/coriolis/" title="Coriolis" class="dd-item ">
         <a href="/physique/meca/coriolis/">
         Coriolis
         
@@ -991,7 +991,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/quantique/" title="Mécanique quantique" class="dd-item
-        
+        parent
         
         
         ">
@@ -1101,7 +1101,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
  
   
     
-      <li data-nav-id="/physique/quantique/nonlocale/" title="Limites de la non localité" class="dd-item ">
+      <li data-nav-id="/physique/quantique/nonlocale/" title="Limites de la non localité" class="dd-item active">
         <a href="/physique/quantique/nonlocale/">
         Limites de la non localité
         
@@ -1372,14 +1372,22 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
                   <span class="links">
                  
                  
-                   Coriolis
+                   Limites de la non localité
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#inégalité-chsh">Inégalité CHSH</a></li>
+    <li><a href="#borne-de-tsirelson">Borne de Tsirelson</a></li>
+    <li><a href="#boites-pr">Boites PR</a></li>
+    <li><a href="#transfert-dinformation">Transfert d&rsquo;information</a></li>
+    <li><a href="#la-causalité-informationnelle">La causalité informationnelle</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -1416,20 +1424,298 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   {
     color: #006C65;
   }
+#preuve
+{
+    background-color:#EAEAEA;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#def
+{
+    background-color:#DCEFFE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#theo
+{
+    background-color:#FBE1DE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#axiom
+{
+    background-color:#E5F3E0;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#grosseformule
+{
+    overflow-x:auto;
+}
 </style>
-<h1 id="coriolis">Coriolis</h1>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/i-EMZHPWGcg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-    </div>
-
+<h1 id="pourquoi-la-quantique-nest-elle-pas-moins-locale">Pourquoi la quantique n&rsquo;est-elle pas moins locale ?</h1>
+<p>La non localité traduit la corrélation instantanée entre composantes éloignées d&rsquo;un système quantique. Or cette corrélation, nulle en mécanique classique, est loin d&rsquo;être maximale en mécanique quantique !</p>
+<h2 id="inégalité-chsh">Inégalité CHSH</h2>
+<p>L&rsquo;inégalité CHSH est la généralisation la plus pratique de l&rsquo;inégalité de Bell.</p>
+<p>On considère une source qui émet des paires de particules intriquées. L&rsquo;une est envoyée à Alice, l&rsquo;autre à Bob.</p>
+<ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+<li>Alice peut choisir de mesurer son système selon deux réglages : $a$ ou $a'$ (cela peut être deux angles d'un polariseur pour des photons),</li>
+<li>Bob peut choisir entre les deux réglages $b$ ou $b'$.</li>
+</ul>
+<p>Chaque mesure donne un résultat binaire : $+1$ ou $−1$.</p>
+<p>On définit la corrélation $E(x,y)$ comme la valeur moyenne du produit des résultats pour les réglages $x$ et $y$ : $E(x, y)=\left\langle A_x \cdot B_y\right\rangle$.</p>
+<p>Dans une théorie classique (ou à variables cachées locales), on suppose que le résultat de la mesure d&rsquo;Alice ne dépend que de son réglage ($a$ ou $a&rsquo;$), mais absolument pas du choix de Bob.</p>
+<p>Considérons la combinaison de mesures suivante pour une paire de particules donnée :</p>
+<div id="def">
+$$C=a \cdot b+a \cdot b^{\prime}+a^{\prime} \cdot b-a^{\prime} \cdot b^{\prime}=a\left(b+b^{\prime}\right)+a^{\prime}\left(b-b^{\prime}\right)$$
 </div>
-<br>
-<p>Simulations de Troyens dans un système où la grosse masse $M$ et la petite masse $m$ sont dans les proportions $m=M\frac{\mu}{1-\mu} $ avec $\mu=1/200$</p>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;">
-<iframe src="https://trinket.io/embed/glowscript/da197e724a?toggleCode=true&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<p>Puisque $b$ et $b&rsquo;$ valent soit $+1$, soit $−1$ :</p>
+<ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+<li>Si $b=b'$, alors $(b+b')=±2$ et $(b-b')=0$. Donc $C=±2$.</li>
+<li>Si $b≠b'$, alors $(b+b')=0$ et $(b-b')=±2$. Donc $C=±2$.</li>
+</ul>
+<p>Dans tous les cas, pour chaque particule, la valeur de $C$ est soit $2$, soit $−2$. En effectuant la moyenne sur un grand nombre de particules, on obtient l&rsquo;<strong>inégalité CHSH</strong> :</p>
+<div id="theo">
+$$S=\left|E(a, b)+E\left(a, b^{\prime}\right)+E\left(a^{\prime}, b\right)-E\left(a^{\prime}, b^{\prime}\right)\right| \leq 2$$
 </div>
-<p>Explication des bandes de vents dominants (thèse + planètes).</p>
+<p>Et que prévoit la mécanique quantique ?</p>
+<p>Utilisons l&rsquo;état intriqué singulet : $|\psi\rangle=\frac{1}{\sqrt{2}}(|01\rangle-|10\rangle)$.<br>
+La corrélation quantique entre deux détecteurs orientés avec un angle relatif $\theta$ est $E(\theta)=-\cos (\theta)$.</p>
+<p>Pour maximiser $S$, Alice et Bob peuvent choisir les angles suivant :</p>
+<ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+<li>$a=0°$ et $a'=90°$ pour Alice</li>
+<li>$a=45°$ et $a'=-45°$ pour Bob</li>
+</ul>
+<p>Calculons les angles relatifs entre les mesures :</p>
+<ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+<li>$\theta(a, b)=45^{\circ} \Longrightarrow E(a, b)=-\cos \left(45^{\circ}\right)=-\frac{\sqrt{2}}{2}$</li>
+<li>$\theta(a, b')=-45^{\circ} \Longrightarrow E(a, b')=-\cos \left(-45^{\circ}\right)=-\frac{\sqrt{2}}{2}$</li>
+<li>$\theta(a', b)=45^{\circ} \Longrightarrow E(a', b)=-\cos \left(45^{\circ}\right)=-\frac{\sqrt{2}}{2}$</li>
+<li>$\theta(a', b')=135^{\circ} \Longrightarrow E(a', b')=-\cos \left(135^{\circ}\right)=+\frac{\sqrt{2}}{2}$</li>
+</ul>
+<p>En injectant dans $S$, on obtient :<br></p>
+<p>$S=\left| \left(-\frac{\sqrt{2}}{2}\right)+\left(-\frac{\sqrt{2}}{2}\right)+\left(-\frac{\sqrt{2}}{2}\right)-\left(\frac{\sqrt{2}}{2}\right)\right|=4 \times \frac{\sqrt{2}}{2}=2 \sqrt{2}&gt;2$</p>
+<p><strong>La mécanique quantique prévoit donc une violation de l&rsquo;inégalité CHSH</strong>. Et c&rsquo;est bien ce qu&rsquo;a vérifié les expériences d&rsquo;Alain Aspect entre autres.</p>
+<h2 id="borne-de-tsirelson">Borne de Tsirelson</h2>
+<p>Quelle est la valeur maximale atteignable ?</p>
+<p>Pour la trouver, construisons l&rsquo;opérateur de Bell $\mathcal{B}$ à partir des observables d&rsquo;Alice $(A, A&rsquo;)$ et de Bob $(B,B&rsquo;)$ :</p>
+<p>$$\mathcal{B}=A \otimes B+A \otimes B&rsquo;+A&rsquo; \otimes B-A&rsquo; \otimes B&rsquo;$$</p>
+<p>On a alors $S=\langle\psi| \mathcal{B}|\psi\rangle$.</p>
+<p>Or on peut montrer que $\mathcal{B}^2=4 I+\left[A, A^{\prime}\right]\otimes \left[B^{\prime}, B\right]$.</p>
+<p>Cela permet de constater que si les opérateurs commutent, on retombe sur la limite classique de $2$ ($4$ pour $S^2$).</p>
+<p>Pour dépasser $2$, les opérateurs d&rsquo;Alice (et ceux de Bob) ne doivent pas commuter. Et la valeur maximale est atteinte quand les commutateurs sont maximaux, ce qui correspond géométriquement à des bases de mesure à 90° l&rsquo;une de l&rsquo;autre (bases complémentaires).</p>
+<p>Si les mesures d&rsquo;Alice et Bob sont des mesures de spin, on peut écrire les observables en fonction des matrices de Pauli : $A=a\cdot \sigma$ et $A&rsquo;=a&rsquo;\cdot \sigma$ où $a$ et $a&rsquo;$ sont les vecteurs unitaires correspondant à l&rsquo;orientation du Stern-Gerlach d&rsquo;Alice et $\sigma=\left(\sigma_x, \sigma_y, \sigma_z\right)$ correspondent aux axes de référence de son appareil de mesure. Et comme $\left[\sigma_i, \sigma_j\right]=2 i \epsilon_{i j k} \sigma_k$, on a $\left[A, A^{\prime}\right]=2 i\left(a \wedge  a^{\prime}\right) \cdot \sigma$.</p>
+<p>Le vecteur $a\wedge a&rsquo;$ a une norme égale à $\sin(\theta)$, où $\theta$ est l&rsquo;angle entre les deux réglages. Cette norme est maximale ($=1$) quand Alice choisit des réglages orthogonaux ($a\perp a&rsquo;$). Dans ce cas, $\left[A, A^{\prime}\right]=2 i \sigma_n$ où $\sigma_n$ est la matrice de Pauli dans la direction normale au plan de mesure $(a,a&rsquo;)$. Les valeurs propres de $\sigma_n$ étant $\{+1,-1\}$, les valeurs propres de $[A,A&rsquo;]$ sont $\{+2\mathrm{i},-2\mathrm{i}\}$. La norme du commutateur (plus grande valeur propre en valeur absolue) est $2$.</p>
+<p>Le raisonnement est exactement le même pour Bob. S&rsquo;il choisit ses réglages $b$ et $b&rsquo;$ orthogonaux, son commutateur $[B&rsquo;,B]$ aura également pour valeurs propres $\{+2\mathrm{i},-2\mathrm{i}\}$.</p>
+<p>Regardons maintenant l&rsquo;opérateur global dans l&rsquo;espace produit $\mathcal{H}_A\otimes \mathcal{H}_B$ : $\left[A, A^{\prime}\right] \otimes\left[B^{\prime}, B\right]$.</p>
+<ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+<li>$(2 i) \times(2 i)=-4$</li>
+<li>$(2 i) \times(-2 i)=-4$</li>
+<li>$(-2 i) \times(2 i)=-4$</li>
+<li>$(-2 i) \times(-2 i)=-4$</li>
+</ul>
+<p>La valeur propre maximale de ce terme de corrélation est donc $4$.</p>
+<p>Les valeurs propres maximales de $\mathcal{B}^2$ sont donc $4+4=8$.</p>
+<p>On en conclut que $S^2≤8$ ce qui nous donne la valeur maximale de l&rsquo;inégalité CHSH permise par la quantique :</p>
+<div id="theo">
+$$S≤2\sqrt{2}$$
+</div>
+<p>C&rsquo;est la <strong>borne de Tsirelson</strong>.</p>
+<p>Ce plafond quantique a une origine géométrique liée à la nature vectorielle des états quantiques. Pour obtenir plus, il faudrait qu&rsquo;un vecteur puisse s&rsquo;aligner avec deux directions orthogonales en même temps&hellip;
+Plus on veut qu&rsquo;un état quantique soit porteur d&rsquo;une information $a$, moins il peut être porteur d&rsquo;une information $b$ si les opérateurs associés à $A$ et $B$ ne commutent pas.</p>
+<p>Montrons que l&rsquo;on peut faire mieux que la borne de Tsirelson hors des lois quantiques.</p>
+<h2 id="boites-pr">Boites PR</h2>
+<p>On s&rsquo;affranchit maintenant de tout espace vectoriel et autres contraintes de norme pour ne plus s&rsquo;occuper que de logique.</p>
+<p>Retournons à la définition de $S$ : $\left|E(a, b)+E\left(a, b^{\prime}\right)+E\left(a^{\prime}, b\right)-E\left(a^{\prime}, b^{\prime}\right)\right| $.</p>
+<p>Comme chaque corrélation $E$ est comprise entre $-1$, le maximum théorique de $S$ est $4$ avec $E(a,b)=E(a&rsquo;,b)=E(a,b&rsquo;)=±1$ et $E(a&rsquo;,b&rsquo;)=\mp 1$.</p>
+<p>Mais peut-on atteindre ce maximum sans communication entre Alice et Bob ? Pour cela, il faut que ce qu&rsquo;observe Alice localement (ses statistiques de résultats) ne dépende pas des choix de réglage fait par Bob à l&rsquo;autre bout de l&rsquo;univers (et vice versa). Dit autrement, Alice ne doit pas savoir quel réglage Bob a choisi en regardant ses résultats.</p>
+<p>On va y parvenir à l&rsquo;aide d&rsquo;une boîte PR (pour Popescu et Rohrlich) !</p>
+<p>Une <strong>boîte PR</strong> est un système bipartite théorique. Alice et Bob entrent chacun un bit ($x$ pour Alice, $y$ pour Bob) et reçoivent chacun un bit en sortie ($a$ pour Alice, $b$ pour Bob). La boîte garantit contractuellement que les sorties respectent toujours l&rsquo;équation :</p>
+  <div id="def">
+  $$
+  a \oplus b=x \cdot y
+  $$
+  </div>
+<p>$\oplus$ est le XOR logique (addition modulo 2).</p>
+<p>Imaginons par exemple que Bob entre la valeur $0$ et Alice entre la valeur $1$ dans leurs parties respectives de la boite. Alors la boîte pourra fournir $1$ aux deux ou $0$ aux deux (puisque $x\cdot y = 0\cdot 1 = 0$ et donc la boîte impose $a\oplus b = 0$, ce qui implique que $a$ et $b$ sont identiques). Par conséquent, Alice a $50\%$ de chance de recevoir un $0$ et $50\%$ de recevoir un $1$. Et cela restera le cas quel que soit le réglage de Bob (la marginale d&rsquo;Alice<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> vaut $50\%$), ce qui empêche Alice d&rsquo;inférer quoi que ce soit sur son réglage ; on a bien non signalisation.</p>
+<p>Calculons la valeur de $S$ à partir des valeurs des mesures $a$ et $b$.</p>
+  <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+  <li>Si $a\oplus b = 0$, alors $a=b$. Les résultats sont identiques et la corrélation vaut donc $+1$.</li>
+  <li>Si $a\oplus b = 0$, alors $a≠b$. Les résultats sont opposés et la corrélation vaut donc $-1$.</li>
+  </ul>
+<p>La corrélation $E(x,y)$ vaut par définition la moyenne des produits des résultats. Mais comme la boîte PR est déterministe dans ses corrélations, $E(x,y)$ vaut soit $+1$, soit $-1$.</p>
+<p>Les couples de réglages possibles pour Alice et Bob sont $(0,0)$, $(0,1)$, $(1,0)$ et $(1,1)$. D&rsquo;où $S=E(0,0)+E(0,1)+E(1,0)-E(1,1)$.</p>
+<p>Appliquons la règle $a \oplus b=x \cdot y$ pour chaque couple de réglage :</p>
+<ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+<li>Pour $(x,y)=(0,0)$ : $a\oplus b=0\cdot 0 = 0\Longrightarrow E(0,0)=1$.</li>
+<li>Pour $(x,y)=(0,1)$ : $a\oplus b=0\cdot 1 = 0\Longrightarrow E(0,1)=1$.</li>
+<li>Pour $(x,y)=(1,0)$ : $a\oplus b=1\cdot 0 = 0\Longrightarrow E(1,0)=1$.</li>
+<li>Pour $(x,y)=(1,1)$ : $a\oplus b=1\cdot 1 = 1\Longrightarrow E(1,1)=-1$.</li>
+</ul>
+<p>Résultat :</p>
+<div id="theo">
+$$S=1+1+1-(-1)=4$$
+</div>
+<p>On a bien atteint le plafond algébrique tout en respectant la contrainte de non-signalisation.</p>
+<p>Pourquoi dès lors la nature se restreint-elle à la borne de Tsirelson alors qu&rsquo;on peut aller plus loin tout en respectant l&rsquo;interdiction d&rsquo;envoyer des messages plus vite que $c$ ? Quitte à être non locale, pourquoi ne pas  l&rsquo;être complètement ?</p>
+<h2 id="transfert-dinformation">Transfert d&rsquo;information</h2>
+<p>Supposons qu&rsquo;Alice ait deux bits $x_0$ et $x_1$. Elle envoie un seul bit $m$ à Bob. Bob veut deviner le bit $x_k$ (où $k\in\{0,1\}$ est son choix).</p>
+<p>La probabilité de succès pour Bob mesure donc la capacité d&rsquo;Alice a faire tenir deux bits d&rsquo;information sur un seul bit envoyé.</p>
+<p>On va supposer aussi qu&rsquo;Alice et Bob partagent à nouveau un système bipartite (que cela soit un état quantique intriqué, une boîte PR, ou autre) qu&rsquo;on va appeler génériquement boîte non-signalante (les réponses de la boîte de Bob n&rsquo;informent pas sur les réglages et réponses de la boîte d&rsquo;Alice).</p>
+<p>Ils suivent le protocole suivant :</p>
+<ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+<li>Alice utilise le réglage $X=x_0\oplus x_1$ et obtient $a\in \{{0,1\}}$</li>
+<li>Elle envoie $m=x_0\oplus a$ à Bob.</li>
+<li>Bob veut $x_k$, il mesure avec le réglage $Y=k$ et obtient $b\in \{{0,1\}}$.</li>
+<li>Son estimation est $g=m\oplus b$.</li>
+</ul>
+<p>L&rsquo;estimation de Bob est bonne si :</p>
+<ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+<li>lorsque $k=0$, $x_0 \oplus a \oplus b=x_0$. Donc si $a\oplus b = 0$.</li>
+<li>et lorsque $k=1$, $x_0 \oplus a \oplus b=x_1$. Donc si $a\oplus b=x_0\oplus x_1$.</li>
+</ul>
+<p>Dans les deux cas, la condition de succès peut s&rsquo;écrire :</p>
+<div id="theo">
+$$a\oplus b = X\cdot Y$$
+</div>
+<p>On retrouve là la règle donnant une valeur maximale à $S$.</p>
+<p>Comme la corrélation physique entre $X$ et $Y$ vaut :</p>
+<p>$$E(X, Y)=(+1) \cdot P(a=b)+(-1) \cdot P(a≠b)$$</p>
+<p>On peut la réécrire :</p>
+<p>$$E(X, Y)=P(a\oplus b=0) - P(a\oplus b =1)$$</p>
+<p>Et comme $P(a \oplus b=0)+P(a \oplus b=1)=1$, on peut écrire :</p>
+<p>$$
+\begin{aligned}
+P(a \oplus b=0)&amp;=\frac{1+E(X, Y)}{2}\\
+P(a \oplus b=1)&amp;=\frac{1-E(X, Y)}{2}
+\end{aligned}
+$$</p>
+<p>La probabilité de succès $P$ est la moyenne des probabilités de gagner sur les 4 configurations possibles de $(X,Y)$ :</p>
+<div id="grosseformule" style="margin-top:-0em;margin-bottom:-0em;">
+<p>$$
+P=\frac{1}{4}\left[P_{\text {succès }}(0,0)+P_{\text {succès }}(0,1)+P_{\text {succès }}(1,0)+P_{\text {succès }}(1,1)\right]
+$$</p>
+</div>
+<p>En utilisant la condition $a\oplus b = X\cdot Y$, on obtient :</p>
+<ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+    <li>Pour $(0,0)$, $(0,1)$ et $(1,0)$, on gagne si $a\oplus b = 0$. La proba est $P(a \oplus b=0)=\frac{1+E(X, Y)}{2}$</li>
+<li>Pour $(1,1)$, on gagne si $a\oplus b = 1$. La proba est $P(a \oplus b=1)=\frac{1-E(X, Y)}{2}$</li>
+</ul>
+<p>En remplaçant dans $P$ :</p>
+<div id="grosseformule" style="margin-top:-0em;margin-bottom:-0em;">
+<p>$$
+\begin{aligned}
+P&amp;=\frac{1}{4}\left[\frac{1+E_{00}}{2}+\frac{1+E_{01}}{2}+\frac{1+E_{10}}{2}+\frac{1-E_{11}}{2}\right]\\
+&amp;=\frac{1}{8}\left[4+\left(E_{00}+E_{01}+E_{10}-E_{11}\right)\right]
+\end{aligned}
+$$</p>
+</div>
+<p>On reconnaît l&rsquo;expression de $S$ dans la parenthèse et finalement :</p>
+<div id="theo">
+$$
+P=\frac{1}{2}\left(1+\frac{S}{4}\right)
+$$
+</div>
+<ul style="margin-bottom:-0.5em;">
+<li>En classique ($S=2$), $P=\frac34$. Bob est totalement informé sur un des deux bits, mais quand il veut l'autre, il n'a qu'une chance sur deux de succès. Toute l'info que lui envoie Alice est concentrée sur un des deux bits.</li>
+<li>En quantique ($S=2\sqrt{2}$), $P\approx 85\%%$. Bob améliore ses chances par rapport à la situation classique car l'information envoyée par Alice concerne maintenant les deux bits à la fois.</li>
+<li>Avec une boîte PR ($S=4$), $P=1$. Bob connaît $x_0$ et $x_1$ avec certitude dès qu'il reçoit le bit $m$.</li>
+</ul>
+<h2 id="la-causalité-informationnelle">La causalité informationnelle</h2>
+<p>Bob cherche maintenant à deviner les bits d&rsquo;Alice à partir du seul bit qu&rsquo;Alice lui a envoyé (et toute mesure locale qu&rsquo;il peut faire sur ses boîtes).</p>
+<p>Le <strong>principe de causalité informationnelle</strong> (CI) stipule que :</p>
+<div id="def">
+Bob ne peut pas obtenir plus d'information qu'Alice a envoyé.
+</div>
+<p>Bob ne peut deviner au mieux qu&rsquo;un bit d&rsquo;Alice selon ce principe. Ça paraît assez raisonnable&hellip;</p>
+<p>Pour l&rsquo;exprimer mathématiquement, on utilise l&rsquo;information mutuelle $I(A:B)$ qui mesure la réduction d&rsquo;incertitude. Pour un bit dont on devine la valeur avec une probabilité $P$, l&rsquo;information gagnée est : $I=1-H(P)$ où $H(P)$ est l&rsquo;entropie binaire. Si on devine au pif complet, $P=\frac12\Rightarrow H(P)=1\Rightarrow I=0$, on obtient une information nulle. Logique.</p>
+<p>Pour deux bits $x_0$ et $x_1$, le principe de CI impose que la somme des informations que Bob peut extraire sur chaque bit ne dépasse pas la taille du message envoyé de 1 bit :</p>
+<p>$$I(x_0:\beta_0)+I(x_1:\beta_1)≤1$$</p>
+<p>Les $\beta_i$ sont les estimations de Bob pour le bit $x_i$.</p>
+<p>Qu&rsquo;obtiendrait-on si Alice et Bob utilise des boîtes PR (de corrélation maximale $S=4$) ?</p>
+<p>Si $S=4\Rightarrow P=1 \Rightarrow h(P)=0$. L&rsquo;information mutuelle pour un bit deviné avec certitude est donc $I=1$. Logique à nouveau.</p>
+<p>Pour les deux bits, on obtient :</p>
+<p>$$I=I(x_0)+I(x_1)=2&gt;1$$</p>
+<p>Bob a extrait 2 bits d&rsquo;information alors qu&rsquo;Alice n&rsquo;en a envoyé qu&rsquo;un seul. On a génération spontanée d&rsquo;information&hellip;</p>
+<p><strong>4 bits</strong></p>
+<p>Supposons qu&rsquo;Alice ait maintenant 4 bits ($x_0,x_1,x_2,x_3$) à faire deviner à Bob en lui envoyant un seul bit. Pour fabriquer le bit à envoyer, Alice va procéder par concaténation successive ce qui donne une structure en pyramide sur deux niveaux :</p>
+<ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+<li>Niveau 1 : Elle utilise une première boîte sur $(x_0,x_1)$ qui produit un message $m_0$, et et une deuxième boîte sur $(x_1,x_2)$ qui produit $m_1$.</li>
+<li>Niveau 2 : Elle utilise une troisième boîte sur ces messages intermédiaires $(m_0,m_1)$ pour produire le message final $m$ qu'elle envoie à Bob.</li>
+</ul>
+<p>Alice et Bob ont donc maintenant 3 paires de boîtes.</p>
+<p>Si Bob veut connaître le bit $x_0$, il doit d&rsquo;abord utiliser sa boîte de niveau 2 pour décoder $m_0$ à partir de $m$. Sa probabilité de succès est $P$. Puis il lui faudra décoder $x_0$ à partir de $m_0$ dans sa première boîte du niveau 1. La probabilité de succès est à nouveau $P$.</p>
+<p>Il réussit à déterminer $x_0$ si:</p>
+<ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+<li>Il ne fait aucune erreur aux deux étapes. Probabilité $P\times P$.</li>
+<li>Il fait une erreur à chaque étape (les deux erreurs se compensant en binaire). Probabilité $(1-P)\times(1-P)$.</li>
+</ul>
+<p>La probabilité de succès pour 4 bits ($P_2$) est donc :</p>
+<p>$$P_2=P^2+(1-P)^2=2 P^2-2 P+1$$</p>
+<p>Calculons maintenant le biais défini comme $2\times(P_2-\frac12)$, soit le double de l&rsquo;écart au hasard pur :</p>
+<div id="grosseformule" style="margin-top:-0em;margin-bottom:-0em;">
+<p>$$
+2P_2-1=2\left(2 P^2-2 P+1\right)-1=4 P^2-4 P+1=(2 P-1)^2
+$$</p>
+</div>
+<p><strong>n bits</strong></p>
+<p>Généralisation à $N=2^n$ bits : si on répète cette pyramide sur $n$ niveaux, par récurrence, le biais après $n$ étapes est :</p>
+<p>$$\left(2 P_n-1\right)=(2 P-1)^n$$</p>
+<p>Rappelons-nous de la relation entre $P$ et $S$ : $P=\frac{1}{2}\left(1+\frac{S}{4}\right)$. On obtient alors :</p>
+<p>$$2 P_n-1=\left(\frac{S}{4}\right)^n$$</p>
+<p><strong>Lien entre information et probabilité</strong></p>
+<p>On a vu que l&rsquo;information mutuelle entre un bit d&rsquo;Alice et l&rsquo;estimation de Bob est $I(P)=1-H(P)$.</p>
+<p>Si $n$ est grand, on peut se dire que l&rsquo;estimation de Bob pour un de ces $n$ bits sera proche du hasard pur. Faisons alors un développement limité de $H(P)=-\frac{1}{\ln(2)}\left[ P\ln(P)+(1-P)\ln(1-P)\right]$ autour de $P=\frac12$. On pose $P=\frac12 + \epsilon$.</p>
+<p>$$H(1 / 2+\epsilon) \approx 1-\frac{2}{\ln 2} \epsilon^2$$</p>
+<p>L&rsquo;information mutuelle est donc :</p>
+<div id="grosseformule" style="margin-top:-0em;margin-bottom:-0em;">
+<p>$$
+I(p)=1-H(p) \approx \frac{2}{\ln 2} \epsilon^2=\frac{1}{2 \ln 2}(2 p-1)^2
+$$</p>
+</div>
+<p><strong>Retour à la causalité informationnelle</strong></p>
+<p>Le principe de CI stipule que pour $N$ bits, la somme de l&rsquo;information extraite par Bob ne peut pas dépasser le message envoyé (1 bit) :</p>
+<p>$$\sum_{i=1}^{2^n} I\left(x_i: \beta_i\right) \leq 1$$</p>
+<p>Puisque tous les bits sont symétriques dans la pyramide :</p>
+<p>$$
+\begin{aligned}
+2^n \cdot I\left(p_n\right) &amp;\leq 1\\
+2^n \cdot \frac{1}{2 \ln 2}\left(2 p_n-1\right)^2 &amp;\leq 1\\
+\frac{1}{2 \ln 2} 2^n\left[(2 p-1)^n\right]^2 &amp;\leq 1\\
+\frac{1}{2 \ln 2}\left[2 \cdot(2 p-1)^2\right]^n &amp;\leq 1
+\end{aligned}
+$$</p>
+<p>Cette inégalité doit être respectée pour n&rsquo;importe quelle valeur de $n$ (même si Alice a une base de données infinie). Si le terme entre crochets est supérieur à 1, alors quand $n\to \infty$, l&rsquo;expression tend vers l&rsquo;infini, ce qui violerait l&rsquo;inégalité. La seule solution est que :</p>
+<p>$$
+\begin{aligned}
+2 \cdot(2 p-1)^2 &amp;\leq 1\\
+(2 p-1)^2 \leq \frac{1}{2}
+\end{aligned}
+$$</p>
+<p>Remplaçons enfin $(2p−1)$ par sa valeur en fonction de $S$ :</p>
+<p>$$\left(\frac{S}{4}\right)^2 \leq \frac{1}{2}$$</p>
+<p>Et finalement :</p>
+<p>$$S≤\sqrt{2}$$</p>
+<p>Revoilà la borne de Tsirelson !</p>
+<ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+<li>Si $S<\sqrt{2}$, l'efficacité de la transmission d'information décroît plus vite que le nombre de bits n'augmente. La somme totale reste "écrasée" sous la barre de 1 bit, même si Alice a des milliards de bits.</li>
+<li>Si $S>\sqrt{2}$, l'efficacité de la corrélation est suffisamment forte pour compenser l'augmentation du nombre de bits. En augmentant $n$, la somme finit inévitablement par percer le plafond de 1 bit et tend même vers l'infini. Bob finit par posséder une information infinie sur les bits d'Alice en n'ayant reçu qu'un seul bit&nbsp;!</li>
+</ul>
+<p>un univers où $S&gt;\sqrt{2}$ est un univers où la communication classique est &ldquo;trop efficace&rdquo; au point de briser la logique même de ce qu&rsquo;est un bit. La mécanique quantique se cale exactement sur la valeur qui sature cette limite sans la dépasser.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Pour un système complexe avec plusieurs acteurs (comme Alice et Bob), la marginale est ce qu&rsquo;un seul acteur voit &ldquo;dans son coin&rdquo;, sans tenir compte des résultats de l&rsquo;autre.<br>
+Soit deux variables aléatoires discrètes $X$ et $Y$ dont la loi de probabilité jointe est donnée par $P(X,Y)$.<br>
+La loi marginale de $X$, notée $P(X)$, est obtenue en sommant les probabilités jointes sur toutes les valeurs possibles de $Y$ :<br>
+$P(X=x)=\sum_y P(X=x, Y=y)$<br>
+Et de même, la marginale de $Y$ est :<br>
+$P(Y=y)=\sum_x P(X=x, Y=y)$<br>
+On utilise le terme « marginale » car, historiquement, ces valeurs étaient calculées dans les marges des tableaux de contingence.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
 
 <footer class="footline">
@@ -1816,173 +2102,8 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2088,6 +2209,70 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
                         
             
             
@@ -2152,10 +2337,114 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
             
         
                     
+            
+        
+                    
                         
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
