@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1776136573" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1776136573" rel="stylesheet">
-    <link href="/css/hybrid.css?1776136573" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1776136573" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1776136573" rel="stylesheet">
-    <link href="/css/auto-complete.css?1776136573" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1776136573" rel="stylesheet">
-    <link href="/css/theme.css?1776136573" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1776136573" rel="stylesheet">
+    <link href="/css/nucleus.css?1776160789" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1776160789" rel="stylesheet">
+    <link href="/css/hybrid.css?1776160789" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1776160789" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1776160789" rel="stylesheet">
+    <link href="/css/auto-complete.css?1776160789" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1776160789" rel="stylesheet">
+    <link href="/css/theme.css?1776160789" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1776160789" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1776136573" rel="stylesheet">
+    <link href="/css/theme-blue.css?1776160789" rel="stylesheet">
     
-    <link href="/css/foo.css?1776136573" rel="stylesheet"><link href="/css/bar.css?1776136573" rel="stylesheet">
+    <link href="/css/foo.css?1776160789" rel="stylesheet"><link href="/css/bar.css?1776160789" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1776136573"></script>
+    <script src="/js/jquery-3.3.1.min.js?1776160789"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1776136573"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1776136573"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1776160789"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1776160789"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1776136573"></script>
+<script type="text/javascript" src="/js/search.js?1776160789"></script>
 
     
   </div>
@@ -1466,8 +1466,12 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 <p>On définit la corrélation $E(x,y)$ comme la valeur moyenne du produit des résultats pour les réglages $x$ et $y$ : $E(x, y)=\left\langle A_x \cdot B_y\right\rangle$.</p>
 <p>Dans une théorie classique (ou à variables cachées locales), on suppose que le résultat de la mesure d&rsquo;Alice ne dépend que de son réglage ($a$ ou $a&rsquo;$), mais absolument pas du choix de Bob.</p>
 <p>Considérons la combinaison de mesures suivante pour une paire de particules donnée :</p>
-<div id="def">
-$$C=a \cdot b+a \cdot b^{\prime}+a^{\prime} \cdot b-a^{\prime} \cdot b^{\prime}=a\left(b+b^{\prime}\right)+a^{\prime}\left(b-b^{\prime}\right)$$
+<div id="def" style="margin-top:-0em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0em;margin-bottom:-0em;">
+<p>$$
+C=a \cdot b+a \cdot b^{\prime}+a^{\prime} \cdot b-a^{\prime} \cdot b^{\prime}=a\left(b+b^{\prime}\right)+a^{\prime}\left(b-b^{\prime}\right)
+$$</p>
+</div>
 </div>
 <p>Puisque $b$ et $b&rsquo;$ valent soit $+1$, soit $−1$ :</p>
 <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
@@ -1476,7 +1480,11 @@ $$C=a \cdot b+a \cdot b^{\prime}+a^{\prime} \cdot b-a^{\prime} \cdot b^{\prime}=
 </ul>
 <p>Dans tous les cas, pour chaque particule, la valeur de $C$ est soit $2$, soit $−2$. En effectuant la moyenne sur un grand nombre de particules, on obtient l&rsquo;<strong>inégalité CHSH</strong> :</p>
 <div id="theo">
-$$S=\left|E(a, b)+E\left(a, b^{\prime}\right)+E\left(a^{\prime}, b\right)-E\left(a^{\prime}, b^{\prime}\right)\right| \leq 2$$
+<div id="grosseformule" style="margin-top:-0em;margin-bottom:-0em;">
+<p>$$
+S=\left|E(a, b)+E\left(a, b^{\prime}\right)+E\left(a^{\prime}, b\right)-E\left(a^{\prime}, b^{\prime}\right)\right| \leq 2
+$$</p>
+</div>
 </div>
 <p>Et que prévoit la mécanique quantique ?</p>
 <p>Utilisons l&rsquo;état intriqué singulet : $|\psi\rangle=\frac{1}{\sqrt{2}}(|01\rangle-|10\rangle)$.<br>
@@ -1514,8 +1522,7 @@ La corrélation quantique entre deux détecteurs orientés avec un angle relatif
 <li>$(-2 i) \times(2 i)=-4$</li>
 <li>$(-2 i) \times(-2 i)=-4$</li>
 </ul>
-<p>La valeur propre maximale de ce terme de corrélation est donc $4$.</p>
-<p>Les valeurs propres maximales de $\mathcal{B}^2$ sont donc $4+4=8$.</p>
+<p>La valeur propre maximale de ce terme de corrélation est donc $4$ et les valeurs propres maximales de $\mathcal{B}^2$ sont alors $4+4=8$.</p>
 <p>On en conclut que $S^2≤8$ ce qui nous donne la valeur maximale de l&rsquo;inégalité CHSH permise par la quantique :</p>
 <div id="theo">
 $$S≤2\sqrt{2}$$
@@ -1559,9 +1566,9 @@ $$S=1+1+1-(-1)=4$$
 <p>On a bien atteint le plafond algébrique tout en respectant la contrainte de non-signalisation.</p>
 <p>Pourquoi dès lors la nature se restreint-elle à la borne de Tsirelson alors qu&rsquo;on peut aller plus loin tout en respectant l&rsquo;interdiction d&rsquo;envoyer des messages plus vite que $c$ ? Quitte à être non locale, pourquoi ne pas  l&rsquo;être complètement ?</p>
 <h2 id="transfert-dinformation">Transfert d&rsquo;information</h2>
-<p>Supposons qu&rsquo;Alice ait deux bits $x_0$ et $x_1$. Elle envoie un seul bit $m$ à Bob. Bob veut deviner le bit $x_k$ (où $k\in\{0,1\}$ est son choix).</p>
+<p>Supposons qu&rsquo;Alice ait deux bits $x_0$ et $x_1$. Elle envoie classiquement un bit unique $m$ à Bob (qu&rsquo;elle intrique comme elle le souhaite avec les deux bits qu&rsquo;elle possède). Bob veut deviner le bit $x_k$ (où $k\in\{0,1\}$ est son choix).</p>
 <p>La probabilité de succès pour Bob mesure donc la capacité d&rsquo;Alice a faire tenir deux bits d&rsquo;information sur un seul bit envoyé.</p>
-<p>On va supposer aussi qu&rsquo;Alice et Bob partagent à nouveau un système bipartite (que cela soit un état quantique intriqué, une boîte PR, ou autre) qu&rsquo;on va appeler génériquement boîte non-signalante (les réponses de la boîte de Bob n&rsquo;informent pas sur les réglages et réponses de la boîte d&rsquo;Alice).</p>
+<p>Alice et Bob partagent à nouveau un système bipartite (que cela soit un état quantique intriqué, une boîte PR, ou autre) qu&rsquo;on va appeler génériquement boîte non-signalante (les réponses de la boîte de Bob n&rsquo;informent pas sur les réglages et réponses de la boîte d&rsquo;Alice).</p>
 <p>Ils suivent le protocole suivant :</p>
 <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
 <li>Alice utilise le réglage $X=x_0\oplus x_1$ et obtient $a\in \{{0,1\}}$</li>
@@ -1571,19 +1578,19 @@ $$S=1+1+1-(-1)=4$$
 </ul>
 <p>L&rsquo;estimation de Bob est bonne si :</p>
 <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
-<li>lorsque $k=0$, $x_0 \oplus a \oplus b=x_0$. Donc si $a\oplus b = 0$.</li>
-<li>et lorsque $k=1$, $x_0 \oplus a \oplus b=x_1$. Donc si $a\oplus b=x_0\oplus x_1$.</li>
+<li>Lorsque $k=0$, $x_0 \oplus a \oplus b=x_0$. Donc si $a\oplus b = 0$.</li>
+<li>Lorsque $k=1$, $x_0 \oplus a \oplus b=x_1$. Donc si $a\oplus b=x_0\oplus x_1$.</li>
 </ul>
 <p>Dans les deux cas, la condition de succès peut s&rsquo;écrire :</p>
 <div id="theo">
 $$a\oplus b = X\cdot Y$$
 </div>
-<p>On retrouve là la règle donnant une valeur maximale à $S$.</p>
+<p>On retrouve la règle donnant une valeur maximale à $S$ !</p>
 <p>Comme la corrélation physique entre $X$ et $Y$ vaut :</p>
 <p>$$E(X, Y)=(+1) \cdot P(a=b)+(-1) \cdot P(a≠b)$$</p>
 <p>On peut la réécrire :</p>
 <p>$$E(X, Y)=P(a\oplus b=0) - P(a\oplus b =1)$$</p>
-<p>Et comme $P(a \oplus b=0)+P(a \oplus b=1)=1$, on peut écrire :</p>
+<p>Et comme $P(a \oplus b=0)+P(a \oplus b=1)=1$, on a :</p>
 <p>$$
 \begin{aligned}
 P(a \oplus b=0)&amp;=\frac{1+E(X, Y)}{2}\\
@@ -1622,12 +1629,12 @@ $$
 <li>Avec une boîte PR ($S=4$), $P=1$. Bob connaît $x_0$ et $x_1$ avec certitude dès qu'il reçoit le bit $m$.</li>
 </ul>
 <h2 id="la-causalité-informationnelle">La causalité informationnelle</h2>
-<p>Bob cherche maintenant à deviner les bits d&rsquo;Alice à partir du seul bit qu&rsquo;Alice lui a envoyé (et toute mesure locale qu&rsquo;il peut faire sur ses boîtes).</p>
+<p>Bob cherche maintenant à deviner tous les bits d&rsquo;Alice à partir du seul bit $m$ qu&rsquo;Alice lui a envoyé (et toute mesure locale qu&rsquo;il peut faire sur ses boîtes avec le bit $m$).</p>
 <p>Le <strong>principe de causalité informationnelle</strong> (CI) stipule que :</p>
 <div id="def">
-Bob ne peut pas obtenir plus d'information qu'Alice a envoyé.
+<b>Bob ne peut pas obtenir plus d'information que le nombre de bits qu'Alice a envoyé (1 dans notre cas).</b>
 </div>
-<p>Bob ne peut deviner au mieux qu&rsquo;un bit d&rsquo;Alice selon ce principe. Ça paraît assez raisonnable&hellip;</p>
+<p>Bob ne peut deviner au mieux qu&rsquo;un des bits $x_k$ d&rsquo;Alice selon ce principe. Ça paraît assez raisonnable&hellip;</p>
 <p>Pour l&rsquo;exprimer mathématiquement, on utilise l&rsquo;information mutuelle $I(A:B)$ qui mesure la réduction d&rsquo;incertitude. Pour un bit dont on devine la valeur avec une probabilité $P$, l&rsquo;information gagnée est : $I=1-H(P)$ où $H(P)$ est l&rsquo;entropie binaire. Si on devine au pif complet, $P=\frac12\Rightarrow H(P)=1\Rightarrow I=0$, on obtient une information nulle. Logique.</p>
 <p>Pour deux bits $x_0$ et $x_1$, le principe de CI impose que la somme des informations que Bob peut extraire sur chaque bit ne dépasse pas la taille du message envoyé de 1 bit :</p>
 <p>$$I(x_0:\beta_0)+I(x_1:\beta_1)≤1$$</p>
@@ -1638,14 +1645,14 @@ Bob ne peut pas obtenir plus d'information qu'Alice a envoyé.
 <p>$$I=I(x_0)+I(x_1)=2&gt;1$$</p>
 <p>Bob a extrait 2 bits d&rsquo;information alors qu&rsquo;Alice n&rsquo;en a envoyé qu&rsquo;un seul. On a génération spontanée d&rsquo;information&hellip;</p>
 <p><strong>4 bits</strong></p>
-<p>Supposons qu&rsquo;Alice ait maintenant 4 bits ($x_0,x_1,x_2,x_3$) à faire deviner à Bob en lui envoyant un seul bit. Pour fabriquer le bit à envoyer, Alice va procéder par concaténation successive ce qui donne une structure en pyramide sur deux niveaux :</p>
+<p>Supposons qu&rsquo;Alice ait maintenant 4 bits ($x_0,x_1,x_2,x_3$) à faire deviner à Bob en lui envoyant un seul bit. Pour fabriquer le bit à envoyer, Alice va procéder par concaténations successives grâce à une structure en pyramide sur deux niveaux :</p>
 <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
 <li>Niveau 1 : Elle utilise une première boîte sur $(x_0,x_1)$ qui produit un message $m_0$, et et une deuxième boîte sur $(x_1,x_2)$ qui produit $m_1$.</li>
 <li>Niveau 2 : Elle utilise une troisième boîte sur ces messages intermédiaires $(m_0,m_1)$ pour produire le message final $m$ qu'elle envoie à Bob.</li>
 </ul>
 <p>Alice et Bob ont donc maintenant 3 paires de boîtes.</p>
 <p>Si Bob veut connaître le bit $x_0$, il doit d&rsquo;abord utiliser sa boîte de niveau 2 pour décoder $m_0$ à partir de $m$. Sa probabilité de succès est $P$. Puis il lui faudra décoder $x_0$ à partir de $m_0$ dans sa première boîte du niveau 1. La probabilité de succès est à nouveau $P$.</p>
-<p>Il réussit à déterminer $x_0$ si:</p>
+<p>Il réussit à déterminer $x_0$ si :</p>
 <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
 <li>Il ne fait aucune erreur aux deux étapes. Probabilité $P\times P$.</li>
 <li>Il fait une erreur à chaque étape (les deux erreurs se compensant en binaire). Probabilité $(1-P)\times(1-P)$.</li>
@@ -1685,7 +1692,7 @@ $$</p>
 \frac{1}{2 \ln 2}\left[2 \cdot(2 p-1)^2\right]^n &amp;\leq 1
 \end{aligned}
 $$</p>
-<p>Cette inégalité doit être respectée pour n&rsquo;importe quelle valeur de $n$ (même si Alice a une base de données infinie). Si le terme entre crochets est supérieur à 1, alors quand $n\to \infty$, l&rsquo;expression tend vers l&rsquo;infini, ce qui violerait l&rsquo;inégalité. La seule solution est que :</p>
+<p>Cette inégalité doit être respectée pour n&rsquo;importe quelle valeur de $n$ (même si Alice a une base de données infinie). Si le terme entre crochets est supérieur à 1, alors l&rsquo;expression tend vers l&rsquo;infini quand $n\to \infty$, ce qui violerait l&rsquo;inégalité. On est donc forcé d&rsquo;avoir :</p>
 <p>$$
 \begin{aligned}
 2 \cdot(2 p-1)^2 &amp;\leq 1\\
@@ -1695,13 +1702,13 @@ $$</p>
 <p>Remplaçons enfin $(2p−1)$ par sa valeur en fonction de $S$ :</p>
 <p>$$\left(\frac{S}{4}\right)^2 \leq \frac{1}{2}$$</p>
 <p>Et finalement :</p>
-<p>$$S≤\sqrt{2}$$</p>
+<p>$$S≤2\sqrt{2}$$</p>
 <p>Revoilà la borne de Tsirelson !</p>
 <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
-<li>Si $S<\sqrt{2}$, l'efficacité de la transmission d'information décroît plus vite que le nombre de bits n'augmente. La somme totale reste "écrasée" sous la barre de 1 bit, même si Alice a des milliards de bits.</li>
-<li>Si $S>\sqrt{2}$, l'efficacité de la corrélation est suffisamment forte pour compenser l'augmentation du nombre de bits. En augmentant $n$, la somme finit inévitablement par percer le plafond de 1 bit et tend même vers l'infini. Bob finit par posséder une information infinie sur les bits d'Alice en n'ayant reçu qu'un seul bit&nbsp;!</li>
+<li>Si $S<2\sqrt{2}$, l'efficacité de la transmission d'information décroît plus vite que le nombre de bits n'augmente. La somme totale reste "écrasée" sous la barre de 1 bit, même si Alice a des milliards de bits.</li>
+<li>Si $S>2\sqrt{2}$, l'efficacité de la corrélation est suffisamment forte pour compenser l'augmentation du nombre de bits. En augmentant $n$, la somme finit inévitablement par percer le plafond de 1 bit et tend même vers l'infini. Bob finit par posséder une information infinie sur les bits d'Alice en n'ayant reçu qu'un seul bit&nbsp;!</li>
 </ul>
-<p>un univers où $S&gt;\sqrt{2}$ est un univers où la communication classique est &ldquo;trop efficace&rdquo; au point de briser la logique même de ce qu&rsquo;est un bit. La mécanique quantique se cale exactement sur la valeur qui sature cette limite sans la dépasser.</p>
+<p>un univers où $S&gt;2\sqrt{2}$ est un univers où la communication classique est &ldquo;trop efficace&rdquo; au point de briser la logique même de ce qu&rsquo;est un bit. La mécanique quantique se cale exactement sur la valeur qui sature cette limite sans la dépasser.</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -2616,16 +2623,16 @@ On utilise le terme « marginale » car, historiquement, ces valeurs étaient ca
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1776136573"></script>
-    <script src="/js/perfect-scrollbar.min.js?1776136573"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1776136573"></script>
-    <script src="/js/jquery.sticky.js?1776136573"></script>
-    <script src="/js/featherlight.min.js?1776136573"></script>
-    <script src="/js/highlight.pack.js?1776136573"></script>
+    <script src="/js/clipboard.min.js?1776160789"></script>
+    <script src="/js/perfect-scrollbar.min.js?1776160789"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1776160789"></script>
+    <script src="/js/jquery.sticky.js?1776160789"></script>
+    <script src="/js/featherlight.min.js?1776160789"></script>
+    <script src="/js/highlight.pack.js?1776160789"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1776136573"></script>
-    <script src="/js/learn.js?1776136573"></script>
-    <script src="/js/hugo-learn.js?1776136573"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1776160789"></script>
+    <script src="/js/learn.js?1776160789"></script>
+    <script src="/js/hugo-learn.js?1776160789"></script>
     
     
 
