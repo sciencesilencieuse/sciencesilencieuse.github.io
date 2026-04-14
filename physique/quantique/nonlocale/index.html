@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1776160789" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1776160789" rel="stylesheet">
-    <link href="/css/hybrid.css?1776160789" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1776160789" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1776160789" rel="stylesheet">
-    <link href="/css/auto-complete.css?1776160789" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1776160789" rel="stylesheet">
-    <link href="/css/theme.css?1776160789" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1776160789" rel="stylesheet">
+    <link href="/css/nucleus.css?1776192053" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1776192053" rel="stylesheet">
+    <link href="/css/hybrid.css?1776192053" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1776192053" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1776192053" rel="stylesheet">
+    <link href="/css/auto-complete.css?1776192053" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1776192053" rel="stylesheet">
+    <link href="/css/theme.css?1776192053" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1776192053" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1776160789" rel="stylesheet">
+    <link href="/css/theme-blue.css?1776192053" rel="stylesheet">
     
-    <link href="/css/foo.css?1776160789" rel="stylesheet"><link href="/css/bar.css?1776160789" rel="stylesheet">
+    <link href="/css/foo.css?1776192053" rel="stylesheet"><link href="/css/bar.css?1776192053" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1776160789"></script>
+    <script src="/js/jquery-3.3.1.min.js?1776192053"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1776160789"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1776160789"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1776192053"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1776192053"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1776160789"></script>
+<script type="text/javascript" src="/js/search.js?1776192053"></script>
 
     
   </div>
@@ -1383,7 +1383,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   <ul>
     <li><a href="#inégalité-chsh">Inégalité CHSH</a></li>
     <li><a href="#borne-de-tsirelson">Borne de Tsirelson</a></li>
-    <li><a href="#boites-pr">Boites PR</a></li>
+    <li><a href="#boites-pr--corrélation-maximale">Boites PR : corrélation maximale</a></li>
     <li><a href="#transfert-dinformation">Transfert d&rsquo;information</a></li>
     <li><a href="#la-causalité-informationnelle">La causalité informationnelle</a></li>
   </ul>
@@ -1463,6 +1463,9 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 <li>Bob peut choisir entre les deux réglages $b$ ou $b'$.</li>
 </ul>
 <p>Chaque mesure donne un résultat binaire : $+1$ ou $−1$.</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/setupepr.png" style="box-shadow:none;background:none;">
+</div>
 <p>On définit la corrélation $E(x,y)$ comme la valeur moyenne du produit des résultats pour les réglages $x$ et $y$ : $E(x, y)=\left\langle A_x \cdot B_y\right\rangle$.</p>
 <p>Dans une théorie classique (ou à variables cachées locales), on suppose que le résultat de la mesure d&rsquo;Alice ne dépend que de son réglage ($a$ ou $a&rsquo;$), mais absolument pas du choix de Bob.</p>
 <p>Considérons la combinaison de mesures suivante pour une paire de particules donnée :</p>
@@ -1492,7 +1495,7 @@ La corrélation quantique entre deux détecteurs orientés avec un angle relatif
 <p>Pour maximiser $S$, Alice et Bob peuvent choisir les angles suivant :</p>
 <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
 <li>$a=0°$ et $a'=90°$ pour Alice</li>
-<li>$a=45°$ et $a'=-45°$ pour Bob</li>
+<li>$b=45°$ et $b'=-45°$ pour Bob</li>
 </ul>
 <p>Calculons les angles relatifs entre les mesures :</p>
 <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
@@ -1504,15 +1507,35 @@ La corrélation quantique entre deux détecteurs orientés avec un angle relatif
 <p>En injectant dans $S$, on obtient :<br></p>
 <p>$S=\left| \left(-\frac{\sqrt{2}}{2}\right)+\left(-\frac{\sqrt{2}}{2}\right)+\left(-\frac{\sqrt{2}}{2}\right)-\left(\frac{\sqrt{2}}{2}\right)\right|=4 \times \frac{\sqrt{2}}{2}=2 \sqrt{2}&gt;2$</p>
 <p><strong>La mécanique quantique prévoit donc une violation de l&rsquo;inégalité CHSH</strong>. Et c&rsquo;est bien ce qu&rsquo;a vérifié les expériences d&rsquo;Alain Aspect entre autres.</p>
+<p>Représentons l&rsquo;évolution de $S$ en fonction de $\theta$ en posant $a=0°$, $b=\theta$, $a&rsquo;=2\theta$ et $b&rsquo;=3\theta$.</p>
+<p>Cela donne pour $S$ : $S=|3 E(\theta)-E(3 \theta)|$.</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/graphechsh.png" style="box-shadow:none;background:none;">
+</div>
+<p>Pour bien comprendre le graphe, on peut déjà se concentrer sur l&rsquo;allure de l&rsquo;évolution de la corrélation $|E(\theta)|$ :</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/graphcorrel.png" style="box-shadow:none;background:none;">
+</div>
+<p>Comme $E(\theta)=-\cos(\theta)$ en quantique pour un état singulet, on obtient $S=|3\cos(\theta)-\cos(3\theta)|$. C&rsquo;est la courbe bleue du premier graphe.</p>
+<p>Pour comprendre la partie classique, il faut se pencher sur ce qu&rsquo;implique un modèle à variable cachée.</p>
+<p>Prenons l&rsquo;exemple où les deux particules sont des disques peints chacun en rouge et vert de chaque côté d&rsquo;un diamètre. Le réglage de chaque boîte correspond à l&rsquo;orientation d&rsquo;un petit trou qu&rsquo;on peut tourner autour du disque. Le résultat sera bien binaire, soit rouge, soit vert, comme attendu.</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/dispoclassique.png" style="box-shadow:none;background:none;">
+</div>
+<p>La variable cachée $\lambda$ est ici l&rsquo;orientation opposée des deux disques envoyés à Alice et Bob (opposée pour coller à l&rsquo;état singulet quantique qui est parfaitement anticorrélé lorsque les réglages sont alignés).</p>
+<p>Que vaut alors $E(\theta)$. Il s&rsquo;agit, rappelons-le, de la moyenne des produits des résultats obtenus par Alice et Bob. Ce produit est proportionnel à la probabilité que les deux trous se retrouvent au-dessus du même demi-disque. Et cette probabilité est elle-même proportionnelle à l&rsquo;écart angulaire entre les deux réglages et passe de $1$ pour $\theta=0°$ à $0$ pour $\theta=180°$. À $\theta=0°$, la corrélation vaut donc $-1$ et elle vaut $1$ pour $\theta=180°$ en passant par $0$ à $\theta=90°$.</p>
+<p>Cela donne une corrélation évoluant linéairement : $E(\theta)=-1+\frac{2\theta}{180}$ pour $\theta\in[0°,180°]$. Et par symétrie,  $E(\theta)=1-\frac{2\theta}{180}$ pour $\theta\in[180°,360°]$. Par conséquent, la pente de $E(3\theta)$ change deux fois de signes entre $0°$ et $180°$ : elle croît sur $[0°,60°]$, décroît sur $[60°,120°]$ (car on a alors $3\theta \in [180°,360°]$), puis croît à nouveau sur $[120°,180°]$. Cela explique l&rsquo;allure bizarre de la courbe classique sur le graphe $|S(\theta)|$.</p>
 <h2 id="borne-de-tsirelson">Borne de Tsirelson</h2>
-<p>Quelle est la valeur maximale atteignable ?</p>
-<p>Pour la trouver, construisons l&rsquo;opérateur de Bell $\mathcal{B}$ à partir des observables d&rsquo;Alice $(A, A&rsquo;)$ et de Bob $(B,B&rsquo;)$ :</p>
+<p>D&rsquo;où vient la borne supérieure de $2\sqrt{2}$ ? Est-elle indépassable ? En quantique, oui ! Montrons pourquoi.</p>
+<p>Construisons l&rsquo;opérateur de Bell $\mathcal{B}$ à partir des observables d&rsquo;Alice $(A, A&rsquo;)$ et de Bob $(B,B&rsquo;)$ :</p>
 <p>$$\mathcal{B}=A \otimes B+A \otimes B&rsquo;+A&rsquo; \otimes B-A&rsquo; \otimes B&rsquo;$$</p>
 <p>On a alors $S=\langle\psi| \mathcal{B}|\psi\rangle$.</p>
 <p>Or on peut montrer que $\mathcal{B}^2=4 I+\left[A, A^{\prime}\right]\otimes \left[B^{\prime}, B\right]$.</p>
-<p>Cela permet de constater que si les opérateurs commutent, on retombe sur la limite classique de $2$ ($4$ pour $S^2$).</p>
+<p>Cela permet déjà de constater que si les opérateurs commutent, on retombe sur la limite classique de $2$ ($4$ pour $S^2$).</p>
 <p>Pour dépasser $2$, les opérateurs d&rsquo;Alice (et ceux de Bob) ne doivent pas commuter. Et la valeur maximale est atteinte quand les commutateurs sont maximaux, ce qui correspond géométriquement à des bases de mesure à 90° l&rsquo;une de l&rsquo;autre (bases complémentaires).</p>
-<p>Si les mesures d&rsquo;Alice et Bob sont des mesures de spin, on peut écrire les observables en fonction des matrices de Pauli : $A=a\cdot \sigma$ et $A&rsquo;=a&rsquo;\cdot \sigma$ où $a$ et $a&rsquo;$ sont les vecteurs unitaires correspondant à l&rsquo;orientation du Stern-Gerlach d&rsquo;Alice et $\sigma=\left(\sigma_x, \sigma_y, \sigma_z\right)$ correspondent aux axes de référence de son appareil de mesure. Et comme $\left[\sigma_i, \sigma_j\right]=2 i \epsilon_{i j k} \sigma_k$, on a $\left[A, A^{\prime}\right]=2 i\left(a \wedge  a^{\prime}\right) \cdot \sigma$.</p>
+<p>On peut écrire les observables d&rsquo;Alice et Bob en fonction des matrices de Pauli (les seules réponses possibles étant $-1$ ou $+1$, ils mesurent un système à deux niveaux, donc un qubit) :<br>
+$A=a\cdot \sigma$ et $A&rsquo;=a&rsquo;\cdot \sigma$ où $a$ et $a&rsquo;$ sont les vecteurs unitaires correspondant aux orientations de la boîte d&rsquo;Alice et $\sigma=\left(\sigma_x, \sigma_y, \sigma_z\right)$ se décompose sur les axes de référence de la boîte.<br>
+Et comme $\left[\sigma_i, \sigma_j\right]=2 i \epsilon_{i j k} \sigma_k$, on a $\left[A, A^{\prime}\right]=2 i\left(a \wedge  a^{\prime}\right) \cdot \sigma$.</p>
 <p>Le vecteur $a\wedge a&rsquo;$ a une norme égale à $\sin(\theta)$, où $\theta$ est l&rsquo;angle entre les deux réglages. Cette norme est maximale ($=1$) quand Alice choisit des réglages orthogonaux ($a\perp a&rsquo;$). Dans ce cas, $\left[A, A^{\prime}\right]=2 i \sigma_n$ où $\sigma_n$ est la matrice de Pauli dans la direction normale au plan de mesure $(a,a&rsquo;)$. Les valeurs propres de $\sigma_n$ étant $\{+1,-1\}$, les valeurs propres de $[A,A&rsquo;]$ sont $\{+2\mathrm{i},-2\mathrm{i}\}$. La norme du commutateur (plus grande valeur propre en valeur absolue) est $2$.</p>
 <p>Le raisonnement est exactement le même pour Bob. S&rsquo;il choisit ses réglages $b$ et $b&rsquo;$ orthogonaux, son commutateur $[B&rsquo;,B]$ aura également pour valeurs propres $\{+2\mathrm{i},-2\mathrm{i}\}$.</p>
 <p>Regardons maintenant l&rsquo;opérateur global dans l&rsquo;espace produit $\mathcal{H}_A\otimes \mathcal{H}_B$ : $\left[A, A^{\prime}\right] \otimes\left[B^{\prime}, B\right]$.</p>
@@ -1531,7 +1554,7 @@ $$S≤2\sqrt{2}$$
 <p>Ce plafond quantique a une origine géométrique liée à la nature vectorielle des états quantiques. Pour obtenir plus, il faudrait qu&rsquo;un vecteur puisse s&rsquo;aligner avec deux directions orthogonales en même temps&hellip;
 Plus on veut qu&rsquo;un état quantique soit porteur d&rsquo;une information $a$, moins il peut être porteur d&rsquo;une information $b$ si les opérateurs associés à $A$ et $B$ ne commutent pas.</p>
 <p>Montrons que l&rsquo;on peut faire mieux que la borne de Tsirelson hors des lois quantiques.</p>
-<h2 id="boites-pr">Boites PR</h2>
+<h2 id="boites-pr--corrélation-maximale">Boites PR : corrélation maximale</h2>
 <p>On s&rsquo;affranchit maintenant de tout espace vectoriel et autres contraintes de norme pour ne plus s&rsquo;occuper que de logique.</p>
 <p>Retournons à la définition de $S$ : $\left|E(a, b)+E\left(a, b^{\prime}\right)+E\left(a^{\prime}, b\right)-E\left(a^{\prime}, b^{\prime}\right)\right| $.</p>
 <p>Comme chaque corrélation $E$ est comprise entre $-1$, le maximum théorique de $S$ est $4$ avec $E(a,b)=E(a&rsquo;,b)=E(a,b&rsquo;)=±1$ et $E(a&rsquo;,b&rsquo;)=\mp 1$.</p>
@@ -1544,11 +1567,15 @@ Plus on veut qu&rsquo;un état quantique soit porteur d&rsquo;une information $a
   $$
   </div>
 <p>$\oplus$ est le XOR logique (addition modulo 2).</p>
-<p>Imaginons par exemple que Bob entre la valeur $0$ et Alice entre la valeur $1$ dans leurs parties respectives de la boite. Alors la boîte pourra fournir $1$ aux deux ou $0$ aux deux (puisque $x\cdot y = 0\cdot 1 = 0$ et donc la boîte impose $a\oplus b = 0$, ce qui implique que $a$ et $b$ sont identiques). Par conséquent, Alice a $50\%$ de chance de recevoir un $0$ et $50\%$ de recevoir un $1$. Et cela restera le cas quel que soit le réglage de Bob (la marginale d&rsquo;Alice<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> vaut $50\%$), ce qui empêche Alice d&rsquo;inférer quoi que ce soit sur son réglage ; on a bien non signalisation.</p>
+  <div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+  <img src="/boitepr.png" style="box-shadow:none;background:none;">
+  </div>
+<p>Montrons d&rsquo;abord que cette boîte est non signalante.</p>
+<p>Imaginons par exemple que Bob entre la valeur $0$ et Alice entre la valeur $1$ dans leurs parties respectives de la boite. Alors la boîte pourra fournir $1$ aux deux ou $0$ aux deux ($x\cdot y = 0\cdot 1 = 0$ et donc la boîte impose $a\oplus b = 0$, ce qui implique que $a$ et $b$ soient identiques). Par conséquent, Alice a $50\%$ de chance de recevoir un $0$ et $50\%$ de recevoir un $1$. Et cela restera le cas quel que soit le réglage de Bob (la marginale d&rsquo;Alice<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> vaut $50\%$), ce qui empêche Alice d&rsquo;inférer quoi que ce soit sur son réglage ; on a bien non signalisation.</p>
 <p>Calculons la valeur de $S$ à partir des valeurs des mesures $a$ et $b$.</p>
   <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
   <li>Si $a\oplus b = 0$, alors $a=b$. Les résultats sont identiques et la corrélation vaut donc $+1$.</li>
-  <li>Si $a\oplus b = 0$, alors $a≠b$. Les résultats sont opposés et la corrélation vaut donc $-1$.</li>
+  <li>Si $a\oplus b = 1$, alors $a≠b$. Les résultats sont opposés et la corrélation vaut donc $-1$.</li>
   </ul>
 <p>La corrélation $E(x,y)$ vaut par définition la moyenne des produits des résultats. Mais comme la boîte PR est déterministe dans ses corrélations, $E(x,y)$ vaut soit $+1$, soit $-1$.</p>
 <p>Les couples de réglages possibles pour Alice et Bob sont $(0,0)$, $(0,1)$, $(1,0)$ et $(1,1)$. D&rsquo;où $S=E(0,0)+E(0,1)+E(1,0)-E(1,1)$.</p>
@@ -1628,11 +1655,15 @@ $$
 <li>En quantique ($S=2\sqrt{2}$), $P\approx 85\%%$. Bob améliore ses chances par rapport à la situation classique car l'information envoyée par Alice concerne maintenant les deux bits à la fois.</li>
 <li>Avec une boîte PR ($S=4$), $P=1$. Bob connaît $x_0$ et $x_1$ avec certitude dès qu'il reçoit le bit $m$.</li>
 </ul>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/polytop.png" style="box-shadow:none;background:none;">
+</div>
+<p>Dans ce type de diagramme on projette l&rsquo;espace des corrélations (de dimension 8 pour le scénario CHSH) sur un plan 2D, $S&rsquo;$ représentent une combinaisons linéaire différente des fonctions de corrélation, avec le signe &ldquo;moins&rdquo; placé différemment</p>
 <h2 id="la-causalité-informationnelle">La causalité informationnelle</h2>
 <p>Bob cherche maintenant à deviner tous les bits d&rsquo;Alice à partir du seul bit $m$ qu&rsquo;Alice lui a envoyé (et toute mesure locale qu&rsquo;il peut faire sur ses boîtes avec le bit $m$).</p>
 <p>Le <strong>principe de causalité informationnelle</strong> (CI) stipule que :</p>
-<div id="def">
-<b>Bob ne peut pas obtenir plus d'information que le nombre de bits qu'Alice a envoyé (1 dans notre cas).</b>
+<div id="def" style="border:2px solid #0076BA;">
+Bob ne peut pas obtenir plus d'information que le nombre de bits qu'Alice a envoyé (1 dans notre cas).
 </div>
 <p>Bob ne peut deviner au mieux qu&rsquo;un des bits $x_k$ d&rsquo;Alice selon ce principe. Ça paraît assez raisonnable&hellip;</p>
 <p>Pour l&rsquo;exprimer mathématiquement, on utilise l&rsquo;information mutuelle $I(A:B)$ qui mesure la réduction d&rsquo;incertitude. Pour un bit dont on devine la valeur avec une probabilité $P$, l&rsquo;information gagnée est : $I=1-H(P)$ où $H(P)$ est l&rsquo;entropie binaire. Si on devine au pif complet, $P=\frac12\Rightarrow H(P)=1\Rightarrow I=0$, on obtient une information nulle. Logique.</p>
@@ -1647,11 +1678,14 @@ $$
 <p><strong>4 bits</strong></p>
 <p>Supposons qu&rsquo;Alice ait maintenant 4 bits ($x_0,x_1,x_2,x_3$) à faire deviner à Bob en lui envoyant un seul bit. Pour fabriquer le bit à envoyer, Alice va procéder par concaténations successives grâce à une structure en pyramide sur deux niveaux :</p>
 <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
-<li>Niveau 1 : Elle utilise une première boîte sur $(x_0,x_1)$ qui produit un message $m_0$, et et une deuxième boîte sur $(x_1,x_2)$ qui produit $m_1$.</li>
+<li>Niveau 1 : Elle utilise une première boîte sur $(x_0,x_1)$ qui produit un message $m_0$, et et une deuxième boîte sur $(x_2,x_3)$ qui produit $m_1$.</li>
 <li>Niveau 2 : Elle utilise une troisième boîte sur ces messages intermédiaires $(m_0,m_1)$ pour produire le message final $m$ qu'elle envoie à Bob.</li>
 </ul>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/troisboites.png" style="box-shadow:none;background:none;">
+</div>
 <p>Alice et Bob ont donc maintenant 3 paires de boîtes.</p>
-<p>Si Bob veut connaître le bit $x_0$, il doit d&rsquo;abord utiliser sa boîte de niveau 2 pour décoder $m_0$ à partir de $m$. Sa probabilité de succès est $P$. Puis il lui faudra décoder $x_0$ à partir de $m_0$ dans sa première boîte du niveau 1. La probabilité de succès est à nouveau $P$.</p>
+<p>Si Bob veut connaître le bit $x_2$, il doit d&rsquo;abord utiliser sa boîte de niveau 2 pour décoder $m_1$ à partir de $m$. Sa probabilité de succès est $P$. Puis il lui faudra décoder $x_2$ à partir de $m_1$ dans sa deuxième boîte du niveau 1. La probabilité de succès est à nouveau $P$.</p>
 <p>Il réussit à déterminer $x_0$ si :</p>
 <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
 <li>Il ne fait aucune erreur aux deux étapes. Probabilité $P\times P$.</li>
@@ -2623,16 +2657,16 @@ On utilise le terme « marginale » car, historiquement, ces valeurs étaient ca
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1776160789"></script>
-    <script src="/js/perfect-scrollbar.min.js?1776160789"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1776160789"></script>
-    <script src="/js/jquery.sticky.js?1776160789"></script>
-    <script src="/js/featherlight.min.js?1776160789"></script>
-    <script src="/js/highlight.pack.js?1776160789"></script>
+    <script src="/js/clipboard.min.js?1776192053"></script>
+    <script src="/js/perfect-scrollbar.min.js?1776192053"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1776192053"></script>
+    <script src="/js/jquery.sticky.js?1776192053"></script>
+    <script src="/js/featherlight.min.js?1776192053"></script>
+    <script src="/js/highlight.pack.js?1776192053"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1776160789"></script>
-    <script src="/js/learn.js?1776160789"></script>
-    <script src="/js/hugo-learn.js?1776160789"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1776192053"></script>
+    <script src="/js/learn.js?1776192053"></script>
+    <script src="/js/hugo-learn.js?1776192053"></script>
     
     
 
