@@ -2,16 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://sciencesilencieuse.github.io/maths/algebre/</loc>
-    <lastmod>2021-03-06T14:20:50+01:00</lastmod>
-  </url><url>
     <loc>https://sciencesilencieuse.github.io/info/algorithmique/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/logique/logique1/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>https://sciencesilencieuse.github.io/maths/geometrie/</loc>
+    <loc>https://sciencesilencieuse.github.io/maths/fondements/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/maths/algebre/groupes/</loc>
@@ -86,6 +83,9 @@
     <loc>https://sciencesilencieuse.github.io/physique/tqc/gifted_amateur/tqc2/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
+    <loc>https://sciencesilencieuse.github.io/maths/algebre/</loc>
+    <lastmod>2021-03-06T14:20:50+01:00</lastmod>
+  </url><url>
     <loc>https://sciencesilencieuse.github.io/maths/pca/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
@@ -134,13 +134,13 @@
     <loc>https://sciencesilencieuse.github.io/physique/quantique/epr/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
+    <loc>https://sciencesilencieuse.github.io/maths/geometrie/</loc>
+    <lastmod>2021-03-06T14:20:50+01:00</lastmod>
+  </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/quantique/nonlocale/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/</loc>
-    <lastmod>2021-03-06T14:20:50+01:00</lastmod>
-  </url><url>
-    <loc>https://sciencesilencieuse.github.io/maths/proba/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/tqc/qed-light/</loc>
@@ -167,7 +167,7 @@
     <loc>https://sciencesilencieuse.github.io/physique/quantique/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>https://sciencesilencieuse.github.io/maths/stat/</loc>
+    <loc>https://sciencesilencieuse.github.io/maths/proba/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/tqc/</loc>
@@ -185,13 +185,16 @@
     <loc>https://sciencesilencieuse.github.io/maths/geometrie/geo5/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
-    <loc>https://sciencesilencieuse.github.io/maths/jeux/</loc>
+    <loc>https://sciencesilencieuse.github.io/maths/stat/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/chaos/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/phistat/entropie/</loc>
+    <lastmod>2021-03-06T14:20:50+01:00</lastmod>
+  </url><url>
+    <loc>https://sciencesilencieuse.github.io/maths/jeux/</loc>
     <lastmod>2021-03-06T14:20:50+01:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/jeux/</loc>

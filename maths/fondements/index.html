@@ -8,7 +8,7 @@
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
-    <title>Poursuites - Science en vrac</title>
+    <title>Fondements - Science en vrac</title>
     
     
 
@@ -75,7 +75,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 
 	
   </head>
-  <body class="" data-url="/maths/geometrie/geo5/">
+  <body class="" data-url="/maths/fondements/">
     <nav id="sidebar" class="">
 
 
@@ -355,7 +355,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
  
   
     
-      <li data-nav-id="/maths/fondements/" title="Fondements" class="dd-item ">
+      <li data-nav-id="/maths/fondements/" title="Fondements" class="dd-item active">
         <a href="/maths/fondements/">
         Fondements
         
@@ -481,7 +481,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/maths/geometrie/" title="Géométrie" class="dd-item
-        parent
+        
         
         
         ">
@@ -1393,7 +1393,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
                   <span class="links">
                  
                  
-                   Poursuites
+                   Fondements
                  
                   </span>
                 </div>
@@ -1402,12 +1402,8 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#paradoxe-dachille-et-de-la-tortue">Paradoxe d&rsquo;Achille et de la tortue</a></li>
-    <li><a href="#courbe-de-poursuite">Courbe de poursuite</a></li>
-    <li><a href="#interception">Interception</a></li>
-    <li><a href="#manœuvre-dévitement-de-lenola-gay">Manœuvre d&rsquo;évitement de l&rsquo;Enola Gay</a></li>
-    <li><a href="#poursuite-cyclique">Poursuite cyclique</a></li>
-    <li><a href="#murmurations">Murmurations</a></li>
+    <li><a href="#lalgèbre-de-boole">L&rsquo;algèbre de Boole</a></li>
+    <li><a href="#infinis-dénombrables-et-indénombrables">Infinis dénombrables et indénombrables</a></li>
   </ul>
 </nav>
     </div>
@@ -1447,184 +1443,55 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     color: #006C65;
   }
 </style>
-<h1 id="poursuites">Poursuites</h1>
-<br>
-
-<div class="notices note" style="--title: 'note';">
-  <p style="display: none;">note</p>
-  <div class="notice-body">
-    <p>Cette page est <em>très</em> inspirée du livre <em>Chases and Escapes The Mathematics of Pursuit and Evasion</em> de Paul Nahin.</p>
-
-  </div>
+<h1 id="logique-et-fondements">Logique et fondements</h1>
+<h2 id="lalgèbre-de-boole">L&rsquo;algèbre de Boole</h2>
+<p>L&rsquo;algèbre de Boole est à la base de la théorie des ensembles (le ET logique $\land$ correspond à l&rsquo;intersection $\cap$ et le OU $\lor$ à l&rsquo;union $\cup$) et joue ainsi le rôle de &ldquo;brique élémentaire&rdquo; de la pensée mathématique.</p>
+<p style="text-align:center;">Monsieur Boole</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-1em;margin-top:-3em;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/George_Boole_color.jpg" style="box-shadow:none;background:none;border-radius:5px;">
 </div>
-
-
-<br>
-<h2 id="paradoxe-dachille-et-de-la-tortue">Paradoxe d&rsquo;Achille et de la tortue</h2>
-<p>Dans <em>La Physique</em>, Aristote rapporte les célèbres paradoxes de Zénon d&rsquo;Élée dont celui d&rsquo;Achille et la tortue. :</p>
-<blockquote>
-<p>Celui qui court le plus lentement ne sera jamais rattrapé par le plus rapide. Car le poursuivant doit d&rsquo;abord atteindre le point d&rsquo;où est parti le poursuivi, si bien que le plus lent doit toujours avoir une longueur d&rsquo;avance.</p></blockquote>
-<p>Imaginons qu&rsquo;Achille aille deux fois plus vite que la tortue et que la tortue ait une distance d&rsquo;avance $d$ au départ. Il faut un temps $T$ à Achille pour parcourir la distance $d$, mais pendant ce temps $T$, la tortue a continué d&rsquo;avancer et a parcouru une distance $d/2$. Il faudra alors $T/2$ à Achille pour parcourir cette distance supplémentaire, mais pendant ce temps, la tortue a avancé de $d/4$, etc.</p>
-<p>Le temps mis par Achille pour rattraper la tortue vaut donc :<br>
-$\displaystyle T+\frac{T}{2}+\frac{T}{4}+\frac{T}{8}+\cdots = \sum_{n=0}^{\infty}\frac{T}{2^n}$</p>
-<p>Le but de Zénon d&rsquo;Élée était de prouver l&rsquo;impossibilité même du mouvement en piégeant le concept avec ces histoires d&rsquo;infini.</p>
-<p>Réussir à imaginer que la somme d&rsquo;un nombre infini de termes positifs puisse donner un résultat fini constitua une montagne mathématique qu&rsquo;on mis très longtemps à gravir.</p>
-<p>Ajourd&rsquo;hui, on sait que ce type de série géométrique converge si sa raison est comprise dans $]-1;1[$. Et dans notre exemple, comme l&rsquo;illustre l&rsquo;animation ci-dessous, la série converge pour donner $2T$.</p>
-<p><img src="/gifserieconv.gif" alt=""></p>
-<br>
-<h2 id="courbe-de-poursuite">Courbe de poursuite</h2>
-<p>Ok, on peut rattraper la tortue, mais comment faire en pratique si on devait programmer Achille en supposant que les deux démarrent dans les poitions notées ci-dessous ?</p>
-<ul>
-<li>Le plus rapidement : calculer la direction de la ligne droite à suivre permettant d&rsquo;intercepter la tortue.</li>
-<li>Le plus simple : toujours orienter son vecteur vitesse (la direction de son mouvement) vers la cible.</li>
-</ul>
-<p>Dans le deuxième cas, on obtient une famille de courbes particulières appelées <strong>courbes de poursuite</strong>.</p>
-<p>Extrait d&rsquo;un manuel de l&rsquo;US Air Force distribué aux mitrailleurs :</p>
-<p><img src="/extraitsmanuels.png" alt=""></p>
-<p>Comme l&rsquo;explique le manuel, si un poursuivant se dirige en permanence vers sa cible (son vecteur vitesse étant selon la ligne joignant le poursuivant à la cible) alors sa trajectoire sera une courbe de poursuite.</p>
-<p>Si on voulait déterminer analytiquement l&rsquo;équation de cette courbe, on poserait que :</p>
-<ul>
-<li>la pente $p(x)$ de la trajectoire du chasseur est donnée par $\displaystyle p(x)=\frac{dy}{dx}=\frac{y-V_{cible}t}{x-x_0}$ d&rsquo;après le schéma ci-dessous.
-<img src="/schemapoursuite.png?width=400px" alt=""></li>
-<li>et le chasseur parcours en un temps $t$ le morceau de trajectoire compris enntre $0$ et $x$ : $\displaystyle V_{chasseur} t = \int_0^x \sqrt{1+\left(\frac{dy}{dx&rsquo;}\right)^2}dx&rsquo; = \int_0^x \sqrt{1+p(x&rsquo;)^2}dx&rsquo; $</li>
-</ul>
-<p>En résolvant pour $t$, on obtient $\displaystyle \frac{1}{V_{chasseur}}\int_0^x\sqrt{1+p(x&rsquo;)^2}dx&rsquo; = \frac{y}{V_{cible}}-p(x)\frac{(x-x_0)}{V_{cible}}$</p>
-<p>Après quelques étapes, cela s&rsquo;intègre en $\displaystyle p(x)=\frac{dy}{dx}=\frac{1}{2}\left[\left(1-\frac{x}{x_0}\right)^{-n}-\left(1-\frac{x}{x_0}\right)^{n}\right]$ en posant $\displaystyle n = \frac{V_{cible}}{V_{chasseur}}$ qui s&rsquo;intègre à son tour en $\displaystyle y(x)=\frac{n}{1-n^2}x_0 + \frac{1}{2}(x_0-x)\times\left[\frac{(1-x/x_0)^n}{1+n}-\frac{(1-x/x_0)^{-n}}{1-n}\right]$.</p>
-<p>La cible est rattrapée au point $(x_0\,;y(x_0))=\left(x_0\,;\frac{n}{(1-n^2)}x_0\right)$. Elle a alors parcouru une distance $\displaystyle \frac{n}{(1-n^2)}x_0$ et le chasseur a parcouru $\displaystyle \frac{V_{chasseur}}{V_{cible}}$ fois plus.</p>
-<p>C&rsquo;est finalement beaucoup plus simple à programmer qu&rsquo;à calculer. Et si la cible se met à remuer, cela devient même mission quasi impossible d&rsquo;obtenir une formule fermée pour la courbe&hellip;</p>
-<p>Dans ce premier petit programme, on retrouve la courbe d&rsquo;allure caractéristique.</p>
-<br>
-<div style="position:relative; width:1000px; max-width:100%; margin-left: auto; margin-right: auto;  ">
-<iframe src="https://trinket.io/embed/glowscript/236437d468?outputOnly=true&start=result" width="100%" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
-<br>
-Et dans ce deuxième programme, on prend le point de vue du passager de l'avion cible pour confirmer la mise-en-garde du manuel&nbsp;; si le chasseur semble glisser dans le ciel tout en grossissant, ça n'est pas bon signe...<br>
-<br>
-<div style="position:relative; width:1000px; max-width:100%; margin-left: auto; margin-right: auto;  ">
-<iframe src="https://trinket.io/embed/glowscript/9ad19212ce?outputOnly=true&start=result" width="100%" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
-<br>
-<h2 id="interception">Interception</h2>
-<p>Arrêtons maintenant de poursuivre bêtement et essayons d&rsquo;intercepter.</p>
-<p><img src="/appollonius.png?width=400px" alt=""></p>
-<p>Supposons que le chasseur est en $A$ à $t=0$ et que la cible est en $B$ au même instant et supposons aussi qu&rsquo;ils ont chacun un mouvement rectiligne uniforme (à $v_{chasseur}$ et $v_{cible}$). À quelle condition le chasseur intercepte-t-il la cible au point $I$ ?</p>
-<p>Il faut que le ratio des distances et des vitesses soient les mêmes : $\displaystyle \frac{BI}{AI}=\frac{v_{cible}}{v_{chasseur}}=n$.<br>
-Les points $I$ solutions doivent donc vérifier : $\displaystyle \frac{\sqrt{(x-p)^2+y^2}}{\sqrt{(x-m)^2+y^2}}=n$.</p>
-<p>Cela donne l&rsquo;équation d&rsquo;un cercle, le <strong>cercle d&rsquo;Apollonius</strong> : $\displaystyle \left[x-\frac{n^2 m-p}{n^2-1}\right]^2 + y^2 = \left[\frac{n(p-m)}{1-n^2}\right]^2$.<br>
-Son centre est sur l&rsquo;axe horizontal $\displaystyle \left(\frac{n^2m-p}{n^2-1};0\right)$ et son rayon vaut $\displaystyle \frac{n(p-m)}{|1-n^2|}$.</p>
-<p>Pour déterminer la direction à prendre pour le chasseur, il suffit de regarder où la direction de la cible coupe le cercle d&rsquo;Apollonius.</p>
-<br>
-<div id="iframe-container" style="position:relative; width:100%; max-width:725px; margin-left:auto; margin-right:auto; overflow:hidden;">
-    <iframe id="iframe-apollonius" scrolling="no" title="Apollonius" src="https://www.geogebra.org/material/iframe/id/qwv9keyf/width/725/height/638/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" style="position:absolute; top:0; left:0; width:100%; border:0px;"> </iframe>
-</div>
-<script>
-function adjustIframeHeight() {
-    var maxWidth = 725; // La largeur maximale de l'iframe
-    var largeur = 597
-    var aspectRatio = largeur/maxWidth; // Le ratio hauteur/largeur
-    var container = document.getElementById('iframe-container');
-    var iframe = document.getElementById('iframe-apollonius');
-    // Calculer le padding-top basé sur la largeur du conteneur
-    var paddingTop = Math.min(container.offsetWidth * aspectRatio, maxWidth * aspectRatio);
-    // Appliquer le padding-top pour maintenir le ratio d'aspect
-    container.style.paddingTop = paddingTop + 'px';
-    // Ajuster la hauteur de l'iframe pour correspondre au nouveau padding-top
-    iframe.style.height = paddingTop + 'px';
-}
-
-// Ajuster la hauteur à la première charge
-adjustIframeHeight();
-
-// Ajuster la hauteur lors du redimensionnement de la fenêtre
-window.addEventListener('resize', adjustIframeHeight);
-</script>
-<br>
-<p>On remarque que même si la cible va plus vite que le chasseur $n&gt;1$, il peut y avoir interseption (et pour deux directions différentes du chasseur). Mais pour cela, l&rsquo;angle $\theta$ de la direction de la cible ne doit pas être supérieur à $\displaystyle \sin^{-1}\left(\frac{v_{chasseur}}{v_{cible}}\right)$.</p>
-<p>En effet, la situation limite correspond à une direction de la cible tangente au cercle d&rsquo;Apollonius (voir dessin ci-dessous).</p>
-<p><img src="/apollonius2.png?width=500px" alt=""></p>
-<p>On a bien $\displaystyle \sin\theta = \frac{CI}{CB} = \frac{\frac{n(p-m)}{n^2-1}}{p-\frac{n^2m-p}{n^2-1}}=\frac{1}{n}$</p>
-<br>
-<h2 id="manœuvre-dévitement-de-lenola-gay">Manœuvre d&rsquo;évitement de l&rsquo;Enola Gay</h2>
-<p>Juste après avoir lâcher sa terrible bombe sur Hiroshima, l&rsquo;Enola Gay a manœuvré pour tenter d&rsquo;éviter au maximum le souffle de l&rsquo;explosion atomique.</p>
-<p>Le B-29 avait une vitesse de $\pu{529 km/h}$ par rapport au sol au moment du largage de la bombe. Sachant que l&rsquo;explosion a eu lieu après une chute de $\pu{19700 ft}$, soit $\pu{9,053 km}$, on peut en déduire le délai entre le largage et l&rsquo;explosion : dans l&rsquo;hypothèse d&rsquo;une chute libre (poids comme seule force), la distance verticale parcourue est donnée par $h=\frac{1}{2}gt^2$, d&rsquo;où $t=\sqrt{\frac{2h}{g}}\approx\pu{43 s}$. C&rsquo;est en accord avec la valeur généralement admise. Le pilote a donc environ 43 secondes pour s&rsquo;éloigner le plus possible de la zone d&rsquo;impact.</p>
-<p><img src="/enola1.png?width=500px" alt=""></p>
-<p>Pendant ces 43 secondes, la bombe continue d&rsquo;avancer horizontalement à la vitesse de l&rsquo;avion au moment du largage, ce qui donne une distance parcourue de $\pu{6,3 km}$. Le pilote parle plutôt d&rsquo;une distance horizontale de 3,5 mi, soit $\pu{5,6 km}$. Vu la forme de la bombe, cela paraît logique que son mouvement horizontal soit plus impacté par les frottements que son mouvement vertical.</p>
-<p>Au moment du largage, le pilote va évidemment chercher à séloigner le plus possible de la future explosion. Pour cela il entreprend immédiatement un virage à pleine vitesse (350 mph par rapport à l&rsquo;air, soit $\pu{563 km/h}$) en braquant ses ailes à un angle $\alpha = 60^\circ$.</p>
-<p><img src="/enola3.png?width=500px" alt=""></p>
-<p>Si le B-29 tourne, c&rsquo;est grâce à l&rsquo;inclinaison de la force de portance $\vec{L}$, perpendiculaire aux ailles. On va supposer que la trajectoire pendant le virage est circulaire de rayon $R$ et que la vitesse $v$ de l&rsquo;avion par rapport à l&rsquo;air reste constante. L&rsquo;accélération est alors horizontale et purement centripète et  vaut $\displaystyle a = \frac{v^2}{R}$.</p>
-<p>Le PFD (2<sup>e</sup> loi de Newton) appliqué à l&rsquo;avion nous dit que : $\displaystyle\vec{P}+\vec{L} = m\vec{a}$.<br>
-En projetant verticalement, on obtient : $\displaystyle-mg+L_y = 0$. On retrouve que la composante verticale de la portance compense le poids. Cela donne : $\displaystyle L\times\cos\alpha = mg$.<br>
-Et la projection horizontale donne : $\displaystyle -L_x = -ma$, et donc $\displaystyle L\sin\alpha = ma$.<br>
-Par conséquent : $\displaystyle ma=\frac{mg}{\cos\alpha}\sin\alpha \Rightarrow a = g\tan\alpha$.<br>
-Comme $\displaystyle\tan(60^\circ) = \sqrt{3}$, on se retrouve avec une accélération horizontale de l&rsquo;avion valant $\sqrt{3}g$.<br>
-Les passagers de l&rsquo;avion ressentent, eux, une accélération oblique de $2g$ (accélération du champ de pesanteur à laquelle s&rsquo;ajoute l&rsquo;accélération perpendiculaire due à l&rsquo;avion).<br>
-Et puisque $\displaystyle a=\frac{v^2}{R}$, on obtient : $\displaystyle R =\frac{v^2}{g \tan\alpha} \approx \pu{1,4 km}$. Un petit coucou ou un gros porteur feront le même virage du moment que vitesse et inclinaison des ailes sont les mêmes !<br></p>
-<p><img src="/enola2.png?width=600px" alt=""></p>
-<p>Il nous reste à trouver quand quitter le virage. $(AH)$ et $(HB)$ sont tangentes au cercle formé et $AH=AB$. Les triangles $HBC$ et $HAC$ sont donc identiques impliquant l&rsquo;égalité des angles $\widehat{HCB}$ et $\widehat{HCA}$ ($\beta$ sur le schéma). Le bombardier quitte le virage au bout d&rsquo;une déviation de $2\beta$ où $\beta = \arctan\left(\frac{AH}{R}\right)=\arctan(5,6/1,4)$. Cela donne une déviation totale $2\beta$ d&rsquo;environ $152^\circ$.</p>
-<p>La distance parcourue sur le cercle vaut alors $\frac{2\beta}{360}\times 2\pi R \approx \pu{3,7 km}$ et le temps pour la parcourir vaut $3,7/545\times 3600 = \pu{24 s}$. Pour la vitesse de l&rsquo;avion, on fait une moyenne entre la vitesse de l&rsquo;avion par rapport au sol au moment du largage et sa vitesse par rapport à l&rsquo;air. Il reste alors $43-24=\pu{19 s}$ pour s&rsquo;éloigner à tout berzingue avant que la bombe n&rsquo;explose. Le bombardier sera alors à une distance $d=5,6+545\times 19/3600 \approx \pu{8,5 km}$.</p>
-<p>Au bout de combien de temps sera-t-il touché par le souffle de l&rsquo;explosion, et à quelle distance de l&rsquo;impact sera-t-il alors ? Supposons une onde de choc se déplaçant à $v_c$ d&rsquo;environ $\pu{1300 km/h}$ (un peu plus rapide que le son) et appelons $t_i$ le temps au bout duquel le souffle rattrape le bombardier (de vitesse $v_b = \pu{545 km/h}$). N&rsquo;oublions pas que le bombardier est à la  hauteur $h$ par rapport au point d&rsquo;impact ($\approx\pu{9,1 km}$) au-dessus du point d&rsquo;impact. Pythagore donne alors : $(v_c\times t_i)^2 = (d+v_b\times t_i)^2+h^2$. La solution positive de ce trinôme du second degré en $t_i$ est $\pu{0,0144 h}$ soit $\pu{52 s}$ environ. Le pilote parle plutôt d&rsquo;un délai de $\pu{45 s}$ après la détonation et d&rsquo;une distance de $\pu{11,5 mi}$ au point d&rsquo;impact. Si notre résultat surestime le délai, il donne une distance à l&rsquo;impact de $0,0144\times 1300 \approx \pu{18,7 km} = \pu{11,6 mi}$. L&rsquo;accord n&rsquo;est pas mauvais.</p>
-<p><img src="/enolapoursuite.gif" alt=""></p>
-<br>
-<h2 id="poursuite-cyclique">Poursuite cyclique</h2>
-<p><img src="/nbugspurs1.png?width=600px" alt=""></p>
-<p>$n$ tortues sont disposées sur les sommets d&rsquo;un polygone régulier à $n$ côtés. Au top départ, chacune se met à poursuivre à vitesse constante sa voisine dans le sens trigonométrique jusqu&rsquo;à ce qu&rsquo;elles se rejoignent toutes au centre.</p>
-<br>
-<div style="position:relative; width:600px; max-width:100%; margin-left: auto; margin-right: auto; ">
-<iframe src="https://trinket.io/embed/python/92f6eeb03c?outputOnly=true&start=result" width="100%" height="750" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
-<br>
-<p>On remarque que le polygone formé par les tortues est à tout moment une réduction et rotation du polygone de départ.</p>
-<br>
-<div style="position:relative; width:600px; max-width:100%; margin-left: auto; margin-right: auto; ">
-<iframe src="https://trinket.io/embed/python/d6e2011399?outputOnly=true&start=result" width="100%" height="750" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
-<br>
-<p>Utilisons les coordonnées polaires $(r(t);\theta(t))$ pour décrire une des tortues dont la position initiale servira d&rsquo;origine des angles $(r(0)=r;\theta(0)=0).$</p>
-<p><img src="/schematortue.png?width=400px" alt=""></p>
-<p>$\displaystyle v_r = \frac{dr}{dt} = -v\sin\left(\frac{\pi}{n}\right)$<br></p>
-<p>$\displaystyle v_\theta = r\frac{d\theta}{dt} = v\cos\left(\frac{\pi}{n}\right)$<br></p>
-<p>En jouant un peu avec ces deux expressions, on obtient :<br></p>
-<p>$\displaystyle \frac{v}{r}\cos\left(\frac{\pi}{n}\right) = \frac{d\theta}{dt} = \frac{d\theta}{dr} \cdot\frac{dr}{dt} = -\frac{d\theta}{dr}v\sin\left(\frac{\pi}{n}\right)$</p>
-<p>On peut simplifier par $v$, ce qui donne :</p>
-<p>$\displaystyle \frac{dr}{d\theta} = -r\frac{\sin(\pi/n)}{\cos(\pi/n)} = -r\tan\left(\frac{\pi}{n}\right)$</p>
-<p>Et finalement :</p>
-<p>$\displaystyle \frac{dr}{r} = - \tan\left(\frac{\pi}{n}\right) d\theta$</p>
-<p>Ce qui s&rsquo;intègre en une belle <strong>spirale logarithmique</strong> :</p>
-<p>$\displaystyle r(\theta) = r(0)\exp\left(-\theta\tan\left(\frac{\pi}{n}\right)\right)$</p>
-<p>Cherchons maintenant le temps mis par les tortues pour rejoindre le centre du polygone :</p>
-<p>$\displaystyle T=\int_0^T dt = \int_{r(0)}^0 \frac{dr}{(dr/dt)}=\int_{r(0)}^0\frac{dr}{-v\sin(\pi/n)}$</p>
-<p>D&rsquo;où $\displaystyle T = \frac{1}{v}\int_0^{r(0)}\frac{dr}{\sin(\pi/n)} = \frac{r(0)}{v \sin(\pi/n)}$</p>
-<p>Et la distance parcourue vaut donc $\displaystyle D = \frac{r(0)}{ \sin(\pi/n)}$.</p>
-<p><img src="/tortuecarre.png?width=500px" alt=""></p>
-<p>Dans le cas d&rsquo;un carré, les expressions deviennnent encore plus simples :</p>
-<p>$\displaystyle r(\theta) = r(0)\exp\left(-\theta \right)$</p>
-<p>Et $\displaystyle D = r(0)\frac{\sqrt{2}}{2} = a$, en appelant $a$ le côté du carré. Donc le long de leur spirale, les tortues parcourent au final la longueur d&rsquo;un côté du carré initial.</p>
-<p>On peut expliquer ça simplement par le fait que la <strong>vitesse relative</strong> entre deux tortues restent en permanence identique à $v$ puisque leurs vecteurs vitesse sont à tout moment orthogonaux.</p>
-<br>
-<p>On peut s&rsquo;amuser à combiner les poursuites pour faire des jolies figures&hellip; Ci-dessous, on assemblé 6 poursuites à 3 tortues pour former un hexagone.</p>
-<p><img src="/nbugspurs2.png?width=1000px" alt=""></p>
-<br>
-<h2 id="murmurations">Murmurations</h2>
-<div style="position:relative; width:800px; max-width:100%; margin-left: auto; margin-right: auto;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); ">
+<p>L&rsquo;algèbre de Boole est le langage naturelle de la logique et des circuits électroniques à la base de l&rsquo;informatique.</p>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/uV54oa0SyMc?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/_9nogCrIrIY?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
     </div>
 
 </div>
 <br>
-<div style="position:relative; width:800px; max-width:100%; margin-left: auto; margin-right: auto;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); ">
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Ch7VxxTBe1c?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/1AfImqVyL_o?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
     </div>
 
 </div>
 <br>
-<p>Comme le montre cette très chouette vidéo de fouloscopie, nos histoires de poursuite participent à l&rsquo;explication des comportements collectifs fascinants des bancs de possions ou des murmurations d&rsquo;étourneaux. Un poisson (ou oiseau) ne ferait en fait que poursuivre les quelques individus immédiatement dans son champ de vision.</p>
-<p>Le code suivant utilise les 6 premiers voisins et permet de voyager un peu dans le diagramme de phase.</p>
-<br>
-<div style="position:relative; width:810px; max-width:100%; margin-left: auto;margin-right: auto;">
-<iframe src="https://trinket.io/embed/glowscript/54274cbedc?outputOnly=true" width="100%" height="770" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<h2 id="infinis-dénombrables-et-indénombrables">Infinis dénombrables et indénombrables</h2>
+<p>Des entiers aux transcendants en passant par l&rsquo;hypothèse du continu ($\aleph_0 = 2^{\aleph_1}$) :<br></p>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/0hB95JwlzBY?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
 </div>
+<br>
+<p>Cette démonstration de Cantor de l&rsquo;indénombrabilité des réels révolutionna les mathématiques. On retrouve un &ldquo;argument diagonal&rdquo; du même type chez <strong>Gödel</strong> dans son premier <strong>théorème d&rsquo;incomplétude</strong> ou dans le <strong>théorème de l&rsquo;arrêt</strong> de <strong>Türing</strong>.</p>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/VyHbd6sx5Po?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+</div>
+<br>
+<p>Mais revenons aux nombres : pourquoi l&rsquo;argument de la diagonal ne marcherait-il pas avec les entiers ?<br>
+Après tout, on pourrait bien lister tous les entiers (en binaire) et on retourne le premier chiffre à la première ligne, le deuxième à la deuxième, etc. Et hop, on a construit un chiffre qui n&rsquo;est pas dans la liste. Et patatras, on a démontré que l&rsquo;ensemble dénombrable des entiers est en fait indénombrable&hellip;</p>
+<p>Bien sûr, on a fait une erreur quelque part. Et en effet, dès le départ, la construction est impossible puisqu&rsquo;elle suppose que l&rsquo;écriture d&rsquo;un entier est faite d&rsquo;un nombre infini de 1 et de 0. Or par définition, <strong>un entier est fini</strong> !</p>
+<p>Par contre, on montre ainsi que l&rsquo;ensemble des suites infinis de 1 et de 0 est bien, elle, indénombrable. On n&rsquo;a pas tout perdu.</p>
+<p>On pourrait résister encore en revenant à la démonstration de la vidéo sur l&rsquo;intervalle $[0\,;\,1]$. Plutôt que de lister les réels, listons les rationnels de l&rsquo;intervalle. Eux aussi ont des développement décimaux potentiellement infinis après tout. L&rsquo;argument diagonal semble donc pouvoir marcher&hellip;<br>
+Et en effet, il marche ! Le nombre fourni par la diagonale n&rsquo;appartient effectivement pas à $\mathbb{Q}$. Mais si on ne suppose pas que $\mathbb{Q}$ recouvre parfaitement l&rsquo;intervalle, sans aucun trou, il n&rsquo;y a pas de contradiction. Le nombre diagonal a justement permis de construire un de ces trous : un nombre irrationnel.</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Georg_Cantor2.jpg" style="box-shadow:none;background:none;border-radius:10px;">
+</div>
+<p>C&rsquo;est parce qu&rsquo;on part de l&rsquo;idée que les réels recouvrent parfaitement (sans trou) l&rsquo;intervalle que l&rsquo;argument de Cantor permet de déduire l&rsquo;indénombrabilité des réels. le nombre diagonal a bien un développement décimal le plaçant dans l&rsquo;intervalle $[0\,;\,1]$. Il s&rsquo;agit donc d&rsquo;un réel puisque, par définition, tout point de cet intervalle est un réel. Or il n&rsquo;est pas listé. On en conclut que les réels ne sont pas listables (dénombrables).</p>
 
 
 <footer class="footline">
@@ -1823,6 +1690,23 @@ Et puisque $\displaystyle a=\frac{v^2}{R}$, on obtient : $\displaystyle R =\fra
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                         
                         
                     
@@ -1847,22 +1731,6 @@ Et puisque $\displaystyle a=\frac{v^2}{R}$, on obtient : $\displaystyle R =\fra
 
                     
                     
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
                         
                     
                     
@@ -1907,7 +1775,6 @@ Et puisque $\displaystyle a=\frac{v^2}{R}$, on obtient : $\displaystyle R =\fra
             
                 
                     
-                    
                 
                 
 
@@ -1948,9 +1815,6 @@ Et puisque $\displaystyle a=\frac{v^2}{R}$, on obtient : $\displaystyle R =\fra
             
             
                 
-                    
-                        
-                        
                     
                 
                 
