@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1778883189" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1778883189" rel="stylesheet">
-    <link href="/css/hybrid.css?1778883189" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1778883189" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1778883189" rel="stylesheet">
-    <link href="/css/auto-complete.css?1778883189" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1778883189" rel="stylesheet">
-    <link href="/css/theme.css?1778883189" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1778883189" rel="stylesheet">
+    <link href="/css/nucleus.css?1778963151" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1778963151" rel="stylesheet">
+    <link href="/css/hybrid.css?1778963151" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1778963151" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1778963151" rel="stylesheet">
+    <link href="/css/auto-complete.css?1778963151" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1778963151" rel="stylesheet">
+    <link href="/css/theme.css?1778963151" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1778963151" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1778883189" rel="stylesheet">
+    <link href="/css/theme-blue.css?1778963151" rel="stylesheet">
     
-    <link href="/css/foo.css?1778883189" rel="stylesheet"><link href="/css/bar.css?1778883189" rel="stylesheet">
+    <link href="/css/foo.css?1778963151" rel="stylesheet"><link href="/css/bar.css?1778963151" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1778883189"></script>
+    <script src="/js/jquery-3.3.1.min.js?1778963151"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1778883189"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1778883189"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1778963151"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1778963151"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1778883189"></script>
+<script type="text/javascript" src="/js/search.js?1778963151"></script>
 
     
   </div>
@@ -1486,15 +1486,12 @@ Si Rouge joue sa première stratégie, il perd au pire 6 alors qu&rsquo;avec la 
     position: relative;
     width: 800px;
     max-width:100%;
-    max-height: 90vh;        /* ne dépasse pas la hauteur visible */
-    aspect-ratio: 1/1;    /* gère la hauteur automatiquement */
     margin: 0 auto;
   }
   /* Le div Plotly occupe 100% du conteneur */
-  #monGraphique{ width:100%; height:100%; }
 </style>
 <div class="plot-wrap">
-  <div id="monGraphique"></div>
+  <div id="monGraphique" style="width:100%; height:800px;"></div>
 </div>
 <script>
 (async ()=>{
@@ -1530,17 +1527,33 @@ Si Rouge joue sa première stratégie, il perd au pire 6 alors qu&rsquo;avec la 
 <p>Si bleu joue B1, il gagne $3q + 6(1-q)$. Et s&rsquo;il joue B2, il gagne $5q+4(1-q)$. L&rsquo;espérance de gain de Bleu est donc $V(p,q)=p[3q+6(1-q)]+(1-p)[5q+4(1-q)]=4+2p+q-4pq$.</p>
 <p>Du point de vue de Rouge, on obtient une espérance de gain valant $q[3p+5(1-p)]+(1-q)[6p+4(1-p)]=4+2p+q-4pq$. On obtient donc à nouveau $V(q,p)$.</p>
 <p>Tracer $V(p,q)$ fait apparaître une selle de cheval. La stratégie optimale pour Bleu et Rouge va donc consister à placer leurs stratégies sur le point col  ; le point minimax.</p>
- <div style="position:relative; width:600px; max-width:100%; margin-left: auto; margin-right: auto; ">
- <div id="monGraphique2" style="width:100%"></div>
+<div class="plot-wrap">
+ <div id="monGraphique2"  style="width:100%; height:800px;"></div>
  </div>
 <script>
-fetch('/selledecheval2.json')
-  .then(response => response.json())
-  .then(data => {
-    var layoutUpdate = data.layout || {};
-    layoutUpdate.responsive = true;
-    Plotly.newPlot('monGraphique2', data.data, layoutUpdate);
-  });
+  (async ()=>{
+  const resp = await fetch('/selledecheval2.json');
+  const data = await resp.json();
+
+  // Layout : pas de width/height figées, autosize activé
+  const layout = { ...(data.layout || {}) };
+  delete layout.width; delete layout.height;
+  layout.autosize = true;
+
+  // Config : responsive ICI (3e argument)
+  const config = { ...(data.config || {}), responsive: true };
+
+  const el = document.getElementById('monGraphique2');
+  await Plotly.newPlot(el, data.data, layout, config);
+
+  // Robuste : resize aussi quand le conteneur change (iframe/Reveal, etc.)
+  const wrap = document.querySelector('.plot-wrap');
+  if ('ResizeObserver' in window){
+    new ResizeObserver(()=>Plotly.Plots.resize(el)).observe(wrap);
+  }
+  // Sécurité : resize sur fenêtre
+  window.addEventListener('resize', ()=>Plotly.Plots.resize(el), {passive:true});
+})();
 </script>
 <p>Bleu veut choisir $p$ tel que $\displaystyle \frac{\partial V}{\partial q} = 0$. Cela donne $1-4p=0$ et donc $p=1/4$. La distribution de probabilité optimale pour Bleu est donc $(1/4\,;3/4)$.</p>
 <p>Rouge veut choisir $q$ tel que $\displaystyle \frac{\partial V}{\partial p} = 0$. Cela donne $2-4q=0$ et donc $q=1/2$. La distribution de probabilité optimale pour Rouge est donc $(1/2\,;1/2)$.</p>
@@ -1554,17 +1567,33 @@ fetch('/selledecheval2.json')
 <li>Pour Rouge : $V(p,q)=q[80p+100(1-p)]+(1-q)[100p+60(1-p)]$</li>
 </ul>
 <p>Dans les deux cas, $V(p,q)=60+40p+40q-60pq$. On obtient bien à nouveau une selle de cheval. Cherchons son point col.</p>
-<div style="position:relative; width:600px; max-width:100%; margin-left: auto; margin-right: auto;">
-<div id="monGraphique3" style="width:100%"></div>
-</div>
+<div class="plot-wrap">
+ <div id="monGraphique3"  style="width:100%; height:800px;"></div>
+ </div>
 <script>
-fetch('/selledecheval3.json')
-  .then(response => response.json())
-  .then(data => {
-    var layoutUpdate = data.layout || {};
-    layoutUpdate.responsive = true;
-    Plotly.newPlot('monGraphique3', data.data, layoutUpdate);
-  });
+  (async ()=>{
+  const resp = await fetch('/selledecheval3.json');
+  const data = await resp.json();
+
+  // Layout : pas de width/height figées, autosize activé
+  const layout = { ...(data.layout || {}) };
+  delete layout.width; delete layout.height;
+  layout.autosize = true;
+
+  // Config : responsive ICI (3e argument)
+  const config = { ...(data.config || {}), responsive: true };
+
+  const el = document.getElementById('monGraphique3');
+  await Plotly.newPlot(el, data.data, layout, config);
+
+  // Robuste : resize aussi quand le conteneur change (iframe/Reveal, etc.)
+  const wrap = document.querySelector('.plot-wrap');
+  if ('ResizeObserver' in window){
+    new ResizeObserver(()=>Plotly.Plots.resize(el)).observe(wrap);
+  }
+  // Sécurité : resize sur fenêtre
+  window.addEventListener('resize', ()=>Plotly.Plots.resize(el), {passive:true});
+})();
 </script>
 <p>Le point minimax est tel que $\displaystyle \frac{\partial V}{\partial p} = \frac{\partial V}{\partial q}  = 0$. Cela donne $40-60q=0$ et $40-60p=0$, d&rsquo;où $p=q=2/3$. Les stratégies mixtes optimales pour Bleu et Rouge ont le même distribution de probabilités : $(2/3\,;1/3)$.</p>
 <p>Contrairement à l&rsquo;intuition, Bleu doit donc placer la bombe dans l&rsquo;avion le moins protégé dans 1/3 des cas. Et toujours dans 1/3 des cas, Rouge doit attaquer ce bombardier (le moins protégé).</p>
@@ -2483,16 +2512,16 @@ On a alors $\displaystyle V\left(\frac{1}{3},\frac{2}{3}\right) = 60+40\left(\fr
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1778883189"></script>
-    <script src="/js/perfect-scrollbar.min.js?1778883189"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1778883189"></script>
-    <script src="/js/jquery.sticky.js?1778883189"></script>
-    <script src="/js/featherlight.min.js?1778883189"></script>
-    <script src="/js/highlight.pack.js?1778883189"></script>
+    <script src="/js/clipboard.min.js?1778963151"></script>
+    <script src="/js/perfect-scrollbar.min.js?1778963151"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1778963151"></script>
+    <script src="/js/jquery.sticky.js?1778963151"></script>
+    <script src="/js/featherlight.min.js?1778963151"></script>
+    <script src="/js/highlight.pack.js?1778963151"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1778883189"></script>
-    <script src="/js/learn.js?1778883189"></script>
-    <script src="/js/hugo-learn.js?1778883189"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1778963151"></script>
+    <script src="/js/learn.js?1778963151"></script>
+    <script src="/js/hugo-learn.js?1778963151"></script>
     
     
 
