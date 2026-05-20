@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1779145351" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1779145351" rel="stylesheet">
-    <link href="/css/hybrid.css?1779145351" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1779145351" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1779145351" rel="stylesheet">
-    <link href="/css/auto-complete.css?1779145351" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1779145351" rel="stylesheet">
-    <link href="/css/theme.css?1779145351" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1779145351" rel="stylesheet">
+    <link href="/css/nucleus.css?1779302979" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1779302979" rel="stylesheet">
+    <link href="/css/hybrid.css?1779302979" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1779302979" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1779302979" rel="stylesheet">
+    <link href="/css/auto-complete.css?1779302979" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1779302979" rel="stylesheet">
+    <link href="/css/theme.css?1779302979" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1779302979" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1779145351" rel="stylesheet">
+    <link href="/css/theme-blue.css?1779302979" rel="stylesheet">
     
-    <link href="/css/foo.css?1779145351" rel="stylesheet"><link href="/css/bar.css?1779145351" rel="stylesheet">
+    <link href="/css/foo.css?1779302979" rel="stylesheet"><link href="/css/bar.css?1779302979" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1779145351"></script>
+    <script src="/js/jquery-3.3.1.min.js?1779302979"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1779145351"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1779145351"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1779302979"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1779302979"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1779145351"></script>
+<script type="text/javascript" src="/js/search.js?1779302979"></script>
 
     
   </div>
@@ -1423,7 +1423,8 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
         <li><a href="#lagrange">Lagrange</a></li>
         <li><a href="#le-lagrangien-de-loptique-géométrique">Le lagrangien de l&rsquo;optique géométrique</a></li>
         <li><a href="#hamilton">Hamilton</a></li>
-        <li><a href="#hamilton-jacobi">Hamilton-Jacobi</a></li>
+        <li><a href="#ondelettes-mécaniques">Ondelettes mécaniques</a></li>
+        <li><a href="#jacobi">Jacobi</a></li>
       </ul>
     </li>
     <li><a href="#lavènement-de-la-mécanique-quantique">L&rsquo;avènement de la mécanique quantique</a>
@@ -1656,13 +1657,14 @@ La mécanique a fait le chemin inverse, on a d&rsquo;abord eu les équations de 
 <p>Pour Maupertuis, l&rsquo;action est l&rsquo;intégrale (une somme continue) de la quantité de mouvement le long de la trajectoire : $S_M=\int_{A\rightarrow B}mv\,\mathrm{d}s$ (où $s$ est l&rsquo;abscisse curviligne le long de la trajectoire).<br>
 Anachroniquement, on peut transformer $S_M$ en $\int_{A\rightarrow B}2T\mathrm{d}t$ où $T$ est l&rsquo;énergie cinétique. Minimiser l&rsquo;action de Maupertuis revient alors à minimiser l&rsquo;énergie cinétique au cours du temps, à énergie totale fixée.<br>
 L&rsquo;action trouve déjà là sa dimension définitive d&rsquo;une énergie multipliée par une durée, ou d&rsquo;une quantité de mouvement multipliée par une distance.</p>
+<p>Mais l&rsquo;action de Maupertuis est plus une jolie intuition métaphysique qu&rsquo;un véritable outil permettant de déduire les trajectoires des systèmes en mouvement. Pour cela, il faut attendre l&rsquo;avènement du calcul variationnel.</p>
 <h3 id="lagrange">Lagrange</h3>
-<p>Un élève de Jean Bernoulli, Euler (le 🐐 des mathématiques), met au point le calcul des variations à partir de considérations géométriques et généralise ainsi les méthodes mises au point pour résoudre le problème de la brachistochrone.</p>
-<p>Lagrange donne sa forme actuelle à ce nouveau type de calcul avec une approche purement analytique et il introduit les coordonnées généralisées $q_i$ (qui en plus des positions habituelles peuvent être des positions relatives, des angles, etc.) ainsi que la variable temps que n&rsquo;utilisait pas Maupertuis.</p>
+<p>Un élève de Jean Bernoulli, Euler (le 🐐 des mathématiques), met au point le <strong>calcul des variations</strong> à partir de considérations géométriques et généralise ainsi les méthodes mises au point pour résoudre le problème de la brachistochrone.</p>
+<p>Lagrange donne sa forme actuelle à ce nouveau type de calcul avec une approche purement analytique. Il introduit les coordonnées généralisées $q_i$ (qui en plus des positions habituelles peuvent être des positions relatives, des angles, etc.) ainsi que la variable temps que n&rsquo;utilisait pas Maupertuis.</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/portraitlagrange.png" style="box-shadow:none;background:none;">
 </div>
-<p>La définition lagrangienne de l&rsquo;action généralise celle de Maupertuis : $S_L=\int_{t_1}^{t_2} L(q, \dot{q}, t) \mathrm{d} t$ où $L$, le lagrangien, vaut $T-V$, la différence entre l&rsquo;énergie cinétique et l&rsquo;énergie potentielle.</p>
+<p>La définition lagrangienne de l&rsquo;action généralise celle de Maupertuis tout en s&rsquo;en écartant quelque peu : $S_L=\int_{t_1}^{t_2} L(q, \dot{q}, t) \mathrm{d} t$ où $L$, le lagrangien, vaut $T-V$, la différence entre l&rsquo;énergie cinétique et l&rsquo;énergie potentielle.</p>
 <p>Le principe de stationnarité $\delta S_L= 0$ pour des extrémités fixées en temps conduit aux équations d&rsquo;Euler-Lagrange :<br>
 $$\frac{\mathrm{d}}{\mathrm{d} t}\frac{\partial L}{\partial \dot{q}_i} - \frac{\partial L}{\partial q_i} = 0$$</p>
 <p>Le lagrangien se fera dès lors progressivement une place de plus en plus centrale en physique. Et depuis le cœur du 20<sup>e</sup> siècle, toute théorie digne de ce nom commence par se chercher un lagrangien duquel tout découle. Un des plus grands achèvements humains est ainsi l&rsquo;établissement du lagrangien du modèle standard qui réunit toute la physique hormis la gravité.</p>
@@ -1690,13 +1692,13 @@ Supposons que l&rsquo;indice ne dépende pas de $x$ : $n(x,z)=n(z)$. On a alors
 La stationnarité $\delta S_H = 0$, pour des extrémités fixes en $(q,t)$ fournit les équations canoniques :<br>
 $\dot{q}_i=\frac{\partial H}{\partial p_i}, \quad \dot{p}_i=-\frac{\partial H}{\partial q_i}$.</p>
 <p>L&rsquo;espace des phases est déjà &ldquo;quantum-ready&rdquo; : les transformations canoniques entre $q$ et $p$ seront les mêmes, les crochets de Poisson (oui, le même que la tâche) préfigurent les commutateurs, les symétries d&rsquo;évolution à la Noether s&rsquo;y expriment naturellement, etc.</p>
-<h3 id="hamilton-jacobi">Hamilton-Jacobi</h3>
-<p>Le principe de moindre action à la Lagrange consistant à chercher un chemin dans l&rsquo;espace des configurations qui rende stationnaire l&rsquo;action est tout à fait analogue au principe de Fermat.<br>
-Huygens ayant réussi à reproduire les résultats de Fermat avec ses ondelettes, Hamilton se demande si on ne pourrait pas trouver une formulation équivalente en mécanique. Une mécanique à base d&rsquo;ondelettes et de fronts d&rsquo;onde !</p>
+<h3 id="ondelettes-mécaniques">Ondelettes mécaniques</h3>
+<p>Le principe de moindre action à la Lagrange consistant à chercher un chemin dans l&rsquo;espace des configurations qui rende stationnaire l&rsquo;action est tout à fait analogue au principe de Fermat.</p>
+<p>Huygens ayant réussi à reproduire les résultats de Fermat avec ses ondelettes, Hamilton se demande si on ne pourrait pas trouver une formulation équivalente en mécanique. Une mécanique à base d&rsquo;ondelettes et de fronts d&rsquo;onde !</p>
 <p>Hamilton y parvient en envisageant l&rsquo;action sous un nouvel aspect. Plutôt que de fixer les points de départ ($q_0,t_0$) et d&rsquo;arrivée ($q_F,t_F$), il laisse ce dernier libre ($q,t$). Il obtient alors :</p>
 <ul style="margin-top:-0.5em;">
 <li><b style="color:#D41876;">$\displaystyle\frac{\partial S}{\partial q}=p$</b></li>
-<li style="margin-top:0.5em;"><b style="color:#D41876;">$\displaystyle\frac{\partial S}{\partial t}=-H$</b> (équation de Hamilton-Jacobi)</li>
+<li style="margin-top:0.5em;"><b style="color:#D41876;">$\displaystyle\frac{\partial S}{\partial t}=-H$</b> (<b>équation de Hamilton-Jacobi</b>)</li>
 </ul>
 <div id="preuve">
 <details>
@@ -1727,7 +1729,7 @@ Comme $\partial S_0(q) / \partial q=p$, le vecteur normal à la surface $S_0(q)=
 <div class="notices note" style="--title: 'note';">
   <p style="display: none;">note</p>
   <div class="notice-body">
-    <p>Avec $S_0$, on retrouve au final l&rsquo;action de Maupertuis qui est renommée <b>action réduite</b> $W=\int_{q_A}^q p \,dq$. En effet, $S_M=\int_{A\rightarrow B}mv\,\mathrm{d}s=\int_{A\rightarrow B}p\,\mathrm{d}q=\int_{A\rightarrow B}(p\dot{q} - H +H)\,\mathrm{d}t=S_H+E(t_B-t_A)=S_0(q)$ ($E$ est fixe ici).</p>
+    <p>Avec $S_0$, on retrouve finalement l&rsquo;action de Maupertuis, renommée <b>action réduite</b> $W=\int_{q_A}^q p \,dq$. En effet, $S_M=\int_{A\rightarrow B}mv\,\mathrm{d}s=\int_{A\rightarrow B}p\,\mathrm{d}q=\int_{A\rightarrow B}(p\dot{q} - H +H)\,\mathrm{d}t=S_H+E(t_B-t_A)=S_0(q)$ ($E$ est fixe ici).</p>
 
   </div>
 </div>
@@ -1739,12 +1741,13 @@ Comme $\partial S_0(q) / \partial q=p$, le vecteur normal à la surface $S_0(q)=
 <p>Schrödinger résume les travaux d&rsquo;Hamilton ainsi :</p>
 <blockquote>
 <p>Le principe variationnel de Hamilton se trouve correspondre au principe de Fermat pour la propagation d’une onde dans l’espace des configurations (espace des q), et l’équation de Hamilton–Jacobi exprime le principe de Huygens pour cette propagation. Malheureusement, cette conception puissante et d’une importance majeure de Hamilton est, dans la plupart des relectures modernes, dépouillée de son magnifique habit — jugé superflu — au profit d’une représentation plus terne de la correspondance analytique.</p></blockquote>
-<p>L&rsquo;admiration que voue Schrödinger à Hamilton a été récompensée puisque les travaux d&rsquo;Hamilton se sont révélés essentiels dans la quête de Schrödinger d&rsquo;une équation d&rsquo;onde quantique.</p>
+<p>L&rsquo;admiration que vouait Schrödinger à Hamilton joua un rôle clé dans l&rsquo;établissement de sa fameuse équation d&rsquo;onde quantique&hellip;</p>
+<h3 id="jacobi">Jacobi</h3>
+<p>Si Hamilton jette les base de la révolution quantique, les lubies géométriques de Jacobi préfigurent une autre révolution du 20<sup>e</sup> siècle, celle de la relativité générale.</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/portraitjacobi.png" style="box-shadow:none;background:none;">
 </div>
-<p>Si Hamilton jette les base de la révolution quantique, les lubies géométriques de Jacobi préfigurent une autre révolution du 20<sup>e</sup> siècle, celle de la relativité générale.<br>
-Il transforme en effet la recherche d&rsquo;une trajectoire minimisant l&rsquo;action en la recherche d&rsquo;une géodésique dans l&rsquo;espace des configurations ! Pour un système à énergie fixée, il réécrit ainsi l&rsquo;action réduite $W=\int_{q_1}^{q_2}p^i\mathrm{d}q_i$ en $\int_{q_1}^{q_2}ds_J$ en introduisant la métrique de Jacobi : $\mathrm{d}s_J^2 = 2(E-V(q)) g_{i j}(q) \mathrm{d} q^i \mathrm{d} q^j$ (où $g_{ij}$ est une métrique riemannienne). Le principe de Maupertuis devient alors un théorème géométrique.</p>
+<p>Il transforme en effet la recherche d&rsquo;une trajectoire minimisant l&rsquo;action en la recherche d&rsquo;une géodésique dans l&rsquo;espace des configurations ! Pour un système à énergie fixée, il réécrit ainsi l&rsquo;action réduite $W=\int_{q_1}^{q_2}p^i\mathrm{d}q_i$ en $\int_{q_1}^{q_2}ds_J$ en introduisant la métrique de Jacobi : $\mathrm{d}s_J^2 = 2(E-V(q)) g_{i j}(q) \mathrm{d} q^i \mathrm{d} q^j$ (où $g_{ij}$ est une métrique riemannienne). Le principe de Maupertuis devient alors un théorème géométrique.</p>
 <br>
 <h2 id="lavènement-de-la-mécanique-quantique">L&rsquo;avènement de la mécanique quantique</h2>
 <h3 id="planck">Planck</h3>
@@ -2799,16 +2802,16 @@ En sommant sur les chemins, on constate bien que les contributions les plus impo
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1779145351"></script>
-    <script src="/js/perfect-scrollbar.min.js?1779145351"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1779145351"></script>
-    <script src="/js/jquery.sticky.js?1779145351"></script>
-    <script src="/js/featherlight.min.js?1779145351"></script>
-    <script src="/js/highlight.pack.js?1779145351"></script>
+    <script src="/js/clipboard.min.js?1779302979"></script>
+    <script src="/js/perfect-scrollbar.min.js?1779302979"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1779302979"></script>
+    <script src="/js/jquery.sticky.js?1779302979"></script>
+    <script src="/js/featherlight.min.js?1779302979"></script>
+    <script src="/js/highlight.pack.js?1779302979"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1779145351"></script>
-    <script src="/js/learn.js?1779145351"></script>
-    <script src="/js/hugo-learn.js?1779145351"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1779302979"></script>
+    <script src="/js/learn.js?1779302979"></script>
+    <script src="/js/hugo-learn.js?1779302979"></script>
     
     
 
