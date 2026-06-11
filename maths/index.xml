@@ -6,15 +6,8 @@
     <description>Recent content in Maths on Science en vrac</description>
     <generator>Hugo</generator>
     <language>fr</language>
-    <lastBuildDate>Sat, 16 May 2026 22:25:24 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jun 2026 13:22:28 +0200</lastBuildDate>
     <atom:link href="https://sciencesilencieuse.github.io/maths/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Fondements</title>
-      <link>https://sciencesilencieuse.github.io/maths/fondements/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/maths/fondements/</guid>
-      <description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;logique-et-fondements&#34;&gt;Logique et fondements&lt;/h1&gt;&#xA;&lt;h2 id=&#34;lalgèbre-de-boole&#34;&gt;L&amp;rsquo;algèbre de Boole&lt;/h2&gt;&#xA;&lt;p&gt;L&amp;rsquo;algèbre de Boole est à la base de la théorie des ensembles (le ET logique $\land$ correspond à l&amp;rsquo;intersection $\cap$ et le OU $\lor$ à l&amp;rsquo;union $\cup$) et joue ainsi le rôle de &amp;ldquo;brique élémentaire&amp;rdquo; de la pensée mathématique.&lt;/p&gt;</description>
-    </item>
     <item>
       <title>Arithmétique</title>
       <link>https://sciencesilencieuse.github.io/maths/arithmetique/</link>
