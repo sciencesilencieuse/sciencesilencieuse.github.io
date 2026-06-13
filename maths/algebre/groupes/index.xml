@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Groupes on Science en vrac</title>
-    <link>https://sciencesilencieuse.github.io/maths/algebre/groupes/</link>
-    <description>Recent content in Groupes on Science en vrac</description>
-    <generator>Hugo</generator>
-    <language>fr</language>
-    <lastBuildDate>Sun, 31 May 2026 15:30:53 +0200</lastBuildDate>
-    <atom:link href="https://sciencesilencieuse.github.io/maths/algebre/groupes/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Groupes discrets</title>
-      <link>https://sciencesilencieuse.github.io/maths/algebre/groupes/groupe1/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/maths/algebre/groupes/groupe1/</guid>
-      <description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;  #grosseformule &#xA;{&#xA;    overflow-x: auto; &#xA;}&#xA;#preuve&#xA;{&#xA;    background-color:#EAEAEA;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#def&#xA;{&#xA;    background-color:#DCEFFE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#theo&#xA;{&#xA;    background-color:#FBE1DE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;h2&#xA;{&#xA;color:#970E53 !important;&#xA;}&#xA;h3&#xA;{&#xA;color:#004D80 !important;&#xA;}&#xA;ul&#xA;{&#xA;margin-top:-0.5em;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;les-groupes&#34;&gt;Les groupes&lt;/h1&gt;&#xA;&lt;p style=&#34;font-size:1.2em;text-align:center;font-weight:bold;&#34;&gt;&lt;a href=&#34;../&#34;&gt;Retour sommaire&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Représentations</title>
-      <link>https://sciencesilencieuse.github.io/maths/algebre/groupes/groupe2/</link>
-      <pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-      <guid>https://sciencesilencieuse.github.io/maths/algebre/groupes/groupe2/</guid>
-      <description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;  #grosseformule &#xA;{&#xA;    overflow-x: auto; &#xA;}&#xA;#preuve&#xA;{&#xA;    background-color:#EAEAEA;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#def&#xA;{&#xA;    background-color:#DCEFFE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#theo&#xA;{&#xA;    background-color:#FBE1DE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;h2&#xA;{&#xA;color:#970E53 !important;&#xA;}&#xA;h3&#xA;{&#xA;color:#004D80 !important;&#xA;}&#xA;ul&#xA;{&#xA;margin-top:-0.5em;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h1 style=&#34;overflow-x: auto;&#34;&gt;Les représentations&lt;/h1&gt;&#xA;&lt;p style=&#34;font-size:1.2em;text-align:center;font-weight:bold;&#34;&gt;&lt;a href=&#34;../&#34;&gt;Retour sommaire&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Groupes on Science en vrac</title>
+		<link>https://sciencesilencieuse.github.io/maths/algebre/groupes/</link>
+		<description>Recent content in Groupes on Science en vrac</description>
+		<generator>Hugo</generator>
+		<language>fr</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 31 May 2026 15:30:53 +0200</lastBuildDate>
+		
+			<atom:link href="https://sciencesilencieuse.github.io/maths/algebre/groupes/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Groupes discrets</title>
+				<link>https://sciencesilencieuse.github.io/maths/algebre/groupes/groupe1/</link>
+				<pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+				<guid>https://sciencesilencieuse.github.io/maths/algebre/groupes/groupe1/</guid>
+				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;  #grosseformule &#xA;{&#xA;    overflow-x: auto; &#xA;}&#xA;#preuve&#xA;{&#xA;    background-color:#EAEAEA;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#def&#xA;{&#xA;    background-color:#DCEFFE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#theo&#xA;{&#xA;    background-color:#FBE1DE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;h2&#xA;{&#xA;color:#970E53 !important;&#xA;}&#xA;h3&#xA;{&#xA;color:#004D80 !important;&#xA;}&#xA;ul&#xA;{&#xA;margin-top:-0.5em;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;les-groupes&#34;&gt;Les groupes&lt;/h1&gt;&#xA;&lt;p style=&#34;font-size:1.2em;text-align:center;font-weight:bold;&#34;&gt;&lt;a href=&#34;../&#34;&gt;Retour sommaire&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Représentations</title>
+				<link>https://sciencesilencieuse.github.io/maths/algebre/groupes/groupe2/</link>
+				<pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+				<guid>https://sciencesilencieuse.github.io/maths/algebre/groupes/groupe2/</guid>
+				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;  #grosseformule &#xA;{&#xA;    overflow-x: auto; &#xA;}&#xA;#preuve&#xA;{&#xA;    background-color:#EAEAEA;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#def&#xA;{&#xA;    background-color:#DCEFFE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#theo&#xA;{&#xA;    background-color:#FBE1DE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;h2&#xA;{&#xA;color:#970E53 !important;&#xA;}&#xA;h3&#xA;{&#xA;color:#004D80 !important;&#xA;}&#xA;ul&#xA;{&#xA;margin-top:-0.5em;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h1 style=&#34;overflow-x: auto;&#34;&gt;Les représentations&lt;/h1&gt;&#xA;&lt;p style=&#34;font-size:1.2em;text-align:center;font-weight:bold;&#34;&gt;&lt;a href=&#34;../&#34;&gt;Retour sommaire&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

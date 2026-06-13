@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.150.1">
+    <meta name="generator" content="Hugo 0.163.1">
     <meta name="description" content="">
 
 
@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1781191650" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1781191650" rel="stylesheet">
-    <link href="/css/hybrid.css?1781191650" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1781191650" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1781191650" rel="stylesheet">
-    <link href="/css/auto-complete.css?1781191650" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1781191650" rel="stylesheet">
-    <link href="/css/theme.css?1781191650" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1781191650" rel="stylesheet">
+    <link href="/css/nucleus.css?1781351745" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1781351745" rel="stylesheet">
+    <link href="/css/hybrid.css?1781351745" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1781351745" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1781351745" rel="stylesheet">
+    <link href="/css/auto-complete.css?1781351745" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1781351745" rel="stylesheet">
+    <link href="/css/theme.css?1781351745" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1781351745" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1781191650" rel="stylesheet">
+    <link href="/css/theme-blue.css?1781351745" rel="stylesheet">
     
-    <link href="/css/foo.css?1781191650" rel="stylesheet"><link href="/css/bar.css?1781191650" rel="stylesheet">
+    <link href="/css/foo.css?1781351745" rel="stylesheet"><link href="/css/bar.css?1781351745" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1781191650"></script>
+    <script src="/js/jquery-3.3.1.min.js?1781351745"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -97,18 +97,18 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     
         <div class="searchbox">
     <label for="search-by"><i class="fas fa-search"></i></label>
-    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <input data-search-input id="search-by" type="search" placeholder="Rechercher...">
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1781191650"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1781191650"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1781351745"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1781351745"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1781191650"></script>
+<script type="text/javascript" src="/js/search.js?1781351745"></script>
 
     
   </div>
@@ -1480,8 +1480,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#trouver-linverse">Trouver l&rsquo;inverse</a></li>
-    <li><a href="#compléter">Compléter</a></li>
+    <li><a href="#un-désir-de-symétrie">Un désir de symétrie</a>
+      <ul>
+        <li><a href="#des-entiers-naturels-aux-entiers-relatifs">Des entiers naturels aux entiers relatifs</a></li>
+        <li><a href="#du-groupe-à-lanneau">Du groupe à l&rsquo;anneau</a></li>
+        <li><a href="#inverser-la-multiplication">Inverser la multiplication</a></li>
+      </ul>
+    </li>
+    <li><a href="#boucher-les-trous">Boucher les trous</a></li>
   </ul>
 </nav>
     </div>
@@ -1520,10 +1526,164 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   {
     color: #006C65;
   }
+    #grosseformule 
+{
+    overflow-x: auto; 
+}
+#preuve
+{
+    background-color:#EAEAEA;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#def
+{
+    background-color:#DCEFFE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#theo
+{
+    background-color:#FBE1DE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+h2
+{
+color:#970E53 !important;
+}
+h3
+{
+color:#004D80 !important;
+}
+ul
+{
+margin-top:-0.5em;
+}
 </style>
 <h1 id="échaufaudage-des-nombres">Échaufaudage des nombres</h1>
-<h2 id="trouver-linverse">Trouver l&rsquo;inverse</h2>
-<h2 id="compléter">Compléter</h2>
+<blockquote>
+<p>Dieu a crée les entiers naturels, le reste est l&rsquo;œuvre de l&rsquo;Homme.<br>
+Leopold Kronecker</p>
+</blockquote>
+<h2 id="un-désir-de-symétrie">Un désir de symétrie</h2>
+<h3 id="des-entiers-naturels-aux-entiers-relatifs">Des entiers naturels aux entiers relatifs</h3>
+<p>Un entier naturel sert à compter des éléments distincts mais que l&rsquo;on traite comme identiques (3 chameaux, 2 idées, 8 cailloux gris).</p>
+<p>On passe d&rsquo;un entier à son successeur en ajoutant une unité ($+1$). On forme alors l&rsquo;ensemble infini des entiers naturels $\mathbb{N}=\{0,1,2,\ldots\}$.</p>
+<div id="def">
+<p>Un <strong>ensemble</strong> est une collection d&rsquo;éléments $\{\text{élément 1},\text{élément 2},\ldots\}$.</p>
+</div>
+<p>Pourquoi aller plus loin ?</p>
+<p>Pour rendre l&rsquo;addition toujours réversible !</p>
+<div id="def">
+<p>Une <strong>loi de composition interne</strong> $\star$ dans un ensemble $E$ est une opération entre deux éléments quelconques de $E$ donnant toujours un résultat dans $E$.</p>
+<p>$$\forall (x,y)\in E^2,\quad x\star y \in E$$</p>
+</div>
+<p>L&rsquo;<strong>addition</strong> est une parfaite loi de composition interne dans $\mathbb{N}$ ; on peut additionner tous les entiers naturels que l&rsquo;on veut, on obtient toujours un entier naturel.</p>
+<p>Mais pour résoudre des équations, il faut pouvoir faire l&rsquo;opération opposée : soustraire. Si l&rsquo;équation $2+x = 5$ ne pose aucun problème puisque la solution ($3$) appartient à $\mathbb{N}$, le système s&rsquo;effondre avec l&rsquo;équation $5+x = 2$. Il est impossible de retrancher 5 à 2 en restant dans les entiers naturels : l&rsquo;équation n&rsquo;a aucune solution.</p>
+<div id="def">
+<p>L&rsquo;<strong>élément neutre</strong> $e_\star$ de la loi de composition interne $\star$ est tel que l&rsquo;opération entre n&rsquo;importe quel nombre et $e_\star$ laisse le nombre inchangé.</p>
+<p>$$\forall x\in E,\quad x\star e_\star = e_\star \star x = x$$</p>
+</div>
+<br>
+<div id="def">
+<p>Le <strong>symétrique</strong> $x&rsquo;$ d&rsquo;un élément $x$ pour une opération $\star$ dotée d&rsquo;un élément neutre $e_\star$ est tel que la composition entre $x$ et $x&rsquo;$ donne l&rsquo;élément neutre :</p>
+<p>$$
+x&rsquo;\star x = x\star x&rsquo;=e_\star
+$$</p>
+</div>
+<p>Pour l&rsquo;addition, on a bien un élément neutre ($0$, puisque pour tout $x$, $x+0=0+x=x$), mais pas d&rsquo;inverse&hellip; Du moins, dans $\mathbb{N}$. L&rsquo;idée est alors de symétriser $\mathbb{N}$ en lui ajoutant les symétriques de ses éléments vis à vis de l&rsquo;addition, notés $x&rsquo;=-x$ (tels que $x+(-x)=(-x)+x=0$). On obtient ainsi les entiers relatifs $\mathbb{Z} = \{\ldots,-2,-1,0,1,2,\ldots\}$.</p>
+<p>Dans $\mathbb{Z}$, on peut maintenant définir l&rsquo;opération inverse de l&rsquo;addition, la <strong>soustraction</strong>, comme l&rsquo;addition de l&rsquo;opposé d&rsquo;un nombre ($a-b = a + (-b)$). Et maintenant, $5+x=2$ a bien une solution puisque $x=2-5 = 2+(-5)=-3 \in\mathbb{Z}$.</p>
+<p>Sa parfaite symétrie élève $\mathbb{Z}$  au rang de <strong>groupe</strong>.</p>
+<div id="def">
+<p>Un <strong>groupe</strong> $(G,\star)$ est un ensemble $G$ muni d&rsquo;une loi de composition interne $\star$ tel que :</p>
+<ul>
+<li>la loi est associative&nbsp;: pour tous éléments $a,b,c,$ $(a\star b)\star c = a\star (b\star c)$&nbsp;;</li>
+<li>il existe un élément neutre&nbsp;;</li>
+<li>tout élément a un symétrique.</li>
+</ul>
+</div>
+<p>Il manquait seulement la dernière condition à $(\mathbb{N},+)$, c&rsquo;est maintenant réparé.<br>
+De plus, comme $a+b=b+a$ pour tous les éléments $a$ et $b$ de $\mathbb{Z}$, $(\mathbb{Z},+)$ est un <strong>groupe commutatif</strong>.</p>
+<h3 id="du-groupe-à-lanneau">Du groupe à l&rsquo;anneau</h3>
+<p>On peut continuer à enrichir notre structure en ajoutant une seconde opération, la <strong>multiplication</strong> $\times$. Si l&rsquo;addition permet de translater, la multiplication permet, elle, de dilater.</p>
+<p>Pour que les deux opérations s&rsquo;entendent, on rend la multiplication <strong>distributive</strong> sur l&rsquo;addition. On obtient alors l&rsquo;anneau $(\mathbb{Z},+,\times)$.</p>
+<div id="def">
+<p>Pour que $(\mathbb{A},\star_1,\star_2)$ soit un <strong>anneau commutatif</strong>, il faut que :</p>
+<ul>
+<li>$(\mathbb{A},\star_1)$ soit un groupe commutatif&nbsp;;</li>
+<li>$\star_2$ soit distributive sur $\star_1$&nbsp;: $a\star_2(b\star_1 c) = a\star_2 b \star_1 a\star_2 c$ </li>
+</ul>
+</div>
+<p>Dans le cas de $(\mathbb{Z},+,\times)$, $(\mathbb{Z},+)$ est bien un groupe commutatif. Il suffit donc d&rsquo;imposer que la multiplication soit distributive par rapport à l&rsquo;addition pour obtenir un anneau.</p>
+<p>L&rsquo;élément neutre pour la multiplication est $e_\times = 1$.</p>
+<p>Vérifions que la simple distributivité de $\times$ par rapport à $+$ permet de retrouver l&rsquo;opération familière de multiplication.</p>
+<div id="preuve">
+<div id="grosseformule">
+<p>$$
+\begin{array}{rcll}
+5\times 3 &amp;=&amp; 5\times (1+1+1)&amp;\\
+&amp;=&amp;5\times 1 + 5\times 1 + 5 \times 1 \quad&amp; \text{distributivité}\\
+&amp;=&amp; 5 + 5 + 5 &amp;\text{muliplication par l&rsquo;élément neutre}\\
+&amp;=&amp; 15
+\end{array}
+$$</p>
+</div>
+</div>
+<h3 id="inverser-la-multiplication">Inverser la multiplication</h3>
+<p>On sait maintenant calculer $5+3, 3-5, 5\times 3$. Mais comment résoudre $5\times x = 15$ ? Pour isoler $x$, il faudrait pouvoir inverser la multiplication. Et que faire de l&rsquo;équation $5\times x = 2$ qui ne semble pas avoir de solution dans $\mathbb{Z}$ ?</p>
+<p>Procédons comme pour $\mathbb{N}\rightarrow\mathbb{Z}$ en ajoutant à $\mathbb{Z}$ les symétriques des éléments de $\mathbb{Z}$ vis-à-vis de la multiplication.</p>
+<p>Petite finesse : l&rsquo;élément neutre de la première opération ($e_+ = 0$) ne peut pas avoir d&rsquo;inverse (c&rsquo;est la distributivité qui l&rsquo;interdit).</p>
+<div id="preuve">
+<p>En effet, la distributivité entraîne que l&rsquo;élément neutre de la première opération $e_+=0$ soit <strong>absorbant</strong> pour la deuxième opération ($0 \times x = 0, \forall x$).</p>
+<p>Preuve :<br>
+$0+0=0$ par définition de l&rsquo;élément neutre $e_+$.<br>
+On multiplie par $x$ à gauche et à droite :<br>
+$x\times(0+0)=x\times 0$<br>
+On applique la distributivité :<br>
+$x\times 0 + x\times 0 = x\times 0$<br>
+Chaque élément possédant un symétrique pour l&rsquo;addition (un opposé), on peut soustraire $x\times 0$ de chaque côté :<br>
+$x\times 0 + x\times 0 -x\times 0 = x\times 0 -x\times 0$<br>
+Ce qui donne :<br>
+$x\times 0  = 0$</p>
+<p>La règle qui force l&rsquo;addition et la multiplication à cohabiter fait donc de $e_+$ un élément absorbant !</p>
+<p>Et que se passe-t-il si on donne un symétrique multiplicatif (un inverse) à un élément absorbant ?</p>
+<p>Soit $0^{-1}$ tel que $0^{-1}\times 0 = e_\times = 1$.<br>
+Or $0^{-1}\times 0 = 0$ puisque $0$ est absorbant.<br>
+On en conclut que $e_+=e_\times$, soit $0=1$&hellip;</p>
+<p>Or si $0=1$, <strong>l&rsquo;anneau s&rsquo;effondre</strong> sur lui-même !</p>
+<p>En effet, prenons un élément quelconque $y$ de l&rsquo;anneau.<br>
+$y=y\times 1$ puisque $1=e_\times$ est l&rsquo;élément neutre de  la multiplication.<br>
+En utilisant $1=0$ :<br>
+$y=y\times0$<br>
+Et comme $0$ est absorbant :<br>
+$y=0$<br></p>
+<p>Conclusion : si l&rsquo;élément neutre de l&rsquo;addition $0$ possède un inverse, cela force tous les éléments à être égaux à $0$. L&rsquo;ensemble se réduit à ce seul élément : $\{0\}$.</p>
+<p>Dans ce micro-univers dégénéré, $0$ est effectivement son propre inverse ($e_+=e_\times=1$).</p>
+<p>Si un anneau veut posséder plus d&rsquo;un élément, $0$ est interdit d&rsquo;inverse.</p>
+</div>
+<p>En ajoutant les symétriques des éléments de $\mathbb{Z} \backslash \{0\}$ vis-à-vis de la multiplication (les inverses), on passe de $\mathbb{Z}$ à $\mathbb{Q}$, d&rsquo;un anneau commutatif à un <strong>corps</strong>, le corps des nombres rationnels (des fractions).</p>
+<p>La présence des inverses permet maintenant de résoudre $a\times x = b$ en multipliant à gauche et à droite par l&rsquo;inverse de $a$ : $x=a^{-1}\times b$. Cette promotion au rang de corps permet de définir la nouvelle opération de <strong>division</strong> comme la multiplication par l&rsquo;inverse.</p>
+<div id="def">
+<p>Dans un <strong>corps</strong> $(\mathbb{K},+,\times)$, les deux opérations sont (presque) symétriques :</p>
+<ul>
+<li>$(\mathbb{K},+)$ forme un groupe&nbsp;;</li>
+<li>$(\mathbb{K}\backslash\{0\},\times)$ forme aussi un groupe.</li>
+</ul>
+</div>
+<br>
+<p>Résumons ce que nous a apporté la symétrisation de nos ensembles de nombres :</p>
+<div id="theo">
+<ul style="margin-top:1em;">
+<li>la symétrie par rapport à l'addition a créé les nombres négatifs ($\mathbb{N}\rightarrow\mathbb{Z}$) et a permis de définir la soustraction&nbsp;;</li>
+<li>le symétrie par rapport à la multiplication a créé les fractions ($\mathbb{Z}\rightarrow\mathbb{Q}$) et a permis de définir la division.</li>
+</ul>
+</div>
+<h2 id="boucher-les-trous">Boucher les trous</h2>
+<p>Tout est maintenant joliment symétrique. Pourquoi aller plus loin ? À cause des trous&hellip;</p>
+<p>Les nombres rationnels $\mathbb{Q}$ semblent occuper tout l&rsquo;espace en formant une droite de $-\infty$ à $+\infty$, puisqu&rsquo;entre deux fractions, aussi proches soient-elles, on peut toujours en trouver une troisième. Et pourtant, la droite de $\mathbb{Q}$ est en réalité une dentelle.</p>
+<p>Les pythagoriciens, déjà, avaient démontré qu&rsquo;en prenant un carré de côté $1$ et en reportant au compas la diagonale du carré sur la droite des nombres, on tombe sur un point qu&rsquo;aucune fraction ne peut exprimer, un point <strong>irrationnel</strong> (n&rsquo;appartenant pas à $\mathbb{Q}$) !</p>
+<p>On dit que $\mathbb{Q}$ n&rsquo;est pas <strong>complet</strong>.</p>
 
 
 <footer class="footline">
@@ -2485,16 +2645,16 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1781191650"></script>
-    <script src="/js/perfect-scrollbar.min.js?1781191650"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1781191650"></script>
-    <script src="/js/jquery.sticky.js?1781191650"></script>
-    <script src="/js/featherlight.min.js?1781191650"></script>
-    <script src="/js/highlight.pack.js?1781191650"></script>
+    <script src="/js/clipboard.min.js?1781351745"></script>
+    <script src="/js/perfect-scrollbar.min.js?1781351745"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1781351745"></script>
+    <script src="/js/jquery.sticky.js?1781351745"></script>
+    <script src="/js/featherlight.min.js?1781351745"></script>
+    <script src="/js/highlight.pack.js?1781351745"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1781191650"></script>
-    <script src="/js/learn.js?1781191650"></script>
-    <script src="/js/hugo-learn.js?1781191650"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1781351745"></script>
+    <script src="/js/learn.js?1781351745"></script>
+    <script src="/js/hugo-learn.js?1781351745"></script>
     
     
 
