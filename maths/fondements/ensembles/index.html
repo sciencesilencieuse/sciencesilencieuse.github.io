@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1781368707" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1781368707" rel="stylesheet">
-    <link href="/css/hybrid.css?1781368707" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1781368707" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1781368707" rel="stylesheet">
-    <link href="/css/auto-complete.css?1781368707" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1781368707" rel="stylesheet">
-    <link href="/css/theme.css?1781368707" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1781368707" rel="stylesheet">
+    <link href="/css/nucleus.css?1781369726" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1781369726" rel="stylesheet">
+    <link href="/css/hybrid.css?1781369726" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1781369726" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1781369726" rel="stylesheet">
+    <link href="/css/auto-complete.css?1781369726" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1781369726" rel="stylesheet">
+    <link href="/css/theme.css?1781369726" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1781369726" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1781368707" rel="stylesheet">
+    <link href="/css/theme-blue.css?1781369726" rel="stylesheet">
     
-    <link href="/css/foo.css?1781368707" rel="stylesheet"><link href="/css/bar.css?1781368707" rel="stylesheet">
+    <link href="/css/foo.css?1781369726" rel="stylesheet"><link href="/css/bar.css?1781369726" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1781368707"></script>
+    <script src="/js/jquery-3.3.1.min.js?1781369726"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1781368707"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1781368707"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1781369726"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1781369726"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1781368707"></script>
+<script type="text/javascript" src="/js/search.js?1781369726"></script>
 
     
   </div>
@@ -1592,7 +1592,7 @@ Leopold Kronecker</p>
 x&rsquo;\star x = x\star x&rsquo;=e_\star
 $$</p>
 </div>
-<p>Pour l&rsquo;addition, on a bien un élément neutre ($0$, puisque pour tout $x$, $x+0=0+x=x$), mais pas d&rsquo;inverse&hellip; Du moins, dans $\mathbb{N}$. L&rsquo;idée est alors de symétriser $\mathbb{N}$ en lui ajoutant les symétriques de ses éléments vis à vis de l&rsquo;addition, notés $x&rsquo;=-x$ (tels que $x+(-x)=(-x)+x=0$). On obtient ainsi les entiers relatifs $\mathbb{Z} = \{\ldots,-2,-1,0,1,2,\ldots\}$.</p>
+<p>Pour l&rsquo;addition, on a bien un élément neutre ($0$, puisque pour tout $x$, $x+0=0+x=x$), mais pas de symétriques&hellip; Du moins, dans $\mathbb{N}$. L&rsquo;idée est alors d&rsquo;augmenter $\mathbb{N}$ de tous les symétriques de ses éléments vis à vis de l&rsquo;addition, notés $x&rsquo;:= -x$ (tels que $x+(-x)=(-x)+x=0$). On obtient ainsi les entiers relatifs $\mathbb{Z} = \{\ldots,-2,-1,0,1,2,\ldots\}$.</p>
 <p>Dans $\mathbb{Z}$, on peut maintenant définir l&rsquo;opération inverse de l&rsquo;addition, la <strong>soustraction</strong>, comme l&rsquo;addition de l&rsquo;opposé d&rsquo;un nombre ($a-b = a + (-b)$). Et maintenant, $5+x=2$ a bien une solution puisque $x=2-5 = 2+(-5)=-3 \in\mathbb{Z}$.</p>
 <p>Sa parfaite symétrie élève $\mathbb{Z}$  au rang de <strong>groupe</strong>.</p>
 <div id="def">
@@ -1607,15 +1607,15 @@ $$</p>
 De plus, comme $a+b=b+a$ pour tous les éléments $a$ et $b$ de $\mathbb{Z}$, $(\mathbb{Z},+)$ est un <strong>groupe commutatif</strong>.</p>
 <h3 id="du-groupe-à-lanneau">Du groupe à l&rsquo;anneau</h3>
 <p>On peut continuer à enrichir notre structure en ajoutant une seconde opération, la <strong>multiplication</strong> $\times$. Si l&rsquo;addition permet de translater, la multiplication permet, elle, de dilater.</p>
-<p>Pour que les deux opérations s&rsquo;entendent, on rend la multiplication <strong>distributive</strong> sur l&rsquo;addition. On obtient alors l&rsquo;anneau $(\mathbb{Z},+,\times)$.</p>
+<p>Pour que les deux opérations s&rsquo;entendent, il faut une règle de bonne conduite : la <strong>distributivité</strong>.</p>
 <div id="def">
-<p>Pour que $(\mathbb{A},\star_1,\star_2)$ soit un <strong>anneau commutatif</strong>, il faut que :</p>
+<p>$(\mathbb{A},\star_1,\star_2)$ est un <strong>anneau commutatif</strong> si :</p>
 <ul>
-<li>$(\mathbb{A},\star_1)$ soit un groupe commutatif&nbsp;;</li>
-<li>$\star_2$ soit distributive sur $\star_1$&nbsp;: $a\star_2(b\star_1 c) = a\star_2 b \star_1 a\star_2 c$ </li>
+<li>$(\mathbb{A},\star_1)$ est un groupe commutatif&nbsp;;</li>
+<li>$\star_2$ est distributive sur $\star_1$&nbsp;: $a\star_2(b\star_1 c) = a\star_2 b \star_1 a\star_2 c$ </li>
 </ul>
 </div>
-<p>Dans le cas de $(\mathbb{Z},+,\times)$, $(\mathbb{Z},+)$ est bien un groupe commutatif. Il suffit donc d&rsquo;imposer que la multiplication soit distributive par rapport à l&rsquo;addition pour obtenir un anneau.</p>
+<p>Dans le cas de $(\mathbb{Z},+,\times)$, $(\mathbb{Z},+)$ est bien un groupe commutatif. Il suffit donc d&rsquo;imposer que la multiplication soit distributive par rapport à l&rsquo;addition pour obtenir un anneau commutatif.</p>
 <p>L&rsquo;élément neutre pour la multiplication est $e_\times = 1$.</p>
 <p>Vérifions que la simple distributivité de $\times$ par rapport à $+$ permet de retrouver l&rsquo;opération familière de multiplication.</p>
 <div id="preuve">
@@ -1662,7 +1662,7 @@ $y=0$<br></p>
 <p>Dans ce micro-univers dégénéré, $0$ est effectivement son propre inverse ($e_+=e_\times=1$).</p>
 <p>Si un anneau veut posséder plus d&rsquo;un élément, $0$ est interdit d&rsquo;inverse.</p>
 </div>
-<p>En ajoutant les symétriques des éléments de $\mathbb{Z} \backslash \{0\}$ vis-à-vis de la multiplication (les inverses), on passe de $\mathbb{Z}$ à $\mathbb{Q}$, d&rsquo;un anneau commutatif à un <strong>corps</strong>, le corps des nombres rationnels (des fractions).</p>
+<p>En ajoutant les symétriques des éléments de $\mathbb{Z} \backslash \{0\}$ vis-à-vis de la multiplication (les inverses), on passe de $\mathbb{Z}$ à $\mathbb{Q}$, d&rsquo;un anneau commutatif à un <strong>corps</strong>, le corps des nombres rationnels (les fractions).</p>
 <p>La présence des inverses permet maintenant de résoudre $a\times x = b$ en multipliant à gauche et à droite par l&rsquo;inverse de $a$ : $x=a^{-1}\times b$. Cette promotion au rang de corps permet de définir la nouvelle opération de <strong>division</strong> comme la multiplication par l&rsquo;inverse.</p>
 <div id="def">
 <p>Dans un <strong>corps</strong> $(\mathbb{K},+,\times)$, les deux opérations sont (presque) symétriques :</p>
@@ -2645,16 +2645,16 @@ $y=0$<br></p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1781368707"></script>
-    <script src="/js/perfect-scrollbar.min.js?1781368707"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1781368707"></script>
-    <script src="/js/jquery.sticky.js?1781368707"></script>
-    <script src="/js/featherlight.min.js?1781368707"></script>
-    <script src="/js/highlight.pack.js?1781368707"></script>
+    <script src="/js/clipboard.min.js?1781369726"></script>
+    <script src="/js/perfect-scrollbar.min.js?1781369726"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1781369726"></script>
+    <script src="/js/jquery.sticky.js?1781369726"></script>
+    <script src="/js/featherlight.min.js?1781369726"></script>
+    <script src="/js/highlight.pack.js?1781369726"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1781368707"></script>
-    <script src="/js/learn.js?1781368707"></script>
-    <script src="/js/hugo-learn.js?1781368707"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1781369726"></script>
+    <script src="/js/learn.js?1781369726"></script>
+    <script src="/js/hugo-learn.js?1781369726"></script>
     
     
 
