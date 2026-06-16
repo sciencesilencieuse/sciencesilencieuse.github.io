@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1781648041" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1781648041" rel="stylesheet">
-    <link href="/css/hybrid.css?1781648041" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1781648041" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1781648041" rel="stylesheet">
-    <link href="/css/auto-complete.css?1781648041" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1781648041" rel="stylesheet">
-    <link href="/css/theme.css?1781648041" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1781648041" rel="stylesheet">
+    <link href="/css/nucleus.css?1781649347" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1781649347" rel="stylesheet">
+    <link href="/css/hybrid.css?1781649347" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1781649347" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1781649347" rel="stylesheet">
+    <link href="/css/auto-complete.css?1781649347" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1781649347" rel="stylesheet">
+    <link href="/css/theme.css?1781649347" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1781649347" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1781648041" rel="stylesheet">
+    <link href="/css/theme-blue.css?1781649347" rel="stylesheet">
     
-    <link href="/css/foo.css?1781648041" rel="stylesheet"><link href="/css/bar.css?1781648041" rel="stylesheet">
+    <link href="/css/foo.css?1781649347" rel="stylesheet"><link href="/css/bar.css?1781649347" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1781648041"></script>
+    <script src="/js/jquery-3.3.1.min.js?1781649347"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1781648041"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1781648041"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1781649347"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1781649347"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1781648041"></script>
+<script type="text/javascript" src="/js/search.js?1781649347"></script>
 
     
   </div>
@@ -1497,7 +1497,12 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
         <li><a href="#cantor-et-les-suites-de-cauchy">Cantor et les suites de Cauchy</a></li>
       </ul>
     </li>
-    <li><a href="#et-mathbbc-alors">Et $\mathbb{C}$ alors ?</a></li>
+    <li><a href="#et-mathbbc-alors">Et $\mathbb{C}$ alors ?</a>
+      <ul>
+        <li><a href="#prix-à-payer">Prix à payer</a></li>
+        <li><a href="#bon-retour-sur-investissement">Bon retour sur investissement</a></li>
+      </ul>
+    </li>
     <li><a href="#et-après">Et après ?</a></li>
   </ul>
 </nav>
@@ -2051,7 +2056,7 @@ $$</p>
 <p>Avec $\mathbb{R}$, on a obtenu un corps topologiquement complet. Et on peut même montré qu&rsquo;il s&rsquo;agit du <strong>seul</strong> corps ordonné complet (intuitivement, il n&rsquo;y a qu&rsquo;une seule droite des réels).<br>
 Mais $\mathbb{R}$ n&rsquo;est pas algébriquement clos dans le sens où certaines équations polynomiales n&rsquo;y ont pas de solution comme $x^2+1=0$.</p>
 <p>On construit alors $\mathbb{C}$ comme clôture algébrique de $\mathbb{R}$ en faisant en sorte que n&rsquo;importe quel polynôme ait des racines.</p>
-<p>Les mathématiciens utilisaient déjà $i=\sqrt{-1}$ depuis le 16<sup>e</sup> siècle pour d&rsquo;obtenir les racines de ces polynômes récalcitrants. Mais $\mathrm{i}$ était alors plus une astuce de calcul qu&rsquo;autre chose. Il fallut attendre la mathématicien irlandais Hamilton pour qu&rsquo;une construction entièrement basée sur $\mathbb{R}$ permette de se passer du parachutage d&rsquo;un nombre magique.</p>
+<p>Les mathématiciens utilisaient déjà $i=\sqrt{-1}$ depuis le 16<sup>e</sup> siècle pour d&rsquo;obtenir les racines de ces polynômes récalcitrants. Mais $i$ était alors plus vu comme une astuce de calcul qu&rsquo;un nombre à part entière. Il fallut attendre la mathématicien irlandais Hamilton pour qu&rsquo;une construction entièrement basée sur $\mathbb{R}$ permette de se passer du parachutage d&rsquo;un nombre magique.</p>
 <p>Hamilton propose de changer de dimension !</p>
 <div id="def">
 <p>L&rsquo;<strong>ensemble des nombres complexes</strong> $\mathbb{C}$ est défini comme l&rsquo;ensemble des couples de nombres réels $\mathbb{R}^2 = {(a, b) \mid a \in \mathbb{R}, b \in \mathbb{R}}$ , muni de deux lois de composition interne définies ainsi pour tous couples $(a,b)$ et $(c,d)$ :</p>
@@ -2091,13 +2096,13 @@ Mais $\mathbb{R}$ n&rsquo;est pas algébriquement clos dans le sens où certaine
 <div id="def">
 <p>$$i := (0, 1)$$</p>
 </div>
-<br>
+<p>On a bien ainsi :</p>
 <div id="theo">
 <p>$$i^2 = -1$$</p>
 </div>
 <br>
 <div id="preuve">
-<p>Calculons le carré de ce couple avec notre loi de multiplication :</p>
+<p>Calculons le carré du couple $(0,1)$ avec notre loi de multiplication :</p>
 <p>$$i^2 = (0, 1) \times (0, 1) = (0\times0 - 1\times1, 0\times1 + 1\times0) = (-1, 0)$$</p>
 <p>Or, d&rsquo;après notre convention précédente, le couple $(-1, 0)$ est identifié au nombre réel $-1$.</p>
 </div>
@@ -2113,14 +2118,20 @@ Grâce aux règles que nous venons de définir, nous pouvons le décomposer alg�
 <p>$$(a, b) \equiv a + ib$$</p>
 </div>
 <p>La boucle est bouclée. Le monstre abstrait $i$ n&rsquo;est rien d&rsquo;autre que le vecteur unitaire de l&rsquo;axe des ordonnées.</p>
-<p>En passant de $\mathbb{Q}$ à $\mathbb{R}$, on n&rsquo;avait rien perdu (on avait gardé le corps, gardé l&rsquo;ordre et gagné la complétude). Par contre, l&rsquo;extension de $\mathbb{R}$ à $\mathbb{C}$ a un coût élevé : on perd la notion d&rsquo;ordre ! Dans le plan complexe, on ne peut pas classer les nombres de manière absolue. Est-ce que $i$ est plus grand que $1$ ? Plus grand que $0$ ? Ça n&rsquo;a pas de sens. $\mathbb{C}$ n&rsquo;est pas un corps ordonné.</p>
+<h3 id="prix-à-payer">Prix à payer</h3>
+<p>En passant de $\mathbb{Q}$ à $\mathbb{R}$, on n&rsquo;avait rien perdu, au contraire : on avait gardé le corps, gardé l&rsquo;ordre et gagné la complétude.<br>
+Par contre, l&rsquo;extension de $\mathbb{R}$ à $\mathbb{C}$ a un coût élevé : on perd la notion d&rsquo;ordre !<br>
+Dans le plan complexe, on ne peut pas classer les nombres de manière absolue. Est-ce que $i$ est plus grand que $1$ ? Plus grand que $0$ ? Ça n&rsquo;a pas de sens. $\mathbb{C}$ n&rsquo;est pas un corps ordonné.</p>
 <div id="preuve">
 <p>On peut démontrer très facilement par l&rsquo;absurde que le corps $\mathbb{C}$ refuse les axiomes de compatibilité <a href="#compat">vus plus haut</a>.</p>
 <p>Dans tout corps ordonné, le carré d&rsquo;un nombre non nul est toujours strictement positif (conséquence directe du deuxième axiome).<br>
 Or, dans $\mathbb{C}$, on a $i \neq 0$ et $i^2 = -1$.<br>
-Si $\mathbb{C}$ était un corps ordonné, on aurait donc $-1 &gt; 0$.<br>
-En ajoutant $1$ des deux côtés, on obtiendrait (premier axiome) $0 &gt; 1$.</p>
+Si $\mathbb{C}$ était un corps ordonné, on aurait donc $-1 &gt; 0$. Pourquoi pas&hellip;<br>
+En ajoutant $1$ des deux côtés, on obtiendrait (premier axiome) $0 &gt; 1$.<br>
+Et comme $-1$ est ici positif, le multiplier par lui-même ne doit pas changer le sens de l&rsquo;inégalité : $(-1)\times(-1)&gt;0\times (-1)$. Ce qui donne : $1&gt;0$.<br>
+Nous voilà devant une belle contradiction.</p>
 </div>
+<h3 id="bon-retour-sur-investissement">Bon retour sur investissement</h3>
 <p>Pourquoi s&rsquo;arrête-t-on à $\mathbb{C}$ ? Pourquoi n&rsquo;a-t-on pas besoin d&rsquo;inventer $\mathbb{D}$ pour résoudre des équations complexes bizarres, puis $\mathbb{E}$, etc. ?</p>
 <p>C&rsquo;est là qu&rsquo;intervient le <strong>théorème de d&rsquo;Alembert-Gauss</strong> (ou théorème fondamental de l&rsquo;algèbre) :</p>
 <div id="theo">
@@ -3110,16 +3121,16 @@ Et on montre que $A_x \subset A_0$ grâce à l&rsquo;absence de maximum dans $A_
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1781648041"></script>
-    <script src="/js/perfect-scrollbar.min.js?1781648041"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1781648041"></script>
-    <script src="/js/jquery.sticky.js?1781648041"></script>
-    <script src="/js/featherlight.min.js?1781648041"></script>
-    <script src="/js/highlight.pack.js?1781648041"></script>
+    <script src="/js/clipboard.min.js?1781649347"></script>
+    <script src="/js/perfect-scrollbar.min.js?1781649347"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1781649347"></script>
+    <script src="/js/jquery.sticky.js?1781649347"></script>
+    <script src="/js/featherlight.min.js?1781649347"></script>
+    <script src="/js/highlight.pack.js?1781649347"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1781648041"></script>
-    <script src="/js/learn.js?1781648041"></script>
-    <script src="/js/hugo-learn.js?1781648041"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1781649347"></script>
+    <script src="/js/learn.js?1781649347"></script>
+    <script src="/js/hugo-learn.js?1781649347"></script>
     
     
 
