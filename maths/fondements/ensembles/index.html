@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1781575971" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1781575971" rel="stylesheet">
-    <link href="/css/hybrid.css?1781575971" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1781575971" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1781575971" rel="stylesheet">
-    <link href="/css/auto-complete.css?1781575971" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1781575971" rel="stylesheet">
-    <link href="/css/theme.css?1781575971" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1781575971" rel="stylesheet">
+    <link href="/css/nucleus.css?1781577618" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1781577618" rel="stylesheet">
+    <link href="/css/hybrid.css?1781577618" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1781577618" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1781577618" rel="stylesheet">
+    <link href="/css/auto-complete.css?1781577618" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1781577618" rel="stylesheet">
+    <link href="/css/theme.css?1781577618" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1781577618" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1781575971" rel="stylesheet">
+    <link href="/css/theme-blue.css?1781577618" rel="stylesheet">
     
-    <link href="/css/foo.css?1781575971" rel="stylesheet"><link href="/css/bar.css?1781575971" rel="stylesheet">
+    <link href="/css/foo.css?1781577618" rel="stylesheet"><link href="/css/bar.css?1781577618" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1781575971"></script>
+    <script src="/js/jquery-3.3.1.min.js?1781577618"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1781575971"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1781575971"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1781577618"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1781577618"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1781575971"></script>
+<script type="text/javascript" src="/js/search.js?1781577618"></script>
 
     
   </div>
@@ -1494,7 +1494,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
         <li><a href="#le-plus-petit-majorant">Le plus petit majorant</a></li>
         <li><a href="#mathbbn-et-mathbbq-dans-mathbbr">$\mathbb{N}$ et $\mathbb{Q}$ dans $\mathbb{R}$</a></li>
         <li><a href="#les-coupures-de-dedekind">Les coupures de Dedekind</a></li>
-        <li><a href="#autre-méthode-les-suites-de-cauchy-de-cantor">Autre méthode : les suites de Cauchy de Cantor</a></li>
+        <li><a href="#cantor-et-les-suites-de-cauchy">Cantor et les suites de Cauchy</a></li>
       </ul>
     </li>
   </ul>
@@ -1784,7 +1784,7 @@ ol.liste-romaine li::marker {
 </style>
 <div id="theo">
 <p><strong>Propriété d&rsquo;Archimède</strong></p>
-<ul>
+<ul style="margin-bottom:1em;>
 <li style="list-style-type: '(i) ';">Pour tout nombre réel $x \in \mathbb{R}$, il existe un entier naturel $n \in \mathbb{N}$ tel que $n > x$.</i>
 <li style="list-style-type: '(ii) ';">Pour tout nombre réel $y > 0$, il existe un entier naturel $n \in \mathbb{N}$ tel que $\frac{1}{n} < y$.</i>
 </ul>
@@ -1949,7 +1949,27 @@ On a donc :</p>
 Conclusion : n&rsquo;importe quel autre majorant $M&rsquo;$ est obligatoirement plus grand ou égal à $S$. $S$ est bien la borne supérieure.</p>
 </div>
 <p>Avec la définition de Dedekind, la complétude de $\mathbb{R}$ découle de manière presque triviale d&rsquo;un axiome basique de la théorie des ensembles : l&rsquo;union de plusieurs &ldquo;sacs de rationnels&rdquo; fermés vers le bas donne naturellement un nouveau &ldquo;sac de rationnels&rdquo; parfaitement conforme.</p>
-<h3 id="autre-méthode-les-suites-de-cauchy-de-cantor">Autre méthode : les suites de Cauchy de Cantor</h3>
+<h3 id="cantor-et-les-suites-de-cauchy">Cantor et les suites de Cauchy</h3>
+<p>Cantor a bouché les trous des rationnels d&rsquo;une toute autre façon que Dedekind.</p>
+<p>Il a utilisé des suites de Cauchy dont l&rsquo;intérêt est de s&rsquo;assurer d&rsquo;une convergence vers une limite (un nombre) sans que ce nombre n&rsquo;ait besoin d&rsquo;être défini.</p>
+<div id="def">
+<p>Une <strong>suite</strong> $(u_n)$ est de <strong>Cauchy</strong> si, pour tout écart $\epsilon$ strictement positif (aussi petit soit-il), il existe un rang $N$ à partir duquel la distance entre deux termes quelconques $u_p$ et $u_q$ est inférieure à cet écart.</p>
+<p>Formellement, cela s&rsquo;écrit :</p>
+<p>$$\forall \epsilon &gt; 0, \exists N \in \mathbb{N}, \forall p \ge N, \forall q \ge N, |u_p - u_q| &lt; \epsilon$$</p>
+</div>
+<p>Ici, la convergence est une propriété interne à la suite (on ne mesure pas la distance entre les éléments et la limite externe $L$).</p>
+<p>Cela permet d&rsquo;avoir des suites définies dans $\mathbb{Q}$ qui convergent même si leurs cibles n&rsquo;est pas dans $\mathbb{Q}$ (la suite des approximations décimales de $\sqrt{2}$ par exemple).</p>
+<p>Et ainsi, Cantor réussit à construire les nombres irrationnels (les &ldquo;trous&rdquo;) en n&rsquo;utilisant que le matériel disponible, c&rsquo;est-à-dire les rationnels : il décrète que les irrationnels sont les suites elles-mêmes. La cible de ces suites n&rsquo;a pas d&rsquo;existence dans les rationnels, mais l&rsquo;ensemble des éléments de ces suites de Cauchy, si.</p>
+<p>Petit problème cependant, certaines suites de Cauchy peuvent converger vers le même nombre.</p>
+<div id="def">
+<p>Deux suites de Cauchy $(u_n)$ et $(v_n)$ sont dites équivalentes si la limite de leur différence tend vers $0$ :</p>
+<p>$$(u_n) \sim (v_n) \iff \lim_{n \to \infty} (u_n - v_n) = 0$$</p>
+</div>
+<p>Cantor définit alors un nombre réel comme une classe d&rsquo;équivalence de suites de Cauchy de rationnels.</p>
+<div id="def">
+<p>En appelant $\mathcal{C}$ l&rsquo;ensemble de toutes les suites de Cauchy à valeurs dans $\mathbb{Q}$, le corps des nombres réels $\mathbb{R}$ est défini comme l&rsquo;ensemble quotient :</p>
+<p>$$\mathbb{R} = \mathcal{C} / \sim$$</p>
+</div>
 
 <div class="notices note" style="--title: 'note';">
   <p style="display: none;">note</p>
@@ -2933,16 +2953,16 @@ Et on montre que $A_x \subset A_0$ grâce à l&rsquo;absence de maximum dans $A_
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1781575971"></script>
-    <script src="/js/perfect-scrollbar.min.js?1781575971"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1781575971"></script>
-    <script src="/js/jquery.sticky.js?1781575971"></script>
-    <script src="/js/featherlight.min.js?1781575971"></script>
-    <script src="/js/highlight.pack.js?1781575971"></script>
+    <script src="/js/clipboard.min.js?1781577618"></script>
+    <script src="/js/perfect-scrollbar.min.js?1781577618"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1781577618"></script>
+    <script src="/js/jquery.sticky.js?1781577618"></script>
+    <script src="/js/featherlight.min.js?1781577618"></script>
+    <script src="/js/highlight.pack.js?1781577618"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1781575971"></script>
-    <script src="/js/learn.js?1781575971"></script>
-    <script src="/js/hugo-learn.js?1781575971"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1781577618"></script>
+    <script src="/js/learn.js?1781577618"></script>
+    <script src="/js/hugo-learn.js?1781577618"></script>
     
     
 
