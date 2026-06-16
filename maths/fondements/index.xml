@@ -10,7 +10,7 @@
 		
 		
 		
-			<lastBuildDate>Tue, 16 Jun 2026 02:07:12 +0200</lastBuildDate>
+			<lastBuildDate>Tue, 16 Jun 2026 04:10:00 +0200</lastBuildDate>
 		
 			<atom:link href="https://sciencesilencieuse.github.io/maths/fondements/index.xml" rel="self" type="application/rss+xml" />
 			<item>
@@ -25,7 +25,7 @@
 				<link>https://sciencesilencieuse.github.io/maths/fondements/ensembles/</link>
 				<pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
 				<guid>https://sciencesilencieuse.github.io/maths/fondements/ensembles/</guid>
-				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA; #grosseformule &#xA;{&#xA;    overflow-x: auto; &#xA;}&#xA;#preuve&#xA;{&#xA;    background-color:#EAEAEA;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#def&#xA;{&#xA;    background-color:#DCEFFE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#theo&#xA;{&#xA;    background-color:#FBE1DE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;h2&#xA;{&#xA;color:#970E53 !important;&#xA;}&#xA;h3&#xA;{&#xA;color:#004D80 !important;&#xA;}&#xA;ul&#xA;{&#xA;margin-top:-0.5em;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h1 style=&#34;overflow-x:auto;&#34;&gt;Échaufaudage des nombres&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Dieu a crée les entiers naturels, le reste est l&amp;rsquo;œuvre de l&amp;rsquo;Homme.&lt;br&gt;&#xA;Leopold Kronecker&lt;/p&gt;</description>
+				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA; #grosseformule &#xA;{&#xA;    overflow-x: auto; &#xA;}&#xA;#preuve&#xA;{&#xA;    background-color:#EAEAEA;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#def&#xA;{&#xA;    background-color:#DCEFFE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#theo&#xA;{&#xA;    background-color:#FBE1DE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;h2&#xA;{&#xA;color:#970E53 !important;&#xA;}&#xA;h3&#xA;{&#xA;color:#004D80 !important;&#xA;}&#xA;ul&#xA;{&#xA;margin-top:-0.5em;&#xA;margin-bottom:0em;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h1 style=&#34;overflow-x:auto;&#34;&gt;Échaufaudage des nombres&lt;/h1&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Dieu a crée les entiers naturels, le reste est l&amp;rsquo;œuvre de l&amp;rsquo;Homme.&lt;br&gt;&#xA;Leopold Kronecker&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Les infinis</title>

@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1781568444" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1781568444" rel="stylesheet">
-    <link href="/css/hybrid.css?1781568444" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1781568444" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1781568444" rel="stylesheet">
-    <link href="/css/auto-complete.css?1781568444" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1781568444" rel="stylesheet">
-    <link href="/css/theme.css?1781568444" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1781568444" rel="stylesheet">
+    <link href="/css/nucleus.css?1781575971" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1781575971" rel="stylesheet">
+    <link href="/css/hybrid.css?1781575971" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1781575971" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1781575971" rel="stylesheet">
+    <link href="/css/auto-complete.css?1781575971" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1781575971" rel="stylesheet">
+    <link href="/css/theme.css?1781575971" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1781575971" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1781568444" rel="stylesheet">
+    <link href="/css/theme-blue.css?1781575971" rel="stylesheet">
     
-    <link href="/css/foo.css?1781568444" rel="stylesheet"><link href="/css/bar.css?1781568444" rel="stylesheet">
+    <link href="/css/foo.css?1781575971" rel="stylesheet"><link href="/css/bar.css?1781575971" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1781568444"></script>
+    <script src="/js/jquery-3.3.1.min.js?1781575971"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1781568444"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1781568444"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1781575971"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1781575971"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1781568444"></script>
+<script type="text/javascript" src="/js/search.js?1781575971"></script>
 
     
   </div>
@@ -1568,6 +1568,7 @@ color:#004D80 !important;
 ul
 {
 margin-top:-0.5em;
+margin-bottom:0em;
 }
 </style>
 <h1 style="overflow-x:auto;">Échaufaudage des nombres</h1>
@@ -1733,19 +1734,19 @@ On a alors : $2=\frac{p^2}{q^2}=\frac{4\times r^2}{q^2}\Leftrightarrow q^2 = 2\
 <p>On dit que $\mathbb{Q}$ n&rsquo;est pas <strong>complet</strong>.</p>
 <p>Cherchons alors à compléter $\mathbb{Q}$ pour obtenir un corps ordonné complet : l&rsquo;ensemble $\mathbb{R}$ des réels. On peut d&rsquo;ailleurs montrer qu&rsquo;un tel ensemble est unique, ce qu&rsquo;on peut intuiter en considérant qu&rsquo;un corps ordonné complet sera toujours en correspondance parfaite avec la ligne droite continue.</p>
 <h3 id="le-plus-petit-majorant">Le plus petit majorant</h3>
-<p>Pour passer de $\mathbb{Q}$ au corps ordonné des réels $\mathbb{R}$, il suffit de supposer que $\mathbb{Q}$ est contenu dans $\mathbb{R}$ et de conférer à $\mathbb{R}$ une propriété manquant cruellement à $\mathbb{Q}$ :</p>
+<p>Pour passer du corps ordonné des rationnels $\mathbb{Q}$ au corps ordonné des réels $\mathbb{R}$, il suffit de supposer que $\mathbb{Q}$ est contenu dans $\mathbb{R}$ et de conférer à $\mathbb{R}$ une propriété manquant cruellement à $\mathbb{Q}$ :</p>
 <div id="theo">
 <p><b style="color:#B51700;">Toute partie non vide majorée de $\mathbb{R}$ admet une borne supérieure (un plus petit majorant).</b></p>
 </div>
 <p>C&rsquo;est cette propriété qui bouche les trous de $\mathbb{Q}$ !</p>
-<p>Montrons d&rsquo;abord que $\mathbb{Q}$ n&rsquo;a pas cette propriété avec l&rsquo;exemple de $\sqrt{2}$.</p>
+<p>Assurons-nous d&rsquo;abord que la propriété n&rsquo;est pas valide dans $\mathbb{Q}$ avec l&rsquo;exemple de $\sqrt{2}$.</p>
 <div id="preuve">
 <p>Soit $E$ l&rsquo;ensemble des rationnels dont le carré est inférieur à 2 : $E=\{x\in\mathbb{Q}|x^2&lt;2\}$.</p>
-<p>$E$ est non vide (il contient $1$, par exemple).</p>
-<p>$E$ est majoré (tous ces éléments sont inférieurs à $1,5 par exemple).</p>
+<p>$E$ est non vide (il contient $1$, entre autres).</p>
+<p>$E$ est majoré (tous ces éléments sont inférieurs à $1,5$ par exemple).</p>
 <p>Mais y a-t-il un plus petit majorant de $E$ dans $\mathbb{Q}$ ? Non ! Comme $\sqrt{2}$ n&rsquo;appartient pas à $\mathbb{Q}$, tout ce qu&rsquo;on pourra faire, c&rsquo;est s&rsquo;en rapprocher indéfiniment ($1,5\rightarrow 1,42\rightarrow 1,415\rightarrow\ldots$).</p>
 </div>
-<p>Si on voulait encadrer $\sqrt{2}$ par des intervalles rationnels enchâssés les uns dans les autres comme des poupées russes $([1;2]$, $ [1,4;1,5]$, $[1,41;1,42]$, $\cdots)$, leur intersection infinie serait vide. À l&rsquo;inverse, grâce à l&rsquo;existence d&rsquo;un plus petit majorant, ce type d&rsquo;intersection n&rsquo;est jamais vide dans $\mathbb{R}$ comme le stipule le théorème suivant.</p>
+<p>Si on voulait encadrer $\sqrt{2}$ par des intervalles rationnels enchâssés les uns dans les autres comme des poupées russes $([1;2]$, $ [1,4;1,5]$, $[1,41;1,42]$, $\cdots)$, leur intersection infinie serait vide. À l&rsquo;inverse, grâce à l&rsquo;existence d&rsquo;un plus petit majorant, ce type d&rsquo;intersection n&rsquo;est jamais vide dans les réels comme le stipule le théorème suivant.</p>
 <div id="theo">
 <p><strong>Propriété des segments emboîtés</strong></p>
 <p>Pour tout $n \in \mathbb{N}$, on considère un intervalle fermé $I_n = [a_n, b_n] = \{x \in \mathbb{R} \mid a_n \leq x \leq b_n\}$ .
@@ -1763,7 +1764,7 @@ Alors, l&rsquo;intersection de tous ces intervalles n&rsquo;est pas vide :</p>
 Puisque $A$ est non vide et majoré, la propriété de la borne supérieure nous garantit l&rsquo;existence d&rsquo;un plus petit majorant.</p>
 <p>Soit $x := \sup(A)$ cette borne supérieure.</p>
 <p>Pour montrer que $x$ appartient à l&rsquo;intersection, il faut prouver que pour un entier $n$ quelconque, on a bien $a_n \leq x \leq b_n$.</p>
-<ul style="margin-bottom:-0.5em;">
+<ul>
 <li>$a_n \leq x$<br>
 $x$ est un majorant de l'ensemble $A$, il est donc par définition supérieur ou égal à tous les $a_n$.</li>
 <li>$x \leq b_n$<br>
@@ -1772,7 +1773,7 @@ Nous avons établi que $b_n$ majore l'ensemble $A$. Or, $x$ est défini comme é
 <p>Conclusion :
 Pour tout $n$, on a $a_n \leq x \leq b_n$. Le nombre réel $x$ appartient donc à tous les intervalles $I_n$. L&rsquo;intersection infinie contient au moins le nombre $x$, elle n&rsquo;est donc pas vide.</p>
 </div>
-<p>En décrétant que <em>toute</em> partie majorée possède obligatoirement un plus petit majorant, on force la droite numérique a fournir un nombre exact, un point, à l&rsquo;exact endroit du trou que l&rsquo;on avait dans $\mathbb{Q}$. On est maintenant garanti qu&rsquo;aucun processus d&rsquo;approximation ou d&rsquo;encadrement se terminera par un vide.</p>
+<p>En décrétant que <em>toute</em> partie majorée possède obligatoirement un plus petit majorant, on force la droite numérique a fournir un point (un nombre) à l&rsquo;exact endroit du trou que l&rsquo;on avait dans $\mathbb{Q}$. On est maintenant garanti qu&rsquo;aucun processus d&rsquo;approximation ou d&rsquo;encadrement se terminera par un vide.</p>
 <h3 id="mathbbn-et-mathbbq-dans-mathbbr">$\mathbb{N}$ et $\mathbb{Q}$ dans $\mathbb{R}$</h3>
 <p>$\mathbb{Q}$ est une extension de $\mathbb{N}$ et $\mathbb{R}$ est une extension de $\mathbb{Q}$. Voyons comment $\mathbb{N}$ et $\mathbb{Q}$ prennent place dans $\mathbb{R}$.</p>
 <p>Montrons d&rsquo;abord que $\mathbb{N}$ est une partie non majorée de $\mathbb{R}$. C&rsquo;est à nouveau l&rsquo;existence du plus petit majorant qui l&rsquo;assure.</p>
@@ -1790,7 +1791,7 @@ ol.liste-romaine li::marker {
 </div>
 <br>
 <div id="preuve">
-<ul style="margin-top:1em;margin-bottom:0em;">
+<ul style="margin-top:1em;">
 <li style="list-style-type: '(i) ';"> : on procède par l'absurde.</li>
 </ul>
 <p>Supposons qu&rsquo;il existe un nombre réel $x$ qui est plus grand que tous les entiers naturels.<br>
@@ -1803,7 +1804,7 @@ Puisque $\alpha - 1$ ne majore pas $\mathbb{N}$, il existe forcément au moins u
 <p>$$n+1&gt;\alpha$$</p>
 <p>Or $n+1$ est lui-même un entier naturel ! On vient donc de trouver un entier naturel strictement supérieur au majorant de tous les entiers. Contradiction.</p>
 <p>Conclusion : il y aura toujours un entier naturel $n$ pour dépasser n&rsquo;importe quel réel $x$.</p>
-<ul style="margin-top:1em;margin-bottom:0em;">
+<ul style="margin-top:1em;">
 <li style="list-style-type: '(ii) ';">est une conséquence de (i).</li>
 </ul>
 <p>Soit un réel $y &gt; 0$. Puisque $y$ est strictement positif, son inverse $\frac{1}{y}$ est un nombre réel bien défini.</p>
@@ -1850,8 +1851,8 @@ On trouve donc :</p>
 <p>Le nombre $r = \frac{m}{n}$ est un rationnel, et il est strictement compris entre $a$ et $b$.</p>
 </div>
 <h3 id="les-coupures-de-dedekind">Les coupures de Dedekind</h3>
-<p>Jusque-là on s&rsquo;est contenté de construire l&rsquo;ensemble des réels à partir des rationnels en ajoutant la propriété que tout ensemble non vide majoré a une borne supérieure, mais sans jamais montrer qu&rsquo;une telle extension était réellement possible.</p>
-<p>En 1872, Dedekind a montré comment construire explicitement les réels à partir des rationnels et comment la propriété centrale de l&rsquo;existence de la borne supérieure en découlait.</p>
+<p>Jusque-là, on s&rsquo;est contenté de définir l&rsquo;ensemble des réels à partir des rationnels en ajoutant la propriété que tout ensemble non vide majoré a une borne supérieure, mais sans jamais s&rsquo;assurer qu&rsquo;une telle extension était réellement possible.</p>
+<p>Le mathématicien allemand Dedekind a montré comment construire explicitement les réels à partir des rationnels et comment la propriété centrale de la borne supérieure découlait naturellement de sa construction.</p>
 <div id="def">
 <p>On appelle coupure de Dedekind une partition de l&rsquo;ensemble des rationnels $\mathbb{Q}$ en deux sous-ensembles $A$ et $B$ qui respecte les quatre conditions suivantes :</p>
 <ol>
@@ -1869,54 +1870,108 @@ On trouve donc :</p>
 </li>
 </ol>
 </div>
-<p><u>Rq</u> :  La condition 4 sert à éviter les ambiguïtés pour une coupure sur un rationnel. Pour une coupure au niveau de $3$ par exemple, on décide que $3$ va dans $B$. Ainsi, $A = \{x \in \mathbb{Q} \mid x &lt; 3\}$ n&rsquo;a pas de maximum, et $B = \{x \in \mathbb{Q} \mid x \ge 3\}$ possède un minimum ($3$).</p>
+<p><u>Rq</u> :  la condition 4 sert à éviter les ambiguïtés pour une coupure sur un rationnel. Pour une coupure au niveau de $3$ par exemple, on décide que $3$ va dans $B$. Ainsi, $A = \{x \in \mathbb{Q} \mid x &lt; 3\}$ n&rsquo;a pas de maximum, et $B = \{x \in \mathbb{Q} \mid x \ge 3\}$ possède un minimum ($3$).</p>
 <p>Une fois ces coupures définies dans $\mathbb{Q}$, on regarde le comportement de l&rsquo;ensemble $B$ (la partie droite). C&rsquo;est lui qui révèle la nature du nombre.</p>
 <ul>
-<li>Si $B$ possède un plus petit élément (un minimum) $m$ : La coupure correspond au nombre rationnel $m$. La frontière appartient à $B$.</li>
+<li>Si $B$ possède un plus petit élément (un minimum) $m$ : la coupure correspond au nombre rationnel $m$. La frontière appartient à $B$.</li>
 <li>Si $B$ ne possède pas de plus petit élément&nbsp;: ni $A$ n'a de maximum, ni $B$ n'a de minimum. Il y a un "vide" rationnel entre les deux ensembles. On décrète alors que cette coupure est un nombre irrationnel.</li>
 </ul>
+<br>
 <div id="def">
 <p>L&rsquo;ensemble des nombres réels $\mathbb{R}$ est alors défini comme l&rsquo;ensemble de toutes les coupures de Dedekind possibles.</p>
 </div>
 <p>Puisque l&rsquo;ensemble $A$ détermine entièrement l&rsquo;ensemble $B$ (car $B = \mathbb{Q} \setminus A$), on peut même définir un nombre réel $x$ comme étant simplement l&rsquo;ensemble $A_x$.</p>
-<p>Notons que $A$ est fermé vers le bas. Cela signifie que si un nombre $p$ appartient à $A$, alors tout nombre $q$ strictement inférieur à $p$ doit aussi appartenir à $A$.</p>
-<p>Montrons qu&rsquo;en définissant ainsi les rationnels, on obtient bien un corps ordonné. Pour cela, on ne peut plus utiliser nos opérations habituelles sur les nombres. Il faut redéfinir l&rsquo;addition, la multiplication et l&rsquo;ordre uniquement en termes d&rsquo;ensembles.</p>
+<p>Notons que la condition 3 revient à dire que $A$ est fermé vers le bas. En effet, si un nombre $p$ appartient à $A$, alors tout nombre $q$ strictement inférieur à $p$ doit aussi appartenir à $A$.</p>
+<p>Montrons qu&rsquo;en définissant ainsi les rationnels, on obtient bien un corps ordonné.<br>
+Pour cela, on ne peut plus utiliser nos opérations habituelles sur les nombres. Il faut redéfinir l&rsquo;addition, la multiplication et l&rsquo;ordre uniquement en termes d&rsquo;ensembles.</p>
 <div id="preuve">
 <ol start ="1" style="margin:1em 0 0 0;">
 <li>L'ordre ($≤$)</li>
 </ol>
-<p>Comment dire que $x \leq y$ quand $x$ et $y$ sont des ensembles ? Par la simple inclusion :</p>
+<p>Comment dire que $x \leq y$ quand $x$ et $y$ sont des ensembles ? Grâce à l&rsquo;inclusion :</p>
 <p>$$x \leq y \iff A_x \subseteq A_y$$</p>
-<p>Intuition : si la lame des ciseaux tombe plus à gauche pour $x$ que pour $y$, l&rsquo;ensemble de gauche de $x$ est forcément inclus dans celui de $y$. Cette définition confère immédiatement à $\mathbb{R}$ un ordre total.</p>
+<p>Intuition : si la lame des ciseaux tombe plus à gauche pour $x$ que pour $y$, l&rsquo;ensemble de gauche de $x$ est forcément inclus dans celui de $y$ (fermeture vers le bas). Cette définition confère immédiatement à $\mathbb{R}$ un ordre total.</p>
 <ol start ="2" style="margin:1em 0 0 0;">
 <li>L'addition</li>
 </ol>
 <p>Pour additionner deux réels $x$ et $y$, on additionne tous les éléments de leurs ensembles $A_x$ et $A_y$ :</p>
 <p>$$A_{x+y} := \{a + b \mid a \in A_x, b \in A_y\}$$</p>
-<p>Il faut ensuite démontrer rigoureusement que ce nouvel ensemble $A_{x+y}$ vérifie bien les propriétés d&rsquo;une coupure (non vide, pas égal à $\mathbb{Q}$, fermé vers le bas, sans maximum). Puis on prouve que cette opération est commutative, associative, et que la coupure correspondant au nombre $0$ agit bien comme élément neutre.</p>
+<p>Il faut ensuite démontrer rigoureusement que ce nouvel ensemble $A_{x+y}$ vérifie bien les propriétés d&rsquo;une coupure (non vide, pas égal à $\mathbb{Q}$, fermé vers le bas, sans maximum). Puis on prouve que cette opération est commutative, associative, et que la coupure correspondant au nombre $0$ agit bien comme élément neutre<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
 <ol start ="3" style="margin:1em 0 0 0;">
 <li>La multiplication</li>
 </ol>
 <p>C&rsquo;est la partie la plus laborieuse. On ne peut pas juste multiplier les ensembles comme on les a additionnés, à cause de la règle des signes (multiplier deux grands nombres négatifs donne un grand positif, ce qui empêche la fermeture vers le bas de la coupure).<br>
 On doit donc :</p>
-<ul style="margin-bottom:0em;">
+<ul>
 <li>Définir la multiplication uniquement pour les réels positifs (les coupures où $0 \in A$).</li>
 <li>Traiter les réels négatifs par des cas particuliers en utilisant l'opposé.</li>
 </ul>
 <p>En résumé, on ne &ldquo;démontre&rdquo; pas que $A$ a les propriétés d&rsquo;un nombre. On construit les lois $+$, $\times$ et $\leq$ sur ces ensembles pour les forcer à se comporter comme un corps.</p>
 </div>
 <p>La magie de la définition de Dedekind est qu&rsquo;elle permet de démontrer simplement la propriété clé que <strong>toute partie non vide et majorée de $\mathbb{R}$ admet une borne supérieure</strong>.</p>
+<div id="preuve">
+<p>Soit $E$ un sous-ensemble de $\mathbb{R}$, non vide et majoré.</p>
+<ul>
+<li>Chaque élément $x \in E$ est une coupure, donc un sous-ensemble $A_x \subset \mathbb{Q}$.</li>
+<li>Puisque $E$ est majoré, il existe une coupure $M$ (un réel) telle que pour tout $x \in E$, on ait $x \leq M$. En termes d'ensembles, cela signifie&nbsp;: $\forall x \in E, A_x \subseteq A_M$ .</li>
+</ul>
+<p>On cherche un bon candidat pour incarner cette borne supérieure. Puisque les réels sont des ensembles, l&rsquo;idée est de tous les unir.<br>
+On définit ainsi l&rsquo;ensemble $S$ comme la réunion de toutes les coupures appartenant à $E$ :</p>
+<p>$$S := \bigcup_{x \in E} A_x$$</p>
+<p>On procède maintenant en trois temps pour montrer que $S$ est la borne supérieure attendue.</p>
+<ol>
+<li>Prouvons que $S$ est bien un nombre réel (une coupure valide).</li>
+</ol>
+<p>Il faut vérifier les quatre propriétés de la coupure sur notre ensemble $S \subset \mathbb{Q}$ :</p>
+<ul>
+<li>Non vide&nbsp;: comme $E$ n'est pas vide, il contient au moins une coupure $A_{x_0}$. Comme cette coupure n'est pas vide, la réunion $S$ n'est pas vide.</li>
+<li>Différent de $\mathbb{Q}$&nbsp;: on sait que pour tout $x \in E$, $A_x \subseteq A_M$. Par définition de la réunion, on a donc $S \subseteq A_M$. Comme $M$ est une coupure valide, $A_M \neq \mathbb{Q}$. Donc $S \neq \mathbb{Q}$.</li>
+<li>Fermé vers le bas&nbsp;: Soit un rationnel $p \in S$. Soit $q \in \mathbb{Q}$ tel que $q < p$.
+Puisque $p \in S$, il existe par définition de la réunion au moins une coupure $A_x$ telle que $p \in A_x$. Or, $A_x$ est une vraie coupure, donc elle est fermée vers le bas&nbsp;: on a donc $q \in A_x$. Par conséquent, $q \in S$.</li>
+<li>Pas de plus grand élément : Soit $p \in S$. Il appartient à un certain $A_x$. Comme $A_x$ est une coupure, elle n'a pas de maximum, donc il existe $r \in A_x$ tel que $p < r$. Ce $r$ appartient évidemment à $S$. Donc $S$ n'a pas de maximum.</li>
+</ul>
+<p>Conclusion : l&rsquo;ensemble $S$ est bien une coupure de Dedekind. Il représente donc un nombre réel.</p>
+<ol start="2">
+<li>Prouvons que $S$ est un majorant de $E$</li>
+</ol>
+<p>Soit $x$ un élément quelconque de $E$. Par définition même de la réunion d&rsquo;ensembles, on a trivialement :</p>
+<p>$$A_x \subseteq \bigcup_{k \in E} A_k = S$$</p>
+<p>Et comme l&rsquo;inclusion traduit l&rsquo;ordre ($A_x \subseteq S \iff x \leq S$), on en déduit que $x \leq S$.
+Conclusion : $S$ majore bien l&rsquo;ensemble $E$.</p>
+<ol start="3">
+<li>Prouvons que $S$ est le plus petit des majorants</li>
+</ol>
+<p>Soit $M&rsquo;$ un autre majorant de $E$. Cela signifie que pour tout $x \in E$, $x \leq M&rsquo;$, c&rsquo;est-à-dire $A_x \subseteq A_{M&rsquo;}$.<br>
+Puisque tous les ensembles $A_x$ (pour $x \in E$) sont inclus dans $A_{M&rsquo;}$, leur réunion totale est nécessairement incluse dans $A_{M&rsquo;}$.<br>
+On a donc :</p>
+<p>$$S \subseteq A_{M&rsquo;}$$</p>
+<p>Ce qui se traduit par $S \leq M&rsquo;$.<br>
+Conclusion : n&rsquo;importe quel autre majorant $M&rsquo;$ est obligatoirement plus grand ou égal à $S$. $S$ est bien la borne supérieure.</p>
+</div>
+<p>Avec la définition de Dedekind, la complétude de $\mathbb{R}$ découle de manière presque triviale d&rsquo;un axiome basique de la théorie des ensembles : l&rsquo;union de plusieurs &ldquo;sacs de rationnels&rdquo; fermés vers le bas donne naturellement un nouveau &ldquo;sac de rationnels&rdquo; parfaitement conforme.</p>
 <h3 id="autre-méthode-les-suites-de-cauchy-de-cantor">Autre méthode : les suites de Cauchy de Cantor</h3>
 
 <div class="notices note" style="--title: 'note';">
   <p style="display: none;">note</p>
   <div class="notice-body">
-    <p>Le miracle de l&rsquo;année 1872.</p>
+    <p>C&rsquo;est exactement la même année, 1872, que Cantor publie sa construction par les classes d&rsquo;équivalence de suites, et que Richard Dedekind publie son traité (Stetigkeit und irrationale Zahlen) où il présente sa méthode par les coupures.<br>
+Les deux hommes (qui étaient amis et correspondaient beaucoup) ont résolu le problème de la nature du continu géométrique au même moment, par deux voies totalement différentes.</p>
 
   </div>
 </div>
 
 
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Esquisse de la preuve pour l&rsquo;élément neutre :<br>
+on veut montrer que $A_{x+0}=\{a+b|a\in A_x,b\in A_0\} = A_x$<br>
+Pour ça, on montre que $A_{x+0}\subset A_x$ grâce à la fermeture vers le bas : $a+b&lt;a$ (puisque tout élément de $A_0$ est strictement négatif). Et donc $a+b \in A_x$.<br>
+Et on montre que $A_x \subset A_0$ grâce à l&rsquo;absence de maximum dans $A_x$ : il y a toujours un $a&rsquo;\in A_x$ tel que $a&rsquo;&gt;a$. Et donc $a=a&rsquo;+(a-a&rsquo;)$. Comme $a-a&rsquo;&lt;0$, $(a-a&rsquo;)\in A_0$. Finalement, tout élément $a$ de $A_x$ peut s&rsquo;écrire comme un élément $a&rsquo;+(a-a&rsquo;)$ de $A_{x+0}$.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
 
 <footer class="footline">
@@ -2878,16 +2933,16 @@ On doit donc :</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1781568444"></script>
-    <script src="/js/perfect-scrollbar.min.js?1781568444"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1781568444"></script>
-    <script src="/js/jquery.sticky.js?1781568444"></script>
-    <script src="/js/featherlight.min.js?1781568444"></script>
-    <script src="/js/highlight.pack.js?1781568444"></script>
+    <script src="/js/clipboard.min.js?1781575971"></script>
+    <script src="/js/perfect-scrollbar.min.js?1781575971"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1781575971"></script>
+    <script src="/js/jquery.sticky.js?1781575971"></script>
+    <script src="/js/featherlight.min.js?1781575971"></script>
+    <script src="/js/highlight.pack.js?1781575971"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1781568444"></script>
-    <script src="/js/learn.js?1781568444"></script>
-    <script src="/js/hugo-learn.js?1781568444"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1781575971"></script>
+    <script src="/js/learn.js?1781575971"></script>
+    <script src="/js/hugo-learn.js?1781575971"></script>
     
     
 
