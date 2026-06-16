@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1781646023" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1781646023" rel="stylesheet">
-    <link href="/css/hybrid.css?1781646023" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1781646023" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1781646023" rel="stylesheet">
-    <link href="/css/auto-complete.css?1781646023" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1781646023" rel="stylesheet">
-    <link href="/css/theme.css?1781646023" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1781646023" rel="stylesheet">
+    <link href="/css/nucleus.css?1781648041" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1781648041" rel="stylesheet">
+    <link href="/css/hybrid.css?1781648041" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1781648041" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1781648041" rel="stylesheet">
+    <link href="/css/auto-complete.css?1781648041" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1781648041" rel="stylesheet">
+    <link href="/css/theme.css?1781648041" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1781648041" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1781646023" rel="stylesheet">
+    <link href="/css/theme-blue.css?1781648041" rel="stylesheet">
     
-    <link href="/css/foo.css?1781646023" rel="stylesheet"><link href="/css/bar.css?1781646023" rel="stylesheet">
+    <link href="/css/foo.css?1781648041" rel="stylesheet"><link href="/css/bar.css?1781648041" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1781646023"></script>
+    <script src="/js/jquery-3.3.1.min.js?1781648041"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1781646023"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1781646023"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1781648041"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1781648041"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1781646023"></script>
+<script type="text/javascript" src="/js/search.js?1781648041"></script>
 
     
   </div>
@@ -1742,7 +1742,7 @@ Le corps ordonné des rationnels $\mathbb{Q}$ coche jusqu&rsquo;ici toutes les c
 <h3 id="le-plus-petit-majorant">Le plus petit majorant</h3>
 <p>L&rsquo;idée pour compléter les rationnels et de lui conférer <em>la</em> propriété qui lui manque cruellement.</p>
 <p>Supposons ainsi que l&rsquo;ensemble des réels $\mathbb{R}$, l&rsquo;extension complète des rationnel (on se contente ici de supposer que cet ensemble existe, on verra plus loin comment le construire explicitement à partir de $\mathbb{Q}$) contient les rationnels (le contraire serait bizarre) et possède la propriété clé suivante :</p>
-<div id="theo">
+<div id="theo" style="border:5px solid #B51700;">
 <p><b style="color:#B51700;">Propriété de la borne supérieure :</b></p>
 <p><b style="color:#B51700;">Toute partie non vide majorée de $\mathbb{R}$ admet une borne supérieure (un plus petit majorant).</b></p>
 </div>
@@ -2040,12 +2040,14 @@ Les deux hommes (qui étaient amis et correspondaient beaucoup) ont résolu le p
 
 <h2 id="et-mathbbc-alors">Et $\mathbb{C}$ alors ?</h2>
 <p>La volonté d&rsquo;étendre les ensembles de nombres afin qu&rsquo;ils contiennent les solutions à des équations qui n&rsquo;en n&rsquo;avaient pas dans l&rsquo;ensemble de départ peut être vue comme le moteur de notre quête :</p>
-<ol style="margin:-0.5em 0 1em 0;">
-<li>$x+2=0$, $\mathbb{N}\rightarrow\mathbb{Z}$</li>
-<li>$2x=3$, $\mathbb{Z}\rightarrow\mathbb{Q}$</li>
-<li>$x^2=2$, $\mathbb{Q}\rightarrow\mathbb{R}$</li>
-<li>$x^2+1=0$, $\mathbb{R}\rightarrow\mathbb{C}$</li>
-</ol>
+<p>$$
+\begin{aligned}
+x+2=0 &amp;\Rightarrow \mathbb{N}\rightarrow\mathbb{Z}\\
+2x=3 &amp;\Rightarrow \mathbb{Z}\rightarrow\mathbb{Q}\\
+x^2=2 &amp;\Rightarrow \mathbb{Q}\rightarrow\mathbb{R}\\
+x^2+1=0 &amp;\Rightarrow \mathbb{R}\rightarrow\mathbb{C}
+\end{aligned}
+$$</p>
 <p>Avec $\mathbb{R}$, on a obtenu un corps topologiquement complet. Et on peut même montré qu&rsquo;il s&rsquo;agit du <strong>seul</strong> corps ordonné complet (intuitivement, il n&rsquo;y a qu&rsquo;une seule droite des réels).<br>
 Mais $\mathbb{R}$ n&rsquo;est pas algébriquement clos dans le sens où certaines équations polynomiales n&rsquo;y ont pas de solution comme $x^2+1=0$.</p>
 <p>On construit alors $\mathbb{C}$ comme clôture algébrique de $\mathbb{R}$ en faisant en sorte que n&rsquo;importe quel polynôme ait des racines.</p>
@@ -2074,7 +2076,7 @@ Mais $\mathbb{R}$ n&rsquo;est pas algébriquement clos dans le sens où certaine
 </div>
 <p>On peut se demander ensuite où $\mathbb{R}$ se place dans $\mathbb{C}$.</p>
 <div id="theo">
-<p>L&rsquo;ensemble $\mathbb{R}$ est l&rsquo;axe des abscisses de $\mathbb{R}^2$</p>
+<p>L&rsquo;ensemble $\mathbb{R}$ est l&rsquo;axe des abscisses de $\mathbb{R}^2$.</p>
 </div>
 <br>
 <div id="preuve">
@@ -2120,20 +2122,22 @@ Si $\mathbb{C}$ était un corps ordonné, on aurait donc $-1 &gt; 0$.<br>
 En ajoutant $1$ des deux côtés, on obtiendrait (premier axiome) $0 &gt; 1$.</p>
 </div>
 <p>Pourquoi s&rsquo;arrête-t-on à $\mathbb{C}$ ? Pourquoi n&rsquo;a-t-on pas besoin d&rsquo;inventer $\mathbb{D}$ pour résoudre des équations complexes bizarres, puis $\mathbb{E}$, etc. ?</p>
-<p>C&rsquo;est là qu&rsquo;intervient le Théorème de d&rsquo;Alembert-Gauss (ou Théorème fondamental de l&rsquo;algèbre) :</p>
+<p>C&rsquo;est là qu&rsquo;intervient le <strong>théorème de d&rsquo;Alembert-Gauss</strong> (ou théorème fondamental de l&rsquo;algèbre) :</p>
 <div id="theo">
 <p>Tout polynôme de degré $n$ (avec $n ≥ 1$) à coefficients complexes possède exactement $n$ racines dans $\mathbb{C}$ (en comptant leurs multiplicités).</p>
 </div>
-<p>Cela signifie que l&rsquo;ensemble $\mathbb{C}$ est algébriquement clos.</p>
+<p>Cela signifie que l&rsquo;ensemble <strong>$\mathbb{C}$ est algébriquement clos</strong>.</p>
 <p>Quelle que soit l&rsquo;équation polynomiale à coefficient dans $\mathbb{C}$, toutes ses solutions sont déjà dans $\mathbb{C}$.<br>
 Il n&rsquo;y a plus aucun trou algébrique. Le système s&rsquo;est refermé sur lui-même de manière parfaite.</p>
+<p>$\mathbb{R}$ et $\mathbb{C}$ représente ainsi, chacun à leur façon, un sommet, un aboutissement. On a d&rsquo;un côté l&rsquo;unique corps ordonné complet qui modélise la droite géométrique, et de l&rsquo;autre, le corps algébriquement clôt (aucun jeu avec les deux opérations à notre disposition ne permet d&rsquo;en sortir).</p>
 <h2 id="et-après">Et après ?</h2>
-<p>On peut s&rsquo;amuser à augmenter les dimensions pour inventer des systèmes de nombres encore plus grand.</p>
-<p>Hamilton a ainsi mis au point les quaternions pour transposer à 3D la modélisation des rotations planes que permettent les complexes. Puis les octonions ont été créés&hellip;</p>
-<p>Mais on perd de plus en plus de propriétés : les quaternions perdent la commutativité et les octonions perdent l&rsquo;associativité. Et si on veut aller plus loin, on perd carrément la division&hellip;</p>
-<p>D&rsquo;autres ont jouer à changer de géométrie avec par exemple les nombres $p$-adiques qui complètent les rationnels de manière analogue aux réels, mais avec une toute autre définition de la distance entre deux fractions que la valeur absolue, une distance basée sur la divisibilité par un nombre premier $p$.<br>
-On n&rsquo;obtient plus la droite réelle mais une géométrie fractale&hellip;</p>
-<p>Manipuler les infinis en les intégrant aux systèmes de nombres est encore une autre tentation avec le corps ordonné des nombres hyperréels (une extension des nombres réels où la propriété d&rsquo;Archimède ne tient plus et où la notion de limite n&rsquo;a plus d&rsquo;utilité).</p>
+<p>Rien n&rsquo;interdit pourtant d&rsquo;essayer d&rsquo;étendre encore ces ensembles ou de prendre des chemins de traverses.</p>
+<p>On peut s&rsquo;amuser par exemple à augmenter à nouveau les dimensions.<br>
+Hamilton a ainsi mis au point les <strong>quaternions</strong> pour transposer à 3D la modélisation des rotations planes que permettent les complexes. Mais pour cela, il s&rsquo;est rendu compte qu&rsquo;il avait besoin de&hellip; 4 dimensions. Puis ce fut le tour des <strong>octonions</strong>, à 8 dimensions, de voir le jour&hellip;</p>
+<p>Mais chacune de ces extensions se fait au détriment de propriétés importantes : les quaternions perdent la commutativité et les octonions perdent l&rsquo;associativité. Et si on veut aller plus loin, on perd carrément la division&hellip;</p>
+<p>D&rsquo;autres ont jouer à changer de géométrie avec les <strong>nombres $p$-adiques</strong> qui complètent les rationnels de manière analogue aux réels, mais avec une toute autre définition de la distance entre deux fractions que la valeur absolue, une distance basée sur la divisibilité par un nombre premier $p$.<br>
+On n&rsquo;obtient plus alors la droite réelle mais une géométrie fractale&hellip;</p>
+<p>Manipuler les infinis en les intégrant aux systèmes de nombres est encore une autre tentation qui a donné naissance au corps ordonné des <strong>nombres hyperréels</strong> (une extension des nombres réels où la propriété d&rsquo;Archimède ne tient plus et où la notion de limite n&rsquo;a plus d&rsquo;utilité).</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -3106,16 +3110,16 @@ Et on montre que $A_x \subset A_0$ grâce à l&rsquo;absence de maximum dans $A_
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1781646023"></script>
-    <script src="/js/perfect-scrollbar.min.js?1781646023"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1781646023"></script>
-    <script src="/js/jquery.sticky.js?1781646023"></script>
-    <script src="/js/featherlight.min.js?1781646023"></script>
-    <script src="/js/highlight.pack.js?1781646023"></script>
+    <script src="/js/clipboard.min.js?1781648041"></script>
+    <script src="/js/perfect-scrollbar.min.js?1781648041"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1781648041"></script>
+    <script src="/js/jquery.sticky.js?1781648041"></script>
+    <script src="/js/featherlight.min.js?1781648041"></script>
+    <script src="/js/highlight.pack.js?1781648041"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1781646023"></script>
-    <script src="/js/learn.js?1781646023"></script>
-    <script src="/js/hugo-learn.js?1781646023"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1781648041"></script>
+    <script src="/js/learn.js?1781648041"></script>
+    <script src="/js/hugo-learn.js?1781648041"></script>
     
     
 
