@@ -8,7 +8,7 @@
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
-    <title>Dimensions - Science en vrac</title>
+    <title>Cover - Science en vrac</title>
     
     
 
@@ -75,7 +75,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 
 	
   </head>
-  <body class="" data-url="/maths/geometrie/geo4/">
+  <body class="" data-url="/maths/proba/cover/">
     <nav id="sidebar" class="">
 
 
@@ -559,7 +559,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/maths/geometrie/" title="Géométrie" class="dd-item
-        parent
+        
         
         
         ">
@@ -610,7 +610,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/maths/proba/" title="Probabilités" class="dd-item
-        
+        parent
         
         
         ">
@@ -636,7 +636,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
  
   
     
-      <li data-nav-id="/maths/proba/cover/" title="Cover" class="dd-item ">
+      <li data-nav-id="/maths/proba/cover/" title="Cover" class="dd-item active">
         <a href="/maths/proba/cover/">
         Cover
         
@@ -1507,27 +1507,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
                   <span class="links">
                  
                  
-                   Dimensions
+                   Cover
                  
                   </span>
                 </div>
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#petite-énigme">Petite énigme</a></li>
-        <li><a href="#volume-dune-n-boule">Volume d&rsquo;une $n$-boule</a></li>
-        <li><a href="#boule-dans-boite">Boule dans boite</a></li>
-        <li><a href="#concentration-sur-les-bords">Concentration sur les bords</a></li>
-        <li><a href="#the-average-man">The &ldquo;Average man&rdquo;</a></li>
-        <li><a href="#distance-entre-les-points">Distance entre les points</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1564,136 +1551,61 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   {
     color: #006C65;
   }
+  #grosseformule 
+{
+    overflow-x: auto; 
+}
 </style>
-<h1 id="curse-of-dimensionality">Curse of dimensionality</h1>
-<p>L&rsquo;expression <em>Curse of dimensionality</em> (<em>Fléau de la dimension</em> dans sa traduction française) vient de l&rsquo;américain Richard Bellman alors qu&rsquo;il considérait des problèmes en programmation dynamique (qu&rsquo;il inventa en 1953).</p>
-<p>Mais qu&rsquo;est-ce donc que ce &ldquo;fléau&rdquo; ?</p>
-<p>Le volume d&rsquo;un cube de côté $a$ dans un espace à $n$ dimensions vaut $a^n$. Jusque là, ça va.</p>
-<p>Pour la boule, de rayon $R$, c&rsquo;est plus compliqué&hellip;</p>
-<ul>
-<li>à 1D, la boule se réduit à un segment de longueur $R$.</li>
-<li>à 2D, c&rsquo;est un disque de &ldquo;volume&rdquo; $\pi R^2$. Ce qu&rsquo;on appelle aire dans notre monde 3D est bien le volume (l&rsquo;espace contenu à l&rsquo;intérieur) d&rsquo;un monde 2D.</li>
-<li>à 3D, le volume de la boule vaut $\frac{4}{3}\pi R^3$.</li>
-</ul>
-<p>Pour des boules de rayon 1, ça nous donne les volumes suivant : $1$ à 1D, $\pi$ à 2D, $\frac{4\pi}{3}$ à 3D. Est-ce que cela continue d&rsquo;augmenter pour les dimensions supérieures ?<br>
-Aussi bizarre que cela puisse paraître, on va voir que le volume culmine en dimension 5 puis s&rsquo;effondre jusqu&rsquo;à presque s&rsquo;évanouir !</p>
-<p>La petite énigme suivante va nous familiariser avec ces bizarreries.</p>
-<br>
-<h3 id="petite-énigme">Petite énigme</h3>
-<blockquote>
-<p>On prend un $n$-cube (cube de dimension $n$) de côté $4$ et on y place à l&rsquo;intérieur autant de  $n$-boules de rayon $1$ que l&rsquo;on peut.<br>Quel sera le rayon de la plus grande $n$-boule possible que l&rsquo;on pourra placer au centre de la boite, dans l&rsquo;espace laissé libre par les autres boules ?</p>
-</blockquote>
-<p>On peut décomposer la boite en $2^n$ sous-boites de côté $2$ contenant chacune une boule de côté $1$.</p>
-<ul>
-<li>à 1D, il ne reste aucune place pour une sphère au milieu : le $1$-cube de côté $4$ est un segment de longueur $4$ dans lequel on peut placer deux $1$-boules de rayon $1$ qui sont des segments de longueur $2$.</li>
-<li>à 2D, 4 $2$-boules (disques) sont placés dans le $2$-cube (carré). Pythagore nous dit que la distance entre le centre de chaque boule et le centre de la boite vaut $\sqrt{R^2+R^2}=R\sqrt{2}$. Par conséquent, le rayon de la plus grande $2$-boule (disque) que l&rsquo;on peut placer au centre est de $R\sqrt{2}-R\Rightarrow\sqrt{2}-1$.</li>
-</ul>
-<p><img src="/dimncube.png?width=500px" alt=""></p>
-<ul>
-<li>à 3D, on place 8 $3$-boules dans le $3$-cube. On peut faire le même raisonnement qu&rsquo;à 2D pour trouver la distance entre le centre des $3$-boules et celui de la boite. C&rsquo;est toujours Pythagore qui nous aide (du moins sa généralisation à $n$ dimensions) et on obtient comme plus grand rayon possible pour la $3$-boule du milieu : $\sqrt{R^2+R^2+R^2}-R = R\sqrt{3}-R \Rightarrow \sqrt{3}-1$.</li>
-</ul>
-<p><img src="/tourneboule.gif?width=500px" alt=""></p>
-<p>On peut sans problème généraliser à $n$ dimensions. Le rayon de la sphère du milieu vaudra $\sqrt{n}-1$. Facile !</p>
-<p>Mais regardons maintenant ce que cela signifie.<br>
-À 4D, la sphère du milieu est aussi grande que les 16 autres ! À 9D, le rayon de la sphère centrale vaut 2 !!! Elle est deux fois plus grande que les 512 voisines et elle touche les parois de la boite. À partir de 10D, la boule centrale déborderait de la boite&hellip; Sorcellerie !</p>
-<br>
-<h3 id="volume-dune-n-boule">Volume d&rsquo;une $n$-boule</h3>
-<p>Le volume $V_n$ d&rsquo;une $n$-boule de rayon $R$ peut se déterminer grâce à la formule de récurrence suivante  $\displaystyle V_n(R)=\frac{2\pi R^2}{n} V_{n-2}(R)$<br>
-En prenant $V_0(R) =1$ (à partir de la formule du cube $a^n$) et $V_1(R)=2R$, on peut déterminer le volume en toute dimension.</p>
-<br>
-<details>
-<summary id="correcsum">
-<a style="color:#006C65;">Démonstration de la formule de récurrence&nbsp;:</a></summary>
-<blockquote id="correc"> 
-Le volume du $n$-boule est par définition $\displaystyle V_n(R) = \underset{x_1^2+x_2^2+\cdots+x_n^2≤R^2}{\int\cdots\int} dx_1 dx_2\cdots dx_n$.<br>
-Séparons l'intégration en deux&nbsp;:
-$\displaystyle V_n(R) = \underset{x_1^2+x_2^2≤R^2}{\iint}\left(\underset{x_3^2+\cdots+x_n^2≤R^2-x_1^2-x_2^2}{\int\cdots\int} dx_3\cdots dx_n\right)dx_1dx_2 = \underset{x_1^2+x_2^2≤R^2}{\iint}V_{n-2}\left(\sqrt{R^2-x_1^2-x_2^2}\right)dx_1dx_2$<br>
-Passons en coordonnées polaires pour les deux premières dimensions en posant $x_1 = r\cos\theta$ et $x_2 = r\sin\theta$.<br>
-On a alors $x_1^2+x_2^2=r^2$ et $dx_1dx_2 = r dr d\theta$.<br>
-$V_n(R)$ devient&nbsp;:<br>
-$\displaystyle V_n(R) = \int_0^{2\pi}\int_0^R V_{n-2}\left(\sqrt{R^2-r^2}\right)rdrd\theta$<br>
-Or par symétrie et analyse dimensionnelle $V_n(a\times R) = a^nV_n(R)$, et ici, on a $V_{n-2}\left(\sqrt{R^2-r^2}\right)=V_{n-2}\left(\left(\sqrt{1-\frac{r^2}{R^2}}\right)R\right)=\left(1-\frac{r^2}{R^2}\right)^{\frac{n-2}{2}}V_{n-2}(R)$<br>
-Finalement $V_n$ se réduit à&nbsp;:<br>
-$
-\begin{aligned}
-V_n(R) &= V_{n-2}(R)\int_0^{2\pi}\int_0^R \left(1-\frac{r^2}{R^2}\right)^{\frac{n-2}{2}}rdrd\theta\\\\
-& = 2\pi V_{n-2}(R) \int_0^R \left(1-\frac{r^2}{R^2}\right)^{\frac{n-2}{2}}rdr\\\\
-& =  2\pi V_{n-2}(R) \left[-\frac{R^2}{2}\frac{2}{n}\left(1-\frac{r^2}{R^2}\right)^{\frac{n}{2}}\right]_{r=0}^{r=R}\\\\
-& = \frac{2\pi R^2}{n} V_{n-2}(R)
-\end{aligned}
-$
-</blockquote>
-</details>
-<br>
-<p>On va ne s&rsquo;intéresser ici qu&rsquo;aux $n$-boules de rayon un. Le petit programme suivant nous permet d&rsquo;obtenir leurs volumes :</p>
-<br>
-<iframe src="https://trinket.io/embed/python/ad65489bb8" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-<p><img src="/voldim.png?width=1200px" alt=""></p>
-<p>Le volume culmine en dimension 5 puis ne fait que diminuer. Qu&rsquo;a de particulier la dimension 5 ? Pas grand chose&hellip;</p>
-<p>Regardons ce que nous dit la formule de récurrence :</p>
-<ul>
-<li>si $n$ est pair :<br>
-$\displaystyle V_n(R) = \frac{2\pi R}{n}\times\frac{2\pi R}{n-2}\times\cdots\times \frac{2\pi R}{4}\times\frac{2\pi R}{2}\times V_0(R)$, avec $V_0(R) = 1$<br>
-Donc $\displaystyle V_n(R) = \frac{2^{n/2}\pi^{n/2}R^n}{n\cdot (n-2)\cdots  4 \cdot 2} =  \frac{\pi^{n/2}R^n}{\left(\frac{n}{2}\right)!}$</li>
-<li>si $n$ est impair :<br>
-$\displaystyle V_n(R) = \frac{2\pi R}{n}\times\frac{2\pi R}{n-2}\times\cdots\times \frac{2\pi R}{3}\times\frac{2\pi R}{1}\times V_1(R)$, avec$V_1(R)=2R$<br>
-Donc $\displaystyle V_n(R) = \frac{2^{\frac{n+1}{2}}\pi^{\frac{n-1}{2}}R^n}{n\cdot (n-2)\cdots  3\cdot 1} $<br>
-L&rsquo;ensemble des deux formules peuvent se combiner en une seule utilisant la fonction gamma $\Gamma$ :<br>
-$\displaystyle V_n(R) = \frac{\pi^{\frac{n}{2}}R^n}{\Gamma\left(\frac{n}{2}+1\right)} $</li>
-</ul>
-<p>En traçant l&rsquo;évolution du volume pour différents rayons, on constate que le maximum change de dimension.</p>
-<p><img src="/dimcourbe.png?width=1000px" alt=""></p>
-<p>La présence d&rsquo;un maximum s&rsquo;explique par la course entre la tortue numérateur, à base de puissances, et le lièvre dénominateur fait de factorielles. Si les puissances peuvent démarrer plus vite, la factorielle finira toujours fatalement par dominer (dans les deux cas, on a un produit de $n$ facteurs mais pour la factorielle, la taille des facteurs augmente en fonction de $n$). Et c&rsquo;est bien ça le plus intéressant : cet évanouissement du volume de l&rsquo;hyperboule pour des grandes dimensions.</p>
-<p>Essayons de mieux comprendre son origine.</p>
-<br>
-<h3 id="boule-dans-boite">Boule dans boite</h3>
-<p>Plaçons maintenant la $n$-boule de rayon 1 dans un $n$-cube de côté 2 et calculons la proportion de volume occupé par la boule (il suffit de diviser par $2^n$ le volume de la boule).</p>
-<p><img src="/ratiodim.png?width=1000px" alt=""></p>
-<p>Le rapport des deux volumes s&rsquo;écrabouille très très vite. Il faut une échelle logarithmique pour y voir plus clair.</p>
-<p><img src="/ratiodimlog.png?width=1000px" alt=""></p>
-<p>À 11 dimensions,  la boule ne représente plus qu&rsquo;un millième du volume de la boite et c&rsquo;est environ un millionième en dimension 17, soit pas grand chose&hellip; Alors qu&rsquo;il s&rsquo;agit bien à chaque fois de la plus grande sphère possible calée dans la boite ! Si on augmentait son rayon d&rsquo;un poil, elle déborderait.</p>
-<p>Raison de cette apparente étrangeté : la différence entre le volume du cube et celui de la sphère est à chercher dans les coins !</p>
-<p><img src="/boule23.png?width=700px" alt=""></p>
-<p>Or plus la dimension augmente, plus le cube a de coins&hellip; En effet, un $n$-cube possède $2^n$ coins. Ajoutez à cela que les diagonales deviennent de plus en plus grandes ($\sqrt{n}$), et on commense à se convaincre que le volume de la sphère va vite devenir négligeable&hellip;</p>
-<br>
-<h3 id="concentration-sur-les-bords">Concentration sur les bords</h3>
-<p>En tirant des points au hasard dans un hypercube, on va vérifier que plus la dimension augmente, plus le volume se concentre sur les bords.</p>
-<p><img src="/bordsdimn.png?width=900px" alt=""></p>
-<p>Dans le petit programme suivant, on tire un million de points au hasard dans un $n$-cube de côté 1 et on calcule la proportion qui se trouve à une distance inférieure à 0,1 d&rsquo;un bord. C&rsquo;est facile, il suffit de checker si c&rsquo;est le cas pour chaque tirage correspondant à la coordonnée sur chaque axe. Dès qu&rsquo;une coordonnée est inférieure à 0,1 ou supérieure à 0,9 (on suppose ici que les coordonnées des sommets du cube sont des séquences de 0 et de 1), on compte le point.</p>
-<iframe src="https://trinket.io/embed/python/e05913ce44" width="100%" height="450" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-<br>
-<p>La raison de cette concentration devient évidente à la lecture du programme ; pour qu&rsquo;un point soit près d&rsquo;un bords, il suffit qu&rsquo;une de ses coordonnées soit près d&rsquo;un bord. Or si on augmente le nombre de dimensions, on augmente par la même le nombre de coordonnées et donc le nombre de tirages. Plus la dimension augmente moins ça devient possible qu&rsquo;aucune des coordonnées ne tombe près d&rsquo;un bord.</p>
-<p>Cela permet d&rsquo;ailleurs d&rsquo;expliquer que le volume de l&rsquo;hypersphère de rayon 1 se ratatine : ses points doivent être presque tous loin des bords. En effet, la sphère touche les bords qu&rsquo;au centre des faces or un hypercube de dimension $n$ compte seulement $2n$ faces (hypercubes de dimension $n-1$) pour $2^n$ sommets !</p>
-<br>
-<h3 id="the-average-man">The &ldquo;Average man&rdquo;</h3>
-<p>Ce résultat a une conséquence très importante en science des données : augmenter le nombre de variables descriptives revient à augmenter le nombre de dimensions et donc à renforcer dans le même mouvement la probabilité d&rsquo;obtenir des valeurs hors normes. Si ces variables décrivent différents aspects d&rsquo;un individu, on en arrive à la conclusion que l&rsquo;<strong>individu moyen n&rsquo;existe pas</strong> puisqu&rsquo;il y aura presque toujours au moins une de ces variables qui sortira des standards.</p>
-<p>L&rsquo;U.S. Air Force l&rsquo;a découvert au prix fort à la fin des années 40. Beaucoup de pilotes se crashaient (jusqu&rsquo;à 17 le même jour !), mais personne ne savait trop pourquoi&hellip; Jusqu&rsquo;à ce qu&rsquo;un jeune scientifique qui venait d&rsquo;être engagé par l&rsquo;armée, Gilbert Daniels, se résolut à mesurer tous les pilotes.</p>
-<div style="position:relative; width:500px; max-width:100%; margin-left: auto; margin-right: auto;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius:20px;">
-<img src="/pilotemoyen.png" style="border-radius:20px;">
+<h1 id="paradoxe-de-cover">Paradoxe de Cover</h1>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:600px;max-width:100%;margin-top:-1em;">
+<img src="/coverparadox.png" style="box-shadow:none;background:none;border-radius:10px;">
 </div>
-<p>Les cockpits et les casques avaient tout spécialement été dessinés pour s&rsquo;adapter parfaitement au pilote moyen&hellip; sans suspecter alors que le pilote moyen était tout à fait extraordinaire ! Ses mensurations furent obtenues au moyen d&rsquo;une large campagne statistique menée sur des milliers de jeunes hommes. Mais lorsque Daniels prit les mesures d&rsquo;un peu plus de 4000 pilotes sur 10 critères différents (circonférence de la poitrine, longueur d&rsquo;entre-jambes, etc.) et qu&rsquo;il inventoria ceux dont l&rsquo;ensemble des caractéristiques s&rsquo;étalait autour de la moyenne (à 30% près), il n&rsquo;en trouva&hellip; aucun ! Le pilote moyen n&rsquo;existe pas. Résultat, chaque pilote avait au moins un truc qui cloche par rapport au design du cockpit, ce qui rendait plus hasardeuse, semble-t-il, la maîtrise de l&rsquo;avion.</p>
-<p>Daniels reporta ses résultats <a href="https://apps.dtic.mil/sti/tr/pdf/AD0010203.pdf">dans cette étude intitulée <em>The &ldquo;Average man&rdquo;?</em></a>.
-Cela fit changer son fusil d&rsquo;épaule à l&rsquo;armée américaine qui se mit à adapter l&rsquo;avion au pilote plutôt que l&rsquo;inverse.</p>
-<br>
-<h3 id="distance-entre-les-points">Distance entre les points</h3>
-<p>Une autre bizarrerie apparaît lorsqu&rsquo;on regarde la distance séparant deux points pris au hasard dans un hypercube.</p>
-<p>Les histogrammes suivant représentent la répartition des distances obtenues entre chaque paire pour 1000 points tirés au hasard uniformément dans l&rsquo;hypercube. Les pointillés indiquent les distances minimales (0) et maximales ($\sqrt{n}$) possibles pour ces distances.</p>
-<p><img src="/distptdim.png" alt=""></p>
-<p>Encore de la magie noire : en grande dimension, la distance entre deux points est à peu près toujours la même !!</p>
-<p>Ce n&rsquo;est finalement pas si dur à intuiter. Tirer un point au hasard dans l&rsquo;hypercube de dimension $n$ revient à choisir au hasard $n$ coordonnées pour construire un vecteur $\vec{v_1}=x_1 \vec{e_1}+x_2\vec{e_2}+\cdots + x_n\vec{e_n}$. Et on fait pareil avec un 2<sup>e</sup> point : $\vec{v_2}=x_1^\prime \vec{e_1}+x^\prime_2\vec{e_2}+\cdots + x^\prime_n\vec{e_n}$.</p>
-<p><img src="/distvec.png?width=500px" alt=""></p>
-<p>Pour $n$ grand, la probabilité que ces deux vecteurs soient orthogonaux (ce qui signifie que leurs directions sont indépendantes) devient énorme. En effet, il suffit qu&rsquo;une des coordonnées soit quasiment nulle pour qu&rsquo;il y ait orthogonalité et en multipliant les tirages, ça va finir par arriver.</p>
-<p>En supposant pour simplifier que chacun des points se ballade à peu près au milieu d&rsquo;une demi-diagonale de l&rsquo;hypercube (puisqu&rsquo;il est bourré de diagonales en grande dimension), on se retrouve avec deux vecteurs orthogonaux éloignés de $\frac{\sqrt{n}}{4}$ du centre. Leur distance sera donc approximativement $\sqrt{\left(\frac{\sqrt{n}}{4}\right)^2+\left(\frac{\sqrt{n}}{4}\right)^2}=\frac{1}{2\sqrt{2}}\sqrt{n}\approx 0,35\sqrt{n}$. La distance entre deux points augmenterait ainsi comme la racine carrée du nombre de dimensions.</p>
-<p>En ajustant la courbe obtenue en traçant la distance moyenne par une fonction $a\sqrt{n}$, l&rsquo;accord est plutôt très bon ! On obtient $a=0,41$. Pour le coup, ce n&rsquo;est pas tout à fait nos $0,35$ mais pour un modèle ultra simplifié, on n&rsquo;est pas si loin&hellip;</p>
-<p><img src="/evoldistmoy.png" alt=""></p>
-<p>On constate par contre que la variabilité, incarnée par l&rsquo;écart-type, n&rsquo;est pas modifiée ! C&rsquo;est ce qui explique que la variabilité relative devient, elle, de plus en plus faible quand le nombre de dimensions augmente.</p>
-<p>La raison de cette conservation de l&rsquo;écart-type est à chercher du côté  de son évolution inversement proportionnelle à la racine carrée du nombre d&rsquo;échantillons.</p>
-<video width="800" controls style="display:block;max-width:100%;position:relative;margin-left:auto;margin-right: auto;">
-  <source src="/evolution_ecart_type.mp4" type="video/mp4">
-</video>
-<p>Or ici, le nombre d&rsquo;échantillons correspond à la dimension. Par conséquent l&rsquo;augmentation de la variabilité provoquée par l&rsquo;augmentation des distances ($\propto\sqrt{n}$) est compensée par la diminution de cette même variabilité du fait de l&rsquo;augmentation du nombre de tirages ($\propto 1/\sqrt{n}$) .</p>
-<p><img src="/suphisto.png" alt=""></p>
-<p>On comprend mieux pourquoi un algorithme comme KNN qui vise à prédire une valeur ou catégorie en regardant celle des plus proches voisins galère à grande dimension ; tous les voisins sont à peu près à la même distance&hellip;</p>
+<p>On vous présente deux papiers pliés où sont écrits deux nombres choisis aléatoirement $a$ et $b$.</p>
+<p>Vous choisissez un des deux papiers et l&rsquo;ouvrez pour découvrir le nombre $X$ (soit $a$, soit $b$). Puis on vous demande lequel des deux papiers contient le plus grand nombre.</p>
+<p>Cela semble du 50-50, et pourtant&hellip; Si vous tirez un nombre aléatoire $Z$ selon une <strong>distribution continue</strong> sur $\mathbb{R}$, vous pouvez augmenter vos chances ! Il suffit de comparer $Z$ à $X$ : si $Z&gt;X$ vous choisissez $Y$ comme plus grand nombre (l&rsquo;autre papier) et si $Z&lt;X$, vous choisissez $X$.</p>
+<p>Dans le code ci-dessous, on tire deux nombres aléatoires $a$ et $b$ selon une distribution normale centrée sur 0 et d&rsquo;écart-type 100, puis on tire au sort le nombre $X$. Petite différence par rapport à ce qui précède, on se sert d&rsquo;une fonction logistique pour &ldquo;envoyer&rdquo; $X$ entre 0 et 1 puis on le compare à un $Z$ tiré uniformément entre 0 et 1.<br>
+On voit qu&rsquo;on obtient alors un taux de succès autour de 75% !</p>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;">
+<iframe src="https://trinket.io/embed/python/03c4d9f9ffa3?toggleCode=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+</div>
+<p>Par quel miracle ?</p>
+<p>Déjà, comme $Z$ est issue d&rsquo;une loi continues, on n&rsquo;aura jamais $Z=a$ ou $Z=b$ et pour que la méthode permette de deviner correctement, il faut que :</p>
+<ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
+<li>$X=\max(a,b)$ (une chance sur deux) <b>et</b> $ Z < X $ </li>
+<li>$X=\min(a,b)$ (une chance sur deux)  <b>et</b> $ Z>X $ </li>
+</ul>
+<p>La probabilité de succès est donc :<br></p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:500px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+<img src="/democover.png" style="box-shadow:none;background:none;">
+</div>
+D'où :
+<div style="overflow-x:auto;">
+<p>$$
+\begin{aligned}
+P_\text { succ } &amp;= \frac{1}{2}P(Z&lt;\max (a, b))+\frac{1}{2}[1-P(Z&lt;\min (a, b))]\\
+&amp;=\frac{1}{2}+\frac{1}{2}[P(Z&lt;\max (a, b))-P(Z &lt; \min (a, b))]\\
+&amp;=\frac{1}{2}+\frac12\color{#970E53}P\left(\min(a,b) &lt; Z&lt;\max(a,b)\right)
+\end{aligned}
+$$</p>
+</div>
+<p>Puisque $Z$ suit une loi continue ${\color{#970E53}P\left(\min(a,b) &lt; Z&lt;\max(a,b)\right)}&gt;0$. On se retrouve donc bien avec une probabilité supérieure à $\tfrac12$.</p>
+<p>Dans une démonstration similaire (qu&rsquo;on retrouve dans <a href="https://johncarlosbaez.wordpress.com/2015/07/20/the-game-of-googol/?utm_source=chatgpt.com">cet article</a> de John Baez retraçant l&rsquo;origine du paradoxe), Greg Egan utilise une fonction $f:\mathbb{R}\rightarrow ]0,1[$ strictement croissante (si $x&lt;y$, $f(x)&lt;f(y)$)  pour ramener $X$ dans $]0,1[$. C&rsquo;est en suivant cette méthode qu&rsquo;on a utilisé dans le code la fonction logistique $f(x)=\frac{\mathrm{e}^x}{\mathrm{e}^x +1}$.<br>
+Le nombre aléatoire $Z$ est alors choisi uniformément entre $0$ et $1$ et on compare $Z$ à $f(X)$ plutôt qu&rsquo;à $X$.<br>
+Supposons $a&gt;b$.<br>La probabilité de deviner correctement devient :</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+<img src="/demoegan.png" style="box-shadow:none;background:none;">
+</div>
+On obtient ainsi&nbsp;:
+<div style="overflow-x:auto;">
+<p>$$P_\text { succ }=\frac{1}{2}+\frac{1}{2}(f(a)-f(b))&gt;\frac{1}{2}$$</p>
+</div>
+<p>En effet, $f(a)&gt;f(b)$ par croissance stricte de $f$.</p>
+<p>Les deux démonstrations sont équivalentes. Suffit de poser $f(x)=P(Z&lt;x)$ (bien strictement croissante) pour s&rsquo;en convaincre. $P_\text { succ }$ devient alors $\frac{1}{2}+\frac{1}{2}(P(Z&lt;\max(a,b))-P(Z&lt;\min(a,b))$.</p>
+<p>Dans le code ci-dessus, les nombres $a$ et $b$ sont volontairement très éloignés de 0 ($\sigma=100$). La fonction logistique donne alors soit $\approx 0$ (nombre $\ll 0$), soit $\approx 1$ (nombre $\gg 0$). Donc $f(a)-f(b)$ va donner $1$ lorsque $a$ et $b$ sont de signes différents (50% des cas) et $0$ dans les autres cas. Ça nous donne une espérance de succès de $\tfrac12+\tfrac12\tfrac12=\tfrac34$.<br></p>
+<p>En diminuant $\sigma$, on diminue le pourcentage de succès (on retrouve que l&rsquo;efficacité de la méthode est d&rsquo;autant plus grande que $Z$ a de chances d&rsquo;être entre $a$ et $b$).</p>
+<p>Si $a$, $b$ et $Z$ sont tirés uniformément dans $[0,1]$, on obtient une espérance de succès de $\tfrac23$. En effet, on a alors $P_\text { succ }(a,b)=\tfrac12 + \tfrac12|a-b|$. Or comme on l&rsquo;a vu <a href="./#densit%C3%A9-de-probabilit%C3%A9s">plus haut</a>, $\mathbb{E}[|a-b|]=\tfrac13$, donc $\mathbb{E}[P_\text{succ}(a,b)]=\tfrac12+\tfrac12\tfrac13=\tfrac23$.</p>
+<p>Cela finit par sérieusement perdre de sa magie&hellip; Si la loi d&rsquo;où est tiré $Z$ est adaptée aux valeurs de $a$ et $b$, tout va pour le mieux, mais dès que ce n&rsquo;est plus le cas, on se retrouve bêtement autour de 50%&hellip; Il suffit par exemple d&rsquo;un $\mu\gg\sigma$ dans la loi normale du code. La fonction logistique va envoyer tout le monde sur $\approx 1$ et on n&rsquo;aura quasi jamais $Z&gt;f(a)$.</p>
+<p>Certes, le hasard permet d&rsquo;augmenter ses chances, mais tant que la distribution des nombres sur les papiers et celle du nombre aléatoire tiré ne se correspondent pas, l&rsquo;avantage obtenu sera infinitésimal&hellip; Le tirage n&rsquo;apporte donc finalement aucune information importante. Celle-ci viendrait plutôt du choix adéquat de la distribution de $Z$ puisqu&rsquo;il impliquerait de connaître celle de $a$ et $b$ !</p>
 
 
 <footer class="footline">
@@ -2024,7 +1936,6 @@ Cela fit changer son fusil d&rsquo;épaule à l&rsquo;armée américaine qui se 
             
                 
                     
-                    
                 
                 
 
@@ -2066,8 +1977,6 @@ Cela fit changer son fusil d&rsquo;épaule à l&rsquo;armée américaine qui se 
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -2081,6 +1990,7 @@ Cela fit changer son fusil d&rsquo;épaule à l&rsquo;armée américaine qui se 
             
             
                 
+                    
                     
                 
                 
@@ -2100,6 +2010,9 @@ Cela fit changer son fusil d&rsquo;épaule à l&rsquo;armée américaine qui se 
             
             
                 
+                    
+                        
+                        
                     
                 
                 
