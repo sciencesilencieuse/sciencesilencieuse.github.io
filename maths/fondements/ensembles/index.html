@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1782273251" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1782273251" rel="stylesheet">
-    <link href="/css/hybrid.css?1782273251" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1782273251" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1782273251" rel="stylesheet">
-    <link href="/css/auto-complete.css?1782273251" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1782273251" rel="stylesheet">
-    <link href="/css/theme.css?1782273251" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1782273251" rel="stylesheet">
+    <link href="/css/nucleus.css?1782274561" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1782274561" rel="stylesheet">
+    <link href="/css/hybrid.css?1782274561" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1782274561" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1782274561" rel="stylesheet">
+    <link href="/css/auto-complete.css?1782274561" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1782274561" rel="stylesheet">
+    <link href="/css/theme.css?1782274561" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1782274561" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1782273251" rel="stylesheet">
+    <link href="/css/theme-blue.css?1782274561" rel="stylesheet">
     
-    <link href="/css/foo.css?1782273251" rel="stylesheet"><link href="/css/bar.css?1782273251" rel="stylesheet">
+    <link href="/css/foo.css?1782274561" rel="stylesheet"><link href="/css/bar.css?1782274561" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1782273251"></script>
+    <script src="/js/jquery-3.3.1.min.js?1782274561"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1782273251"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1782273251"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1782274561"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1782274561"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1782273251"></script>
+<script type="text/javascript" src="/js/search.js?1782274561"></script>
 
     
   </div>
@@ -1597,20 +1597,20 @@ Leopold Kronecker</p>
 <p>$$\forall (x,y)\in E^2,\quad x\star y \in E$$</p>
 </div>
 <p>L&rsquo;<strong>addition</strong> est une parfaite loi de composition interne dans $\mathbb{N}$ ; on peut additionner tous les entiers naturels que l&rsquo;on veut, on obtient toujours un entier naturel.</p>
-<p>Mais pour résoudre des équations, il faut pouvoir faire l&rsquo;opération opposée : soustraire. Si l&rsquo;équation $2+x = 5$ ne pose aucun problème puisque la solution ($3$) appartient à $\mathbb{N}$, le système s&rsquo;effondre avec l&rsquo;équation $5+x = 2$. Il est impossible de retrancher 5 à 2 en restant dans les entiers naturels : l&rsquo;équation n&rsquo;a aucune solution.</p>
+<p>Mais pour résoudre des équations, il faut pouvoir faire l&rsquo;opération opposée : soustraire. Si l&rsquo;équation $2+x = 5$ ne pose pas trop de problèmes puisque la solution appartient à $\mathbb{N}$, le système s&rsquo;effondre avec l&rsquo;équation $5+x = 2$. Il est impossible de retrancher $5$ à $2$ en restant dans les entiers naturels : l&rsquo;équation n&rsquo;a aucune solution dans $\mathbb{N}$.</p>
 <div id="def">
 <p>L&rsquo;<strong>élément neutre</strong> $e_\star$ de la loi de composition interne $\star$ est tel que l&rsquo;opération entre n&rsquo;importe quel nombre et $e_\star$ laisse le nombre inchangé.</p>
 <p>$$\forall x\in E,\quad x\star e_\star = e_\star \star x = x$$</p>
 </div>
 <br>
 <div id="def">
-<p>Le <strong>symétrique</strong> $x&rsquo;$ d&rsquo;un élément $x$ pour une opération $\star$ dotée d&rsquo;un élément neutre $e_\star$ est tel que la composition entre $x$ et $x&rsquo;$ donne l&rsquo;élément neutre :</p>
+<p>Le <strong>symétrique</strong> $x&rsquo;$ d&rsquo;un élément $x$ pour une loi de composition $\star$ dotée d&rsquo;un élément neutre $e_\star$ est tel que la composition entre $x$ et $x&rsquo;$ donne l&rsquo;élément neutre :</p>
 <p>$$
 x&rsquo;\star x = x\star x&rsquo;=e_\star
 $$</p>
 </div>
-<p>Pour l&rsquo;addition, on a bien un élément neutre ($0$, puisque pour tout $x$, $x+0=0+x=x$), mais pas de symétriques&hellip; Du moins, dans $\mathbb{N}$. L&rsquo;idée est alors d&rsquo;augmenter $\mathbb{N}$ de tous les symétriques de ses éléments vis à vis de l&rsquo;addition, notés $x&rsquo;:= -x$ (tels que $x+(-x)=(-x)+x=0$). On obtient ainsi les entiers relatifs $\mathbb{Z} = \{\ldots,-2,-1,0,1,2,\ldots\}$.</p>
-<p>Dans $\mathbb{Z}$, on peut maintenant définir l&rsquo;opération inverse de l&rsquo;addition, la <strong>soustraction</strong>, comme l&rsquo;addition de l&rsquo;opposé d&rsquo;un nombre ($a-b = a + (-b)$). Et maintenant, $5+x=2$ a bien une solution puisque $x=2-5 = 2+(-5)=-3 \in\mathbb{Z}$.</p>
+<p>Pour l&rsquo;addition, on a bien un élément neutre ($0$, puisque pour tout $x$, $x+0=0+x=x$), mais pas de symétriques&hellip; Du moins, dans $\mathbb{N}$. L&rsquo;idée est alors d&rsquo;augmenter $\mathbb{N}$ de tous les symétriques de ses éléments vis à vis de l&rsquo;addition, notés $x&rsquo;:= -x$ (tels que $x+(-x)=(-x)+x=0$) et appelés opposés. On obtient ainsi les entiers relatifs $\mathbb{Z} = \{\ldots,-2,-1,0,1,2,\ldots\}$.</p>
+<p>Dans $\mathbb{Z}$, on peut définir l&rsquo;opération inverse de l&rsquo;addition, la <strong>soustraction</strong>, comme l&rsquo;addition de l&rsquo;opposé d&rsquo;un nombre ($a-b = a + (-b)$). Et maintenant, $5+x=2$ a bien une solution puisque $x=2-5 = 2+(-5)=-3 \in\mathbb{Z}$.</p>
 <p>Sa parfaite symétrie élève $\mathbb{Z}$  au rang de <strong>groupe</strong>.</p>
 <div id="def">
 <p>Un <strong>groupe</strong> $(G,\star)$ est un ensemble $G$ muni d&rsquo;une loi de composition interne $\star$ tel que :</p>
@@ -1620,7 +1620,7 @@ $$</p>
 <li>tout élément a un symétrique.</li>
 </ul>
 </div>
-<p>Il manquait seulement la dernière condition à $(\mathbb{N},+)$, c&rsquo;est maintenant réparé.<br>
+<p>Il manquait la dernière condition à $(\mathbb{N},+)$. C&rsquo;est maintenant réparé.<br>
 De plus, comme $a+b=b+a$ pour tous les éléments $a$ et $b$ de $\mathbb{Z}$, $(\mathbb{Z},+)$ est un <strong>groupe commutatif</strong>.</p>
 <h3 id="du-groupe-à-lanneau">Du groupe à l&rsquo;anneau</h3>
 <p>On peut continuer à enrichir notre structure en ajoutant une seconde opération, la <strong>multiplication</strong> $\times$. Si l&rsquo;addition permet de translater, la multiplication permet, elle, de dilater.</p>
@@ -1679,7 +1679,7 @@ $y=0$<br></p>
 <p>Dans ce micro-univers dégénéré, $0$ est effectivement son propre inverse ($e_+=e_\times=1$).</p>
 <p>Si un anneau veut posséder plus d&rsquo;un élément, $0$ est interdit d&rsquo;inverse.</p>
 </div>
-<p>En ajoutant les symétriques des éléments de $\mathbb{Z} \backslash \{0\}$ vis-à-vis de la multiplication (les inverses), on passe de $\mathbb{Z}$ à $\mathbb{Q}$, d&rsquo;un anneau commutatif à un corps, le <strong>corps des nombres rationnels</strong> (les fractions).</p>
+<p>En ajoutant les symétriques des éléments de $\mathbb{Z} \backslash \{0\}$ vis-à-vis de la multiplication (les inverses), on passe de $\mathbb{Z}$ à $\mathbb{Q}$, d&rsquo;un anneau commutatif à un corps : le <strong>corps des nombres rationnels</strong> (les fractions).</p>
 <p>La présence des inverses permet maintenant de résoudre $a\times x = b$ en multipliant à gauche et à droite par l&rsquo;inverse de $a$ : $x=a^{-1}\times b$. Cette promotion au rang de corps permet de définir la nouvelle opération de <strong>division</strong> comme la multiplication par l&rsquo;inverse.</p>
 <div id="def">
 <p>Dans un <strong>corps</strong> $(\mathbb{K},+,\times)$, les deux opérations sont (presque) symétriques :</p>
@@ -1727,7 +1727,8 @@ si $0≤x$ et $0≤y$, alors $0≤x\times y$</li>
 </ul>
 </div>
 <h2 id="boucher-les-trous">Boucher les trous</h2>
-<p>Tout est maintenant joliment symétrique. Pourquoi aller plus loin ? À cause des trous&hellip;</p>
+<p>Tout est maintenant joliment symétrique. Pourquoi aller plus loin ?<br>
+À cause des trous&hellip;</p>
 <p>Entre deux fractions, aussi proches soient-elles, on peut toujours en trouver une troisième. Les nombres rationnels $\mathbb{Q}$ semblent donc occuper tout l&rsquo;espace en formant une droite de $-\infty$ à $+\infty$. Et pourtant, la droite de $\mathbb{Q}$ est en réalité une dentelle.</p>
 <p>Les pythagoriciens, déjà, avaient démontré qu&rsquo;en prenant un carré de côté $1$ et en reportant au compas la diagonale du carré sur la droite des nombres, on tombe sur un point qu&rsquo;aucune fraction ne peut exprimer, un point <strong>irrationnel</strong> (n&rsquo;appartenant pas à $\mathbb{Q}$) !</p>
 <div id="preuve">
@@ -1752,7 +1753,7 @@ Le corps ordonné des rationnels $\mathbb{Q}$ coche jusqu&rsquo;ici toutes les c
 <p><b style="color:#B51700;">Toute partie non vide majorée de $\mathbb{R}$ admet une borne supérieure (un plus petit majorant).</b></p>
 </div>
 <p>Cela suffit pour boucher les trous de $\mathbb{Q}$ (ne pas se tromper de préposition) !</p>
-<p>Assurons-nous d&rsquo;abord que cette borne supérieure n&rsquo;est pas toujours présente dans $\mathbb{Q}$. Pour cela, utilisons à nouveau l&rsquo;exemple fil rouge historique de $\sqrt{2}$.</p>
+<p>Assurons-nous d&rsquo;abord que cette borne supérieure est bien parfois absente de $\mathbb{Q}$. Pour cela, utilisons à nouveau notre exemple fil-rouge historique : $\sqrt{2}$.</p>
 <div id="preuve">
 <p>Soit $E$ l&rsquo;ensemble des rationnels dont le carré est inférieur à $2$ : $E=\{x\in\mathbb{Q}|x^2&lt;2\}$.</p>
 <ul>
@@ -3132,16 +3133,16 @@ Et on montre que $A_x \subset A_0$ grâce à l&rsquo;absence de maximum dans $A_
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1782273251"></script>
-    <script src="/js/perfect-scrollbar.min.js?1782273251"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1782273251"></script>
-    <script src="/js/jquery.sticky.js?1782273251"></script>
-    <script src="/js/featherlight.min.js?1782273251"></script>
-    <script src="/js/highlight.pack.js?1782273251"></script>
+    <script src="/js/clipboard.min.js?1782274561"></script>
+    <script src="/js/perfect-scrollbar.min.js?1782274561"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1782274561"></script>
+    <script src="/js/jquery.sticky.js?1782274561"></script>
+    <script src="/js/featherlight.min.js?1782274561"></script>
+    <script src="/js/highlight.pack.js?1782274561"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1782273251"></script>
-    <script src="/js/learn.js?1782273251"></script>
-    <script src="/js/hugo-learn.js?1782273251"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1782274561"></script>
+    <script src="/js/learn.js?1782274561"></script>
+    <script src="/js/hugo-learn.js?1782274561"></script>
     
     
 
