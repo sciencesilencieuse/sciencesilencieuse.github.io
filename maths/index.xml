@@ -14,13 +14,6 @@
 		
 			<atom:link href="https://sciencesilencieuse.github.io/maths/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Arithmétique</title>
-				<link>https://sciencesilencieuse.github.io/maths/arithmetique/</link>
-				<pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-				<guid>https://sciencesilencieuse.github.io/maths/arithmetique/</guid>
-				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;arithmétique-et-théorie-des-nombres&#34;&gt;Arithmétique et théorie des nombres :&lt;/h1&gt;&#xA;&lt;h2 id=&#34;numération&#34;&gt;Numération&lt;/h2&gt;&#xA;&lt;p&gt;Le système décimale nous est si familier qu&amp;rsquo;il nous paraît incongru de compter autrement. Et pourtant, bien d&amp;rsquo;autres systèmes sont ou ont été utilisés :&lt;/p&gt;&#xA;&lt;ul style=&#34;margin-top:-0.2em; margin-bottom:-0.5em;&#34;&gt;&#xA;&lt;li&gt;système binaire (base 2) utilisé dans des langues d&#39;Amérique du Sud et d&#39;Océanie, et utilisé de nos jours en informatique.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;système quinaire (base 5) dont il reste des traces jusqu&amp;rsquo;au xx&lt;sup&gt;e&lt;/sup&gt; siècle dans des langues africaines, mais aussi, partiellement, dans les notations tchouvache, suzhou, romaine et maya. Le nom des chiffres 6, 7, 8 et 9 dans de nombreuses langues témoignent de ce système quinaire : ils se disent 5+1, 5+2, 5+3 et 5+4 en wolof (langue de la famille nigéro-congolaise), en khmer (langue austro-asiatique), en nahuatl (langue uto-aztèque), et, dans de nombreuses langues austronésiennes telles qu&amp;rsquo;en lote ou en ngadha (sous forme partielle). La base quinaire apparait parfois comme base auxiliaire ou sous-base de la base décimale, comme dans le système romain, ou de la base vigésimale.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://sciencesilencieuse.github.io/romain.png?width=600px&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
-			</item>
-			<item>
 				<title>Analyse en composantes principales</title>
 				<link>https://sciencesilencieuse.github.io/maths/pca/</link>
 				<pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>

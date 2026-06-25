@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Arithmétique on Science en vrac</title>
+		<link>https://sciencesilencieuse.github.io/maths/arithmetique/</link>
+		<description>Recent content in Arithmétique on Science en vrac</description>
+		<generator>Hugo</generator>
+		<language>fr</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 25 Jun 2026 20:02:10 +0200</lastBuildDate>
+		
+			<atom:link href="https://sciencesilencieuse.github.io/maths/arithmetique/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Numération</title>
+				<link>https://sciencesilencieuse.github.io/maths/arithmetique/numeration/</link>
+				<pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+				<guid>https://sciencesilencieuse.github.io/maths/arithmetique/numeration/</guid>
+				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;numération&#34;&gt;Numération&lt;/h1&gt;&#xA;&lt;p&gt;Le système décimale nous est si familier qu&amp;rsquo;il nous paraît incongru de compter autrement. Et pourtant, bien d&amp;rsquo;autres systèmes sont ou ont été utilisés :&lt;/p&gt;&#xA;&lt;ul style=&#34;margin-top:-0.2em; margin-bottom:-0.5em;&#34;&gt;&#xA;&lt;li&gt;système binaire (base 2) utilisé dans des langues d&#39;Amérique du Sud et d&#39;Océanie, et utilisé de nos jours en informatique.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;système quinaire (base 5) dont il reste des traces jusqu&amp;rsquo;au xx&lt;sup&gt;e&lt;/sup&gt; siècle dans des langues africaines, mais aussi, partiellement, dans les notations tchouvache, suzhou, romaine et maya. Le nom des chiffres 6, 7, 8 et 9 dans de nombreuses langues témoignent de ce système quinaire : ils se disent 5+1, 5+2, 5+3 et 5+4 en wolof (langue de la famille nigéro-congolaise), en khmer (langue austro-asiatique), en nahuatl (langue uto-aztèque), et, dans de nombreuses langues austronésiennes telles qu&amp;rsquo;en lote ou en ngadha (sous forme partielle). La base quinaire apparait parfois comme base auxiliaire ou sous-base de la base décimale, comme dans le système romain, ou de la base vigésimale.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://sciencesilencieuse.github.io/romain.png?width=600px&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Nombres particuliers</title>
+				<link>https://sciencesilencieuse.github.io/maths/arithmetique/nombresapart/</link>
+				<pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+				<guid>https://sciencesilencieuse.github.io/maths/arithmetique/nombresapart/</guid>
+				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;nombres-particuliers&#34;&gt;Nombres particuliers&lt;/h1&gt;&#xA;&lt;h2 id=&#34;divisibilité-et-nombres-premiers&#34;&gt;Divisibilité et nombres premiers&lt;/h2&gt;&#xA;&lt;p&gt;Les nombres premiers sont en quelque sorte les atomes des nombres, les objets primordiaux.&lt;/p&gt;&#xA;&lt;div style=&#34;position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);&#34;&gt;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;&#x9;&#x9;&#x9;&lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/bpvzvnsjjDE?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;&#x9;&#x9;&lt;/div&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&lt;br&gt;&#xA;&lt;div style=&#34;position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);&#34;&gt;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;&#x9;&#x9;&#x9;&lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/IOGpTFJduaA?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;&#x9;&#x9;&lt;/div&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&lt;h2 id=&#34;algorithme-deuclide&#34;&gt;Algorithme d&amp;rsquo;Euclide&lt;/h2&gt;&#xA;&lt;p&gt;Un des plus anciens algorithmes connus. Sa formulation est simplissime comme le montre le code python ci-dessous mais sa puissance est redoutable.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Complexes</title>
+				<link>https://sciencesilencieuse.github.io/maths/arithmetique/complexes/</link>
+				<pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+				<guid>https://sciencesilencieuse.github.io/maths/arithmetique/complexes/</guid>
+				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;nombres-complexes&#34;&gt;Nombres complexes&lt;/h1&gt;&#xA;&#xA;&lt;div class=&#34;notices note&#34; style=&#34;--title: &#39;note&#39;;&#34;&gt;&#xA;  &lt;p style=&#34;display: none;&#34;&gt;note&lt;/p&gt;&#xA;  &lt;div class=&#34;notice-body&#34;&gt;&#xA;    &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLiaHhY2iBX9g6KIvZ_703G3KJXapKkNaF&#34;&gt;Jolie série de vidéos&lt;/a&gt; présentant les complexes.&lt;/p&gt;&#xA;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&#xA;&lt;p&gt;Comme on l&amp;rsquo;a vu &lt;a href=&#34;../fondements/ensembles&#34;&gt;ici&lt;/a&gt;, les complexes sont la clôture algébrique des réels, une extension permettant que tout polynôme trouve ses racines dans l&amp;rsquo;ensemble.&lt;/p&gt;&#xA;&lt;p&gt;Et chez les complexes, ces racines peuvent tracer de jolies figures.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
