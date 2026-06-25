@@ -158,7 +158,7 @@
 	"title": "Arithmétique",
 	"tags": [],
 	"description": "",
-	"content": " Arithmétique et théorie des nombres Numération et bases Différents systèmes La base 3 Nombres particuliers nombres premiers pgcd (algorithme d'Euclide) fractions continues nombre d'or Complexes nombres algébriques Triplets pythagoriciens "
+	"content": " Arithmétique et théorie des nombres Numération et bases Différents systèmes La base 3 Nombres particuliers nombres premiers pgcd (algorithme d'Euclide) fractions continues nombre d'or Complexes\nnombres algébriques Triplets pythagoriciens "
 },
 {
 	"uri": "https://sciencesilencieuse.github.io/maths/geometrie/geo2/",
@@ -368,7 +368,7 @@
 	"title": "Géométrie",
 	"tags": [],
 	"description": "",
-	"content": " Géométrie La géométrie est avec l\u0026rsquo;arithmétique une des plus vieilles branches des mathématiques (l\u0026rsquo;arithmétique pour tenir les comptes et la géométrie pour mesurer les terres).\nGéométrie et physique sont intimement liées. Le développement de la géométrie a en partie été poussé par les questionnements des astronomes (sur la position des astres, leur mouvement, leur taille, leur distance, etc.) et des ingénieurs (pour construire des trucs qui tiennent debout). Et une explication géométrique des lois fondamentales de l\u0026rsquo;univers attire toujours certains chercheurs, plus de 2000 ans après Platon.\nTriangle : Pythagore, Thalès, droite d'Euler Cercle et triangle : trigonométrie, angle inscrit Aires et Volumes Curse of dimensionality Poursuites "
+	"content": " Géométrie La géométrie est avec l\u0026rsquo;arithmétique une des plus vieilles branches des mathématiques (l\u0026rsquo;arithmétique pour tenir les comptes et la géométrie pour mesurer les terres).\nGéométrie et physique sont intimement liées. Le développement de la géométrie a en partie été poussé par les questionnements des astronomes (sur la position des astres, leur mouvement, leur taille, leur distance, etc.) et des ingénieurs (pour construire des trucs qui tiennent debout). Et une explication géométrique des lois fondamentales de l\u0026rsquo;univers attire toujours certains chercheurs, plus de 2000 ans après Platon.\nTriangle\nPythagore Thalès Droite d'Euler Cercle et triangle\nTrigonométrie Angles inscrits Théorème de La Hire Aires et Volumes Curse of dimensionality Poursuites "
 },
 {
 	"uri": "https://sciencesilencieuse.github.io/physique/quantique/nonlocale/",
