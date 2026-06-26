@@ -10,7 +10,7 @@
 		
 		
 		
-			<lastBuildDate>Fri, 26 Jun 2026 21:25:40 +0200</lastBuildDate>
+			<lastBuildDate>Fri, 26 Jun 2026 22:03:10 +0200</lastBuildDate>
 		
 			<atom:link href="https://sciencesilencieuse.github.io/index.xml" rel="self" type="application/rss+xml" />
 			<item>
@@ -319,7 +319,7 @@
 				<link>https://sciencesilencieuse.github.io/maths/arithmetique/complexes/</link>
 				<pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
 				<guid>https://sciencesilencieuse.github.io/maths/arithmetique/complexes/</guid>
-				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;nombres-complexes&#34;&gt;Nombres complexes&lt;/h1&gt;&#xA;&#xA;&lt;div class=&#34;notices note&#34; style=&#34;--title: &#39;note&#39;;&#34;&gt;&#xA;  &lt;p style=&#34;display: none;&#34;&gt;note&lt;/p&gt;&#xA;  &lt;div class=&#34;notice-body&#34;&gt;&#xA;    &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLiaHhY2iBX9g6KIvZ_703G3KJXapKkNaF&#34;&gt;Très belle série de vidéos&lt;/a&gt; présentant les complexes.&lt;/p&gt;&#xA;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&#xA;&lt;p&gt;Comme on l&amp;rsquo;a vu &lt;a href=&#34;../fondements/ensembles&#34;&gt;ici&lt;/a&gt;, les complexes sont la clôture algébrique des réels, une extension permettant à tout polynôme d&amp;rsquo;avoir ses racines dans l&amp;rsquo;ensemble.&lt;/p&gt;&#xA;&lt;p&gt;Et chez les complexes, ces racines peuvent tracer de jolies figures comme on va le voir dans la suite.&lt;/p&gt;</description>
+				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;  #grosseformule &#xA;{&#xA;    overflow-x: auto;&#xA;    margin-top:-0.5em;&#xA;    margin-bottom:-0.5em;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;nombres-complexes&#34;&gt;Nombres complexes&lt;/h1&gt;&#xA;&#xA;&lt;div class=&#34;notices note&#34; style=&#34;--title: &#39;note&#39;;&#34;&gt;&#xA;  &lt;p style=&#34;display: none;&#34;&gt;note&lt;/p&gt;&#xA;  &lt;div class=&#34;notice-body&#34;&gt;&#xA;    &lt;p&gt;&lt;a href=&#34;https://www.youtube.com/playlist?list=PLiaHhY2iBX9g6KIvZ_703G3KJXapKkNaF&#34;&gt;Très belle série de vidéos&lt;/a&gt; présentant les complexes.&lt;/p&gt;&#xA;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&#xA;&lt;p&gt;Comme on l&amp;rsquo;a vu &lt;a href=&#34;../fondements/ensembles&#34;&gt;ici&lt;/a&gt;, les complexes sont la clôture algébrique des réels, une extension permettant à tout polynôme d&amp;rsquo;avoir ses racines dans l&amp;rsquo;ensemble.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Dimensions</title>
