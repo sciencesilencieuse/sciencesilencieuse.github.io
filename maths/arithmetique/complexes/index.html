@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1782480458" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1782480458" rel="stylesheet">
-    <link href="/css/hybrid.css?1782480458" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1782480458" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1782480458" rel="stylesheet">
-    <link href="/css/auto-complete.css?1782480458" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1782480458" rel="stylesheet">
-    <link href="/css/theme.css?1782480458" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1782480458" rel="stylesheet">
+    <link href="/css/nucleus.css?1782502120" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1782502120" rel="stylesheet">
+    <link href="/css/hybrid.css?1782502120" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1782502120" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1782502120" rel="stylesheet">
+    <link href="/css/auto-complete.css?1782502120" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1782502120" rel="stylesheet">
+    <link href="/css/theme.css?1782502120" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1782502120" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1782480458" rel="stylesheet">
+    <link href="/css/theme-blue.css?1782502120" rel="stylesheet">
     
-    <link href="/css/foo.css?1782480458" rel="stylesheet"><link href="/css/bar.css?1782480458" rel="stylesheet">
+    <link href="/css/foo.css?1782502120" rel="stylesheet"><link href="/css/bar.css?1782502120" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1782480458"></script>
+    <script src="/js/jquery-3.3.1.min.js?1782502120"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1782480458"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1782480458"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1782502120"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1782502120"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1782480458"></script>
+<script type="text/javascript" src="/js/search.js?1782502120"></script>
 
     
   </div>
@@ -1768,7 +1768,8 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#nombre-algébriques">Nombre algébriques</a></li>
+    <li><a href="#entiers-algébriques">Entiers algébriques</a></li>
+    <li><a href="#ensemble-de-mandelbrot">Ensemble de Mandelbrot</a></li>
     <li><a href="#triplets-pythagoriciens">Triplets pythagoriciens</a></li>
   </ul>
 </nav>
@@ -1814,16 +1815,16 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 <div class="notices note" style="--title: 'note';">
   <p style="display: none;">note</p>
   <div class="notice-body">
-    <p><a href="https://www.youtube.com/playlist?list=PLiaHhY2iBX9g6KIvZ_703G3KJXapKkNaF">Jolie série de vidéos</a> présentant les complexes.</p>
+    <p><a href="https://www.youtube.com/playlist?list=PLiaHhY2iBX9g6KIvZ_703G3KJXapKkNaF">Très belle série de vidéos</a> présentant les complexes.</p>
 
   </div>
 </div>
 
 
-<p>Comme on l&rsquo;a vu <a href="../fondements/ensembles">ici</a>, les complexes sont la clôture algébrique des réels, une extension permettant que tout polynôme trouve ses racines dans l&rsquo;ensemble.</p>
-<p>Et chez les complexes, ces racines peuvent tracer de jolies figures.</p>
-<h2 id="nombre-algébriques">Nombre algébriques</h2>
-<p>Un nombre algébrique est un nombre réel ou complexe solution d&rsquo;une équation polynomiale à coefficients dans le corps $\mathbb{Q}$ des rationnels.</p>
+<p>Comme on l&rsquo;a vu <a href="../fondements/ensembles">ici</a>, les complexes sont la clôture algébrique des réels, une extension permettant à tout polynôme d&rsquo;avoir ses racines dans l&rsquo;ensemble.</p>
+<p>Et chez les complexes, ces racines peuvent tracer de jolies figures comme on va le voir dans la suite.</p>
+<h2 id="entiers-algébriques">Entiers algébriques</h2>
+<p>Un nombre algébrique est un nombre réel ou complexe solution d&rsquo;une équation polynomiale à coefficients dans le corps $\mathbb{Q}$ des rationnels. Et si les coefficient sont entiers, on parle d&rsquo;entiers algébriques.</p>
 <p>Traçons l&rsquo;ensemble des racines des $2^{21}$ (≈ 2 millions) polynômes de degré 20 possible si chacun des coefficients vaut soit 1, soit -1.<br>
 Exemple d&rsquo;un de ces polynômes : $-x^{20}+x^{19}+x^{18}+x^{17}-x^{16}-x^{15}-x^{14}-x^{13}+x^{12}-x^{11}+x^{10}-x^{9}+x^{8}+x^{7}+x^{6}-x^{5}-x^{4}-x^{3}-x^{2}+x+1$<br>
 Un polynôme de degré 20 a 20 racines complexes. On se retrouve donc avec 40 millions de points (dont beaucoup sont aux mêmes endroits)&hellip; Et cela donne ça :</p>
@@ -1840,13 +1841,127 @@ Un polynôme de degré 20 a 20 racines complexes. On se retrouve donc avec 40 mi
 </div>
 
 
-<p>En représentant dans le plan complexe les racines d&rsquo;un polynôme de degré 2 dont on fait varier chacun des trois coefficients entre -100 et 100, on obtient la jolie figure suivante (ici dans une zone centrée sur zéro et de rayon 1,7) :</p>
+<p>En représentant dans le plan complexe les racines d&rsquo;un polynôme de degré 2 dont on fait varier chacun des trois coefficients entiers entre -100 et 100, on obtient la jolie figure suivante (ici dans une zone centrée sur zéro et de rayon 1,7) :</p>
 <p><img src="/racinarithm.png?width=800px" alt=""></p>
+<p>Pour avoir des racines ailleurs que sur l&rsquo;axe des abscisses, il faut un discriminant négatif. On obtient alors des solutions complexes conjuguées : $z_\pm = \frac{-b \pm i\sqrt{4ac - b^2}}{2a}$.</p>
+<ul style="margin-bottom: 1em;">
+<li>Qu'obtient-on si on fixe $a$ et $b$ et qu'on fait varier $c$&nbsp;?</li>
+</ul>
+<p>On obtient des droites verticales plantées aux abscisses $-\frac{b}{2a}$.</p>
+<ul style="margin-bottom: 0;">
+<li>Qu'obtient-on si on fixe $a$ et $c$ et qu'on fait varier $b$&nbsp;?</li>
+</ul>
+<p>Prenons maintenant le module au carré de nos racines complexes :</p>
+<div id="grosseformule">
+<p>$$|z|^2 = \left(-\frac{b}{2a}\right)^2 + \left(\frac{\sqrt{4ac - b^2}}{2a}\right)^2 = \frac{b^2 + 4ac - b^2}{4a^2} = \frac{c}{a}$$</p>
+</div>
+<p>Le module est donc $|z| = \sqrt{\frac{c}{a}}$. Cela signifie que pour un couple $(a, c)$ fixé, toutes les racines obtenues en faisant varier $b$ se trouvent sur un cercle centré à l&rsquo;origine. Les rayons visibles sont donc des racines de fractions rationnelles ($\sqrt{1}$, $\sqrt{2}$, $\sqrt{1/2}$, etc.).</p>
+<ul style="margin-bottom: 1em;">
+<li>Et si on fixe $b$ et $c$ et qu'on fait varier $a$&nbsp;?</li>
+</ul>
+<p>En injectant $z = x + iy$ dans $az^2+bz+c=0$, on obtient :</p>
+<p>$$a(x + iy)^2 + b(x + iy) + c = 0$$
+$$a(x^2 - y^2 + 2ixy) + bx + iby + c = 0$$</p>
+<p>En séparant les parties réelle et imaginaire, on aboutit au système suivant :</p>
+<div id="grosseformule">
+<p>$$
+\begin{cases}
+a(x^2 - y^2) + bx + c = 0 &amp; \text{(partie réelle)} \\
+2axy + by = 0 \implies y(2ax + b) = 0 &amp; \text{(partie imaginaire)}
+\end{cases}
+$$</p>
+</div>
+<p>Comme on étudie les racines complexes, $y ≠ 0$, ce qui impose la condition sur la partie réelle :</p>
+<p>$$2ax + b = 0 \implies a = -\frac{b}{2x}$$</p>
+<p>Substituons cette expression de $a$ dans l&rsquo;équation de la partie réelle :</p>
+<p>$$\left(-\frac{b}{2x}\right)(x^2 - y^2) + bx + c = 0$$</p>
+<p>Multiplions tout l&rsquo;équation par $-2x$ (pour $x \neq 0$) :</p>
+<p>$$b(x^2 - y^2) - 2bx^2 - 2cx = 0$$
+$$-bx^2 - by^2 - 2cx = 0$$</p>
+<p>En multipliant par $-1$ et en divisant par $b$ (pour $b ≠ 0$), on obtient une équation de cercle caractéristique :</p>
+<p>$$x^2 + y^2 + \frac{2c}{b}x = 0$$
+En mettant sous forme canonique (complétion du carré) :</p>
+<p>$$\left(x + \frac{c}{b}\right)^2 + y^2 = \left(\frac{c}{b}\right)^2$$</p>
+<p>On obtient des cercles dont le centre est situé sur l&rsquo;axe des réels à la coordonnée $\left(-\frac{c}{b}, 0\right)$ et de rayon $R = \left|\frac{c}{b}\right|$.<br>
+Puisque la distance du centre à l&rsquo;origine est égale au rayon, tous ces cercles sont tangents à l&rsquo;axe imaginaire à l&rsquo;origine $(0,0)$.</p>
+<ul style="margin-bottom: 1em;">
+<li>Quid des zones d'exclusion&nbsp;?</li>
+</ul>
+<p>Calculons la distance au carré entre une racine complexe $z = x + iy$ et un point rationnel quelconque $\frac{p}{q}$ situé sur l&rsquo;axe des abscisses (où $p \in \mathbb{Z}$ et $q \in \mathbb{N}^*$).</p>
+<p>$$\left|z - \frac{p}{q}\right|^2 = \left(x - \frac{p}{q}\right)^2 + y^2$$</p>
+<p>Nous savons d&rsquo;après les relations standard des racines du second degré que $x = -\frac{b}{2a}$ et $y^2 = \frac{4ac - b^2}{4a^2}$. Injectons ces expressions :</p>
+<p>$$\left|z - \frac{p}{q}\right|^2 = \left(-\frac{b}{2a} - \frac{p}{q}\right)^2 + \frac{4ac - b^2}{4a^2}$$</p>
+<p>$$\left|z - \frac{p}{q}\right|^2 = \frac{(bq + 2ap)^2 + q^2(4ac - b^2)}{4a^2q^2}$$</p>
+<p>Développons le numérateur :</p>
+<p>$$b^2q^2 + 4abpq + 4a^2p^2 + 4acq^2 - b^2q^2 = 4a^2p^2 + 4abpq + 4acq^2$$</p>
+<p>En simplifiant par $4a^2$ au numérateur et au dénominateur, on obtient :</p>
+<p>$$\left|z - \frac{p}{q}\right|^2 = \frac{ap^2 + bpq + cq^2}{aq^2}$$</p>
+<p>Posons $I = ap^2 + bpq + cq^2$. Puisque $a, b, c, p, q$     sont tous des entiers, $I$ est obligatoirement un entier.<br>
+De plus, si $I = 0$, cela signifierait que le nombre rationnel $\frac{p}{q}$ est une solution exacte de l&rsquo;équation $at^2 + bt + c = 0$. Or, nous avons posé comme condition initiale que l&rsquo;équation possède des racines strictement complexes ($\Delta &lt; 0$). Le polynôme n&rsquo;admet donc aucune racine réelle. Par conséquent, $I$ ne peut pas être nul :</p>
+<p>$$I \in \mathbb{Z}^* \implies |I| \ge 1$$</p>
+<p>On en déduit l&rsquo;inégalité fondamentale suivante :</p>
+<p>$$\left|z - \frac{p}{q}\right|^2 \ge \frac{1}{a q^2}$$</p>
+<p>Comme les coefficients de la figure sont bornés par $N = 100$, la valeur maximale de $a$ est $100$. On obtient donc le rayon d&rsquo;exclusion minimal théorique autour de n&rsquo;importe quelle fraction $\frac{p}{q}$ :</p>
+<p>$$\left|z - \frac{p}{q}\right| \ge \frac{1}{q\sqrt{100}} = \frac{1}{10q}$$</p>
+<p>Conclusion :</p>
+<p>Autour de $0$ ($\frac{0}{1}$) : Le rayon d&rsquo;exclusion est de $\frac{1}{10 \times 1} = 0,1$. C&rsquo;est le grand trou central.<br>
+Autour de $1$ et $-1$ ($\frac{1}{1}$ et $\frac{-1}{1}$) : le rayon d&rsquo;exclusion minimum est également de $\frac{1}{10 \times 1} = 0,1$, mais en pratique, le fait que la partie réelle vale $-\frac{b}{2a}=\pm 1$ impose $|b|=2|a|$ et donc $a$ se ballade jusqu&rsquo;à 50 seulement rendant le trou $\sqrt{2}$ fois plus gros.<br></p>
+<p>Cette loi en $\frac{1}{10q}$ explique pourquoi la taille des zones d&rsquo;exclusion décroît de manière fractale à mesure que le dénominateur de la fraction augmente.</p>
+<br>
+<h2 id="ensemble-de-mandelbrot">Ensemble de Mandelbrot</h2>
+<p>L&rsquo;ensemble de Mandelbrot est une des fractales les plus célèbres.</p>
+<p>Il est défini par une suite récurrente.<br>
+Pour chaque point $c$ du plan complexe :<br>
+$$z_{0} = 0$$
+$$z_{n+1} = z_{n}^2 + c$$</p>
+<p>Pour chaque point $c$ (qui correspond à un pixel de l&rsquo;image) :</p>
+<ol style="margin-top:0;">
+<li>Si la suite converge, le point appartient à l'ensemble.</li>
+<li>Si la suite diverge, la couleur correspond à la vitesse de divergence (le nombre d'itérations nécessaires pour que le module de $z_n$ dépasse une certaine valeur seuil, 2 ici). Plus la divergence sera rapide, plus le point sera blanc.
+</ol>
 <video width="1200" poster="/mandelposter.png" controls style="display:block;max-width:100%;position:relative;margin-left:auto;margin-right: auto; border-radius:5px;">
   <source src="/mandelbrot.mp4" type="video/mp4">
 </video>
+<p>La vidéo montre une zone à la frontière de l&rsquo;ensemble appelée vallée des hippocampes pour un nombre d&rsquo;iteration croissant.</p>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+    
+def mandelbrot(c, max_iter):
+    z = complex(0, 0)
+    for n in range(max_iter):
+        if abs(z) > 2.0:
+            # Calcul pour lisser la couleur
+            log_zn = np.log(z.real*z.real + z.imag*z.imag) / 2.0
+            nu = np.log(log_zn / np.log(2)) / np.log(2) if log_zn > 0 else 0
+            n = n + 1 - nu
+            break
+        z = z*z + c
+    return n / max_iter  # Normalisation pour assurer une transition douce
+
+centre = (-0.06783611264225832-0.0025,0.6617460391250546+0.0005)
+
+# Paramètres de l'image
+width, height = 2000, 1000
+x_min, x_max = centre[0]-0.004, centre[0]+0.004
+y_min, y_max = centre[1]-0.002, centre[1]+0.002
+
+# Création de l'image
+for i in range(27,301):  # Générer 20 images avec des itérations croissantes
+    img = np.zeros((height, width))
+    for x in range(width):
+        for y in range(height):
+            c = complex(x_min + (x / width) * (x_max - x_min),
+                        y_min + (y / height) * (y_max - y_min))
+            m = mandelbrot(c, i)
+            img[y, x] = m
+    #img = (img - np.min(img)) / (np.max(img) - np.min(img))  # Normalisation
+    plt.imsave(f'mandelbrot/mandelbrot_{i:03d}.png', img, cmap='Blues')
+    print(i)
+</code></pre>
+<br>
 <h2 id="triplets-pythagoriciens">Triplets pythagoriciens</h2>
 <p>Les nombres complexes vont nous aider à mettre la main sur tous les triplets pythagoriciens, ces triplets d&rsquo;entiers $(a,b,c)$ tels que $a^2+b^2=c^2$.</p>
+<p>Code utilisé :</p>
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
 			<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/cQ2N0CX7a-4?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
@@ -3000,16 +3115,16 @@ Un polynôme de degré 20 a 20 racines complexes. On se retrouve donc avec 40 mi
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1782480459"></script>
-    <script src="/js/perfect-scrollbar.min.js?1782480459"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1782480459"></script>
-    <script src="/js/jquery.sticky.js?1782480459"></script>
-    <script src="/js/featherlight.min.js?1782480459"></script>
-    <script src="/js/highlight.pack.js?1782480459"></script>
+    <script src="/js/clipboard.min.js?1782502120"></script>
+    <script src="/js/perfect-scrollbar.min.js?1782502120"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1782502120"></script>
+    <script src="/js/jquery.sticky.js?1782502120"></script>
+    <script src="/js/featherlight.min.js?1782502120"></script>
+    <script src="/js/highlight.pack.js?1782502120"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1782480459"></script>
-    <script src="/js/learn.js?1782480459"></script>
-    <script src="/js/hugo-learn.js?1782480459"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1782502120"></script>
+    <script src="/js/learn.js?1782502120"></script>
+    <script src="/js/hugo-learn.js?1782502120"></script>
     
     
 
