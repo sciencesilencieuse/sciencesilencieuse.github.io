@@ -1,0 +1,180 @@
+<meta charset="utf-8">
+<style>
+    html, body { margin: 0; padding: 0; background: #fff; overflow: hidden;
+                 font-family: system-ui, -apple-system, sans-serif; }
+    #wrap { display: flex; flex-direction: column; align-items: center;
+            gap: 10px; padding: 12px 0 16px; box-sizing: border-box; }
+    #controls { display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+                justify-content: center; font-size: 14px; color: #222; }
+    #controls label { font-weight: 600; }
+    #nb { width: 200px; cursor: pointer; accent-color: #1565ff; }
+    #nbval { min-width: 1.5em; text-align: center; font-variant-numeric: tabular-nums;
+             font-weight: 600; }
+    #restart { border: 1px solid #cfcfcf; background: #f6f6f6; border-radius: 7px;
+               padding: 5px 12px; font-size: 13px; cursor: pointer; color: #222; }
+    #restart:hover { background: #ececec; }
+    #stage { position: relative; max-width: 100%; }
+    #stage canvas { display: block; max-width: 100%; height: auto; }
+    #markers { position: absolute; left: 0; top: 0; }
+</style>
+
+<div id="wrap">
+  <div id="controls">
+    <label for="nb">Tortues</label>
+    <input type="range" id="nb" min="3" max="12" step="1" value="6">
+    <span id="nbval">6</span>
+    <button id="restart">Relancer</button>
+  </div>
+  <div id="stage">
+    <canvas id="trail" width="480" height="480"></canvas>
+    <canvas id="markers" width="480" height="480"></canvas>
+  </div>
+</div>
+
+<script>
+(function () {
+  var trail = document.getElementById('trail');
+  var markers = document.getElementById('markers');
+  var tctx = trail.getContext('2d');
+  var mctx = markers.getContext('2d');
+  var nbInput = document.getElementById('nb');
+  var nbVal = document.getElementById('nbval');
+  var restartBtn = document.getElementById('restart');
+
+  var W = 480, H = 480;
+  var dpr = window.devicePixelRatio || 1;
+  [trail, markers].forEach(function (c) {
+    c.width = W * dpr; c.height = H * dpr;
+    c.style.width = W + 'px'; c.style.height = H + 'px';
+  });
+
+  // Noms CSS résolus par le navigateur — identiques au rendu Trinket/Skulpt
+  var couleurs = ['red', 'orange', 'blue', 'green',
+                  'purple', 'cyan', 'pink', 'yellow'];
+
+  var taille = 150, pas = 2;
+  var margin = 24;
+  var scale = (W / 2 - margin) / taille;
+
+  function X(px) { return px * scale + W / 2; }
+  function Y(py) { return H / 2 - py * scale; }
+
+  var positions, headings, total, step, rafId;
+
+  function clearTrail() {
+    tctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    tctx.fillStyle = '#ffffff';
+    tctx.fillRect(0, 0, W, H);
+  }
+  function clearMarkers() {
+    mctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    mctx.clearRect(0, 0, W, H);
+  }
+
+  function drawMarkers() {
+    clearMarkers();
+    mctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    for (var i = 0; i < positions.length; i++) {
+      var p = positions[i], ang = headings[i];
+      var cx = X(p[0]), cy = Y(p[1]);
+      var r = 7;
+      mctx.save();
+      mctx.translate(cx, cy);
+      mctx.rotate(-ang);
+      mctx.beginPath();
+      mctx.moveTo(r, 0);
+      mctx.lineTo(-r * 0.7, r * 0.6);
+      mctx.lineTo(-r * 0.7, -r * 0.6);
+      mctx.closePath();
+      mctx.fillStyle = couleurs[i % 8];
+      mctx.fill();
+      mctx.strokeStyle = 'rgba(0,0,0,0.35)';
+      mctx.lineWidth = 0.8;
+      mctx.stroke();
+      mctx.restore();
+    }
+  }
+
+  function init() {
+    var N = parseInt(nbInput.value, 10);
+    nbVal.textContent = N;
+    if (rafId) cancelAnimationFrame(rafId);
+
+    clearTrail();
+    clearMarkers();
+
+    positions = [];
+    headings = [];
+    for (var i = 0; i < N; i++) {
+      positions.push([
+        taille * Math.cos(2 * i * Math.PI / N),
+        taille * Math.sin(2 * i * Math.PI / N)
+      ]);
+      headings.push(0);
+    }
+
+    total = Math.floor(29 * N);
+    step = 0;
+
+    // Polygone de départ : sommets = positions initiales (begin_fill/end_fill)
+    tctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    tctx.beginPath();
+    tctx.moveTo(X(positions[0][0]), Y(positions[0][1]));
+    for (var j = 1; j < positions.length; j++) {
+      tctx.lineTo(X(positions[j][0]), Y(positions[j][1]));
+    }
+    tctx.closePath();
+    tctx.fillStyle = '#ffffff';
+    tctx.fill();
+    tctx.strokeStyle = 'rgba(0,0,0,0.4)';
+    tctx.lineWidth = 1.2;
+    tctx.stroke();
+
+    drawMarkers();
+    animate();
+  }
+
+  function oneStep() {
+    var N = positions.length;
+    var snap = positions.map(function (p) { return [p[0], p[1]]; });
+
+    tctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    tctx.lineWidth = 1.4;
+
+    for (var i = 0; i < N; i++) {
+      var cur = snap[i];
+      var nxt = snap[(i + 1) % N];
+      var ang = Math.atan2(nxt[1] - cur[1], nxt[0] - cur[0]);
+      var np = [cur[0] + pas * Math.cos(ang), cur[1] + pas * Math.sin(ang)];
+
+      tctx.strokeStyle = couleurs[i % 8];
+      tctx.beginPath();
+      tctx.moveTo(X(cur[0]), Y(cur[1]));
+      tctx.lineTo(X(np[0]), Y(np[1]));
+      tctx.stroke();
+
+      positions[i] = np;
+      headings[i] = ang;
+    }
+  }
+
+  function animate() {
+    var perFrame = 2;
+    for (var k = 0; k < perFrame && step < total; k++) {
+      oneStep();
+      step++;
+    }
+    if (step < total) {
+      drawMarkers();
+      rafId = requestAnimationFrame(animate);
+    } else {
+      clearMarkers();
+    }
+  }
+
+  nbInput.addEventListener('input', init);
+  restartBtn.addEventListener('click', init);
+
+  init();
+})();
+</script>

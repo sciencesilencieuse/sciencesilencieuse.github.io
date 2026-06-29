@@ -1,0 +1,180 @@
+<style>
+    body { margin: 0; padding: 0; overflow: hidden; }
+</style>
+
+<div id="glowscript" class="glowscript">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link type="text/css" href="https://www.glowscript.org/css/redmond/2.1/jquery-ui.custom.css" rel="stylesheet" />
+<link type="text/css" href="https://www.glowscript.org/css/ide.css" rel="stylesheet" />
+<script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/package/glow.3.2.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/package/RSrun.3.2.min.js"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+// START JAVASCRIPT
+;(function() {;
+var ρσ_modules = {};
+ρσ_modules.pythonize = {};
+
+(function(){
+    function strings() {
+        var string_funcs, exclude, name;
+        string_funcs = set("capitalize strip lstrip rstrip islower isupper isspace lower upper swapcase center count endswith startswith find rfind index rindex format join ljust rjust partition rpartition replace split rsplit splitlines zfill".split(" "));
+        if (!arguments.length) {
+            exclude = (function(){
+                var s = ρσ_set();
+                s.jsset.add("split");
+                s.jsset.add("replace");
+                return s;
+            })();
+        } else if (arguments[0]) {
+            exclude = Array.prototype.slice.call(arguments);
+        } else {
+            exclude = null;
+        }
+        if (exclude) {
+            string_funcs = string_funcs.difference(set(exclude));
+        }
+        var ρσ_Iter0 = string_funcs;
+        ρσ_Iter0 = ((typeof ρσ_Iter0[Symbol.iterator] === "function") ? (ρσ_Iter0 instanceof Map ? ρσ_Iter0.keys() : ρσ_Iter0) : Object.keys(ρσ_Iter0));
+        for (var ρσ_Index0 of ρσ_Iter0) {
+            name = ρσ_Index0;
+            (ρσ_expr_temp = String.prototype)[(typeof name === "number" && name < 0) ? ρσ_expr_temp.length + name : name] = (ρσ_expr_temp = ρσ_str.prototype)[(typeof name === "number" && name < 0) ? ρσ_expr_temp.length + name : name];
+        }
+    };
+    if (!strings.__module__) Object.defineProperties(strings, {
+        __module__ : {value: "pythonize"}
+    });
+
+    ρσ_modules.pythonize.strings = strings;
+})();
+async function __main__() {
+"use strict";
+    var display = canvas;
+    var scene = canvas();
+
+    function round(num, n=0) {return Number(num.toFixed(n))}
+
+    var version, print, arange, __name__, type, ρσ_ls, ρσ_unpack, l, h, w, r, v0, theta, sol, centre, cercle, balles, rayons, N, dtheta, balle, rayon, i, g, t, dt, Fres;
+    version = ρσ_list_decorate([ "3.2", "glowscript" ]);
+    Array.prototype['+'] = function(r) {return this.concat(r)}
+    Array.prototype['*'] = function(r) {return __array_times_number(this, r)}
+    window.__GSlang = "vpython";
+    print = GSprint;
+    arange = range;
+    __name__ = "__main__";
+    type = pytype;
+    var strings = ρσ_modules.pythonize.strings;
+
+    strings();
+    "3";
+    scene.width = window.innerWidth;
+    scene.height = scene.width*3/4;
+    "4";
+    scene.range = 15;
+    "5";
+    scene.center = vec(0, 1, 0);
+    "6";
+    scene.background = vec(4, 63, 97)["/"](255);
+    "8";
+    ρσ_unpack = [20, .4, 2];
+    l = ρσ_unpack[0];
+    h = ρσ_unpack[1];
+    w = ρσ_unpack[2];
+    "9";
+    r = .1;
+    "10";
+    v0 = 6;
+    "11";
+    theta = 30["*"](pi)["/"](180);
+    "12";
+    sol = ρσ_interpolate_kwargs.call(this, box, [ρσ_desugar_kwargs({pos: vec(0, 1["-u"]()["*"](.2), 0), size: vec(l, h, w), color: vec(.6, .3, .2), opacity: .4})]);
+    "14";
+    centre = ρσ_interpolate_kwargs.call(this, sphere, [ρσ_desugar_kwargs({pos: vec(0, 0, 0), radius: r, color: vec(255, 42, 16)["/"](255)})]);
+    "15";
+    centre.v = vec(0, 0, 0);
+    "16";
+    centre.m = .2;
+    "17";
+    cercle = ρσ_interpolate_kwargs.call(this, ring, [ρσ_desugar_kwargs({pos: centre.pos, axis: vector(0, 0, 1), radius: 0, thickness: .02, color: vec(255, 138, 110)["/"](255)})]);
+    "19";
+    balles = ρσ_list_decorate([]);
+    "20";
+    rayons = ρσ_list_decorate([]);
+    "21";
+    N = 50;
+    "22";
+    dtheta = 2["*"](pi)["/"](N);
+    "23";
+    theta = 0;
+    "24";
+    for (var ρσ_Index1 = 0; ρσ_Index1["<"](N["+"](1)); ρσ_Index1++) {
+        i = ρσ_Index1;
+        "25";
+        balle = ρσ_interpolate_kwargs.call(this, sphere, [ρσ_desugar_kwargs({pos: vec(0, 0, 0), radius: r, color: vec(232, 166, 177)["/"](255)})]);
+        "26";
+        balle.v = v0["*"](vec(cos(theta), sin(theta), 0));
+        "27";
+        balle.m = .2;
+        "28";
+        balles=balles["+"](balle);
+        "29";
+        theta=theta["+"](dtheta);
+        "30";
+        rayon = ρσ_interpolate_kwargs.call(this, cylinder, [ρσ_desugar_kwargs({pos: centre.pos, axis: balle.pos["-"](1["*"](centre.pos)), radius: .02, color: vec(249, 236, 179)["/"](255)})]);
+        "31";
+        rayons=rayons["+"](rayon);
+    }
+    "32";
+    g = vector(0, 1["-u"]()["*"](9.8), 0);
+    "33";
+    balle.m = .2;
+    "36";
+    t = 0;
+    "37";
+    dt = .01;
+    "39";
+    while (t["<"](2)) {
+        "40";
+        (await rate(1["/"](dt)));
+        "41";
+        Fres = balle.m["*"](g);
+        "42";
+        if (t[">"](.2)) {
+            "43";
+            centre.v=centre.v["+"](Fres["*"](dt)["/"](centre.m));
+            "44";
+            centre.pos=centre.pos["+"](centre.v["*"](dt));
+            "45";
+            cercle.radius=cercle.radius["+"](v0["*"](dt));
+            "46";
+            cercle.pos = centre.pos;
+            "47";
+            scene.center = centre.pos["+"](vec(0, 1, 0));
+            "48";
+            for (var ρσ_Index2 = 0; ρσ_Index2["<"](N["+"](1)); ρσ_Index2++) {
+                i = ρσ_Index2;
+                "49";
+                ρσ_getitem(balles, i).v=ρσ_getitem(balles, i).v["+"](Fres["*"](dt)["/"](ρσ_getitem(balles, i).m));
+                "50";
+                ρσ_getitem(balles, i).pos=ρσ_getitem(balles, i).pos["+"](ρσ_getitem(balles, i).v["*"](dt));
+                "51";
+                ρσ_getitem(rayons, i).pos = centre.pos;
+                "52";
+                ρσ_getitem(rayons, i).axis = ρσ_getitem(balles, i).pos["-"](1["*"](centre.pos));
+            }
+        }
+        "53";
+        t=t["+"](dt);
+    }
+};
+if (!__main__.__module__) Object.defineProperties(__main__, {
+    __module__ : {value: null}
+});
+
+;$(function(){ window.__context = { glowscript_container: $("#glowscript").removeAttr("id") }; __main__() })})()
+// END JAVASCRIPT
+
+//--><!]]></script>
+</div>

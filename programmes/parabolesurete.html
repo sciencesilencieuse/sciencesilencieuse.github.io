@@ -1,0 +1,122 @@
+<style>
+    body { margin: 0; padding: 0; overflow: hidden; }
+</style>
+
+<div id="glowscript" class="glowscript">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link type="text/css" href="https://www.glowscript.org/css/redmond/2.1/jquery-ui.custom.css" rel="stylesheet" />
+<link type="text/css" href="https://www.glowscript.org/css/ide.css" rel="stylesheet" />
+<script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/package/glow.3.0.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/package/RSrun.3.0.min.js"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+// START JAVASCRIPT
+;(function() {;
+async function __main__() {
+"use strict";
+
+    var version, display, vector, print, arange, __name__, type, scene, RS_ls, RS_unpack, l, h, w, r, v0, theta, sol, balles, N, dtheta, balle, i, g, t, dt, Fres;
+    version = RS_list_decorate([ "3.0", "glowscript" ]);
+    Array.prototype['+'] = function(r) {return this.concat(r)}
+    Array.prototype['*'] = function(r) {return __array_times_number(this, r)}
+    window.__GSlang = "vpython";
+    display = canvas;
+    vector = vec;
+    print = GSprint;
+    arange = range;
+    __name__ = "__main__";
+    type = pytype;
+    scene = canvas();
+    "3";
+    scene.width = window.innerWidth;
+    scene.height = scene.width*3/4;
+    "4";
+    scene.range = 9;
+    "5";
+    scene.center = vec(0, 2, 0);
+    "6";
+    scene.background = vec(.2, .2, .4);
+    "8";
+    RS_unpack = [22, .4, 2];
+    l = RS_unpack[0];
+    h = RS_unpack[1];
+    w = RS_unpack[2];
+    "9";
+    r = .1;
+    "10";
+    v0 = 10;
+    "11";
+    theta = 30["*"](pi)["/"](180);
+    "12";
+    sol = RS_interpolate_kwargs.call(this, box, [RS_desugar_kwargs({pos: vec(0, .2["-u"](), 0), size: vec(l, h, w), color: vec(.6, .3, .2)})]);
+    "13";
+    balles = RS_list_decorate([]);
+    "15";
+    N = 50;
+    "16";
+    dtheta = 2["*"](pi)["/"](N);
+    "17";
+    theta = 0;
+    "18";
+    for (var RS_Index0 = 0; RS_Index0["<"](N["+"](1)); RS_Index0++) {
+        i = RS_Index0;
+        "19";
+        balle = RS_interpolate_kwargs.call(this, sphere, [RS_desugar_kwargs({pos: vec(0, .1, 0), radius: r, color: vec(1, .8, .5), make_trail: true})]);
+        "20";
+        balle.v = v0["*"](vec(cos(theta), sin(theta), 0));
+        "21";
+        balle.m = .2;
+        "22";
+        balles=balles["+"](balle);
+        "23";
+        theta=theta["+"](dtheta);
+    }
+    "24";
+    g = vector(0, 9.8["-u"](), 0);
+    "25";
+    balle.m = .2;
+    "28";
+    t = 0;
+    "29";
+    dt = .01;
+    "31";
+    while (t["<"](5)) {
+        "32";
+        (await rate(1["/"](dt)));
+        "33";
+        Fres = balle.m["*"](g);
+        "34";
+        if (t[">"](.2)) {
+            "35";
+            var RS_Iter1 = balles;
+            RS_Iter1 = ((typeof RS_Iter1[Symbol.iterator] === "function") ? (RS_Iter1 instanceof Map ? RS_Iter1.keys() : RS_Iter1) : Object.keys(RS_Iter1));
+            for (var RS_Index1 of RS_Iter1) {
+                balle = RS_Index1;
+                "36";
+                balle.v=balle.v["+"](Fres["*"](dt)["/"](balle.m));
+                "37";
+                balle.pos=balle.pos["+"](balle.v["*"](dt));
+                "38";
+                if (balle.pos.y["<="](0)) {
+                    "39";
+                    balle.v = vec(0, 0, 0);
+                    "40";
+                    balle.pos.y = 0;
+                }
+            }
+        }
+        "41";
+        t=t["+"](dt);
+    }
+};
+if (!__main__.__module__) Object.defineProperties(__main__, {
+    __module__ : {value: "__main__"}
+});
+
+;$(function(){ window.__context = { glowscript_container: $("#glowscript").removeAttr("id") }; __main__() })})()
+// END JAVASCRIPT
+
+//--><!]]></script>
+</div>

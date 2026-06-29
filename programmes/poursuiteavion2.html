@@ -1,0 +1,179 @@
+<style>
+    body { margin: 0; padding: 0; overflow: hidden; }
+</style>
+
+<div id="glowscript" class="glowscript">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link type="text/css" href="https://www.glowscript.org/css/redmond/2.1/jquery-ui.custom.css" rel="stylesheet" />
+<link type="text/css" href="https://www.glowscript.org/css/ide.css" rel="stylesheet" />
+<script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/package/glow.3.2.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/package/RSrun.3.2.min.js"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+// START JAVASCRIPT
+;(function() {;
+var ρσ_modules = {};
+ρσ_modules.pythonize = {};
+
+(function(){
+    function strings() {
+        var string_funcs, exclude, name;
+        string_funcs = set("capitalize strip lstrip rstrip islower isupper isspace lower upper swapcase center count endswith startswith find rfind index rindex format join ljust rjust partition rpartition replace split rsplit splitlines zfill".split(" "));
+        if (!arguments.length) {
+            exclude = (function(){
+                var s = ρσ_set();
+                s.jsset.add("split");
+                s.jsset.add("replace");
+                return s;
+            })();
+        } else if (arguments[0]) {
+            exclude = Array.prototype.slice.call(arguments);
+        } else {
+            exclude = null;
+        }
+        if (exclude) {
+            string_funcs = string_funcs.difference(set(exclude));
+        }
+        var ρσ_Iter0 = string_funcs;
+        ρσ_Iter0 = ((typeof ρσ_Iter0[Symbol.iterator] === "function") ? (ρσ_Iter0 instanceof Map ? ρσ_Iter0.keys() : ρσ_Iter0) : Object.keys(ρσ_Iter0));
+        for (var ρσ_Index0 of ρσ_Iter0) {
+            name = ρσ_Index0;
+            (ρσ_expr_temp = String.prototype)[(typeof name === "number" && name < 0) ? ρσ_expr_temp.length + name : name] = (ρσ_expr_temp = ρσ_str.prototype)[(typeof name === "number" && name < 0) ? ρσ_expr_temp.length + name : name];
+        }
+    };
+    if (!strings.__module__) Object.defineProperties(strings, {
+        __module__ : {value: "pythonize"}
+    });
+
+    ρσ_modules.pythonize.strings = strings;
+})();
+async function __main__() {
+"use strict";
+    var display = canvas;
+    var scene = canvas();
+
+    function round(num, n=0) {return Number(num.toFixed(n))}
+
+    var version, print, arange, __name__, type, ρσ_ls, ρσ_unpack, v_avion, v_chasseur, fuselage, ailes, helice_gauche, helice_droite, deb, haut, fin, triangleshape, linepath, queue, avion, Posinitiale, chasseur, upinitial, N, L, pas, k, j, i, n, dt;
+    version = ρσ_list_decorate([ "3.2", "glowscript" ]);
+    Array.prototype['+'] = function(r) {return this.concat(r)}
+    Array.prototype['*'] = function(r) {return __array_times_number(this, r)}
+    window.__GSlang = "vpython";
+    print = GSprint;
+    arange = range;
+    __name__ = "__main__";
+    type = pytype;
+    var strings = ρσ_modules.pythonize.strings;
+
+    strings();
+    "3";
+    scene.width = window.innerWidth;
+    scene.height = window.innerWidth*680/980;
+    "4";
+    scene.background = vec(.6, .8, 1);
+    "7";
+    v_avion = 1;
+    "8";
+    v_chasseur = 1.2;
+    "10";
+    fuselage = ρσ_interpolate_kwargs.call(this, ellipsoid, [ρσ_desugar_kwargs({pos: vector(0, 0, 0), axis: vector(1, 0, 0), length: 8, height: 2, width: 2, color: vec(.8, .8, .8)})]);
+    "12";
+    ailes = ρσ_interpolate_kwargs.call(this, ellipsoid, [ρσ_desugar_kwargs({pos: vector(0, 0, 0), axis: vector(0, 1, 0), length: 8, height: 2, width: .2, color: vec(.8, .8, .8)})]);
+    "14";
+    helice_gauche = ρσ_interpolate_kwargs.call(this, cylinder, [ρσ_desugar_kwargs({pos: vector(1["-u"]()["*"](.9), 1["-u"]()["*"](2.5), 0), axis: vector(.02, 0, 0), radius: .5, color: vec(1, 1, 1), opacity: .7})]);
+    "15";
+    helice_droite = ρσ_interpolate_kwargs.call(this, cylinder, [ρσ_desugar_kwargs({pos: vector(1["-u"]()["*"](.9), 2.5, 0), axis: vector(.02, 0, 0), radius: .5, color: vec(1, 1, 1), opacity: .7})]);
+    "20";
+    ρσ_unpack = [0, 1.5, 3];
+    deb = ρσ_unpack[0];
+    haut = ρσ_unpack[1];
+    fin = ρσ_unpack[2];
+    "21";
+    triangleshape = ρσ_list_decorate([ ρσ_list_decorate([ 0, 0 ]), ρσ_list_decorate([ fin, haut ]), ρσ_list_decorate([ fin, 0 ]), ρσ_list_decorate([ 0, 0 ]) ]);
+    "22";
+    linepath = ρσ_list_decorate([ vec(0, 1["-u"]()["*"](.1), 0), vec(0, .1, 0) ]);
+    "23";
+    queue = ρσ_interpolate_kwargs.call(this, extrusion, [ρσ_desugar_kwargs({shape: triangleshape, path: linepath, color: vec(.8, .8, .8)})]);
+    "24";
+    queue.pos = vec(4["-"](1["*"](fin)["/"](2)), 0, haut["/"](2));
+    "25";
+    queue.axis = vec(0, 0, 1);
+    "27";
+    avion = ρσ_interpolate_kwargs.call(this, compound, [ρσ_list_decorate([ fuselage, ailes, helice_gauche, helice_droite, queue ])].concat([ρσ_desugar_kwargs({vitesse: vec(1, 0, 0)["*"](v_avion), make_trail: true, trail_type: "points", trail_radius: .2, interval: 1e4, emissive: true})]));
+    "30";
+    avion.pos = vector(0, 0, 0);
+    "31";
+    avion.axis = vector(1["-u"]()["*"](1), 0, 0);
+    "32";
+    ρσ_interpolate_kwargs.call(avion, avion.rotate, [ρσ_desugar_kwargs({axis: vec(1, 0, 0), angle: pi["/"](2)})]);
+    "34";
+    Posinitiale = vec(0, 100, 1["-u"]()["*"](50));
+    "36";
+    chasseur = ρσ_interpolate_kwargs.call(avion, avion.clone, [ρσ_desugar_kwargs({pos: Posinitiale, axis: vec(0, 1, 0), vitesse: hat(avion.pos["-"](1["*"](Posinitiale)))["*"](v_chasseur), make_trail: true, trail_type: "points", trail_radius: .2, interval: 1e4, color: vec(1, .8, .8)})]);
+    "38";
+    upinitial = chasseur.up;
+    "41";
+    avion.color = vec(.8, 1, .8);
+    "44";
+    N = 10;
+    "45";
+    L = 500;
+    "46";
+    pas = Math.floor(L["/"](N));
+    "47";
+    for (var ρσ_Index1 = 0; ρσ_Index1["<"](N); ρσ_Index1++) {
+        i = ρσ_Index1;
+        "48";
+        for (var ρσ_Index2 = 0; ρσ_Index2["<"](N); ρσ_Index2++) {
+            j = ρσ_Index2;
+            "49";
+            for (var ρσ_Index3 = 0; ρσ_Index3["<"](N); ρσ_Index3++) {
+                k = ρσ_Index3;
+                "50";
+                ρσ_interpolate_kwargs.call(this, sphere, [ρσ_desugar_kwargs({pos: vec(Math.floor(1["-u"]()["*"](L)["/"](2))["+"](i["*"](pas)), Math.floor(1["-u"]()["*"](L)["/"](2))["+"](j["*"](pas)), Math.floor(1["-u"]()["*"](L)["/"](2))["+"](k["*"](pas))), radius: .5, emissive: true, color: vec(1, 1, 1), visible: true})]);
+            }
+        }
+    }
+    "52";
+    scene.center = chasseur.pos["+"](avion.pos)["/"](2);
+    "53";
+    scene.range = mag(Posinitiale["/"](3)["*"](2));
+    "54";
+    scene.up = vec(0, 1, 0);
+    "56";
+    n = v_avion["/"](v_chasseur);
+    "57";
+    dt = 1e-4;
+    "59";
+    while (mag(chasseur.pos["-"](1["*"](avion.pos)))[">"](8)) {
+        "60";
+        (await rate(10["/"](dt)));
+        "61";
+        avion.pos=avion.pos["+"](avion.vitesse["*"](dt));
+        "62";
+        chasseur.axis = 1["-u"]()["*"](hat(avion.pos["-"](1["*"](chasseur.pos))));
+        "63";
+        chasseur.vitesse = hat(avion.pos["-"](1["*"](chasseur.pos)))["*"](v_chasseur);
+        "64";
+        chasseur.pos=chasseur.pos["+"](chasseur.vitesse["*"](dt));
+        "65";
+        scene.camera.pos = avion.pos["+"](vec(0, 1.7, 0));
+        "66";
+        scene.forward = chasseur.pos["-"](1["*"](scene.camera.pos));
+        "67";
+        scene.up = vec(0, 1, 0);
+        "69";
+        chasseur.up = upinitial["+"](avion.up["-"](1["*"](upinitial))["*"](mag(chasseur.pos["-"](1["*"](Posinitiale))))["/"](n["/"](1["-"](1["*"](Math.pow(n, 2))))["*"](mag(Posinitiale))["-"](1["*"](8))));
+    }
+};
+if (!__main__.__module__) Object.defineProperties(__main__, {
+    __module__ : {value: null}
+});
+
+;$(function(){ window.__context = { glowscript_container: $("#glowscript").removeAttr("id") }; __main__() })})()
+// END JAVASCRIPT
+
+//--><!]]></script>
+</div>

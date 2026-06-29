@@ -1,0 +1,151 @@
+<meta charset="utf-8">
+<style>
+    html, body { margin: 0; padding: 0; background: #fff; overflow: hidden;
+                 font-family: system-ui, -apple-system, sans-serif; }
+    #wrap { display: flex; flex-direction: column; align-items: center;
+            gap: 10px; padding: 12px 0 16px; box-sizing: border-box; }
+    #controls { display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+                justify-content: center; font-size: 14px; color: #222; }
+    #controls label { font-weight: 600; }
+    #nb { width: 200px; cursor: pointer; accent-color: #1565ff; }
+    #nbval { min-width: 1.5em; text-align: center; font-variant-numeric: tabular-nums;
+             font-weight: 600; }
+    #restart { border: 1px solid #cfcfcf; background: #f6f6f6; border-radius: 7px;
+               padding: 5px 12px; font-size: 13px; cursor: pointer; color: #222; }
+    #restart:hover { background: #ececec; }
+    canvas { max-width: 100%; height: auto; touch-action: none; }
+</style>
+
+<div id="wrap">
+  <div id="controls">
+    <label for="nb">Tortues</label>
+    <input type="range" id="nb" min="3" max="12" step="1" value="6">
+    <span id="nbval">6</span>
+    <button id="restart">Relancer</button>
+  </div>
+  <canvas id="cv" width="480" height="480"></canvas>
+</div>
+
+<script>
+(function () {
+  var canvas = document.getElementById('cv');
+  var ctx = canvas.getContext('2d');
+  var nbInput = document.getElementById('nb');
+  var nbVal = document.getElementById('nbval');
+  var restartBtn = document.getElementById('restart');
+
+  var W = 480, H = 480;
+
+  // Netteté sur écrans haute densité
+  var dpr = window.devicePixelRatio || 1;
+  canvas.width = W * dpr;
+  canvas.height = H * dpr;
+  canvas.style.width = W + 'px';
+  canvas.style.height = H + 'px';
+
+  // Paramètres du programme d'origine
+  var taille = 150;   // rayon du cercle de départ
+  var pas = 3;        // unité de déplacement
+
+  var positions, bluePrev, totalSteps, step, localReached, rafId;
+
+  function resetTransform() {
+    // Repère "tortue" : origine au centre, axe y vers le haut
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.translate(W / 2, H / 2);
+    ctx.scale(1, -1);
+  }
+
+  function clearAll() {
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, W, H);
+    resetTransform();
+  }
+
+  function drawPolygon(pts, color) {
+    ctx.strokeStyle = color;
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(pts[0][0], pts[0][1]);
+    for (var i = 1; i < pts.length; i++) ctx.lineTo(pts[i][0], pts[i][1]);
+    ctx.closePath();
+    ctx.stroke();
+  }
+
+  function init() {
+    var N = parseInt(nbInput.value, 10);
+    nbVal.textContent = N;
+
+    if (rafId) cancelAnimationFrame(rafId);
+    clearAll();
+
+    // Positions de départ sur le cercle
+    positions = [];
+    for (var i = 0; i < N; i++) {
+      positions.push([
+        taille * Math.cos(2 * i * Math.PI / N),
+        taille * Math.sin(2 * i * Math.PI / N)
+      ]);
+    }
+    bluePrev = positions.map(function (p) { return [p[0], p[1]]; });
+
+    // Polygone initial en rouge (comme draw_square(pos,...) avant la boucle)
+    drawPolygon(positions, '#ff0000');
+
+    totalSteps = Math.floor(taille / pas) * N >> 1; // int(taille/pas)*N//2
+    step = 0;
+    animate();
+  }
+
+  function oneStep() {
+    var N = positions.length;
+    var snapshot = positions.map(function (p) { return [p[0], p[1]]; });
+
+    // Ralentissement : si tortue 0 et 1 sont proches, pas -> 1
+    var dx = snapshot[0][0] - snapshot[1][0];
+    var dy = snapshot[0][1] - snapshot[1][1];
+    var d = Math.sqrt(dx * dx + dy * dy);
+    var localPas = pas;
+
+    ctx.strokeStyle = '#0000ff';
+    ctx.lineWidth = 1;
+
+    for (var i = 0; i < N; i++) {
+      if (d < 2 * localPas) localPas = 1;
+      var cur = snapshot[i];
+      var nxt = snapshot[(i + 1) % N];
+      var ang = Math.atan2(nxt[1] - cur[1], nxt[0] - cur[0]);
+      var np = [cur[0] + localPas * Math.cos(ang),
+                cur[1] + localPas * Math.sin(ang)];
+
+      // Trace bleue (la courbe de poursuite)
+      ctx.beginPath();
+      ctx.moveTo(cur[0], cur[1]);
+      ctx.lineTo(np[0], np[1]);
+      ctx.stroke();
+
+      positions[i] = np;
+    }
+
+    // Polygone rouge des nouvelles positions
+    drawPolygon(positions, '#ff0000');
+  }
+
+  function animate() {
+    var perFrame = 2; // vitesse de tracé
+    for (var k = 0; k < perFrame && step < totalSteps; k++) {
+      oneStep();
+      step++;
+    }
+    if (step < totalSteps) {
+      rafId = requestAnimationFrame(animate);
+    }
+  }
+
+  nbInput.addEventListener('input', init);
+  restartBtn.addEventListener('click', init);
+
+  init();
+})();
+</script>

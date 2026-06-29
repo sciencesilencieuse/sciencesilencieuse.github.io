@@ -1,0 +1,165 @@
+<style>
+    body { margin: 0; padding: 0; overflow: hidden; }
+</style>
+
+<div id="glowscript" class="glowscript">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link type="text/css" href="https://www.glowscript.org/css/redmond/2.1/jquery-ui.custom.css" rel="stylesheet" />
+<link type="text/css" href="https://www.glowscript.org/css/ide.css" rel="stylesheet" />
+<script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/package/glow.3.2.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/package/RSrun.3.2.min.js"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+// START JAVASCRIPT
+;(function() {;
+var ρσ_modules = {};
+ρσ_modules.pythonize = {};
+
+(function(){
+    function strings() {
+        var string_funcs, exclude, name;
+        string_funcs = set("capitalize strip lstrip rstrip islower isupper isspace lower upper swapcase center count endswith startswith find rfind index rindex format join ljust rjust partition rpartition replace split rsplit splitlines zfill".split(" "));
+        if (!arguments.length) {
+            exclude = (function(){
+                var s = ρσ_set();
+                s.jsset.add("split");
+                s.jsset.add("replace");
+                return s;
+            })();
+        } else if (arguments[0]) {
+            exclude = Array.prototype.slice.call(arguments);
+        } else {
+            exclude = null;
+        }
+        if (exclude) {
+            string_funcs = string_funcs.difference(set(exclude));
+        }
+        var ρσ_Iter0 = string_funcs;
+        ρσ_Iter0 = ((typeof ρσ_Iter0[Symbol.iterator] === "function") ? (ρσ_Iter0 instanceof Map ? ρσ_Iter0.keys() : ρσ_Iter0) : Object.keys(ρσ_Iter0));
+        for (var ρσ_Index0 of ρσ_Iter0) {
+            name = ρσ_Index0;
+            (ρσ_expr_temp = String.prototype)[(typeof name === "number" && name < 0) ? ρσ_expr_temp.length + name : name] = (ρσ_expr_temp = ρσ_str.prototype)[(typeof name === "number" && name < 0) ? ρσ_expr_temp.length + name : name];
+        }
+    };
+    if (!strings.__module__) Object.defineProperties(strings, {
+        __module__ : {value: "pythonize"}
+    });
+
+    ρσ_modules.pythonize.strings = strings;
+})();
+async function __main__() {
+"use strict";
+    var display = canvas;
+    var scene = canvas();
+
+    function round(num, n=0) {return Number(num.toFixed(n))}
+
+    var version, print, arange, __name__, type, ρσ_ls, ρσ_unpack, t, dt, g, r_roue, orig, epaisseur, roue, rayons, omega, N_rayons, i, balles, N_balles, masse, v0, balle, Fgrav, Fres;
+    version = ρσ_list_decorate([ "3.2", "glowscript" ]);
+    Array.prototype['+'] = function(r) {return this.concat(r)}
+    Array.prototype['*'] = function(r) {return __array_times_number(this, r)}
+    window.__GSlang = "vpython";
+    print = GSprint;
+    arange = range;
+    __name__ = "__main__";
+    type = pytype;
+    var strings = ρσ_modules.pythonize.strings;
+
+    strings();
+    "3";
+    scene.width = window.innerWidth;
+    scene.height = scene.width*3/4;
+    "4";
+    scene.range = 2;
+    "5";
+    scene.center = vec(0, 1["-u"]()["*"](1), 0);
+    "6";
+    scene.background = vec(223, 101, 127)["/"](255);
+    "8";
+    t = 0;
+    "9";
+    dt = .01;
+    "10";
+    g = vec(0, 1["-u"]()["*"](9.8), 0);
+    "12";
+    r_roue = .5;
+    "13";
+    orig = vec(0, 0, 0);
+    "14";
+    epaisseur = .05;
+    "15";
+    roue = ρσ_interpolate_kwargs.call(this, ring, [ρσ_desugar_kwargs({pos: orig, axis: vector(0, 0, 1), radius: r_roue, thickness: epaisseur, color: vec(140, 121, 167)["/"](255)})]);
+    "16";
+    rayons = ρσ_list_decorate([]);
+    "17";
+    omega = 2["*"](pi);
+    "18";
+    N_rayons = 10;
+    "19";
+    for (var ρσ_Index1 = 0; ρσ_Index1["<"](N_rayons); ρσ_Index1++) {
+        i = ρσ_Index1;
+        "20";
+        rayons=rayons["+"](ρσ_interpolate_kwargs.call(this, cylinder, [ρσ_desugar_kwargs({pos: orig, axis: vec(r_roue["*"](cos(omega["*"](t)["+"](2["*"](pi)["/"](N_rayons)["*"](i)))), r_roue["*"](sin(omega["*"](t)["+"](2["*"](pi)["/"](N_rayons)["*"](i)))), 0), radius: .02, color: vec(226, 207, 145)["/"](255)})]));
+    }
+    "22";
+    balles = ρσ_list_decorate([]);
+    "23";
+    N_balles = 50;
+    "24";
+    masse = 1;
+    "25";
+    v0 = r_roue["+"](epaisseur)["*"](omega);
+    "26";
+    for (var ρσ_Index2 = 0; ρσ_Index2["<"](N_balles); ρσ_Index2++) {
+        i = ρσ_Index2;
+        "27";
+        balle = ρσ_interpolate_kwargs.call(this, sphere, [ρσ_desugar_kwargs({pos: vec(r_roue["+"](epaisseur)["*"](cos(omega["*"](t)["+"](2["*"](pi)["/"](N_balles)["*"](i)))), r_roue["+"](epaisseur)["*"](sin(omega["*"](t)["+"](2["*"](pi)["/"](N_balles)["*"](i)))), 0), radius: .01, color: vec(140, 186, 215)["/"](255), make_trail: true})]);
+        "28";
+        balle.v = v0["*"](vec(1["-u"]()["*"](sin(2["*"](pi)["/"](N_balles)["*"](i))), cos(2["*"](pi)["/"](N_balles)["*"](i)), 0));
+        "29";
+        balle.m = masse;
+        "30";
+        balles=balles["+"](balle);
+    }
+    "32";
+    while (t["<"](1.5)) {
+        "33";
+        (await rate(1["/"](dt)));
+        "34";
+        Fgrav = masse["*"](g);
+        "35";
+        Fres = Fgrav;
+        "36";
+        if (t[">"](.2)) {
+            "37";
+            for (var ρσ_Index3 = 0; ρσ_Index3["<"](N_rayons); ρσ_Index3++) {
+                i = ρσ_Index3;
+                "38";
+                ρσ_getitem(rayons, i).axis = vec(r_roue["*"](cos(omega["*"](t)["+"](2["*"](pi)["/"](N_rayons)["*"](i)))), r_roue["*"](sin(omega["*"](t)["+"](2["*"](pi)["/"](N_rayons)["*"](i)))), 0);
+            }
+            "39";
+            var ρσ_Iter4 = balles;
+            ρσ_Iter4 = ((typeof ρσ_Iter4[Symbol.iterator] === "function") ? (ρσ_Iter4 instanceof Map ? ρσ_Iter4.keys() : ρσ_Iter4) : Object.keys(ρσ_Iter4));
+            for (var ρσ_Index4 of ρσ_Iter4) {
+                balle = ρσ_Index4;
+                "40";
+                balle.v=balle.v["+"](Fres["*"](dt)["/"](balle.m));
+                "41";
+                balle.pos=balle.pos["+"](balle.v["*"](dt));
+            }
+        }
+        "42";
+        t=t["+"](dt);
+    }
+};
+if (!__main__.__module__) Object.defineProperties(__main__, {
+    __module__ : {value: null}
+});
+
+;$(function(){ window.__context = { glowscript_container: $("#glowscript").removeAttr("id") }; __main__() })})()
+// END JAVASCRIPT
+
+//--><!]]></script>
+</div>

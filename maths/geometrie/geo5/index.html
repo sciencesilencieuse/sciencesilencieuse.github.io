@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1782504219" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1782504219" rel="stylesheet">
-    <link href="/css/hybrid.css?1782504219" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1782504219" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1782504219" rel="stylesheet">
-    <link href="/css/auto-complete.css?1782504219" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1782504219" rel="stylesheet">
-    <link href="/css/theme.css?1782504219" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1782504219" rel="stylesheet">
+    <link href="/css/nucleus.css?1782767101" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1782767101" rel="stylesheet">
+    <link href="/css/hybrid.css?1782767101" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1782767101" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1782767101" rel="stylesheet">
+    <link href="/css/auto-complete.css?1782767101" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1782767101" rel="stylesheet">
+    <link href="/css/theme.css?1782767101" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1782767101" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1782504219" rel="stylesheet">
+    <link href="/css/theme-blue.css?1782767101" rel="stylesheet">
     
-    <link href="/css/foo.css?1782504219" rel="stylesheet"><link href="/css/bar.css?1782504219" rel="stylesheet">
+    <link href="/css/foo.css?1782767101" rel="stylesheet"><link href="/css/bar.css?1782767101" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1782504219"></script>
+    <script src="/js/jquery-3.3.1.min.js?1782767101"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1782504219"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1782504219"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1782767101"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1782767101"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1782504219"></script>
+<script type="text/javascript" src="/js/search.js?1782767101"></script>
 
     
   </div>
@@ -1861,15 +1861,131 @@ $\displaystyle T+\frac{T}{2}+\frac{T}{4}+\frac{T}{8}+\cdots = \sum_{n=0}^{\infty
 <p>C&rsquo;est finalement beaucoup plus simple à programmer qu&rsquo;à calculer. Et si la cible se met à remuer, cela devient même mission quasi impossible d&rsquo;obtenir une formule fermée pour la courbe&hellip;</p>
 <p>Dans ce premier petit programme, on retrouve la courbe d&rsquo;allure caractéristique.</p>
 <br>
-<div style="position:relative; width:1000px; max-width:100%; margin-left: auto; margin-right: auto;  ">
-<iframe src="https://trinket.io/embed/glowscript/236437d468?outputOnly=true&start=result" width="100%" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<div style="position:relative; width:100%; max-width:980px; margin:auto; aspect-ratio:980/680; overflow:hidden; border-radius: 6px;">
+  <button id="resetButton" title="Relancer la simulation">
+    <i class="fa-solid fa-rotate-right"></i>
+  </button>
+  <iframe id="monProgramme"
+          src="/programmes/poursuiteavion1.html"
+          width="100%" height="100%"
+          frameborder="0"
+          allowfullscreen
+          tabindex="0"></iframe>
 </div>
+<style>
+#resetButton {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 10;
+  background: #A4CBFA;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#resetButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+#resetButton:active {
+  transform: scale(0.92);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+
+/* Supprime le liseré bleu par défaut quand l'iframe prend le focus */
+#monProgramme:focus {
+  outline: none;
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const iframe = document.getElementById("monProgramme");
+    const btn = document.getElementById("resetButton");
+
+    // Action du bouton reset
+    btn.onclick = function() {
+        iframe.src = iframe.src;
+    };
+
+    // LE CORRECTIF POUR LE SHIFT + DRAG :
+    // On force l'iframe à prendre le focus clavier dès que la souris la survole.
+    iframe.addEventListener("mouseenter", function() {
+        iframe.focus();
+    });
+});
+</script>
 <br>
-Et dans ce deuxième programme, on prend le point de vue du passager de l'avion cible pour confirmer la mise-en-garde du manuel&nbsp;; si le chasseur semble glisser dans le ciel tout en grossissant, ça n'est pas bon signe...<br>
+<p>Et dans ce deuxième programme, on prend le point de vue du passager de l&rsquo;avion cible pour confirmer la mise-en-garde du manuel ; si le chasseur semble glisser dans le ciel tout en grossissant, ça n&rsquo;est pas bon signe&hellip;<br></p>
 <br>
-<div style="position:relative; width:1000px; max-width:100%; margin-left: auto; margin-right: auto;  ">
-<iframe src="https://trinket.io/embed/glowscript/9ad19212ce?outputOnly=true&start=result" width="100%" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<div style="position:relative; width:100%; max-width:980px; margin:auto; aspect-ratio:980/680; overflow:hidden; border-radius: 6px;">
+  <button id="resetButton2" title="Relancer la simulation">
+    <i class="fa-solid fa-rotate-right"></i>
+  </button>
+  <iframe id="monProgramme2"
+          src="/programmes/poursuiteavion2.html"
+          width="100%" height="100%"
+          frameborder="0"
+          allowfullscreen
+          tabindex="0"></iframe>
 </div>
+<style>
+#resetButton2 {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 10;
+  background: #A4CBFA;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#resetButton2:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+#resetButton2:active {
+  transform: scale(0.92);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+
+/* Supprime le liseré bleu par défaut quand l'iframe prend le focus */
+#monProgramme2:focus {
+  outline: none;
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const iframe = document.getElementById("monProgramme2");
+    const btn = document.getElementById("resetButton2");
+
+    // Action du bouton reset
+    btn.onclick = function() {
+        iframe.src = iframe.src;
+    };
+
+    // LE CORRECTIF POUR LE SHIFT + DRAG :
+    // On force l'iframe à prendre le focus clavier dès que la souris la survole.
+    iframe.addEventListener("mouseenter", function() {
+        iframe.focus();
+    });
+});
+</script>
 <br>
 <h2 id="interception">Interception</h2>
 <p>Arrêtons maintenant de poursuivre bêtement et essayons d&rsquo;intercepter.</p>
@@ -1936,16 +2052,17 @@ Et puisque $\displaystyle a=\frac{v^2}{R}$, on obtient : $\displaystyle R =\fra
 <p><img src="/nbugspurs1.png?width=600px" alt=""></p>
 <p>$n$ tortues sont disposées sur les sommets d&rsquo;un polygone régulier à $n$ côtés. Au top départ, chacune se met à poursuivre à vitesse constante sa voisine dans le sens trigonométrique jusqu&rsquo;à ce qu&rsquo;elles se rejoignent toutes au centre.</p>
 <br>
-<div style="position:relative; width:600px; max-width:100%; margin-left: auto; margin-right: auto; ">
-<iframe src="https://trinket.io/embed/python/92f6eeb03c?outputOnly=true&start=result" width="100%" height="750" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<div style="width:fit-content;max-width:100%;margin:auto;">
+  <iframe src="/programmes/tortue1.html"
+          width="480" height="540" frameborder="0"></iframe>
 </div>
 <br>
 <p>On remarque que le polygone formé par les tortues est à tout moment une réduction et rotation du polygone de départ.</p>
 <br>
-<div style="position:relative; width:600px; max-width:100%; margin-left: auto; margin-right: auto; ">
-<iframe src="https://trinket.io/embed/python/d6e2011399?outputOnly=true&start=result" width="100%" height="750" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<div style="position:relative; width:700px; max-width:100%; margin-left: auto; margin-right: auto; aspect-ratio:700/560;border:none;">
+<iframe src="/programmes/tortue2.html"  style="width:100%; height:100%;border:none;">
+</iframe>
 </div>
-<br>
 <p>Utilisons les coordonnées polaires $(r(t);\theta(t))$ pour décrire une des tortues dont la position initiale servira d&rsquo;origine des angles $(r(0)=r;\theta(0)=0).$</p>
 <p><img src="/schematortue.png?width=400px" alt=""></p>
 <p>$\displaystyle v_r = \frac{dr}{dt} = -v\sin\left(\frac{\pi}{n}\right)$<br></p>
@@ -1989,9 +2106,67 @@ Et puisque $\displaystyle a=\frac{v^2}{R}$, on obtient : $\displaystyle R =\fra
 <p>Comme le montre cette très chouette vidéo de fouloscopie, nos histoires de poursuite participent à l&rsquo;explication des comportements collectifs fascinants des bancs de possions ou des murmurations d&rsquo;étourneaux. Un poisson (ou oiseau) ne ferait en fait que poursuivre les quelques individus immédiatement dans son champ de vision.</p>
 <p>Le code suivant utilise les 6 premiers voisins et permet de voyager un peu dans le diagramme de phase.</p>
 <br>
-<div style="position:relative; width:810px; max-width:100%; margin-left: auto;margin-right: auto;">
-<iframe src="https://trinket.io/embed/glowscript/54274cbedc?outputOnly=true" width="100%" height="770" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<div style="position:relative; width:1200px; max-width:100%; margin:auto; aspect-ratio:1200/800; overflow:hidden; border-radius: 6px;">
+  <button id="resetButton3" title="Relancer la simulation">
+    <i class="fa-solid fa-rotate-right"></i>
+  </button>
+  <iframe id="monProgramme3"
+          src="/programmes/murmuration.html"
+          width="100%" height="100%"
+          frameborder="0"
+          allowfullscreen
+          tabindex="0"></iframe>
 </div>
+<style>
+#resetButton3 {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 10;
+  background: #A4CBFA;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#resetButton3:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+#resetButton3:active {
+  transform: scale(0.92);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+
+/* Supprime le liseré bleu par défaut quand l'iframe prend le focus */
+#monProgramme3:focus {
+  outline: none;
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const iframe = document.getElementById("monProgramme3");
+    const btn = document.getElementById("resetButton3");
+
+    // Action du bouton reset
+    btn.onclick = function() {
+        iframe.src = iframe.src;
+    };
+
+    // LE CORRECTIF POUR LE SHIFT + DRAG :
+    // On force l'iframe à prendre le focus clavier dès que la souris la survole.
+    iframe.addEventListener("mouseenter", function() {
+        iframe.focus();
+    });
+});
+</script>
 
 
 <footer class="footline">
@@ -3139,16 +3314,16 @@ Et puisque $\displaystyle a=\frac{v^2}{R}$, on obtient : $\displaystyle R =\fra
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1782504219"></script>
-    <script src="/js/perfect-scrollbar.min.js?1782504219"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1782504219"></script>
-    <script src="/js/jquery.sticky.js?1782504219"></script>
-    <script src="/js/featherlight.min.js?1782504219"></script>
-    <script src="/js/highlight.pack.js?1782504219"></script>
+    <script src="/js/clipboard.min.js?1782767101"></script>
+    <script src="/js/perfect-scrollbar.min.js?1782767101"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1782767101"></script>
+    <script src="/js/jquery.sticky.js?1782767101"></script>
+    <script src="/js/featherlight.min.js?1782767101"></script>
+    <script src="/js/highlight.pack.js?1782767101"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1782504219"></script>
-    <script src="/js/learn.js?1782504219"></script>
-    <script src="/js/hugo-learn.js?1782504219"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1782767101"></script>
+    <script src="/js/learn.js?1782767101"></script>
+    <script src="/js/hugo-learn.js?1782767101"></script>
     
     
 

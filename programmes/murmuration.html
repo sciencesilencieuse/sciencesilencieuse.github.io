@@ -1,0 +1,445 @@
+<meta charset="utf-8">
+<style>
+    html, body { margin: 0; padding: 0; overflow: hidden; background: #000; }
+
+    /* Overlay flottant en bas du canvas */
+    #gs-panel {
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0 24px;
+        padding: 10px 24px 14px;
+        box-sizing: border-box;
+        background: rgba(0, 0, 0, 0.52);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        z-index: 99;
+    }
+    .gs-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    .gs-label {
+        color: rgba(255,255,255,0.85);
+        font: 600 11px/1 system-ui, sans-serif;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+    }
+    .gs-val {
+        color: rgba(255,255,255,0.6);
+        font: 11px/1 monospace;
+    }
+    /* Slider custom */
+    .gs-range {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background: rgba(255,255,255,0.25);
+        outline: none;
+        cursor: pointer;
+    }
+    .gs-range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 18px; height: 18px;
+        border-radius: 50%;
+        background: #4fc3f7;
+        box-shadow: 0 0 6px rgba(79,195,247,.7);
+        cursor: pointer;
+    }
+    .gs-range::-moz-range-thumb {
+        width: 18px; height: 18px;
+        border-radius: 50%;
+        background: #4fc3f7;
+        box-shadow: 0 0 6px rgba(79,195,247,.7);
+        border: none;
+        cursor: pointer;
+    }
+</style>
+
+<div id="glowscript" class="glowscript">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link type="text/css" href="https://www.glowscript.org/css/redmond/2.1/jquery-ui.custom.css" rel="stylesheet" />
+<link type="text/css" href="https://www.glowscript.org/css/ide.css" rel="stylesheet" />
+<script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/package/glow.3.2.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/package/RSrun.3.2.min.js"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+// START JAVASCRIPT
+;(function() {;
+var ρσ_modules = {};
+var facteur_alignement, facteur_cohesion, facteur_separation, point_fuite, temps_debut_fuite, t;
+ρσ_modules.pythonize = {};
+
+(function(){
+    function strings() {
+        var string_funcs, exclude, name;
+        string_funcs = set("capitalize strip lstrip rstrip islower isupper isspace lower upper swapcase center count endswith startswith find rfind index rindex format join ljust rjust partition rpartition replace split rsplit splitlines zfill".split(" "));
+        if (!arguments.length) {
+            exclude = (function(){
+                var s = ρσ_set();
+                s.jsset.add("split");
+                s.jsset.add("replace");
+                return s;
+            })();
+        } else if (arguments[0]) {
+            exclude = Array.prototype.slice.call(arguments);
+        } else {
+            exclude = null;
+        }
+        if (exclude) {
+            string_funcs = string_funcs.difference(set(exclude));
+        }
+        var ρσ_Iter0 = string_funcs;
+        ρσ_Iter0 = ((typeof ρσ_Iter0[Symbol.iterator] === "function") ? (ρσ_Iter0 instanceof Map ? ρσ_Iter0.keys() : ρσ_Iter0) : Object.keys(ρσ_Iter0));
+        for (var ρσ_Index0 of ρσ_Iter0) {
+            name = ρσ_Index0;
+            (ρσ_expr_temp = String.prototype)[(typeof name === "number" && name < 0) ? ρσ_expr_temp.length + name : name] = (ρσ_expr_temp = ρσ_str.prototype)[(typeof name === "number" && name < 0) ? ρσ_expr_temp.length + name : name];
+        }
+    };
+    if (!strings.__module__) Object.defineProperties(strings, {
+        __module__ : {value: "pythonize"}
+    });
+
+    ρσ_modules.pythonize.strings = strings;
+})();
+async function __main__() {
+"use strict";
+    var display = canvas;
+    var scene = canvas();
+
+    var version, print, arange, __name__, type, ρσ_ls, nombre_oiseaux, espace_taille, vitesse_initiale, rayon_vision, distance_minimale, rayon_fuite, temps_fuite, ρσ_unpack, oiseaux, point_fuite, temps_debut_fuite, facteur_alignement, facteur_cohesion, facteur_separation, s1, s2, s3, valeur_facteur_alignement, valeur_facteur_cohesion, valeur_facteur_separation, posit, oiseau, _, t, dt;
+    version = ρσ_list_decorate([ "3.2", "glowscript" ]);
+    Array.prototype['+'] = function(r) {return this.concat(r)}
+    Array.prototype['*'] = function(r) {return __array_times_number(this, r)}
+    window.__GSlang = "vpython";
+    print = GSprint;
+    arange = range;
+    __name__ = "__main__";
+    type = pytype;
+    var strings = ρσ_modules.pythonize.strings;
+
+    strings();
+    "4";
+    nombre_oiseaux = 50;
+    "5";
+    espace_taille = 20;
+    "6";
+    vitesse_initiale = .05;
+    "7";
+    rayon_vision = 20;
+    "8";
+    distance_minimale = 2;
+    "9";
+    rayon_fuite = 5;
+    "10";
+    temps_fuite = .005;
+    "13";
+    scene.width = window.innerWidth;
+    scene.height = scene.width*2/3;
+    "14";
+    oiseaux = ρσ_list_decorate([]);
+    "15";
+    point_fuite = null;
+    "16";
+    temps_debut_fuite = null;
+    "19";
+    facteur_alignement = .004;
+    "20";
+    facteur_cohesion = .002;
+    "21";
+    facteur_separation = .008;
+    "24";
+    async function ajuster_alignement(s) {
+        "25";
+        "26";
+        facteur_alignement = s.value;
+        "27";
+        valeur_facteur_alignement.text = "{:1.2e}".format(s.value);
+    };
+    if (!ajuster_alignement.__argnames__) Object.defineProperties(ajuster_alignement, {
+        __argnames__ : {value: ["s"]},
+        __module__ : {value: null}
+    });
+
+    "29";
+    async function ajuster_cohesion(s) {
+        "30";
+        "31";
+        facteur_cohesion = s.value;
+        "32";
+        valeur_facteur_cohesion.text = "{:1.2e}".format(s.value);
+    };
+    if (!ajuster_cohesion.__argnames__) Object.defineProperties(ajuster_cohesion, {
+        __argnames__ : {value: ["s"]},
+        __module__ : {value: null}
+    });
+
+    "34";
+    async function ajuster_separation(s) {
+        "35";
+        "36";
+        facteur_separation = s.value;
+        "37";
+        valeur_facteur_separation.text = "{:1.2e}".format(s.value);
+    };
+    if (!ajuster_separation.__argnames__) Object.defineProperties(ajuster_separation, {
+        __argnames__ : {value: ["s"]},
+        __module__ : {value: null}
+    });
+
+    "40";
+    scene.append_to_caption(" ".repeat(30));
+    "41";
+    ρσ_interpolate_kwargs.call(this, wtext, [ρσ_desugar_kwargs({text: "alignement"})]);
+    "42";
+    scene.append_to_caption(" ".repeat(60));
+    "43";
+    ρσ_interpolate_kwargs.call(this, wtext, [ρσ_desugar_kwargs({text: "cohésion"})]);
+    "44";
+    scene.append_to_caption(" ".repeat(60));
+    "45";
+    ρσ_interpolate_kwargs.call(this, wtext, [ρσ_desugar_kwargs({text: "séparation"})]);
+    "46";
+    scene.append_to_caption("\n");
+    "47";
+    s1 = ρσ_interpolate_kwargs.call(this, slider, [ρσ_desugar_kwargs({min: 0, max: .05, value: facteur_alignement, step: .001, bind: ajuster_alignement, title: "Alignement", length: Math.floor((window.innerWidth - 80) / 3)})]);
+    "48";
+    s2 = ρσ_interpolate_kwargs.call(this, slider, [ρσ_desugar_kwargs({min: 0, max: .05, value: facteur_cohesion, step: .001, bind: ajuster_cohesion, title: "Cohésion", length: Math.floor((window.innerWidth - 80) / 3)})]);
+    "49";
+    s3 = ρσ_interpolate_kwargs.call(this, slider, [ρσ_desugar_kwargs({min: 0, max: .2, value: facteur_separation, step: .005, bind: ajuster_separation, title: "Séparation", length: Math.floor((window.innerWidth - 80) / 3)})]);
+    "50";
+    scene.append_to_caption("\n");
+    "51";
+    scene.append_to_caption(" ".repeat(30));
+    "52";
+    valeur_facteur_alignement = ρσ_interpolate_kwargs.call(this, wtext, [ρσ_desugar_kwargs({text: "{:1.2e}".format(s1.value)})]);
+    "53";
+    scene.append_to_caption(" ".repeat(65));
+    "54";
+    valeur_facteur_cohesion = ρσ_interpolate_kwargs.call(this, wtext, [ρσ_desugar_kwargs({text: "{:1.2e}".format(s2.value)})]);
+    "55";
+    scene.append_to_caption(" ".repeat(65));
+    "56";
+    valeur_facteur_separation = ρσ_interpolate_kwargs.call(this, wtext, [ρσ_desugar_kwargs({text: "{:1.2e}".format(s3.value)})]);
+    // ── Overlay flottant sur le canvas ──
+    // Polling : on attend que GlowScript ait créé le canvas ET les 3 sliders.
+    (function() {
+        var tries = 0;
+        var iv = setInterval(function() {
+            tries++;
+            var gs = document.querySelector('.glowscript');
+            var wrapper = gs ? gs.querySelector('.glowscript-canvas-wrapper') : null;
+            // GlowScript 3.2 = sliders jQuery UI (.ui-slider), pas des input[range].
+            var uiSliders = gs ? gs.querySelectorAll('.ui-slider') : [];
+            if (gs && wrapper && uiSliders.length >= 3) {
+                clearInterval(iv);
+                buildOverlay(gs, wrapper);
+            } else if (tries > 50) {
+                clearInterval(iv); // abandon après ~5 s
+            }
+        }, 100);
+
+        function buildOverlay(gs, wrapper) {
+            // 1. Position relative forcée en JS (GlowScript pose des styles inline).
+            gs.style.position = 'relative';
+
+            // 2. Masquer toute la légende : tout dans .glowscript sauf le wrapper du canvas.
+            Array.from(gs.childNodes).forEach(function(n) {
+                if (n === wrapper) return;
+                if (n.nodeType === Node.ELEMENT_NODE) n.style.display = 'none';
+                else if (n.nodeType === Node.TEXT_NODE) n.textContent = '';
+            });
+
+            // 3. Construire le panneau. Chaque slider pilote DIRECTEMENT la variable
+            //    du programme (facteur_*) — dans la portée de ce code injecté.
+            var configs = [
+                { label: 'Alignement', min: 0, max: 0.05, step: 0.001,
+                  value: facteur_alignement, set: function(v) { facteur_alignement = v; } },
+                { label: 'Cohésion',   min: 0, max: 0.05, step: 0.001,
+                  value: facteur_cohesion,   set: function(v) { facteur_cohesion = v; } },
+                { label: 'Séparation', min: 0, max: 0.2,  step: 0.005,
+                  value: facteur_separation, set: function(v) { facteur_separation = v; } }
+            ];
+
+            var panel = document.createElement('div');
+            panel.id = 'gs-panel';
+
+            configs.forEach(function(cfg) {
+                var col = document.createElement('div');
+                col.className = 'gs-col';
+
+                var lbl = document.createElement('div');
+                lbl.className = 'gs-label';
+                lbl.textContent = cfg.label;
+
+                var inp = document.createElement('input');
+                inp.className = 'gs-range';
+                inp.type  = 'range';
+                inp.min   = cfg.min;
+                inp.max   = cfg.max;
+                inp.step  = cfg.step;
+                inp.value = cfg.value;
+
+                var valEl = document.createElement('div');
+                valEl.className = 'gs-val';
+                valEl.textContent = parseFloat(inp.value).toExponential(2);
+
+                inp.addEventListener('input', function() {
+                    var v = parseFloat(inp.value);
+                    cfg.set(v);                                  // pilote la simulation
+                    valEl.textContent = v.toExponential(2);
+                });
+
+                col.append(lbl, inp, valEl);
+                panel.appendChild(col);
+            });
+
+            gs.appendChild(panel);
+        }
+    })();
+    "58";
+    for (var ρσ_Index1 = 0; ρσ_Index1["<"](nombre_oiseaux); ρσ_Index1++) {
+        _ = ρσ_Index1;
+        "59";
+        posit = vector.random()["*"](espace_taille)["-"](1["*"](vector(espace_taille["/"](2), espace_taille["/"](2), espace_taille["/"](2))));
+        "60";
+        oiseau = ρσ_interpolate_kwargs.call(this, arrow, [ρσ_desugar_kwargs({pos: posit, axis: hat(vector.random())["*"](vitesse_initiale), color: color.white})]);
+        "61";
+        oiseaux.append(oiseau);
+    }
+    "63";
+    async function on_click(evt) {
+        "64";
+        "65";
+        point_fuite = evt.pos;
+        "66";
+        temps_debut_fuite = t;
+    };
+    if (!on_click.__argnames__) Object.defineProperties(on_click, {
+        __argnames__ : {value: ["evt"]},
+        __module__ : {value: null}
+    });
+
+    "68";
+    scene.bind("click", on_click);
+    "70";
+    async function mise_a_jour_oiseaux() {
+        var ρσ_ls, CDM, distances, dist, autre, voisins_proches, centre_masse, direction_moyenne, separation, ρσ_unpack, voisin, oiseau;
+        "71";
+        "72";
+        CDM = vec(0, 0, 0);
+        "73";
+        var ρσ_Iter2 = oiseaux;
+        ρσ_Iter2 = ((typeof ρσ_Iter2[Symbol.iterator] === "function") ? (ρσ_Iter2 instanceof Map ? ρσ_Iter2.keys() : ρσ_Iter2) : Object.keys(ρσ_Iter2));
+        for (var ρσ_Index2 of ρσ_Iter2) {
+            oiseau = ρσ_Index2;
+            "74";
+            distances = ρσ_list_decorate([]);
+            "75";
+            var ρσ_Iter3 = oiseaux;
+            ρσ_Iter3 = ((typeof ρσ_Iter3[Symbol.iterator] === "function") ? (ρσ_Iter3 instanceof Map ? ρσ_Iter3.keys() : ρσ_Iter3) : Object.keys(ρσ_Iter3));
+            for (var ρσ_Index3 of ρσ_Iter3) {
+                autre = ρσ_Index3;
+                "76";
+                if (autre !== oiseau) {
+                    "77";
+                    dist = mag(oiseau.pos["-"](1["*"](autre.pos)));
+                    "78";
+                    distances.append([dist, autre]);
+                }
+            }
+            "81";
+            distances.pysort();
+            "83";
+            voisins_proches = distances.slice(0, 6);
+            "85";
+            centre_masse = vec(0, 0, 0);
+            "86";
+            direction_moyenne = vec(0, 0, 0);
+            "87";
+            separation = vec(0, 0, 0);
+            "88";
+            var ρσ_Iter4 = voisins_proches;
+            ρσ_Iter4 = ((typeof ρσ_Iter4[Symbol.iterator] === "function") ? (ρσ_Iter4 instanceof Map ? ρσ_Iter4.keys() : ρσ_Iter4) : Object.keys(ρσ_Iter4));
+            for (var ρσ_Index4 of ρσ_Iter4) {
+                ρσ_unpack = ρσ_Index4;
+                dist = ρσ_unpack[0];
+                voisin = ρσ_unpack[1];
+                "89";
+                if (dist["<"](rayon_vision)) {
+                    "90";
+                    centre_masse=centre_masse["+"](voisin.pos);
+                    "91";
+                    direction_moyenne=direction_moyenne["+"](voisin.axis);
+                    "92";
+                    if (dist["<"](distance_minimale)) {
+                        "93";
+                        separation=separation["-"](voisin.pos["-"](1["*"](oiseau.pos))["/"](dist));
+                        "95";
+                    }
+                }
+            }
+            if (len(voisins_proches)[">"](0)) {
+                "96";
+                centre_masse=centre_masse["/"](len(voisins_proches));
+                "97";
+                direction_moyenne = hat(direction_moyenne);
+                "98";
+                separation = hat(separation);
+                "100";
+                oiseau.axis=oiseau.axis["+"](direction_moyenne["-"](1["*"](oiseau.axis))["*"](facteur_alignement));
+                "101";
+                oiseau.axis=oiseau.axis["+"](centre_masse["-"](1["*"](oiseau.pos))["*"](facteur_cohesion));
+                "102";
+                oiseau.axis=oiseau.axis["+"](separation["*"](facteur_separation));
+                "103";
+                oiseau.axis = hat(oiseau.axis);
+            }
+            "105";
+            oiseau.pos=oiseau.pos["+"](oiseau.axis["*"](vitesse_initiale));
+            "106";
+            CDM=CDM["+"](oiseau.pos);
+        }
+        "108";
+        scene.center = CDM["/"](nombre_oiseaux);
+    };
+    if (!mise_a_jour_oiseaux.__module__) Object.defineProperties(mise_a_jour_oiseaux, {
+        __module__ : {value: null}
+    });
+
+    "110";
+    t = 0;
+    "111";
+    dt = .05;
+    "112";
+    while (true) {
+        "113";
+        (await rate(100));
+        "114";
+        (await mise_a_jour_oiseaux());
+        "115";
+        t=t["+"](dt);
+    }
+};
+if (!__main__.__module__) Object.defineProperties(__main__, {
+    __module__ : {value: null}
+});
+
+;$(function(){ window.__context = { glowscript_container: $("#glowscript").removeAttr("id") }; __main__() })})()
+// END JAVASCRIPT
+
+//--><!]]>
+
+</script>
+
+
+
+
+</div>

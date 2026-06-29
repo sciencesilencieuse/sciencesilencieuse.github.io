@@ -10,7 +10,7 @@
 		
 		
 		
-			<lastBuildDate>Fri, 26 Jun 2026 13:34:01 +0200</lastBuildDate>
+			<lastBuildDate>Mon, 29 Jun 2026 21:52:18 +0200</lastBuildDate>
 		
 			<atom:link href="https://sciencesilencieuse.github.io/maths/geometrie/index.xml" rel="self" type="application/rss+xml" />
 			<item>
@@ -39,7 +39,7 @@
 				<link>https://sciencesilencieuse.github.io/maths/geometrie/geo4/</link>
 				<pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
 				<guid>https://sciencesilencieuse.github.io/maths/geometrie/geo4/</guid>
-				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;curse-of-dimensionality&#34;&gt;Curse of dimensionality&lt;/h1&gt;&#xA;&lt;p&gt;L&amp;rsquo;expression &lt;em&gt;Curse of dimensionality&lt;/em&gt; (&lt;em&gt;Fléau de la dimension&lt;/em&gt; dans sa traduction française) vient de l&amp;rsquo;américain Richard Bellman alors qu&amp;rsquo;il considérait des problèmes en programmation dynamique (qu&amp;rsquo;il inventa en 1953).&lt;/p&gt;&#xA;&lt;p&gt;Mais qu&amp;rsquo;est-ce donc que ce &amp;ldquo;fléau&amp;rdquo; ?&lt;/p&gt;&#xA;&lt;p&gt;Le volume d&amp;rsquo;un cube de côté $a$ dans un espace à $n$ dimensions vaut $a^n$. Jusque là, ça va.&lt;/p&gt;</description>
+				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;  details &gt; summary:first-of-type {&#xA;  display: list-item;     &#xA;  cursor: pointer;      &#xA;}&#xA;&#xA;details &gt; summary:first-of-type {&#xA;  list-style: disclosure-closed inside;&#xA;}&#xA;details[open] &gt; summary:first-of-type {&#xA;  list-style-type: disclosure-open;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;curse-of-dimensionality&#34;&gt;Curse of dimensionality&lt;/h1&gt;&#xA;&lt;p&gt;L&amp;rsquo;expression &lt;em&gt;Curse of dimensionality&lt;/em&gt; (&lt;em&gt;Fléau de la dimension&lt;/em&gt; dans sa traduction française) vient de l&amp;rsquo;américain Richard Bellman alors qu&amp;rsquo;il considérait des problèmes en programmation dynamique (qu&amp;rsquo;il inventa en 1953).&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Poursuites</title>
