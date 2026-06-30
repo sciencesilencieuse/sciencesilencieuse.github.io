@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1782778676" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1782778676" rel="stylesheet">
-    <link href="/css/hybrid.css?1782778676" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1782778676" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1782778676" rel="stylesheet">
-    <link href="/css/auto-complete.css?1782778676" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1782778676" rel="stylesheet">
-    <link href="/css/theme.css?1782778676" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1782778676" rel="stylesheet">
+    <link href="/css/nucleus.css?1782779747" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1782779747" rel="stylesheet">
+    <link href="/css/hybrid.css?1782779747" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1782779747" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1782779747" rel="stylesheet">
+    <link href="/css/auto-complete.css?1782779747" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1782779747" rel="stylesheet">
+    <link href="/css/theme.css?1782779747" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1782779747" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1782778676" rel="stylesheet">
+    <link href="/css/theme-blue.css?1782779747" rel="stylesheet">
     
-    <link href="/css/foo.css?1782778676" rel="stylesheet"><link href="/css/bar.css?1782778676" rel="stylesheet">
+    <link href="/css/foo.css?1782779747" rel="stylesheet"><link href="/css/bar.css?1782779747" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1782778676"></script>
+    <script src="/js/jquery-3.3.1.min.js?1782779747"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1782778676"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1782778676"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1782779747"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1782779747"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1782778676"></script>
+<script type="text/javascript" src="/js/search.js?1782779747"></script>
 
     
   </div>
@@ -2043,8 +2043,8 @@ Dans le premier cas, l&rsquo;information supplémentaire laisse trois possibilit
 <summary id="correcsum">
 Correction (cliquer pour afficher)</summary>
 <blockquote id="correc">
-<div style="position:relative; width:800px; height=450px; max-width: 100%; margin-left: auto; margin-right: auto; border-radius:10px;">
-<iframe width="800" height="450"  src="https://www.youtube.com/embed/J94PPS0qkAw?si=y-DGc1EiTtr3oNZs&amp;start=318" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius:10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"></iframe>
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto; margin-right: auto; border-radius:10px; aspect-ratio:800/450;">
+<iframe width="800" height="450"  src="https://www.youtube.com/embed/J94PPS0qkAw?si=y-DGc1EiTtr3oNZs&amp;start=318" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="max-width:100%;border-radius:10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); aspect-ratio:800/450; height:auto;"></iframe>
 </div>
 </blockquote>
 </details>
@@ -2087,6 +2087,7 @@ Vous vous retrouvez dans une de ces boites et on vous demande s&rsquo;il y a 10 
 <summary id="correcsum">
 Correction (cliquer pour afficher)</summary>
 <blockquote id="correc">
+<div style="overflow-x:auto;">
 <p>$$
 \color{#006C65}
 \begin{aligned}
@@ -2096,6 +2097,7 @@ P(\text{Pile}|7)&amp;=\frac{P(7|\text{Pile})P(\text{pile})}{P(7|\text{Pile})P(\t
 &amp;=91\%
 \end{aligned}
 $$</p>
+</div>
 </blockquote>
 </details>
 <br>
@@ -2216,9 +2218,11 @@ Tout ce qu&rsquo;il fait, c&rsquo;est <strong>mettre à jour</strong> les chance
 <summary id="correcsum">
 Réponse (cliquer pour afficher)</summary>
 <blockquote id="correc">
-$\displaystyle
+<div style="overflow-x:auto;">
+$$
 \frac{P(+|\text{Cancer})}{P(+|\overline{\text{Cancer}})}=\frac{\text{probabilité de vrais positifs}}{\text{probabilité de faux positifs}}=\frac{\text{sensibilité}}{\text{1-spécificité}}
-$
+$$
+</div>
 </blockquote>
 </details>
 <p>Le théorème de Bayes version cote devient donc :</p>
@@ -2231,7 +2235,7 @@ $</p>
 <p><span style="font-size: 1.1rem;color: #999;">Quelle est la bonne réponse (les cotes permettent de l&rsquo;estimer facilement) ?</span></p>
 </blockquote>
 <p>Plus de la moitié des docteurs présents ont choisi la réponse A, ce qui est très à côté de la plaque, et seulement 1 sur 5 ont choisi la bonne réponse&hellip;</p>
-<p>Changeons la prévalence à 10 % :</p>
+<p>Changeons la prévalence à 10 % :</p>
 <div>
 <table>
 <tr>
@@ -2248,7 +2252,7 @@ $</p>
 <blockquote>
 <p><span style="font-size: 1.1rem;color: #999;">Que devient la probabilité d&rsquo;avoir un cancer en cas de test positif ?</span></p>
 </blockquote>
-<p>Passons-la maintenant à 0,1 % :</p>
+<p>Passons-la maintenant à 0,1 % :</p>
 <table>
 <tr>
 <th>prévalence</th> <td> 0,1% </td>
@@ -2264,7 +2268,7 @@ $</p>
 <p><span style="font-size: 1.1rem;color: #999;">Que vaut $P(cancer|+)$  maintenant ?
 </span></p>
 </blockquote>
-<p>Augmentons la spécificité à 99 % et reprenant une prévalence de 1 %.</p>
+<p>Augmentons la spécificité à 99 % et reprenant une prévalence de 1 %.</p>
 <table>
 <tr>
 <th>prévalence</th> <td> 1% </td>
@@ -3547,16 +3551,16 @@ des mots, alors qu’il a une incidence sur la présence simultanée de certains
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1782778676"></script>
-    <script src="/js/perfect-scrollbar.min.js?1782778676"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1782778676"></script>
-    <script src="/js/jquery.sticky.js?1782778676"></script>
-    <script src="/js/featherlight.min.js?1782778676"></script>
-    <script src="/js/highlight.pack.js?1782778676"></script>
+    <script src="/js/clipboard.min.js?1782779747"></script>
+    <script src="/js/perfect-scrollbar.min.js?1782779747"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1782779747"></script>
+    <script src="/js/jquery.sticky.js?1782779747"></script>
+    <script src="/js/featherlight.min.js?1782779747"></script>
+    <script src="/js/highlight.pack.js?1782779747"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1782778676"></script>
-    <script src="/js/learn.js?1782778676"></script>
-    <script src="/js/hugo-learn.js?1782778676"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1782779747"></script>
+    <script src="/js/learn.js?1782779747"></script>
+    <script src="/js/hugo-learn.js?1782779747"></script>
     
     
 
