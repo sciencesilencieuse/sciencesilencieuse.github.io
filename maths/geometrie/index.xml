@@ -10,7 +10,7 @@
 		
 		
 		
-			<lastBuildDate>Tue, 30 Jun 2026 01:07:03 +0200</lastBuildDate>
+			<lastBuildDate>Tue, 30 Jun 2026 01:53:05 +0200</lastBuildDate>
 		
 			<atom:link href="https://sciencesilencieuse.github.io/maths/geometrie/index.xml" rel="self" type="application/rss+xml" />
 			<item>
@@ -46,7 +46,7 @@
 				<link>https://sciencesilencieuse.github.io/maths/geometrie/geo5/</link>
 				<pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
 				<guid>https://sciencesilencieuse.github.io/maths/geometrie/geo5/</guid>
-				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;poursuites&#34;&gt;Poursuites&lt;/h1&gt;&#xA;&lt;br&gt;&#xA;&#xA;&lt;div class=&#34;notices note&#34; style=&#34;--title: &#39;note&#39;;&#34;&gt;&#xA;  &lt;p style=&#34;display: none;&#34;&gt;note&lt;/p&gt;&#xA;  &lt;div class=&#34;notice-body&#34;&gt;&#xA;    &lt;p&gt;Cette page est &lt;em&gt;très&lt;/em&gt; inspirée du livre &lt;em&gt;Chases and Escapes The Mathematics of Pursuit and Evasion&lt;/em&gt; de Paul Nahin.&lt;/p&gt;&#xA;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;paradoxe-dachille-et-de-la-tortue&#34;&gt;Paradoxe d&amp;rsquo;Achille et de la tortue&lt;/h2&gt;&#xA;&lt;p&gt;Dans &lt;em&gt;La Physique&lt;/em&gt;, Aristote rapporte les célèbres paradoxes de Zénon d&amp;rsquo;Élée dont celui d&amp;rsquo;Achille et la tortue. :&lt;/p&gt;</description>
+				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;poursuites&#34;&gt;Poursuites&lt;/h1&gt;&#xA;&#xA;&lt;div class=&#34;notices note&#34; style=&#34;--title: &#39;note&#39;;&#34;&gt;&#xA;  &lt;p style=&#34;display: none;&#34;&gt;note&lt;/p&gt;&#xA;  &lt;div class=&#34;notice-body&#34;&gt;&#xA;    &lt;p&gt;Cette page est &lt;em&gt;très&lt;/em&gt; inspirée du livre &lt;em&gt;Chases and Escapes The Mathematics of Pursuit and Evasion&lt;/em&gt; de Paul Nahin.&lt;/p&gt;&#xA;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&#xA;&lt;h2 id=&#34;paradoxe-dachille-et-de-la-tortue&#34;&gt;Paradoxe d&amp;rsquo;Achille et de la tortue&lt;/h2&gt;&#xA;&lt;p&gt;Dans &lt;em&gt;La Physique&lt;/em&gt;, Aristote rapporte les célèbres paradoxes de Zénon d&amp;rsquo;Élée dont celui d&amp;rsquo;Achille et la tortue. :&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>
