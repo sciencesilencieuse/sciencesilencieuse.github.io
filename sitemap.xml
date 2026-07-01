@@ -7,9 +7,6 @@
     <loc>https://sciencesilencieuse.github.io/logique/logique1/</loc>
     <lastmod>2025-05-19T19:33:51+02:00</lastmod>
   </url><url>
-    <loc>https://sciencesilencieuse.github.io/maths/proba/cover/</loc>
-    <lastmod>2026-06-29T22:30:41+02:00</lastmod>
-  </url><url>
     <loc>https://sciencesilencieuse.github.io/maths/algebre/equations/</loc>
     <lastmod>2026-06-26T14:00:55+02:00</lastmod>
   </url><url>
@@ -31,8 +28,14 @@
     <loc>https://sciencesilencieuse.github.io/logique/</loc>
     <lastmod>2026-06-13T13:52:14+02:00</lastmod>
   </url><url>
+    <loc>https://sciencesilencieuse.github.io/maths/proba/lois/</loc>
+    <lastmod>2026-07-01T16:15:26+02:00</lastmod>
+  </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/meca/</loc>
     <lastmod>2026-05-19T00:11:38+02:00</lastmod>
+  </url><url>
+    <loc>https://sciencesilencieuse.github.io/maths/stat/moyennes/</loc>
+    <lastmod>2026-07-01T13:44:10+02:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/quantique/fondations/</loc>
     <lastmod>2026-04-25T13:31:26+02:00</lastmod>
@@ -76,8 +79,14 @@
     <loc>https://sciencesilencieuse.github.io/maths/geometrie/geo2/</loc>
     <lastmod>2026-06-24T14:18:51+02:00</lastmod>
   </url><url>
+    <loc>https://sciencesilencieuse.github.io/maths/proba/markov/</loc>
+    <lastmod>2026-07-01T13:30:52+02:00</lastmod>
+  </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/electromag/</loc>
     <lastmod>2025-05-17T21:41:01+02:00</lastmod>
+  </url><url>
+    <loc>https://sciencesilencieuse.github.io/maths/geometrie/</loc>
+    <lastmod>2026-07-01T14:27:59+02:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/info/</loc>
     <lastmod>2026-04-24T00:44:33+02:00</lastmod>
@@ -97,6 +106,9 @@
     <loc>https://sciencesilencieuse.github.io/logique/logique2/</loc>
     <lastmod>2025-05-19T19:50:05+02:00</lastmod>
   </url><url>
+    <loc>https://sciencesilencieuse.github.io/maths/stat/montecarlo/</loc>
+    <lastmod>2026-07-01T13:44:21+02:00</lastmod>
+  </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/quantique/spekkens/</loc>
     <lastmod>2026-02-12T17:54:54+01:00</lastmod>
   </url><url>
@@ -109,11 +121,17 @@
     <loc>https://sciencesilencieuse.github.io/maths/algebre/</loc>
     <lastmod>2026-06-26T18:59:04+02:00</lastmod>
   </url><url>
-    <loc>https://sciencesilencieuse.github.io/maths/pca/</loc>
-    <lastmod>2026-04-16T03:03:40+02:00</lastmod>
+    <loc>https://sciencesilencieuse.github.io/maths/stat/acp/</loc>
+    <lastmod>2026-07-02T01:17:00+02:00</lastmod>
+  </url><url>
+    <loc>https://sciencesilencieuse.github.io/maths/stat/acp_sauve/</loc>
+    <lastmod>2026-07-02T01:14:45+02:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/meca/coriolis/</loc>
     <lastmod>2026-06-27T15:41:37+02:00</lastmod>
+  </url><url>
+    <loc>https://sciencesilencieuse.github.io/maths/proba/curiosites/</loc>
+    <lastmod>2026-07-01T13:36:22+02:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/quantique/epistovsonto/</loc>
     <lastmod>2026-04-23T15:13:23+02:00</lastmod>
@@ -148,6 +166,9 @@
     <loc>https://sciencesilencieuse.github.io/maths/arithmetique/nombresapart/</loc>
     <lastmod>2026-06-30T02:01:30+02:00</lastmod>
   </url><url>
+    <loc>https://sciencesilencieuse.github.io/maths/stat/simpson/</loc>
+    <lastmod>2026-07-01T13:44:36+02:00</lastmod>
+  </url><url>
     <loc>https://sciencesilencieuse.github.io/logique/logique3/</loc>
     <lastmod>2025-07-07T02:47:31+02:00</lastmod>
   </url><url>
@@ -168,9 +189,6 @@
   </url><url>
     <loc>https://sciencesilencieuse.github.io/maths/algebre/fft/</loc>
     <lastmod>2026-06-26T15:24:36+02:00</lastmod>
-  </url><url>
-    <loc>https://sciencesilencieuse.github.io/maths/geometrie/</loc>
-    <lastmod>2026-06-26T11:58:04+02:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/quantique/nonlocale/</loc>
     <lastmod>2026-04-16T01:16:49+02:00</lastmod>
@@ -203,10 +221,13 @@
     <lastmod>2026-06-30T02:38:51+02:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/maths/proba/</loc>
-    <lastmod>2026-06-30T15:15:00+02:00</lastmod>
+    <lastmod>2026-07-01T14:29:15+02:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/tqc/</loc>
     <lastmod>2026-04-24T00:48:42+02:00</lastmod>
+  </url><url>
+    <loc>https://sciencesilencieuse.github.io/maths/stat/ecarttype/</loc>
+    <lastmod>2026-07-01T14:02:11+02:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/quantique/erepr/</loc>
     <lastmod>2025-05-20T23:05:00+02:00</lastmod>
@@ -218,7 +239,10 @@
     <lastmod>2025-09-28T13:02:32+02:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/maths/stat/</loc>
-    <lastmod>2026-05-15T21:53:39+02:00</lastmod>
+    <lastmod>2026-07-01T14:26:39+02:00</lastmod>
+  </url><url>
+    <loc>https://sciencesilencieuse.github.io/maths/stat/testhyp/</loc>
+    <lastmod>2026-07-01T16:17:04+02:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/chaos/</loc>
     <lastmod>2025-08-18T13:54:41+02:00</lastmod>
@@ -231,6 +255,9 @@
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/jeux/</loc>
     <lastmod>2024-05-29T00:17:43+02:00</lastmod>
+  </url><url>
+    <loc>https://sciencesilencieuse.github.io/maths/stat/bayes/</loc>
+    <lastmod>2026-07-01T13:45:16+02:00</lastmod>
   </url><url>
     <loc>https://sciencesilencieuse.github.io/physique/phistat/chgt/</loc>
     <lastmod>2025-09-28T13:10:24+02:00</lastmod>

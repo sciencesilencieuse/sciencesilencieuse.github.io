@@ -10,15 +10,29 @@
 		
 		
 		
-			<lastBuildDate>Mon, 29 Jun 2026 22:30:41 +0200</lastBuildDate>
+			<lastBuildDate>Wed, 01 Jul 2026 16:15:26 +0200</lastBuildDate>
 		
 			<atom:link href="https://sciencesilencieuse.github.io/maths/proba/index.xml" rel="self" type="application/rss+xml" />
 			<item>
-				<title>Cover</title>
-				<link>https://sciencesilencieuse.github.io/maths/proba/cover/</link>
+				<title>Lois</title>
+				<link>https://sciencesilencieuse.github.io/maths/proba/lois/</link>
 				<pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
-				<guid>https://sciencesilencieuse.github.io/maths/proba/cover/</guid>
-				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;  #grosseformule &#xA;{&#xA;    overflow-x: auto; &#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;paradoxe-de-cover&#34;&gt;Paradoxe de Cover&lt;/h1&gt;&#xA;&lt;div style=&#34;position:relative;margin-left:auto;margin-right:auto;width:600px;max-width:100%;margin-top:-1em;&#34;&gt;&#xA;&lt;img src=&#34;https://sciencesilencieuse.github.io/coverparadox.png&#34; style=&#34;box-shadow:none;background:none;border-radius:10px;&#34;&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;On vous présente deux papiers pliés où sont écrits deux nombres choisis aléatoirement $a$ et $b$.&lt;/p&gt;&#xA;&lt;p&gt;Vous choisissez un des deux papiers et l&amp;rsquo;ouvrez pour découvrir le nombre $X$ (soit $a$, soit $b$). Puis on vous demande lequel des deux papiers contient le plus grand nombre.&lt;/p&gt;</description>
+				<guid>https://sciencesilencieuse.github.io/maths/proba/lois/</guid>
+				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;  #grosseformule &#xA;{&#xA;    overflow-x: auto; &#xA;}&#xA;  /* 1. Rétablir la déclaration que votre reset a écrasée */&#xA;details &gt; summary:first-of-type {&#xA;  display: list-item;     /* remet le triangle + l’accessibilité */&#xA;  cursor: pointer;        /* optionnel : feedback visuel */&#xA;}&#xA;&#xA;/* 2. Si vous aviez aussi supprimé le list-style */&#xA;details &gt; summary:first-of-type {&#xA;  list-style: disclosure-closed inside;&#xA;}&#xA;details[open] &gt; summary:first-of-type {&#xA;  list-style-type: disclosure-open;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;lois&#34;&gt;Lois&lt;/h1&gt;&#xA;&lt;h2 id=&#34;loi-binomiale&#34;&gt;Loi Binomiale&lt;/h2&gt;&#xA;&lt;p&gt;D&amp;rsquo;une épreuve de Bernoulli à la loi binomiale :&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Chaînes de Markov</title>
+				<link>https://sciencesilencieuse.github.io/maths/proba/markov/</link>
+				<pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+				<guid>https://sciencesilencieuse.github.io/maths/proba/markov/</guid>
+				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;  #grosseformule &#xA;{&#xA;    overflow-x: auto; &#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;chaînes-de-markov&#34;&gt;Chaînes de Markov&lt;/h1&gt;&#xA;&lt;p&gt;Le jeu de Penney a d&amp;rsquo;étonnantes propriétés. Les chaînes de Markov aident à le démystifier :&lt;/p&gt;&#xA;&lt;div style=&#34;position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);&#34;&gt;&#xA;&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;&#x9;&#x9;&#x9;&lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/mIN9AWYKtjc?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;&#xA;&#x9;&#x9;&lt;/div&gt;&#xA;&#xA;&lt;/div&gt;</description>
+			</item>
+			<item>
+				<title>Curiosités et énigmes</title>
+				<link>https://sciencesilencieuse.github.io/maths/proba/curiosites/</link>
+				<pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+				<guid>https://sciencesilencieuse.github.io/maths/proba/curiosites/</guid>
+				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;  #grosseformule &#xA;{&#xA;    overflow-x: auto; &#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;curiosités-et-énigmes&#34;&gt;Curiosités et énigmes&lt;/h1&gt;&#xA;&lt;h2 id=&#34;anniversaires-simultanés&#34;&gt;Anniversaires simultanés&lt;/h2&gt;&#xA;&lt;p&gt;Quelle est la probabilité que deux élèves d&amp;rsquo;une classe est un anniversaire le même jour ?&lt;/p&gt;&#xA;&lt;p&gt;Lorsqu&amp;rsquo;on n&amp;rsquo;a jamais fait le calcul ou entendu parler du résultat, notre intuition nous amène généralement à soupçonner une probabilité bien plus petite qu&amp;rsquo;elle ne l&amp;rsquo;est.&lt;br&gt;&#xA;C&amp;rsquo;est d&amp;rsquo;ailleurs assez fréquent que notre intuition soit aux fraises lorsqu&amp;rsquo;il s&amp;rsquo;agit d&amp;rsquo;estimer une probabilité ou expliquer des statistiques (voir &lt;a href=&#34;../stat/#paradoxe-de-simpson&#34;&gt;le paradoxe de Simpson&lt;/a&gt;).&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>
