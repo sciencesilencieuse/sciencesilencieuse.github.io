@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1783021050" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1783021050" rel="stylesheet">
-    <link href="/css/hybrid.css?1783021050" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1783021050" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1783021050" rel="stylesheet">
-    <link href="/css/auto-complete.css?1783021050" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1783021050" rel="stylesheet">
-    <link href="/css/theme.css?1783021050" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1783021050" rel="stylesheet">
+    <link href="/css/nucleus.css?1783080712" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1783080712" rel="stylesheet">
+    <link href="/css/hybrid.css?1783080712" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1783080712" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1783080712" rel="stylesheet">
+    <link href="/css/auto-complete.css?1783080712" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1783080712" rel="stylesheet">
+    <link href="/css/theme.css?1783080712" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1783080712" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1783021050" rel="stylesheet">
+    <link href="/css/theme-blue.css?1783080712" rel="stylesheet">
     
-    <link href="/css/foo.css?1783021050" rel="stylesheet"><link href="/css/bar.css?1783021050" rel="stylesheet">
+    <link href="/css/foo.css?1783080712" rel="stylesheet"><link href="/css/bar.css?1783080712" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1783021050"></script>
+    <script src="/js/jquery-3.3.1.min.js?1783080712"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1783021050"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1783021050"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1783080712"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1783080712"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1783021050"></script>
+<script type="text/javascript" src="/js/search.js?1783080712"></script>
 
     
   </div>
@@ -1948,7 +1948,12 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#calcul-à-la-fermi-et-moyennes">Calcul à la Fermi et moyennes</a></li>
+    <li><a href="#petite-énigme-avec-la-moyenne-harmonique">Petite énigme avec la moyenne harmonique</a></li>
+    <li><a href="#estimation-de-fermi-et-moyennes">Estimation de Fermi et moyennes</a>
+      <ul>
+        <li><a href="#exemple">Exemple</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -1991,6 +1996,24 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 {
     overflow-x: auto; 
 }
+#preuve
+{
+    background-color:#EAEAEA;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#def
+{
+    background-color:#DCEFFE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#theo
+{
+    background-color:#FBE1DE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
 </style>
 <h1 id="les-différentes-moyennes">Les différentes moyennes</h1>
 <br>
@@ -2000,7 +2023,124 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 		</div>
 
 </div>
-<h2 id="calcul-à-la-fermi-et-moyennes">Calcul à la Fermi et moyennes</h2>
+<br>
+<p>Dans la vidéo, on a défini la <strong>moyenne généralisée</strong> :</p>
+<div id="def">
+<div id="grosseformule">
+<p>$$
+M_p = \left(a_1^p + a_2 \dotsm + a_n^p\right)^\frac1p
+$$</p>
+</div>
+</div>
+<p>Et on a vu que :</p>
+<ul>
+<li>$M_1 = MA$ moyenne arithmétique</li>
+<li>$M_{-1} = MH$ moyenne harmonique</li>
+<li>$M_{2} = MQ$ moyenne quadratique</li>
+<li>$M_{0} = MG$ moyenne géométrique</li>
+</ul>
+<p>Prouvons le dernier point, un peu plus délicat </p>
+<div id="theo">
+<div id="grosseformule">
+<p>$$
+M_0 = \lim_{p \to 0} M_p =  \sqrt[n]{a_1 \cdot a_2 \dotsm a_n} = MG
+$$</p>
+</div>
+</div>
+<br>
+<div id="preuve">
+<p>On passe au logarithme :</p>
+<div id="grosseformule">
+<p>$$\ln(M_p) = \frac{1}{p} \ln\left( \frac{1}{n} \sum_{i=1}^n a_i^p \right)$$</p>
+</div>
+<p>On introduit la fonction $f$ définie sur $\mathbb{R}$ :</p>
+<p>$$f(p) = \ln\left( \frac{1}{n} \sum_{i=1}^n a_i^p \right)$$</p>
+<p>Regardons la valeur de cette fonction en $p = 0$ (sachant que $a_i^0 = 1$) :</p>
+<div id="grosseformule">
+<p>$$f(0) = \ln\left( \frac{1}{n} \sum_{i=1}^n 1 \right) = \ln\left( \frac{1}{n} \cdot n \right) = \ln(1) = 0$$</p>
+</div>
+<p>Grâce à ce résultat, on peut réécrire $\ln(M_p)$ sous la forme d&rsquo;un taux d&rsquo;accroissement :</p>
+<p>$$\ln(M_p) = \frac{f(p) - f(0)}{p - 0}$$</p>
+<p>La limite de $\ln(M_p)$ lorsque $p \to 0$ est donc exactement la définition du nombre dérivé $f&rsquo;(0)$.</p>
+<p>Or on sait que $\left(\ln(u(p)\right)&rsquo;=\frac{u&rsquo;(p)}{u(p)}$ et pour dériver $a_i^p$ par rapport à $p$, on se rappelle que $a_i^p = e^{p \ln(a_i)}\Rightarrow \left(a_i^p\right)&rsquo; = \ln(a_i) a_i^p$.<br>
+On obtient ainsi :</p>
+<p>$$f&rsquo;(p) = \frac{\frac{1}{n} \sum_{i=1}^n \ln(a_i) a_i^p}{\frac{1}{n} \sum_{i=1}^n a_i^p}$$</p>
+<p>Évaluons en $p=0$ :</p>
+<div id="grosseformule">
+<p>$$f&rsquo;(0) = \frac{\frac{1}{n} \sum_{i=1}^n \ln(a_i) \cdot 1}{\frac{1}{n} \sum_{i=1}^n 1} = \frac{\frac{1}{n} \sum_{i=1}^n \ln(a_i)}{1} = \frac{1}{n} \sum_{i=1}^n \ln(a_i)$$</p>
+</div>
+<p>Et en utilisant les propriétés des logarithmes $\ln(a)+\ln(b)=\ln(a\cdot b)$ et $c\ln(a) = \ln(a^c)$, on peut réécrire :</p>
+<div id="grosseformule">
+<p>$$f&rsquo;(0) = \frac{1}{n} \ln\left( \prod_{i=1}^n a_i \right) = \ln \left( \prod_{i=1}^n a_i \right)^{\!\!1/n} $$</p>
+</div>
+<p>La fonction exponentielle étant continue sur $\mathbb{R}$, on peut passer la limite à l&rsquo;intérieur de l&rsquo;exponentielle :</p>
+<div id="grosseformule">
+<p>$$\lim_{p \to 0} M_p = \lim_{p \to 0} \exp\left(\ln(M_p)\right)  = \exp\left( \lim_{p \to 0} \ln(M_p)\right) =\exp\left[ \ln\left( \left( \prod_{i=1}^n a_i \right)^{\!\!1/n} \right) \right] = \left( \prod_{i=1}^n a_i \right)^{\!\! 1/n} = \sqrt[n]{a_1 \cdot a_2 \dotsm a_n}$$</p>
+</div>
+<p>On retrouve la définition de la moyenne géométrique.<br>C&rsquo;est ce qui justifie de poser par prolongement par continuité $M_0 = \sqrt[n]{a_1 \cdot a_2 \dotsm a_n}$.</p>
+</div>
+<h2 id="petite-énigme-avec-la-moyenne-harmonique">Petite énigme avec la moyenne harmonique</h2>
+<p>Vous courez deux tours sur une piste d&rsquo;athlétisme. Supposons que votre vitesse moyenne sur le premier tour soit $v_1$. À quelle vitesse moyenne $v_2$ devrez-vous courir le deuxième tour de piste pour que la vitesse moyenne sur l&rsquo;ensemble des deux tours soit le double de la vitesse moyenne sur le premier tour ($2v_1$) ?</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/piste.jpeg" style="box-shadow:none;background:none;border-radius:10px;">
+</div>
+<p>En raisonnant sur la moyenne arithmétique, on a un problème :<br>
+si $v_{tot} = \frac{v_{1}+v_{2}}{2}$, alors $v_{tot} = 2 v_{1}$ entraîne $v_2=3v_1$.<br>
+Prenons un exemple pour constater que ça cloche : si l&rsquo;athlète fait un tour de piste en $\pu{60 s}$ ($v_1 = \pu{6,7 m*s-1}$), alors il devra faire le second en $\pu{20 s}$ ($v_2=3v_1 = \pu{20 m*s-1}$). Que vaut la vitesse moyenne totale ? $v_{tot}=\frac{800}{80} = \pu{10 m*s-1}\neq 2v_1$. On ne peut pas utiliser la moyenne arithmétique pour des vitesses lorsque la distance est fixe !</p>
+
+<div class="notices note" style="--title: 'note';">
+  <p style="display: none;">note</p>
+  <div class="notice-body">
+    <p>Il n&rsquo;y aurait par contre aucun problème à utiliser la moyenne arithmétique des vitesses pour des durées identiques !</p>
+
+  </div>
+</div>
+
+
+<p>Montrons que la moyenne harmonique donne, elle, un résultat cohérent :</p>
+<p>$$v_{tot} = \frac{2}{\frac{1}{v_1}+\frac{1}{v_2}} = 2v_1$$</p>
+<p>$$\Rightarrow \frac{2}{v_2}=0$$</p>
+<p>Cela donne l&rsquo;impression que quelque chose est encore de travers, mais non, c&rsquo;est la bonne réponse !<br>
+En effet, le problème est impossible. La seule solution est d&rsquo;avoir une vitesse $v_2$ infinie : l&rsquo;athlète devra parcourir son deuxième tour en exactement $\pu{0 s}$&hellip;<br>
+On aurait plus simplement pu s&rsquo;en rendre compte en écrivant que $v_{tot} = \frac{2d}{\Delta t_1 + \Delta t_2} = 2 v_1 = 2\frac{d}{\Delta t_1} = \frac{2d}{\Delta t_1}$ qui impose $\Delta t_2 = 0$. Mais au moins, la moyenne harmonique ne nous a pas trahi.</p>
+<h2 id="estimation-de-fermi-et-moyennes">Estimation de Fermi et moyennes</h2>
+<p>Les estimations de Fermi sont des calculs de coin de table visant à trouver un ordre de grandeur. Le physicien italien Enrico Fermi brillait dans l&rsquo;exercice et un de ses faits d&rsquo;armes légendaires est d&rsquo;avoir estimé l&rsquo;énergie de l&rsquo;explosion du premier essai atomique de l&rsquo;histoire en mesurant la distance à laquelle furent emportés des petits bouts de papiers qu&rsquo;il lâcha dans le souffle.</p>
+<p>Lorsqu&rsquo;on fait ce type de calcul, on est amené à estimer plein de valeurs. L&rsquo;idée est alors d&rsquo;encadrer grossièrement par différents ordres de grandeurs (un ou deux suivant notre méconnaissance) puis de prendre la moyenne. Mais quelle moyenne ?</p>
+<p>Lorsqu&rsquo;on estime, on estime généralement à un facteur près. En effet, on a plutôt tendance à viser une position sur une échelle logarithmique plutôt que linéaire. C&rsquo;est bien ça d&rsquo;ailleurs, par définition, un ordre de grandeur : un barreau sur une échelle en logarithme décimal. Et comment se place-t-on entre deux graduations d&rsquo;une telle échelle ? Grâce à la moyenne géométrique pardi.</p>
+<h3 id="exemple">Exemple</h3>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:0;margin-top:0;">
+<img src="/dinopisse.png" style="box-shadow:none;background:none;">
+</div>
+<p>Cherchons à vérifier l&rsquo;affirmation suivante :</p>
+<blockquote>
+<p>Toute l&rsquo;eau sur Terre a été pissée par les dinosaures</p>
+</blockquote>
+<ul style="margin-bottom:0.5em;">
+<li>Commençons par estimer le volume d'eau sur Terre.</li>
+</ul>
+Disons que les océans font $\pu{3 km}$ de profondeur en moyenne (entre $1$ et $10$ km). La Terre est une sphère d'environ $\pu{10000 km}$ de diamètre recouverte aux deux tiers par les océans. Ça représente un volume d'environ $2/3\times 4\pi \times \left(\frac{10^7}{2}\right)^2\times 3\times 10^3\approx \pu{6E17 m^3}$ d'eau.
+<ul style="margin-bottom:0.5em;">
+<li>Voyons maintenant la quantité d'eau passée dans les dinosaures.</li>
+</ul>
+Estimation de la population de dinosaures&nbsp;: entre $1$ et $10$ dinos par km<sup>2</sup> de terres émergées semble raisonnable pour une espèce dominante. Ça fait environ $1/3\times 4\pi\times (10^7)^2 / 10^6 \times 3 \approx  10^9$ dinos à un moment donné. Disons que le dino moyen pèse entre $1$ et $100$ humains, soit $1$ tonne environ. En supposant une hydratation humaine, notre dino moyen boira entre $10$ et $100$ litres par jour, soit environ $\pu{30 L}$, ce qui représente en une année $10\,000 \text{ L}$ ou $\pu{10 m3}$. <br>
+Or les dinosaures ont régné sur Terre sur une période de l'ordre de $100$ millions d'année. Ça représente donc en tout environ $(10\; \mathrm{m^3/dino/an})\times (10^9 \text{ dinos})\times (10^8 \text{ ans})\approx  10^{18} \;\mathrm{m^3}$. 
+<ul style="margin-bottom:0.5em;">
+<li>Conclusion&nbsp;:</li>
+</ul>
+<p>Les dinos ont bu (et logiquement pissé) plus d&rsquo;une fois toute l&rsquo;eau sur Terre durant leur longue existence.<br>
+Comme l&rsquo;eau a une certaine tendance à s&rsquo;homogénéiser, il y a de fortes chances que l&rsquo;on boive à chaque verre de l&rsquo;urine de dinosaure même si elle a été depuis un poil diluée par l&rsquo;eau venue de l&rsquo;espace<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1.5em;margin-top:-1em;">
+<img src="/eausurterre.png" style="box-shadow:none;background:none;">
+</div>
+<p style="text-align:center;width:700px;margin:auto;color:#777;">La plus grande sphère bleue représente toute l'eau sur Terre, la plus petite l'eau des rivières et des lacs et l'intermédiaire l'ensemble de l'eau douce (Credit: Howard Perlman, USGS&nbsp;; illustration du globe de Jack Cook, Woods Hole Oceanographic Institution). </p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>L&rsquo;apport d&rsquo;eau par les météorites ne compense pas l&rsquo;eau qui disparaît ! Dans les hautes couches d&rsquo;atmosphère, les UV peuvent dissocier les molécules d&rsquo;eau en dihydrogène et dioxygène et le dihydrogène formé est si léger qu&rsquo;il peut se retrouver avec une vitesse dépassant la vitesse de libération et ainsi s&rsquo;enfuir de la Terre empêchant la molécule d&rsquo;eau de se reformer un jour.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
 
 <footer class="footline">
@@ -3268,16 +3408,16 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1783021050"></script>
-    <script src="/js/perfect-scrollbar.min.js?1783021050"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1783021050"></script>
-    <script src="/js/jquery.sticky.js?1783021050"></script>
-    <script src="/js/featherlight.min.js?1783021050"></script>
-    <script src="/js/highlight.pack.js?1783021050"></script>
+    <script src="/js/clipboard.min.js?1783080712"></script>
+    <script src="/js/perfect-scrollbar.min.js?1783080712"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1783080712"></script>
+    <script src="/js/jquery.sticky.js?1783080712"></script>
+    <script src="/js/featherlight.min.js?1783080712"></script>
+    <script src="/js/highlight.pack.js?1783080712"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1783021050"></script>
-    <script src="/js/learn.js?1783021050"></script>
-    <script src="/js/hugo-learn.js?1783021050"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1783080712"></script>
+    <script src="/js/learn.js?1783080712"></script>
+    <script src="/js/hugo-learn.js?1783080712"></script>
     
     
 
