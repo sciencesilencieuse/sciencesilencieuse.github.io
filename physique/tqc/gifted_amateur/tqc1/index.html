@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1783114927" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1783114927" rel="stylesheet">
-    <link href="/css/hybrid.css?1783114927" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1783114927" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1783114927" rel="stylesheet">
-    <link href="/css/auto-complete.css?1783114927" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1783114927" rel="stylesheet">
-    <link href="/css/theme.css?1783114927" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1783114927" rel="stylesheet">
+    <link href="/css/nucleus.css?1784024649" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1784024649" rel="stylesheet">
+    <link href="/css/hybrid.css?1784024649" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1784024649" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1784024649" rel="stylesheet">
+    <link href="/css/auto-complete.css?1784024649" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1784024649" rel="stylesheet">
+    <link href="/css/theme.css?1784024649" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1784024649" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1783114927" rel="stylesheet">
+    <link href="/css/theme-blue.css?1784024649" rel="stylesheet">
     
-    <link href="/css/foo.css?1783114927" rel="stylesheet"><link href="/css/bar.css?1783114927" rel="stylesheet">
+    <link href="/css/foo.css?1784024649" rel="stylesheet"><link href="/css/bar.css?1784024649" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1783114927"></script>
+    <script src="/js/jquery-3.3.1.min.js?1784024649"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1783114927"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1783114927"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1784024649"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1784024649"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1783114927"></script>
+<script type="text/javascript" src="/js/search.js?1784024649"></script>
 
     
   </div>
@@ -1832,6 +1832,9 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
             
             
           
+            
+            
+          
         
         </ul>
       
@@ -2029,6 +2032,18 @@ ul
 {
 margin-top:-0.5em;
 }
+/* Pour rétablir le comportement de details */
+details > summary:first-of-type {
+  display: list-item;     /* remet le triangle + l’accessibilité */
+  cursor: pointer;        /* optionnel : feedback visuel */
+}
+
+details > summary:first-of-type {
+  list-style: disclosure-closed inside;
+}
+details[open] > summary:first-of-type {
+  list-style-type: disclosure-open;
+}
 </style>
 <h1 id="théorie-quantique-des-champs--partie-1">Théorie quantique des champs &ndash; Partie 1</h1>
 
@@ -2041,6 +2056,13 @@ margin-top:-0.5em;
 </div>
 
 
+<div style="overflow-x: auto;text-align:center;">
+<table>
+  <tr>
+    <th style="text-align:center;"><a href="../">Retour sommaire</a></th></td>
+    </tr>
+</table>
+</div>
 <br>
 <h2 id="les-oscillateurs-harmoniques">Les oscillateurs harmoniques</h2>
 <p>Une vidéo vieille comme tout sur l&rsquo;oscillateur harmonique quantique qui traite pas mal des points de ce chapitre :</p>
@@ -2563,9 +2585,14 @@ Le dernier changement de signe venant du fait qu'il y ait déjà un fermion à g
 <br>
 <p>On a découvert jusqu&rsquo;ici comment des systèmes variés peuvent se réduire à un simple jeu d&rsquo;oscillateurs harmoniques, chacun décrivant un certain mode normal du système. Et chacun de ces modes normaux peut-être vu comme un état d&rsquo;impulsion pour des particules identiques sans interaction. Le nombre de particules correspond alors au nombre d&rsquo;excitations quantifiées du mode. Et on a défini des opérateurs qui peuvent créer et annihiler ces particules.<br>
 Les modèles considérés se restreignaient à des réseaux discrets adaptés à la physique de la matière condensée. Dans le prochain chapitre, on va généraliser au continu.</p>
-<br>
-<p style="font-size:1.5em;text-align:center;font-weight:bold;"><a href="../tqc2">Chapitre suivant</a></p>
-<p style="font-size:1.5em;text-align:center;font-weight:bold;"><a href="../">Sommaire</a></p>
+<p><br><br></p>
+<div style="overflow-x: auto;text-align:center;">
+<table>
+  <tr>
+    <th style="text-align:center;"><a href="../">Sommaire</a></th><td><a href="../tqc0">Chapitre précédent</a></td><td><a href="../tqc2">Chapitre suivant</a></td>
+    </tr>
+</table>
+</div>
 
 <footer class="footline">
 	
@@ -3776,6 +3803,11 @@ Les modèles considérés se restreignaient à des réseaux discrets adaptés à
             
         
                     
+                        
+            
+            
+        
+                    
             
         
                     
@@ -3835,16 +3867,16 @@ Les modèles considérés se restreignaient à des réseaux discrets adaptés à
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1783114927"></script>
-    <script src="/js/perfect-scrollbar.min.js?1783114927"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1783114927"></script>
-    <script src="/js/jquery.sticky.js?1783114927"></script>
-    <script src="/js/featherlight.min.js?1783114927"></script>
-    <script src="/js/highlight.pack.js?1783114927"></script>
+    <script src="/js/clipboard.min.js?1784024649"></script>
+    <script src="/js/perfect-scrollbar.min.js?1784024649"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1784024649"></script>
+    <script src="/js/jquery.sticky.js?1784024649"></script>
+    <script src="/js/featherlight.min.js?1784024649"></script>
+    <script src="/js/highlight.pack.js?1784024649"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1783114927"></script>
-    <script src="/js/learn.js?1783114927"></script>
-    <script src="/js/hugo-learn.js?1783114927"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1784024649"></script>
+    <script src="/js/learn.js?1784024649"></script>
+    <script src="/js/hugo-learn.js?1784024649"></script>
     
     
 

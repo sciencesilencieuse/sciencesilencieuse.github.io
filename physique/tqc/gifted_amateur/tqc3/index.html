@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1783114927" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1783114927" rel="stylesheet">
-    <link href="/css/hybrid.css?1783114927" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1783114927" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1783114927" rel="stylesheet">
-    <link href="/css/auto-complete.css?1783114927" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1783114927" rel="stylesheet">
-    <link href="/css/theme.css?1783114927" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1783114927" rel="stylesheet">
+    <link href="/css/nucleus.css?1784024649" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1784024649" rel="stylesheet">
+    <link href="/css/hybrid.css?1784024649" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1784024649" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1784024649" rel="stylesheet">
+    <link href="/css/auto-complete.css?1784024649" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1784024649" rel="stylesheet">
+    <link href="/css/theme.css?1784024649" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1784024649" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1783114927" rel="stylesheet">
+    <link href="/css/theme-blue.css?1784024649" rel="stylesheet">
     
-    <link href="/css/foo.css?1783114927" rel="stylesheet"><link href="/css/bar.css?1783114927" rel="stylesheet">
+    <link href="/css/foo.css?1784024649" rel="stylesheet"><link href="/css/bar.css?1784024649" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1783114927"></script>
+    <script src="/js/jquery-3.3.1.min.js?1784024649"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1783114927"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1783114927"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1784024649"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1784024649"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1783114927"></script>
+<script type="text/javascript" src="/js/search.js?1784024649"></script>
 
     
   </div>
@@ -1832,6 +1832,9 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
             
             
           
+            
+            
+          
         
         </ul>
       
@@ -2044,19 +2047,37 @@ ul
 {
 margin-top:-0.5em;
 }
+/* Pour rétablir le comportement de details */
+details > summary:first-of-type {
+  display: list-item;     /* remet le triangle + l’accessibilité */
+  cursor: pointer;        /* optionnel : feedback visuel */
+}
+
+details > summary:first-of-type {
+  list-style: disclosure-closed inside;
+}
+details[open] > summary:first-of-type {
+  list-style-type: disclosure-open;
+}
 </style>
 <h1 id="théorie-quantique-des-champs--partie-3">Théorie quantique des champs &ndash; Partie 3</h1>
 
 <div class="notices note" style="--title: 'note';">
   <p style="display: none;">note</p>
   <div class="notice-body">
-    <p>Notes de lecture du livre <em>Quantum field theory for the gifted amateur</em> de Thomas Lancaster et Stephen Blundell. Très souvent une simple traduction.</p>
+    <p>Notes de lecture du livre <em>Quantum field theory for the gifted amateur</em> de Thomas Lancaster et Stephen Blundell. Très souvent une simple traduction approximative.</p>
 
   </div>
 </div>
 
 
-<p style="font-size:1.2em;text-align:center;font-weight:bold;"><a href="../">Retour sommaire</a></p>
+<div style="overflow-x: auto;text-align:center;">
+<table>
+  <tr>
+    <th style="text-align:center;"><a href="../">Retour sommaire</a></th></td>
+    </tr>
+</table>
+</div>
 <br>
 <h2 id="évolution-temporelle">Évolution temporelle</h2>
 <p>Deux représentations de la mécanique quantique s&rsquo;opposent quant à la description de l&rsquo;évolution temporelle d&rsquo;un système : la représentation de Schrödinger et la représentation d&rsquo;Heisenberg.</p>
@@ -2752,7 +2773,7 @@ $$</p>
 <p>$$
 \Pi^\mu(x)=\frac{\partial \mathcal{L}}{\partial\left(\partial_\mu \phi\right)}
 $$</p>
-<p>$\Pi^\mu(x)$ est  la <strong>densité d&rsquo;impulsion</strong>.</p>
+<p style="text-align:center;">$\Pi^\mu(x)$ est  la <b>densité d'impulsion</b>.</p>
 </div>
 </div>
 <p>C&rsquo;est une généralisation quadrivectorielle du moment conjugué $\pi(x)=\delta \mathcal{L} / \delta \dot{\phi}$. Et d&rsquo;ailleurs, le moment conjugué est la composante temporelle de la densité d&rsquo;impulsion : $\Pi^0(x)=\pi(x)$.</p>
@@ -2800,7 +2821,7 @@ $$</p>
 <p>$$
 \frac{\partial \mathcal{L}}{\partial \phi}=\partial_\mu \Pi^\mu
 $$</p>
-<p>C&rsquo;est l&rsquo;<strong>équation d&rsquo;Euler-Lagrange</strong>.</p>
+<p style="text-align:center;">C'est l'<b>équation d'Euler-Lagrange</b>.</p>
 </div>
 </div>
 <p>Partons maintenant du fait que le champ respecte l&rsquo;équation du mouvement :</p>
@@ -2834,7 +2855,7 @@ $$</p>
 <p>$$
 J_{\mathrm{N}}^\mu(x)=\Pi^\mu(x) D \phi(x)-W^\mu(x)
 $$</p>
-<p>est le <strong>courant de Noether.</strong></p>
+<p style="text-align:center;">est le <b>courant de Noether</b>.</p>
 </div>
 </div>
 <p>Le courant de Noether est donc conservé localement.</p>
@@ -2942,8 +2963,13 @@ $$</p>
 <p>Pour des champs plus complexes que des champs scalaires réels, en plus des symétries de l&rsquo;espace-temps, il faudra se préoccuper de la façon dont les symétries affecte les champ eux-mêmes. On verra par exemple <a href="">un peu plus loin</a> que la symétrie $U(1)$ d&rsquo;un champ scalaire complexe entraîne la conservation du nombre de particules !</p>
 <br>
 <br>
-<p style="font-size:1.5em;text-align:center;font-weight:bold;"><a href="../tqc4">Chapitre suivant</a></p>
-<p style="font-size:1.5em;text-align:center;font-weight:bold;"><a href="../">Sommaire</a></p>
+<div style="overflow-x: auto;text-align:center;">
+<table>
+  <tr>
+    <th style="text-align:center;"><a href="../">Sommaire</a></th><td><a href="../tqc2">Chapitre précédent</a></td><td><a href="../tqc4">Chapitre suivant</a></td>
+    </tr>
+</table>
+</div>
 
 <footer class="footline">
 	
@@ -4154,6 +4180,11 @@ $$</p>
             
         
                     
+                        
+            
+            
+        
+                    
             
         
                     
@@ -4213,16 +4244,16 @@ $$</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1783114927"></script>
-    <script src="/js/perfect-scrollbar.min.js?1783114927"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1783114927"></script>
-    <script src="/js/jquery.sticky.js?1783114927"></script>
-    <script src="/js/featherlight.min.js?1783114927"></script>
-    <script src="/js/highlight.pack.js?1783114927"></script>
+    <script src="/js/clipboard.min.js?1784024649"></script>
+    <script src="/js/perfect-scrollbar.min.js?1784024649"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1784024649"></script>
+    <script src="/js/jquery.sticky.js?1784024649"></script>
+    <script src="/js/featherlight.min.js?1784024649"></script>
+    <script src="/js/highlight.pack.js?1784024649"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1783114927"></script>
-    <script src="/js/learn.js?1783114927"></script>
-    <script src="/js/hugo-learn.js?1783114927"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1784024649"></script>
+    <script src="/js/learn.js?1784024649"></script>
+    <script src="/js/hugo-learn.js?1784024649"></script>
     
     
 

@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1783114927" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1783114927" rel="stylesheet">
-    <link href="/css/hybrid.css?1783114927" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1783114927" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1783114927" rel="stylesheet">
-    <link href="/css/auto-complete.css?1783114927" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1783114927" rel="stylesheet">
-    <link href="/css/theme.css?1783114927" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1783114927" rel="stylesheet">
+    <link href="/css/nucleus.css?1784024649" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1784024649" rel="stylesheet">
+    <link href="/css/hybrid.css?1784024649" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1784024649" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1784024649" rel="stylesheet">
+    <link href="/css/auto-complete.css?1784024649" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1784024649" rel="stylesheet">
+    <link href="/css/theme.css?1784024649" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1784024649" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1783114927" rel="stylesheet">
+    <link href="/css/theme-blue.css?1784024649" rel="stylesheet">
     
-    <link href="/css/foo.css?1783114927" rel="stylesheet"><link href="/css/bar.css?1783114927" rel="stylesheet">
+    <link href="/css/foo.css?1784024649" rel="stylesheet"><link href="/css/bar.css?1784024649" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1783114927"></script>
+    <script src="/js/jquery-3.3.1.min.js?1784024649"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1783114927"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1783114927"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1784024649"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1784024649"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1783114927"></script>
+<script type="text/javascript" src="/js/search.js?1784024649"></script>
 
     
   </div>
@@ -1832,6 +1832,9 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
             
             
           
+            
+            
+          
         
         </ul>
       
@@ -2047,20 +2050,38 @@ ul
 {
 margin-top:-0.5em;
 }
+/* Pour rétablir le comportement de details */
+details > summary:first-of-type {
+  display: list-item;     /* remet le triangle + l’accessibilité */
+  cursor: pointer;        /* optionnel : feedback visuel */
+}
+
+details > summary:first-of-type {
+  list-style: disclosure-closed inside;
+}
+details[open] > summary:first-of-type {
+  list-style-type: disclosure-open;
+}
 </style>
 <h1 id="théorie-quantique-des-champs--partie-2">Théorie quantique des champs &ndash; Partie 2</h1>
 
 <div class="notices note" style="--title: 'note';">
   <p style="display: none;">note</p>
   <div class="notice-body">
-    <p>Notes de lecture du livre <em>Quantum field theory for the gifted amateur</em> de Thomas Lancaster et Stephen Blundell. Très souvent une simple traduction.<br>
+    <p>Notes de lecture du livre <em>Quantum field theory for the gifted amateur</em> de Thomas Lancaster et Stephen Blundell. Très souvent une simple traduction approximative.<br>
 Le premier encadré gris est issu de <em>No-Nonsense Classical Mechanics</em> de Jakob Schwichtenberg.</p>
 
   </div>
 </div>
 
 
-<p style="font-size:1.2em;text-align:center;font-weight:bold;"><a href="../">Retour sommaire</a></p>
+<div style="overflow-x: auto;text-align:center;">
+<table>
+  <tr>
+    <th style="text-align:center;"><a href="../">Retour sommaire</a></th></td>
+    </tr>
+</table>
+</div>
 <br>
 <p>Revenons dans un premier temps à la mécanique du 19<sup>e</sup> siècle, en particulier la mécanique hamiltonienne pour constater sa similarité avec la mécanique quantique avant de présenter la théorie classique des champs.</p>
 <h2 id="théorie-classique-des-champs">Théorie classique des champs</h2>
@@ -2861,9 +2882,14 @@ $$</p>
 <br>
 <br>
 <p>Dans le chapitre suivant, on va passer de ces champs classiques à des champs quantiques et vérifier que les particules émergent bien comme leurs excitations.</p>
-<br>
-<p style="font-size:1.5em;text-align:center;font-weight:bold;"><a href="../tqc3">Chapitre suivant</a></p>
-<p style="font-size:1.5em;text-align:center;font-weight:bold;"><a href="../">Sommaire</a></p>
+<p><br><br></p>
+<div style="overflow-x: auto;text-align:center;">
+<table>
+  <tr>
+    <th style="text-align:center;"><a href="../">Sommaire</a></th><td><a href="../tqc1">Chapitre précédent</a></td><td><a href="../tqc3">Chapitre suivant</a></td>
+    </tr>
+</table>
+</div>
 
 <footer class="footline">
 	
@@ -4074,6 +4100,11 @@ $$</p>
             
         
                     
+                        
+            
+            
+        
+                    
             
         
                     
@@ -4133,16 +4164,16 @@ $$</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1783114927"></script>
-    <script src="/js/perfect-scrollbar.min.js?1783114927"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1783114927"></script>
-    <script src="/js/jquery.sticky.js?1783114927"></script>
-    <script src="/js/featherlight.min.js?1783114927"></script>
-    <script src="/js/highlight.pack.js?1783114927"></script>
+    <script src="/js/clipboard.min.js?1784024649"></script>
+    <script src="/js/perfect-scrollbar.min.js?1784024649"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1784024649"></script>
+    <script src="/js/jquery.sticky.js?1784024649"></script>
+    <script src="/js/featherlight.min.js?1784024649"></script>
+    <script src="/js/highlight.pack.js?1784024649"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1783114927"></script>
-    <script src="/js/learn.js?1783114927"></script>
-    <script src="/js/hugo-learn.js?1783114927"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1784024649"></script>
+    <script src="/js/learn.js?1784024649"></script>
+    <script src="/js/hugo-learn.js?1784024649"></script>
     
     
 

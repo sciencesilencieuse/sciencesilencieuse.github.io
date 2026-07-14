@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1783114927" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1783114927" rel="stylesheet">
-    <link href="/css/hybrid.css?1783114927" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1783114927" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1783114927" rel="stylesheet">
-    <link href="/css/auto-complete.css?1783114927" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1783114927" rel="stylesheet">
-    <link href="/css/theme.css?1783114927" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1783114927" rel="stylesheet">
+    <link href="/css/nucleus.css?1784024649" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1784024649" rel="stylesheet">
+    <link href="/css/hybrid.css?1784024649" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1784024649" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1784024649" rel="stylesheet">
+    <link href="/css/auto-complete.css?1784024649" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1784024649" rel="stylesheet">
+    <link href="/css/theme.css?1784024649" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1784024649" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1783114927" rel="stylesheet">
+    <link href="/css/theme-blue.css?1784024649" rel="stylesheet">
     
-    <link href="/css/foo.css?1783114927" rel="stylesheet"><link href="/css/bar.css?1783114927" rel="stylesheet">
+    <link href="/css/foo.css?1784024649" rel="stylesheet"><link href="/css/bar.css?1784024649" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1783114927"></script>
+    <script src="/js/jquery-3.3.1.min.js?1784024649"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1783114927"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1783114927"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1784024649"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1784024649"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1783114927"></script>
+<script type="text/javascript" src="/js/search.js?1784024649"></script>
 
     
   </div>
@@ -1832,6 +1832,9 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
             
             
           
+            
+            
+          
         
         </ul>
       
@@ -2021,6 +2024,18 @@ ul
 {
 margin-top:-0.5em;
 }
+/* Pour rétablir le comportement de details */
+details > summary:first-of-type {
+  display: list-item;     /* remet le triangle + l’accessibilité */
+  cursor: pointer;        /* optionnel : feedback visuel */
+}
+
+details > summary:first-of-type {
+  list-style: disclosure-closed inside;
+}
+details[open] > summary:first-of-type {
+  list-style-type: disclosure-open;
+}
 </style>
 <h1 id="théorie-quantique-des-champs--partie-0">Théorie quantique des champs &ndash; Partie 0</h1>
 
@@ -2033,6 +2048,13 @@ margin-top:-0.5em;
 </div>
 
 
+<div style="overflow-x: auto;text-align:center;">
+<table>
+  <tr>
+    <th style="text-align:center;"><a href="../">Retour sommaire</a></th></td>
+    </tr>
+</table>
+</div>
 <br>
 <h2 id="lagrangien-et-principe-de-moindre-action">Lagrangien et principe de moindre action</h2>
 <p><img src="/tqctraj.png?width=500px" alt=""></p>
@@ -2047,7 +2069,7 @@ $$
 \frac{\delta F}{\delta f(x)}=\lim_{\epsilon\to 0}\frac{F[f(x')+\epsilon\delta(x-x')]-F[f(x')]}{\epsilon}
 $$
 </div>
-<details>
+<details style="margin-bottom:0.5em;">
 <summary><a style="color:#004D80">Dérivées fonctionnelles utilisées dans la suite&nbsp;:</a></summary>
 <br>
 <ul>
@@ -2090,7 +2112,6 @@ Si $x$ se balade sur l'intervalle d'intégration, le terme entre crochets est de
 </li>
 </ul>
 </details>
-<br>
 </div>
 <p>On peut maintenant vérifier comment $\bar{T}$ et $\bar{V}$ varient lorsque la trajectoire $x(t)$ est un peu modifiée :</p>
 <div id="grosseformule">
@@ -2114,8 +2135,7 @@ $$ S=\int_0^\tau L \mathrm{d}t $$
 $\displaystyle S=\int_0^\tau(T-V)\mathrm{d}t = \tau(\bar{T}[x]-\bar{V}[x])$, et donc</p>
 <div id="theo">
 $$ \frac{\delta S}{\delta x(t)} = 0 $$
-<p>C&rsquo;est le <strong>principe de moindre action</strong> de Hamilton.
-<br></p>
+<p style="text-align:center;">C'est le <b>principe de moindre action</b> de Hamilton.</p>
 </div>
 <br>
 <div id="preuve">
@@ -2126,7 +2146,7 @@ $$
  \frac{\delta L}{\delta x(t)}-\frac{\mathrm{d}}{\mathrm{d}t}\frac{\delta L}{\delta\dot{x}(t)} = 0
 $$
 </div>
-<details>
+<details style="margin-bottom:0.5em;">
 <summary><a style="color:#004D80">Démonstration&nbsp;:</a></summary>
 <div id="grosseformule">
 $$
@@ -2139,7 +2159,6 @@ $$
 $$
 </div>
 </details>
-<br>
 </div>
 <p>On introduit aussi la densité lagrangienne $\mathcal{L}$ :</p>
 <div id="def">
@@ -2163,8 +2182,13 @@ $$
 <p>Lorsqu&rsquo;on se retrouve à sommer sur toutes les trajectoires possibles, les différents termes vont interférer. L&rsquo;interférence sera destructive dans l&rsquo;immense majorité des cas, là où la phase fluctuera fortement d&rsquo;une trajectoire à l&rsquo;autre. Au contraire, la trajectoire minimisant l&rsquo;action va émerger car toutes les trajectoires voisines auront des phases proches et interféreront constructivement.</p>
 <br>
 <br>
-<p style="font-size:1.5em;text-align:center;font-weight:bold;"><a href="../tqc1">Chapitre suivant</a></p>
-<p style="font-size:1.5em;text-align:center;font-weight:bold;"><a href="../">Sommaire</a></p>
+<div style="overflow-x: auto;text-align:center;">
+<table>
+  <tr>
+    <th style="text-align:center;"><a href="../">Sommaire</a></th><td><a href="../tqc1">Chapitre suivant</a></td>
+    </tr>
+</table>
+</div>
 
 <footer class="footline">
 	
@@ -3375,6 +3399,11 @@ $$
             
         
                     
+                        
+            
+            
+        
+                    
             
         
                     
@@ -3434,16 +3463,16 @@ $$
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1783114927"></script>
-    <script src="/js/perfect-scrollbar.min.js?1783114927"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1783114927"></script>
-    <script src="/js/jquery.sticky.js?1783114927"></script>
-    <script src="/js/featherlight.min.js?1783114927"></script>
-    <script src="/js/highlight.pack.js?1783114927"></script>
+    <script src="/js/clipboard.min.js?1784024649"></script>
+    <script src="/js/perfect-scrollbar.min.js?1784024649"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1784024649"></script>
+    <script src="/js/jquery.sticky.js?1784024649"></script>
+    <script src="/js/featherlight.min.js?1784024649"></script>
+    <script src="/js/highlight.pack.js?1784024649"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1783114927"></script>
-    <script src="/js/learn.js?1783114927"></script>
-    <script src="/js/hugo-learn.js?1783114927"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1784024649"></script>
+    <script src="/js/learn.js?1784024649"></script>
+    <script src="/js/hugo-learn.js?1784024649"></script>
     
     
 
