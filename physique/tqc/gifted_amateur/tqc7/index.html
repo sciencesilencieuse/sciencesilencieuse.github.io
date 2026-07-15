@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1784125722" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1784125722" rel="stylesheet">
-    <link href="/css/hybrid.css?1784125722" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1784125722" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1784125722" rel="stylesheet">
-    <link href="/css/auto-complete.css?1784125722" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1784125722" rel="stylesheet">
-    <link href="/css/theme.css?1784125722" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1784125722" rel="stylesheet">
+    <link href="/css/nucleus.css?1784128139" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1784128139" rel="stylesheet">
+    <link href="/css/hybrid.css?1784128139" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1784128139" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1784128139" rel="stylesheet">
+    <link href="/css/auto-complete.css?1784128139" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1784128139" rel="stylesheet">
+    <link href="/css/theme.css?1784128139" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1784128139" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1784125722" rel="stylesheet">
+    <link href="/css/theme-blue.css?1784128139" rel="stylesheet">
     
-    <link href="/css/foo.css?1784125722" rel="stylesheet"><link href="/css/bar.css?1784125722" rel="stylesheet">
+    <link href="/css/foo.css?1784128139" rel="stylesheet"><link href="/css/bar.css?1784128139" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1784125722"></script>
+    <script src="/js/jquery-3.3.1.min.js?1784128139"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1784125722"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1784125722"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1784128139"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1784128139"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1784125722"></script>
+<script type="text/javascript" src="/js/search.js?1784128139"></script>
 
     
   </div>
@@ -2238,10 +2238,12 @@ $$</p>
 $$</p>
 </div>
 <p>À l&rsquo;ordre $n$, même argument : le domaine libre $[t&rsquo;,t]^n$ se découpe en $n!$ secteurs (un par ordre chronologique possible des $t_i$), et sous $T$ ils contribuent tous autant (d&rsquo;où le $1/n!$ qui reconstitue l&rsquo;exponentielle) :</p>
+<div id="grosseformule" style="margin-bottom:-1em;margin-top:-1em;">
 <p>$$
 \hat U_I = \sum_{n} \frac{(-i)^n}{n!} \int \cdots \int\; T\big[\hat H_I(t_1)\cdots \hat H_I(t_n)\big]
 = T\exp\left(-i\int \hat H_I\right)
 $$</p>
+</div>
 <details>
 <summary>
 Quelques détails&nbsp;:
@@ -2307,26 +2309,34 @@ $$</p>
 <p>Prenons $x^0 &gt; y^0$, de sorte que $T\hat\phi(x)\hat\phi(y) = \hat\phi(x)\hat\phi(y)$, et développons les quatre produits :</p>
 <p>$\hat\phi_{\mathrm a}\hat\phi_{\mathrm a}$, $\hat\phi_{\mathrm c}\hat\phi_{\mathrm a}$, $\hat\phi_{\mathrm c}\hat\phi_{\mathrm c}$ sont déjà en ordre normal.</p>
 <p>Seul $\hat\phi_{\mathrm a}(x)\hat\phi_{\mathrm c}(y)$ (annihilation à gauche d&rsquo;une création) ne l&rsquo;est pas. On le remet en ordre par le commutateur :</p>
+<div id="grosseformule" style="margin-bottom:-1em;margin-top:-1em;">
 <p>$$
 \hat\phi_{\mathrm a}(x)\,\hat\phi_{\mathrm c}(y) = \hat\phi_{\mathrm c}(y)\,\hat\phi_{\mathrm a}(x) + [\hat\phi_{\mathrm a}(x), \hat\phi_{\mathrm c}(y)],
 $$</p>
+</div>
 <p>et le commutateur est un simple nombre, déjà calculé au chapitre précédent (seuls les crochets $[\hat a, \hat a^\dagger] = \delta^{(3)}$ survivent) :</p>
+<div id="grosseformule" style="margin-bottom:-1em;margin-top:-1em;">
 <p>$$
 [\hat\phi_{\mathrm a}(x), \hat\phi_{\mathrm c}(y)] = \int\widetilde{\mathrm{d}p}\; e^{-ip\cdot(x-y)} = D(x-y).
 $$</p>
+</div>
 <p>Donc, pour $x^0 &gt; y^0$ : $T\hat\phi\hat\phi = N[\hat\phi\hat\phi] + D(x-y)$. Le cas $y^0 &gt; x^0$ donne de même $D(y-x)$. En recollant les deux avec leurs $\theta$ :</p>
+<div id="grosseformule" style="margin-bottom:-1em;margin-top:-1em;">
 <p>$$
 T\,\hat\phi(x)\hat\phi(y) = N\big[\hat\phi(x)\hat\phi(y)\big] + \underbrace{\theta(x^0-y^0)D(x-y) + \theta(y^0-x^0)D(y-x)}_{=\;\Delta(x,y)}
 $$</p>
+</div>
 <p>Vérification de cohérence : en prenant la valeur moyenne dans le vide, l&rsquo;ordre normal disparaît et il reste $\langle 0|T\hat\phi\hat\phi|0\rangle = \Delta$ (définition du chapitre précédent).</p>
 </div>
 <br>
 <div id="theo">
 <p><b>Théorème de Wick.</b></p>
 <p>Pour des champs libres :</p>
+<div id="grosseformule" style="margin-bottom:-0.5em;margin-top:-0.5em;">
 <p>$$
 T\big[\hat\phi_1 \cdots \hat\phi_n\big] = N\big[\hat\phi_1\cdots\hat\phi_n\big] + \sum_{\text{1 contraction}} N[\cdots] + \sum_{\text{2 contractions}} N[\cdots] + \cdots
 $$</p>
+</div>
 <p>Somme sur <i>toutes</i> les façons de contracter des paires, les champs non contractés restant en ordre normal ($\hat\phi_k \equiv \hat\phi(x_k)$, chaque contraction valant $\Delta(x_j, x_k)$).</p>
 </div>
 <br>
@@ -2362,10 +2372,12 @@ Esquisse de la démonstration (récurrence)
 <div id="theo">
 <p><b>Corollaire (celui qu&rsquo;on utilise en pratique)</b></p>
 <p>Dans le vide, seuls survivent les termes <i>complètement</i> contractés :</p>
+<div id="grosseformule" style="margin-bottom:-0.5em;margin-top:-0.5em;">
 <p>$$
 \langle 0|\, T\big[\hat\phi_1\cdots\hat\phi_n\big]\, |0\rangle
 = \sum_{\text{appariements\\complets}}\; \prod_{\text{paires} \\ (j,k)} \Delta(x_j, x_k)
 $$</p>
+</div>
 <ul>
 <li>nul si $n$ est impair&nbsp;;</li>
 <li>pour $n$ pair, la somme compte $(n-1)!! = (n-1)(n-3)\cdots 3\cdot 1$ termes.</li>
@@ -4107,16 +4119,16 @@ $\displaystyle
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1784125722"></script>
-    <script src="/js/perfect-scrollbar.min.js?1784125722"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1784125722"></script>
-    <script src="/js/jquery.sticky.js?1784125722"></script>
-    <script src="/js/featherlight.min.js?1784125722"></script>
-    <script src="/js/highlight.pack.js?1784125722"></script>
+    <script src="/js/clipboard.min.js?1784128139"></script>
+    <script src="/js/perfect-scrollbar.min.js?1784128139"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1784128139"></script>
+    <script src="/js/jquery.sticky.js?1784128139"></script>
+    <script src="/js/featherlight.min.js?1784128139"></script>
+    <script src="/js/highlight.pack.js?1784128139"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1784125722"></script>
-    <script src="/js/learn.js?1784125722"></script>
-    <script src="/js/hugo-learn.js?1784125722"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1784128139"></script>
+    <script src="/js/learn.js?1784128139"></script>
+    <script src="/js/hugo-learn.js?1784128139"></script>
     
     
 
