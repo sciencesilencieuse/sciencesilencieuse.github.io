@@ -8,7 +8,7 @@
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
-    <title>Complexes - Science en vrac</title>
+    <title>TQC-10 - Science en vrac</title>
     
     
 
@@ -75,7 +75,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 
 	
   </head>
-  <body class="" data-url="/maths/arithmetique/complexes/">
+  <body class="" data-url="/physique/tqc/gifted_amateur/tqc10/">
     <nav id="sidebar" class="">
 
 
@@ -327,7 +327,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/maths/" title="Maths" class="dd-item
-        parent
+        
         
         
         ">
@@ -455,7 +455,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/maths/arithmetique/" title="Arithmétique" class="dd-item
-        parent
+        
         
         
         ">
@@ -523,7 +523,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
  
   
     
-      <li data-nav-id="/maths/arithmetique/complexes/" title="Complexes" class="dd-item active">
+      <li data-nav-id="/maths/arithmetique/complexes/" title="Complexes" class="dd-item ">
         <a href="/maths/arithmetique/complexes/">
         Complexes
         
@@ -1169,7 +1169,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/" title="Physique" class="dd-item
-        
+        parent
         
         
         ">
@@ -1741,7 +1741,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/tqc/" title="Théorie quantique des champs" class="dd-item
-        
+        parent
         
         
         ">
@@ -1794,7 +1794,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/tqc/gifted_amateur/" title="Gifted Amateur" class="dd-item
-        
+        parent
         
         
         ">
@@ -1954,7 +1954,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
                   <span class="links">
                  
                  
-                   Complexes
+                   TQC-10
                  
                   </span>
                 </div>
@@ -1963,9 +1963,26 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#entiers-algébriques">Entiers algébriques</a></li>
-    <li><a href="#ensemble-de-mandelbrot">Ensemble de Mandelbrot</a></li>
-    <li><a href="#triplets-pythagoriciens">Triplets pythagoriciens</a></li>
+    <li><a href="#les-objets-topologiques">Les objets topologiques</a>
+      <ul>
+        <li><a href="#un-cours-éclair-de-topologie">Un cours éclair de topologie</a></li>
+        <li><a href="#leffet-aharonovbohm-un-avant-goût">L&rsquo;effet Aharonov–Bohm, un avant-goût</a></li>
+        <li><a href="#les-kinks">Les kinks</a></li>
+        <li><a href="#la-charge-topologique">La charge topologique</a></li>
+        <li><a href="#les-vortex">Les vortex</a></li>
+        <li><a href="#bilan">Bilan</a></li>
+        <li><a href="#pièges">Pièges</a></li>
+      </ul>
+    </li>
+    <li><a href="#la-théorie-topologique-des-champs">La théorie topologique des champs</a>
+      <ul>
+        <li><a href="#les-anyons-de-wilczek">Les anyons de Wilczek</a></li>
+        <li><a href="#la-théorie-de-chernsimons">La théorie de Chern–Simons</a></li>
+        <li><a href="#la-statistique-fractionnaire-ou-la-boucle-bouclée">La statistique fractionnaire, ou la boucle bouclée</a></li>
+        <li><a href="#bilan-1">Bilan</a></li>
+        <li><a href="#pièges-1">Pièges</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -2006,180 +2023,570 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   }
   #grosseformule 
 {
-    overflow-x: auto;
-    margin-top:-0.5em;
-    margin-bottom:-0.5em;
+    overflow-x: auto; 
+}
+#preuve
+{
+    background-color:#EAEAEA;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#def
+{
+    background-color:#DCEFFE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#theo
+{
+    background-color:#FBE1DE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+h2
+{
+color:#970E53 !important;
+}
+h3
+{
+color:#004D80 !important;
+}
+ul
+{
+margin-top:0em;
+margin-bottom:0.5em;
+}
+/* Pour rétablir le comportement de details */
+details > summary:first-of-type {
+  display: list-item;     /* remet le triangle + l'accessibilité */
+  cursor: pointer;        /* optionnel : feedback visuel */
+}
+
+details > summary:first-of-type {
+  list-style: disclosure-closed inside;
+}
+details[open] > summary:first-of-type {
+  list-style-type: disclosure-open;
 }
 </style>
-<h1 id="nombres-complexes">Nombres complexes</h1>
+<h1 id="théorie-quantique-des-champs--partie-10">Théorie quantique des champs &ndash; Partie 10</h1>
 
 <div class="notices note" style="--title: 'note';">
   <p style="display: none;">note</p>
   <div class="notice-body">
-    <p><a href="https://www.youtube.com/playlist?list=PLiaHhY2iBX9g6KIvZ_703G3KJXapKkNaF">Très belle série de vidéos</a> présentant les complexes.</p>
+    <p>Notes de lecture du livre <em>Quantum field theory for the gifted amateur</em> de Thomas Lancaster et Stephen Blundell.</p>
 
   </div>
 </div>
 
 
-<p>Comme on l&rsquo;a vu <a href="../fondements/ensembles">ici</a>, les complexes sont la clôture algébrique des réels, une extension permettant à tout polynôme d&rsquo;avoir ses racines dans l&rsquo;ensemble.</p>
-<p>Et chez les complexes, ces racines peuvent tracer de jolies figures comme on va le voir dans la suite.</p>
-<h2 id="entiers-algébriques">Entiers algébriques</h2>
-<p>Un nombre algébrique est un nombre réel ou complexe solution d&rsquo;une équation polynomiale à coefficients dans le corps $\mathbb{Q}$ des rationnels. Et si les coefficient sont entiers, on parle d&rsquo;entiers algébriques.</p>
-<p>Traçons l&rsquo;ensemble des racines des $2^{21}$ (≈ 2 millions) polynômes de degré 20 possible si chacun des coefficients vaut soit 1, soit -1.<br>
-Exemple d&rsquo;un de ces polynômes : $-x^{20}+x^{19}+x^{18}+x^{17}-x^{16}-x^{15}-x^{14}-x^{13}+x^{12}-x^{11}+x^{10}-x^{9}+x^{8}+x^{7}+x^{6}-x^{5}-x^{4}-x^{3}-x^{2}+x+1$<br>
-Un polynôme de degré 20 a 20 racines complexes. On se retrouve donc avec 40 millions de points (dont beaucoup sont aux mêmes endroits)&hellip; Et cela donne ça :</p>
-<p><img src="/racine0.png" alt=""></p>
-<p>Sont tracés ci-dessous les racines pour des degrés croissants de ces polynômes à coefficients unitaires.</p>
-<p><img src="/racdegres.png" alt=""></p>
-
-<div class="notices note" style="--title: 'note';">
-  <p style="display: none;">note</p>
-  <div class="notice-body">
-    <p><a href="https://math.ucr.edu/home/baez/roots/">Cette page</a> pour en savoir plus. Ça parle même de dragons !</p>
-
-  </div>
+<div style="overflow-x: auto;text-align:center;">
+<table>
+  <tr>
+    <th style="text-align:center;"><a href="../">Retour sommaire</a></th></td>
+    </tr>
+</table>
 </div>
-
-
-<p>En représentant dans le plan complexe les racines d&rsquo;un polynôme de degré 2 dont on fait varier chacun des trois coefficients entiers entre -100 et 100, on obtient la jolie figure suivante (ici dans une zone centrée sur zéro et de rayon 1,7) :</p>
-<p><img src="/racinarithm.png?width=800px" alt=""></p>
-<p>Pour avoir des racines ailleurs que sur l&rsquo;axe des abscisses, il faut un discriminant négatif. On obtient alors des solutions complexes conjuguées : $z_\pm = \frac{-b \pm i\sqrt{4ac - b^2}}{2a}$.</p>
-<ul style="margin-bottom: 1em;">
-<li>Qu'obtient-on si on fixe $a$ et $b$ et qu'on fait varier $c$&nbsp;?</li>
-</ul>
-<p>On obtient des droites verticales plantées aux abscisses $-\frac{b}{2a}$.</p>
-<ul style="margin-bottom: 0;">
-<li>Qu'obtient-on si on fixe $a$ et $c$ et qu'on fait varier $b$&nbsp;?</li>
-</ul>
-<p>Prenons le module au carré de nos racines complexes :</p>
-<div id="grosseformule">
-<p>$$|z|^2 = \left(-\frac{b}{2a}\right)^2 + \left(\frac{\sqrt{4ac - b^2}}{2a}\right)^2 = \frac{b^2 + 4ac - b^2}{4a^2} = \frac{c}{a}$$</p>
-</div>
-<p>Le module est donc $|z| = \sqrt{\frac{c}{a}}$. Cela signifie que pour un couple $(a, c)$ fixé, toutes les racines obtenues en faisant varier $b$ se trouvent sur un cercle centré à l&rsquo;origine. Les rayons visibles sont donc des racines de fractions rationnelles ($\sqrt{1}$, $\sqrt{2}$, $\sqrt{1/2}$, etc.).</p>
-<ul style="margin-bottom: 1em;">
-<li>Et si on fixe $b$ et $c$ et qu'on fait varier $a$&nbsp;?</li>
-</ul>
-<p>En injectant $z = x + iy$ dans $az^2+bz+c=0$, on obtient :</p>
-<div id="grosseformule">
-<p>$$a(x + iy)^2 + b(x + iy) + c = 0$$</p>
-</div>
-<div id="grosseformule">
-<p>$$a(x^2 - y^2 + 2ixy) + bx + iby + c = 0$$</p>
-</div>
-<p>En séparant les parties réelle et imaginaire, on aboutit au système suivant :</p>
-<div id="grosseformule">
-<p>$$
-\begin{cases}
-a(x^2 - y^2) + bx + c = 0 &amp; \text{(partie réelle)} \\
-2axy + by = 0 \implies y(2ax + b) = 0 &amp; \text{(partie imaginaire)}
-\end{cases}
-$$</p>
-</div>
-<p>Comme on étudie les racines complexes, $y ≠ 0$, ce qui impose la condition :</p>
-<p>$$2ax + b = 0 \implies a = -\frac{b}{2x}$$</p>
-<p>Substituons cette expression de $a$ dans l&rsquo;équation de la partie réelle :</p>
-<p>$$\left(-\frac{b}{2x}\right)(x^2 - y^2) + bx + c = 0$$</p>
-<p>Multiplions tout l&rsquo;équation par $-2x$ (pour $x \neq 0$) :</p>
-<p>$$b(x^2 - y^2) - 2bx^2 - 2cx = 0$$
-$$-bx^2 - by^2 - 2cx = 0$$</p>
-<p>En multipliant par $-1/b$ (pour $b ≠ 0$), on obtient une équation de cercle caractéristique :</p>
-<p>$$x^2 + y^2 + \frac{2c}{b}x = 0$$
-En mettant sous forme canonique (complétion du carré) :</p>
-<p>$$\left(x + \frac{c}{b}\right)^2 + y^2 = \left(\frac{c}{b}\right)^2$$</p>
-<p>Équation de cercles dont le centre est situé sur l&rsquo;axe des réels à la coordonnée $\left(-\frac{c}{b}, 0\right)$ et de rayon $R = \left|\frac{c}{b}\right|$.<br>
-Puisque la distance du centre à l&rsquo;origine est égale au rayon, tous ces cercles sont tangents à l&rsquo;axe imaginaire à l&rsquo;origine $(0,0)$.</p>
-<ul style="margin-bottom: 1em;">
-<li>Quid des zones d'exclusion&nbsp;?</li>
-</ul>
-<p>Calculons la distance au carré entre une racine complexe $z = x + iy$ et un point rationnel quelconque $\frac{p}{q}$ situé sur l&rsquo;axe des abscisses (où $p \in \mathbb{Z}$ et $q \in \mathbb{N}^*$).</p>
-<p>$$\left|z - \frac{p}{q}\right|^2 = \left(x - \frac{p}{q}\right)^2 + y^2$$</p>
-<p>Nous savons d&rsquo;autre part que $x = -\frac{b}{2a}$ et $y^2 = \frac{4ac - b^2}{4a^2}$. Injectons ces expressions :</p>
-<div id="grosseformule">
-<p>$$
-\begin{aligned}
-\left|z - \frac{p}{q}\right|^2 &amp;= \left(-\frac{b}{2a} - \frac{p}{q}\right)^2 + \frac{4ac - b^2}{4a^2}\\
-&amp; =\frac{(bq + 2ap)^2 + q^2(4ac - b^2)}{4a^2q^2}
-\end{aligned}
-$$</p>
-</div>
-<p>Développons le numérateur :</p>
-<div id="grosseformule">
-<p>$$b^2q^2 + 4abpq + 4a^2p^2 + 4acq^2 - b^2q^2 = 4a^2p^2 + 4abpq + 4acq^2$$</p>
-</div>
-<p>En simplifiant par $4a^2$ au numérateur et au dénominateur, on obtient :</p>
-<p>$$\left|z - \frac{p}{q}\right|^2 = \frac{ap^2 + bpq + cq^2}{aq^2}$$</p>
-<p>Posons $I = ap^2 + bpq + cq^2$. Puisque $a, b, c, p, q$     sont tous des entiers, $I$ est obligatoirement un entier.<br>
-De plus, si $I = 0$, cela signifierait que le nombre rationnel $\frac{p}{q}$ est une solution exacte de l&rsquo;équation $at^2 + bt + c = 0$. Or, nous avons posé comme condition initiale que l&rsquo;équation possède des racines strictement complexes ($\Delta &lt; 0$). Le polynôme n&rsquo;admet donc aucune racine réelle. Par conséquent, $I$ ne peut pas être nul :</p>
-<p>$$I \in \mathbb{Z}^* \implies |I| \ge 1$$</p>
-<p>On en déduit l&rsquo;inégalité fondamentale suivante :</p>
-<p>$$\left|z - \frac{p}{q}\right|^2 \ge \frac{1}{a q^2}$$</p>
-<p>Comme les coefficients de la figure sont bornés par $N = 100$, la valeur maximale de $a$ est $100$. On obtient donc le rayon d&rsquo;exclusion minimal théorique autour de n&rsquo;importe quelle fraction $\frac{p}{q}$ :</p>
-<p>$$\left|z - \frac{p}{q}\right| \ge \frac{1}{q\sqrt{100}} = \frac{1}{10q}$$</p>
-<p>Conclusion :</p>
-<p>Autour de $0$ ($\frac{0}{1}$) : Le rayon d&rsquo;exclusion est de $\frac{1}{10 \times 1} = 0,1$. C&rsquo;est le grand trou central.<br>
-Autour de $1$ et $-1$ ($\frac{1}{1}$ et $\frac{-1}{1}$) : le rayon d&rsquo;exclusion minimum est également de $\frac{1}{10 \times 1} = 0,1$, mais en pratique, le fait que la partie réelle vale $-\frac{b}{2a}=\pm 1$ impose $|b|=2|a|$ et donc $a$ se ballade jusqu&rsquo;à 50 seulement rendant le trou $\sqrt{2}$ fois plus gros.<br></p>
-<p>Cette loi en $\frac{1}{10q}$ explique pourquoi la taille des zones d&rsquo;exclusion décroît de manière fractale à mesure que le dénominateur de la fraction augmente.</p>
 <br>
-<h2 id="ensemble-de-mandelbrot">Ensemble de Mandelbrot</h2>
-<p>L&rsquo;ensemble de Mandelbrot est une des fractales les plus célèbres.</p>
-<p>Il est défini par une suite récurrente.<br>
-Pour chaque point $c$ du plan complexe :<br>
-$$z_{0} = 0$$
-$$z_{n+1} = z_{n}^2 + c$$</p>
-<p>Pour chaque point $c$ (qui correspond à un pixel de l&rsquo;image) :</p>
-<ol style="margin-top:0;">
-<li>Si la suite converge, le point appartient à l'ensemble.</li>
-<li>Si la suite diverge, la couleur correspond à la vitesse de divergence (le nombre d'itérations nécessaires pour que le module de $z_n$ dépasse une certaine valeur seuil, 2 ici). Plus la divergence sera rapide, plus le point sera blanc.
+<p>Changement de regard. Jusqu&rsquo;ici, presque tous nos calculs consistaient à intégrer sur l&rsquo;espace-temps, et la géométrie précise de celui-ci comptait : elle est encodée dans la métrique $g_{\mu\nu}$, le manuel d&rsquo;instruction qui dit ce que mesurent les montres et les règles. Cette partie s&rsquo;intéresse aux questions qui sont totalement aveugles à la métrique. La réponse ne peut alors dépendre que de propriétés globales, insensibles aux déformations continues : c&rsquo;est le domaine de la topologie.</p>
+<ul style="margin-top:1em;">
+<li><b>L'idée</b>&nbsp;: quand une symétrie est spontanément brisée (partie précédente), le champ peut la briser <i>différemment en différentes régions de l'espace</i>. Les configurations qui recollent ces régions sont des <b>défauts topologiques</b>, protégés non par une loi de conservation à la Noether mais par l'impossibilité de les déformer continûment vers le vide.</li>
+<li><b>Les objets</b>&nbsp;: les deux défauts les plus simples, le <b>kink</b> en une dimension d'espace et le <b>vortex</b> en deux. Le kink vit très bien tout seul&nbsp;; le vortex, lui, exige un champ de jauge pour exister, et cette association a une conséquence&nbsp;: la <b>quantification du flux magnétique</b>.</li>
+<li><b>La théorie</b>&nbsp;: on construit un lagrangien qui est <i>lui-même</i> topologique, la théorie de <b>Chern–Simons</b>, où le symbole antisymétrique $\epsilon^{\mu\nu\lambda}$ remplace la métrique. En (2+1) dimensions, elle attache du flux aux charges et fabrique des particules qui ne sont ni bosons ni fermions&nbsp;: les <b>anyons</b>.</li>
+</ul>
+<br>
+<h2 id="les-objets-topologiques">Les objets topologiques</h2>
+<h3 id="un-cours-éclair-de-topologie">Un cours éclair de topologie</h3>
+<p>Deux objets sont topologiquement équivalents si l&rsquo;on peut déformer continûment l&rsquo;un en l&rsquo;autre, comme si tout était fait de pâte à modeler : on a le droit d&rsquo;étirer et d&rsquo;écraser, mais pas de percer, de recoller, d&rsquo;ajouter ou de supprimer un trou. Des points voisins doivent rester voisins. C&rsquo;est en ce sens que la tasse à café et le doughnut sont le même objet : chacun possède exactement un trou.</p>
+<p>Donnons des noms aux espaces de base.</p>
+<div id="def">
+<ul style="margin-top:0.5em;">
+<li>La droite réelle est notée $\mathbb R$, le plan $\mathbb R^2$, et $\mathbb R^n$ en dimension $n$.</li>
+<li>Un segment de $\mathbb R$ recollé bout à bout donne le cercle $S^1$. La sphère est $S^2$&nbsp;: attention, il s'agit de la <i>surface</i> de la boule, pas de son intérieur, c'est donc un espace de dimension 2.</li>
+<li>On fabrique un <b>espace produit</b> en attachant une copie d'un espace à chaque point d'un autre&nbsp;: $\mathbb R \times \mathbb R = \mathbb R^2$, et le tore $T^2 = S^1 \times S^1$ (on retrouve le doughnut&nbsp;: un petit cercle attaché à chaque point d'un grand cercle).</li>
+</ul>
+</div>
+<!-- Figure à redessiner (L&B fig. 29.2) : deux panneaux. (a) une droite R horizontale, une droite R verticale, le symbole ×, puis le plan R² quadrillé ; (b) deux cercles S¹ avec le symbole ×, puis le tore T², avec un grand cercle et un petit cercle dessinés dessus. Légende : un espace produit attache une copie d'un espace à chaque point de l'autre -->
+<div style="position:relative;margin-left:auto;margin-right:auto;width:500px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/espacesproduits.png" style="box-shadow:none;background:none;">
+</div>
+<p>Un mot sur les plongements, parce qu&rsquo;il resservira : $S^1$ ne peut pas être plongé dans $\mathbb R$, et $S^2$ ne peut pas être plongé dans $\mathbb R^2$. C&rsquo;est pour cela que toute carte plane de la Terre exige une coupure quelque part, en général au milieu d&rsquo;un océan.</p>
+<p>Une fois qu&rsquo;on a un espace, on peut s&rsquo;y promener. Un <b>chemin</b> est une application $f$ d&rsquo;un segment $[a,b]$ vers l&rsquo;espace. Si $f(a) = f(b)$, le chemin se referme et devient un <b>lacet</b>. Deux lacets sont équivalents si on peut déformer continûment l&rsquo;un en l&rsquo;autre. La question centrale de tout ce chapitre est alors : combien y a-t-il de classes de lacets non équivalents ?</p>
+<div id="def">
+<p>L&rsquo;ensemble des classes de lacets d&rsquo;un espace forme un groupe, le <b>groupe fondamental</b>, noté $\pi_1$.</p>
+<ul style="margin-top:0.5em;margin-bottom:1em">
+<li>Dans $\mathbb R^n$, tout lacet est <b>contractile</b> (déformable en un point)&nbsp;: une seule classe, $\pi_1$ est le groupe trivial.</li>
+<li>Si l'espace a un trou, un lacet est caractérisé par le nombre (algébrique) de tours qu'il fait autour&nbsp;: c'est le <b>nombre d'enroulement</b> (<i>winding number</i>). D'où $\pi_1(S^1) = \mathbb Z$.</li>
+<li>Sur le tore, un lacet peut s'enrouler de deux façons indépendantes (par le trou, ou autour du boudin)&nbsp;: $\pi_1(T^2) = \mathbb Z \times \mathbb Z$.</li>
+</ul>
+</div>
+<p>Point crucial : un argument topologique ne fait appel à aucune structure géométrique. Il ne mesure rien, il compte.</p>
+<br>
+<h3 id="leffet-aharonovbohm-un-avant-goût">L&rsquo;effet Aharonov–Bohm, un avant-goût</h3>
+<p>Avant de fabriquer des objets topologiques, voici un phénomène quantique dont le caractère topologique saute aux yeux. On réaffiche $\hbar$ dans ce paragraphe, parce que la phase $q\Phi/\hbar$ va avoir son importance.</p>
+<p>On glisse un solénoïde très fin (rayon $R$, axe selon $\hat{\mathbf e}_z$) entre les deux fentes d&rsquo;une expérience d&rsquo;Young avec des électrons. Le champ magnétique vaut $(0,0,B)$ à l&rsquo;intérieur du solénoïde et il est <b>rigoureusement nul partout à l&rsquo;extérieur</b>, là où passent les électrons. Le potentiel vecteur, lui, ne s&rsquo;annule pas dehors : $A^\theta = BR^2/2r$.</p>
+<!-- Figure à redessiner (L&B fig. 29.4) : dispositif des fentes d'Young vu de dessus. À gauche une source d'électrons, au centre un écran percé de deux fentes, entre les deux chemins un petit cercle marqué B (le solénoïde vu en coupe), à droite l'écran de détection. Les deux chemins d'électrons contournent le solénoïde de part et d'autre. Légende : les électrons ne traversent que des régions où B = 0, mais leurs chemins enlacent le flux -->
+<div style="position:relative;margin-left:auto;margin-right:auto;width:400px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/aharonovbohm.png" style="box-shadow:none;background:none;">
+</div>
+<div id="preuve">
+<p>En présence de $\mathbf A$, l&rsquo;impulsion se décale, $\mathbf p \to \mathbf p - q\mathbf A$, et une onde plane $\psi \propto e^{i\mathbf p\cdot\mathbf r/\hbar}$ accumule le long d&rsquo;une trajectoire une phase supplémentaire $e^{i\Delta\alpha}$ avec</p>
+<p style="text-align:center;">
+$\displaystyle
+\Delta\alpha = -\frac{q}{\hbar}\int \mathbf A\cdot\mathrm d\mathbf r
+$
+</p>
+<p>Prise isolément, cette phase ne veut rien dire : une transformation de jauge $\mathbf A \to \mathbf A + \boldsymbol\nabla\chi$ la modifie arbitrairement. Mais l&rsquo;interférence ne dépend que de la <i>différence</i> entre les deux chemins, et cette différence referme la boucle :</p>
+<p style="text-align:center;">
+$\displaystyle
+\Delta\delta = \Delta\alpha_1 - \Delta\alpha_2 = \frac{q}{\hbar}\oint \mathbf A\cdot\mathrm d\mathbf r
+$
+</p>
+<p>Sur une boucle fermée, la contribution de jauge $\oint \boldsymbol\nabla\chi\cdot\mathrm d\mathbf r = 0$ disparaît, et le théorème de Stokes traduit l&rsquo;intégrale en flux :</p>
+<p style="text-align:center;">
+$\displaystyle
+\Delta\delta = \frac{q}{\hbar}\int \boldsymbol\nabla\times\mathbf A\cdot\mathrm d\mathbf S = \frac{q}{\hbar}\int \mathbf B\cdot\mathrm d\mathbf S = \frac{q}{\hbar}\,\Phi
+$
+</p>
+</div>
+<br>
+<div id="theo">
+<p><b>Effet Aharonov–Bohm</b></p>
+<p>La figure d&rsquo;interférence se décale d&rsquo;une phase $\displaystyle \Delta\delta = \frac{q\,\Phi}{\hbar}$.</p>
+<p>où $\Phi$ est le flux enfermé dans le solénoïde, alors même que les électrons ne rencontrent jamais le moindre champ magnétique.<br>
+L&rsquo;effet est observé expérimentalement !</p>
+</div>
+<p>Pourquoi dit-on que l&rsquo;effet est topologique ?<br>
+La fonction d&rsquo;onde électronique vit sur le plan privé de l&rsquo;origine (là où on a planté le flux) : une feuille avec un trou. L&rsquo;électromagnétisme a la symétrie $U(1)$, et une phase se lit sur un cercle du plan complexe : la topologie de $U(1)$ est celle de $S^1$.<br>
+Définir la phase partout sur la feuille trouée, c&rsquo;est donc envoyer $S^1$ sur un lacet autour du trou. Ces applications tombent dans des classes disjointes étiquetées par un entier, précisément parce que $\pi_1(S^1) = \mathbb Z$, et deux classes différentes ne peuvent pas être déformées l&rsquo;une dans l&rsquo;autre. Le décalage des franges ne mesure pas une distance ; il compte un enlacement.</p>
+<br>
+<h3 id="les-kinks">Les kinks</h3>
+<p>Passons à la fabrication d&rsquo;objets. On se place en (1+1) dimensions d&rsquo;espace-temps avec le lagrangien de brisure de symétrie de la théorie $\phi^4$ :</p>
+<div id="def">
+<p style="text-align:center;">
+$\displaystyle
+\mathcal L = \tfrac12(\partial_\mu\phi)^2 - U(\phi)
+$
+ avec 
+ $\displaystyle
+ U(\phi) = \frac{\lambda}{4}\,(v^2 - \phi^2)^2
+ $
+</p>
+<p>C&rsquo;est bien notre lagrangien à symétrie brisée : en développant le carré et en posant $v^2 = m^2/\lambda$, on retrouve le terme de masse $+\tfrac12 m^2\phi^2$ et l&rsquo;interaction $-\tfrac{\lambda}{4}\phi^4$.</p>
+<p>Le potentiel est un double puits, avec $U = 0$ aux deux minima $\phi = \pm v$. En développant autour de l&rsquo;un des deux vides, les excitations sont des particules de masse $m_{\text{phys}} = (2\lambda v^2)^{1/2}$.</p>
+</div>
+<!-- Figure à redessiner (deux panneaux, d'après L&B fig. 29.5 et 29.7) : (a) le potentiel U(φ) en double puits, avec les deux minima marqués en φ = -v et φ = +v ; (b) le profil du kink φ(x), courbe en S montant de -v (à gauche) vers +v (à droite), avec la largeur l indiquée autour du croisement de l'axe. Légende : le kink interpole entre les deux vides -->
+<div style="position:relative;margin-left:auto;margin-right:auto;width:440px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/doublepuitskink1.png" style="box-shadow:none;background:none;">
+</div>
+<p>La leçon de ce chapitre tient en une phrase : <b>les particules ne sont pas les seuls habitants de ce potentiel</b>.<br>
+Cherchons les configurations statiques dont la densité d&rsquo;énergie $\tfrac12(\partial_x\phi)^2 + U(\phi)$ s&rsquo;annule en $x = \pm\infty$. Cela impose au champ d&rsquo;être constant et de siéger dans un zéro du potentiel aux deux extrémités. La solution ennuyeuse est $\phi(x) = v$ partout (ou $-v$ partout) : c&rsquo;est le vide ordinaire de la symétrie brisée. La solution intéressante prend $\phi(-\infty) = -v$ et $\phi(+\infty) = +v$ : le champ doit alors traverser la bosse quelque part.</p>
+<!-- Figure à redessiner (deux panneaux, d'après L&B fig. 29.5 et 29.7) : (a) le potentiel U(φ) en double puits, avec les deux minima marqués en φ = -v et φ = +v ; (b) le profil du kink φ(x), courbe en S montant de -v (à gauche) vers +v (à droite), avec la largeur l indiquée autour du croisement de l'axe. Légende : le kink interpole entre les deux vides -->
+<div style="position:relative;margin-left:auto;margin-right:auto;width:440px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/doublepuitskink2.png" style="box-shadow:none;background:none;">
+</div>
+<div id="def">
+<p>Cette configuration est le <b>kink</b> : une moitié du champ vit dans un vide, l&rsquo;autre moitié dans l&rsquo;autre, et le champ interpole entre les deux sur une région finie. Le champ brise la symétrie de deux façons différentes selon la région d&rsquo;espace : les extrémités $x = \pm\infty$ vivent dans des vides différents.</p>
+</div>
+<p>Pour savoir si cet objet a le droit d&rsquo;exister, il faut vérifier que son énergie totale est finie. Le calcul contient une jolie astuce.</p>
+<div id="preuve">
+<p>Le kink est statique, donc $\partial_0\phi = 0$ et l&rsquo;énergie vaut $E = \int\mathrm dx\left[\tfrac12(\partial_x\phi)^2 + U(\phi)\right]$.</p>
+<p>L&rsquo;astuce (dite de Bogomolny) consiste à intégrer une fois l&rsquo;équation du mouvement statique $\dfrac{\partial^2\phi}{\partial x^2} = \dfrac{\partial U}{\partial\phi}$. On multiplie par $\partial_x\phi$ et on intègre :</p>
+<p style="text-align:center;">
+$\displaystyle
+\frac12\left(\frac{\partial\phi}{\partial x}\right)^2 = U(\phi)
+$
+</p>
+<p>L&rsquo;intégration produit en principe une constante. Elle est nulle ici parce que les deux membres tendent vers zéro en $x\to\pm\infty$ (le champ devient constant et atteint un zéro du potentiel), et c&rsquo;est précisément notre condition aux limites.<br>
+L&rsquo;égalité dit que la densité d&rsquo;énergie cinétique (au sens du gradient) et la densité potentielle contribuent à parts exactement égales.</p>
+<p>L&rsquo;énergie devient alors une intégrale <i>sur les valeurs du champ</i>, sans plus aucune référence au profil précis :</p>
+<p style="text-align:center;">
+$\displaystyle
+E = \int\mathrm dx\, 2\,U(\phi) = \int_{-v}^{v}\mathrm d\phi\,\frac{\mathrm dx}{\mathrm d\phi}\,2\,U(\phi) = \int_{-v}^{v}\mathrm d\phi\,\big[2U(\phi)\big]^{1/2}
+$
+</p>
+<p>On injecte $[2U(\phi)]^{1/2} = (\lambda/2)^{1/2}(v^2 - \phi^2)$. Et comme $\int_{-v}^{v}(v^2-\phi^2)\,\mathrm d\phi = \tfrac43 v^3$ :</p>
+<p style="text-align:center;">
+$\displaystyle
+E = \frac{2\sqrt2}{3}\,\sqrt\lambda\; v^3 = \frac{1}{\sqrt2}\,\frac{4m^3}{3\lambda}
+$
+</p>
+<p>où $m$ est le <i>paramètre du lagrangien</i> ($v^2 = m^2/\lambda$).<br>
+Exprimée avec la masse physique $m_{\text{phys}} = \sqrt2\, m$, la même énergie s&rsquo;écrit plus joliment $E = m_{\text{phys}}^3/3\lambda$.</p>
+</div>
+<p>L&rsquo;énergie est finie : le kink existe. Et la formule cache un message profond : <b>l&rsquo;énergie est inversement proportionnelle à la constante de couplage</b>. Un développement en puissances de $\lambda$, comme ceux de la théorie des perturbations, ne verra jamais un objet en $1/\lambda$ : les objets topologiques sont fondamentalement <b>non perturbatifs</b>. Aucune somme de diagrammes de Feynman ne les fabrique.</p>
+<p>Le kink a aussi une taille finie $l$, fixée par un bras de fer : le terme de gradient $\int\mathrm dx\,\tfrac12(\partial_x\phi)^2 \approx l\,(v/l)^2$ voudrait étaler le kink (grand $l$), tandis que le terme potentiel $\int\mathrm dx\, U \approx \lambda v^4 l$ voudrait le comprimer (petit $l$, pour minimiser la région où le champ traîne hors des vides). L&rsquo;équilibre donne $l \approx (\lambda v^2)^{-1/2} \sim 1/m$ : la taille du kink est la longueur Compton des particules ordinaires de la théorie.</p>
+<p>Faisons l&rsquo;inventaire des propriétés : énergie finie et localisée dans une région de taille $l$, la théorie est invariante par translation (le centre du kink peut être n&rsquo;importe où) et par Lorentz (on peut le booster à toute vitesse). Le kink se comporte donc <b>très exactement comme une particule</b>, alors que rien dans la quantification canonique ne l&rsquo;annonçait.</p>
+<p>Et il est <b>stable</b>. Pour effacer un kink, il faudrait soulever une demi-droite entière de champ d&rsquo;un minimum du potentiel vers l&rsquo;autre, ce qui coûte une énergie infinie. En langage plus mathématique : en tenant fermement les deux extrémités (l&rsquo;une en $-v$, l&rsquo;autre en $+v$), il est impossible de déformer le profil pour supprimer la traversée de l&rsquo;axe. La seule façon de tuer un kink est de lui présenter un <b>antikink</b>, le profil qui descend de $+v$ vers $-v$. La paire kink-antikink, elle, a ses deux extrémités dans le <i>même</i> vide : en tenant les bouts, on peut aplatir continûment tout ce qui se passe au milieu et retomber sur le vide $\phi = -v$.</p>
+<!-- Figure à redessiner (L&B fig. 29.9) : profil φ(x) montrant un kink suivi d'un antikink : la courbe part de -v, monte en S vers +v (kink), reste en plateau, puis redescend en S vers -v (antikink). Annoter « kink » et « antikink ». Légende : les deux extrémités vivent dans le même vide, la paire est déformable vers le vide -->
+<div style="position:relative;margin-left:auto;margin-right:auto;width:400px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/kinkantikink.png" style="box-shadow:none;background:none;">
+</div>
+
+<div class="notices note" style="--title: 'note';">
+  <p style="display: none;">note</p>
+  <div class="notice-body">
+    <p>Le jumeau expérimental du kink est la <b>paroi de domaine</b> d&rsquo;un aimant. Les deux vides sont « tous les spins vers le haut » et « tous les spins vers le bas », un domaine est une région où la symétrie est brisée d&rsquo;une façon donnée, et la paroi est la zone de largeur finie où les spins basculent. Les parois de domaines sont bien réelles et détectables. Nambu a proposé l&rsquo;idée vertigineuse que l&rsquo;Univers, en brisant ses symétries au refroidissement, aurait pu se découper de la même façon en domaines cosmiques aux vides différents.</p>
+
+  </div>
+</div>
+
+
+<br>
+<h3 id="la-charge-topologique">La charge topologique</h3>
+<p>La stabilité du kink mérite d&rsquo;être encodée dans une grandeur conservée, une charge. On la construit à la main.</p>
+<div id="def">
+<p>Le <b>courant topologique</b> (ou courant de kink) est défini par</p>
+<p style="text-align:center;">
+$\displaystyle
+J^\mu_{\mathrm T} = \frac{1}{2v}\,\epsilon^{\mu\nu}\,\partial_\nu\phi
+$
+</p>
+<p>où $\epsilon^{\mu\nu}$ est le symbole antisymétrique, fixé par $\epsilon^{01} = 1$.<br>
+Rq : il n&rsquo;est pas ici considéré comme un tenseur, et donc $\epsilon^{\mu\nu} = \epsilon_{\mu\nu}$ (on ne monte pas ses indices avec la métrique).</p>
+</div>
+<br>
+<div id="preuve">
+<p>Ce courant est conservé <i>identiquement</i> :</p>
+<p style="text-align:center;">
+$\displaystyle
+\partial_\mu J^\mu_{\mathrm T} = \frac{1}{2v}\,\epsilon^{\mu\nu}\,\partial_\mu\partial_\nu\phi = 0
+$
+</p>
+<p>En effet, on contracte un objet antisymétrique ($\epsilon^{\mu\nu}$) avec un objet symétrique ($\partial_\mu\partial_\nu$). Aucune équation du mouvement n&rsquo;a servi, aucune symétrie du lagrangien non plus : ce n&rsquo;est <b>pas</b> un courant de Noether. La conservation est une identité de structure.</p>
+</div>
+<p>La charge associée compte alors exactement ce qu&rsquo;on veut :</p>
+<div id="theo">
+<p style="text-align:center;">
+$\displaystyle
+Q_{\mathrm T} = \int_{-\infty}^{\infty}\mathrm dx\, J^0_{\mathrm T} = \frac{1}{2v}\int_{-\infty}^{\infty}\mathrm dx\,\frac{\partial\phi}{\partial x} = \frac{1}{2v}\big[\phi(\infty) - \phi(-\infty)\big]
+$
+</p>
+<p>Le kink porte $Q_{\mathrm T} = 1$, l&rsquo;antikink $Q_{\mathrm T} = -1$, et les particules ordinaires de la théorie (les « phions »), qui ont leurs deux extrémités dans le même vide, portent $Q_{\mathrm T} = 0$. On appelle $Q_{\mathrm T}$ la <b>charge topologique</b>.</p>
+</div>
+<p>La charge ne dépend que des valeurs du champ <i>au bord</i> : elle ignore tout de ce qui se passe entre les deux. Et remarquez la signature dans la définition : les indices sont sommés avec $\epsilon^{\mu\nu}$ et non avec $g^{\mu\nu}$. La métrique dit ce que mesurent les montres et les règles ; la charge topologique n&rsquo;en a pas besoin, elle compte. Cette dépendance en $\epsilon$ plutôt qu&rsquo;en $g$ est la signature générale des objets topologiques, et elle deviendra un principe de construction au chapitre suivant.</p>
+<br>
+<h3 id="les-vortex">Les vortex</h3>
+<p>Montons d&rsquo;une dimension : espace-temps (2+1), même lagrangien, mais le champ est maintenant complexe et le potentiel devient un chapeau mexicain dont les minima décrivent un <i>cercle</i> dans le plan $\phi_1$-$\phi_2$. On adopte des coordonnées polaires internes en écrivant $\phi(x) = \phi_1(x) + \mathrm i\phi_2(x) \equiv \rho(x)\,\mathrm e^{\mathrm i\theta(x)}$.</p>
+<p>La question du kink se transpose mot pour mot : à quoi ressemble un champ continu dont les éléments vivent dans des vides différents dans l&rsquo;infini spatial ? La frontière de l&rsquo;espace est maintenant un cercle (le cercle à l&rsquo;infini du plan), et l&rsquo;espace des vides est aussi un cercle (le fond du chapeau). Une configuration de bord est donc une application d&rsquo;un cercle sur un cercle, et l&rsquo;on sait depuis le début du chapitre que ces applications sont classées par $\pi_1(S^1) = \mathbb Z$.</p>
+<div id="def">
+<p>Un <b>vortex</b> est une configuration dont la forme à l&rsquo;infini est</p>
+<p style="text-align:center;">
+$\displaystyle
+\phi(\mathbf x) = K\,e^{\mathrm i[n\,\theta(\mathbf x) + \varphi]} \; (|\mathbf x|\to\infty)
+$
+</p>
+<p>où $\theta(\mathbf x) = \tan^{-1}(x^2/x^1)$ est l&rsquo;angle qui repère la position dans le plan, $\varphi$ une phase constante arbitraire, et $n \in \mathbb Z$ le <b>nombre d&rsquo;enroulement</b> : le nombre de tours que fait la direction du champ dans le plan complexe interne quand on parcourt une fois le cercle à l&rsquo;infini. L&rsquo;équation attache la direction interne du champ à l&rsquo;angle de l&rsquo;espace réel.</p>
+</div>
+<!-- Figure à redessiner (L&B fig. 29.10) : quatre panneaux carrés (a)-(d), chacun montrant un champ de flèches dans le plan. (a) n = 1 : flèches radiales sortantes (hérisson) ; (b) n = 1 avec φ = π/2 : flèches tangentes, tourbillon circulaire ; (c) n = -1 : configuration hyperbolique (flèches convergeant selon un axe, divergeant selon l'autre) ; (d) n = 2 : configuration dipolaire à double enroulement. Légende : le nombre d'enroulement compte les tours du champ interne le long d'un tour dans l'espace -->
+<div style="position:relative;margin-left:auto;margin-right:auto;width:600px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/vortexenroulements.png" style="box-shadow:none;background:none;">
+</div>
+<div id="preuve">
+<p>(a) <strong>Le Hérisson</strong> ($n=1, \varphi=0$ )<br>
+Ici, la relation est $\alpha = 1\times\theta + 0$. La flèche pointe exactement dans la même direction que la position. Quand on fait un tour complet anti-horaire, la flèche fait exactement 1 tour complet dans le sens anti-horaire. Donc $n=1$.</p>
+<p>(b) <strong>Le Tourbillon</strong> ($n=1, \varphi=\pi/2$ )<br>
+Ici, la relation est $\alpha = 1\times\theta + \pi/2$.<br>
+C&rsquo;est exactement la même image que (a), sauf que toutes les flèches ont été tournées de 90 degrés vers la gauche (c&rsquo;est le rôle de la phase arbitraire $\varphi$).<br>
+Résultat : si on marche autour du centre, la flèche tourne toujours dans le même sens que nous, à la même vitesse. Elle fait 1 tour complet anti-horaire. Donc $n=1$.</p>
+<p>(c) <strong>La Selle</strong> ($n=-1$)<br>
+Ici, la relation est $\alpha = -1\times\theta$ (en supposant $\varphi=0$). L&rsquo;angle de la flèche tourne dans le sens inverse du déplacement !<br>
+Pendant qu&rsquo;on fait 1 tour anti-horaire, la flèche fait 1 tour dans le sens horaire (sens des aiguilles d&rsquo;une montre). Le signe moins indique cette rotation inversée. Donc $n=-1$.</p>
+<p>(d) <strong>Le Double Tour</strong> ($n=2$)<br>
+Ici, la relation est $\alpha = 2\times\theta$. La flèche tourne deux fois plus vite que nous !<br>
+En faisant un seul tour autour du centre, on voit la flèche faire 2 tours complets sur elle-même. Donc $n=2$.</p>
+</div>
+<p>Le vortex est-il viable ? Calculons son énergie.</p>
+<div id="preuve">
+<p>Pour une configuration statique, la densité d&rsquo;énergie est $\mathcal H = \tfrac12\boldsymbol\nabla\phi^\dagger\cdot\boldsymbol\nabla\phi + U(\phi)$, avec un potentiel choisi tel que $U = 0$ sur le cercle des vides, par exemple $U(\phi) = \big(|K|^2 - \phi^\dagger\phi\big)^2$. Le terme potentiel ne coûte donc rien à l&rsquo;infini.</p>
+<p>Le danger vient du gradient. À grande distance, seule la phase varie, et son gradient en coordonnées cylindriques vaut :</p>
+<p style="text-align:center;">
+$\displaystyle
+\boldsymbol\nabla\phi = \frac1r\,\big(\mathrm i\,n\,K e^{\mathrm i n\theta}\big)\,\hat{\mathbf e}_\theta
+\;\Longrightarrow\;
+|\boldsymbol\nabla\phi|^2 = \frac{n^2|K|^2}{r^2}
+$
+</p>
+<p>Le cœur du vortex ($r\to0$) a l&rsquo;air affreusement singulier, mais en réalité l&rsquo;amplitude $\rho$ s&rsquo;annule au centre et régularise tout ; on range donc le cœur dans une énergie finie $E_{\text{cœur}}(a)$, où $a$ est sa taille, et on n&rsquo;intègre qu&rsquo;à l&rsquo;extérieur. Ce découpage est sans danger précisément parce que le problème qu&rsquo;on va trouver vient des <i>grandes</i> distances, pas du cœur :</p>
+<p style="text-align:center;">
+$\displaystyle
+E = E_{\text{cœur}} + \int_a^{\infty}\mathrm dr\,\mathrm d\theta\; r\,\mathcal H = E_{\text{cœur}} + \pi n^2|K|^2\int_a^{\infty}\frac{\mathrm dr}{r}
+$
+</p>
+<p>L&rsquo;intégrale diverge logarithmiquement.</p>
+</div>
+<p>Verdict : <b>un vortex isolé n&rsquo;est pas un objet stable</b>. On le voit à l&rsquo;œil nu sur les figures : même très loin du centre, le champ continue de tourbillonner, et ce tourbillonnement à l&rsquo;infini coûte sans fin. Ce n&rsquo;est pas un accident de notre modèle : un théorème dû à Derrick interdit les objets topologiques statiques dans les théories scalaires en plus d&rsquo;une dimension spatiale.</p>
+<div id="preuve">
+<details>
+<summary>
+L'argument de Derrick (version simplifiée)
+</summary>
+<p>On prend une configuration statique candidate $\phi(\mathbf x)$ en dimension spatiale $d$, d&rsquo;énergie $E = E_{\text{grad}} + E_{\text{pot}}$, et on la comprime ou on la dilate : $\phi_\mu(\mathbf x) = \phi(\mu\mathbf x)$. Un changement de variable donne les lois d&rsquo;échelle</p>
+<p style="text-align:center;">
+$\displaystyle
+E(\mu) = \mu^{2-d}\,E_{\text{grad}} + \mu^{-d}\,E_{\text{pot}}
+$
+</p>
+<p>Pour $d = 1$, les deux exposants ont des signes opposés : le bras de fer a un équilibre, et c&rsquo;est exactement celui qui fixait la taille $l$ du kink. Pour $d \geq 2$, les deux exposants sont négatifs ou nuls : dilater ($\mu \to 0$, si $d&gt;2$) ou jouer sur l&rsquo;échelle ne rencontre jamais de minimum non trivial, et la configuration peut toujours baisser son énergie en se déformant. Aucune solution statique stable de taille finie n&rsquo;existe.</p>
+<p>Avec des scalaires seuls, l&rsquo;histoire du kink ne se généralise pas, et il faut enrichir la théorie.</p>
+</details>
+</div>
+<p>Le remède consiste à <b>jauger la théorie</b> : on introduit une dérivée covariante</p>
+<p>$$
+D_\mu\phi = \partial_\mu\phi + \mathrm i q A_\mu\phi
+$$</p>
+<p>et l&rsquo;on va choisir le champ de jauge pour qu&rsquo;il annule précisément la partie divergente de l&rsquo;énergie, celle qui venait du gradient de la phase. Il faut donc que $D_\mu\phi$ s&rsquo;annule à l&rsquo;infini. Le bon candidat est un champ de jauge dont la limite à grande distance est $\mathbf A(r,\theta) \to \frac1q\boldsymbol\nabla(n\theta)$.</p>
+<div id="preuve">
+<p>Vérifions :<br>
+Les composantes du champ proposé à l&rsquo;infini sont $A_r \to 0$ et $A_\theta \to -\dfrac{n}{qr}$ (attention aux signes : avec la métrique $(+,-,-,-)$, on a $A^i = -A_i$). La composante orthoradiale de la dérivée covariante devient</p>
+<p style="text-align:center;">
+$\displaystyle
+D_\theta\phi = \frac1r\,\frac{\partial\phi}{\partial\theta} + \mathrm i q A_\theta\,\phi
+\;\longrightarrow\;
+\frac{\mathrm i n}{r}\,\phi - \frac{\mathrm i n}{r}\,\phi = 0
+\qquad (r\to\infty)
+$
+</p>
+<p>et $D_r\phi \to 0$ trivialement. Le terme cinétique du champ, celui-là même qui divergeait, s&rsquo;éteint à l&rsquo;infini : le champ de jauge a sauvé le vortex.</p>
+</div>
+<p>On pourrait craindre que le champ de jauge apporte sa propre facture via le terme $-\tfrac14 F_{\mu\nu}F^{\mu\nu}$. Il n&rsquo;en est rien, et la raison est élégante : à l&rsquo;infini, $\mathbf A = \boldsymbol\nabla\chi$ avec $\chi = \frac{n\theta}{q}$. Notre champ de jauge est <i>entièrement</i> une transformation de jauge, une <b>jauge pure</b> (déjà rencontrée au chapitre sur la brisure de symétrie). Donc $F_{\mu\nu} = 0$ à grande distance et le terme $F^2$ ne menace rien.</p>
+<p>Mais alors, si $F = 0$ dehors, le champ de jauge fait-il quoi que ce soit ? Oui, et c&rsquo;est un déjà-vu : la situation est exactement celle d&rsquo;Aharonov–Bohm, une jauge pure à l&rsquo;extérieur et du flux caché au centre. Calculons ce flux par le théorème de Stokes, en intégrant sur un cercle à l&rsquo;infini :</p>
+<div id="theo">
+<p style="text-align:center;">
+$\displaystyle
+\Phi = \oint\mathbf A\cdot\mathrm d\mathbf l = \int_0^{2\pi} A^\theta\, r\,\mathrm d\theta = \int_0^{2\pi}\mathrm d\theta\,\frac nq = \frac{2\pi n}{q}
+$
+</p>
+<p><b>Le vortex porte un flux magnétique quantifié</b>, en unités de $2\pi/q$, et le nombre de quanta est le nombre d&rsquo;enroulement $n$. La quantification n&rsquo;est pas dynamique : elle est topologique, imposée par le fait que $n$ est un entier.</p>
+</div>
+
+<div class="notices note" style="--title: 'note';">
+  <p style="display: none;">note</p>
+  <div class="notice-body">
+    <p>Ce vortex jaugé n&rsquo;est pas une curiosité de théoricien : c&rsquo;est le vortex d&rsquo;Abrikosov des supraconducteurs de type II, où le paramètre d&rsquo;ordre joue le rôle de $\phi$ et où le flux traverse le matériau en tubes portant chacun un quantum $2\pi/q$ (avec $q = 2e$, la charge des paires de Cooper). L&rsquo;étape suivante de cette logique, un objet topologique en (3+1) dimensions, existe aussi : c&rsquo;est le <b>monopôle magnétique</b>, étudié plus tard.</p>
+
+  </div>
+</div>
+
+
+<br>
+<h3 id="bilan">Bilan</h3>
+<div id="grosseformule">
+<p style="text-align:center;">
+$\displaystyle
+\text{symétrie brisée}
+\;\xrightarrow{\ \text{bords dans des vides différents}\ }\;
+\text{kink / vortex}
+\;\xrightarrow{\ \epsilon^{\mu\nu},\ \text{pas } g^{\mu\nu}\ }\;
+Q_{\mathrm T}\ \text{conservée sans Noether}
+\;\xrightarrow{\ E \sim \ln,\ \text{Derrick}\ }\;
+\text{jauger : } D_\mu\phi
+\;\xrightarrow{\ \mathbf A \to \frac1q\boldsymbol\nabla(n\theta)\ }\;
+\Phi = \frac{2\pi n}{q}
+$
+</p>
+</div>
+<h3 id="pièges">Pièges</h3>
+<ul>
+<li>$E \propto 1/\lambda$&nbsp;: aucune série perturbative ne voit un kink. «&nbsp;Non perturbatif&nbsp;» n'est pas une figure de style, c'est un théorème sur les développements en puissances de $\lambda$.</li>
+<li>La conservation de $J^\mu_{\mathrm T}$ est une <b>identité</b> (antisymétrique contre symétrique), pas un théorème de Noether&nbsp;: elle ne doit rien à une symétrie du lagrangien et vaut hors équations du mouvement.</li>
+<li>La phase d'Aharonov–Bohm d'un <i>seul</i> chemin dépend de la jauge et n'a aucun sens physique&nbsp;; seule la différence, c'est-à-dire l'intégrale sur la boucle fermée, est invariante.</li>
+<li>Hiérarchie de stabilité à retenir&nbsp;: le kink scalaire est stable en $d=1$&nbsp;; le vortex scalaire (dit «&nbsp;global&nbsp;») diverge logarithmiquement en $d=2$ (Derrick)&nbsp;; le vortex ne devient un objet qu'une fois la théorie <b>jaugée</b>.</li>
+<li>À l'infini du vortex, $\mathbf A$ est une jauge pure, donc $F_{\mu\nu} = 0$&nbsp;: le flux $\Phi = 2\pi n/q$ n'est pas en contradiction avec cela, il est concentré dans le cœur, exactement comme le flux du solénoïde d'Aharonov–Bohm.</li>
+</ul>
+<br>
+<h2 id="la-théorie-topologique-des-champs">La théorie topologique des champs</h2>
+<p>Le chapitre précédent a montré des objets topologiques vivant dans des théories ordinaires. On franchit maintenant un cran : construire une théorie qui est <i>elle-même</i> topologique, c&rsquo;est-à-dire dont le lagrangien ignore la métrique. Le terrain de jeu est l&rsquo;espace-temps (2+1)-dimensionnel, le « flatland », et il faut commencer par une surprise sur les statistiques quantiques.</p>
+<h3 id="les-anyons-de-wilczek">Les anyons de Wilczek</h3>
+<p>En dimension 3, le catalogue des particules identiques tient en un signe : l&rsquo;échange de deux particules multiplie la fonction d&rsquo;onde par $+1$ (bosons) ou $-1$ (fermions),</p>
+<p style="text-align:center;">
+$\displaystyle
+\psi(x_1, x_2) = \pm\,\psi(x_2, x_1)
+$
+</p>
+<p>En dimension 2, cette définition abstraite de l&rsquo;échange est trop naïve. Un échange n&rsquo;est pas un tour de magie où les particules disparaissent et réapparaissent : c&rsquo;est un <b>processus physique</b> où on les déplace réellement l&rsquo;une autour de l&rsquo;autre. Classons donc les processus de déplacement.</p>
+<ul>
+<li>Dans un processus de <b>type A</b>, chaque particule revient à sa position de départ ($x_1 \to x_1$, $x_2 \to x_2$), éventuellement après avoir tourné autour de l'autre.</li> 
+<li>Dans un processus de <b>type B</b>, les particules échangent leurs positions ($x_1 \to x_2$, $x_2 \to x_1$), là encore avec un nombre quelconque de tours en chemin.</li>
+</ul>
+<!-- Figure à redessiner (L&B fig. 30.1) : quatre panneaux (a)-(d) montrant deux particules numérotées 1 et 2 et leurs trajectoires. (a) type A trivial : chaque particule fait une petite boucle sur elle-même ; (b) type A avec enroulement : la particule 2 fait une grande boucle qui entoure la particule 1 ; (c) type B : les deux particules échangent leurs positions le long d'un grand ovale ; (d) type B avec enroulement : échange avec une boucle supplémentaire de l'une autour de l'autre. Légende : les processus se classent par l'angle total d'enroulement -->
+<div style="position:relative;margin-left:auto;margin-right:auto;width:460px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/echab.png" style="box-shadow:none;background:none;">
+</div>
+<p>Voilà où la topologie entre en scène : on peut déformer continûment les trajectoires, mais on ne peut pas changer le <b>nombre de tours</b> qu&rsquo;une particule fait autour de l&rsquo;autre sans que les trajectoires se coupent. Le paramètre pertinent est l&rsquo;angle $\phi$ dont une particule tourne autour de l&rsquo;autre : les processus de type A réalisent $\phi = 2\pi p$ et ceux de type B réalisent $\phi = \pi(2p+1)$, avec $p$ entier, et chaque valeur de $p$ est une classe topologique distincte.</p>
+<div id="preuve">
+<p>Quelle phase quantique attacher à chaque classe ?<br>
+On suppose que chaque processus contribue à la fonction d&rsquo;onde (ou, en théorie des champs, à l&rsquo;intégrale de chemin) un facteur multiplicatif $\Phi(\phi)$ de module 1. Si l&rsquo;on enchaîne deux processus, les angles s&rsquo;additionnent et les facteurs se multiplient :</p>
+<p style="text-align:center;">
+$\displaystyle
+\Phi(\phi_1 + \phi_2) = \Phi(\phi_1)\,\Phi(\phi_2)
+\;\Longrightarrow\;
+\displaystyle \Phi(\phi) = \mathrm e^{\mathrm i\eta\phi}
+$
+</p>
+<p>Le point crucial est que rien n&rsquo;oblige le paramètre $\eta$ à être entier.</p>
+<p>Le traitement complet passe par la quantification sur l&rsquo;espace des configurations à points coïncidents exclus, où les classes de trajectoires forment le <i>groupe de tresses</i>. Notre argument par phases multiplicatives en capture tout le contenu utile ici, parce que la seule donnée topologique d&rsquo;une tresse à deux brins est justement l&rsquo;angle d&rsquo;enroulement total.</p>
+</div>
+<p>Confrontons maintenant ce résultat à la vieille définition. Un échange simple est un processus de type B minimal, $\phi = \pi$, donc un facteur $\Phi = e^{\mathrm i\eta\pi}$. On retrouve les bosons quand $\eta$ est un entier pair et les fermions quand il est impair. Mais tous les $\eta$ intermédiaires sont permis : en dimension 2, il existe des particules à statistique quelconque, baptisées <b>anyons</b> par Frank Wilczek (le nom est un jeu de mots : <i>any</i>-ons, les particules à statistique <i>quelconque</i>).</p>
+<p>Pourquoi est-ce réservé au flatland ? En dimension 3, la troisième direction permet de faire passer les trajectoires l&rsquo;une derrière l&rsquo;autre : toutes les boucles se contractent, tous les processus de type A deviennent équivalents au processus trivial, tous les processus de type B se réduisent à l&rsquo;échange simple. Il ne reste que $\phi = 0$ ou $\pi$ à un multiple trivial près, et le monde retombe sur bosons et fermions. L&rsquo;existence des anyons est une propriété de $\pi_1$ de l&rsquo;espace des configurations, pas une propriété des particules.</p>
+<br>
+<h3 id="la-théorie-de-chernsimons">La théorie de Chern–Simons</h3>
+<p>Il faut maintenant un lagrangien qui héberge naturellement cette physique. Qu&rsquo;est-ce qu&rsquo;un lagrangien « topologique » ? Nos lagrangiens habituels contractent leurs indices avec la métrique $g_{\mu\nu}$ ; un lagrangien topologique les contracte avec le symbole antisymétrique, ici $\epsilon^{\mu\nu\lambda}$ en (2+1) dimensions. Il est donc aveugle aux montres et aux règles, et son contenu ne dépend que de la topologie de la variété<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> où l&rsquo;on travaille.</p>
+<p>Première conséquence, spectaculaire : le hamiltonien d&rsquo;une théorie topologique est nul.</p>
+<div id="preuve">
+<p>La méthode générale pour obtenir le tenseur énergie-impulsion est de varier l&rsquo;action par rapport à la métrique :</p>
+<p style="text-align:center;">
+$\displaystyle
+T^{\mu\nu} = \frac{-2}{\sqrt{-\det g}}\,\frac{\delta S_{\text{top}}}{\delta g_{\mu\nu}}
+$
+</p>
+<p>Or une action topologique ne contient pas $g_{\mu\nu}$ du tout, donc $T^{\mu\nu} = 0$, et le hamiltonien, qui en est la composante 00, est nul : $H = 0$. Tous les états sont d&rsquo;énergie nulle.</p>
+<p>Ce qu&rsquo;on met sous le tapis : cette définition « métrique » de $T^{\mu\nu}$ est admise ici (c&rsquo;est celle de la relativité générale). Il faut aussi résister à une fausse conclusion : $H = 0$ ne signifie pas que la théorie est vide. Il signifie que le fondamental est massivement <b>dégénéré</b>, et le nombre d&rsquo;états dégénérés dépend, précisément, de la topologie de la variété. C&rsquo;est cette dégénérescence robuste qui fait rêver au calcul quantique topologique.</p>
+</div>
+<br>
+<div id="def">
+<p>Le <b>lagrangien de Chern–Simons</b>, pour un champ de jauge $U(1)$ noté $a_\mu$ et une constante $\kappa$, s&rsquo;écrit en (2+1) dimensions :</p>
+<p style="text-align:center;">
+$\displaystyle
+\mathcal L = -\frac{\kappa}{2}\,\epsilon^{\mu\nu\lambda}\,a_\mu\,\partial_\nu\,a_\lambda
+$
+</p>
+<p>Un terme de Chern–Simons se repère au premier coup d&rsquo;œil : il a la structure $\epsilon\, a\,\partial a$. Le compte d&rsquo;indices ne tombe juste qu&rsquo;en dimension impaire d&rsquo;espace-temps : en (3+1), $\epsilon^{\mu\nu\lambda\rho}$ a quatre indices et $a\,\partial a$ n&rsquo;en fournit que trois, la construction échoue.</p>
+</div>
+<p>On note $a_\mu$ en minuscule, et c&rsquo;est une vraie précaution : ce champ de jauge n&rsquo;est <b>pas</b> le photon. Dans les applications (effet Hall quantique fractionnaire), $a_\mu$ est un champ <i>émergent</i>, fabriqué par le système lui-même.</p>
+<p>L&rsquo;invariance de jauge demande un examen, car elle est plus subtile qu&rsquo;en électromagnétisme.</p>
+<div id="preuve">
+<p>Sous $a_\mu \to a_\mu + \partial_\mu\chi$, le lagrangien reçoit deux termes. Le premier, $\epsilon^{\mu\nu\lambda}\,a_\mu\,\partial_\nu\partial_\lambda\chi$, est nul par antisymétrie (le réflexe du chapitre précédent). Le second ne l&rsquo;est pas, mais s&rsquo;écrit comme une dérivée totale :</p>
+<p style="text-align:center;">
+$\displaystyle
+\delta S = \int\mathrm d^3x\;\epsilon^{\mu\nu\lambda}\,\partial_\mu\big(\chi\,\partial_\nu a_\lambda\big)
+$
+</p>
+<p>L&rsquo;action n&rsquo;est donc invariante de jauge <b>qu&rsquo;à un terme de bord près</b>, qu&rsquo;on jette en supposant que rien ne vit au bord.</p>
+<p>Sur une variété <i>avec</i> bord, on n&rsquo;a pas le droit de jeter ce terme, et l&rsquo;invariance de jauge du volume doit être réparée par des degrés de liberté vivant sur le bord. Ce sont les fameux <b>états de bord</b> de l&rsquo;effet Hall quantique, qui portent le courant. Ici, on travaille sans bord et on n&rsquo;en dit pas plus.</p>
+</div>
+<p>Cherchons la dynamique :</p>
+<p>Les équations d&rsquo;Euler–Lagrange donnent $\kappa\,\epsilon^{\mu\nu\lambda}\,\partial_\nu a_\lambda = 0$, soit, en définissant le tenseur de champ $f_{\mu\nu} = \partial_\mu a_\nu - \partial_\nu a_\mu$ :</p>
+<p style="text-align:center;">
+$\displaystyle
+f_{\mu\nu} = 0
+$
+</p>
+<p>La déception semble totale : là où l&rsquo;électromagnétisme libre ($\partial_\mu F^{\mu\nu} = 0$) supporte des ondes planes, la théorie de Chern–Simons seule n&rsquo;a <b>aucune dynamique propre</b>. Mais c&rsquo;est une fausse déception : une théorie topologique ne devient intéressante que couplée à autre chose. Elle ne propage rien, elle <b>contraint</b>.</p>
+<p>Couplons donc $a_\mu$ au courant conservé $J^\mu$ d&rsquo;un autre champ :</p>
+<div id="theo">
+<p style="text-align:center;">
+$\displaystyle
+\mathcal L = -\frac{\kappa}{2}\,\epsilon^{\mu\nu\lambda}\,a_\mu\,\partial_\nu a_\lambda + a_\mu J^\mu
+$
+</p>
+<p>Euler-Lagrange permet d&rsquo;obtenir l&rsquo;équation du mouvement :</p>
+<p style="text-align:center;">
+$\displaystyle
+J^\mu = \kappa\,\epsilon^{\mu\nu\lambda}\,\partial_\nu a_\lambda = \frac{\kappa}{2}\,\epsilon^{\mu\nu\lambda}f_{\nu\lambda}
+$
+</p>
+<p>Cette équation n&rsquo;est pas un théorème de Noether : c&rsquo;est une <b>contrainte</b> que le terme de Chern–Simons impose au courant du champ source.</p>
+</div>
+<p>Pour décoder la contrainte, il faut d&rsquo;abord une bizarrerie de la dimension 2 : le produit vectoriel y produit un pseudo<i>scalaire</i> et non un pseudovecteur (en composantes, $S = \epsilon^{ij}A_iB_j$ : il ne reste plus d&rsquo;indice libre). Le « champ magnétique » du champ $a_\mu$ est donc un simple nombre pseudoscalaire, $b = \partial_2 a_1 - \partial_1 a_2$, tandis que son « champ électrique » garde deux composantes, $e_i = \partial_0 a_i - \partial_i a_0$.<br>
+En écrivant les composantes $J^\mu = (\rho, \mathbf J)$ de la contrainte :</p>
+<p style="text-align:center;">
+$\displaystyle
+\rho = -\kappa\, b\\
+\displaystyle J_i = -\kappa\,\epsilon^{ij}\, e_j
+$
+</p>
+<p>La seconde équation dit qu&rsquo;un champ $e$ selon $y$ engendre un courant source selon $x$ : c&rsquo;est une relation de type Hall, courant perpendiculaire au champ. La première livre le message central du chapitre : en l&rsquo;intégrant sur tout l&rsquo;espace,</p>
+<div id="theo">
+<p style="text-align:center;">
+$\displaystyle
+Q = -\kappa\int\mathrm d^2x\; b
+$
+</p>
+<p>c&rsquo;est-à-dire</p>
+<p style="text-align:center;">
+$\displaystyle
+\begin{pmatrix}\text{charge du}\\ \text{champ source}\end{pmatrix}
+\;\propto\;
+\begin{pmatrix}\text{flux du}\\ \text{champ } a_\mu\end{pmatrix}
+$
+</p>
+<p><b>La théorie de Chern–Simons attache du flux à la charge.</b> Toute particule chargée du champ source se promène avec son petit tube de flux de $a_\mu$ accroché sur le dos.</p>
+</div>
+<br>
+<h3 id="la-statistique-fractionnaire-ou-la-boucle-bouclée">La statistique fractionnaire, ou la boucle bouclée</h3>
+<p>Il reste à assembler les pièces, et elles s&rsquo;emboîtent d&rsquo;elles-mêmes. On travaille avec $\hbar = 1$.</p>
+<p>Prenons deux particules du champ source, de charge $q$. Grâce au chapitre précédent, on sait ce qui se passe quand une charge fait un tour complet autour d&rsquo;un flux : elle ramasse la phase d&rsquo;Aharonov–Bohm $e^{\mathrm i q\Phi}$. Mais grâce à Chern–Simons, chaque particule <i>est</i> un flux, avec $\Phi = -q/\kappa$. Un tour complet d&rsquo;une particule autour de l&rsquo;autre produit donc la phase</p>
+<p style="text-align:center;">
+$\displaystyle
+\mathrm e^{\mathrm i q\Phi} = \mathrm e^{-\mathrm i q^2/\kappa}
+$
+</p>
+<p>Or un tour complet, dans le langage du début de chapitre, c&rsquo;est un angle $2\pi$, soit <b>deux</b> échanges, soit une phase $\mathrm e^{\mathrm i\eta\cdot 2\pi}$. En identifiant les deux expressions :</p>
+<div id="theo">
+<p style="text-align:center;">
+$\displaystyle
+2\pi\eta = -\frac{q^2}{\kappa}
+\;\Longrightarrow\;
+\eta = -\frac{q^2}{2\pi\kappa}
+$
+</p>
+<p>Rien n&rsquo;oblige ce nombre à être entier : les excitations chargées d&rsquo;une théorie de Chern–Simons sont génériquement des <b>anyons</b>. Le mécanisme du composite charge-flux réalise concrètement la statistique fractionnaire promise par l&rsquo;argument topologique.</p>
+</div>
+<p>Le programme du chapitre est accompli : un lagrangien construit sur $\epsilon^{\mu\nu\lambda}$ au lieu de $g_{\mu\nu}$, sans dynamique propre, qui contraint les champs auxquels on le couple, attache du flux aux charges et produit des excitations fractionnaires. Une phase de la matière est décrite exactement par cette théorie : le fluide de Hall quantique fractionnaire (étudié beaucoup plus loin) dont les quasi-particules portent des charges et des statistiques fractionnaires mesurées expérimentalement.</p>
+<br>
+<h3 id="bilan-1">Bilan</h3>
+<p style="text-align:center;">
+$\displaystyle
+\text{échange en 2D} = \text{enroulement}
+\;\xrightarrow{\ \Phi(\phi)=\mathrm e^{\mathrm i\eta\phi}\ }\;
+\text{anyons } (\eta \notin \mathbb Z)
+\;\xrightarrow{\ \mathcal L = -\frac\kappa2\epsilon\, a\,\partial a\ }\;
+f_{\mu\nu}=0,\ H=0
+\;\xrightarrow{\ +\,a_\mu J^\mu\ }\;
+Q = -\kappa\Phi
+\;\xrightarrow{\ \text{Aharonov–Bohm}\ }\;
+\eta = -\frac{q^2}{2\pi\kappa}
+$
+</p>
+<br>
+<h3 id="pièges-1">Pièges</h3>
+<ul>
+<li><b>Échange contre tour complet</b>&nbsp;: un échange est une rotation d'angle $\pi$ (phase $e^{\mathrm i\eta\pi}$), un tour complet vaut $2\pi$, soit deux échanges.</li>
+<li>Les anyons sont strictement bidimensionnels&nbsp;: en dimension 3, la direction supplémentaire contracte toutes les boucles et il ne reste que $\pm 1$. L'argument est topologique, pas dynamique.</li>
+<li>$H = 0$ ne signifie pas «&nbsp;théorie triviale&nbsp;» mais «&nbsp;fondamental dégénéré&nbsp;», avec une dégénérescence qui dépend de la topologie de la variété[^1].
+</li>
+<li>L'invariance de jauge de Chern–Simons ne vaut <b>qu'à un terme de bord près</b>&nbsp;: sur une variété à bord, elle exige des degrés de liberté de bord (les états de bord de l'effet Hall).</li>
+<li>$f_{\mu\nu} = 0$ sans source&nbsp;: la théorie n'a aucune onde, aucune dynamique propre. Chern–Simons ne propage pas, elle contraint. Comparer mentalement avec $\partial_\mu F^{\mu\nu} = 0$ qui, lui, supporte des ondes planes.</li>
+<li>$J^\mu = \kappa\,\epsilon^{\mu\nu\lambda}\partial_\nu a_\lambda$ n'est pas un courant de Noether&nbsp;: c'est une contrainte issue du couplage, écrite à la main. Même piège de vocabulaire qu'avec le courant topologique du kink.</li>
+<li>Le champ $a_\mu$ n'est pas le photon&nbsp;: c'est un champ de jauge émergent (d'où la minuscule), et son «&nbsp;champ magnétique&nbsp;» $b$ est un pseudoscalaire, particularité de la dimension 2 où le produit vectoriel perd un indice.</li>
+<li>Le terme de Chern–Simons n'existe qu'en dimension impaire d'espace-temps&nbsp;: en (3+1), le compte d'indices de $\epsilon^{\mu\nu\lambda\rho}$ contre $a\,\partial a$ échoue.</li>
+</ul>
+
+<div class="notices note" style="--title: 'note';">
+  <p style="display: none;">note</p>
+  <div class="notice-body">
+    <p>Et maintenant ? Après cette parenthèse où les intégrales ne dépendaient pas de la métrique, retour aux intégrales qui en dépendent trop : celles qui divergent. La partie suivante affronte la <b>renormalisation</b>, l&rsquo;art d&rsquo;apprivoiser les infinis, et découvrira que les « constantes » de couplage n&rsquo;en sont pas : elles coulent avec l&rsquo;échelle d&rsquo;observation.</p>
+
+  </div>
+</div>
+
+
+<br>
+<div style="overflow-x: auto;text-align:center;">
+<table>
+  <tr>
+    <th style="text-align:center;"><a href="../">Sommaire</a></th><td><a href="../tqc9">Chapitre précédent</a></td><td><a href="../tqc11">Chapitre suivant</a></td>
+    </tr>
+</table>
+</div>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Une variété (manifold en anglais) est un espace topologique qui ressemble localement à un espace euclidien (un espace plat).&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
 </ol>
-<video width="1200" poster="/mandelposter.png" controls style="display:block; max-width:100%; position:relative; margin-left:auto; margin-right: auto; border-radius:5px;">
-  <source src="/mandelbrot.mp4" type="video/mp4">
-</video>
-<p>La vidéo montre une zone à la frontière de l&rsquo;ensemble appelée vallée des hippocampes pour un nombre d&rsquo;iteration croissant.</p>
-<pre><code class="language-python">import numpy as np
-import matplotlib.pyplot as plt
-    
-def mandelbrot(c, max_iter):
-    z = complex(0, 0)
-    for n in range(max_iter):
-        if abs(z) > 2.0:
-            # Calcul pour lisser la couleur
-            log_zn = np.log(z.real*z.real + z.imag*z.imag) / 2.0
-            nu = np.log(log_zn / np.log(2)) / np.log(2) if log_zn > 0 else 0
-            n = n + 1 - nu
-            break
-        z = z*z + c
-    return n / max_iter  # Normalisation pour assurer une transition douce
-
-centre = (-0.06783611264225832-0.0025,0.6617460391250546+0.0005)
-
-# Paramètres de l'image
-width, height = 2000, 1000
-x_min, x_max = centre[0]-0.004, centre[0]+0.004
-y_min, y_max = centre[1]-0.002, centre[1]+0.002
-
-# Création de l'image
-for i in range(27,301):  # Générer 20 images avec des itérations croissantes
-    img = np.zeros((height, width))
-    for x in range(width):
-        for y in range(height):
-            c = complex(x_min + (x / width) * (x_max - x_min),
-                        y_min + (y / height) * (y_max - y_min))
-            m = mandelbrot(c, i)
-            img[y, x] = m
-    #img = (img - np.min(img)) / (np.max(img) - np.min(img))  # Normalisation
-    plt.imsave(f'mandelbrot/mandelbrot_{i:03d}.png', img, cmap='Blues')
-    print(i)
-</code></pre>
-<br>
-<h2 id="triplets-pythagoriciens">Triplets pythagoriciens</h2>
-<p>Les nombres complexes vont nous aider à mettre la main sur tous les triplets pythagoriciens, ces triplets d&rsquo;entiers $(a,b,c)$ tels que $a^2+b^2=c^2$.</p>
-<p>Code utilisé :</p>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-			<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/cQ2N0CX7a-4?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-		</div>
-
 </div>
 
 
@@ -2363,7 +2770,6 @@ for i in range(27,301):  # Générer 20 images avec des itérations croissantes
             
                 
                     
-                    
                 
                 
 
@@ -2378,9 +2784,6 @@ for i in range(27,301):  # Générer 20 images avec des itérations croissantes
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2446,7 +2849,6 @@ for i in range(27,301):  # Générer 20 images avec des itérations croissantes
             
                 
                     
-                    
                 
                 
 
@@ -2459,9 +2861,6 @@ for i in range(27,301):  # Générer 20 images avec des itérations croissantes
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2494,7 +2893,6 @@ for i in range(27,301):  # Générer 20 images avec des itérations croissantes
             
             
                 
-                    
                     
                 
                 
@@ -2514,9 +2912,6 @@ for i in range(27,301):  # Générer 20 images avec des itérations croissantes
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2933,6 +3328,7 @@ for i in range(27,301):  # Générer 20 images avec des itérations croissantes
             
                 
                     
+                    
                 
                 
 
@@ -2947,6 +3343,9 @@ for i in range(27,301):  # Générer 20 images avec des itérations croissantes
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3316,6 +3715,7 @@ for i in range(27,301):  # Générer 20 images avec des itérations croissantes
             
                 
                     
+                    
                 
                 
 
@@ -3335,6 +3735,9 @@ for i in range(27,301):  # Générer 20 images avec des itérations croissantes
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3351,6 +3754,7 @@ for i in range(27,301):  # Générer 20 images avec des itérations croissantes
             
             
                 
+                    
                     
                 
                 
@@ -3430,6 +3834,9 @@ for i in range(27,301):  # Générer 20 images avec des itérations croissantes
             
             
                 
+                    
+                        
+                        
                     
                 
                 
