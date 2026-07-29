@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785255715" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785255715" rel="stylesheet">
-    <link href="/css/hybrid.css?1785255715" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785255715" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785255715" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785255715" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785255715" rel="stylesheet">
-    <link href="/css/theme.css?1785255715" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785255715" rel="stylesheet">
+    <link href="/css/nucleus.css?1785283866" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785283866" rel="stylesheet">
+    <link href="/css/hybrid.css?1785283866" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785283866" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785283866" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785283866" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785283866" rel="stylesheet">
+    <link href="/css/theme.css?1785283866" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785283866" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785255715" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785283866" rel="stylesheet">
     
-    <link href="/css/foo.css?1785255715" rel="stylesheet"><link href="/css/bar.css?1785255715" rel="stylesheet">
+    <link href="/css/foo.css?1785283866" rel="stylesheet"><link href="/css/bar.css?1785283866" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785255715"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785283866"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785255715"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785255715"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785283866"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785283866"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785255715"></script>
+<script type="text/javascript" src="/js/search.js?1785283866"></script>
 
     
   </div>
@@ -2007,9 +2007,12 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
         <li><a href="#pièges-4">Pièges</a></li>
       </ul>
     </li>
-    <li><a href="#les-nombres-de-grassmann-lintégrale-de-chemin-des-fermions">Les nombres de Grassmann : l&rsquo;intégrale de chemin des fermions</a></li>
-    <li><a href="#bilan-5">Bilan</a></li>
-    <li><a href="#pièges-5">Pièges</a></li>
+    <li><a href="#les-nombres-de-grassmann-lintégrale-de-chemin-des-fermions">Les nombres de Grassmann : l&rsquo;intégrale de chemin des fermions</a>
+      <ul>
+        <li><a href="#bilan-5">Bilan</a></li>
+        <li><a href="#pièges-5">Pièges</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -3020,66 +3023,164 @@ $
 </ul>
 <br>
 <h2 id="les-nombres-de-grassmann-lintégrale-de-chemin-des-fermions">Les nombres de Grassmann : l&rsquo;intégrale de chemin des fermions</h2>
-<p>L&rsquo;intégrale de chemin somme sur des champs <i>classiques</i> ; or les champs fermioniques, même débarrassés de leurs chapeaux, doivent garder la trace de l&rsquo;anticommutation $\hat\psi(x)\hat\psi(y) = -\hat\psi(y)\hat\psi(x)$ du formalisme canonique. Et l&rsquo;état cohérent fermionique devrait vérifier $\hat c\,|\eta\rangle = \eta\,|\eta\rangle$ avec des valeurs propres qui anticommutent. Dans les deux cas, il faut de <b>nouveaux nombres</b> — inventés un siècle plus tôt par Hermann Grassmann, dont l&rsquo;œuvre fut largement ignorée de son vivant. (Le livre le signale : ce chapitre peut se sauter en première lecture, les nombres de Grassmann ne resservant qu&rsquo;au §38.2.)</p>
+<p>L&rsquo;intégrale de chemin somme sur des champs <i>classiques</i>. Or les champs fermioniques, même débarrassés de leurs chapeaux, doivent garder la trace de l&rsquo;anticommutation $\hat\psi(x)\hat\psi(y) = -\hat\psi(y)\hat\psi(x)$ du formalisme canonique. Et l&rsquo;état cohérent fermionique devrait vérifier $\hat c\,|\eta\rangle = \eta\,|\eta\rangle$ avec des valeurs propres qui anticommutent. Dans les deux cas, il faut de <b>nouveaux nombres</b>. Et ils furent inventés un siècle plus tôt par Hermann Grassmann, dont l&rsquo;œuvre fut largement ignorée de son vivant.</p>
 <div id="def">
-<p>Les <b>nombres de Grassmann</b> : des symboles $\eta, \bar\eta, \ldots$ vérifiant</p>
-<p>$$
-\eta\,\eta&rsquo; = -\eta&rsquo;\eta
-\qquad\Longrightarrow\qquad
-\eta^2 = 0.
-$$</p>
-<p>Conséquence radicale : toute fonction est <i>linéaire</i>, $f(\eta) = a + b\,\eta$ (le développement de Taylor s&rsquo;arrête net). L&rsquo;intégration (dite de Berezin) se <b>définit</b> par</p>
-<p>$$
-\int\mathrm{d}\eta\; 1 = 0,
-\qquad
-\int\mathrm{d}\eta\; \eta = 1
-$$</p>
-<p>— intégrer, c&rsquo;est dériver. Bizarre, mais cohérent (invariance par translation), et c&rsquo;est tout ce dont on a besoin.</p>
+<p>Les <b>nombres de Grassmann</b> (de symboles $\eta, \bar\eta, \ldots$) vérifient :</p>
+<p style="text-align:center;">
+$\displaystyle
+\eta\,\eta' = -\eta'\eta\\
+\Longrightarrow \eta^2 = 0
+$
+</p>
+<p>Conséquence radicale : toute fonction est <i>linéaire</i>, $f(\eta) = a + b\,\eta$ (le développement de Taylor s&rsquo;arrête net).</p>
+</div>
+<p>On veut pouvoir faire des calculs avec ces nombres, ce qui nus amène à définir la dérivation et l&rsquo;intégration des nombres de Grassmann.</p>
+<div id="def">
+<p>La dérivation est définie par :</p>
+<p style="text-align:center;">
+$\displaystyle
+\frac{\partial}{\partial \eta} \eta=1\\
+\displaystyle  \frac{\partial}{\partial \eta} a=0
+$
+</p>
+<p>De plus, l&rsquo;opérateur dérivé lui-même anticommute. Si $\zeta$ est un autre nombre de Grassman, on a $\frac{\partial}{\partial \eta} \zeta \eta=-\zeta \frac{\partial}{\partial \eta} \eta=-\zeta$.</p>
+</div>
+<br>
+<div id="def">
+<p>L&rsquo;intégration (dite de Berezin) se <b>définit</b> par</p>
+<p style="text-align:center;">
+$\displaystyle
+\int\mathrm{d}\eta\; 1 = 0\\
+\displaystyle \int\mathrm{d}\eta\; \eta = 1
+$
+</p>
+<p>Par conséquent, $\int f(\eta) \mathrm d \eta = \int (a+b\eta) \mathrm d \eta = a\times 0 + b\times 1  = b = \frac{\partial}{\partial \eta}f(\eta)$</p>
+<p>Intégrer, c&rsquo;est dériver. Bizarre, mais cohérent si on veut une invariance par translation.</p>
+</div>
+<br>
+<div id="preuve">
+<p>Les règles de Berezin découlent de cette volonté d&rsquo;avoir une invariance par translation. C&rsquo;est une symétrie fondamentale, et en pratique, c&rsquo;est elle qu&rsquo;on invoque à chaque fois qu&rsquo;on utilise l&rsquo;astuce de la complétion du carré dans l&rsquo;exponentielle gaussienne.</p>
+<p>Comment définir les règles de l&rsquo;intégrale de Grassmann pour conserver le droit de faire des changements de variables par translation ?</p>
+<p>Berezin exige donc que pour toute fonction $f$ et pour toute constante de Grassmann $\theta$, on ait :</p>
+<p style="text-align:center;">
+$\displaystyle
+\int \mathrm{d} \eta f(\eta+\theta)=\int \mathrm{d} \eta f(\eta)
+$
+</p>
+<p>Voyons ce que cela implique pour $f(\eta)=a+b \eta$.</p>
+<p>Déjà, on a $f(\eta+\theta)=a+b(\eta+\theta)=(a+b \theta)+b \eta$.</p>
+<p>Appliquons maintenant l&rsquo;intégration à la fonction non translatée et à la translatée :</p>
+<p style="text-align:center;">
+ $\displaystyle
+\int \mathrm{d} \eta f(\eta )=  \int \mathrm{d} \eta(a+b \eta)=a \int \mathrm{~d} \eta 1+b \int \mathrm{~d} \eta \eta\\
+\displaystyle  \int \mathrm{d} \eta f(\eta +\theta ) = \int \mathrm{d} \eta((a+b \theta)+b \eta)=(a+b \theta) \int \mathrm{d} \eta 1+b \int \mathrm{~d} \eta \eta
+ $
+ </p> 
+<p>Par conséquent, les deux intégrales ne sont égales que si $b \theta \int \mathrm{~d} \eta 1=0$. Et comme $b$ et $\theta$ peuvent valoir n&rsquo;importe quoi, cela a amené Berezin à imposer :</p>
+ <p style="text-align:center;">
+ $\displaystyle
+ \int \mathrm{d} \eta 1=0
+ $
+ </p>
 </div>
 <br>
 <div id="theo">
 <p>La gaussienne de Grassmann inverse la place du déterminant :</p>
-<p>$$
-\int\mathrm{d}\eta\,\mathrm{d}\bar\eta\;\, e^{\bar\eta\, a\, \eta} = a,
-\qquad\qquad
-\int\mathrm{d}^N\!\eta\,\mathrm{d}^N\!\bar\eta\;\, e^{\bar\eta A \eta} = \det A
-$$</p>
-<p>— là où la gaussienne bosonique complexe donne $\displaystyle\int\mathrm{d}z\,\mathrm{d}z^<em>\, e^{-z^</em> a z} = \pi/a$, les fermions donnent le déterminant <b>au numérateur</b>.</p>
+<p style="text-align:center;">
+$\displaystyle
+\int\mathrm{d}\eta\,\mathrm{d}\bar\eta\;\, e^{\bar\eta\, a\, \eta} = a
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+\int\mathrm{d}^N\!\eta\,\mathrm{d}^N\!\bar\eta\;\ e^{\bar\eta A \eta} = \det A
+$
+</p>
+<p>Là où la gaussienne bosonique complexe donne $\displaystyle\int\mathrm{d}z\,\mathrm{d}z^*\, e^{-z^* a z} = \pi/a$, les fermions donnent le déterminant <b>au numérateur</b>.</p>
 </div>
 <br>
 <div id="preuve">
-<p>Le cas $1\times 1$ tient en une ligne (l&rsquo;éq. 28.18 du livre) : $e^{\bar\eta a\eta} = 1 + \bar\eta a\eta$ — la série de Taylor s&rsquo;arrête net, $(\bar\eta\eta)^2 = 0$ — et les règles de Berezin ne retiennent que le terme saturant les deux intégrales :</p>
-<p>$$
-\int\mathrm{d}\eta\,\mathrm{d}\bar\eta\; (1 + \bar\eta\, a\, \eta) = \int\mathrm{d}\eta\; a\,\eta = a.
-$$</p>
+<p>Le cas $1\times 1$ tient en une ligne : $e^{\bar\eta a\eta} = 1 + \bar\eta a\eta$. La série de Taylor s&rsquo;arrête net, $(\bar\eta\eta)^2 = 0$. Et les règles de Berezin ne retiennent que le terme saturant les deux intégrales :</p>
+<p style="text-align:center;">
+$\displaystyle
+\int\mathrm{d}\eta\,\mathrm{d}\bar\eta\; (1 + \bar\eta\, a\, \eta) = \int\mathrm{d}\eta\; a\,\eta = a
+$
+</p>
 <p>Le cas $N \times N$ s&rsquo;obtient en développant l&rsquo;exponentielle : seul survit le terme contenant chaque $\eta_i$ et chaque $\bar\eta_i$ exactement une fois, et la somme signée sur les appariements est <i>la définition du déterminant</i>.</p>
 </div>
+<br>
 <div id="def">
-<p>L&rsquo;<b>état cohérent fermionique</b> : avec $\hat c^\dagger$ le créateur d&rsquo;un fermion,</p>
-<p>$$
+<p>L&rsquo;<b>état cohérent fermionique</b> :</p>
+<p>Avec $\hat c^\dagger$ le créateur d&rsquo;un fermion,</p>
+<p style="text-align:center;">
+$\displaystyle
 |\eta\rangle = e^{-\eta\hat c^{\dagger}}|0\rangle = |0\rangle - \eta\,|1\rangle
-$$</p>
-<p>(la série s&rsquo;arrête d&rsquo;elle-même : $\eta^2 = 0$), en convenant que les nombres de Grassmann anticommutent aussi avec les opérateurs de fermions, $\{\eta, \hat c\} = 0$. On vérifie en une ligne que $\hat c\,|\eta\rangle = \eta\,|\eta\rangle$. Côté bra, on pose $\langle\bar\eta| = \langle 0| + \bar\eta\langle 1|$, où $\bar\eta$ n&rsquo;est <b>pas</b> le conjugué de $\eta$ mais une variable de Grassmann indépendante ; recouvrement $\langle\bar\zeta|\eta\rangle = e^{\bar\zeta\eta}$, complétude $\int\mathrm{d}\eta\,\mathrm{d}\bar\eta\; e^{\bar\eta\eta}\,|\bar\eta\rangle\langle\eta| = \mathbb 1$.</p>
+$
+</p>
+<p>(la série s&rsquo;arrête d&rsquo;elle-même : $\eta^2 = 0$), en convenant que les nombres de Grassmann anticommutent aussi avec les opérateurs de fermions, $\{\eta, \hat c\} = 0$.</p>
+<p>On vérifie en une ligne que $\hat c\,|\eta\rangle = \eta\,|\eta\rangle$.</p>
+<p>Côté bra, on pose $\langle\bar\eta| = \langle 0| + \bar\eta\langle 1|$, où $\bar\eta$ n&rsquo;est <b>pas</b> le conjugué de $\eta$ mais une variable de Grassmann indépendante.</p>
+<p>Ces définitions impliquent le recouvrement (produit scalaire) $\langle\bar\zeta|\eta\rangle = e^{\bar\zeta\eta}$.</p>
+<p>Enfin, pour que ces états cohérents puissent être utiles, on requiert qu&rsquo;ils forment un espace completvia la relation de complétude $\int\mathrm{d}\eta\,\mathrm{d}\bar\eta\; e^{\bar\eta\eta}\,|\bar\eta\rangle\langle\eta| = \mathbb 1$.</p>
 </div>
-<p>Reste l&rsquo;intégrale la plus importante de toutes : la gaussienne <b>avec sources</b>. Le carré se complète exactement comme chez les bosons ($\bar\psi K\psi + \bar\eta\psi + \bar\psi\eta$, translation des variables, le terme croisé survit) :</p>
-<p>$$
-\int\mathrm{d}\psi\,\mathrm{d}\bar\psi\;\, e^{\bar\psi K\psi + \bar\eta\psi + \bar\psi\eta} = C\, e^{-\bar\eta K^{-1}\eta},
-$$</p>
-<p>d&rsquo;où, pour toute théorie fermionique dont le lagrangien se masse en $\bar\psi(x)\hat K\psi(x)$ :</p>
+<p>Reste l&rsquo;intégrale la plus importante de toutes : la gaussienne <b>avec sources</b>. Le carré se complète exactement comme chez les bosons (grâce aux règles de Berezin) :</p>
 <div id="theo">
-<p>$$
-\mathcal Z[\bar\eta, \eta]
-= \frac{\displaystyle\int\mathcal D\psi\,\mathcal D\bar\psi\;\, e^{\,i\int\mathrm{d}^4x\,[\mathcal L(\bar\psi,\psi) + \bar\eta\psi + \bar\psi\eta]}}{\displaystyle\int\mathcal D\psi\,\mathcal D\bar\psi\;\, e^{\,i\int\mathrm{d}^4x\,\mathcal L(\bar\psi,\psi)}}
-= e^{-i\int \bar\eta(x)\,\hat K^{-1}(x,y)\,\eta(y)}
-$$</p>
-<p>— <b>le propagateur se lit, $i\hat K^{-1}$, et la quantification est terminée</b> : le jumeau exact du $\mathcal Z_0[J] = e^{-\frac12\int J\Delta J}$ bosonique, avec deux sources de Grassmann $\bar\eta, \eta$ au lieu d&rsquo;une source réelle.</p>
+<p style="text-align:center;">
+$\displaystyle
+\int\mathrm{d}\psi\,\mathrm{d}\bar\psi\;\, e^{\bar\psi K\psi + \bar\eta\psi + \bar\psi\eta} = C\, e^{-\bar\eta K^{-1}\eta}
+$
+</p>
+<p>Le $C$ partira dans la normalisation.</p>
 </div>
-<p>À température finie s&rsquo;imposent les conditions <b>antipériodiques</b> $\psi(0) = -\psi(\beta)$ annoncées au chapitre 25 (et les fréquences de Matsubara impaires $\omega_n = (2n+1)\pi/\beta$).</p>
-<p><u>Le dividende, et une vieille promesse tenue</u> : le $\det A$ au numérateur (contre $1/\det$ pour les bosons) est l&rsquo;origine profonde du <b>signe $(-1)$ de chaque boucle de fermions</b> — celui que le théorème de Wick fermionique du chapitre 18 annonçait par ses signatures de permutation. Deux langages, un seul fait : les fermions comptent avec des signes.</p>
 <br>
-<h2 id="bilan-5">Bilan</h2>
+<div id="preuve">
+<p>Il suffit d&rsquo;écrire :</p>
+<p style="text-align:center;">
+$\displaystyle
+\bar{\psi} K \psi+\bar{\eta} \psi+\bar{\psi} \eta=\left(\bar{\psi}+\bar{\eta} K^{-1}\right) K\left(\psi+K^{-1} \eta\right)-\bar{\eta} K^{-1} \eta
+$
+</p>
+</div>
+<p>Pour toute théorie fermionique dont le lagrangien peut se mettre sous la forme en $\bar\psi(x)\hat K\psi(x)$, on a donc :</p>
+<div id="theo">
+<p style="text-align:center;">
+$\displaystyle
+\mathcal Z[\bar\eta, \eta]
+= \frac{\displaystyle\int\mathcal D\psi\,\mathcal D\bar\psi\;\, e^{\,\mathrm i\int\mathrm{d}^4x\,[\mathcal L(\bar\psi,\psi) + \bar\eta\psi + \bar\psi\eta]}}{\displaystyle\int\mathcal D\psi\,\mathcal D\bar\psi\;\, e^{\,\mathrm i\int\mathrm{d}^4x\,\mathcal L(\bar\psi,\psi)}}
+= e^{-i\int \bar\eta(x)\,\hat K^{-1}(x,y)\,\eta(y)}
+$
+</p>
+<p>Le propagateur se lit directement, c&rsquo;est $\mathrm i\hat K^{-1}$. Et la quantification est terminée. C&rsquo;est le jumeau exact du $\mathcal Z_0[J] = e^{-\frac12\int J\Delta J}$ bosonique, avec deux sources de Grassmann $\bar\eta, \eta$ au lieu d&rsquo;une source réelle.</p>
+</div>
+<p>À température finie s&rsquo;imposent les conditions <b>antipériodiques</b> $\psi(0) = -\psi(\beta)$ annoncées deux chapitres plus tôt (et les fréquences de Matsubara impaires $\omega_n = (2n+1)\pi/\beta$).</p>
+<p>Le $\det A$ au numérateur (contre $1/\det$ pour les bosons) est l&rsquo;origine profonde du <b>signe $(-1)$ de chaque boucle de fermions</b>, celui que le théorème de Wick fermionique annonçait par ses signatures de permutation. Deux langages, un seul fait : les fermions comptent avec des signes.</p>
 <br>
-<h2 id="pièges-5">Pièges</h2>
+<h3 id="bilan-5">Bilan</h3>
+<p style="text-align:center;">
+$\displaystyle
+\eta\zeta = -\zeta\eta
+\;\longrightarrow\;
+f = a + b\eta
+\;\overset{\text{Berezin}}{\longrightarrow}\;
+{\textstyle\int}\mathrm{d}\eta\;\eta = 1
+\;\longrightarrow\;
+e^{\bar\eta A\eta} \to \det A
+\;\longrightarrow\;
+|\eta\rangle = |0\rangle - \eta|1\rangle
+\;\overset{\text{carré complété}}{\longrightarrow}\;
+\mathcal Z[\bar\eta,\eta] = e^{-i\int\bar\eta\hat K^{-1}\eta}
+$
+</p>
+<br>
+<h3 id="pièges-5">Pièges</h3>
+<ul>
+<li>Intégrer = dériver (Berezin)&nbsp;: aucune «&nbsp;aire sous la courbe&nbsp;» à chercher&nbsp;; c'est une définition algébrique, justifiée par ses invariances.</li>
+<li>L'<b>ordre</b> de tout compte (variables, différentielles, opérateurs)&nbsp;: chaque échange coûte un signe.</li>
+<li>$\bar\eta$ n'est <b>pas</b> le conjugué de $\eta$, et $\langle\bar\eta|$ n'est pas l'adjoint de $|\eta\rangle$. Ce sont des variables indépendantes.</li>
+<li>Les nombres de Grassmann anticommutent <i>aussi</i> avec les opérateurs de fermions, $\{\eta, \hat c\} = 0$.</li>
+<li>$\det A$ au <b>numérateur</b> (contre $\pi/a$ pour la gaussienne bosonique complexe)&nbsp;: c'est l'origine du $(-1)$ par boucle de fermions.</li>
+<li>À $T \neq 0$&nbsp;: <b>anti</b>périodicité et fréquences de Matsubara impaires.</li>
+</ul>
 
 <div class="notices note" style="--title: 'note';">
   <p style="display: none;">note</p>
@@ -4413,16 +4514,16 @@ $$</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785255715"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785255715"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785255715"></script>
-    <script src="/js/jquery.sticky.js?1785255715"></script>
-    <script src="/js/featherlight.min.js?1785255715"></script>
-    <script src="/js/highlight.pack.js?1785255715"></script>
+    <script src="/js/clipboard.min.js?1785283866"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785283866"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785283866"></script>
+    <script src="/js/jquery.sticky.js?1785283866"></script>
+    <script src="/js/featherlight.min.js?1785283866"></script>
+    <script src="/js/highlight.pack.js?1785283866"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785255715"></script>
-    <script src="/js/learn.js?1785255715"></script>
-    <script src="/js/hugo-learn.js?1785255715"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785283866"></script>
+    <script src="/js/learn.js?1785283866"></script>
+    <script src="/js/hugo-learn.js?1785283866"></script>
     
     
 
