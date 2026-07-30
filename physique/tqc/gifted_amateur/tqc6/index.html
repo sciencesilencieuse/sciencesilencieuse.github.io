@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785366109" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785366109" rel="stylesheet">
-    <link href="/css/hybrid.css?1785366109" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785366109" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785366109" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785366109" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785366109" rel="stylesheet">
-    <link href="/css/theme.css?1785366109" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785366109" rel="stylesheet">
+    <link href="/css/nucleus.css?1785386198" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785386198" rel="stylesheet">
+    <link href="/css/hybrid.css?1785386198" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785386198" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785386198" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785386198" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785386198" rel="stylesheet">
+    <link href="/css/theme.css?1785386198" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785386198" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785366109" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785386198" rel="stylesheet">
     
-    <link href="/css/foo.css?1785366109" rel="stylesheet"><link href="/css/bar.css?1785366109" rel="stylesheet">
+    <link href="/css/foo.css?1785386198" rel="stylesheet"><link href="/css/bar.css?1785386198" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785366109"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785386198"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785366109"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785366109"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785386198"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785386198"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785366109"></script>
+<script type="text/javascript" src="/js/search.js?1785386198"></script>
 
     
   </div>
@@ -1847,6 +1847,9 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
             
             
           
+            
+            
+          
         
         </ul>
       
@@ -2101,16 +2104,20 @@ details[open] > summary:first-of-type {
 </div>
 <p>Stratégie :</p>
 <div id="theo">
-<ul style="margin-top:0.5em;margin-bottom:-0.5em;">
+<ul style="margin-top:1em;margin-bottom:-0.5em;">
 <li>Résoudre d'abord le problème pour la source la plus simple possible = une <b>impulsion</b> ponctuelle&nbsp;:
-<p>$$
-\hat L_x G(x, x&rsquo;) = \delta(x - x&rsquo;),
-$$</p>
+<p style="text-align:center;">
+$\displaystyle
+\hat L_x G(x, x') = \delta(x - x')
+$
+</p>
 </li>
 <li>Puis invoquer la <b>linéarité</b>. La source $f$ étant une superposition d'impulsions, $f(x) = \int \delta(x-x') f(x') \mathrm{d}x'$, la solution est la superposition des réponses&nbsp;:
-<p>$$
-\phi(x) = \int G(x, x&rsquo;)f(x&rsquo;) \mathrm{d}x&rsquo;.
-$$</p>
+<p style="text-align:center;">
+$\displaystyle
+\phi(x) = \int G(x, x')f(x') \mathrm{d}x'.
+$
+</p>
 </li>
 </ul>
 </div>
@@ -2143,23 +2150,29 @@ $\hat L = x\frac{\mathrm{d}}{\mathrm{d}x}$ donne $\hat L(T_a f)(x) = x f&rsquo;(
 <p>Géométriquement : dans le plan des couples $(x,x&rsquo;)$, $G$ est constante le long de chaque diagonale $x - x&rsquo; = \text{cste}$ (translater les deux arguments de $a$ = glisser le long d&rsquo;une diagonale).</p>
 <p>L&rsquo;identité valant pour tout $a$, choisissons celui qui ramène la source à l&rsquo;origine : $a = -x&rsquo;$.</p>
 <div id="def">
-<p>$$
-G(x, x&rsquo;) = G(x - x&rsquo;, 0) \;\equiv\; G(x - x&rsquo;)
-$$</p>
-   </div>
+<p style="text-align:center;">
+$\displaystyle
+G(x, x') = G(x - x', 0) \;\equiv\; G(x - x')
+$
+</p>
+</div>
 <p>La formule de superposition devient le <strong>produit de convolution</strong> entre $G$ et $f$ !</p>
    <div id="theo">
-<p>$$
-\phi(x) = \int G(x - x&rsquo;)f(x&rsquo;)\, \mathrm{d}x&rsquo; = (G * f)(x)
-$$</p>
+   <p style="text-align:center;">
+   $\displaystyle
+     \phi(x) = \int G(x - x')f(x')\, \mathrm{d}x' = (G * f)(x)
+   $
+   </p>
    </div>
    <br>
    <div id="preuve">
 <p>Vérifions que $\phi = G*f$ résout bien $\hat L \phi = f$.</p>
 <p>On passe l&rsquo;opérateur différentiel sous l&rsquo;intégrale (possible car $\hat L$ ne « voit » que la variable $x$) :</p>
-<p>$$
-\hat L_x \phi(x) = \int \underbrace{\hat L_x G(x - x&rsquo;)}_{=\ \delta(x - x&rsquo;)} f(x&rsquo;)\, \mathrm{d}x&rsquo; = f(x)
-$$</p>
+<p style="text-align:center;">
+$\displaystyle
+\hat L_x \phi(x) = \int \underbrace{\hat L_x G(x - x')}_{=\ \delta(x - x')} f(x')\, \mathrm{d}x' = f(x)
+$
+</p>
    </div>
 <p>En traitement du signal, la sortie d&rsquo;un système <em>linéaire et invariant dans le temps</em> est toujours $s_{\text{sortie}} = h * s_{\text{entrée}}$, où $h$ est la réponse impulsionnelle. La fonction de Green incarne bien cette réponse impulsionnelle, et l&rsquo;hypothèse « coefficients constants » correspond à l&rsquo;invariance du système.</p>
 <p>Avec un hamiltonien indépendant du temps (et donc invariant par translation temporelle), reconstruire $\psi(t)$ à partir de $\psi(t&rsquo;)$ revient à une convolution temporelle. Et si de plus $\hat H = \hat p^2/2m$ (particule libre), il est aussi invariant par translation spatiale&hellip;</p>
@@ -2167,7 +2180,7 @@ $$</p>
 <p>Exemple de détermination et d&rsquo;utilisation d&rsquo;une fonction de Green :</p>
 <p>Montrons que la loi de Coulomb intégrale est la résolution de l&rsquo;équation de Poisson par fonction de Green.</p>
 <p>En effet, $\nabla^2 \phi = -\rho/\varepsilon_0$ a pour fonction de Green $G(\mathbf r, \mathbf r&rsquo;) = \dfrac{1}{4\pi |\mathbf r - \mathbf r&rsquo;|}$.</p>
-<details>
+<details style="background-color:#F4F4F4;border-radius:5px;padding:5px;">
 <summary>
 Pourquoi donc&nbsp;?
 </summary>
@@ -2204,11 +2217,11 @@ G(\mathbf r, \mathbf r&rsquo;) = \frac{1}{4\pi |\mathbf r - \mathbf r&rsquo;|}
 $$</p>
 </details>
 <p>La formule de superposition redonne alors bien la loi de Coulomb intégrale :</p>
-<div id="grosseformule" style="margin-bottom:-1em; margin-top:-1em;">
-<p>$$
-\phi(\mathbf r) =  \int G(\mathbf{r}-\mathbf{r&rsquo;})\,\frac{\rho(\mathbf{r&rsquo;})}{\varepsilon_0} \,\mathrm{d}^3 r&rsquo; = \dfrac{1}{4\pi\varepsilon_0}\displaystyle\int \dfrac{\rho(\mathbf r&rsquo;)}{|\mathbf r - \mathbf r&rsquo;|}\mathrm{d}^3 r'
-$$</p>
-</div>
+<p style="text-align:center;">
+$\displaystyle
+\phi(\mathbf r) =  \int G(\mathbf{r}-\mathbf{r'})\,\frac{\rho(\mathbf{r'})}{\varepsilon_0} \,\mathrm{d}^3 r' = \dfrac{1}{4\pi\varepsilon_0}\displaystyle\int \dfrac{\rho(\mathbf r')}{|\mathbf r - \mathbf r'|}\mathrm{d}^3 r'
+$
+</p>
 <p>
 Le potentiel total est la somme des potentiels de charges ponctuelles. Toute la théorie des fonctions de Green est la généralisation de ce raisonnement.
 </p>
@@ -2226,36 +2239,37 @@ Le potentiel total est la somme des potentiels de charges ponctuelles. Toute la 
 <p>Les ondes planes $e^{ikx}$ sont des fonctions propres de la dérivation, donc de <em>tout</em> opérateur construit à coefficients constants à partir de dérivations.<br>
 En base de Fourier, un tel opérateur est diagonal, et appliquer $\hat L$ revient à multiplier par la valeur propre $L(k)$.</p>
 <p>Plaçons-nous à 1D (le cas général est identique) :</p>
-<div id="grosseformule" style="margin-bottom:-1em;margin-top:-1em;">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \hat L = \sum_{j=0}^{m} a_j\, \frac{\mathrm{d}^j}{\mathrm{d}x^j}, \; a_j \in \mathbb C \text{ constants}
-$$</p>
-</div>
-<div id="grosseformule" style="margin-bottom:-1em;margin-top:-1em;">
-<p>$$
-\frac{\mathrm{d}^j}{\mathrm{d}x^j} e^{ikx} = (ik)^j\, e^{ikx}
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+\frac{\mathrm{d}^j}{\mathrm{d}x^j} \mathrm e^{\mathrm ikx} = (ik)^j\, \mathrm e^{\mathrm ikx}
 \Longrightarrow
-\hat L e^{ikx} = \underbrace{\left(\sum_j a_j (ik)^j\right)}_{\displaystyle L(k)} e^{ikx}$$</p>
-</div>
+\hat L \mathrm e^{\mathrm ikx} = \underbrace{\left(\sum_j a_j (ik)^j\right)}_{\displaystyle L(k)} \mathrm e^{\mathrm ikx}
+$
+</p>
 <p>Chaque onde plane est vecteur propre de $\hat L$, de valeur propre le polynôme $L(k)$.</p>
 <p>Maintenant, décomposons une fonction quelconque sur cette base (transformée de Fourier inverse) et appliquons $\hat L$ en dérivant sous l&rsquo;intégrale :</p>
-<div id="grosseformule" style="margin-bottom:-1em; margin-top:-1em;">
-$$
-\phi(x) = \int \frac{\mathrm{d}k}{2\pi} \tilde\phi(k) e^{ikx}
+<p style="text-align:center;">
+$\displaystyle
+\phi(x) = \int \frac{\mathrm{d}k}{2\pi} \tilde\phi(k) \mathrm e^{\mathrm ikx}
 \Longrightarrow
-\hat L\phi(x) = \int \frac{\mathrm{d}k}{2\pi} \underbrace{L(k) \tilde\phi(k)}_{\widetilde{L\phi}(k)} e^{ikx}
-$$
-</div>
+\hat L\phi(x) = \int \frac{\mathrm{d}k}{2\pi} \underbrace{L(k) \tilde\phi(k)}_{\widetilde{L\phi}(k)} \mathrm e^{\mathrm ikx}
+$
+</p>
 <p>Autrement dit, <strong>dans l&rsquo;espace de Fourier, $\hat L$ agit par simple multiplication</strong> : $\widetilde{\hat L \phi}(k) = L(k) \tilde\phi(k)$. L&rsquo;équation différentielle $\hat L \phi = f$ devient une équation algébrique :</p>
-<div id="grosseformule" style="margin-bottom:-1em; margin-top:-1em;">
-$$
+<p style="text-align:center;">
+$\displaystyle
 L(k) \tilde\phi(k) = \tilde f(k)
 \Longrightarrow
 \tilde\phi(k) = \frac{\tilde f(k)}{L(k)}
 \Longrightarrow
 \tilde G(k) = \frac{1}{L(k)}
-$$
-</div>
+$
+</p>
 <p>
 La dernière égalité vient de la transformée de $\hat L G = \delta$ sachant $\tilde\delta = 1$.
 </p>
@@ -2269,11 +2283,11 @@ La dernière égalité vient de la transformée de $\hat L G = \delta$ sachant $
 <p><strong>Les zéros de $L(k)$</strong> (c&rsquo;est-à-dire les modes propres du système libre) deviennent <strong>les pôles de $\tilde G$</strong>. <strong>Le spectre du système est encodé dans les pôles de sa fonction de Green</strong>.</p>
 <p>Deux exemples. :</p>
 <div id="preuve">
-<ul style="margin-top:0.5em;margin-bottom:1em;">
+<ul style="margin-top:1em;margin-bottom:1em;">
 <li><b>Klein-Gordon statique</b>&nbsp;: $\hat L = -\nabla^2 + m^2$ $\Rightarrow$ $L(\mathbf k) = \mathbf k^2 + m^2$<br>
-On en déduit $\tilde G(\mathbf k) = \dfrac{1}{\mathbf k^2 + m^2}$, dont la transformée inverse en 3D est le potentiel de Yukawa $\dfrac{e^{-mr}}{4\pi r}$.<br>
+On en déduit $\tilde G(\mathbf k) = \dfrac{1}{\mathbf k^2 + m^2}$, dont la transformée inverse en 3D est le potentiel de Yukawa $\dfrac{\mathrm e^{-mr}}{4\pi r}$.<br>
 Aucun zéro réel de $L$&nbsp;: pas de mode propagatif, pas de subtilité de contour.</li>
-<li><b>Schrödinger</b>&nbsp;: $\hat L = i\partial_t - \hat H_0$ $\Rightarrow$ $L(E) = E - \dfrac{p^2}{2m}$<br>
+<li><b>Schrödinger</b>&nbsp;: $\hat L = \mathrm i\partial_t - \hat H_0$ $\Rightarrow$ $L(E) = E - \dfrac{p^2}{2m}$<br>
 Ici $L$ s'annule sur la relation de dispersion. $\tilde G = 1/L$ n'est donc pas défini tel quel (les modes propres du système libre sont des obstructions à l'inversion). Toute la prescription $i\varepsilon$ (voir la suite) est la réponse à ce problème&nbsp;: comment diviser par quelque chose qui s'annule.</li>
 </ul>
 </div>
@@ -2282,9 +2296,11 @@ Ici $L$ s'annule sur la relation de dispersion. $\tilde G = 1/L$ n'est donc pas 
 <p>La particule est en $x&rsquo;$ à l&rsquo;instant $t&rsquo;$, quelle est l&rsquo;amplitude de probabilité de la trouver en $x$ à l&rsquo;instant $t$ ?<br></p>
 <div id="def">
 <p>On définit le <strong>propagateur retardé</strong> :</p>
-<p>$$
-G^+(x, t\,;\, x&rsquo;, t&rsquo;) = -i \, \theta(t - t&rsquo;) \big\langle x \big|  e^{-i\hat H (t - t&rsquo;)} \big| x&rsquo; \big\rangle
-$$</p>
+<p style="text-align:center;">
+$\displaystyle
+G^+(x, t\,;\, x', t') = -\mathrm i \, \theta(t - t') \big\langle x \big|  e^{-i\hat H (t - t')} \big| x' \big\rangle
+$
+</p>
 <p>où $\theta$ est la fonction de Heaviside (on n&rsquo;autorise la propagation que <strong>vers le futur</strong>, le $+$ en exposant signifie « retardé »).</p>
 </div>
 <br>
@@ -2293,49 +2309,51 @@ $$</p>
 </div>
 <br>
 <div id="preuve">
-<p>Calculons $(i\partial_t - \hat H_x)\,G^+$ :</p>
-<p>Posons $\tau = t - t&rsquo;$ et $G^+ = -i\,\theta(\tau) K(\tau)$ avec $K(\tau) \equiv \langle x| e^{-i\hat H \tau} |x&rsquo;\rangle$, en notant que $\partial_t = \partial_\tau$ à $t&rsquo;$ fixé.</p>
+<p>Calculons $(\mathrm i\partial_t - \hat H_x)\,G^+$ :</p>
+<p>Posons $\tau = t - t&rsquo;$ et $G^+ = -\mathrm i\,\theta(\tau) K(\tau)$ avec $K(\tau) \equiv \langle x| \mathrm e^{-\mathrm i\hat H \tau} |x&rsquo;\rangle$, en notant que $\partial_t = \partial_\tau$ à $t&rsquo;$ fixé.</p>
 <ul>
 <li>$\theta'(\tau) = \delta(\tau)$ au sens des distributions.</li>
-<li>$\delta(\tau) K(\tau) = \delta(\tau) K(0)$ (le Dirac ne « voit » que $\tau = 0$), et $K(0) = \langle x | e^{0} | x'\rangle = \langle x | x' \rangle = \delta(x - x')$.</li>
-<li> $\partial_\tau K(\tau) = \langle x| (-i\hat H)\, e^{-i\hat H\tau} |x'\rangle = -\,i\, \hat H_x\, K(\tau)$
+<li>$\delta(\tau) K(\tau) = \delta(\tau) K(0)$ (le Dirac ne « voit » que $\tau = 0$), et $K(0) = \langle x | \mathrm e^{0} | x'\rangle = \langle x | x' \rangle = \delta(x - x')$.</li>
+<li> $\partial_\tau K(\tau) = \langle x| (-i\hat H)\, \mathrm e^{-\mathrm i\hat H\tau} |x'\rangle = -\,\mathrm i\, \hat H_x\, K(\tau)$
    où $\hat H_x$ est l'opérateur différentiel agissant sur la variable $x$ (c'est la définition même de la représentation position&nbsp;: $\langle x|\hat H \hat A|x'\rangle = \hat H_x \langle x|\hat A|x'\rangle$).
 </ul>
 <p>On a donc :</p>
-<div id="grosseformule" style="margin-bottom:-1em; margin-top:-1em;">
-$$
-\partial_t G^+ = -\,i\Big[\underbrace{\delta(\tau)\, K(\tau)}_{=\ \delta(\tau)\,\delta(x-x')} + \theta(\tau)\, \partial_\tau K(\tau)\Big]
-= -\,i\,\delta(\tau)\,\delta(x-x') \;-\; i\,\theta(\tau)\,\big(-i\hat H_x K\big).
-$$
-</div>
-<p>Multiplions par $i$ et regroupons :</p>
-<div id="grosseformule" style="margin-bottom:-1em; margin-top:-1em;">
-$$
-i\,\partial_t G^+
-= \underbrace{i\cdot(-i)}_{=\,1}\,\delta(\tau)\,\delta(x-x')
-\;+\; \hat H_x \underbrace{\big[-i\,\theta(\tau) K(\tau)\big]}_{=\ G^+}
-= \delta(t-t')\,\delta(x-x') + \hat H_x\, G^+,
-$$
-</div>
-<p>c&rsquo;est-à-dire</p>
-<div id="grosseformule" style="margin-top:-1em;">
-$$
-\big(i\partial_t - \hat H_x\big)\, G^+ = \delta(t-t')\,\delta(x-x')
-$$
-</div>
+<p style="text-align:center;">
+$\displaystyle
+\partial_t G^+ = -\,\mathrm i\Big[\underbrace{\delta(\tau)\, K(\tau)}_{=\ \delta(\tau)\,\delta(x-x')} + \theta(\tau)\, \partial_\tau K(\tau)\Big]
+= -\,\mathrm i\,\delta(\tau)\,\delta(x-x') \;-\; \mathrm i\,\theta(\tau)\,\big(-\mathrm i\hat H_x K\big)
+$
+</p>
+<p>Multiplions par $\mathrm i$ et regroupons :</p>
+<p style="text-align:center;">
+$\displaystyle
+\mathrm i\,\partial_t G^+
+= \underbrace{\mathrm i\cdot(- \mathrm i)}_{=\,1}\,\delta(\tau)\,\delta(x-x')
+\;+\; \hat H_x \underbrace{\big[-\mathrm i\,\theta(\tau) K(\tau)\big]}_{=\ G^+}
+= \delta(t-t')\,\delta(x-x') + \hat H_x\, G^+
+$
+</p>
+<p>C&rsquo;est-à-dire</p>
+<p style="text-align:center;">
+$\displaystyle
+\big(\mathrm i\partial_t - \hat H_x\big)\, G^+ = \delta(t-t')\,\delta(x-x')
+$
+</p>
 </div>
 <p>Cela fait du propagateur une <strong>fonction de Green</strong>.</p>
 <p>Le propagateur contient donc <strong>toute la dynamique</strong> puisque :</p>
-<div id="grosseformule" style="margin-top:-1em;">
-<p>$$
-\psi(x, t) = i \int G^+(x, t\,;\, x&rsquo;, t&rsquo;) \psi(x&rsquo;, t&rsquo;)\, \mathrm{d}x&rsquo; \quad (t &gt; t&rsquo;)
-$$</p>
-</div>
-<p>De $e^{-i\hat H(t-t&rsquo;)} = e^{-i\hat H(t-t&rsquo;&rsquo;)} e^{-i\hat H(t&rsquo;&rsquo;-t&rsquo;)}$ et de la relation de fermeture $\int |x&rsquo;&rsquo;\rangle\langle x&rsquo;&rsquo;|\mathrm{d}x&rsquo;&rsquo; = \mathbb 1$, on tire la <strong>loi de composition</strong> ($t &gt; t&rsquo;&rsquo; &gt; t&rsquo;$) :</p>
+<p style="text-align:center;">
+$\displaystyle
+\psi(x, t) = \mathrm i \int G^+(x, t\,;\, x', t') \psi(x', t')\, \mathrm{d}x' \quad (t > t')
+$
+</p>
+<p>De $\mathrm e^{-\mathrm i\hat H(t-t&rsquo;)} = \mathrm e^{-\mathrm i\hat H(t-t&rsquo;&rsquo;)} \mathrm e^{-\mathrm i\hat H(t&rsquo;&rsquo;-t&rsquo;)}$ et de la relation de fermeture $\int |x&rsquo;&rsquo;\rangle\langle x&rsquo;&rsquo;|\mathrm{d}x&rsquo;&rsquo; = \mathbb 1$, on tire la <strong>loi de composition</strong> ($t &gt; t&rsquo;&rsquo; &gt; t&rsquo;$) :</p>
 <div id="theo">
-<p>$$
-G^+(x,t\,;\,x&rsquo;,t&rsquo;) = i\int \mathrm{d}x&rsquo;&rsquo;\; G^+(x,t\,;\,x&rsquo;&rsquo;,t&rsquo;&rsquo;)\, G^+(x&rsquo;&rsquo;,t&rsquo;&rsquo;\,;\,x&rsquo;,t&rsquo;)
-$$</p>
+<p style="text-align:center;">
+$\displaystyle
+G^+(x,t\,;\,x',t') = \mathrm i\int \mathrm{d}x''\; G^+(x,t\,;\,x'',t'')\, G^+(x'',t''\,;\,x',t')
+$
+</p>
 </div>
 <p>L&rsquo;amplitude d&rsquo;aller de $x&rsquo;$ à $x$ est la <strong>somme sur tous les points intermédiaires</strong> des amplitudes des trajets en deux étapes<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. On obtient là un équivalent du <strong>principe de Huygens</strong> pour l&rsquo;amplitude quantique : chaque point $x&rsquo;&rsquo;$ atteint à l&rsquo;instant $t&rsquo;&rsquo;$ se comporte comme une source secondaire d&rsquo;amplitude. C&rsquo;est ce mécanisme qui rend possibles à la fois l&rsquo;intégrale de chemin et la lecture « diagrammatique » de la théorie des perturbations que l&rsquo;on va découvrir dans la suite.</p>
 <p><u>Rq</u> : si $t&rsquo;&rsquo;$ sort de l&rsquo;intervalle, l&rsquo;un des $\theta$ s&rsquo;annule et le membre de droite est nul alors que le gauche ne l&rsquo;est pas. Les propagateurs <em>retardés</em> ne composent que dans l&rsquo;ordre chronologique.</p>
@@ -2343,9 +2361,11 @@ $$</p>
 <h3 id="représentation-spectrale">Représentation spectrale</h3>
 <p>Insérons une base propre de $\hat H$, $\hat H |n\rangle = E_n |n\rangle$, $\phi_n(x) = \langle x | n\rangle$, et posons $\tau = t - t&rsquo;$. Le propagateur devient :</p>
 <div id="theo">
-<p>$$
-G^+(x, x&rsquo;\,;\, \tau) = -i \theta(\tau) \sum_n \phi_n(x) \phi_n^*(x&rsquo;) e^{-i E_n \tau}
-$$</p>
+<p style="text-align:center;">
+$\displaystyle
+G^+(x, x'\,;\, \tau) = -\mathrm i \theta(\tau) \sum_n \phi_n(x) \phi_n^*(x') \mathrm e^{-\mathrm i E_n \tau}
+$
+</p>
 </div>
 <br>
 <div id="preuve">
@@ -2353,9 +2373,9 @@ $$</p>
 <div id="grosseformule" style="margin-top:-1em;margin-bottom:-0.5em;">
 <p>$$
 \begin{aligned}
-\langle x|e^{-i\hat H\tau}|x&rsquo;\rangle &amp;= \sum_n \langle x| e^{-i\hat H\tau}|n\rangle \langle n|x&rsquo;\rangle \\
-&amp;= \sum_n e^{-iE_n\tau} \langle x|n\rangle\langle n|x&rsquo;\rangle\\
-&amp;= \sum_n e^{-iE_n\tau} \phi_n(x)\phi_n^*(x&rsquo;)
+\langle x|\mathrm e^{-\mathrm i\hat H\tau}|x&rsquo;\rangle &amp;= \sum_n \langle x| \mathrm e^{-\mathrm i\hat H\tau}|n\rangle \langle n|x&rsquo;\rangle \\
+&amp;= \sum_n \mathrm e^{-\mathrm iE_n\tau} \langle x|n\rangle\langle n|x&rsquo;\rangle\\
+&amp;= \sum_n \mathrm e^{-\mathrm iE_n\tau} \phi_n(x)\phi_n^*(x&rsquo;)
 \end{aligned}
 $$</p>
 </div>
@@ -2363,27 +2383,31 @@ $$</p>
 <p>Pour propager de $x&rsquo;$ à $x$ pendant $\tau$, on <strong>décompose</strong> l&rsquo;état initial localisé $|x&rsquo;\rangle$ sur les modes stationnaires (le poids du mode $n$ est $\phi_n^*(x&rsquo;)$). Chaque mode <strong>tourne</strong> dans le plan complexe à sa fréquence propre (les états stationnaires ne font qu&rsquo;accumuler une phase), puis on <strong>recompose</strong> en $x$ (facteur $\phi_n(x)$). Décomposer–faire tourner–recomposer : c&rsquo;est le mode d&rsquo;emploi universel des problèmes linéaires, et le propagateur en est la forme condensée.</p>
 <p>Passons en « espace des énergies » par transformée de Fourier en temps.</p>
 <div id="def">
-<div id="grosseformule">
-$$
-\tilde G^+(x, x'\,;\, E) \;=\; \int_{-\infty}^{+\infty} \mathrm{d}\tau\; e^{iE\tau}\, G^+(x, x'\,;\, \tau).
-$$
-</div>
+<p style="text-align:center;">
+$\displaystyle
+\tilde G^+(x, x'\,;\, E) \;=\; \int_{-\infty}^{+\infty} \mathrm{d}\tau\; \mathrm e^{\mathrm iE\tau}\, G^+(x, x'\,;\, \tau)
+$
+</p>
 </div>
 <p>$\int_{-\infty}^{+\infty}$ se réduit à $\int_0^{\infty}$ à cause du $\theta(\tau)$.</p>
-<p><u>Problème</u> : l&rsquo;intégrale $\int_0^{\infty} e^{i(E - E_n)\tau}\,\mathrm{d}\tau$ ne converge pas (l&rsquo;intégrande oscille sans s&rsquo;amortir).</p>
-<p><u>Remède</u> : donner à l&rsquo;énergie une partie imaginaire infinitésimale, $E \to E + i\varepsilon$ avec $\varepsilon \to 0^+$ <em>à la fin du calcul</em>, ce qui amortit l&rsquo;oscillation :</p>
-<p>$$
-\int_0^{\infty} e^{i(E - E_n + i\varepsilon)\tau} \,\mathrm{d}\tau = \frac{i}{E - E_n + i\varepsilon}
-$$</p>
+<p><u>Problème</u> : l&rsquo;intégrale $\int_0^{\infty} \mathrm e^{\mathrm i(E - E_n)\tau}\,\mathrm{d}\tau$ ne converge pas (l&rsquo;intégrande oscille sans s&rsquo;amortir).</p>
+<p><u>Remède</u> : donner à l&rsquo;énergie une partie imaginaire infinitésimale, $E \to E + \mathrm i\varepsilon$ avec $\varepsilon \to 0^+$ <em>à la fin du calcul</em>, ce qui amortit l&rsquo;oscillation :</p>
+<p style="text-align:center;">
+$\displaystyle
+\int_0^{\infty} \mathrm e^{\mathrm i(E - E_n + i\varepsilon)\tau} \,\mathrm{d}\tau = \frac{\mathrm i}{E - E_n + \mathrm i\varepsilon}
+$
+</p>
 <p>On obtient la <strong>représentation spectrale</strong> :</p>
 <div id="theo">
-<p>$$
-\tilde{G}^+(x, x&rsquo;\,;\, E) = \sum_n \frac{\phi_n(x) \phi_n^*(x&rsquo;)}{E - E_n + i\varepsilon}
-$$</p>
+<p style="text-align:center;">
+$\displaystyle
+\tilde{G}^+(x, x'\,;\, E) = \sum_n \frac{\phi_n(x) \phi_n^*(x')}{E - E_n + i\varepsilon}
+$
+</p>
 </div>
-<p>Finalement, on n&rsquo;a pas calculé la transformée de $G^+$, mais celle de $G^+(\tau) \,e^{-\varepsilon\tau}$ en décrétant que cela donnera bien $\tilde{G}^+$ dans la limite $\varepsilon \to 0^+$. La section suivante vérifie que cette expression est bien la bonne.</p>
+<p>Finalement, on n&rsquo;a pas calculé la transformée de $G^+$, mais celle de $G^+(\tau) \,\mathrm e^{-\varepsilon\tau}$ en décrétant que cela donnera bien $\tilde{G}^+$ dans la limite $\varepsilon \to 0^+$. La section suivante vérifie que cette expression est bien la bonne.</p>
 <ul>
-<li>les <strong>pôles</strong> de $\tilde{G}^+(E)$ (situés en $E_n - i\varepsilon$, juste sous l&rsquo;axe réel) sont les <strong>énergies propres</strong> ;</li>
+<li>les <strong>pôles</strong> de $\tilde{G}^+(E)$ (situés en $E_n - \mathrm i\varepsilon$, juste sous l&rsquo;axe réel) sont les <strong>énergies propres</strong> ;</li>
 <li>les <strong>résidus</strong> sont les produits de fonctions d&rsquo;onde $\phi_n(x)\phi_n^*(x&rsquo;)$.</li>
 </ul>
 <p>Autrement dit : <em>mesurer le propagateur, c&rsquo;est mesurer le spectre.</em><br>
@@ -2402,14 +2426,16 @@ En théorie des champs, ça va devenir : <em>le pôle du propagateur exact déf
 <h3 id="les-pôles-encodent-la-causalité">Les pôles encodent la causalité</h3>
 <p>Vérifions la cohérence de la formule obtenue pour $\tilde{G}^+(E)$ en inversant la transformée de Fourier par le théorème des résidus :</p>
 <div id="theo">
-$$
-G^+(\tau) \;\stackrel{?}{=}\; \int_{-\infty}^{+\infty} \frac{\mathrm{d}E}{2\pi}\, e^{-iE\tau}\, \tilde G^+(E),
-$$
+<p style="text-align:center;">
+$\displaystyle
+G^+(\tau) \;\stackrel{?}{=}\; \int_{-\infty}^{+\infty} \frac{\mathrm{d}E}{2\pi}\, \mathrm e^{-\mathrm iE\tau}\, \tilde G^+(E)
+$
+</p>
 </div>
 <p>Rien ne garantit a priori que la mémoire de la causalité (le $\theta$) ait survécu au passage en énergie, où il ne reste que des fractions rationnelles. Le calcul par résidus va montrer qu&rsquo;elle a survécu, et où elle s&rsquo;est cachée : dans la position des pôles.</p>
-<p>Avec $E = x + iy$, on a $|e^{-iE\tau}| = e^{y\tau}$. Le lemme de Jordan<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> impose alors :</p>
+<p>Avec $E = x + \mathrm iy$, on a $|\mathrm e^{-\mathrm iE\tau}| = \mathrm e^{y\tau}$. Le lemme de Jordan<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> impose alors :</p>
 <ul>
-<li><strong>$\tau &gt; 0$</strong> : pour que ça converge, il faut fermer le contour dans le <strong>demi-plan inférieur</strong> ($y &lt; 0$). On y attrape tous les pôles $E_n - i\varepsilon$ ; la somme des résidus redonne $-i\sum_n \phi_n \phi_n^*\, e^{-iE_n\tau}$ (signe $-$ car on tourne dans le sens négatif).</li>
+<li><strong>$\tau &gt; 0$</strong> : pour que ça converge, il faut fermer le contour dans le <strong>demi-plan inférieur</strong> ($y &lt; 0$). On y attrape tous les pôles $E_n - \mathrm i\varepsilon$ ; la somme des résidus redonne $-\mathrm i\sum_n \phi_n \phi_n^*\, \mathrm e^{-\mathrm iE_n\tau}$ (signe $-$ car on tourne dans le sens négatif).</li>
 <li><strong>$\tau &lt; 0$</strong> : on ferme dans le <strong>demi-plan supérieur</strong>. Aucun pôle → intégrale nulle.</li>
 </ul>
 <p>C&rsquo;est la fonction $\theta(\tau)$ qui réapparaît !</p>
@@ -2429,13 +2455,13 @@ $$
 	</thead>
 	<tbody>
 			<tr>
-					<td>$E_n - i\varepsilon$</td>
+					<td>$E_n - \mathrm i\varepsilon$</td>
 					<td>tous sous l&rsquo;axe réel</td>
 					<td>retardée $G^+$</td>
 					<td>tout se propage vers le futur</td>
 			</tr>
 			<tr>
-					<td>$E_n + i\varepsilon$</td>
+					<td>$E_n + \mathrm i\varepsilon$</td>
 					<td>tous au-dessus</td>
 					<td>avancée $G^-$</td>
 					<td>tout se propage vers le passé</td>
@@ -2456,7 +2482,7 @@ $$
 <p>Particule libre : $\hat H_0 = \hat p^2/2m$</p>
 <p>En Fourier spatial ET temporel, la représentation spectrale se réduit à un seul terme par mode :</p>
 <p>$$
-\tilde{G}_0^+(\mathbf p\,;\, E) = \frac{1}{E - \dfrac{p^2}{2m} + i\varepsilon}.
+\tilde{G}_0^+(\mathbf p\,;\, E) = \frac{1}{E - \dfrac{p^2}{2m} + \mathrm i\varepsilon}.
 $$</p>
 <p>Un pôle unique sur la relation de dispersion : « une particule libre, c&rsquo;est un pôle qui se promène ».</p>
 </div>
@@ -2466,10 +2492,10 @@ $$</p>
 <p>En représentation énergie :</p>
 <div id="def">
 <p>$$
-G = \frac{1}{E - \hat H_0 - \hat V + i\varepsilon}
+G = \frac{1}{E - \hat H_0 - \hat V + \mathrm i\varepsilon}
 $$</p>
 <p>$$
-G_0 = \frac{1}{E - \hat H_0 + i\varepsilon}
+G_0 = \frac{1}{E - \hat H_0 +\mathrm i\varepsilon}
 $$</p>
 </div>
 <p>Il s&rsquo;agit en réalité de $G^+$ et $G_0^+$ comme l&rsquo;atteste la présence de $+i\varepsilon$ (en l&rsquo;absence d&rsquo;ambigüité, on se passe du $+$ pour alléger l&rsquo;écriture).</p>
@@ -2505,16 +2531,16 @@ $$</p>
 <h2 id="propagateurs-et-champs">Propagateurs et champs</h2>
 <p>Le chapitre précédent a établi le programme : le propagateur est une fonction de Green, ses pôles portent le spectre, et la position infinitésimale des pôles code les conditions aux limites temporelles. Ce chapitre exécute ce programme pour un champ relativiste, où trois nouveautés surgissent :</p>
 <ul>
-<li>L'objet élémentaire n'est plus $\langle x|e^{-i\hat H\tau}|x'\rangle$ mais $\langle 0|\hat\phi(x)\hat\phi(y)|0\rangle$&nbsp;: <b>créer</b> une particule du vide en $y$, la <b>détruire</b> en $x$ (en théorie des champs, le nombre de particules n'est pas conservé et l'opérateur de champ est précisément l'objet qui crée et détruit).</li>
+<li>L'objet élémentaire n'est plus $\langle x|\mathrm e^{-\mathrm i\hat H\tau}|x'\rangle$ mais $\langle 0|\hat\phi(x)\hat\phi(y)|0\rangle$&nbsp;: <b>créer</b> une particule du vide en $y$, la <b>détruire</b> en $x$ (en théorie des champs, le nombre de particules n'est pas conservé et l'opérateur de champ est précisément l'objet qui crée et détruit).</li>
 <li><b>Les antiparticules</b>&nbsp;: le spectre relativiste contient des fréquences des deux signes. Il faut pouvoir propager les fréquences positives vers le futur et les négatives vers le passé. C'est l'<b>ordre chronologique</b> $T$ qui accomplit cela. Il correspond au contour « panaché » du <a href="./#tableau">tableau</a> du chapitre précédent.</li>
-<li>La récompense&nbsp;: $\Delta_F(p) = \dfrac{i}{p^2 - m^2 + i\varepsilon}$, une première brique des diagrammes de Feynman. Et déjà, en régime statique, l'explication des forces par échange de particules virtuelles (Yukawa).
+<li>La récompense&nbsp;: $\Delta_F(p) = \dfrac{\mathrm i}{p^2 - m^2 + \mathrm i\varepsilon}$, une première brique des diagrammes de Feynman. Et déjà, en régime statique, l'explication des forces par échange de particules virtuelles (Yukawa).
 </ul>
 <br>
 <h3 id="lamplitude-élémentaire-dx-y">L&rsquo;amplitude élémentaire $D(x-y)$</h3>
 <p><u>Rappels</u> :</p>
 <ul>
 <li><b>Champ scalaire réel</b>&nbsp;: $\hat\phi(x) = \int \frac{\mathrm{d}^3p}{(2\pi)^{3/2}} \frac{1}{\sqrt{2E_{\mathbf p}}}
-  \Big( \hat a_{\mathbf p} e^{-ip\cdot x} + \hat a^\dagger_{\mathbf p} e^{+ip\cdot x} \Big)\Big|_{p^0 = E_{\mathbf p}}  $</li>
+  \Big( \hat a_{\mathbf p}\, \mathrm e^{-\mathrm ip\cdot x} + \hat a^\dagger_{\mathbf p} \, \mathrm e^{+\mathrm ip\cdot x} \Big)\Big|_{p^0 = E_{\mathbf p}}  $</li>
 <li>$ [\hat a_{\mathbf p}, \hat a^\dagger_{\mathbf q}] = \delta^{(3)}(\mathbf p - \mathbf q)$,  tous les autres commutateurs sont nuls.</li>
 <li>La mesure $
   \int \widetilde{\mathrm{d}p} \;\equiv\; \int \frac{\mathrm{d}^3 p}{(2\pi)^3\, 2E_{\mathbf p}}$ est invariante de Lorentz (le $(2\pi)^3$ vient de la fusion des deux $(2\pi)^{3/2}$ des développements en modes).</li>
@@ -2528,7 +2554,7 @@ $$</p>
 <br>
 <div id="theo">
 <p>$$
-D(x-y) = \int \widetilde{\mathrm{d}p}\;\; e^{-ip\cdot(x-y)}\Big|_{p^0 = E_{\mathbf p}}
+D(x-y) = \int \widetilde{\mathrm{d}p}\;\; \mathrm e^{-\mathrm ip\cdot(x-y)}\Big|_{p^0 = E_{\mathbf p}}
 $$</p>
 </div>
 <br>
@@ -2552,9 +2578,9 @@ $$</p>
 <div id="grosseformule" style="margin-bottom:-1em;margin-top:-1em;">
 <p>$$
 D(x-y) = \int \frac{\mathrm{d}^3p\,\mathrm{d}^3q}{(2\pi)^3}
-\frac{e^{-ip\cdot x + iq\cdot y}}{\sqrt{4E_{\mathbf p}E_{\mathbf q}}}\,
+\frac{\mathrm e^{-\mathrm ip\cdot x + \mathrm iq\cdot y}}{\sqrt{4E_{\mathbf p}E_{\mathbf q}}}\,
 \delta^{(3)}(\mathbf p - \mathbf q)
-= \int \widetilde{\mathrm{d}p}\;\; e^{-ip\cdot(x-y)}
+= \int \widetilde{\mathrm{d}p}\;\; \mathrm e^{-\mathrm ip\cdot(x-y)}
 $$</p>
 </div>
 <p>(le $\delta^{(3)}$ a absorbé l&rsquo;intégrale sur $\mathbf q$ et fusionné les deux $1/\sqrt{2E}$ en $1/2E_{\mathbf p}$).</p>
@@ -2563,7 +2589,7 @@ $$</p>
 <p>Deux remarques importantes sur $D$ :</p>
 <ul>
 <li>$D$ est une solution de Klein–Gordon <b>homogène</b>&nbsp;: $(\partial^2 + m^2)D = 0$ (chaque onde plane du paquet est sur la couche de masse). Ce n'est donc <b>pas</b> une fonction de Green (il manque le $\theta$, exactement comme à la section précédente où c'était la dérivée de $\theta$ qui produisait le $\delta$).</li>
-<li>$D$ <b>ne s'annule pas hors du cône de lumière</b>&nbsp;: pour une séparation de genre espace, $D(0, \mathbf r) \sim e^{-mr}$ (petite, mais non nulle, sur une longueur de Compton $1/m$). Faut-il s'inquiéter pour la causalité&nbsp;? Non, et la suite dit pourquoi.</li>
+<li>$D$ <b>ne s'annule pas hors du cône de lumière</b>&nbsp;: pour une séparation de genre espace, $D(0, \mathbf r) \sim \mathrm e^{-mr}$ (petite, mais non nulle, sur une longueur de Compton $1/m$). Faut-il s'inquiéter pour la causalité&nbsp;? Non, et la suite dit pourquoi.</li>
 </ul>
 <br>
 <h3 id="causalité">Causalité</h3>
@@ -2576,26 +2602,26 @@ $$</p>
 <br>
 <div id="preuve">
 <p><b>Étape 1 : calcul du commutateur.</b> Mêmes claculs que pour $D$, mais seuls les crochets croisés survivent :</p>
-<div id="grosseformule" style="margin-bottom:-1em;margin-top:-1em;">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 [\hat\phi(x), \hat\phi(y)]
 = \int \frac{\mathrm{d}^3p\,\mathrm{d}^3q}{(2\pi)^3\sqrt{4E_{\mathbf p}E_{\mathbf q}}}
-\Big\{ e^{-ip\cdot x + iq\cdot y}\underbrace{[\hat a_{\mathbf p}, \hat a^\dagger_{\mathbf q}]}_{+\delta^{(3)}} + e^{+ip\cdot x - iq\cdot y}\underbrace{[\hat a^\dagger_{\mathbf p}, \hat a_{\mathbf q}]}_{-\delta^{(3)}} \Big\}
-= \int \widetilde{\mathrm{d}p}\, \big( e^{-ip\cdot z} - e^{+ip\cdot z} \big) = D(z) - D(-z)
-$$</p>
-</div>
+\Big\{ \mathrm e^{-\mathrm ip\cdot x + \mathrm iq\cdot y}\underbrace{[\hat a_{\mathbf p}, \hat a^\dagger_{\mathbf q}]}_{+\delta^{(3)}} +\, \mathrm e^{+\mathrm ip\cdot x - \mathrm iq\cdot y}\underbrace{[\hat a^\dagger_{\mathbf p}, \hat a_{\mathbf q}]}_{-\delta^{(3)}} \Big\}
+= \int \widetilde{\mathrm{d}p}\, \big( \mathrm e^{-\mathrm ip\cdot z} - \mathrm e^{+\mathrm ip\cdot z} \big) = D(z) - D(-z)
+$
+</p>
 <p>Remarque : il ne reste aucun opérateur. Le commutateur est un simple nombre, un multiple de l&rsquo;identité (ce que Dirac appellait un « <i>c</i>-nombre »), le même dans tous les états. La causalité du champ libre est cinématique, pas dynamique.</p>
 <p><b>Étape 2 : réduction au cas purement spatial.</b> Si $z^2 &lt; 0$, alors $|z^0| &lt; |\mathbf z|$, et le boost le long de $\mathbf z$ de vitesse $\beta = z^0/|\mathbf z|$ (licite car $|\beta| &lt; 1$ <i>précisément parce que</i> $z$ est de genre espace) amène $z$ sur la forme $z = (0, \mathbf r)$. Par l&rsquo;invariance de Lorentz de $D$, il suffit de traiter ce cas.</p>
 <p><b>Étape 3 : parité en $\mathbf p$.</b> Pour $z = (0, \mathbf r)$, $p\cdot z = -\mathbf p\cdot\mathbf r$, donc</p>
-<div id="grosseformule" style="margin-bottom:-1em;margin-top:-1em;">
-<p>$$
-D(z) - D(-z) = \int \widetilde{\mathrm{d}p}\, \big( e^{+i\mathbf p\cdot\mathbf r} - e^{-i\mathbf p\cdot\mathbf r} \big)
+<p style="text-align:center;">
+$\displaystyle
+D(z) - D(-z) = \int \widetilde{\mathrm{d}p}\, \big( \mathrm e^{+\mathrm i\mathbf p\cdot\mathbf r} - \mathrm e^{-\mathrm i\mathbf p\cdot\mathbf r} \big)
 \;\overset{\mathbf p \to -\mathbf p}{=}\; 0
-$$</p>
-</div>
+$
+</p>
 <p>le changement de variable étant licite car la mesure est paire ($E_{-\mathbf p} = E_{\mathbf p}$).</p>
 </div>
-<p>Pour un intervalle de genre temps, par contre, le commutateur n&rsquo;est pas nul : pour $z^2 &gt; 0$, on peut amener $z$ sur $(t, \mathbf 0)$, et alors $D(z) - D(-z) = -2i\int \widetilde{\mathrm{d}p}\,\sin(E_{\mathbf p}t) \neq 0$. Le renversement $z \to -z$ exigerait de renverser le temps, ce qui n&rsquo;appartient pas au groupe propre orthochrone. L&rsquo;asymétrie est exactement la bonne : l&rsquo;influence causale vit <i>dans</i> le cône, et seulement là.</p>
+<p>Pour un intervalle de genre temps, par contre, le commutateur n&rsquo;est pas nul : pour $z^2 &gt; 0$, on peut amener $z$ sur $(t, \mathbf 0)$, et alors $D(z) - D(-z) = -2\mathrm i\int \widetilde{\mathrm{d}p}\,\sin(E_{\mathbf p}t) \neq 0$. Le renversement $z \to -z$ exigerait de renverser le temps, ce qui n&rsquo;appartient pas au groupe propre orthochrone. L&rsquo;asymétrie est exactement la bonne : l&rsquo;influence causale vit <i>dans</i> le cône, et seulement là.</p>
 <h4 id="pourquoi-le-commutateur-est-le-bon-critère-de-causalité">Pourquoi le commutateur est le bon critère de causalité</h4>
 <ul style="margin-top:1em;">
 <li><b>Corrélation ≠ signal.</b> $D(z) \neq 0$ hors du cône dit que le vide contient des <i>corrélations</i> à distance de genre espace. Mais des corrélations ne transportent pas d'information (c'est la situation EPR&nbsp;: deux photons intriqués sont parfaitement corrélés hors du cône sans qu'Alice puisse envoyer un message à Bob). </li>
@@ -2631,18 +2657,20 @@ Pour le champ réel, $\hat\phi^\dagger = \hat\phi$.</p>
 <p><u>Rappels sur le champ complexe</u> :</p>
 <ul style="margin-bottom:1em;">
 <li>Le champ complexe porte deux jeux de modes indépendants ($\hat a$&nbsp;: particules, $\hat b$&nbsp;: antiparticules)&nbsp;:
-<div id="grosseformule" style="margin-bottom:-1em;margin-top:-1em;">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \hat\psi(x) = \int \frac{\mathrm{d}^3p}{(2\pi)^{3/2}\sqrt{2E_{\mathbf p}}}
-\Big( \hat a_{\mathbf p} e^{-ip\cdot x} + \hat b^\dagger_{\mathbf p} e^{+ip\cdot x} \Big)
-$$</p>
-<p>$$
+\Big( \hat a_{\mathbf p} \, \mathrm e^{-\mathrm ip\cdot x} + \hat b^\dagger_{\mathbf p} \, \mathrm e^{+\mathrm ip\cdot x} \Big)
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
 \hat\psi^\dagger(x) = \int \frac{\mathrm{d}^3p}{(2\pi)^{3/2}\sqrt{2E_{\mathbf p}}}
-\Big( \hat b_{\mathbf p} e^{-ip\cdot x} + \hat a^\dagger_{\mathbf p} e^{+ip\cdot x} \Big)
-$$</p>
-</div>
+\Big( \hat b_{\mathbf p} \, \mathrm e^{-\mathrm ip\cdot x} + \hat a^\dagger_{\mathbf p} \, \mathrm e^{+\mathrm ip\cdot x} \Big)
+$
+</p>
 </li>
-<li>et il porte aussi une symétrie $U(1)$, $\hat\psi \to e^{i\alpha}\hat\psi$, de charge conservée $\hat Q = \int \mathrm{d}^3p\, \big( \hat a^\dagger_{\mathbf p}\hat a_{\mathbf p} - \hat b^\dagger_{\mathbf p}\hat b_{\mathbf p} \big)$. On vérifie sur les modes que $[\hat Q, \hat\psi^\dagger] = +\hat\psi^\dagger$&nbsp;: $\hat\psi^\dagger(y)$ dépose une unité de charge en $y$ (en créant une particule <i>ou</i> en détruisant une antiparticule), et $\hat\psi(x)$ en retire une.
+<li>et il porte aussi une symétrie $U(1)$, $\hat\psi \to \mathrm e^{\mathrm i\alpha}\hat\psi$, de charge conservée $\hat Q = \int \mathrm{d}^3p\, \big( \hat a^\dagger_{\mathbf p}\hat a_{\mathbf p} - \hat b^\dagger_{\mathbf p}\hat b_{\mathbf p} \big)$. On vérifie sur les modes que $[\hat Q, \hat\psi^\dagger] = +\hat\psi^\dagger$&nbsp;: $\hat\psi^\dagger(y)$ dépose une unité de charge en $y$ (en créant une particule <i>ou</i> en détruisant une antiparticule), et $\hat\psi(x)$ en retire une.
 </li>
 </ul>
 <div id="preuve">
@@ -2652,7 +2680,7 @@ Dans $\hat\psi^\dagger(y)|0\rangle$, seul $\hat a^\dagger$ agit. Une particule e
 Dans $\langle 0|\hat\psi(x)$, seule la partie $\hat a$ peut la détruire.<br>
 Seul survit $\langle 0|\hat a_{\mathbf p}\hat a^\dagger_{\mathbf q}|0\rangle = \delta^{(3)}(\mathbf p - \mathbf q)$, d&rsquo;où</p>
 <p>$$
-\langle 0|\hat\psi(x)\hat\psi^\dagger(y)|0\rangle = \int \widetilde{\mathrm{d}p}\, e^{-ip\cdot(x-y)} = D(x-y)
+\langle 0|\hat\psi(x)\hat\psi^\dagger(y)|0\rangle = \int \widetilde{\mathrm{d}p}\, \mathrm e^{-\mathrm ip\cdot(x-y)} = D(x-y)
 $$</p>
 <p><b>Une particule, créée en $y$, se propage vers le futur et meurt en $x$.</b></p>
 <p><b>Cas $y^0 &gt; x^0$</b> : l&rsquo;ordre est $\hat\psi^\dagger(y)\hat\psi(x)$.<br>
@@ -2660,7 +2688,7 @@ Cette fois, dans $\hat\psi(x)|0\rangle$, la partie $\hat a$ tue le vide. C&rsquo
 Et c&rsquo;est la partie $\hat b$ de $\hat\psi^\dagger(y)$ qui la détruit.<br>
 Seul survit $\langle 0|\hat b_{\mathbf q}\hat b^\dagger_{\mathbf p}|0\rangle$, d&rsquo;où</p>
 <p>$$
-\langle 0|\hat\psi^\dagger(y)\hat\psi(x)|0\rangle = \int \widetilde{\mathrm{d}p}\, e^{-ip\cdot(y-x)} = D(y-x)
+\langle 0|\hat\psi^\dagger(y)\hat\psi(x)|0\rangle = \int \widetilde{\mathrm{d}p}\, \mathrm e^{-\mathrm ip\cdot(y-x)} = D(y-x)
 $$</p>
 <p><b>Une antiparticule, créée en $x$, se propage vers le futur et meurt en $y$.</b></p>
 </div>
@@ -2678,7 +2706,7 @@ Le $\theta(x^0 - y^0)$ caché dans $T$ a l&rsquo;air de trahir la relativité :
 <div id="theo">
 <div id="grosseformule">
 <p>$$
-\Delta(x - y) = \int \frac{\mathrm{d}^4 p}{(2\pi)^4}\; \frac{i}{p^2 - m^2 + i\varepsilon}\; e^{-ip\cdot(x-y)}
+\Delta(x - y) = \int \frac{\mathrm{d}^4 p}{(2\pi)^4}\; \frac{\mathrm i}{p^2 - m^2 + \mathrm i\varepsilon}\; \mathrm e^{-\mathrm ip\cdot(x-y)}
 $$</p>
 </div>
 </div>
@@ -2688,46 +2716,46 @@ $$</p>
 <p>En posant $\varepsilon&rsquo; = \frac{\varepsilon}{2E_{\mathbf p}}$, on a au premier ordre :</p>
 <div id="grosseformule" style="margin-bottom:-0.5em;margin-top:-0.5em;">
 <p>$$
-p^2 - m^2 + i\varepsilon = \big(p^0 - (E_{\mathbf p} - i\varepsilon&rsquo;)\big)\big(p^0 + (E_{\mathbf p} - i\varepsilon&rsquo;)\big),
+p^2 - m^2 + \mathrm i\varepsilon = \big(p^0 - (E_{\mathbf p} - \mathrm i\varepsilon&rsquo;)\big)\big(p^0 + (E_{\mathbf p} - \mathrm i\varepsilon&rsquo;)\big),
 $$</p>
 </div>
 </div>
-<p>Les deux pôles sont en $p^0 = +E_{\mathbf p} - i\varepsilon&rsquo;$ (fréquence positive, sous l&rsquo;axe) et $p^0 = -E_{\mathbf p} + i\varepsilon&rsquo;$ (fréquence négative, au-dessus).</p>
+<p>Les deux pôles sont en $p^0 = +E_{\mathbf p} - \mathrm i\varepsilon&rsquo;$ (fréquence positive, sous l&rsquo;axe) et $p^0 = -E_{\mathbf p} + \mathrm i\varepsilon&rsquo;$ (fréquence négative, au-dessus).</p>
 <!-- Figure à créer : plan complexe de p⁰, pôle +E_p − iε' en bas à droite, pôle −E_p + iε' en haut à gauche, fermeture en bas pour x⁰>y⁰ (sens horaire), en haut pour x⁰<y⁰ -->
 <div style="position:relative;margin-left:auto;margin-right:auto;width:500px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/contourfeynman.png" style="box-shadow:none;background:none;">
 </div>
 <div id="preuve">
 <p>Vérifions que la formule encadrée redonne $\theta(x^0-y^0)D(x-y) + \theta(y^0-x^0)D(y-x)$. Faisons l&rsquo;intégrale sur $p^0$ à $\mathbf p$ fixé, avec $t = x^0 - y^0$ (mêmes gestes que l&rsquo;inversion par résidus du chapitre précédent).</p>
-<p><b>Cas $t &gt; 0$</b> : $|e^{-ip^0 t}| = e^{\mathrm{Im}(p^0)t}$ décroît pour $\mathrm{Im}\, p^0 &lt; 0$ : on referme <b>en bas</b> (lemme de Jordan pour l&rsquo;arc). Le contour horaire ($-2\pi i \sum \text{Rés}$) attrape le seul pôle du bas, $p^0 = E_{\mathbf p} - i\varepsilon&rsquo;$ :</p>
-<div id="grosseformule" style="margin-bottom:-1em;margin-top:-1em;">
-<p>$$
-\int \frac{\mathrm{d}p^0}{2\pi} \frac{i\, e^{-ip^0 t}}{(p^0 - E_{\mathbf p} + i\varepsilon&rsquo;)(p^0 + E_{\mathbf p} - i\varepsilon&rsquo;)}
-= \frac{-2\pi i}{2\pi}\cdot \frac{i\, e^{-iE_{\mathbf p} t}}{2E_{\mathbf p}}
-= \frac{e^{-iE_{\mathbf p} t}}{2E_{\mathbf p}}
-$$</p>
-</div>
+<p><b>Cas $t &gt; 0$</b> : $|e^{-\mathrm ip^0 t}| = e^{\mathrm{Im}(p^0)t}$ décroît pour $\mathrm{Im}\, p^0 &lt; 0$ : on referme <b>en bas</b> (lemme de Jordan pour l&rsquo;arc). Le contour horaire ($-2\pi \mathrm i \sum \text{Rés}$) attrape le seul pôle du bas, $p^0 = E_{\mathbf p} - \mathrm i\varepsilon&rsquo;$ :</p>
+<p style="text-align:center;">
+$\displaystyle
+\int \frac{\mathrm{d}p^0}{2\pi} \frac{\mathrm i\, e^{-\mathrm ip^0 t}}{(p^0 - E_{\mathbf p} +\mathrm i\varepsilon')(p^0 + E_{\mathbf p} - \mathrm i\varepsilon')}
+= \frac{-2\pi \mathrm i}{2\pi}\cdot \frac{\mathrm i\, e^{-iE_{\mathbf p} t}}{2E_{\mathbf p}}
+= \frac{\mathrm e^{-\mathrm iE_{\mathbf p} t}}{2E_{\mathbf p}}
+$
+</p>
 <p>L&rsquo;amortissement $e^{-\varepsilon&rsquo; t}$, qui a justifié toute la manœuvre, s&rsquo;évapore (comme toujours) à la fin quand on prend $\lim_{\varepsilon \to 0^+}$.</p>
 <p>En recollant l&rsquo;intégrale sur $\mathbf p$ : $\Delta(t&gt;0) = \int \widetilde{\mathrm{d}p}\, e^{-ip\cdot(x-y)} = D(x-y)$. Fréquences <b>positives</b> propagées <b>vers le futur</b>.</p>
-<details>
+<details style="background-color:#F4F4F4;border-radius:5px;padding:5px;">
 <summary>
 Le recollement en détail
 </summary>
-<p>Avec $\mathbf r = \mathbf x - \mathbf y$, la métrique $(+,-,-,-)$ scinde l&rsquo;exponentielle : $e^{-ip\cdot(x-y)} = e^{-ip^0t}\,e^{+i\mathbf p\cdot\mathbf r}$, et $(2\pi)^4 = (2\pi)(2\pi)^3$ répartit les facteurs :</p>
-<div id="grosseformule" style="margin-bottom:-1em;margin-top:-1em;">
-<p>$$
-\Delta(x-y) = \int \frac{\mathrm{d}^3 p}{(2\pi)^3}\, e^{+i\mathbf p\cdot\mathbf r}
-\underbrace{\left[\int \frac{\mathrm{d}p^0}{2\pi} \frac{i\, e^{-ip^0 t}}{p^2 - m^2 + i\varepsilon}\right]}_{=\; e^{-iE_{\mathbf p}t}/2E_{\mathbf p} \text{ pour } t&gt;0}
-= \int \frac{\mathrm{d}^3 p}{(2\pi)^3\, 2E_{\mathbf p}}\, e^{-iE_{\mathbf p}t + i\mathbf p\cdot\mathbf r}
-$$</p>
-</div>
+<p>Avec $\mathbf r = \mathbf x - \mathbf y$, la métrique $(+,-,-,-)$ scinde l&rsquo;exponentielle : $\mathrm e^{-\mathrm i p\cdot(x-y)} = e^{-ip^0t}\,e^{+i\mathbf p\cdot\mathbf r}$, et $(2\pi)^4 = (2\pi)(2\pi)^3$ répartit les facteurs :</p>
+<p style="text-align:center;">
+$\displaystyle
+\Delta(x-y) = \int \frac{\mathrm{d}^3 p}{(2\pi)^3}\, \mathrm e^{+\mathrm i\mathbf p\cdot\mathbf r}
+\underbrace{\left[\int \frac{\mathrm{d}p^0}{2\pi} \frac{\mathrm i\, \mathrm e^{-\mathrm ip^0 t}}{p^2 - m^2 + \mathrm i\varepsilon}\right]}_{=\; \mathrm e^{-\mathrm iE_{\mathbf p}t}/2E_{\mathbf p} \text{ pour } t>0}
+= \int \frac{\mathrm{d}^3 p}{(2\pi)^3\, 2E_{\mathbf p}}\, \mathrm e^{-\mathrm iE_{\mathbf p}t + \mathrm i\mathbf p\cdot\mathbf r}
+$
+</p>
 <p>Reconnaissance en deux morceaux :</p>
 <ul>
 <li><i>L'exposant</i>&nbsp;: $E_{\mathbf p}t - \mathbf p\cdot\mathbf r = p\cdot(x-y)$ évalué <b>sur la couche de masse</b> $p^0 = E_{\mathbf p}$. Le résidu a fait le travail d'une fonction delta&nbsp;: il a épinglé le $p^0$ libre sur la couche de masse.</li>
 <li><i>La mesure</i>&nbsp;: le $1/2E_{\mathbf p}$ sorti du résidu reconstitue exactement $\widetilde{\mathrm{d}p}$ — c'est le <i>même</i> $1/2E_{\mathbf p}$ que celui de $\delta\big((p^0)^2 - E_{\mathbf p}^2\big) = [\delta(p^0 - E_{\mathbf p}) + \delta(p^0 + E_{\mathbf p})]/2E_{\mathbf p}$ de la mesure invariante.</li>
 </ul>
-<p>D&rsquo;où $\Delta(t&gt;0) = \int \widetilde{\mathrm{d}p}\, e^{-ip\cdot(x-y)}\big|_{p^0 = E_{\mathbf p}} = D(x-y)$.</p>
-<p><u>Piège du cas $t&lt;0$</u> : le même recollement donne $\int \widetilde{\mathrm{d}p}\, e^{+iE_{\mathbf p}t + i\mathbf p\cdot\mathbf r}$, alors que la cible est $D(y-x) = \int \widetilde{\mathrm{d}p}\, e^{+iE_{\mathbf p}t - i\mathbf p\cdot\mathbf r}$ : il faut un dernier changement de variable $\mathbf p \to -\mathbf p$ (licite car la mesure est paire) pour conclure.</p>
+<p>D&rsquo;où $\Delta(t&gt;0) = \int \widetilde{\mathrm{d}p}\, \mathrm e^{-\mathrm ip\cdot(x-y)}\big|_{p^0 = E_{\mathbf p}} = D(x-y)$.</p>
+<p><u>Piège du cas $t&lt;0$</u> : le même recollement donne $\int \widetilde{\mathrm{d}p}\, \mathrm e^{+\mathrm iE_{\mathbf p}t + \mathrm i\mathbf p\cdot\mathbf r}$, alors que la cible est $D(y-x) = \int \widetilde{\mathrm{d}p}\, \mathrm e^{+\mathrm iE_{\mathbf p}t - \mathrm i\mathbf p\cdot\mathbf r}$ : il faut un dernier changement de variable $\mathbf p \to -\mathbf p$ (licite car la mesure est paire) pour conclure.</p>
 </details>
 <p><b>Cas $t &lt; 0$</b> : on referme <b>en haut</b>, le contour antihoraire attrape le pôle $p^0 = -E_{\mathbf p} + i\varepsilon&rsquo;$, et le même calcul donne $D(y-x)$ : fréquences <b>négatives</b> propagées <b>vers le passé</b> (antiparticule de Feynman).</p>
 </div>
@@ -2735,22 +2763,22 @@ $$</p>
 <div id="theo">
 <p>$\Delta$ est une <b>fonction de Green de Klein–Gordon</b> :</p>
 <p>$$
-(\partial^2 + m^2)\, \Delta(x - y) = -i\,\delta^{(4)}(x - y)
+(\partial^2 + m^2)\, \Delta(x - y) = -\mathrm i\,\delta^{(4)}(x - y)
 $$</p>
 </div>
 <br>
 <div id="preuve">
-<p>En Fourier, $\partial^2 e^{-ip\cdot x} = -p^2 e^{-ip\cdot x}$, donc</p>
-<div id="grosseformule" style="margin-bottom:-1em;margin-top:-1em;">
-<p>$$
+<p>En Fourier, $\partial^2 \mathrm e^{-\mathrm ip\cdot x} = -p^2 \mathrm e^{-\mathrm ip\cdot x}$, donc</p>
+<p style="text-align:center;">
+$\displaystyle
 \begin{aligned}
 (\partial^2 + m^2)\Delta(x-y)
-&amp;= \int \frac{\mathrm{d}^4p}{(2\pi)^4} \frac{i(-p^2 + m^2)}{p^2 - m^2 + i\varepsilon} e^{-ip\cdot(x-y)}\\
-&amp;= -i \int \frac{\mathrm{d}^4p}{(2\pi)^4} e^{-ip\cdot(x-y)} \\
-&amp;= -i\,\delta^{(4)}(x-y)
+&= \int \frac{\mathrm{d}^4p}{(2\pi)^4} \frac{\mathrm i(-p^2 + m^2)}{p^2 - m^2 + \mathrm i\varepsilon} \mathrm e^{-\mathrm ip\cdot(x-y)}\\
+&= -\mathrm i \int \frac{\mathrm{d}^4p}{(2\pi)^4} \mathrm e^{-\mathrm ip\cdot(x-y)} \\\
+&= -\mathrm i\,\delta^{(4)}(x-y)
 \end{aligned}
-$$</p>
-</div>
+$
+</p>
 </div>
 <p>Même structure qu&rsquo;au chapitre précédent : solution élémentaire de l&rsquo;opérateur libre, avec les conditions aux limites (ici celles de Feynman) codées par le $+i\varepsilon$.</p>
 <br>
@@ -2758,7 +2786,7 @@ $$</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:400px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/intyuk.png" style="box-shadow:none;background:none;">
 </div>
-<p>La figure montre la version <b>dynamique</b> du processus : deux particules entrent, s&rsquo;échangent un quantum du champ médiateur (la ligne en tirets), et repartent déviées (l&rsquo;amplitude du processus contient le facteur $\frac{i}{p^2 - m^2 + i\varepsilon}$ porté par la ligne interne). Le calcul de cette section en est la <b>limite statique</b> : des sources lourdes qui ne reculent pas, pour lesquelles le quantum échangé ne transporte pas d&rsquo;énergie ($p^0 = 0$) ; le facteur devient $\frac{-i}{\mathbf q^2 + m^2}$, et c&rsquo;est sa transformée de Fourier qui va donner le potentiel.</p>
+<p>La figure montre la version <b>dynamique</b> du processus : deux particules entrent, s&rsquo;échangent un quantum du champ médiateur (la ligne en tirets), et repartent déviées (l&rsquo;amplitude du processus contient le facteur $\frac{\mathrm i}{p^2 - m^2 + \mathrm i\varepsilon}$ porté par la ligne interne). Le calcul de cette section en est la <b>limite statique</b> : des sources lourdes qui ne reculent pas, pour lesquelles le quantum échangé ne transporte pas d&rsquo;énergie ($p^0 = 0$) ; le facteur devient $\frac{-\mathrm i}{\mathbf q^2 + m^2}$, et c&rsquo;est sa transformée de Fourier qui va donner le potentiel.</p>
 <p><u>Rq</u> : la ligne en tirets est le dessin d&rsquo;un terme de calcul, pas la photographie d&rsquo;un projectile (cf. la section « particules réelles, particules virtuelles » plus bas).</p>
 <p>Couplons le champ à une source statique ponctuelle de « charge » $g$ en $\mathbf r_1$. En régime statique ($p^0 = 0$), Klein–Gordon avec source devient un pur problème de fonction de Green au sens du chapitre précédent :</p>
 <div id="def">
@@ -2766,15 +2794,17 @@ $$</p>
 \big(-\nabla^2 + m^2\big)\, \phi(\mathbf r) = g\, \delta^{(3)}(\mathbf r - \mathbf r_1)
 $$</p>
 </div>
-<p>Opérateur à coefficients constants : son <b>symbole</b> (le nom savant du polynôme $L(\mathbf q)$ du chapitre précédent), c&rsquo;est-à-dire sa valeur propre sur les ondes planes, $\hat L\, e^{i\mathbf q\cdot\mathbf r} = L(\mathbf q)\, e^{i\mathbf q\cdot\mathbf r}$) vaut ici $L(\mathbf q) = \mathbf q^2 + m^2$.<br>
-<i>Aucun zéro réel</i> ($L \geq m^2 &gt; 0$) : pas de mode propagatif en statique, donc aucune subtilité de contour ni de $i\varepsilon$ ; les seuls zéros sont en $\mathbf q$ complexe, $q = \pm im$. D&rsquo;où :</p>
+<p>Opérateur à coefficients constants : son <b>symbole</b> (le nom savant du polynôme $L(\mathbf q)$ du chapitre précédent), c&rsquo;est-à-dire sa valeur propre sur les ondes planes, $\hat L\, \mathrm e^{\mathrm i\mathbf q\cdot\mathbf r} = L(\mathbf q)\, \mathrm e^{\mathrm i\mathbf q\cdot\mathbf r}$) vaut ici $L(\mathbf q) = \mathbf q^2 + m^2$.<br>
+<i>Aucun zéro réel</i> ($L \geq m^2 &gt; 0$) : pas de mode propagatif en statique, donc aucune subtilité de contour ni de $\mathrm i\varepsilon$ ; les seuls zéros sont en $\mathbf q$ complexe, $q = \pm im$. D&rsquo;où :</p>
 <div id="theo">
-<p>$$
-\phi(\mathbf r) = g \int \frac{\mathrm{d}^3 q}{(2\pi)^3} \frac{e^{i\mathbf q\cdot(\mathbf r - \mathbf r_1)}}{\mathbf q^2 + m^2}
-= \frac{g}{4\pi} \frac{e^{-m|\mathbf r - \mathbf r_1|}}{|\mathbf r - \mathbf r_1|}
-$$</p>
+<p style="text-align:center;">
+$\displaystyle
+\phi(\mathbf r) = g \int \frac{\mathrm{d}^3 q}{(2\pi)^3} \frac{\mathrm e^{\mathrm i\mathbf q\cdot(\mathbf r - \mathbf r_1)}}{\mathbf q^2 + m^2}
+= \frac{g}{4\pi} \frac{\mathrm e^{-m|\mathbf r - \mathbf r_1|}}{|\mathbf r - \mathbf r_1|}
+$
+</p>
 </div>
-<p>$g \int \frac{\mathrm{d}^3 q}{(2\pi)^3} \frac{e^{i\mathbf q\cdot(\mathbf r - \mathbf r_1)}}{\mathbf q^2 + m^2}$, c&rsquo;est $\phi = G * \text{source}$ avec $\tilde G(\mathbf q) = 1/L(\mathbf q)$.<br>
+<p>$g \int \frac{\mathrm{d}^3 q}{(2\pi)^3} \frac{\mathrm e^{\mathrm i\mathbf q\cdot(\mathbf r - \mathbf r_1)}}{\mathbf q^2 + m^2}$, c&rsquo;est $\phi = G * \text{source}$ avec $\tilde G(\mathbf q) = 1/L(\mathbf q)$.<br>
 La source étant $g\,\delta^{(3)}$ posée en $\mathbf r_1$, la convolution se réduit à $\phi(\mathbf r) = g\, G(\mathbf r - \mathbf r_1)$ : la fonction de Green translatée au point de frappe (invariance par translation, encore elle).<br>
 La maxime « décomposer – faire tourner – recomposer » a ici sa version statique : décomposer – <b>diviser par le symbole</b> – recomposer.</p>
 <div id="preuve">
@@ -2782,28 +2812,28 @@ La maxime « décomposer – faire tourner – recomposer » a ici sa version 
 <summary>
 L'intégrale pas à pas
 </summary>
-<p>On veut $I(r) = \int \frac{\mathrm{d}^3 q}{(2\pi)^3} \frac{e^{i\mathbf q\cdot\mathbf r}}{\mathbf q^2 + m^2}$ pour $r = |\mathbf r| &gt; 0$.</p>
+<p>On veut $I(r) = \int \frac{\mathrm{d}^3 q}{(2\pi)^3} \frac{\mathrm e^{\mathrm i\mathbf q\cdot\mathbf r}}{\mathbf q^2 + m^2}$ pour $r = |\mathbf r| &gt; 0$.</p>
 <p>On se place en coordonnées sphériques avec un axe polaire selon $\mathbf r$</b> : $\mathbf q\cdot\mathbf r = qr\cos\theta$ et $\mathrm{d}^3q = q^2\sin(\theta)\mathrm{d}q\,\mathrm{d}\theta\,\mathrm{d}\phi$.</p>
 <p>L&rsquo;intégrale sur $\phi$ donne $2\pi$.</p>
 <p>On pose $u = \cos\theta$ :</p>
 <p>$$
-\int_0^{\pi} e^{iqr\cos\theta}\sin\theta\,\mathrm{d}\theta = \int_{-1}^{1} e^{iqru}\mathrm{d}u = \frac{2\sin(qr)}{qr}
+\int_0^{\pi} \mathrm e^{\mathrm iqr\cos\theta}\sin\theta\,\mathrm{d}\theta = \int_{-1}^{1} \mathrm e^{\mathrm iqru}\mathrm{d}u = \frac{2\sin(qr)}{qr}
 $$</p>
-<p>d&rsquo;où $I(r) = \dfrac{1}{2\pi^2 r}\displaystyle\int_0^\infty \dfrac{q\sin(qr)}{q^2 + m^2}\mathrm{d}q$.</p>
+<p>d&rsquo;où $I(r) = \dfrac{1}{2\pi^2 r}\displaystyle \int_0^\infty \dfrac{q\sin(qr)}{q^2 + m^2}\mathrm{d}q$.</p>
 <p>L&rsquo;intégrande est pair en $q$ (deux fonctions impaires au numérateur, une paire au dénominateur), donc</p>
 <p>$$
 I(r) = \frac{1}{4\pi^2 r} \int_{-\infty}^{+\infty} \frac{q\sin(qr)}{q^2 + m^2}\mathrm{d}q
-= \frac{1}{4\pi^2 r}\, \mathrm{Im} \int_{-\infty}^{+\infty} \frac{q\, e^{iqr}}{q^2 + m^2}\mathrm{d}q
+= \frac{1}{4\pi^2 r}\, \mathrm{Im} \int_{-\infty}^{+\infty} \frac{q\, \mathrm e^{\mathrm iqr}}{q^2 + m^2}\mathrm{d}q
 $$</p>
-<p>$q^2 + m^2 = (q - im)(q + im)$, pôles simples en $q = \pm im$, sur l&rsquo;axe <i>imaginaire</i>.</p>
-<p>Contour : pour $r &gt; 0$, $|e^{iqr}| = e^{-r\,\mathrm{Im}\, q}$ décroît dans le demi-plan supérieur : on referme en haut (Jordan tue l&rsquo;arc). Le contour n&rsquo;enferme que $q = +im$.</p>
-<p>Résidu (contour antihoraire : $+2\pi i \sum \text{Rés}$) :</p>
+<p>$q^2 + m^2 = (q - \mathrm im)(q + \mathrm im)$, pôles simples en $q = \pm \mathrm im$, sur l&rsquo;axe <i>imaginaire</i>.</p>
+<p>Contour : pour $r &gt; 0$, $|\mathrm e^{\mathrm iqr}| = \mathrm e^{-r\,\mathrm{Im}\, q}$ décroît dans le demi-plan supérieur : on referme en haut (Jordan tue l&rsquo;arc). Le contour n&rsquo;enferme que $q = +\mathrm im$.</p>
+<p>Résidu (contour antihoraire : $+2\pi \mathrm i \sum \text{Rés}$) :</p>
 <p>$$
-\mathrm{Rés}_{q = im} \frac{q\, e^{iqr}}{(q-im)(q+im)} = \frac{im\, e^{-mr}}{2im} = \frac{e^{-mr}}{2}
+\mathrm{Rés}_{q = \mathrm im} \frac{q\, \mathrm e^{\mathrm iqr}}{(q-\mathrm im)(q+\mathrm im)} = \frac{\mathrm im\, \mathrm e^{-mr}}{2\mathrm im} = \frac{\mathrm e^{-mr}}{2}
 \Longrightarrow
-\int_{-\infty}^{+\infty} = i\pi\, e^{-mr}
+\int_{-\infty}^{+\infty} = \mathrm i\pi\, \mathrm e^{-mr}
 $$</p>
-<p>On recolle : $\mathrm{Im}(i\pi e^{-mr}) = \pi e^{-mr}$, d&rsquo;où $I(r) = \dfrac{e^{-mr}}{4\pi r}$</p>
+<p>On recolle : $\mathrm{Im}(\mathrm i\pi \mathrm e^{-mr}) = \pi \mathrm e^{-mr}$, d&rsquo;où $I(r) = \dfrac{\mathrm e^{-mr}}{4\pi r}$</p>
 </details>
 </div>
 <p>L&rsquo;énergie d&rsquo;une seconde source $g$ placée en $\mathbf r_2$ dans ce champ est le <strong>potentiel de Yukawa</strong> :</p>
@@ -2825,25 +2855,25 @@ $$</p>
 
 <p>Trois lectures de ce résultat :</p>
 <ul>
-<li><b>C'est la limite statique du propagateur de Feynman</b>&nbsp;: $\Delta$ à $p^0 = 0$ vaut $\dfrac{-i}{\mathbf q^2 + m^2}$&nbsp;; le calcul complet par échange d'un quantum entre les deux sources (chapitres suivants) redonne $V(r)$. <i>Une force = l'échange de quanta virtuels du champ médiateur.</i></li>
-<li><b>La portée est littéralement la distance du pôle à l'axe réel</b>&nbsp;: le résidu apporte $e^{iqr}|_{q=im} = e^{-mr}$. Unités restaurées&nbsp;: portée $= \hbar/mc$, la longueur d'onde de Compton réduite. Conversion pratique ($\hbar c \simeq 197$ MeV·fm)&nbsp;: portée nucléaire $\sim 1{,}4$ fm $\Rightarrow$ médiateur de $\sim 140$ MeV. Yukawa prédit l'existence de ce méson (le nom méson vient de sa masse intermédiaire entre l'électron et le proton) en 1935, et le pion (méson pi) est découvert en 1947 (prix Nobel en 1949).</li>
+<li><b>C'est la limite statique du propagateur de Feynman</b>&nbsp;: $\Delta$ à $p^0 = 0$ vaut $\dfrac{-\mathrm i}{\mathbf q^2 + m^2}$&nbsp;; le calcul complet par échange d'un quantum entre les deux sources (chapitres suivants) redonne $V(r)$. <i>Une force = l'échange de quanta virtuels du champ médiateur.</i></li>
+<li><b>La portée est littéralement la distance du pôle à l'axe réel</b>&nbsp;: le résidu apporte $\mathrm e^{\mathrm iqr}|_{q=\mathrm im} = \mathrm e^{-mr}$. Unités restaurées&nbsp;: portée $= \hbar/mc$, la longueur d'onde de Compton réduite. Conversion pratique ($\hbar c \simeq 197$ MeV·fm)&nbsp;: portée nucléaire $\sim 1{,}4$ fm $\Rightarrow$ médiateur de $\sim 140$ MeV. Yukawa prédit l'existence de ce méson (le nom méson vient de sa masse intermédiaire entre l'électron et le proton) en 1935, et le pion (méson pi) est découvert en 1947 (prix Nobel en 1949).</li>
 <li><b>La limite $m \to 0$ redonne Coulomb</b>&nbsp;: le pôle glisse vers l'origine, $V \to -g^2/4\pi r$, portée infinie (cohérent avec un médiateur sans masse), et l'on retrouve la fonction de Green du laplacien du chapitre précédent.<br>
-Mêmes mathématiques en matière condensée&nbsp;: l'écrantage de Thomas–Fermi donne un potentiel identique $e^{-k_{TF}r}/r$ (le photon y acquiert une masse effective par le milieu).</li>
+Mêmes mathématiques en matière condensée&nbsp;: l'écrantage de Thomas–Fermi donne un potentiel identique $\mathrm e^{-k_{TF}r}/r$ (le photon y acquiert une masse effective par le milieu).</li>
 </ul>
 <br>
 <h3 id="particules-réelles-particules-virtuelles">Particules réelles, particules virtuelles</h3>
-<p>Ce que dit, morceau par morceau, $\Delta(p) = \dfrac{i}{p^2 - m^2 + i\varepsilon}$ :</p>
+<p>Ce que dit, morceau par morceau, $\Delta(p) = \dfrac{\mathrm i}{p^2 - m^2 + \mathrm i\varepsilon}$ :</p>
 <ul>
 <li><b>Particule réelle</b> = quantum d'excitation d'un mode&nbsp;: l'état $\hat a^\dagger_{\mathbf p}|0\rangle$, <b>sur la couche de masse</b> $p^2 = m^2$ par construction. Vrai vecteur de l'espace de Hilbert&nbsp;: existe indépendamment de tout processus, se propage arbitrairement loin (le pôle domine la propagation à longue distance), fait <i>clic</i> dans un détecteur.</li>
 <li><b>Particule virtuelle</b> = <b>ligne interne</b> d'un diagramme&nbsp;: un domaine d'intégration ($p^0$ délié de $\mathbf p$, donc $p^2 \neq m^2$ génériquement), pas un état. Elle n'appartient pas à l'espace de Hilbert, n'a ni trajectoire ni durée de vie propre.</li>
-<li><b>Le pôle $p^2 = m^2$</b> = <b>la masse physique</b>&nbsp;: traduction relativiste du slogan «&nbsp;les pôles portent le spectre&nbsp;». Avec les interactions, le pôle du propagateur exact se déplacera&nbsp;: sa position définira la masse renormalisée, son résidu la constante $Z$ de renormalisation du champ. Et si le pôle s'enfonce franchement sous l'axe ($p^0 \simeq m - i\Gamma/2$)&nbsp;: particule instable, de durée de vie $1/\Gamma$.</li>
+<li><b>Le pôle $p^2 = m^2$</b> = <b>la masse physique</b>&nbsp;: traduction relativiste du slogan «&nbsp;les pôles portent le spectre&nbsp;». Avec les interactions, le pôle du propagateur exact se déplacera&nbsp;: sa position définira la masse renormalisée, son résidu la constante $Z$ de renormalisation du champ. Et si le pôle s'enfonce franchement sous l'axe ($p^0 \simeq m - \mathrm i\Gamma/2$)&nbsp;: particule instable, de durée de vie $1/\Gamma$.</li>
 </ul>
 <h4 id="paradoxe-de-lénergie-empruntée">Paradoxe de « l&rsquo;énergie empruntée »</h4>
 <p>L&rsquo;image populaire (« le quantum emprunte $\Delta E \sim mc^2$ pendant $\Delta t \lesssim \hbar/\Delta E$, donc parcourt $\lesssim \hbar/mc$ ») donne la bonne portée, mais semble violer la conservation de l&rsquo;énergie. Le nœud du paradoxe : entre l&rsquo;état initial et l&rsquo;état final (les seuls qu&rsquo;on mesure) l&rsquo;énergie est rigoureusement conservée. La question ne se pose que pour l&rsquo;étape <i>intermédiaire</i>, celle où le quantum « vole » d&rsquo;une source à l&rsquo;autre. Or cette étape n&rsquo;est jamais observée : c&rsquo;est un terme dans une somme (la série de perturbations), et on est libre de découper cette somme de deux façons.</p>
 <ul>
 <li>Première comptabilité (celle de l'image populaire). On raconte le processus comme un film horodaté&nbsp;: à $t_1$, la source 1 émet le quantum&nbsp;; entre $t_1$ et $t_2$, il vole&nbsp;; à $t_2$, la source 2 l'absorbe. Dans ce récit, on exige que le quantum intermédiaire soit une <i>vraie</i> particule, d'énergie $E_{\mathbf p} = \sqrt{\mathbf p^2 + m^2}$ (sur couche). Mais alors le bilan ne tombe pas juste&nbsp;: pendant $[t_1, t_2]$, l'énergie de l'état intermédiaire dépasse l'énergie initiale (il a fallu fabriquer le quantum d'au moins $mc^2$). La théorie ne s'en émeut pas&nbsp;: cet état n'est jamais mesuré, et son poids dans la somme est <i>pénalisé</i> par l'écart (ce sont exactement les dénominateurs en $1/(E - E_{\text{interm}})$ de la série de Dyson du chapitre précédent). Et un écart $\Delta E$ ne pèse que sur des durées $\lesssim \hbar/\Delta E$&nbsp;: simple fait de transformée de Fourier (une composante dont la fréquence est décalée de $\Delta E/\hbar$ se brouille par interférence au-delà de $\hbar/\Delta E$). L'heuristique «&nbsp;$\Delta E \cdot \Delta t$&nbsp;» n'est donc pas un droit de tirage sur une banque d'énergie&nbsp;: c'est la mesure du prix payé par un terme dont le bilan intermédiaire ne tombe pas juste.</li>
 <li style="margin-top:0.5em;">Seconde comptabilité (celle des diagrammes de Feynman). On renonce à dater les étapes (prix de la covariance&nbsp;: pour deux événements séparés d'un intervalle de genre espace, l'ordre chronologique dépend du référentiel), et on impose à la place la conservation <i>exacte</i> de la quadri-impulsion à chaque vertex. Le bilan tombe juste partout, à tout instant… mais l'écart a changé de colonne&nbsp;: la ligne interne porte maintenant un $p$ qui ne vérifie pas $p^2 = m^2$ (il est hors couche). Ce n'est plus une vraie particule&nbsp;: c'est une variable d'intégration.</li>
-<p>Bilan. Même amplitude totale, deux découpages du même calcul : soit de <i>vraies particules</i> intermédiaires avec un bilan d&rsquo;énergie provisoirement faux (et pénalisé), soit un bilan d&rsquo;énergie exact avec des objets intermédiaires qui ne sont <i>pas de vraies particules</i>. Ce qui n&rsquo;existe dans aucune des deux colonnes : une vraie particule <b>et</b> une vraie violation. Rien n&rsquo;est emprunté, on choisit seulement dans quelle colonne inscrire l&rsquo;écart, et la physique mesurable (l&rsquo;amplitude, la portée $e^{-mr}$) est identique dans les deux.</p>
+<p>Bilan. Même amplitude totale, deux découpages du même calcul : soit de <i>vraies particules</i> intermédiaires avec un bilan d&rsquo;énergie provisoirement faux (et pénalisé), soit un bilan d&rsquo;énergie exact avec des objets intermédiaires qui ne sont <i>pas de vraies particules</i>. Ce qui n&rsquo;existe dans aucune des deux colonnes : une vraie particule <b>et</b> une vraie violation. Rien n&rsquo;est emprunté, on choisit seulement dans quelle colonne inscrire l&rsquo;écart, et la physique mesurable (l&rsquo;amplitude, la portée $\mathrm e^{-mr}$) est identique dans les deux.</p>
 <h4 id="gamme-des-portées">Gamme des portées</h4>
 <br>
 <div : style="overflow-x:auto;">
@@ -2902,10 +2932,10 @@ Mêmes mathématiques en matière condensée&nbsp;: l'écrantage de Thomas–Fer
 			</tr>
 			<tr>
 					<td>$(i\partial_t - \hat H)G^+ = \delta\,\delta$</td>
-					<td>$(\partial^2 + m^2)\Delta = -i\,\delta^{(4)}$</td>
+					<td>$(\partial^2 + m^2)\Delta = -\mathrm i\,\delta^{(4)}$</td>
 			</tr>
 			<tr>
-					<td>Pôles tous en $E_n - i\varepsilon$</td>
+					<td>Pôles tous en $E_n - \mathrm i\varepsilon$</td>
 					<td>Pôles panachés : $+E_{\mathbf p}$ dessous, $-E_{\mathbf p}$ dessus</td>
 			</tr>
 			<tr>
@@ -2913,8 +2943,8 @@ Mêmes mathématiques en matière condensée&nbsp;: l'écrantage de Thomas–Fer
 					<td>Pôle $p^2 = m^2$ = masse physique (résidu → $Z$)</td>
 			</tr>
 			<tr>
-					<td>$\tilde G_0^+ = \dfrac{1}{E - \mathbf p^2/2m + i\varepsilon}$</td>
-					<td>$\Delta = \dfrac{i}{p^2 - m^2 + i\varepsilon}$</td>
+					<td>$\tilde G_0^+ = \dfrac{1}{E - \mathbf p^2/2m + \mathrm i\varepsilon}$</td>
+					<td>$\Delta = \dfrac{\mathrm i}{p^2 - m^2 + \mathrm i\varepsilon}$</td>
 			</tr>
 			<tr>
 					<td>Fermeture sur les états propres $\sum_n \lvert n\rangle\langle n\rvert$</td>
@@ -2942,7 +2972,7 @@ Mêmes mathématiques en matière condensée&nbsp;: l'écrantage de Thomas–Fer
 <p>On retrouve les deux règles de composition des amplitudes de Feynman :<ul><li>événements <strong>successifs</strong> → les amplitudes se <strong>multiplient</strong> ;</li><li>alternatives <strong>indiscernables</strong> (par où est-elle passée ?) → les amplitudes s&rsquo;<strong>additionnent</strong> (ici, s&rsquo;intègrent).</li></ul>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2">
-<p>Soit $g(E)$ tendant vers $0$ uniformément quand $|E| \to \infty$ dans le demi-plan inférieur. Alors, pour $\tau &gt; 0$, l&rsquo;intégrale de $g(E) e^{-iE\tau}$ sur le demi-cercle inférieur de rayon $R$ tend vers $0$ quand $R \to \infty$ (énoncé miroir en haut pour $\tau &lt; 0$). Ici $g(E) = \frac{1}{E - E_n + i\varepsilon} \sim \frac 1E \to 0$. L&rsquo;hypothèse est satisfaite. Donc $$\int_{-\infty}^{+\infty} = \oint_{\mathcal C} - \underbrace{\int_{\text{arc}}}_{\to\, 0}
+<p>Soit $g(E)$ tendant vers $0$ uniformément quand $|E| \to \infty$ dans le demi-plan inférieur. Alors, pour $\tau &gt; 0$, l&rsquo;intégrale de $g(E) \, \mathrm e^{-\mathrm iE\tau}$ sur le demi-cercle inférieur de rayon $R$ tend vers $0$ quand $R \to \infty$ (énoncé miroir en haut pour $\tau &lt; 0$). Ici $g(E) = \frac{1}{E - E_n + \mathrm i\varepsilon} \sim \frac 1E \to 0$. L&rsquo;hypothèse est satisfaite. Donc $$\int_{-\infty}^{+\infty} = \oint_{\mathcal C} - \underbrace{\int_{\text{arc}}}_{\to\, 0}
 $$ où $\mathcal C$ est le contour fermé (droite réelle + arc).&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
@@ -4183,6 +4213,11 @@ $$ où $\mathcal C$ est le contour fermé (droite réelle + arc).&#160;<a href="
             
         
                     
+                        
+            
+            
+        
+                    
             
         
                     
@@ -4242,16 +4277,16 @@ $$ où $\mathcal C$ est le contour fermé (droite réelle + arc).&#160;<a href="
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785366109"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785366109"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785366109"></script>
-    <script src="/js/jquery.sticky.js?1785366109"></script>
-    <script src="/js/featherlight.min.js?1785366109"></script>
-    <script src="/js/highlight.pack.js?1785366109"></script>
+    <script src="/js/clipboard.min.js?1785386198"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785386198"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785386198"></script>
+    <script src="/js/jquery.sticky.js?1785386198"></script>
+    <script src="/js/featherlight.min.js?1785386198"></script>
+    <script src="/js/highlight.pack.js?1785386198"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785366109"></script>
-    <script src="/js/learn.js?1785366109"></script>
-    <script src="/js/hugo-learn.js?1785366109"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785386198"></script>
+    <script src="/js/learn.js?1785386198"></script>
+    <script src="/js/hugo-learn.js?1785386198"></script>
     
     
 

@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785366109" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785366109" rel="stylesheet">
-    <link href="/css/hybrid.css?1785366109" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785366109" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785366109" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785366109" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785366109" rel="stylesheet">
-    <link href="/css/theme.css?1785366109" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785366109" rel="stylesheet">
+    <link href="/css/nucleus.css?1785386198" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785386198" rel="stylesheet">
+    <link href="/css/hybrid.css?1785386198" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785386198" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785386198" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785386198" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785386198" rel="stylesheet">
+    <link href="/css/theme.css?1785386198" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785386198" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785366109" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785386198" rel="stylesheet">
     
-    <link href="/css/foo.css?1785366109" rel="stylesheet"><link href="/css/bar.css?1785366109" rel="stylesheet">
+    <link href="/css/foo.css?1785386198" rel="stylesheet"><link href="/css/bar.css?1785386198" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785366109"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785386198"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785366109"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785366109"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785386198"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785386198"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785366109"></script>
+<script type="text/javascript" src="/js/search.js?1785386198"></script>
 
     
   </div>
@@ -1847,6 +1847,9 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
             
             
           
+            
+            
+          
         
         </ul>
       
@@ -2277,11 +2280,13 @@ $
 <p>Le produit infini diverge, et la constante de mesure $B$ est inconnue.</p>
 <p>La cure : <b>diviser par la particule libre</b> ($\omega_0 = 0$), dont on connaît le propagateur exact : $G_{\omega_0=0}(0,T\,;0,0)=G_\mathrm{libre}(0,T\,;0,0)=\left(\frac{-\mathrm{i} m}{2 \pi T}\right)^{\frac{1}{2}}$.</p>
 <p>Dans le rapport, $B$ et les divergences s&rsquo;annulent terme à terme :</p>
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 G(0,T\,;0,0) = G_{\text{libre}} \prod_{n=1}^{\infty}\left[ 1 - \Big(\frac{\omega_0 T}{n\pi}\Big)^{\!2} \right]^{-\frac12}
-= \left( \frac{-i\, m\omega_0}{2\pi\sin\omega_0 T} \right)^{\!\frac12},
-$$</p>
-<p>grâce à l&rsquo;identité d&rsquo;Euler $\prod_{n}\big[1 - (x/n\pi)^2\big] = \sin x / x$.</p>
+= \left( \frac{-i\, m\omega_0}{2\pi\sin\omega_0 T} \right)^{\!\frac12}
+$
+</p>
+<p>En utilisant l&rsquo;identité d&rsquo;Euler $\prod_{n}\big[1 - (x/n\pi)^2\big] = \sin x / x$.</p>
 </div>
 <p>La densité de probabilité $|G|^2 \propto 1/|\sin\omega_0 T|$ <b>pique aux temps $T = n\pi/\omega_0$</b> : à ces instants, tous les chemins partant et revenant à l&rsquo;origine interfèrent constructivement. Les trajectoires « font le point » puis se défocalisent, au rythme de l&rsquo;oscillateur (à chaque demi-période).</p>
 <!-- Figure à redessiner (L&B fig. 23.4) : la courbe 2π|G|²/(mω₀) en fonction de ω₀T/π, série de pics aigus aux valeurs entières de ω₀T/π ; légende : les chemins « font le point » à chaque demi-période -->
@@ -2428,7 +2433,7 @@ $
 </p>
 <p>Chaque dérivée soit <i>consomme un $J$</i> pendu à un $\Delta$ existant (elle referme une ligne), soit <i>ouvre une nouvelle ligne</i> $(\Delta J)$ (et les coefficients $3$ et $6$ comptent les façons de le faire).</p>
 <p>En multipliant par $-\frac{i\lambda}{4!}\int\mathrm{d}^4z$ :</p>
-<p style="text-align:center;">
+<p style="text-align:center;overflow-x:auto;">
 $\displaystyle
 \mathcal Z_1[J] = -\mathrm{i}\lambda\left[ \frac18\int\Delta(0)^2 \;-\; \frac14\int\Delta(0)\,(\Delta J)^2 \;+\; \frac{1}{4!}\int(\Delta J)^4 \right]\mathcal Z_0[J]
 $
@@ -2831,7 +2836,7 @@ $
 <p>En utilisant $|n\rangle = \frac{\left(\hat{a}^{\dagger}\right)^n}{\sqrt{n!}}|0\rangle$, on obtient :</p>
 <p style="text-align:center;">
 $\displaystyle
-|\alpha\rangle = c_0\left(1+\frac{\alpha}{1!} \hat{a}^{\dagger}+\frac{\alpha^2}{2!}\left(\hat{a}^{\dagger}\right)^2+\frac{\alpha^3}{3!}\left(\hat{a}^{\dagger}\right)^3+\ldots\right)|0\rangle
+|\alpha\rangle = c_0\big(1+\frac{\alpha}{1!} \hat{a}^{\dagger}+\frac{\alpha^2}{2!}\left(\hat{a}^{\dagger}\right)^2+\frac{\alpha^3}{3!}\left(\hat{a}^{\dagger}\right)^3+\ldots\big)|0\rangle
 $
 </p>
 <p>Et par normalisation $\langle \alpha | \alpha \rangle = 1$, on a finalement $c_0=\mathrm{e}^{-|\alpha|^2 / 2}$.</p>
@@ -4464,6 +4469,11 @@ $
             
         
                     
+                        
+            
+            
+        
+                    
             
         
                     
@@ -4523,16 +4533,16 @@ $
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785366109"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785366109"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785366109"></script>
-    <script src="/js/jquery.sticky.js?1785366109"></script>
-    <script src="/js/featherlight.min.js?1785366109"></script>
-    <script src="/js/highlight.pack.js?1785366109"></script>
+    <script src="/js/clipboard.min.js?1785386198"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785386198"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785386198"></script>
+    <script src="/js/jquery.sticky.js?1785386198"></script>
+    <script src="/js/featherlight.min.js?1785386198"></script>
+    <script src="/js/highlight.pack.js?1785386198"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785366109"></script>
-    <script src="/js/learn.js?1785366109"></script>
-    <script src="/js/hugo-learn.js?1785366109"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785386198"></script>
+    <script src="/js/learn.js?1785386198"></script>
+    <script src="/js/hugo-learn.js?1785386198"></script>
     
     
 
