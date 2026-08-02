@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785386198" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785386198" rel="stylesheet">
-    <link href="/css/hybrid.css?1785386198" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785386198" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785386198" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785386198" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785386198" rel="stylesheet">
-    <link href="/css/theme.css?1785386198" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785386198" rel="stylesheet">
+    <link href="/css/nucleus.css?1785704825" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785704825" rel="stylesheet">
+    <link href="/css/hybrid.css?1785704825" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785704825" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785704825" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785704825" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785704825" rel="stylesheet">
+    <link href="/css/theme.css?1785704825" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785704825" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785386198" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785704825" rel="stylesheet">
     
-    <link href="/css/foo.css?1785386198" rel="stylesheet"><link href="/css/bar.css?1785386198" rel="stylesheet">
+    <link href="/css/foo.css?1785704825" rel="stylesheet"><link href="/css/bar.css?1785704825" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785386198"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785704825"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785386198"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785386198"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785704825"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785704825"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785386198"></script>
+<script type="text/javascript" src="/js/search.js?1785704825"></script>
 
     
   </div>
@@ -1850,6 +1850,12 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
             
             
           
+            
+            
+          
+            
+            
+          
         
         </ul>
       
@@ -2008,16 +2014,6 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
         <li><a href="#pièges-3">Pièges</a></li>
       </ul>
     </li>
-    <li><a href="#le-ferromagnétisme-un-tutoriel-de-renormalisation">Le ferromagnétisme, un tutoriel de renormalisation</a>
-      <ul>
-        <li><a href="#les-phénomènes-critiques-et-lhypothèse-de-widom">Les phénomènes critiques et l&rsquo;hypothèse de Widom</a></li>
-        <li><a href="#le-modèle-et-léchauffement-gaussien">Le modèle, et l&rsquo;échauffement gaussien</a></li>
-        <li><a href="#une-boucle-et-le-point-fixe-de-wilsonfisher">Une boucle, et le point fixe de Wilson–Fisher</a></li>
-        <li><a href="#les-exposants-et-le-miracle-de-luniversalité">Les exposants, et le miracle de l&rsquo;universalité</a></li>
-        <li><a href="#bilan-4">Bilan</a></li>
-        <li><a href="#pièges-4">Pièges</a></li>
-      </ul>
-    </li>
   </ul>
 </nav>
     </div>
@@ -2128,39 +2124,51 @@ details[open] > summary:first-of-type {
 <li><b><a href="./#quasiparticules-et-surface-de-fermi">Le vrai sujet</a></b>&nbsp;: avant même de parler d'infinis, les interactions changent ce qu'est une particule. Une particule en interaction s'habille d'un nuage de fluctuations et devient une <b>quasiparticule</b>, de masse et de charge modifiées. Ce phénomène s'appelle la renormalisation, et il existerait même si aucune intégrale ne divergeait.</li>
 <li><b><a href="./#le-problème-divergences-et-sa-solution-contretermes">Le problème et sa solution</a></b>&nbsp;: les boucles divergent, on coupe les intégrales à une impulsion $\Lambda$, et on ajoute des <b>contretermes</b> qui effacent toute dépendance en $\Lambda$. On découvre alors que ces contretermes ne sont rien d'autre que le changement de variables des paramètres nus vers les paramètres physiques.</li>
 <li><b><a href="./#la-renormalisation-en-action-self-énergie-et-vertex">La machinerie en action</a></b>&nbsp;: deux fonctions de Green concentrent tout l'habillage, la <b>self-énergie</b> $\tilde\Sigma$ (qui déplace la masse) et la <b>fonction de vertex</b> $\tilde\Gamma$ (qui écrante le couplage), reliées au propagateur exact par une resommation géométrique.</li>
-<li><b><a href="./#le-groupe-de-renormalisation">Le changement de regard</a></b>&nbsp;: Wilson propose de ne plus cacher $\Lambda$ mais de vivre avec, et de regarder comment les «&nbsp;constantes&nbsp;» de couplage <b>coulent</b> quand on change l'échelle d'observation. C'est le <b>groupe de renormalisation</b>, avec trois applications spectaculaires&nbsp;: la liberté asymptotique, la localisation d'Anderson, et la transition de Kosterlitz–Thouless (où l'on retrouve nos vortex de la partie précédente).</li>
+<li><b><a href="./#le-groupe-de-renormalisation">Le changement de regard</a></b>&nbsp;: Wilson propose de ne plus cacher $\Lambda$ mais de vivre avec, et de regarder comment les «&nbsp;constantes&nbsp;» de couplage <b>varient</b> quand on change l'échelle d'observation. C'est le <b>groupe de renormalisation</b>, avec trois applications spectaculaires&nbsp;: la liberté asymptotique, la localisation d'Anderson, et la transition de Kosterlitz–Thouless (où l'on retrouve nos vortex de la partie précédente).</li>
 <li><b><a href="./#le-ferromagnétisme-un-tutoriel-de-renormalisation">Le tutoriel complet</a></b>&nbsp;: la transition ferromagnétique passée dans la machine, le point fixe de Wilson–Fisher, et le miracle de l'<b>universalité</b>&nbsp;: des exposants critiques calculés qui ne dépendent que de la dimension et de la symétrie, pas des détails microscopiques.</li>
 </ul>
 <br>
 <h2 id="quasiparticules-et-surface-de-fermi">Quasiparticules et surface de Fermi</h2>
 <h3 id="lhabillage-une-idée-dabord-classique">L&rsquo;habillage, une idée d&rsquo;abord classique</h3>
-<p>Avant tout formalisme, une image. Ce paragraphe ne figure pas dans le livre, mais il donne un point d&rsquo;ancrage entièrement classique. Poussez une balle de ping-pong immergée dans l&rsquo;eau : pour l&rsquo;accélérer, il faut aussi accélérer l&rsquo;eau qu&rsquo;elle déplace, et tout se passe comme si la balle avait une masse effective $m^* = m + \tfrac12\rho V$, où $\rho V$ est la masse d&rsquo;eau déplacée (le résultat est exact en fluide parfait). La balle ne peut pas se déplacer sans traîner son environnement avec elle : l&rsquo;objet qui se propage n&rsquo;est plus « la balle », c&rsquo;est « la balle plus sa déformation du fluide », et ses paramètres sont modifiés. Voilà exactement ce que les interactions font aux particules d&rsquo;une théorie quantique des champs.</p>
-<p>Le livre donne deux exemples de matière condensée dans le même esprit : une charge positive plongée dans un métal s&rsquo;entoure d&rsquo;un nuage électronique qui <b>écrante</b> sa charge apparente, et un électron dans un cristal acquiert une masse effective $m^*$ différente de sa masse dans le vide. La différence avec une théorie « fondamentale » comme l&rsquo;électrodynamique quantique est seulement épistémique : en matière condensée, on peut sortir l&rsquo;électron du cristal et comparer, tandis qu&rsquo;on ne peut pas sortir l&rsquo;électron du vide quantique. Le cadre conceptuel, lui, est identique.</p>
+<p>Avant tout formalisme, une image. Poussons une balle de ping-pong immergée dans l&rsquo;eau : pour l&rsquo;accélérer, il faut aussi accélérer l&rsquo;eau qu&rsquo;elle déplace, et tout se passe comme si la balle avait une masse effective $m^* = m + \tfrac12\rho V$, où $\rho V$ est la masse d&rsquo;eau déplacée (le résultat est exact en fluide parfait). La balle ne peut pas se déplacer sans traîner son environnement avec elle : l&rsquo;objet qui se propage n&rsquo;est plus « la balle », c&rsquo;est « la balle plus sa déformation du fluide », et ses paramètres sont modifiés. Voilà exactement ce que les interactions font aux particules d&rsquo;une théorie quantique des champs.</p>
+<p>Deux exemples de matière condensée dans le même esprit : une charge positive plongée dans un métal s&rsquo;entoure d&rsquo;un nuage électronique qui <b>écrante</b> sa charge apparente, et un électron dans un cristal acquiert une masse effective $m^*$ différente de sa masse dans le vide. La différence avec une théorie « fondamentale » comme l&rsquo;électrodynamique quantique est seulement épistémique : en matière condensée, on peut sortir l&rsquo;électron du cristal et comparer, tandis qu&rsquo;on ne peut pas sortir l&rsquo;électron du vide quantique. Le cadre conceptuel, lui, est identique.</p>
 <div id="def">
-<p>Une <b>quasiparticule</b> (ou particule habillée, ou particule renormalisée, selon le contexte) est l&rsquo;excitation d&rsquo;un système en interaction. Elle ressemble à une particule libre mais possède une masse et des couplages modifiés. En une équation d&rsquo;esprit :</p>
-<p>$$
+<p>Une <b>quasiparticule</b> (ou particule habillée, ou particule renormalisée, selon le contexte) est l&rsquo;excitation d&rsquo;un système en interaction. Elle ressemble à une particule libre mais possède une masse et des couplages modifiés.</p>
+<p style="text-align:center;">
+$\displaystyle
 (\text{quasiparticule}) = (\text{particule nue}) + (\text{interactions})
-$$</p>
+$
+</p>
 <p>Le processus d&rsquo;habillage s&rsquo;appelle la <b>renormalisation</b>.</p>
 </div>
+<br>
 <h3 id="lallumage-adiabatique-et-le-poids-de-quasiparticule">L&rsquo;allumage adiabatique et le poids de quasiparticule</h3>
-<p>Reprenons la théorie libre : un vide $|0\rangle$, des opérateurs $\hat a^\dagger_{\mathbf p}$ qui créent des particules une par une, et un propagateur $\tilde G_0(p) = \mathrm i/(p^2 - m^2 + \mathrm i\epsilon)$ dont le pôle donne la masse. Branchons maintenant, très lentement, une interaction : $\hat H = \hat H_0 + \lambda(T),\hat H&rsquo;$, avec $\lambda$ qui monte de 0 à 1. Le fondamental devient $|\Omega\rangle$, les états propres deviennent $|{\mathbf p}_\lambda\rangle$, et le système est un chaudron bouillonnant de paires virtuelles. Une question angoissante se pose : dans ce chaos, <b>existe-t-il encore des excitations à une particule</b> ? Toute notre théorie des champs repose sur la création et l&rsquo;annihilation de particules individuelles ; si la réponse est non, tout s&rsquo;effondre.</p>
-<p>Le nœud du problème est que nous n&rsquo;avons pas les bons outils. Pour créer une excitation propre du système en interaction, il faudrait un opérateur $\hat q^\dagger_{\mathbf p}$ tel que $|{\mathbf p}<em>\lambda\rangle = \hat q^\dagger</em>{\mathbf p}|\Omega\rangle$, mais nous ne le connaissons pas. Tout ce que nous possédons, ce sont les opérateurs <i>libres</i> $\hat a^\dagger_{\mathbf p}$. Et un opérateur libre appliqué au vide en interaction se comporte comme un éléphant dans un magasin de porcelaine : rien ne l&rsquo;empêche de créer plusieurs excitations à la fois. Le résultat est une superposition :</p>
-<p>$$
+<p>Reprenons la théorie libre : un vide $|0\rangle$, des opérateurs $\hat a^\dagger_{\mathbf p}$ qui créent des particules une par une, et un propagateur $\tilde G_0(p) = \mathrm i/(p^2 - m^2 + \mathrm i\epsilon)$ dont le pôle donne la masse. Branchons maintenant, très lentement, une interaction : $\hat H = \hat H_0 + \lambda(T)\,\hat H&rsquo;$, avec $\lambda$ qui monte de 0 à 1. Le fondamental devient $|\Omega\rangle$, les états propres deviennent $|{\mathbf p}_\lambda\rangle$, et le système est un chaudron bouillonnant de paires virtuelles. Une question angoissante se pose : dans ce chaos, <b>existe-t-il encore des excitations à une particule</b> ? Toute notre théorie des champs repose sur la création et l&rsquo;annihilation de particules individuelles ; si la réponse est non, tout s&rsquo;effondre.</p>
+<p>Le nœud du problème est que nous n&rsquo;avons pas les bons outils. Pour créer une excitation propre du système en interaction, il faudrait un opérateur $\hat q^\dagger_{\mathbf p}$ tel que $|{\mathbf p}_\lambda\rangle = \hat q^\dagger_{\mathbf p}|\Omega\rangle$, mais nous ne le connaissons pas. Tout ce que nous possédons, ce sont les opérateurs <i>libres</i> $\hat a^\dagger_{\mathbf p}$. Et un opérateur libre appliqué au vide en interaction se comporte comme un éléphant dans un magasin de porcelaine : rien ne l&rsquo;empêche de créer plusieurs excitations à la fois. Le résultat est une superposition :</p>
+<p style="text-align:center;">
+$\displaystyle
 \hat a^\dagger_{\mathbf p}|\Omega\rangle
-= |{\mathbf p}<em>\lambda\rangle,\langle{\mathbf p}</em>\lambda|\hat a^\dagger_{\mathbf p}|\Omega\rangle</p>
-<ul>
-<li>\sum(\text{états multiparticules d&rsquo;impulsion totale } \mathbf p)
-$$</li>
-</ul>
+= |{\mathbf p}_\lambda\rangle\,\langle{\mathbf p}_\lambda|\hat a^\dagger_{\mathbf p}|\Omega\rangle
++ \sum(\text{états multiparticules d'impulsion totale } \mathbf p)
+$
+</p>
+<p>$\hat a^\dagger_{\mathbf p}|\Omega\rangle$ peut par exemple contenir un état avec deux particules et une antiparticule comme $\hat{q}_{\boldsymbol{p}_1}^{\dagger} \hat{q}_{\boldsymbol{p}_2}^{\dagger} \hat{q}_{\boldsymbol{p}_1+\boldsymbol{p}_2-\boldsymbol{p}}|\Omega\rangle$<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
 <div id="def">
 <p>L&rsquo;amplitude de la composante à une seule particule s&rsquo;appelle le <b>poids de quasiparticule</b> :</p>
-<p>$$
-Z_{\mathbf p}^{1/2} = \langle{\mathbf p}<em>\lambda|,\hat a^\dagger</em>{\mathbf p},|\Omega\rangle
-$$</p>
-<p>On dit qu&rsquo;une quasiparticule existe si $Z_{\mathbf p} \neq 0$. Deux complications s&rsquo;ajoutent : la masse de l&rsquo;état $|{\mathbf p}<em>\lambda\rangle$ n&rsquo;est plus la masse nue $m$ mais la <b>masse physique</b> $m</em>{\mathrm P}$ (celle que mesurent les expériences), et l&rsquo;état créé n&rsquo;est en général qu&rsquo;un paquet d&rsquo;ondes étroit, une <b>résonance</b>, d&rsquo;énergie complexe $E_{\mathbf p} + \mathrm i\Gamma_{\mathbf p}$ : la quasiparticule est instable, de durée de vie $(2\Gamma_{\mathbf p})^{-1}$. Pour mériter le nom de quasiparticule, il faut $E_{\mathbf p} &gt; \Gamma_{\mathbf p}$ : vivre plus longtemps qu&rsquo;on n&rsquo;oscille.</p>
+<p style="text-align:center;">
+$\displaystyle
+Z_{\mathbf p}^{1/2} = \langle{\mathbf p}_\lambda|\,\hat a^\dagger_{\mathbf p}\,|\Omega\rangle
+$
+</p>
+<p>On dit qu&rsquo;une quasiparticule existe si $Z_{\mathbf p} \neq 0$.</p>
+<p>Deux complications s&rsquo;ajoutent :</p>
+<ul>
+<li>la masse de l'état $|{\mathbf p}_\lambda\rangle$ n'est plus la masse nue $m$ mais la <b>masse physique</b> $m_{\mathrm P}$ (celle que mesurent les expériences),</li> 
+<li>et l'état créé n'est en général qu'un paquet d'ondes étroit, une <b>résonance</b>, d'énergie complexe $E_{\mathbf p} + \mathrm i\Gamma_{\mathbf p}$&nbsp;: la quasiparticule est instable, de durée de vie $(2\Gamma_{\mathbf p})^{-1}$.</li>
+</ul>
+<p>Pour mériter le nom de quasiparticule, il faut $E_{\mathbf p} &gt; \Gamma_{\mathbf p}$ : vivre plus longtemps qu&rsquo;on n&rsquo;oscille.</p>
 </div>
-<p>Le tableau de correspondance mérite d&rsquo;être appris par cœur, car toute la partie VIII en découle :</p>
+<p>Le tableau de correspondance :</p>
 <table>
 	<thead>
 			<tr>
@@ -2179,47 +2187,175 @@ $$</p>
 			</tr>
 			<tr>
 					<td>Théorie en interaction</td>
-					<td>$|{\mathbf p}<em>\lambda\rangle = \hat q^\dagger</em>{\mathbf p}|\Omega\rangle$</td>
-					<td>$\langle{\mathbf p}<em>\lambda|\hat\phi(x)|\Omega\rangle = Z</em>{\mathbf p}^{1/2}, e^{\mathrm i p\cdot x}, e^{-\Gamma_{\mathbf p} t}$</td>
+					<td>$|{\mathbf p}_\lambda\rangle = \hat q^\dagger_{\mathbf p}|\Omega\rangle$</td>
+					<td>$\langle{\mathbf p}_\lambda|\hat\phi(x)|\Omega\rangle = Z_{\mathbf p}^{1/2}\, e^{\mathrm i p\cdot x}\, e^{-\Gamma_{\mathbf p} t}$</td>
 					<td>$m_{\mathrm P}$</td>
 			</tr>
 	</tbody>
 </table>
+<br>
 <h3 id="le-propagateur-habillé">Le propagateur habillé</h3>
 <div id="theo">
-<p>Sans aucune théorie des perturbations (il suffit d&rsquo;insérer une résolution de l&rsquo;identité sur les états propres exacts entre les deux champs de $G = \langle\Omega|T\hat\phi_H\hat\phi^\dagger_H|\Omega\rangle$), le propagateur en interaction prend la forme générale</p>
-<p>$$
-\tilde G(p) = \frac{\mathrm i, Z_{\mathbf p}}{p^2 - m_{\mathrm P}^2 + \mathrm i\Gamma_{\mathbf p}}</p>
-<ul>
-<li>\begin{pmatrix}\text{parties}\ \text{multiparticules}\end{pmatrix}
-$$</li>
-</ul>
+<p>Sans aucune théorie des perturbations, le propagateur en interaction prend la forme générale</p>
+<p style="text-align:center;">
+$\displaystyle
+\tilde G(p) = \frac{\mathrm i\, Z_{\mathbf p}}{p^2 - m_{\mathrm P}^2 + \mathrm i\Gamma_{\mathbf p}}
++ \begin{pmatrix}\text{parties}\\ \text{multiparticules}\end{pmatrix}
+$
+</p>
 <p>Tout s&rsquo;y lit : la <b>position du pôle</b> donne la masse physique $m_{\mathrm P}$, le <b>résidu</b> au pôle donne $\mathrm i Z_{\mathbf p}$, et la largeur $\Gamma_{\mathbf p}$ donne l&rsquo;inverse de la durée de vie, en lieu et place de l&rsquo;infinitésimal $\epsilon$ habituel.</p>
 </div>
-<p>Une reformulation fait le pont avec l&rsquo;expérience : on écrit le propagateur comme une superposition de propagateurs libres de masses variables, pondérés par la <b>fonction spectrale</b> $\rho(M^2)$ :</p>
-<p>$$
-G(x,y) = \int_0^{\infty}\frac{\mathrm dM^2}{2\pi},\rho(M^2),\Delta(x,y,M^2)
-$$</p>
-<p>Pour une particule stable, $\rho$ contient un pic de Dirac de poids $Z$ en $M^2 = m_{\mathrm P}^2$, puis un continuum multiparticule qui démarre vers $4m_{\mathrm P}^2$ (le seuil de création de deux particules réelles). Pour une quasiparticule de durée de vie finie, le pic de Dirac s&rsquo;élargit en une bosse de largeur $2\Gamma_{\mathbf p}$. La condition $E_{\mathbf p} &gt; \Gamma_{\mathbf p}$ se lit alors à l&rsquo;œil : le pic doit être étroit devant sa distance à l&rsquo;origine. Et le livre glisse une remarque rassurante : les parties multiparticules subissent en général des interférences destructives et s&rsquo;éteignent bien avant $\Gamma_{\mathbf p}^{-1}$, laissant la quasiparticule seule au milieu des ruines.</p>
+<br>
+<div id="preuve">
+<details>
+<summary>Pourquoi cette forme est exacte, et non perturbative&nbsp;?</summary>
+<p>L&rsquo;argument tient en deux ingrédients, et aucun des deux ne suppose que le couplage soit petit.</p>
+<p><b>Premier ingrédient, la complétude.</b> Les états propres exacts du système en interaction forment une base : le fondamental $|\Omega\rangle$, les états à une quasiparticule $|\mathbf p_\lambda\rangle$, et tous les états multiparticules. On insère donc cette décomposition de l&rsquo;identité entre les deux champs de $G = \langle\Omega|T\hat\phi(x)\hat\phi^\dagger(y)|\Omega\rangle$. Chaque état intermédiaire apporte un terme, pondéré par le module carré de l&rsquo;élément de matrice qui le relie au vide par un champ.</p>
+<p><b>Second ingrédient, l&rsquo;invariance de Lorentz.</b> Chaque famille d&rsquo;états intermédiaires possède une masse invariante bien définie, et se propage exactement comme une particule libre de cette masse. La somme est donc une <b>superposition de propagateurs libres</b>, ce qui est précisément la représentation en fonction spectrale évoquée ci-dessous.</p>
+<p>L&rsquo;état à une quasiparticule, isolé en masse, donne un pôle unique dont le poids est par définition $Z_{\mathbf p}$ : c&rsquo;est le même $Z$ que celui du paragraphe précédent, ce qui n&rsquo;est pas une coïncidence mais la même quantité vue deux fois. Les états multiparticules, eux, forment un continuum de masses invariantes et ne peuvent produire aucun pôle isolé : ils donnent une contribution régulière.</p>
+<p>Le prix de cette généralité est qu&rsquo;on ne sait rien de $Z_{\mathbf p}$, $m_{\mathrm P}$ ni $\Gamma_{\mathbf p}$ : la forme est garantie, les valeurs restent à calculer. Ce sera l&rsquo;affaire du chapitre &ldquo;<a href="./#la-renormalisation-en-action-self-%C3%A9nergie-et-vertex">la renormalisation en action</a>&rdquo;.</p>
+</details>
+</div>
+<p>Une reformulation fait le pont avec l&rsquo;expérience :<br>
+On écrit le propagateur comme une superposition de propagateurs libres de masses variables, pondérés par la <b>fonction spectrale</b> $\rho(M^2)$ :</p>
+<p style="text-align:center;">
+$\displaystyle
+G(x,y) = \int_0^{\infty}\frac{\mathrm dM^2}{2\pi}\,\rho(M^2)\,\Delta(x,y,M^2)
+$
+</p>
+<p>Pour une particule stable, $\rho$ contient un pic de Dirac de poids $Z$ en $M^2 = m_{\mathrm P}^2$, puis un continuum multiparticule qui démarre vers $4m_{\mathrm P}^2$ (le seuil de création de deux particules réelles).</p>
+<p>Pour une quasiparticule de durée de vie finie, le pic de Dirac s&rsquo;élargit en une bosse de largeur $2\Gamma_{\mathbf p}$. La condition $E_{\mathbf p} &gt; \Gamma_{\mathbf p}$ se lit alors à l&rsquo;œil : le pic doit être étroit devant sa distance à l&rsquo;origine. Les parties multiparticules subissent en général des interférences destructives et s&rsquo;éteignent bien avant $\Gamma_{\mathbf p}^{-1}$, laissant la quasiparticule seule au milieu des ruines.</p>
 <!-- Figure à redessiner (L&B fig. 31.2) : deux panneaux montrant ρ(M²) en fonction de M². (a) un pic de Dirac (flèche verticale) en M² = m_P², puis un continuum multiparticule qui démarre vers 4m_P² ; (b) même chose mais le pic est élargi en une lorentzienne étroite de largeur 2Γ. Légende : particule stable contre quasiparticule de durée de vie finie -->
 <div style="position:relative;margin-left:auto;margin-right:auto;width:420px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/fonctionspectrale.png" style="box-shadow:none;background:none;">
 </div>
+<br>
 <h3 id="les-quasiparticules-dun-métal-et-une-prédiction-mesurable">Les quasiparticules d&rsquo;un métal, et une prédiction mesurable</h3>
-<p>En matière condensée, le renversement de point de vue est spectaculaire : un métal réel contient $N \approx 10^{23}$ électrons en interaction forte, et la renormalisation consiste à le décrire comme un <i>vide</i> (le fondamental, sans excitation) peuplé d&rsquo;un <i>petit nombre</i> d&rsquo;excitations élémentaires faiblement couplées. Deux familles d&rsquo;excitations élémentaires existent : les <b>excitations collectives</b> (phonons, plasmons), qui mobilisent tous les constituants et disparaissent si l&rsquo;on coupe les interactions, et les <b>quasiparticules</b>, qui sont des excitations à une particule habillées.</p>
+<p>En matière condensée, le renversement de point de vue est spectaculaire : un métal réel contient $N \approx 10^{23}$ électrons en interaction forte, et la renormalisation consiste à le décrire comme un <i>vide</i> (le fondamental, sans excitation) peuplé d&rsquo;un <i>petit nombre</i> d&rsquo;excitations élémentaires faiblement couplées.</p>
+<p>Deux familles d&rsquo;excitations élémentaires existent :</p>
+<ul style="margin-top:-0.5em; margin-bottom:1em;">
+<li>les <b>excitations collectives</b> (phonons, plasmons), qui mobilisent tous les constituants et disparaissent si l'on coupe les interactions,</li>
+<li>et les <b>quasiparticules</b>, qui sont des excitations à une particule habillées.</li>
+</ul>
 <div id="preuve">
-<p>Le gaz de Fermi sans interaction à $T = 0$ : $N$ électrons (que l&rsquo;on prend sans spin pour simplifier) empilés dans les états $|\mathbf p\rangle$ jusqu&rsquo;au niveau de Fermi $p_{\mathrm F}$. Près de la surface de Fermi, la dispersion se linéarise :</p>
-<p>$$
-E^{(0)}<em>{\mathbf p} = v</em>{\mathrm F},(|\mathbf p| - p_{\mathrm F})
-\qquad\text{avec}\qquad
-v_{\mathrm F} = \frac{p_{\mathrm F}}{m_e}
-$$</p>
-<p>On allume les interactions : la forme de la dispersion survit mais la pente change, $v_{\mathrm F} = p_{\mathrm F}/m^<em>$, où $m^</em>$ est la <b>masse effective</b>. Le propagateur libre du métal contient deux termes (électrons au-dessus de $p_{\mathrm F}$, trous en dessous, avec des prescriptions $\pm\mathrm i\epsilon$ opposées, ce sera dérivé au chapitre 43), et sa version habillée s&rsquo;obtient par la substitution désormais familière : un facteur $Z_{\mathbf p}$ au numérateur, $E_{\mathbf p}$ et $\Gamma_{\mathbf p}$ au dénominateur.</p>
-<p>Le dividende expérimental sort en trois lignes. La distribution d&rsquo;impulsion du système faiblement excité vaut $n_{\mathbf p} = \langle\hat a^\dagger_{\mathbf p}\hat a_{\mathbf p}\rangle$, et elle se lit sur le propagateur en temps égal, $n_{\mathbf p} = -\lim_{t\to0^-} G(\mathbf p, t)$. En insérant la forme habillée :</p>
-<p>$$
-n_{\mathbf p} = Z_{\mathbf p},\theta(p_{\mathrm F} - |\mathbf p|) + \big(\text{fond multiparticule, régulier}\big)
-$$</p>
+<p>Le gaz de Fermi sans interaction à $T = 0$ :</p>
+<p>$N$ électrons (que l&rsquo;on prend sans spin pour simplifier) empilés dans les états $|\mathbf p\rangle$ jusqu&rsquo;au niveau de Fermi $p_{\mathrm F}$. Près de la surface de Fermi, la dispersion se linéarise :</p>
+<p style="text-align:center;">
+$\displaystyle
+E^{(0)}_{\mathbf p} = v_{\mathrm F}\,(|\mathbf p| - p_{\mathrm F})\;$
+avec 
+$\; \displaystyle v_{\mathrm F} = \frac{p_{\mathrm F}}{m_e}$
+</p>
+<p>On allume les interactions : la forme de la dispersion survit mais la pente change, $v_{\mathrm F} = p_{\mathrm F}/m^*$, où $m^*$ est la <b>masse effective</b>.</p>
 </div>
+<br>
+<h4 id="le-propagateur-dun-métal-construit-pas-à-pas">Le propagateur d&rsquo;un métal, construit pas à pas</h4>
+<p>Nous allons extraire de ce propagateur une prédiction mesurable, mais l&rsquo;objet lui-même n&rsquo;est plus celui des chapitres précédents. Trois écarts sont à poser noir sur blanc avant tout calcul.</p>
+<p><b>Premier écart : le fondamental n&rsquo;est plus vide.</b> Dans le vide relativiste, $\hat a_{\mathbf p}|0\rangle = 0$ pour <i>toute</i> impulsion : il n&rsquo;y a rien à détruire. Dans un métal à $T = 0$, le fondamental $|\Omega\rangle$ est la mer de Fermi remplie jusqu&rsquo;à $p_{\mathrm F}$, et le comportement dépend maintenant de l&rsquo;impulsion considérée :</p>
+<ul style="margin-top:0.5em;">
+<li>si $|\mathbf p| > p_{\mathrm F}$, l'état est libre&nbsp;: $\hat a_{\mathbf p}|\Omega\rangle = 0$, et seul $\hat a^\dagger_{\mathbf p}$ fait quelque chose (il ajoute un électron au-dessus de la mer)&nbsp;;</li>
+<li>si $|\mathbf p| < p_{\mathrm F}$, l'état est occupé&nbsp;: c'est $\hat a^\dagger_{\mathbf p}|\Omega\rangle = 0$ qui s'annule, par le principe de Pauli, et seul $\hat a_{\mathbf p}$ fait quelque chose (il creuse un <b>trou</b> dans la mer).</li>
+</ul>
+<p><b>Deuxième écart : ce sont des fermions.</b> Le produit ordonné dans le temps change de signe quand on échange deux opérateurs fermioniques. Ce signe, purement mécanique, sera l&rsquo;origine du signe moins qui nous attend plus bas.</p>
+<p><b>Troisième écart : on travaille en temps, à impulsion fixée.</b> L&rsquo;objet est $G(\mathbf p, t)$ et non $\tilde G(p)$ : on suit une impulsion donnée au cours du temps, ce qui est le langage naturel de la matière condensée.</p>
+<div id="def">
+<p>Le <b>propagateur à une particule</b> du métal, dans la convention sans facteur $-\mathrm i$ devant la moyenne :</p>
+<p style="text-align:center;">
+$\displaystyle
+G(\mathbf p, t) = \langle\Omega|\,T\,\hat a_{\mathbf p}(t)\,\hat a^\dagger_{\mathbf p}(0)\,|\Omega\rangle
+= \begin{cases}
+\;\;\;\langle \hat a_{\mathbf p}(t)\,\hat a^\dagger_{\mathbf p}(0)\rangle & \text{si } t>0\\[2mm]
+-\langle \hat a^\dagger_{\mathbf p}(0)\,\hat a_{\mathbf p}(t)\rangle & \text{si } t<0
+\end{cases}
+$
+</p>
+</div>
+<p>Les deux lignes ne sont pas deux écritures d&rsquo;une même chose : ce sont <b>deux histoires physiques différentes</b>, et c&rsquo;est là que tout se joue.</p>
+<ul style="margin-top:0.5em;">
+<li>Pour $t>0$, on lit de droite à gauche&nbsp;: on ajoute un électron à l'instant 0, on le retire à l'instant $t$. Cela n'a de sens que si la place était libre, donc si $|\mathbf p| > p_{\mathrm F}$. C'est la <b>propagation d'un électron</b>.</li>
+<li>Pour $t<0$, l'opérateur le plus ancien est celui de gauche dans la moyenne, $\hat a_{\mathbf p}(t)$&nbsp;: on retire un électron à l'instant $t$, on le remet à l'instant 0. Cela n'a de sens que si la place était occupée, donc si $|\mathbf p| < p_{\mathrm F}$. C'est la <b>propagation d'un trou</b>.</li>
+</ul>
+<p>Voilà l&rsquo;origine des « deux termes » du propagateur d&rsquo;un métal : chacun n&rsquo;existe que d&rsquo;un côté de la surface de Fermi, et les deux histoires se déroulent dans des sens du temps opposés. Cette opposition se traduit, après transformation de Fourier, par des prescriptions de contour opposées.</p>
+<div id="preuve">
+<details>
+<summary>Transformation de Fourier des deux morceaux&nbsp;:</summary>
+<p>En représentation de Heisenberg avec les énergies comptées depuis le potentiel chimique, $\hat a_{\mathbf p}(t) = \mathrm  e^{-\mathrm iE^{(0)}_{\mathbf p}t}\,\hat a_{\mathbf p}$.</p>
+<p>Au-dessus de la surface, l&rsquo;état est vide, donc $\langle \hat a_{\mathbf p}\hat a^\dagger_{\mathbf p}\rangle = 1$ et $G(\mathbf p,t) = \mathrm e^{- \mathrm iE^{(0)}_{\mathbf p}t}\,\theta(t)$. La transformée de Fourier d&rsquo;une exponentielle tronquée par un échelon ne converge qu&rsquo;en donnant à $\omega$ une petite partie imaginaire, ici positive :</p>
+<p style="text-align:center;">
+$\displaystyle
+\int_0^{\infty}\!\mathrm dt\ \mathrm e^{\mathrm i\omega t}\,\mathrm e^{-\mathrm iE^{(0)}_{\mathbf p}t}
+= \frac{\mathrm i}{\omega - E^{(0)}_{\mathbf p} + \mathrm i\epsilon}
+$
+</p>
+<p>En dessous de la surface, l&rsquo;état est plein, donc $\langle \hat a^\dagger_{\mathbf p}\hat a_{\mathbf p}\rangle = 1$ et $G(\mathbf p,t) = -\mathrm e^{-\mathrm iE^{(0)}_{\mathbf p}t}\,\theta(-t)$ ; l&rsquo;intégrale porte cette fois sur les temps négatifs et exige une partie imaginaire de signe opposé :</p>
+<p style="text-align:center;">
+$\displaystyle
+-\int_{-\infty}^{0}\!\mathrm dt\ \mathrm e^{\mathrm i\omega t}\,\mathrm e^{-\mathrm iE^{(0)}_{\mathbf p}t}
+= \frac{\mathrm i}{\omega - E^{(0)}_{\mathbf p} - \mathrm i\epsilon}
+$
+</p>
+<p>Le $\pm\mathrm i\epsilon$ n&rsquo;est donc pas un ornement : c&rsquo;est la trace du sens du temps dans lequel chaque histoire se déroule. Le pôle de l&rsquo;électron est sous l&rsquo;axe réel, celui du trou est au-dessus.</p>
+</details>
+</div>
+<br>
+<div id="theo">
+<p style="text-align:center;">
+$\displaystyle
+\tilde G_0(\mathbf p, \omega) =
+\frac{\mathrm i\;\theta(|\mathbf p| - p_{\mathrm F})}{\omega - E^{(0)}_{\mathbf p} + \mathrm i\epsilon}
++ \frac{\mathrm i\;\theta(p_{\mathrm F} - |\mathbf p|)}{\omega - E^{(0)}_{\mathbf p} - \mathrm i\epsilon}
+$
+</p>
+<p>La version <b>habillée</b> s&rsquo;obtient par la substitution désormais familière : un facteur $Z_{\mathbf p}$ au numérateur, l&rsquo;énergie renormalisée $E_{\mathbf p}$ au dénominateur, et $\Gamma_{\mathbf p}$ à la place de $\epsilon$ ; s&rsquo;ajoute la partie multiparticule, qui est un continuum sans pôle isolé.</p>
+</div>
+<br>
+<h4 id="lire-loccupation-sur-le-propagateur">Lire l&rsquo;occupation sur le propagateur</h4>
+<p>La quantité que nous voulons prédire est la <b>distribution d&rsquo;impulsion</b> du fondamental, $n_{\mathbf p} = \langle\hat a^\dagger_{\mathbf p}\hat a_{\mathbf p}\rangle$ : le nombre moyen d&rsquo;électrons d&rsquo;impulsion $\mathbf p$.</p>
+<p>Or regardons la deuxième ligne de la définition du propagateur, celle qui vaut pour $t&lt;0$ : elle contient déjà $\langle\hat a^\dagger_{\mathbf p}(0)\,\hat a_{\mathbf p}(t)\rangle$, c&rsquo;est-à-dire presque exactement $n_{\mathbf p}$. Il ne manque qu&rsquo;à ramener les deux opérateurs au même instant, ce qui s&rsquo;obtient en faisant tendre $t$ vers zéro <i>par valeurs négatives</i> :</p>
+<div id="theo">
+<p style="text-align:center;">
+$\displaystyle
+n_{\mathbf p} = -\lim_{t\to0^-} G(\mathbf p, t)
+$
+</p>
+</div>
+<p>Trois remarques :</p>
+<ul style="margin-top:0.5em;">
+<li>Le signe moins&nbsp;: c'est le signe fermionique du produit ordonné, celui que nous avons pris soin d'écrire dans la définition. Pour des bosons, il n'y serait pas.</li>
+<li>La limite par la gauche&nbsp;: à $t = 0$ exactement, l'ordre des deux opérateurs est ambigu, et les deux ordres ne donnent pas la même chose puisque $\hat a\hat a^\dagger + \hat a^\dagger\hat a = 1$. Approcher par les temps négatifs est le seul moyen de sélectionner l'ordre $\hat a^\dagger\hat a$, celui qui compte les <i>électrons présents</i>. En approchant par $t\to0^+$, on obtiendrait $1 - n_{\mathbf p}$, c'est-à-dire le nombre de <i>places libres</i>. La limite est un choix d'ordre déguisé en question de continuité.</li>
+<li>Le facteur global dépend de la convention. Si le propagateur est défini  avec un $-\mathrm i$ devant la moyenne, cela donne $n_{\mathbf p} = -\mathrm i\lim_{t\to0^-}G$.</li>
+</ul>
+<br>
+<h4 id="le-calcul-du-saut">Le calcul du saut</h4>
+<p>Il ne reste qu&rsquo;à mettre le propagateur habillé dans cette formule. Repassons en fréquence :</p>
+<p style="text-align:center;">
+$\displaystyle
+n_{\mathbf p} = -\lim_{t\to0^-}\int\frac{\mathrm d\omega}{2\pi}\,\mathrm e^{-\mathrm i\omega t}\,\tilde G(\mathbf p,\omega)
+$
+</p>
+<p>Pour $t &lt; 0$, le facteur $\mathrm e^{-\mathrm i\omega t} = \mathrm e^{\mathrm i\omega|t|}$ décroît quand $\omega$ a une partie imaginaire <i>positive</i> : on referme donc le contour d&rsquo;intégration par le haut, et le théorème des résidus ne ramasse que les pôles du demi-plan supérieur.</p>
+<p>Et quels sont-ils ? Ceux qui portent $-\mathrm i\epsilon$, c&rsquo;est-à-dire, d&rsquo;après ce que nous venons d&rsquo;établir, exactement les pôles de <b>trous</b>, ceux qui n&rsquo;existent que pour $|\mathbf p| &lt; p_{\mathrm F}$. Le calcul se referme donc tout seul :</p>
+<div id="preuve">
+<details>
+<summary>Le résidu&nbsp;:</summary>
+<p>Pour $|\mathbf p| &lt; p_{\mathrm F}$, le terme de quasiparticule du propagateur habillé est $\mathrm iZ_{\mathbf p}/(\omega - E_{\mathbf p} - \mathrm i\Gamma_{\mathbf p})$, de pôle $\omega = E_{\mathbf p} + \mathrm i\Gamma_{\mathbf p}$, situé dans le demi-plan supérieur. En fermant par le haut (donc dans le sens direct) :</p>
+<p style="text-align:center;">
+$\displaystyle
+\int\frac{\mathrm d\omega}{2\pi}\,\mathrm e^{-\mathrm i\omega t}\,\frac{\mathrm iZ_{\mathbf p}}{\omega - E_{\mathbf p}-\mathrm i\Gamma_{\mathbf p}}
+= \frac{1}{2\pi}\,(2\pi\mathrm i)\,(\mathrm iZ_{\mathbf p})\,\mathrm e^{-\mathrm i(E_{\mathbf p}+\mathrm i\Gamma_{\mathbf p}) t}
+\;\xrightarrow[t\to0^-]{}\; -Z_{\mathbf p}
+$
+</p>
+<p>Le moins de la formule de lecture remet le résultat à l&rsquo;endroit, et il reste $Z_{\mathbf p}$. Pour $|\mathbf p| &gt; p_{\mathrm F}$, le pôle est dans l&rsquo;autre demi-plan, le contour ne l&rsquo;attrape pas, et la contribution de quasiparticule est nulle.</p>
+</details>
+</div>
+<p style="text-align:center;">
+$\displaystyle
+n_{\mathbf p} = Z_{\mathbf p}\,\theta(p_{\mathrm F} - |\mathbf p|) + \big(\text{fond multiparticule, régulier}\big)
+$
+</p>
+<p>Dernière étape, la lecture. Le fond multiparticule est une fonction <b>continue</b> de $|\mathbf p|$ : c&rsquo;est un continuum, sans pôle isolé, donc sans saut. Toute la discontinuité de $n_{\mathbf p}$ est portée par le premier terme, et l&rsquo;échelon $\theta$ en fixe la position, la surface de Fermi, tandis que $Z_{\mathbf p}$ en fixe la hauteur.</p>
+<br>
 <div id="theo">
 <p><b>Prédiction</b> : la distribution d&rsquo;impulsion d&rsquo;un métal en interaction conserve une <b>discontinuité à la surface de Fermi</b>, mais sa hauteur n&rsquo;est plus 1 : elle vaut $Z_{p_{\mathrm F}}$, le poids de quasiparticule. La marche du gaz de Fermi survit aux interactions, simplement rabotée.</p>
 <p>Cette prédiction se teste par diffusion Compton sur les métaux, et l&rsquo;accord est bon. Le poids de quasiparticule n&rsquo;est pas une fiction de théoricien : c&rsquo;est un nombre qu&rsquo;on mesure.</p>
@@ -2228,49 +2364,81 @@ $$</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:420px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/distributionimpulsion.png" style="box-shadow:none;background:none;">
 </div>
+<br>
 <h3 id="le-liquide-de-fermi-de-landau">Le liquide de Fermi de Landau</h3>
-<p>Landau propose une autre façon, phénoménologique et géniale, de penser les métaux : décrire un métal <i>fortement</i> en interaction comme presque identique au gaz de Fermi libre. C&rsquo;est devenu, sans grande exagération, le modèle standard du métal. Attention : les quasiparticules de Landau ne sont <b>pas</b> celles de la théorie des champs vues plus haut, et le livre les distingue soigneusement. Nous verrons la différence dans un instant.</p>
-<p>L&rsquo;idée maîtresse est la <b>continuité adiabatique</b>. On allume l&rsquo;interaction très lentement, et on postule que chaque état propre à une particule du gaz évolue continûment vers un état propre à une particule du liquide. Chaque électron du gaz, y compris ceux enfouis au fond de la mer de Fermi, devient une quasiparticule de Landau : la correspondance est <b>un pour un</b>, et la distribution d&rsquo;impulsion du fondamental est inchangée.</p>
+<p>Landau propose une autre façon, phénoménologique, de penser les métaux : décrire un métal <i>fortement</i> en interaction comme presque identique au gaz de Fermi libre. L&rsquo;idée paraît saugrenue : comment des électrons interagissant fortement au sein du métal, comme dans un liquide, pourraient être modélisés par un gaz ? Mmais c&rsquo;est pourtant devenu le modèle standard du métal.<br>
+Attention : les quasiparticules de Landau ne sont pas celles de la théorie des champs vues plus haut. Nous verrons la différence dans un instant.</p>
+<p>L&rsquo;idée maîtresse est la <b>continuité adiabatique</b>. On allume l&rsquo;interaction très lentement, et on postule que chaque état propre à une particule du gaz évolue continûment vers un état propre à une particule du liquide. Chaque électron du gaz, y compris ceux enfouis au fond de la mer de Fermi, devient une quasiparticule de Landau : la correspondance est <b>un pour un</b>, et la distribution d&rsquo;impulsion du fondamental est inchangée. Chaque électron fini habillé par son nuage d&rsquo;interaction.</p>
 <div id="preuve">
 <p>Pourquoi la correspondance un pour un tient-elle ? Parce que les niveaux d&rsquo;énergie ne se croisent pas pendant l&rsquo;allumage. L&rsquo;argument est le théorème de non-croisement de la mécanique quantique ordinaire : si deux niveaux dégénérés d&rsquo;énergie $E$ sont couplés par un élément de matrice $\delta$, le hamiltonien $2\times2$</p>
-<p>$$
-H = \begin{pmatrix} E &amp; \delta\ \delta &amp; E\end{pmatrix}
-$$</p>
-<p>a des valeurs propres $E \pm \delta$ : les niveaux se <i>repoussent</i> dès qu&rsquo;un élément de matrice existe entre eux, et ne se croisent jamais. La seule exception se produit quand l&rsquo;élément de matrice est nul par symétrie, et c&rsquo;est précisément ce qui arrive à une transition de phase (le système trouve un fondamental de symétrie plus basse). Donc, <b>en l&rsquo;absence de transition de phase</b>, l&rsquo;identité de chaque état est préservée tout au long de l&rsquo;allumage.</p>
-<p>Ce qu&rsquo;on met sous le tapis : la vitesse d&rsquo;allumage est prise dans une fenêtre délicate. Trop rapide, l&rsquo;évolution n&rsquo;est pas adiabatique ; trop lente (plus lente que $\Gamma^{-1}$), la quasiparticule excitée a le temps de se désintégrer et perd son identité. L&rsquo;existence même d&rsquo;un liquide quantique suppose qu&rsquo;une telle fenêtre existe.</p>
+<p style="text-align:center;">
+$\displaystyle
+H = \begin{pmatrix} E & \delta\\ \delta & E\end{pmatrix}
+$
+</p>    
+<p>a des valeurs propres $E \pm \delta$ : les niveaux se <i>repoussent</i> dès qu&rsquo;un élément de matrice existe entre eux, et ne se croisent jamais.</p>
+<p>La seule exception se produit quand l&rsquo;élément de matrice est nul par symétrie, et c&rsquo;est précisément ce qui arrive à une transition de phase (le système trouve un fondamental de symétrie plus basse).</p>
+<p>Donc, <b>en l&rsquo;absence de transition de phase</b>, l&rsquo;identité de chaque état est préservée tout au long de l&rsquo;allumage.</p>
 </div>
 <!-- Figure à redessiner (L&B fig. 31.7) : niveaux d'énergie en fonction du paramètre d'allumage λ (de 0 à 1). Cinq ou six courbes horizontales qui se déforment ; deux d'entre elles se rapprochent au milieu puis se repoussent visiblement sans se croiser. Annoter « sans interaction » à gauche, « en interaction » à droite. Légende : les niveaux se repoussent et ne se croisent jamais, chaque état garde son identité -->
-<div style="position:relative;margin-left:auto;margin-right:auto;width:380px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:320px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/repulsionniveaux.png" style="box-shadow:none;background:none;">
 </div>
-<p>Mesurons l&rsquo;écart avec les quasiparticules de la théorie des champs. En théorie des champs, le fondamental $|\Omega\rangle$ ne contient <i>aucune</i> quasiparticule, et l&rsquo;existence d&rsquo;une quasiparticule est suspendue à $Z_{\mathbf p} \neq 0$. Chez Landau, le fondamental contient autant de quasiparticules qu&rsquo;il y avait d&rsquo;électrons, elles portent la même charge que l&rsquo;électron (ce qui garantit la conservation de la charge), et leur existence ne doit rien à $Z$.</p>
-<p>Où les deux images se rejoignent-elles ? Sur les états faiblement excités. Ajoutons un électron d&rsquo;impulsion $|\mathbf p&rsquo;| &gt; p_{\mathrm F}$ et allumons : contrairement aux électrons de la mer, cet électron excité a de l&rsquo;espace de phase pour diffuser, et il acquiert une durée de vie finie. Le principe de Pauli restreint sévèrement cet espace de phase : pour diffuser, il faut deux états finals au-dessus de $p_{\mathrm F}$ et un partenaire pris juste sous $p_{\mathrm F}$, et la fenêtre d&rsquo;énergie disponible se referme quadratiquement quand on s&rsquo;approche de la surface. Le taux de désintégration en découle :</p>
-<p>$$
+<p>Mesurons l&rsquo;écart avec les quasiparticules de la théorie des champs.<br>
+En théorie des champs, le fondamental $|\Omega\rangle$ ne contient <i>aucune</i> quasiparticule, et l&rsquo;existence d&rsquo;une quasiparticule est suspendue à $Z_{\mathbf p} \neq 0$. Chez Landau, le fondamental contient autant de quasiparticules qu&rsquo;il y avait d&rsquo;électrons, elles portent la même charge que l&rsquo;électron (ce qui garantit la conservation de la charge), et leur existence ne doit rien à $Z$.</p>
+<p>Où les deux images se rejoignent-elles ?<br>
+Sur les états faiblement excités. Ajoutons un électron d&rsquo;impulsion $|\mathbf p&rsquo;| &gt; p_{\mathrm F}$ et allumons : contrairement aux électrons de la mer, cet électron excité a de l&rsquo;espace de phase pour diffuser, et il acquiert une durée de vie finie. Le principe de Pauli restreint sévèrement cet espace de phase !</p>
+<p>il faut deux états finals au-dessus de $p_{\mathrm F}$ et un partenaire pris juste sous $p_{\mathrm F}$, et la fenêtre d&rsquo;énergie disponible se referme quadratiquement quand on s&rsquo;approche de la surface. Le taux de désintégration en découle :</p>
+<p style="text-align:center;">
+$\displaystyle
 \Gamma_{\mathbf p} \propto (|\mathbf p| - p_{\mathrm F})^2
-$$</p>
-<p>tandis que l&rsquo;énergie vaut $E_{\mathbf p} \approx v_{\mathrm F}(|\mathbf p| - p_{\mathrm F})$, linéaire. Près de la surface de Fermi, le linéaire bat toujours le quadratique : $E_{\mathbf p} &gt; \Gamma_{\mathbf p}$, et la quasiparticule est bien définie. Loin de la surface, elle ne l&rsquo;est plus. <b>La notion de quasiparticule dans un métal n&rsquo;a de sens qu&rsquo;au voisinage de la surface de Fermi</b>, et c&rsquo;est exactement là que vit la physique de basse température.</p>
-<p>Le dernier étage de la construction de Landau est un développement de l&rsquo;énergie d&rsquo;un état faiblement excité en puissances des écarts d&rsquo;occupation $\delta n_{\mathbf p} = n_{\mathbf p} - n^{(0)}_{\mathbf p}$ :</p>
-<p>$$
-E = E_g + \sum_{\mathbf p},(E^{(0)}<em>{\mathbf p} - \mu),\delta n</em>{\mathbf p}</p>
-<ul>
-<li>\frac12\sum_{\mathbf p\mathbf p&rsquo;} f_{\mathbf p\mathbf p&rsquo;},\delta n_{\mathbf p},\delta n_{\mathbf p&rsquo;} + \cdots
-$$</li>
+$
+</p>
+<div id="preuve">
+<details>
+<summary>Détails</summary>
+<p>Pour diffuser, l&rsquo;électron de départ (particule 1, d&rsquo;énergie $E_1&gt;0$ en plaçant le niveau zéro à l&rsquo;énergie de Fermi) doit cogner un électron du liquide (particule 2, d&rsquo;énergie $E_2 &lt; 0$) pour donner naissance à deux électrons déviés (particules 3 et 4). Le principe de Pauli interdit à un électron d&rsquo;aller sur une place déjà occupée. Or, toute la mer de Fermi (sous le niveau zéro) est complètement pleine ! Les particules 3 et 4 sont donc obligées de finir leur course au-dessus de la mer de Fermi : leurs énergies finales doivent être $E_3 &gt; 0$ et $E_4 &gt; 0$.</p>
+<p>Et par conservation de l&rsquo;énergie, $E_1+E_2=E_3+E_4$.<br>
+Puisque $E_3$ et $E_4$ sont strictement positifs, leur somme est positive. Cela implique obligatoirement que $(E_1 + E_2) &gt; 0$, et donc que $E_2 &gt; -E_1$.<br></p>
+<p>C&rsquo;est une grosse contrainte !</p>
+<ul style="margin-top:-0em; margin-bottom:-0em;">
+<li>Le partenaire de collision (particule 2) ne peut pas être pris n'importe où au fond du liquide : il doit être pris dans une minuscule tranche juste sous la surface de Fermi, d'une épaisseur maximale $E_1$. (C'est le premier facteur limitant, proportionnel à $E_1$).</li>
+<li>Une fois la particule 2 choisie, les particules 3 et 4 doivent se partager la petite énergie restante ($E_1 + E_2$). Le nombre de configurations finales possibles est lui aussi proportionnel à cette petite énergie $E_1$. (C'est le second facteur limitant, proportionnel à $E_1$).</li>
 </ul>
-<p>Le génie du geste est de développer en une quantité que l&rsquo;on <i>connaît</i> ($\delta n_{\mathbf p}$, le nombre d&rsquo;excitations) plutôt qu&rsquo;en des quantités inaccessibles. Le terme quadratique $f_{\mathbf p\mathbf p&rsquo;}$ encode toutes les interactions entre quasiparticules ; décomposé en polynômes de Legendre (après restauration du spin), il livre les <b>paramètres de Landau</b> $F^{\mathrm s}<em>\ell, F^{\mathrm a}</em>\ell$, un petit jeu de nombres qui fixe les observables : par exemple $m^* = m,(1 + F^{\mathrm s}_1)$ pour la masse effective, et la susceptibilité de spin en $1/(1+F^{\mathrm a}_0)$. Une théorie complète du métal tient dans une poignée de constantes phénoménologiques, et les traitements diagrammatiques lourds confirment ses prédictions.</p>
+<p>En multipliant ces deux probabilités (choix du partenaire $\times$ choix de l&rsquo;état final), on trouve que la probabilité totale de faire une collision (le taux de désintégration $\Gamma$) est proportionnelle à $(E_1)^2$.
+Puisque l&rsquo;énergie $E_1$ est proportionnelle à la distance à la surface $(\vert \mathbf p\vert  - p_{\mathrm F})$, on obtient :</p>
+<p style="text-align:center;">
+$\displaystyle
+\Gamma_{\mathbf p} \propto (\vert{}\mathbf p\vert{} - p_{\mathrm F})^2
+$
+</p>
+</details>
+</div>
+<p>L&rsquo;énergie, elle, vaut $E_{\mathbf p} \approx v_{\mathrm F}(|\mathbf p| - p_{\mathrm F})$, linéaire. Près de la surface de Fermi, le linéaire bat toujours le quadratique : $E_{\mathbf p} &gt; \Gamma_{\mathbf p}$, et la quasiparticule est bien définie. Loin de la surface, elle ne l&rsquo;est plus. <b>La notion de quasiparticule dans un métal n&rsquo;a de sens qu&rsquo;au voisinage de la surface de Fermi</b>, et c&rsquo;est exactement là que vit la physique de basse température.</p>
+<p>Le dernier étage de la construction de Landau est un développement de l&rsquo;énergie d&rsquo;un état faiblement excité en puissances des écarts d&rsquo;occupation $\delta n_{\mathbf p} = n_{\mathbf p} - n^{(0)}_{\mathbf p}$ :</p>
+<p style="text-align:center;">
+$\displaystyle
+E = E_g + \sum_{\mathbf p}\,(E^{(0)}_{\mathbf p} - \mu)\,\delta n_{\mathbf p}
++ \frac12\sum_{\mathbf p\mathbf p'} f_{\mathbf p\mathbf p'}\,\delta n_{\mathbf p}\,\delta n_{\mathbf p'} + \cdots
+$
+</p>
+<p>On développe ainsi en une quantité que l&rsquo;on <i>connaît</i> ($\delta n_{\mathbf p}$, le nombre d&rsquo;excitations) plutôt qu&rsquo;en des quantités inaccessibles. Le terme quadratique $f_{\mathbf p\mathbf p&rsquo;}$ encode toutes les interactions entre quasiparticules ; décomposé en polynômes de Legendre (après restauration du spin), il livre les <b>paramètres de Landau</b> $F^{\mathrm s}_\ell, F^{\mathrm a}_\ell$, un petit jeu de nombres qui fixe les observables : par exemple $m^* = m\,(1 + F^{\mathrm s}_1)$ pour la masse effective, et la susceptibilité de spin en $1/(1+F^{\mathrm a}_0)$. Une théorie complète du métal tient dans une poignée de constantes phénoménologiques, et les traitements diagrammatiques lourds confirment ses prédictions.</p>
 <br>
 <h3 id="bilan">Bilan</h3>
 <div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 |0\rangle,\ \hat a^\dagger_{\mathbf p},\ m
-;\xrightarrow{\ \text{allumage adiabatique}\ };
-\hat a^\dagger_{\mathbf p}|\Omega\rangle = Z_{\mathbf p}^{1/2}|{\mathbf p}<em>\lambda\rangle + \text{multip.}
-;\xrightarrow{\ \tilde G\ };
-\text{pôle } m</em>{\mathrm P},\ \text{résidu } \mathrm iZ,\ \text{largeur } \Gamma
-;\xrightarrow{\ \text{métal}\ };
+\;\xrightarrow{\ \text{allumage adiabatique}\ }\;
+\hat a^\dagger_{\mathbf p}|\Omega\rangle = Z_{\mathbf p}^{1/2}|{\mathbf p}_\lambda\rangle + \text{multip.}
+\;\xrightarrow{\ \tilde G\ }\;
+\text{pôle } m_{\mathrm P},\ \text{résidu } \mathrm iZ,\ \text{largeur } \Gamma
+\;\xrightarrow{\ \text{métal}\ }\;
 \text{saut } Z_{p_{\mathrm F}}\ \text{à la surface de Fermi}
-;\xrightarrow{\ \text{Landau}\ };
+\;\xrightarrow{\ \text{Landau}\ }\;
 \Gamma \propto (|\mathbf p|-p_{\mathrm F})^2,\ m^* = m(1+F^{\mathrm s}_1)
-$$</p>
+$
+</p>
 </div>
 <h3 id="pièges">Pièges</h3>
 <ul>
@@ -2279,116 +2447,242 @@ $$</p>
 <li>Dans le propagateur habillé, $\Gamma_{\mathbf p}$ occupe la place de l'infinitésimal $\epsilon$&nbsp;: la prescription de contour devient une physique (durée de vie finie), ce n'est plus un artifice de calcul.</li>
 <li>Une quasiparticule n'a de sens que si $E_{\mathbf p} > \Gamma_{\mathbf p}$&nbsp;: dans un métal, cela restreint la notion au voisinage de la surface de Fermi, puisque $E$ est linéaire et $\Gamma$ quadratique en $(|\mathbf p| - p_{\mathrm F})$.</li>
 <li>Le renversement de vocabulaire de la matière condensée&nbsp;: le «&nbsp;vide&nbsp;» d'un métal contient $10^{23}$ particules. Vide signifie «&nbsp;sans excitation&nbsp;», pas «&nbsp;sans rien&nbsp;».</li>
-<li>$Z^{1/2}$ est une amplitude, $Z$ un poids (une probabilité)&nbsp;: le saut de $n_{\mathbf p}$ vaut $Z$, l'élément de matrice vaut $Z^{1/2}$. Gare aux racines carrées perdues.</li>
-<li>Message central à retenir pour la suite&nbsp;: <b>la renormalisation n'est pas une machine à effacer les infinis</b>. Elle est nécessaire pour toute théorie en interaction, avec ou sans divergences (le gaz d'électrons en a peu, l'électrodynamique quantique en a beaucoup, la physique de l'habillage est la même).</li>
+<li>$Z^{1/2}$ est une amplitude, $Z$ un poids (une probabilité)&nbsp;: le saut de $n_{\mathbf p}$ vaut $Z$, l'élément de matrice vaut $Z^{1/2}$.</li>
+<li>Dans $n_{\mathbf p} = -\lim_{t\to0^-}G(\mathbf p,t)$, <b>le sens de la limite est le contenu de la formule</b>, pas une précaution&nbsp;: par la gauche on compte les électrons présents, par la droite on compterait les places libres, $1 - n_{\mathbf p}$. Et le signe moins est le signe fermionique du produit ordonné, pas une convention.</li>
+<li>Le propagateur d'un métal a <b>deux termes</b> parce que le fondamental est plein&nbsp;: électrons au-dessus de $p_{\mathrm F}$, trous en dessous, avec des prescriptions $\pm\mathrm i\epsilon$ opposées puisque les deux histoires se déroulent dans des sens du temps opposés. Rien de tel dans le vide relativiste, où le même opérateur agit pour toutes les impulsions.</li>
+<li>Le facteur global des relations propagateur-observable dépend de la convention adoptée pour le $\mathrm i$&nbsp;: les textes qui posent $G = -\mathrm i\langle T\cdots\rangle$ écrivent $n_{\mathbf p} = -\mathrm i\lim_{t\to0^-}G$. Vérifier la convention avant de comparer deux formules.</li>
+<li><b>La renormalisation n'est pas une machine à effacer les infinis</b>. Elle est nécessaire pour toute théorie en interaction, avec ou sans divergences (le gaz d'électrons en a peu, l'électrodynamique quantique en a beaucoup, la physique de l'habillage est la même).</li>
 </ul>
 <br>
 <h2 id="le-problème-divergences-et-sa-solution-contretermes">Le problème (divergences) et sa solution (contretermes)</h2>
 <h3 id="le-problème">Le problème</h3>
 <p>Le diagnostic tient en trois intégrales, avec $a$ fini et positif :</p>
-<p>$$
-\int_a^{\infty}\mathrm dx, x^n \ \text{diverge pour } n \geq 0,
-\qquad
-\int_a^{\infty}\frac{\mathrm dx}{x} = [\ln x]_a^{\infty} \ \text{diverge},
-\qquad
-\int_a^{\infty}\frac{\mathrm dx}{x^m} = \frac{a^{-m+1}}{m-1} \ \text{converge pour } m&gt;1
-$$</p>
-<p>Le deuxième cas, où numérateur et dénominateur portent autant de puissances, s&rsquo;appelle une divergence <b>logarithmique</b>. Reprenons la théorie $\phi^4$,</p>
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
+\int_a^{\infty}\mathrm dx\, x^n \ \text{diverge pour } n \geq 0
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+\int_a^{\infty}\frac{\mathrm dx}{x} = [\ln x]_a^{\infty} \ \text{diverge}
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+\int_a^{\infty}\frac{\mathrm dx}{x^m} = \frac{a^{-m+1}}{m-1} \ \text{converge pour } m>1
+$
+</p>
+<p>Le deuxième cas, où numérateur et dénominateur portent autant de puissances, s&rsquo;appelle une divergence <b>logarithmique</b>.</p>
+<p>Reprenons la théorie $\phi^4$ :</p>
+<p style="text-align:center;">
+$\displaystyle
 \mathcal L = \frac12(\partial_\mu\phi)^2 - \frac{m^2}{2}\phi^2 - \frac{\lambda}{4!}\phi^4
-$$</p>
-<p>et calculons enfin, jusqu&rsquo;au bout, l&rsquo;amplitude de diffusion à deux particules au deuxième ordre. Quatre diagrammes contribuent : le vertex nu, et trois boucles (une par canal $s$, $t$, $u$).</p>
+$
+</p>
+<p>Et calculons enfin, jusqu&rsquo;au bout, l&rsquo;amplitude de diffusion à deux particules au deuxième ordre. Quatre diagrammes contribuent : le vertex nu, et trois boucles (une par canal $s$, $t$, $u$).</p>
 <!-- Figure à redessiner (L&B fig. 32.1) : quatre diagrammes de Feynman à quatre pattes externes p1, p2 entrantes et p3, p4 sortantes. (a) le vertex ponctuel -iλ ; (b) la boucle du canal s : deux vertex reliés par deux propagateurs internes q et p1+p2-q ; (c) la boucle du canal t ; (d) la boucle du canal u. Légende : au deuxième ordre, chaque canal apporte une boucle logarithmiquement divergente -->
-<div style="position:relative;margin-left:auto;margin-right:auto;width:420px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:480px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/quatrepattes.png" style="box-shadow:none;background:none;">
 </div>
 <div id="preuve">
-<p>Le vertex nu donne $\mathrm i\mathcal M_a = -\mathrm i\lambda$. Chaque boucle demande l&rsquo;intégrale</p>
-<p>$$
-\int_0^{\Lambda}\frac{\mathrm d^4q}{(2\pi)^4},
-\frac{\mathrm i}{q^2 - m^2 + \mathrm i\epsilon},
+<p>Le vertex nu donne $\mathrm i\mathcal M_a = -\mathrm i\lambda$.</p>
+<p>Chaque boucle demande l&rsquo;intégrale</p>
+<p style="text-align:center;">
+$\displaystyle
+\int_0^{\Lambda}\frac{\mathrm d^4q}{(2\pi)^4}\,
+\frac{\mathrm i}{q^2 - m^2 + \mathrm i\epsilon}\,
 \frac{\mathrm i}{(p-q)^2 - m^2 + \mathrm i\epsilon}
-= -4\mathrm i a \ln!\Big(\frac{\Lambda}{p}\Big)
-$$</p>
-<p>où $a$ est une constante numérique dont la valeur exacte ne nous servira pas, et où l&rsquo;on a coupé l&rsquo;intégrale à une grande impulsion $\Lambda$. Le comptage des puissances annonce le résultat : quatre puissances d&rsquo;impulsion en haut, quatre en bas, l&rsquo;intégrale se comporte comme $\int\mathrm d^4q/q^4$, logarithmiquement divergente quand $\Lambda \to \infty$. En sommant les quatre diagrammes :</p>
-<p>$$
-\mathrm i\mathcal M = -\mathrm i\lambda + \mathrm i a\lambda^2,\big(3\ln\Lambda^2 - \ln s - \ln t - \ln u\big)
-$$</p>
+= -4\mathrm i a \ln\!\Big(\frac{\Lambda}{p}\Big)
+$
+</p>
+<p>où $a$ est une constante numérique dont la valeur exacte ne nous servira pas, et où l&rsquo;on a coupé l&rsquo;intégrale à une grande impulsion $\Lambda$.</p>
+<p>Le comptage des puissances annonce le résultat : quatre puissances d&rsquo;impulsion en haut, quatre en bas, l&rsquo;intégrale se comporte comme $\int\mathrm d^4q/q^4$, logarithmiquement divergente quand $\Lambda \to \infty$.</p>
+<p>Pour les diagrammes (b) à (d), on obtient ainsi :</p>
+<ul style="margin-top:-0em; margin-bottom:-0em;">
+<li>$\mathrm{i} \mathcal{M}_{\mathrm{b}}=\mathrm{i} a \lambda^2\left\{\ln \Lambda^2-\ln \left[\left(p_1+p_2\right)^2\right]\right\}=\mathrm{i} a \lambda^2\left\{\ln \Lambda^2-\ln s\right\}$</li>
+<li>$\mathrm{i} \mathcal{M}_{\mathrm{c}}=\mathrm{i} a \lambda^2\left\{\ln \Lambda^2-\ln \left[\left(p_1-p_3\right)^2\right]\right\}=\mathrm{i} a \lambda^2\left\{\ln \Lambda^2-\ln t\right\}$</li>
+<li>$\mathrm{i} \mathcal{M}_{\mathrm{d}}=\mathrm{i} a \lambda^2\left\{\ln \Lambda^2-\ln \left[\left(p_1-p_4\right)^2\right]\right\}=\mathrm{i} a \lambda^2\left\{\ln \Lambda^2-\ln u\right\}$</li>
+</ul>
+<p>En sommant les quatre diagrammes :</p>
+<p style="text-align:center;">
+$\displaystyle
+\mathrm i\mathcal M = -\mathrm i\lambda + \mathrm i a\lambda^2\,\big(3\ln\Lambda^2 - \ln s - \ln t - \ln u\big)
+$
+</p>
 <p>Le terme $3\mathrm i a\lambda^2\ln\Lambda^2 \propto \ln\Lambda$ explose quand $\Lambda\to\infty$. Une prédiction infinie n&rsquo;est pas une prédiction : c&rsquo;est un désastre.</p>
 </div>
 <p>Couper l&rsquo;intégrale à $\Lambda$ fini est un geste pragmatique parfaitement honorable : cela revient à renoncer délibérément aux détails du champ plus fins que $1/\Lambda$. En matière condensée c&rsquo;est même la routine (on ignore ce qui est plus petit que l&rsquo;atome). Pour les particules fondamentales, la justification est moins claire, mais vivons avec, inconfortablement. Le vrai problème est ailleurs : les amplitudes calculées <b>dépendent de $\Lambda$</b>, une constante arbitraire. Il faut l&rsquo;évacuer.</p>
+<br>
 <h3 id="la-solution">La solution</h3>
 <div id="def">
 <p>Un <b>contreterme</b> est un terme ajouté au lagrangien, choisi pour annuler la dépendance en $\Lambda$ des amplitudes à un ordre donné de la théorie des perturbations. Pour tuer le $3\mathrm ia\lambda^2\ln\Lambda^2 = 6\mathrm ia\lambda^2\ln\Lambda$ ci-dessus, on ajoute</p>
-<p>$$
-\mathcal L ;\to; \mathcal L + \frac{C^{(2)}}{4!}\phi^4
-\qquad\text{avec}\qquad
+<p style="text-align:center;">
+$\displaystyle
+\mathcal L \;\to\; \mathcal L + \frac{C^{(2)}}{4!}\phi^4\;
+$
+avec
+$\displaystyle
 C^{(2)} = -6a\lambda^2\ln\Lambda
-$$</p>
+$
+</p>
 <p>L&rsquo;exposant $(2)$ rappelle que ce coefficient nettoie le deuxième ordre. Comme le contreterme est en $\phi^4$, il se comporte comme le terme d&rsquo;interaction et fournit un nouveau vertex de règle de Feynman $\mathrm iC^{(2)}$.</p>
 </div>
 <p>On recommence alors tout le programme (quantification canonique, développement de Dyson, diagrammes) avec le lagrangien complété, et au deuxième ordre il suffit d&rsquo;ajouter un diagramme de contreterme :</p>
-<p>$$
+<div style="position:relative;margin-left:auto;margin-right:auto;width:180px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/diagcontreterme.png" style="box-shadow:none;background:none;">
+</div>
+<p style="text-align:center;">
+$\displaystyle
 \mathrm i\mathcal M^{(2)} = -\mathrm i\lambda + \mathrm ia\lambda^2\big(3\ln\Lambda^2 - \ln s - \ln t - \ln u\big) + \mathrm iC^{(2)}
-= -\mathrm i\lambda - \mathrm ia\lambda^2,\big(\ln s + \ln t + \ln u\big)
-$$</p>
+= -\mathrm i\lambda - \mathrm ia\lambda^2\,\big(\ln s + \ln t + \ln u\big)
+$
+</p>
 <p>L&rsquo;amplitude dépend des impulsions (c&rsquo;est normal, c&rsquo;est de la physique) mais plus du tout de $\Lambda$. Mission accomplie, au deuxième ordre.</p>
+<br>
 <h3 id="apprivoiser-une-intégrale-quelconque">Apprivoiser une intégrale quelconque</h3>
 <p>On pourrait craindre une fuite en avant : et si le troisième ordre exigeait un contreterme en $\phi^6$, puis le vingt-septième ordre 513 contretermes inédits ? Une théorie pourrait ne jamais cesser d&rsquo;absorber de nouveaux types de contretermes. Le miracle de la renormalisation est que, pour une large classe de théories, <b>un petit nombre fixe de types de contretermes suffit à tous les ordres</b> (trois pour l&rsquo;électrodynamique quantique). Seuls les coefficients $C^{(n)}$ changent d&rsquo;ordre en ordre, et ils se calculent. Ces théories sont dites <b>renormalisables</b>.</p>
+<div id="preuve">
 <p>La méthode systématique s&rsquo;illustre sur le diagramme de Saturne (une self-énergie à deux boucles).</p>
 <!-- Figure à redessiner (L&B fig. 32.3) : le diagramme de Saturne : une ligne horizontale portant l'impulsion p entre et sort, interrompue par deux vertex reliés par trois propagateurs internes q, k et p-q-k formant un anneau double autour de la ligne. Légende : deux boucles, huit puissances d'impulsion en haut, six en bas, divergence quadratique -->
-<div style="position:relative;margin-left:auto;margin-right:auto;width:320px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
-<img src="/saturne.png" style="box-shadow:none;background:none;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:220px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/diagsaturne.png" style="box-shadow:none;background:none;">
 </div>
-<div id="preuve">
-<p>L&rsquo;idée clé, qui rend tout systématique : <b>un diagramme de Feynman se développe en série de Taylor de l&rsquo;impulsion externe</b>. Pour Saturne, la symétrie $\phi \to -\phi$ du lagrangien interdit les puissances impaires, donc</p>
-<p>$$
-I = \alpha + \beta,p^2 + \gamma,p^4 + \cdots
-$$</p>
+<p>L&rsquo;amplitude correspondante est  :</p>
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle
+\mathrm{i} \mathcal{M}=\frac{(-\mathrm{i} \lambda)^2}{6} \int_0^{\Lambda} \frac{\mathrm{d}^4 q}{(2 \pi)^4} \frac{\mathrm{~d}^4 k}{(2 \pi)^4} \frac{\mathrm{i}}{q^2-m^2+\mathrm{i} \epsilon} \frac{\mathrm{i}}{k^2-m^2+\mathrm{i} \epsilon} \frac{\mathrm{i}}{(p-q-k)^2-m^2+\mathrm{i} \epsilon}
+$
+</p>
+<p>Appelons $I$ cette intégrale.</p>
+<p>L&rsquo;idée clé, qui rend tout systématique : <b>un diagramme de Feynman se développe en série de Taylor de l&rsquo;impulsion externe</b>.</p>
+<p>Pour Saturne, la symétrie $\phi \to -\phi$ du lagrangien interdit les puissances impaires, donc</p>
+<p style="text-align:center;">
+$\displaystyle
+I = \alpha + \beta\,p^2 + \gamma\,p^4 + \cdots
+$
+</p>
 <p>Toute la divergence est concentrée dans les <i>coefficients</i> de ce polynôme, et on la localise en dérivant :</p>
 <ul style="margin-top:0.5em;">
 <li>À $p = 0$, $I = \alpha$. Le comptage de puissances (huit en haut, six en bas) dit que $\alpha$ diverge <b>quadratiquement</b> en $\Lambda$.</li>
 <li>Deux dérivations en $p$ retirent deux puissances au numérateur&nbsp;: $I'' = 2\beta$ diverge <b>logarithmiquement</b>.</li>
 <li>Deux dérivations de plus rendent l'intégrale convergente&nbsp;: $\gamma$ et la suite sont finis, on s'arrête là.</li>
 </ul>
-<p>Il faut donc deux contretermes : un coefficient $A$ (quadratique en $\Lambda$) sans facteur cinématique, et un coefficient $B$ (logarithmique) accompagné d&rsquo;un facteur $p^2$. Comment obtenir un facteur $p^2$ depuis le lagrangien ? Par un terme de gradient, puisqu&rsquo;en espace des impulsions $(\partial_\mu\phi)^2 \to p^2$. D&rsquo;où les contretermes</p>
-<p>$$
+<p>La série de Taylor permet donc d&rsquo;isoler toute la « maladie » de l&rsquo;infini dans les tous premiers termes de la série (qui sont de simples constantes), tandis que la queue infinie de la série est totalement saine.</p>
+<p>Il faut donc deux contretermes : un coefficient $A$ (quadratique en $\Lambda$) sans facteur cinématique, et un coefficient $B$ (logarithmique) accompagné d&rsquo;un facteur $p^2$.</p>
+<p>Comment obtenir un facteur $p^2$ depuis le lagrangien ? Par un terme de gradient, puisqu&rsquo;en espace des impulsions $(\partial_\mu\phi)^2 \to p^2$. D&rsquo;où les contretermes</p>
+<p style="text-align:center;">
+$\displaystyle
 \mathcal L_{\text{ct}} = \frac{A}{2}\phi^2 + \frac{B}{2}(\partial_\mu\phi)^2
-$$</p>
-<p>de règle de Feynman combinée $\mathrm i,(B^{(n)}p^2 + A^{(n)})$ sur une ligne de propagateur.</p>
+$
+</p>
+<p>Leur règle de Feynman combinée est $\mathrm i\,(B^{(n)}p^2 + A^{(n)})$ sur une ligne de propagateur.</p>
 </div>
+<br>
 <div id="theo">
 <p>Le lagrangien complet de la théorie $\phi^4$ <b>renormalisée</b> s&rsquo;écrit</p>
-<p>$$
-\mathcal L = \frac12(\partial_\mu\phi)^2 - \frac{m^2}{2}\phi^2 - \frac{\lambda}{4!}\phi^4</p>
-<ul>
-<li>\frac{A}{2}\phi^2 + \frac{B}{2}(\partial_\mu\phi)^2 + \frac{C}{4!}\phi^4
-$$</li>
-</ul>
+<p style="text-align:center;">
+$\displaystyle
+\mathcal L = \frac12(\partial_\mu\phi)^2 - \frac{m^2}{2}\phi^2 - \frac{\lambda}{4!}\phi^4
++ \frac{A}{2}\phi^2 + \frac{B}{2}(\partial_\mu\phi)^2 + \frac{C}{4!}\phi^4
+$
+</p>    
 <p>Observation capitale : <b>chaque contreterme a exactement la même forme qu&rsquo;un terme déjà présent</b>. Seuls les coefficients diffèrent. Cette coïncidence n&rsquo;en est pas une, et le paragraphe suivant en révèle le sens.</p>
 </div>
+<br>
 <h3 id="ce-que-les-contretermes-veulent-dire">Ce que les contretermes veulent dire</h3>
-<p>Nous avons ajouté des termes au lagrangien : n&rsquo;avons-nous pas changé la physique ? La réponse est le cœur conceptuel du chapitre. En collectant les coefficients du lagrangien renormalisé et en posant $-A = \delta m^2$, $-C = \delta\lambda$, $B = \delta Z$, tout se réorganise en</p>
-<p>$$
-\phi = \sqrt Z,\phi_r,
-\qquad
+<p>Nous avons ajouté trois termes au lagrangien : n&rsquo;avons-nous pas changé la physique ? La réponse est le cœur conceptuel du chapitre.</p>
+<h4 id="un-précédent-entièrement-classique">Un précédent entièrement classique</h4>
+<p>Avant toute théorie des champs, un détour par l&rsquo;oscillateur anharmonique classique :</p>
+<p style="text-align:center;">
+$\displaystyle
+\ddot x + \omega_0^2\,x + \varepsilon\,x^3 = 0
+$
+</p>
+<p>Cherchons sa solution en perturbation, en développant $x = x_0 + \varepsilon x_1 + \cdots$ autour de la solution libre $x_0 = A\cos\omega_0 t$.</p>
+<p>À l&rsquo;ordre $\varepsilon$, l&rsquo;équation pour $x_1$ est celle d&rsquo;un oscillateur de fréquence $\omega_0$ <b>forcé à sa propre fréquence de résonance</b>, puisque $x_0^3$ contient un terme en $\cos\omega_0 t$. La réponse résonnante croît linéairement en temps : on obtient un terme dit <b>séculaire</b>, proportionnel à $t\sin\omega_0 t$, qui diverge quand $t\to\infty$. Le développement perturbatif s&rsquo;effondre aux grands temps, alors que le mouvement réel est parfaitement borné et périodique.</p>
+<p>Le diagnostic n&rsquo;est pas que la perturbation serait trop forte. C&rsquo;est que <b>l&rsquo;anharmonicité change la période de l&rsquo;oscillateur</b>, et qu&rsquo;en insistant pour tout écrire en fonction de $\omega_0$, on demande à la série de reproduire un décalage de fréquence en empilant des termes qui divergent. Le remède, dû à Lindstedt et Poincaré, consiste à introduire la vraie fréquence $\omega$ et à écrire l&rsquo;ancienne en fonction d&rsquo;elle :</p>
+<p style="text-align:center;">
+$\displaystyle
+\omega_0^2 = \omega^2 - \varepsilon\,\delta\omega^2 + O(\varepsilon^2)
+\;\Longrightarrow\;
+\ddot x + \omega^2 x + \varepsilon\big(x^3 - \delta\omega^2\,x\big) = 0
+$
+</p>
+<p>Un terme supplémentaire est apparu, $-\varepsilon\,\delta\omega^2 x$, dont le coefficient est ensuite ajusté ordre par ordre pour annuler les termes séculaires. Et ce terme a la <i>même forme</i> que le terme $\omega^2 x$ déjà présent : c&rsquo;est un contreterme, au sens plein.</p>
+<p>Tout y est déjà, sans une once de théorie quantique des champs : les divergences viennent d&rsquo;un mauvais choix de paramètre de développement, le remède est un changement de variables vers le paramètre physique, ce changement engendre <i>mécaniquement</i> un terme supplémentaire de forme déjà connue, et son coefficient se fixe ordre par ordre en exigeant un comportement correct. La renormalisation en théorie des champs est le même geste, dans un décor plus intimidant.</p>
+<h4 id="le-changement-de-variables-déroulé">Le changement de variables, déroulé</h4>
+<p>Reprenons donc au commencement. Notons désormais $\phi_0$, $m_0$ et $\lambda_0$ les ingrédients du lagrangien de départ, l&rsquo;indice zéro rappelant qu&rsquo;aucun des trois n&rsquo;est mesurable :</p>
+<p style="text-align:center;">
+$\displaystyle
+\mathcal L = \frac12(\partial_\mu\phi_0)^2 - \frac{m_0^2}{2}\phi_0^2 - \frac{\lambda_0}{4!}\phi_0^4
+$
+</p>
+<p><b>Premier changement de variables : le champ.</b> Le chapitre précédent nous a appris que le propagateur exact a pour résidu $Z$ au pôle, et non 1 : le champ nu ne crée une quasiparticule qu&rsquo;avec l&rsquo;amplitude $Z^{1/2}$. Or toutes nos règles de lecture des diagrammes supposent un champ qui crée une particule avec l&rsquo;amplitude 1. Définissons donc un champ <b>renormalisé</b> $\phi_r$ qui possède cette propriété :</p>
+<p style="text-align:center;">
+$\displaystyle
+\phi_0 = \sqrt Z\,\phi_r
+$
+</p>
+<p>Ce n&rsquo;est pas une approximation, c&rsquo;est un choix d&rsquo;unité pour le champ, aussi anodin que de mesurer une longueur en mètres plutôt qu&rsquo;en pieds. Substituons, en notant que le facteur $\sqrt Z$ sort de chaque champ :</p>
+<p style="text-align:center;">
+$\displaystyle
+\mathcal L = \frac{Z}{2}(\partial_\mu\phi_r)^2 - \frac{Z\,m_0^2}{2}\phi_r^2 - \frac{Z^2\lambda_0}{4!}\phi_r^4
+$
+</p>
+<p><b>Deuxième changement de variables : les paramètres.</b> Les trois coefficients obtenus, $Z$, $Zm_0^2$ et $Z^2\lambda_0$, restent des inconnues non mesurables. Introduisons alors les quantités que l&rsquo;on mesure vraiment, la masse physique $m_{\mathrm P}$ et le couplage physique $\lambda_{\mathrm P}$, et écrivons chaque coefficient sous la forme « valeur physique, plus un écart » :</p>
+<div id="def">
+<p style="text-align:center;">
+$\displaystyle
 Z = 1 + \delta Z,
+\quad
+Z\,m_0^2 = m_{\mathrm P}^2 + \delta m^2,
+\quad
+Z^2\lambda_0 = \lambda_{\mathrm P} + \delta\lambda
+$
+</p>
+</div>
+<p>Insistons sur le statut de ces trois lignes : ce sont des <b>définitions</b> de $\delta Z$, $\delta m^2$ et $\delta\lambda$, et non des hypothèses. Quelles que soient les valeurs des quantités nues, les écarts existent et valent, par construction, ce qu&rsquo;il faut pour que les égalités soient vraies. Aucune information n&rsquo;a encore été introduite.</p>
+<p><b>Substituons une dernière fois</b>, et regroupons les termes selon qu&rsquo;ils portent une quantité physique ou un écart :</p>
+<div id="theo">
+<p style="text-align:center;">
+$\displaystyle
+\mathcal L =
+\underbrace{\frac12(\partial_\mu\phi_r)^2 - \frac{m_{\mathrm P}^2}{2}\phi_r^2 - \frac{\lambda_{\mathrm P}}{4!}\phi_r^4}_{\text{lagrangien de départ, en variables physiques}}
+\;+\;
+\underbrace{\frac{\delta Z}{2}(\partial_\mu\phi_r)^2 - \frac{\delta m^2}{2}\phi_r^2 - \frac{\delta\lambda}{4!}\phi_r^4}_{\text{les trois contretermes}}
+$
+</p>
+</div>
+<p>Il n&rsquo;y a rien de plus, et c&rsquo;est tout le propos. La comparaison terme à terme avec le lagrangien renormalisé écrit plus haut donne l&rsquo;identification : $B = \delta Z$, $A = -\delta m^2$ et $C = -\delta\lambda$, ou de façon équivalente, en résolvant pour les quantités nues,</p>
+<div id="theo">
+<p style="text-align:center;">
+$\displaystyle
+m_0^2 = \frac{m_{\mathrm P}^2 + \delta m^2}{Z},
 \qquad
-m^2 = \frac{m_{\mathrm P}^2 + \delta m^2}{Z},
-\qquad
-\lambda = \frac{\lambda_{\mathrm P} + \delta\lambda}{Z^2}
-$$</p>
-<p>Autrement dit : partir du lagrangien nu (paramètres $m$, $\lambda$) et effectuer le <b>changement de variables</b> vers les paramètres physiques ($m_{\mathrm P}$, $\lambda_{\mathrm P}$, avec le champ rééchelonné par $\sqrt Z$) engendre <i>exactement</i> les trois contretermes. Nous n&rsquo;ajoutons rien : nous corrigeons une erreur de départ. Depuis le début du livre, nous développions la théorie des perturbations en puissances des mauvaises constantes, la masse nue $m$ et le couplage nu $\lambda$, qui ne sont les paramètres d&rsquo;aucune particule observable. La question posée était absurde, la réponse était infinie : tout est cohérent. En développant autour de $m_{\mathrm P}$ et $\lambda_{\mathrm P}$, les réponses deviennent finies.</p>
-<p><b>La renormalisation n&rsquo;est pas un exercice de dissimulation d&rsquo;infinis, c&rsquo;est un exercice de mise en correspondance de la théorie avec le monde réel.</b> Et quelles valeurs prendre pour $m_{\mathrm P}$ et $\lambda_{\mathrm P}$ ? Celles que la Nature nous donne : on les mesure. Le prix à payer est que les paramètres nus, eux, divergent quand $\Lambda\to\infty$ : la charge nue de l&rsquo;électron est infinie, écrantée par les paires électron-positron virtuelles jusqu&rsquo;à la valeur finie que nous mesurons. Cela ne dérange personne, car les paramètres nus ne sont pas observables.</p>
+\lambda_0 = \frac{\lambda_{\mathrm P} + \delta\lambda}{Z^2}
+$
+</p>
+</div>
+<h4 id="trois-moralités">Trois moralités</h4>
+<p><b>Rien n&rsquo;a été ajouté.</b> Les deux accolades, réunies, <i>sont</i> le lagrangien nu du départ, identiquement. Nous n&rsquo;avons pas modifié la théorie : nous avons réécrit la même chose dans d&rsquo;autres variables, puis rangé les morceaux en deux tas. Le premier tas ressemble à la théorie familière et sera traité comme tel ; le second fournit les nouveaux vertex qui annulent les divergences. Ajouter des contretermes et changer de variables sont deux descriptions du même geste.</p>
+<p><b>La forme des contretermes n&rsquo;est pas une coïncidence.</b> La question était posée à la fin du bloc précédent : pourquoi chaque contreterme a-t-il exactement la forme d&rsquo;un terme déjà présent ? Parce que le changement de variables est <i>linéaire</i> sur le champ et <i>affine</i> sur les coefficients. Une telle opération ne peut que multiplier chaque monôme existant par un facteur : elle est structurellement incapable de fabriquer un monôme d&rsquo;une forme nouvelle. C&rsquo;est aussi pourquoi l&rsquo;apparition d&rsquo;un contreterme en $\phi^6$ serait un événement grave : elle signifierait que le problème n&rsquo;est <i>pas</i> réductible à un changement de variables, c&rsquo;est-à-dire que la théorie n&rsquo;est pas renormalisable.</p>
+<p><b>Où est passée la physique ?</b> Nulle part dans ce qui précède, et c&rsquo;est normal : un changement de variables ne contient aucune information. La physique entre à l&rsquo;étape suivante, quand on <i>fixe numériquement</i> les trois écarts en imposant des <b>conditions de renormalisation</b> : que le pôle du propagateur soit bien en $m_{\mathrm P}^2$, que son résidu vaille bien 1, que l&rsquo;amplitude de diffusion vaille bien $\lambda_{\mathrm P}$ au point de mesure choisi. C&rsquo;est en résolvant ces conditions, ordre par ordre, que les $\delta$ acquièrent des valeurs, et ces valeurs contiennent précisément les $\ln\Lambda$ qu&rsquo;il faut pour annuler ceux des boucles. Le chapitre suivant met ce programme en œuvre.</p>
+<p>Un mot sur ce « ordre par ordre ». Les trois écarts s&rsquo;annulent quand l&rsquo;interaction est éteinte : sans interaction, le champ nu crée déjà une particule avec l&rsquo;amplitude 1 et la masse nue est la masse physique. Ils commencent donc à l&rsquo;ordre $\lambda$ au moins, ce qui autorise à les traiter comme des quantités perturbatives et explique les exposants des coefficients $C^{(2)}$, $C^{(3)}$, etc. rencontrés plus haut : le <i>type</i> de contreterme est fixé une fois pour toutes par le changement de variables, seule sa valeur numérique se recalcule à chaque ordre.</p>
+<p><b>La renormalisation n&rsquo;est pas un exercice de dissimulation d&rsquo;infinis, c&rsquo;est un exercice de mise en correspondance de la théorie avec le monde réel.</b> Depuis le début, nous développions la théorie des perturbations en puissances de la masse nue $m_0$ et du couplage nu $\lambda_0$, qui ne sont les paramètres d&rsquo;aucune particule observable. La question posée était absurde, la réponse était infinie : tout est cohérent. En développant autour de $m_{\mathrm P}$ et $\lambda_{\mathrm P}$, les réponses deviennent finies.</p>
+<p>Et quelles valeurs prendre pour $m_{\mathrm P}$ et $\lambda_{\mathrm P}$ ? Celles que la Nature nous donne : on les mesure. Le prix à payer est que les paramètres nus, eux, divergent quand $\Lambda\to\infty$ : la charge nue de l&rsquo;électron est infinie, écrantée par les paires électron-positron virtuelles jusqu&rsquo;à la valeur finie que nous mesurons. Cela ne dérange personne, car les paramètres nus ne sont pas observables.</p>
+<br>
 <h3 id="le-détecteur-de-divergences-et-la-question-de-la-renormalisabilité">Le détecteur de divergences, et la question de la renormalisabilité</h3>
 <p>Reste à savoir, une fois pour toutes, quels diagrammes divergent. La réponse tient dans une analyse dimensionnelle.</p>
 <div id="def">
 <p>Le <b>degré superficiel de divergence</b> d&rsquo;un diagramme est</p>
-<p>$$
-D = \big(\text{puissances d&rsquo;impulsion au numérateur}\big) - \big(\text{puissances au dénominateur}\big)
-$$</p>
+<p style="text-align:center;">
+$\displaystyle
+D = \big(\text{puissances d'impulsion au numérateur}\big) - \big(\text{puissances au dénominateur}\big)
+$
+</p>
 <p>Si $D &gt; 0$ le diagramme diverge, si $D = 0$ il diverge logarithmiquement, si $D &lt; 0$ il converge (superficiellement : le mot est là parce que des sous-diagrammes peuvent encore faire des misères, notamment dans les théories de jauge).</p>
 </div>
+<br>
 <div id="preuve">
 <p>Pour $\phi^4$ en dimension 4, comptons avec $L$ boucles, $B_I$ lignes internes, $B_E$ pattes externes et $V$ vertex. Chaque boucle apporte $\mathrm d^4q$, soit $+4$ ; chaque propagateur interne apporte $-2$ :</p>
 <p>$$
@@ -2402,147 +2696,268 @@ $$</p>
 <p>Le résultat est spectaculaire par ce qu&rsquo;il ne contient <b>pas</b> : ni $V$, ni le nombre de boucles. La divergence d&rsquo;un diagramme de $\phi^4$ ne dépend que de son nombre de pattes externes. Seuls les diagrammes à $B_E \leq 4$ pattes divergent, les pattes impaires sont interdites par la symétrie $\phi\to-\phi$, et les cas $B_E = 2$ (nos $A$, $B$) et $B_E = 4$ (notre $C$) sont déjà traités : <b>les trois contretermes identifiés sont les seuls qui apparaîtront jamais</b>. La théorie $\phi^4$ est renormalisable, et c&rsquo;est démontré.</p>
 <p>La généralisation tient dans la dimension du couplage. Dans nos unités, l&rsquo;action est sans dimension, donc $\mathcal L$ a la dimension $[\text{masse}]^4$, d&rsquo;où $[\phi] = [\text{masse}]$ et $[\lambda] = [\text{masse}]^0$. La règle générale :</p>
 <div id="theo">
-<ul style="margin-top:0.5em;">
+<ul style="margin-top:1em;">
 <li>Couplage de dimension de masse <b>positive</b>&nbsp;: théorie <b>super-renormalisable</b> (un nombre fini de diagrammes divergents en tout).</li>
 <li>Couplage <b>sans dimension</b>&nbsp;: théorie <b>renormalisable</b> (divergences à tous les ordres, mais un nombre fini de <i>types</i> de contretermes).</li>
 <li>Couplage de dimension <b>négative</b>&nbsp;: théorie <b>non renormalisable</b> (à un ordre assez élevé, tout diverge, et il faut sans cesse de nouveaux contretermes).</li>
 </ul>
-<p>Exemple emblématique : la théorie de Fermi de l&rsquo;interaction faible, $\mathcal L = \bar\psi(\mathrm i\gamma^\mu\partial_\mu - m)\psi + G(\bar\psi\psi)^2$ (le livre l&rsquo;écrit avec l&rsquo;impulsion barrée et la barre sur $\psi$, notations qui seront expliquées au chapitre 36 ; seules les dimensions nous servent ici). Le terme de masse impose $[\psi] = [\text{masse}]^{3/2}$, donc $[G] = [\text{masse}]^{-2}$ : non renormalisable. Son degré superficiel, $D = 4 - \tfrac32 F_E + 2V$, dépend de $V$ : chaque ordre de perturbation est plus divergent que le précédent.</p>
+<p>Exemple emblématique : la théorie de Fermi de l&rsquo;interaction faible, $\mathcal L = \bar\psi(\mathrm i\gamma^\mu\partial_\mu - m)\psi + G(\bar\psi\psi)^2$. Le terme de masse impose $[\psi] = [\text{masse}]^{3/2}$, donc $[G] = [\text{masse}]^{-2}$ : non renormalisable. Son degré superficiel, $D = 4 - \tfrac32 F_E + 2V$, dépend de $V$ ($F_E$ sont les pattes externes de fermions) : chaque ordre de perturbation est plus divergent que le précédent.</p>
 </div>
-<p>Le mécanisme se comprend par cohérence dimensionnelle : si $\mathcal M_1 \sim G$, le terme suivant $\mathcal M_2 \sim G^2$ doit être compensé par deux puissances d&rsquo;impulsion, $\mathcal M_2 \sim G^2\Lambda^2$, et ainsi de suite en pire. Mais retournons l&rsquo;argument : la correction relative est d&rsquo;ordre $G\Lambda^2$, donc la théorie de Fermi ne pose problème que pour $\Lambda \gtrsim G^{-1/2}$ (petit contrôle dimensionnel au passage : $[G] = [\text{masse}]^{-2}$, l&rsquo;échelle d&rsquo;énergie naturelle est bien $G^{-1/2}$, et pour la vraie constante de Fermi cela donne quelques centaines de GeV, précisément l&rsquo;échelle électrofaible où la théorie de Fermi cède la place à la théorie complète). En dessous de cette échelle, un terme non renormalisable est inoffensif, ses effets sont simplement petits. D&rsquo;où une lecture moderne vertigineuse : nos théories « renormalisables » de la Nature contiennent peut-être toutes des termes non renormalisables aux coefficients minuscules, invisibles à nos énergies. Nos théories seraient des <b>théories effectives</b> de basse énergie, vouées à céder à haute énergie, et la théorie ultime pourrait ne pas être une théorie des champs du tout.</p>
+<p>Le mécanisme se comprend par cohérence dimensionnelle : si $\mathcal M_1 \sim G$, le terme suivant $\mathcal M_2 \sim G^2$ doit être compensé par deux puissances d&rsquo;impulsion, $\mathcal M_2 \sim G^2\Lambda^2$, et ainsi de suite en pire. Mais retournons l&rsquo;argument : la correction relative $\mathcal M_2 / \mathcal M_1$ est d&rsquo;ordre $G\Lambda^2$, donc la théorie de Fermi ne pose problème que pour $\Lambda \gtrsim G^{-1/2}$ (petit contrôle dimensionnel au passage : $[G] = [\text{masse}]^{-2}$, l&rsquo;échelle d&rsquo;énergie naturelle est bien $G^{-1/2}$, et pour la vraie constante de Fermi cela donne quelques centaines de GeV, précisément l&rsquo;échelle électrofaible où la théorie de Fermi cède la place à la théorie complète). En dessous de cette échelle, un terme non renormalisable est inoffensif, ses effets sont simplement petits. D&rsquo;où une lecture moderne vertigineuse : nos théories « renormalisables » de la Nature contiennent peut-être toutes des termes non renormalisables aux coefficients minuscules, invisibles à nos énergies. Nos théories seraient des <b>théories effectives</b> de basse énergie, vouées à céder à haute énergie, et la théorie ultime pourrait ne pas être une théorie des champs du tout.</p>
 <br>
 <h3 id="bilan-1">Bilan</h3>
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \text{boucles}
-;\xrightarrow{\ \int^{\Lambda}\ };
+\;\xrightarrow{\ \int^{\Lambda}\ }\;
 \ln\Lambda,\ \Lambda^2
-;\xrightarrow{\ +\frac A2\phi^2 + \frac B2(\partial\phi)^2 + \frac C{4!}\phi^4\ };
+\;\xrightarrow{\ +\frac A2\phi^2 + \frac B2(\partial\phi)^2 + \frac C{4!}\phi^4\ }\;
 \text{amplitudes indépendantes de }\Lambda
-;\xrightarrow{\ \text{lecture}\ };
+\;\xrightarrow{\ \text{lecture}\ }\;
 (m,\lambda)\to(m_{\mathrm P},\lambda_{\mathrm P}),\ \phi = \sqrt Z\phi_r
-;\xrightarrow{\ D = 4 - B_E\ };
+\;\xrightarrow{\ D = 4 - B_E\ }\;
 3\ \text{contretermes suffisent}
-;\xrightarrow{\ [g]&lt;0\ };
+\;\xrightarrow{\ [g]<0\ }\;
 \text{théories effectives}
-$$</p>
+$
+</p>
 </div>
 <h3 id="pièges-1">Pièges</h3>
 <ul>
 <li>Que les contretermes aient <b>la même forme</b> que les termes du lagrangien de départ est la condition de tout l'édifice&nbsp;: c'est ce qui permet de les lire comme un simple décalage des paramètres. Un contreterme d'une forme nouvelle (un $\phi^6$) signerait la non-renormalisabilité.</li>
 <li>Les coefficients dépendent de l'ordre&nbsp;: $C^{(2)}$, $C^{(3)}$, ... Le <i>type</i> de contreterme est fixe, sa valeur se recalcule ordre par ordre.</li>
-<li>$3\ln\Lambda^2 = 6\ln\Lambda$&nbsp;: la moitié des erreurs de facteur 2 du chapitre se cache dans ce logarithme.</li>
 <li>«&nbsp;Superficiel&nbsp;» n'est pas un mot décoratif&nbsp;: $D < 0$ ne garantit la convergence qu'en l'absence de sous-diagrammes divergents, et les théories de jauge offrent des contre-exemples.</li>
 <li>Le développement de Taylor en l'impulsion externe est le geste qui rend tout fini-dimensionnel&nbsp;: la divergence, objet infini, se range dans un nombre <i>fini</i> de coefficients ($\alpha$, $\beta$), et la symétrie $\phi\to-\phi$ élimine les puissances impaires.</li>
 <li>Des paramètres nus infinis ne sont pas un scandale&nbsp;: ils ne sont pas observables. Le scandale serait une <i>prédiction</i> infinie.</li>
-<li>Contrôle dimensionnel sur la théorie de Fermi&nbsp;: $[G] = [\text{masse}]^{-2}$, donc l'échelle de rupture est $G^{-1/2}$ (et non $G^{-1}$, qui n'a pas la dimension d'une énergie&nbsp;; la formulation rapide du livre p. 294 se relit avec cette correction).</li>
-<li>Ne pas oublier la leçon du chapitre 31&nbsp;: même sans divergences, il faudrait renormaliser. Les infinis rendent le changement de variables obligatoire, ils ne le motivent pas seuls.</li>
+<li>Contrôle dimensionnel sur la théorie de Fermi&nbsp;: $[G] = [\text{masse}]^{-2}$, donc l'échelle de rupture est $G^{-1/2}$ (et non $G^{-1}$, qui n'a pas la dimension d'une énergie).</li>
+<li>Ne pas oublier la leçon du chapitre précédent&nbsp;: même sans divergences, il faudrait renormaliser. Les infinis rendent le changement de variables obligatoire, ils ne le motivent pas seuls.</li>
 </ul>
 <br>
 <h2 id="la-renormalisation-en-action-self-énergie-et-vertex">La renormalisation en action : self-énergie et vertex</h2>
 <h3 id="la-self-énergie-et-la-resommation-de-dyson">La self-énergie et la resommation de Dyson</h3>
-<p>Le chapitre 31 a donné la forme <i>exacte</i> du propagateur habillé (pôle en $m_{\mathrm P}^2$, résidu $\mathrm iZ$). Le chapitre 32 a donné des contretermes. Ce chapitre relie les deux à travers les diagrammes de Feynman, et le mécanisme central est une resommation.</p>
+<p>Le premier chapitre de la partie a donné la forme <i>exacte</i> du propagateur habillé (pôle en $m_{\mathrm P}^2$, résidu $\mathrm iZ$). Et le deuxième chapitre a donné des contretermes. Ce chapitre relie les deux à travers les diagrammes de Feynman, et le mécanisme central est une resommation.</p>
 <p>En théorie des perturbations, le propagateur est la somme de tous les diagrammes connexes à deux pattes externes. Pour organiser cette somme, on isole la brique élémentaire :</p>
 <div id="def">
 <p>Un diagramme est <b>une-particule-irréductible</b> (1PI) s&rsquo;il reste connexe quand on coupe n&rsquo;importe laquelle de ses lignes internes, une seule à la fois. Un diagramme non 1PI possède au contraire une « ligne de coupe » : un coup de ciseaux au bon endroit le sépare en deux morceaux. Les diagrammes 1PI sont les plus petits diagrammes non triviaux, les tripes de l&rsquo;habillage.</p>
-<p>La <b>self-énergie 1PI</b> est la somme de tous les diagrammes 1PI à deux pattes, <i>amputés</i> (on ne compte pas les propagateurs des pattes externes) et sans delta global :</p>
-<p>$$
--\mathrm i\tilde\Sigma(p) = \sum\begin{pmatrix}\text{diagrammes 1PI amputés}\ \text{à deux pattes externes}\end{pmatrix}
-$$</p>
 </div>
+<p>Exemples de diagrammes 1PI dans la théorie $\phi^4$ :</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:440px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/diag1pi.png" style="box-shadow:none;background:none;">
+</div>
+<p>Et voilà des diagrammes non 1PI :</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:440px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/diagnon1pi.png" style="box-shadow:none;background:none;">
+</div>
+<p>Tous les diagrammes non 1PI peuvent être transformés en des 1PI légitimes avec des coupures aux bons endroits.</p>
+<div id="def">
+<p>La <b>self-énergie 1PI</b> est la somme de tous les diagrammes 1PI à deux pattes, <i>amputés</i> (on ne compte pas les propagateurs des pattes externes) et sans delta global :</p>
+<p style="text-align:center;">
+$\displaystyle
+-\mathrm i\tilde\Sigma(p) = \sum\begin{pmatrix}\text{diagrammes 1PI amputés}\\ \text{à deux pattes externes}\end{pmatrix}
+$
+</p>
+</div>
+<p>Quelques contributions à la self-énergie 1PI dans $\phi^4$ :</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:440px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/1piself.png" style="box-shadow:none;background:none;">
+</div>
+<p>Rq : on a représenté des pattes externes sur le 1PI (et sur les diagrammes qui le composent) mais elles sont bien amputées (c&rsquo;est juste pour rappeler qu&rsquo;on doit le connecter). On distingue ces moignons en rose.</p>
 <div id="preuve">
 <p>Voici l&rsquo;un des plus jolis tours de passe-passe de la théorie des perturbations. Tout diagramme à deux pattes se décompose de façon <i>unique</i> en une chaîne : propagateur libre, puis un bloc 1PI, puis un propagateur libre, puis un autre bloc 1PI, et ainsi de suite (c&rsquo;est précisément la définition du 1PI qui garantit l&rsquo;unicité du découpage : on coupe sur toutes les lignes de coupe). Sommer <i>tous</i> les diagrammes revient donc à sommer sur le nombre de blocs :</p>
-<p>$$
-\tilde G(p) = \frac{\mathrm i}{p^2-m^2}</p>
-<ul>
-<li>\frac{\mathrm i}{p^2-m^2}\big[-\mathrm i\tilde\Sigma\big]\frac{\mathrm i}{p^2-m^2}</li>
-<li>\frac{\mathrm i}{p^2-m^2}\big[-\mathrm i\tilde\Sigma\big]\frac{\mathrm i}{p^2-m^2}\big[-\mathrm i\tilde\Sigma\big]\frac{\mathrm i}{p^2-m^2}</li>
-<li>\cdots
-$$</li>
-</ul>
+<p style="text-align:center;">
+$\displaystyle
+\tilde G(p) = \frac{\mathrm i}{p^2-m^2}
++ \frac{\mathrm i}{p^2-m^2}\big[-\mathrm i\tilde\Sigma\big]\frac{\mathrm i}{p^2-m^2}
++ \frac{\mathrm i}{p^2-m^2}\big[-\mathrm i\tilde\Sigma\big]\frac{\mathrm i}{p^2-m^2}\big[-\mathrm i\tilde\Sigma\big]\frac{\mathrm i}{p^2-m^2}
++ \cdots
+$
+</p>
 <p>C&rsquo;est une série géométrique de raison $\tilde\Sigma/(p^2-m^2)$, et elle se somme en bloc :</p>
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \tilde G(p) = \frac{\mathrm i}{p^2-m^2}\cdot\frac{1}{1 - \dfrac{\tilde\Sigma(p)}{p^2-m^2}}
 = \frac{\mathrm i}{p^2 - m^2 - \tilde\Sigma(p) + \mathrm i\epsilon}
-$$</p>
-<p>(on a réinséré à la fin le $\mathrm i\epsilon$ du propagateur libre). C&rsquo;est une nouvelle incarnation de l&rsquo;équation de Dyson. Le propagateur habillé ressemble au propagateur libre, avec la self-énergie logée au dénominateur.</p>
-<p>Ce qu&rsquo;on met sous le tapis : la sommation d&rsquo;une série géométrique suppose sa convergence, que rien ne garantit ici ; on somme formellement, et le résultat se justifie a posteriori par sa cohérence avec la forme exacte du chapitre 31. Et il vaut la peine de savourer le gain : <b>déplacer un pôle est un effet invisible à tout ordre fini</b> (chaque terme de la série a son pôle obstinément en $p^2 = m^2$), mais la resommation de la série entière le produit. La resommation est la porte par laquelle la théorie des perturbations accède à de l&rsquo;information non perturbative, le pendant constructif du $E \propto 1/\lambda$ des kinks de la partie précédente.</p>
+$
+</p>
+<p>On a réinséré à la fin le $\mathrm i\epsilon$ du propagateur libre.</p>
+<p>Version graphique :</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:340px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/demdyson1pi.png" style="box-shadow:none;background:none;">
 </div>
-<!-- Figure à redessiner (d'après L&B fig. 33.3 et 33.4) : deux lignes. Ligne 1 : le propagateur habillé (ligne épaisse ou blob hachuré) = ligne fine + ligne fine-[blob 1PI]-ligne fine + ligne fine-[1PI]-ligne fine-[1PI]-ligne fine + ... Ligne 2 : le résultat de la somme géométrique écrit comme fraction : i / (p² - m² - Σ̃ + iε). Légende : la resommation de Dyson : sommer la chaîne de blocs 1PI loge la self-énergie au dénominateur -->
-<div style="position:relative;margin-left:auto;margin-right:auto;width:440px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
-<img src="/dysonresommation.png" style="box-shadow:none;background:none;">
+<p>C&rsquo;est une nouvelle incarnation de l&rsquo;équation de Dyson. Le propagateur habillé ressemble au propagateur libre, avec la self-énergie logée au dénominateur.</p>
+<p>La sommation d&rsquo;une série géométrique suppose sa convergence, que rien ne garantit ici ; on somme formellement, et le résultat se justifie a posteriori par sa cohérence avec la forme exacte du premier chapitre. Et il vaut la peine de savourer le gain : <b>déplacer un pôle est un effet invisible à tout ordre fini</b> (chaque terme de la série a son pôle obstinément en $p^2 = m^2$), mais la resommation de la série entière le produit. La resommation est la porte par laquelle la théorie des perturbations accède à de l&rsquo;information non perturbative, le pendant constructif du $E \propto 1/\lambda$ des kinks de la partie précédente.</p>
 </div>
+<br>
 <h3 id="les-conditions-de-renormalisation">Les conditions de renormalisation</h3>
-<p>La règle d&rsquo;or établie au chapitre 31 s&rsquo;applique maintenant au résultat de la resommation : <b>la masse physique est la position du pôle, le poids de quasiparticule est le résidu</b>. La position du pôle de $\tilde G$ résout</p>
-<p>$$
+<p>La règle d&rsquo;or établie au premier chapitre s&rsquo;applique maintenant au résultat de la resommation : <b>la masse physique est la position du pôle, le poids de quasiparticule est le résidu</b>.</p>
+<p>La position du pôle de $\tilde G$ résout :</p>
+<p style="text-align:center;">
+$\displaystyle
 p^2 - m^2 - \operatorname{Re}\tilde\Sigma(p) = 0
-\qquad\Longrightarrow\qquad
+\;\Longrightarrow\;
 m_{\mathrm P}^2 = m^2 + \operatorname{Re}\tilde\Sigma(p^2 = m_{\mathrm P}^2)
-$$</p>
-<p>La partie réelle de la self-énergie est le déplacement de masse dû aux interactions, et sa partie imaginaire donne le taux de désintégration, $\Gamma$ se lisant sur $\operatorname{Im}\tilde\Sigma(m_{\mathrm P}^2)$. En développant $\tilde\Sigma$ au voisinage du pôle, on obtient aussi le poids (c&rsquo;est l&rsquo;exercice 33.1, et le résultat sert sans arrêt) :</p>
-<p>$$
-Z \approx \frac{1}{1 - \dfrac{\mathrm d\tilde\Sigma}{\mathrm dp^2}\Big|<em>{p^2=m</em>{\mathrm P}^2}}
-\approx 1 + \frac{\mathrm d\tilde\Sigma}{\mathrm dp^2}\Big|<em>{p^2=m</em>{\mathrm P}^2}
-$$</p>
+$
+</p>
+<p>La partie réelle de la self-énergie est le déplacement de masse dû aux interactions, et sa partie imaginaire donne le taux de désintégration, $\Gamma$ se lisant sur $\operatorname{Im}\tilde\Sigma(m_{\mathrm P}^2)$. Le poids de quasiparticule, lui, se lit sur la <i>pente</i> de la self-énergie au pôle :</p>
+<p style="text-align:center;">
+$\displaystyle
+Z = \frac{1}{1 - \dfrac{\mathrm d\tilde\Sigma}{\mathrm dp^2}\Big|_{p^2=m_{\mathrm P}^2}}
+\approx 1 + \frac{\mathrm d\tilde\Sigma}{\mathrm dp^2}\Big|_{p^2=m_{\mathrm P}^2}
+$
+</p>
+<div id="preuve">
+<details>
+<summary>D'où vient ce résultat&nbsp;?</summary>
+<p>Le résidu se lit en approchant le pôle, donc en développant $\tilde\Sigma$ à l&rsquo;ordre 1 autour de $p^2 = m_{\mathrm P}^2$ :</p>
+<p style="text-align:center;">
+$\displaystyle
+\tilde\Sigma(p^2) \simeq \tilde\Sigma(m_{\mathrm P}^2) + (p^2 - m_{\mathrm P}^2)\,\frac{\mathrm d\tilde\Sigma}{\mathrm dp^2}\Big|_{m_{\mathrm P}^2}
+$
+</p>
+<p>Injectons dans le dénominateur du propagateur resommé :</p>
+<p style="text-align:center;">
+$\displaystyle
+p^2 - m^2 - \tilde\Sigma(p^2)
+\simeq
+\underbrace{p^2 - m^2 - \tilde\Sigma(m_{\mathrm P}^2)}_{\text{voir ci-dessous}}
+- (p^2 - m_{\mathrm P}^2)\,\frac{\mathrm d\tilde\Sigma}{\mathrm dp^2}
+$
+</p>
+<p>L&rsquo;étape qui fait tout le travail est la suivante : la condition du pôle établie juste au-dessus dit exactement que $m^2 + \tilde\Sigma(m_{\mathrm P}^2) = m_{\mathrm P}^2$. La masse nue et la valeur de la self-énergie au pôle disparaissent donc <i>ensemble</i>, remplacées par la seule masse physique, et le dénominateur se factorise :</p>
+<p style="text-align:center;">
+$\displaystyle
+p^2 - m^2 - \tilde\Sigma(p^2)
+\simeq
+(p^2 - m_{\mathrm P}^2)\left(1 - \frac{\mathrm d\tilde\Sigma}{\mathrm dp^2}\right)
+$
+</p>
+<p>Le propagateur prend alors la forme exacte annoncée au chapitre 31, $\tilde G \simeq \mathrm iZ/(p^2 - m_{\mathrm P}^2)$, et l&rsquo;identification du résidu se lit à vue.</p>
+</details>
+</div>
+<p>La self-énergie ne se contente pas de déplacer la masse par sa <i>valeur</i> au pôle, elle mange aussi une fraction du champ par sa <i>pente</i>. Deux informations distinctes, extraites du même objet à deux ordres du développement.</p>
 <div id="theo">
 <p>Il y a deux manières de mener les affaires, et les deux se rencontrent dans la littérature :</p>
 <ul style="margin-top:0.5em;">
 <li><b>Sans contretermes</b>&nbsp;: on garde le lagrangien nu, et la condition $m_{\mathrm P}^2 = m^2 + \operatorname{Re}\tilde\Sigma(m_{\mathrm P}^2)$ dit que la self-énergie <i>déplace</i> la masse, d'un décalage potentiellement infini (le choix logique pour le gaz d'électrons, où les divergences sont bénignes).</li>
 <li><b>Avec contretermes</b>&nbsp;: on écrit le lagrangien directement en fonction de $m_{\mathrm P}$, les contretermes entrent dans $\tilde\Sigma$, et la <b>condition de renormalisation</b> devient
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \operatorname{Re}\tilde\Sigma(p^2 = m_{\mathrm P}^2) = 0
-$$</p>
-<p>la masse part de la bonne valeur et l&rsquo;on exige qu&rsquo;elle n&rsquo;en bouge plus (le choix de l&rsquo;électrodynamique quantique).</li></p>
+$
+</p>
+<p>La masse part de la bonne valeur et l&rsquo;on exige qu&rsquo;elle n&rsquo;en bouge plus (le choix de l&rsquo;électrodynamique quantique).</li></p>
 </ul>
 </div>
+<br>
 <h3 id="la-fonction-de-vertex-et-la-naissance-du-point-de-renormalisation">La fonction de vertex et la naissance du point de renormalisation</h3>
-<p>Le même traitement s&rsquo;applique au couplage. Physiquement, le couplage change parce que les fluctuations du vide <b>écrantent</b> l&rsquo;interaction entre deux particules, exactement comme le nuage électronique écrantait la charge test du chapitre 31.</p>
+<p>Le même traitement s&rsquo;applique au couplage. Physiquement, le couplage change parce que les fluctuations du vide <b>écrantent</b> l&rsquo;interaction entre deux particules, exactement comme le nuage électronique écrantait la charge test du premier chapitre.</p>
+<p>Le plan est calqué sur celui de la self-énergie : isoler un objet qui concentre tout l&rsquo;habillage du vertex, puis lui imposer une condition qui le relie à une mesure. Mais la deuxième étape va réserver une surprise, et c&rsquo;est elle qui ouvre le chapitre suivant.</p>
+<p>Considérons la fonction de Green à quatre points de la théorie en interaction, celle qui décrit la diffusion de deux particules. Elle contient deux sortes d&rsquo;information mélangées : ce qui arrive aux particules <i>pendant</i> qu&rsquo;elles interagissent, et ce qui leur arrive <i>avant et après</i>, c&rsquo;est-à-dire l&rsquo;habillage de chacune des quatre pattes, déjà entièrement décrit par la self-énergie de la section précédente.</p>
+<p>Compter deux fois la même physique n&rsquo;aurait aucun sens. On ampute donc les quatre propagateurs complets des pattes externes :</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:520px;max-width:100%;">
+<img src="/vertexampute.png" style="box-shadow:none;background:none;">
+</div>
 <div id="def">
 <p>La <b>fonction de vertex</b> de la théorie $\phi^4$ est la somme de tous les diagrammes connexes à quatre pattes, amputés :</p>
-<p>$$
--\mathrm i\tilde\Gamma = \sum\begin{pmatrix}\text{diagrammes connexes à 4 points,}\ \text{pattes externes amputées}\end{pmatrix}
-$$</p>
-<p>C&rsquo;est un vertex effectif : il se branche entre quatre propagateurs comme le vertex nu $-\mathrm i\lambda$, mais il raconte comment les particules <i>réelles</i> interagissent une fois les particules virtuelles prises en compte. Au premier ordre, $-\mathrm i\tilde\Gamma = -\mathrm i\lambda$ ; au deuxième ordre, avec le contreterme du chapitre 32,</p>
-<p>$$
--\mathrm i\tilde\Gamma(p_1,p_2,p_3) = -\mathrm i\lambda - \mathrm ia\lambda^2,(\ln s + \ln t + \ln u)
-$$</p>
+<p style="text-align:center;">
+$\displaystyle
+-\mathrm i\tilde\Gamma = \sum\begin{pmatrix}\text{diagrammes connexes à 4 points,}\\ \text{pattes externes amputées}\end{pmatrix}
+$
+</p>
+<p>Autrement dit, la fonction de Green complète à quatre points se reconstruit en rebranchant les propagateurs habillés : $\tilde G(p_1)\tilde G(p_2)\big[-\mathrm i\tilde\Gamma\big]\tilde G(p_3)\tilde G(p_4)$.</p>
 </div>
-<p>La fonction de vertex dépend des impulsions. Pour en extraire <i>un nombre</i> qui mérite le nom de couplage physique, il faut choisir des impulsions de référence, et voici la subtilité qui change tout : contrairement à la masse, définie sans ambiguïté par un pôle, <b>le couplage n&rsquo;a pas de définition canonique</b>. On décrète :</p>
-<p>$$
--\mathrm i\lambda_{\mathrm P} = -\mathrm i\tilde\Gamma(p_1,p_2,p_3)\Big|_{s_0,,t_0,,u_0}
-$$</p>
-<p>où le triplet $(s_0, t_0, u_0)$, librement choisi, s&rsquo;appelle le <b>point de renormalisation</b>.</p>
-<div id="preuve">
-<p>Voyons ce libre choix à l&rsquo;œuvre, car il paie immédiatement. Au deuxième ordre en perturbation non renormalisée, le couplage physique vaut $-\mathrm i\lambda_{\mathrm P} = -\mathrm i\lambda + \mathrm ia\lambda^2(3\ln\Lambda^2 - \ln s_0 - \ln t_0 - \ln u_0)$ et l&rsquo;amplitude physique $-\mathrm i\lambda + \mathrm ia\lambda^2(3\ln\Lambda^2 - \ln s - \ln t - \ln u)$. À l&rsquo;ordre où l&rsquo;on travaille, on peut inverser la première relation, injecter dans la seconde, et $\lambda$ comme $\Lambda$ disparaissent simultanément :</p>
-<p>$$
-\mathrm i\mathcal M = -\mathrm i\lambda_{\mathrm P}</p>
-<ul>
-<li>\mathrm ia\lambda_{\mathrm P}^2\left[\ln\frac{s}{s_0} + \ln\frac{t}{t_0} + \ln\frac{u}{u_0}\right] + O(\lambda^3)
-$$</li>
+<p>Deux conventions accompagnent cette définition, et les oublier désaccorde tous les facteurs :</p>
+<ul style="margin-top:0.5em;">
+<li>$-\mathrm i\tilde\Gamma$ <b>n'inclut pas</b> la fonction delta globale de conservation de l'énergie-impulsion, contrairement à la règle de Feynman du vertex nu, qui s'écrit $(2\pi)^4\delta^{(4)}(p_4+p_3-p_2-p_1)\,(-\mathrm i\lambda)$&nbsp;;</li>
+<li>le signe est choisi pour qu'<b>au premier ordre</b> on retrouve exactement le vertex nu, $-\mathrm i\tilde\Gamma = -\mathrm i\lambda$. C'est ce choix qui rend légitime de parler de $\tilde\Gamma$ comme d'un «&nbsp;couplage effectif&nbsp;».</li>
 </ul>
-<p>L&rsquo;amplitude s&rsquo;exprime en fonction du couplage physique et d&rsquo;impulsions <i>mesurées relativement au point de renormalisation</i>. La version avec contretermes donne le même résultat sans jamais transporter de $\ln\Lambda$.</p>
+<p>La fonction de vertex est donc un vertex <i>effectif</i> : elle se branche entre quatre propagateurs comme le vertex nu, mais elle raconte comment les particules <b>réelles</b> interagissent une fois toutes les particules virtuelles prises en compte. Les premières contributions :</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:760px;max-width:100%;">
+<img src="/vertexcontributions.png" style="box-shadow:none;background:none;">
 </div>
-<p>Ce résultat est plus gros qu&rsquo;il n&rsquo;en a l&rsquo;air. La valeur de $\lambda_{\mathrm P}$ dépend du point $(s_0,t_0,u_0)$ où on l&rsquo;a définie : le couplage physique n&rsquo;est pas un nombre, c&rsquo;est une <i>fonction de l&rsquo;échelle de référence</i>. Deux physiciens ayant choisi des points différents mesurent des couplages différents et décrivent pourtant la même physique. La question « comment $\lambda_{\mathrm P}$ dépend-il de l&rsquo;échelle ? » est la porte du chapitre suivant.</p>
+<p>Au deuxième ordre, avec le contreterme du chapitre précédent, c&rsquo;est le calcul que nous avons déjà mené :</p>
+<p style="text-align:center;">
+$\displaystyle
+-\mathrm i\tilde\Gamma(p_1,p_2,p_3) = -\mathrm i\lambda - \mathrm ia\lambda^2\,(\ln s + \ln t + \ln u)
+$
+</p>
+<p>Pour la masse, la marche à suivre était claire : la masse physique est la position du pôle du propagateur, un point remarquable que la fonction porte en elle, sans qu&rsquo;aucun choix ne soit demandé.</p>
+<p>Pour le couplage, rien de tel. La fonction de vertex est une <b>fonction des impulsions</b>, sans pôle ni aucun autre point distingué. Pour en extraire un nombre unique qui mériterait le nom de couplage physique, il faut décider en quelles impulsions on la lit, et rien dans la théorie ne dicte ce choix :</p>
+<div id="def">
+<p style="text-align:center;">
+$\displaystyle
+-\mathrm i\lambda_{\mathrm P} = -\mathrm i\tilde\Gamma(p_1,p_2,p_3)\Big|_{s_0,\,t_0,\,u_0}
+$
+</p>
+<p>Le triplet $(s_0, t_0, u_0)$, librement choisi, s&rsquo;appelle le <b>point de renormalisation</b>.</p>
+</div>
+<p>Cette liberté n&rsquo;est pas un aveu de faiblesse : c&rsquo;est la situation de tout physicien qui mesure une grandeur relative. On ne mesure jamais une altitude dans l&rsquo;absolu, mais toujours par rapport à un niveau de référence, et deux cartes qui prennent des références différentes restent parfaitement cohérentes entre elles. Le point de renormalisation est le niveau de la mer du couplage.</p>
+<p>Voyons ce choix payer immédiatement sur un calcul en perturbation <i>non</i> renormalisée, c&rsquo;est-à-dire sans contretermes, en traînant explicitement la coupure $\Lambda$.</p>
+<div id="preuve">
+<p>Deux expressions sont disponibles, toutes deux au deuxième ordre, et toutes deux divergentes. D&rsquo;abord la définition du couplage physique, obtenue en lisant $\tilde\Gamma$ au point de renormalisation :</p>
+<p style="text-align:center;">
+$\displaystyle
+-\mathrm i\lambda_{\mathrm P} = -\mathrm i\lambda + \mathrm ia\lambda^2\big(3\ln\Lambda^2 - \ln s_0 - \ln t_0 - \ln u_0\big)
+$
+</p>
+<p>Ensuite l&rsquo;amplitude que l&rsquo;on veut prédire, aux impulsions $s$, $t$, $u$ de l&rsquo;expérience :</p>
+<p style="text-align:center;">
+$\displaystyle
+\mathrm i\mathcal M = -\mathrm i\lambda + \mathrm ia\lambda^2\big(3\ln\Lambda^2 - \ln s - \ln t - \ln u\big)
+$
+</p>
+<p>Premier pas, inverser :</p>
+<p>On extrait $\lambda$ de la première relation :</p>
+<p style="text-align:center;">
+$\displaystyle
+-\mathrm i\lambda = -\mathrm i\lambda_{\mathrm P} - \mathrm ia\lambda_{\mathrm P}^2\big(3\ln\Lambda^2 - \ln s_0 - \ln t_0 - \ln u_0\big) + O(\lambda^3)
+$
+</p>
+<p>Le remplacement de $\lambda^2$ par $\lambda_{\mathrm P}^2$ dans le terme correctif est légitime : les deux quantités $\lambda$ et $\lambda_p$ ne diffèrent que d&rsquo;un terme d&rsquo;ordre $\lambda^2$ d&rsquo;après la première équation.</p>
+<p>Deuxième pas, injecter :</p>
+<p>On reporte dans l&rsquo;amplitude :</p>
+<p style="text-align:center;">
+$\displaystyle
+\mathrm i\mathcal M = -\mathrm i\lambda_{\mathrm P}
++ \mathrm ia\lambda_{\mathrm P}^2\Big[\big(3\ln\Lambda^2 - \ln s - \ln t - \ln u\big) - \big(3\ln\Lambda^2 - \ln s_0 - \ln t_0 - \ln u_0\big)\Big]
+$
+</p>
+<p>Troisième pas, regarder ce qui s&rsquo;annule :</p>
+<p>Les deux crochets portent <i>le même</i> $3\ln\Lambda^2$, avec le même coefficient, et la soustraction l&rsquo;élimine. Les logarithmes des impulsions, eux, survivent en se regroupant en rapports :</p>
+<p style="text-align:center;">
+$\displaystyle
+\mathrm i\mathcal M = -\mathrm i\lambda_{\mathrm P}
+- \mathrm ia\lambda_{\mathrm P}^2\left[\ln\frac{s}{s_0} + \ln\frac{t}{t_0} + \ln\frac{u}{u_0}\right] + O(\lambda^3)
+$
+</p>
+</div>
+<p>Le troisième pas mérite qu&rsquo;on s&rsquo;y arrête, car c&rsquo;est lui qui explique <i>pourquoi</i> la manœuvre pouvait réussir. Le terme divergent $3\ln\Lambda^2$ <b>ne dépend pas des impulsions externes</b> : il est le même quelle que soit l&rsquo;énergie de la collision. Il figure donc à l&rsquo;identique dans l&rsquo;amplitude et dans sa valeur au point de référence, et disparaît dès qu&rsquo;on soustrait l&rsquo;une de l&rsquo;autre. Une divergence qui aurait dépendu de $s$, $t$ ou $u$ n&rsquo;aurait pas pu être absorbée dans la définition d&rsquo;une constante, et la théorie n&rsquo;aurait pas été renormalisable. Toute la renormalisabilité tient dans cette indépendance.</p>
+<p>Le résultat s&rsquo;énonce alors simplement : l&rsquo;amplitude s&rsquo;exprime en fonction du couplage physique, et les impulsions ne sont mesurées que <i>relativement au point de renormalisation</i>. La version avec contretermes donne le même résultat, sans jamais avoir à transporter de $\ln\Lambda$.</p>
+<p>Reste la conclusion, plus grosse qu&rsquo;elle n&rsquo;en a l&rsquo;air. La valeur de $\lambda_{\mathrm P}$ dépend du point $(s_0,t_0,u_0)$ où on l&rsquo;a définie : le couplage physique n&rsquo;est pas un nombre, c&rsquo;est la <b>valeur d&rsquo;une fonction en un point qu&rsquo;on a choisi</b>. Deux physiciens ayant choisi des points différents mesurent des couplages différents et décrivent pourtant la même physique, puisque la courbe entière est la même. La question « comment $\lambda_{\mathrm P}$ dépend-il de l&rsquo;échelle ? » est la porte du chapitre suivant.</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:460px;max-width:100%;">
+<img src="/courberen.png" style="box-shadow:none;background:none;">
+</div>
 <br>
 <h3 id="bilan-2">Bilan</h3>
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \text{diagrammes à 2 pattes}
-;\xrightarrow{\ \text{blocs 1PI}\ };
+\;\xrightarrow{\ \text{blocs 1PI}\ }\;
 \tilde\Sigma(p)
-;\xrightarrow{\ \text{série géométrique (Dyson)}\ };
+\;\xrightarrow{\ \text{série géométrique (Dyson)}\ }\;
 \tilde G = \frac{\mathrm i}{p^2 - m^2 - \tilde\Sigma + \mathrm i\epsilon}
-;\xrightarrow{\ \text{pôle, résidu, Im}\ };
+\;\xrightarrow{\ \text{pôle, résidu, Im}\ }\;
 m_{\mathrm P},\ Z,\ \Gamma
-;\xrightarrow{\ \text{4 pattes amputées}\ };
+\;\xrightarrow{\ \text{4 pattes amputées}\ }\;
 \tilde\Gamma
-;\xrightarrow{\ (s_0,t_0,u_0)\ };
+\;\xrightarrow{\ (s_0,t_0,u_0)\ }\;
 \lambda_{\mathrm P}\ \text{définie à une échelle}
-$$</p>
-</div>
+$
+</p>
+<br>
 <h3 id="pièges-2">Pièges</h3>
 <ul>
-<li><b>Collision de notations</b>, signalée par le livre lui-même&nbsp;: $\tilde\Gamma$ est la fonction de vertex, $\Gamma_{\mathbf p}$ le taux de désintégration du chapitre 31. Aucun rapport entre les deux.</li>
+<li><b>Collision de notations</b>&nbsp;: $\tilde\Gamma$ est la fonction de vertex, $\Gamma_{\mathbf p}$ le taux de désintégration du premier chapitre. Aucun rapport entre les deux.</li>
 <li>$\tilde\Sigma$ est définie <b>amputée</b> et <b>sans delta global</b> de conservation&nbsp;: oublier l'une de ces conventions désaccorde tous les facteurs de la resommation.</li>
 <li>1PI signifie «&nbsp;survit à la coupure d'<i>une</i> ligne interne&nbsp;»&nbsp;: un diagramme connexe n'est pas forcément 1PI, et c'est l'unicité du découpage en blocs 1PI qui autorise la série géométrique sans double comptage.</li>
 <li>La resommation est une somme formelle&nbsp;: sa convergence n'est pas établie, mais elle accomplit ce qu'aucun ordre fini ne peut faire, déplacer le pôle. Tronquer la série après quelques termes redonnerait un pôle en $m$, pas en $m_{\mathrm P}$.</li>
@@ -2557,322 +2972,218 @@ $$</p>
 <p>Le chapitre précédent a préparé le terrain sans le dire. Reprenons l&rsquo;amplitude à deux particules exprimée au point de renormalisation $s_0 = t_0 = u_0 = \mu^2$ :</p>
 <div id="preuve">
 <p>Deux physiciens choisissent deux points de renormalisation $\mu$ et $\mu&rsquo;$. Chacun écrit la même amplitude physique :</p>
-<p>$$
-\mathrm i\mathcal M = -\mathrm i\lambda_{\mathrm P}(\mu) + \mathrm ia,[\lambda_{\mathrm P}(\mu)]^2\left[\ln\frac{\mu^2}{s} + \ln\frac{\mu^2}{t} + \ln\frac{\mu^2}{u}\right]
-$$</p>
-<p>et la même avec des primes. En soustrayant les deux expressions (l&rsquo;amplitude, elle, est unique), les termes en $s,t,u$ s&rsquo;éliminent et il reste une relation entre les deux couplages :</p>
-<p>$$
-\lambda_{\mathrm P}(\mu&rsquo;) = \lambda_{\mathrm P}(\mu) + 6a,[\lambda_{\mathrm P}(\mu)]^2,\ln\frac{\mu&rsquo;}{\mu} + O(\lambda_{\mathrm P}^3)
-$$</p>
+<p style="text-align:center;">
+$\displaystyle
+\mathrm i\mathcal M = -\mathrm i\lambda_{\mathrm P}(\mu) + \mathrm ia\,[\lambda_{\mathrm P}(\mu)]^2\left[\ln\frac{\mu^2}{s} + \ln\frac{\mu^2}{t} + \ln\frac{\mu^2}{u}\right]
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+\mathrm i\mathcal M = -\mathrm i\lambda_{\mathrm P}(\mu') + \mathrm ia\,[\lambda_{\mathrm P}(\mu')]^2\left[\ln\frac{\mu'^2}{s} + \ln\frac{\mu'^2}{t} + \ln\frac{\mu'^2}{u}\right]
+$
+</p>
+<p>En soustrayant les deux expressions (l&rsquo;amplitude, elle, est unique), les termes en $s,t,u$ s&rsquo;éliminent et il reste une relation entre les deux couplages :</p>
+<p style="text-align:center;">
+$\displaystyle
+\lambda_{\mathrm P}(\mu') = \lambda_{\mathrm P}(\mu) + 6a\,[\lambda_{\mathrm P}(\mu)]^2\,\ln\frac{\mu'}{\mu} + O(\lambda_{\mathrm P}^3)
+$
+</p>
 <p>soit, sous forme différentielle,</p>
-<p>$$
-\mu,\frac{\mathrm d\lambda_{\mathrm P}}{\mathrm d\mu} = 6a,\lambda_{\mathrm P}^2 + O(\lambda_{\mathrm P}^3)
-$$</p>
+<p style="text-align:center;">
+$\displaystyle
+\mu\,\frac{\mathrm d\lambda_{\mathrm P}}{\mathrm d\mu} = 6a\,\lambda_{\mathrm P}^2 + O(\lambda_{\mathrm P}^3)
+$
+</p>
+<details style="background-color:#F4F4F4;border-radius:5px;padding:5px;">
+<summary>Le passage à la forme différentielle&nbsp;:</summary>
+<p>Il suffit de rapprocher les deux points de renormalisation. Posons $\mu&rsquo; = \mu + \mathrm d\mu$ ; alors $\ln(\mu&rsquo;/\mu) = \ln(1 + \mathrm d\mu/\mu) \simeq \mathrm d\mu/\mu$, et la relation entre les deux couplages devient</p>
+<p style="text-align:center;">
+$\displaystyle
+\lambda_{\mathrm P}(\mu + \mathrm d\mu) - \lambda_{\mathrm P}(\mu) = 6a\,\lambda_{\mathrm P}^2\,\frac{\mathrm d\mu}{\mu}
+$
+</p>
+</details>
+<p>L&rsquo;écriture $\mu\,\mathrm d\lambda_{\mathrm P}/\mathrm d\mu$ n&rsquo;est donc rien d&rsquo;autre que $\mathrm d\lambda_{\mathrm P}/\mathrm d\ln\mu$ : c&rsquo;est la variation du couplage par <i>facteur multiplicatif</i> d&rsquo;échelle, et non par incrément additif. C&rsquo;est la bonne question à poser, puisque changer d&rsquo;échelle signifie multiplier une énergie, jamais lui ajouter quelque chose.</p>
 <p>Le couplage <b>coule</b> avec l&rsquo;échelle, et l&rsquo;équation qui gouverne ce flot s&rsquo;appelle équation de Gell-Mann–Low, ou équation de flot. La limite $\mu\to\infty$ interroge le comportement <b>ultraviolet</b> (hautes énergies, courtes distances), la limite $\mu\to0$ le comportement <b>infrarouge</b> (basses énergies, grandes distances).</p>
 </div>
+<br>
 <div id="def">
-<p>Une théorie est un point $(g_1, g_2, \ldots)$ dans l&rsquo;espace de ses constantes de couplage (pour $\phi^4$ : $m$ et $\lambda$). Changer l&rsquo;échelle déplace ce point le long d&rsquo;une <b>trajectoire de renormalisation</b> : c&rsquo;est le <b>flot de renormalisation</b>. Pour un seul couplage, on visualise le flot par la <b>fonction $\beta$</b>,</p>
-<p>$$
+<p>Une théorie est un point $(g_1, g_2, \ldots)$ dans l&rsquo;espace de ses constantes de couplage (pour $\phi^4$ : $m$ et $\lambda$). Changer l&rsquo;échelle déplace ce point le long d&rsquo;une <b>trajectoire de renormalisation</b> : c&rsquo;est le <b>flot de renormalisation</b>.</p>
+<p>Pour un seul couplage, on visualise le flot par la <b>fonction $\beta$</b>,</p>
+<p style="text-align:center;">
+$\displaystyle
 \beta(g) = \frac{\mathrm dg}{\mathrm d\ln b}
-$$</p>
-<p>où $b$ est le facteur de changement d&rsquo;échelle. Les zéros de $\beta$ sont les <b>points fixes</b> : des théories invariantes d&rsquo;échelle, où le flot s&rsquo;arrête. Un point fixe est <b>attractif</b> si les trajectoires voisines convergent vers lui, <b>répulsif</b> si elles s&rsquo;en écartent ; et un même point peut être attractif d&rsquo;un côté, répulsif de l&rsquo;autre.</p>
+$<br>
+où $b$ est le facteur de changement d'échelle. 
+</p>
+<p>Les zéros de $\beta$ sont les <b>points fixes</b> : des théories invariantes d&rsquo;échelle, où le flot s&rsquo;arrête. Un point fixe est <b>attractif</b> si les trajectoires voisines convergent vers lui, <b>répulsif</b> si elles s&rsquo;en écartent ; et un même point peut être attractif d&rsquo;un côté, répulsif de l&rsquo;autre.</p>
 </div>
 <!-- Figure à redessiner (L&B fig. 34.2) : quatre petits graphes de β(g) en fonction de g, avec des flèches sur l'axe g indiquant le sens du flot. (a) β > 0 partout : flèches vers la droite, g file à l'infini ; (b) β < 0 partout : flèches vers la gauche, g retombe à 0 ; (c) β s'annule en g* en montant : flèches divergeant de g* (point fixe répulsif) ; (d) β s'annule en g* en descendant : flèches convergeant vers g* (point fixe attractif) -->
-<div style="position:relative;margin-left:auto;margin-right:auto;width:440px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
-<img src="/pointsfixes.png" style="box-shadow:none;background:none;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:540px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/gscale.png" style="box-shadow:none;background:none;">
 </div>
 <h3 id="la-méthode-de-wilson-en-trois-pas">La méthode de Wilson en trois pas</h3>
-<p>La dérivation ci-dessus était un raccourci. La méthode systématique part de l&rsquo;intégrale fonctionnelle euclidienne $Z(\Lambda) = \int_\Lambda\mathcal D\phi,e^{-\int\mathrm d^dx,\mathcal L[\phi]}$, où l&rsquo;indice $\Lambda$ ordonne d&rsquo;intégrer sur les configurations dont les composantes de Fourier vont jusqu&rsquo;à $\Lambda$. On découpe le champ en composantes <b>lentes</b> et <b>rapides</b> :</p>
-<p>$$
-\tilde\phi(p) = \tilde\phi_{\mathrm s}(p)\ \text{pour } 0 \leq |p| \leq \Lambda/b,
-\qquad
+<p>La dérivation ci-dessus était un raccourci. La méthode systématique part de l&rsquo;intégrale fonctionnelle euclidienne $Z(\Lambda) = \int_\Lambda\mathcal D\phi\,e^{-\int\mathrm d^dx\,\mathcal L[\phi]}$, où l&rsquo;indice $\Lambda$ ordonne d&rsquo;intégrer sur les configurations dont les composantes de Fourier vont jusqu&rsquo;à $\Lambda$. On découpe le champ en composantes <b>lentes</b> et <b>rapides</b> :</p>
+<p style="text-align:center;">
+$\displaystyle
+\tilde\phi(p) = \tilde\phi_{\mathrm s}(p)\ \text{pour } 0 \leq |p| \leq \Lambda/b
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
 \tilde\phi(p) = \tilde\phi_{\mathrm f}(p)\ \text{pour } \Lambda/b \leq |p| \leq \Lambda
-$$</p>
-<p>avec $b &gt; 1$. Puis trois pas :</p>
+$
+</p>
+<p style="text-align:center;">
+avec $b > 1$.
+</p>
+<p>Puis trois pas :</p>
 <ul style="margin-top:0.5em;">
-<li><b>Pas I, intégrer les modes rapides.</b> On effectue la partie de l'intégrale fonctionnelle qui porte sur $\phi_{\mathrm f}$. L'effet est celui d'une paire de lunettes qu'on retire&nbsp;: les détails fins disparaissent, le champ a l'air plus lisse. Le résultat se range dans une correction $\delta\mathcal L[\phi_{\mathrm s}]$ à l'action des modes lents. C'est le pas difficile, en général impossible exactement&nbsp;: on le fait en perturbation.</li>
-<li><b>Pas II, rééchelonner les impulsions.</b> Le champ lissé vit sur $[0, \Lambda/b]$&nbsp;: pour le comparer loyalement à la théorie de départ, on pose $p' = b\,p$, ce qui redéploie l'espace des impulsions sur $[0, \Lambda]$.</li>
-<li><b>Pas III, rééchelonner les champs.</b> On pose $\tilde\phi(p'/b) = b^{\,d - d_\phi}\,\tilde\phi'(p')$, en choisissant l'exposant $d_\phi$ (baptisé, dans le jargon volontiers ésotérique du domaine, <b>dimension anormale</b>) pour laisser invariant le terme jugé dominant, en pratique le terme de gradient.</li>
+<li>Pas I&nbsp;: <b>Intégrer les modes rapides.</b> On effectue la partie de l'intégrale fonctionnelle qui porte sur $\phi_{\mathrm f}$. L'effet est celui d'une paire de lunettes qu'on retire&nbsp;: les détails fins disparaissent, le champ a l'air plus lisse. Le résultat se range dans une correction $\delta\mathcal L[\phi_{\mathrm s}]$ à l'action des modes lents. C'est le pas difficile, en général impossible exactement&nbsp;: on le fait en perturbation.</li>
 </ul>
-<p>Si tout se passe bien, le lagrangien final a <b>la même forme</b> que le lagrangien initial, avec des couplages modifiés : on a fabriqué la transformation $g_i \to g_i&rsquo;$, et il suffit de l&rsquo;itérer en pensée pour engendrer le flot complet. En posant $b = e^\ell$ et en envoyant $\ell\to\infty$, on suit la physique aux grandes longueurs d&rsquo;onde.</p>
-<!-- Figure à redessiner (d'après L&B fig. 34.5 et 34.6) : à gauche, un axe vertical |p| de 0 à Λ, coupé en deux zones : « lents φ_s » de 0 à Λ/b, « rapides φ_f » (hachurés) de Λ/b à Λ, avec au-dessus « ignoré ». À droite, une flèche « intégrer la coquille puis p' = bp » menant au même axe où la zone des lents a été redilatée jusqu'à Λ. Légende : un tour de manivelle : intégrer la coquille rapide, redilater, recommencer -->
-<div style="position:relative;margin-left:auto;margin-right:auto;width:440px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
-<img src="/coquillewilson.png" style="box-shadow:none;background:none;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:240px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/wilson1.png" style="box-shadow:none;background:none;">
 </div>
 
 <div class="notices note" style="--title: 'note';">
   <p style="display: none;">note</p>
   <div class="notice-body">
-    <p>Le « groupe » de renormalisation n&rsquo;est pas un groupe, et il vaut la peine de comprendre pourquoi. Les changements d&rsquo;échelle purs forment bien un groupe, mais l&rsquo;opération complète (intégrer une coquille de modes rapides, <i>puis</i> rééchelonner) détruit de l&rsquo;information : les détails fins sont perdus et rien ne permet de les reconstruire. La transformation n&rsquo;a pas d&rsquo;inverse : c&rsquo;est un <b>semi-groupe</b>, au sens des normes académiques françaises (loi de composition interne associative, sans inverses). Cette irréversibilité n&rsquo;est pas un défaut technique, c&rsquo;est le contenu physique de la méthode : la physique de basse énergie oublie les détails microscopiques, et c&rsquo;est précisément ce qui rendra l&rsquo;universalité possible au chapitre 35.</p>
+    <p>L&rsquo;intégrale du pas I n&rsquo;est pas une intégrale sur les impulsions : c&rsquo;est l&rsquo;<b>intégrale fonctionnelle</b>
+$\int\mathcal D\phi_{\mathrm f}$, c&rsquo;est-à-dire une somme sur toutes les<i>configurations possibles</i> du champ rapide. C&rsquo;est très exactement une marginalisation au sens des probabilités : de même qu&rsquo;on passe d&rsquo;une loi jointe à une loi marginale par $P(x)=\int P(x,y)\,\mathrm dy$, on passe ici de $Z=\int\mathcal D\phi_{\mathrm s}\mathcal D\phi_{\mathrm f}\,\mathrm e^{-S}$ à $Z=\int\mathcal D\phi_{\mathrm s}\,\mathrm e^{-S_{\text{eff}}[\phi_{\mathrm s}]}$.<br>
+L&rsquo;anglais dit <i>integrate out</i>, « éliminer par intégration », et le
+français perd le <i>out</i> en route.<br><br>
+<b>On ne jette pas les modes rapides, on les moyenne</b>. Leur influence survit, encodée dans le $\delta\mathcal L$ qui modifie les couplages des modes lents. Une simple troncature ne produirait aucun flot.</p>
 
   </div>
 </div>
 
 
+<ul>
+<li>Pas II&nbsp;: <b>Rééchelonner les impulsions</b>. Le champ lissé vit sur $[0, \Lambda/b]$&nbsp;: pour le comparer loyalement à la théorie de départ, on pose $p' = b\,p$, ce qui redéploie l'espace des impulsions sur $[0, \Lambda]$.</li>
+</ul>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:220px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/wilson2.png" style="box-shadow:none;background:none;">
+</div>
+<ul>
+<li>Pas III&nbsp;: <b>Rééchelonner les champs.</b> On pose $\tilde\phi(p'/b) = b^{\,d - d_\phi}\,\tilde\phi'(p')$, en choisissant l'exposant $d_\phi$ (baptisé, dans le jargon volontiers ésotérique du domaine, <b>dimension anormale</b>) pour laisser invariant le terme jugé dominant, en pratique le terme de gradient.</li>
+</ul>
+<p>Si tout se passe bien, le lagrangien final a <b>la même forme</b> que le lagrangien initial, avec des couplages modifiés : on a fabriqué la transformation $g_i \to g_i&rsquo;$, et il suffit de l&rsquo;itérer en pensée pour engendrer le flot complet. En posant $b = e^\ell$ et en envoyant $\ell\to\infty$, on suit la physique aux grandes longueurs d&rsquo;onde.</p>
+
+<div class="notices note" style="--title: 'note';">
+  <p style="display: none;">note</p>
+  <div class="notice-body">
+    <p>Le « groupe » de renormalisation n&rsquo;est pas un groupe, et il vaut la peine de comprendre pourquoi. Les changements d&rsquo;échelle purs forment bien un groupe, mais l&rsquo;opération complète (intégrer une coquille de modes rapides, <i>puis</i> rééchelonner) détruit de l&rsquo;information : les détails fins sont perdus et rien ne permet de les reconstruire. La transformation n&rsquo;a pas d&rsquo;inverse : c&rsquo;est un <b>semi-groupe</b>, au sens des normes académiques françaises (loi de composition interne associative, sans inverses). Cette irréversibilité n&rsquo;est pas un défaut technique, c&rsquo;est le contenu physique de la méthode : la physique de basse énergie oublie les détails microscopiques, et c&rsquo;est précisément ce qui rendra l&rsquo;universalité possible au chapitre suivant.</p>
+
+  </div>
+</div>
+
+
+<p>Illustration schématique des trois pas, sur une réalisation d&rsquo;un champ représenté le long d&rsquo;une direction :</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:620px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/signalrenorm.png" style="box-shadow:none;background:none;">
+</div>
+<p>Comment lire la figure ? Après le pas I, le champ (b) est plus lisse que (a), mais c&rsquo;est trivial : on vient de lui retirer ses hautes fréquences. Surtout, (a) et (b) n&rsquo;ont pas la même coupure et <b>ne sont pas comparables</b>.<br>
+C&rsquo;est le rétrécissement des pas II et III qui ramène la coupure à $\Lambda$ et rend enfin la comparaison légitime. La comparaison qui porte toute l&rsquo;information est donc <b>(a) contre (c)</b>, et elle se lit ainsi :</p>
+<ul>
+<li>(c) statistiquement indiscernable de (a)&nbsp;: on est au <b>point fixe</b>, le système est invariant d'échelle&nbsp;;</li>
+<li>(c) plus lisse, tendant vers une valeur uniforme non nulle&nbsp;: le flot va vers la phase <b>ordonnée</b>, la fenêtre finit dans un seul domaine&nbsp;;</li>
+<li>(c) plus haché, tendant vers du bruit décorrélé&nbsp;: le flot va vers la phase <b>désordonnée</b>.</li>
+</ul>
+Dans les deux cas non critiques, la raison est la même&nbsp;: $\xi' = \xi/b$, la longueur de corrélation rétrécit à chaque étape mesurée en unités de la maille. Seul $\xi = \infty$ y résiste, et c'est la définition du point critique.
+
+<div class="notices note" style="--title: 'note';">
+  <p style="display: none;">note</p>
+  <div class="notice-body">
+    <p>Attention à deux limites du dessin : la transformation porte en réalité sur l&rsquo;action, non sur une configuration particulière ; et le passage de (a) à (b) y apparaît comme une simple troncature, alors que l&rsquo;élimination des modes rapides engendre aussi une correction $\delta\mathcal L$ aux couplages des modes lents, invisible sur le tracé mais qui porte toute la physique du procédé.</p>
+
+  </div>
+</div>
+
+
+<br>
 <h3 id="application-1-la-liberté-asymptotique">Application 1 : la liberté asymptotique</h3>
-<p>La théorie des perturbations est un développement en puissances des couplages : elle marche là où ils sont petits. Or ils coulent. En électrodynamique quantique, la fonction $\beta$ de la charge est <b>positive</b> ($\mu,\mathrm de/\mathrm d\mu = |e|^3/12\pi^2$ au premier ordre, dérivée au chapitre 41) : la charge effective croît vers l&rsquo;ultraviolet et décroît vers l&rsquo;infrarouge. L&rsquo;image physique est l&rsquo;<b>écrantage</b> : le vide, peuplé de paires virtuelles polarisables, se comporte comme un diélectrique, et plus on s&rsquo;approche de la charge (hautes impulsions), moins elle est masquée, donc plus elle paraît grande. La théorie des perturbations de l&rsquo;électrodynamique est excellente à basse énergie et se dégrade en montant.</p>
-<p>Pour une classe de théories, dont les théories de jauge non abéliennes de Yang–Mills (chapitre 46), la surprise est totale : $\beta$ est <b>négative</b>. Le couplage fond vers l&rsquo;ultraviolet et enfle vers l&rsquo;infrarouge. C&rsquo;est la <b>liberté asymptotique</b> : la théorie est presque libre à haute énergie et férocement couplée à basse énergie. Le vide non abélien <i>anti-écrante</i>, les gluons virtuels portant eux-mêmes la charge de couleur et renforçant le champ au lieu de le masquer. Le phénomène explique d&rsquo;un coup les deux visages de l&rsquo;interaction forte : dans les expériences de diffusion profondément inélastique, les quarks frappés à très haute énergie se comportent comme des particules quasi libres, tandis qu&rsquo;à basse énergie le couplage devient si fort qu&rsquo;aucun quark ne peut être isolé (on ne les trouve qu&rsquo;en états liés, mésons et baryons). Une image mécanique aide : des masses reliées par des ressorts interagissent faiblement à courte distance et de plus en plus fort à mesure qu&rsquo;on les écarte.</p>
+<p>La théorie des perturbations est un développement en puissances des couplages : elle marche là où ils sont petits. Or ils varient avec l&rsquo;échelle. En électrodynamique quantique, la fonction $\beta$ de la charge est <b>positive</b> ($\mu\,\mathrm de/\mathrm d\mu = |e|^3/12\pi^2$ au premier ordre, dérivée dans un chapitre ultérieure) : la charge effective croît vers l&rsquo;ultraviolet et décroît vers l&rsquo;infrarouge. L&rsquo;image physique est l&rsquo;<b>écrantage</b> : le vide, peuplé de paires virtuelles polarisables, se comporte comme un diélectrique, et plus on s&rsquo;approche de la charge (hautes impulsions), moins elle est masquée, donc plus elle paraît grande. La théorie des perturbations de l&rsquo;électrodynamique est excellente à basse énergie et se dégrade en montant.</p>
+<p>Pour une classe de théories, dont les théories de jauge non abéliennes de Yang–Mills (chapitre ultérieur), la surprise est totale : $\beta$ est <b>négative</b>. Le couplage fond vers l&rsquo;ultraviolet et enfle vers l&rsquo;infrarouge. C&rsquo;est la <b>liberté asymptotique</b> : la théorie est presque libre à haute énergie et férocement couplée à basse énergie. Le vide non abélien <i>anti-écrante</i>, les gluons virtuels portant eux-mêmes la charge de couleur et renforçant le champ au lieu de le masquer. Le phénomène explique d&rsquo;un coup les deux visages de l&rsquo;interaction forte : dans les expériences de diffusion profondément inélastique, les quarks frappés à très haute énergie se comportent comme des particules quasi libres, tandis qu&rsquo;à basse énergie le couplage devient si fort qu&rsquo;aucun quark ne peut être isolé (on ne les trouve qu&rsquo;en états liés, mésons et baryons). Une image mécanique aide : des masses reliées par des ressorts interagissent faiblement à courte distance et de plus en plus fort à mesure qu&rsquo;on les écarte.</p>
+<br>
 <h3 id="application-2-la-localisation-danderson">Application 2 : la localisation d&rsquo;Anderson</h3>
 <p>Question de matière condensée : un métal cristallin conduit, mais que se passe-t-il quand on le salit de plus en plus ? Anderson a compris en 1958 qu&rsquo;au-delà d&rsquo;un désordre critique, la diffusion sur les impuretés cesse d&rsquo;être diffusive : les électrons se <b>localisent</b> dans des états liés et le métal devient isolant. Le point de bascule s&rsquo;appelle le seuil de mobilité. Le groupe de renormalisation transforme cette intuition en théorème, et Thouless a identifié le bon couplage : la conductance sans dimension $g = \hbar G(L)/e^2$ d&rsquo;un échantillon de taille $L$, avec pour fonction de flot</p>
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \beta(g) = \frac{\mathrm d\ln g}{\mathrm d\ln L}
-$$</p>
-<p>Les deux régimes limites se calculent par analyse dimensionnelle : un métal a $G(L) \propto L^{d-2}$ (pensez $G = \sigma L$ en dimension 3), donc $\beta \approx d-2$ à grand $g$ ; un isolant a $G \propto e^{-L/\xi}$, donc $\beta \approx \ln g$ à petit $g$, très négatif. En raccordant les deux limites, tout se lit sur le graphe. En dimension 3, la courbe $\beta(g)$ traverse zéro en un point fixe répulsif $g_c$ : c&rsquo;est le seuil de mobilité, plus propre que $g_c$ on coule vers le métal, plus sale on coule vers l&rsquo;isolant. En dimensions 1 et 2, la courbe reste sous zéro : <b>aucun point fixe, aucun seuil</b>. La moindre poussière suffit, à taille assez grande, à rendre le système isolant. Un énoncé profond obtenu en raccordant deux asymptotes.</p>
+$
+</p>
+<p>Les deux régimes limites se calculent par analyse dimensionnelle : un métal a $G(L) \propto L^{d-2}$ ($G = \sigma L$ en dimension 3), donc $\beta \approx d-2$ à grand $g$ ; un isolant a $G \propto e^{-L/\xi}$, donc $\beta \approx \ln g$ à petit $g$, très négatif. En raccordant les deux limites, tout se lit sur le graphe.</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:420px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/anderson.png" style="box-shadow:none;background:none;">
+</div>
+<p>En dimension 3, la courbe $\beta(g)$ traverse zéro en un point fixe répulsif $g_c$ : c&rsquo;est le seuil de mobilité, plus propre que $g_c$le flot emporte vers le métal, plus sale il emporte vers l&rsquo;isolant. En dimensions 1 et 2, la courbe reste sous zéro : <b>aucun point fixe, aucun seuil</b>. La moindre poussière suffit, à taille assez grande, à rendre le système isolant. Un énoncé profond obtenu en raccordant deux asymptotes.</p>
+<br>
 <h3 id="application-3-la-transition-de-kosterlitzthouless">Application 3 : la transition de Kosterlitz–Thouless</h3>
-<p>Voici le plus beau retour sur investissement de la partie précédente. Le théorème de Coleman–Mermin–Wagner interdit toute brisure spontanée d&rsquo;une symétrie continue en deux dimensions spatiales : pas de transition magnétique ordinaire pour un aimant plan. Et pourtant une transition existe, d&rsquo;un type entièrement nouveau : une <b>transition de phase topologique</b>, qui sépare deux régimes des <i>vortex</i> du chapitre 29.</p>
-<p>Le modèle est le champ complexe de module 1, $\phi(\mathbf x) = e^{\mathrm i\theta(\mathbf x)}$, le modèle $XY$ bidimensionnel : une flèche plane en chaque point. Nous connaissons déjà l&rsquo;objet central : le vortex <i>global</i> (non jaugé), dont le chapitre 29 avait établi que l&rsquo;énergie diverge logarithmiquement. Ce qui était là-bas une pathologie devient ici le moteur de toute la physique. L&rsquo;action euclidienne d&rsquo;un vortex vaut</p>
-<p>$$
-S = S^{\text{cœur}}(a) + \pi K,\ln(L/a)
-\qquad\text{avec}\qquad
-K = \frac{J}{T}
-$$</p>
+<p>Voici le plus beau retour sur investissement de la partie précédente. Le théorème de Coleman–Mermin–Wagner interdit toute brisure spontanée d&rsquo;une symétrie continue en deux dimensions spatiales : pas de transition magnétique ordinaire pour un aimant plan. Et pourtant une transition existe, d&rsquo;un type entièrement nouveau : une <b>transition de phase topologique</b>, qui sépare deux régimes des <i>vortex</i> (découverts au chapitre sur les objets topologiques).</p>
+<p>Le modèle est le champ complexe de module 1, $\phi(\mathbf x) = e^{\mathrm i\theta(\mathbf x)}$, appelé modèle $XY$ bidimensionnel : une flèche plane en chaque point. Nous connaissons déjà l&rsquo;objet central : le vortex <i>global</i> (non jaugé), dont on avait établi que l&rsquo;énergie diverge logarithmiquement.</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:340px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/vortexantivortex.png" style="box-shadow:none;background:none;">
+</div>
+<p>Ce qui était une pathologie devient ici le moteur de toute la physique. L&rsquo;action euclidienne d&rsquo;un vortex vaut</p>
+<p style="text-align:center;">
+$\displaystyle
+S = S^{\text{cœur}}(a) + \pi K\,\ln(L/a)$<br>
+avec  $\displaystyle K = \frac{J}{T}$
+</p>
 <p>où $J$ est la <b>raideur</b> du champ de spins (le coût de ses déformations, la rigidité générique des phases ordonnées), $a$ la taille du cœur et $L$ celle du système.</p>
 <div id="preuve">
-<p>L&rsquo;argument d&rsquo;équilibre énergie-entropie, dû à Kosterlitz et Thouless, tient en quatre lignes et donne déjà la température de transition. À température finie, on minimise l&rsquo;énergie libre $F = U - TS_{\text{ent}}$ et non l&rsquo;énergie. Un vortex coûte $U = \pi J\ln(L/a)$, mais il rapporte de l&rsquo;entropie : son cœur peut se placer en $(L/a)^2$ endroits, d&rsquo;où $S_{\text{ent}} = 2k_{\mathrm B}\ln(L/a)$. Le bilan :</p>
-<p>$$
-F = \big(\pi J - 2k_{\mathrm B}T\big),\ln(L/a)
-$$</p>
-<p>Les deux termes croissent avec le <i>même</i> logarithme : la compétition ne dépend pas de la taille, seulement du signe du préfacteur. En dessous de $k_{\mathrm B}T = \pi J/2$, l&rsquo;énergie gagne et les vortex libres sont interdits ; au-dessus, l&rsquo;entropie gagne et les vortex prolifèrent. Ce qu&rsquo;on met sous le tapis : ce raisonnement à un seul vortex ignore les interactions entre vortex et l&rsquo;écrantage mutuel des paires ; le traitement complet passe par le flot de renormalisation ci-dessous, et il confirme le seuil.</p>
+<p>L&rsquo;argument d&rsquo;équilibre énergie-entropie, dû à Kosterlitz et Thouless, tient en quelques lignes et donne déjà la température de transition.</p>
+<p>À température finie, on minimise l&rsquo;énergie libre $F = U - TS_{\text{ent}}$ et non l&rsquo;énergie. Un vortex coûte $U = \pi J\ln(L/a)$, mais il rapporte de l&rsquo;entropie : son cœur peut se placer en $(L/a)^2$ endroits, d&rsquo;où $S_{\text{ent}} = 2k_{\mathrm B}\ln(L/a)$.</p>
+<p>Le bilan :</p>
+<p style="text-align:center;">
+$\displaystyle
+F = \big(\pi J - 2k_{\mathrm B}T\big)\,\ln(L/a)
+$
+</p>
+<p>Les deux termes croissent avec le <i>même</i> logarithme : la compétition ne dépend pas de la taille, seulement du signe du préfacteur. En dessous de $k_{\mathrm B}T = \pi J/2$, l&rsquo;énergie gagne et les vortex libres sont interdits ; au-dessus, l&rsquo;entropie gagne et les vortex prolifèrent.</p>
+<p>Ce raisonnement à un seul vortex ignore les interactions entre vortex et l&rsquo;écrantage mutuel des paires ; le traitement complet passe par le flot de renormalisation ci-dessous, et il confirme le seuil.</p>
 </div>
-<p>L&rsquo;analyse de renormalisation suit deux couplages en fonction de l&rsquo;échelle : $K^{-1} = T/J$ (l&rsquo;inverse de la raideur réduite) et la <b>fugacité</b> $y = e^{-S^{\text{cœur}}(a)}$, qui mesure à quel point le système sent la présence des vortex (petit $y$ : cœurs coûteux et rares ; grand $y $: vortex libres bon marché).</p>
+<p>L&rsquo;analyse de renormalisation suit deux couplages en fonction de l&rsquo;échelle : $K^{-1} = T/J$ (l&rsquo;inverse de la raideur réduite) et la <b>fugacité</b> $y = e^{-S^{\text{cœur}}(a)}$, qui mesure à quel point le système sent la présence des vortex (petit $y$ : cœurs coûteux et rares ; grand $y $ : vortex libres bon marché).</p>
 <!-- Figure à redessiner (L&B fig. 34.9) : plan (K⁻¹ en abscisse, y en ordonnée). Des trajectoires de flot : dans la région de droite, elles montent vers K⁻¹, y → ∞ (annoter « phase haute température ») ; dans le coin inférieur gauche, elles plongent vers l'axe y = 0 et s'y arrêtent (annoter « phase basse température ») ; la séparatrice aboutit au point K⁻¹ = π/2 sur l'axe. Légende : le flot de Kosterlitz–Thouless ; la ligne de points fixes y = 0 se termine en K⁻¹ = π/2 -->
 <div style="position:relative;margin-left:auto;margin-right:auto;width:380px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
-<img src="/flotkt.png" style="box-shadow:none;background:none;">
+<img src="/flowkt.png" style="box-shadow:none;background:none;">
 </div>
-<p>Le diagramme de flot raconte deux destins. La plupart des trajectoires filent vers $K^{-1}, y \to\infty$ : c&rsquo;est la phase de haute température, où les vortex libres prolifèrent, brouillent le champ à l&rsquo;infini, et où la raideur cesse de compter. Mais en bas à gauche, des trajectoires aboutissent sur des points fixes de l&rsquo;axe $y = 0$, à $K$ fini : c&rsquo;est la phase de basse température. La fugacité nulle signifie que les vortex n&rsquo;y survivent qu&rsquo;en <b>paires liées vortex-antivortex</b>, des dipôles topologiques : vu de loin, le tourbillon horaire de l&rsquo;un annule le tourbillon antihoraire de l&rsquo;autre, le champ redevient uniforme à l&rsquo;infini, et la paire ne coûte qu&rsquo;une énergie <i>finie</i>. Le système garde une raideur non nulle, la signature d&rsquo;un ordre (exotique), sans jamais violer Mermin–Wagner puisque l&rsquo;aimantation moyenne reste nulle. La transition, à $K^{-1} = \pi/2$ (on retrouve le $k_{\mathrm B}T = \pi J/2$ de l&rsquo;argument entropique), est le <b>déliement des vortex</b> : en chauffant, les dipôles se dissocient et les charges topologiques se libèrent. Kosterlitz et Thouless ont reçu le prix Nobel 2016 pour cette physique (avec Haldane, et Berezinskii l&rsquo;avait découverte indépendamment en Union soviétique).</p>
-<!-- Figure à redessiner (d'après L&B fig. 34.11 et 34.12) : à gauche, un nuage de symboles + et - appariés deux à deux par de petites ellipses en pointillés (gaz de dipôles, phase basse température) ; à droite, un zoom sur une paire vortex-antivortex avec le champ de flèches : tourbillon antihoraire autour du +, horaire autour du -, et des flèches quasi uniformes loin de la paire. Légende : en dessous de T_KT, les vortex n'existent qu'en dipôles liés dont les tourbillons s'annulent à grande distance -->
-<div style="position:relative;margin-left:auto;margin-right:auto;width:440px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<p>Le diagramme de flot raconte deux destins. La plupart des trajectoires filent vers $K^{-1}, y \to\infty$ (en haut à droite) : c&rsquo;est la phase de haute température, où les vortex libres prolifèrent, brouillent le champ à l&rsquo;infini, et où la raideur cesse de compter.</p>
+<p>Mais en bas à gauche, des trajectoires aboutissent sur des points fixes de l&rsquo;axe $y = 0$, à $K$ fini : c&rsquo;est la phase de basse température. La fugacité nulle signifie que les vortex n&rsquo;y survivent qu&rsquo;en <b>paires liées vortex-antivortex</b>, des dipôles topologiques : vu de loin, le tourbillon horaire de l&rsquo;un annule le tourbillon antihoraire de l&rsquo;autre, le champ redevient uniforme à l&rsquo;infini, et la paire ne coûte qu&rsquo;une énergie <i>finie</i>. Le système garde une raideur non nulle, la signature d&rsquo;un ordre (exotique), sans jamais violer Mermin–Wagner puisque l&rsquo;aimantation moyenne reste nulle.</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:540px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/dipolesvortex.png" style="box-shadow:none;background:none;">
 </div>
+<p>La transition, à $K^{-1} = \pi/2$ (on retrouve le $k_{\mathrm B}T = \pi J/2$ de l&rsquo;argument entropique), est le <b>déliement des vortex</b> : en chauffant, les dipôles se dissocient et les charges topologiques se libèrent. Kosterlitz et Thouless ont reçu le prix Nobel 2016 pour cette physique (avec Haldane, et Berezinskii l&rsquo;avait découverte indépendamment en Union soviétique).</p>
+<!-- Figure à redessiner (d'après L&B fig. 34.11 et 34.12) : à gauche, un nuage de symboles + et - appariés deux à deux par de petites ellipses en pointillés (gaz de dipôles, phase basse température) ; à droite, un zoom sur une paire vortex-antivortex avec le champ de flèches : tourbillon antihoraire autour du +, horaire autour du -, et des flèches quasi uniformes loin de la paire. Légende : en dessous de T_KT, les vortex n'existent qu'en dipôles liés dont les tourbillons s'annulent à grande distance -->
 <br>
 <h3 id="bilan-3">Bilan</h3>
 <div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \lambda_{\mathrm P}(\mu)\ \text{dépend du point choisi}
-;\xrightarrow{\ \text{comparer deux choix}\ };
+\;\xrightarrow{\ \text{comparer deux choix}\ }\;
 \mu\frac{\mathrm d\lambda_{\mathrm P}}{\mathrm d\mu} = \beta(\lambda_{\mathrm P})
-;\xrightarrow{\ \text{Wilson : intégrer la coquille, redilater}\ };
-\text{flot des } {g_i}
-;\xrightarrow{\ \beta(g^*) = 0\ };
+\;\xrightarrow{\ \text{Wilson : intégrer la coquille, redilater}\ }\;
+\text{flot des } \{g_i\}
+\;\xrightarrow{\ \beta(g^*) = 0\ }\;
 \text{points fixes}
-;\xrightarrow{\ \text{applications}\ };
+\;\xrightarrow{\ \text{applications}\ }\;
 \text{liberté asymptotique, localisation, déliement des vortex}
-$$</p>
-</div>
+$
+</p>
+<br>
 <h3 id="pièges-3">Pièges</h3>
 <ul>
 <li>Le groupe de renormalisation est un <b>semi-groupe</b>&nbsp;: intégrer les modes rapides détruit de l'information, la transformation n'a pas d'inverse. Le nom est un vestige historique.</li>
-<li>La fonction $\beta$ se définit différemment selon les problèmes ($\mathrm dg/\mathrm d\ln b$, $\mu\,\mathrm dg/\mathrm d\mu$, $\mathrm d\ln g/\mathrm d\ln L$...)&nbsp;: aucune inquiétude à avoir, l'idée est toujours la même, mais vérifier la convention avant de comparer deux textes.</li>
-<li>Surveiller le <b>sens du flot</b>&nbsp;: $b > 1$ et $\ell\to\infty$ suivent l'infrarouge (grandes distances, convention de la matière condensée), $\mu\to\infty$ suit l'ultraviolet. Une flèche inversée fait dire à un diagramme le contraire de ce qu'il dit.</li>
-<li>«&nbsp;Constante&nbsp;» de couplage est un abus de langage désormais officiel&nbsp;: tout couplage coule.</li>
+<li>La fonction $\beta$ se définit différemment selon les problèmes ($\mathrm dg/\mathrm d\ln b$, $\mu\,\mathrm dg/\mathrm d\mu$, $\mathrm d\ln g/\mathrm d\ln L$...). L'idée est toujours la même.</li>
+<li>Surveiller le <b>sens du flot</b>&nbsp;: $b > 1$ et $\ell\to\infty$ suivent l'infrarouge (grandes distances, convention de la matière condensée), $\mu\to\infty$ suit l'ultraviolet.</li>
+<li>«&nbsp;Constante&nbsp;» de couplage est un abus de langage désormais officiel&nbsp;: tout couplage dépend de l'échelle.</li>
 <li>Un point fixe n'est pas une destination garantie&nbsp;: répulsif, il sépare des bassins&nbsp;; attractif, il ne capture que son bassin. Et un flot $g\to\infty$ ne prédit pas une mesure infinie&nbsp;: une physique absente du lagrangien finit toujours par couper le flot.</li>
 <li>Électrodynamique et chromodynamique tirent en sens opposés&nbsp;: écrantage ($\beta > 0$, la charge croît vers l'ultraviolet) contre anti-écrantage ($\beta < 0$, liberté asymptotique)&nbsp;; la différence vient de ce que les gluons portent eux-mêmes la charge de couleur.</li>
 <li>Kosterlitz–Thouless ne contredit pas Coleman–Mermin–Wagner&nbsp;: aucune symétrie n'est brisée, aucune aimantation n'apparaît. La transition est topologique (déliement de vortex), et le paramètre qui la détecte est la raideur, pas l'ordre.</li>
-<li>Les vortex de ce chapitre sont les vortex <b>globaux</b> (non jaugés) du chapitre 29&nbsp;: leur énergie en $\pi K\ln(L/a)$ est exactement la divergence logarithmique qui les rendait instables à $T = 0$. La température recycle le défaut en physique.</li>
+<li>Les vortex de ce chapitre sont les vortex <b>globaux</b> (non jaugés) du chapitre sur les objets topologiques&nbsp;: leur énergie en $\pi K\ln(L/a)$ est exactement la divergence logarithmique qui les rendait instables à $T = 0$. La température recycle le défaut en physique.</li>
 <li>Dans l'argument entropique, tout repose sur le fait que énergie et entropie portent le <i>même</i> $\ln(L/a)$&nbsp;: c'est cette coïncidence de forme qui produit une température de transition finie et indépendante de la taille.</li>
 </ul>
-<br>
-<h2 id="le-ferromagnétisme-un-tutoriel-de-renormalisation">Le ferromagnétisme, un tutoriel de renormalisation</h2>
-<h3 id="les-phénomènes-critiques-et-lhypothèse-de-widom">Les phénomènes critiques et l&rsquo;hypothèse de Widom</h3>
-<p>Au voisinage d&rsquo;une transition de phase continue, l&rsquo;expérience révèle un comportement remarquable : les grandeurs thermodynamiques suivent des <b>lois de puissance</b>. En posant la température réduite $t = (T - T_c)/T_c$, on définit les <b>exposants critiques</b> :</p>
-<p>$$
-C \sim |t|^{-\alpha},
-\quad
-M \sim (-t)^{\beta},
-\quad
-\chi \sim |t|^{-\gamma},
-\quad
-\chi \sim |B|^{1/\delta}\ \text{à } T_c,
-\quad
-\xi \sim |t|^{-\nu}
-$$</p>
-<p>et la fonction de corrélation connexe interpole entre une loi de puissance $1/|r|^{d-2+\eta}$ à courte distance et une décroissance exponentielle $e^{-|r|/\xi}$ au-delà de la longueur de corrélation $\xi$. Le choix des lois de puissance n&rsquo;est pas anodin : contrairement à une exponentielle, une loi de puissance ne contient <b>aucune échelle de longueur</b>. C&rsquo;est la marque du point critique, où $\xi$ diverge et où les fluctuations existent à toutes les échelles à la fois. Un système sans échelle propre est exactement le client idéal d&rsquo;une méthode qui étudie les changements d&rsquo;échelle.</p>
-<p>Bien avant le groupe de renormalisation, Widom a remarqué que tous les exposants découlent d&rsquo;une seule hypothèse sur l&rsquo;énergie libre réduite $f(t, h)$ (par unité de volume et de température, avec $h$ le champ réduit) :</p>
-<div id="theo">
-<p><b>Hypothèse d&rsquo;échelle de Widom</b> : sous un changement de longueur $L \to bL$,</p>
-<p>$$
-f(t, h) = b^{-d}, f\big(b^{y_t},t,\ b^{y_h},h\big)
-$$</p>
-<p>pour deux exposants $y_t$ et $y_h$ à déterminer. Le facteur $b^{-d}$ vient du $1/L^d$ de la densité d&rsquo;énergie libre. Comme $b$ est arbitraire, on peut le choisir tel que $b^{y_t}t = 1$, ce qui élimine un paramètre et livre les six exposants en fonction de $(y_t, y_h)$ seuls :</p>
-<p>$$
-\alpha = 2 - \frac{d}{y_t},
-\quad
-\beta = \frac{d - y_h}{y_t},
-\quad
-\gamma = \frac{2y_h - d}{y_t},
-\quad
-\delta = \frac{y_h}{d - y_h},
-\quad
-\nu = \frac1{y_t},
-\quad
-\eta = 2 + d - 2y_h
-$$</p>
-<p>Deux nombres commandent six exposants : quatre relations doivent donc lier les exposants entre eux (lois de Rushbrooke, Griffith, Josephson, Fisher), et l&rsquo;expérience les vérifie.</p>
-</div>
-<p>Le programme du chapitre est fixé : la machine de Wilson doit produire $y_t$ et $y_h$, en lisant comment $t$ et $h$ coulent sous renormalisation.</p>
-<h3 id="le-modèle-et-léchauffement-gaussien">Le modèle, et l&rsquo;échauffement gaussien</h3>
-<p>Le modèle continu du ferromagnète est le modèle de Landau–Ginzburg, qui n&rsquo;est autre que la théorie $\phi^4$ euclidienne en dimension $d$ :</p>
-<p>$$
-S_{\mathrm E} = \int\mathrm d^dx\left[\frac12(\nabla\phi)^2 + \frac{m^2}{2}\phi^2 + \frac{\lambda}{4!}\phi^4\right]
-\qquad\text{avec l&rsquo;identification}\qquad
-m^2 = a,(T - T_c)
-$$</p>
-<p>La température entre par le terme de masse : $m^2 &gt; 0$ au-dessus de $T_c$, $m^2 &lt; 0$ en dessous. En champ moyen ($\phi$ uniforme), on retrouve la théorie de Landau du chapitre sur la brisure de symétrie : $m^2 &lt; 0$ et $\lambda &gt; 0$ donnent un ferromagnète, point final. Mais le champ moyen est aveugle aux fluctuations, et toute la question du chapitre est de savoir ce qu&rsquo;elles changent.</p>
-<div id="preuve">
-<p>Échauffement : la théorie libre ($\lambda = 0$, dite <b>modèle gaussien</b>), où les trois pas de Wilson s&rsquo;exécutent exactement. En espace de Fourier, l&rsquo;action $\frac12\int\tilde\phi(-p)(p^2+m^2)\tilde\phi(p)$ est diagonale en $p$ : les modes lents et rapides ne se parlent pas, et le pas I (intégrer les rapides) ne produit qu&rsquo;une constante multiplicative sans intérêt. Le pas II pose $p&rsquo; = bp$, le pas III rééchelonne le champ avec $d_\phi = (d-2)/2$, choisi pour laisser le terme de gradient $\tilde\phi,p^2,\tilde\phi$ invariant. Le seul survivant est le terme de masse, qui ressort multiplié :</p>
-<p>$$
-m&rsquo;^2 = b^2,m^2
-\qquad\Longrightarrow\qquad
-y_t = 2
-$$</p>
-<p>Le couplage $m^2$ grandit à chaque tour de manivelle : on dit que c&rsquo;est une variable (un opérateur) <b>pertinente</b> (une variable qui rétrécit est <b>non pertinente</b>, une variable immobile est <b>marginale</b>). En ajoutant un champ extérieur, terme $-h\phi$, le même rééchelonnement donne $h&rsquo; = b^{(d+2)/2}h$, soit</p>
-<p>$$
-y_h = \frac{d+2}{2}
-$$</p>
-<p>Ces valeurs gaussiennes, injectées dans les formules de Widom avec $d = 4$, redonnent exactement les exposants du champ moyen ($\alpha = 0$, $\beta = \tfrac12$, $\gamma = 1$, $\delta = 3$, $\nu = \tfrac12$, $\eta = 0$).</p>
-</div>
-<h3 id="une-boucle-et-le-point-fixe-de-wilsonfisher">Une boucle, et le point fixe de Wilson–Fisher</h3>
-<p>Allumons $\lambda$. Le pas I devient impossible exactement, et on le traite en perturbation par des diagrammes de Feynman, avec <b>une seule différence</b> par rapport à toutes nos habitudes : les impulsions internes ne s&rsquo;intègrent que <i>sur la coquille rapide</i>, de $\Lambda/b$ à $\Lambda$, et non de 0 à la coupure. À une boucle, deux diagrammes corrigent la théorie : le têtard (une boucle accrochée à une ligne, qui corrige $m^2$) et le poisson (deux vertex reliés par deux propagateurs, qui corrige $\lambda$).</p>
-<!-- Figure à redessiner (L&B fig. 35.2) : deux diagrammes. En haut, le « têtard » : une ligne horizontale avec un vertex portant une boucle fermée au-dessus (correction de m²) ; en bas, le « poisson » : quatre pattes externes reliées à deux vertex joints par deux propagateurs formant une lentille (correction de λ). Légende : les deux diagrammes à une boucle ; les impulsions internes ne parcourent que la coquille Λ/b ≤ |p| ≤ Λ -->
-<div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
-<img src="/uneboucle.png" style="box-shadow:none;background:none;">
-</div>
-<div id="preuve">
-<p>Les intégrales de coquille effectuées, puis les pas II et III appliqués, les couplages se décalent (équations 35.19 du livre, que nous admettons ; les préfacteurs cachent une subtilité de facteurs de symétrie signalée en note par le livre). Pour en extraire un flot continu, on pose $b = e^\ell$ avec $\ell$ petit et on développe. Détail crucial : les intégrales ne convergent proprement qu&rsquo;en dimension 4, et l&rsquo;on pose donc</p>
-<p>$$
-d = 4 - \varepsilon
-$$</p>
-<p>en développant tout en puissances de $\varepsilon$. Le résultat, à l&rsquo;ordre dominant (et avec $\Omega_4 = 1/8\pi^2$ pour le volume angulaire) :</p>
-<p>$$
-\frac{\mathrm dm&rsquo;^2}{\mathrm d\ell} = 2m^2 + \frac{\lambda}{16\pi^2},(1 - m^2),
-\qquad
-\frac{\mathrm d\lambda&rsquo;}{\mathrm d\ell} = \varepsilon,\lambda - \frac{3\lambda^2}{16\pi^2}
-$$</p>
-<p>Ce sont les équations de Gell-Mann–Low du ferromagnète. La seconde se lit seule : le terme $\varepsilon\lambda$ (pur effet de dimension) pousse $\lambda$ vers le haut, le terme de boucle $-3\lambda^2/16\pi^2$ le freine, et l&rsquo;équilibre définit un point fixe non trivial. Les points fixes du système complet sont</p>
-<p>$$
-(m^2, \lambda)^* = (0, 0)
-\quad\text{(gaussien)}
-\qquad\text{et}\qquad
-(m^2, \lambda)^* = \Big({-\frac{\varepsilon}{6}},\ \frac{16\pi^2\varepsilon}{3}\Big)
-\quad\text{(Wilson–Fisher)}
-$$</p>
-<p>En linéarisant le flot autour de chaque point fixe (développement limité au premier ordre, la matrice jacobienne évaluée au point fixe), on lit les stabilités : le point gaussien est répulsif dès que $\varepsilon &gt; 0$ (en dessous de quatre dimensions, $\lambda$ est pertinent et fuit), et le point de Wilson–Fisher est mixte, attractif dans la direction de $\lambda$, répulsif dans celle de $m^2$. La valeur propre de la direction $m^2$ au point de Wilson–Fisher donne le trésor du chapitre :</p>
-<p>$$
-y_t = 2 - \frac{\varepsilon}{3}
-$$</p>
-<p>tandis que $y_h = (d+2)/2$ n&rsquo;est pas corrigé à une boucle.</p>
-</div>
-<!-- Figure à redessiner (L&B fig. 35.4) : plan (m² en abscisse, λ en ordonnée). Deux points fixes marqués : W1 à l'origine, W2 en (-ε/6, 16π²ε/3). Trajectoires de flot : à droite elles filent vers m² → +∞ (annoter « PM », paramagnétique) ; à gauche vers m² → -∞ (annoter « FM », ferromagnétique) ; une séparatrice passe par W2. Dessiner une trajectoire B partant de m² légèrement négatif mais λ grand qui finit côté PM, et une trajectoire C partant de m² négatif et λ petit qui finit côté FM. Légende : les fluctuations peuvent voler la transition : m² < 0 ne garantit plus le ferromagnétisme -->
-<div style="position:relative;margin-left:auto;margin-right:auto;width:400px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
-<img src="/flotferro.png" style="box-shadow:none;background:none;">
-</div>
-<p>Avant les nombres, la physique du diagramme de flot. Les trajectoires partant de $m^2 &gt; 0$ filent toutes vers les grands $m^2$ positifs : paramagnétisme, en accord avec le champ moyen. Mais côté $m^2 &lt; 0$, la surprise : <b>partir avec une masse carrée négative ne garantit plus le ferromagnétisme</b>. Si le couplage $\lambda$ (l&rsquo;intensité des fluctuations) est assez fort, le flot ramène le système côté paramagnétique : les fluctuations peuvent voler la transition au champ moyen. Seules les conditions initiales à $\lambda$ assez petit et $m^2$ assez négatif s&rsquo;échappent vers l&rsquo;ordre ferromagnétique.</p>
-<h3 id="les-exposants-et-le-miracle-de-luniversalité">Les exposants, et le miracle de l&rsquo;universalité</h3>
-<p>Il ne reste qu&rsquo;à récolter. Avec $y_t = 2 - \varepsilon/3$ et $y_h = (6-\varepsilon)/2$, les formules de Widom donnent, à l&rsquo;ordre $\varepsilon$ :</p>
-<p>$$
-\alpha = \frac{\varepsilon}{6},
-\quad
-\beta = \frac12 - \frac{\varepsilon}{6},
-\quad
-\gamma = 1 + \frac{\varepsilon}{6},
-\quad
-\delta = 3 + \varepsilon,
-\quad
-\nu = \frac12 + \frac{\varepsilon}{12},
-\quad
-\eta = 0
-$$</p>
-<p>Puis vient le geste le plus effronté de tout le livre : pour décrire le monde réel à trois dimensions, on pose $\varepsilon = 1$, très au-delà du domaine où le développement est censé valoir. Et cela marche remarquablement bien :</p>
-<table>
-	<thead>
-			<tr>
-					<th></th>
-					<th>$\alpha$</th>
-					<th>$\beta$</th>
-					<th>$\gamma$</th>
-					<th>$\delta$</th>
-					<th>$\nu$</th>
-					<th>$\eta$</th>
-			</tr>
-	</thead>
-	<tbody>
-			<tr>
-					<td>$\varepsilon = 0$ (champ moyen, $d=4$)</td>
-					<td>0</td>
-					<td>0.5</td>
-					<td>1</td>
-					<td>3</td>
-					<td>0.5</td>
-					<td>0</td>
-			</tr>
-			<tr>
-					<td>$\varepsilon = 1$, ordre $\varepsilon$</td>
-					<td>0.167</td>
-					<td>0.333</td>
-					<td>1.167</td>
-					<td>4</td>
-					<td>0.583</td>
-					<td>0</td>
-			</tr>
-			<tr>
-					<td>$\varepsilon = 1$, ordre $\varepsilon^2$</td>
-					<td>0.077</td>
-					<td>0.340</td>
-					<td>1.244</td>
-					<td>4.462</td>
-					<td>0.626</td>
-					<td>0.019</td>
-			</tr>
-			<tr>
-					<td>Ising 3D (valeurs acceptées)</td>
-					<td>0.110</td>
-					<td>0.327</td>
-					<td>1.237</td>
-					<td>4.789</td>
-					<td>0.630</td>
-					<td>0.036</td>
-			</tr>
-	</tbody>
-</table>
-<p>L&rsquo;ordre $\varepsilon^2$ s&rsquo;approche des valeurs acceptées pour le modèle d&rsquo;Ising tridimensionnel, elles-mêmes en bon accord avec l&rsquo;expérience. Et la leçon dépasse largement l&rsquo;aimant : dans tout ce calcul, aucun détail microscopique n&rsquo;est entré. Les exposants ne dépendent que de la <b>dimension</b> de l&rsquo;espace et de la <b>symétrie</b> du paramètre d&rsquo;ordre. Une transition ferromagnétique, une transition liquide-gaz, un mélange binaire de fluides, un système décrit par le même lagrangien dans l&rsquo;Univers primordial : mêmes exposants. C&rsquo;est l&rsquo;<b>universalité</b>, et c&rsquo;est le semi-groupe qui l&rsquo;explique : le flot vers les grandes échelles efface les détails microscopiques (variables non pertinentes) et toutes les théories d&rsquo;une même classe convergent vers le même point fixe. Le point fixe ne se souvient de rien, sauf de la dimension et de la symétrie.</p>
-<br>
-<h3 id="bilan-4">Bilan</h3>
-<div id="grosseformule">
-<p>$$
-C, M, \chi, \xi \sim |t|^{-\text{exposants}}
-;\xrightarrow{\ \text{Widom}\ };
-f(t,h) = b^{-d}f(b^{y_t}t,, b^{y_h}h)
-;\xrightarrow{\ \text{gaussien}\ };
-y_t = 2,\ y_h = \tfrac{d+2}{2}
-;\xrightarrow{\ \text{1 boucle},\ d = 4-\varepsilon\ };
-\text{point fixe de Wilson–Fisher}
-;\xrightarrow{\ \text{linéarisation}\ };
-y_t = 2 - \tfrac{\varepsilon}{3}
-;\xrightarrow{\ \varepsilon = 1\ };
-\text{exposants d&rsquo;Ising 3D, universalité}
-$$</p>
-</div>
-<h3 id="pièges-4">Pièges</h3>
-<ul>
-<li>L'identification $m^2 = a(T - T_c)$ est le pont entre le champ et la thermodynamique&nbsp;: la température entre dans la théorie par le terme de masse, et c'est pour cela que $y_t$ se lit sur le flot de $m^2$.</li>
-<li>Le champ moyen est <i>aveugle aux fluctuations</i>&nbsp;: le résultat le plus contre-intuitif du flot est qu'un $m^2 < 0$ initial peut aboutir à un paramagnétique si $\lambda$ est grand. La transition n'appartient pas au lagrangien, elle appartient au flot.</li>
-<li>Dans le calcul à une boucle du groupe de renormalisation, les intégrales internes ne courent que <b>sur la coquille</b> $\Lambda/b \leq |p| \leq \Lambda$&nbsp;: reprendre l'habitude des intégrales de 0 à $\Lambda$ fausse tous les coefficients.</li>
-<li>Le développement en $\varepsilon = 4 - d$ est utilisé à $\varepsilon = 1$, hors de tout domaine de validité contrôlé, et la série est de surcroît asymptotique&nbsp;: son succès est un fait d'expérience (et un petit miracle), pas un théorème.</li>
-<li>$\eta = 0$ à une boucle&nbsp;: l'exposant de la fonction de corrélation n'apparaît qu'à deux boucles. Un $\eta$ non nul mesure l'écart du champ à sa dimension naïve, d'où le nom de dimension anormale.</li>
-<li>Vocabulaire à verrouiller&nbsp;: <b>pertinent</b> (grandit sous le flot, gouverne la physique aux grandes échelles), <b>non pertinent</b> (rétrécit, oubliable), <b>marginal</b> (immobile au premier ordre, tout se joue aux ordres suivants). En dimension $4-\varepsilon$, $\lambda$ est pertinent près du point gaussien&nbsp;; en dimension $> 4$, il devient non pertinent et le champ moyen dit vrai.</li>
-<li>Les préfacteurs des diagrammes cachent une subtilité de comptage (le bon facteur pour $p$ boucles est $2p!/2^p2^p$, note du livre renvoyant à Binney et al.)&nbsp;: en cas de désaccord d'un facteur 2 ou 3 avec un autre texte, chercher d'abord là.</li>
-<li>L'universalité n'affirme pas que tout est pareil&nbsp;: $T_c$, les amplitudes, les détails hors du régime critique restent propres à chaque matériau. Seuls les <i>exposants</i> (et certains rapports d'amplitudes) sont universels.</li>
-</ul>
-
-<div class="notices note" style="--title: 'note';">
-  <p style="display: none;">note</p>
-  <div class="notice-body">
-    <p>Et maintenant ? La machine est complète pour les champs scalaires : quasiparticules, contretermes, self-énergie, flot. Mais les électrons ne sont pas des scalaires. La partie suivante donne un spin à la théorie des champs : l&rsquo;équation de Dirac, les spineurs, et la découverte que l&rsquo;antimatière est une conséquence de la relativité jointe à la mécanique quantique.</p>
-
-  </div>
-</div>
-
-
 <br>
 <div style="overflow-x: auto;text-align:center;">
 <table>
@@ -2880,6 +3191,14 @@ $$</p>
     <th style="text-align:center;"><a href="../">Sommaire</a></th><td><a href="../tqc10">Chapitre précédent</a></td><td><a href="../tqc12">Chapitre suivant</a></td>
     </tr>
 </table>
+</div>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Dans un métal, ces multiparticules peuvent être décrites comme des émissions de paires électrons-trous.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
 </div>
 
 
@@ -4122,6 +4441,16 @@ $$</p>
             
         
                     
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
             
         
                     
@@ -4181,16 +4510,16 @@ $$</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785386198"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785386198"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785386198"></script>
-    <script src="/js/jquery.sticky.js?1785386198"></script>
-    <script src="/js/featherlight.min.js?1785386198"></script>
-    <script src="/js/highlight.pack.js?1785386198"></script>
+    <script src="/js/clipboard.min.js?1785704825"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785704825"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785704825"></script>
+    <script src="/js/jquery.sticky.js?1785704825"></script>
+    <script src="/js/featherlight.min.js?1785704825"></script>
+    <script src="/js/highlight.pack.js?1785704825"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785386198"></script>
-    <script src="/js/learn.js?1785386198"></script>
-    <script src="/js/hugo-learn.js?1785386198"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785704825"></script>
+    <script src="/js/learn.js?1785704825"></script>
+    <script src="/js/hugo-learn.js?1785704825"></script>
     
     
 
