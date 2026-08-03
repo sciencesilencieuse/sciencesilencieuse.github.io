@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785732124" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785732124" rel="stylesheet">
-    <link href="/css/hybrid.css?1785732124" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785732124" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785732124" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785732124" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785732124" rel="stylesheet">
-    <link href="/css/theme.css?1785732124" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785732124" rel="stylesheet">
+    <link href="/css/nucleus.css?1785763798" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785763798" rel="stylesheet">
+    <link href="/css/hybrid.css?1785763798" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785763798" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785763798" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785763798" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785763798" rel="stylesheet">
+    <link href="/css/theme.css?1785763798" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785763798" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785732124" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785763798" rel="stylesheet">
     
-    <link href="/css/foo.css?1785732124" rel="stylesheet"><link href="/css/bar.css?1785732124" rel="stylesheet">
+    <link href="/css/foo.css?1785763798" rel="stylesheet"><link href="/css/bar.css?1785763798" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785732124"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785763798"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785732124"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785732124"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785763798"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785763798"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785732124"></script>
+<script type="text/javascript" src="/js/search.js?1785763798"></script>
 
     
   </div>
@@ -2140,8 +2140,126 @@ Jusqu&rsquo;ici, nos champs étaient des scalaires (une composante, spin 0) ou d
 <p>La confrontation de cette théorie à l&rsquo;expérience, elle, demande de la renormaliser : c&rsquo;est l&rsquo;objet de la partie suivante, qui lui est entièrement consacrée.</p>
 <h2 id="léquation-de-dirac">L&rsquo;équation de Dirac</h2>
 <h3 id="lidée-de-dirac-prendre-la-racine-carrée-dun-opérateur">L&rsquo;idée de Dirac : prendre la racine carrée d&rsquo;un opérateur</h3>
-<p>Rappelons les deux maladies de l&rsquo;équation de Klein&ndash;Gordon vue comme équation d&rsquo;onde à une particule : des états d&rsquo;énergie négative, et des probabilités négatives.</p>
-<p>Dirac diagnostique une cause commune : l&rsquo;équation est du <b>second ordre</b> en temps, parce qu&rsquo;elle contient $\partial^2$. Son idée, qui lui vint dit-on en fixant la cheminée du salon de St John&rsquo;s College, consiste à chercher une équation du <b>premier ordre</b>, c&rsquo;est-à-dire à prendre la racine carrée de $(\partial^2 + m^2)$.</p>
+<h4 id="ce-quon-attend-dune-équation-donde">Ce qu&rsquo;on attend d&rsquo;une équation d&rsquo;onde</h4>
+<p>Une équation d&rsquo;onde à une particule doit fournir une <strong>densité de probabilité</strong> $\rho$ et un courant $\boldsymbol j$ satisfaisant une équation de continuité $\partial_t\rho + \boldsymbol\nabla\cdot\boldsymbol j = 0$, qui garantit que la probabilité totale ne se perd pas. Et $\rho$ doit être <strong>positive</strong>, faute de quoi le mot « probabilité » perd son sens.</p>
+<p>Grâce au fait qu&rsquo;elle soit du <strong>premier ordre en temps</strong>, l&rsquo;équation de Schrödinger $\mathrm i\partial_t\psi = \hat H\psi$ s&rsquo;en acquitte parfaitement. En découle en effet naturellement une densité de probabilité définie par :</p>
+<p style="text-align:center;">
+$\displaystyle \rho = \psi^*\psi = |\psi|^2 \;\geq\; 0$
+</p>
+<p>qui est positive par construction, puisque c&rsquo;est un module carré. Rien à vérifier, rien à espérer : c&rsquo;est <strong>automatique</strong>.</p>
+<div id="preuve">
+<details>
+<summary>Obtention de l'équation de continuité</summary>
+<p>Multiplions à gauche l&rsquo;équation de Schrödinger par $\psi^*$ :</p>
+<p style="text-align:center;">
+$\displaystyle
+\psi^*(\mathrm i \partial_t \psi = \hat H \psi)
+$
+</p>
+<p>Et sa conjuguée par $\psi$ :</p>
+<p style="text-align:center;">
+$\displaystyle
+\psi(-\mathrm i \partial_t \psi^* = (\hat H \psi)^*)
+$
+</p>
+<p>En soustrayant la seconde équation à la première, on obtient :</p>
+<p style="text-align:center;">
+$\displaystyle
+\mathrm i (\psi^* \partial_t \psi + \psi \partial_t \psi^*) = \psi^* \hat H \psi - \psi (\hat H \psi)^*
+$
+</p>
+<p>Or d&rsquo;une part $\psi^* \partial_t \psi + \psi \partial_t \psi^*=\partial_t(\psi^*\psi)$.</p>
+<p>Et d&rsquo;autre part, avec $\hat H = -\frac{1}{2m}\nabla^2 + V$ (où l&rsquo;énergie potentielle $V$ est un nombre réel, $V^*=V$), le premier terme du membre de droite donne :</p>
+<p style="text-align:center;">
+$\displaystyle
+\psi^* \hat H \psi = \psi^* \left( -\frac{1}{2m}\nabla^2 \psi + V\psi \right) = -\frac{1}{2m}\psi^*\nabla^2\psi + V\psi^*\psi
+$
+</p>
+<p>Et le second terme :</p>
+<p style="text-align:center;">
+$\displaystyle
+\psi (\hat H \psi)^* = \psi\left( -\frac{1}{2m}\nabla^2 \psi + V\psi \right)^{\!*} = -\frac{1}{2m}\psi\nabla^2\psi^* + V\psi\psi^*
+$
+</p>
+<p>D&rsquo;où le terme de droite complet :</p>
+<p style="text-align:center;">
+$\displaystyle
+\left( -\frac{1}{2m}\psi^*\nabla^2\psi + \cancel{V\psi^*\psi } \right) - \left( -\frac{1}{2m}\psi\nabla^2\psi^* + \cancel{V\psi\psi^* }\right) = -\frac{1}{2m} \big( \psi^*\nabla^2\psi - \psi\nabla^2\psi^* \big) = -\frac{1}{2m} \nabla \cdot \big( \psi^*\nabla\psi - \psi\nabla\psi^* \big)
+$
+</p>  
+<p>On peut donc réécrire l&rsquo;équation globale comme :</p>
+<p style="text-align:center;">
+  $\displaystyle
+\partial_t (\psi^* \psi) + \nabla \cdot \left[ \frac{1}{2m\mathrm i} \big( \psi^*\nabla\psi - \psi\nabla\psi^* \big) \right] = 0
+  $
+  </p> 
+<p>Soit encore :</p>
+<p style="text-align:center;">
+$\displaystyle
+\partial_t (\psi^* \psi) + \nabla \cdot \mathbf{j} = 0
+$
+</p>
+<p>en posant  $\mathbf{j} = \frac{1}{2m\mathrm i} (\psi^* \nabla \psi - \psi \nabla \psi^*)$.</p>
+<p>On reconnaît une équation de continuité qui nous dit que la variation d&rsquo;une &ldquo;densité&rdquo; dans le temps est compensée par un &ldquo;courant&rdquo; qui s&rsquo;échappe. Cette fameuse densité, notée $\rho$, s&rsquo;identifie donc formellement et obligatoirement au terme dans la parenthèse :</p>
+<p style="text-align:center;">
+$\displaystyle
+\rho = \psi^* \psi
+$
+</p>
+</details>
+</div>
+<h4 id="ce-que-donne-kleingordon-et-pourquoi-cela-échoue">Ce que donne Klein&ndash;Gordon, et pourquoi cela échoue</h4>
+<p>Refaisons exactement la même manipulation sur l&rsquo;équation de Klein&ndash;Gordon.</p>
+<div id="preuve">
+<details>
+<summary>Le courant conservé de Klein&ndash;Gordon</summary>
+<p>Partons de $(\partial^2 + m^2)\phi = 0$. Multiplions par $\phi^*$, puis retranchons l&rsquo;équation conjuguée multipliée par $\phi$ ; le terme de masse disparaît :</p>
+<p style="text-align:center;">
+$\displaystyle \phi^*\,\partial^2\phi - \phi\,\partial^2\phi^* = 0$
+</p>
+<p>On reconnaît à nouveau une divergence exacte, car les termes croisés $\partial_\mu\phi^*\partial^\mu\phi$ se compensent :</p>
+<p style="text-align:center;">
+$\displaystyle \partial_\mu\big(\phi^*\partial^\mu\phi - \phi\,\partial^\mu\phi^*\big) = 0$
+</p>
+<p>On a donc bien une équation de continuité $\partial_\mu j^\mu = 0$, avec (en normalisant pour retrouver Schrödinger à la limite non relativiste)</p>
+<p style="text-align:center;">
+$\displaystyle j^\mu = \frac{\mathrm i}{2m}\big(\phi^*\partial^\mu\phi - \phi\,\partial^\mu\phi^*\big)$
+</p>
+<p><b>Regardons maintenant la composante temporelle</b>, celle qui joue le rôle de densité :</p>
+<p style="text-align:center;">
+$\displaystyle \rho = j^0 = \frac{\mathrm i}{2m}\left(\phi^*\frac{\partial\phi}{\partial t} - \phi\,\frac{\partial\phi^*}{\partial t}\right)$
+</p>
+<p><b>Elle contient $\partial\phi/\partial t$</b>, et c&rsquo;est là toute la différence avec Schrödinger. Ce n&rsquo;est plus un module carré, et rien n&rsquo;impose son signe.</p>
+</details>
+</div>
+<p>Le désastre se voit sur l&rsquo;exemple le plus simple. Prenons une onde plane $\phi = N\,\mathrm e^{-\mathrm i(Et - \boldsymbol p\cdot\boldsymbol x)}$, de sorte que $\partial_t\phi = -\mathrm iE\phi$ :</p>
+<div id="theo">
+<p style="text-align:center;">
+$\displaystyle \rho = \frac{\mathrm i}{2m}\big(-\mathrm iE|\phi|^2 - \mathrm iE|\phi|^2\big) = \frac{E}{m}\,|N|^2$
+</p>
+</div>
+<p>La densité est <strong>proportionnelle à l&rsquo;énergie</strong>. Or l&rsquo;équation de Klein&ndash;Gordon, étant du second ordre en temps, impose $E^2 = \boldsymbol p^2 + m^2$ et accepte donc les <b>deux</b> racines :</p>
+<p style="text-align:center;">
+$\displaystyle E = \pm\sqrt{\boldsymbol p^2 + m^2}$
+</p>
+<p>Les solutions d&rsquo;énergie négative, que rien ne permet d&rsquo;écarter puisqu&rsquo;elles font partie de la base des solutions, donnent une densité négative.</p>
+<p><b>Les deux maladies n&rsquo;en font qu&rsquo;une.</b> On les cite souvent séparément, énergies négatives d&rsquo;un côté et probabilités négatives de l&rsquo;autre, mais on vient de voir qu&rsquo;elles sont le même symptôme : $\rho \propto E$, donc les secondes découlent des premières.<br><br>
+Et leur cause commune est identifiable : l&rsquo;équation est du <b>second ordre en temps</b>. C&rsquo;est cela qui autorise deux racines pour $E$, et c&rsquo;est encore cela qui fait apparaître $\partial_t\phi$ dans la densité. Autrement dit, $\phi$ et $\dot\phi$ peuvent être choisis <i>indépendamment</i> comme conditions initiales, et l&rsquo;on peut donc fabriquer une densité négative à volonté.</p>
+<h4 id="le-raisonnement-de-dirac">Le raisonnement de Dirac</h4>
+<p>De ce diagnostic découle une exigence, et elle est contraignante.</p>
+<ul style="margin-top:0.5em;">
+<li>Pour que $\rho$ soit un module carré, comme chez Schrödinger, il faut que l'équation soit du <b>premier ordre en temps</b>&nbsp;: c'est la seule façon d'obtenir une continuité où $\partial_t$ ne porte que sur $\psi^*\psi$.</li>
+<li>Mais la relativité exige que <b>l'espace et le temps soient sur le même pied</b>. Une équation du premier ordre en temps et du second en espace serait non covariante (c'est d'ailleurs le défaut de Schrödinger).</li>
+<li>Donc l'équation cherchée doit être du <b>premier ordre en espace aussi</b>, c'est-à-dire linéaire en toutes les dérivées.</li>
+</ul>
+<p>Reste une contrainte que l&rsquo;on ne peut pas abandonner : la relation de dispersion relativiste $E^2 = \boldsymbol p^2 + m^2$ est un fait physique, pas un défaut. La nouvelle équation devra donc, une fois élevée au carré, redonner Klein&ndash;Gordon.</p>
+<div id="theo">
+<p>Le programme de Dirac tient ainsi en une phrase : trouver un opérateur linéaire dans les dérivées dont le carré vaut $\partial^2 + m^2$. C&rsquo;est très exactement chercher une <b>racine carrée de l&rsquo;opérateur de Klein–Gordon</b>.</p>
+</div>
+<p>L&rsquo;idée lui vint, dit-on, en fixant la cheminée du salon de St John&rsquo;s College.</p>
+<p>Mise en garde. L&rsquo;équation de Dirac guérira le problème des probabilités négatives : sa densité sera bien $\psi^\dagger\psi \geq 0$. Mais elle <b>ne guérira pas</b> celui des énergies négatives, qui subsistent dans son spectre. Dirac tentera d&rsquo;abord de les neutraliser par l&rsquo;hypothèse de la « mer » remplie, et la solution définitive ne viendra qu&rsquo;avec la théorie quantique des champs, qui les réinterprète en <b>antiparticules</b> d&rsquo;énergie positive (chapitre 38).<br><br>
+Avec le recul, le vrai diagnostic est ailleurs : c&rsquo;est l&rsquo;interprétation à <i>une particule</i> qui est intenable en régime relativiste, puisque l&rsquo;énergie disponible permet toujours de créer des paires. Ce que Klein&ndash;Gordon fournissait n&rsquo;était pas une densité de probabilité mais une densité de <b>charge</b>, laquelle a parfaitement le droit d&rsquo;être négative.</p>
+<h4 id="prendre-la-racine-carrée">Prendre la racine carrée</h4>
 <p>Naïvement, on aimerait factoriser comme avec des nombres :</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -2150,16 +2268,15 @@ $
 </p>
 <p>mais $\sqrt{\partial^2}$ n&rsquo;a aucun sens. L&rsquo;analogie utile est celle de $\sqrt{-1}$ : quand une opération est impossible avec les objets disponibles, on invente de nouveaux objets qui la rendent possible. Ici, les nouveaux objets sont quatre quantités $\gamma^\mu$ qui <b>anticommutent</b>.</p>
 <div id="def">
-Les quatre matrices gamma $\gamma^\mu = (\gamma^0, \gamma^1, \gamma^2, \gamma^3)$ sont définies par la relation d'anticommutation
+<p>Les quatre matrices gamma $\gamma^\mu = (\gamma^0, \gamma^1, \gamma^2, \gamma^3)$ sont définies par la relation d&rsquo;anticommutation</p>
 <p style="text-align:center;">
 $\displaystyle
 \{\gamma^\mu, \gamma^\nu\} \equiv \gamma^\mu\gamma^\nu + \gamma^\nu\gamma^\mu = 2g^{\mu\nu}
 $
 </p>
-<p>qui condense $(\gamma^0)^2 = 1$, $(\gamma^i)^2 = -1$ et $\gamma^\mu\gamma^\nu = -\gamma^\nu\gamma^\mu$ pour $\mu \neq \nu$.</p>
-<p>Une telle structure s&rsquo;appelle une <b>algèbre de Clifford</b>.</p>
+<p>qui condense $(\gamma^0)^2 = 1$, $(\gamma^i)^2 = -1$ et $\gamma^\mu\gamma^\nu = -\gamma^\nu\gamma^\mu$ pour $\mu \neq \nu$. Une telle structure s&rsquo;appelle une <b>algèbre de Clifford</b>.</p>
 </div>
-<p>Le miracle algébrique tient en une ligne. Posons $\not{\!\!\partial} \equiv \gamma^\mu \partial_\mu$ (notation slash de Feynman) et développons son carré :</p>
+<p>Le miracle algébrique tient en une ligne. Posons $\not{\!\!\partial} \equiv \gamma^\mu \partial_\mu$ et développons son carré :</p>
 <p style="text-align:center;">
 $\displaystyle
 (\not{\!\!\partial})^2 = \gamma^\mu\gamma^\nu \partial_\mu\partial_\nu = \frac{1}{2}\{\gamma^\mu, \gamma^\nu\}\partial_\mu\partial_\nu = g^{\mu\nu}\partial_\mu\partial_\nu = \partial^2
@@ -2171,18 +2288,17 @@ $\displaystyle
 (\partial^2 + m^2) = (\not{\!\!\partial} - \mathrm{i} m)(\not{\!\!\partial} + \mathrm{i} m)
 $
 </p>
-<p>On garde le facteur avec le signe plus, on l&rsquo;applique à une fonction d&rsquo;onde $\psi(x)$, on multiplie par $\mathrm{i}$, et voici la célèbre équation.</p>
+<p>On garde le facteur avec le signe plus, on l&rsquo;applique à une fonction d&rsquo;onde $\psi(x)$, on multiplie par $\mathrm{i}$, et voici l&rsquo;équation célèbre.</p>
 <div id="theo">
-<b>Équation de Dirac</b>
+<p><b>Équation de Dirac</b></p>
 <p style="text-align:center;">
 $\displaystyle
 (\mathrm{i}\gamma^\mu\partial_\mu - m)\,\psi(x) = 0
 $
 </p>
-<p>soit encore $(\gamma^\mu \hat p_\mu - m)\psi = (\not{\!\!\hat p}_\mu - m)\psi = 0$ avec $\hat p_\mu = \mathrm{i}\partial_\mu$.</p>
+<p>soit encore $(\gamma^\mu \hat p_\mu - m)\psi = 0$ avec $\hat p_\mu = \mathrm{i}\partial_\mu$.</p>
 <p>La relation de dispersion reste $E_{\boldsymbol p}^2 = \boldsymbol p^2 + m^2$ : les énergies négatives subsistent (on les réinterprétera comme antiparticules, à la Feynman), mais le problème des probabilités négatives est guéri.</p>
 </div>
-<p>Le prix à payer : la représentation la plus simple des $\gamma^\mu$ utilise des matrices $4\times 4$, donc $\psi$ possède <b>quatre composantes</b>. Tout le chapitre consiste à comprendre ce que ces quatre composantes racontent. Réponse courte, à garder en tête pour la suite : deux composantes pour le spin, fois deux pour la chiralité gauche/droite (et le prochain chapitre montrera que ce doublement est exigé par la parité).</p>
 <br>
 <h3 id="la-représentation-chirale-et-le-découpage-gauchedroite">La représentation chirale et le découpage gauche/droite</h3>
 <p>Il n&rsquo;y a pas de choix unique des $\gamma^\mu$ : toute famille de matrices satisfaisant l&rsquo;algèbre de Clifford convient.</p>
@@ -3991,16 +4107,16 @@ La lecture d'un diagramme se fait <b>à rebours de la flèche fermionique</b>&nb
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785732124"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785732124"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785732124"></script>
-    <script src="/js/jquery.sticky.js?1785732124"></script>
-    <script src="/js/featherlight.min.js?1785732124"></script>
-    <script src="/js/highlight.pack.js?1785732124"></script>
+    <script src="/js/clipboard.min.js?1785763798"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785763798"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785763798"></script>
+    <script src="/js/jquery.sticky.js?1785763798"></script>
+    <script src="/js/featherlight.min.js?1785763798"></script>
+    <script src="/js/highlight.pack.js?1785763798"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785732124"></script>
-    <script src="/js/learn.js?1785732124"></script>
-    <script src="/js/hugo-learn.js?1785732124"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785763798"></script>
+    <script src="/js/learn.js?1785763798"></script>
+    <script src="/js/hugo-learn.js?1785763798"></script>
     
     
 
