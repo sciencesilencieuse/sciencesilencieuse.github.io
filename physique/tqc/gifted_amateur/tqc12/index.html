@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785768731" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785768731" rel="stylesheet">
-    <link href="/css/hybrid.css?1785768731" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785768731" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785768731" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785768731" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785768731" rel="stylesheet">
-    <link href="/css/theme.css?1785768731" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785768731" rel="stylesheet">
+    <link href="/css/nucleus.css?1785770434" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785770434" rel="stylesheet">
+    <link href="/css/hybrid.css?1785770434" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785770434" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785770434" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785770434" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785770434" rel="stylesheet">
+    <link href="/css/theme.css?1785770434" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785770434" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785768731" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785770434" rel="stylesheet">
     
-    <link href="/css/foo.css?1785768731" rel="stylesheet"><link href="/css/bar.css?1785768731" rel="stylesheet">
+    <link href="/css/foo.css?1785770434" rel="stylesheet"><link href="/css/bar.css?1785770434" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785768731"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785770434"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785768731"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785768731"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785770434"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785770434"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785768731"></script>
+<script type="text/javascript" src="/js/search.js?1785770434"></script>
 
     
   </div>
@@ -2906,7 +2906,8 @@ $
 <p>La première route est celle que nous venons de suivre : lire le signe de $(4-d)$ dans l&rsquo;équation de flot. En voici une autre, entièrement indépendante, qui ne suppose aucune théorie des perturbations.</p>
 <p>L&rsquo;idée est de comparer directement l&rsquo;amplitude des <b>fluctuations</b> du paramètre d&rsquo;ordre à celle du paramètre d&rsquo;ordre lui-même, à l&rsquo;intérieur d&rsquo;un volume de corrélation. Le champ moyen, qui néglige les premières, n&rsquo;est cohérent que si</p>
 <p style="text-align:center;">
-$\displaystyle \big\langle(\delta\phi)^2\big\rangle \ll \phi^2 \qquad\text{dans un volume } \xi^d$
+$\displaystyle \big\langle(\delta\phi)^2\big\rangle \ll \phi^2\;$
+dans un volume $\xi^d$
 </p>
 <p>En estimant chaque membre au voisinage de $T_c$, on trouve que le rapport se comporte comme</p>
 <p style="text-align:center;">
@@ -2914,6 +2915,38 @@ $\displaystyle
 \frac{\langle(\delta\phi)^2\rangle}{\phi^2} \sim \xi^{\,4-d}
 $
 </p>
+<details style="background-color:#F4F4F4;border-radius:5px;padding:5px;">
+<summary>Dans le détail</summary>
+<p>Dans le cadre du champ moyen, $\phi\sim t^\beta$ avec $\beta=1/2$. Et donc $\phi^2\sim t$.</p>
+<p>Mais ici, nous voulons tout exprimer en fonction de la longueur de corrélation $\xi$, or en champ moyen, la longueur de corrélation diverge avec l&rsquo;exposant $\nu = 1/2$ : $\xi \sim t^{-1/2}$.</p>
+<p>Par conséquent, $t\sim \xi^{-2}$, ce qui donne $\phi^2\sim\xi^{-2}$.</p>
+<p>On l&rsquo;a vu, en physique statistique, le théorème de fluctuation-dissipation nous dit que l&rsquo;intégrale spatiale de la fonction de corrélation des fluctuations est directement égale à la susceptibilité du système $\chi$ :</p>
+<p style="text-align:center;">
+$\displaystyle
+\int_V \mathrm d^dr \, \langle\delta\phi(0)\delta\phi(r)\rangle \sim \chi
+$
+</p>
+<p>Si l&rsquo;on veut la fluctuation moyenne dans ce volume $V$, on divise cette intégrale par le volume :</p>
+<p style="text-align:center;">
+$\displaystyle
+\langle(\delta\phi)^2\rangle_V \sim \frac{\chi}{V} = \frac{\chi}{\xi^d}
+$
+</p>
+<p>Il nous faut donc le comportement de la susceptibilité $\chi$ en champ moyen. Elle diverge avec l&rsquo;exposant $\gamma = 1$ : $\chi \sim t^{-1}$</p>
+<p>En utilisant notre traduction $t \sim \xi^{-2}$, la susceptibilité devient : $\chi \sim (\xi^{-2})^{-1} = \xi^2$</p>
+<p>Injectons cela dans notre formule de fluctuation : $\langle(\delta\phi)^2\rangle \sim \frac{\xi^2}{\xi^d} = \xi^{2-d}$</p>
+<p>Finalement :</p>
+<p style="text-align:center;">
+$\displaystyle
+\frac{\langle(\delta\phi)^2\rangle}{\phi^2} \sim \frac{\xi^{2-d}}{\xi^{-2}} = \xi^{2-d} \times \xi^2
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+\frac{\langle(\delta\phi)^2\rangle}{\phi^2} \sim \xi^{4-d}
+$
+</p>
+</details>
 <p><b>Tout se joue dans le signe de l&rsquo;exposant</b>, et l&rsquo;on retrouve exactement le même $4-d$. Si $d &gt; 4$, le rapport s&rsquo;évanouit quand $\xi \to \infty$ : les fluctuations deviennent négligeables au point critique, et le champ moyen y est exact. Si $d &lt; 4$, il diverge : les fluctuations finissent toujours par dominer, aussi faible soit le couplage.</p>
 <p>Deux routes très différentes, un même seuil. C&rsquo;est ce qui donne confiance dans le fait que la dimension 4 n&rsquo;est pas un artefact de notre troncature à une boucle.</p>
 <p>C&rsquo;est aussi ce critère qui dit <b>dans quelle fenêtre de température</b> les fluctuations dominent, et l&rsquo;on verra plus loin que cette fenêtre vaut $10^{-12}$ K dans un supraconducteur conventionnel et plusieurs kelvins dans un cuprate.</p>
@@ -4679,16 +4712,16 @@ $
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785768731"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785768731"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785768731"></script>
-    <script src="/js/jquery.sticky.js?1785768731"></script>
-    <script src="/js/featherlight.min.js?1785768731"></script>
-    <script src="/js/highlight.pack.js?1785768731"></script>
+    <script src="/js/clipboard.min.js?1785770434"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785770434"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785770434"></script>
+    <script src="/js/jquery.sticky.js?1785770434"></script>
+    <script src="/js/featherlight.min.js?1785770434"></script>
+    <script src="/js/highlight.pack.js?1785770434"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785768731"></script>
-    <script src="/js/learn.js?1785768731"></script>
-    <script src="/js/hugo-learn.js?1785768731"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785770434"></script>
+    <script src="/js/learn.js?1785770434"></script>
+    <script src="/js/hugo-learn.js?1785770434"></script>
     
     
 
