@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785730733" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785730733" rel="stylesheet">
-    <link href="/css/hybrid.css?1785730733" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785730733" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785730733" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785730733" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785730733" rel="stylesheet">
-    <link href="/css/theme.css?1785730733" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785730733" rel="stylesheet">
+    <link href="/css/nucleus.css?1785732124" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785732124" rel="stylesheet">
+    <link href="/css/hybrid.css?1785732124" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785732124" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785732124" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785732124" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785732124" rel="stylesheet">
+    <link href="/css/theme.css?1785732124" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785732124" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785730733" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785732124" rel="stylesheet">
     
-    <link href="/css/foo.css?1785730733" rel="stylesheet"><link href="/css/bar.css?1785730733" rel="stylesheet">
+    <link href="/css/foo.css?1785732124" rel="stylesheet"><link href="/css/bar.css?1785732124" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785730733"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785732124"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785730733"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785730733"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785732124"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785732124"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785730733"></script>
+<script type="text/javascript" src="/js/search.js?1785732124"></script>
 
     
   </div>
@@ -2853,51 +2853,60 @@ $\displaystyle
 $
 </p>
 </div>
-<p>La seconde mérite d&rsquo;être lue tout de suite, car elle contient déjà l&rsquo;essentiel. Deux termes s&rsquo;y opposent : $(4-d)\lambda$, pur effet de dimension qui pousse le couplage vers le haut dès que $d &lt; 4$, et $-3\lambda^2\Omega_d/2$, effet de boucle qui le freine. Comme l&rsquo;un est linéaire et l&rsquo;autre quadratique, ils s&rsquo;équilibrent nécessairement quelque part, et cet équilibre sera un point fixe non trivial. On voit aussi pourquoi la dimension 4 est spéciale : c&rsquo;est là, et seulement là, que le premier terme disparaît.</p>
+<p>La seconde équation contient déjà l&rsquo;essentiel. Deux termes s&rsquo;y opposent : $(4-d)\lambda$, pur effet de dimension qui pousse le couplage vers le haut dès que $d &lt; 4$, et $-3\lambda^2\Omega_d/2$, effet de boucle qui le freine. Comme l&rsquo;un est linéaire et l&rsquo;autre quadratique, ils s&rsquo;équilibrent nécessairement quelque part, et cet équilibre sera un point fixe non trivial. On voit aussi pourquoi la dimension 4 est spéciale : c&rsquo;est là, et seulement là, que le premier terme disparaît.</p>
 <br>
 <h4 id="quatre-dimensions-moins-epsilon">Quatre dimensions, moins epsilon</h4>
-<p>Nous voici au second temps, celui qui produit des nombres.</p>
-<p>Le problème est le suivant. Nous venons de faire un calcul à <strong>une boucle</strong>, et rien ne dit pour l&rsquo;instant que s&rsquo;arrêter là soit légitime. Encore faudrait-il savoir en quoi l&rsquo;on développe, et la question « $\lambda$ est-il petit ? » n&rsquo;a même pas de sens telle quelle : le couplage a une <strong>dimension de masse</strong> $4-d$, ce n&rsquo;est pas un nombre pur, et il n&rsquo;y a rien à quoi le comparer tant qu&rsquo;on n&rsquo;a pas fixé d&rsquo;échelle.</p>
+<p>Nous voici au second temps, celui qui produit des nombres. Mais avant de calculer, il faut régler une question de légitimité.</p>
+<p><strong>Le problème.</strong> Nous venons de faire un calcul à <strong>une boucle</strong>, et rien ne dit pour l&rsquo;instant que s&rsquo;arrêter là soit permis. Encore faudrait-il savoir en quoi l&rsquo;on développe. Or la question « $\lambda$ est-il petit ? » n&rsquo;a même pas de sens telle quelle : le couplage a une <strong>dimension de masse</strong> $4-d$, ce n&rsquo;est donc pas un nombre pur, et il n&rsquo;y a rien à quoi le comparer tant qu&rsquo;on n&rsquo;a pas fixé d&rsquo;échelle.</p>
 <p>Pire, l&rsquo;équation de flot que nous venons d&rsquo;obtenir dit que le terme $(4-d)\lambda$ est <strong>positif</strong> dès que $d &lt; 4$ : le couplage est pertinent, il enfle quand on va vers les grandes échelles. Or la criticité est justement un phénomène de très grande échelle, puisque $\xi \to \infty$. La théorie des perturbations naïve y est donc condamnée, non parce que le couplage microscopique serait grand, mais parce que le couplage <strong>effectif</strong> grandit en chemin.</p>
-<p>Mais nous venons aussi de constater qu&rsquo;en dimension 4, le terme $(4-d)\lambda$ disparaît. L&rsquo;astuce de Wilson et Fisher consiste alors à <strong>traiter la dimension elle-même comme un paramètre continu</strong>, et à s&rsquo;écarter de 4 d&rsquo;un petit montant :</p>
+<p><strong>La dimension 4 est un seuil.</strong> La même équation de flot dit cependant autre chose. En dimension 4 exactement, le terme $(4-d)\lambda$ <strong>disparaît</strong> : le couplage cesse d&rsquo;enfler, il devient marginal, et l&rsquo;obstacle s&rsquo;évanouit. La dimension 4 sépare donc deux régimes, celui où les fluctuations finissent toujours par dominer et celui où elles s&rsquo;éteignent.</p>
+<p>Ce seuil est assez important pour qu&rsquo;on le vérifie autrement qu&rsquo;en se fiant à notre calcul.</p>
+<div id="preuve">
+<details>
+<summary>Une seconde route vers la dimension 4, sans écrire un seul diagramme&nbsp;: le critère de Ginzburg</summary>
+<p>La première route est celle que nous venons de suivre : lire le signe de $(4-d)$ dans l&rsquo;équation de flot. En voici une autre, entièrement indépendante, qui ne suppose aucune théorie des perturbations.</p>
+<p>L&rsquo;idée est de comparer directement l&rsquo;amplitude des <b>fluctuations</b> du paramètre d&rsquo;ordre à celle du paramètre d&rsquo;ordre lui-même, à l&rsquo;intérieur d&rsquo;un volume de corrélation. Le champ moyen, qui néglige les premières, n&rsquo;est cohérent que si</p>
+<p style="text-align:center;">
+$\displaystyle \big\langle(\delta\phi)^2\big\rangle \ll \phi^2 \qquad\text{dans un volume } \xi^d$
+</p>
+<p>En estimant chaque membre au voisinage de $T_c$, on trouve que le rapport se comporte comme</p>
+<p style="text-align:center;">
+$\displaystyle
+\frac{\langle(\delta\phi)^2\rangle}{\phi^2} \sim \xi^{\,4-d}
+$
+</p>
+<p><b>Tout se joue dans le signe de l&rsquo;exposant</b>, et l&rsquo;on retrouve exactement le même $4-d$. Si $d &gt; 4$, le rapport s&rsquo;évanouit quand $\xi \to \infty$ : les fluctuations deviennent négligeables au point critique, et le champ moyen y est exact. Si $d &lt; 4$, il diverge : les fluctuations finissent toujours par dominer, aussi faible soit le couplage.</p>
+<p>Deux routes très différentes, un même seuil. C&rsquo;est ce qui donne confiance dans le fait que la dimension 4 n&rsquo;est pas un artefact de notre troncature à une boucle.</p>
+<p>C&rsquo;est aussi ce critère qui dit <b>dans quelle fenêtre de température</b> les fluctuations dominent, et l&rsquo;on verra plus loin que cette fenêtre vaut $10^{-12}$ K dans un supraconducteur conventionnel et plusieurs kelvins dans un cuprate.</p>
+</details>
+</div>
+<p><strong>L&rsquo;astuce de Wilson et Fisher.</strong> Puisque tout est simple en dimension 4 et compliqué en dimension 3, autant ne pas y aller d&rsquo;un coup. L&rsquo;idée consiste à <strong>traiter la dimension elle-même comme un paramètre continu</strong>, et à s&rsquo;écarter de 4 d&rsquo;un petit montant :</p>
 <div id="def">
 <p>$$
 d = 4 - \varepsilon
 $$</p>
 </div>
-<p>Ce que l&rsquo;on développe alors, ce n&rsquo;est plus $\ell$ mais $\varepsilon$. L&rsquo;idée est acrobatique (une dimension fractionnaire n&rsquo;a aucun sens géométrique évident) mais elle est purement formelle : $d$ n&rsquo;apparaît dans nos formules qu&rsquo;à travers des exposants et le facteur $\Omega_d$, qui se prolongent analytiquement sans difficulté. On calculera donc en dimension $4-\varepsilon$, puis on posera bravement $\varepsilon = 1$ pour redescendre en dimension 3.</p>
+<p>L&rsquo;opération est acrobatique, une dimension fractionnaire n&rsquo;ayant aucun sens géométrique évident, mais elle est purement formelle : $d$ n&rsquo;apparaît dans nos formules qu&rsquo;à travers des exposants et le facteur angulaire $\Omega_d$, qui se prolongent analytiquement sans difficulté. On calculera donc en dimension $4-\varepsilon$, en supposant $\varepsilon$ petit, puis on posera bravement $\varepsilon = 1$ pour redescendre en dimension 3.</p>
+<p>Reste que nous n&rsquo;avons toujours pas répondu à la question de départ.</p>
 
 <div class="notices note" style="--title: 'note';">
   <p style="display: none;">note</p>
   <div class="notice-body">
-    <p>En quoi développe-t-on, au juste ?<br><br>
-La réponse ne viendra qu&rsquo;après coup, et il faut l&rsquo;assumer. Ce qui gouverne le comportement critique n&rsquo;est pas la valeur initiale du couplage mais sa valeur <b>au point fixe</b>, puisque toutes les trajectoires y aboutissent. Or nous trouverons $\lambda^*/16\pi^2 = \varepsilon/3$. Comme chaque boucle supplémentaire coûte un facteur $\lambda\Omega$, <b>le développement en boucles et le développement en $\varepsilon$ sont le même développement</b>. En dimension 4 exactement, $\lambda^* = 0$ : la théorie critique est libre et le champ moyen est exact. En dimension 3, $\varepsilon = 1$, et rien n&rsquo;est petit.<br><br>
-Le raisonnement est donc circulaire au sens où l&rsquo;on parie sur la petitesse de $\varepsilon$, on calcule, et l&rsquo;on vérifie ensuite que le couplage au point fixe est bien d&rsquo;ordre $\varepsilon$. Ce n&rsquo;est pas vicieux, mais il faut savoir que c&rsquo;est un pari.<br><br>
+    <p><b>En quoi développe-t-on, au juste ?</b><br><br>
+Nous avons maintenant deux petites quantités en jeu, $\lambda$ et $\varepsilon$, et il serait inquiétant qu&rsquo;elles soient indépendantes : rien ne garantirait alors qu&rsquo;une troncature à une boucle ait un sens. La réponse rassurante est qu&rsquo;<b>elles n&rsquo;en font qu&rsquo;une</b>, mais on ne peut la donner qu&rsquo;après coup.<br><br>
+Ce qui gouverne le comportement critique n&rsquo;est pas la valeur initiale du couplage, mais sa valeur <b>au point fixe</b>, puisque toutes les trajectoires y aboutissent. Or nous trouverons $\lambda^*/16\pi^2 = \varepsilon/3$. Comme chaque boucle supplémentaire coûte un facteur $\lambda\Omega$, il vient que <b>le développement en boucles et le développement en $\varepsilon$ sont le même développement</b>. En dimension 4 exactement, $\lambda^* = 0$ : la théorie critique est libre et le champ moyen est exact. En dimension 3, $\varepsilon = 1$, et rien n&rsquo;est petit.<br><br>
+Le raisonnement est donc circulaire, au sens où l&rsquo;on parie sur la petitesse de $\varepsilon$, on calcule, et l&rsquo;on vérifie ensuite que le couplage au point fixe est bien d&rsquo;ordre $\varepsilon$. Ce n&rsquo;est pas vicieux, mais il faut savoir que c&rsquo;est un pari.<br><br>
 <b>Et il l&rsquo;est doublement :</b> la série en $\varepsilon$ n&rsquo;est pas convergente, elle est <b>asymptotique</b>. Poser $\varepsilon = 1$ est un acte de foi que seul le succès justifie. Il se trouve que le paramètre effectif vaut $\varepsilon/3 \approx 0{,}33$ et non 1, ce qui explique que les premiers ordres se comportent honorablement ; mais les valeurs vraiment précises ne s&rsquo;obtiennent qu&rsquo;en resommant la série au sens de Borel.</p>
 
   </div>
 </div>
 
 
+<p><strong>Ce que cela change dans nos deux équations.</strong> Peu de choses, en réalité. Le terme $(4-d)\lambda$ devient $\varepsilon\lambda$, par définition. Et il reste à évaluer le facteur angulaire $\Omega_d$, qui dépend lui aussi de la dimension : comme il ne multiplie que des termes de boucle, on peut se contenter de sa valeur en dimension 4.</p>
 <div id="preuve">
 <details>
-<summary>Une seconde voie, sans aucun calcul&nbsp;: le critère de Ginzburg&nbsp;:</summary>
-<p>On peut voir la dimension 4 émerger avant toute théorie des perturbations, en comparant simplement l&rsquo;amplitude des <b>fluctuations</b> du paramètre d&rsquo;ordre à celle du paramètre d&rsquo;ordre lui-même, dans un volume de corrélation.</p>
-<p>Le champ moyen est cohérent tant que $\langle(\delta\phi)^2\rangle \ll \phi^2$ à l&rsquo;intérieur d&rsquo;un volume $\xi^d$. En estimant chaque membre au voisinage de $T_c$, on trouve que le rapport se comporte comme</p>
-<p style="text-align:center;">
-$\displaystyle
-\frac{\langle(\delta\phi)^2\rangle}{\phi^2} \sim \xi^{\,4-d}
-$
-</p>
-<p>Tout se joue dans le signe de l&rsquo;exposant. Si $d &gt; 4$, le rapport <b>s&rsquo;évanouit</b> quand $\xi \to \infty$ : les fluctuations deviennent négligeables au point critique et le champ moyen est exact. Si $d &lt; 4$, il <b>diverge</b> : les fluctuations finissent toujours par dominer, aussi faible soit le couplage. La dimension 4 apparaît ainsi comme le seuil, et l&rsquo;écart $4-d$ mesure directement l&rsquo;importance des fluctuations, sans qu&rsquo;on ait eu à écrire un seul diagramme.</p>
-<p>C&rsquo;est aussi ce critère qui dit <b>dans quelle fenêtre de température</b> les fluctuations dominent, et l&rsquo;on verra plus loin que cette fenêtre vaut $10^{-12}$ K dans un supraconducteur conventionnel et plusieurs kelvins dans un cuprate.</p>
-</details>
-</div>
-<br>
-<div id="preuve">
-<details>
-<summary>Pourquoi l'on peut remplacer $\Omega_d$ par $\Omega_4$&nbsp;:</summary>
-<p>Le facteur $\Omega_d$ n&rsquo;apparaît que devant les termes de boucle, déjà d&rsquo;ordre $\lambda$ ou $\lambda^2$. Or nous allons trouver un point fixe en $\lambda^* \propto \varepsilon$. Écrire $\Omega_d = \Omega_4 + O(\varepsilon)$ n&rsquo;introduit donc, dans ces termes, qu&rsquo;une erreur d&rsquo;ordre $\varepsilon^2$ : invisible à l&rsquo;ordre où nous travaillons.</p>
+<summary>Pourquoi l'on peut remplacer $\Omega_d$ par $\Omega_4$</summary>
+<p>Le facteur $\Omega_d$ n&rsquo;apparaît que devant les termes de boucle, déjà d&rsquo;ordre $\lambda$ ou $\lambda^2$. Or nous venons de dire que le point fixe se trouvera en $\lambda^* \propto \varepsilon$. Écrire $\Omega_d = \Omega_4 + O(\varepsilon)$ n&rsquo;introduit donc, dans ces termes, qu&rsquo;une erreur d&rsquo;ordre $\varepsilon^2$ : invisible à l&rsquo;ordre où nous travaillons.</p>
 <p>Avec $\Omega_4 = 1/8\pi^2$, il vient</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -2908,6 +2917,7 @@ $\displaystyle
 \;\frac{3\lambda^2\Omega_4}{2} = \frac{3\lambda^2}{16\pi^2}
 $
 </p>
+<p>Garder $\Omega_d$ exact serait donc du zèle inutile : la correction se situe au-delà de la précision de tout le calcul.</p>
 </details>
 </div>
 <p>Les deux équations prennent alors leur forme définitive :</p>
@@ -4619,16 +4629,16 @@ $
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785730733"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785730733"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785730733"></script>
-    <script src="/js/jquery.sticky.js?1785730733"></script>
-    <script src="/js/featherlight.min.js?1785730733"></script>
-    <script src="/js/highlight.pack.js?1785730733"></script>
+    <script src="/js/clipboard.min.js?1785732124"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785732124"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785732124"></script>
+    <script src="/js/jquery.sticky.js?1785732124"></script>
+    <script src="/js/featherlight.min.js?1785732124"></script>
+    <script src="/js/highlight.pack.js?1785732124"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785730733"></script>
-    <script src="/js/learn.js?1785730733"></script>
-    <script src="/js/hugo-learn.js?1785730733"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785732124"></script>
+    <script src="/js/learn.js?1785732124"></script>
+    <script src="/js/hugo-learn.js?1785732124"></script>
     
     
 
