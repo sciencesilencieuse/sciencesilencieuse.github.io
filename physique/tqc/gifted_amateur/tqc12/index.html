@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785720581" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785720581" rel="stylesheet">
-    <link href="/css/hybrid.css?1785720581" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785720581" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785720581" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785720581" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785720581" rel="stylesheet">
-    <link href="/css/theme.css?1785720581" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785720581" rel="stylesheet">
+    <link href="/css/nucleus.css?1785720964" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785720964" rel="stylesheet">
+    <link href="/css/hybrid.css?1785720964" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785720964" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785720964" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785720964" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785720964" rel="stylesheet">
+    <link href="/css/theme.css?1785720964" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785720964" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785720581" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785720964" rel="stylesheet">
     
-    <link href="/css/foo.css?1785720581" rel="stylesheet"><link href="/css/bar.css?1785720581" rel="stylesheet">
+    <link href="/css/foo.css?1785720964" rel="stylesheet"><link href="/css/bar.css?1785720964" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785720581"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785720964"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785720581"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785720581"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785720964"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785720964"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785720581"></script>
+<script type="text/javascript" src="/js/search.js?1785720964"></script>
 
     
   </div>
@@ -2275,7 +2275,7 @@ La <b>thèse 1 est fausse aussi</b>, et c&rsquo;est plus inattendu : nous verro
 <p>En espace de Fourier, l&rsquo;action libre s&rsquo;écrit</p>
 <p style="text-align:center;">
 $\displaystyle
-S = \frac12\int_{|p|<\Lambda}\frac{\mathrm d^dp}{(2\pi)^d}\\;\tilde\phi(-p)\\,(p^2+m^2)\\,\tilde\phi(p)
+S = \frac12\int_{|p|<\Lambda}\frac{\mathrm d^dp}{(2\pi)^d}\;\tilde\phi(-p)\,(p^2+m^2)\,\tilde\phi(p)
 $
 </p>
 <p>Elle est <b>diagonale en $p$</b> : chaque mode n&rsquo;y apparaît qu&rsquo;avec lui-même, jamais couplé à un autre. Ce n&rsquo;est pas un hasard, c&rsquo;est la conséquence de deux propriétés. L&rsquo;action est <b>quadratique</b> (aucun produit de trois champs ou plus qui mélangerait les impulsions) et <b>invariante par translation</b> (d&rsquo;où la conservation de l&rsquo;impulsion, qui apparie $p$ avec $-p$ et rien d&rsquo;autre).</p>
@@ -2288,7 +2288,7 @@ $
 <p>L&rsquo;intégrale fonctionnelle se factorise donc :</p>
 <p style="text-align:center;">
 $\displaystyle
-Z = \int\mathcal D\phi_{\mathrm s}\\,\mathrm e^{-S[\phi_{\mathrm s}]}\times\underbrace{\int\mathcal D\phi_{\mathrm f}\\,\mathrm e^{-S[\phi_{\mathrm f}]}}_{\text{un nombre}}
+Z = \int\mathcal D\phi_{\mathrm s}\,\mathrm e^{-S[\phi_{\mathrm s}]}\times\underbrace{\int\mathcal D\phi_{\mathrm f}\,\mathrm e^{-S[\phi_{\mathrm f}]}}_{\text{un nombre}}
 $
 </p>
 <p>Le second facteur ne dépend pas de $\phi_{\mathrm s}$ : c&rsquo;est une constante multiplicative. Or une constante dans $Z$ ne fait que décaler l&rsquo;énergie libre d&rsquo;un terme fixe ; elle ne modifie aucune fonction de corrélation, et ne contribue à aucun comportement singulier. <b>Le pas I ne produit donc strictement aucun $\delta\mathcal L$.</b></p>
@@ -2303,13 +2303,13 @@ $
 <p>Sous $x = bx&rsquo;$, deux choses changent dans l&rsquo;intégrale : la mesure, $\mathrm d^dx = b^d\,\mathrm d^dx&rsquo;$, et le gradient, $\nabla_x = b^{-1}\nabla_{x&rsquo;}$. Le terme de gradient devient donc</p>
 <p style="text-align:center;">
 $\displaystyle
-\int\mathrm d^dx\\,\frac12(\nabla_x\phi)^2 = b^{\\,d-2}\int\mathrm d^dx'\\,\frac12(\nabla_{x'}\phi)^2
+\int\mathrm d^dx\,\frac12(\nabla_x\phi)^2 = b^{\,d-2}\int\mathrm d^dx'\,\frac12(\nabla_{x'}\phi)^2
 $
 </p>
 <p>Pour ramener le coefficient à $\tfrac12$, on définit le nouveau champ par $\phi&rsquo;(x&rsquo;) = b^{\,d_\phi}\phi(x)$ avec</p>
 <p style="text-align:center;">
 $\displaystyle
-b^{\\,d-2}\times b^{-2d_\phi} = 1
+b^{\,d-2}\times b^{-2d_\phi} = 1
 \qquad\Longrightarrow\qquad
 d_\phi = \frac{d-2}{2}
 $
@@ -2318,7 +2318,7 @@ $
 <p><b>Le terme de masse suit :</b></p>
 <p style="text-align:center;">
 $\displaystyle
-\int\mathrm d^dx\\,\frac{m^2}{2}\phi^2 = b^{\\,d}\int\mathrm d^dx'\\,\frac{m^2}{2}\\,b^{-(d-2)}\phi'^2 = \int\mathrm d^dx'\\,\frac{b^2m^2}{2}\phi'^2
+\int\mathrm d^dx\,\frac{m^2}{2}\phi^2 = b^{\,d}\int\mathrm d^dx'\,\frac{m^2}{2}\,b^{-(d-2)}\phi'^2 = \int\mathrm d^dx'\,\frac{b^2m^2}{2}\phi'^2
 $
 </p>
 <p><b>Et le champ extérieur aussi</b>, avec le terme $-h\phi$ :</p>
@@ -2719,11 +2719,11 @@ $
 <p style="text-align:center;">
 $\displaystyle
 J = \begin{pmatrix}
-\partial_u f & \partial_v f\\\\
+\partial_u f & \partial_v f\\
 \partial_u g & \partial_v g
 \end{pmatrix}
 = \begin{pmatrix}
-2 - \dfrac{v}{16\pi^2} & \dfrac{1-u}{16\pi^2}\\\\[2mm]
+2 - \dfrac{v}{16\pi^2} & \dfrac{1-u}{16\pi^2}\\
 0 & \varepsilon - \dfrac{6v}{16\pi^2}
 \end{pmatrix}
 $
@@ -2732,7 +2732,7 @@ $
 <p><b>Au point gaussien</b> $(0,0)$ :</p>
 <p style="text-align:center;">
 $\displaystyle
-J = \begin{pmatrix} 2 & \frac{1}{16\pi^2}\\\\ 0 & \varepsilon\end{pmatrix}
+J = \begin{pmatrix} 2 & \frac{1}{16\pi^2}\\ 0 & \varepsilon\end{pmatrix}
 \;\Longrightarrow\;
 y_t = 2, \; y_\lambda = \varepsilon
 $
@@ -2740,7 +2740,7 @@ $
 <p><b>Au point de Wilson–Fisher</b>, avec $v^*/16\pi^2 = \varepsilon/3$ et $u^* \simeq -\varepsilon/6$ :</p>
 <p style="text-align:center;">
 $\displaystyle
-J = \begin{pmatrix} 2 - \frac{\varepsilon}{3} & \frac{1}{16\pi^2}\\\\ 0 & -\varepsilon\end{pmatrix}
+J = \begin{pmatrix} 2 - \frac{\varepsilon}{3} & \frac{1}{16\pi^2}\\ 0 & -\varepsilon\end{pmatrix}
 \;\Longrightarrow\;
 y_t = 2 - \frac{\varepsilon}{3}, \; y_\lambda = -\varepsilon
 $
@@ -4330,16 +4330,16 @@ $
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785720581"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785720581"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785720581"></script>
-    <script src="/js/jquery.sticky.js?1785720581"></script>
-    <script src="/js/featherlight.min.js?1785720581"></script>
-    <script src="/js/highlight.pack.js?1785720581"></script>
+    <script src="/js/clipboard.min.js?1785720964"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785720964"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785720964"></script>
+    <script src="/js/jquery.sticky.js?1785720964"></script>
+    <script src="/js/featherlight.min.js?1785720964"></script>
+    <script src="/js/highlight.pack.js?1785720964"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785720581"></script>
-    <script src="/js/learn.js?1785720581"></script>
-    <script src="/js/hugo-learn.js?1785720581"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785720964"></script>
+    <script src="/js/learn.js?1785720964"></script>
+    <script src="/js/hugo-learn.js?1785720964"></script>
     
     
 
