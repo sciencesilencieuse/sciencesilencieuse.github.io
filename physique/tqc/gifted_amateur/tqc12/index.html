@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785721548" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785721548" rel="stylesheet">
-    <link href="/css/hybrid.css?1785721548" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785721548" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785721548" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785721548" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785721548" rel="stylesheet">
-    <link href="/css/theme.css?1785721548" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785721548" rel="stylesheet">
+    <link href="/css/nucleus.css?1785728760" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785728760" rel="stylesheet">
+    <link href="/css/hybrid.css?1785728760" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785728760" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785728760" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785728760" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785728760" rel="stylesheet">
+    <link href="/css/theme.css?1785728760" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785728760" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785721548" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785728760" rel="stylesheet">
     
-    <link href="/css/foo.css?1785721548" rel="stylesheet"><link href="/css/bar.css?1785721548" rel="stylesheet">
+    <link href="/css/foo.css?1785728760" rel="stylesheet"><link href="/css/bar.css?1785728760" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785721548"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785728760"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785721548"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785721548"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785728760"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785728760"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785721548"></script>
+<script type="text/javascript" src="/js/search.js?1785728760"></script>
 
     
   </div>
@@ -2108,7 +2108,6 @@ details[open] > summary:first-of-type {
 </ul>
 <p>Ce troisième point est le cœur de l&rsquo;affaire, et il a un équivalent qu&rsquo;on peut voir à l&rsquo;œil nu. Au point critique liquide-gaz d&rsquo;un fluide, les fluctuations de densité atteignent la longueur d&rsquo;onde de la lumière visible et le fluide, jusque-là transparent, devient laiteux : c&rsquo;est l&rsquo;<b>opalescence critique</b>. On <i>voit</i> la longueur de corrélation diverger.</p>
 <p>Question concrète : <b>de combien</b> la capacité thermique s&rsquo;envole-t-elle ? À quelle vitesse l&rsquo;aimantation s&rsquo;éteint-elle quand on approche de 1043 K par en dessous ? Ce sont des nombres mesurables, mesurés depuis les années 1960, et le champ moyen se trompe sur leurs valeurs. C&rsquo;est cet écart que la renormalisation va combler.</p>
-</div>
 <h3 id="six-nombres-à-mesurer-les-exposants-critiques">Six nombres à mesurer : les exposants critiques</h3>
 <p>L&rsquo;expérience montre que chacune de ces grandeurs suit une <b>loi de puissance</b> près de $T_c$. Introduisons la <b>température réduite</b>, qui mesure l&rsquo;écart relatif au point critique :</p>
 <p>$$
@@ -2130,8 +2129,9 @@ $$</p>
 <li>$\nu$, la <b>longueur de corrélation.</b> $\xi$ est la taille du plus grand domaine cohérent, la distance au-delà de laquelle deux spins s'ignorent.
 <p style="text-align:center;">$\displaystyle \xi \sim |t|^{-\nu}$</p>
 <p>Elle <b>diverge</b> : c&rsquo;est elle qu&rsquo;on voit dans l&rsquo;opalescence critique, et c&rsquo;est la grandeur maîtresse dont tout le reste découle.</li></p>
-<li>$\eta$, la <b>dimension anomale</b>. Exactement à $T_c$, la corrélation entre deux spins distants décroît en loi de puissance. L'analyse dimensionnelle naïve prédirait $1/|r|^{d-2}$&nbsp;; l'exposant réel s'en écarte de $\eta$&nbsp;:
-<p style="text-align:center;">$\displaystyle \langle\phi(0)\phi(r)\rangle \sim \frac{1}{|r|^{d-2+\eta}}$</p></li>
+<li>$\eta$, la <b>dimension anomale</b>. Exactement à $T_c$, la corrélation entre deux spins distants décroît en loi de puissance. L'analyse dimensionnelle naïve prédirait $1/|r|^{d-2}$&nbsp;; l'exposant réel s'en écarte de $\eta$, et cet écart <b>définit</b> $\eta$&nbsp;:
+<p style="text-align:center;">$\displaystyle \langle\phi(0)\phi(r)\rangle \sim \frac{1}{|r|^{d-2+\eta}}$</p>
+<p><i>D&rsquo;où vient la puissance naïve ?</i> Dans la théorie libre, le propagateur vaut $1/p^2$ à $T_c$ (masse nulle), et sa transformée de Fourier en dimension $d$ est exactement $\propto 1/r^{d-2}$, c&rsquo;est-à-dire la fonction de Green du laplacien, celle qui donne $1/4\pi r$ en dimension 3. Autrement dit, $\eta$ mesure de combien les interactions font dévier la corrélation de son comportement de champ libre. Il vaut donc $0$ en champ moyen, par construction.</li></p>
 </ul>
 </div>
 <p>La théorie de Landau prédit $\beta = 1/2$ : l&rsquo;aimantation s&rsquo;annulerait comme $\sqrt{T_c - T}$. L&rsquo;expérience, sur le fer comme sur le nickel, donne plutôt $0{,}33$. L&rsquo;écart n&rsquo;est pas une broutille de troisième décimale, c&rsquo;est une courbe visiblement différente. Et le champ moyen prédit $\alpha = 0$, donc pas de divergence de la chaleur spécifique, alors qu&rsquo;on la mesure. Il y a bien quelque chose à réparer.</p>
@@ -2146,7 +2146,138 @@ $\displaystyle
 f(t, h) = b^{-d}\, f\big(b^{y_t}\,t,\ b^{y_h}\,h\big)
 $
 </p>
-<p>pour deux exposants $y_t$ et $y_h$ à déterminer. Le facteur $b^{-d}$ vient du $1/L^d$ de la densité d&rsquo;énergie libre. Comme $b$ est arbitraire, on peut le choisir tel que $b^{y_t}t = 1$, ce qui élimine un paramètre et livre les six exposants en fonction de $(y_t, y_h)$ seuls :</p>
+<p>pour deux exposants $y_t$ et $y_h$ à déterminer. Le facteur $b^{-d}$ vient du $1/L^d$ de la densité d&rsquo;énergie libre.</p>
+</div>
+<p>Ce que dit cette hypothèse en français : <i>changer l&rsquo;échelle d&rsquo;observation revient à changer la température et le champ</i>. Regarder un aimant critique à travers un objectif deux fois moins puissant donne la même image qu&rsquo;un aimant observé normalement mais un peu plus loin de $T_c$. C&rsquo;est cette équivalence qui contraint tout.</p>
+<h4 id="le-mécanisme-choisir-b-pour-tuer-une-variable">Le mécanisme : choisir $b$ pour tuer une variable</h4>
+<p>Toute la force de l&rsquo;hypothèse tient dans le fait que <strong>$b$ est arbitraire</strong>. La relation vaut pour <i>toute</i> valeur du facteur d&rsquo;échelle ; on a donc le droit de choisir celle qui nous arrange, et le bon choix fait disparaître une variable.</p>
+<p>Pour tout ce qui se passe <strong>à champ nul</strong>, on choisit $b$ tel que $b^{y_t}|t| = 1$, c&rsquo;est-à-dire</p>
+<p>$$b = |t|^{-1/y_t}$$</p>
+<p>En reportant, l&rsquo;énergie libre prend la forme</p>
+<div id="theo">
+<p style="text-align:center;">
+$\displaystyle
+f(t,h) = |t|^{d/y_t}\;\Phi\!\left(\frac{h}{|t|^{\,y_h/y_t}}\right)
+$
+</p>
+</div>
+<p>où $\Phi$ est une fonction inconnue, mais <strong>universelle</strong>, dont nous n&rsquo;aurons jamais besoin de connaître la forme. Toute la dépendance singulière en température est passée dans le préfacteur $|t|^{d/y_t}$, et il ne reste plus qu&rsquo;à dériver.</p>
+<p>Les cinq premiers exposants suivent alors mécaniquement ; le sixième, $\eta$, est d&rsquo;une autre nature et demandera un objet différent.</p>
+<div id="preuve">
+<details>
+<summary>$\alpha$, $\beta$, $\gamma$&nbsp;: trois dérivations de l'énergie libre&nbsp;:</summary>
+<p>Les trois grandeurs sont des dérivées de $f$, et l&rsquo;on se place à $h = 0$, donc à argument nul dans $\Phi$. Chaque dérivation par rapport à $h$ fera sortir un facteur $|t|^{-y_h/y_t}$, par simple dérivation en chaîne.</p>
+<p>$\alpha$, la <b>chaleur spécifique</b>. Elle est la dérivée seconde de l&rsquo;énergie libre par rapport à la température, donc par rapport à $t$ :</p>
+<p style="text-align:center;">
+$\displaystyle
+C \sim \frac{\partial^2 f}{\partial t^2} \sim \frac{\partial^2}{\partial t^2}|t|^{\,d/y_t} \sim |t|^{\,d/y_t - 2}
+$
+</p>
+<p>En comparant avec la définition $C \sim |t|^{-\alpha}$, on identifie $-\alpha = d/y_t - 2$, soit</p>
+<p style="text-align:center;">
+$\displaystyle \boxed{\ \alpha = 2 - \frac{d}{y_t}\ }$
+</p>
+<p>$\beta$, l&rsquo;<b>aimantation</b>. C&rsquo;est la dérivée première par rapport au champ, prise ensuite en $h = 0$ :</p>
+<p style="text-align:center;">
+$\displaystyle
+M = -\frac{\partial f}{\partial h}\bigg|_{h=0}
+= -|t|^{\,d/y_t}\;\Phi'(0)\;|t|^{-y_h/y_t}
+\sim |t|^{\,(d-y_h)/y_t}
+$
+</p>
+<p>En comparant avec $M \sim (-t)^\beta$ :</p>
+<p style="text-align:center;">
+$\displaystyle \boxed{\ \beta = \frac{d-y_h}{y_t}\ }$
+</p>
+<p>$\gamma$, la <b>susceptibilité</b>. Une dérivation de plus par rapport à $h$, donc un facteur $|t|^{-y_h/y_t}$ de plus :</p>
+<p style="text-align:center;">
+$\displaystyle
+\chi = \frac{\partial M}{\partial h} \sim |t|^{\,d/y_t}\;|t|^{-2y_h/y_t} = |t|^{\,(d-2y_h)/y_t}
+$
+</p>
+<p>En comparant avec $\chi \sim |t|^{-\gamma}$ :</p>
+<p style="text-align:center;">
+$\displaystyle \boxed{\ \gamma = \frac{2y_h-d}{y_t}\ }$
+</p>
+</details>
+<details>
+<summary>$\nu$&nbsp;: la longueur de corrélation, sans passer par $f$&nbsp;:</summary>
+<p>Celle-ci ne demande aucune dérivation, seulement la remarque que $\xi$ est une <b>longueur</b>. Sous le changement d&rsquo;échelle, toutes les longueurs sont divisées par $b$, donc</p>
+<p style="text-align:center;">
+$\displaystyle \xi(t') = \frac{\xi(t)}{b} \;\text{avec}\; t' = b^{y_t}t$
+</p>
+<p>Reprenons le même choix, $b = |t|^{-1/y_t}$, qui amène $t&rsquo;$ à la valeur fixe $\pm 1$ :</p>
+<p style="text-align:center;">
+$\displaystyle \xi(\pm 1) = \xi(t)\,|t|^{1/y_t} \;\Longrightarrow\; \xi(t) = \xi(\pm 1)\;|t|^{-1/y_t}$
+</p>
+<p>Le facteur $\xi(\pm1)$ est un simple nombre, et on lit</p>
+<p style="text-align:center;">
+$\displaystyle \boxed{\ \nu = \frac{1}{y_t}\ }$
+</p>
+<p>Notons au passage que cette dérivation dit quelque chose de fort : <b>$y_t$ n&rsquo;est rien d&rsquo;autre que l&rsquo;inverse de $\nu$</b>. Puisque $y_t$ sera une valeur propre du flot, la longueur de corrélation est directement lue sur la linéarisation autour du point fixe.</p>
+</details>
+<details>
+<summary>$\delta$&nbsp;: un autre choix de $b$&nbsp;:</summary>
+<p>Ici la situation change, car on se place <b>exactement à $T_c$</b>, donc $t = 0$. Le choix précédent, $b = |t|^{-1/y_t}$, n&rsquo;a plus de sens (il divergerait). Mais $b$ étant arbitraire, rien n&rsquo;empêche de le choisir autrement : cette fois on tue le <i>champ</i> plutôt que la température, en posant $b^{y_h}h = 1$, soit</p>
+<p style="text-align:center;">
+$\displaystyle b = h^{-1/y_h}$
+</p>
+<p>L&rsquo;hypothèse d&rsquo;échelle donne alors directement</p>
+<p style="text-align:center;">
+$\displaystyle f(0,h) = h^{\,d/y_h}\,f(0,1)$
+</p>
+<p>et l&rsquo;aimantation s&rsquo;obtient par une dérivation :</p>
+<p style="text-align:center;">
+$\displaystyle
+M = -\frac{\partial f}{\partial h} \sim h^{\,d/y_h - 1} = h^{\,(d-y_h)/y_h}
+$
+</p>
+<p>En comparant avec la définition $M \sim |B|^{1/\delta}$ à $T = T_c$, on identifie $1/\delta = (d-y_h)/y_h$, soit</p>
+<p style="text-align:center;">
+$\displaystyle \boxed{\ \delta = \frac{y_h}{d-y_h}\ }$
+</p>
+<p><b>C&rsquo;est ici que se voit pourquoi $\delta$ était défini avec un exposant inverse</b> : la grandeur naturelle sortant du calcul est $1/\delta$, et la convention a simplement retourné la fraction pour obtenir un nombre supérieur à 1.</p>
+</details>
+<details>
+<summary>$\eta$&nbsp;: le seul qui demande un ingrédient de plus&nbsp;:</summary>
+<p>Cet exposant décrit la <b>fonction de corrélation</b> et non une grandeur thermodynamique. L&rsquo;hypothèse de Widom, qui ne porte que sur l&rsquo;énergie libre, ne suffit donc pas à elle seule : il faut un pont entre les deux mondes. Ce pont existe, et c&rsquo;est un résultat classique de physique statistique.</p>
+<p><b>Le pont : la susceptibilité est l&rsquo;intégrale des corrélations.</b></p>
+<p style="text-align:center;">
+$\displaystyle \chi = \int \mathrm d^dr\;G(r)$
+</p>
+<p>L&rsquo;énoncé est intuitif : plus les spins sont corrélés sur de grandes distances, plus le matériau répond en bloc à un champ appliqué. (C&rsquo;est le théorème de fluctuation-dissipation, sous sa forme la plus simple.)</p>
+<p>Rappelons que par définition de $\eta$, la corrélation suit la loi de puissanec $G(r) \sim r^{-(d-2+\eta)}$. Cette même loi vaut encore <i>au voisinage</i> de $T_c$ et non seulement dessus, tant qu&rsquo;on regarde à des distances $r \ll \xi$ ; au-delà de $\xi$, la corrélation meurt exponentiellement et ne contribue plus. Autrement dit, on suppose la forme d&rsquo;échelle</p>
+<p style="text-align:center;">
+$\displaystyle G(r) = \frac{1}{r^{\,d-2+\eta}}\;g\!\left(\frac{r}{\xi}\right)$
+</p>
+<p>avec $g(0)$ fini et $g$ qui s&rsquo;effondre au-delà de 1. C&rsquo;est là que se cache l&rsquo;ingrédient supplémentaire annoncé.</p>
+<p>L&rsquo;intégrale est alors coupée à $\xi$ :</p>
+<p style="text-align:center;">
+$\displaystyle
+\chi \sim \int_0^{\xi}\! r^{\,d-1}\,\mathrm dr\;\; r^{-(d-2+\eta)}
+= \int_0^{\xi}\! r^{\,1-\eta}\,\mathrm dr
+\;\sim\; \xi^{\,2-\eta}
+$
+</p>
+<p>où le $r^{d-1}$ est le jacobien de l&rsquo;intégration radiale en dimension $d$.</p>
+<p>En reportant $\xi \sim |t|^{-\nu}$ :</p>
+<p style="text-align:center;">
+$\displaystyle \chi \sim |t|^{-\nu(2-\eta)} \;\Longrightarrow\; \gamma = \nu\,(2-\eta)$
+</p>
+<p><b>C&rsquo;est la relation de Fisher</b>, et elle nous donne $\eta$ gratuitement, puisque $\gamma$ et $\nu$ sont déjà connus :</p>
+<p style="text-align:center;">
+$\displaystyle
+\eta = 2 - \frac{\gamma}{\nu} = 2 - \frac{2y_h-d}{y_t}\times y_t = 2 - (2y_h - d)
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle \boxed{\ \eta = 2 + d - 2y_h\ }$
+</p>
+<p><b>À retenir : $\eta$ n&rsquo;est pas au même rang que les cinq autres.</b> Les cinq premiers découlent de la seule hypothèse d&rsquo;échelle sur $f$ ; celui-ci a exigé en plus <i>une hypothèse d&rsquo;échelle sur la fonction de corrélation elle-même</i>, à savoir que la loi de puissance survit au voisinage de $T_c$ avec une coupure en $\xi$. C&rsquo;est ce supplément qui fait le pont entre corrélations et thermodynamique, et le théorème de fluctuation-dissipation sert de passerelle. Les manuels postulent souvent directement cette forme d&rsquo;échelle pour $G$ ; cela revient au même, et fait apparaître $\eta$ comme la <b>dimension anomale</b> du champ, l&rsquo;écart entre la façon dont $\phi$ se rééchelonne réellement et ce que prédirait l&rsquo;analyse dimensionnelle.</p>
+</details>
+</div>
+<p>Rassemblons les six formules :</p>
+<div id="theo">
 <p style="text-align:center;">
 $\displaystyle
 \begin{aligned}
@@ -2160,8 +2291,82 @@ $\displaystyle
 $
 </p>
 </div>
-<p>Ce que dit cette hypothèse en français : <i>changer l&rsquo;échelle d&rsquo;observation revient à changer la température et le champ</i>. Regarder un aimant critique à travers un objectif deux fois moins puissant donne la même image qu&rsquo;un aimant observé normalement mais un peu plus loin de $T_c$. C&rsquo;est cette équivalence qui contraint tout.</p>
-<p>Deux nombres commandent six exposants : quatre relations doivent donc lier les exposants entre eux (lois de Rushbrooke, Griffith, Josephson, Fisher), et l&rsquo;expérience les vérifie. C&rsquo;est un test fort et bon marché de toute la construction, puisqu&rsquo;il ne demande que des mesures, aucune théorie.</p>
+<br>
+<div id="preuve">
+<details>
+<summary>Contrôle&nbsp;: le champ moyen doit correspondre à $y_t = 2$ et $y_h = 3$ en $d = 4$</summary>
+<p style="text-align:center;">
+$\displaystyle
+\alpha = 2-\tfrac42 = 0,\quad
+\beta = \tfrac{4-3}{2} = \tfrac12,\quad
+\gamma = \tfrac{6-4}{2} = 1,\quad
+\delta = \tfrac{3}{4-3} = 3,\quad
+\nu = \tfrac12,\quad
+\eta = 2+4-6 = 0
+$
+</p>
+<p>C&rsquo;est exactement le tableau du champ moyen que nous établirons plus loin. Le contrôle est rassurant, et il annonce un résultat de fond : le champ moyen correspondra au <b>point fixe gaussien vu en dimension 4</b>.</p>
+</details>
+</div>
+<h4 id="quatre-relations-et-un-test-gratuit">Quatre relations, et un test gratuit</h4>
+<p>Deux nombres commandent six exposants : il doit donc exister <strong>quatre relations</strong> entre eux, obtenues en éliminant $y_t$ et $y_h$. Elles portent des noms, et l&rsquo;expérience les vérifie.</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: center">Nom</th>
+					<th style="text-align: center">Relation</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">Rushbrooke</td>
+					<td style="text-align: center">$\alpha + 2\beta + \gamma = 2$</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">Widom–Griffith</td>
+					<td style="text-align: center">$\gamma = \beta(\delta - 1)$</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">Fisher</td>
+					<td style="text-align: center">$\gamma = \nu\,(2-\eta)$</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">Josephson (hyperéchelle)</td>
+					<td style="text-align: center">$\nu\,d = 2 - \alpha$</td>
+			</tr>
+	</tbody>
+</table>
+<br>
+<div id="preuve">
+<details>
+<summary>Vérification des quatre&nbsp;:</summary>
+<p><b>Rushbrooke</b></p>
+<p>Les trois exposants ont le même dénominateur :</p>
+<p style="text-align:center;">
+$\displaystyle
+\alpha + 2\beta + \gamma = 2 - \frac{d}{y_t} + \frac{2(d-y_h) + (2y_h-d)}{y_t} = 2 - \frac{d}{y_t} + \frac{d}{y_t} = 2
+$
+</p>
+<p><b>Widom–Griffith</b></p>
+<p style="text-align:center;">
+$\displaystyle
+\beta(\delta-1) = \frac{d-y_h}{y_t}\left(\frac{y_h}{d-y_h}-1\right) = \frac{d-y_h}{y_t}\cdot\frac{2y_h-d}{d-y_h} = \frac{2y_h-d}{y_t} = \gamma
+$
+</p>
+<p><b>Fisher</b></p>
+<p>Déjà obtenue plus haut : c&rsquo;est elle qui nous a livré $\eta$, par l&rsquo;intégration de la fonction de corrélation. On la retrouve bien sûr en reportant les formules :</p>
+<p style="text-align:center;">
+$\displaystyle
+\nu(2-\eta) = \frac{1}{y_t}\big(2 - 2 - d + 2y_h\big) = \frac{2y_h-d}{y_t} = \gamma
+$
+</p>
+<p><b>Josephson</b></p>
+<p>C&rsquo;est la plus immédiate, puisque $\nu d = d/y_t$ et $2-\alpha = d/y_t$ par définition.</p>
+</details>
+</div>
+<p><b>Ces quatre relations sont un test remarquablement bon marché.</b> Elles ne demandent <i>aucune théorie</i> : on mesure six exposants sur un matériau, on vérifie qu&rsquo;ils satisfont les quatre égalités. Si l&rsquo;hypothèse d&rsquo;échelle est fausse, cela se voit sans avoir rien calculé. Elle passe l&rsquo;examen.<br><br>
+Une mise en garde, cependant, sur la dernière. La relation de Josephson est la seule où la <b>dimension $d$ apparaît explicitement</b> : on l&rsquo;appelle pour cela relation d&rsquo;<b>hyperéchelle</b>. Elle repose sur l&rsquo;idée que l&rsquo;énergie libre singulière vaut environ $k_{\mathrm B}T$ par volume de corrélation $\xi^d$, ce qui cesse d&rsquo;être vrai au-dessus de quatre dimensions. De fait, en champ moyen ($\alpha = 0$, $\nu = 1/2$), elle donnerait $d = 4$ : elle n&rsquo;est satisfaite qu&rsquo;à la dimension critique supérieure, et échoue au-delà. Les trois autres relations, elles, restent valables en toute dimension.</p>
+<br>
 <p>Le programme du chapitre est fixé : la machine de Wilson doit produire $y_t$ et $y_h$, en lisant comment $t$ et $h$ évoluent sous le flot.</p>
 <br>
 <h3 id="le-modèle-et-pourquoi-phi4-convient">Le modèle, et pourquoi $\phi^4$ convient</h3>
@@ -2294,38 +2499,70 @@ $
 <p>C&rsquo;est exactement ce qui cessera d&rsquo;être vrai dès que $\lambda \neq 0$ : le terme $\phi^4$ contient des produits du type $\phi_{\mathrm s}\phi_{\mathrm s}\phi_{\mathrm f}\phi_{\mathrm f}$, qui couplent les deux familles et empêchent la factorisation. Tout le flot du chapitre naîtra de ces termes croisés.</p>
 </details>
 </div>
-<p><strong>Pas II et III : tout se joue là.</strong> Puisque le pas I n&rsquo;apporte rien, le flot gaussien est un pur effet de changement d&rsquo;échelle, c&rsquo;est-à-dire une affaire d&rsquo;analyse dimensionnelle. Le pas II ramène la coupure de $\Lambda/b$ à $\Lambda$ en posant $x&rsquo; = x/b$, et le pas III rééchelonne le champ.</p>
-<p>Reste à savoir de combien. Il faut une <strong>convention</strong>, car sans elle deux théories ne seraient jamais comparables : on choisit de maintenir le coefficient du terme de gradient à sa valeur $\tfrac12$. Ce choix n&rsquo;est pas arbitraire au sens de « indifférent » ; c&rsquo;est le terme de gradient qui définit ce qu&rsquo;on appelle « le champ », et le garder fixe revient à décider que l&rsquo;unité de mesure de $\phi$ ne bouge pas.</p>
+<p><strong>Pas II et III : tout se joue là.</strong> Puisque le pas I n&rsquo;apporte rien, le flot gaussien est un pur effet de changement d&rsquo;échelle, c&rsquo;est-à-dire une affaire d&rsquo;analyse dimensionnelle.</p>
+<p>Le <strong>pas II</strong> ramène la coupure de $\Lambda/b$ à $\Lambda$ en contractant les longueurs :</p>
+<p style="text-align:center;">
+$\displaystyle x' = \frac{x}{b}$
+</p>
+<p>Le <strong>pas III</strong> rééchelonne le champ. Mais de combien ? Écrivons l&rsquo;opération avec un exposant encore inconnu, que l&rsquo;on appellera <strong>dimension d&rsquo;échelle du champ</strong> :</p>
+<div id="def">
+<p style="text-align:center;">
+$\displaystyle \phi'(x') = b^{\,d_\phi}\,\phi(x)$
+</p>
+</div>
+<p>Il faut maintenant fixer $d_\phi$, et cela demande une <strong>convention</strong> : sans elle, deux théories ne seraient jamais comparables, puisqu&rsquo;on pourrait toujours absorber une différence dans un rééchelonnement du champ. On choisit de maintenir le coefficient du terme de gradient à sa valeur $\tfrac12$. Ce choix n&rsquo;est pas « indifférent » : c&rsquo;est le terme de gradient qui définit ce qu&rsquo;on appelle « le champ », et le garder fixe revient à décider que l&rsquo;unité de mesure de $\phi$ ne bouge pas d&rsquo;un tour de manivelle à l&rsquo;autre.</p>
 <div id="preuve">
 <details>
-<summary>D'où sort $d_\phi = (d-2)/2$&nbsp;?</summary>
-<p>Sous $x = bx&rsquo;$, deux choses changent dans l&rsquo;intégrale : la mesure, $\mathrm d^dx = b^d\,\mathrm d^dx&rsquo;$, et le gradient, $\nabla_x = b^{-1}\nabla_{x&rsquo;}$. Le terme de gradient devient donc</p>
+<summary>La convention fixe $d_\phi = (d-2)/2$&nbsp;</summary>
+<p>Sous $x = bx&rsquo;$, deux choses changent dans l&rsquo;intégrale : la mesure, $\mathrm d^dx = b^d,\mathrm d^dx&rsquo;$, et le gradient, $\nabla_x = b^{-1}\nabla_{x&rsquo;}$. Comme le gradient est au carré, le terme devient</p>
 <p style="text-align:center;">
 $\displaystyle
-\int\mathrm d^dx\,\frac12(\nabla_x\phi)^2 = b^{\,d-2}\int\mathrm d^dx'\,\frac12(\nabla_{x'}\phi)^2
+\int\mathrm d^dx\,\frac12(\nabla_x\phi)^2 = b^{\,d}\times b^{-2}\int\mathrm d^dx'\,\frac12(\nabla_{x'}\phi)^2 = b^{\,d-2}\int\mathrm d^dx'\,\frac12(\nabla_{x'}\phi)^2
 $
 </p>
-<p>Pour ramener le coefficient à $\tfrac12$, on définit le nouveau champ par $\phi&rsquo;(x&rsquo;) = b^{\,d_\phi}\phi(x)$ avec</p>
+<p>On remplace ensuite $\phi$ par $b^{-d_\phi}\phi&rsquo;$, ce qui apporte $b^{-2d_\phi}$ puisque le champ apparaît deux fois. Pour que le coefficient revienne à $\tfrac12$, il faut que le produit des deux facteurs vaille 1 :</p>
 <p style="text-align:center;">
 $\displaystyle
 b^{\,d-2}\times b^{-2d_\phi} = 1
-\qquad\Longrightarrow\qquad
+\;\Longrightarrow\;
+d - 2 - 2d_\phi = 0
+\;\Longrightarrow\;
 d_\phi = \frac{d-2}{2}
 $
 </p>
 <p><b>Ce nombre n&rsquo;est autre que la dimension de masse du champ</b> en dimension $d$ : c&rsquo;est ce que donne l&rsquo;analyse dimensionnelle appliquée à $\int\mathrm d^dx\,(\nabla\phi)^2$, qui doit être sans dimension. Le pas III est donc, au point fixe gaussien, de l&rsquo;analyse dimensionnelle et rien d&rsquo;autre.</p>
-<p><b>Le terme de masse suit :</b></p>
+</details>
+</div>
+<br>
+<div id="preuve">
+<details>
+<summary>Les deux couplages suivent&nbsp;: obtention de $m'^2$ et de $h'$</summary>
+<p>$d_\phi$ étant fixé, il n&rsquo;y a plus qu&rsquo;à faire subir aux autres termes le même traitement : la mesure apporte $b^d$, et chaque facteur $\phi$ apporte $b^{-d_\phi}$.</p>
+<p><b>Le terme de masse</b> contient <i>deux</i> champs, donc $b^{-2d_\phi} = b^{-(d-2)}$ :</p>
 <p style="text-align:center;">
 $\displaystyle
-\int\mathrm d^dx\,\frac{m^2}{2}\phi^2 = b^{\,d}\int\mathrm d^dx'\,\frac{m^2}{2}\,b^{-(d-2)}\phi'^2 = \int\mathrm d^dx'\,\frac{b^2m^2}{2}\phi'^2
+\int\mathrm d^dx\,\frac{m^2}{2}\phi^2
+= b^{\,d}\times b^{-(d-2)}\int\mathrm d^dx'\,\frac{m^2}{2}\phi'^2
+= \int\mathrm d^dx'\,\frac{\overbrace{b^{2}m^2}^{m'^2}}{2}\,\phi'^2
 $
 </p>
-<p><b>Et le champ extérieur aussi</b>, avec le terme $-h\phi$ :</p>
+<p>L&rsquo;exposant se calcule sans peine : $d - (d-2) = 2$. D&rsquo;où :</p>
+<p style="text-align:center;">
+$\displaystyle m'^2 = b^{2}\,m^2$
+</p>
+<p><b>Le terme de champ extérieur</b>, lui, ne contient qu&rsquo;<i>un seul</i> champ, donc un seul facteur $b^{-d_\phi}$ :</p>
 <p style="text-align:center;">
 $\displaystyle
-b^{\\,d}\times b^{-\frac{d-2}{2}} = b^{\\,\frac{d+2}{2}}
+\int\mathrm d^dx\,(-h\phi)
+= b^{\,d}\times b^{-\frac{d-2}{2}}\int\mathrm d^dx'\,(-h\,\phi')
+= \int\mathrm d^dx'\,(-\underbrace{b^{\frac{d+2}{2}}h}_{h'}\,\phi')
 $
 </p>
+<p>avec $d - \dfrac{d-2}{2} = \dfrac{2d-d+2}{2} = \dfrac{d+2}{2}$. D&rsquo;où :</p>
+<p style="text-align:center;">
+ $\displaystyle h' = b^{\frac{d+2}{2}}\,h$
+</p>
+<p><b>Toute la différence entre les deux vient donc du nombre de champs</b> présents dans le terme : deux pour la masse, un pour le champ extérieur. C&rsquo;est cette remarque qui va se généraliser à la section suivante.</p>
 </details>
 </div>
 <p>On obtient donc, sans la moindre approximation :</p>
@@ -2344,9 +2581,53 @@ y_h = \frac{d+2}{2}
 $
 </p>
 </div>
-<p>Les deux couplages <strong>grandissent</strong> à chaque tour de manivelle. On dit qu&rsquo;ils sont <strong>pertinents</strong> ; une variable qui rétrécit est <strong>non pertinente</strong>, une variable immobile est <strong>marginale</strong>.</p>
+<p>Les deux exposants sont <strong>positifs</strong>, et $b &gt; 1$ puisqu&rsquo;on regarde de plus en plus grand. Chaque tour de manivelle, c&rsquo;est-à-dire chaque application de la transformation, multiplie donc $m^2$ par $b^2 &gt; 1$ et $h$ par $b^{(d+2)/2} &gt; 1$. Après $n$ tours, les facteurs sont $b^{2n}$ et $b^{n(d+2)/2}$ : les deux couplages <strong>s&rsquo;échappent</strong> vers l&rsquo;infini.</p>
+<div id="theo">
+<ul style="margin-top:1em; margin-bottom:1em;">
+<li>Un couplage dont l'exposant est <b>positif</b> grandit sous le flot&nbsp;: on le dit <b>pertinent</b></li>
+<li>S'il est <b>négatif</b>, le couplage rétrécit et finit par disparaître&nbsp;: il est <b>non pertinent</b>.</li>
+<li>S'il est <b>nul</b>, le couplage ne bouge pas à cet ordre et l'on doit regarder plus finement&nbsp;: il est <b>marginal</b>.</li>
+</ul>
+</div>
+<p>Le contenu physique mérite qu&rsquo;on s&rsquo;y arrête, car ces mots ne sont pas du jargon.</p>
+<p>Prenons $m^2 \propto (T - T_c)$, et supposons-le petit mais non nul : nous sommes tout près du point critique, sans y être. Le flot dit qu&rsquo;en regardant à des échelles de plus en plus grandes, le système paraît de <strong>plus en plus loin</strong> de sa température critique. C&rsquo;est cohérent avec ce que nous savons déjà : $\xi&rsquo; = \xi/b$, la longueur de corrélation rétrécit en unités de la maille, et comme $\xi \sim 1/m$, cela redonne exactement $m&rsquo; = bm$.</p>
+<p><b>La conséquence est la définition même de la criticité</b>. Puisque toute valeur non nulle de $m^2$ s&rsquo;échappe, la seule façon de rester au point fixe est de partir <b>exactement</b> de $m^2 = 0$, c&rsquo;est-à-dire de régler la température à $T_c$ à la perfection. Et comme $h$ est pertinent lui aussi, il faut de même annuler le champ extérieur.<br><br>
+Deux directions pertinentes, donc <b>deux paramètres à régler</b> pour atteindre la criticité : c&rsquo;est pourquoi le point critique est un <i>point</i> dans le plan $(T, h)$, et non une ligne ou une région. Un expérimentateur qui cherche la criticité doit ajuster deux boutons, et tout écart, si petit soit-il, finit par le chasser du point fixe.</p>
+<br>
 <h4 id="le-comptage-de-puissances-en-une-formule">Le comptage de puissances, en une formule</h4>
-<p>Le calcul précédent ne demandait rien de particulier au terme considéré : on peut donc le faire une fois pour toutes. Un terme quelconque $\int\mathrm d^dx\;g_n\phi^n$ subit la mesure ($b^d$) et $n$ facteurs de champ ($b^{-n(d-2)/2}$), d&rsquo;où</p>
+<p>La seule chose qui distinguait le terme de masse du terme de champ était le nombre de champs qu&rsquo;ils contiennent, deux contre un. Rien d&rsquo;autre n&rsquo;est intervenu. On peut donc faire le calcul une bonne fois pour toutes, pour un terme comportant $n$ champs.</p>
+<div id="preuve">
+<details>
+<summary>Le calcul général, pour un terme à $n$ champs</summary>
+<p>Considérons un terme quelconque de l&rsquo;action, de couplage $g_n$ :</p>
+<p style="text-align:center;">
+$\displaystyle \int\mathrm d^dx\;g_n\,\big[\phi(x)\big]^n$
+</p>
+<p>Deux substitutions, et deux seulement :</p>
+<ul style="margin-top:0.5em;">
+<li>la mesure&nbsp;: $\mathrm d^dx = b^{\,d}\,\mathrm d^dx'$, ce qui apporte un facteur $b^{\,d}$&nbsp;;</li>
+<li>les champs&nbsp;: $\phi(x) = b^{-d_\phi}\phi'(x')$, et comme il y en a $n$, cela apporte $b^{-n\,d_\phi}$.</li>
+</ul>
+<p>En reportant :</p>
+<p style="text-align:center;">
+$\displaystyle
+\int\mathrm d^dx\;g_n\,\phi^n
+= b^{\,d}\times b^{-n\,d_\phi}\int\mathrm d^dx'\;g_n\,\phi'^n
+= \int\mathrm d^dx'\;\underbrace{\Big(b^{\,d - n\,d_\phi}\,g_n\Big)}_{\textstyle g_n'}\;\phi'^n
+$
+</p>
+<p>Le terme a donc gardé exactement la même <i>forme</i> ; seul son coefficient a changé. En lisant le facteur et en y injectant $d_\phi = (d-2)/2$ :</p>
+<p style="text-align:center;">
+$\displaystyle
+g_n' = b^{\,y_n}\,g_n
+\qquad\text{avec}\qquad
+y_n = d - n\,d_\phi = d - n\,\frac{d-2}{2}
+$
+</p>
+<p><b>Contrôle sur les deux cas déjà connus.</b> Pour $n = 2$ (la masse) : $y_2 = d - (d-2) = 2$, c&rsquo;est bien $y_t$. Pour $n = 1$ (le champ extérieur) : $y_1 = d - \frac{d-2}{2} = \frac{d+2}{2}$, c&rsquo;est bien $y_h$. Les deux résultats obtenus séparément plus haut sont les deux premiers cas d&rsquo;une même formule.</p>
+</details>
+</div>
+<br>
 <div id="theo">
 <p style="text-align:center;">
 $\displaystyle
@@ -2357,6 +2638,7 @@ $\displaystyle
 $
 </p>
 </div>
+<p>$y_n$ n&rsquo;est donc rien d&rsquo;autre que la <b>dimension de masse du couplage $g_n$</b>. En effet l&rsquo;action est sans dimension, donc $[g_n] = d - n,[\phi] = d - n\,\frac{d-2}{2}$, ce qui est exactement $y_n$. Au point fixe gaussien, « pertinent » signifie donc simplement <b>de dimension de masse positive</b>. C&rsquo;est cela qu&rsquo;on appelle le <b>comptage de puissances</b>, et c&rsquo;est le même outil qui servait à décider quels diagrammes divergent au chapitre &lsquo;Le problème et ses solutions&quot;.</p>
 <p>Cette unique formule répond d&rsquo;un coup à plusieurs questions laissées en suspens :</p>
 <table>
 	<thead>
@@ -2408,6 +2690,7 @@ $
 <li><b>Les deux premières lignes sont $y_t$ et $y_h$</b>, c'est-à-dire précisément les deux nombres réclamés par l'hypothèse de Widom.</li>
 </ul>
 <p>Injectées dans les formules de Widom avec $d=4$, ces valeurs gaussiennes redonnent <b>exactement</b> le tableau du champ moyen établi plus haut ($\alpha=0$, $\beta=\tfrac12$, $\gamma=1$, $\delta=3$, $\nu=\tfrac12$, $\eta=0$). Ce n&rsquo;est pas une coïncidence : <b>le champ moyen <i>est</i> le point fixe gaussien vu en dimension 4</b>, et c&rsquo;est pourquoi il devient exact au-dessus de quatre dimensions, là où $\lambda$ est non pertinent et s&rsquo;évanouit tout seul.</p>
+<br>
 <p>Tout le chapitre tient désormais dans une question : que devient ce tableau quand on allume $\lambda$ en dessous de quatre dimensions, là où il refuse de s&rsquo;évanouir ?</p>
 <br>
 <h3 id="une-boucle-et-le-point-fixe-de-wilsonfisher">Une boucle, et le point fixe de Wilson–Fisher</h3>
@@ -2693,7 +2976,7 @@ $
 <li>Ensuite, il se trouve à $m^{2*} < 0$. Retenons-le, car ce détail apparemment technique aura une conséquence physique considérable une fois le diagramme de flot dessiné.</li>
 </ul>
 <br>
-<h4 id="qui-attire-qui-repousse">Qui attire, qui repousse</h4>
+<h4 id="qui-attire-qui-repousse">Qui attire, qui repousse ?</h4>
 <p>Un point fixe ne dit rien à lui seul : tout dépend de la façon dont les trajectoires voisines se comportent. On linéarise donc le flot autour de chacun, ce qui revient à évaluer la matrice jacobienne au point fixe et à en chercher les valeurs propres.</p>
 <ul style="margin-top:-0.5em; margin-bottom:1em;">
 <li>Une valeur propre <b>positive</b> signale une direction <b>pertinente</b>, dont on s'écarte&nbsp;;</li>
@@ -4328,16 +4611,16 @@ $
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785721548"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785721548"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785721548"></script>
-    <script src="/js/jquery.sticky.js?1785721548"></script>
-    <script src="/js/featherlight.min.js?1785721548"></script>
-    <script src="/js/highlight.pack.js?1785721548"></script>
+    <script src="/js/clipboard.min.js?1785728760"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785728760"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785728760"></script>
+    <script src="/js/jquery.sticky.js?1785728760"></script>
+    <script src="/js/featherlight.min.js?1785728760"></script>
+    <script src="/js/highlight.pack.js?1785728760"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785721548"></script>
-    <script src="/js/learn.js?1785721548"></script>
-    <script src="/js/hugo-learn.js?1785721548"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785728760"></script>
+    <script src="/js/learn.js?1785728760"></script>
+    <script src="/js/hugo-learn.js?1785728760"></script>
     
     
 
