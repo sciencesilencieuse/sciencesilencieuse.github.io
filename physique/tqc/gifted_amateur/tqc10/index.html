@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785764322" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785764322" rel="stylesheet">
-    <link href="/css/hybrid.css?1785764322" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785764322" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785764322" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785764322" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785764322" rel="stylesheet">
-    <link href="/css/theme.css?1785764322" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785764322" rel="stylesheet">
+    <link href="/css/nucleus.css?1785765697" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785765697" rel="stylesheet">
+    <link href="/css/hybrid.css?1785765697" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785765697" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785765697" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785765697" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785765697" rel="stylesheet">
+    <link href="/css/theme.css?1785765697" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785765697" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785764322" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785765697" rel="stylesheet">
     
-    <link href="/css/foo.css?1785764322" rel="stylesheet"><link href="/css/bar.css?1785764322" rel="stylesheet">
+    <link href="/css/foo.css?1785765697" rel="stylesheet"><link href="/css/bar.css?1785765697" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785764322"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785765697"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785764322"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785764322"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785765697"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785765697"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785764322"></script>
+<script type="text/javascript" src="/js/search.js?1785765697"></script>
 
     
   </div>
@@ -2106,6 +2106,7 @@ details[open] > summary:first-of-type {
 <p>Changement de regard. Jusqu&rsquo;ici, presque tous nos calculs consistaient à intégrer sur l&rsquo;espace-temps, et la géométrie précise de celui-ci comptait : elle est encodée dans la métrique $g_{\mu\nu}$, le manuel d&rsquo;instruction qui dit ce que mesurent les montres et les règles. Cette partie s&rsquo;intéresse aux questions qui sont totalement aveugles à la métrique. La réponse ne peut alors dépendre que de propriétés globales, insensibles aux déformations continues : c&rsquo;est le domaine de la topologie.</p>
 <ul style="margin-top:1em;">
 <li><b>L'idée</b>&nbsp;: quand une symétrie est spontanément brisée (partie précédente), le champ peut la briser <i>différemment en différentes régions de l'espace</i>. Les configurations qui recollent ces régions sont des <b>défauts topologiques</b>, protégés non par une loi de conservation à la Noether mais par l'impossibilité de les déformer continûment vers le vide.</li>
+<li><b>Le fil rouge</b>&nbsp;: l'effet <b>Aharonov–Bohm</b>, où des électrons qui ne rencontrent jamais le moindre champ magnétique voient pourtant leur figure d'interférence se décaler. On le rencontre d'abord comme un avant-goût, puis il resurgit deux fois&nbsp;: pour donner son flux au vortex, puis pour donner sa statistique à l'anyon.</li>
 <li><b>Les objets</b>&nbsp;: les deux défauts les plus simples, le <b>kink</b> en une dimension d'espace et le <b>vortex</b> en deux. Le kink vit très bien tout seul&nbsp;; le vortex, lui, exige un champ de jauge pour exister, et cette association a une conséquence&nbsp;: la <b>quantification du flux magnétique</b>.</li>
 <li><b>La théorie</b>&nbsp;: on construit un lagrangien qui est <i>lui-même</i> topologique, la théorie de <b>Chern–Simons</b>, où le symbole antisymétrique $\epsilon^{\mu\nu\lambda}$ remplace la métrique. En (2+1) dimensions, elle attache du flux aux charges et fabrique des particules qui ne sont ni bosons ni fermions&nbsp;: les <b>anyons</b>.</li>
 </ul>
@@ -2115,11 +2116,9 @@ details[open] > summary:first-of-type {
 <p>Deux objets sont topologiquement équivalents si l&rsquo;on peut déformer continûment l&rsquo;un en l&rsquo;autre, comme si tout était fait de pâte à modeler : on a le droit d&rsquo;étirer et d&rsquo;écraser, mais pas de percer, de recoller, d&rsquo;ajouter ou de supprimer un trou. Des points voisins doivent rester voisins. C&rsquo;est en ce sens que la tasse à café et le doughnut sont le même objet : chacun possède exactement un trou.</p>
 <p>Donnons des noms aux espaces de base.</p>
 <div id="def">
-<ul style="margin-top:0.5em;">
-<li>La droite réelle est notée $\mathbb R$, le plan $\mathbb R^2$, et $\mathbb R^n$ en dimension $n$.</li>
-<li>Un segment de $\mathbb R$ recollé bout à bout donne le cercle $S^1$. La sphère est $S^2$&nbsp;: attention, il s'agit de la <i>surface</i> de la boule, pas de son intérieur, c'est donc un espace de dimension 2.</li>
-<li>On fabrique un <b>espace produit</b> en attachant une copie d'un espace à chaque point d'un autre&nbsp;: $\mathbb R \times \mathbb R = \mathbb R^2$, et le tore $T^2 = S^1 \times S^1$ (on retrouve le doughnut&nbsp;: un petit cercle attaché à chaque point d'un grand cercle).</li>
-</ul>
+<p>La <b>droite réelle</b> est notée $\mathbb R$, le plan $\mathbb R^2$, et $\mathbb R^n$ en dimension $n$.</p>
+<p>Un <b>segment</b> de $\mathbb R$ recollé bout à bout donne le cercle $S^1$. La sphère est $S^2$ : attention, il s&rsquo;agit de la <i>surface</i> de la boule, pas de son intérieur, c&rsquo;est donc un espace de dimension 2.</p>
+<p>On fabrique un <b>espace produit</b> en attachant une copie d&rsquo;un espace à chaque point d&rsquo;un autre : $\mathbb R \times \mathbb R = \mathbb R^2$, et le tore $T^2 = S^1 \times S^1$ (on retrouve le doughnut : un petit cercle attaché à chaque point d&rsquo;un grand cercle).</p>
 </div>
 <!-- Figure à redessiner (L&B fig. 29.2) : deux panneaux. (a) une droite R horizontale, une droite R verticale, le symbole ×, puis le plan R² quadrillé ; (b) deux cercles S¹ avec le symbole ×, puis le tore T², avec un grand cercle et un petit cercle dessinés dessus. Légende : un espace produit attache une copie d'un espace à chaque point de l'autre -->
 <div style="position:relative;margin-left:auto;margin-right:auto;width:500px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
@@ -2190,13 +2189,13 @@ $
 <p>C&rsquo;est bien notre lagrangien à symétrie brisée : en développant le carré et en posant $v^2 = m^2/\lambda$, on retrouve le terme de masse $+\tfrac12 m^2\phi^2$ et l&rsquo;interaction $-\tfrac{\lambda}{4}\phi^4$.</p>
 <p>Le potentiel est un double puits, avec $U = 0$ aux deux minima $\phi = \pm v$. En développant autour de l&rsquo;un des deux vides, les excitations sont des particules de masse $m_{\text{phys}} = (2\lambda v^2)^{1/2}$.</p>
 </div>
-<!-- Figure à redessiner (deux panneaux, d'après L&B fig. 29.5 et 29.7) : (a) le potentiel U(φ) en double puits, avec les deux minima marqués en φ = -v et φ = +v ; (b) le profil du kink φ(x), courbe en S montant de -v (à gauche) vers +v (à droite), avec la largeur l indiquée autour du croisement de l'axe. Légende : le kink interpole entre les deux vides -->
+<!-- Figure à redessiner (d'après L&B fig. 29.5) : le potentiel U(φ) tracé en fonction de φ, en double puits symétrique, avec les deux minima marqués en φ = -v et φ = +v, la bosse centrale en φ = 0, et U = 0 au niveau des minima. Légende : le potentiel à symétrie brisée, deux vides dégénérés -->
 <div style="position:relative;margin-left:auto;margin-right:auto;width:440px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/doublepuitskink1.png" style="box-shadow:none;background:none;">
 </div>
 <p>La leçon de ce chapitre tient en une phrase : <b>les particules ne sont pas les seuls habitants de ce potentiel</b>.<br>
 Cherchons les configurations statiques dont la densité d&rsquo;énergie $\tfrac12(\partial_x\phi)^2 + U(\phi)$ s&rsquo;annule en $x = \pm\infty$. Cela impose au champ d&rsquo;être constant et de siéger dans un zéro du potentiel aux deux extrémités. La solution ennuyeuse est $\phi(x) = v$ partout (ou $-v$ partout) : c&rsquo;est le vide ordinaire de la symétrie brisée. La solution intéressante prend $\phi(-\infty) = -v$ et $\phi(+\infty) = +v$ : le champ doit alors traverser la bosse quelque part.</p>
-<!-- Figure à redessiner (deux panneaux, d'après L&B fig. 29.5 et 29.7) : (a) le potentiel U(φ) en double puits, avec les deux minima marqués en φ = -v et φ = +v ; (b) le profil du kink φ(x), courbe en S montant de -v (à gauche) vers +v (à droite), avec la largeur l indiquée autour du croisement de l'axe. Légende : le kink interpole entre les deux vides -->
+<!-- Figure à redessiner (d'après L&B fig. 29.7) : le profil du kink φ(x) tracé en fonction de x, courbe en S montant de -v (asymptote à gauche) vers +v (asymptote à droite), traversant l'axe en x = 0 ; coter la largeur l de la zone de transition autour du croisement. Légende : le kink interpole entre les deux vides sur une région de taille finie -->
 <div style="position:relative;margin-left:auto;margin-right:auto;width:440px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/doublepuitskink2.png" style="box-shadow:none;background:none;">
 </div>
@@ -2313,7 +2312,7 @@ En faisant un seul tour autour du centre, on voit la flèche faire 2 tours compl
 </div>
 <p>Le vortex est-il viable ? Calculons son énergie.</p>
 <div id="preuve">
-<p>Pour une configuration statique, la densité d&rsquo;énergie est $\mathcal H = \tfrac12\boldsymbol\nabla\phi^\dagger\cdot\boldsymbol\nabla\phi + U(\phi)$, avec un potentiel choisi tel que $U = 0$ sur le cercle des vides, par exemple $U(\phi) = \big(|K|^2 - \phi^\dagger\phi\big)^2$. Le terme potentiel ne coûte donc rien à l&rsquo;infini.</p>
+<p>Pour une configuration statique, la densité d&rsquo;énergie est $\mathcal H = \tfrac12\boldsymbol\nabla\phi^\dagger\cdot\boldsymbol\nabla\phi + U(\phi)$, avec le même chapeau mexicain qu&rsquo;au début du chapitre, transposé au champ complexe : $U(\phi) = \frac{\lambda}{4}\big(|K|^2 - \phi^\dagger\phi\big)^2$, où $|K|$ joue le rôle que $v$ jouait pour le kink. Il s&rsquo;annule sur tout le cercle des vides $|\phi| = |K|$, donc le terme potentiel ne coûte rien à l&rsquo;infini.</p>
 <p>Le danger vient du gradient. À grande distance, seule la phase varie, et son gradient en coordonnées cylindriques vaut :</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -2342,7 +2341,7 @@ $\displaystyle
 E(\mu) = \mu^{2-d}\,E_{\text{grad}} + \mu^{-d}\,E_{\text{pot}}
 $
 </p>
-<p>Pour $d = 1$, les deux exposants ont des signes opposés : le bras de fer a un équilibre, et c&rsquo;est exactement celui qui fixait la taille $l$ du kink. Pour $d \geq 2$, les deux exposants sont négatifs ou nuls : dilater ($\mu \to 0$, si $d&gt;2$) ou jouer sur l&rsquo;échelle ne rencontre jamais de minimum non trivial, et la configuration peut toujours baisser son énergie en se déformant. Aucune solution statique stable de taille finie n&rsquo;existe.</p>
+<p>Pour $d = 1$, les deux exposants ont des signes opposés : le bras de fer a un équilibre, et c&rsquo;est exactement celui qui fixait la taille $l$ du kink. Pour $d \geq 2$, les deux exposants sont négatifs ou nuls, et le bras de fer disparaît : les deux termes décroissent ensemble quand $\mu$ grandit. Or $\mu &gt; 1$ <b>comprime</b> la configuration. Rien n&rsquo;arrête donc son <b>effondrement</b> vers une taille nulle, où l&rsquo;énergie tend vers $0$ (pour $d &gt; 2$) ou vers $E_{\text{grad}}$ seul (pour $d = 2$). Dans l&rsquo;autre sens, $\mu \to 0$ dilate et fait au contraire diverger l&rsquo;énergie. Aucun minimum à taille finie, donc aucune solution statique stable.</p>
 <p>Avec des scalaires seuls, l&rsquo;histoire du kink ne se généralise pas, et il faut enrichir la théorie.</p>
 </details>
 </div>
@@ -2412,6 +2411,18 @@ $
 <br>
 <h2 id="la-théorie-topologique-des-champs">La théorie topologique des champs</h2>
 <p>Le chapitre précédent a montré des objets topologiques vivant dans des théories ordinaires. On franchit maintenant un cran : construire une théorie qui est <i>elle-même</i> topologique, c&rsquo;est-à-dire dont le lagrangien ignore la métrique. Le terrain de jeu est l&rsquo;espace-temps (2+1)-dimensionnel, le « flatland », et il faut commencer par une surprise sur les statistiques quantiques.</p>
+
+<div class="notices note" style="--title: 'note';">
+  <p style="display: none;">note</p>
+  <div class="notice-body">
+    <p><b>Deux notations à ne pas confondre dans ce chapitre.</b><br><br>
+$\Phi$ reste réservé au <b>flux magnétique</b>, comme dans tout le chapitre précédent : c&rsquo;est lui qui vaut $2\pi n/q$ pour le vortex, et c&rsquo;est lui qui reviendra à la toute fin, attaché aux charges par la théorie de Chern–Simons.<br><br>
+L&rsquo;<b>angle d&rsquo;enroulement</b> d&rsquo;une particule autour d&rsquo;une autre sera noté $\vartheta$, et le <b>facteur de phase</b> qu&rsquo;un processus fait acquérir à la fonction d&rsquo;onde sera noté $W(\vartheta)$. Le symbole $\phi$, lui, garde son sens habituel de champ scalaire.</p>
+
+  </div>
+</div>
+
+
 <h3 id="les-anyons-de-wilczek">Les anyons de Wilczek</h3>
 <p>En dimension 3, le catalogue des particules identiques tient en un signe : l&rsquo;échange de deux particules multiplie la fonction d&rsquo;onde par $+1$ (bosons) ou $-1$ (fermions),</p>
 <p style="text-align:center;">
@@ -2428,22 +2439,22 @@ $
 <div style="position:relative;margin-left:auto;margin-right:auto;width:460px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/echab.png" style="box-shadow:none;background:none;">
 </div>
-<p>Voilà où la topologie entre en scène : on peut déformer continûment les trajectoires, mais on ne peut pas changer le <b>nombre de tours</b> qu&rsquo;une particule fait autour de l&rsquo;autre sans que les trajectoires se coupent. Le paramètre pertinent est l&rsquo;angle $\phi$ dont une particule tourne autour de l&rsquo;autre : les processus de type A réalisent $\phi = 2\pi p$ et ceux de type B réalisent $\phi = \pi(2p+1)$, avec $p$ entier, et chaque valeur de $p$ est une classe topologique distincte.</p>
+<p>Voilà où la topologie entre en scène : on peut déformer continûment les trajectoires, mais on ne peut pas changer le <b>nombre de tours</b> qu&rsquo;une particule fait autour de l&rsquo;autre sans que les trajectoires se coupent. Le paramètre pertinent est l&rsquo;angle dont une particule tourne autour de l&rsquo;autre, que l&rsquo;on notera $\vartheta$ : les processus de type A réalisent $\vartheta = 2\pi p$ et ceux de type B réalisent $\vartheta = \pi(2p+1)$, avec $p$ entier, et chaque valeur de $p$ est une classe topologique distincte.</p>
 <div id="preuve">
 <p>Quelle phase quantique attacher à chaque classe ?<br>
-On suppose que chaque processus contribue à la fonction d&rsquo;onde (ou, en théorie des champs, à l&rsquo;intégrale de chemin) un facteur multiplicatif $\Phi(\phi)$ de module 1. Si l&rsquo;on enchaîne deux processus, les angles s&rsquo;additionnent et les facteurs se multiplient :</p>
+On suppose que chaque processus contribue à la fonction d&rsquo;onde (ou, en théorie des champs, à l&rsquo;intégrale de chemin) un facteur multiplicatif $W(\vartheta)$ de module 1. Si l&rsquo;on enchaîne deux processus, les angles s&rsquo;additionnent et les facteurs se multiplient :</p>
 <p style="text-align:center;">
 $\displaystyle
-\Phi(\phi_1 + \phi_2) = \Phi(\phi_1)\,\Phi(\phi_2)
+W(\vartheta_1 + \vartheta_2) = W(\vartheta_1)\,W(\vartheta_2)
 \;\Longrightarrow\;
-\displaystyle \Phi(\phi) = \mathrm e^{\mathrm i\eta\phi}
+\displaystyle W(\vartheta) = \mathrm e^{\mathrm i\eta\vartheta}
 $
 </p>
 <p>Le point crucial est que rien n&rsquo;oblige le paramètre $\eta$ à être entier.</p>
 <p>Le traitement complet passe par la quantification sur l&rsquo;espace des configurations à points coïncidents exclus, où les classes de trajectoires forment le <i>groupe de tresses</i>. Notre argument par phases multiplicatives en capture tout le contenu utile ici, parce que la seule donnée topologique d&rsquo;une tresse à deux brins est justement l&rsquo;angle d&rsquo;enroulement total.</p>
 </div>
-<p>Confrontons maintenant ce résultat à la vieille définition. Un échange simple est un processus de type B minimal, $\phi = \pi$, donc un facteur $\Phi = e^{\mathrm i\eta\pi}$. On retrouve les bosons quand $\eta$ est un entier pair et les fermions quand il est impair. Mais tous les $\eta$ intermédiaires sont permis : en dimension 2, il existe des particules à statistique quelconque, baptisées <b>anyons</b> par Frank Wilczek (le nom est un jeu de mots : <i>any</i>-ons, les particules à statistique <i>quelconque</i>).</p>
-<p>Pourquoi est-ce réservé au flatland ? En dimension 3, la troisième direction permet de faire passer les trajectoires l&rsquo;une derrière l&rsquo;autre : toutes les boucles se contractent, tous les processus de type A deviennent équivalents au processus trivial, tous les processus de type B se réduisent à l&rsquo;échange simple. Il ne reste que $\phi = 0$ ou $\pi$ à un multiple trivial près, et le monde retombe sur bosons et fermions. L&rsquo;existence des anyons est une propriété de $\pi_1$ de l&rsquo;espace des configurations, pas une propriété des particules.</p>
+<p>Confrontons maintenant ce résultat à la vieille définition. Un échange simple est un processus de type B minimal, $\vartheta = \pi$, donc un facteur $W = \mathrm e^{\mathrm i\eta\pi}$. On retrouve les bosons quand $\eta$ est un entier pair et les fermions quand il est impair. Mais tous les $\eta$ intermédiaires sont permis : en dimension 2, il existe des particules à statistique quelconque, baptisées <b>anyons</b> par Frank Wilczek (le nom est un jeu de mots : <i>any</i>-ons, les particules à statistique <i>quelconque</i>).</p>
+<p>Pourquoi est-ce réservé au flatland ? En dimension 3, la troisième direction permet de faire passer les trajectoires l&rsquo;une derrière l&rsquo;autre : toutes les boucles se contractent, tous les processus de type A deviennent équivalents au processus trivial, tous les processus de type B se réduisent à l&rsquo;échange simple. Il ne reste que $\vartheta = 0$ ou $\pi$ à un multiple trivial près, et le monde retombe sur bosons et fermions. L&rsquo;existence des anyons est une propriété de $\pi_1$ de l&rsquo;espace des configurations, pas une propriété des particules.</p>
 <br>
 <h3 id="la-théorie-de-chernsimons">La théorie de Chern–Simons</h3>
 <p>Il faut maintenant un lagrangien qui héberge naturellement cette physique. Qu&rsquo;est-ce qu&rsquo;un lagrangien « topologique » ? Nos lagrangiens habituels contractent leurs indices avec la métrique $g_{\mu\nu}$ ; un lagrangien topologique les contracte avec le symbole antisymétrique, ici $\epsilon^{\mu\nu\lambda}$ en (2+1) dimensions. Il est donc aveugle aux montres et aux règles, et son contenu ne dépend que de la topologie de la variété<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> où l&rsquo;on travaille.</p>
@@ -2554,7 +2565,7 @@ $
 <p style="text-align:center;">
 $\displaystyle
 \text{échange en 2D} = \text{enroulement}
-\;\xrightarrow{\ \Phi(\phi)=\mathrm e^{\mathrm i\eta\phi}\ }\;
+\;\xrightarrow{\ W(\vartheta)=\mathrm e^{\mathrm i\eta\vartheta}\ }\;
 \text{anyons } (\eta \notin \mathbb Z)
 \;\xrightarrow{\ \mathcal L = -\frac\kappa2\epsilon\, a\,\partial a\ }\;
 f_{\mu\nu}=0,\ H=0
@@ -2581,7 +2592,7 @@ $
 <div class="notices note" style="--title: 'note';">
   <p style="display: none;">note</p>
   <div class="notice-body">
-    <p>Et maintenant ? Après cette parenthèse où les intégrales ne dépendaient pas de la métrique, retour aux intégrales qui en dépendent trop : celles qui divergent. La partie suivante affronte la <b>renormalisation</b>, l&rsquo;art d&rsquo;apprivoiser les infinis, et découvrira que les « constantes » de couplage n&rsquo;en sont pas : elles coulent avec l&rsquo;échelle d&rsquo;observation.</p>
+    <p>Et maintenant ? Après cette parenthèse où les intégrales ne dépendaient pas de la métrique, retour aux intégrales qui en dépendent trop : celles qui divergent. La partie suivante affronte la <b>renormalisation</b>, l&rsquo;art d&rsquo;apprivoiser les infinis, et découvrira que les « constantes » de couplage n&rsquo;en sont pas : elles varient avec l&rsquo;échelle d&rsquo;observation.</p>
 
   </div>
 </div>
@@ -3923,16 +3934,16 @@ $
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785764322"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785764322"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785764322"></script>
-    <script src="/js/jquery.sticky.js?1785764322"></script>
-    <script src="/js/featherlight.min.js?1785764322"></script>
-    <script src="/js/highlight.pack.js?1785764322"></script>
+    <script src="/js/clipboard.min.js?1785765697"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785765697"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785765697"></script>
+    <script src="/js/jquery.sticky.js?1785765697"></script>
+    <script src="/js/featherlight.min.js?1785765697"></script>
+    <script src="/js/highlight.pack.js?1785765697"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785764322"></script>
-    <script src="/js/learn.js?1785764322"></script>
-    <script src="/js/hugo-learn.js?1785764322"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785765697"></script>
+    <script src="/js/learn.js?1785765697"></script>
+    <script src="/js/hugo-learn.js?1785765697"></script>
     
     
 
