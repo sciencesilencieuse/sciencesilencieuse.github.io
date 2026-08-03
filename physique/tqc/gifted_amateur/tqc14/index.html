@@ -8,7 +8,7 @@
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
-    <title>Logique modale - Science en vrac</title>
+    <title>TQC-14 - Science en vrac</title>
     
     
 
@@ -75,7 +75,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 
 	
   </head>
-  <body class="" data-url="/logique/logique4/">
+  <body class="" data-url="/physique/tqc/gifted_amateur/tqc14/">
     <nav id="sidebar" class="">
 
 
@@ -136,7 +136,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/logique/" title="Logique" class="dd-item
-        parent
+        
         
         
         ">
@@ -189,7 +189,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
  
   
     
-      <li data-nav-id="/logique/logique4/" title="Logique modale" class="dd-item active">
+      <li data-nav-id="/logique/logique4/" title="Logique modale" class="dd-item ">
         <a href="/logique/logique4/">
         Logique modale
         
@@ -1169,7 +1169,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/" title="Physique" class="dd-item
-        
+        parent
         
         
         ">
@@ -1741,7 +1741,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/tqc/" title="Théorie quantique des champs" class="dd-item
-        
+        parent
         
         
         ">
@@ -1794,7 +1794,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/tqc/gifted_amateur/" title="Gifted Amateur" class="dd-item
-        
+        parent
         
         
         ">
@@ -1969,7 +1969,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
                   <span class="links">
                  
                  
-                   Logique modale
+                   TQC-14
                  
                   </span>
                 </div>
@@ -1978,17 +1978,19 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#syntaxe">Syntaxe</a></li>
-    <li><a href="#sémantique">Sémantique</a>
+    <li><a href="#chapitre-41-la-renormalisation-de-qed-et-deux-grands-résultats">Chapitre 41 : la renormalisation de QED et deux grands résultats</a>
       <ul>
-        <li><a href="#système-de-transition">Système de transition</a></li>
-        <li><a href="#satisfaction">Satisfaction</a></li>
-        <li><a href="#exemple-des-dragons-aux-yeux-bleus">Exemple des dragons aux yeux bleus</a></li>
-        <li><a href="#modèles-et-classes">Modèles et classes</a></li>
-        <li><a href="#conséquences-sémantiques">Conséquences sémantiques</a></li>
-        <li><a href="#théories-équivalence-et-bisimulation">Théories, équivalence et bisimulation</a></li>
+        <li><a href="#le-programme-trois-fonctions-de-green-trois-contretermes">Le programme : trois fonctions de Green, trois contretermes</a></li>
+        <li><a href="#la-self-énergie-du-photon-le-vide-est-un-diélectrique">La self-énergie du photon : le vide est un diélectrique</a></li>
+        <li><a href="#le-groupe-de-renormalisation-et-la-charge-qui-coule">Le groupe de renormalisation et la charge qui coule</a></li>
+        <li><a href="#les-corrections-de-vertex-et-le-g-de-lélectron">Les corrections de vertex et le $g$ de l&rsquo;électron</a></li>
+        <li><a href="#le-calcul-de-schwinger-jusquau-bout">Le calcul de Schwinger, jusqu&rsquo;au bout</a></li>
+        <li><a href="#la-confrontation-en-un-tableau">La confrontation, en un tableau</a></li>
+        <li><a href="#bilan">Bilan</a></li>
+        <li><a href="#pièges">Pièges</a></li>
       </ul>
     </li>
+    <li><a href="#pour-aller-plus-loin">Pour aller plus loin</a></li>
   </ul>
 </nav>
     </div>
@@ -2027,7 +2029,11 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   {
     color: #006C65;
   }
-  #preuve
+  #grosseformule 
+{
+    overflow-x: auto; 
+}
+#preuve
 {
     background-color:#EAEAEA;
     border-radius:10px;
@@ -2045,610 +2051,368 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     border-radius:10px;
     padding:5px 20px 5px 20px;
 }
-  td, th {
-  text-align: center;
-  vertical-align: middle;
-  min-width: 3em;
-}
-#grosseformule 
+h2
 {
-    overflow-x: auto; 
-  }
-</style>
-<br>
-<div style="position:relative; width:200px; max-width: 100%; margin-left: auto;margin-right: auto;border-radius:10px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-<img src="/duparc.png" style="border-radius:10px;">
-</div>
+color:#970E53 !important;
+}
+h3
+{
+color:#004D80 !important;
+}
+ul
+{
+margin-top:0em;
+margin-bottom:0.5em;
+}
+/* Pour rétablir le comportement de details */
+details > summary:first-of-type {
+  display: list-item;     /* remet le triangle + l'accessibilité */
+  cursor: pointer;        /* optionnel : feedback visuel */
+}
 
-<div class="notices info" style="--title: 'info';">
-  <p style="display: none;">info</p>
+details > summary:first-of-type {
+  list-style: disclosure-closed inside;
+}
+details[open] > summary:first-of-type {
+  list-style-type: disclosure-open;
+}
+</style>
+<h1 id="théorie-quantique-des-champs--partie-14">Théorie quantique des champs &ndash; Partie 14</h1>
+
+<div class="notices note" style="--title: 'note';">
+  <p style="display: none;">note</p>
   <div class="notice-body">
-    <p>Notes de lecture du livre <em>La logique pas à pas</em> de Jacques Duparc que je paraphrase allégrement.</p>
+    <p>Notes de lecture du livre <em>Quantum field theory for the gifted amateur</em> de Thomas Lancaster et Stephen Blundell.</p>
 
   </div>
 </div>
 
 
-<h1 id="logique-modale">Logique modale</h1>
-<div style="overflow-x: auto;">
+<div style="overflow-x: auto;text-align:center;">
 <table>
-<tr>
-    <th><a href="../logique4/">Syntaxe et sémantique</a></th>
-    <th><a href="../logique5/">Systèmes logiques</a></th>
-    <tH><a href="../logique6/">Différentes logiques modales</a></th>
-  </tr>
+  <tr>
+    <th style="text-align:center;"><a href="../">Retour sommaire</a></th></td>
+    </tr>
 </table>
 </div>
-<p><img src="/iledragons.png" alt=""></p>
-<p>Une petite communauté de dragons vivent sur une île aux règles spéciales. Si un dragon apprend qu&rsquo;il a les yeux bleus, c&rsquo;est la honte et il doit partir le soir même. Mais les autres dragons n&rsquo;ont pas le droit de lui dire et aucun de ces dragons n&rsquo;a de reflet et ne peut donc constater la couleur de ses propres yeux.</p>
-<p>Trois dragons peuplent l&rsquo;île, <strong>A</strong>pophis, <strong>B</strong>ahamut et <strong>C</strong>araxès, lorsqu&rsquo;un jour, un étranger débarque.<br>
-L&rsquo;étranger déclare :</p>
-<blockquote>
-<p>l&rsquo;un de vous au moins a les yeux bleus.</p>
-</blockquote>
-<p>Le premier soir, aucun dragon ne part.<br>
-Le deuxième soir, toujours rien.<br>
-Le troisième soir, ils partent tous les trois&hellip;</p>
-<p>La logique modale va permettre de modéliser ce petit problème.</p>
 <br>
-<h2 id="syntaxe">Syntaxe</h2>
-<br>
-<p>La <strong>syntaxe</strong> de la logique modale est celle du calcul des propositions à laquelle on ajoute deux opérateurs unaires, les <strong>opérateurs de modalité</strong> :</p>
+<p>La partie précédente a construit l&rsquo;électrodynamique quantique et ses règles de Feynman. Mais dès qu&rsquo;on dépasse l&rsquo;ordre le plus bas, les intégrales divergent, et rien n&rsquo;est encore comparable à une mesure de précision. Cette partie lève l&rsquo;obstacle en appliquant à QED la machinerie de renormalisation développée aux parties 11 et 12, et en tire deux résultats qui ont fait sa réputation.</p>
+<p>Le premier est que la <b>charge électrique n&rsquo;est pas une constante</b> : le vide se comporte comme un diélectrique, écrante l&rsquo;électron, et la valeur mesurée de $\alpha$ dépend de la distance à laquelle on regarde. Le second est le <b>moment magnétique anormal de l&rsquo;électron</b> : la valeur $g = 2$ que Dirac avait déduite de la relativité reçoit une correction, calculable à partir d&rsquo;un unique diagramme, et vérifiée aujourd&rsquo;hui sur une dizaine de chiffres significatifs.</p>
+<p>Ces deux résultats ont ceci de commun qu&rsquo;ils sont des <b>tests</b> au sens fort : la théorie sans champ quantifié y prédit des valeurs nettes (exactement $2$, exactement une dégénérescence, exactement une constante), et l&rsquo;expérience les contredit toutes les trois. On mènera donc les calculs jusqu&rsquo;au nombre, et un tableau de confrontation clôt la partie.</p>
+<p>Conventions inchangées : $\hbar = c = 1$, métrique $(+,-,-,-)$, notations de L&amp;B, et $\gamma \cdot a \equiv \gamma^\mu a_\mu$ en lieu et place de la notation « slash » de Feynman.</p>
+<h2 id="chapitre-41-la-renormalisation-de-qed-et-deux-grands-résultats">Chapitre 41 : la renormalisation de QED et deux grands résultats</h2>
+<p>Le sommet de la partie, et l&rsquo;un des sommets du livre. Les boucles électron&ndash;positron divergent ; la renormalisation de la partie VIII s&rsquo;applique, et elle ne se contente pas d&rsquo;éponger les infinis : elle prédit deux effets mesurés. Un, la charge électrique n&rsquo;est pas une constante. Deux, $g$ n&rsquo;est pas tout à fait 2.</p>
+<h3 id="le-programme-trois-fonctions-de-green-trois-contretermes">Le programme : trois fonctions de Green, trois contretermes</h3>
+<p>QED est renormalisable avec exactement trois contretermes, un par fonction de Green divergente :</p>
 <ul>
-<li>La boite $\Box$</li>
-<li>Le diamant $\Diamond$</li>
+<li>la self-énergie 1PI de l'électron $-\mathrm{i}\tilde\Sigma(\gamma\cdot p)$, et son contreterme $\mathrm{i}(\gamma\cdot p\,B + A)$ («&nbsp;l'oiseau sur le fil&nbsp;», dans le bestiaire graphique du livre)&nbsp;;</li>
+<li>la self-énergie 1PI du photon $\mathrm{i}\tilde\Pi^{\mu\nu}(q)$, contreterme $\mathrm{i}(g^{\mu\nu}q^2 - q^\mu q^\nu)C$ («&nbsp;l'oiseau sur la vague&nbsp;»)&nbsp;;</li>
+<li>la fonction de vertex $-\mathrm{i} Q|e|\tilde\Gamma^\mu(p, p')$, contreterme $\mathrm{i} Q|e|\gamma^\mu D$ («&nbsp;l'oiseau électrocuté&nbsp;»).</li>
 </ul>
-<p>On va être amené à non pas définir un seul $\Box$ et $\Diamond$ mais potentiellement une infinité (dénombrable).<br>
-On écrira alors $[i]$ et $\langle i \rangle$, où $i$ varie dans un ensemble $I$.</p>
-<br>
-<div id="def">
-<p>Le <b>langage</b> $\mathcal{L}$ de la logique modale est l&rsquo;ensemble suivant :</p>
-<p>$\mathcal{L}=VAR\cup\set{\top,\bot,\neg,\lor,\land\rightarrow,\leftrightarrow,(,)}\cup\set{[i]:i\in\mathbb{N}}\cup\set{\langle i\rangle:i\in\mathbb{N}}$</p>
+<p>Les conditions de renormalisation fixent le sens physique des paramètres : $\tilde\Sigma(\gamma\cdot p = m) = 0$ (la masse de l&rsquo;électron est $m$, la vraie), $\tilde\Pi^{\mu\nu}(q = 0) = 0$ (le photon reste sans masse) et $\tilde\Gamma^\mu(p&rsquo; - p = 0) = \gamma^\mu$ (la charge est $Q|e|$, la vraie, mesurée à transfert nul). Toute la physique nouvelle vient de ce que ces conditions ne peuvent être imposées qu&rsquo;<b>en un point</b> : ailleurs, les fonctions bougent, et ce mouvement est mesurable.</p>
+<h3 id="la-self-énergie-du-photon-le-vide-est-un-diélectrique">La self-énergie du photon : le vide est un diélectrique</h3>
+<p>Concentrons-nous sur le photon. Sa self-énergie 1PI $\mathrm{i}\tilde\Pi^{\mu\nu}(q)$ rassemble tous les diagrammes insérables dans une ligne de photon : le photon arrache des paires électron&ndash;positron au vide et les y rend. La resommation géométrique habituelle (Dyson, chapitre 33) donne le propagateur habillé. L&rsquo;identité de Ward garantit $q_\nu\tilde\Pi^{\mu\nu} = 0$, donc la self-énergie a la structure tensorielle $\tilde\Pi^{\mu\nu}(q) = (q^2 g^{\mu\nu} - q^\mu q^\nu),\tilde\Pi(q)$, et la resommation se referme sur</p>
+<p>$$\tilde D_{\mu\nu}(q) = \frac{-\mathrm{i},g_{\mu\nu}}{q^2\left[1 - \tilde\Pi(q)\right]}$$</p>
+<p>(plus un terme en $q_\mu q_\nu$ qui, couplé à des courants conservés, ne contribue jamais). Le pôle reste en $q^2 = 0$ : <b>le photon ne prend pas de masse</b>, l&rsquo;invariance de jauge y veille, et c&rsquo;est la condition $\tilde\Pi(0) = 0$ (imposée par le contreterme $C$) qui l&rsquo;exprime.</p>
+<!-- FIGURE à redessiner (d'après fig. 41.5 de L&B) : ligne de photon ondulée verticale portant q, interrompue par une boucle fermionique circulaire : l'électron tourne avec p+q sur un demi-cercle et p sur l'autre, les deux vertex étiquetés mu et nu. Légende : « La polarisation du vide à une boucle ». -->
+<p>Où est la physique ? Chaque vertex apporte un facteur $|e_0|$ (charge <b>nue</b>). Empaquetons les deux facteurs qui encadrent chaque propagateur de photon :</p>
+<p>$$\tilde D_{\mu\nu}(q) = \frac{-\mathrm{i} g_{\mu\nu}}{q^2}\left(\frac{e_0^2}{1 - [\tilde\Pi(q) - \tilde\Pi(0)]}\right).$$</p>
+<p>La parenthèse se lit comme le carré d&rsquo;une <b>charge effective dépendant de l&rsquo;impulsion</b> :</p>
+<div id="theo">
+<b>Charge électrique courante.</b>
+<p>$$|e(q)| = \frac{|e_0|}{\sqrt{1 - [\tilde\Pi(q) - \tilde\Pi(0)]}}.$$</p>
+<p>La « constante » de couplage électromagnétique dépend du transfert d&rsquo;impulsion du photon qui véhicule la force.</p>
 </div>
-<br>
-<div id="def">
-<p>Soient $\phi$, $\psi$, $\theta$ trois formules, on note $\phi[\theta/\psi]$ la <b>substitution uniforme</b> de la formule $\theta$ à toutes les occurrences de $\psi$ dans $\phi$.</p>
+<p>L&rsquo;image physique est celle d&rsquo;un <b>diélectrique</b>. Un diélectrique ordinaire se polarise autour d&rsquo;une charge et l&rsquo;écrante : de loin, on voit une charge affaiblie. Le vide de QED fait pareil : les paires virtuelles $e^+e^-$ se comportent comme des dipôles fugaces, orientés par le champ de la charge centrale, qui l&rsquo;habillent d&rsquo;un nuage d&rsquo;écrantage. Sonder à grand $|q|$, c&rsquo;est regarder de près, à l&rsquo;intérieur du nuage : la charge apparente <b>augmente</b>. C&rsquo;est la <b>polarisation du vide</b>.</p>
+<!-- FIGURE à redessiner (d'après fig. 41.6 de L&B) : une charge centrale (signe moins encerclé) entourée d'une couronne de petits dipôles ovales (chaque ovale contient un + et un -), tous orientés avec le + vers le centre. Légende : « Écrantage de la charge par les paires virtuelles : le vide est un diélectrique ». -->
+<p>Quantitativement, la boucle à un ordre (avec son contreterme) donne</p>
+<p>$$\tilde\pi(q) - \tilde\pi(0) = -\frac{e_0^2}{2\pi^2}\int_0^1\mathrm{d} x,(x - x^2),\ln!\left(\frac{m^2}{m^2 - (x - x^2),q^2}\right),$$</p>
+<p>et dans la limite statique ($q^2 = -\boldsymbol q^2$) à petit $|\boldsymbol q|$, le propagateur corrigé, transformé de Fourier inverse, livre le potentiel créé par un électron :</p>
+<p>$$V(\boldsymbol r) = -\left{\frac{\alpha}{|\boldsymbol r|} + \frac{4\alpha^2}{15 m^2},\delta^{(3)}(\boldsymbol r)\right}.$$</p>
+<p>Coulomb, plus une correction de contact (dans cette limite : la version exacte, le potentiel d&rsquo;Uehling, est une correction à courte portée $\sim 1/m$) : l&rsquo;écrantage ne se fait sentir que si l&rsquo;on pénètre le nuage. Et ceci se mesure.</p>
+<p>Dans l&rsquo;hydrogène, seuls les états $l = 0$ ont $\psi(0) \neq 0$ et tâtent donc le terme de contact : l&rsquo;orbitale $2S_{1/2}$ est déplacée, l&rsquo;orbitale $2P_{1/2}$ ne l&rsquo;est pas. Le calcul se mène jusqu&rsquo;au bout sans difficulté.</p>
+<div id="preuve">
+<details style="background-color:#F4F4F4;border-radius:5px;padding:5px;">
+<summary>Le décalage, jusqu'au nombre&nbsp;:</summary>
+<p>Le terme de contact se traite en perturbation au premier ordre ; la distribution de Dirac ne laisse survivre que la valeur de la fonction d&rsquo;onde à l&rsquo;origine :</p>
+<p>$$\Delta E = \left\langle -\frac{4\alpha^2}{15m^2},\delta^{(3)}(\boldsymbol r)\right\rangle = -\frac{4\alpha^2}{15m^2},|\psi(0)|^2.$$</p>
+<p>Pour l&rsquo;orbitale $2S$ de l&rsquo;hydrogène, $|\psi_{2S}(0)|^2 = \dfrac{1}{8\pi a_0^3}$, et le rayon de Bohr vaut $a_0 = 1/(\alpha m)$ en unités naturelles, d&rsquo;où $|\psi_{2S}(0)|^2 = \dfrac{\alpha^3m^3}{8\pi}$. En reportant, les puissances de $m$ se simplifient :</p>
+<p>$$\Delta E = -\frac{4\alpha^2}{15m^2}\cdot\frac{\alpha^3m^3}{8\pi} = -\frac{\alpha^5,m}{30\pi}.$$</p>
+<p>Un résultat d&rsquo;ordre $\alpha^5,m c^2$ : la structure fine est en $\alpha^4 mc^2$, cet effet est donc plus petit d&rsquo;un facteur $\alpha$, ce qui annonce déjà l&rsquo;ordre de grandeur du mégahertz. Numériquement, avec $\alpha^5 = 2{,}069\times10^{-11}$ et $mc^2 = 511{,}0$ keV :</p>
+<p>$$\Delta E = -1{,}122\times10^{-7}\ \mathrm{eV}
+\qquad\Longrightarrow\qquad
+\Delta\nu = \frac{\Delta E}{h} = -27{,}1\ \mathrm{MHz}.$$</p>
+</details>
 </div>
-<p>Une substitution uniforme consiste dans un premier temps à retirer toutes les occurrences de $\psi$ puis à remplacer chacune par $\theta$.</p>
-<br>
-<h2 id="sémantique">Sémantique</h2>
-<br>
-<h3 id="système-de-transition">Système de transition</h3>
-<br>
-<p>On va utiliser les <strong>modèles de Kripke</strong>, c&rsquo;est-à-dire des graphes dirigés, pour interpréter les formules de la logique modale. Mais on se cantonnera ici à la logique classique (les interprétations de la négation et de l&rsquo;implication seront traditionnels et non intuitionnistes). Chaque nœud va correspondre à des <strong>mondes possibles</strong> qui sont ou non liés entre eux par des arcs.</p>
-<p>On appelle ces graphes dirigés des <strong>systèmes de transition</strong> (<em>frame</em> en anglais) :</p>
-<div id="def">
-<p>Pour $I$ un ensemble non vide, un système de transition étiqueté par $I$ (ou de signature $I$) est une structure relationnelle (un graphe dirigé étiqueté)
-$$\mathcal{S}=(N,A)$$
-où $N$ est un ensemble non vide dont les éléments sont appelés nœuds
-<br>et $A$ est un ensemble de ralations binaires sur $\mathbb{N}$ indicées par $I$ ($A=\set{A_i\subseteq N\times N|i\in I}$).</p>
+<p>La polarisation du vide décale donc la transition $2S_{1/2} \to 2P_{1/2}$ de $-27$ MHz. C&rsquo;est une petite partie du <b>déplacement de Lamb</b> total ($+1057$ MHz, dominé par la self-énergie de l&rsquo;électron), et de signe opposé à l&rsquo;ensemble ; mais c&rsquo;est une partie calculée et vérifiée séparément. La mesure de Lamb et Retherford en 1947 fut l&rsquo;événement qui convainquit les physiciens de prendre les photons virtuels au sérieux et déclencha la course à la renormalisation.</p>
+<h3 id="le-groupe-de-renormalisation-et-la-charge-qui-coule">Le groupe de renormalisation et la charge qui coule</h3>
+<p>Branchons le groupe de renormalisation du chapitre 34. La fonction $\beta = \mu\frac{\mathrm{d}|e|}{\mathrm{d}\mu}$ se calcule en dérivant la charge courante à grand $\mu$ ($\mu \gg m$, où le logarithme de la boucle devient $\ln(\mu^2/m^2)$ à des constantes près) :</p>
+<p>$$\beta = \mu\frac{\mathrm{d}|e|}{\mathrm{d}\mu} = +\frac{|e|^3}{12\pi^2}.$$</p>
+<p>Le signe <b>plus</b> est l&rsquo;information capitale : le couplage électromagnétique <b>croît</b> avec l&rsquo;échelle d&rsquo;énergie, c&rsquo;est-à-dire quand on regarde de plus près. Cohérence parfaite avec l&rsquo;image de l&rsquo;écrantage : s&rsquo;approcher de l&rsquo;électron, c&rsquo;est traverser le nuage de paires et voir la charge grossir.</p>
+<p>Confrontons à l&rsquo;expérience, mais soigneusement, car il y a un piège.</p>
+<div id="preuve">
+<details style="background-color:#F4F4F4;border-radius:5px;padding:5px;">
+<summary>Ce que prédit la boucle d'électron seule, et pourquoi cela ne suffit pas&nbsp;:</summary>
+<p>En intégrant la fonction $\beta$ ci-dessus, on obtient la forme la plus commode, qui est linéaire en $\ln\mu$ pour l&rsquo;<i>inverse</i> du couplage :</p>
+<p>$$\frac{1}{\alpha(\mu)} = \frac{1}{\alpha(m_e)} - \frac{2}{3\pi}\ln\frac{\mu}{m_e}.$$</p>
+<p>Au pôle du $Z^0$, $\mu = M_Z = 91{,}19$ GeV, et $\ln(M_Z/m_e) = 12{,}09$, d&rsquo;où</p>
+<p>$$\frac{1}{\alpha(M_Z)} = 137{,}04 - \frac{2}{3\pi}\times 12{,}09 = 137{,}04 - 2{,}57 = 134{,}5.$$</p>
+<p>Or la mesure donne $\alpha^{-1}(M_Z) \simeq 128{,}9$. <b>L&rsquo;écart est réel et n&rsquo;est pas une imprécision : c&rsquo;est un manque de physique.</b></p>
+<p>La boucle d&rsquo;électron n&rsquo;est en effet pas la seule : <i>toute</i> particule chargée peut apparaître dans la boucle de polarisation du vide, à condition que l&rsquo;énergie sondée dépasse le seuil de création de sa paire. Entre $m_e$ et $M_Z$, il faut donc ajouter le muon, le tau, et les cinq quarks accessibles (chacun comptant trois fois pour la couleur, et avec sa charge au carré). La fonction $\beta$ devient</p>
+<p>$$\mu\frac{\mathrm{d}\alpha}{\mathrm{d}\mu} = \frac{2\alpha^2}{3\pi}\sum_f N_c^{(f)},Q_f^2,$$</p>
+<p>la somme portant sur les fermions déjà « allumés » à l&rsquo;échelle $\mu$. On comprend alors que la fonction $\beta$ <b>compte les degrés de liberté chargés</b> de la théorie, et que sa mesure est une façon de les recenser.</p>
+</details>
 </div>
-<br>
-<div id="def">
-<p>Un système de transition $\mathcal{S}(N,A)$ (avec $A=\set{A_i\subseteq N\times N|i\in I}$) est dit</p>
-<ul>
-<li><b>réflexif</b> si, pour tout $i\in I$ et pour tout $a\in N$, il vérifie $a\xrightarrow{i}a$&nbsp;;</li>
-<li><b>symétrique</b> si, pour tout $i\in I$ et pour tout $a,b\in N$, dès qu'il vérifie $a\xrightarrow{i}b$, il vérifie aussi $b\xrightarrow{i}a$&nbsp;;</li>
-<li><b>transitif</b> si, pour tout $i\in I$ et pour tout $a,b,c\in N$, dès qu'il vérifie à la fois $a\xrightarrow{i}b$ et $b\xrightarrow{i}c$, il vérifie aussi $a\xrightarrow{i}c$&nbsp;;</li>
-<li><b>famélique</b> si, pour tout $i\in I$ et pour tout $a,b\in N$, dès qu'il vérifie $a\xrightarrow{i} b$ alors $a=b$&nbsp;;</li>
-<li><b>dense</b>  si, pour tout $i\in I$ et pour tout $a,c\in N$, dès qu'il vérifie $a\xrightarrow{i} c$, alors il existe $b$ tel que $a\xrightarrow{i} b$ et $b\xrightarrow{i} c$&nbsp;;</li>
-<li><b>non borné à droite</b>  si, pour tout $i\in I$ et pour tout $a\in N$, il existe un nœud $b\in N$ tel que $a\xrightarrow{i}b$&nbsp;;</li>
-<li><b>euclidien</b>  si, pour tout $i\in I$ et pour tout $a,b,c\in N$,  dès qu'il vérifie à la fois $a\xrightarrow{i} b$ et $a\xrightarrow{i} c$, alors il vérifie aussi $b\xrightarrow{i} c$.</li>
-</ul>
+<p>Le résultat de la confrontation est le suivant. La boucle d&rsquo;électron seule prédit $\alpha^{-1}(M_Z) = 134{,}5$ ; en ajoutant tous les leptons et quarks accessibles, on tombe sur la valeur mesurée au LEP par diffusion Bhabha, $\alpha^{-1}(M_Z) = 128{,}9$. Numériquement, la « constante » de structure fine passe donc de $1/137$ aux grandes distances à environ $1/129$ à l&rsquo;échelle électrofaible : un effet de six pour cent, mesuré, et prédit à condition de compter correctement les particules.</p>
+<details>
+<summary>Aparté&nbsp;: le signe opposé qui vaut un prix Nobel</summary>
+<p>Retenir le raisonnement, car il se retourne spectaculairement ailleurs. En chromodynamique quantique, les gluons portent eux-mêmes la charge de couleur, et leurs boucles contribuent à la fonction $\beta$ avec le signe <b>moins</b>, qui l&rsquo;emporte : le couplage fort <b>décroît</b> à courte distance. C&rsquo;est la liberté asymptotique (Gross, Politzer, Wilczek, Nobel 2004) : les quarks sont quasi libres au cœur du proton et inséparables de loin. Anti-écrantage : le vide de QCD se comporte comme un milieu paramagnétique plutôt que diélectrique. Même mathématique, physique inversée, et l&rsquo;on comprend pourquoi le signe de $\beta$ est la première chose qu&rsquo;on calcule dans une théorie de jauge.</p>
+</details>
+<h3 id="les-corrections-de-vertex-et-le-g-de-lélectron">Les corrections de vertex et le $g$ de l&rsquo;électron</h3>
+<p>Second grand résultat, côté vertex. La fonction de vertex complète $\tilde\Gamma^\mu(p, p&rsquo;)$ se décompose, pour des raisons de symétrie (le photon a $J^P = 1^-$, et la paire $e^+e^-$ peut l&rsquo;accommoder de deux façons, $L = 0$ ou $L = 2$ avec $S = 1$), en deux <b>facteurs de forme</b> :</p>
+<p>$$\tilde\Gamma^\mu(p, p&rsquo;) = \gamma^\mu,F_1(q) + \frac{\mathrm{i}\sigma^{\mu\nu}q_\nu}{2m},F_2(q), \qquad q = p&rsquo; - p, \quad \sigma^{\mu\nu} = \frac{\mathrm{i}}{2}[\gamma^\mu, \gamma^\nu].$$</p>
+<p>$F_1$ (facteur de forme de Dirac) est la transformée de Fourier de la distribution de charge, avec $F_1(0) = 1$ à tous les ordres (c&rsquo;est la condition de renormalisation de la charge) ; $F_2$ (facteur de forme de Pauli) est la nouveauté, nulle à l&rsquo;ordre le plus bas.</p>
+<p>Le lien avec $g$ se fait en quatre pas, qu&rsquo;on résume en gardant la logique et les jalons du calcul :</p>
+<div id="preuve">
+<b>Du vertex au facteur $g$</b> (esquisse structurée du calcul de L&B).
+<p><b>Pas I.</b> On couple le vertex à un potentiel classique : $\mathrm{i}\mathcal M = -\mathrm{i} Q|e|,\bar u(p&rsquo;)\tilde\Gamma^\mu u(p),\tilde A^{\mathrm{cl}}_\mu(q)$.</p>
+<p><b>Pas II.</b> On élimine le $\gamma^\mu$ du terme en $F_1$ grâce à la <b>décomposition de Gordon</b> (exercice 36.7) :</p>
+<p>$$\bar u(p&rsquo;)\gamma^\mu u(p) = \bar u(p&rsquo;)\left[\frac{p&rsquo;^\mu + p^\mu}{2m} + \frac{\mathrm{i}\sigma^{\mu\nu}q_\nu}{2m}\right]u(p),$$</p>
+<p>qui sépare proprement une partie « orbitale » (indépendante du spin, le courant de convection) et une partie de spin. En regroupant, la partie dépendante du spin de l&rsquo;amplitude porte le facteur $F_1(q) + F_2(q)$.</p>
+<p><b>Pas III.</b> Limite non relativiste ($u(p) \approx \sqrt m\begin{pmatrix} \xi \ \xi \end{pmatrix}$, formes explicites de $\sigma^{\mu\nu}$) : la partie de spin devient, à $q \to 0$, proportionnelle à $\left[\xi&rsquo;^\dagger\sigma^k\xi\right]\tilde B^k(\boldsymbol q),{1 + F_2(0)}$, où $\boldsymbol B = \boldsymbol\nabla\times\boldsymbol A$ apparaît via $\mathrm{i}\epsilon^{ijk}q^i\tilde A^{\mathrm{cl},j} = \tilde B^k$. L&rsquo;extraction du potentiel par Born (en divisant par la normalisation relativiste $2m$) donne</p>
+<p>$$V(\boldsymbol x) = -\frac{Q|e|}{m},{1 + F_2(0)},\langle\hat{\boldsymbol S}\rangle\cdot\boldsymbol B(\boldsymbol x),$$</p>
+<p>et la comparaison avec $V = -g\frac{Q|e|}{2m}\langle\hat{\boldsymbol S}\rangle\cdot\boldsymbol B$ livre l&rsquo;identification centrale :</p>
+<p>$$g = 2\left[1 + F_2(0)\right].$$</p>
+<p><b>Pas IV.</b> Reste à calculer $F_2(0)$. Il n&rsquo;y a rien à l&rsquo;ordre le plus bas (le vertex nu est un pur $\gamma^\mu$, donc $F_2 = 0$), et rien à l&rsquo;ordre suivant. La première contribution vient de l&rsquo;ordre $e^3$, et d&rsquo;un <b>unique</b> diagramme : l&rsquo;électron émet un photon virtuel avant d&rsquo;atteindre le vertex et le réabsorbe après, le photon d&rsquo;interaction s&rsquo;accrochant entre les deux. C&rsquo;est le diagramme de Schwinger, et il fait l&rsquo;objet de la section suivante.</p>
 </div>
-<br>
-<h3 id="satisfaction">Satisfaction</h3>
-<br>
-<p>Un système de transition se mue en <strong>modèle de la logique modale</strong> (modèle de Kripke) dès qu&rsquo;il est équipé d&rsquo;une valuation portant sur les variables étudiées. Une valuation indique pour chaque nœud du graphe les variables qui sont forcées en ce nœud.</p>
-<div id="def">
-<p>Soient $I$ un ensemble non vide et $\mathcal{S}=(N,A)$ un système de transition étiqueté par $I$.<br>
-Une <b>valuation</b> sur ce système de transition $\mathcal{S}$ est une fonction :
-$$
-\begin{array}{ccc}
-\mathcal{V}: VAR &amp; \to &amp; \mathcal{P}(N)\\
-\phantom{\mathcal{V}:}P &amp; \mapsto &amp; \set{a|a\Vdash P}
-\end{array}
+<!-- FIGURE à redessiner (d'après fig. 41.10 de L&B) : le diagramme de vertex à l'ordre 3, temps vers le haut : ligne fermionique montante (p en bas, p' en haut), photon externe ondulé arrivant au vertex central (impulsion q) ; un photon virtuel ondulé en arc relie un point de la ligne avant le vertex (impulsion du fermion k) à un point après (k' = k+q), le photon d'arc portant p-k. Légende : « Le diagramme de Schwinger : la seule contribution d'ordre alpha à F2(0) ». -->
+<h3 id="le-calcul-de-schwinger-jusquau-bout">Le calcul de Schwinger, jusqu&rsquo;au bout</h3>
+<p>Voici, à mon sens, le plus beau calcul de la partie. Rien n&rsquo;y est nouveau : tout le matériel a été construit dans les chapitres précédents, à savoir les règles de Feynman de QED (chapitre 39), l&rsquo;algèbre des matrices $\gamma$ et ses identités de contraction (chapitre 40), les paramètres de Feynman et le décalage d&rsquo;impulsion (chapitre 32), et la décomposition de Gordon (chapitre 36). Et pourtant, au bout de l&rsquo;assemblage, il sort un <strong>nombre pur</strong>, sans masse, sans coupure et sans logarithme, qui prédit une décimale mesurée. Voyons-le en cinq étapes.</p>
+<div id="comm">
+<b>Le plan en une phrase&nbsp;:</b> on écrit l'intégrale du diagramme, on nettoie le numérateur avec l'algèbre de Dirac, on symétrise le dénominateur par les paramètres de Feynman, on trie le numérateur en séparant ce qui est $\gamma^\mu$ (donc $F_1$) de ce qui est $\sigma^{\mu\nu}q_\nu$ (donc $F_2$), et l'on intègre. <b>Aucune divergence n'apparaîtra dans la partie $F_2$&nbsp;</b>: c'est la clef de la prédictibilité.
+</div>
+<h4 id="étape-1-lintégrale-du-diagramme">Étape 1 : l&rsquo;intégrale du diagramme</h4>
+<p>On applique les règles de Feynman de QED en suivant la ligne fermionique à rebours de la flèche. En notant $k$ l&rsquo;impulsion du fermion avant le vertex et $k&rsquo; = k + q$ après, le photon virtuel porte $p - k$ :</p>
+<div id="grosseformule">
+<p>$$
+\bar u(p&rsquo;),\delta\Gamma^\mu,u(p) = \int!\frac{\mathrm d^4k}{(2\pi)^4};
+\frac{-\mathrm i g_{\nu\rho}}{(k-p)^2+\mathrm i\epsilon};
+\bar u(p&rsquo;),(-\mathrm ie\gamma^\nu),
+\frac{\mathrm i,(\gamma\cdot k&rsquo;+m)}{k&rsquo;^2-m^2+\mathrm i\epsilon},
+\gamma^\mu,
+\frac{\mathrm i,(\gamma\cdot k+m)}{k^2-m^2+\mathrm i\epsilon},
+(-\mathrm ie\gamma^\rho),u(p)
 $$</p>
 </div>
-<br>
-<div id="def">
-<p>La <b>satisfaction</b> d&rsquo;une formule $\phi$ au nœud $a$ (au sein de $\mathcal{S}$ et pour la valuation $\mathcal{V}$) est notée $a\Vdash\phi$ et se définit par induction sur la hauteur de $\phi$ :</p>
-<ul>
-<li>$a\Vdash\top$ et $a\nVdash\bot$</li>
-<li>$a\Vdash P$ ssi $a\in\mathcal{V}(P)$ (pour une variable $P$ quelconque)</li>
-<li>$a\Vdash\neg\phi$ ssi $a\nVdash\phi$</li>
-<li>$a\Vdash\phi\lor\psi$ ssi ($a\Vdash\phi$ ou $a\Vdash\psi$)</li>
-<li>$a\Vdash\phi\land\psi$ ssi ($a\Vdash\phi$ et $a\Vdash\psi$)</li>
-<li>$a\Vdash\phi\rightarrow\psi$ ssi ($a\nVdash\phi$ ou $a\Vdash\psi$)</li>
-<li>$a\Vdash\phi\leftrightarrow\psi$ ssi (($a\Vdash\phi$ et $a\Vdash\psi$) ou ($a\nVdash\phi$ et $a\nVdash\psi$))</li>
-<li>$a\Vdash[i]\phi$ ssi pour tout $b$, si $a\xrightarrow{i}b$, alors $b\Vdash\phi$</li>
-<li>$a\Vdash\langle i\rangle\phi$ ssi il existe $b$ tel que $a\xrightarrow{i}b$ et $b\Vdash\phi$</li>
-</ul>
-</div>
-<ul>
-<li>
-<p>S&rsquo;il n&rsquo;existe pas de nœud $b$ tel que $a\xrightarrow{i}b$, alors quelle que soit la formule $\phi$, $a\Vdash\langle i\rangle\phi$ est toujours fausse. Autrement dit, $a\nVdash \langle i\rangle\phi$.</p>
-</li>
-<li>
-<p>Par contre, s&rsquo;il n&rsquo;existe pas de nœud $b$ tel que $a\xrightarrow{i}b$, alors $a\Vdash[i]\phi$ est toujours vraie quelle que soit la formule $\phi$. En effet pour que $a\Vdash[i]\phi$ soit vérifiée il faut que si $a\xrightarrow{i}b$, alors $b\Vdash\phi$. Mais s&rsquo;il n&rsquo;y a aucun $a\xrightarrow{i}b$ alors l&rsquo;implication est tojours vérifiée.</p>
-</li>
-</ul>
-<div id="def">
-<p>La satisfaction d&rsquo;une formule en un nœud $a$ d&rsquo;un système de transition $\mathcal{S}$ équipé d&rsquo;une valuation $\mathcal{V}$ dépend de ces trois ingrédients et on notera donc $\langle \mathcal{S},\mathcal{V},a\rangle\Vdash\phi$.</p>
-</div>
-<p><br><br></p>
-<p>Revenons à nos dragons :</p>
-<h3 id="exemple-des-dragons-aux-yeux-bleus">Exemple des dragons aux yeux bleus</h3>
-<br>
+<p>Trois propagateurs au dénominateur (deux fermions, un photon), deux vertex de plus qu&rsquo;à l&rsquo;arbre : c&rsquo;est bien une correction d&rsquo;ordre $e^2$ relative, donc $\alpha$.</p>
+<h4 id="étape-2-nettoyer-le-numérateur">Étape 2 : nettoyer le numérateur</h4>
+<p>L&rsquo;indice $\nu$ du photon virtuel est contracté entre les deux extrémités de l&rsquo;arc, ce qui prend en sandwich toute la chaîne. Les identités de contraction du chapitre 40 s&rsquo;en chargent.</p>
 <div id="preuve">
-<p>les mondes possibles (les nœuds du graphe) vont correspondre aux différentes combinaisons possibles de couleurs d&rsquo;yeux pour les trois dragons $A$, $B$ et $C$. On a deux possibilités (yeux bleus ou non) pour chacun des trois dragons. Cela fait 8 mondes possibles.</p>
-<p>Les arcs entre mondes vont être étiquetés chacun par un des trois dragons et vont correspondre aux différents mondes que ce dragon pense possible depuis le monde où il est.</p>
-<p><img src="/kripkedragons.png?width=800px" alt=""></p>
-<p>Par exemple, dans le monde où seul $B$ a les yeux bleus (le monde 3) $A$ imagine aussi possible  le monde où $A$ et $B$ ont tous les deux les yeux bleus (le monde 5). Une flèche étiquetée par $A$ rejoint donc ces deux mondes possibles. Et bien sûr, dans le monde où $A$ et $B$ ont les yeux bleus, $A$ imagine possible le monde où seul $B$ a les yeux bleus (il y a donc une flèche de 5 vers 3). Et comme c&rsquo;est vrai dans chaque cas et pour les trois dragons, cela montre que ce système de transition est <strong>symétrique</strong>. Il est de plus évident que chaque monde semble possible pour les dragons qui s&rsquo;y trouvent. Le système est donc aussi <strong>réflexif</strong>.</p>
-<p>Imaginons que l&rsquo;on soit dans le monde 2. L&rsquo;ensemble des mondes possibles se simplifient alors grandement.</p>
-<p><img src="/kripkedragons1.png?width=800px" alt=""></p>
-<p>La déclaration de l&rsquo;étranger n&rsquo;est pas une surprise pour $B$ et $C$ qui voient bien que le pauvre $A$ a les yeux bleus et est donc sans effet pour eux. Par contre $A$ comprend que l&rsquo;autre monde qu&rsquo;il pensait possible, le monde béni où il n&rsquo;avait pas des yeux infames (le monde 1) est en fait impossible.</p>
-<p>Avant la déclaration de l&rsquo;étranger, $2\Vdash\color{#00AB8E}\langle A\rangle \color{#000}\neg A$ puisqu&rsquo;il y a une flèche étiquetée par <span style="color:#00AB8E">$A$</span> qui rejoint 1 (qui réalise $\neg A$). On peut traduire ça par : &ldquo;dans le monde 2, Apophis croit possible qu&rsquo;il n&rsquo;ait pas les yeux bleus&rdquo;. De même $2\Vdash\color{#FEAE00}\langle B\rangle \color{#000}\neg B$ à cause de la flèche étiquetée par <span style="color:#FEAE00">$B$</span> vers le monde 5 et $2\Vdash\color{#FF42A1}\langle C\rangle \color{#000}\neg C$ à cause de la flèche étiquetée par <span style="color:#FF42A1">$C$</span> vers le monde 6. Donc chaque dragon croit encore possible d&rsquo;avoir les yeux bleus.
-<br>D&rsquo;autre part, on peut écrire que $2\Vdash\color{#FF42A1}[C] \color{#000} A$ puisque les trois arcs étiquetés par <span style="color:#FF42A1">$C$</span> qui partent de 2 vont dans des mondes (2, 5 et 6) où $A$ est réalisée. Ça peut se lire : &ldquo;dans le monde 2, Caraxès sait qu&rsquo;Apophis a les yeux bleus&rdquo;.<br>
-On peut aussi compliquer les énoncés avec par exemple : $6 \Vdash \color{#FF42A1}\langle C\rangle \color{#FEAE00}\langle B\rangle \color{#000} (B\land\neg C)$ (une flèche rose part de 6 vers 2 et une flèche jaune part de 2 vers 5 où $B$ a les yeux bleus mais pas $C$).</p>
-<p>Après la déclaration de l&rsquo;étranger, le monde 1 disparaît !</p>
-<p><img src="/kripkedragons2.png?width=800px" alt=""></p>
-<p>Si $B$ et $C$ sont toujours dans le doute quant à la couleur de leurs yeux, pour $A$, les jeux sont faits. En effet, on a dorénavant $2\Vdash\color{#00AB8E}[A] \color{#000} A$. Et le soir même, Apophis s&rsquo;en va tout penaud.</p>
-<p>En généralisant, dans les mondes où seul un dragon a les yeux bleus (2, 3 et 4), ce dragon le comprend au moment de la déclaration de l&rsquo;étranger et se retire le soir même.</p>
-<p>Imaginons maintenant que l&rsquo;on soit dans le monde 5 où Apophis et Bahamut ont les yeux bleus.</p>
-<p><img src="/kripkedragons3.png?width=800px" alt=""></p>
-<p>La déclaration de l&rsquo;étranger ne fait pas beaucoup d&rsquo;effet car ils étaient déjà tous les trois au courant qu&rsquo;au moins l&rsquo;un d&rsquo;eux avait les yeux bleus&hellip; Par conséquent, le soir même, personne ne part. Et ça par contre, ça change pas mal de choses ! En effet, les mondes 2 et 3 deviennet d&rsquo;un coup impossibles puisque on a vu que les mondes où seul un des dragon a les yeux bleus voient ce dragon décamper dès le premier soir.</p>
-<p><img src="/kripkedragons4.png?width=800px" alt=""></p>
-<p>On a maintenant : $5\Vdash (\color{#00AB8E}[A] \color{#000} A)\land (\color{#FEAE00}[B] \color{#000} B)$. $A$ et $B$ ont acquis la certitude d&rsquo;avoir les yeux bleus et s&rsquo;envolent au deuxième soir.<br>
-Les deux dragons aux yeux bleus des mondes 7 ou 6 auraient fait de même.</p>
-<p>La dernière situation possible correspond au monde 8.</p>
-<p><img src="/kripkedragons5.png?width=800px" alt=""></p>
-<p>On reprend le raisonnement précédent. Personne ne part au premier soir, mais cette fois-ci, ça ne permet d&rsquo;éliminer aucun monde possible&hellip; Et par conséquent, au deuxième soir, personne ne s&rsquo;envole. Mais là, bingo ! Ça élimine les mondes où seuls deux dragons ont les yeux piscine. Finalement, ils comprennent tous les trois qu&rsquo;ils sont banis et s&rsquo;envolent au troisième soir.<br>
-La situation de départ correspondait donc au monde 8.</p>
-</div>
-<br>
-<p>On peut remarquer en passant différentes équivalences :</p>
+<details style="background-color:#F4F4F4;border-radius:5px;padding:5px;">
+<summary>Les trois identités et leur emploi&nbsp;:</summary>
+<p>$$\gamma^\nu\gamma^\mu\gamma_\nu = -2\gamma^\mu,
+\qquad
+\gamma^\nu\gamma^\alpha\gamma^\beta\gamma_\nu = 4g^{\alpha\beta},
+\qquad
+\gamma^\nu\gamma^\alpha\gamma^\mu\gamma^\beta\gamma_\nu = -2\gamma^\beta\gamma^\mu\gamma^\alpha$$</p>
+<p>Le numérateur à traiter est $\gamma^\nu(\gamma\cdot k&rsquo;+m)\gamma^\mu(\gamma\cdot k+m)\gamma_\nu$. En développant le produit, quatre morceaux apparaissent :</p>
 <ul>
-<li>$a\Vdash\neg\color{#00AB8E}[A] \color{#000} \phi$ ssi $a\Vdash \color{#00AB8E}\langle A\rangle \color{#000} \neg \phi$<br>
-Pour A, ne pas savoir quelque chose est équivalent à croire possible sont contraire.</li>
-<li>$a\Vdash\color{#00AB8E}[A] \color{#000} \phi$ ssi $a\Vdash \neg\color{#00AB8E}\langle A\rangle \color{#000} \neg \phi$<br>
-Pour A, savoir quelque chose est identique à ne pas croire possible le contraire de cette chose.</li>
-<li>$a\Vdash\neg\color{#00AB8E}[A] \color{#000} \neg\phi$ ssi $a\Vdash \color{#00AB8E}\langle A\rangle \color{#000}  \phi$<br>
-Pour A, croire possible quelque chose revient à ne pas savoir le contraire de cette chose.</li>
+<li>le terme sans masse, $\gamma^\nu(\gamma\cdot k')\gamma^\mu(\gamma\cdot k)\gamma_\nu$, traité par la troisième identité (cinq matrices)&nbsp;: il donne $-2(\gamma\cdot k)\gamma^\mu(\gamma\cdot k')$, avec <b>inversion de l'ordre</b> de $k$ et $k'$&nbsp;;</li>
+<li>les deux termes linéaires en $m$, traités par la deuxième identité (quatre matrices)&nbsp;: ils donnent $4m\,k^\mu$ et $4m\,k'^\mu$, c'est-à-dire des objets <b>sans matrice $\gamma$ libre</b>&nbsp;;</li>
+<li>le terme en $m^2$, traité par la première identité&nbsp;: $-2m^2\gamma^\mu$.</li>
 </ul>
-<br>
-<h3 id="modèles-et-classes">Modèles et classes</h3>
-<br>
-<div id="def">
-<p>Soient $\phi$ une formule, $I$ un ensemble non vide, $\mathcal{S}=(N,A)$ un système de transition étiqueté par $I$, $a$ un nœud de $\mathcal{S}$ et $\mathcal{V}$ une valuation,</p>
+<p>En rassemblant, et en comptant les facteurs $\mathrm i$ des propagateurs et des vertex (soit $(-\mathrm i)\times(-\mathrm ie)^2\times\mathrm i^2 = -\mathrm ie^2$, multiplié par le $-2$ commun) :</p>
+<div id="grosseformule">
+<p>$$
+\bar u(p&rsquo;),\delta\Gamma^\mu,u(p) = 2\mathrm ie^2!\int!\frac{\mathrm d^4k}{(2\pi)^4}
+\frac{\bar u(p&rsquo;)\big[(\gamma\cdot k)\gamma^\mu(\gamma\cdot k&rsquo;) + m^2\gamma^\mu - 2m(k+k&rsquo;)^\mu\big]u(p)}
+{\big((k-p)^2+\mathrm i\epsilon\big)\big(k&rsquo;^2-m^2+\mathrm i\epsilon\big)\big(k^2-m^2+\mathrm i\epsilon\big)}
+$$</p>
+</div>
+<p>Le numérateur ne contient plus que trois structures, et l&rsquo;on notera déjà que la troisième, $(k+k&rsquo;)^\mu$, n&rsquo;a aucune matrice $\gamma$ : c&rsquo;est elle qui alimentera $F_2$ après passage par Gordon.</p>
+</details>
+</div>
+<h4 id="étape-3-symétriser-le-dénominateur">Étape 3 : symétriser le dénominateur</h4>
+<p>Trois facteurs différents au dénominateur interdisent toute intégration. Le remède est celui du chapitre 32 : les <strong>paramètres de Feynman</strong>, qui les fusionnent en un seul au prix d&rsquo;intégrales supplémentaires sur des variables auxiliaires.</p>
+<div id="preuve">
+<details style="background-color:#F4F4F4;border-radius:5px;padding:5px;">
+<summary>Fusion et décalage d'impulsion&nbsp;:</summary>
+<p>L&rsquo;identité à trois facteurs s&rsquo;écrit</p>
+<p>$$\frac{1}{ABC} = \int_0^1!\mathrm dx,\mathrm dy,\mathrm dz;\delta(x+y+z-1);\frac{2}{[xA+yB+zC]^3}$$</p>
+<p>Avec $A = k^2-m^2$, $B = k&rsquo;^2-m^2$ et $C = (k-p)^2$, le crochet devient, après regroupement,</p>
+<p>$$k^2 + 2k\cdot(yq - zp) + yq^2 - (x+y-z)m^2$$</p>
+<p>On complète alors le carré en posant</p>
+<p>$$\boxed{\ \ell = k + yq - zp\ }$$</p>
+<p>qui est le <b>décalage d&rsquo;impulsion</b> : la variable d&rsquo;intégration devient $\ell$, ce qui est licite puisque l&rsquo;intégrale porte sur tout l&rsquo;espace. Le dénominateur prend sa forme définitive, ne dépendant plus de $\ell$ que par $\ell^2$ :</p>
+<p>$$\big[\ell^2 - \Delta\big]^3
+\qquad\text{avec}\qquad
+\Delta = (1-z)^2m^2 - xy,q^2$$</p>
+<p>en ayant utilisé $p^2 = p&rsquo;^2 = m^2$ et $p\cdot q = -q^2/2$. Cette quantité $\Delta$ est positive et joue le rôle d&rsquo;une masse effective : c&rsquo;est elle qui apparaîtra au dénominateur du résultat final.</p>
+</details>
+</div>
+<h4 id="étape-4-trier-et-voir-apparaître-f_2">Étape 4 : trier, et voir apparaître $F_2$</h4>
+<p>C&rsquo;est l&rsquo;étape décisive. Le décalage $k = \ell - yq + zp$ étant reporté dans le numérateur, celui-ci devient un polynôme en $\ell$, et il faut le ranger selon les deux structures autorisées par la symétrie, $\gamma^\mu$ et $\sigma^{\mu\nu}q_\nu$.</p>
+<div id="preuve">
+<details style="background-color:#F4F4F4;border-radius:5px;padding:5px;">
+<summary>Le tri, et les trois outils qui le rendent possible&nbsp;:</summary>
+<p>Trois simplifications font tout le travail :</p>
 <ul>
-<li>$\langle\mathcal{S},\mathcal{V}\rangle\Vdash^{\forall a}\phi$ ssi pour tous nœuds $a'$, $\langle\mathcal{S},\mathcal{V},a'\rangle\Vdash\phi$</li>
-<li>$\langle\mathcal{S},a\rangle\Vdash^{\forall \mathcal{V}}\phi$ ssi pour toutes valuations $\mathcal{V'}$, $\langle\mathcal{S},\mathcal{V'},a\rangle\Vdash\phi$</li>
-<li>$\mathcal{S}\Vdash^{\forall  a,\forall \mathcal{V}}\phi$ ssi pour tous nœuds $a'$ et toutes valuations $\mathcal{V'}$, $\langle\mathcal{S},\mathcal{V'},a'\rangle\Vdash\phi$</li>
+<li><b>Parité en $\ell$.</b> Les termes <i>linéaires</i> en $\ell$ s'intègrent à zéro, le dénominateur ne dépendant que de $\ell^2$. Pour les termes quadratiques, on peut remplacer $\ell^\alpha\ell^\beta \to \frac{\ell^2}{4}g^{\alpha\beta}$ par isotropie.</li>
+<li><b>Équations de Dirac.</b> Le numérateur est pris en sandwich entre $\bar u(p')$ et $u(p)$&nbsp;: on peut donc utiliser $(\gamma\cdot p)\,u(p) = m\,u(p)$ à droite et $\bar u(p')(\gamma\cdot p') = m\,\bar u(p')$ à gauche, ce qui élimine toutes les occurrences de $\gamma\cdot p$ et $\gamma\cdot p'$.</li>
+<li><b>Décomposition de Gordon.</b> Les termes restants du type $(p+p')^\mu$, qui n'ont pas de matrice $\gamma$, se convertissent grâce à la relation du pas II, lue à l'envers&nbsp;: $\frac{(p+p')^\mu}{2m} = \gamma^\mu - \frac{\mathrm i\sigma^{\mu\nu}q_\nu}{2m}$. <b>C'est ici, et seulement ici, que naît la structure de Pauli.</b></li>
+</ul>
+<p>Après le tri, le numérateur se met sous la forme</p>
+<div id="grosseformule">
+<p>$$
+\bar u(p&rsquo;)\left[
+\gamma^\mu\left(-\frac{\ell^2}{2} + (1-x)(1-y)q^2 + (1-2z-z^2)m^2\right)</p>
+<ul>
+<li>\frac{\mathrm i\sigma^{\mu\nu}q_\nu}{2m}\Big(2m^2 z(1-z)\Big)
+\right]u(p)
+$$</li>
 </ul>
 </div>
-<br>
-<div id="def">
-<p>Un <b>modèle</b> de la logique modale (modèle de Kripke) est un système de transition équipé d&rsquo;une valuation :
-$$\mathcal{M}=\langle\mathcal{S},\mathcal{V}\rangle$$
-Une formule $\phi$ est <b>vraie</b> (ou <b>satisfaite</b>) dans le modèle $\langle\mathcal{S},\mathcal{V}\rangle$ si elle est forcée en chacun des nœuds du système de transition :
-$$\langle\mathcal{S},\mathcal{V}\rangle\Vdash^{\forall a}\phi$$</p>
+<p><b>Observons attentivement les deux coefficients</b>, car toute la suite en découle. Le coefficient de $\gamma^\mu$ contient un terme en $\ell^2$ ; celui de $\sigma^{\mu\nu}q_\nu$ n&rsquo;en contient aucun. Or c&rsquo;est précisément le $\ell^2$ qui, intégré contre $1/(\ell^2-\Delta)^3$, produit une divergence logarithmique. <b>La divergence est donc tout entière dans $F_1$, et $F_2$ est fini d&rsquo;emblée.</b></p>
+</details>
 </div>
-<p>La notion de vérité dans un modèle de Kripke est donc une notion de <b>vérité globale</b> puisqu&rsquo;elle prend en compte l&rsquo;ensemble des nœuds du système de transition.</p>
-<p>Prenons l&rsquo;exemple du système de transition $\mathcal{S}$ équipé de la valuation $\mathcal{V}$ ci-dessous :</p>
-<p><img src="/explekripke.png?width=500px" alt=""></p>
-<p>On a bien $\langle\mathcal{S},\mathcal{V}\rangle\Vdash^{\forall a}Q\lor\neg Q$. Par contre, comme $b\Vdash Q$ alors que $a\Vdash\neg Q$, $\langle\mathcal{S},\mathcal{V}\rangle\nVdash^{\forall a}Q$ et $\langle\mathcal{S},\mathcal{V}\rangle\nVdash^{\forall a}\neg Q$.<br>
-On peut donc avoir une formule $\phi\lor\psi$ satisfaite sans que ni $\phi$ ni $\psi$ ne le soient !</p>
+<div id="theo">
+<b>Le point structurel à retenir.</b> Le facteur de forme $F_1$ diverge, et sa divergence est absorbée par le contreterme de vertex&nbsp;: la valeur $F_1(0) = 1$ est une <b>condition de renormalisation</b>, c'est-à-dire un choix, pas une prédiction. Le facteur $F_2$, lui, est <b>convergent sans contreterme</b>. Il ne dépend d'aucune coupure, ne contient aucun logarithme, et sa valeur en $q = 0$ est un nombre pur multiplié par $\alpha$. <b>C'est pour cela que le moment magnétique anormal est prédictible</b>, et c'est ce qui en fait le test de précision par excellence.
+</div>
+<h4 id="étape-5-les-deux-intégrations">Étape 5 : les deux intégrations</h4>
+<p>Il ne reste qu&rsquo;à intégrer, d&rsquo;abord sur $\ell$, puis sur les paramètres de Feynman.</p>
+<div id="preuve">
+<details style="background-color:#F4F4F4;border-radius:5px;padding:5px;">
+<summary>L'intégrale sur $\ell$, puis sur $x$, $y$, $z$&nbsp;:</summary>
+<p>La partie $F_2$ n&rsquo;ayant pas de $\ell$ au numérateur, une seule intégrale est nécessaire, et elle est convergente :</p>
+<p>$$\int!\frac{\mathrm d^4\ell}{(2\pi)^4},\frac{1}{(\ell^2-\Delta)^3} = \frac{-\mathrm i}{32\pi^2,\Delta}$$</p>
+<p>En rassemblant les préfacteurs ($2\mathrm ie^2$ de l&rsquo;étape 2, le facteur 2 de l&rsquo;identité de Feynman, et le $-\mathrm i/32\pi^2$ ci-dessus), on obtient</p>
+<p>$$2\mathrm ie^2 \times 2 \times \frac{-\mathrm i}{32\pi^2} = \frac{e^2}{8\pi^2} = \frac{\alpha}{2\pi}$$</p>
+<p>d&rsquo;où le facteur de forme de Pauli à tout $q$ :</p>
+<div id="grosseformule">
+<p>$$
+F_2(q^2) = \frac{\alpha}{2\pi}\int_0^1!\mathrm dx,\mathrm dy,\mathrm dz;\delta(x+y+z-1);\frac{2m^2 z(1-z)}{(1-z)^2m^2 - xy,q^2}
+$$</p>
+</div>
+<p><b>Posons maintenant $q = 0$</b>, puisque c&rsquo;est le moment magnétique statique qui nous intéresse. Alors $\Delta = (1-z)^2m^2$, et une simplification spectaculaire se produit : le $m^2$ disparaît, et l&rsquo;un des deux facteurs $(1-z)$ aussi.</p>
+<p>$$F_2(0) = \frac{\alpha}{2\pi}\int!\mathrm dx,\mathrm dy,\mathrm dz;\delta(x+y+z-1);\frac{2z(1-z)}{(1-z)^2}
+= \frac{\alpha}{\pi}\int!\mathrm dx,\mathrm dy,\mathrm dz;\delta(x+y+z-1);\frac{z}{1-z}$$</p>
+<p>La distribution $\delta$ sert à faire l&rsquo;intégrale sur $x$ ; il reste $y$ à parcourir de $0$ à $1-z$, ce qui fournit exactement un facteur $(1-z)$ :</p>
+<p>$$F_2(0) = \frac{\alpha}{\pi}\int_0^1!\mathrm dz;(1-z),\frac{z}{1-z} = \frac{\alpha}{\pi}\int_0^1 z,\mathrm dz$$</p>
+<p><b>Le facteur $(1-z)$ gênant s&rsquo;annule contre celui du volume d&rsquo;intégration</b>, et il ne reste que l&rsquo;intégrale la plus simple des mathématiques.</p>
+</details>
+</div>
+<p>Tout se referme sur $\int_0^1 z,\mathrm dz = \tfrac12$ :</p>
+<div id="theo">
+<b>Le résultat de Schwinger (1948).</b>
+<p>$$F_2(0) = \frac{\alpha}{2\pi}
+\qquad\Longrightarrow\qquad
+g = 2\left(1 + \frac{\alpha}{2\pi} + \ldots\right) = 2{,}00232\ldots$$</p>
+</div>
+<p>Reprenons la mesure de ce qui vient d&rsquo;être fait. Une intégrale sur quatre dimensions d&rsquo;impulsion, un numérateur de seize termes matriciels, trois propagateurs, une divergence. Et au bout, $\int_0^1 z,\mathrm dz$. Aucun ingrédient nouveau n&rsquo;a été introduit : les règles de Feynman, l&rsquo;algèbre des $\gamma$, les paramètres de Feynman et la décomposition de Gordon suffisaient. C&rsquo;est ce que la théorie quantique des champs a de plus convaincant : la machinerie, assemblée pièce par pièce et pour d&rsquo;autres raisons, produit sans qu&rsquo;on l&rsquo;y invite un nombre que l&rsquo;on peut aller vérifier au laboratoire.</p>
+<p>L&rsquo;accord avec l&rsquo;expérience de l&rsquo;époque valut à Schwinger une salve d&rsquo;applaudissements spontanée au congrès de l&rsquo;APS de 1948, et le $\frac{\alpha}{2\pi}$ est gravé sur sa tombe.</p>
+<div id="preuve">
+<details style="background-color:#F4F4F4;border-radius:5px;padding:5px;">
+<summary>Ce que vaut le seul terme de Schwinger, face à la mesure&nbsp;:</summary>
+<p>L&rsquo;anomalie est définie par $a_e = (g-2)/2$. Le calcul ci-dessus donne</p>
+<p>$$a_e^{(1)} = \frac{\alpha}{2\pi} = 1{,}161,410\times10^{-3}$$</p>
+<p>alors que la mesure donne</p>
+<p>$$a_e^{\text{mes}} = 1{,}159,652,181\times10^{-3}$$</p>
+<p>Le premier terme seul est donc juste à <b>0,15 %</b> près, ce qui est déjà remarquable pour un unique diagramme. L&rsquo;écart résiduel est comblé par les ordres supérieurs, calculés jusqu&rsquo;à $\alpha^5$ (des milliers de diagrammes), et l&rsquo;accord final porte sur une dizaine de chiffres significatifs.</p>
+<p>C&rsquo;est ce qui fait de QED <b>la théorie la plus précisément testée de toute la physique</b>. Le cousin muonique $a_\mu$, plus sensible aux particules lourdes virtuelles puisque l&rsquo;effet croît comme $m_\mu^2/M^2$, fait couler beaucoup d&rsquo;encre comme sonde de physique au-delà du modèle standard.</p>
+</details>
+</div>
+<p>Relisons enfin l&rsquo;histoire complète du facteur $g$, car elle résume toute la partie précédente et celle-ci : Pauli le met à la main ($g = 2$ postulé) ; Dirac le <b>déduit</b> de la relativité ($g = 2$ exact, chapitre 36) ; le champ quantique le <b>corrige</b> ($g = 2 + \frac{\alpha}{\pi}$, parce que l&rsquo;électron n&rsquo;est jamais nu : il traîne son nuage de photons virtuels, qui participe au moment magnétique). Chaque étage de la théorie laisse son empreinte dans les décimales d&rsquo;un seul nombre mesurable.</p>
+<h3 id="la-confrontation-en-un-tableau">La confrontation, en un tableau</h3>
+<div style="overflow-x: auto;">
+<table>
+	<thead>
+			<tr>
+					<th>Grandeur</th>
+					<th>Sans QED</th>
+					<th>Avec QED</th>
+					<th>Mesure</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>$g$ de l&rsquo;électron</td>
+					<td>Dirac : exactement $2$</td>
+					<td>$2\left(1+\dfrac{\alpha}{2\pi}+\ldots\right)$</td>
+					<td>$2{,}002,319,304,362$</td>
+			</tr>
+			<tr>
+					<td>$a_e = (g-2)/2$</td>
+					<td>$0$</td>
+					<td>$1{,}159,652,181\times10^{-3}$ (jusqu&rsquo;à $\alpha^5$)</td>
+					<td>$1{,}159,652,181\times10^{-3}$</td>
+			</tr>
+			<tr>
+					<td>Lamb : $2S_{1/2} - 2P_{1/2}$</td>
+					<td>Dirac : $0$, les deux niveaux sont dégénérés</td>
+					<td>$+1058$ MHz, dont $-27$ MHz de polarisation du vide</td>
+					<td>$1057{,}8$ MHz</td>
+			</tr>
+			<tr>
+					<td>$\alpha^{-1}$ à l&rsquo;échelle $M_Z$</td>
+					<td>constante : $137{,}04$</td>
+					<td>$128{,}9$ (toutes particules chargées)</td>
+					<td>$128{,}9 \pm 0{,}1$</td>
+			</tr>
+	</tbody>
+</table>
+</div>
+<p>Les trois lignes ne testent pas la même chose, et c&rsquo;est ce qui rend le tableau instructif. Le $g$ de l&rsquo;électron teste le <strong>vertex</strong> et la structure du couplage. Le déplacement de Lamb teste la <strong>self-énergie de l&rsquo;électron</strong> (pour l&rsquo;essentiel) et la <strong>polarisation du vide</strong> (pour la petite part calculée ici), avec la particularité de porter sur une dégénérescence que la théorie de Dirac prédisait exacte : sans champ quantifié, l&rsquo;effet serait rigoureusement nul. Et la course de $\alpha$ teste le <strong>groupe de renormalisation</strong> lui-même, en vérifiant qu&rsquo;une constante fondamentale n&rsquo;en est pas une.</p>
+<div id="comm">
+Dans les trois cas, la colonne «&nbsp;sans QED&nbsp;» donne un résultat <b>net et faux</b>&nbsp;: exactement 2, exactement 0, exactement constant. Ce n'est pas une théorie vague que la renormalisation vient préciser, c'est une théorie précise qu'elle vient corriger. C'est ce qui donne aux mesures leur pouvoir de trancher.
+</div>
+<h3 id="bilan">Bilan</h3>
+<div id="grosseformule">
+<p>$$\tilde\Pi^{\mu\nu} = (q^2 g^{\mu\nu} - q^\mu q^\nu)\tilde\Pi ;\Rightarrow; \tilde D = \frac{-\mathrm{i} g_{\mu\nu}}{q^2(1 - \tilde\Pi)} ;\Rightarrow; e(q) ;\Rightarrow; \text{Lamb},\ \alpha(M_Z)$$</p>
+</div>
+<div id="grosseformule">
+<p>$$\tilde\Gamma^\mu = \gamma^\mu F_1 + \frac{\mathrm{i}\sigma^{\mu\nu}q_\nu}{2m}F_2 ;\Rightarrow; g = 2[1+F_2(0)] ;\Rightarrow; F_2(0) = \frac{\alpha}{\pi}\int_0^1 z,\mathrm dz = \frac{\alpha}{2\pi}$$ \nearrow,\ \beta = +\frac{e^3}{12\pi^2} ;\Rightarrow; \text{Lamb } (-27\ \mathrm{MHz}) ;\Big/; \tilde\Gamma^\mu = \gamma^\mu F_1 + \frac{\mathrm{i}\sigma^{\mu\nu}q_\nu}{2m}F_2 ;\Rightarrow; g = 2\left(1 + \frac{\alpha}{2\pi}\right)$$</p>
+</div>
+<h3 id="pièges">Pièges</h3>
+<ul>
+<li>Le photon habillé reste sans masse&nbsp;: la structure $(q^2 g^{\mu\nu} - q^\mu q^\nu)$ imposée par Ward maintient le pôle en $q^2 = 0$. Une self-énergie qui donnerait une masse au photon signalerait une violation de jauge (ou une physique différente&nbsp;: cf. le modèle de Schwinger en dimension (1+1), exercice 41.4, ou le mécanisme de Higgs).</li>
+<li>$e(q)$ n'est pas «&nbsp;la charge qui change avec le temps&nbsp;»&nbsp;: c'est la force effective vue à une résolution donnée. La charge de Thomson ($q \to 0$) reste la constante des tables.</li>
+<li>Ne pas confondre les deux contributions au déplacement de Lamb&nbsp;: la polarisation du vide donne $-27\ \mathrm{MHz}$, le gros du $+1057\ \mathrm{MHz}$ vient de la self-énergie de l'électron. Le signe même diffère.</li>
+<li>$F_1(0) = 1$ n'est pas un résultat de calcul mais une <b>condition de renormalisation</b> (définition de la charge)&nbsp;: c'est pourquoi seul $F_2(0)$ contient de la physique nouvelle à transfert nul.</li>
+<li>$F_2$ est <b>fini sans contreterme</b>, et ce n'est pas un hasard&nbsp;: le terme en $\ell^2$ du numérateur, seul responsable de la divergence logarithmique, n'accompagne que la structure $\gamma^\mu$. Toute la divergence est donc dans $F_1$. C'est cette finitude qui rend $a_e$ prédictible sans aucun paramètre ajustable.</li>
+<li>La décomposition de Gordon ne vaut qu'entre spineurs sur couche de masse&nbsp;: elle utilise l'équation de Dirac des deux côtés.</li>
+<li>Le signe de $\beta$ n'est pas universel&nbsp;: positif en QED (écrantage), négatif en QCD (liberté asymptotique). Le calcul est le même, le contenu en boucles change tout.</li>
+</ul>
+<h2 id="pour-aller-plus-loin">Pour aller plus loin</h2>
+<ul>
+<li><b>Peskin & Schroeder, <i>An Introduction to Quantum Field Theory</i></b>, chapitres 6 et 7&nbsp;: le calcul de $F_2(0)$ y est mené exactement dans l'ordre suivi ici (§6.3), et §7.5 traite le potentiel d'Uehling et le décalage de $-27$&nbsp;MHz.</li>
+<li><b>M. Schwartz, <i>Quantum Field Theory and the Standard Model</i></b>, chapitres 16 et 17&nbsp;: discussion particulièrement claire de la polarisation du vide, de l'identité de Ward et du sens de la charge courante.</li>
+<li><b>David Tong, <i>Lectures on Quantum Field Theory</i></b> (Cambridge), et son cours plus récent sur le groupe de renormalisation&nbsp;: <a href="https://www.damtp.cam.ac.uk/user/tong/qft.html">damtp.cam.ac.uk/user/tong/qft</a></li>
+<li><b>Eides, Grotch et Shelyuto, «&nbsp;Theory of light hydrogenlike atoms&nbsp;»</b>, <i>Physics Reports</i> 342, 63 (2001)&nbsp;: la référence exhaustive sur le déplacement de Lamb et la décomposition de ses contributions.</li>
+<li><b>Collaboration OPAL, <i>Eur. Phys. J. C</i> 45, 1 (2006)</b>&nbsp;: la mesure au LEP de la course de $\alpha$ par diffusion Bhabha, qui donne $\alpha^{-1}(M_Z) = 128{,}89 \pm 0{,}07$.</li>
+<li><b>Aoyama, Kinoshita et Nio</b>, sur le calcul de $a_e$ jusqu'à l'ordre $\alpha^5$&nbsp;: pour mesurer l'ampleur de ce que représentent les «&nbsp;ordres supérieurs&nbsp;» évoqués ici (12&nbsp;672 diagrammes au dernier ordre).</li>
+<li><b>Expérience <i>Muon g-2</i></b> (Fermilab)&nbsp;: publications et communication grand public, sur le cousin muonique et son statut de sonde de nouvelle physique.</li>
+<li><b>R. P. Feynman, <i>QED: The Strange Theory of Light and Matter</i></b>&nbsp;: la vulgarisation de référence, où le $g-2$ sert précisément d'argument sur la précision de la théorie.</li>
+<li><b>S. Schweber, <i>QED and the Men Who Made It</i></b>&nbsp;: l'histoire de la renormalisation, de Lamb et Retherford en 1947 à Schwinger, Feynman, Tomonaga et Dyson.</li>
+</ul>
 
-<div class="notices info" style="--title: 'info';">
-  <p style="display: none;">info</p>
+<div class="notices note" style="--title: 'note';">
+  <p style="display: none;">note</p>
   <div class="notice-body">
-    <p>On retrouve les modèles du calcul des propositions en se restreignant aux systèmes de transition contenant un seul nœud. Dit autrement, une formule $\phi$ de <b>profondeur modale</b> nulle est une formule du calcul des propositions.<br>
-Soit $\mathcal{M}$ un modèle du calcul des propositions défini par la distribution de valeur de vérité $\delta_\mathcal{M}$ qui associe aux variables apparaissant dans $\phi$ la valeur 1 lorsqu&rsquo;elles sont vraies dans $\mathcal{M}$ et 0 sinon ($\delta_\mathcal{M}(P)=1$ ssi $\mathcal{M}\models P$). La formule $\phi$ st vraie dans $\mathcal{M}$ (noté $\mathcal{M}\models\phi$) si et seulement si cette même formule $\phi$ est vraie dans le système de transition $\mathcal{S}_\mathcal{M}=(N,A)$, où $N=\set{a}$ et $A=\emptyset$, équipé de la valuation $\mathcal{V}_{\delta_\mathcal{M}}$ définie par : $\mathcal{V}_{\delta_\mathcal{M}}(P)=\set{a}$ si et seulement si $\delta_\mathcal{M}(P)=1$ et $\mathcal{V}_{\delta_\mathcal{M}}(P)=\emptyset$ si et seulement si $\delta_\mathcal{M}(P)=0$.<br>
-Cela s&rsquo;écrit : $\mathcal{M}\models\phi$ ssi $\langle\mathcal{S},\mathcal{V}_{\delta_\mathcal{M}}\rangle\Vdash^{\forall a}\phi$</p>
+    <p>Et maintenant ? Nous possédons la théorie quantique des champs de l&rsquo;électromagnétisme et de la matière chargée, renormalisée et confrontée à l&rsquo;expérience. La partie suivante la fait travailler là où elle est née une seconde fois : la <b>matière condensée</b>, avec les superfluides, les supraconducteurs et les transitions de phase quantiques, où les mêmes idées (brisure de symétrie, champs de jauge, écrantage) prennent des visages nouveaux et mesurables au laboratoire.</p>
 
   </div>
 </div>
 
 
-<div id="def">
-<p>Soit $\phi$ une formule de la logique modale et $\mathcal{S}$ un système de transition.<br>
-La formule $\phi$ est <b>valide</b> dans $\mathcal{S}$ si :
-$$\mathcal{S}\Vdash^{\forall a,\forall \mathcal{V}} \phi$$</p>
-</div>
-<p><strong>La notion de validité est globale</strong>, elle aussis. Et à nouveau, une formule $\phi\lor\psi$ peut être valide dans un système de transition sans que ni $\phi$, ni $\psi$ ne le soit.</p>
 <br>
-<div id="theo">
-<p>Soient $\phi$ une formule de profondeur modale nulle et $\mathcal{S}=(N,A)$ un système de transition.<br>
-Les affirmations suivantes sont équivalentes :</p>
-<ol>
-<li>$\mathcal{S}\Vdash^{\forall a,\forall\mathcal{V}} \phi$</li>
-<li>Il existe $a\in N$ tel que $\langle\mathcal{S},a\rangle\Vdash^{\forall \mathcal{V}}\phi$</li>
-<li>Pour $\mathcal{T}=(\set{a},\emptyset)$, $\langle\mathcal{T},a\rangle\Vdash^{\forall \mathcal{V}}\phi$</li>
-<li>$\phi$ est une tautologie du calcul des propositions</li>
-</ol>
-</div>
-<br>
-<div id="preuve">
-<p>On va montrer la suite des implications suivante $(1)\rightarrow(2)$, $(2)\rightarrow(3)$, $(3)\rightarrow(4)$ et $(4)\rightarrow(1)$. La circularité nous permettra alors d&rsquo;obtenir toutes les autres implications. Par exemple, $(2)\rightarrow(1)$ découle de $(2)\rightarrow(3)\rightarrow(4)\rightarrow(1)$.</p>
-<ul>
-<li>$(1)\rightarrow(2)$ et $(2)\rightarrow(3)$ sont immédiates.</li>
-<li>Pour montrer $(3)\rightarrow(4)$, nous allons montrer la contraposée $\neg(4)\rightarrow\neg(3)$.<br>
-Supposons que $\phi$ n'est pas une tautologie du calcul des propositions. Il existe donc un modèle $\mathcal{M}$ pour lequel la formule est fausse. Équipons alors le système de transition $\mathcal{T}=(\set{a},\emptyset)$ de la valuation où pour chacune des variables propositionnelles $P$ apparaissant dans $\phi$, $a\in\mathcal{V}(P)$ si et seulement si $\mathcal{M}\models P$.<br>
-Par définition de la satisfaction locale d'une formule $\langle \mathcal{T},\mathcal{V},a\rangle\Vdash \phi$ ssi $\mathcal{M}\models\phi$.<br>
-Comme notre hypothèse est que $\mathcal{M}\not\models\phi$, on en déduit que $\langle \mathcal{T},\mathcal{V},a\rangle\nVdash \phi$. On a donc trouvé une valuation qui contredit $(3)$.
-</li>
-<li>Pour montrer $(4)\rightarrow(1)$, on passe également par la contraposée $\neg(1)\rightarrow\neg(4)$.<br>
-On suppose que $\mathcal{S}\Vdash^{\forall a,\forall \mathcal{V}}\phi$ n'est pas satisfaite, et donc qu'il existe une valuation $\mathcal{V}$ et un nœud $a$ tels que $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash\phi$. On définit le modèle du calcul des propositions $\mathcal{M}$ par $\mathcal{M}\models P$ si et seulement si $a\in\mathcal{V}(P)$, et ce pour chaque variable propositionnelle apparaissant dans $\phi$. On a donc $\mathcal{M}\not\models\phi$. Par conséquent, $\phi$ n'est pas une tautologie.
-</li>
-</ul>
-</div>
-<p><br><br></p>
-<div id="def">
-<p>Soit $\phi$ une formule et $\mathscr{C}$ une <b>classe</b> de systèmes de transition.<br>
-$\mathscr{C}\Vdash\phi$ ssi pour tout $\mathcal{S}\in\mathscr{C}, \mathcal{S}\Vdash^{\forall a,\forall\mathcal{V}}\phi$ ($\phi$ est valide dans tout système de la classe $\mathscr{C}$).</p>
-</div>
-<br>
-<div id="theo">
-<p>Soit $\mathscr{C}$ la classe de tous les systèmes de transition.<br>
-$\mathscr{C}\Vdash\Box(P\rightarrow Q)\rightarrow(\Box P\rightarrow \Box Q)$<br></p>
-</div>
-<br>
-<div id="preuve">
-<p>Soient $\mathcal{S}$ un système de transition, $a$ un nœud de $\mathcal{S}$ et $\mathcal{V}$ une valuation quelconque.<br>
-Si $\langle \mathcal{S},\mathcal{V}, a\rangle\Vdash\Box(P\rightarrow Q)$, alors pour tout $b$ tel que $a\longrightarrow b$, $\langle \mathcal{S},\mathcal{V}, b\rangle\Vdash P\rightarrow Q$.<br>
-Pour montrer $\langle \mathcal{S},\mathcal{V}, a\rangle\Vdash\Box P\rightarrow \Box Q$, il suffit de supposer $\langle \mathcal{S},\mathcal{V}, a\rangle\Vdash\Box P$ et de montrer $\langle \mathcal{S},\mathcal{V}, a\rangle\Vdash\Box Q$.<br>
-Or, si $\langle \mathcal{S},\mathcal{V}, a\rangle\Vdash\Box P$, alors $\langle \mathcal{S},\mathcal{V}, b\rangle\Vdash P$ pour tout $b$ tel que $a\longrightarrow b$. Et comme par hypothèse $\langle \mathcal{S},\mathcal{V}, b\rangle\Vdash P\rightarrow Q$, on en déduit $\langle \mathcal{S},\mathcal{V}, b\rangle\Vdash Q$.<br>
-Et comme c&rsquo;est vrai pour tout $b$ successeur de $a$, on en déduit $\langle \mathcal{S},\mathcal{V}, a\rangle\Vdash\Box Q$.</p>
-</div>
-<p><br><br id="refl"></p>
-<div id="theo">
-<p>Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalents :</p>
-<ol>
-<li>$\mathcal{S}$ est <b>réflexif</b></li>
-<li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\Box\phi\rightarrow\phi)$</li>
-</ol>
-</div>
-<p><img src="/exrefl.png?width=500px" alt=""></p>
-<div id="preuve">
-<ul>
-<li>$(1)\Rightarrow(2)$<br>
-Si un nœud $a$ quelconque, pour une valuation quelconque, vérifie $a\Vdash\Box \phi$, alors par définition, pour tout $b$ tel que $a\longrightarrow b$, $b\Vdash\phi$. Puisque $\mathcal{S}$ est réflexif, $a$ est lui-même un de ces $b$ et donc $a\Vdash\phi$.
-</li>
-<li>$(2)\Rightarrow(1)$<br>
-Supposons que $\mathcal{S}$ ne soit pas réflexif. Il s'en suit qu'il existe un nœud $a$ tel que $a\,\,\not\!\!\longrightarrow a$. Soit $\phi=P$ une formule de hauteur nulle et $\mathcal{V}$ une valuation telle que $b\in\mathcal{V}(P)$ si et seulement si $a\longrightarrow b$. Par définition de $\mathcal{V}$, on a à la fois $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box P$ et $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash P$, donc $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash (\Box P\rightarrow P)$. Cela prouve ainsi que $\mathcal{S}\nvdash ^{\forall a,\forall\mathcal{V}}(\Box P\rightarrow P)$, ce qui contredit l'hypothèse.
-</li>
-</ul>
-</div>
-<br>
-<div id="def">
-<p>On note $\mathscr{C}_{ref.}$ la classe de tous les systèmes de transition réflexifs.</p>
-</div>
-<p><br><br></p>
-<div id="theo">
-<p>Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalents :</p>
-<ol>
-<li>$\mathcal{S}$ est <b>famélique</b></li>
-<li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\phi\rightarrow\Box\phi)$</li>
-</ol>
-</div>
-<p><img src="/exfame.png?width=400px" alt=""></p>
-<div id="preuve">
-<ul>
-<li>$(1)\Rightarrow(2)$<br>
-Un système de transition $\mathcal{S}$ muni de la valuation $\mathcal{V}$ satisfait la formule $\phi\rightarrow\Box\phi$ au nœud $a$ si, $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\phi$ entraîne $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box\phi$. Autrement dit, dès qu'une formule est satisfaite en un nœud, elle doit être satisfaite en chacun des successeurs de ce nœud.<br>
-Si le seul successeur possible d'un nœud est lui-même (système famélique), l'implication tient toujours. 
-</li>
-<li>$(2)\Rightarrow(1)$<br>
-Dans le cas où il existe un nœud $a$ possédant un successeur $b$ différent de lui-même, il suffit de considérer la formule $\phi=P$ et la valuation $\mathcal{V}$ qui vérifie $a\in\mathcal{V}(P)$ et $b\not\in\mathcal{V}(P)$ pour obtenir&nbsp;:<br>
-<ul>
-<li>$\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\phi$</li>
-<li>$\langle\mathcal{S},\mathcal{V},a\rangle\nVdash\Box\phi$</li>
-<li>$\langle\mathcal{S},\mathcal{V},a\rangle\nVdash\phi\rightarrow\Box\phi$</li>
-</ul>
-</li>
-</ul>
-</div>
-<p><br><br id="trans"></p>
-<div id="theo">
-<p>Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalents :</p>
-<ol>
-<li>$\mathcal{S}$ est <b>transitif</b></li>
-<li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\Box\phi\rightarrow \Box\Box\phi )$</li>
-</ol>
-</div>
-<p><img src="/extrans.png?width=700px" alt=""></p>
-<div id="preuve">
-<ul>
-<li>$(1)\Rightarrow(2)$<br>
-Soient $\mathcal{S}$ un système de transition transitif, $\mathcal{V}$ une valuation et $a$ un nœud.<br>
-Si $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box\phi$ alors pour tout nœud $b$ tel que $a\longrightarrow b$, $\langle\mathcal{S},\mathcal{V},b\rangle\Vdash\phi$.<br>
-Pour montrer $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box\Box\phi$, il suffit de montrer que pour tout $c$ tel qu'il existe $b$ vérifiant $a\longrightarrow b$ et $b\longrightarrow c$, on a $\langle\mathcal{S},\mathcal{V},c\rangle\Vdash\phi$.<br>
-Or puisque $\mathcal{S}$ est transitif, $a\longrightarrow b$ et $b\longrightarrow c$ impliquent $a\longrightarrow c$. D'où $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box\phi$ entraîne $\langle\mathcal{S},\mathcal{V},c\rangle\Vdash\phi$.
-</li>
-<li>$(2)\Rightarrow(1)$<br>
-Soit un système de transition non transitif $\mathcal{S}$ et soient $a$, $b$ et $c$ trois nœuds de $\mathcal{S}$ tels que $a\longrightarrow b$, $b\longrightarrow c$ et $a\not\!\!\longrightarrow c$. Soit $\mathcal{V}$ une valuation qui vérifie $d\in\mathcal{V}(P)$ si et seulement si $a\rightarrow d$.<br>
-Pour $\phi=P$, nous obtenons donc à la fois $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box\phi$ et $\langle\mathcal{S},\mathcal{V},c\rangle\nVdash\phi$ ce qui montre que $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash\Box\Box\phi$.
-</li>
-</ul>
-</div>
-<br>
-<div id="def">
-<p>On note $\mathscr{C}_{tr.}$ la classe de tous les systèmes de transition transitifs.</p>
-</div>
-<p><br><br id="syme"></p>
-<div id="theo">
-<p>Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalents :</p>
-<ol>
-<li>$\mathcal{S}$ est <b>symétrique</b></li>
-<li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\phi\rightarrow \Box\Diamond\phi)$
-</ol>
-</div>
-<br>
-<p>On peut traduire $\Box\Diamond\phi$ par &ldquo;pour tout successeur possible, $\phi$ est vrai dans au moins un successeur&rdquo;.</p>
-<p><img src="/exsyme.png?width=500px" alt=""></p>
-<div id="preuve">
-<ul>
-<li>$(1)\Rightarrow(2)$<br>
-Soient $\mathcal{S}$ un système de transition symétrique, $\mathcal{V}$ une valuation et $a$ un nœud.<br>
-On suppose $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash \phi$. Pour tout nœud $a$, soit $a$ n'a pas de successeur et la formule $\phi\rightarrow \Box\Diamond\phi$ est trivialement vérifiée (toute formule commençant par $\Box$ est vraie en un nœud sans successeur), soit $a$ possède un ou plusieurs successeurs et chacun d'entre eux possède alors $a$ comme successeur par symétrie du graphe. Tous ces nœuds ont    donc au moins un successeur, $a$, où $\phi$ est vraie. Par conséquent, tous les successeurs de $a$ forcent $\Diamond \phi$. Et finalement, on a bien $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash \Box\Diamond\phi$.
-</li>
-<li>$(2)\Rightarrow(1)$<br>
-S'il existe deux nœuds $a$ et $b$ tels que $a\longrightarrow b$ mais $b\,\,\not\!\!\longrightarrow a$, il suffit de considérer une valuation telle que $a\Vdash P$ et $c\Vdash\neg P$ pour tout nœud $c$ tel que $b\longrightarrow c$ pour obtenir $a\nVdash P \rightarrow\Box\Diamond P$.
-</li>
-</ul>
-</div>
-<br>
-<div id="def">
-<p>On note $\mathscr{C}_{sym.}$ la classe de tous les systèmes de transition symétriques.</p>
-</div>
-<p><br><br></p>
-<div id="theo">
-<p>Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalents :</p>
-<ol>
-<li>$\mathcal{S}$ est <b>dense</b></li>
-<li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\Box\Box\phi\rightarrow \Box\phi)$
-</ol>
-</div>
-<p><img src="/exdense.png?width=700px" alt=""></p>
-<div id="preuve">
-<ul>
-<li>$(1)\Rightarrow(2)$<br>
-Soient $\mathcal{S}$ un système de transition dense, $\mathcal{V}$ une valuation et $a$ un nœud.<br>
-Supposons que $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box\Box\phi$ est vérifié et montrons que $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box\phi$ l'est également.<br>
-Soit $c$ un nœud vérifiant $a\longrightarrow c$. $\mathcal{S}$ étant dense, il existe $b$ tel que $a\longrightarrow b$ et $b\longrightarrow c$. Par conséquent, l'hypothèse $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box\Box\phi$ entraîne aussitôt $\langle\mathcal{S},\mathcal{V},c\rangle\Vdash \phi$.
-</li>
-<li>$(2)\Rightarrow(1)$<br>
-Soit un système de transition non dense $\mathcal{S}$ qui vérifie $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\Box\Box\phi\rightarrow \Box\phi)$ pour n'importe quelle formule $\phi$.<br>
-Si $\mathcal{S}$ n'est pas dense, il existe deux nœuds $a$ et $c$ tels que $a\longrightarrow c$ sans qu'aucun $b$ ne vérifie à la fois $a\longrightarrow b$ et $b\longrightarrow c$.<br>
-Considérons la valuation $\mathcal{V}$ définie par $d\in\mathcal{V}(P)$ si et seulement si $d\neq c$.<br>
-Il s'en suit que si $\langle\mathcal{S},\mathcal{V},c\rangle\nVdash P$ alors $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash\Box P$, et pourtant $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box\Box P$. D'où $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash\Box\Box P \rightarrow \Box P$.
-</li>
-</ul>
-</div>
-<p><br><br id="nbd"></p>
-<div id="theo">
-<p>Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalents :</p>
-<ol>
-<li>$\mathcal{S}$ est <b>non borné à droite</b></li>
-<li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\Box\phi\rightarrow \Diamond\phi)$
-</ol>
-</div>
-<p><img src="/exnbd.png?width=850px" alt=""></p>
-<div id="preuve">
-<ul>
-<li>$(1)\Rightarrow(2)$<br>
-Soient $\mathcal{S}$ un système de transition non borné à droite, $\mathcal{V}$ une valuation et $a$ un nœud.<br>
-On suppose que $a\Vdash\Box P$. La seule possibilité pour que $a\nVdash\Diamond P$, c'est que le nœud $a$ n'est aucun successeur or l'hypothèse que $\mathcal{S}$ est non broné à droite nous l'interdit, donc nécessairement $a\Vdash\Diamond P$.
-</li>
-<li>$(2)\Rightarrow(1)$<br>
-Si un système de transition n'est pas borné à droite, il existe un nœud $a$ sans successeur. Supposons une valuation $\mathcal{V}$ telle que seul $a\in \mathcal{V}(P)$. On a alors $a\Vdash \Box P$ mais aussi $a\nvdash \Diamond P$.
-</li>
-</ul>
-</div>
-<br>
-<div id="def">
-<p>On note $\mathscr{C}_{n.b.d.}$ la classe de tous les systèmes de transition non bornés à droite.</p>
-</div>
-<p><br><br id="eucl"></p>
-<div id="theo">
-<p>Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalents :</p>
-<ol>
-<li>$\mathcal{S}$ est <b>euclidien</b></li>
-<li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\Diamond\phi\rightarrow \Box\Diamond\phi)$
-</ol>
-</div>
-<p><img src="/exeucl.png?width=700px" alt=""></p>
-<div id="preuve">
-<ul>
-<li>$(1)\Rightarrow(2)$<br>
-Soient $\mathcal{S}$ un système de transition euclidien, $\mathcal{V}$ une valuation et $a$ un nœud.<br>
-S'il existe un nœud $c$ tel que $a\longrightarrow c$ et $\langle\mathcal{S},\mathcal{V},c\rangle\Vdash \phi$, alors pour tout nœud $b$ tel que $a\longrightarrow b$, il existe un nœud $d$, tel que $b\longrightarrow d$ et $\langle\mathcal{S},\mathcal{V},d\rangle\Vdash \phi$. En effet, il suffit de prendre $d=c$ puisque le caractère euclidien du graphe assure que de  $a\longrightarrow b$ et $a\longrightarrow c$, nous obtenons $b\longrightarrow c$.
-</li>
-<li>$(2)\Rightarrow(1)$<br>
-Si un système de transition n'est pas euclidien, il existe des nœuds $a$, $b$, $c$, avec $a\longrightarrow b$ et $a\longrightarrow c$, mais sans arc $b\longrightarrow c$, alors il suffit de considérer une valuation telle que $\langle\mathcal{S},\mathcal{V},c\rangle\Vdash P$ et pour tout nœud $d\neq c$, $\langle\mathcal{S},\mathcal{V},d\rangle\nVdash P$. On obtient ainsi $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash \Diamond P$, mais comme il n'y a pas d'arc de $b$ vers $c$, $\langle\mathcal{S},\mathcal{V},b\rangle\nVdash \Diamond P$ et par conséquent $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash \Box\Diamond P$.
-</li>
-</ul>
-</div>
-<p><br><br></p>
-<p>Soit $\Gamma$ un ensemble de formules. On écrit :</p>
-<ul>
-<li>
-<p>$\mathcal{S}\Vdash^{\forall a, \forall\mathcal{V}} \Gamma$ si et seulement si pour toute formule $\phi\in\Gamma$, $\mathcal{S}\Vdash^{\forall a, \forall\mathcal{V}} \phi$<br>
-$\mathcal{S}$ est un système de transition tel qu&rsquo;en tout nœud et quelle que soit la valuation considérée, il satisfait tout ce que &ldquo;raconte&rdquo; $\Gamma$. C&rsquo;est donc par sa seule forme que ce système de transition vérifie l&rsquo;ensemble des formules de $\Gamma$.</p>
-</li>
-<li>
-<p>$\mathscr{C} \Vdash\Gamma$ si et seulement si pour toute formule $\phi\in\Gamma$, $\mathscr{C}\Vdash \phi$<br>
-Même affirmation que la précédente mais pour une classe de systèmes de transition toute entière plutôt que pour un seul représentant. En ce sens, la plus grande classe $\mathscr{C}$ qui vérifie $\mathscr{C}\Vdash\Gamma$ octroie une sorte de caractérisation par la seule forme des graphes de ce que raconte $\Gamma$.</p>
-</li>
-</ul>
-<br>
-<h3 id="conséquences-sémantiques">Conséquences sémantiques</h3>
-<br>
-<div id="def">
-<p>Soient $\Gamma$ un ensemble de formules et $\mathscr{C}$ une classe de systèmes de transition.<br>
-$\phi$ est une <b>conséquence sémantique globale</b> de $\Gamma$ (noté $\Gamma\models^{\forall a}_\mathscr{C}\phi$) si et seulement si pour tout système de transition $\mathcal{S}\in \mathscr{C}$, et toute valuation $\mathcal{V}$, si $\langle\mathcal{S},\mathcal{V}\rangle\Vdash^{\forall a}\Gamma$ alors $\langle\mathcal{S},\mathcal{V}\rangle\Vdash^{\forall a}\phi$</p>
-</div>
-<p>Plus simplement, une formule est conséquence d&rsquo;un ensemble d&rsquo;hypothèses si chaque fois que ces hypothèses sont vraies dans un modèle de la classe considérée, alors cette formule est également vraie dans ce modèle.</p>
-<br>
-<div id="def">
-<p>Soient $\Gamma$ un ensemble de formules et $\mathscr{C}$ une classe de systèmes de transition.<br>
-$\phi$ est une <b>conséquence sémantique locale</b> de $\Gamma$ (noté $\Gamma\models_\mathscr{C}\phi$) si et seulement si pour tout système de transition $\mathcal{S}\in \mathscr{C}$, toute valuation $\mathcal{V}$, et tout nœud $a\in N$, si $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Gamma$ alors $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\phi$</p>
-</div>
-<p>La conséquence sémantique locale est plus forte que la globale au sens où si $\Gamma\models_\mathscr{C}\phi$ alors $\Gamma\models^{\forall a}_\mathscr{C}\phi$. L&rsquo;inverse est généralement faux comme le montre l&rsquo;exemple suivant :</p>
-<div id="preuve">
-<p>Soient $\mathscr{C}$ la classe de tous les systèmes de transition, $\Gamma=\set{P}$ et $\phi=\Box P$.<br>
-On a  $\Gamma\models^{\forall a}_\mathscr{C}\phi$.<br>
-En effet, considérons un modèle quelconque $\langle\mathcal{S},\mathcal{V}\rangle$ qui vérifie $\langle\mathcal{S},\mathcal{V}\rangle\Vdash^{\forall a}\Gamma$, ce qui revient ici à affirmer que $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash P$ est vraie pour tout nœud $a$. En particulier, pour tout nœud $b$ tel que $a\longrightarrow b$, la relation $\langle\mathcal{S},\mathcal{V},b\rangle\Vdash P$ est vérifiée, ce qui signifie que tout nœud $a$ vérifie $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash \Box P$.</p>
-<p>Par contre, il est facile de trouver un modèle où $\Gamma\models_\mathscr{C}\phi$ est faux :</p>
-<div style="position:relative;margin-left:auto;margin-right:auto;width:500px;max-width:100%;">
-<img src="/preuvecsqsem.png">
-</div>
-Dans ce modèle, on a $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash P$ et $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash \Box P$
+<div style="overflow-x: auto;text-align:center;">
+<table>
+  <tr>
+    <th style="text-align:center;"><a href="../">Sommaire</a></th><td><a href="../tqc13">Chapitre précédent</a></td><td><a href="../tqc15">Chapitre suivant</a></td>
+    </tr>
+</table>
 </div>
 
-<div class="notices tip" style="--title: 'tip';">
-  <p style="display: none;">tip</p>
-  <div class="notice-body">
-    <p>Plus prosaïquement, la conséquence locale dit que partout où il y a $\Gamma$, il y a $\phi$, alors que la conséquence globale dit que s&rsquo;il y a $\Gamma$ partout alors il y a $\phi$ partout.</p>
-
-  </div>
-</div>
-
-
-<p>Il existe un lien entre les deux conséquences sémantiques :</p>
-<div id="theo">
-<p>$\Gamma\models^{\forall a}_\mathscr{C}\phi$ si et seulement si $\set{\Box^n\psi|n\in\mathbb{N},\psi\in\Gamma}\models_\mathscr{C}\phi$ (où $\Box^n\psi = \underbrace{\Box\Box\ldots\Box}_{n}\psi$ si $n&gt;0$ et $\psi$ si $n =0$)</p>
-</div>
-<p>$\Box^n$ permet en quelque sorte de généraliser la vérité d&rsquo;un nœud puisque dire qu&rsquo;on a $\Box^n\psi$ en $a$ implique que $\psi$ est vraie en tout nœud atteignable depuis $a$.</p>
-<div id="preuve">
-<ul>
-<li>$\Leftarrow$<br>
-Si on a $\Gamma$ en tout nœud, alors en un nœud $a$ quelconque, on a nécessairement $\Box^n\psi$ vraie pour tout $n$ et tout $\psi$ dans $\Gamma$. Or par hypothèse, cela implique que $\phi$ est vraie en ce nœud. Et comme la raisonnement ne dépend pas du nœud $a$, cela montre que $\phi$ est vraie en tout nœud.
-</li>
-<li>$\Rightarrow$<br>
-Démontrons la contraposée&nbsp;: si $\set{\Box^n\psi|n\in\mathbb{N},\psi\in\Gamma}\not\models_\mathscr{C}\phi$ alors $\Gamma\not\models^{\forall a}_\mathscr{C}\phi$.<br>
-Soient $\mathcal{S}=(N,A)$ un système de transition, $\mathcal{V}$ une valuation et $a\in N$ un nœud, tels que $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\set{\Box^n\psi|n\in\mathbb{N},\psi\in\Gamma}$ alors que $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash\phi$.<br>
-Fabriquons le système de transition $\mathcal{T}=(N',A')$ qui correspond à la restriction de $\mathcal{S}$ à l'ensemble des nœuds accessibles depuis $a$ et munissons-le d'une valuation $\mathcal{V}'$ identique à $\mathcal{V}$ pour ces nœuds.<br>
-Par construction, dans le modèle $\langle\mathcal{T},\mathcal{V}'\rangle$ ainsi formé, $\psi$ est vraie en tout nœud&nbsp;: $\langle\mathcal{T},\mathcal{V}'\rangle\Vdash^{\forall a}\psi$. Cela entraîne que $\langle\mathcal{T},\mathcal{V}'\rangle\Vdash^{\forall a}\Gamma$, et pourtant $\langle\mathcal{T},\mathcal{V}',a\rangle\nVdash\phi$ par hypothèse, ce qui implique $\Gamma\not\models^{\forall a}_\mathscr{C}\phi$.
-</ul>
-</div>
-<br>
-<p>Si $\mathscr{C}_\phi$ et $\mathscr{C}_\psi$ désignent respectivement tous les systèmes dans lesquels $\phi$ est vraie et tous ceux où $\psi$ est vraie, alors $\phi\models^{\forall a}_\mathscr{C}\psi$ est équivalent à l&rsquo;inclusion $\mathscr{C}_\phi\subseteq\mathscr{C}_\psi$.<br> Donc si on a à la fois $\phi\models^{\forall a}_\mathscr{C}\psi$ et $\psi\models^{\forall a}_\mathscr{C}\phi$, alors $\mathscr{C}_\phi = \mathscr{C}_\psi$.</p>
-<br>
-<h3 id="théories-équivalence-et-bisimulation">Théories, équivalence et bisimulation</h3>
-<br>
-<div id="def">
-<p>On appelle <b>théorie du modèle</b> $\langle\mathcal{S},\mathcal{V}\rangle$ l&rsquo;ensemble de toutes les formules qui sont vraies dans ce modèle :
-$$Th_\mathcal{M}=\set{\phi|\langle\mathcal{S},\mathcal{V}\rangle\Vdash^{\forall a}\phi}$$</p>
-</div>
-<p>La théorie d&rsquo;un modèle est composée de toutes les formules décrivant ce modèle.<br>
-Deux modèles sont distinguables par la logique modale s&rsquo;ils n&rsquo;ont pas la même théorie.</p>
-<br>
-<div id="def">
-<p>On appelle <b>théorie locale d&rsquo;un modèle</b> $\langle\mathcal{S},\mathcal{V}\rangle$ au nœud $a$ l&rsquo;ensemble de toutes les formules qui sont vraies dans ce modèle :
-$$Th_{(\mathcal{M},a)}=\set{\phi|\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\phi}$$</p>
-</div>
-<br>
-<div id="def">
-<p>Soient $\mathcal{M}$ et $\mathcal{N}$ deux modèles de la logique modale.</p>
-<ul>
-<li>$\mathcal{M}$ et $\mathcal{N}$ sont <b>équivalents</b> s'ils ont la même théorie&nbsp;:<br>
-$\mathcal{M} \equiv \mathcal{N}$ si et seulement si $Th_\mathcal{M}=Th_\mathcal{N}$</li>
-<br>
-<li>$\mathcal{M}$ et $\mathcal{N}$ sont <b>localement équivalents</b> s'ils partagent la même théorie locale&nbsp;:<br>
-$(\mathcal{M},a) \equiv (\mathcal{N},b)$ si et seulement si $Th_{(\mathcal{M},a)}=Th_{(\mathcal{N},b)}$</li>
-</div>
-<br>
-<div id="preuve">
-<p>Les deux modèles suivants sont équivalents ($\mathcal{M} \equiv \mathcal{N}$).</p>
-<div style="position:relative;width:800px;max-width:100%;margin-left:auto;margin-right:auto;">
-<img src="/exequivkr.png">
-</div>
-Et par ailleurs, $(\mathcal{M},a) \equiv (\mathcal{N},a')$, $(\mathcal{M},b) \equiv (\mathcal{N},b')$, $(\mathcal{M},b) \equiv (\mathcal{N},c')$.<br>
-La <b>bisimulation</b> va nous permettre de reconnaître que ces modèles sont localement équivalents.
-</div>
-<br>
-<p>Deux modèles correspondent en quelque sorte à deux univers parallèles. Mais il se peut que depuis un des mondes du premier univers, tout paraisse exactement identique à ce que l&rsquo;on perçoit depuis un monde du deuxième univers. Bien que les univers soient différents, ses &ldquo;habitants&rdquo; ne peuvent pas les différentier. On dit qu&rsquo;ils sont <b>indiscernables</b> ou <b>bisimilaires</b>. Deux mondes sont indiscernables s&rsquo;il n&rsquo;existe pas de formule vraie dans l&rsquo;un et fausse dans l&rsquo;autre.</p>
-<p>Un jeu à deux joueurs à information parfaite, le jeu de bisimulation, est défini de telle sorte que le joueur appelé <b>Duplicateur</b> possède une stratégie gagnante si et seulement si les deux mondes (associés à leurs modèles respectifs) qui interviennent dans le jeu sont indiscernables.</p>
-<p>Plus besoin de passer en revue toutes les formules possibles pour déterminer si deux mondes sont ou non discernables&hellip;</p>
-<div id="def">
-<p>Soient $\mathcal{M}=\langle\mathcal{S}=(N,A) , \mathcal{V}\rangle$ et  $\mathcal{N}=\langle\mathcal{T}=(M,B),\mathcal{W}\rangle$ deux modèles de la logique modale et soient $a\in N$ et $b\in M$ deux nœuds.</p>
-<p>Le jeu de bisimulation $\mathbb{Bis}((\mathcal{M},a),(\mathcal{N},b))$ est défini comme suit :</p>
-<ul>
-<li>il comprend deux joueurs appelés <b>Duplicateur</b> et <b>Corrupteur</b>.<br>
-Le Duplicateur ($\text{D}_{up}$) cherche à montrer que les deux modèles sont localement bisimilaires, alors que le Corrupteur ($\text{C}_{or}$) au contraire veut montrer qu'ils ne le sont pas.<br>
-Un coup, pour chacun des joueurs, consiste à choisir un nœud dans un système de transition. Les nœuds de départ étant $a$ dans $\mathcal{S}$ et $b$ dans $\mathcal{T}$.
-</li>
-<br>
-<li>
-À chaque tour, pour une position $a'$ dans $\mathcal{M}$ et une position $b'$ dans $\mathcal{N}$, $\text{C}_{or}$ choisit d'abord de jouer dans $\mathcal{S}$ ou dans $\mathcal{T}$ puis il choisit un arc permettant d'arriver à un successeur du nœud $a'$ ou $b'$ et $\text{D}_{up}$ répond en choisissant un successeur dans l'autre modèle tel que les nœuds choisit dans chaque modèle satisfont les mêmes variables propositionnelles.
-</li>
-<br>
-<li>Fin de la partie&nbsp;:
-<ul>
-<li>S'il existe une variable $P$ telle que la position initiale vérifie $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash P$ si et seulement si $\langle\mathcal{T},\mathcal{W},b\rangle\nVdash P$, alors $\text{C}_{or}$ l'emporte.</li>
-<li>Si un joueur ne peut plus avancer alors il perd la partie.</li>
-<li>Si la partie est infinie, $\text{D}_{up}$ l'emporte.</li>
-</ul>
-</li>
-</ul>
-</div>
-<br>
-<div id="preuve">
-<p>Exemple 1 :</p>
-<div style="position:relative;width:1000px;max-width:100%;margin-left:auto;margin-right:auto;">
-<img src="/bisimu1.png">
-</div>
-Le Corrupteur possède une stratégie gagnante&nbsp;:
-<ul>
-<li>$\text{C}_{or}$ choisit de joueur dans $\mathcal{N}$ puis va en $b'$.</li>
-<li>$\text{D}_{up}$ n'a pas d'autre choix que d'aller en $b$.</li>
-<li>$\text{C}_{or}$ choisit à nouveau de joueur dans $\mathcal{N}$ et va en $c'$.</li>
-<li>$\text{D}_{up}$ perd car il ne peut plus avancer.</li>
-</ul>
-</div>
-<br>
-<div id="preuve">
-<p>Exemple 2 :</p>
-<div style="position:relative;width:800px;max-width:100%;margin-left:auto;margin-right:auto;">
-<img src="/exequivkr.png">
-</div>
-Le Duplicateur possède une stratégie gagnante&nbsp;:
-<ul>
-<li>Si $\text{C}_{or}$ choisit d'aller en $b'$ ou en $c'$, $\text{D}_{up}$ va en $b$ (il n'a pas trop le choix en même temps...).</li>
-<li>Si $\text{C}_{or}$ choisit d'aller en $b$, $\text{D}_{up}$ va en $b'$ ou en $c'$ (c'est sans importance).</li>
-</ul>
-Le Corrupteur ne peut pas jouer son deuxième coup et perd la partie.
-</div>
-<br>
-<div id="preuve">
-<p>Exemple 3 :</p>
-<div style="position:relative;width:1200px;max-width:100%;margin-left:auto;margin-right:auto;">
-<img src="/bisimu2.png">
-</div>
-Le modèle $\mathcal{N}$ est défini par&nbsp;:
-<ul>
-<li>l'ensemble des nœuds est $\mathbb{N}$,</li>
-<li>de tout nœud $n\in\mathbb{N}$ part deux arcs&nbsp;: $n\longrightarrow n+1$ et $n\longrightarrow n+2$</li>
-<li>$2n\Vdash P$ et $2n+1\nVdash P$</li>
-</ul>
-Le Duplicateur possède une stratégie gagnante qui consiste à tout moment de la partie&nbsp;:
-<ul>
-<li>si $\text{C}_{or}$ joue dans $\mathcal{N}$ et va sur $n$, à aller sur $a$ si $n$ est pair et sur $b$ sinon,</li>
-<li>si $\text{C}_{or}$ joue dans $\mathcal{M}$ et va sur $a$, à aller sur $n+2$ si $n$ est pair et sur $n+1$ sinon,</li>
-<li>si $\text{C}_{or}$ joue dans $\mathcal{M}$ et va sur $b$, à aller sur $n+1$ si $n$ est pair et sur $n+2$ sinon,</li>
-</ul>
-De la sorte, le jeu continue indéfiniment.
-</div>
-<br>
-<div id="theo">
-<p><b>Théorème de Henessy-Milner</b> : $(\mathcal{M},a)\equiv(\mathcal{N},b)$ si et seulement si $\text{D}_{up}$ a une stratégie gagnante dans $\mathbb{Bis}((\mathcal{M},a),(\mathcal{N},b))$.</p>
-</div>
-<p><br><br></p>
-<p style="text-align:center;">
-<a href="../logique5" style="font-size:2em;">Suite : <b>Systèmes logiques</b></a>
-</p>
 
 <footer class="footline">
 	
@@ -2685,6 +2449,8 @@ De la sorte, le jeu continue indéfiniment.
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -2698,9 +2464,6 @@ De la sorte, le jeu continue indéfiniment.
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2728,7 +2491,6 @@ De la sorte, le jeu continue indéfiniment.
             
                 
                     
-                    
                 
                 
 
@@ -2767,9 +2529,6 @@ De la sorte, le jeu continue indéfiniment.
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3392,6 +3151,7 @@ De la sorte, le jeu continue indéfiniment.
             
             
                 
+                    
                     
                 
                 
@@ -3408,6 +3168,9 @@ De la sorte, le jeu continue indéfiniment.
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -3776,6 +3539,7 @@ De la sorte, le jeu continue indéfiniment.
             
                 
                     
+                    
                 
                 
 
@@ -3795,6 +3559,9 @@ De la sorte, le jeu continue indéfiniment.
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3811,6 +3578,7 @@ De la sorte, le jeu continue indéfiniment.
             
             
                 
+                    
                     
                 
                 
@@ -3915,6 +3683,9 @@ De la sorte, le jeu continue indéfiniment.
             
             
                 
+                    
+                        
+                        
                     
                 
                 

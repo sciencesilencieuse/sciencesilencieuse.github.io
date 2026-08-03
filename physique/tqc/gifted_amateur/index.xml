@@ -10,9 +10,23 @@
 		
 		
 		
-			<lastBuildDate>Sun, 02 Aug 2026 20:20:22 +0200</lastBuildDate>
+			<lastBuildDate>Mon, 03 Aug 2026 03:29:34 +0200</lastBuildDate>
 		
 			<atom:link href="https://sciencesilencieuse.github.io/physique/tqc/gifted_amateur/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>TQC-14</title>
+				<link>https://sciencesilencieuse.github.io/physique/tqc/gifted_amateur/tqc14/</link>
+				<pubDate>Sun, 02 Aug 2026 10:00:00 +0100</pubDate>
+				<guid>https://sciencesilencieuse.github.io/physique/tqc/gifted_amateur/tqc14/</guid>
+				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;  #grosseformule &#xA;{&#xA;    overflow-x: auto; &#xA;}&#xA;#preuve&#xA;{&#xA;    background-color:#EAEAEA;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#def&#xA;{&#xA;    background-color:#DCEFFE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#theo&#xA;{&#xA;    background-color:#FBE1DE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;h2&#xA;{&#xA;color:#970E53 !important;&#xA;}&#xA;h3&#xA;{&#xA;color:#004D80 !important;&#xA;}&#xA;ul&#xA;{&#xA;margin-top:0em;&#xA;margin-bottom:0.5em;&#xA;}&#xA;/* Pour rétablir le comportement de details */&#xA;details &gt; summary:first-of-type {&#xA;  display: list-item;     /* remet le triangle + l&#39;accessibilité */&#xA;  cursor: pointer;        /* optionnel : feedback visuel */&#xA;}&#xA;&#xA;details &gt; summary:first-of-type {&#xA;  list-style: disclosure-closed inside;&#xA;}&#xA;details[open] &gt; summary:first-of-type {&#xA;  list-style-type: disclosure-open;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;théorie-quantique-des-champs--partie-14&#34;&gt;Théorie quantique des champs &amp;ndash; Partie 14&lt;/h1&gt;&#xA;&#xA;&lt;div class=&#34;notices note&#34; style=&#34;--title: &#39;note&#39;;&#34;&gt;&#xA;  &lt;p style=&#34;display: none;&#34;&gt;note&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>TQC-13</title>
+				<link>https://sciencesilencieuse.github.io/physique/tqc/gifted_amateur/tqc13/</link>
+				<pubDate>Thu, 30 Jul 2026 10:00:00 +0100</pubDate>
+				<guid>https://sciencesilencieuse.github.io/physique/tqc/gifted_amateur/tqc13/</guid>
+				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;  #grosseformule &#xA;{&#xA;    overflow-x: auto; &#xA;}&#xA;#preuve&#xA;{&#xA;    background-color:#EAEAEA;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#def&#xA;{&#xA;    background-color:#DCEFFE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#theo&#xA;{&#xA;    background-color:#FBE1DE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;h2&#xA;{&#xA;color:#970E53 !important;&#xA;}&#xA;h3&#xA;{&#xA;color:#004D80 !important;&#xA;}&#xA;ul&#xA;{&#xA;margin-top:0em;&#xA;margin-bottom:0.5em;&#xA;}&#xA;/* Pour rétablir le comportement de details */&#xA;details &gt; summary:first-of-type {&#xA;  display: list-item;     /* remet le triangle + l&#39;accessibilité */&#xA;  cursor: pointer;        /* optionnel : feedback visuel */&#xA;}&#xA;&#xA;details &gt; summary:first-of-type {&#xA;  list-style: disclosure-closed inside;&#xA;}&#xA;details[open] &gt; summary:first-of-type {&#xA;  list-style-type: disclosure-open;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;théorie-quantique-des-champs--partie-13&#34;&gt;Théorie quantique des champs &amp;ndash; Partie 13&lt;/h1&gt;&#xA;&#xA;&lt;div class=&#34;notices note&#34; style=&#34;--title: &#39;note&#39;;&#34;&gt;&#xA;  &lt;p style=&#34;display: none;&#34;&gt;note&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>TQC-11</title>
 				<link>https://sciencesilencieuse.github.io/physique/tqc/gifted_amateur/tqc11/</link>
