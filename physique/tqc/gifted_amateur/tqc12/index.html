@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785728760" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785728760" rel="stylesheet">
-    <link href="/css/hybrid.css?1785728760" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785728760" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785728760" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785728760" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785728760" rel="stylesheet">
-    <link href="/css/theme.css?1785728760" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785728760" rel="stylesheet">
+    <link href="/css/nucleus.css?1785730003" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785730003" rel="stylesheet">
+    <link href="/css/hybrid.css?1785730003" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785730003" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785730003" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785730003" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785730003" rel="stylesheet">
+    <link href="/css/theme.css?1785730003" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785730003" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785728760" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785730003" rel="stylesheet">
     
-    <link href="/css/foo.css?1785728760" rel="stylesheet"><link href="/css/bar.css?1785728760" rel="stylesheet">
+    <link href="/css/foo.css?1785730003" rel="stylesheet"><link href="/css/bar.css?1785730003" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785728760"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785730003"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785728760"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785728760"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785730003"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785730003"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785728760"></script>
+<script type="text/javascript" src="/js/search.js?1785730003"></script>
 
     
   </div>
@@ -2514,7 +2514,7 @@ $\displaystyle \phi'(x') = b^{\,d_\phi}\,\phi(x)$
 <div id="preuve">
 <details>
 <summary>La convention fixe $d_\phi = (d-2)/2$&nbsp;</summary>
-<p>Sous $x = bx&rsquo;$, deux choses changent dans l&rsquo;intégrale : la mesure, $\mathrm d^dx = b^d,\mathrm d^dx&rsquo;$, et le gradient, $\nabla_x = b^{-1}\nabla_{x&rsquo;}$. Comme le gradient est au carré, le terme devient</p>
+<p>Sous $x = bx&rsquo;$, deux choses changent dans l&rsquo;intégrale : la mesure, $\mathrm d^dx = b^d\,\mathrm d^dx&rsquo;$, et le gradient, $\nabla_x = b^{-1}\nabla_{x&rsquo;}$. Comme le gradient est au carré, le terme devient</p>
 <p style="text-align:center;">
 $\displaystyle
 \int\mathrm d^dx\,\frac12(\nabla_x\phi)^2 = b^{\,d}\times b^{-2}\int\mathrm d^dx'\,\frac12(\nabla_{x'}\phi)^2 = b^{\,d-2}\int\mathrm d^dx'\,\frac12(\nabla_{x'}\phi)^2
@@ -2530,7 +2530,7 @@ d - 2 - 2d_\phi = 0
 d_\phi = \frac{d-2}{2}
 $
 </p>
-<p><b>Ce nombre n&rsquo;est autre que la dimension de masse du champ</b> en dimension $d$ : c&rsquo;est ce que donne l&rsquo;analyse dimensionnelle appliquée à $\int\mathrm d^dx\,(\nabla\phi)^2$, qui doit être sans dimension. Le pas III est donc, au point fixe gaussien, de l&rsquo;analyse dimensionnelle et rien d&rsquo;autre.</p>
+<p><b>Ce nombre n&rsquo;est autre que la dimension de masse<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> du champ</b> en dimension $d$ : c&rsquo;est ce que donne l&rsquo;analyse dimensionnelle appliquée à $\int\mathrm d^dx\,(\nabla\phi)^2$, qui doit être sans dimension. Le pas III est donc, au point fixe gaussien, de l&rsquo;analyse dimensionnelle et rien d&rsquo;autre.</p>
 </details>
 </div>
 <br>
@@ -3290,6 +3290,14 @@ $
     <th style="text-align:center;"><a href="../">Sommaire</a></th><td><a href="../tqc11">Chapitre précédent</a></td><td><a href="../tqc13">Chapitre suivant</a></td>
     </tr>
 </table>
+</div>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>On parle de dimension de masse car toutes les dimensions peuvent se ramener à la masse en TQC (avec $c=\hbar=1$). L&rsquo;énergie est de la masse alors que la distance et le temps sont des inverses de masse. Dans le cas qui nous intéresse, on veut $[\mathrm d^d x][(\nabla \phi)^2]=1$. Et comme $[\mathrm d^d x]=1/M^d$ et $[(\nabla \phi)^2]=[\phi]^2\times M^2$, on retrouve bien que $[\phi]=M^{\frac{d-2}{2}}$.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
 </div>
 
 
@@ -4611,16 +4619,16 @@ $
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785728760"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785728760"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785728760"></script>
-    <script src="/js/jquery.sticky.js?1785728760"></script>
-    <script src="/js/featherlight.min.js?1785728760"></script>
-    <script src="/js/highlight.pack.js?1785728760"></script>
+    <script src="/js/clipboard.min.js?1785730003"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785730003"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785730003"></script>
+    <script src="/js/jquery.sticky.js?1785730003"></script>
+    <script src="/js/featherlight.min.js?1785730003"></script>
+    <script src="/js/highlight.pack.js?1785730003"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785728760"></script>
-    <script src="/js/learn.js?1785728760"></script>
-    <script src="/js/hugo-learn.js?1785728760"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785730003"></script>
+    <script src="/js/learn.js?1785730003"></script>
+    <script src="/js/hugo-learn.js?1785730003"></script>
     
     
 
