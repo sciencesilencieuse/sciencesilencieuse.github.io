@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785771173" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785771173" rel="stylesheet">
-    <link href="/css/hybrid.css?1785771173" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785771173" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785771173" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785771173" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785771173" rel="stylesheet">
-    <link href="/css/theme.css?1785771173" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785771173" rel="stylesheet">
+    <link href="/css/nucleus.css?1785887542" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785887542" rel="stylesheet">
+    <link href="/css/hybrid.css?1785887542" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785887542" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785887542" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785887542" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785887542" rel="stylesheet">
+    <link href="/css/theme.css?1785887542" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785887542" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785771173" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785887542" rel="stylesheet">
     
-    <link href="/css/foo.css?1785771173" rel="stylesheet"><link href="/css/bar.css?1785771173" rel="stylesheet">
+    <link href="/css/foo.css?1785887542" rel="stylesheet"><link href="/css/bar.css?1785887542" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785771173"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785887542"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785771173"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785771173"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785887542"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785887542"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785771173"></script>
+<script type="text/javascript" src="/js/search.js?1785887542"></script>
 
     
   </div>
@@ -2027,6 +2027,11 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     </li>
     <li><a href="#les-nombres-de-grassmann-lintégrale-de-chemin-des-fermions">Les nombres de Grassmann : l&rsquo;intégrale de chemin des fermions</a>
       <ul>
+        <li><a href="#de-nouveaux-nombres-et-pourquoi-il-en-faut">De nouveaux nombres, et pourquoi il en faut</a></li>
+        <li><a href="#lintégrale-de-berezin">L&rsquo;intégrale de Berezin</a></li>
+        <li><a href="#la-gaussienne-et-le-déterminant-qui-remonte-au-numérateur">La gaussienne, et le déterminant qui remonte au numérateur</a></li>
+        <li><a href="#létat-cohérent-fermionique">L&rsquo;état cohérent fermionique</a></li>
+        <li><a href="#la-gaussienne-avec-sources-et-le-propagateur">La gaussienne avec sources, et le propagateur</a></li>
         <li><a href="#bilan-5">Bilan</a></li>
         <li><a href="#pièges-5">Pièges</a></li>
       </ul>
@@ -2359,7 +2364,7 @@ $
 </p>
 </div>
 <p>Dans la partie précédente sur la physique statistique, on calculait $Z[J]$ via la matrice $S$ (Gell-Mann–Low). Ici, l&rsquo;intégrale de chemin la calcule <i>directement</i>.</p>
-<!-- Figure à redessiner (L&B fig. 24.1) : l'organigramme de la fig. 22.1 avec le nouveau moteur — « Lagrangien » ; flèche « + source J » vers la boîte « Intégrale de chemin, donne Z[J] » ; flèche « dériver » vers « Fonctions de Green » ; bulle latérale « on en INFÈRE les règles de Feynman » ; flèche finale vers « Prédictions physiques » -->
+<!-- Figure à redessiner (L&B fig. 24.1) : l'organigramme de la fig. 22.1 avec le nouveau moteur, « Lagrangien » ; flèche « + source J » vers la boîte « Intégrale de chemin, donne Z[J] » ; flèche « dériver » vers « Fonctions de Green » ; bulle latérale « on en INFÈRE les règles de Feynman » ; flèche finale vers « Prédictions physiques » -->
 <div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/orgaintchemin.png" style="box-shadow:none;background:none;">
 </div>
@@ -2542,7 +2547,7 @@ Que modifier pour calculer $\mathrm{Tr}\,e^{-\beta\hat H} = \sum_\lambda\langle\
 </div>
 <p><b>La physique statistique se déroule en temps imaginaire périodique</b>. Plus il fait chaud, plus le cylindre de temps est court ($\beta \to 0$). Les trajectoires quantiques sont forcées de faire des boucles minuscules et finissent par être écrasées sur le plan spatial. La dimension temporelle &ldquo;disparaît&rdquo; macroscopiquement, et l&rsquo;on retrouve la physique statistique classique, uniquement spatiale.</p>
 <p>À température nulle, le cylindre se déroule complètement. Le temps imaginaire redevient une ligne droite infinie. La particule a toute la place temporelle pour faire ses fluctuations quantiques. On retrouve la pure Théorie Quantique des Champs du vide.</p>
-<!-- Figure à redessiner (L&B fig. 25.2) : trois panneaux — (a) une trajectoire de champ dans le temps réel t (axe vertical), libre ; (b) la tranche de temps imaginaire 0 ≤ τ ≤ β (un « mur » d'épaisseur β) avec une trajectoire qui revient à son point de départ ; (c) l'axe τ gradué 0, β, 2β, 3β avec la trajectoire périodique répétée -->
+<!-- Figure à redessiner (L&B fig. 25.2) : trois panneaux : (a) une trajectoire de champ dans le temps réel t (axe vertical), libre ; (b) la tranche de temps imaginaire 0 ≤ τ ≤ β (un « mur » d'épaisseur β) avec une trajectoire qui revient à son point de départ ; (c) l'axe τ gradué 0, β, 2β, 3β avec la trajectoire périodique répétée -->
 <div style="position:relative;margin-left:auto;margin-right:auto;width:540px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/figwickcyl.png" style="box-shadow:none;background:none;">
 </div>
@@ -2650,7 +2655,7 @@ $
 <h3 id="lintuition-du-flambage">L&rsquo;intuition du flambage</h3>
 <p>Si on place une masse de plus en plus grande sur une règle verticale, la règle va finir par flamber, c&rsquo;est-à-dire plier, soit à gauche, soit à droite. Le système {règle + masse} est pourtant parfaitement symétrique gauche/droite. Rien dans la physique ne permet de prédire le côté choisi<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup> : <b>l&rsquo;état fondamental n&rsquo;a pas la symétrie du hamiltonien</b>.</p>
 <p>Pour un aimant ($\hat H = -J\sum_i \hat S^z_i\hat S^z_{i+1}$), aucune préférence haut/bas, et pourtant là aussi, le fondamental choisit d&rsquo;orienter tous les spins vers le haut, ou tous vers le bas.</p>
-<!-- Figure à redessiner (L&B fig. 26.3) : trois vignettes du flambage — (a) la règle droite chargée d'un poids (symétrique) ; (b) flambée vers la gauche ; (c) flambée vers la droite -->
+<!-- Figure à redessiner (L&B fig. 26.3) : trois vignettes du flambage : (a) la règle droite chargée d'un poids (symétrique) ; (b) flambée vers la gauche ; (c) flambée vers la droite -->
 <div style="position:relative;margin-left:auto;margin-right:auto;width:280px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/flambage.png" style="box-shadow:none;background:none;">
 </div>
@@ -2696,9 +2701,7 @@ $\displaystyle
 - \frac{\lambda}{4!}\big(\phi_1^2 + \phi_2^2\big)^2
 $
 </p>
-<div id="grosseformule" style="margin:-0.5em 0;">
-</div>
-<p>Symétrie globale $SO(2)$ : les rotations du plan interne $(\phi_1, \phi_2)$ laissent $\mathcal L$ invariant. Le potentiel $U(\phi_1, \phi_2)$ a la forme d&rsquo;un <b>cul de bouteille</b> : une bosse au centre, et un <b>cercle de minima</b> d&rsquo;équation $\phi_1^2 + \phi_2^2 = 6\mu^2/\lambda$. Cela donne une infinité de vides, tous équivalents. Le système doit en <i>choisir</i> un.</p>
+Symétrie globale $SO(2)$&nbsp;: les rotations du plan interne $(\phi_1, \phi_2)$ laissent $\mathcal L$ invariant. Le potentiel $U(\phi_1, \phi_2)$ a la forme d'un <b>cul de bouteille</b>&nbsp;: une bosse au centre, et un <b>cercle de minima</b> d'équation $\phi_1^2 + \phi_2^2 = 6\mu^2/\lambda$. Cela donne une infinité de vides, tous équivalents. Le système doit en <i>choisir</i> un.
 <!-- Figure à redessiner (L&B fig. 26.6) : (a) une bouteille de vin culottée (clin d'œil) ; (b) la surface du potentiel en chapeau mexicain / fond de bouteille, bosse centrale et gouttière circulaire ; (c) vue de dessus dans le plan (φ₁, φ₂) : le cercle des minima, avec un point marqué sur le cercle = le vide choisi -->
 <div style="position:relative;margin-left:auto;margin-right:auto;width:580px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/symbris.png" style="box-shadow:none;background:none;">
@@ -2822,7 +2825,7 @@ $
 <h2 id="les-états-cohérents">Les états cohérents</h2>
 <h3 id="létat-le-plus-classique-possible">L&rsquo;état le plus classique possible</h3>
 <p>Question d&rsquo;apparence innocente : quel état quantique ressemble le plus à une onde classique d&rsquo;amplitude et de phase données ?</p>
-<p>L&rsquo;oscillateur classique a $Q = Q_0\cos(\omega t - \varphi)$ et $P = -P_0\sin(\omega t - \varphi)$ : position et impulsion oscillent <i>en quadrature</i>, verrouillées à $90°$.</p>
+<p>L&rsquo;oscillateur classique a $Q = Q_0\cos(\omega t - \theta)$ et $P = -P_0\sin(\omega t - \theta)$ : position et impulsion oscillent <i>en quadrature</i>, verrouillées à $90°$.</p>
 <p>Les états propres de l&rsquo;énergie $|n\rangle$ ne savent rien de tout cela ($\langle\hat Q\rangle = \langle\hat P\rangle = 0$ : rien n&rsquo;y oscille, ce sont des états stationnaires).</p>
 <p>Où trouver un état quantique qui possède cette relation de phase entre $\hat Q$ et $\hat P$ ? Chez les états propres de l&rsquo;opérateur d&rsquo;annihilation puisque la quadrature y est câblée en dur : $\hat a=(\hat{Q}+\mathrm{i} \hat{P}) / \sqrt{2}$.</p>
 <div id="def">
@@ -2932,7 +2935,7 @@ C&rsquo;est précisément en ce sens que les états cohérents représentent l&r
 </li>
 </ul>
 <ul>
-<li><b>Il évolue classiquement</b>&nbsp;: $|\alpha(0)\rangle \to |\alpha(t)\rangle$ avec $\alpha(t) = \alpha_0\, e^{-i\omega t}$ (à une phase globale près), d'où $\langle\hat Q\rangle = \sqrt2\,\alpha_0\cos(\omega t - \varphi)$ et $\langle\hat P\rangle = -\sqrt2\,\alpha_0\sin(\omega t - \varphi)$&nbsp;: les moyennes exécutent le mouvement harmonique <i>classique</i>. Dans le plan $(Q, P)$, l'état est un petit «&nbsp;nuage&nbsp;» d'incertitude $\Delta Q = \Delta P = 1/\sqrt2$ qui orbite comme un point matériel.
+<li><b>Il évolue classiquement</b>&nbsp;: $|\alpha(0)\rangle \to |\alpha(t)\rangle$ avec $\alpha(t) = \alpha_0\, e^{-i\omega t}$ (à une phase globale près), d'où $\langle\hat Q\rangle = \sqrt2\,\alpha_0\cos(\omega t - \theta)$ et $\langle\hat P\rangle = -\sqrt2\,\alpha_0\sin(\omega t - \theta)$&nbsp;: les moyennes exécutent le mouvement harmonique <i>classique</i>. Dans le plan $(Q, P)$, l'état est un petit «&nbsp;nuage&nbsp;» d'incertitude $\Delta Q = \Delta P = 1/\sqrt2$ qui orbite comme un point matériel.
 <div id="preuve" style="margin-top:0.5em;">
 <details><summary>Démonstration&nbsp;:</summary>
 <p>Comment les états cohérents réagissent à l&rsquo;opérateur d&rsquo;évolution $\hat{U}(\theta) = e^{-i\theta\hat{n}}$, où $\theta$ est un angle (un nombre réel) et $\hat{n}$ est notre opérateur habituel du nombre de particules ?</p>
@@ -2986,9 +2989,8 @@ $
 </ul>  
 <p>Deux incarnations :</p>
 <ul>
-<li><b>Le laser</b>&nbsp;: $n$ photons dans un mode de cavité, à nombre fixé, ont une phase totalement indéterminée&nbsp;; le même mode en état cohérent $|\alpha_{\mathbf k}\rangle$ a $\Delta n = |\alpha|$ mais une phase de plus en plus raide à mesure qu'on le remplit ($\Delta\cos\phi \sim 1/|\alpha|$)&nbsp;: c'est le bon modèle du champ dans un laser.</li>
-<br>
-<li><b>Le superfluide</b>&nbsp;: des bosons en interaction dans un état cohérent multimode vérifient $\hat\Psi(\mathbf x)|\psi\rangle = \psi(\mathbf x)|\psi\rangle$ — le champ <i>quantique</i> a une valeur propre <i>classique</i>, la <b>fonction d'onde macroscopique</b>. Avec le mode $\mathbf p = 0$ macroscopiquement occupé, $\psi_0 = \sqrt{n_0}\\,e^{i\theta_0}$&nbsp;: fixer la phase $\theta_0$ partout, c'est <b>briser spontanément la symétrie de phase</b> — le chapitre 26 refait surface, avec $\psi(\mathbf x)$ pour paramètre d'ordre (suite au ch. 42 du livre). Contre-épreuve parlante&nbsp;: dans un état à nombres d'occupation fixés, $\langle\hat\Psi(\mathbf x)\rangle = 0$ — sans cohérence, pas de paramètre d'ordre.</li>
+<li><b>Le laser</b>&nbsp;: $n$ photons dans un mode de cavité, à nombre fixé, ont une phase totalement indéterminée&nbsp;; le même mode en état cohérent $|\alpha_{\mathbf k}\rangle$ a $\Delta n = |\alpha|$ mais une phase de plus en plus raide à mesure qu'on le remplit ($\Delta\cos\theta \sim 1/|\alpha|$)&nbsp;: c'est le bon modèle du champ dans un laser.</li>
+<li style="margin-top:0.8em;"><b>Le superfluide</b>&nbsp;: des bosons en interaction dans un état cohérent multimode vérifient $\hat\Psi(\mathbf x)|\psi\rangle = \psi(\mathbf x)|\psi\rangle$&nbsp;: le champ <i>quantique</i> a une valeur propre <i>classique</i>, la <b>fonction d'onde macroscopique</b>. Avec le mode $\mathbf p = 0$ macroscopiquement occupé, $\psi_0 = \sqrt{n_0}\\,e^{i\theta_0}$&nbsp;: fixer la phase $\theta_0$ partout, c'est <b>briser spontanément la symétrie de phase</b>&nbsp;: le chapitre sur la <a href="./#brisure-de-symétrie">brisure de symétrie</a> refait surface, avec $\psi(\mathbf x)$ pour paramètre d'ordre. Contre-épreuve parlante&nbsp;: dans un état à nombres d'occupation fixés, $\langle\hat\Psi(\mathbf x)\rangle = 0$, donc sans cohérence, pas de paramètre d'ordre.</li>
 </ul>
 <br>
 <h3 id="une-source-classique-fabrique-un-état-cohérent">Une source classique fabrique un état cohérent</h3>
@@ -3010,7 +3012,7 @@ $
 </p>
 <p>Le $\sqrt{n!}$ vient de la normalisation de $|n\rangle$.</p>
 <p>L&rsquo;état final est donc $\propto \sum_n \frac{\alpha^n}{\sqrt{n!}}\,|n\rangle$ : <b>c&rsquo;est l&rsquo;état cohérent $|\alpha\rangle$</b>.</p>
-<p>Une source classique branchée sur un mode quantique prépare exactement un état cohérent, d&rsquo;amplitude $\alpha = i\tilde f(\omega)/(2m\omega)^{1/2}$ (module <i>et</i> phase hérités de la source). C&rsquo;est le mécanisme du laser pompé, de l&rsquo;antenne, de tout champ « classique » rayonné : le monde classique émet du cohérent.</li></p>
+<p>Une source classique branchée sur un mode quantique prépare exactement un état cohérent, d&rsquo;amplitude $\alpha = i\tilde f(\omega)/(2m\omega)^{1/2}$ (module <i>et</i> phase hérités de la source). C&rsquo;est le mécanisme du laser pompé, de l&rsquo;antenne, de tout champ « classique » rayonné : le monde classique émet du cohérent.</p>
 <br>
 <h3 id="bilan-4">Bilan</h3>
 <p style="text-align:center;">
@@ -3043,6 +3045,7 @@ $
 </ul>
 <br>
 <h2 id="les-nombres-de-grassmann-lintégrale-de-chemin-des-fermions">Les nombres de Grassmann : l&rsquo;intégrale de chemin des fermions</h2>
+<h3 id="de-nouveaux-nombres-et-pourquoi-il-en-faut">De nouveaux nombres, et pourquoi il en faut</h3>
 <p>L&rsquo;intégrale de chemin somme sur des champs <i>classiques</i>. Or les champs fermioniques, même débarrassés de leurs chapeaux, doivent garder la trace de l&rsquo;anticommutation $\hat\psi(x)\hat\psi(y) = -\hat\psi(y)\hat\psi(x)$ du formalisme canonique. Et l&rsquo;état cohérent fermionique devrait vérifier $\hat c\,|\eta\rangle = \eta\,|\eta\rangle$ avec des valeurs propres qui anticommutent. Dans les deux cas, il faut de <b>nouveaux nombres</b>. Et ils furent inventés un siècle plus tôt par Hermann Grassmann, dont l&rsquo;œuvre fut largement ignorée de son vivant.</p>
 <div id="def">
 <p>Les <b>nombres de Grassmann</b> (de symboles $\eta, \bar\eta, \ldots$) vérifient :</p>
@@ -3054,7 +3057,8 @@ $
 </p>
 <p>Conséquence radicale : toute fonction est <i>linéaire</i>, $f(\eta) = a + b\,\eta$ (le développement de Taylor s&rsquo;arrête net).</p>
 </div>
-<p>On veut pouvoir faire des calculs avec ces nombres, ce qui nus amène à définir la dérivation et l&rsquo;intégration des nombres de Grassmann.</p>
+<p>On veut pouvoir faire des calculs avec ces nombres, ce qui nous amène à définir la dérivation et l&rsquo;intégration des nombres de Grassmann.</p>
+<h3 id="lintégrale-de-berezin">L&rsquo;intégrale de Berezin</h3>
 <div id="def">
 <p>La dérivation est définie par :</p>
 <p style="text-align:center;">
@@ -3063,7 +3067,7 @@ $\displaystyle
 \displaystyle  \frac{\partial}{\partial \eta} a=0
 $
 </p>
-<p>De plus, l&rsquo;opérateur dérivé lui-même anticommute. Si $\zeta$ est un autre nombre de Grassman, on a $\frac{\partial}{\partial \eta} \zeta \eta=-\zeta \frac{\partial}{\partial \eta} \eta=-\zeta$.</p>
+<p>De plus, l&rsquo;opérateur dérivé lui-même anticommute. Si $\zeta$ est un autre nombre de Grassmann, on a $\frac{\partial}{\partial \eta} \zeta \eta=-\zeta \frac{\partial}{\partial \eta} \eta=-\zeta$.</p>
 </div>
 <br>
 <div id="def">
@@ -3104,6 +3108,7 @@ $
  </p>
 </div>
 <br>
+<h3 id="la-gaussienne-et-le-déterminant-qui-remonte-au-numérateur">La gaussienne, et le déterminant qui remonte au numérateur</h3>
 <div id="theo">
 <p>La gaussienne de Grassmann inverse la place du déterminant :</p>
 <p style="text-align:center;">
@@ -3129,8 +3134,8 @@ $
 <p>Le cas $N \times N$ s&rsquo;obtient en développant l&rsquo;exponentielle : seul survit le terme contenant chaque $\eta_i$ et chaque $\bar\eta_i$ exactement une fois, et la somme signée sur les appariements est <i>la définition du déterminant</i>.</p>
 </div>
 <br>
+<h3 id="létat-cohérent-fermionique">L&rsquo;état cohérent fermionique</h3>
 <div id="def">
-<p>L&rsquo;<b>état cohérent fermionique</b> :</p>
 <p>Avec $\hat c^\dagger$ le créateur d&rsquo;un fermion,</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -3141,8 +3146,15 @@ $
 <p>On vérifie en une ligne que $\hat c\,|\eta\rangle = \eta\,|\eta\rangle$.</p>
 <p>Côté bra, on pose $\langle\bar\eta| = \langle 0| + \bar\eta\langle 1|$, où $\bar\eta$ n&rsquo;est <b>pas</b> le conjugué de $\eta$ mais une variable de Grassmann indépendante.</p>
 <p>Ces définitions impliquent le recouvrement (produit scalaire) $\langle\bar\zeta|\eta\rangle = e^{\bar\zeta\eta}$.</p>
-<p>Enfin, pour que ces états cohérents puissent être utiles, on requiert qu&rsquo;ils forment un espace completvia la relation de complétude $\int\mathrm{d}\eta\,\mathrm{d}\bar\eta\; e^{\bar\eta\eta}\,|\bar\eta\rangle\langle\eta| = \mathbb 1$.</p>
+<p>Enfin, pour que ces états cohérents soient utilisables, il leur faut une <b>relation de complétude</b> :</p>
+<p style="text-align:center;">
+$\displaystyle
+\int\mathrm{d}\eta\,\mathrm{d}\bar\eta\; e^{\bar\eta\eta}\,|\eta\rangle\langle\bar\eta| = \mathbb 1
+$
+</p>
+<p>Attention, le ket porte $\eta$ et le bra porte $\bar\eta$, conformément aux définitions ci-dessus. Et le signe de l&rsquo;exposant est <b>affaire de convention</b> : il dépend de l&rsquo;ordre choisi pour $\mathrm d\eta,\mathrm d\bar\eta$ et de la règle d&rsquo;anticommutation entre nombres de Grassmann et états impairs. On trouve donc $e^{-\bar\eta\eta}$ dans une bonne partie de la littérature, sans que la physique en soit changée.</p>
 </div>
+<h3 id="la-gaussienne-avec-sources-et-le-propagateur">La gaussienne avec sources, et le propagateur</h3>
 <p>Reste l&rsquo;intégrale la plus importante de toutes : la gaussienne <b>avec sources</b>. Le carré se complète exactement comme chez les bosons (grâce aux règles de Berezin) :</p>
 <div id="theo">
 <p style="text-align:center;">
@@ -4565,16 +4577,16 @@ $
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785771173"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785771173"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785771173"></script>
-    <script src="/js/jquery.sticky.js?1785771173"></script>
-    <script src="/js/featherlight.min.js?1785771173"></script>
-    <script src="/js/highlight.pack.js?1785771173"></script>
+    <script src="/js/clipboard.min.js?1785887542"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785887542"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785887542"></script>
+    <script src="/js/jquery.sticky.js?1785887542"></script>
+    <script src="/js/featherlight.min.js?1785887542"></script>
+    <script src="/js/highlight.pack.js?1785887542"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785771173"></script>
-    <script src="/js/learn.js?1785771173"></script>
-    <script src="/js/hugo-learn.js?1785771173"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785887542"></script>
+    <script src="/js/learn.js?1785887542"></script>
+    <script src="/js/hugo-learn.js?1785887542"></script>
     
     
 

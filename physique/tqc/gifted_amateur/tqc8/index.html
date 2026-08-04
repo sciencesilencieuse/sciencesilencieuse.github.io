@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785771173" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785771173" rel="stylesheet">
-    <link href="/css/hybrid.css?1785771173" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785771173" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785771173" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785771173" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785771173" rel="stylesheet">
-    <link href="/css/theme.css?1785771173" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785771173" rel="stylesheet">
+    <link href="/css/nucleus.css?1785887542" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785887542" rel="stylesheet">
+    <link href="/css/hybrid.css?1785887542" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785887542" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785887542" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785887542" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785887542" rel="stylesheet">
+    <link href="/css/theme.css?1785887542" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785887542" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785771173" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785887542" rel="stylesheet">
     
-    <link href="/css/foo.css?1785771173" rel="stylesheet"><link href="/css/bar.css?1785771173" rel="stylesheet">
+    <link href="/css/foo.css?1785887542" rel="stylesheet"><link href="/css/bar.css?1785887542" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785771173"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785887542"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785771173"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785771173"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785887542"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785887542"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785771173"></script>
+<script type="text/javascript" src="/js/search.js?1785887542"></script>
 
     
   </div>
@@ -2259,7 +2259,7 @@ Subtilité : $\hat\phi_i$ ne commute pas avec $\hat H_0$ en général, donc dé
 <p>La correspondance profonde entre les deux colonnes, le temps imaginaire, $\beta \leftrightarrow \mathrm{i}t$, sera détaillée plus loin.</p>
 <p>On secoue un système avec une force $f(t)$ (ici l&rsquo;oscillateur $\hat H&rsquo; = -f(t)\hat x$). Comment sa moyenne répond-elle ? On définit la <b>fonction de réponse</b> $\chi$ par $\langle\hat x(t)\rangle = \int\mathrm{d}t&rsquo;\,\chi(t-t&rsquo;)\,f(t&rsquo;)$.</p>
 <div id="preuve">
-<p>On représente d&rsquo;interaction, au premier ordre (la série de Dyson, tronquée) :</p>
+<p>On se place en représentation d&rsquo;interaction et on développe au premier ordre (la série de Dyson, tronquée) :</p>
 <p style="text-align:center;">
 $\displaystyle
 |\psi_I(t)\rangle = |0\rangle + i\int_{-\infty}^{t}\mathrm{d}t'\, f(t')\,\hat x_I(t')\,|0\rangle
@@ -2268,7 +2268,7 @@ $
 <p>d&rsquo;où, en ne gardant que le premier ordre dans $\langle\psi_I|\hat x_I(t)|\psi_I\rangle$ :</p>
 <p style="text-align:center;">
 $\displaystyle
-\delta\langle\hat x(t)\rangle = i\int\mathrm{d}t'\,\theta(t-t')\,\big\langle\big[\hat x_I(t), \hat x_I(t')\big]\big\rangle\, f(t')\\z
+\delta\langle\hat x(t)\rangle = i\int\mathrm{d}t'\,\theta(t-t')\,\big\langle\big[\hat x_I(t), \hat x_I(t')\big]\big\rangle\, f(t')
 \Longrightarrow
 \chi(t-t') = i\,\theta(t-t')\,\big\langle\big[\hat x(t), \hat x(t')\big]\big\rangle
 $
@@ -2282,13 +2282,13 @@ $\displaystyle
 $
 </p>
 <p>La fonction de Green <b>retardée classique</b> de l&rsquo;oscillateur, à l&rsquo;identique. Rien d&rsquo;étonnant : le commutateur est un simple nombre, la réponse moyenne d&rsquo;un oscillateur quantique est exactement classique (Ehrenfest).</p>
-<p>Conséquence remarquable, objet des questions : ce nombre ne dépend pas de l&rsquo;état . <b>La réponse est la même à toute température</b>.</p>
+<p>Conséquence remarquable : ce nombre ne dépend pas de l&rsquo;état dans lequel se trouve l&rsquo;oscillateur. <b>La réponse est la même à toute température</b>.</p>
 </div>
 <p>La formule de Kubo est le socle de toute la physique de la réponse linéaire (susceptibilités, conductivités…).</p>
 <p>Quelle est la fonction de Green de la diffusion, et que nous raconte son pôle unique ?</p>
 <div id="preuve">
 <p>Un <b>mode hydrodynamique</b> est la fluctuation d&rsquo;une quantité conservée (le nombre de particules, l&rsquo;énergie, l&rsquo;impulsion).</p>
-<p>La traduction mathématique de la conservation de la quantité $n$ est l&rsquo;équation de continuité $\partial_t n - \mathbf{\nabla}\cdot \mathbf{j} = 0$. Si on lui adjoint une relation constitutive comme la loi de Fick, $\mathbf{j}=-D\mathbf{\nabla}n$, on obtient l&rsquo;équation de la diffusion $\partial_t n - D\nabla^2 n = 0$.</p>
+<p>La traduction mathématique de la conservation de la quantité $n$ est l&rsquo;équation de continuité $\partial_t n + \mathbf{\nabla}\cdot \mathbf{j} = 0$. Si on lui adjoint une relation constitutive comme la loi de Fick, $\mathbf{j}=-D\mathbf{\nabla}n$, on obtient l&rsquo;équation de la diffusion $\partial_t n - D\nabla^2 n = 0$.</p>
 <p>On place une source ponctuelle à $t = 0$ et on cherche $G$ telle que $G(\mathbf x - \mathbf y, t = 0) = \delta^{(3)}(\mathbf x - \mathbf y)$.</p>
 <p>En Fourier :</p>
 <p style="text-align:center;">
@@ -2300,13 +2300,10 @@ $
 </p>
 <p>L&rsquo;unique pôle est en $\omega = -iD\mathbf q^2$ : <b>sur l&rsquo;axe imaginaire, dans le demi-plan inférieur</b>.</p>
 <p>Comme dans le chapitre des propagateurs, on retrouve que rien ne se passe avant l&rsquo;origine des temps puisque le contour ne ramasse le pôle que pour $t &gt; 0$.</p>
-<p>Et pour $t&gt;0$, on récupère un pôle imaginaire pur $\Rightarrow$ aucune oscillation, une <b>relaxation pure</b> $e^{-D\mathbf q^2 t}$. Et cela donne une gaussienne qui s&rsquo;étale dans l&rsquo;espace réel $G \propto t^{-3/2},e^{-|\mathbf x|^2/4Dt}$.</li></p>
-</ul>
-</div>
+<p>Et pour $t&gt;0$, on récupère un pôle imaginaire pur $\Rightarrow$ aucune oscillation, une <b>relaxation pure</b> $e^{-D\mathbf q^2 t}$. Et cela donne une gaussienne qui s&rsquo;étale dans l&rsquo;espace réel $G \propto t^{-3/2},e^{-|\mathbf x|^2/4Dt}$.</p>
 <p>Après les pôles de masse $\pm(E_{\mathbf p} - i\varepsilon)$ donnant une propagation oscillante, on découvre donc le pôle $-iD\mathbf q^2$ correspondant à une décroissance sans phase.</p>
 <p>Et la <i>position</i> de ce nouveau pôle encode la physique hydrodynamique : les grandes longueurs d&rsquo;onde relaxent en un temps $1/D\mathbf q^2$, c&rsquo;est-à-dire lentement, expliquant pourquoi les modes hydrodynamiques dominent les temps longs. Peu importe les milliards de détails complexes et chaotiques des collisions moléculaires à l&rsquo;échelle microscopique, la physique aux temps longs est entièrement dictée par les lois de conservation du système.</p>
-</li>
-</ul>
+</div>
 <br>
 <h3 id="zj-pour-les-champs">$Z[J]$ pour les champs</h3>
 <p>On retourne la même manivelle en ajoutant une source au lagrangien, couplée linéairement au champ :</p>
@@ -2538,7 +2535,7 @@ $
 <p>Deux clous dans le vide : la troisième dérivation du <b>potentiel de Yukawa</b></p>
 <p>Théorie : $\mathcal L = \frac12(\partial\phi)^2 - \frac{m^2}{2}\phi^2 + gJ\phi$, avec pour source deux « clous » statiques plantés dans le vide, $J(x) = \delta^{(3)}(\mathbf x - \mathbf x_1) + \delta^{(3)}(\mathbf x - \mathbf x_2)$. Aucune particule ne diffuse : on demande seulement au vide <i>ce que ça lui coûte</i>.</p>
 <p>L&rsquo;haltère de cette théorie : $(\text{Dumbbell}) = \frac{(-ig)^2}{2}\int\mathrm{d}^4x\,\mathrm{d}^4y\;\, J(x)\,\Delta(x-y)\,J(y)$.</p>
-<p>Injectons les deux deltas et gardons les termes croisés $1 \leftrightarrow 2$ (l&rsquo;auto-énergie de chaque clou est une constante sans intérêt) ; les sources étant <i>statiques</i>, l&rsquo;intégrale sur les temps épingle $p^0 = 0$, et le propagateur de Feynman dégénère en fonction de Green statique — $\frac{\mathrm{i}}{p^2 - m^2 + \mathrm{i}\varepsilon}\big|_{p^0 = 0} = \frac{-\mathrm{i}}{\mathbf p^2 + m^2}$, plus besoin de $\mathrm{i}\varepsilon$. On retrouve la limite statique du propagateur de Feynman :</p>
+<p>Injectons les deux deltas et gardons les termes croisés $1 \leftrightarrow 2$ (l&rsquo;auto-énergie de chaque clou est une constante sans intérêt) ; les sources étant <i>statiques</i>, l&rsquo;intégrale sur les temps épingle $p^0 = 0$, et le propagateur de Feynman dégénère en fonction de Green statique, $\frac{\mathrm{i}}{p^2 - m^2 + \mathrm{i}\varepsilon}\big|_{p^0 = 0} = \frac{-\mathrm{i}}{\mathbf p^2 + m^2}$, plus besoin de $\mathrm{i}\varepsilon$. On retrouve la limite statique du propagateur de Feynman :</p>
 <p style="text-align:center;">
 $\displaystyle
 (\text{Dumbbell})_{12} = i g^2 \int\mathrm{d}x^0 \int\frac{\mathrm{d}^3p}{(2\pi)^3}\;\, \frac{e^{i\mathbf p\cdot(\mathbf x_1 - \mathbf x_2)}}{\mathbf p^2 + m^2}
@@ -2559,6 +2556,7 @@ $
 <li>Chapitre diffusion&nbsp;: limite de Born (il fallait des particules qui se croisent).</li>
 <li>Ici&nbsp;: <b>l'énergie du vide déformé par deux sources immobiles, lue directement dans $Z[J]$</b>. Pas de diffusion, pas de limite non relativiste&nbsp;: deux clous, et le vide qui répond en abaissant son énergie. La «&nbsp;force&nbsp;» est un déplacement d'énergie de point zéro.</li>
 </ul>
+</li>
 <li><b>Le signe est structurel</b>&nbsp;: $E < 0$, les clous s'attirent. L'échange d'un scalaire attire des sources identiques.</li>
 <li>Méthodologiquement&nbsp;: $\langle 0|\hat S|0\rangle = e^{-iET}$ est un <b>extracteur d'énergie du fondamental</b>. L'astuce resservira sans cesse (énergies de Casimir, potentiels effectifs).</li>
 </ul>
@@ -3935,16 +3933,16 @@ $
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785771173"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785771173"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785771173"></script>
-    <script src="/js/jquery.sticky.js?1785771173"></script>
-    <script src="/js/featherlight.min.js?1785771173"></script>
-    <script src="/js/highlight.pack.js?1785771173"></script>
+    <script src="/js/clipboard.min.js?1785887542"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785887542"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785887542"></script>
+    <script src="/js/jquery.sticky.js?1785887542"></script>
+    <script src="/js/featherlight.min.js?1785887542"></script>
+    <script src="/js/highlight.pack.js?1785887542"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785771173"></script>
-    <script src="/js/learn.js?1785771173"></script>
-    <script src="/js/hugo-learn.js?1785771173"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785887542"></script>
+    <script src="/js/learn.js?1785887542"></script>
+    <script src="/js/hugo-learn.js?1785887542"></script>
     
     
 

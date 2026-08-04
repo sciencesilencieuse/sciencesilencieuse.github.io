@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785771173" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785771173" rel="stylesheet">
-    <link href="/css/hybrid.css?1785771173" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785771173" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785771173" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785771173" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785771173" rel="stylesheet">
-    <link href="/css/theme.css?1785771173" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785771173" rel="stylesheet">
+    <link href="/css/nucleus.css?1785887542" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785887542" rel="stylesheet">
+    <link href="/css/hybrid.css?1785887542" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785887542" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785887542" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785887542" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785887542" rel="stylesheet">
+    <link href="/css/theme.css?1785887542" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785887542" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785771173" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785887542" rel="stylesheet">
     
-    <link href="/css/foo.css?1785771173" rel="stylesheet"><link href="/css/bar.css?1785771173" rel="stylesheet">
+    <link href="/css/foo.css?1785887542" rel="stylesheet"><link href="/css/bar.css?1785887542" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785771173"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785887542"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785771173"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785771173"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785887542"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785887542"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785771173"></script>
+<script type="text/javascript" src="/js/search.js?1785887542"></script>
 
     
   </div>
@@ -2118,6 +2118,14 @@ details[open] > summary:first-of-type {
 </table>
 </div>
 <br>
+<p>Les parties précédentes ont bâti les outils : champs quantifiés, symétries, propagateurs. Aucun d&rsquo;eux ne produit encore un <b>nombre mesurable</b>. Cette partie comble l&rsquo;écart, en trois temps qui répondent chacun à une question :</p>
+<ul>
+<li><b>Comment relier la théorie à une expérience&nbsp;?</b> Par la <b>matrice $S$</b>, qui n'enregistre que ce qu'on sait mesurer&nbsp;: l'état longtemps avant la collision et l'état longtemps après. Deux théorèmes la rendent calculable, Dyson et Wick.</li>
+<li><b>Comment organiser le calcul&nbsp;?</b> En le <b>dessinant</b>. Chaque terme de la série devient un <b>diagramme de Feynman</b>, et les règles de Feynman permettent d'écrire l'intégrale directement depuis le dessin, sans repasser par Wick.</li>
+<li><b>Comment en tirer un nombre&nbsp;?</b> Par la <b>section efficace</b>, la grandeur que l'expérimentateur mesure vraiment. On la calcule sur une théorie-jouet, $\psi^\dagger\psi\phi$, qui est la doublure de l'électrodynamique quantique.</li>
+</ul>
+<p>Un fil traverse le tout : la même quantité, l&rsquo;amplitude, se laisse écrire successivement comme une somme de contractions, comme une somme de dessins, puis comme une prédiction chiffrée.</p>
+<br>
 <h2 id="la-matrice-s">La matrice S</h2>
 <p>Les chapitres précédents ont construit le propagateur (l&rsquo;amplitude de propagation d&rsquo;un quantum). Ce chapitre construit l&rsquo;objet qui parle aux <i>expériences</i>. Trois idées s&rsquo;emboîtent :</p>
 <ul>
@@ -2126,7 +2134,6 @@ details[open] > summary:first-of-type {
 <li><b>Deux théorèmes de conversion</b>&nbsp;: la série de Dyson (qui écrit $\hat S$ comme exponentielle chronologique de l'interaction) et le théorème de Wick (qui convertit les produits chronologiques en produits de propagateurs). Le chapitre suivant ne fera plus que <i>dessiner</i> le résultat.</li>
 </ul>
 <br>
-<br>
 <h3 id="ce-quon-mesure">Ce qu&rsquo;on mesure</h3>
 <p>Posons $\hat H = \hat H_0 + \hat H&rsquo;$, où $\hat H_0$ est la partie <b>libre</b> (celle du chapitre précédent, exactement soluble, dont on connaît les états propres : le vide et les états de Fock) et $\hat H&rsquo;$ l&rsquo;<b>interaction</b>.</p>
 <p>Dans une collision, on ne mesure jamais « pendant », seulement « longtemps avant » et « longtemps après ».</p>
@@ -2134,7 +2141,7 @@ details[open] > summary:first-of-type {
 <ul style="margin-bottom:1em;">
 <li>on <b>prépare</b> des paquets d'ondes très éloignés les uns des autres (donc sans interaction, des états propres de $\hat H_0$)&nbsp;;</li> 
 <li>ils se rapprochent, interagissent pendant un temps fini&nbsp;;</li> 
-<li>on <b>détecte</b> des paquets à nouveau très éloignés (encore des états libres). Toute la physique accessible tient dans le tableau des amplitudes «&nbsp;entrée $\to$ sortie&nbsp;».
+<li>on <b>détecte</b> des paquets à nouveau très éloignés (encore des états libres). Toute la physique accessible tient dans le tableau des amplitudes «&nbsp;entrée $\to$ sortie&nbsp;».</li>
 </ul>
 <div id="def">
 <p>L&rsquo;opérateur $\hat S$ envoie les états libres du passé lointain sur ceux du futur lointain :</p>
@@ -2502,7 +2509,7 @@ Quatre pattes de champ se rencontrent en $z$ (le $4!$ est là pour simplifier le
 </div>
 <ul>
 <li>
-<p><b>Type Yukawa</b> : $\hat{\mathcal H}_I(z) = g,\hat\psi^\dagger(z)\hat\psi(z)\hat\phi(z)$, $\hat\psi$ complexe<br>
+<p><b>Type Yukawa</b> : $\hat{\mathcal H}_I(z) = g\,\hat\psi^\dagger(z)\hat\psi(z)\hat\phi(z)$, $\hat\psi$ complexe<br>
 Un $\psi$ (flèche entrante), un $\psi^\dagger$ (flèche sortante) et un $\phi$ se rencontrent en $z$. Même structure que QED ($\psi \to$ électron, $\phi \to$ photon)<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
 </li>
 </ul>
@@ -2574,19 +2581,19 @@ $</p>
 <p>Il reste à évaluer les <b>contractions externes</b> en suivant les règles de conversion :</p>
 <div id="theo">
 <ul style="margin-top:1em;margin-bottom:1em;">
-<li><b>Champ–champ</b> — le propagateur (cf. chapitre précédent>ici</a>)&nbsp;:
+<li><b>Champ–champ</b>&nbsp;: le propagateur (cf. <a href="../tqc6">chapitre précédent</a>)&nbsp;:
 <div style="text-align:center;margin:-1em 0;">
 <img src="/wick19-phiphi.svg" style="box-shadow:none;background:none;height:2.0em;">
 </div></li>
-<li><b>Champ–état initial</b> — une onde <b>entrante</b>&nbsp;:
+<li><b>Champ–état initial</b>&nbsp;: une onde <b>entrante</b>&nbsp;:
 <div style="text-align:center;margin:-1em 0;">
 <img src="/wick19-phi-adag.svg" style="box-shadow:none;background:none;height:2.6em;">
 </div></li>
-<li><b>Champ–état final</b> — une onde <b>sortante</b>&nbsp;:
+<li><b>Champ–état final</b>&nbsp;: une onde <b>sortante</b>&nbsp;:
 <div style="text-align:center;margin:-1em 0;">
 <img src="/wick19-aq-phi.svg" style="box-shadow:none;background:none;height:2.6em;">
 </div></li>
-<li><b>Initial–final</b> — rien ne s'est passé&nbsp;:
+<li><b>Initial–final</b>&nbsp;: rien ne s'est passé&nbsp;:
 <div style="text-align:center;margin:-1em 0;">
 <img src="/wick19-aa.svg" style="box-shadow:none;background:none;height:2.0em;">
 </div></li>
@@ -2732,7 +2739,7 @@ $$</p>
 $$</p>
 </div>
 <p>On applique maintenant le théorème de Wick pour obtenir les différents diagrammes. Celui qui nous intéresse est donné par le terme :</p>
-<div style="text-align:center;margin:-1em 0;">
+<div style="text-align:center;margin:0.8em 0;">
 <img src="/wicksaturne.svg" style="box-shadow:none;background:none;height:4.2em;">
 </div>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:120px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
@@ -2771,7 +2778,6 @@ intégrer la <i>position</i> d&rsquo;un vertex sur tout l&rsquo;espace-temps fab
 $$</p>
 </div>
 <p>Même nombre d&rsquo;intégrales qu&rsquo;en position, mais <b>plus aucune exponentielle</b> : c&rsquo;est pour cela qu&rsquo;on calcule en espace des impulsions.</p>
-</div>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:190px;max-width:100%;margin-bottom:-1em;margin-top:-2em;">
 <img src="/diagsatp.png" style="box-shadow:none;background:none;">
 </div>
@@ -2786,6 +2792,7 @@ $$</p>
 <li>chaque <b>ligne externe</b>&nbsp;: un facteur $1$ (en espace des impulsions, la contraction champ–état se réduit à $1$ grâce à la normalisation relativiste)&nbsp;;</li>
 <li><b>diviser</b> par le facteur de symétrie $D$&nbsp;;</li>
 <li>inclure le $\boldsymbol{(2\pi)^4\delta^{(4)}}$ <b>global</b> de conservation.</li>
+</ul>
 </div>
 <p>Les lignes externes ne portent <b>pas</b> de propagateur. Et on n&rsquo;intègre que les impulsions dont les deltas n&rsquo;ont pas déjà fixées (au moindre doute : mettre un delta par vertex et intégrer tout).</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:580px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
@@ -2843,7 +2850,7 @@ $\displaystyle
 <div class="notices note" style="--title: 'note';">
   <p style="display: none;">note</p>
   <div class="notice-body">
-    <p>On n&rsquo;a pas encore dit comment <i>faire</i> ces intégrales — parce que beaucoup divergent ! Apprivoiser ces infinis révèle une grande part de la physique cachée de la théorie des champs (renormalisation, ch. 32 du livre) ; certaines intégrales convergent, et le chapitre suivant en tire déjà de la physique mesurable.</p>
+    <p>On n&rsquo;a pas encore dit comment <i>faire</i> ces intégrales, et pour cause : beaucoup divergent ! Apprivoiser ces infinis révèle une grande part de la physique cachée de la théorie des champs (renormalisation, ch. 32 du livre) ; certaines intégrales convergent, et le chapitre suivant en tire déjà de la physique mesurable.</p>
 
   </div>
 </div>
@@ -2868,7 +2875,7 @@ $\displaystyle
 <h2 id="théorie-de-la-diffusion">Théorie de la diffusion</h2>
 <p>Les chapitres précédents ont construit la machinerie nécessaire pour déterminer une amplitude : propagateurs, matrice $S$, théorème de Wick, diagrammes. Ce chapitre utilise cette machinerie sur une expérience. Trois parties :</p>
 <ul>
-<li><b>Une nouvelle théorie-jouet</b>&nbsp;: la théorie $\psi^\dagger\psi\phi$ de Yukawa. C'est la <i>doublure</i> de l'électrodynamique quantique (mêmes gestes, sans les spins), et elle a le bon goût de différencier les antiparticules, ce que $\varphi^4$ ne pouvait pas faire.</li>
+<li><b>Une nouvelle théorie-jouet</b>&nbsp;: la théorie $\psi^\dagger\psi\phi$ de Yukawa. C'est la <i>doublure</i> de l'électrodynamique quantique (mêmes gestes, sans les spins), et elle a le bon goût de différencier les antiparticules, ce que $\phi^4$ ne pouvait pas faire.</li>
 <li><b>La grammaire des processus</b>&nbsp;: lire les flèches (flot de nombres, pas d'impulsions), reconnaître les trois canaux $s$, $t$, $u$, et distiller l'amplitude jusqu'à son cœur utile, l'amplitude invariante $\mathcal M$ (diagrammes connexes amputés, sans le $\delta^{(4)}$).</li>
 <li><b>Le nombre mesuré</b>&nbsp;: la section efficace, $\mathrm{d}\sigma/\mathrm{d}\Omega \propto |\mathcal M|^2$, et le grand bouclage&nbsp;: la limite non relativiste de l'échange d'un phion <i>redonne</i>, via l'approximation de Born, le potentiel de Yukawa découvert ici (ce qu'on avait posé à la main y est maintenant dérivé).</li>
 </ul>
@@ -2901,7 +2908,7 @@ le phion, réel, est sa propre antiparticule.</li>
 <li><b>Tous les termes du premier ordre sont nuls</b> pour nos processus.<br>
 Raison mécanique&nbsp;: $\hat{\mathcal H}_I$ contient <i>un seul</i> $\hat\phi$&nbsp;; entre deux vides sans phion externe, ce $\hat\phi$ orphelin ne peut être contracté avec personne, et $\langle 0|\hat\phi|0\rangle = 0$. (Pour du $2\to 2$, argument encore plus simple&nbsp;: impossible d'accrocher quatre pattes externes à un vertex qui n'en a que trois.)</li>
 <li><b>Tous les facteurs de symétrie valent $D = 1$</b>.<br>
-Raison&nbsp;: les trois pattes d'un vertex sont <i>toutes différentes</i> ($\psi$, $\psi^\dagger$, $\phi$). Aucune permutation interne ne redonne le même câblage, contrairement aux quatre pattes identiques de $\varphi^4$. Le comptage des contractions compense alors exactement le $1/n!$ de Dyson, sans surplus.</li>
+Raison&nbsp;: les trois pattes d'un vertex sont <i>toutes différentes</i> ($\psi$, $\psi^\dagger$, $\phi$). Aucune permutation interne ne redonne le même câblage, contrairement aux quatre pattes identiques de $\phi^4$. Le comptage des contractions compense alors exactement le $1/n!$ de Dyson, sans surplus.</li>
 </ul>
 <br>
 <h3 id="le-dictionnaire-des-contractions">Le dictionnaire des contractions</h3>
@@ -2923,7 +2930,7 @@ Raison&nbsp;: les trois pattes d'un vertex sont <i>toutes différentes</i> ($\ps
 <div style="text-align:center;margin:-1em 0;">
 <img src="/wickprop2.svg" style="box-shadow:none;background:none;height:3em;">
 </div>
-<b>Psion entrant / sortant</b> (la contraction entre $\hat\psi$ et $\hat a$ détruit ce que celle entre $\hat a^{\dagger}_{\mathbf p}$ a créé, et celle entre $\hat\psi^\dagger$ et $\hat a^{\dagger}$ crée ce que $\hat a_{\mathbf p}$ va détruire)&nbsp;:
+<p><b>Psion entrant / sortant</b> (la contraction entre $\hat\psi$ et $\hat a$ détruit ce que celle entre $\hat a^{\dagger}_{\mathbf p}$ a créé, et celle entre $\hat\psi^\dagger$ et $\hat a^{\dagger}$ crée ce que $\hat a_{\mathbf p}$ va détruire) :</p>
 <!-- LaTeX (simplewick) :
 \contraction{}{\hat\psi(x)}{\,}{\hat a^{\dagger}_{\mathbf p}}
 \hat\psi(x)\,\hat a^{\dagger}_{\mathbf p} = \frac{e^{-ip\cdot x}}{(2\pi)^{3/2}(2E_{\mathbf p})^{1/2}},
@@ -3030,7 +3037,7 @@ Intuition de sa valeur : la boucle $\hat\psi^\dagger(w)\hat\psi(w)$ au même po
 $$</p>
 </div>
 <p>Il existe aussi deux câblages <b>déconnectés</b> (la ligne directe $\hat a_{\mathbf p&rsquo;}\hat a^{\dagger}_{\mathbf p}$ accompagnée d&rsquo;un morceau de vide à deux vertex). Même sort qu&rsquo;au chapitre précédent : ils ne contribueront pas.</p>
-<!-- Figure à redessiner (L&B fig. 20.3) : les deux diagrammes déconnectés du second ordre — ligne directe â â† à côté (a) d'un « haltère » du vide (deux boucles psion reliées par un phion), (b) d'une « huître fermée » du vide (boucle psion double reliée par un phion) -->
+<!-- Figure à redessiner (L&B fig. 20.3) : les deux diagrammes déconnectés du second ordre : ligne directe â â† à côté (a) d'un « haltère » du vide (deux boucles psion reliées par un phion), (b) d'une « huître fermée » du vide (boucle psion double reliée par un phion) -->
 <div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/diagdecon.png" style="box-shadow:none;background:none;">
 </div>
@@ -3102,7 +3109,7 @@ Conséquence : <b>un antipsion a son impulsion opposée à son flot de nombre</
 <li>pour $\psi\bar\psi \to \psi\bar\psi$, canaux $t + s$ (car dans ce cas «&nbsp;échanger les sorties&nbsp;» échange <i>un psion et un antipsion</i>, particules parfaitement discernables. Le câblage type $u$ décrit alors un <i>autre</i> élément de matrice ($\langle \bar p' k'|\hat S|\bar k\, p\rangle$), pas le nôtre.</li>
 </ul>
 <br>
-<!-- Figure à redessiner (L&B fig. 20.4) : les trois câblages en espace-temps, avec les étiquettes de contraction à chaque extrémité — (a) canal t : deux lignes psion montantes reliées par un phion horizontal ; (b) canal u : pareil mais les deux lignes se CROISENT au-dessus du phion ; (c) canal s : psion et antipsion (flèche descendante) convergent vers le vertex du bas, phion VERTICAL, nouvelle paire au vertex du haut -->
+<!-- Figure à redessiner (L&B fig. 20.4) : les trois câblages en espace-temps, avec les étiquettes de contraction à chaque extrémité : (a) canal t : deux lignes psion montantes reliées par un phion horizontal ; (b) canal u : pareil mais les deux lignes se CROISENT au-dessus du phion ; (c) canal s : psion et antipsion (flèche descendante) convergent vers le vertex du bas, phion VERTICAL, nouvelle paire au vertex du haut -->
 <div id="theo">
 <p><b>Règles de Feynman de la théorie $\psi^\dagger\psi\phi$</b> (espace des impulsions) :</p>
 <ul>
@@ -3303,10 +3310,21 @@ $</p>
 <li>Les flèches des lignes = <b>flot de nombre</b>, jamais l'impulsion&nbsp;; un antipsion a l'impulsion opposée à sa flèche.</li>
 <li>Savoir <i>qui</i> additionner&nbsp;: $\psi\psi \to t + u$&nbsp;; $\psi\bar\psi \to t + s$.</li>
 <li>Seuls les diagrammes connexes <i>et amputés</i> nourrissent $\mathcal M$.</li>
-<li>$D = 1$ dans cette théorie, mais c'est une propriété du vertex à pattes toutes distinctes, pas une loi générale (cf. $\varphi^4$).</li>
+<li>$D = 1$ dans cette théorie, mais c'est une propriété du vertex à pattes toutes distinctes, pas une loi générale (cf. $\phi^4$).</li>
 <li>Le canal $s$ a un pôle en $s = \mu^2$&nbsp;: si l'énergie de collision atteint la masse du médiateur, l'amplitude explose. C'est une <i>résonance</i>, le pôle du propagateur de la partie précédente vu depuis l'accélérateur (sa largeur viendra des corrections d'ordre supérieur).</li>
 </ul>
 <br>
+
+<div class="notices note" style="--title: 'note';">
+  <p style="display: none;">note</p>
+  <div class="notice-body">
+    <p>Et maintenant ? Nous savons dessiner une amplitude et la convertir en section efficace, mais nous avons esquivé une difficulté majeure : dès qu&rsquo;un diagramme contient une <b>boucle</b>, l&rsquo;intégrale sur l&rsquo;impulsion interne <b>diverge</b>.<br><br>
+La partie suivante prépare le terrain en donnant un second moteur à la machine, l&rsquo;<b>intégrale de chemin</b> et la fonctionnelle génératrice $Z[J]$, qui feront apparaître les mêmes diagrammes par une tout autre route. Les infinis, eux, seront affrontés plus loin, avec la renormalisation.</p>
+
+  </div>
+</div>
+
+
 <br>
 <div style="overflow-x: auto;text-align:center;">
 <table>
@@ -4660,16 +4678,16 @@ $</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785771173"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785771173"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785771173"></script>
-    <script src="/js/jquery.sticky.js?1785771173"></script>
-    <script src="/js/featherlight.min.js?1785771173"></script>
-    <script src="/js/highlight.pack.js?1785771173"></script>
+    <script src="/js/clipboard.min.js?1785887542"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785887542"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785887542"></script>
+    <script src="/js/jquery.sticky.js?1785887542"></script>
+    <script src="/js/featherlight.min.js?1785887542"></script>
+    <script src="/js/highlight.pack.js?1785887542"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785771173"></script>
-    <script src="/js/learn.js?1785771173"></script>
-    <script src="/js/hugo-learn.js?1785771173"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785887542"></script>
+    <script src="/js/learn.js?1785887542"></script>
+    <script src="/js/hugo-learn.js?1785887542"></script>
     
     
 
