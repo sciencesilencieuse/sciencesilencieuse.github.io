@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785951060" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785951060" rel="stylesheet">
-    <link href="/css/hybrid.css?1785951060" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785951060" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785951060" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785951060" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785951060" rel="stylesheet">
-    <link href="/css/theme.css?1785951060" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785951060" rel="stylesheet">
+    <link href="/css/nucleus.css?1785967551" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785967551" rel="stylesheet">
+    <link href="/css/hybrid.css?1785967551" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785967551" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785967551" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785967551" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785967551" rel="stylesheet">
+    <link href="/css/theme.css?1785967551" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785967551" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785951060" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785967551" rel="stylesheet">
     
-    <link href="/css/foo.css?1785951060" rel="stylesheet"><link href="/css/bar.css?1785951060" rel="stylesheet">
+    <link href="/css/foo.css?1785967551" rel="stylesheet"><link href="/css/bar.css?1785967551" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785951060"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785967551"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785951060"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785951060"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785967551"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785967551"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785951060"></script>
+<script type="text/javascript" src="/js/search.js?1785967551"></script>
 
     
   </div>
@@ -2302,8 +2302,91 @@ La dernière égalité vient de la transformée de $\hat L G = \delta$ sachant $
 <div id="preuve">
 <ul style="margin-top:1em;margin-bottom:1em;">
 <li><b>Klein-Gordon statique</b>&nbsp;: $\hat L = -\nabla^2 + m^2$ $\Rightarrow$ $L(\mathbf k) = \mathbf k^2 + m^2$<br>
-On en déduit $\tilde G(\mathbf k) = \dfrac{1}{\mathbf k^2 + m^2}$, dont la transformée inverse en 3D est le potentiel de Yukawa $\dfrac{\mathrm e^{-mr}}{4\pi r}$.<br>
-Aucun zéro réel de $L$&nbsp;: pas de mode propagatif, pas de subtilité de contour.</li>
+On en déduit $\tilde G(\mathbf k) = \dfrac{1}{\mathbf k^2 + m^2}$, dont la transformée inverse en 3D est le potentiel de Yukawa $\dfrac{\mathrm e^{-mr}}{4\pi r}$.
+<details style="background-color:#F4F4F4;border-radius:5px;padding:5px;margin-top:0.5em;">
+<summary>
+Preuve&nbsp;:
+</summary>
+<p>On cherche :</p>
+<p style="text-align:center;">
+$\displaystyle
+V(\mathbf r)=\int_{\mathbb{R}^3} \frac{\mathrm d^3k}{(2\pi)^3} \frac{1}{\mathbf k^2 + m^2} \mathrm e^{\mathrm i \mathbf{k} \cdot \mathbf{r}}
+$
+</p>
+<p>Pour évaluer cette intégrale sur l&rsquo;espace des moments, on choisit un système de coordonnées sphériques $(k, \theta, \phi)$   dans lequel l&rsquo;axe $z$ est aligné avec le vecteur position $\mathbf{r}$.<br>
+Dans ce repère, le produit scalaire s&rsquo;écrit $\mathbf{k} \cdot \mathbf{r} = kr \cos\theta$, et l&rsquo;élément de volume est $\mathrm d^3k = k^2 \sin\theta \, \mathrm dk \, \mathrm d\theta \, \mathrm d\phi$. L&rsquo;intégrale devient :</p>
+<p style="text-align:center;">
+$\displaystyle
+V(\mathbf{r}) = \frac{1}{(2\pi)^3} \int_0^\infty \!\! \mathrm dk \int_0^\pi \!\! \mathrm d\theta \int_0^{2\pi} \!\! \mathrm d\phi \frac{k^2 \sin\theta}{k^2 + m^2} \mathrm e^{\mathrm i k r \cos\theta}
+$
+</p>
+<p>L&rsquo;intégration sur l&rsquo;angle azimutal $\phi$ donne immédiatement un facteur $2\pi$. L&rsquo;intégrale se réduit à :</p>
+<p style="text-align:center;">
+$\displaystyle
+V(\mathbf{r}) = \frac{1}{(2\pi)^2} \int_0^\infty \!\! \mathrm dk \frac{k^2}{k^2 + m^2} \int_0^\pi \sin\theta \, \mathrm e^{\mathrm i k r \cos\theta} \mathrm d\theta
+$
+</p>
+<p>Pour intégrer sur $\theta$, on effectue le changement de variable $u = \cos\theta$, ce qui donne $\mathrm du = -\sin\theta \, \mathrm d\theta$. Les bornes d&rsquo;intégration passent de $1$ à $-1$ (ou de $-1$ à $1$ en absorbant le signe moins) :</p>
+<p style="text-align:center;">
+$\displaystyle
+\int_0^\pi \sin\theta \, \mathrm e^{\mathrm i k r \cos\theta} \mathrm d\theta = \int_{-1}^1 \mathrm e^{\mathrm i k r u} \mathrm du = \left[ \frac{\mathrm e^{\mathrm i k r u}}{i k r} \right]_{-1}^1 = \frac{\mathrm e^{\mathrm i k r} - \mathrm e^{-\mathrm i k r}}{\mathrm i k r}
+$
+</p>
+<p>En réinjectant ce résultat dans l&rsquo;expression de $V(\mathbf{r})$, on obtient :</p>
+<p style="text-align:center;">
+$\displaystyle
+V(\mathbf{r}) = \frac{1}{(2\pi)^2} \int_0^\infty \!\! \mathrm dk \, \frac{k^2}{k^2 + m^2} \frac{\mathrm e^{\mathrm i k r} - \mathrm e^{-\mathrm i k r}}{\mathrm i k r} = \frac{1}{(2\pi)^2 \mathrm i r} \int_0^\infty \frac{k}{k^2 + m^2} \left( \mathrm e^{\mathrm i k r} - \mathrm e^{-\mathrm i k r} \right) \mathrm dk
+$
+</p>
+Pour utiliser le théorème des résidus, il est plus commode d'avoir une intégrale de $-\infty$ à $+\infty$. Séparons l'intégrale en deux termes&nbsp;:
+<p style="text-align:center;">
+$\displaystyle
+\int_0^\infty \frac{k \mathrm e^{\mathrm i k r}}{k^2 + m^2} \mathrm dk - \int_0^\infty \frac{k \mathrm e^{-\mathrm i k r}}{k^2 + m^2} \mathrm dk
+$
+</p>
+<p>Dans le second terme, on pose $k&rsquo; = -k$. Il devient :</p>
+<p style="text-align:center;">
+$\displaystyle
+- \int_0^{-\infty} \frac{-k' \mathrm e^{\mathrm i k' r}}{k'^2 + m^2} (-\mathrm dk') = \int_{-\infty}^0 \frac{k' \mathrm e^{\mathrm i k' r}}{k'^2 + m^2} \mathrm dk'
+$
+</p>
+En rassemblant les deux termes, l'intégrale sur $[0, +\infty[$  et l'intégrale sur $]-\infty, 0]$  se combinent parfaitement pour former une seule intégrale sur $\mathbb{R}$&nbsp;:
+<p style="text-align:center;">
+$\displaystyle
+V(\mathbf{r}) = \frac{1}{(2\pi)^2 \mathrm i r} \int_{-\infty}^\infty \frac{k\, \mathrm e^{\mathrm i k r}}{k^2 + m^2} \mathrm dk
+$
+</p>
+<p>Considérons l&rsquo;intégrale complexe :</p>
+<p style="text-align:center;">
+$\displaystyle
+I = \int_{-\infty}^\infty \frac{z \, \mathrm e^{\mathrm i z r}}{z^2 + m^2} \mathrm dz
+$
+</p>
+Puisque $r > 0$, l'exponentielle $\mathrm e^{\mathrm i z r}$ décroît de façon exponentielle dans le demi-plan supérieur complexe (où $\text{Im}(z) > 0$). On peut donc fermer le contour d'intégration par un grand demi-cercle dans ce demi-plan supérieur. La contribution de ce demi-cercle tend vers 0 (lemme de Jordan).<br>
+L'intégrande possède deux pôles simples là où $z^2 + m^2 = 0$, c'est-à-dire en $z = \mathrm im$ et $z = -\mathrm im$.<br>
+Seul le pôle $z = \mathrm im$ se trouve à l'intérieur de notre contour fermé.<br>
+Le résidu en $z = \mathrm im$ est&nbsp;:
+<p style="text-align:center;">
+$\displaystyle
+\text{Res}(\mathrm im) = \lim_{z \to \mathrm im} (z - \mathrm im) \frac{z \, \mathrm e^{\mathrm i z r}}{(z - \mathrm im)(z + \mathrm im)} = \frac{\mathrm im \, \mathrm e^{\mathrm i (im) r}}{\mathrm im + \mathrm im} = \frac{\mathrm im \, \mathrm e^{-mr}}{2\mathrm im} = \frac{1}{2} \mathrm e^{-mr}
+$
+</p>
+<p>D&rsquo;après le théorème des résidus :</p>
+<p style="text-align:center;">
+$\displaystyle
+I = 2\mathrm i\pi \times \text{Res}(\mathrm im) = 2\mathrm i\pi \left( \frac{1}{2} \mathrm e^{-mr} \right) = \mathrm i\pi \, \mathrm e^{-mr}
+$
+</p>
+<p>Il ne reste plus qu&rsquo;à substituer $I$ dans l&rsquo;expression de $V(\mathbf{r})$ :</p>
+<p style="text-align:center;">
+$\displaystyle
+V(\mathbf{r}) = \frac{1}{(2\pi)^2 \mathrm i r} \times \mathrm i\pi \mathrm e^{-mr} = \frac{\mathrm e^{-mr}}{4\pi r}
+$
+</p>
+<p>On retrouve bien l&rsquo;expression spatiale du potentiel de Yukawa.</p>
+</details>
+<p>Aucun zéro réel de $L$ : pas de mode propagatif, pas de subtilité de contour.</li></p>
+</li>
 <li><b>Schrödinger</b>&nbsp;: $\hat L = \mathrm i\partial_t - \hat H_0$ $\Rightarrow$ $L(E) = E - \dfrac{p^2}{2m}$<br>
 Ici $L$ s'annule sur la relation de dispersion. $\tilde G = 1/L$ n'est donc pas défini tel quel (les modes propres du système libre sont des obstructions à l'inversion). Toute la prescription $i\varepsilon$ (voir la suite) est la réponse à ce problème&nbsp;: comment diviser par quelque chose qui s'annule.</li>
 </ul>
@@ -4367,16 +4450,16 @@ $$ où $\mathcal C$ est le contour fermé (droite réelle + arc).&#160;<a href="
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785951060"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785951060"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785951060"></script>
-    <script src="/js/jquery.sticky.js?1785951060"></script>
-    <script src="/js/featherlight.min.js?1785951060"></script>
-    <script src="/js/highlight.pack.js?1785951060"></script>
+    <script src="/js/clipboard.min.js?1785967551"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785967551"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785967551"></script>
+    <script src="/js/jquery.sticky.js?1785967551"></script>
+    <script src="/js/featherlight.min.js?1785967551"></script>
+    <script src="/js/highlight.pack.js?1785967551"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785951060"></script>
-    <script src="/js/learn.js?1785951060"></script>
-    <script src="/js/hugo-learn.js?1785951060"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785967551"></script>
+    <script src="/js/learn.js?1785967551"></script>
+    <script src="/js/hugo-learn.js?1785967551"></script>
     
     
 
