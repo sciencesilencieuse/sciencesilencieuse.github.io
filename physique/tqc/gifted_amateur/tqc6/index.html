@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785887542" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785887542" rel="stylesheet">
-    <link href="/css/hybrid.css?1785887542" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785887542" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785887542" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785887542" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785887542" rel="stylesheet">
-    <link href="/css/theme.css?1785887542" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785887542" rel="stylesheet">
+    <link href="/css/nucleus.css?1785888288" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785888288" rel="stylesheet">
+    <link href="/css/hybrid.css?1785888288" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785888288" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785888288" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785888288" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785888288" rel="stylesheet">
+    <link href="/css/theme.css?1785888288" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785888288" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785887542" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785888288" rel="stylesheet">
     
-    <link href="/css/foo.css?1785887542" rel="stylesheet"><link href="/css/bar.css?1785887542" rel="stylesheet">
+    <link href="/css/foo.css?1785888288" rel="stylesheet"><link href="/css/bar.css?1785888288" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785887542"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785888288"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785887542"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785887542"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785888288"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785888288"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785887542"></script>
+<script type="text/javascript" src="/js/search.js?1785888288"></script>
 
     
   </div>
@@ -1985,6 +1985,8 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
         <li><a href="#représentation-spectrale">Représentation spectrale</a></li>
         <li><a href="#les-pôles-encodent-la-causalité">Les pôles encodent la causalité</a></li>
         <li><a href="#théorie-des-perturbations-et-équation-de-dyson">Théorie des perturbations et équation de Dyson</a></li>
+        <li><a href="#bilan">Bilan</a></li>
+        <li><a href="#pièges">Pièges</a></li>
       </ul>
     </li>
     <li><a href="#propagateurs-et-champs">Propagateurs et champs</a>
@@ -1996,6 +1998,8 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
         <li><a href="#yukawa-les-forces-comme-échange-de-particules">Yukawa : les forces comme échange de particules</a></li>
         <li><a href="#particules-réelles-particules-virtuelles">Particules réelles, particules virtuelles</a></li>
         <li><a href="#dictionnaire-mécanique-quantique--champ-scalaire">Dictionnaire : mécanique quantique ↔ champ scalaire</a></li>
+        <li><a href="#bilan-1">Bilan</a></li>
+        <li><a href="#pièges-1">Pièges</a></li>
       </ul>
     </li>
   </ul>
@@ -2102,6 +2106,13 @@ details[open] > summary:first-of-type {
     </tr>
 </table>
 </div>
+<br>
+<p>Les parties précédentes ont quantifié des champs et exploité leurs symétries. Il manque encore l&rsquo;objet qui relie tout cela à un calcul : le <b>propagateur</b>, c&rsquo;est-à-dire l&rsquo;amplitude pour qu&rsquo;un quantum aille d&rsquo;un point à un autre. Cette partie le construit en deux temps.</p>
+<ul>
+<li><b>D'abord en mécanique quantique</b>, où le propagateur se révèle être une <b>fonction de Green</b> ordinaire, celle de l'équation de Schrödinger. Ce détour n'est pas une révision&nbsp;: il installe les trois idées qui resserviront intactes, à savoir que les <b>pôles portent le spectre</b>, que la <b>prescription $\mathrm i\varepsilon$ encode la causalité</b>, et que l'<b>équation de Dyson</b> transforme une interaction en série de propagations libres entrecoupées de chocs ponctuels.</li>
+<li><b>Puis pour un champ relativiste</b>, où deux difficultés nouvelles apparaissent&nbsp;: l'amplitude élémentaire $D(x-y)$ ne s'annule pas hors du cône de lumière, et le spectre contient des fréquences des deux signes. La réponse aux deux est le même objet, le <b>propagateur de Feynman</b> $\Delta_F$, qui propage les particules vers le futur et les antiparticules vers le passé.</li>
+</ul>
+<p>La récompense arrive dès la fin de la partie : le potentiel de <b>Yukawa</b>, c&rsquo;est-à-dire l&rsquo;explication des forces par échange de particules virtuelles, et la première brique des diagrammes de Feynman.</p>
 <br>
 <h2 id="fonction-de-green-et-propagateur">Fonction de Green et propagateur</h2>
 <ul>
@@ -2327,7 +2338,7 @@ $
 <li>$\theta'(\tau) = \delta(\tau)$ au sens des distributions.</li>
 <li>$\delta(\tau) K(\tau) = \delta(\tau) K(0)$ (le Dirac ne « voit » que $\tau = 0$), et $K(0) = \langle x | \mathrm e^{0} | x'\rangle = \langle x | x' \rangle = \delta(x - x')$.</li>
 <li> $\partial_\tau K(\tau) = \langle x| (-i\hat H)\, \mathrm e^{-\mathrm i\hat H\tau} |x'\rangle = -\,\mathrm i\, \hat H_x\, K(\tau)$
-   où $\hat H_x$ est l'opérateur différentiel agissant sur la variable $x$ (c'est la définition même de la représentation position&nbsp;: $\langle x|\hat H \hat A|x'\rangle = \hat H_x \langle x|\hat A|x'\rangle$).
+   où $\hat H_x$ est l'opérateur différentiel agissant sur la variable $x$ (c'est la définition même de la représentation position&nbsp;: $\langle x|\hat H \hat A|x'\rangle = \hat H_x \langle x|\hat A|x'\rangle$).</li>
 </ul>
 <p>On a donc :</p>
 <p style="text-align:center;">
@@ -2540,12 +2551,51 @@ $$</p>
 <img src="/formuledyson.png" style="box-shadow:none;background:none;">
 </div>
 <br>
+<h3 id="bilan">Bilan</h3>
+<p style="text-align:center;">
+$\displaystyle
+\text{opérateur linéaire } \hat L
+\;\xrightarrow{\ \hat L\,G = \delta\ }\;
+\text{réponse impulsionnelle } G
+\;\xrightarrow{\ \text{superposition}\ }\;
+\text{solution avec source quelconque}
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+\langle x,t\,|\,x',t'\rangle
+\;\xrightarrow{\ \times\,\theta(t-t')\ }\;
+G^+
+\;\xrightarrow{\ \text{Fourier}\ }\;
+\tilde G^+(E) = \sum_n \frac{\lvert n\rangle\langle n\rvert}{E - E_n + \mathrm i\varepsilon}
+\;\xrightarrow{\ \text{pôles}\ }\;
+\text{spectre}
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+\hat H = \hat H_0 + \hat V
+\;\xrightarrow{\ \text{Dyson}\ }\;
+G = G_0 + G_0 V G_0 + G_0 V G_0 V G_0 + \cdots
+\;\xrightarrow{\ \text{dessin}\ }\;
+\text{diagrammes}
+$
+</p>
+<h3 id="pièges">Pièges</h3>
+<ul>
+<li>Une fonction de Green n'est pas <i>la</i> solution&nbsp;: c'est la réponse à une source ponctuelle, dont toutes les autres se déduisent par superposition. Elle n'est définie qu'à une solution de l'équation homogène près, et ce sont les <b>conditions aux limites</b> qui la fixent.</li>
+<li>Le $\mathrm i\varepsilon$ n'est pas une commodité de calcul&nbsp;: c'est <b>la causalité</b>. Le déplacer d'un côté ou de l'autre de l'axe réel échange fonction de Green retardée et avancée, donc échange passé et futur.</li>
+<li>Les pôles sont en $E_n - \mathrm i\varepsilon$, donc <b>tous</b> dans le demi-plan inférieur pour $G^+$. C'est ce qui permet de fermer le contour par le haut pour $t < t'$ et d'obtenir zéro, autrement dit de ne rien propager vers le passé.</li>
+<li>Dans la série de Dyson, chaque $V$ est une interaction <b>ponctuelle</b> et chaque $G_0$ une propagation <b>libre</b>. Ce découpage est un artefact du développement, pas une chronologie observable&nbsp;: on ne peut pas dater les chocs.</li>
+<li>Convolution et produit s'échangent par transformée de Fourier, et c'est tout l'intérêt du passage en $E$&nbsp;: la série de Dyson y devient une série <b>géométrique</b>, sommable en $\tilde G = (\tilde G_0^{-1} - \tilde V)^{-1}$.</li>
+</ul>
+<br>
 <h2 id="propagateurs-et-champs">Propagateurs et champs</h2>
 <p>Le chapitre précédent a établi le programme : le propagateur est une fonction de Green, ses pôles portent le spectre, et la position infinitésimale des pôles code les conditions aux limites temporelles. Ce chapitre exécute ce programme pour un champ relativiste, où trois nouveautés surgissent :</p>
 <ul>
 <li>L'objet élémentaire n'est plus $\langle x|\mathrm e^{-\mathrm i\hat H\tau}|x'\rangle$ mais $\langle 0|\hat\phi(x)\hat\phi(y)|0\rangle$&nbsp;: <b>créer</b> une particule du vide en $y$, la <b>détruire</b> en $x$ (en théorie des champs, le nombre de particules n'est pas conservé et l'opérateur de champ est précisément l'objet qui crée et détruit).</li>
 <li><b>Les antiparticules</b>&nbsp;: le spectre relativiste contient des fréquences des deux signes. Il faut pouvoir propager les fréquences positives vers le futur et les négatives vers le passé. C'est l'<b>ordre chronologique</b> $T$ qui accomplit cela. Il correspond au contour « panaché » du <a href="./#tableau">tableau</a> du chapitre précédent.</li>
-<li>La récompense&nbsp;: $\Delta_F(p) = \dfrac{\mathrm i}{p^2 - m^2 + \mathrm i\varepsilon}$, une première brique des diagrammes de Feynman. Et déjà, en régime statique, l'explication des forces par échange de particules virtuelles (Yukawa).
+<li>La récompense&nbsp;: $\Delta_F(p) = \dfrac{\mathrm i}{p^2 - m^2 + \mathrm i\varepsilon}$, une première brique des diagrammes de Feynman. Et déjà, en régime statique, l'explication des forces par échange de particules virtuelles (Yukawa).</li>
 </ul>
 <br>
 <h3 id="lamplitude-élémentaire-dx-y">L&rsquo;amplitude élémentaire $D(x-y)$</h3>
@@ -2764,7 +2814,7 @@ $
 <p>Reconnaissance en deux morceaux :</p>
 <ul>
 <li><i>L'exposant</i>&nbsp;: $E_{\mathbf p}t - \mathbf p\cdot\mathbf r = p\cdot(x-y)$ évalué <b>sur la couche de masse</b> $p^0 = E_{\mathbf p}$. Le résidu a fait le travail d'une fonction delta&nbsp;: il a épinglé le $p^0$ libre sur la couche de masse.</li>
-<li><i>La mesure</i>&nbsp;: le $1/2E_{\mathbf p}$ sorti du résidu reconstitue exactement $\widetilde{\mathrm{d}p}$ — c'est le <i>même</i> $1/2E_{\mathbf p}$ que celui de $\delta\big((p^0)^2 - E_{\mathbf p}^2\big) = [\delta(p^0 - E_{\mathbf p}) + \delta(p^0 + E_{\mathbf p})]/2E_{\mathbf p}$ de la mesure invariante.</li>
+<li><i>La mesure</i>&nbsp;: le $1/2E_{\mathbf p}$ sorti du résidu reconstitue exactement $\widetilde{\mathrm{d}p}$, et c'est le <i>même</i> $1/2E_{\mathbf p}$ que celui de $\delta\big((p^0)^2 - E_{\mathbf p}^2\big) = [\delta(p^0 - E_{\mathbf p}) + \delta(p^0 + E_{\mathbf p})]/2E_{\mathbf p}$ de la mesure invariante.</li>
 </ul>
 <p>D&rsquo;où $\Delta(t&gt;0) = \int \widetilde{\mathrm{d}p}\, \mathrm e^{-\mathrm ip\cdot(x-y)}\big|_{p^0 = E_{\mathbf p}} = D(x-y)$.</p>
 <p><u>Piège du cas $t&lt;0$</u> : le même recollement donne $\int \widetilde{\mathrm{d}p}\, \mathrm e^{+\mathrm iE_{\mathbf p}t + \mathrm i\mathbf p\cdot\mathbf r}$, alors que la cible est $D(y-x) = \int \widetilde{\mathrm{d}p}\, \mathrm e^{+\mathrm iE_{\mathbf p}t - \mathrm i\mathbf p\cdot\mathbf r}$ : il faut un dernier changement de variable $\mathbf p \to -\mathbf p$ (licite car la mesure est paire) pour conclure.</p>
@@ -2825,7 +2875,7 @@ La maxime « décomposer – faire tourner – recomposer » a ici sa version 
 L'intégrale pas à pas
 </summary>
 <p>On veut $I(r) = \int \frac{\mathrm{d}^3 q}{(2\pi)^3} \frac{\mathrm e^{\mathrm i\mathbf q\cdot\mathbf r}}{\mathbf q^2 + m^2}$ pour $r = |\mathbf r| &gt; 0$.</p>
-<p>On se place en coordonnées sphériques avec un axe polaire selon $\mathbf r$</b> : $\mathbf q\cdot\mathbf r = qr\cos\theta$ et $\mathrm{d}^3q = q^2\sin(\theta)\mathrm{d}q\,\mathrm{d}\theta\,\mathrm{d}\phi$.</p>
+<p><b>On se place en coordonnées sphériques</b> avec un axe polaire selon $\mathbf r$ : $\mathbf q\cdot\mathbf r = qr\cos\theta$ et $\mathrm{d}^3q = q^2\sin(\theta)\mathrm{d}q\,\mathrm{d}\theta\,\mathrm{d}\phi$.</p>
 <p>L&rsquo;intégrale sur $\phi$ donne $2\pi$.</p>
 <p>On pose $u = \cos\theta$ :</p>
 <p>$$
@@ -2885,10 +2935,11 @@ Mêmes mathématiques en matière condensée&nbsp;: l'écrantage de Thomas–Fer
 <ul>
 <li>Première comptabilité (celle de l'image populaire). On raconte le processus comme un film horodaté&nbsp;: à $t_1$, la source 1 émet le quantum&nbsp;; entre $t_1$ et $t_2$, il vole&nbsp;; à $t_2$, la source 2 l'absorbe. Dans ce récit, on exige que le quantum intermédiaire soit une <i>vraie</i> particule, d'énergie $E_{\mathbf p} = \sqrt{\mathbf p^2 + m^2}$ (sur couche). Mais alors le bilan ne tombe pas juste&nbsp;: pendant $[t_1, t_2]$, l'énergie de l'état intermédiaire dépasse l'énergie initiale (il a fallu fabriquer le quantum d'au moins $mc^2$). La théorie ne s'en émeut pas&nbsp;: cet état n'est jamais mesuré, et son poids dans la somme est <i>pénalisé</i> par l'écart (ce sont exactement les dénominateurs en $1/(E - E_{\text{interm}})$ de la série de Dyson du chapitre précédent). Et un écart $\Delta E$ ne pèse que sur des durées $\lesssim \hbar/\Delta E$&nbsp;: simple fait de transformée de Fourier (une composante dont la fréquence est décalée de $\Delta E/\hbar$ se brouille par interférence au-delà de $\hbar/\Delta E$). L'heuristique «&nbsp;$\Delta E \cdot \Delta t$&nbsp;» n'est donc pas un droit de tirage sur une banque d'énergie&nbsp;: c'est la mesure du prix payé par un terme dont le bilan intermédiaire ne tombe pas juste.</li>
 <li style="margin-top:0.5em;">Seconde comptabilité (celle des diagrammes de Feynman). On renonce à dater les étapes (prix de la covariance&nbsp;: pour deux événements séparés d'un intervalle de genre espace, l'ordre chronologique dépend du référentiel), et on impose à la place la conservation <i>exacte</i> de la quadri-impulsion à chaque vertex. Le bilan tombe juste partout, à tout instant… mais l'écart a changé de colonne&nbsp;: la ligne interne porte maintenant un $p$ qui ne vérifie pas $p^2 = m^2$ (il est hors couche). Ce n'est plus une vraie particule&nbsp;: c'est une variable d'intégration.</li>
+</ul>
 <p>Bilan. Même amplitude totale, deux découpages du même calcul : soit de <i>vraies particules</i> intermédiaires avec un bilan d&rsquo;énergie provisoirement faux (et pénalisé), soit un bilan d&rsquo;énergie exact avec des objets intermédiaires qui ne sont <i>pas de vraies particules</i>. Ce qui n&rsquo;existe dans aucune des deux colonnes : une vraie particule <b>et</b> une vraie violation. Rien n&rsquo;est emprunté, on choisit seulement dans quelle colonne inscrire l&rsquo;écart, et la physique mesurable (l&rsquo;amplitude, la portée $\mathrm e^{-mr}$) est identique dans les deux.</p>
 <h4 id="gamme-des-portées">Gamme des portées</h4>
 <br>
-<div : style="overflow-x:auto;">
+<div style="overflow-x:auto;">
 <table>
 	<thead>
 			<tr>
@@ -2970,6 +3021,51 @@ Mêmes mathématiques en matière condensée&nbsp;: l'écrantage de Thomas–Fer
 </table>
 </div>
 <br>
+<h3 id="bilan-1">Bilan</h3>
+<p style="text-align:center;">
+$\displaystyle
+\langle 0|\hat\phi(x)\hat\phi(y)|0\rangle = D(x-y)
+\;\xrightarrow{\ \text{ne s'annule pas hors du cône}\ }\;
+\text{crise de causalité}
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+[\hat\phi(x),\hat\phi(y)] = D(x-y) - D(y-x) = 0 \ \text{hors du cône}
+\;\xrightarrow{\ \text{les deux ordres se compensent}\ }\;
+\text{causalité sauvée}
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+\Delta_F = \langle 0|T\,\hat\phi(x)\hat\phi(y)|0\rangle
+\;\xrightarrow{\ \text{Fourier}\ }\;
+\frac{\mathrm i}{p^2 - m^2 + \mathrm i\varepsilon}
+\;\xrightarrow{\ \text{statique}\ }\;
+V(r) = -\frac{g^2}{4\pi}\frac{\mathrm e^{-mr}}{r}
+$
+</p>
+<h3 id="pièges-1">Pièges</h3>
+<ul>
+<li>$D(x-y)$ et $\Delta_F(x-y)$ sont <b>deux objets différents</b>. Le premier est une amplitude nue, qui survit hors du cône de lumière&nbsp;; le second est ordonné dans le temps, et c'est lui qui apparaît dans les diagrammes.</li>
+<li>Ce n'est pas $D$ qui s'annule hors du cône, c'est le <b>commutateur</b>. La causalité n'exige pas qu'aucune amplitude ne franchisse le cône, mais qu'aucune <b>mesure</b> ne puisse en révéler le franchissement&nbsp;: les deux ordres temporels se compensent exactement.</li>
+<li>Le $\mathrm i\varepsilon$ de $\Delta_F$ ne déplace pas les deux pôles du même côté, contrairement au cas non relativiste&nbsp;: $+E_{\mathbf p}$ passe <b>en dessous</b> de l'axe et $-E_{\mathbf p}$ <b>au-dessus</b>. C'est cette disposition panachée qui propage les particules vers le futur et les antiparticules vers le passé.</li>
+<li>Une particule <b>virtuelle</b> n'est pas une particule&nbsp;: c'est une variable d'intégration. Elle n'est pas sur sa couche de masse, elle n'est pas observable, et lui prêter une trajectoire ou une durée de vie n'a pas de sens.</li>
+<li>L'image de «&nbsp;l'énergie empruntée pendant $\Delta t \sim \hbar/\Delta E$&nbsp;» donne le bon ordre de grandeur pour la portée, mais par un raisonnement faux&nbsp;: l'énergie est conservée exactement à chaque vertex. La portée $\hbar/mc$ sort du <b>pôle</b> du propagateur, pas d'une violation temporaire.</li>
+<li>Le signe du potentiel de Yukawa dépend de la nature du médiateur. L'échange d'un <b>scalaire</b> entre sources identiques est toujours <b>attractif</b>&nbsp;; il faudra un champ vectoriel pour que des charges de même signe se repoussent.</li>
+</ul>
+<br>
+
+<div class="notices note" style="--title: 'note';">
+  <p style="display: none;">note</p>
+  <div class="notice-body">
+    <p>Et maintenant ? Nous disposons de l&rsquo;amplitude élémentaire, $\Delta_F$, et nous avons vu avec la série de Dyson qu&rsquo;une interaction se décompose en propagations libres entrecoupées de chocs ponctuels. Deux ingrédients, donc, mais aucune méthode systématique pour les combiner.<br><br>
+La partie suivante fournit cette méthode : la <b>matrice $S$</b>, qui n&rsquo;enregistre que ce qu&rsquo;on sait mesurer, le théorème de <b>Wick</b>, qui convertit mécaniquement les produits chronologiques en produits de propagateurs, et enfin les <b>diagrammes de Feynman</b>, où chaque terme du développement devient un dessin dont on lit l&rsquo;intégrale directement.</p>
+
+  </div>
+</div>
+
+
 <br>
 <div style="overflow-x: auto;text-align:center;">
 <table>
@@ -4309,16 +4405,16 @@ $$ où $\mathcal C$ est le contour fermé (droite réelle + arc).&#160;<a href="
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785887542"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785887542"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785887542"></script>
-    <script src="/js/jquery.sticky.js?1785887542"></script>
-    <script src="/js/featherlight.min.js?1785887542"></script>
-    <script src="/js/highlight.pack.js?1785887542"></script>
+    <script src="/js/clipboard.min.js?1785888288"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785888288"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785888288"></script>
+    <script src="/js/jquery.sticky.js?1785888288"></script>
+    <script src="/js/featherlight.min.js?1785888288"></script>
+    <script src="/js/highlight.pack.js?1785888288"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785887542"></script>
-    <script src="/js/learn.js?1785887542"></script>
-    <script src="/js/hugo-learn.js?1785887542"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785888288"></script>
+    <script src="/js/learn.js?1785888288"></script>
+    <script src="/js/hugo-learn.js?1785888288"></script>
     
     
 
