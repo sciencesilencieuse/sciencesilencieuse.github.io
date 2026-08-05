@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785950342" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785950342" rel="stylesheet">
-    <link href="/css/hybrid.css?1785950342" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785950342" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785950342" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785950342" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785950342" rel="stylesheet">
-    <link href="/css/theme.css?1785950342" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785950342" rel="stylesheet">
+    <link href="/css/nucleus.css?1785950834" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785950834" rel="stylesheet">
+    <link href="/css/hybrid.css?1785950834" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785950834" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785950834" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785950834" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785950834" rel="stylesheet">
+    <link href="/css/theme.css?1785950834" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785950834" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785950342" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785950834" rel="stylesheet">
     
-    <link href="/css/foo.css?1785950342" rel="stylesheet"><link href="/css/bar.css?1785950342" rel="stylesheet">
+    <link href="/css/foo.css?1785950834" rel="stylesheet"><link href="/css/bar.css?1785950834" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785950342"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785950834"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785950342"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785950342"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785950834"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785950834"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785950342"></script>
+<script type="text/javascript" src="/js/search.js?1785950834"></script>
 
     
   </div>
@@ -2426,17 +2426,16 @@ $
 <li>antiparticules&nbsp;: $v(p)\,\mathrm{e}^{+\mathrm{i} p\cdot x}$</li>
 <li>$p^0 = E_{\boldsymbol p} > 0$</li>
 </ul>
-<p>Les spineurs d&rsquo;impulsion $u(p)$ et $v(p)$ satisfont les équations de Dirac en impulsion</p>
+<p>Les spineurs d&rsquo;impulsion $u(p)$ et $v(p)$ satisfont les équations de Dirac en impulsion :</p>
+<div id="def">
 <p style="text-align:center;">
 $\displaystyle
-(\not{\!\!p} - m)\,u(p) = 0
-$
-</p>
-<p style="text-align:center;">
-$\displaystyle
+(\not{\!\!p} - m)\,u(p) = 0\\
+\displaystyle
 (\not{\!\!p} + m)\,v(p) = 0
 $
 </p>
+</div>
 <p><b>Au repos</b>, $p^\mu = (m, \boldsymbol 0)$, la première équation devient :</p>
 <p style="text-align:center;">
 $\displaystyle\begin{pmatrix} -m & m \\ m & -m \end{pmatrix}\begin{pmatrix} u_L \\ u_R \end{pmatrix} = 0
@@ -2784,15 +2783,31 @@ $
 </details>
 </div>
 <p>Regardons le nouveau terme généré par ce calcul : $H_{\text{mag}} = - \frac{q}{2m}\,\boldsymbol\sigma\cdot\boldsymbol B$.</p>
-<p>En physique classique/phénoménologique, l&rsquo;énergie d&rsquo;un moment magnétique $\boldsymbol\mu$ dans un champ $\boldsymbol B$ s&rsquo;écrit : $H_{\text{mag}} = -\boldsymbol\mu \cdot \boldsymbol B$.</p>
+<p>En physique classique/phénoménologique, l&rsquo;énergie d&rsquo;un moment magnétique $\boldsymbol\mu$ dans un champ $\boldsymbol B$ s&rsquo;écrit :</p>
+<div id="def">
+<p style="text-align:center;">
+$\displaystyle
+H_{\text{mag}} = -\boldsymbol\mu \cdot \boldsymbol B
+$
+</p>
+</div>
 <p>On sait par ailleurs que le moment magnétique d&rsquo;une particule est lié à son spin $\hat{\boldsymbol S}$ par la formule :</p>
+<div id="def">
 <p style="text-align:center;">
 $\displaystyle
 \boldsymbol\mu = g \frac{q}{2m} \hat{\boldsymbol S}
 $
 </p>
-<p>où $g$ est le fameux facteur gyromagnétique (qui vaut classiquement $1$ pour une boucle de courant).</p>
-<p>Pour un électron, l&rsquo;opérateur de spin s&rsquo;exprime à l&rsquo;aide des matrices de Pauli : $\hat{\boldsymbol S} = \frac{1}{2}\boldsymbol\sigma$.</p>
+</div>
+<p>où $g$ est le fameux <strong>facteur gyromagnétique</strong> (qui vaut classiquement $1$ pour une boucle de courant).</p>
+<p>Pour un électron, l&rsquo;opérateur de spin s&rsquo;exprime à l&rsquo;aide des matrices de Pauli :</p>
+<div id="def">
+<p style="text-align:center;">
+$\displaystyle
+\hat{\boldsymbol S} = \frac{1}{2}\boldsymbol\sigma
+$
+</p>
+</div>
 <p>Injectons cela dans l&rsquo;expression de $H_{\text{mag}}$ attendue :</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -2810,11 +2825,13 @@ $\displaystyle
 \frac{g}{4m} = \frac{1}{2m}
 $
 </p>
+<div id="theo">
 <p style="text-align:center;">
 $\displaystyle
-\Rightarrow \boxed{\,g = 2\,}
+\Rightarrow g = 2
 $
 </p>
+</div>
 <p>Sans avoir rien demandé, la structure matricielle imposée par la relativité restreinte a généré ce terme magnétique, prouvant que l&rsquo;électron se comporte (presque) comme s&rsquo;il tournait sur lui-même deux fois plus efficacement qu&rsquo;un objet classique. C&rsquo;est le moment où la mécanique quantique et la relativité se serrent formellement la main !</p>
 <p>Historiquement, ce résultat fut décisif pour asseoir l&rsquo;équation de Dirac : le facteur 2, mystérieux dans la théorie de Pauli où on le mettait à la main, sort ici du formalisme sans qu&rsquo;on lui demande rien. L&rsquo;expérience donne $g = 2{,}002,319,304\ldots$ ; l&rsquo;écart n&rsquo;est pas une imperfection de Dirac mais le signal que $\psi$ n&rsquo;est pas une fonction d&rsquo;onde à une particule : c&rsquo;est un champ, dont les fluctuations quantiques corrigent $g$. La <a href="https://sciencesilencieuse.github.io/physique/tqc/gifted_amateur/tqc14/">partie 14</a> calculera la première correction et retrouvera les décimales.</p>
 <br>
@@ -4518,16 +4535,16 @@ La lecture d'un diagramme se fait <b>à rebours de la flèche fermionique</b>&nb
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785950343"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785950343"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785950343"></script>
-    <script src="/js/jquery.sticky.js?1785950343"></script>
-    <script src="/js/featherlight.min.js?1785950343"></script>
-    <script src="/js/highlight.pack.js?1785950343"></script>
+    <script src="/js/clipboard.min.js?1785950834"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785950834"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785950834"></script>
+    <script src="/js/jquery.sticky.js?1785950834"></script>
+    <script src="/js/featherlight.min.js?1785950834"></script>
+    <script src="/js/highlight.pack.js?1785950834"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785950343"></script>
-    <script src="/js/learn.js?1785950343"></script>
-    <script src="/js/hugo-learn.js?1785950343"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785950834"></script>
+    <script src="/js/learn.js?1785950834"></script>
+    <script src="/js/hugo-learn.js?1785950834"></script>
     
     
 
