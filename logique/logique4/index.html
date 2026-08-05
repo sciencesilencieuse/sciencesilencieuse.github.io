@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785927050" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785927050" rel="stylesheet">
-    <link href="/css/hybrid.css?1785927050" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785927050" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785927050" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785927050" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785927050" rel="stylesheet">
-    <link href="/css/theme.css?1785927050" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785927050" rel="stylesheet">
+    <link href="/css/nucleus.css?1785950342" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785950342" rel="stylesheet">
+    <link href="/css/hybrid.css?1785950342" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785950342" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785950342" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785950342" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785950342" rel="stylesheet">
+    <link href="/css/theme.css?1785950342" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785950342" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785927050" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785950342" rel="stylesheet">
     
-    <link href="/css/foo.css?1785927050" rel="stylesheet"><link href="/css/bar.css?1785927050" rel="stylesheet">
+    <link href="/css/foo.css?1785950342" rel="stylesheet"><link href="/css/bar.css?1785950342" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785927050"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785950342"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,7 +59,7 @@ window.MathJax = {
         }
       
     </style>
-    
+    <link rel="stylesheet" href="/css/notice.css">
 
 <script 
 src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785927050"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785927050"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785950342"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785950342"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785927050"></script>
+<script type="text/javascript" src="/js/search.js?1785950342"></script>
 
     
   </div>
@@ -2059,16 +2059,8 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 <div style="position:relative; width:200px; max-width: 100%; margin-left: auto;margin-right: auto;border-radius:10px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <img src="/duparc.png" style="border-radius:10px;">
 </div>
-
-<div class="notices info" style="--title: 'info';">
-  <p style="display: none;">info</p>
-  <div class="notice-body">
-    <p>Notes de lecture du livre <em>La logique pas à pas</em> de Jacques Duparc que je paraphrase allégrement.</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--info" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Important</span></div><div class="notice__corps"><p>Notes de lecture du livre <em>La logique pas à pas</em> de Jacques Duparc que je paraphrase allégrement.</p>
+</div></div>
 <h1 id="logique-modale">Logique modale</h1>
 <div style="overflow-x: auto;">
 <table>
@@ -2239,18 +2231,10 @@ $$\langle\mathcal{S},\mathcal{V}\rangle\Vdash^{\forall a}\phi$$</p>
 <p><img src="/explekripke.png?width=500px" alt=""></p>
 <p>On a bien $\langle\mathcal{S},\mathcal{V}\rangle\Vdash^{\forall a}Q\lor\neg Q$. Par contre, comme $b\Vdash Q$ alors que $a\Vdash\neg Q$, $\langle\mathcal{S},\mathcal{V}\rangle\nVdash^{\forall a}Q$ et $\langle\mathcal{S},\mathcal{V}\rangle\nVdash^{\forall a}\neg Q$.<br>
 On peut donc avoir une formule $\phi\lor\psi$ satisfaite sans que ni $\phi$ ni $\psi$ ne le soient !</p>
-
-<div class="notices info" style="--title: 'info';">
-  <p style="display: none;">info</p>
-  <div class="notice-body">
-    <p>On retrouve les modèles du calcul des propositions en se restreignant aux systèmes de transition contenant un seul nœud. Dit autrement, une formule $\phi$ de <b>profondeur modale</b> nulle est une formule du calcul des propositions.<br>
+<div class="notice notice--info" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Important</span></div><div class="notice__corps"><p>On retrouve les modèles du calcul des propositions en se restreignant aux systèmes de transition contenant un seul nœud. Dit autrement, une formule $\phi$ de <b>profondeur modale</b> nulle est une formule du calcul des propositions.<br>
 Soit $\mathcal{M}$ un modèle du calcul des propositions défini par la distribution de valeur de vérité $\delta_\mathcal{M}$ qui associe aux variables apparaissant dans $\phi$ la valeur 1 lorsqu&rsquo;elles sont vraies dans $\mathcal{M}$ et 0 sinon ($\delta_\mathcal{M}(P)=1$ ssi $\mathcal{M}\models P$). La formule $\phi$ st vraie dans $\mathcal{M}$ (noté $\mathcal{M}\models\phi$) si et seulement si cette même formule $\phi$ est vraie dans le système de transition $\mathcal{S}_\mathcal{M}=(N,A)$, où $N=\set{a}$ et $A=\emptyset$, équipé de la valuation $\mathcal{V}_{\delta_\mathcal{M}}$ définie par : $\mathcal{V}_{\delta_\mathcal{M}}(P)=\set{a}$ si et seulement si $\delta_\mathcal{M}(P)=1$ et $\mathcal{V}_{\delta_\mathcal{M}}(P)=\emptyset$ si et seulement si $\delta_\mathcal{M}(P)=0$.<br>
 Cela s&rsquo;écrit : $\mathcal{M}\models\phi$ ssi $\langle\mathcal{S},\mathcal{V}_{\delta_\mathcal{M}}\rangle\Vdash^{\forall a}\phi$</p>
-
-  </div>
-</div>
-
-
+</div></div>
 <div id="def">
 <p>Soit $\phi$ une formule de la logique modale et $\mathcal{S}$ un système de transition.<br>
 La formule $\phi$ est <b>valide</b> dans $\mathcal{S}$ si :
@@ -2506,16 +2490,8 @@ En effet, considérons un modèle quelconque $\langle\mathcal{S},\mathcal{V}\ran
 </div>
 Dans ce modèle, on a $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash P$ et $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash \Box P$
 </div>
-
-<div class="notices tip" style="--title: 'tip';">
-  <p style="display: none;">tip</p>
-  <div class="notice-body">
-    <p>Plus prosaïquement, la conséquence locale dit que partout où il y a $\Gamma$, il y a $\phi$, alors que la conséquence globale dit que s&rsquo;il y a $\Gamma$ partout alors il y a $\phi$ partout.</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--tip" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Tip</span></div><div class="notice__corps"><p>Plus prosaïquement, la conséquence locale dit que partout où il y a $\Gamma$, il y a $\phi$, alors que la conséquence globale dit que s&rsquo;il y a $\Gamma$ partout alors il y a $\phi$ partout.</p>
+</div></div>
 <p>Il existe un lien entre les deux conséquences sémantiques :</p>
 <div id="theo">
 <p>$\Gamma\models^{\forall a}_\mathscr{C}\phi$ si et seulement si $\set{\Box^n\psi|n\in\mathbb{N},\psi\in\Gamma}\models_\mathscr{C}\phi$ (où $\Box^n\psi = \underbrace{\Box\Box\ldots\Box}_{n}\psi$ si $n&gt;0$ et $\psi$ si $n =0$)</p>
@@ -3961,16 +3937,16 @@ De la sorte, le jeu continue indéfiniment.
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785927050"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785927050"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785927050"></script>
-    <script src="/js/jquery.sticky.js?1785927050"></script>
-    <script src="/js/featherlight.min.js?1785927050"></script>
-    <script src="/js/highlight.pack.js?1785927050"></script>
+    <script src="/js/clipboard.min.js?1785950342"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785950342"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785950342"></script>
+    <script src="/js/jquery.sticky.js?1785950342"></script>
+    <script src="/js/featherlight.min.js?1785950342"></script>
+    <script src="/js/highlight.pack.js?1785950342"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785927050"></script>
-    <script src="/js/learn.js?1785927050"></script>
-    <script src="/js/hugo-learn.js?1785927050"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785950342"></script>
+    <script src="/js/learn.js?1785950342"></script>
+    <script src="/js/hugo-learn.js?1785950342"></script>
     
     
 

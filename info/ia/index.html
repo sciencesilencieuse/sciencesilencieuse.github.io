@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785927050" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785927050" rel="stylesheet">
-    <link href="/css/hybrid.css?1785927050" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785927050" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785927050" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785927050" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785927050" rel="stylesheet">
-    <link href="/css/theme.css?1785927050" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785927050" rel="stylesheet">
+    <link href="/css/nucleus.css?1785950342" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785950342" rel="stylesheet">
+    <link href="/css/hybrid.css?1785950342" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785950342" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785950342" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785950342" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785950342" rel="stylesheet">
+    <link href="/css/theme.css?1785950342" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785950342" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785927050" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785950342" rel="stylesheet">
     
-    <link href="/css/foo.css?1785927050" rel="stylesheet"><link href="/css/bar.css?1785927050" rel="stylesheet">
+    <link href="/css/foo.css?1785950342" rel="stylesheet"><link href="/css/bar.css?1785950342" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785927050"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785950342"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,7 +59,7 @@ window.MathJax = {
         }
       
     </style>
-    
+    <link rel="stylesheet" href="/css/notice.css">
 
 <script 
 src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785927050"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785927050"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785950342"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785950342"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785927050"></script>
+<script type="text/javascript" src="/js/search.js?1785950342"></script>
 
     
   </div>
@@ -2164,16 +2164,8 @@ Cela signifie qu&rsquo;on ne présuppose rien de particulier sur les données (�
 </table>
 </div>
 <br>
-
-<div class="notices tip" style="--title: 'tip';">
-  <p style="display: none;">tip</p>
-  <div class="notice-body">
-    <p>Lorsqu&rsquo;on ne connaît rien sur les données, on peut toujours commencer par prendre la racine carrée du nombre de points dans l&rsquo;ensemble d&rsquo;entraînement comme <em>k</em> de départ.</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--tip" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Tip</span></div><div class="notice__corps"><p>Lorsqu&rsquo;on ne connaît rien sur les données, on peut toujours commencer par prendre la racine carrée du nombre de points dans l&rsquo;ensemble d&rsquo;entraînement comme <em>k</em> de départ.</p>
+</div></div>
 <p>Le choix de <em>k</em> est donc affaire de compromis. Pour le rendre plus scientifique, on peut chercher à mesurer la performance de l&rsquo;algorithme pour différentes valeurs de <em>k</em>.</p>
 <p>Mais comment mesure-t-on la <strong>performance d&rsquo;un algorithme d&rsquo;apprentissage automatique</strong> ?</p>
 <br>
@@ -2190,60 +2182,20 @@ Cela signifie qu&rsquo;on ne présuppose rien de particulier sur les données (�
 <li>les <strong>faux négatifs</strong> FN (les 3 identifiés comme des non 3).</li>
 </ul>
 <p>À partir de ces effectifs, on peut calculer 3 grandeurs permettant d&rsquo;évaluer la qualité de la prédiction :</p>
-
-<div class="notices def" style="--title: 'Précision';">
-  <p style="display: none;">Précision</p>
-  <div class="notice-body">
-    <p>Nombre de données bien prédites parmi les prédictions positives :
+<div class="notice notice--def" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Précision</span></div><div class="notice__corps"><p>Nombre de données bien prédites parmi les prédictions positives :
 $$\frac{VP}{VP+FP}$$</p>
-
-  </div>
-</div>
-
-
-
-<div class="notices def" style="--title: 'Rappel ou sensibilité';">
-  <p style="display: none;">Rappel ou sensibilité</p>
-  <div class="notice-body">
-    <p>Nombre de données bien prédites parmi les données positives :
+</div></div>
+<div class="notice notice--def" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Rappel ou sensibilité</span></div><div class="notice__corps"><p>Nombre de données bien prédites parmi les données positives :
 $$\frac{VP}{VP+FN}$$<br></p>
-
-  </div>
-</div>
-
-
-
-<div class="notices def" style="--title: 'Exactitude \28 accuracy\29 ';">
-  <p style="display: none;">Exactitude (accuracy)</p>
-  <div class="notice-body">
-    <p>$$\frac{VP+VN}{VP+VN+FP+FN}$$<br></p>
-
-  </div>
-</div>
-
-
-
-<div class="notices info" style="--title: 'info';">
-  <p style="display: none;">info</p>
-  <div class="notice-body">
-    <p>Un algorithme peut très bien être très précis (les prédictions positives sont bien des 3), mais peu sensible, avec un faible taux de rappel (parmi tous les 3, peu ont été identifiés).<br>
+</div></div>
+<div class="notice notice--def" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Exactitude (accuracy)</span></div><div class="notice__corps"><p>$$\frac{VP+VN}{VP+VN+FP+FN}$$<br></p>
+</div></div>
+<div class="notice notice--info" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Important</span></div><div class="notice__corps"><p>Un algorithme peut très bien être très précis (les prédictions positives sont bien des 3), mais peu sensible, avec un faible taux de rappel (parmi tous les 3, peu ont été identifiés).<br>
 À l&rsquo;inverse, on peut avoir une bonne sensibilité (la plupart des vrais 3 ont été identifiés comme tel), mais peu précis (beaucoup de chiffres identifiés comme des 3 sont en fait d&rsquo;autres chiffres).</p>
-
-  </div>
-</div>
-
-
+</div></div>
 <p><img src="/matconfus.png?width=800px" alt=""></p>
-
-<div class="notices tip" style="--title: 'tip';">
-  <p style="display: none;">tip</p>
-  <div class="notice-body">
-    <p>On peut tout aussi bien définir la matrice de confusion avec les prédictions sur les lignes et la réalité sur les colonnes.</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--tip" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Tip</span></div><div class="notice__corps"><p>On peut tout aussi bien définir la matrice de confusion avec les prédictions sur les lignes et la réalité sur les colonnes.</p>
+</div></div>
 <p>Maintenant qu&rsquo;on sait évaluer l&rsquo;algorithme, cherchons la valeur de <strong>k</strong> qui maximise l&rsquo;exactitude.</p>
 <p>Dans le graphe ci-dessous, on a tracé l&rsquo;<em>exactitude</em> de l&rsquo;algorithme pour la reconnaissance des &ldquo;9&rdquo; en fonction de la valeur de <em>k</em>.
 <img src="/meilleurk.png?width=600px" alt="">
@@ -2287,17 +2239,9 @@ où $\mu_i$ est le barycentre des points dans $S_i$.</p>
 <img src="/inertiefctk5.png?width=1400px" alt=""></p>
 <p>Là encore, le coude indique le nombre <em>k</em> idéal.<br>
 On semble donc avoir trouver une tactique utilisable lorsqu&rsquo;on n&rsquo;a pas d&rsquo;autres indices.</p>
-<p>
-<div class="notices tip" style="--title: 'tip';">
-  <p style="display: none;">tip</p>
-  <div class="notice-body">
-    <p>Il existe des méthodes plus précises pour déterminer <em>k</em>, mais elles sont aussi plus gourmandes en calcul. La plus répandue utilise les <em>coefficients de silhouette</em> de chaque point  (différence entre la distance moyenne avec les points du même groupe (cohésion) et la distance moyenne avec les points des autres groupes voisins (séparation)).</p>
-
-  </div>
-</div>
-
-
-<img src="/xkcdkmeans.png?width=400px" alt=""></p>
+<div class="notice notice--tip" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Tip</span></div><div class="notice__corps"><p>Il existe des méthodes plus précises pour déterminer <em>k</em>, mais elles sont aussi plus gourmandes en calcul. La plus répandue utilise les <em>coefficients de silhouette</em> de chaque point  (différence entre la distance moyenne avec les points du même groupe (cohésion) et la distance moyenne avec les points des autres groupes voisins (séparation)).</p>
+</div></div>
+![](/xkcdkmeans.png?width=400px)
 <h3 id="limites">Limites</h3>
 <p>L&rsquo;algorithme des $k$-moyennes se confronte à une difficulté classique en apprentissage automatique, et plus généralement pour tout problème d&rsquo;optimisation : <strong>obtenir un minimum global plutôt qu&rsquo;un minimum local</strong>.</p>
 <p><img src="/localglobal.png?width=600px" alt=""></p>
@@ -2528,28 +2472,12 @@ On semble donc avoir trouver une tactique utilisable lorsqu&rsquo;on n&rsquo;a p
     content: 'Graphe biparti';
 }
 </style>
-
-<div class="notices def" style="--title: 'bipa';">
-  <p style="display: none;">bipa</p>
-  <div class="notice-body">
-    <p>Un graphe biparti (ou bipartite) $G$ est un graphe dont l&rsquo;ensemble des sommets peut être divisé en deux sous-ensembles de sommets disjoints $S_1$ et $S_2$ ($S_1$ et $S_2$ sont une partition de $S$ : $S_1\cup S_2=S$, $S_1\cap S_2=\varnothing$) tels que chaque arête de $G$ a une extrémité dans $S_1$ et l&rsquo;autre dans $S_2$.</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--def" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">bipa</span></div><div class="notice__corps"><p>Un graphe biparti (ou bipartite) $G$ est un graphe dont l&rsquo;ensemble des sommets peut être divisé en deux sous-ensembles de sommets disjoints $S_1$ et $S_2$ ($S_1$ et $S_2$ sont une partition de $S$ : $S_1\cup S_2=S$, $S_1\cap S_2=\varnothing$) tels que chaque arête de $G$ a une extrémité dans $S_1$ et l&rsquo;autre dans $S_2$.</p>
+</div></div>
 <p><img src="/animbipar.gif" alt=""></p>
-
-<div class="notices tip" style="--title: 'tip';">
-  <p style="display: none;">tip</p>
-  <div class="notice-body">
-    <p>Un graphe est biparti si on peut colorier tous les sommets du graphe avec seulement deux couleurs de manière à ce que deux sommets voisins n&rsquo;aient jamais la même couleur (on parle alors de <strong>2-coloriage</strong>).<br>
+<div class="notice notice--tip" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Tip</span></div><div class="notice__corps"><p>Un graphe est biparti si on peut colorier tous les sommets du graphe avec seulement deux couleurs de manière à ce que deux sommets voisins n&rsquo;aient jamais la même couleur (on parle alors de <strong>2-coloriage</strong>).<br>
 On peut montrer qu&rsquo;un graphe est biparti si et seulement si il ne possède pas de cycle de longueur impaire.<br></p>
-
-  </div>
-</div>
-
-
+</div></div>
 <blockquote>
 <p>Démonstration de &ldquo;graphe biparti $\Leftrightarrow$ pas de cycle impair&rdquo; :</p>
 <ul>
@@ -2590,16 +2518,8 @@ Deux joueurs, $J_1$ et $J_2$, s&rsquo;affrontent sur un graphe orienté biparti 
 On a indiqué en jaune le sommet à atteindre pour Eve (sommet de $F$).</p>
 <p><img src="/variantenim.png?width=600px" alt=""></p>
 <p>Le graphe est ici plutôt simple, mais on verra <a href="http://localhost:1313/semestre_3/tp13/#jeux-daccessibilit%C3%A9-%C3%A0-deux-joueurs">dans le TP</a> que pour des nombres d&rsquo;allumettes plus grand, on sera content de pouvoir confier la tâche de sa construction à python.</p>
-
-<div class="notices tip" style="--title: 'tip';">
-  <p style="display: none;">tip</p>
-  <div class="notice-body">
-    <p>Ce jeu est une variante du jeu de Nim (voir TP) comme en fait tout jeu impartial à deux joueurs (théorème de Sprague-Grundy). Un <strong>jeu impartial</strong> est un jeu tour par tour dans lequel les coups autorisés, ainsi que les gains obtenus, dépendent uniquement de la position, et pas du joueur dont c&rsquo;est le tour. C&rsquo;est le cas de Chomp qui est donc, lui aussi, un jeu de Nim déguisé&hellip; Un jeu qui n&rsquo;est pas impartial est appelé <strong>jeu partisan</strong> (le morpion ou les échecs par exemple).</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--tip" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Tip</span></div><div class="notice__corps"><p>Ce jeu est une variante du jeu de Nim (voir TP) comme en fait tout jeu impartial à deux joueurs (théorème de Sprague-Grundy). Un <strong>jeu impartial</strong> est un jeu tour par tour dans lequel les coups autorisés, ainsi que les gains obtenus, dépendent uniquement de la position, et pas du joueur dont c&rsquo;est le tour. C&rsquo;est le cas de Chomp qui est donc, lui aussi, un jeu de Nim déguisé&hellip; Un jeu qui n&rsquo;est pas impartial est appelé <strong>jeu partisan</strong> (le morpion ou les échecs par exemple).</p>
+</div></div>
 <br>
 <h4 id="morpion-tic-tac-toe">Morpion (tic-tac-toe)</h4>
 <p>Pas besoin de rappeler les règles du morpion (oxo en belgique).<br>
@@ -2623,17 +2543,9 @@ En effet, Adam ne peut alors pas éviter de mettre Eve dans une position gagnant
 <p>Formalisons un peu tout ça en définissant la suite $Attr_i(F)$ qui contient l&rsquo;ensemble des sommets gagnants après $i$ étapes :
 $$ \begin{array}{lll} Attr_0(F) &amp;= &amp;F \\  Attr_{i+1}(F) &amp;= &amp;Attr_{i}(F) \\ &amp;&amp;\cup \{s \in S_1|Succ(s)\cap Attr_i(F) ≠ \varnothing \} \\ &amp;&amp;\cup \{s\in S_2| Succ(s)\subseteq Attr_i(F)\} \end{array} $$
 Étant donné que $Attr_i(F) \subseteq Attr_{i+1}(F) \subseteq S$, pour tout $i≥0$, si on suppose le graphe fini, la suite est croissante et bornée et donc stationnaire (à partir d&rsquo;un certain $i=i_0$, $Attr_i(F)$ est constante, et si $|G|=n$, $i_0$ vaut au plus $n-1$).</p>
-
-<div class="notices info" style="--title: 'info';">
-  <p style="display: none;">info</p>
-  <div class="notice-body">
-    <p>On appelle <strong>attracteur</strong> de $F$ pour le joueur $J_1$  la limite de $Attr_i(F)$. On le note $Attr(F)$.<br>
+<div class="notice notice--info" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Important</span></div><div class="notice__corps"><p>On appelle <strong>attracteur</strong> de $F$ pour le joueur $J_1$  la limite de $Attr_i(F)$. On le note $Attr(F)$.<br>
 Tout sommet dans l&rsquo;attracteur est une <strong>position gagnante</strong> pour $J_1$.</p>
-
-  </div>
-</div>
-
-
+</div></div>
 <p>Le complémentaire d&rsquo;un attracteur est appelé <strong>piège</strong>. Si le joueur 1 est sur une position n&rsquo;appartenant pas à son attracteur (et donc à son piège), cela signifie que :</p>
 <ul>
 <li>si c&rsquo;est son tour, tous les mouvements possibles restent dans le piège,</li>
@@ -2681,18 +2593,10 @@ Tout sommet dans l&rsquo;attracteur est une <strong>position gagnante</strong> p
     content: 'Stratégie sans mémoire gagnante';
 }
 </style>
-
-<div class="notices def" style="--title: 'moryless';">
-  <p style="display: none;">moryless</p>
-  <div class="notice-body">
-    <p>Une <strong>stratégie sans mémoire</strong> est une fonction $\sigma$ qui assigne un mouvement autorisé à un joueur pour chaque position non terminale : $\forall s\in S, (s,\sigma(s))\in A.$<br>
+<div class="notice notice--def" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">moryless</span></div><div class="notice__corps"><p>Une <strong>stratégie sans mémoire</strong> est une fonction $\sigma$ qui assigne un mouvement autorisé à un joueur pour chaque position non terminale : $\forall s\in S, (s,\sigma(s))\in A.$<br>
 Un joueur sur une position $s$ suit une stratégie s&rsquo;il emprunte le chemin $&lt;s,\sigma(s),\sigma^2(s),\ldots&gt;$. Elle est dite sans mémoire car pour une position donnée, la stratégie est indépendante du chemin qui y a mené ($\sigma$ ne dépend que du sommet).<br>
 Une <strong>stratégie sans mémoire gagnante</strong> depuis une position donnée garantit la victoire au joueur en un nombre de coups limité. Pour le joueur 1, une stratégie gagnante garantit d&rsquo;arriver sur un sommet de $F$. Mais suivant la position de départ, une telle stratégie n&rsquo;existe pas forcément&hellip;</p>
-
-  </div>
-</div>
-
-
+</div></div>
 <p>En construisant l&rsquo;attracteur, on répond à notre première question : <strong>la position d&rsquo;Eve est-elle gagnante ? Il suffit de vérifier qu&rsquo;elle appartient à l&rsquo;attracteur.</strong><br>
 Si c&rsquo;est le cas, une stratégie gagnante est facile à mettre en place ; il faut faire en sorte que chaque déplacement sur le graphe (chaque coup joué) se fasse vers un sommet de l&rsquo;attracteur. Chaque coup d&rsquo;Eve vers un sommet de l&rsquo;attracteur piège aussi le coup suivant d&rsquo;Adam dans l&rsquo;attracteur.<br>
 Comme son nom l&rsquo;indique, l&rsquo;attracteur attire irrémédiablement vers $F$, assurant la victoire au joueur 1.</p>
@@ -2713,17 +2617,9 @@ Comme son nom l&rsquo;indique, l&rsquo;attracteur attire irrémédiablement vers
     content: 'Heuristique';
 }
 </style>
-
-<div class="notices def" style="--title: 'heuri';">
-  <p style="display: none;">heuri</p>
-  <div class="notice-body">
-    <p>Une heuristique est une méthode de calcul qui fournit rapidement une solution réalisable, pas nécessairement optimale ou exacte, pour un problème d&rsquo;optimisation difficile. Elle  s&rsquo;impose quand les algorithmes de résolution exacte sont impraticables, à savoir de complexité polynomiale de haut degré, exponentielle ou plus.<br>
+<div class="notice notice--def" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">heuri</span></div><div class="notice__corps"><p>Une heuristique est une méthode de calcul qui fournit rapidement une solution réalisable, pas nécessairement optimale ou exacte, pour un problème d&rsquo;optimisation difficile. Elle  s&rsquo;impose quand les algorithmes de résolution exacte sont impraticables, à savoir de complexité polynomiale de haut degré, exponentielle ou plus.<br>
 Une heuristique est donc un compromis entre d&rsquo;un côté l&rsquo;optimalité (trouver la meilleure solution) et/ou la complétude (trouver toutes les solutions) de l&rsquo;algorithme et de l&rsquo;autre côté sa vitesse.</p>
-
-  </div>
-</div>
-
-
+</div></div>
 <p>Pour implémenter efficacement cette recherche partielle, l&rsquo;idée est d&rsquo;utiliser un arbre plutôt que l&rsquo;arêne précédente. Quelle différence ? L&rsquo;absence de cycle qui va permettre d&rsquo;élaguer ! On le paye au prix de la redondance des sommets (le même sommet peut apparaître plusieurs fois dans l&rsquo;arbre). Pour chaque position, les différents coups possibles correspondent aux différentes branches et on avance ainsi niveau par niveau jusqu&rsquo;aux feuilles représentant les positions terminales.</p>
 <p>Le gros avantage d&rsquo;un arbre est qu&rsquo;il permet facilement de ne garder que quelques niveaux (on raccourci alors toutes les branches jusqu&rsquo;à la profondeur considérée).</p>
 <p>Muni de cet arbre, l&rsquo;algorithme se lance dans un parcours en profondeur jusqu&rsquo;à la profondeur maximale stipulée. Lorsque ce niveau est atteint (2, par exemple, si on veut que l&rsquo;IA ait deux coups d&rsquo;avance), l&rsquo;algorithme évalue les feuilles grâce à son heuristique, puis il propage ce score vers les niveaux supérieurs en suivant le <strong>principe du minimax</strong> :</p>
@@ -2968,19 +2864,11 @@ Réponse (cliquer pour afficher)</summary>
 <p>Les données d&rsquo;apprentissage rendent les modèles de langage particulièrement sensibles à ce type de confusion.</p>
 <p>Les IA génératives peuvent ainsi reproduire des préjugés sexistes ; si les données d&rsquo;apprentissage contiennent plus d&rsquo;infirmiers ou secrétaires femmes et de patrons ou ingénieurs hommes, le modèle a alors tendance à plus associer une femme à une infirmière qu&rsquo;à une ingénieure.<br>
 Au-delà du genre, ces modèles peuvent renforcer un large éventail de stéréotypes lié à la race, à l&rsquo;âge, la nationalité, la religion ou le milieu d&rsquo;origine.</p>
-
-<div class="notices note" style="--title: 'note';">
-  <p style="display: none;">note</p>
-  <div class="notice-body">
-    <p>Sur ce point, les modèles de langage n&rsquo;ont pas grand chose à envier aux humains.<br>
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>Sur ce point, les modèles de langage n&rsquo;ont pas grand chose à envier aux humains.<br>
 <a href="/ziegler.pdf">Une étude de 2004</a> montre en effet que sur 144 étudiantes allemandes, 32% seulement savent résoudre la petite énigme suivante :<br>
 <i>Un père et son fils ont un grave accident de voiture. Le père meurt. Le fils est entre la vie et la mort. On l&rsquo;amène aux urgences et le chirurgien qui le voit dit : &ldquo;Je ne peux pas l&rsquo;opérer car c&rsquo;est mon fils.&quot;</i><br>
 Était alors demandé aux étudiantes si ce problème était explicable en une phrase simple et elles devaient soit répondre non soit donner l&rsquo;explication.</p>
-
-  </div>
-</div>
-
-
+</div></div>
 <h3 id="quand-la-machine-devra-choisir-à-notre-place">Quand la machine devra choisir à notre place</h3>
 <p>Dans une situation où vous sacrifier permet de sauver plusieurs vies, la voiture autonome qui vous conduit doit-elle choisir de vous tuer ?</p>
 <p><a href="https://www.moralmachine.net">Une expérience sociologique</a> visant à donner une perspective humaine aux futures décisions morales des machines permet de se pencher sur ces décisions un peu glauques.</p>
@@ -4332,16 +4220,16 @@ Au-delà du genre, ces modèles peuvent renforcer un large éventail de stéréo
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785927050"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785927050"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785927050"></script>
-    <script src="/js/jquery.sticky.js?1785927050"></script>
-    <script src="/js/featherlight.min.js?1785927050"></script>
-    <script src="/js/highlight.pack.js?1785927050"></script>
+    <script src="/js/clipboard.min.js?1785950342"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785950342"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785950342"></script>
+    <script src="/js/jquery.sticky.js?1785950342"></script>
+    <script src="/js/featherlight.min.js?1785950342"></script>
+    <script src="/js/highlight.pack.js?1785950342"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785927050"></script>
-    <script src="/js/learn.js?1785927050"></script>
-    <script src="/js/hugo-learn.js?1785927050"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785950342"></script>
+    <script src="/js/learn.js?1785950342"></script>
+    <script src="/js/hugo-learn.js?1785950342"></script>
     
     
 

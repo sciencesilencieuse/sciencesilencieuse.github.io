@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785927050" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785927050" rel="stylesheet">
-    <link href="/css/hybrid.css?1785927050" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785927050" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785927050" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785927050" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785927050" rel="stylesheet">
-    <link href="/css/theme.css?1785927050" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785927050" rel="stylesheet">
+    <link href="/css/nucleus.css?1785950342" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785950342" rel="stylesheet">
+    <link href="/css/hybrid.css?1785950342" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785950342" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785950342" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785950342" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785950342" rel="stylesheet">
+    <link href="/css/theme.css?1785950342" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785950342" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785927050" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785950342" rel="stylesheet">
     
-    <link href="/css/foo.css?1785927050" rel="stylesheet"><link href="/css/bar.css?1785927050" rel="stylesheet">
+    <link href="/css/foo.css?1785950342" rel="stylesheet"><link href="/css/bar.css?1785950342" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785927050"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785950342"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,7 +59,7 @@ window.MathJax = {
         }
       
     </style>
-    
+    <link rel="stylesheet" href="/css/notice.css">
 
 <script 
 src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785927050"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785927050"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785950342"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785950342"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785927050"></script>
+<script type="text/javascript" src="/js/search.js?1785950342"></script>
 
     
   </div>
@@ -2055,16 +2055,8 @@ td, th {
 <div style="position:relative; width:200px; max-width: 100%; margin-left: auto;margin-right: auto;border-radius:10px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <img src="/duparc.png" style="border-radius:10px;">
 </div>
-
-<div class="notices info" style="--title: 'info';">
-  <p style="display: none;">info</p>
-  <div class="notice-body">
-    <p>Notes de lecture du livre <em>La logique pas à pas</em> de Jacques Duparc que je paraphrase allégrement.</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--info" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Important</span></div><div class="notice__corps"><p>Notes de lecture du livre <em>La logique pas à pas</em> de Jacques Duparc que je paraphrase allégrement.</p>
+</div></div>
 <br>
 <h1 id="calcul-des-propositions">Calcul des propositions</h1>
 <div style="overflow-x: auto;">
@@ -2123,16 +2115,8 @@ td, th {
 </ul>
 </div>
 <p>La <strong>hauteur</strong> d&rsquo;une formule est la longueur de sa plus longue branche.</p>
-
-<div class="notices tip" style="--title: 'tip';">
-  <p style="display: none;">tip</p>
-  <div class="notice-body">
-    <p>C&rsquo;est une définition par <strong>récurrence</strong> (ou <strong>inductive</strong>) : on a d&rsquo;abord défini les feuilles, cas de base de hauteur 0, puis on a donné la recette pour passer d&rsquo;un arbre de hauteur $n$ à un arbre de hauteur $n+1$.</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--tip" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Tip</span></div><div class="notice__corps"><p>C&rsquo;est une définition par <strong>récurrence</strong> (ou <strong>inductive</strong>) : on a d&rsquo;abord défini les feuilles, cas de base de hauteur 0, puis on a donné la recette pour passer d&rsquo;un arbre de hauteur $n$ à un arbre de hauteur $n+1$.</p>
+</div></div>
 <p>Une <strong>sous formule</strong> d&rsquo;une formule $\phi$ est un sous-arbre de $\phi$ dont l&rsquo;un des nœuds de $\phi$ est la racine.</p>
 <p><img src="/sousformules.png?width=600px" alt=""></p>
 <p>La formule de hauteur 5 ci-dessus contient :</p>
@@ -2160,16 +2144,8 @@ sont données respectivement par $\theta=\left(\color{#B51700}{\neg}\color{#0071
 \phi =  ( \color{#B51700}{\neg}\color{#000}  ( \color{#007100}{P} \color{#B51700}{\lor} \color{#007100}{R}\color{#000}  ) ) \color{#B51700}{\land} \color{#000} (\color{#007100}{P} \color{#B51700}{\lor}\color{#000}  ( ( \color{#B51700}{\neg} \color{#007100}{R}\color{#000}  ) \color{#B51700}{\rightarrow} \color{#000}( ( \color{#B51700}{\neg} \color{#007100}{Q}\color{#000} ) \color{#B51700}{\leftrightarrow} \color{#007100}{P} \color{#000} ) ))
 $$</p>
 <br>
-
-<div class="notices note" style="--title: 'note';">
-  <p style="display: none;">note</p>
-  <div class="notice-body">
-    <p>La <strong>syntaxe</strong>, c&rsquo;est l&rsquo;articulation des symboles. La <strong>sémantique</strong>, c&rsquo;est ce que ça raconte.</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>La <strong>syntaxe</strong>, c&rsquo;est l&rsquo;articulation des symboles. La <strong>sémantique</strong>, c&rsquo;est ce que ça raconte.</p>
+</div></div>
 <br>
 <p style="text-align:center;">
 <a href="../logique2" style="font-size:2em;">Suite : <b>la sémantique</b></a>
@@ -3484,16 +3460,16 @@ $$</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785927050"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785927050"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785927050"></script>
-    <script src="/js/jquery.sticky.js?1785927050"></script>
-    <script src="/js/featherlight.min.js?1785927050"></script>
-    <script src="/js/highlight.pack.js?1785927050"></script>
+    <script src="/js/clipboard.min.js?1785950342"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785950342"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785950342"></script>
+    <script src="/js/jquery.sticky.js?1785950342"></script>
+    <script src="/js/featherlight.min.js?1785950342"></script>
+    <script src="/js/highlight.pack.js?1785950342"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785927050"></script>
-    <script src="/js/learn.js?1785927050"></script>
-    <script src="/js/hugo-learn.js?1785927050"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785950342"></script>
+    <script src="/js/learn.js?1785950342"></script>
+    <script src="/js/hugo-learn.js?1785950342"></script>
     
     
 

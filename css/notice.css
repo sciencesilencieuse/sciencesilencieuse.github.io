@@ -1,0 +1,139 @@
+/* ==========================================================================
+   Encarts « notice » — compagnon de layouts/shortcodes/notice.html
+
+   Valeurs reprises telles quelles de ton css/theme.css (section div.notices) :
+   barre de 30 px, angles droits, fond pastel, texte #666, icône Font Awesome 5
+   Free solide en blanc à gauche, libellé à 2rem.
+   Seule différence assumée : une seule barre et un fond continu même quand
+   l'encart contient plusieurs blocs.
+   ========================================================================== */
+
+.notice {
+  --notice-accent: #6AB0DE;   /* note */
+  --notice-fond:   #E7F2FA;
+  --notice-glyphe: "\f05a";   /* fa-info-circle, le glyphe par défaut */
+  margin: 2rem 0;
+  background: var(--notice-fond);
+}
+
+.notice--info {
+  --notice-accent: #F0B37E;
+  --notice-fond: #FFF2DB;
+  --notice-glyphe: "\f06a";              /* fa-exclamation-circle */
+}
+.notice--warning {
+  --notice-accent: rgba(217, 83, 79, .8);
+  --notice-fond: #FAE2E2;
+  --notice-glyphe: "\f1e2";              /* fa-bomb */
+}
+.notice--tip {
+  --notice-accent: rgba(92, 184, 92, .8);
+  --notice-fond: #E6F9E6;
+  --notice-glyphe: "\f0d0";              /* fa-magic */
+}
+.notice--theo {
+  --notice-accent: rgba(188, 128, 255, .8);
+  --notice-fond: rgba(188, 128, 255, .2);
+}
+.notice--def {
+  --notice-accent: #6AB0DE;
+  --notice-fond: #E7F2FA;
+  --notice-glyphe: "\f02d";              /* fa-book */
+}
+.notice--piege {
+  --notice-accent: #99195E;
+  --notice-fond: #FAC5DF;
+}
+
+/* --- barre de titre : les 30 px du border-top d'origine ----------------- */
+
+.notice__entete {
+  position: relative;
+  height: 30px;
+  background: var(--notice-accent);
+  color: #fff;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+.notice__icone {
+  position: absolute;
+  top: 2px;
+  left: 10px;
+  color: #fff;
+}
+
+/* icône du thème quand le paramètre icon= n'est pas fourni ;
+   le span est alors émis vide et le CSS reprend la main */
+.notice__icone:empty::before {
+  font-family: "Font Awesome 5 Free", "Font Awesome 6 Free", "FontAwesome";
+  font-weight: 900;
+  content: var(--notice-glyphe);
+}
+
+.notice__titre {
+  position: absolute;
+  top: 2px;
+  left: 2rem;
+  right: 2.2rem;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* --- corps : padding, taille et couleur de texte d'origine ------------- */
+
+.notice__corps {
+  padding: 15px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.notice__corps > :first-child { margin-top: 0; }
+.notice__corps > :last-child  { margin-bottom: 0; }
+
+.notice__corps p  { margin: .8rem 0; padding: 0; }
+.notice__corps ul,
+.notice__corps ol { margin: .8rem 0; padding-left: 1.5rem; }
+.notice__corps li { margin: .25rem 0; }
+.notice__corps li > ul,
+.notice__corps li > ol { margin: .25rem 0; }
+
+.notice__corps blockquote {
+  margin: .8rem 0;
+  padding-left: .8rem;
+  border-left: 3px solid var(--notice-accent);
+}
+
+.notice__corps table { margin: .8rem 0; }
+.notice__corps img   { max-width: 100%; height: auto; }
+.notice__corps details { margin: .8rem 0; }
+.notice__corps details > summary { cursor: pointer; }
+
+/* --- variante sans titre : title="none" -------------------------------- */
+/* le fond pastel et le padding subsistent, sans la barre */
+
+/* --- variante pliable : collapse="true" -------------------------------- */
+
+.notice--pliable > summary { cursor: pointer; list-style: none; }
+.notice--pliable > summary::-webkit-details-marker { display: none; }
+.notice--pliable > summary::marker { content: ""; }
+
+.notice__chevron {
+  position: absolute;
+  top: 11px;
+  right: 12px;
+  width: 0;
+  height: 0;
+  border-top: .32em solid transparent;
+  border-bottom: .32em solid transparent;
+  border-left: .45em solid #fff;
+  transition: transform .18s ease;
+}
+.notice--pliable[open] > summary .notice__chevron { transform: rotate(90deg); }
+
+.notice--pliable > summary:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: -3px;
+}

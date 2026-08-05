@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785927050" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785927050" rel="stylesheet">
-    <link href="/css/hybrid.css?1785927050" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785927050" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785927050" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785927050" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785927050" rel="stylesheet">
-    <link href="/css/theme.css?1785927050" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785927050" rel="stylesheet">
+    <link href="/css/nucleus.css?1785950343" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785950343" rel="stylesheet">
+    <link href="/css/hybrid.css?1785950343" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785950343" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785950343" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785950343" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785950343" rel="stylesheet">
+    <link href="/css/theme.css?1785950343" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785950343" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785927050" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785950343" rel="stylesheet">
     
-    <link href="/css/foo.css?1785927050" rel="stylesheet"><link href="/css/bar.css?1785927050" rel="stylesheet">
+    <link href="/css/foo.css?1785950343" rel="stylesheet"><link href="/css/bar.css?1785950343" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785927050"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785950343"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,7 +59,7 @@ window.MathJax = {
         }
       
     </style>
-    
+    <link rel="stylesheet" href="/css/notice.css">
 
 <script 
 src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785927050"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785927050"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785950343"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785950343"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785927050"></script>
+<script type="text/javascript" src="/js/search.js?1785950343"></script>
 
     
   </div>
@@ -2123,16 +2123,8 @@ details[open] > summary:first-of-type {
 }
 </style>
 <h1 id="théorie-quantique-des-champs--partie-9">Théorie quantique des champs &ndash; Partie 9</h1>
-
-<div class="notices note" style="--title: 'note';">
-  <p style="display: none;">note</p>
-  <div class="notice-body">
-    <p>Notes de lecture du livre <em>Quantum field theory for the gifted amateur</em> de Thomas Lancaster et Stephen Blundell.</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>Notes de lecture du livre <em>Quantum field theory for the gifted amateur</em> de Thomas Lancaster et Stephen Blundell.</p>
+</div></div>
 <div style="overflow-x: auto;text-align:center;">
 <table>
   <tr>
@@ -2250,21 +2242,13 @@ $
 <p>Et le passage au continu s&rsquo;écrit tout seul : $x_i \to \phi(x)$, la matrice $A$ devient un <i>opérateur</i>, $\det A$ un déterminant fonctionnel (avalé par la normalisation), et $A^{-1}$… <b>une fonction de Green</b>. Toute la partie tient dans cette phrase : <i>une intégrale gaussienne avec source livre l&rsquo;inverse de l&rsquo;opérateur, c&rsquo;est-à-dire le propagateur</i>.</p>
 </div>
 <p><u>Rq</u> : dans (3), $x$ et $J$ sont des vecteurs et $A$ est une matrice. $J^TA^{-1}J$ est donc une double somme qui se transforme en double intégrale dans la version continue.</p>
-
-<div class="notices note" style="--title: 'note';">
-  <p style="display: none;">note</p>
-  <div class="notice-body">
-    <p>Prenons $L = -\frac12 x A x + Jx$ et appliquons Euler–Lagrange (de manière très cavalière) comme si $A$ était un nombre :<br>
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>Prenons $L = -\frac12 x A x + Jx$ et appliquons Euler–Lagrange (de manière très cavalière) comme si $A$ était un nombre :<br>
 $\to -Ax + J = 0$<br>
 Donc $x_\star = A^{-1}J$, et en réinjectant, $L(x_\star) = +\frac12\, J\, A^{-1} b$.<br>
 On a retrouvé <i>l&rsquo;exposant exact du résultat (3)</i>.
 <br><br>
 $e^{\frac12 JA^{-1}J}$ n&rsquo;est donc rien d&rsquo;autre que <b>l&rsquo;intégrande évalué au point stationnaire</b>. Pour une gaussienne, la phase stationnaire est exacte, et le déterminant n&rsquo;est que le prix (indépendant de $J$) des fluctuations autour.</p>
-
-  </div>
-</div>
-
-
+</div></div>
 <br>
 <h3 id="loscillateur-harmonique-et-les-infinis-apprivoisés">L&rsquo;oscillateur harmonique, et les infinis apprivoisés</h3>
 <p>On cherche l&rsquo;amplitude de <b>retour à l&rsquo;origine</b> $G(0, T\,; 0, 0)$. Cela revient à poser la particule au fond du puits harmonique, puis revenir au temps $T$ et se demander si elle est encore là.</p>
@@ -2499,16 +2483,8 @@ $
 <div style="position:relative;margin-left:auto;margin-right:auto;width:340px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/figrotwick.png" style="box-shadow:none;background:none;">
 </div>
-
-<div class="notices note" style="--title: 'note';">
-  <p style="display: none;">note</p>
-  <div class="notice-body">
-    <p>Le sens de la rotation ($-\pi/2$, pas $+\pi/2$) n&rsquo;est pas un caprice : c&rsquo;est le $i\varepsilon$ qui l&rsquo;impose. Dans le plan $p^0$, le contour s&rsquo;appuyant sur l&rsquo;axe des réels doit être déformé vers l&rsquo;axe imaginaire sans rencontrer aucun pôle sur la route pour que l&rsquo;intégrale reste la même (théorème intégral de Cauchy). Or aucun des deux pôles panachés du propagateur de Feynman n&rsquo;est rencontré si l&rsquo;axe réel tourne dans le sens trigo ($+\pi/2$) et comme $p_0=\mathrm{i}\partial_t$, cela oblige $t$ à tourner négativement ($-\pi/2$) pour que $p_0$ aille dans le bon sens.</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>Le sens de la rotation ($-\pi/2$, pas $+\pi/2$) n&rsquo;est pas un caprice : c&rsquo;est le $i\varepsilon$ qui l&rsquo;impose. Dans le plan $p^0$, le contour s&rsquo;appuyant sur l&rsquo;axe des réels doit être déformé vers l&rsquo;axe imaginaire sans rencontrer aucun pôle sur la route pour que l&rsquo;intégrale reste la même (théorème intégral de Cauchy). Or aucun des deux pôles panachés du propagateur de Feynman n&rsquo;est rencontré si l&rsquo;axe réel tourne dans le sens trigo ($+\pi/2$) et comme $p_0=\mathrm{i}\partial_t$, cela oblige $t$ à tourner négativement ($-\pi/2$) pour que $p_0$ aille dans le bon sens.</p>
+</div></div>
 <p>Le propagateur de Feynman s&rsquo;écrit maintenant :</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -3214,16 +3190,8 @@ $
 <li>À $T \neq 0$&nbsp;: <b>anti</b>périodicité et fréquences de Matsubara impaires.</li>
 </ul>
 <br>
-
-<div class="notices note" style="--title: 'note';">
-  <p style="display: none;">note</p>
-  <div class="notice-body">
-    <p>Et maintenant ? Le livre est équipé de <b>deux moteurs complets</b> (canonique et fonctionnel) et de la température. La suite en tire les grandes récoltes : les théories effectives et la renormalisation (où l&rsquo;intégrale de chemin règne sans partage), et la physique de la matière condensée (où états cohérents, Matsubara et brisure de symétrie travaillent ensemble, supraconducteurs en tête).</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>Et maintenant ? Le livre est équipé de <b>deux moteurs complets</b> (canonique et fonctionnel) et de la température. La suite en tire les grandes récoltes : les théories effectives et la renormalisation (où l&rsquo;intégrale de chemin règne sans partage), et la physique de la matière condensée (où états cohérents, Matsubara et brisure de symétrie travaillent ensemble, supraconducteurs en tête).</p>
+</div></div>
 <br>
 <div style="overflow-x: auto;text-align:center;">
 <table>
@@ -4577,16 +4545,16 @@ $
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785927050"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785927050"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785927050"></script>
-    <script src="/js/jquery.sticky.js?1785927050"></script>
-    <script src="/js/featherlight.min.js?1785927050"></script>
-    <script src="/js/highlight.pack.js?1785927050"></script>
+    <script src="/js/clipboard.min.js?1785950343"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785950343"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785950343"></script>
+    <script src="/js/jquery.sticky.js?1785950343"></script>
+    <script src="/js/featherlight.min.js?1785950343"></script>
+    <script src="/js/highlight.pack.js?1785950343"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785927050"></script>
-    <script src="/js/learn.js?1785927050"></script>
-    <script src="/js/hugo-learn.js?1785927050"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785950343"></script>
+    <script src="/js/learn.js?1785950343"></script>
+    <script src="/js/hugo-learn.js?1785950343"></script>
     
     
 

@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785927050" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785927050" rel="stylesheet">
-    <link href="/css/hybrid.css?1785927050" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785927050" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785927050" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785927050" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785927050" rel="stylesheet">
-    <link href="/css/theme.css?1785927050" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785927050" rel="stylesheet">
+    <link href="/css/nucleus.css?1785950342" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785950342" rel="stylesheet">
+    <link href="/css/hybrid.css?1785950342" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785950342" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785950342" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785950342" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785950342" rel="stylesheet">
+    <link href="/css/theme.css?1785950342" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785950342" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785927050" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785950342" rel="stylesheet">
     
-    <link href="/css/foo.css?1785927050" rel="stylesheet"><link href="/css/bar.css?1785927050" rel="stylesheet">
+    <link href="/css/foo.css?1785950342" rel="stylesheet"><link href="/css/bar.css?1785950342" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785927050"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785950342"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,7 +59,7 @@ window.MathJax = {
         }
       
     </style>
-    
+    <link rel="stylesheet" href="/css/notice.css">
 
 <script 
 src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785927050"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785927050"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785950342"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785950342"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785927050"></script>
+<script type="text/javascript" src="/js/search.js?1785950342"></script>
 
     
   </div>
@@ -2056,16 +2056,8 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 <div style="position:relative; width:200px; max-width: 100%; margin-left: auto;margin-right: auto;border-radius:10px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <img src="/duparc.png" style="border-radius:10px;">
 </div>
-
-<div class="notices info" style="--title: 'info';">
-  <p style="display: none;">info</p>
-  <div class="notice-body">
-    <p>Notes de lecture du livre <em>La logique pas à pas</em> de Jacques Duparc que je paraphrase allégrement.</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--info" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Important</span></div><div class="notice__corps"><p>Notes de lecture du livre <em>La logique pas à pas</em> de Jacques Duparc que je paraphrase allégrement.</p>
+</div></div>
 <h1 id="logique-modale">Logique modale</h1>
 <div style="overflow-x: auto;">
 <table>
@@ -2163,18 +2155,10 @@ $$
 On écrit $\Gamma\vdash_\textbf{S}\phi$ s&rsquo;il existe un ensemble fini de formules $\set{\psi_1,\psi_2,\ldots,\psi_n}\subseteq\Gamma$ tel que la formule $(\psi_1\land\psi_2\land\ldots\land\psi_n)\rightarrow\phi$ puisse être prouvée dans le système formel $\textbf{S}$. Autrement dit le séquent $\vdash_\textbf{S}(\psi_1\land\psi_2\land\ldots\land\psi_n)\rightarrow\phi$ est vérifiée pour un nombre fini de formules bien choisies de $\Gamma$.</p>
 </div>
 <br>
-
-<div class="notices info" style="--title: 'info';">
-  <p style="display: none;">info</p>
-  <div class="notice-body">
-    <p>Attention, ici les hypothèses n&rsquo;ont pas le même sens qu&rsquo;en logique des propositions. En effet, pour prouver le séquent $\phi\vdash_\textbf{S}\psi$, on ne peut pas ajouter $\phi$ aux axiomes et tenter d&rsquo;atteindre $\psi$ à partir des règles (<em>modus ponens</em>, substitution uniforme et nécessitation). Il faut ici réussir à prouver la formule $\phi\rightarrow\psi$ sur la base des seuls axiomes.
+<div class="notice notice--info" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Important</span></div><div class="notice__corps"><p>Attention, ici les hypothèses n&rsquo;ont pas le même sens qu&rsquo;en logique des propositions. En effet, pour prouver le séquent $\phi\vdash_\textbf{S}\psi$, on ne peut pas ajouter $\phi$ aux axiomes et tenter d&rsquo;atteindre $\psi$ à partir des règles (<em>modus ponens</em>, substitution uniforme et nécessitation). Il faut ici réussir à prouver la formule $\phi\rightarrow\psi$ sur la base des seuls axiomes.
 <br><br>
 Si on pouvait faire comme en logique des propositions, prouver $\phi\vdash_\textbf{S}\Box\phi$ deviendrait évident : on place $\phi$ dans les axiomes et on applique la règle de nécessitation. Mais non, il faut pouvoir prouver $\vdash_\textbf{S}\phi\rightarrow\Box\phi$ et comme on va le voir, dans le système $\textbf{K}$, la formule $P\rightarrow\Box P$ n&rsquo;est pas prouvable ($P\nvdash_\textbf{K}\Box P$).</p>
-
-  </div>
-</div>
-
-
+</div></div>
 <br>
 <h3 id="le-système-k">Le système K</h3>
 <br>
@@ -2755,20 +2739,12 @@ Conséquence de 2. et 5. et 7.
 </div>
 <p>On représente graphiquement par une flèche &ldquo;$\mathscr{C}_x\longrightarrow\textbf{X}$&rdquo; la relation de forte-complétude : &ldquo;si $\Gamma\models_{\mathscr{C}_x}\phi$, alors $\Gamma\vdash_\textbf{X}\phi$&rdquo;.</p>
 <p><img src="/compcomplet.png?width=1200px" alt=""></p>
-
-<div class="notices note" style="--title: 'note';">
-  <p style="display: none;">note</p>
-  <div class="notice-body">
-    <p>La notion de conséquence sémantique $\models$ demande une satisfaction sur tous les modèle alors que la notion de conséquence syntaxique $\vdash$ demande seulement l&rsquo;existence d&rsquo;une preuve.<br>
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>La notion de conséquence sémantique $\models$ demande une satisfaction sur tous les modèle alors que la notion de conséquence syntaxique $\vdash$ demande seulement l&rsquo;existence d&rsquo;une preuve.<br>
 Dit autrement, $\models$ est définie avec un quantificateur universel $\forall$ et $\vdash$ avec un quantificateur existentiel $\exists$ or la négation du quantificateur universel est le quantificateur existentiel et inversement.<br>
 Démontrer qu&rsquo;une formule est non démontrable est donc très difficile du côté de la  théorie de la démonstration puisque cela oblige à montrer que <strong>toutes</strong> les preuves échouent. Par contre, sur le versant sémantique, il suffit de trouver <strong>un</strong> modèle où la négation de la formule est satisfaite (un contre-exemple suffit).<br>
 C&rsquo;est la <strong>correction</strong> qui nous permet le changement de versant (on passe de la syntaxe à la sémantique).<br>
 On peut trouver d&rsquo;ailleurs un peu douloureux que la correspondance de loin la plus difficile à démontrer (la complétude) apporte si peu d&rsquo;applications concrètes.</p>
-
-  </div>
-</div>
-
-
+</div></div>
 <br>
 <p style="text-align:center;">
 <a href="../logique6" style="font-size:2em;">Suite : <b>Différentes logiques modales</b></a>
@@ -4082,16 +4058,16 @@ On peut trouver d&rsquo;ailleurs un peu douloureux que la correspondance de loin
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785927050"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785927050"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785927050"></script>
-    <script src="/js/jquery.sticky.js?1785927050"></script>
-    <script src="/js/featherlight.min.js?1785927050"></script>
-    <script src="/js/highlight.pack.js?1785927050"></script>
+    <script src="/js/clipboard.min.js?1785950342"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785950342"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785950342"></script>
+    <script src="/js/jquery.sticky.js?1785950342"></script>
+    <script src="/js/featherlight.min.js?1785950342"></script>
+    <script src="/js/highlight.pack.js?1785950342"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785927050"></script>
-    <script src="/js/learn.js?1785927050"></script>
-    <script src="/js/hugo-learn.js?1785927050"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785950342"></script>
+    <script src="/js/learn.js?1785950342"></script>
+    <script src="/js/hugo-learn.js?1785950342"></script>
     
     
 

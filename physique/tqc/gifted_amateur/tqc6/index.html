@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785927050" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785927050" rel="stylesheet">
-    <link href="/css/hybrid.css?1785927050" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785927050" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785927050" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785927050" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785927050" rel="stylesheet">
-    <link href="/css/theme.css?1785927050" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785927050" rel="stylesheet">
+    <link href="/css/nucleus.css?1785950343" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785950343" rel="stylesheet">
+    <link href="/css/hybrid.css?1785950343" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785950343" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785950343" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785950343" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785950343" rel="stylesheet">
+    <link href="/css/theme.css?1785950343" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785950343" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785927050" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785950343" rel="stylesheet">
     
-    <link href="/css/foo.css?1785927050" rel="stylesheet"><link href="/css/bar.css?1785927050" rel="stylesheet">
+    <link href="/css/foo.css?1785950343" rel="stylesheet"><link href="/css/bar.css?1785950343" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785927050"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785950343"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,7 +59,7 @@ window.MathJax = {
         }
       
     </style>
-    
+    <link rel="stylesheet" href="/css/notice.css">
 
 <script 
 src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785927050"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785927050"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785950343"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785950343"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785927050"></script>
+<script type="text/javascript" src="/js/search.js?1785950343"></script>
 
     
   </div>
@@ -2089,16 +2089,8 @@ details[open] > summary:first-of-type {
 }
 </style>
 <h1 id="théorie-quantique-des-champs--partie-6">Théorie quantique des champs &ndash; Partie 6</h1>
-
-<div class="notices note" style="--title: 'note';">
-  <p style="display: none;">note</p>
-  <div class="notice-body">
-    <p>Notes de lecture du livre <em>Quantum field theory for the gifted amateur</em> de Thomas Lancaster et Stephen Blundell.</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>Notes de lecture du livre <em>Quantum field theory for the gifted amateur</em> de Thomas Lancaster et Stephen Blundell.</p>
+</div></div>
 <div style="overflow-x: auto;text-align:center;">
 <table>
   <tr>
@@ -2115,11 +2107,6 @@ details[open] > summary:first-of-type {
 <p>Une récompense à la fin : le potentiel de <b>Yukawa</b>, c&rsquo;est-à-dire l&rsquo;explication des forces par échange de particules virtuelles, et la première brique des diagrammes de Feynman.</p>
 <br>
 <h2 id="fonction-de-green-et-propagateur">Fonction de Green et propagateur</h2>
-<ul>
-<li>Une fonction de Green est la <b>réponse impulsionnelle</b> d'un système linéaire&nbsp;; par superposition, elle résout n'importe quel problème avec source.</li>
-<li>L'amplitude de transition quantique $\langle x, t \,|\, x', t'\rangle$ est (à un facteur près) une fonction de Green de l'équation de Schrödinger. On l'appelle le <b>propagateur</b>. Ses <b>pôles en énergie donnent le spectre</b>.</li>
-<li>Quand $\hat H = \hat H_0 + \hat V$, le propagateur exact s'écrit comme une série géométrique en $\hat V$ (<b>équation de Dyson</b>) dont chaque terme se lit comme un dessin&nbsp;: <b>propagation libre → interaction ponctuelle → propagation libre → …</b> C'est l'ancêtre direct des diagrammes de Feynman (chapitres suivants).</li>
-</ul>
 <h3 id="fonction-de-green">Fonction de Green</h3>
 <p>Soit $\hat L$ un opérateur différentiel linéaire. On cherche à résoudre (pour une source $f$ quelconque) :</p>
 <div id="def">
@@ -2251,7 +2238,7 @@ Le potentiel total est la somme des potentiels de charges ponctuelles. Toute la 
 </div>
 <br>
 <h4 id="transformée-de-fourier">Transformée de Fourier</h4>
-<p>Si $\hat L$ est à coefficients constants, la transformée de Fourier le transforme en multiplication par un polynôme $L(k)$, d&rsquo;où :</p>
+<p>Si $\hat L$ est à coefficients constants, la transformée de Fourier le tourne en multiplication par un polynôme $L(k)$, d&rsquo;où :</p>
 <div id="theo">
   $$
   \tilde G(k) = \frac{1}{L(k)}.
@@ -2259,8 +2246,8 @@ Le potentiel total est la somme des potentiels de charges ponctuelles. Toute la 
 </div>
 <br>
 <div id="preuve">
-<p>Les ondes planes $e^{ikx}$ sont des fonctions propres de la dérivation, donc de <em>tout</em> opérateur construit à coefficients constants à partir de dérivations.<br>
-En base de Fourier, un tel opérateur est diagonal, et appliquer $\hat L$ revient à multiplier par la valeur propre $L(k)$.</p>
+<p>Les ondes planes $e^{ikx}$ sont des fonctions propres de la dérivation, donc de <em>tout</em> opérateur construit à coefficients constants à partir de dérivations.</p>
+<p>En base de Fourier, un tel opérateur est diagonal, et appliquer $\hat L$ revient à multiplier par la valeur propre $L(k)$.</p>
 <p>Plaçons-nous à 1D (le cas général est identique) :</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -2302,8 +2289,15 @@ La dernière égalité vient de la transformée de $\hat L G = \delta$ sachant $
 <p>Que se passe-t-il si les coefficients $a_j$ de $L$ ne sont pas constants ?</p>
 <p>Si $a_j = a_j(x)$, le produit $a_j(x)\,\partial^j\phi$ devient, en Fourier, une convolution $\tilde a_j * \big((ik)^j\tilde\phi\big)$. L&rsquo;opérateur n&rsquo;est alors plus diagonal, les modes $k$ se mélangent.</p>
 </div>
-<p>Moralité : coefficients constants = invariance par translation = les ondes planes diagonalisent = Fourier transforme en simple multiplication.</p>
-<p><strong>Les zéros de $L(k)$</strong> (c&rsquo;est-à-dire les modes propres du système libre) deviennent <strong>les pôles de $\tilde G$</strong>. <strong>Le spectre du système est encodé dans les pôles de sa fonction de Green</strong>.</p>
+<p>Moralité :</p>
+<div id="theo">
+<p>coefficients constants = invariance par translation = les ondes planes diagonalisent = Fourier transforme en simple multiplication</p>
+</div>
+<br>
+<div id="theo">
+<p><strong>Les zéros de $L(k)$</strong> (c&rsquo;est-à-dire les modes propres du système libre) deviennent <strong>les pôles de $\tilde G$</strong>.<br>
+<strong>Le spectre du système est encodé dans les pôles de sa fonction de Green</strong>.</p>
+</div>
 <p>Deux exemples. :</p>
 <div id="preuve">
 <ul style="margin-top:1em;margin-bottom:1em;">
@@ -2435,16 +2429,8 @@ $
 </ul>
 <p>Autrement dit : <em>mesurer le propagateur, c&rsquo;est mesurer le spectre.</em><br>
 En théorie des champs, ça va devenir : <em>le pôle du propagateur exact définit la masse physique de la particule</em> (c&rsquo;est ce qui donnera un sens à la renormalisation de la masse).</p>
-
-<div class="notices note" style="--title: 'note';">
-  <p style="display: none;">note</p>
-  <div class="notice-body">
-    <p>Point notation : on ne distingue pas toujours la transformée de Fourier du propagateur par un ~ étant donné que l&rsquo;argument nous informe sur la nature de l&rsquo;objet : temps → propagateur, énergie → transformée du propagateur.</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>Point notation : on ne distingue pas toujours la transformée de Fourier du propagateur par un ~ étant donné que l&rsquo;argument nous informe sur la nature de l&rsquo;objet : temps → propagateur, énergie → transformée du propagateur.</p>
+</div></div>
 <br>
 <h3 id="les-pôles-encodent-la-causalité">Les pôles encodent la causalité</h3>
 <p>Vérifions la cohérence de la formule obtenue pour $\tilde{G}^+(E)$ en inversant la transformée de Fourier par le théorème des résidus :</p>
@@ -2692,16 +2678,8 @@ $
 <ul style="margin-top:0.5em;">
 <li><b>Non-signalisation.</b> Toute intervention en $y$ s'exprime par des opérateurs construits sur les champs au voisinage de $y$. Si tous les opérateurs locaux en $x$ commutent avec tous ceux en $y$ (ce que garantit $[\hat\phi(x), \hat\phi(y)] = 0$ qui s'étend au cas des polynômes de champs), les statistiques de mesure en $x$ sont rigoureusement insensibles à ce qui a été fait en $y$. C'est l'axiome de <b>micro-causalité</b>.</li>
 </ul>
-
-<div class="notices note" style="--title: 'note';">
-  <p style="display: none;">note</p>
-  <div class="notice-body">
-    <p>Pour le champ complexe, $[\hat\psi(x), \hat\psi^\dagger(y)] = D_a(z) - D_b(-z)$, où $D_a$ est construit sur les modes de particules et $D_b$ sur ceux d&rsquo;antiparticules. L&rsquo;annulation hors du cône exige que les deux intégrales se compensent identiquement, ce qui force l&rsquo;existence du second jeu de modes <b>et</b> l&rsquo;égalité des masses. Autrement dit : la causalité <i>impose</i> les antiparticules, de même masse que les particules (c&rsquo;est le cœur de la conférence de Feynman « <a href="https://scispace.com/pdf/elementary-particles-and-the-laws-of-physics-the-reason-for-qvzqjmen7f.pdf">The reason for antiparticles</a> »).</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>Pour le champ complexe, $[\hat\psi(x), \hat\psi^\dagger(y)] = D_a(z) - D_b(-z)$, où $D_a$ est construit sur les modes de particules et $D_b$ sur ceux d&rsquo;antiparticules. L&rsquo;annulation hors du cône exige que les deux intégrales se compensent identiquement, ce qui force l&rsquo;existence du second jeu de modes <b>et</b> l&rsquo;égalité des masses. Autrement dit : la causalité <i>impose</i> les antiparticules, de même masse que les particules (c&rsquo;est le cœur de la conférence de Feynman « <a href="https://scispace.com/pdf/elementary-particles-and-the-laws-of-physics-the-reason-for-qvzqjmen7f.pdf">The reason for antiparticles</a> »).</p>
+</div></div>
 <br>
 <h3 id="le-propagateur-de-feynman">Le propagateur de Feynman</h3>
 <div id="def">
@@ -2905,16 +2883,8 @@ V(r) = -\frac{g^2}{4\pi} \frac{e^{-mr}}{r}, \qquad r = |\mathbf r_1 - \mathbf r_
 $$</p>
 </div>
 <p>Ce potentiel est <strong>attractif</strong> entre charges de même signe (fait remarquable de l&rsquo;échange scalaire).</p>
-
-<div class="notices note" style="--title: 'note';">
-  <p style="display: none;">note</p>
-  <div class="notice-body">
-    <p>Le caractère attractif/répulsif vient du <b>spin du médiateur</b> : l&rsquo;échange de spin pair (scalaire, graviton) fait s&rsquo;<i>attirer</i> les charges identiques, l&rsquo;échange de spin impair (photon) les fait se <i>repousser</i>. D&rsquo;où « la gravitation attire tout » (spin 2) et « les charges semblables se repoussent » (spin 1).</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>Le caractère attractif/répulsif vient du <b>spin du médiateur</b> : l&rsquo;échange de spin pair (scalaire, graviton) fait s&rsquo;<i>attirer</i> les charges identiques, l&rsquo;échange de spin impair (photon) les fait se <i>repousser</i>. D&rsquo;où « la gravitation attire tout » (spin 2) et « les charges semblables se repoussent » (spin 1).</p>
+</div></div>
 <p>Trois lectures de ce résultat :</p>
 <ul>
 <li><b>C'est la limite statique du propagateur de Feynman</b>&nbsp;: $\Delta$ à $p^0 = 0$ vaut $\dfrac{-\mathrm i}{\mathbf q^2 + m^2}$&nbsp;; le calcul complet par échange d'un quantum entre les deux sources (chapitres suivants) redonne $V(r)$. <i>Une force = l'échange de quanta virtuels du champ médiateur.</i></li>
@@ -3055,17 +3025,9 @@ $
 <li>Le signe du potentiel de Yukawa dépend de la nature du médiateur. L'échange d'un <b>scalaire</b> entre sources identiques est toujours <b>attractif</b>&nbsp;; il faudra un champ vectoriel pour que des charges de même signe se repoussent.</li>
 </ul>
 <br>
-
-<div class="notices note" style="--title: 'note';">
-  <p style="display: none;">note</p>
-  <div class="notice-body">
-    <p>Et maintenant ? Nous disposons de l&rsquo;amplitude élémentaire, $\Delta_F$, et nous avons vu avec la série de Dyson qu&rsquo;une interaction se décompose en propagations libres entrecoupées de chocs ponctuels. Deux ingrédients, donc, mais aucune méthode systématique pour les combiner.<br><br>
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>Et maintenant ? Nous disposons de l&rsquo;amplitude élémentaire, $\Delta_F$, et nous avons vu avec la série de Dyson qu&rsquo;une interaction se décompose en propagations libres entrecoupées de chocs ponctuels. Deux ingrédients, donc, mais aucune méthode systématique pour les combiner.<br><br>
 La partie suivante fournit cette méthode : la <b>matrice $S$</b>, qui n&rsquo;enregistre que ce qu&rsquo;on sait mesurer, le théorème de <b>Wick</b>, qui convertit mécaniquement les produits chronologiques en produits de propagateurs, et enfin les <b>diagrammes de Feynman</b>, où chaque terme du développement devient un dessin dont on lit l&rsquo;intégrale directement.</p>
-
-  </div>
-</div>
-
-
+</div></div>
 <br>
 <div style="overflow-x: auto;text-align:center;">
 <table>
@@ -4405,16 +4367,16 @@ $$ où $\mathcal C$ est le contour fermé (droite réelle + arc).&#160;<a href="
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785927050"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785927050"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785927050"></script>
-    <script src="/js/jquery.sticky.js?1785927050"></script>
-    <script src="/js/featherlight.min.js?1785927050"></script>
-    <script src="/js/highlight.pack.js?1785927050"></script>
+    <script src="/js/clipboard.min.js?1785950343"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785950343"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785950343"></script>
+    <script src="/js/jquery.sticky.js?1785950343"></script>
+    <script src="/js/featherlight.min.js?1785950343"></script>
+    <script src="/js/highlight.pack.js?1785950343"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785927050"></script>
-    <script src="/js/learn.js?1785927050"></script>
-    <script src="/js/hugo-learn.js?1785927050"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785950343"></script>
+    <script src="/js/learn.js?1785950343"></script>
+    <script src="/js/hugo-learn.js?1785950343"></script>
     
     
 

@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1785927050" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1785927050" rel="stylesheet">
-    <link href="/css/hybrid.css?1785927050" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1785927050" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1785927050" rel="stylesheet">
-    <link href="/css/auto-complete.css?1785927050" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1785927050" rel="stylesheet">
-    <link href="/css/theme.css?1785927050" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1785927050" rel="stylesheet">
+    <link href="/css/nucleus.css?1785950342" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1785950342" rel="stylesheet">
+    <link href="/css/hybrid.css?1785950342" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1785950342" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1785950342" rel="stylesheet">
+    <link href="/css/auto-complete.css?1785950342" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1785950342" rel="stylesheet">
+    <link href="/css/theme.css?1785950342" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1785950342" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1785927050" rel="stylesheet">
+    <link href="/css/theme-blue.css?1785950342" rel="stylesheet">
     
-    <link href="/css/foo.css?1785927050" rel="stylesheet"><link href="/css/bar.css?1785927050" rel="stylesheet">
+    <link href="/css/foo.css?1785950342" rel="stylesheet"><link href="/css/bar.css?1785950342" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1785927050"></script>
+    <script src="/js/jquery-3.3.1.min.js?1785950342"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -59,7 +59,7 @@ window.MathJax = {
         }
       
     </style>
-    
+    <link rel="stylesheet" href="/css/notice.css">
 
 <script 
 src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1785927050"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1785927050"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1785950342"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1785950342"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1785927050"></script>
+<script type="text/javascript" src="/js/search.js?1785950342"></script>
 
     
   </div>
@@ -2067,16 +2067,8 @@ td, th {
 <div style="position:relative; width:200px; max-width: 100%; margin-left: auto;margin-right: auto;border-radius:10px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <img src="/duparc.png" style="border-radius:10px;">
 </div>
-
-<div class="notices info" style="--title: 'info';">
-  <p style="display: none;">info</p>
-  <div class="notice-body">
-    <p>Notes de lecture du livre <em>La logique pas à pas</em> de Jacques Duparc que je paraphrase allégrement.</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--info" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Important</span></div><div class="notice__corps"><p>Notes de lecture du livre <em>La logique pas à pas</em> de Jacques Duparc que je paraphrase allégrement.</p>
+</div></div>
 <br>
 <h1 id="calcul-des-propositions">Calcul des propositions</h1>
 <div style="overflow-x: auto;">
@@ -2161,16 +2153,8 @@ $\mathcal{M}\models\phi$ signifie que $\delta_\mathcal{F}(\phi) = 1$ et $\mathca
 <div id="def">
 <p>Deux formules $\phi$ et $\psi$ sont deux formules <strong>équivalentes</strong> ($\phi\equiv\psi$) ssi elles sont satisfaites dans les mêmes modèles (mêmes valeurs de vérité dans les mêmes modèles).</p>
 </div>
-
-<div class="notices info" style="--title: 'info';">
-  <p style="display: none;">info</p>
-  <div class="notice-body">
-    <p>$\equiv$ est une équivalence sémantique alors que $\leftrightarrow$ est une équivalence syntaxique, parfois appelée équivalence matérielle.</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--info" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Important</span></div><div class="notice__corps"><p>$\equiv$ est une équivalence sémantique alors que $\leftrightarrow$ est une équivalence syntaxique, parfois appelée équivalence matérielle.</p>
+</div></div>
 <div id="theo">
 <p>$\phi\equiv\psi$ ssi (pour tout modèle $\mathcal{M}$, $\mathcal{M}\models \phi\leftrightarrow \psi$).</p>
 </div>
@@ -2220,16 +2204,8 @@ Et $\models\phi$ est un raccourci pour $\emptyset \models \phi$ ce qui signifie 
 </div>
 <p>En effet, $\mathcal{T&rsquo;}$ est une conséquence sémantique de $\mathcal{T}$ si elle est vraie partout où $\mathcal{T}$ est vraie.</p>
 <p>Deux théories équivalentes ont exactement les mêmes modèles ($\mathcal{T}\equiv \mathcal{T&rsquo;}$ correspond à avoir à la fois $\mathcal{T}\models \mathcal{T&rsquo;}$ et $\mathcal{T&rsquo;}\models \mathcal{T}$), ce qui revient à dire qu&rsquo;il n&rsquo;existe pas de modèle pouvant les discriminer. Elles ne sont pas nécessairement égales (pas nécessairement le même ensemble de formules), mais elles sont égales sur le plan sémantique puisqu&rsquo;elles signifient la même chose.</p>
-
-<div class="notices info" style="--title: 'info';">
-  <p style="display: none;">info</p>
-  <div class="notice-body">
-    <p>La notion de conséquence sémantique est la version sémantique de la notion de déduction. Dire qu&rsquo;une formule est une conséquence sémantique d&rsquo;une théorie, c&rsquo;est affirmer que partout où la théorie est satisfaite (c.-à-d. quand les hypothèses sont vraies), la formule l&rsquo;est également. La formule découle donc de la théorie.</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--info" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Important</span></div><div class="notice__corps"><p>La notion de conséquence sémantique est la version sémantique de la notion de déduction. Dire qu&rsquo;une formule est une conséquence sémantique d&rsquo;une théorie, c&rsquo;est affirmer que partout où la théorie est satisfaite (c.-à-d. quand les hypothèses sont vraies), la formule l&rsquo;est également. La formule découle donc de la théorie.</p>
+</div></div>
 <div id="theo">
 <ul>
 <li>Si $\mathcal{T}$ est satisfaisable et $\mathcal{T'}\subseteq\mathcal{T}$, alors $\mathcal{T'}$ est également satisfaisable.<br>
@@ -2508,17 +2484,9 @@ $</p>
 </div>
 </blockquote>
 <p>Et pour construire de la même manière une formule sous forme normale disjonctive, il suffit d&rsquo;utiliser à la fin la distribution de la conjonction par rapport à la distribution puisqu&rsquo;il s&rsquo;agit cette fois-ci de faire descendre $\land$ dans l&rsquo;arbre.</p>
-
-<div class="notices tip" style="--title: 'tip';">
-  <p style="display: none;">tip</p>
-  <div class="notice-body">
-    <p>Sans stratégie, <strong>tester la validité</strong> d&rsquo;une formule revient à vérifier sa véracité pour chaque combinaison des valeurs des variables, ce qui va dépendre exponentiellement du nombre de variables (ce qui devient vite impraticable). L&rsquo;équivalence entre le tableau de vérité de la formule et sa forme normale conjonctive ($\phi=\bigwedge_{i}\phi_i$) permet un test syntaxique rapide de la validité. Pour vérifier que chaque $\phi_i$ est une tautologie, il suffit de s&rsquo;assurer de la présence dans chaque $\phi_i=\bigvee_j P_j$ d&rsquo;une couple contradictoire $P_j$ et $\neg P_j$.<br>
+<div class="notice notice--tip" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Tip</span></div><div class="notice__corps"><p>Sans stratégie, <strong>tester la validité</strong> d&rsquo;une formule revient à vérifier sa véracité pour chaque combinaison des valeurs des variables, ce qui va dépendre exponentiellement du nombre de variables (ce qui devient vite impraticable). L&rsquo;équivalence entre le tableau de vérité de la formule et sa forme normale conjonctive ($\phi=\bigwedge_{i}\phi_i$) permet un test syntaxique rapide de la validité. Pour vérifier que chaque $\phi_i$ est une tautologie, il suffit de s&rsquo;assurer de la présence dans chaque $\phi_i=\bigvee_j P_j$ d&rsquo;une couple contradictoire $P_j$ et $\neg P_j$.<br>
 Et pour un <strong>test de satisfabilité</strong>, la forme normale disjonctive $\phi=\bigvee_j \phi_i$ est plus adaptée. On va à nouveau tester la présence d&rsquo;un couple de variables contradictoires dans les $\phi_i=\bigwedge_{j}P_j$. Si on revient bredouille pour au moins un $i$ alors la formule est satisfaisable.</p>
-
-  </div>
-</div>
-
-
+</div></div>
 <br>
 <h3 id="connecteurs-binaires-et-systèmes-complets-de-connecteurs">Connecteurs binaires et systèmes complets de connecteurs</h3>
 <br>
@@ -2682,29 +2650,13 @@ $</p>
 </ul>
 </ul>
 </div>
-
-<div class="notices note" style="--title: 'note';">
-  <p style="display: none;">note</p>
-  <div class="notice-body">
-    <p>C&rsquo;est ainsi qu&rsquo;un ordinateur peut être construit entièrement avec des portes logiques NAND ou NOR qui sont dites universelles (il semblerait que l&rsquo;Apollo Guidance Computer qui servit à poser l&rsquo;homme sur la Lune pendant le programme Apollo était construit exclusivement avec des portes NOR). Ces portes réalisent en effet électroniquement les opérations logiques $\not\!\!\land$ et $\not\!\lor$ et permettent donc de construire toutes les formules de la logique des propositions.</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>C&rsquo;est ainsi qu&rsquo;un ordinateur peut être construit entièrement avec des portes logiques NAND ou NOR qui sont dites universelles (il semblerait que l&rsquo;Apollo Guidance Computer qui servit à poser l&rsquo;homme sur la Lune pendant le programme Apollo était construit exclusivement avec des portes NOR). Ces portes réalisent en effet électroniquement les opérations logiques $\not\!\!\land$ et $\not\!\lor$ et permettent donc de construire toutes les formules de la logique des propositions.</p>
+</div></div>
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;border-radius:20px">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Agc_view.jpg/1280px-Agc_view.jpg" style="border-radius:20px;"></div>
 <br>
-
-<div class="notices note" style="--title: 'note';">
-  <p style="display: none;">note</p>
-  <div class="notice-body">
-    <p>Après la notion de <strong>modèle</strong>, on va maintenant s&rsquo;intéresser à la notion de <strong>preuve</strong>. Et ces deux notions seront réunies par le <strong>théorème de complétude</strong>.</p>
-
-  </div>
-</div>
-
-
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>Après la notion de <strong>modèle</strong>, on va maintenant s&rsquo;intéresser à la notion de <strong>preuve</strong>. Et ces deux notions seront réunies par le <strong>théorème de complétude</strong>.</p>
+</div></div>
 <br>
 <p style="text-align:center;">
 <a href="../logique3" style="font-size:2em;">Suite : <b>Théorie de la démonstration</b></a>
@@ -4018,16 +3970,16 @@ $</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1785927050"></script>
-    <script src="/js/perfect-scrollbar.min.js?1785927050"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1785927050"></script>
-    <script src="/js/jquery.sticky.js?1785927050"></script>
-    <script src="/js/featherlight.min.js?1785927050"></script>
-    <script src="/js/highlight.pack.js?1785927050"></script>
+    <script src="/js/clipboard.min.js?1785950342"></script>
+    <script src="/js/perfect-scrollbar.min.js?1785950342"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1785950342"></script>
+    <script src="/js/jquery.sticky.js?1785950342"></script>
+    <script src="/js/featherlight.min.js?1785950342"></script>
+    <script src="/js/highlight.pack.js?1785950342"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1785927050"></script>
-    <script src="/js/learn.js?1785927050"></script>
-    <script src="/js/hugo-learn.js?1785927050"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1785950342"></script>
+    <script src="/js/learn.js?1785950342"></script>
+    <script src="/js/hugo-learn.js?1785950342"></script>
     
     
 
