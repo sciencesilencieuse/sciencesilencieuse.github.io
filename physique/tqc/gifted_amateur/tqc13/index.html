@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1786057561" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1786057561" rel="stylesheet">
-    <link href="/css/hybrid.css?1786057561" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1786057561" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1786057561" rel="stylesheet">
-    <link href="/css/auto-complete.css?1786057561" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1786057561" rel="stylesheet">
-    <link href="/css/theme.css?1786057561" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1786057561" rel="stylesheet">
+    <link href="/css/nucleus.css?1786066867" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1786066867" rel="stylesheet">
+    <link href="/css/hybrid.css?1786066867" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1786066867" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1786066867" rel="stylesheet">
+    <link href="/css/auto-complete.css?1786066867" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1786066867" rel="stylesheet">
+    <link href="/css/theme.css?1786066867" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1786066867" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1786057561" rel="stylesheet">
+    <link href="/css/theme-blue.css?1786066867" rel="stylesheet">
     
-    <link href="/css/foo.css?1786057561" rel="stylesheet"><link href="/css/bar.css?1786057561" rel="stylesheet">
+    <link href="/css/foo.css?1786066867" rel="stylesheet"><link href="/css/bar.css?1786066867" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1786057561"></script>
+    <script src="/js/jquery-3.3.1.min.js?1786066867"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1786057561"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1786057561"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1786066867"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1786066867"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1786057561"></script>
+<script type="text/javascript" src="/js/search.js?1786066867"></script>
 
     
   </div>
@@ -2340,6 +2340,21 @@ $\displaystyle
 $
 </p>
 </div>
+<br>
+<div id="preuve">
+<details>
+<summary>
+Détails&nbsp;:
+</summary>
+<p>On part de l&rsquo;équation de Dirac $\gamma^\mu \hat{p}_\mu \psi = m \psi$.</p>
+<p>Comme $\gamma^\mu \hat{p}_\mu = \gamma^0 \hat{p}^0 - \boldsymbol{\gamma} \cdot \hat{\boldsymbol{p}}$, et que $\gamma^0 \hat{p}^0 = \begin{pmatrix} 0 &amp; I \\ I &amp; 0 \end{pmatrix} \hat{p}^0 = \begin{pmatrix} 0 &amp; \hat{p}^0 \\ \hat{p}^0 &amp; 0 \end{pmatrix}$, alors que $\boldsymbol{\gamma} \cdot \hat{\boldsymbol{p}} = \begin{pmatrix} 0 &amp; \boldsymbol{\sigma} \\ -\boldsymbol{\sigma} &amp; 0 \end{pmatrix} \cdot \hat{\boldsymbol{p}} = \begin{pmatrix} 0 &amp; \boldsymbol{\sigma} \cdot \hat{\boldsymbol{p}} \\ -\boldsymbol{\sigma} \cdot \hat{\boldsymbol{p}} &amp; 0 \end{pmatrix}$, on a finalement :</p>
+<p style="text-align:center;">
+$\displaystyle
+\gamma^\mu \hat{p}_\mu = \gamma^0 \hat{p}^0 - \boldsymbol{\gamma} \cdot \hat{\boldsymbol{p}} = \begin{pmatrix} 0 & \hat{p}^0 \\ \hat{p}^0 & 0 \end{pmatrix} - \begin{pmatrix} 0 & \boldsymbol{\sigma} \cdot \hat{\boldsymbol{p}} \\ -\boldsymbol{\sigma} \cdot \hat{\boldsymbol{p}} & 0 \end{pmatrix} = \begin{pmatrix} 0 & \hat{p}^0 - \boldsymbol{\sigma} \cdot \hat{\boldsymbol{p}} \\ \hat{p}^0 + \boldsymbol{\sigma} \cdot \hat{\boldsymbol{p}} & 0 \end{pmatrix}
+$
+</p>
+</details>
+</div>
 <p>Lisons cette structure avant de calculer, parce qu&rsquo;elle contient toute la physique du chapitre : <b>c&rsquo;est la masse qui couple $\psi_L$ et $\psi_R$</b>. Sans masse, les deux blocs vivent leur vie indépendamment ; avec masse, la particule oscille sans cesse entre les deux, à un rythme fixé par $m$.</p>
 <p>Pour une particule au repos, les équations se réduisent à $\mathrm{i}\partial_0\psi_R = m\psi_L$ et $\mathrm{i}\partial_0\psi_L = m\psi_R$ : un système de deux oscillateurs couplés, le contenu « gauche » se déversant dans le contenu « droite » et réciproquement, comme deux pendules reliés par un ressort de raideur $m$.</p>
 <br>
@@ -2353,7 +2368,7 @@ $\displaystyle
 $<br>
 (en représentation chirale)
 </p>
-<p>Un état purement gauche $\begin{pmatrix} \psi_L \ 0 \end{pmatrix}$ est état propre de $\gamma^5$ avec la valeur propre $-1$, un état purement droit avec $+1$.</p>
+<p>Un état purement gauche $\begin{pmatrix} \psi_L \\ 0 \end{pmatrix}$ est état propre de $\gamma^5$ avec la valeur propre $-1$, un état purement droit avec $+1$.</p>
 <p>Les projecteurs</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -2367,7 +2382,7 @@ $
 </p>
 <p>extraient la partie gauche ou droite de n&rsquo;importe quelle fonction d&rsquo;onde.</p>
 </div>
-<p>Pour un état sans masse d&rsquo;énergie $E_{\boldsymbol p} = |\boldsymbol p|$, les équations découplées donnent</p>
+<p>Pour un état sans masse d&rsquo;énergie $\hat p^0=E_{\boldsymbol p} = |\boldsymbol p|$, les équations découplées donnent</p>
 <p style="text-align:center;">
 $\displaystyle
 \frac{\boldsymbol\sigma \cdot \hat{\boldsymbol p}}{|\boldsymbol p|}\,\psi_R = +\psi_R
@@ -2382,7 +2397,7 @@ $
 <p>L&rsquo;opérateur qui apparaît mesure la projection du spin sur la direction du mouvement : c&rsquo;est l&rsquo;<b>hélicité</b> $\hat h = \boldsymbol\sigma\cdot\hat{\boldsymbol p}/|\boldsymbol p|$.</p>
 <p>Donc pour une particule sans masse, chiralité et hélicité coïncident : droite $\Leftrightarrow$ spin parallèle à l&rsquo;impulsion ($h = +1$), gauche $\Leftrightarrow$ antiparallèle ($h = -1$).</p>
 </div>
-<p>Il faut absolument distinguer les deux notions dans le cas massif, et c&rsquo;est un piège classique.</p>
+<p>Il faut absolument distinguer les deux notions dans le cas massif.</p>
 <ul>
 <li><b>La chiralité</b> est une propriété algébrique (valeur propre de $\gamma^5$), invariante de Lorentz, mais qui n'est pas conservée par l'évolution d'une particule massive (la masse mélange $L$ et $R$).</li>
 <br>
@@ -2421,7 +2436,7 @@ $
 <p>Ce ne sont ni des scalaires ni des vecteurs : leur définition rigoureuse passe par leurs propriétés de transformation, objet du prochain chapitre.</p>
 </div>
 <br>
-<h4 id="pourquoi-deux-familles-de-solutions">Pourquoi deux familles de solutions</h4>
+<h4 id="pourquoi-deux-familles-de-solutions">Pourquoi deux familles de solutions ?</h4>
 <p>L&rsquo;équation de Dirac est une équation aux dérivées partielles <b>linéaire à coefficients constants</b>. Comme toujours dans ce cas, on la résout en cherchant des <b>ondes planes</b>, puis on superpose. Pour un objet à quatre composantes, une onde plane s&rsquo;écrit nécessairement</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -2455,9 +2470,9 @@ $
 <br>
 <div id="preuve">
 <details>
-<summary>D'où vient le signe qui distingue les deux équations</summary>
-<p>Il ne vient de rien d&rsquo;autre que du signe de l&rsquo;exposant, et c&rsquo;est tout ce qu&rsquo;il faut retenir.</p>
-<p><b>Pour une particule</b>, $\psi = u(p),\mathrm{e}^{-\mathrm{i}p\cdot x}$. Dériver une exponentielle revient à multiplier par son exposant :</p>
+<summary>D'où vient le signe qui distingue les deux équations&nbsp;?</summary>
+<p>Il ne vient de rien d&rsquo;autre que du signe de l&rsquo;exposant.</p>
+<p><b>Pour une particule</b>, $\psi = u(p)\,\mathrm{e}^{-\mathrm{i}p\cdot x}$. Dériver une exponentielle revient à multiplier par son exposant :</p>
 <p style="text-align:center;">
 $\displaystyle
 \partial_\mu\psi = -\mathrm{i}\,p_\mu\,\psi
@@ -2467,18 +2482,18 @@ $
 <p style="text-align:center;">
 $\displaystyle
 \mathrm{i}\gamma^\mu(-\mathrm{i}p_\mu)\,u = m\,u
-\qquad\Longrightarrow\qquad
+\quad\Longrightarrow\quad
 \gamma^\mu p_\mu\,u = m\,u
-\qquad\Longrightarrow\qquad
+\quad\Longrightarrow\quad
 (\not{\!\!p} - m)\,u = 0
 $
 </p>
 <p>les deux facteurs $\mathrm{i}$ se combinant en $+1$.</p>
-<p><b>Pour une antiparticule</b>, $\psi = v(p),\mathrm{e}^{+\mathrm{i}p\cdot x}$, la dérivation donne cette fois $\partial_\mu\psi = +\mathrm{i}p_\mu\psi$, et les deux facteurs $\mathrm{i}$ se combinent en $-1$ :</p>
+<p><b>Pour une antiparticule</b>, $\psi = v(p)\,\mathrm{e}^{+\mathrm{i}p\cdot x}$, la dérivation donne cette fois $\partial_\mu\psi = +\mathrm{i}p_\mu\psi$, et les deux facteurs $\mathrm{i}$ se combinent en $-1$ :</p>
 <p style="text-align:center;">
 $\displaystyle
 -\gamma^\mu p_\mu\,v = m\,v
-\qquad\Longrightarrow\qquad
+\quad\Longrightarrow\quad
 (\not{\!\!p} + m)\,v = 0
 $
 </p>
@@ -2503,15 +2518,17 @@ $
 <div id="preuve">
 <details>
 <summary>Le calcul, et l'origine du signe moins de $v$</summary>
-<p><b>Le point de départ.</b> Au repos, $p^\mu = (m, \boldsymbol 0)$, donc $\not{!!p} = \gamma^\mu p_\mu = m\gamma^0$. Les deux équations deviennent</p>
+<p>Au repos, $p^\mu = (m, \boldsymbol 0)$, donc $\not{\!\!p} = \gamma^\mu p_\mu = m\gamma^0$. Les deux équations deviennent</p>
 <p style="text-align:center;">
 $\displaystyle
-m\,(\gamma^0 - 1)\,u(p_0) = 0
-\qquad\text{et}\qquad
-m\,(\gamma^0 + 1)\,v(p_0) = 0
+m\,(\gamma^0 - 1)\,u(p_0) = 0\quad$
+et
+$\displaystyle
+\quad m\,(\gamma^0 + 1)\,v(p_0) = 0
 $
 </p>
-<p><b>Pour la particule.</b> En représentation chirale, la matrice s&rsquo;écrit en blocs $2\times 2$ :</p>
+<p><b>Pour la particule :</b></p>
+<p>En représentation chirale, la matrice s&rsquo;écrit en blocs $2\times 2$ :</p>
 <p style="text-align:center;">
 $\displaystyle
 \gamma^0 - 1 = \begin{pmatrix} 0 & I \\ I & 0 \end{pmatrix} - \begin{pmatrix} I & 0 \\ 0 & I \end{pmatrix} = \begin{pmatrix} -I & I \\ I & -I \end{pmatrix}
@@ -2521,7 +2538,7 @@ $
 <p style="text-align:center;">
 $\displaystyle
 m\begin{pmatrix} -I & I \\ I & -I \end{pmatrix}\begin{pmatrix} u_L \\ u_R \end{pmatrix} = 0
-\qquad\Longleftrightarrow\qquad
+\quad\Longleftrightarrow\quad
 \begin{cases} -u_L + u_R = 0 \\ u_L - u_R = 0 \end{cases}
 $
 </p>
@@ -2530,9 +2547,9 @@ $
 <p style="text-align:center;">
 $\displaystyle
 \gamma^0 + 1 = \begin{pmatrix} I & I \\ I & I \end{pmatrix}
-\qquad\Longrightarrow\qquad
+\quad\Longrightarrow\quad
 v_L + v_R = 0
-\qquad\Longrightarrow\qquad
+\quad\Longrightarrow\quad
 v_R = -v_L
 $
 </p>
@@ -2541,28 +2558,21 @@ $
 </details>
 </div>
 <p>Deux lectures physiques de ce résultat.</p>
-<p><strong>Le décompte des degrés de liberté.</strong> Les quatre composantes du spineur ne portent que <b>deux informations indépendantes</b>, les deux composantes de $\xi$ (ou de $\eta$), qui codent le spin. Une particule de spin up selon $z$ a $\xi = \begin{pmatrix} 1 \\ 0 \end{pmatrix}$, de spin down $\xi = \begin{pmatrix} 0 \\ 1 \end{pmatrix}$. Les deux composantes restantes ne sont pas de l&rsquo;information nouvelle : elles sont recopiées de la contrainte $u_L = u_R$.</p>
+<p><strong>Le décompte des degrés de liberté.</strong> Les quatre composantes du spineur ne portent que <b>deux informations indépendantes</b>, les deux composantes de $\xi$ (ou de $\eta$), qui codent le spin.<br>
+Une particule de spin up selon $z$ a $\xi = \begin{pmatrix} 1 \\ 0 \end{pmatrix}$, de spin down $\xi = \begin{pmatrix} 0 \\ 1 \end{pmatrix}$.<br>
+Les deux composantes restantes ne sont pas de l&rsquo;information nouvelle : elles sont recopiées de la contrainte $u_L = u_R$.</p>
 <p><strong>Pourquoi gauche et droite coïncident au repos.</strong> Deux raisons se rejoignent, et elles reviendront toutes deux au chapitre suivant. Sans impulsion, il n&rsquo;existe aucun axe pour définir une hélicité, donc rien qui puisse distinguer les deux blocs. Et surtout, nous verrons que ce qui sépare $\psi_L$ de $\psi_R$ est leur comportement sous les <b>boosts</b> : au repos, aucun boost n&rsquo;est à l&rsquo;œuvre.</p>
 <div id="preuve">
 <details>
 <summary>Attention&nbsp;: pour les antiparticules, la lecture du spin s'inverse</summary>
-<p>C&rsquo;est le point le plus contre-intuitif du chapitre, et il fait perdre beaucoup de temps quand on l&rsquo;oublie.</p>
-<p>Une antiparticule de <b>spin physique up</b> selon $z$ est décrite par</p>
-<p style="text-align:center;">
-$\displaystyle
-\eta = \begin{pmatrix} 0 \\ 1 \end{pmatrix}
-\qquad\text{de sorte que}\qquad
-\hat S_z\,\eta = -\tfrac{1}{2}\,\eta
-$
-</p>
-<p>et une antiparticule de spin physique down par $\eta = \begin{pmatrix} 1 \ 0 \end{pmatrix}$. Le signe de la valeur propre est <b>opposé</b> au spin physique.</p>
-<p><b>La raison profonde</b> n&rsquo;apparaîtra qu&rsquo;au chapitre sur le champ de Dirac quantique : dans le champ quantifié, le terme $v(p),\mathrm{e}^{\mathrm{i}p\cdot x}$ accompagne un opérateur de <b>création</b> d&rsquo;antiparticule, et non d&rsquo;annihilation. Tous les nombres quantiques se lisent donc « à l&rsquo;envers » : créer une antiparticule de spin $+\frac{1}{2}$ revient, du point de vue du champ, à retirer une particule de spin $-\frac{1}{2}$.</p>
-<p><b>En pratique</b> : dès qu&rsquo;un calcul mêle particules et antiparticules polarisées, vérifier cette convention avant tout. C&rsquo;est l&rsquo;erreur qui inverse les distributions angulaires.</p>
+<p>Une antiparticule de <b>spin physique up</b> selon $z$ est décrite par $\eta = \begin{pmatrix} 0 \\ 1 \end{pmatrix}$ de sorte que $\hat S_z\,\eta = -\tfrac{1}{2}\,\eta$ et une antiparticule de spin physique down par $\eta = \begin{pmatrix} 1 \\ 0 \end{pmatrix}$.<br>
+Le signe de la valeur propre est <b>opposé</b> au spin physique.</p>
+<p><b>La raison profonde</b> n&rsquo;apparaîtra qu&rsquo;au chapitre sur le champ de Dirac quantique : dans le champ quantifié, le terme $v(p)\,\mathrm{e}^{\mathrm{i}p\cdot x}$ accompagne un opérateur de <b>création</b> d&rsquo;antiparticule, et non d&rsquo;annihilation. Tous les nombres quantiques se lisent donc « à l&rsquo;envers » : créer une antiparticule de spin $+\frac{1}{2}$ revient, du point de vue du champ, à retirer une particule de spin $-\frac{1}{2}$.</p>
 </details>
 </div>
 <br>
 <h4 id="le-cas-général-impulsion-quelconque">Le cas général : impulsion quelconque</h4>
-<p>Il ne reste qu&rsquo;à booster le spineur au repos. Le résultat est le suivant, et sa démonstration complète est donnée au chapitre suivant, une fois la loi de transformation des spineurs établie.</p>
+<p>Il ne reste qu&rsquo;à booster le spineur au repos. Le résultat est le suivant.</p>
 <div id="theo">
 <p><b>Spineurs d&rsquo;impulsion quelconque</b></p>
 <p style="text-align:center;">
@@ -2577,10 +2587,14 @@ $
 </p>
 <p>où $p\cdot\sigma = p_\mu\sigma^\mu$ est une matrice $2\times 2$, et où sa racine carrée s&rsquo;entend comme la racine positive de chacune de ses valeurs propres.</p>
 </div>
-<p>Deux contrôles immédiats, avant même de savoir d&rsquo;où sort cette formule. Au repos, $\boldsymbol p = \boldsymbol 0$ donne $p\cdot\sigma = p\cdot\bar\sigma = m,I$, et l&rsquo;on retrouve bien les spineurs de la section précédente. Et le signe moins du bloc inférieur de $v$ a survécu au boost, comme il se doit puisque les boosts n&rsquo;échangent pas les blocs.</p>
+<p>La démonstration complète est donnée au chapitre suivant, une fois la loi de transformation des spineurs établie.</p>
+<p>Deux contrôles immédiats, avant même de savoir d&rsquo;où sort cette formule. Au repos, $\boldsymbol p = \boldsymbol 0$ donne $p\cdot\sigma = p\cdot\bar\sigma = m\,I$, et l&rsquo;on retrouve bien les spineurs de la section précédente. Et le signe moins du bloc inférieur de $v$ a survécu au boost, comme il se doit puisque les boosts n&rsquo;échangent pas les blocs.</p>
 <br>
 <div id="preuve">
-<p>Exemple qui rend tout ça un peu plus concret :</p>
+<details>
+<summary>
+Exemple pour rendre tout ça un peu plus concret
+</summary>
 <p>Pour un mouvement selon l&rsquo;axe $z$ :</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -2624,6 +2638,7 @@ u(p) = \begin{pmatrix} \sqrt{E_{\boldsymbol p} - |\boldsymbol p|}\begin{pmatrix}
 $
 </p>
 <p>Dans la limite ultra-relativiste, la composante gauche s&rsquo;éteint : une particule d&rsquo;hélicité $+1$ devient purement droite, comme annoncé. Le calcul analogue pour les trois autres cas (spin down, et les deux antiparticules) confirme le tableau de la figure des hélicités ci-dessus.</p>
+</details>
 </div>
 <br>
 <h3 id="base-orthonormée-et-sommes-de-spin">Base orthonormée et sommes de spin</h3>
@@ -2643,7 +2658,7 @@ $\displaystyle
 $
 </p>
 </div>
-<p>En choisissant la base de spin $\xi^1 = \begin{pmatrix} 1 \ 0 \end{pmatrix}$, $\xi^2 = \begin{pmatrix} 0 \ 1 \end{pmatrix}$ avec $\xi^{s\dagger}\xi^r = \delta^{sr}$, on obtient le jeu complet de relations, qu&rsquo;on rassemble ici parce qu&rsquo;il servira sans arrêt aux chapitres suivant :</p>
+<p>En choisissant la base de spin $\xi^1 = \begin{pmatrix} 1 \\ 0 \end{pmatrix}$, $\xi^2 = \begin{pmatrix} 0 \\ 1 \end{pmatrix}$ avec $\xi^{s\dagger}\xi^r = \delta^{sr}$, on obtient le jeu complet de relations, qu&rsquo;on rassemble ici parce qu&rsquo;il servira sans arrêt aux chapitres suivant :</p>
 <div id="theo">
 <p style="text-align:center;">
 $\displaystyle
@@ -2679,7 +2694,7 @@ $\displaystyle
 \psi_-(x) = \int \frac{\mathrm{d}^3 p}{(2\pi)^{3/2}}\,\frac{1}{(2E_{\boldsymbol p})^{1/2}} \sum_{s=1}^{2} a_{s\boldsymbol p}\, u^s(p)\,\mathrm{e}^{-\mathrm{i} p\cdot x}
 $
 </p>
-<p>et de même pour les antiparticules, avec $b^*_{s\boldsymbol p},v^s(p),\mathrm{e}^{+\mathrm{i} p\cdot x}$.</p>
+<p>et de même pour les antiparticules, avec $b^*_{s\boldsymbol p}\,v^s(p)\,\mathrm{e}^{+\mathrm{i} p\cdot x}$.</p>
 </div>
 <p>Décortiquons cette écriture, dont chaque morceau a sa raison d&rsquo;être :</p>
 <ul style="margin-top:0.5em; margin-bottom:1em;">
@@ -2730,7 +2745,7 @@ $
 <p style="text-align:center;">
 $\displaystyle
 (p\cdot\sigma)(p\cdot\bar\sigma) = p^2 = m^2
-\qquad\Longrightarrow\qquad
+\quad\Longrightarrow\quad
 \sqrt{p\cdot\sigma}\sqrt{p\cdot\bar\sigma} = m
 $
 </p>
@@ -2740,7 +2755,7 @@ $\displaystyle
 \sum_s u^s\bar u^s = \begin{pmatrix} m & p\cdot\sigma \\ p\cdot\bar\sigma & m \end{pmatrix} = \; \not{\!\!p} + m
 $
 </p>
-<p>la dernière égalité venant de $\not{!!p} = \begin{pmatrix} 0 &amp; p\cdot\sigma \ p\cdot\bar\sigma &amp; 0\end{pmatrix}$ et de $m$ fois l&rsquo;identité.</p>
+<p>la dernière égalité venant de $\not{\!\!p} = \begin{pmatrix} 0 &amp; p\cdot\sigma \\ p\cdot\bar\sigma &amp; 0\end{pmatrix}$ et de $m$ fois l&rsquo;identité.</p>
 <p><b>À noter pour la suite</b> : cette matrice a exactement la structure que nous retrouverons dans le propagateur du fermion, avec la masse sur la diagonale et le terme cinétique hors diagonale. Ce n&rsquo;est pas un hasard : le numérateur du propagateur <i>est</i> cette somme de spin.</p>
 </details>
 </div>
@@ -5472,16 +5487,16 @@ $
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1786057561"></script>
-    <script src="/js/perfect-scrollbar.min.js?1786057561"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1786057561"></script>
-    <script src="/js/jquery.sticky.js?1786057561"></script>
-    <script src="/js/featherlight.min.js?1786057561"></script>
-    <script src="/js/highlight.pack.js?1786057561"></script>
+    <script src="/js/clipboard.min.js?1786066867"></script>
+    <script src="/js/perfect-scrollbar.min.js?1786066867"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1786066867"></script>
+    <script src="/js/jquery.sticky.js?1786066867"></script>
+    <script src="/js/featherlight.min.js?1786066867"></script>
+    <script src="/js/highlight.pack.js?1786066867"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1786057561"></script>
-    <script src="/js/learn.js?1786057561"></script>
-    <script src="/js/hugo-learn.js?1786057561"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1786066867"></script>
+    <script src="/js/learn.js?1786066867"></script>
+    <script src="/js/hugo-learn.js?1786066867"></script>
     
     
 
