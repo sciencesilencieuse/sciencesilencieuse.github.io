@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1786130030" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1786130030" rel="stylesheet">
-    <link href="/css/hybrid.css?1786130030" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1786130030" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1786130030" rel="stylesheet">
-    <link href="/css/auto-complete.css?1786130030" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1786130030" rel="stylesheet">
-    <link href="/css/theme.css?1786130030" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1786130030" rel="stylesheet">
+    <link href="/css/nucleus.css?1786149803" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1786149803" rel="stylesheet">
+    <link href="/css/hybrid.css?1786149803" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1786149803" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1786149803" rel="stylesheet">
+    <link href="/css/auto-complete.css?1786149803" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1786149803" rel="stylesheet">
+    <link href="/css/theme.css?1786149803" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1786149803" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1786130030" rel="stylesheet">
+    <link href="/css/theme-blue.css?1786149803" rel="stylesheet">
     
-    <link href="/css/foo.css?1786130030" rel="stylesheet"><link href="/css/bar.css?1786130030" rel="stylesheet">
+    <link href="/css/foo.css?1786149803" rel="stylesheet"><link href="/css/bar.css?1786149803" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1786130030"></script>
+    <script src="/js/jquery-3.3.1.min.js?1786149803"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1786130030"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1786130030"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1786149803"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1786149803"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1786130030"></script>
+<script type="text/javascript" src="/js/search.js?1786149803"></script>
 
     
   </div>
@@ -2589,7 +2589,6 @@ $
 </div>
 <p>La démonstration complète est donnée au chapitre suivant, une fois la loi de transformation des spineurs établie.</p>
 <p>Deux contrôles immédiats, avant même de savoir d&rsquo;où sort cette formule. Au repos, $\boldsymbol p = \boldsymbol 0$ donne $p\cdot\sigma = p\cdot\bar\sigma = m\,I$, et l&rsquo;on retrouve bien les spineurs de la section précédente. Et le signe moins du bloc inférieur de $v$ a survécu au boost, comme il se doit puisque les boosts n&rsquo;échangent pas les blocs.</p>
-<br>
 <div id="preuve">
 <details>
 <summary>
@@ -2642,7 +2641,7 @@ $
 </div>
 <br>
 <h3 id="base-orthonormée-et-sommes-de-spin">Base orthonormée et sommes de spin</h3>
-<p>Pour utiliser les spineurs comme base de développement, il faut une notion de produit scalaire. Deux candidats se présentent, et il faut les <b>garder tous les deux</b> : chacun servira dans un contexte différent, et les confondre est une source d&rsquo;erreurs constante.</p>
+<p>Pour utiliser les spineurs comme base de développement, il faut une notion de produit scalaire. Deux candidats se présentent, et il faut les <b>garder tous les deux</b> : chacun servira dans un contexte différent.</p>
 <p>Le premier est le produit hermitien naïf $u^\dagger u$. Il a le défaut de ne pas être invariant de Lorentz, puisqu&rsquo;on montrera qu&rsquo;il vaut $2E_{\boldsymbol p}$, donc qu&rsquo;il dépend du référentiel. Mais c&rsquo;est précisément lui qui apparaîtra dans les calculs de <b>densités</b>, comme le hamiltonien et la charge, puisque celles-ci ne sont pas des scalaires non plus.</p>
 <p>Le second utilise le <b>spineur adjoint</b>, et c&rsquo;est celui qui produit les invariants.</p>
 <div id="def">
@@ -2653,7 +2652,39 @@ $\displaystyle
 $
 </p>
 </div>
-<p>C&rsquo;est la combinaison qui produit des invariants de Lorentz :</p>
+<p>Avant de calculer quoi que ce soit, posons l&rsquo;outil algébrique qui va servir dans <b>toute</b> la partie, et que nous ne redémontrerons plus ensuite.</p>
+<div id="def">
+<p><b>Identité de Pauli</b></p>
+<p style="text-align:center;">
+$\displaystyle
+\sigma^i\sigma^j = \delta^{ij}\,I + \mathrm{i}\,\epsilon^{ijk}\sigma^k
+$
+</p>
+<p>Trois formes dérivées, qu&rsquo;on rencontrera tour à tour et qui ne sont que cette relation lue autrement :</p>
+<p style="text-align:center;">
+$\displaystyle
+\{\sigma^i, \sigma^j\} = 2\delta^{ij}\,I
+\quad$ (partie symétrique)
+</p>
+<p style="text-align:center;">
+$\displaystyle
+[\sigma^i, \sigma^j] = 2\mathrm{i}\,\epsilon^{ijk}\sigma^k
+\quad$ (partie antisymétrique)
+</p>
+<p style="text-align:center;">
+$\displaystyle
+(\boldsymbol\sigma\cdot\boldsymbol a)(\boldsymbol\sigma\cdot\boldsymbol b) = (\boldsymbol a\cdot\boldsymbol b)\,I + \mathrm{i}\,\boldsymbol\sigma\cdot(\boldsymbol a \times \boldsymbol b)
+\quad$ (forme vectorielle)
+</p>
+</div>
+<p>Les deux premières s&rsquo;obtiennent en séparant la relation maîtresse en ses parties symétrique et antisymétrique en $ij$ ; la troisième en la contractant avec $a_i b_j$.</p>
+<div id="preuve">
+<p><b>Deux mises en garde sur la forme vectorielle</b>, car c&rsquo;est celle qui servira le plus.</p>
+<p><b>L&rsquo;ordre des facteurs compte.</b> La démonstration ne suppose jamais que $\boldsymbol a$ et $\boldsymbol b$ commutent : elle reste donc valable pour des <b>opérateurs</b>, à condition de garder $\boldsymbol a$ à gauche de $\boldsymbol b$ dans les deux membres.</p>
+<p><b>Corollaire surprenant.</b> Si $\boldsymbol a = \boldsymbol b$ est un vecteur ordinaire, le produit vectoriel s&rsquo;annule et l&rsquo;on retrouve le cas familier $(\boldsymbol\sigma\cdot\boldsymbol a)^2 = |\boldsymbol a|^2$. Mais si $\boldsymbol a$ est un <b>opérateur vectoriel dont les composantes ne commutent pas entre elles</b>, alors $\boldsymbol a \times \boldsymbol a \neq \boldsymbol 0$ et le second terme survit. Nous en ferons un usage spectaculaire à la fin du chapitre, pour faire apparaître le champ magnétique.</p>
+</div>
+<br>
+<p>La combinaison qui produit des invariants de Lorentz :</p>
 <p style="text-align:center;">
 $\displaystyle
 \bar u(p)u(p) = 2m\,\xi^\dagger\xi
@@ -2688,10 +2719,10 @@ $\displaystyle
 \sqrt{E + \boldsymbol{p} \cdot \boldsymbol{\sigma}} \sqrt{E - \boldsymbol{p} \cdot \boldsymbol{\sigma}} = \sqrt{(E + \boldsymbol{p} \cdot \boldsymbol{\sigma})(E - \boldsymbol{p} \cdot \boldsymbol{\sigma})} = \sqrt{E^2 - (\boldsymbol{p} \cdot \boldsymbol{\sigma})^2}=\sqrt{E^2 - \vert{}\boldsymbol{p}\vert{}^2} =\sqrt{m^2}=m
 $
 </p>
-<p>Où on a utilisé l&rsquo;identité de Pauli, $(\boldsymbol\sigma\cdot\boldsymbol a)(\boldsymbol\sigma\cdot\boldsymbol b) = \boldsymbol a\cdot\boldsymbol b + \mathrm{i}\boldsymbol\sigma\cdot(\boldsymbol a\times\boldsymbol b)$, appliquée avec $\boldsymbol a = \boldsymbol b = \boldsymbol p$ :</p>
+<p>Où l&rsquo;on a utilisé la <b>forme vectorielle</b> de l&rsquo;identité de Pauli, posée en tête de section, avec $\boldsymbol a = \boldsymbol b = \boldsymbol p$. Le produit vectoriel s&rsquo;annule ici, puisque les composantes de $\boldsymbol p$ sont de simples nombres qui commutent, et il reste :</p>
 <p style="text-align:center;">
 $\displaystyle
-\Rightarrow (\boldsymbol p\cdot \boldsymbol \sigma)^2 = |\boldsymbol p|^2
+ (\boldsymbol p\cdot \boldsymbol \sigma)^2 = |\boldsymbol p|^2
 $
 </p>
 <p>On obtient finalement :</p>
@@ -2801,10 +2832,7 @@ $\displaystyle
 $
 </p>
 </div>
-<p><b>Deux différences avec le jeu précédent méritent d&rsquo;être soulignées</b>, car ce sont elles qui feront tout le travail au chapitre suivant.</p>
-<p>D&rsquo;abord, la normalisation vaut $2E_{\boldsymbol p}$ et non $2m$ : elle dépend du référentiel, comme annoncé.</p>
-<p>Ensuite, et c&rsquo;est le point crucial, <b>le signe de la relation pour $v$ a changé</b>. On avait $\bar v v = -2m$, on obtient ici $v^\dagger v = +2E_{\boldsymbol p}$. Ce basculement de signe est la clé du calcul du hamiltonien.</p>
-<p>Enfin, l&rsquo;orthogonalité croisée ne vaut pas entre $u(p)$ et $v(p)$, mais entre $u(\tilde p)$ et $v(p)$, c&rsquo;est-à-dire pour des impulsions <b>spatialement opposées</b>. C&rsquo;est exactement la configuration que produiront les termes croisés du développement en modes.</p>
+<br>
 <div id="preuve">
 <details>
 <summary>Démonstration des trois relations</summary>
@@ -2820,7 +2848,7 @@ $
 <p>Chaque racine est ici multipliée par <b>elle-même</b>, ce qui la fait disparaître sans qu&rsquo;on ait besoin de l&rsquo;identité de Pauli. Et la somme des deux matrices est immédiate :</p>
 <p style="text-align:center;">
 $\displaystyle
-p\cdot\sigma + p\cdot\bar\sigma = (E_{\boldsymbol p} - \boldsymbol p\cdot\boldsymbol\sigma) + (E_{\boldsymbol p} + \boldsymbol p\cdot\boldsymbol\sigma) = 2E_{\boldsymbol p}\,I
+p\cdot\sigma + p\cdot\bar\sigma = (E_{\boldsymbol p}\, I - \boldsymbol p\cdot\boldsymbol\sigma) + (E_{\boldsymbol p}\, I + \boldsymbol p\cdot\boldsymbol\sigma) = 2E_{\boldsymbol p}\,I
 $
 </p>
 <p><b>les termes en $\boldsymbol\sigma$ se compensant exactement</b>. D&rsquo;où $u^{r\dagger}u^s = 2E_{\boldsymbol p},\xi^{r\dagger}\xi^s = 2E_{\boldsymbol p}\delta^{rs}$.</p>
@@ -2856,6 +2884,12 @@ $
 <p><b>C&rsquo;est cette relation qui tuera les termes croisés</b> du hamiltonien et de la charge au chapitre suivant.</p>
 </details>
 </div>
+<p><b>Trois différences avec le jeu précédent</b> méritent d&rsquo;être soulignées, car ce sont elles qui feront tout le travail au chapitre suivant.</p>
+<ul style="margin-top:-0.5em; margin-bottom:1em;">
+<li>D'abord, la normalisation vaut $2E_{\boldsymbol p}$ et non $2m$&nbsp;: elle dépend du référentiel, comme annoncé.</li>
+<li>Ensuite, et c'est le point crucial, <b>le signe de la relation pour $v$ a changé</b>. On avait $\bar v v = -2m$, on obtient ici $v^\dagger v = +2E_{\boldsymbol p}$. Ce basculement de signe est la clé du calcul du hamiltonien.</li>
+<li>Enfin, l'orthogonalité croisée ne vaut pas entre $u(p)$ et $v(p)$, mais entre $u(\tilde p)$ et $v(p)$, c'est-à-dire pour des impulsions <b>spatialement opposées</b>. C'est exactement la configuration que produiront les termes croisés du développement en modes.</li>
+</ul>
 <br>
 <h4 id="de-la-base-au-développement-en-modes">De la base au développement en modes</h4>
 <p>Ces relations ne sont pas une simple collection de formules : elles disent que nous tenons une <b>base</b>, et c&rsquo;est ce qui va nous autoriser à développer.</p>
@@ -2922,11 +2956,16 @@ $\displaystyle
 \sum_s u^s\bar u^s = \begin{pmatrix} \sqrt{p\cdot\sigma}\sqrt{p\cdot\bar\sigma} & \sqrt{p\cdot\sigma}\sqrt{p\cdot\sigma} \\ \sqrt{p\cdot\bar\sigma}\sqrt{p\cdot\bar\sigma} & \sqrt{p\cdot\bar\sigma}\sqrt{p\cdot\sigma} \end{pmatrix}
 $
 </p>
-<p>Les blocs <b>diagonaux</b> se simplifient grâce à l&rsquo;identité de Pauli, $(\boldsymbol\sigma\cdot\boldsymbol a)(\boldsymbol\sigma\cdot\boldsymbol b) = \boldsymbol a\cdot\boldsymbol b + \mathrm{i}\boldsymbol\sigma\cdot(\boldsymbol a\times\boldsymbol b)$, appliquée avec $\boldsymbol a = \boldsymbol b = \boldsymbol p$ et les signes croisés de $\sigma$ et $\bar\sigma$ :</p>
+<p>Les blocs <b>diagonaux</b> se simplifient par le mécanisme déjà employé pour $\bar u u$ : la forme vectorielle de l&rsquo;identité de Pauli avec $\boldsymbol a = \boldsymbol b = \boldsymbol p$, les signes croisés de $\sigma$ et $\bar\sigma$ produisant la différence de carrés :</p>
 <p style="text-align:center;">
 $\displaystyle
-(p\cdot\sigma)(p\cdot\bar\sigma) = p^2 = m^2
-\quad\Longrightarrow\quad
+(p\cdot\sigma)(p\cdot\bar\sigma) = (E_p - \boldsymbol p\cdot\boldsymbol\sigma)(E_p + \boldsymbol p\cdot\boldsymbol\sigma) = E_p^2 - (\boldsymbol p\cdot\boldsymbol\sigma)^2 =  E_p^2 - |p|^2 = m^2
+\quad
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+\Longrightarrow\quad
 \sqrt{p\cdot\sigma}\sqrt{p\cdot\bar\sigma} = m
 $
 </p>
@@ -3012,7 +3051,7 @@ $
 </p>
 </details>
 </div>
-<p>À partir de ces équations et dans la limite non relativiste ($E\ll m$), on retrouve l&rsquo;équation de Pauli :</p>
+<p>À partir de ces équations et dans la limite non relativiste ($E\ll m$), on retrouve l&rsquo;<strong>équation de Pauli</strong> :</p>
 <div id="theo">
 <p style="text-align:center;">
 $\displaystyle
@@ -3079,49 +3118,50 @@ $
 <div id="preuve">
 <details>
 <summary>Détails&nbsp;:</summary>
-<p>Appelons $\boldsymbol\pi = \hat{\boldsymbol p} - q\boldsymbol A$.<br>
-Le terme cinétique de droite de l&rsquo;équation de Pauli devient donc proportionnel à $(\boldsymbol\sigma\cdot\boldsymbol\pi)^2$. Développons ce carré à l&rsquo;aide de la fameuse identité des matrices de Pauli $\sigma^i\sigma^j = \delta^{ij} + \mathrm{i}\epsilon^{ijk}\sigma^k$ :</p>
+<p>Appelons $\boldsymbol\pi = \hat{\boldsymbol p} - q\boldsymbol A$ l&rsquo;<b>impulsion cinétique</b>. Le terme cinétique de l&rsquo;équation devient proportionnel à $(\boldsymbol\sigma\cdot\boldsymbol\pi)^2$, et c&rsquo;est ici que l&rsquo;identité de Pauli posée au début du chapitre va donner tout son rendement, sous sa <b>forme vectorielle</b>.</p>
+<p>Pas 1 : <b>appliquer l&rsquo;identité</b><br>
+Avec $\boldsymbol a = \boldsymbol b = \boldsymbol\pi$ :</p>
 <p style="text-align:center;">
 $\displaystyle
-(\boldsymbol\sigma\cdot\boldsymbol\pi)^2 = (\sigma^i \pi_i)(\sigma^j \pi_j) = \sigma^i\sigma^j \pi_i \pi_j =  (\delta^{ij} + \mathrm{i}\epsilon^{ijk}\sigma^k) \pi_i \pi_j = \boldsymbol\pi^2 + \mathrm{i}\sigma^k \epsilon^{ijk} \pi_i \pi_j
+(\boldsymbol\sigma\cdot\boldsymbol\pi)^2 = \boldsymbol\pi^2 + \mathrm{i}\,\boldsymbol\sigma\cdot(\boldsymbol\pi \times \boldsymbol\pi)
 $
 </p>
-<p>(Note : $\boldsymbol\pi^2$ redonne le terme régulier $(\hat{\boldsymbol p} - q\boldsymbol A)^2$ habituel de Schrödinger. Concentrons-nous sur le second terme).</p>
-<p>Puisque $\epsilon^{ijk}$ est totalement antisymétrique (il change de signe si on échange $i$ et $j$), il extrait uniquement la partie antisymétrique du produit $\pi_i \pi_j$, c&rsquo;est-à-dire le commutateur :</p>
+<p>Le premier terme redonne le $(\hat{\boldsymbol p} - q\boldsymbol A)^2$ habituel de Schrödinger. Tout l&rsquo;intérêt est dans le second.</p>
+<p><b>Le point remarquable</b> : pour un vecteur ordinaire, $\boldsymbol\pi \times \boldsymbol\pi = \boldsymbol 0$ et il n&rsquo;y aurait rien de plus. Mais $\boldsymbol\pi$ est un <b>opérateur</b> dont les composantes ne commutent pas entre elles, précisément parce que $\hat{\boldsymbol p}$ et $\boldsymbol A(\boldsymbol x)$ ne commutent pas. Ce produit vectoriel d&rsquo;un vecteur avec lui-même est donc non nul, et nous allons voir que c&rsquo;est <b>le champ magnétique</b>.</p>
+<p>Pas 2 : <b>calculer $\boldsymbol\pi \times \boldsymbol\pi$</b><br>
+En développant, deux des quatre termes s&rsquo;annulent d&rsquo;eux-mêmes :</p>
 <p style="text-align:center;">
 $\displaystyle
-\epsilon^{ijk} \pi_i \pi_j = \frac{1}{2} \epsilon^{ijk} [\pi_i, \pi_j]
+\boldsymbol\pi \times \boldsymbol\pi = \underbrace{\hat{\boldsymbol p} \times \hat{\boldsymbol p}}_{=\;\boldsymbol 0} - q\big(\hat{\boldsymbol p} \times \boldsymbol A + \boldsymbol A \times \hat{\boldsymbol p}\big) + q^2\underbrace{\boldsymbol A \times \boldsymbol A}_{=\;\boldsymbol 0}
 $
 </p>
-<p>Calculons ce commutateur $[\pi_i, \pi_j]$  sachant que $\pi_i = -\mathrm{i}\nabla_i - qA_i$ :</p>
+<p>Les composantes de $\hat{\boldsymbol p}$ commutent entre elles, et celles de $\boldsymbol A$ aussi (c&rsquo;est une simple multiplication). Seuls survivent les <b>termes croisés</b>, et c&rsquo;est là que se joue toute la physique.</p>
+<p>Pas 3 : <b>faire agir sur une fonction test</b><br>
+Les deux termes croisés ne se compensent pas, car $\hat{\boldsymbol p} = -\mathrm{i}\boldsymbol\nabla$ dérive ce qui est à sa droite. Appliquons-les à une fonction $\psi$ :</p>
 <p style="text-align:center;">
 $\displaystyle
-[\pi_i, \pi_j] = [-\mathrm{i}\nabla_i - qA_i, -\mathrm{i}\nabla_j - qA_j]
+\big(\hat{\boldsymbol p} \times \boldsymbol A\big)\psi = -\mathrm{i}\,\boldsymbol\nabla \times (\boldsymbol A\psi)
+\qquad\text{et}\qquad
+\big(\boldsymbol A \times \hat{\boldsymbol p}\big)\psi = -\mathrm{i}\,\boldsymbol A \times (\boldsymbol\nabla\psi)
 $
 </p>
-<p>Les gradients commutent entre eux, les $A$ commutent entre eux. Il ne reste que les termes croisés :</p>
+<p>La règle du produit pour le rotationnel donne $\boldsymbol\nabla \times (\boldsymbol A\psi) = (\boldsymbol\nabla \times \boldsymbol A)\psi - \boldsymbol A \times \boldsymbol\nabla\psi$. En sommant, <b>les deux termes en $\boldsymbol A \times \boldsymbol\nabla\psi$ se retranchent</b> et il ne reste que le rotationnel de $\boldsymbol A$ :</p>
 <p style="text-align:center;">
 $\displaystyle
-[\pi_i, \pi_j] = \mathrm{i}q [\nabla_i, A_j] + \mathrm{i}q [A_i, \nabla_j]
+\big(\hat{\boldsymbol p} \times \boldsymbol A + \boldsymbol A \times \hat{\boldsymbol p}\big)\psi = -\mathrm{i}\,(\boldsymbol\nabla \times \boldsymbol A)\,\psi = -\mathrm{i}\,\boldsymbol B\,\psi
 $
 </p>
-<p>Or, quand le gradient agit dans un commutateur sur une fonction test, il applique la règle du produit qui se simplifie pour donner simplement la dérivée du potentiel : $[\nabla_i, A_j] = \partial_i A_j$.</p>
+<p><b>Le champ magnétique est apparu directement comme un rotationnel</b>, sans passer par les indices, puisque $\boldsymbol B = \boldsymbol\nabla \times \boldsymbol A$ par définition. D&rsquo;où</p>
 <p style="text-align:center;">
 $\displaystyle
-[\pi_i, \pi_j] = \mathrm{i}q (\partial_i A_j - \partial_j A_i)
+\boldsymbol\pi \times \boldsymbol\pi = -q\,(-\mathrm{i}\boldsymbol B) = \mathrm{i}q\,\boldsymbol B
 $
 </p>
-<p>On reconnaît dans la parenthèse le champ magnétique ! En effet, $\boldsymbol B = \boldsymbol\nabla \times \boldsymbol A$, ce qui en composantes s&rsquo;écrit précisément $B^k = \epsilon^{ijk} \partial_i A_j$.</p>
-<p>Ainsi, le terme complet devient :</p>
+<p>Pas 4 : <b>reporter</b><br>
+Les deux facteurs $\mathrm{i}$ se combinent en $-1$ :</p>
 <p style="text-align:center;">
 $\displaystyle
-\mathrm{i}\sigma^k \left( \frac{1}{2} \epsilon^{ijk} \right) \big( \mathrm{i}q (\partial_i A_j - \partial_j A_i) \big)
-$
-</p>
-<p>Ce qui donne :</p>
-<p style="text-align:center;">
-$\displaystyle
--q \sigma^k B^k = -q \boldsymbol\sigma\cdot\boldsymbol B
+(\boldsymbol\sigma\cdot\boldsymbol\pi)^2 = \boldsymbol\pi^2 + \mathrm{i}\,\boldsymbol\sigma\cdot(\mathrm{i}q\boldsymbol B) = \boldsymbol\pi^2 - q\,\boldsymbol\sigma\cdot\boldsymbol B
 $
 </p>
 <p>En divisant par le $2m$ de l&rsquo;équation de Pauli, on tombe sur l&rsquo;équation finale :</p>
@@ -3228,7 +3268,7 @@ $
 <summary>
 Exemple de la rotation d'angle $\theta^3$ autour de $z$&nbsp;:
 </summary>
-<p>En géométrie, une rotation est définie par un axe et un angle. Le vecteur $\boldsymbol\theta$ pointe dans la direction de l&rsquo;axe de rotation, et sa longueur (sa norme) correspond à l&rsquo;angle de rotation. Ici, $\boldsymbol\theta = (0, 0, \theta^3)$.</p>
+<p>En géométrie, une rotation est définie par <b>un axe et un angle</b>. Le vecteur $\boldsymbol\theta$ pointe dans la direction de l&rsquo;axe de rotation, et sa longueur (sa norme) correspond à l&rsquo;angle de rotation. Ici, $\boldsymbol\theta = (0, 0, \theta^3)$.</p>
 <p>Le produit scalaire se simplifie donc en :</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -3241,28 +3281,28 @@ $\displaystyle
 D(\theta^3) = \mathrm{e}^{-\frac{\mathrm{i}}{2}\sigma^3\theta^3}
 $
 </p>
-<p>Or $\sigma^3 = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}$ est sympatiquement diagonales.</p>
+<p>Or $\sigma^3 = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}$ est sympatiquement <b>diagonale</b>.</p>
 <p>Et comme $\mathrm{e}^{\begin{pmatrix} a &amp; 0 \\ 0 &amp; b \end{pmatrix}} = \begin{pmatrix} \mathrm{e}^a &amp; 0 \\ 0 &amp; \mathrm{e}^b \end{pmatrix}$,</p>
 <p style="text-align:center;">
 $\displaystyle
 D(\theta^3) = \begin{pmatrix} \mathrm{e}^{-\frac{\mathrm{i}}{2}\theta^3 (1)} & 0 \\ 0 & \mathrm{e}^{-\frac{\mathrm{i}}{2}\theta^3 (-1)} \end{pmatrix} = \begin{pmatrix} \mathrm{e}^{-\mathrm{i}\theta^3/2} & 0 \\ 0 & \mathrm{e}^{\mathrm{i}\theta^3/2} \end{pmatrix}
 $
 </p>
-<p>Appliquons maintenant cette matrice à un spineur en lui faisant faire un tour géométrique complet sur lui-même, c&rsquo;est-à-dire en choisissant un angle de rotation $\theta^3 = 2\pi$.</p>
-<p>Grâce au facteur $1/2$ apparu dans l&rsquo;exponentielle, la matrice de rotation pour un tour complet devient :</p>
+<p><b>Appliquons maintenant cette matrice à un spineur</b> en lui faisant faire un tour géométrique complet sur lui-même, c&rsquo;est-à-dire en choisissant un angle de rotation $\theta^3 = 2\pi$.</p>
+<p><b>Grâce au facteur $1/2$</b> apparu dans l&rsquo;exponentielle, la matrice de rotation pour un tour complet devient :</p>
 <p style="text-align:center;">
 $\displaystyle
 D(2\pi) = \begin{pmatrix} \mathrm{e}^{-\mathrm{i}\pi} & 0 \\ 0 & \mathrm{e}^{\mathrm{i}\pi} \end{pmatrix}=\begin{pmatrix} -1 & 0 \\ 0 & -1 \end{pmatrix} = -I
 $
 </p>
 <p>La conclusion physique :<br>
-Si vous prenez un spineur $\psi$ (qui décrit un électron) et que vous lui faites subir une rotation spatiale classique de 360° ($2\pi$), l&rsquo;opérateur de rotation agit ainsi :</p>
+Si vous prenez un spineur $\psi$ (qui décrit un électron) et que vous lui faites subir une rotation spatiale classique de <b>360°</b> ($2\pi$), l&rsquo;opérateur de rotation agit ainsi :</p>
 <p style="text-align:center;">
 $\displaystyle
 \psi \xrightarrow{\;360^\circ\;} -I \psi = -\psi
 $
 </p>
-<p>La fonction d&rsquo;onde ne revient pas à elle-même, elle est inversée (multipliée par un signe moins global) !<br>
+<p><b>La fonction d&rsquo;onde</b> ne revient pas à elle-même, elle <b>est inversée</b> (multipliée par un signe moins global) !<br>
 Pour que le signe moins s&rsquo;annule et que l&rsquo;électron retrouve son état quantique strict de départ, il faut tourner d&rsquo;un angle total de $\theta^3 = 4\pi$ (soit <b>deux tours complets</b>). C&rsquo;est la signature mathématique des particules de spin 1/2.</p>
 </details>
 </div>
@@ -3297,7 +3337,7 @@ $\displaystyle
 [K^i, K^j] = -\mathrm{i}\epsilon^{ijk}J^k
 $
 </p>
-<p>Posons $\boldsymbol J = \frac{1}{2}\boldsymbol\sigma$ et $\boldsymbol K = \lambda\boldsymbol\sigma$, avec $\lambda$ un nombre à déterminer. Tout repose sur l&rsquo;unique relation $[\sigma^i, \sigma^j] = 2\mathrm{i}\epsilon^{ijk}\sigma^k$.</p>
+<p>Posons $\boldsymbol J = \frac{1}{2}\boldsymbol\sigma$ et $\boldsymbol K = \lambda\boldsymbol\sigma$, avec $\lambda$ un nombre à déterminer. Tout repose sur la <b>partie antisymétrique</b> de l&rsquo;identité de Pauli, $[\sigma^i, \sigma^j] = 2\mathrm{i}\epsilon^{ijk}\sigma^k$, établie au chapitre précédent.</p>
 <p><b>La deuxième relation</b> ne contraint rien :</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -3386,14 +3426,14 @@ $
 <details>
 <summary>Démonstration, sur un boost selon $z$</summary>
 <p>Le raisonnement tient en cinq pas. On se place dans le cas d&rsquo;un boost selon $z$, ce qui ne coûte aucune généralité : une rotation ramène toujours à cette configuration.</p>
-<p><b>Écrire l&rsquo;exponentielle de matrices.</b><br>
+<p><b>Écrire l&rsquo;exponentielle de matrices</b><br>
 Pour un boost selon $z$, $\boldsymbol\sigma\cdot\boldsymbol\phi = \sigma^3\phi^3$. Comme $(\sigma^3)^2 = I$, le développement en série se replie sur les fonctions hyperboliques, exactement comme $\mathrm e^{\sigma^3 x}$ se replierait sur $\cosh$ et $\sinh$ :</p>
 <p style="text-align:center;">
 $\displaystyle
 \mathrm{e}^{\pm\frac{1}{2}\sigma^3\phi^3} = I\cosh\frac{\phi^3}{2} \pm \sigma^3\sinh\frac{\phi^3}{2}
 $
 </p>
-<p><b>Rendre ces matrices explicites.</b><br>
+<p><b>Rendre ces matrices explicites</b><br>
 Puisque $\sigma^3 = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1\end{pmatrix}$ est diagonale, l&rsquo;exponentielle l&rsquo;est aussi, et chaque entrée est une exponentielle ordinaire :</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -3402,7 +3442,7 @@ $\displaystyle
 \mathrm{e}^{+\frac{1}{2}\sigma^3\phi^3} = \begin{pmatrix} \mathrm{e}^{+\phi^3/2} & 0 \\ 0 & \mathrm{e}^{-\phi^3/2} \end{pmatrix}
 $
 </p>
-<p><b>Traduire la rapidité en énergie et impulsion.</b><br>
+<p><b>Traduire la rapidité en énergie et impulsion</b><br>
 Un boost de rapidité $\phi^3$ appliqué à une particule au repos lui donne l&rsquo;impulsion $p^\mu = (E_{\boldsymbol p}, 0, 0, |\boldsymbol p|)$ avec</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -3420,7 +3460,7 @@ $\displaystyle
 \mathrm{e}^{\pm\phi^3/2} = \sqrt{\frac{E_{\boldsymbol p} \pm |\boldsymbol p|}{m}}
 $
 </p>
-<p><b>Assembler la matrice $4\times 4$.</b><br>
+<p><b>Assembler la matrice $4\times 4$</b><br>
 En empilant le bloc $D_L$ puis le bloc $D_R$ :</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -3475,7 +3515,7 @@ $
 <div id="preuve">
 <details>
 <summary>La démonstration en trois pas</summary>
-<p><b>Pas 1 : écrire la condition de repos sous forme matricielle.</b><br>
+<p>Pas 1 : <b>écrire la condition de repos sous forme matricielle</b><br>
 Nous savons qu&rsquo;au repos $u_L(p_0) = u_R(p_0)$. Or la matrice $\gamma^0$ échange précisément les deux blocs :</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -3491,7 +3531,7 @@ $\displaystyle
 $
 </p>
 <p>Cette équation ne contient aucune physique : elle traduit une observation faite au repos.</p>
-<p><b>Pas 2 : booster la matrice $\gamma^0$.</b><br>
+<p>Pas 2 : <b>booster la matrice $\gamma^0$</b><br>
 C&rsquo;est le cœur du calcul. Notons $S$ la matrice de boost écrite plus haut, en blocs $\mathrm{diag}(D_L, D_R)$, et calculons $S\,\gamma^0\,S^{-1}$ par blocs :</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -3525,7 +3565,7 @@ S\gamma^0 S^{-1} = \frac{1}{m}\begin{pmatrix} 0 & p\cdot\sigma \\ p\cdot\bar\sig
 $
 </p>
 <p>la dernière égalité venant de $\not{\!\!p} = \gamma^\mu p_\mu = \begin{pmatrix} 0 &amp; \sigma^\mu \\ \bar\sigma^\mu &amp; 0\end{pmatrix}p_\mu$.</p>
-<p><b>Pas 3 : transporter l&rsquo;équation du repos.</b><br>
+<p>Pas 3 : <b>transporter l&rsquo;équation du repos</b><br>
 Il ne reste qu&rsquo;à multiplier la condition du pas 1 par $S$, en glissant $S^{-1}S = I$ au bon endroit :</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -3538,7 +3578,7 @@ $\displaystyle
 (\not{\!\!p} - m)\,u(p) = 0
 $
 </p>
-<p><b>Morale.</b><br>
+<p><b>Morale</b><br>
 Nous n&rsquo;avons introduit aucun principe dynamique : seulement une observation au repos et la façon dont les spineurs se transforment. L&rsquo;équation de Dirac est donc, littéralement, la condition « gauche $=$ droite au repos » rendue valable dans tous les référentiels.</p>
 </details>
 </div>
@@ -3915,7 +3955,7 @@ $
 <br>
 <div id="preuve">
 <details>
-<summary>D'où sortent les deux écritures, et pourquoi la seconde est préférable</summary>
+<summary>D'où sortent les deux écritures&nbsp;?</summary>
 <p><b>Première écriture : le propagateur est un inverse</b></p>
 <p>Le principe est celui de toutes les fonctions de Green rencontrées dans la partie qui leur était consacrée : le propagateur est la <b>réponse impulsionnelle</b> de l&rsquo;opérateur qui gouverne le champ. Ici, cet opérateur est celui de Dirac, et la définition s&rsquo;écrit</p>
 <p style="text-align:center;">
@@ -3923,7 +3963,8 @@ $\displaystyle
 (\mathrm{i}\not{\!\!\partial} - m)\,S(x - y) = \delta^{(4)}(x - y)
 $
 </p>
-<p><b>Pas 1 : passer en Fourier.</b> On développe les deux membres sur les ondes planes,</p>
+<p>Pas 1 : <b>passer en Fourier</b><br>
+On développe les deux membres sur les ondes planes,</p>
 <p style="text-align:center;">
 $\displaystyle
 S(x) = \int\!\frac{\mathrm{d}^4 p}{(2\pi)^4}\,\tilde S(p)\,\mathrm{e}^{-\mathrm{i}p\cdot x}
@@ -3931,17 +3972,19 @@ S(x) = \int\!\frac{\mathrm{d}^4 p}{(2\pi)^4}\,\tilde S(p)\,\mathrm{e}^{-\mathrm{
 \delta^{(4)}(x) = \int\!\frac{\mathrm{d}^4 p}{(2\pi)^4}\,\mathrm{e}^{-\mathrm{i}p\cdot x}
 $
 </p>
-<p><b>Pas 2 : convertir la dérivée en multiplication.</b> C&rsquo;est le mécanisme déjà utilisé pour établir les équations de Dirac en impulsion : dériver une exponentielle revient à multiplier par son exposant, $\partial_\mu \to -\mathrm{i}p_\mu$, donc</p>
+<p>Pas 2 : <b>convertir la dérivée en multiplication</b><br>
+C&rsquo;est le mécanisme déjà utilisé pour établir les équations de Dirac en impulsion : dériver une exponentielle revient à multiplier par son exposant, $\partial_\mu \to -\mathrm{i}p_\mu$, donc</p>
 <p style="text-align:center;">
 $\displaystyle
 \mathrm{i}\not{\!\!\partial} = \mathrm{i}\gamma^\mu\partial_\mu \;\longrightarrow\; \mathrm{i}\gamma^\mu(-\mathrm{i}p_\mu) = \gamma^\mu p_\mu = \; \not{\!\!p}
 $
 </p>
-<p><b>Pas 3 : identifier les intégrandes.</b> L&rsquo;équation différentielle devient une équation <b>algébrique</b> entre matrices $4\times 4$ :</p>
+<p>Pas 3 : <b>identifier les intégrandes</b><br>
+L&rsquo;équation différentielle devient une équation <b>algébrique</b> entre matrices $4\times 4$ :</p>
 <p style="text-align:center;">
 $\displaystyle
 (\not{\!\!p} - m)\,\tilde S(p) = I_{4\times 4}
-\qquad\Longrightarrow\qquad
+\quad\Longrightarrow\quad
 \tilde S(p) = \big(\not{\!\!p} - m\big)^{-1}
 $
 </p>
@@ -3951,10 +3994,11 @@ $\displaystyle
 \tilde G_0(p) = \frac{\mathrm{i}}{\not{\!\!p} - m + \mathrm{i}\epsilon}
 $
 </p>
-<p>Il faut lire cette barre de fraction comme un <b>inverse matriciel</b>, et non comme une division. Écrire $1/(\not{!!p} - m)$ est un abus de notation commode, mais l&rsquo;objet est bien la matrice qui, multipliée par $\not{!!p} - m$, redonne l&rsquo;identité.</p>
+<p>Il faut lire cette barre de fraction comme un <b>inverse matriciel</b>, et non comme une division. Écrire $1/(\not{\!\!p} - m)$ est un abus de notation commode, mais l&rsquo;objet est bien la matrice qui, multipliée par $\not{\!\!p} - m$, redonne l&rsquo;identité.</p>
 <p><b>Seconde écriture : rationaliser le dénominateur</b></p>
-<p>Un inverse de matrice est malcommode. L&rsquo;astuce consiste à faire exactement ce qu&rsquo;on fait avec un nombre complexe : multiplier haut et bas par le conjugué, ici $(\not{!!p} + m)$.</p>
-<p><b>Pas 1 : l&rsquo;identité qui rend tout possible.</b> Elle n&rsquo;est pas nouvelle, c&rsquo;est le <b>miracle algébrique du premier chapitre</b>, celui qui avait permis de prendre la racine carrée de l&rsquo;opérateur de Klein&ndash;Gordon :</p>
+<p>Un inverse de matrice est malcommode. L&rsquo;astuce consiste à faire exactement ce qu&rsquo;on fait avec un nombre complexe : multiplier haut et bas par le conjugué, ici $(\not{\!\!p} + m)$.</p>
+<p>Pas 1 : <b>l&rsquo;identité qui rend tout possible</b><br>
+Elle n&rsquo;est pas nouvelle, c&rsquo;est le <b>miracle algébrique du premier chapitre</b>, celui qui avait permis de prendre la racine carrée de l&rsquo;opérateur de Klein&ndash;Gordon :</p>
 <p style="text-align:center;">
 $\displaystyle
 (\not{\!\!p})^2 = \gamma^\mu\gamma^\nu\,p_\mu p_\nu
@@ -3963,26 +4007,35 @@ $\displaystyle
 $
 </p>
 <p>la deuxième égalité venant de ce que $p_\mu p_\nu$ est <b>symétrique</b> en $\mu\nu$ : seule la partie symétrique du produit de matrices survit, c&rsquo;est-à-dire l&rsquo;anticommutateur, lequel vaut $2g^{\mu\nu}$ par l&rsquo;algèbre de Clifford.</p>
-<p><b>Pas 2 : développer le produit.</b> Les deux termes croisés en $m\not{!!p}$ se retranchent :</p>
+<p>Pas 2 : <b>développer le produit</b><br>
+Les deux termes croisés en $m\not{\!\!p}$ se retranchent :</p>
 <p style="text-align:center;">
 $\displaystyle
 (\not{\!\!p} - m)(\not{\!\!p} + m) = (\not{\!\!p})^2 + m\not{\!\!p} - m\not{\!\!p} - m^2 = p^2 - m^2
 $
 </p>
 <p><b>Le résultat est un scalaire</b>, et non une matrice : c&rsquo;est tout l&rsquo;intérêt de la manœuvre.</p>
-<p><b>Pas 3 : conclure.</b> L&rsquo;inverse s&rsquo;écrit donc explicitement</p>
+<p>Pas 3 : <b>conclure</b><br>
+L&rsquo;inverse s&rsquo;écrit donc explicitement</p>
 <p style="text-align:center;">
 $\displaystyle
 \big(\not{\!\!p} - m\big)^{-1} = \frac{\not{\!\!p} + m}{p^2 - m^2}
-\qquad\Longrightarrow\qquad
+\quad\Longrightarrow\quad
 \tilde G_0(p) = \frac{\mathrm{i}\,(\not{\!\!p} + m)}{p^2 - m^2 + \mathrm{i}\epsilon}
 $
 </p>
-<p><b>Pourquoi préférer cette seconde forme</b></p>
+</details>
+</div>
+<br>
+<div id="preuve">
+<details>
+<summary>
+Pourquoi préférer la seconde forme&nbsp;?
+</summary>
 <p>Trois raisons, dont la dernière n&rsquo;est pas la moindre.</p>
 <p>Elle <b>sépare les deux natures</b> : le dénominateur est un scalaire, qui porte le pôle donc la propagation ; le numérateur est une matrice, qui porte la structure spinorielle.</p>
 <p>Elle rend <b>le pôle visible</b> : il est en $p^2 = m^2$, exactement comme pour un champ scalaire. La particule de Dirac se propage donc sur sa couche de masse comme n&rsquo;importe quelle autre.</p>
-<p>Et surtout, <b>on reconnaît son numérateur</b>. La matrice $\not{!!p} + m$ n&rsquo;est autre que la <b>somme de spin</b> établie au chapitre précédent :</p>
+<p>Et surtout, <b>on reconnaît son numérateur</b>. La matrice $\not{\!\!p} + m$ n&rsquo;est autre que la <b>somme de spin</b> établie au chapitre précédent :</p>
 <p style="text-align:center;">
 $\displaystyle
 \sum_{s=1}^{2} u^s(p)\,\bar u^s(p) = \; \not{\!\!p} + m
@@ -3998,7 +4051,8 @@ $\displaystyle
 $
 </p>
 <div id="theo">
-<p><b>Lecture par blocs.</b> Le propagateur est formé de $\hat\psi(x)\hat{\bar\psi}(y)$, donc chaque bloc répond à la question « quelle chiralité entre, quelle chiralité sort ? » :</p>
+<p><b>Lecture par blocs</b></p>
+<p>Le propagateur est formé de $\hat\psi(x)\hat{\bar\psi}(y)$, donc chaque bloc répond à la question « quelle chiralité entre, quelle chiralité sort ? » :</p>
 <ul style="margin-top:0.5em;margin-bottom:1em;">
 <li>les blocs <b>hors diagonale</b>, qui conservent la chiralité, portent le terme cinétique $p^0 \mp \boldsymbol p\cdot\boldsymbol\sigma$&nbsp;;</li>
 <li>les blocs <b>diagonaux</b>, qui renversent la chiralité, portent la <b>masse</b> $m$.</li>
@@ -4007,6 +4061,9 @@ $
 <p>C&rsquo;est très exactement ce que les équations couplées du premier chapitre annonçaient : <b>c&rsquo;est la masse qui couple gauche et droite</b>. En resommant la série $G = G_0 + G_0 V G_0 + \cdots$, chaque bloc devient une superposition de toutes les histoires d&rsquo;oscillation $L \to R \to L \to \cdots$ compatibles avec les chiralités d&rsquo;entrée et de sortie.</p>
 <p>Autrement dit, <b>une particule de Dirac massive se propage en clignotant entre gauche et droite</b>, et chaque clignotement coûte une insertion de masse. Une particule sans masse, elle, ne clignote pas : sa chiralité est conservée, ce qui redonne les deux équations de Weyl découplées.</p>
 <!-- FIGURE à redessiner (d'après fig. 38.1 de L&B) : une grande matrice 2x2 dessinée entre parenthèses. Chaque case contient une somme de petits diagrammes : une ligne fermionique verticale (temps vers le haut) ponctuée de croix (insertions de masse), avec un nombre pair de croix pour les blocs hors diagonale (chiralité conservée) et impair pour les blocs diagonaux (chiralité renversée). Étiqueter les extrémités d'entrée et de sortie par L ou R. Légende : « Le propagateur 4x4 lu comme un catalogue d'oscillations de chiralité ; chaque croix est une insertion de masse m ». -->
+<div style="position:relative;margin-left:auto;margin-right:auto;width:500px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/propfermions.png" style="box-shadow:none;background:none;">
+</div>
 <br>
 <h3 id="les-règles-de-feynman-fermioniques">Les règles de Feynman fermioniques</h3>
 <div id="def">
@@ -4067,14 +4124,16 @@ $
 <div id="preuve">
 <details>
 <summary>Comment la symétrie locale fabrique l'interaction</summary>
-<p><b>Le problème.</b> Sous $\psi(x) \to \psi(x),\mathrm{e}^{\mathrm{i}\alpha(x)}$, le terme de masse $\bar\psi\psi$ reste invariant (les phases se compensent), mais la dérivée produit un terme parasite :</p>
+<p><b>Le problème</b><br>
+Sous $\psi(x) \to \psi(x),\mathrm{e}^{\mathrm{i}\alpha(x)}$, le terme de masse $\bar\psi\psi$ reste invariant (les phases se compensent), mais la dérivée produit un terme parasite :</p>
 <p style="text-align:center;">
 $\displaystyle
 \partial_\mu\left(\psi\,\mathrm{e}^{\mathrm{i}\alpha(x)}\right) = \mathrm{e}^{\mathrm{i}\alpha(x)}\left(\partial_\mu\psi + \mathrm{i}\,\psi\,\partial_\mu\alpha\right)
 $
 </p>
 <p>Le second terme casse l&rsquo;invariance. Il faut le compenser.</p>
-<p><b>Le remède.</b> On introduit un champ $A_\mu(x)$ et l&rsquo;on remplace la dérivée ordinaire par la <b>dérivée covariante</b> :</p>
+<p><b>Le remède</b><br>
+On introduit un champ $A_\mu(x)$ et l&rsquo;on remplace la dérivée ordinaire par la <b>dérivée covariante</b> :</p>
 <p style="text-align:center;">
 $\displaystyle
 D_\mu = \partial_\mu + \mathrm{i} q A_\mu(x)
@@ -4083,7 +4142,8 @@ A_\mu \to A_\mu - \frac{1}{q}\partial_\mu\alpha
 $
 </p>
 <p>La variation de $A_\mu$ produit exactement le terme opposé au parasite : la compensation est exacte, et $D_\mu\psi$ se transforme comme $\psi$ lui-même. C&rsquo;est de là que vient le mot « covariante ».</p>
-<p><b>Le résultat.</b> Le lagrangien jaugé $\mathcal L = \bar\psi(\mathrm{i}\gamma^\mu D_\mu - m)\psi$ se développe en</p>
+<p><b>Le résultat</b><br>
+Le lagrangien jaugé $\mathcal L = \bar\psi(\mathrm{i}\gamma^\mu D_\mu - m)\psi$ se développe en</p>
 <p style="text-align:center;">
 $\displaystyle
 \mathcal L = \bar\psi(\mathrm{i}\not{\!\!\partial} - m)\psi - q\,\bar\psi\gamma^\mu\psi\,A_\mu
@@ -4192,7 +4252,7 @@ $\displaystyle
 \mathcal A = \mathrm{i}\,\frac{J^0_a J^0_b}{(k^3)^2} + \mathrm{i}\,\frac{J^1_a J^1_b + J^2_a J^2_b}{(k^0)^2 - (k^3)^2}
 $
 </p>
-<p><b>Deux morceaux, deux physiques.</b></p>
+<p><b>Deux morceaux, deux physiques</b></p>
 <p>Le premier, en $J^0J^0/\boldsymbol k^2$, n&rsquo;a <b>plus de pôle</b> : ce n&rsquo;est pas une particule qui se propage, c&rsquo;est la transformée de Fourier du <b>potentiel de Coulomb instantané</b>, répulsif entre charges de même signe. Son instantanéité n&rsquo;est qu&rsquo;un artefact du découpage non covariant que nous venons de faire ; c&rsquo;est le terme dominant du régime non relativiste, et le fondement de toute la matière condensée.</p>
 <p>Le second garde le pôle en $k^2 = 0$ : c&rsquo;est le photon <b>rayonné</b>. Et il ne couple que $J^1$ et $J^2$, c&rsquo;est-à-dire les directions <b>transverses</b> à la propagation. On lit donc directement qu&rsquo;il n&rsquo;existe que <b>deux</b> polarisations physiques, alors que le propagateur en transportait apparemment quatre.</p>
 <p>Moralité : un seul objet, $-\mathrm{i}g_{\mu\nu}/k^2$, contient à la fois l&rsquo;électrostatique et la lumière. Les deux composantes « en trop » ne créent pas de particules parasites ; elles conspirent pour fabriquer le Coulomb instantané, et rien d&rsquo;autre.</p>
@@ -4237,24 +4297,29 @@ $
 <div id="preuve">
 <details>
 <summary>Le calcul en amplitudes d'hélicité</summary>
-<p><b>Le choix des hélicités.</b> Prenons un $e^-$ droit (hélicité $+1$, impulsion selon $+z$) et un $e^+$ gauche. Attention au piège rappelé plus haut : pour l&rsquo;antiparticule, les conventions s&rsquo;inversent, si bien qu&rsquo;un $e^+$ <b>gauche</b> a lui aussi une hélicité physique $+1$. Les deux spins pointent donc dans le même sens.</p>
+<p><b>Le choix des hélicités</b><br>
+Prenons un $e^-$ droit (hélicité $+1$, impulsion selon $+z$) et un $e^+$ gauche. Attention au piège rappelé plus haut : pour l&rsquo;antiparticule, les conventions s&rsquo;inversent, si bien qu&rsquo;un $e^+$ <b>gauche</b> a lui aussi une hélicité physique $+1$. Les deux spins pointent donc dans le même sens.</p>
 <p><b>Pourquoi le calcul est facile.</b> Dans la limite ultra-relativiste, une des deux entrées des spineurs boostés s&rsquo;annule (nous l&rsquo;avons vu au chapitre sur les boosts : le facteur $\sqrt{E - |\boldsymbol p|}$ tend vers zéro). Chaque spineur n&rsquo;a donc <b>qu&rsquo;une seule composante non nulle</b>, et le produit $\bar v\gamma^\mu u$ se calcule à la main.</p>
-<p><b>Le courant entrant.</b> On obtient</p>
+<p><b>Le courant entrant</b><br>
+On obtient :</p>
 <p style="text-align:center;">
 $\displaystyle
 \bar v(p')\,\gamma^\mu\, u(p) = -2E\,(0,\,1,\,\mathrm{i},\,0)
 $
 </p>
 <p>Ce quadrivecteur mérite une lecture. La combinaison $x + \mathrm{i}y$ est celle d&rsquo;un moment cinétique $+1$ selon $z$ : le courant décrit donc <b>le spin total de la paire entrante</b>, les deux spins étant alignés selon $+z$. La composante temporelle est nulle, ce qui traduit l&rsquo;absence de composante scalaire.</p>
-<p><b>Le courant sortant.</b> C&rsquo;est le même objet, conjugué, et tourné de l&rsquo;angle $\theta$ dans le plan de la réaction :</p>
+<p><b>Le courant sortant</b><br>
+C&rsquo;est le même objet, conjugué, et tourné de l&rsquo;angle $\theta$ dans le plan de la réaction :</p>
 <p style="text-align:center;">
 $\displaystyle
 \bar u(k)\,\gamma^\mu\, v(k') = -2E\,(0,\,\cos\theta,\,-\mathrm{i},\,-\sin\theta)
 $
 </p>
-<p><b>La contraction.</b> Le produit scalaire des deux courants, divisé par $q^2 = (2E)^2$, donne le résultat annoncé. Le facteur $(1 + \cos\theta)$ se comprend d&rsquo;ailleurs sans calcul : c&rsquo;est l&rsquo;<b>amplitude de recouvrement</b> entre un état de moment cinétique $J_z = +1$ le long de l&rsquo;axe des électrons et le même état le long de l&rsquo;axe des muons.</p>
+<p><b>La contraction</b><br>
+Le produit scalaire des deux courants, divisé par $q^2 = (2E)^2$, donne le résultat annoncé. Le facteur $(1 + \cos\theta)$ se comprend d&rsquo;ailleurs sans calcul : c&rsquo;est l&rsquo;<b>amplitude de recouvrement</b> entre un état de moment cinétique $J_z = +1$ le long de l&rsquo;axe des électrons et le même état le long de l&rsquo;axe des muons.</p>
 <p><b>Les autres combinaisons d&rsquo;hélicités</b> donnent $-e^2(1 \pm \cos\theta)$, ou bien <b>zéro</b>. Les zéros sont instructifs : ce sont les configurations interdites parce que le vertex $\gamma^\mu$, couplage vectoriel, <b>conserve la chiralité</b> à chaque extrémité. Un électron droit ne peut pas se transformer en électron gauche au passage d&rsquo;un photon.</p>
-<p><b>La moyenne.</b> En sommant les carrés des quatre amplitudes non nulles et en divisant par quatre (moyenne sur les états de spin initiaux), les termes en $\cos\theta$ se compensent et il reste $e^4(1 + \cos^2\theta)$.</p>
+<p><b>La moyenne</b><br>
+En sommant les carrés des quatre amplitudes non nulles et en divisant par quatre (moyenne sur les états de spin initiaux), les termes en $\cos\theta$ se compensent et il reste $e^4(1 + \cos^2\theta)$.</p>
 </details>
 </div>
 <p>Cette distribution en $1 + \cos^2\theta$ est un classique absolu des collisionneurs. Elle a été vérifiée avec une grande précision, et sa <b>déformation</b> à haute énergie fut l&rsquo;une des signatures du $Z^0$ : l&rsquo;échange d&rsquo;un boson faible s&rsquo;ajoute à celui du photon et brise la symétrie avant&ndash;arrière.</p>
@@ -4278,7 +4343,8 @@ $
 <div id="preuve">
 <details>
 <summary>La même chose dite physiquement, et le retournement qui suit</summary>
-<p><b>La version physique.</b> Considérons l&rsquo;amplitude d&rsquo;émission d&rsquo;un photon par une source $J^\mu$. Elle contient un terme en</p>
+<p><b>La version physique</b><br>
+Considérons l&rsquo;amplitude d&rsquo;émission d&rsquo;un photon par une source $J^\mu$. Elle contient un terme en</p>
 <p style="text-align:center;">
 $\displaystyle
 \frac{k_\mu\,\tilde J^\mu(k)}{m^2}
@@ -4286,7 +4352,8 @@ $
 </p>
 <p>qui explose quand $m \to 0$, <b>sauf</b> si $k_\mu\tilde J^\mu = 0$. Or cette condition est exactement la conservation du courant $\partial_\mu J^\mu = 0$, écrite en Fourier.</p>
 <p>Autrement dit : <b>un photon ne peut se coupler qu&rsquo;à un courant conservé</b>, et c&rsquo;est cette conservation qui désamorce la divergence. Ce n&rsquo;est donc pas un passage en force, c&rsquo;est un théorème.</p>
-<p><b>Le retournement élégant.</b> Puisque les termes en $k_\mu k_\nu$ ne contribuent jamais, on peut non seulement les retirer, mais aussi en <b>rajouter</b> à volonté. D&rsquo;où toute une famille de propagateurs :</p>
+<p><b>Le retournement élégant</b><br>
+Puisque les termes en $k_\mu k_\nu$ ne contribuent jamais, on peut non seulement les retirer, mais aussi en <b>rajouter</b> à volonté. D&rsquo;où toute une famille de propagateurs :</p>
 <p style="text-align:center;">
 $\displaystyle
 \tilde D_{0\mu\nu}(k) = \frac{-\mathrm{i}\left(g_{\mu\nu} + (1 - \xi)\,k_\mu k_\nu/k^2\right)}{k^2 + \mathrm{i}\epsilon}
@@ -4294,7 +4361,8 @@ $
 </p>
 <p>paramétrée par un $\xi$ arbitraire : $\xi = 1$ est la <b>jauge de Feynman</b>, la plus simple ; $\xi = 0$ la <b>jauge de Landau</b>.</p>
 <p><b>D&rsquo;où vient ce paramètre ?</b> Du lagrangien lui-même, muni d&rsquo;un terme de <b>fixation de jauge</b> $-\frac{1}{2\xi}(\partial_\mu A^\mu)^2$. Ce terme est indispensable : sans lui, les équations du mouvement de $A^\mu$ ne sont pas inversibles, l&rsquo;opérateur $k^2g^{\mu\nu} - k^\mu k^\nu$ étant un projecteur, donc singulier. La liberté de jauge <b>doit</b> être fixée pour qu&rsquo;un propagateur existe, et $\xi$ mesure la liberté résiduelle.</p>
-<p><b>Un test de cohérence redoutable.</b> Qu&rsquo;aucune quantité mesurable ne dépende de $\xi$ est une contrainte forte, et on l&rsquo;utilise en pratique pour vérifier les calculs : si un résultat final garde une trace de $\xi$, c&rsquo;est qu&rsquo;il y a une erreur.</p>
+<p><b>Un test de cohérence redoutable</b><br>
+Qu&rsquo;aucune quantité mesurable ne dépende de $\xi$ est une contrainte forte, et on l&rsquo;utilise en pratique pour vérifier les calculs : si un résultat final garde une trace de $\xi$, c&rsquo;est qu&rsquo;il y a une erreur.</p>
 </details>
 </div>
 <br>
@@ -4347,26 +4415,30 @@ $
 <div id="preuve">
 <details>
 <summary>Le calcul, en quatre pas</summary>
-<p><b>Pas 1 : la transformée du potentiel.</b> Pour le Coulomb $A^0_{\mathrm{cl}}(\boldsymbol r) = \dfrac{Z|e|}{4\pi|\boldsymbol r|}$, la transformée de Fourier est celle de $1/r$, bien connue :</p>
+<p>Pas 1 : <b>la transformée du potentiel</b><br>
+Pour le Coulomb $A^0_{\mathrm{cl}}(\boldsymbol r) = \dfrac{Z|e|}{4\pi|\boldsymbol r|}$, la transformée de Fourier est celle de $1/r$, bien connue :</p>
 <p style="text-align:center;">
 $\displaystyle
 \tilde A^0_{\mathrm{cl}}(\boldsymbol q) = \frac{Z|e|}{\boldsymbol q^2}
 $
 </p>
-<p><b>Pas 2 : l&rsquo;amplitude.</b> Avec $Q = -1$ pour l&rsquo;électron, une seule règle de Feynman suffit :</p>
+<p>Pas 2 : <b>l&rsquo;amplitude</b><br>
+Avec $Q = -1$ pour l&rsquo;électron, une seule règle de Feynman suffit :</p>
 <p style="text-align:center;">
 $\displaystyle
 \mathrm{i}\mathcal M = \mathrm{i}\,\frac{Z e^2}{\boldsymbol q^2}\,\bar u(p')\,\gamma^0\,u(p)
 $
 </p>
-<p><b>Pas 3 : la cinématique.</b> La diffusion est élastique sur un centre infiniment lourd, donc $|\boldsymbol p&rsquo;| = |\boldsymbol p|$, et le transfert vaut</p>
+<p>Pas 3 : <b>la cinématique</b><br>
+La diffusion est élastique sur un centre infiniment lourd, donc $|\boldsymbol p&rsquo;| = |\boldsymbol p|$, et le transfert vaut</p>
 <p style="text-align:center;">
 $\displaystyle
 \boldsymbol q^2 = |\boldsymbol p' - \boldsymbol p|^2 = 2\boldsymbol p^2(1 - \cos\theta) = 4\boldsymbol p^2\sin^2\frac{\theta}{2}
 $
 </p>
 <p>en utilisant $1 - \cos\theta = 2\sin^2(\theta/2)$. <b>C&rsquo;est ce $\sin^2(\theta/2)$, élevé au carré par le module, qui produira le fameux $\sin^{-4}$.</b></p>
-<p><b>Pas 4 : le facteur spinoriel, dans la limite non relativiste.</b> Ici $\bar u(p&rsquo;)\gamma^0 u(p) = 2m,\xi&rsquo;^\dagger\xi = 2m$ pour des spins alignés. En reportant dans $\dfrac{\mathrm{d}\sigma}{\mathrm{d}\Omega} = \dfrac{|\mathcal M|^2}{(4\pi)^2}$ et en posant $|\boldsymbol p| = mv$, on obtient la formule annoncée.</p>
+<p>Pas 4 : <b>le facteur spinoriel, dans la limite non relativiste</b><br>
+Ici $\bar u(p&rsquo;)\gamma^0 u(p) = 2m,\xi&rsquo;^\dagger\xi = 2m$ pour des spins alignés. En reportant dans $\dfrac{\mathrm{d}\sigma}{\mathrm{d}\Omega} = \dfrac{|\mathcal M|^2}{(4\pi)^2}$ et en posant $|\boldsymbol p| = mv$, on obtient la formule annoncée.</p>
 </details>
 </div>
 <p>Deux traits de cette formule méritent d&rsquo;être relevés. La <b>divergence en $\theta \to 0$</b> est la signature de la portée infinie du potentiel de Coulomb : une particule passant arbitrairement loin est tout de même déviée, si peu que ce soit. Et le $\sin^{-4}$ autorise des <b>rétrodiffusions</b> rares mais réelles, ce qui fut précisément l&rsquo;observation de Rutherford et lui fit conclure à l&rsquo;existence d&rsquo;un noyau compact.</p>
@@ -4386,7 +4458,7 @@ $
 </div>
 <br>
 <div id="theo">
-<p><b>L&rsquo;algorithme, en cinq pas</b>, à mémoriser tel quel :</p>
+<p><b>L&rsquo;algorithme, en cinq pas</b> :</p>
 <ol style="margin-top:0.5em;">
 <li>écrire $|\mathcal M|^2 = \mathcal M\mathcal M^*$ et conjuguer avec l'astuce spineur 1&nbsp;;</li>
 <li>écrire <b>tous</b> les indices spinoriels explicitement, ce qui autorise à réordonner librement les facteurs (ce sont des nombres)&nbsp;;</li>
@@ -4399,14 +4471,16 @@ $
 <div id="preuve">
 <details>
 <summary>L'algorithme à l'œuvre sur Mott</summary>
-<p><b>Application des pas 1 à 4.</b> Les deux spineurs se soudent en deux matrices, et la chaîne se referme :</p>
+<p><b>Application des pas 1 à 4</b><br>
+Les deux spineurs se soudent en deux matrices, et la chaîne se referme :</p>
 <p style="text-align:center;">
 $\displaystyle
 \frac{1}{2}\sum_{s,s'}\left|\bar u^{s'}(p')\,\gamma^0\, u^s(p)\right|^2
 = \frac{1}{2}\,\mathrm{Tr}\!\left[\gamma^0(\not{\!\!p} + m)\,\gamma^0(\not{\!\!p}' + m)\right]
 $
 </p>
-<p><b>Pas 5 : évaluer la trace.</b> En développant le produit, quatre termes apparaissent, mais <b>deux disparaissent immédiatement</b> car ils contiennent un nombre impair de matrices $\gamma$ (trois exactement). Il ne reste que :</p>
+<p><b>Pas 5 : évaluer la trace</b><br>
+En développant le produit, quatre termes apparaissent, mais <b>deux disparaissent immédiatement</b> car ils contiennent un nombre impair de matrices $\gamma$ (trois exactement). Il ne reste que :</p>
 <p style="text-align:center;">
 $\displaystyle
 \mathrm{Tr}\!\left[\gamma^0\not{\!\!p}\,\gamma^0\not{\!\!p}'\right] = 4\left(E_{\boldsymbol p}E_{\boldsymbol p'} + \boldsymbol p\cdot\boldsymbol p'\right)
@@ -4421,7 +4495,8 @@ $\displaystyle
 $
 </p>
 <p>en utilisant $E_{\boldsymbol p&rsquo;} = E_{\boldsymbol p}$ (diffusion élastique).</p>
-<p><b>Réécriture cinématique.</b> Avec $\boldsymbol p\cdot\boldsymbol p&rsquo; = \boldsymbol p^2\cos\theta$, $E^2 = \boldsymbol p^2 + m^2$ et $\beta = |\boldsymbol p|/E$, un peu d&rsquo;algèbre transforme cette expression en</p>
+<p><b>Réécriture cinématique</b><br>
+Avec $\boldsymbol p\cdot\boldsymbol p&rsquo; = \boldsymbol p^2\cos\theta$, $E^2 = \boldsymbol p^2 + m^2$ et $\beta = |\boldsymbol p|/E$, un peu d&rsquo;algèbre transforme cette expression en</p>
 <p style="text-align:center;">
 $\displaystyle
 4E_{\boldsymbol p}^2\left(1 - \beta^2\sin^2\frac{\theta}{2}\right)
@@ -4469,7 +4544,8 @@ $
 <div id="preuve">
 <details>
 <summary>Les variables de Mandelstam, et l'origine du résultat</summary>
-<p><b>Les variables.</b> Pour un processus à quatre pattes, il n&rsquo;existe que trois façons d&rsquo;apparier les particules, d&rsquo;où trois invariants de Lorentz :</p>
+<p><b>Les variables</b><br>
+Pour un processus à quatre pattes, il n&rsquo;existe que trois façons d&rsquo;apparier les particules, d&rsquo;où trois invariants de Lorentz :</p>
 <p style="text-align:center;">
 $\displaystyle
 s = (p + k)^2 = 2p\cdot k
@@ -4478,7 +4554,8 @@ u = (p' - k)^2 = -2p'\cdot k
 $
 </p>
 <p>les formes de droite valant dans la limite sans masse. Chacun mesure le carré de l&rsquo;énergie disponible dans un canal.</p>
-<p><b>Le canal $s$.</b> L&rsquo;algorithme donne</p>
+<p><b>Le canal $s$</b><br>
+L&rsquo;algorithme donne :</p>
 <p style="text-align:center;">
 $\displaystyle
 \frac{1}{4}\sum|\mathcal M_s|^2 = \frac{e^4}{s^2}\,\mathrm{Tr}\!\left[\not{\!\!k}\,\not{\!\!p}\,\not{\!\!k}\,\not{\!\!p}'\right] = -\frac{2e^4\,u}{s}
@@ -4504,9 +4581,12 @@ $
 <div id="preuve">
 <details>
 <summary>Deux exemples, et une mise en garde</summary>
-<p><b>Premier exemple.</b> Partons du canal $s$ de $e^-e^+ \to \mu^-\mu^+$, calculé au chapitre précédent. Plions le $e^+$ entrant et le $\mu^+$ sortant : on obtient le processus $e^-\mu^- \to e^-\mu^-$, en canal $t$. Dans les amplitudes exprimées en variables de Mandelstam, le croisement se réduit à l&rsquo;échange $s \leftrightarrow t$.</p>
-<p><b>Second exemple.</b> La diffusion de Møller ($e^-e^- \to e^-e^-$) se croise en diffusion de Bhabha ($e^-e^+ \to e^-e^+$). Deux processus expérimentalement très différents, une seule fonction.</p>
-<p><b>La mise en garde.</b> Le croisement échange les variables, mais aussi leurs <b>signes et leurs domaines</b>. Ce qui était un $s &gt; 0$ physique d&rsquo;un côté devient un $t &lt; 0$ de l&rsquo;autre, et les singularités de l&rsquo;amplitude (pôles, seuils de production) vivent donc dans des régions différentes selon le processus. S&rsquo;y ajoutent les facteurs de flux, qui ne se croisent pas.</p>
+<p><b>Premier exemple</b><br>
+Partons du canal $s$ de $e^-e^+ \to \mu^-\mu^+$, calculé au chapitre précédent. Plions le $e^+$ entrant et le $\mu^+$ sortant : on obtient le processus $e^-\mu^- \to e^-\mu^-$, en canal $t$. Dans les amplitudes exprimées en variables de Mandelstam, le croisement se réduit à l&rsquo;échange $s \leftrightarrow t$.</p>
+<p><b>Second exemple</b><br>
+La diffusion de Møller ($e^-e^- \to e^-e^-$) se croise en diffusion de Bhabha ($e^-e^+ \to e^-e^+$). Deux processus expérimentalement très différents, une seule fonction.</p>
+<p><b>La mise en garde</b><br>
+Le croisement échange les variables, mais aussi leurs <b>signes et leurs domaines</b>. Ce qui était un $s &gt; 0$ physique d&rsquo;un côté devient un $t &lt; 0$ de l&rsquo;autre, et les singularités de l&rsquo;amplitude (pôles, seuils de production) vivent donc dans des régions différentes selon le processus. S&rsquo;y ajoutent les facteurs de flux, qui ne se croisent pas.</p>
 <p>En pratique : le croisement est un outil de calcul très puissant, mais il faut vérifier chaque facteur avant de l&rsquo;utiliser « en conditions réelles ». Peskin &amp; Schroeder détaillent les précautions.</p>
 </details>
 </div>
@@ -5874,16 +5954,16 @@ $
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1786130030"></script>
-    <script src="/js/perfect-scrollbar.min.js?1786130030"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1786130030"></script>
-    <script src="/js/jquery.sticky.js?1786130030"></script>
-    <script src="/js/featherlight.min.js?1786130030"></script>
-    <script src="/js/highlight.pack.js?1786130030"></script>
+    <script src="/js/clipboard.min.js?1786149803"></script>
+    <script src="/js/perfect-scrollbar.min.js?1786149803"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1786149803"></script>
+    <script src="/js/jquery.sticky.js?1786149803"></script>
+    <script src="/js/featherlight.min.js?1786149803"></script>
+    <script src="/js/highlight.pack.js?1786149803"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1786130030"></script>
-    <script src="/js/learn.js?1786130030"></script>
-    <script src="/js/hugo-learn.js?1786130030"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1786149803"></script>
+    <script src="/js/learn.js?1786149803"></script>
+    <script src="/js/hugo-learn.js?1786149803"></script>
     
     
 
