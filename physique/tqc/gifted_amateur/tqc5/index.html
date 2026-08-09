@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1786149803" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1786149803" rel="stylesheet">
-    <link href="/css/hybrid.css?1786149803" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1786149803" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1786149803" rel="stylesheet">
-    <link href="/css/auto-complete.css?1786149803" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1786149803" rel="stylesheet">
-    <link href="/css/theme.css?1786149803" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1786149803" rel="stylesheet">
+    <link href="/css/nucleus.css?1786296014" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1786296014" rel="stylesheet">
+    <link href="/css/hybrid.css?1786296014" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1786296014" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1786296014" rel="stylesheet">
+    <link href="/css/auto-complete.css?1786296014" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1786296014" rel="stylesheet">
+    <link href="/css/theme.css?1786296014" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1786296014" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1786149803" rel="stylesheet">
+    <link href="/css/theme-blue.css?1786296014" rel="stylesheet">
     
-    <link href="/css/foo.css?1786149803" rel="stylesheet"><link href="/css/bar.css?1786149803" rel="stylesheet">
+    <link href="/css/foo.css?1786296014" rel="stylesheet"><link href="/css/bar.css?1786296014" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1786149803"></script>
+    <script src="/js/jquery-3.3.1.min.js?1786296014"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1786149803"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1786149803"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1786296014"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1786296014"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1786149803"></script>
+<script type="text/javascript" src="/js/search.js?1786296014"></script>
 
     
   </div>
@@ -1862,6 +1862,12 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
             
             
           
+            
+            
+          
+            
+            
+          
         
         </ul>
       
@@ -1982,6 +1988,8 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
       <ul>
         <li><a href="#théorie-de-jauge-la-plus-simple-lélectromagnétisme">Théorie de jauge la plus simple : l&rsquo;électromagnétisme</a></li>
         <li><a href="#quantification-canonique-du-champ-électromagnétique">Quantification canonique du champ électromagnétique</a></li>
+        <li><a href="#bilan">Bilan</a></li>
+        <li><a href="#pièges">Pièges</a></li>
       </ul>
     </li>
     <li><a href="#symétries-discrètes">Symétries discrètes</a>
@@ -1991,6 +1999,8 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
         <li><a href="#renversement-du-temps">Renversement du temps</a></li>
         <li><a href="#combinaisons-de-transformations-discrètes">Combinaisons de transformations discrètes</a></li>
         <li><a href="#combinaisons-de-transformations-discrètes-et-continues">Combinaisons de transformations discrètes et continues</a></li>
+        <li><a href="#bilan-1">Bilan</a></li>
+        <li><a href="#pièges-1">Pièges</a></li>
       </ul>
     </li>
   </ul>
@@ -2079,7 +2089,7 @@ details[open] > summary:first-of-type {
 }
 </style>
 <h1 id="théorie-quantique-des-champs--partie-5">Théorie quantique des champs &ndash; Partie 5</h1>
-<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>Notes de lecture du livre <em>Quantum field theory for the gifted amateur</em> de Thomas Lancaster et Stephen Blundell. Très souvent une simple traduction approximative.</p>
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>Notes de lecture du livre <em>Quantum field theory for the gifted amateur</em> de Thomas Lancaster et Stephen Blundell.</p>
 </div></div>
 <div style="overflow-x: auto;text-align:center;">
 <table>
@@ -2089,6 +2099,12 @@ details[open] > summary:first-of-type {
 </table>
 </div>
 <br>
+<p>Deux chapitres, et un même thème sous deux visages : <b>ce que les symétries imposent à une théorie</b>.</p>
+<ul>
+<li>Le premier part d'une exigence qui semble gratuite, l'invariance sous une transformation de phase <b>locale</b>, et découvre qu'elle <b>dicte l'électromagnétisme</b>. Le champ de jauge $A^\mu$ n'est pas postulé, il est réclamé par la symétrie&nbsp;; et une fois qu'on lui donne une dynamique, on retombe sur Maxwell sans avoir eu le choix. Au passage, la quantification du champ électromagnétique livre le photon, avec ses deux polarisations et son spin&nbsp;1.</li>
+<li>Le second quitte les groupes continus pour les <b>symétries discrètes</b>&nbsp;: la conjugaison de charge $\mathrm C$, la parité $\mathrm P$ et le renversement du temps $\mathrm T$. Chacune est violée quelque part dans la nature, mais leur produit $\mathrm{CPT}$ résiste à tout, et c'est un théorème. Le chapitre se clôt sur la topologie du groupe des rotations, qui explique pourquoi un spineur change de signe après un tour complet.</li>
+</ul>
+<br>
 <h2 id="champs-de-jauge-et-théorie-de-jauge">Champs de jauge et théorie de jauge</h2>
 <p>Une invariance de jauge trahit moins une symétrie du système qu&rsquo;une redondance dans sa description (différentes configurations du champ aboutissent à des observables identiques). Cette redondance nous laisse une certaine latitude quant au choix de la meilleure formulation, c&rsquo;est le choix de jauge. Une transformation d&rsquo;une description à une autre est appelée <strong>transformation de jauge</strong> et l&rsquo;invariance sous-jacente est l&rsquo;<strong>invariance de jauge</strong>.</p>
 <p>L&rsquo;invariance de jauge n&rsquo;est pas une symétrie dans le sens où il n&rsquo;est pas question ici de curseurs internes permettant de passer d&rsquo;une particule à une autre. C&rsquo;est plutôt l&rsquo;affirmation de notre incapacité à trouver une description unique du système. On peut citer comme exemple l&rsquo;indétermination de l&rsquo;origine des potentiels électriques (le choix d&rsquo;associer 0 V à la terre est arbitraire), celle de l&rsquo;origine des phases en mécanique quantique (on peut passer de $\psi(x)$ à $\psi(x)\mathrm{e}^{\mathrm{i}\alpha}$ sans changer la physique), et, en électromagnétisme, la liberté sur le choix de $A$ laissé par la transformation $A \rightarrow A+\nabla \chi$ (où $\chi(\boldsymbol{x})$ est une fonction de la position) qui est sans effet sur $\boldsymbol{B}=\boldsymbol{\nabla} \times \boldsymbol{A}$. On verra que ces trois indéterminations sont en fait liées entre elles. On constate aussi que dans les trois cas, seules des variations de la grandeur indéterminée peuvent faire l&rsquo;objet d&rsquo;observations.</p>
@@ -2096,83 +2112,83 @@ details[open] > summary:first-of-type {
 <p>Il peut s&rsquo;agir de choix de jauges globaux, identiques en tout point, ou de choix locaux, susceptibles de varier d&rsquo;un point à l&rsquo;autre.</p>
 <p>Partons du Lagrangien du champ scalaire complexe :</p>
 <div id="def">
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \mathcal{L}=\left(\partial^\mu \psi\right)^{\dagger}\left(\partial_\mu \psi\right)-m^2 \psi^{\dagger} \psi
-$$</p>
-</div>
+$
+</p>
 </div>
 <p>Comme on l&rsquo;a vu, la symétrie $U(1)$ se traduit par la non variation du Lagrangien (et par extension des équations du mouvement) lors de la transformation $\psi(x) \rightarrow \psi(x) \mathrm{e}^{\mathrm{i} \alpha}$. Il s&rsquo;agit là d&rsquo;une <strong>transformation globale</strong> puisqu&rsquo;elle change le champ d&rsquo;une même valeur en tout point de l&rsquo;espace-temps. La théorie est donc dite invariante par transformation $U(1)$ globale.</p>
 <p>Que se passerait-il si on imposait une invariance <strong>locale</strong> par rapport à la phase ? Il faudrait que la transformation $\psi(x) \rightarrow \psi(x) \mathrm{e}^{\mathrm{i} \alpha(x)}$ (où $\alpha(x)$ peut maintenant différer d&rsquo;un point à l&rsquo;autre) soit sans effet sur les équations du mouvement. Cela semble une demande un peu extrême, mais elles se révèle surprenemment féconde : l&rsquo;électromagnétisme en découle !</p>
 <p>On n&rsquo;est pas embêté par le terme de masse : $m^2\psi^\dagger\psi\rightarrow m^2\psi^\dagger \mathrm{e}^{-\mathrm{i} \alpha(x)} \mathrm{e}^{\mathrm{i} \alpha(x)} \psi = m^2\psi^\dagger\psi $. Par contre, le terme contenant les dérivées pose problème puisque la dérivée agit maintenant sur $\alpha(x)$ :</p>
 <div id="theo">
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \begin{aligned}
-\partial_\mu \psi(x) &amp; \rightarrow \partial_\mu \psi(x) \mathrm{e}^{\mathrm{i} \alpha(x)} \\
-&amp; =\mathrm{e}^{\mathrm{i} \alpha(x)} \partial_\mu \psi(x)+\psi(x) \mathrm{e}^{\mathrm{i} \alpha(x)} \mathrm{i} \partial_\mu \alpha(x) \\
-&amp; =\mathrm{e}^{\mathrm{i} \alpha(x)}\left[\partial_\mu+\mathrm{i} \partial_\mu \alpha(x)\right] \psi(x)
+\partial_\mu \psi(x) & \rightarrow \partial_\mu \psi(x) \mathrm{e}^{\mathrm{i} \alpha(x)} \\
+& =\mathrm{e}^{\mathrm{i} \alpha(x)} \partial_\mu \psi(x)+\psi(x) \mathrm{e}^{\mathrm{i} \alpha(x)} \mathrm{i} \partial_\mu \alpha(x) \\
+& =\mathrm{e}^{\mathrm{i} \alpha(x)}\left[\partial_\mu+\mathrm{i} \partial_\mu \alpha(x)\right] \psi(x)
 \end{aligned}
-$$</p>
-</div>
+$
+</p>
 </div>
 <p>Et de même, on a $\partial^\mu \psi^{\dagger}(x)  \rightarrow  \mathrm{e}^{-\mathrm{i} \alpha(x)}\left[\partial^\mu-\mathrm{i} \partial^\mu \alpha(x)\right] \psi^{\dagger}(x)$.</p>
 <p>Le premier terme du Lagrangien est donc tout chamboulé :</p>
 <div id="theo">
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \left(\partial^\mu \psi^{\dagger}\right)\left(\partial_\mu \psi\right)-\mathrm{i}\left(\partial^\mu \alpha\right) \psi^{\dagger}\left(\partial_\mu \psi\right)+\mathrm{i}\left(\partial^\mu \psi^{\dagger}\right)\left(\partial_\mu \alpha\right) \psi+\left(\partial^\mu \alpha\right)\left(\partial_\mu \alpha\right) \psi^{\dagger} \psi
-$$</p>
-</div>
+$
+</p>
 </div>
 <p>Faire dépendre $\alpha$ de la position a logiquement retiré sa symétrie $U(1)$ à la théorie qui n&rsquo;est donc pas invariante sous une transformation $U(1)$ locale. Mais peut-on restaurer cette symétrie ?</p>
 <p>Oui, en ajoutant un nouveau champ $A^\mu(x)$ dont la mission sera d&rsquo;annuler les variations de la phase d&rsquo;un point à l&rsquo;autre. On greffe ce champ à la dérivée pour créer une sorte de &ldquo;super dérivée&rdquo; : la <strong>dérivée covariante $D_\mu$</strong>.</p>
 <div id="def">
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 D_\mu=\partial_\mu+\mathrm{i} q A_\mu(x)
-$$</p>
-</div>
+$
+</p>
 </div>
 <p>La dérivée covariante peut réparer la symétrie $U(1)$ si le nouveau champ $A_\mu$ se transforme comme :</p>
 <div id="def">
-<div id="grosseformule">
-<p>$$
-A_\mu \rightarrow A_\mu-\frac{1}{q} \partial_\mu \alpha(x)
-$$</p>
-</div>
+<p style="text-align:center;">
+$\displaystyle
+ A_\mu \rightarrow A_\mu-\frac{1}{q} \partial_\mu \alpha(x)
+$
+</p>
 <p>$q$ est le paramètre de couplage, il nous informe sur la force de l&rsquo;interaction entre $A_\mu$ et les autres champs.</p>
  </div>
 <br>
 <div id="preuve">
 <p>Si $\psi(x) \rightarrow \psi(x) \mathrm{e}^{\mathrm{i} \alpha(x)}$, alors $\partial_\mu \psi \rightarrow\left(\partial_\mu \psi\right) \mathrm{e}^{\mathrm{i} \alpha}+\mathrm{i}\left(\partial_\mu \alpha\right) \psi$ et donc</p>
-<div id="grosseformule">
-<p>$$
-\begin{aligned}
-D_\mu \psi=\left(\partial_\mu+\mathrm{i} q A_\mu\right) \psi &amp; \rightarrow\left(\partial_\mu \psi\right) \mathrm{e}^{\mathrm{i} \alpha}+\mathrm{i}\left(\partial_\mu \alpha\right) \psi+\mathrm{i} q A_\mu \psi \mathrm{e}^{\mathrm{i} \alpha}-\mathrm{i}\left(\partial_\mu \alpha\right) \psi \\
-&amp; =D_\mu\left(\psi \mathrm{e}^{\mathrm{i} \alpha}\right)
-\end{aligned}
-$$</p>
-</div>
+<p style="text-align:center;">
+$\displaystyle
+D_\mu \psi
+=\left(\partial_\mu+\mathrm{i} q A_\mu\right) \psi  \rightarrow\left(\partial_\mu \psi\right) \mathrm{e}^{\mathrm{i} \alpha}+\mathrm{i}\left(\partial_\mu \alpha\right) \psi \, \mathrm{e}^{\mathrm{i} \alpha} +\mathrm{i} q A_\mu \psi \, \mathrm{e}^{\mathrm{i} \alpha} - \mathrm{i}\left(\partial_\mu \alpha\right) \psi \, \mathrm{e}^{\mathrm{i} \alpha}
+= (\partial_\mu \psi) \mathrm{e}^{\mathrm{i} \alpha} + \mathrm{i} q A_\mu \psi \, \mathrm{e}^{\mathrm{i} \alpha}
+= \left( D_\mu \psi \right)  \mathrm{e}^{\mathrm{i} \alpha}
+$
+</p>
 </div>
 <p>Le Lagrangien entier devient invariant si on remplace les dérivées ordinaires par des dérivées covariantes :</p>
 <div id="def">
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \mathcal{L}=\left(D^\mu \psi\right)^{\dagger}\left(D_\mu \psi\right)-m^2 \psi^{\dagger} \psi
-$$</p>
-</div>
+$
+</p>
 </div>
 <p>Pour imposer une symétrie $U(1)$ locale, la théorie se doit alors d&rsquo;être invariante par rapport à deux jeux de transformations en parallèle :</p>
 <div id="theo">
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \begin{aligned}
-\psi(x) &amp; \rightarrow \psi(x) \mathrm{e}^{\mathrm{i} \alpha(x)} \\
-A_\mu(x) &amp; \rightarrow A_\mu(x)-\frac{1}{q} \partial_\mu \alpha(x)
+\psi(x) & \rightarrow \psi(x) \mathrm{e}^{\mathrm{i} \alpha(x)} \\
+A_\mu(x) & \rightarrow A_\mu(x)-\frac{1}{q} \partial_\mu \alpha(x)
 \end{aligned}
-$$</p>
-</div>
+$
+</p>
 </div>
 <br>
 <div id="def">
@@ -2183,37 +2199,149 @@ $$</p>
 <h3 id="théorie-de-jauge-la-plus-simple-lélectromagnétisme">Théorie de jauge la plus simple : l&rsquo;électromagnétisme</h3>
 <p>Une théorie dont le Lagrangien contient des termes décrivant $A^\mu(x)$ se doit d&rsquo;être invariante sous des transformations du type $A_\mu(x) \rightarrow A_\mu(x)-\frac{1}{q} \partial_\mu \alpha(x)$. L&rsquo;électromagnétisme est justement un exemple d&rsquo;une telle théorie avec son champ vectoriel $A^\mu(x)=(V(x), \boldsymbol{A}(x))$ formant le Lagrangien :</p>
 <div id="def">
-<div id="grosseformule">
-<p>$$
-\mathcal{L}=-\frac{1}{4}\left(\partial_\mu A_\nu-\partial_\nu A_\mu\right)\left(\partial^\mu A^\nu-\partial^\nu A^\mu\right)-J_{\mathrm{em}}^\mu A^\mu
-$$</p>
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle
+\begin{aligned}
+\mathcal{L}&=-\frac{1}{4} \left(\partial_\mu A_\nu-\partial_\nu A_\mu\right) \left(\partial^\mu A^\nu-\partial^\nu A^\mu\right) - J_{\mathrm{em}}^\mu A^\mu\\
+&= -\frac{1}{4}F_{\mu\nu}F^{\mu\nu} - J_{\mathrm{em}}^\mu A^\mu
+\end{aligned}
+$
+</p>
+<p style="text-align:center;">
+où $F_{\mu\nu} = \left(\partial_\mu A_\nu-\partial_\nu A_\mu\right)$ est le <b>tenseur de Maxwell</b>
+</p>
 </div>
+<br>
+<div id="preuve">
+<details>
+<summary>
+Motivation du terme $-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}$
+</summary>
+<p><b>La nécessité d&rsquo;une cinétique (faire vivre le champ)</b><br>
+À ce stade du raisonnement, le champ de jauge $A_\mu(x)$ a été introduit uniquement comme une rustine mathématique pour réparer la dérivée de $\psi$. S&rsquo;il en reste là, $A_\mu$ n&rsquo;est qu&rsquo;un champ statique, une toile de fond sans vie.<br>
+Pour que $A_\mu$ devienne une véritable particule (le photon) capable de se propager dans l&rsquo;espace et le temps, il doit posséder sa propre énergie cinétique. Dans un lagrangien, un terme cinétique doit impérativement contenir des dérivées du champ par rapport à l&rsquo;espace-temps ($\partial_\mu A_\nu$).</p>
+<p><b>Le couperet de la symétrie de jauge</b><br>
+Nous voulons ajouter un terme cinétique $\mathcal L_{\text{photon}}$ qui ne dépend que de $A_\mu$. Mais notre règle d&rsquo;or (le principe de jauge) est stricte : ce nouveau terme doit être totalement invariant sous la transformation de jauge :</p>
+<p style="text-align:center;">
+$\displaystyle
+A_\mu \to A_\mu - \frac{1}{q}\partial_\mu\alpha
+$
+</p>
+<p>Ce que cela interdit (la masse du photon) :<br>
+Si l&rsquo;on tentait de lui donner une masse avec un terme classique de type $m^2 A_\mu A^\mu$, la transformation de jauge ajouterait des termes parasites contenant $\partial_\mu\alpha$ qui ne s&rsquo;annuleraient jamais.<br>
+Conséquence : La symétrie de jauge interdit au photon d&rsquo;avoir une masse. $m_\gamma = 0$ n&rsquo;est pas mesuré, c&rsquo;est exigé mathématiquement.</p>
+<p><b>La géométrie à la rescousse (d&rsquo;où vient $F_{\mu\nu}$ ?)</b><br>
+Nous devons donc construire un objet mathématique avec des dérivées de $A_\mu$, qui soit insensible à la jauge.
+Regardons comment se transforme la dérivée simple du champ :</p>
+<p style="text-align:center;">
+$\displaystyle
+\partial_\mu A_\nu \to \partial_\mu \left( A_\nu - \frac{1}{q}\partial_\nu\alpha \right) = \partial_\mu A_\nu - \frac{1}{q}\partial_\mu\partial_\nu\alpha
+$
+</p>
+<p>Le terme parasite contient les dérivées secondes croisées $\partial_\mu\partial_\nu\alpha$. Le théorème de Schwarz nous dit que l&rsquo;ordre des dérivées partielles n&rsquo;importe pas : $\partial_\mu\partial_\nu = \partial_\nu\partial_\mu$.<br>
+Pour éliminer ce parasite, l&rsquo;astuce est de soustraire la version inversée du terme :</p>
+<p style="text-align:center;">
+$\displaystyle
+(\partial_\mu A_\nu - \partial_\nu A_\mu) \to (\partial_\mu A_\nu - \partial_\nu A_\mu) - \frac{1}{q}(\partial_\mu\partial_\nu\alpha - \partial_\nu\partial_\mu\alpha) = (\partial_\mu A_\nu - \partial_\nu A_\mu) - 0
+$
+</p>
+<p>On vient de construire un objet fondamentalement invariant de jauge, le tenseur de Maxwell :</p>
+<p style="text-align:center;">
+$\displaystyle
+F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu
+$
+</p>
+<p><b>Construire le scalaire de Lorentz (l&rsquo;équation finale)</b><br>
+Le lagrangien doit être un scalaire de Lorentz (un simple nombre, invariant sous les rotations et les changements de référentiels). Notre objet $F_{\mu\nu}$ est un tenseur à deux indices. Pour fabriquer un scalaire, la seule solution est de le contracter avec lui-même : $F_{\mu\nu}F^{\mu\nu}$.<br>
+Nous avons notre terme ! Il s&rsquo;écrira proportionnellement à $F_{\mu\nu}F^{\mu\nu}$.</p>
+<p>Pourquoi le facteur $-\frac{1}{4}$ ?
+C&rsquo;est ici qu&rsquo;interviennent les conventions physiques de base pour retomber sur nos pattes :</p>
+<ul style="margin-top:-0.5em; margin-bottom:1em;">
+<li>Le signe moins&nbsp;: Il est crucial pour que l'énergie cinétique (liée aux champs électriques et magnétiques) soit positive. Si le signe était positif, le photon aurait une énergie cinétique négative, ce qui produirait une particule fantôme qui déstabiliserait le vide quantique.</li>
+<li>Le facteur $1/4$&nbsp;: Le tenseur $F_{\mu\nu}$ est antisymétrique. Lorsqu'on fait la double somme sur $\mu$ et $\nu$, chaque terme croisé est compté deux fois (un facteur $2$), et les équations d'Euler-Lagrange font encore descendre un facteur $2$ de l'exposant. Le $1/4$ sert à neutraliser ces facteurs pour que les équations du mouvement générées soient exactement les équations de Maxwell classiques $\partial_\mu F^{\mu\nu} = J^\nu$.</li>
+</ul>
+<p>Pourquoi pas des puissances supérieures ?<br>
+On pourrait imaginer des termes comme $(F_{\mu\nu}F^{\mu\nu})^2$. Ils sont invariants de jauge et de Lorentz !<br>
+Cependant, l&rsquo;analyse dimensionnelle et la condition de renormalisabilité (pour que la théorie quantique ne génère pas d&rsquo;infinis impossibles à maîtriser) interdisent dans un espace-temps à 4 dimensions d&rsquo;avoir des termes dont la dimension d&rsquo;énergie dépasse 4. Le terme $F^2$ a exactement la dimension 4. Tout terme supérieur exigerait l&rsquo;introduction d&rsquo;une nouvelle échelle de masse (physique au-delà du modèle standard).</p>
+<p><b>En conclusion</b><br>
+Le terme $-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}$ est l&rsquo;unique terme cinétique renormalisable, invariant de Lorentz et invariant de jauge qu&rsquo;il est mathématiquement possible d&rsquo;écrire dans notre univers. La symétrie dicte l&rsquo;interaction, mais elle dicte aussi la dynamique libre du champ.</p>
+</details>
 </div>
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Courbure du champ de jauge</span></div><div class="notice__corps"><p>Plutôt que de tâtonner, la géométrie différentielle nous donne le tenseur de Maxwell automatiquement. En calculant le commutateur des deux dérivées covariantes $[D_\mu, D_\nu] = D_\mu D_\nu - D_\nu D_\mu$  agissant sur le champ $\psi$, les dérivées ordinaires s&rsquo;annulent et il ne reste que :</p>
+<p style="text-align:center;">
+$\displaystyle
+[D_\mu, D_\nu]\psi = \mathrm{i}q (\partial_\mu A_\nu - \partial_\nu A_\mu)\psi = \mathrm{i}q F_{\mu\nu}\psi
+$
+</p>
+<p>$F_{\mu\nu}$ mesure la &ldquo;<strong>courbure</strong>&rdquo; de notre symétrie de jauge.</p>
+<details>
+<summary>
+Géométrie différentielle&nbsp;: la force comme courbure
+</summary>
+<p>C&rsquo;est le changement de paradigme fondamental apporté par la géométrie différentielle à la physique : les interactions fondamentales ne sont rien d&rsquo;autre que la manifestation géométrique d&rsquo;une courbure.</p>
+<p><b>Les forces de jauge (électromagnétisme, forces nucléaires)</b><br>
+Pour comprendre pourquoi le terme cinétique $F_{\mu\nu}$ est une courbure, il faut adopter la vision des mathématiciens (la théorie des espaces fibrés).</p>
+<ul style="margin-top:-0.5em; margin-bottom:1em;">
+<li>Le potentiel $A_\mu$ est une «&nbsp;connexion&nbsp;»&nbsp;: en géométrie, une connexion est l'outil qui permet de comparer des objets situés en des points différents. Ici, $A_\mu$ nous dit comment la «&nbsp;phase&nbsp;» (l'angle interne) d'un électron tourne lorsqu'on le déplace d'un point à un autre de l'espace.</li>
+<li>Le tenseur $F_{\mu\nu}$ est la «&nbsp;courbure&nbsp;»&nbsp;: comment mesure-t-on la courbure d'un espace ? En marchant le long d'une boucle fermée. Sur Terre, si nous marchons vers le pôle Nord, tournons à 90°, marchons jusqu'à l'équateur, tournons à 90° et revenons au point de départ, vous ne regardez plus dans la même direction.<br>
+En physique quantique, si on prend un électron, qu'on le déplace le long d'une minuscule boucle spatio-temporelle fermée et qu'on le ramène à son point de départ, sa phase quantique aura tourné. La quantité exacte dont la phase a tourné est mesurée par $F_{\mu\nu}$.</li>
+</ul>
+<p>C&rsquo;est exactement ce que dit la formule mathématique du commutateur  :</p>
+<p style="text-align:center;">
+$\displaystyle
+[D_\mu, D_\nu]\psi = \mathrm{i}q F_{\mu\nu}\psi
+$
+</p>
+<p>Faire $D_\mu D_\nu - D_\nu D_\mu$, c&rsquo;est faire un petit pas dans la direction $\nu$, puis $\mu$, et soustraire le chemin inverse ($\mu$ puis $\nu$). C&rsquo;est le contour d&rsquo;un rectangle infinitésimal.<br>
+Ainsi, le terme cinétique du photon $-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}$ se lit géométriquement comme : la somme des courbures au carré de l&rsquo;espace interne de la particule. Ce principe a été généralisé par Yang et Mills pour décrire la force nucléaire forte (les gluons) et faible (les bosons $W$ et $Z$) avec des courbures non plus de simples phases, mais de matrices complexes.</p>
+<p><b>La force de gravité (Relativité Générale)</b><br>
+Si les physiciens des particules ont découvert que les forces étaient la courbure d&rsquo;espaces « internes », Einstein, lui, l&rsquo;avait déjà découvert pour l&rsquo;espace physique lui-même !<br>
+Dans la relativité générale, le champ qui varie n&rsquo;est pas un potentiel $A_\mu$, c&rsquo;est la métrique de l&rsquo;espace-temps lui-même, notée $g_{\mu\nu}$ (qui permet de mesurer les distances).</p>
+<ul style="margin-top:-0.5em; margin-bottom:1em;">
+<li>La connexion (l'équivalent de $A_\mu$) est représentée par les symboles de Christoffel $\Gamma^\lambda_{\mu\nu}$.</li>
+<li>La courbure (l'équivalent de $F_{\mu\nu}$) est le tenseur de Riemann $R^\rho_{\sigma\mu\nu}$, qui mesure littéralement à quel point l'espace-temps est tordu.</li>
+</ul>
+<p>Quel est le terme « cinétique » du champ gravitationnel dans le lagrangien d&rsquo;Einstein-Hilbert ?</p>
+<p style="text-align:center;">
+$\displaystyle
+\mathcal L_{\text{gravité}} = R
+$
+</p>
+<p>C&rsquo;est tout. $R$ (le scalaire de Ricci) est simplement la contraction du tenseur de Riemann. Le lagrangien de la gravité est purement et simplement la courbure de l&rsquo;espace-temps.</p>
+<p><b>La matière</b><br>
+La règle est donc parfaite pour les forces (les bosons vecteurs de spin 1 et le graviton de spin 2).<br>
+En revanche, pour les champs de matière (les fermions de spin 1/2 comme l&rsquo;électron, ou le scalaire de spin 0 comme le Higgs), le terme cinétique n&rsquo;est pas une courbure.</p>
+<ul style="margin-top:-0.5em; margin-bottom:1em;">
+<li>Terme cinétique de Dirac&nbsp;: $\bar$\bar\psi\,\mathrm{i}\gamma^\mu D_\mu\,\psi$</li>
+<li>Terme cinétique de Klein-Gordon&nbsp;: $(D_\mu\phi)^\dagger(D^\mu\phi)$</li>
+</ul>
+<p>Ici, la dérivée covariante $D_\mu$ est une « vitesse généralisée ». Ces termes mesurent simplement à quel point le champ de matière ondule ou se déplace dans l&rsquo;espace. Ils « ressentent » la géométrie (via le $A_\mu$ contenu dans $D_\mu$), mais ils ne sont pas la géométrie.</p>
+</details></div></div>
 <p>Les équations du mouvement qu&rsquo;on en déduit ne sont autres que les deux équations de Maxwell inhomogènes :</p>
 <div id="theo">
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \partial^2 A^\nu-\partial^\nu\left(\partial_\mu A^\mu\right)=J_{\mathrm{em}}^\nu
-$$</p>
-</div>
+$
+</p>
 </div>
 <p>Ni le Lagrangien, ni les équations du mouvement ne sont modifiés par la transformation $A_\mu(x) \rightarrow A_\mu(x)-\partial_\mu \chi(x)$ qui se décompose en :</p>
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \begin{aligned}
-V &amp; \rightarrow V-\partial_0 \chi \\
-\boldsymbol{A} &amp; \rightarrow \boldsymbol{A}+\boldsymbol{\nabla} \chi
+V & \rightarrow V-\partial_0 \chi \\
+\boldsymbol{A} & \rightarrow \boldsymbol{A}+\boldsymbol{\nabla} \chi
 \end{aligned}
-$$</p>
-</div>
+$
+</p>
 <p>C&rsquo;est bien ce qu&rsquo;on nomme en électromagnétisme l&rsquo;invariance de jauge (si $A_\mu$ décrit correctement le champ électromagnétique dans une certaine situation, alors $A_\mu-\partial_\mu \chi$ aussi). Et on en déduit que l&rsquo;électromagnétisme est une <strong>théorie de jauge</strong> puisqu&rsquo;en choisissant de redéfinir $\chi(x)$ comme $\alpha(x)/q$, on retrouve bien la définition vue plus haut.</p>
 <p>Comment choisir $\chi(x)$ ? Il est commun d&rsquo;en passer par la <strong>jauge de Lorenz</strong> (sans &ldquo;t&rdquo;) :</p>
 <div id="def">
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \partial_\mu A^\mu(x)=0
-$$</p>
-</div>
+$
+</p>
 </div>
 <br>
 <div id="preuve">
@@ -2224,20 +2352,22 @@ $$</p>
 <p>Cela ne rend toujours pas $A^{\prime \mu}$ unique ici puisqu&rsquo;on peut continuer à transformer le champ $A_\mu^\prime \rightarrow A_\mu^{\prime \prime}=A_\mu^{\prime}-\partial_\mu \xi$ tant que $\partial^2 \xi = 0$ ($A^{\prime \mu}$ et $A^{\prime \prime \mu}$ respectent tous deux la condition de Lorenz). Pour rendre $A^{\prime \prime \mu}$ unique, on choisit en plus de fixer $\partial_0 \xi=A_0^{\prime}$, ce qui implique $A_0^{\prime \prime}=0$.</p>
 <p>Avec ce choix, la condition de Lorenz implique finalement la <strong>jauge de Coulomb</strong> :</p>
 <div id="theo">
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \boldsymbol{\nabla} \cdot \boldsymbol{A}^{\prime \prime}=0
-$$</p>
-</div>
+$
+</p>
 </div>
 <p>Le nombre de degrés de liberté du champ est encore réduit d&rsquo;un cran.</p>
 <p>La physique impose finalement au champ $A^\mu$ de n&rsquo;avoir que deux composantes indépendantes !</p>
 <div id="preuve">
+<details>
+<summary>Le décompte, jusqu'aux deux polarisations physiques&nbsp;:</summary>
 <p>Les équations du mouvement sous la jauge de Lorenz donnent $\partial^2A^\mu = 0$. Avec la condition $A^0 = 0$, cela implique des ondes planes de la forme $\boldsymbol{A}=\boldsymbol{\epsilon} \mathrm{e}^{-\mathrm{i} p \cdot x}$.</p>
 <p>La jauge de Coulomb $\boldsymbol{\nabla} \cdot \boldsymbol{A}=0$ impose alors $\boldsymbol{p} \cdot \boldsymbol{A}=\boldsymbol{p} \cdot \boldsymbol{\epsilon}=0$ qui nous dit que la direction de propagation de l&rsquo;onde est perpendiculaire à la polarisation ; l&rsquo;onde est <strong>transverse</strong> !</p>
 <p>En supposant une propagation selon l&rsquo;axe $z$ avec une impulsion $q^\mu=(|\boldsymbol{q}|, 0,0,|\boldsymbol{q}|)$, on peut par exemple se donner une polarisation linéaire :</p>
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \boldsymbol{\epsilon}_1(q)=\left(\begin{array}{l}
 1 \\
 0 \\
@@ -2247,11 +2377,11 @@ $$</p>
 1 \\
 0
 \end{array}\right)
-$$</p>
-</div>
+$
+</p>
 <p>ou encore une polarisation circulaire avec :</p>
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \epsilon_{\mathrm{R}}^*(q)=-\frac{1}{\sqrt{2}}\left(\begin{array}{l}
 1 \\
 \mathrm{i} \\
@@ -2261,26 +2391,27 @@ $$</p>
 -\mathrm{i} \\
 0
 \end{array}\right)
-$$</p>
-</div>
+$
+</p>
+</details>
 </div>
 <p>Pour observer les effets du champ électromagnétique, il faut le coupler à un champ de matière. La recette la plus simple consiste à remplacer les dérivées ordinaires par les dérivées covariantes dans le Lagrangien. On nomme ce procédé <strong>couplage minimal</strong>.</p>
 <p>Considérons un champ scalaire complexe en présence d&rsquo;un champ électromagnétique. Si les champs sont indépendants, le Lagrangien total s&rsquo;écrit comme la somme des Lagrangiens de chacune des théories :</p>
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \mathcal{L}=\left(\partial^\mu \psi\right)^{\dagger}\left(\partial_\mu \psi\right)-m^2 \psi^{\dagger} \psi-\frac{1}{4} F_{\mu \nu} F^{\mu \nu}
-$$</p>
-</div>
+$
+</p>
 <p>On obtient un couplage entre les champs en passant de $\partial$ à $D$ :</p>
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \begin{aligned}
-\mathcal{L}&amp;= \left(D^\mu \psi\right)^{\dagger}\left(D_\mu \psi\right)-m^2 \psi^{\dagger} \psi-\frac{1}{4} F_{\mu \nu} F^{\mu \nu} \\
-&amp;=  \left(\partial^\mu \psi^{\dagger}-\mathrm{i} q A^\mu \psi^{\dagger}\right)\left(\partial_\mu \psi+\mathrm{i} q A_\mu \psi\right)-m^2 \psi^{\dagger} \psi-\frac{1}{4} F_{\mu \nu} F^{\mu \nu} \\
-&amp;= \partial^\mu \psi^{\dagger} \partial_\mu \psi-m^2 \psi^{\dagger} \psi-\frac{1}{4} F_{\mu \nu} F^{\mu \nu}  + {\color{#D41876}\left(-\mathrm{i} q A^\mu \psi^{\dagger}\left(\partial_\mu \psi\right)+\mathrm{i} q\left(\partial^\mu \psi^{\dagger}\right) A_\mu \psi+q^2 \psi^{\dagger} \psi A^\mu A_\mu\right) }
+\mathcal{L}&= \left(D^\mu \psi\right)^{\dagger}\left(D_\mu \psi\right)-m^2 \psi^{\dagger} \psi-\frac{1}{4} F_{\mu \nu} F^{\mu \nu} \\
+&=  \left(\partial^\mu \psi^{\dagger}-\mathrm{i} q A^\mu \psi^{\dagger}\right)\left(\partial_\mu \psi+\mathrm{i} q A_\mu \psi\right)-m^2 \psi^{\dagger} \psi-\frac{1}{4} F_{\mu \nu} F^{\mu \nu} \\
+&= \partial^\mu \psi^{\dagger} \partial_\mu \psi-m^2 \psi^{\dagger} \psi-\frac{1}{4} F_{\mu \nu} F^{\mu \nu}  + {\color{#D41876}\left(-\mathrm{i} q A^\mu \psi^{\dagger}\left(\partial_\mu \psi\right)+\mathrm{i} q\left(\partial^\mu \psi^{\dagger}\right) A_\mu \psi+q^2 \psi^{\dagger} \psi A^\mu A_\mu\right) }
 \end{aligned}
-$$</p>
-</div>
+$
+</p>
 <p>Le couplage entre le champ $A^\mu$ et les champs $\psi$ et $\psi^\dagger$ est contenu dans le dernier terme et l&rsquo;importance du couplage est fixée par $q$, la charge électromagnétique.</p>
 <p>On appelle <strong>principe de jauge</strong> la notion selon laquelle un champ de jauge introduit pour assurer une symétrie locale dicte la forme du couplage, c&rsquo;est-à-dire des interactions, dans la théorie.</p>
 <br>
@@ -2288,51 +2419,91 @@ $$</p>
 <p>Le terme de masse du champ massif de spin 1 <a href="../tqc4/#quantification-canonique-dun-champ-%C3%A0-plusieurs-composantes">vu précédemment</a> lui ôtait toute possibilité d&rsquo;invariance de jauge alors que la nature non massive du champ de jauge lui confère cette invariance et lui retire une composante.</p>
 <p>On obtient <i>in fine</i> :</p>
 <div id="theo">
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \hat{A}^\mu(x)=\int \frac{\mathrm{d}^3 p}{(2 \pi)^{\frac{3}{2}}} \frac{1}{\left(2 E_{\boldsymbol{p}}\right)^{\frac{1}{2}}} \sum_{\lambda=1}^2\left(\epsilon_\lambda^\mu(p) \hat{a}_{\boldsymbol{p} \lambda} \mathrm{e}^{-\mathrm{i} p \cdot x}+\epsilon_\lambda^{\mu *}(p) \hat{a}_{\boldsymbol{p} \lambda}^{\dagger} \mathrm{e}^{\mathrm{i} p \cdot x}\right)
-$$</p>
-</div>
+$
+</p>
 </div>
 <p>avec $E_p=|\boldsymbol{p}|$.</p>
 <p>Et l&rsquo;Hamiltonien est donné par :</p>
 <div id="theo">
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \hat{H}=\int \mathrm{d}^3 p \sum_{\lambda=1}^2 E_{\boldsymbol{p}} \hat{a}_{\boldsymbol{p} \lambda}^{\dagger} \hat{a}_{\boldsymbol{p} \lambda}
-$$</p>
-</div>
+$
+</p>
 </div>
 <p>Les excitations du champ électromagnétique sont des <strong>photons</strong> qu&rsquo;on peut observer dans deux états de polarisation transverses.</p>
 <p>Ces particules ont un spin $S=1$ et on en trouve deux types : $\hat{a}_{\boldsymbol{p} 1}^{\dagger}|0\rangle$ et $\hat{a}_{\boldsymbol{p} 2}^{\dagger}|0\rangle.$</p>
 <p>Considérons un photon se propageant selon la direction $z$ avec l&rsquo;impulsion $q^\mu=(|\boldsymbol{q}|, 0,0,|\boldsymbol{q}|)$. Dans une base de polarisation circulaire, on peut écrire $\epsilon_{\lambda=\mathrm{R}}^*(q)=-\frac{1}{\sqrt{2}}(0,1, \mathrm{i}, 0)$ (correspondant à $S_z = 1$) et $\epsilon_{\lambda=\mathrm{L}}^*(q)=\frac{1}{\sqrt{2}}(0,1,-\mathrm{i}, 0)$ (correspondant à $S_z = -1$). Il n&rsquo;y a pas de photon avec $S^z = 0$ puisque cela correspondrait à une polarisation longitudinale interdite $\epsilon_{\lambda=3}^*(p)=(0,0,0,1).$</p>
+<br>
+<h3 id="bilan">Bilan</h3>
+<p style="text-align:center;">
+$\displaystyle
+U(1)\ \text{globale}
+\;\xrightarrow{\ \alpha \to \alpha(x)\ }\;
+\text{symétrie brisée par}\ \partial_\mu\alpha
+\;\xrightarrow{\ D_\mu = \partial_\mu + \mathrm{i}qA_\mu\ }\;
+\text{symétrie restaurée}
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+A_\mu \to A_\mu - \tfrac{1}{q}\partial_\mu\alpha
+\;\xrightarrow{\ \text{terme cinétique invariant}\ }\;
+-\tfrac{1}{4}F_{\mu\nu}F^{\mu\nu}
+\;\xrightarrow{\ \text{Euler--Lagrange}\ }\;
+\text{équations de Maxwell}
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+4\ \text{composantes de}\ A^\mu
+\;\xrightarrow{\ \text{jauge de Lorenz}\ }\;
+3
+\;\xrightarrow{\ \text{jauge de Coulomb}\ }\;
+2\ \text{polarisations}
+\;\xrightarrow{\ \text{quantification}\ }\;
+\text{photon}
+$
+</p>
+<h3 id="pièges">Pièges</h3>
+<ul>
+<li>Une invariance de jauge n'est <b>pas une symétrie</b> au sens ordinaire&nbsp;: elle ne relie pas deux configurations physiquement distinctes, elle signale une <b>redondance de description</b>. C'est pour cela qu'on doit la <i>fixer</i> pour calculer, alors qu'on ne fixe jamais une symétrie véritable.</li>
+<li>Le champ de jauge est introduit pour une raison purement formelle, mais il acquiert ensuite une <b>dynamique propre</b>. Ce n'est pas un artifice de calcul&nbsp;: c'est le photon.</li>
+<li>Le paramètre $q$ n'est pas un choix libre&nbsp;: il apparaît à la fois dans $D_\mu$ et dans la loi de transformation de $A_\mu$, et c'est cette <b>double occurrence</b> qui fait la compensation. C'est aussi ce qui explique que la charge soit quantifiée de la même façon pour tous les champs couplés au même $A_\mu$.</li>
+<li>Fixer la jauge de Lorenz ne fixe pas <b>tout</b>&nbsp;: il reste une liberté résiduelle, celle des $\chi$ satisfaisant $\partial^2\chi = 0$, et c'est elle qu'on épuise avec la jauge de Coulomb. D'où la descente $4 \to 3 \to 2$.</li>
+<li>Le photon n'a <b>pas</b> d'état $S_z = 0$, alors qu'une particule de spin&nbsp;1 massive en aurait trois. La polarisation longitudinale est interdite par l'invariance de jauge, et c'est la trace de l'absence de masse.</li>
+<li>Ne pas confondre les deux jauges&nbsp;: Lorenz ($\partial_\mu A^\mu = 0$) est covariante, Coulomb ($\boldsymbol\nabla\cdot\boldsymbol A = 0$) ne l'est pas. La seconde est commode mais brise la covariance manifeste.</li>
+</ul>
 <br>
 <h2 id="symétries-discrètes">Symétries discrètes</h2>
 <p>On a rencontré jusque-là des symétries portées par des transformations continues (translations, rotations) représentées par des groupes continus (groupes de Lie). Mais on peut aussi rencontrer des symétries correspondant à des transformations discrètes représentées cette fois-ci par des groupes finis.</p>
 <h3 id="conjugaison-de-charge">Conjugaison de charge</h3>
 <p>On appelle conjugaison de charge la transformation qui change une particule en son antiparticule. C&rsquo;est l&rsquo;opérateur $\text { C }$ qui se charge de cette prouesse. Il ne permute pas seulement la charge d&rsquo;une particule, mais aussi son nombre leptonique, son hypercharge et tout autre &ldquo;nombre de charge&rdquo;. On a alors :</p>
 <div id="def">
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \mathrm{C}|p\rangle=|\bar{p}\rangle
-$$</p>
-</div>
+$
+</p>
 </div>
 <p>La charge d&rsquo;une particule $p$ de charge $q$ est mesurée par un opérateur $\hat{Q}$ : $\hat{Q}|p\rangle=q|p\rangle$. Par contre : $\hat{Q}|\bar{p}\rangle=-q|\bar{p}\rangle$. On peut donc écrire $\mathrm{C} \hat{Q}|p\rangle=q \mathrm{C}|p\rangle=q|\bar{p}\rangle$, mais $\hat{Q} \mathrm{C}|p\rangle=\hat{Q}|\bar{p}\rangle=-q|\bar{p}\rangle$, ce qui implique que $\hat{Q} \mathrm{C}=-\mathrm{C} \hat{Q}$, ou de manière équivalente :</p>
 <div id="theo">
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \mathrm{C}^{-1} \hat{Q} \mathrm{C}=-\hat{Q}
-$$</p>
-</div>
+$
+</p>
 </div>
 <p>L&rsquo;échange entre particule et antiparticule impose :</p>
 <div id="theo">
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \mathrm{C}^{-1} \hat{a}_{\boldsymbol{p}} \mathrm{C}=\hat{b}_{\boldsymbol{p}} \quad\quad \mathrm{C}^{-1} \hat{b}_{\boldsymbol{p}}^{\dagger} \mathrm{C}=\hat{a}_{\boldsymbol{p}}^{\dagger}
-$$</p>
-</div>
+$
+</p>
 </div>
 <p>Et comme un champ scalaire $\hat{\psi}(x)$ peut s&rsquo;écrire $\hat{\psi}(x)=\int_{\boldsymbol{p}}\left(\hat{a}_{\boldsymbol{p}} \mathrm{e}^{-\mathrm{i} p \cdot x}+\hat{b}_{\boldsymbol{p}}^{\dagger} \mathrm{e}^{\mathrm{i} p \cdot x}\right)$, on doit avoir $\mathrm{C}^{-1} \hat{\psi} \mathrm{C}=\hat{\psi}^{\dagger}$ ($\hat{\psi}^{\dagger}=\int_{\boldsymbol{p}}\left(\hat{a}_{\boldsymbol{p}}^{\dagger} \mathrm{e}^{\mathrm{i} p \cdot x}+\hat{b}_{\boldsymbol{p}} \mathrm{e}^{-\mathrm{i} p \cdot x}\right)$).</p>
 <div id="preuve">
@@ -2343,85 +2514,85 @@ $$</p>
 <h3 id="parité">Parité</h3>
 <p>Une symétrie miroir inverse la direction de l&rsquo;axe perpendiculaire au miroir et conserve les autres. Si on fait suivre cette transformation d&rsquo;une rotation à 180° autour de l&rsquo;axe perpendiculaire au miroir, on aura inversé toutes les directions spatiales, opérant ainsi une <strong>inversion spatiale</strong> ($\boldsymbol{x}\rightarrow-\boldsymbol{x}$). Cette transformation, appelée <strong>parité</strong>, est prise en charge par l&rsquo;opérateur $\mathrm{P}$. L&rsquo;opérateur position va donc anticommuter avec l&rsquo;opérateur parité :</p>
 <div id="def">
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \hat{\boldsymbol{x}} \mathrm{P}=-\mathrm{P} \hat{\boldsymbol{x}}
-$$</p>
-</div>
+$
+</p>
 </div>
 <p>Ou de manière équivalente :</p>
 <div id="def">
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \mathrm{P}^{-1} \hat{\boldsymbol{x}} \,\mathrm{P}=-\hat{\boldsymbol{x}}
-$$</p>
-</div>
+$
+</p>
 </div>
 <p>L&rsquo;effet sur les coordonnées de l&rsquo;impulsion est le même ($p \rightarrow-\boldsymbol{p}$) et donc :</p>
 <div id="def">
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \mathrm{P}^{-1} \hat{\boldsymbol{p}} \, \mathrm{P}=-\hat{\boldsymbol{p}}
-$$</p>
-</div>
+$
+</p>
 </div>
 <p>L&rsquo;opérateur $\mathrm{P}$ est hermitien et son propre inverse ($\mathrm{P}^2=I$), donc $\mathrm{P}$ est aussi un opérateur unitaire.</p>
 <p>L&rsquo;opérateur de parité est sans effet sur les scalaires mais renverse les vecteurs. Mais il existe une classe spéciale de scalaire et de vecteurs (même si pas réellement des scalaires et des vecteurs mais plutôt des ojets composites) pour lesquels ce n&rsquo;est pas vrai : les <strong>pseudoscalaires</strong> formés par un produit mixte et les <strong>pseudovecteurs</strong> (aussi appelés vecteurs axiaux) formés par un produit vectoriel entre vecteurs ordinaires (aussi appelés vecteurs polaires).</p>
 <p>Le champ électrique $\boldsymbol{E}$ agit comme un vecteur ordianaire (polaire) alors que le champ magnitique et le moment cinétique $\boldsymbol{L}$ sont des pesudovecteurs (vecteurs axiaux).</p>
 <div id="def">
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \begin{aligned}
-\mathrm{P}(\text { scalaire })&amp;=\text { scalaire }\\
-\mathrm{P}(\text { pseudoscalaire })&amp;=-\text { pseudoscalaire }\\
-\mathrm{P}(\textbf{ vecteur })&amp;=- \textbf{ vecteur }\\
-\mathrm{P}(\textbf{ pseudovecteur })&amp;= \textbf{pseudovecteur }
+\mathrm{P}(\text { scalaire })&=\text { scalaire }\\
+\mathrm{P}(\text { pseudoscalaire })&=-\text { pseudoscalaire }\\
+\mathrm{P}(\textbf{ vecteur })&=- \textbf{ vecteur }\\
+\mathrm{P}(\textbf{ pseudovecteur })&= \textbf{pseudovecteur }
 \end{aligned}
-$$</p>
-</div>
+$
+</p>
 </div>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:450px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/tqcparite.png" style="box-shadow:none;background:none;">
 </div>
 <p>Comme $\mathrm{P}^2 = I$, sous la multiplication, le groupe ${I, P}$ est isomorphe à $\mathbb{Z}_2$, le groupe cyclique d&rsquo;ordre 2.</p>
-<div id="grosseformule">
-<p>$$
-\begin{array}{c|cc}
-&amp; I &amp; \mathrm{P} \\
-\hline I &amp; I &amp; \mathrm{P} \\
-\mathrm{P} &amp; \mathrm{P} &amp; I
+<p style="text-align:center;">
+$\displaystyle
+\begin{array}{c|cc} 
+& I & \mathrm{P} \\
+\hline I & I & \mathrm{P} \\
+\mathrm{P} & \mathrm{P} & I
 \end{array}
-$$</p>
-</div>
+$
+</p>
 <p>Comme pour $\mathrm{C}$, cela signifie que les valeurs propres de $\mathrm{P}$ sont $\pm1$. Les scalaires et pseudovecteurs ont une valeur de parité de $+1$ alors que pseudoscalaires et vecteurs ont une parité de $-1$.</p>
 <p>Le photon étant une excitation d&rsquo;un champ vectoriel non massique, il possède une parité intrinsèque de $-1$. Le pion est, lui, décrit par un champ pseudoscalaire et a donc aussi une parité de $-1$. On verra plus tard que la parité d&rsquo;un fermion est opposée à celle de son antiparticule.</p>
 <p>La complication avec l&rsquo;opérateur de parité est qu&rsquo;il agit à la fois sur les coordonnées du champ et sur la nature même du champ.</p>
 <div id="preuve">
 <p>Prenons le cas d&rsquo;un champ scalaire. La parité va faire en sorte que $\phi(t, \boldsymbol{x}) \rightarrow \phi(t,-\boldsymbol{x})$. Étudions maintenant son action sur les opérateurs de création et d&rsquo;annihilation :</p>
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \mathrm{P}^{-1} \hat{\phi}(t, \boldsymbol{x}) \mathrm{P}=\hat{\phi}(t,-\boldsymbol{x})=\int_{\boldsymbol{p}} \hat{a}_{\boldsymbol{p}} \mathrm{e}^{-\mathrm{i}(E t+\boldsymbol{p} \cdot \boldsymbol{x})}+\hat{a}_{\boldsymbol{p}}^{\dagger} \mathrm{e}^{\mathrm{i}(E t+\boldsymbol{p} \cdot \boldsymbol{x})}
-$$</p>
-</div>
+$
+</p>
 <p>C&rsquo;est possible si $\mathrm{P}^{-1} \hat{a}_{\boldsymbol{p}} \mathrm{P}=\hat{a}_{-{\boldsymbol{p}}}$ et $\mathrm{P}^{-1} \hat{a}_{\boldsymbol{p}}^{\dagger} \mathrm{P}=\hat{a}_{-\boldsymbol{p}}^{\dagger}$. L&rsquo;opérateur de parité renverse simplement les impulsions pour les opérateurs de création et d&rsquo;annihilation.</p>
 </div>
 <br>
 <h3 id="renversement-du-temps">Renversement du temps</h3>
 <p>L&rsquo;opérateur renversement du temps $\mathrm{T}$ transforme un champ scalaire $\phi(t, \boldsymbol{x})$ en $\phi(-t, \boldsymbol{x})$. Elle laisse donc le vecteur position tranquille :</p>
 <div id="def">
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \mathrm{T}^{-1} \hat{\boldsymbol{x}} \mathrm{~T}=\hat{\boldsymbol{x}}
-$$</p>
-</div>
+$
+</p>
 </div>
 <p>Mais elle renverse l&rsquo;impulsion :</p>
 <div id="def">
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \mathrm{T}^{-1} \hat{\boldsymbol{p}} \mathrm{~T}=-\hat{\boldsymbol{p}}
-$$</p>
-</div>
+$
+</p>
 </div>
 <p>La seule possibilité pour préserver la relation de commutation $\left[\hat{x}, \hat{p}_x\right]=\mathrm{i}$ est que $\mathrm{T}$ soit antiunitaire puisqu&rsquo;il faut que $\mathrm{T}^{-1} \mathrm{i} \mathrm{~T}=-\mathrm{i}$.</p>
 <div id="preuve">
@@ -2430,59 +2601,62 @@ $$</p>
 <p>L&rsquo;opérateur antiunitaire archétypal est $\mathrm{K}$, l&rsquo;opérateur de conjugaison complexe. Et on peut construire un opérateur antiunitaire général par le produit d&rsquo;un opérateur unitaire $\mathrm{U}$ et de $\mathrm{K}$. Écrivons ainsi $\mathrm{T}=\mathrm{UK}$, qui équivaut (en multipliant les deux membres à droite par $\mathrm{K}$) à $\mathrm{U}=\mathrm{T} \mathrm{K}$.</p>
 <div id="preuve">
 <p>Pour des particules sans spin, on peut choisir $\mathrm{U}=I$ et $\mathrm{U}=\mathrm{K}$. Ce n&rsquo;est pas surprenant si on regarde l&rsquo;effet de la conjugaison complexe sur l&rsquo;équation de Schrödinger :</p>
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \begin{gathered}
 \hat{H} \psi=\mathrm{i} \frac{\partial \psi}{\partial t} \\
 \hat{H} \psi^*=-\mathrm{i} \frac{\partial \psi^*}{\partial t}=\mathrm{i} \frac{\partial \psi^*}{\partial(-t)}
 \end{gathered}
-$$</p>
-</div>
+$
+</p>
 <p>La combinaison d&rsquo;un renversement du temps et d&rsquo;une conjugaison complexe laisse invariante l&rsquo;équation de Schrödinger. Ça semble bien montrer que dans ce cas, $\mathrm{K}$ et $\mathrm{T}$ sont une seule et même transformation.</p>
 </div>
 <br>
 <div id="preuve">
+<details>
+<summary>Le renversement du temps sur un spin, et le théorème de Kramers&nbsp;:</summary>
 <p>Pour des particules avec spin, les choses se compliquent puisque le moment cinétique est renversé lorsqu&rsquo;on change le sens d&rsquo;écoulement du temps. Et donc l&rsquo;action de $\mathrm{T}$ sur l&rsquo;opérateur de spin $\hat{\boldsymbol{S}}$ s&rsquo;écrit :</p>
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \mathrm{T}^{-1} \hat{\boldsymbol{S}} \mathrm{~T}=-\hat{\boldsymbol{S}}
-$$</p>
-</div>
+$
+</p>
 <p>En se rappelant que seul la matrice de Pauli $\sigma_y$ a des composantes complexes, l&rsquo;action de l&rsquo;opérateur de conjugaison complexe sur les opérateurs de spin est plus tordue :</p>
-<div id="grosseformule">
-<p>$$
-\mathrm{K}^{-1} \hat{S}_x \mathrm{~K}=\hat{S}_x, \quad \mathrm{~K}^{-1} \hat{S}_y \mathrm{~K}=-\hat{S}_y, \quad \mathrm{~K}^{-1} \hat{S}_z \mathrm{~K}=\hat{S}_z
-$$</p>
-</div>
+<p style="text-align:center;">
+$\displaystyle
+\mathrm{K}^{-1} \hat{S}_x \mathrm{~K}=\hat{S}_x, \quad \mathrm{~K}^{-1} \hat{S}_y \mathrm{~K}=-\hat{S}_y, \quad \mathrm{~K}^{-1} \hat{S}_z \mathrm{~K}=\hat{S}_z 
+$
+</p>
 <p>Une forme appropriée pour $\mathrm{U}$ serait donc $\mathrm{U}=\exp \left(-\mathrm{i} \pi \hat{S}_y\right)$ correspondant à une rotation de π autour de la direction $y$  de telle sorte qu&rsquo;en combinant $\mathrm{U}$ et $\mathrm{K}$, on renverse bien les trois composantes du spin. On a ainsi :</p>
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \mathrm{T}=\exp \left(-\mathrm{i} \pi \hat{S}_y\right) \mathrm{K}
-$$</p>
-</div>
+$
+</p>
 <p>On obtient alors :</p>
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \mathrm{T}^2=\mathrm{U}\mathrm{K}\mathrm{U}\mathrm{K}=\exp \left(- \mathrm{i} \pi \hat{S}_y\right)\exp \left(+\mathrm{i} \pi (-\hat{S}_y)\right)=\exp \left(- 2\mathrm{i} \pi \hat{S}_y\right)=(-1)^{2S}
-$$</p>
-</div>
+$
+</p>
 <p>Pour un électron unique, on a $S=\frac{1}{2}$ et donc $\mathrm{T}^2=-1$. Cela reste le cas si on a un nombre impair d&rsquo;électrons, mais si le nombre est pair, alors $\mathrm{T}^2=1$.</p>
 <p>Plaçons-nous dans le cas où le nombre d&rsquo;électrons est impair et supposons que l&rsquo;Hamiltonien $\mathcal{H}$ du système est invariant par rapport à une inversion temporelle ($\mathcal{H}$ commute avec $\mathrm{T}$). Les états $|\psi\rangle$ et $\mathrm{T}|\psi\rangle$ ont alors la même énergie. Mais correspondent-ils au même état ? S&rsquo;ils l&rsquo;étaient, on aurait $\mathrm{T}|\psi\rangle=\alpha|\psi\rangle$ où $\alpha$ est un nombre complexe. Mais alors, $\mathrm{T}^2|\psi\rangle=\mathrm{T} \alpha|\psi\rangle=\alpha^* \mathrm{~T}|\psi\rangle=|\alpha|^2|\psi\rangle$ et comme $\mathrm{T}^2=-1$, on aboutit à une contradiction $|\alpha|^2=-1$. Conclusion, $|\psi\rangle$ et $\mathrm{T}|\psi\rangle$ sont linéairement indépendants et sont appelés <strong>doublets de Kramers</strong>. On vient ainsi de déduire que les niveaux d&rsquo;énergie d&rsquo;un système temporellement symétrique avec un nombre impair d&rsquo;électrons sont $n$-fois dégénérés avec un $n$ pair. C&rsquo;est le <strong>théorème de Kramers</strong>. Pour séparer ces paires, il faut introduire une perturbation qui brise la symétrie temporelle, comme un champ magnétique.</p>
+</details>
 </div>
 <br>
 <h3 id="combinaisons-de-transformations-discrètes">Combinaisons de transformations discrètes</h3>
 <p>En renversant à la fois le temps $t$ avec $\mathrm{T}$ et les coordonnées spatiales $\boldsymbol{x}$ avec $\mathrm{P}$, on obtient un renversement complet de l&rsquo;espace-temps $x$. Sur un champ scalaire, on obtient :</p>
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 (\mathrm{PT})^{-1} \hat{\phi}(x)(\mathrm{PT})=\hat{\phi}(-x)
-$$</p>
-</div>
+$
+</p>
 <p>Cette opération laisse les opérateurs de création et d&rsquo;annihilation inchangés puisque l&rsquo;impulsion est retournée une fois par l&rsquo;opération de parité et une nouvelle fois par le renversement du temps.</p>
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 (\mathrm{PT})^{-1} \hat{a}_{\boldsymbol{p}}(\mathrm{PT})=\hat{a}_{\boldsymbol{p}} \quad(\mathrm{PT})^{-1} \hat{a}_{\boldsymbol{p}}^{\dagger}(\mathrm{PT})=\hat{a}_{\boldsymbol{p}}^{\dagger}
-$$</p>
-</div>
+$
+</p>
 <p>Le seul effet sur la décomposition en modes est alors de changer le signe de $\mathrm{i}$ dans l&rsquo;exponentielle. $\mathrm{P}\mathrm{T}$ agit donc comme un opérateur de conjugaison complexe.</p>
 <p>Les symétries liées à $\mathrm{C}$, $\mathrm{P}$ et $\mathrm{T}$ sont chacune conservées dans la plupart des processus à plusieurs particules, mais pas tous. $\mathrm{P}$ est par exemple &ldquo;violée&rdquo; en interaction faible.</p>
 <div id="theo">
@@ -2494,15 +2668,15 @@ $$</p>
 <h3 id="combinaisons-de-transformations-discrètes-et-continues">Combinaisons de transformations discrètes et continues</h3>
 <p>$SO(3)$, le <strong>groupe orthogonal spécial</strong>, est le groupe des rotations à 3 dimensions représentées par des matrices $3\times 3$ orthogonales et de déterminant $+1$ (spéciales). Ces rotations qui respectent l&rsquo;orientation (c&rsquo;est ce qu&rsquo;assure le déterminant de $+1$) sont dites <strong>propres</strong>.</p>
 <p>La transformation de parité peut être représentée par la matrice $\text{diag}(-1,-1,-1)$ :</p>
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \left(\begin{array}{ccc}
--1 &amp; 0 &amp; 0 \\
-0 &amp; -1 &amp; 0 \\
-0 &amp; 0 &amp; -1
+-1 & 0 & 0 \\
+0 & -1 & 0 \\
+0 & 0 & -1
 \end{array}\right)
-$$</p>
-</div>
+$
+</p>
 <p>Là, le déterminant est clairement $-1$. En combinant avec $SO(3)$, c&rsquo;est-à-dire en s&rsquo;autorisant les <strong>rotations impropres</strong> (ne conservant pas l&rsquo;orientation), on obtient le groupe $O(3)$ de toutes les matrices orthogonales $3\times 3$.</p>
 <div id="preuve">
 <p>L&rsquo;othogonalité implique $R^TR = I$ et en prenant le déterminant $\operatorname{det} \mathbf{R} \times \operatorname{det} \mathbf{R}^{\mathrm{T}}=1$. Et comme $\operatorname{det} \mathbf{R}=\operatorname{det} \mathbf{R}^{\mathrm{T}}$, on obtient $(\operatorname{det} \mathbf{R})^2=1$. D&rsquo;où les deux possibilités $\operatorname{det} \mathbf{R}= \pm 1$.</p>
@@ -2529,21 +2703,67 @@ $$</p>
 </div>
 <p>On peut faire correspondre les rotations 3D aux éléments d&rsquo;un autre groupe : $SU(2)$, le <strong>groupe spécial unitaire</strong>  représenté par des matrices $2\times 2$ de déterminant 1. Les éléments de $SU(2)$ permettent de faire tourner les spineurs.</p>
 <p>Une matrice de rotation peut en effet s&rsquo;écrire $\mathbf{R}(\hat{\boldsymbol{n}}, \theta)$ avec :</p>
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \mathbf{R}(\hat{\boldsymbol{n}}, \theta)=\exp \left(-\mathrm{i} \frac{\theta}{2} \boldsymbol{\sigma} \cdot \boldsymbol{n}\right)=I \cos \frac{\theta}{2}-\mathrm{i} \sin \frac{\theta}{2} \boldsymbol{\sigma} \cdot \boldsymbol{n}
-$$</p>
-</div>
+$
+</p>
 <p>où $\boldsymbol{\sigma}=\left(\sigma_x, \sigma_y, \sigma_z\right)$ sont les matrices de Pauli et $I$ la matrice identité. On remarque alors que :</p>
-<div id="grosseformule">
-<p>$$
+<p style="text-align:center;">
+$\displaystyle
 \mathbf{R}(\hat{\boldsymbol{n}}, 0)=I\quad,\quad \mathbf{R}(\hat{\boldsymbol{n}}, 2 \pi)=-I \quad,\quad \mathbf{R}(\hat{\boldsymbol{n}}, 4 \pi)=I
-$$</p>
-</div>
+$
+</p>
 <p>On dit que $SU(2)$ est un <strong>double recouvrement</strong> de $SO(3)$. Prenons l&rsquo;identité par exemple : dans $SO(3)$, l&rsquo;absence de rotation est représentée par $\operatorname{diag}(1,1,1)$ et dans $SU(2)$, à la fois par $\operatorname{diag}(1,1)$ et $\operatorname{diag}(-1,-1)$.</p>
 <p>Un spineur peut s&rsquo;écrire comme une entité à deux composantes $\binom{a}{b}$ où $a$ et $b$ sont des nombres complexes tels que $|a|^2+|b|^2=1$. En écrivant $a=x_0+\mathrm{i} x_1$ et $b=x_2+\mathrm{i} x_3$ où les $x_i$ sont des nombres réels, la condition $|a|^2+|b|^2=1$ devient $x_0^2+x_1^2+x_2^2+x_3^2=1$ et donc $SU(2)$ est isomorphe à $S^3$, la 3-sphère, ce qui montre que $SU(2)$ est simplement connexe, contrairement à $SO(3)$. $SO(3)$ est finalement un groupe quotient : $S O(3) \cong S U(2) / \mathbb{Z}_2$.</p>
 <p>On peut généraliser ces arguments à la composante connexe du groupe de Lorentz : $S O(1,3) \cong S L(2, \mathbb{C}) / \mathbb{Z}_2$ où $S L(2, \mathbb{C})$ est le groupe des matrices $2\times 2$ complexes de déterminant unité.</p>
 <br>
+<h3 id="bilan-1">Bilan</h3>
+<p style="text-align:center;">
+$\displaystyle
+\mathrm C\ :\ \text{particule} \leftrightarrow \text{antiparticule}
+\qquad
+\mathrm P\ :\ \boldsymbol x \to -\boldsymbol x
+\qquad
+\mathrm T\ :\ t \to -t
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+\mathrm T\ \text{antiunitaire}
+\;\xrightarrow{\ \mathrm T^2 = (-1)^{2S}\ }\;
+\text{nombre impair d'électrons}
+\;\xrightarrow{\ \ }\;
+\text{doublets de Kramers}
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+\text{Lorentz invariant} + \text{local} + \text{hermitien}
+\;\xrightarrow{\ \text{théorème}\ }\;
+\mathrm{CPT}\ \text{conservée}
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+SO(3) \ \text{connexe mais pas simplement connexe}
+\;\xrightarrow{\ SU(2)/\mathbb Z_2\ }\;
+\text{rotation de } 2\pi \ \Rightarrow \ -1 \ \text{sur un spineur}
+$
+</p>
+<h3 id="pièges-1">Pièges</h3>
+<ul>
+<li>$\mathrm T$ n'est pas un opérateur unitaire mais <b>antiunitaire</b>&nbsp;: il conjugue les nombres complexes. C'est cette propriété, et non une subtilité technique, qui donne $\mathrm T^2 = -1$ pour un spin demi-entier et fait exister les doublets de Kramers.</li>
+<li>La plupart des particules ne sont <b>pas</b> des états propres de $\mathrm C$&nbsp;: seules celles qui sont leur propre antiparticule le sont. Parler de la «&nbsp;valeur propre de $\mathrm C$&nbsp;» d'un électron n'a pas de sens.</li>
+<li>$\mathrm C$, $\mathrm P$ et $\mathrm T$ sont chacune violée quelque part dans la nature&nbsp;: $\mathrm P$ par l'interaction faible, $\mathrm{CP}$ dans le secteur des saveurs. Seul le <b>produit</b> $\mathrm{CPT}$ résiste, et c'est un théorème, pas une observation.</li>
+<li>La parité est une rotation <b>impropre</b> et ne fait donc pas partie de $SO(3)$&nbsp;: on ne peut pas l'atteindre continûment depuis l'identité. C'est précisément ce qui la rend discrète.</li>
+<li>Le facteur $\theta/2$ dans $\mathbf R(\hat{\boldsymbol n}, \theta) = \exp(-\mathrm i\frac{\theta}{2}\boldsymbol\sigma\cdot\boldsymbol n)$ n'est pas une coquille&nbsp;: c'est lui qui produit le double recouvrement, donc le signe moins après un tour complet.</li>
+<li>Une rotation de $2\pi$ n'est <b>pas</b> l'identité sur un spineur, mais une rotation de $4\pi$ l'est. Ce n'est pas un artefact de calcul&nbsp;: c'est la topologie de $SO(3)$, et la ceinture de Dirac le montre à la main.</li>
+</ul>
+<br>
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>Et maintenant ? Nous avons vu ce que les symétries <b>imposent</b> à une théorie : l&rsquo;invariance locale fabrique l&rsquo;électromagnétisme, les symétries discrètes contraignent les processus autorisés. Mais nous ne savons toujours pas <b>calculer</b> une amplitude : aucun nombre comparable à une mesure n&rsquo;est encore sorti de la machine.<br><br>
+La partie suivante fournit l&rsquo;objet qui manque, le <b>propagateur</b>, c&rsquo;est-à-dire l&rsquo;amplitude pour qu&rsquo;un quantum aille d&rsquo;un point à un autre. On le construit d&rsquo;abord en mécanique quantique, où il se révèle être une simple fonction de Green, puis pour un champ relativiste, où il faudra résoudre une crise de causalité. La récompense est immédiate : le potentiel de Yukawa, et l&rsquo;explication des forces par échange de particules virtuelles.</p>
+</div></div>
 <br>
 <div style="overflow-x: auto;text-align:center;">
 <table>
@@ -3813,6 +4033,16 @@ $$</p>
             
         
                     
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
             
         
                     
@@ -3872,16 +4102,16 @@ $$</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1786149803"></script>
-    <script src="/js/perfect-scrollbar.min.js?1786149803"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1786149803"></script>
-    <script src="/js/jquery.sticky.js?1786149803"></script>
-    <script src="/js/featherlight.min.js?1786149803"></script>
-    <script src="/js/highlight.pack.js?1786149803"></script>
+    <script src="/js/clipboard.min.js?1786296014"></script>
+    <script src="/js/perfect-scrollbar.min.js?1786296014"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1786296014"></script>
+    <script src="/js/jquery.sticky.js?1786296014"></script>
+    <script src="/js/featherlight.min.js?1786296014"></script>
+    <script src="/js/highlight.pack.js?1786296014"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1786149803"></script>
-    <script src="/js/learn.js?1786149803"></script>
-    <script src="/js/hugo-learn.js?1786149803"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1786296014"></script>
+    <script src="/js/learn.js?1786296014"></script>
+    <script src="/js/hugo-learn.js?1786296014"></script>
     
     
 
