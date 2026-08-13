@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1786581372" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1786581372" rel="stylesheet">
-    <link href="/css/hybrid.css?1786581372" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1786581372" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1786581372" rel="stylesheet">
-    <link href="/css/auto-complete.css?1786581372" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1786581372" rel="stylesheet">
-    <link href="/css/theme.css?1786581372" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1786581372" rel="stylesheet">
+    <link href="/css/nucleus.css?1786630772" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1786630772" rel="stylesheet">
+    <link href="/css/hybrid.css?1786630772" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1786630772" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1786630772" rel="stylesheet">
+    <link href="/css/auto-complete.css?1786630772" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1786630772" rel="stylesheet">
+    <link href="/css/theme.css?1786630772" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1786630772" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1786581372" rel="stylesheet">
+    <link href="/css/theme-blue.css?1786630772" rel="stylesheet">
     
-    <link href="/css/foo.css?1786581372" rel="stylesheet"><link href="/css/bar.css?1786581372" rel="stylesheet">
+    <link href="/css/foo.css?1786630772" rel="stylesheet"><link href="/css/bar.css?1786630772" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1786581372"></script>
+    <script src="/js/jquery-3.3.1.min.js?1786630772"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1786581372"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1786581372"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1786630772"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1786630772"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1786581372"></script>
+<script type="text/javascript" src="/js/search.js?1786630772"></script>
 
     
   </div>
@@ -2014,6 +2014,8 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
         <li><a href="#le-photon-et-les-bosons-de-jauge">Le photon et les bosons de jauge</a></li>
         <li><a href="#ce-que-la-théorie-prédit">Ce que la théorie prédit</a></li>
         <li><a href="#la-confrontation-en-un-tableau">La confrontation, en un tableau</a></li>
+        <li><a href="#lénigme-de-la-masse-du-neutrino">L&rsquo;énigme de la masse du neutrino</a></li>
+        <li><a href="#doù-vient-la-masse-un-bilan">D&rsquo;où vient la masse ? Un bilan</a></li>
         <li><a href="#bilan-1">Bilan</a></li>
         <li><a href="#pièges-1">Pièges</a></li>
       </ul>
@@ -2103,6 +2105,19 @@ details > summary:first-of-type {
 details[open] > summary:first-of-type {
   list-style-type: disclosure-open;
 }
+
+/* Style spécifique pour le cadre de l'animation */
+#animation-container {
+    width: 100%;
+    height: 450px; 
+    background-color: #f4f4f4; /* Fond gris très clair */
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 30px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Ombre adoucie pour mieux coller au fond clair */
+    cursor: pointer; 
+}
+
 </style>
 <h1 id="théorie-quantique-des-champs--partie-17">Théorie quantique des champs &ndash; Partie 17</h1>
 <div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>Notes de lecture du livre <em>Quantum field theory for the gifted amateur</em> de Thomas Lancaster et Stephen Blundell.</p>
@@ -2136,7 +2151,10 @@ Encadrer les deux résultats finaux et les relier par un signe « different de �
 <img src="/livrerotations.png" style="box-shadow:none;background:none;max-width:100%;">
 </div>
  -->
-<p>$U(1)$, au contraire, est <b>abélien</b> : deux multiplications par une phase donnent toujours le même résultat, quel que soit l&rsquo;ordre. C&rsquo;est cette commutativité, discrète et jamais soulignée, qui rendait la construction de QED aussi simple. Nous allons voir ce qu&rsquo;il en coûte de s&rsquo;en passer.</p>
+<div id="animation-container" title="Cliquez pour relancer l'animation">
+</div>
+  <script type="module" src="/js/rotnonabel.js"></script>
+<p>$U(1)$, au contraire, est <b>abélien</b> : deux multiplications par une phase donnent toujours le même résultat, quel que soit l&rsquo;ordre. C&rsquo;est cette commutativité qui rendait la construction de QED aussi simple. Nous allons voir ce qu&rsquo;il en coûte de s&rsquo;en passer.</p>
 <h3 id="rappel-la-théorie-de-jauge-abélienne-en-infinitésimal">Rappel : la théorie de jauge abélienne, en infinitésimal</h3>
 <p>Reprenons le lagrangien du champ scalaire complexe de la partie 5 :</p>
 <p style="text-align:center;">
@@ -2261,8 +2279,9 @@ $
 <br>
 <div id="preuve">
 <details>
-<summary>D'où vient le terme en produit vectoriel</summary>
-<p><b>Ce qu&rsquo;on exige.</b> Il faut que $D_\mu\Psi$ se transforme comme $\Psi$, c&rsquo;est-à-dire</p>
+<summary>D'où vient le terme en produit vectoriel&nbsp;?</summary>
+<p><b>Ce qu&rsquo;on exige</b><br>
+Il faut que $D_\mu\Psi$ se transforme comme $\Psi$, c&rsquo;est-à-dire</p>
 <p style="text-align:center;">
 $\displaystyle
 D_\mu\Psi \to \left(1 + \frac{\mathrm{i}}{2}\boldsymbol\tau\cdot\boldsymbol\alpha(x)\right)D_\mu\Psi
@@ -2274,7 +2293,8 @@ $\displaystyle
 \partial_\mu\Psi - \frac{\mathrm{i}}{2}g\,\boldsymbol\tau\cdot\boldsymbol W_\mu\Psi + \frac{\mathrm{i}}{2}\boldsymbol\tau\cdot\boldsymbol\alpha\,\partial_\mu\Psi - \left(\frac{\mathrm{i}}{2}\right)^2 g\,[\boldsymbol\tau\cdot\boldsymbol\alpha][\boldsymbol\tau\cdot\boldsymbol W_\mu]\Psi
 $
 </p>
-<p><b>Ce qu&rsquo;on obtient.</b> Supposons que le champ se transforme en $\boldsymbol W_\mu + \delta\boldsymbol W_\mu$, et calculons directement $D_\mu\Psi$ après transformation. Le résultat contient les mêmes termes, mais le dernier apparaît avec les deux matrices dans l&rsquo;<b>ordre inverse</b> :</p>
+<p><b>Ce qu&rsquo;on obtient</b><br>
+Supposons que le champ se transforme en $\boldsymbol W_\mu + \delta\boldsymbol W_\mu$, et calculons directement $D_\mu\Psi$ après transformation. Le résultat contient les mêmes termes, mais le dernier apparaît avec les deux matrices dans l&rsquo;<b>ordre inverse</b> :</p>
 <p style="text-align:center;">
 $\displaystyle
 -\left(\frac{\mathrm{i}}{2}\right)^2 g\,[\boldsymbol\tau\cdot\boldsymbol W_\mu][\boldsymbol\tau\cdot\boldsymbol\alpha]\Psi
@@ -2311,7 +2331,7 @@ $\displaystyle
 \bar\Psi\,\mathrm{i}\gamma^\mu D_\mu\,\Psi = \bar\Psi\,\mathrm{i}\gamma^\mu\partial_\mu\,\Psi + \frac{g}{2}\,\bar\Psi\gamma^\mu\,\boldsymbol\tau\cdot\boldsymbol W_\mu\,\Psi
 $
 </p>
-<p>à comparer avec la version $U(1)$, $\bar\phi,\mathrm{i}\gamma^\mu D_\mu\phi = \bar\phi,\mathrm{i}\gamma^\mu\partial_\mu\phi - q,\bar\phi\gamma^\mu A_\mu\phi$. La structure est identique : là où le photon se couplait à la charge $q$, les excitations de $\boldsymbol W_\mu$ se couplent à l&rsquo;<b>isospin</b> avec une intensité fixée par $g$.</p>
+<p>à comparer avec la version $U(1)$, $\bar\phi\,\mathrm{i}\gamma^\mu D_\mu\phi = \bar\phi\,\mathrm{i}\gamma^\mu\partial_\mu\phi - q\,\bar\phi\gamma^\mu A_\mu\phi$. La structure est identique : là où le photon se couplait à la charge $q$, les excitations de $\boldsymbol W_\mu$ se couplent à l&rsquo;<b>isospin</b> avec une intensité fixée par $g$.</p>
 <div id="theo">
 <p>Par analogie avec le vertex de QED, qui valait $-\mathrm{i}q\gamma^\mu$, le vertex $\bar\Psi\Psi W_\mu$ contribue un facteur proportionnel à $\mathrm{i}g\boldsymbol\tau\gamma^\mu$.</p>
 <p>On attend donc trois particules $W^1$, $W^2$, $W^3$ <b>sans masse</b>, analogues au photon, chacune avec deux polarisations transverses.</p>
@@ -2349,11 +2369,11 @@ $
 <p>et le terme en produit vectoriel apparaît tout seul, produit par la non-commutativité des matrices $\boldsymbol\tau$. <b>Le tenseur de champ est la courbure de la dérivée covariante</b>, et c&rsquo;est cette lecture qui se généralise à tous les groupes.</p>
 </div>
 <h3 id="le-champ-de-jauge-devient-sa-propre-source">Le champ de jauge devient sa propre source</h3>
-<p>C&rsquo;est la conséquence la plus spectaculaire de la non-linéarité, et elle vaut qu&rsquo;on s&rsquo;y arrête.</p>
+<p>C&rsquo;est la conséquence la plus spectaculaire de la non-linéarité.</p>
 <p>En développant $\boldsymbol G_{\mu\nu}\cdot\boldsymbol G^{\mu\nu}$, le produit vectoriel engendre des termes à <b>trois</b> et à <b>quatre</b> champs $\boldsymbol W$. Autrement dit, des vertex où les bosons de jauge interagissent <b>entre eux</b>, sans aucun fermion.</p>
 <!-- FIGURE à redessiner (d'après fig. 46.2 de L&B) : le vertex à trois bosons de jauge. Un point central d'où partent trois lignes ondulées, disposées en Y (une vers le bas, deux vers le haut en V). Étiqueter chaque ligne par W et son indice interne. Ajouter à côté, plus petit, le vertex à quatre bosons : un point central d'où partent quatre lignes ondulées en croix. Légende : « Les bosons de jauge non abéliens interagissent entre eux : le champ est sa propre source. Rien de tel pour le photon, qui ne porte pas de charge électrique. » -->
-<div style="text-align:center;margin:0.8em 0;">
-<img src="/vertexwww.png" style="box-shadow:none;background:none;max-width:100%;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/autointbos.png" style="box-shadow:none;background:none;">
 </div>
 <div id="theo">
 <p><b>La raison est une question de charge.</b> Le photon ne porte <b>aucune</b> charge électrique : il ne peut donc pas se coupler à lui-même, et les interactions photon–photon n&rsquo;existent pas en électromagnétisme abélien.</p>
@@ -2389,13 +2409,14 @@ $
 <p style="text-align:center;">
 $\displaystyle
 \mathcal L = \frac{1}{2}D^\mu\boldsymbol\Phi\cdot D_\mu\boldsymbol\Phi + \frac{m^2}{2}\boldsymbol\Phi\cdot\boldsymbol\Phi - \lambda(\boldsymbol\Phi\cdot\boldsymbol\Phi)^2 - \frac{1}{4}\boldsymbol G_{\mu\nu}\cdot\boldsymbol G^{\mu\nu}
-$
+$<br>
+avec $D_\mu\boldsymbol\Phi = \partial_\mu\boldsymbol\Phi - g\,\boldsymbol\Phi\times\boldsymbol W_\mu$.
 </p>
-<p>avec $D_\mu\boldsymbol\Phi = \partial_\mu\boldsymbol\Phi - g,\boldsymbol\Phi\times\boldsymbol W_\mu$.</p>
 </div>
-<p>Le potentiel possède une <b>sphère</b> de minima, de rayon $|\boldsymbol\Phi_0| = \left(\frac{m^2}{4\lambda}\right)^{1/2}$ dans l&rsquo;espace interne. Briser la symétrie, c&rsquo;est choisir un point sur cette sphère ; prenons la direction 3, soit $\boldsymbol\Phi_0 = |\boldsymbol\Phi_0|,\hat{\boldsymbol e}_3$.</p>
+<p>Le potentiel possède une <b>sphère</b> de minima, de rayon $|\boldsymbol\Phi_0| = \left(\frac{m^2}{4\lambda}\right)^{1/2}$ dans l&rsquo;espace interne. Briser la symétrie, c&rsquo;est choisir un point sur cette sphère ; prenons la direction 3, soit $\boldsymbol\Phi_0 = |\boldsymbol\Phi_0|\,\hat{\boldsymbol e}_3$.</p>
 <div id="theo">
-<p><b>La jauge unitaire.</b> Les termes croisés entre composantes de $\boldsymbol\Phi$ et de $\boldsymbol W_\mu$ rendent le lagrangien illisible. Mais nous sommes libres de faire une transformation de jauge <b>différente en chaque point</b> : choisissons celle qui aligne $\boldsymbol\Phi$ sur la direction 3 partout.</p>
+<p><b>La jauge unitaire</b></p>
+<p>Les termes croisés entre composantes de $\boldsymbol\Phi$ et de $\boldsymbol W_\mu$ rendent le lagrangien illisible. Mais nous sommes libres de faire une transformation de jauge <b>différente en chaque point</b> : choisissons celle qui aligne $\boldsymbol\Phi$ sur la direction 3 partout.</p>
 <p style="text-align:center;">
 $\displaystyle
 \boldsymbol\Phi(x) = \big[|\boldsymbol\Phi_0| + \chi(x)\big]\,\hat{\boldsymbol e}_3
@@ -2405,7 +2426,8 @@ $
 </div>
 <br>
 <div id="preuve">
-<p>Voyons ce que devient la dérivée covariante dans cette jauge. Le produit vectoriel $\boldsymbol\Phi\times\boldsymbol W_\mu$ mélange les composantes, et comme $\boldsymbol\Phi$ ne pointe plus que selon $\hat{\boldsymbol e}_3$ :</p>
+<p>Voyons ce que devient la dérivée covariante dans cette jauge.</p>
+<p>Le produit vectoriel $\boldsymbol\Phi\times\boldsymbol W_\mu$ mélange les composantes, et comme $\boldsymbol\Phi$ ne pointe plus que selon $\hat{\boldsymbol e}_3$ :</p>
 <p style="text-align:center;">
 $\displaystyle
 D_\mu\Phi_1 = g\,W^2_\mu\big(|\boldsymbol\Phi_0| + \chi\big)
@@ -2431,7 +2453,7 @@ $
 </p>
 <div id="theo">
 <p><b>Le bilan de la brisure</b></p>
-<p style="text-align:center;">
+<p style="text-align:center;overflow-x:auto,">
 $\displaystyle
 \begin{pmatrix} 3\ \text{champs scalaires massifs } \boldsymbol\Phi \\ 3\ \text{champs de jauge sans masse } \boldsymbol W_\mu \end{pmatrix}
 \;\longrightarrow\;
@@ -2440,13 +2462,7 @@ $
 </p>
 <p>Les champs $W^1_\mu$ et $W^2_\mu$ ont <b>mangé</b> les modes de Goldstone $\Phi_1$ et $\Phi_2$, et ont pris la masse $g|\boldsymbol\Phi_0|$.</p>
 </div>
-<!-- FIGURE à redessiner (d'après fig. 46.3 de L&B, qui montre un oiseau avalant un poisson) : illustration du mécanisme « manger le mode de Goldstone ». Proposition plus sobre que le dessin animalier du livre : deux colonnes.
-À gauche, AVANT : trois disques étiquetés Phi_1, Phi_2, Phi_3 (scalaires, 1 degré de liberté chacun, noté « 1 ddl ») et trois lignes ondulées étiquetées W^1, W^2, W^3 (sans masse, 2 ddl chacune). Total annoté « 3 x 1 + 3 x 2 = 9 ddl ».
-À droite, APRES : un disque chi (1 ddl), deux lignes ondulées ÉPAISSIES W^1, W^2 annotées « massif, 3 ddl », une ligne ondulée fine W^3 annotée « sans masse, 2 ddl ». Total annoté « 1 + 2 x 3 + 2 = 9 ddl ».
-Entre les deux colonnes, deux flèches courbes partant de Phi_1 et Phi_2 vers W^1 et W^2, étiquetées « mode de Goldstone absorbé ». Légende : « Le comptage des degrés de liberté est conservé : chaque mode de Goldstone avalé fournit la polarisation longitudinale qui manquait au boson de jauge pour devenir massif. » -->
-<div style="text-align:center;margin:0.8em 0;">
-<img src="/goldstonemange.png" style="box-shadow:none;background:none;max-width:100%;">
-</div>
+<br>
 <div id="theo">
 <p><b>Le comptage des degrés de liberté est conservé</b>, et c&rsquo;est le meilleur contrôle du mécanisme.</p>
 <p>À gauche : 3 scalaires massifs ($1$ degré chacun) et 3 champs sans masse de type photon ($2$ degrés chacun), soit $3 + 6 = 9$.</p>
@@ -2533,40 +2549,41 @@ Q = I_3 + \frac{Y}{2}
 $
 </p>
 </div>
+<br>
 <div style="overflow-x:auto;">
 <table>
 	<thead>
 			<tr>
-					<th>champ</th>
-					<th>$\nu_e$</th>
-					<th>$e_{\mathrm L}$</th>
-					<th>$e_{\mathrm R}$</th>
+					<th style="text-align: center">champ</th>
+					<th style="text-align: center">$\nu_e$</th>
+					<th style="text-align: center">$e_{\mathrm L}$</th>
+					<th style="text-align: center">$e_{\mathrm R}$</th>
 			</tr>
 	</thead>
 	<tbody>
 			<tr>
-					<td>$I$</td>
-					<td>$1/2$</td>
-					<td>$1/2$</td>
-					<td>$0$</td>
+					<td style="text-align: center">$I$</td>
+					<td style="text-align: center">$1/2$</td>
+					<td style="text-align: center">$1/2$</td>
+					<td style="text-align: center">$0$</td>
 			</tr>
 			<tr>
-					<td>$I_3$</td>
-					<td>$+1/2$</td>
-					<td>$-1/2$</td>
-					<td>$0$</td>
+					<td style="text-align: center">$I_3$</td>
+					<td style="text-align: center">$+1/2$</td>
+					<td style="text-align: center">$-1/2$</td>
+					<td style="text-align: center">$0$</td>
 			</tr>
 			<tr>
-					<td>$Y$</td>
-					<td>$-1$</td>
-					<td>$-1$</td>
-					<td>$-2$</td>
+					<td style="text-align: center">$Y$</td>
+					<td style="text-align: center">$-1$</td>
+					<td style="text-align: center">$-1$</td>
+					<td style="text-align: center">$-2$</td>
 			</tr>
 			<tr>
-					<td>$Q = I_3 + Y/2$</td>
-					<td>$0$</td>
-					<td>$-1$</td>
-					<td>$-1$</td>
+					<td style="text-align: center">$Q = I_3 + Y/2$</td>
+					<td style="text-align: center">$0$</td>
+					<td style="text-align: center">$-1$</td>
+					<td style="text-align: center">$-1$</td>
 			</tr>
 	</tbody>
 </table>
@@ -2576,7 +2593,8 @@ $
 <details>
 <summary>Ces charges ne sont pas arbitraires&nbsp;: elles sont forcées</summary>
 <p>On peut motiver physiquement l&rsquo;attribution, plutôt que de la subir. Le raisonnement part d&rsquo;une exigence : la théorie doit contenir <b>à la fois</b> l&rsquo;interaction faible et l&rsquo;électromagnétisme, correctement enchâssés.</p>
-<p><b>Les deux courants en présence.</b> Le courant d&rsquo;isospin faible ne concerne que la partie gauche :</p>
+<p><b>Les deux courants en présence</b><br>
+Le courant d&rsquo;isospin faible ne concerne que la partie gauche :</p>
 <p style="text-align:center;">
 $\displaystyle
 \boldsymbol J^\mu = \frac{1}{2}\,\bar L\,\gamma^\mu\,\boldsymbol\tau\,L
@@ -2588,7 +2606,8 @@ $\displaystyle
 J^\mu_{\mathrm{em}} = Q\,\big(\bar e_{\mathrm L}\gamma^\mu e_{\mathrm L} + \bar e_{\mathrm R}\gamma^\mu e_{\mathrm R}\big)
 $
 </p>
-<p><b>Le problème.</b> En termes de transfert de charge, $J^\mu_{\mathrm{em}}$ et $J^\mu_3$ sont tous deux <b>neutres</b>, alors que $J^\mu_{1,2}$ sont <b>chargés</b>. Mais $J^\mu_3$ ne contient pas $e_{\mathrm R}$, tandis que $J^\mu_{\mathrm{em}}$ le contient. Le courant d&rsquo;isospin ne peut donc pas, à lui seul, engendrer l&rsquo;électromagnétisme.</p>
+<p><b>Le problème</b><br>
+En termes de transfert de charge, $J^\mu_{\mathrm{em}}$ et $J^\mu_3$ sont tous deux <b>neutres</b>, alors que $J^\mu_{1,2}$ sont <b>chargés</b>. Mais $J^\mu_3$ ne contient pas $e_{\mathrm R}$, tandis que $J^\mu_{\mathrm{em}}$ le contient. Le courant d&rsquo;isospin ne peut donc pas, à lui seul, engendrer l&rsquo;électromagnétisme.</p>
 <p><b>La solution la plus simple</b> consiste à ajouter un courant supplémentaire, l&rsquo;hypercourant $J^\mu_Y$, et à poser</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -2660,8 +2679,8 @@ $
 <p>Le champ de Higgs est donc, dès son écriture, <b>instable à la brisure de symétrie</b>. C&rsquo;est délibéré.</p>
 </div>
 <!-- FIGURE à redessiner (d'après fig. 47.1 de L&B) : le potentiel du champ de Higgs. Surface de révolution en chapeau mexicain, tracée en perspective avec un maillage. Axe vertical U(phi), les deux axes horizontaux étiquetés Re phi et Im phi. Marquer la bosse centrale instable en phi = 0 par un petit point creux, et le cercle de minima au fond de la gouttière par un trait plus épais. Ajouter une petite bille posée sur la bosse centrale avec une flèche indiquant qu'elle va tomber. Légende : « Le potentiel du champ de Higgs. Le terme de masse positif rend l'origine instable : le vide choisira un point du cercle de minima, et brisera la symétrie. » -->
-<div style="text-align:center;margin:0.8em 0;">
-<img src="/chapeauhiggs.png" style="box-shadow:none;background:none;max-width:100%;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/chapeauhiggs.png" style="box-shadow:none;background:none;">
 </div>
 <p>Tout cela resterait sans effet sur les leptons s&rsquo;il n&rsquo;existait pas de couplage entre le Higgs et le champ électron–neutrino. On l&rsquo;ajoute donc, sous la forme d&rsquo;un couplage de Yukawa :</p>
 <p style="text-align:center;">
@@ -2673,25 +2692,21 @@ $
 <div id="theo">
 <p style="text-align:center;">
 $\displaystyle
-\mathcal L = \bar L\,\mathrm{i}\gamma^\mu D_\mu L + \bar R\,\mathrm{i}\gamma^\mu D_\mu R + (D^\mu\phi)^\dagger(D_\mu\phi)
-$
-</p>
-<p style="text-align:center;">
-$\displaystyle
-+\; \frac{m_{\mathrm h}^2}{2}\phi^\dagger\phi - \frac{\lambda}{4}(\phi^\dagger\phi)^2 - G_e\big(\bar L\phi R + \bar R\phi^\dagger L\big) - \frac{1}{4}\boldsymbol G^{(W)}_{\mu\nu}\cdot\boldsymbol G^{(W)\mu\nu} - \frac{1}{4}F^{(B)}_{\mu\nu}F^{(B)\mu\nu}
+\mathcal L = \bar L\,\mathrm{i}\gamma^\mu D_\mu L + \bar R\,\mathrm{i}\gamma^\mu D_\mu R + (D^\mu\phi)^\dagger(D_\mu\phi) + \frac{m_{\mathrm h}^2}{2}\phi^\dagger\phi - \frac{\lambda}{4}(\phi^\dagger\phi)^2 - G_e\big(\bar L\phi R + \bar R\phi^\dagger L\big) - \frac{1}{4}\boldsymbol G^{(W)}_{\mu\nu}\cdot\boldsymbol G^{(W)\mu\nu} - \frac{1}{4}F^{(B)}_{\mu\nu}F^{(B)\mu\nu}
 $
 </p>
 <p>Tous les champs y sont <b>sans masse</b> : les deux chiralités de l&rsquo;électron, le neutrino gauche, les trois $\boldsymbol W_\mu$ et le $B_\mu$.</p>
 </div>
 <h3 id="la-brisure-et-le-cadeau-quelle-réserve">La brisure, et le cadeau qu&rsquo;elle réserve</h3>
-<p>Après $10^{-12}$ seconde, le fondamental brise la symétrie. Le minimum du potentiel n&rsquo;est pas en zéro mais en $(\phi^\dagger\phi)<em>0 = v = \left(\frac{m</em>{\mathrm h}^2}{\lambda}\right)^{1/2}$, et l&rsquo;on choisit de briser dans la direction</p>
+<p>Après $10^{-12}$ seconde, le fondamental brise la symétrie. Le minimum du potentiel n&rsquo;est pas en zéro mais en $(\phi^\dagger\phi)_0 = v = \left(\frac{m_{\mathrm h}^2}{\lambda}\right)^{1/2}$, et l&rsquo;on choisit de briser dans la direction</p>
 <p style="text-align:center;">
 $\displaystyle
 \langle\phi\rangle_0 = \begin{pmatrix} 0 \\ v \end{pmatrix}
 $
 </p>
 <div id="theo">
-<p><b>Le cadeau.</b> Quand on brise une symétrie non abélienne, le vide choisi peut rester invariant sous un <b>sous-groupe</b> des transformations d&rsquo;origine : ces symétries-là ne sont pas brisées du tout.</p>
+<p><b>Le cadeau</b></p>
+<p>Quand on brise une symétrie non abélienne, le vide choisi peut rester invariant sous un <b>sous-groupe</b> des transformations d&rsquo;origine : ces symétries-là ne sont pas brisées du tout.</p>
 <p>Le vide ci-dessus est encore invariant sous la transformation locale</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -2711,7 +2726,7 @@ $
 <h3 id="lorigine-de-la-masse-de-lélectron">L&rsquo;origine de la masse de l&rsquo;électron</h3>
 <p>Où chercher une masse de fermion ? La partie 13 nous l&rsquo;a dit : dans un terme qui <strong>relie</strong> les chiralités.</p>
 <div id="preuve">
-<p>Repartons du lagrangien de Dirac écrit en chiralités. En posant $\psi = \psi_{\mathrm L} + \psi_{\mathrm R}$ dans $\mathcal L = \bar\psi(\not{!!p} - m)\psi$, on obtient huit termes, dont la moitié s&rsquo;annulent :</p>
+<p>Repartons du lagrangien de Dirac écrit en chiralités. En posant $\psi = \psi_{\mathrm L} + \psi_{\mathrm R}$ dans $\mathcal L = \bar\psi(\not{\!\!p} - m)\psi$, on obtient huit termes, dont la moitié s&rsquo;annulent :</p>
 <p style="text-align:center;">
 $\displaystyle
 \mathcal L = \bar\psi_{\mathrm L}\not{\!\!p}\,\psi_{\mathrm L} + \bar\psi_{\mathrm R}\not{\!\!p}\,\psi_{\mathrm R} - m\big(\bar\psi_{\mathrm L}\psi_{\mathrm R} + \bar\psi_{\mathrm R}\psi_{\mathrm L}\big)
@@ -2739,11 +2754,11 @@ $
 <p>La masse de l&rsquo;électron n&rsquo;est pas une propriété intrinsèque : c&rsquo;est la <b>mesure de son couplage au champ de Higgs</b>, lequel remplit le vide. L&rsquo;électron est massif parce qu&rsquo;il se déplace dans cette mélasse et interagit avec elle.</p>
 </div>
 <!-- FIGURE à redessiner (d'après fig. 47.2 de L&B) : l'interaction du champ de Higgs avec les électrons. Une ligne fermionique verticale, temps vers le haut, alternant les étiquettes e_L et e_R à chaque segment. À chaque changement, un petit vertex plein d'où part vers la droite une ligne hachurée courte étiquetée v (la valeur moyenne du Higgs dans le vide). Répéter le motif quatre ou cinq fois en montant. Légende : « La masse de l'électron : sa propagation est une succession de basculements entre chiralités, chacun payé par une interaction avec le Higgs du vide. » On pourra rapprocher cette figure de celle du propagateur du fermion à la partie 14, où chaque croix était une insertion de masse : c'est ici la même chose, l'insertion étant explicitée comme un couplage au Higgs. -->
-<div style="text-align:center;margin:0.8em 0;">
-<img src="/higgselectron.png" style="box-shadow:none;background:none;max-width:100%;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/couplagefermionhiggs.png" style="box-shadow:none;background:none;">
 </div>
 <div id="theo">
-<p>Rapprochez cette figure de celle du propagateur du fermion, à la partie 14 : chaque croix y était une <b>insertion de masse</b> qui renversait la chiralité. Nous savons maintenant ce que cette croix <i>est</i> : un couplage au champ de Higgs du vide.</p>
+<p>Rapprochez cette figure de celle du propagateur du fermion, à la partie 14 : chaque rebond y était une <b>insertion de masse</b> qui renversait la chiralité. Nous savons maintenant ce que ce rebond <i>est</i> : un couplage au champ de Higgs du vide.</p>
 </div>
 <h3 id="le-photon-et-les-bosons-de-jauge">Le photon et les bosons de jauge</h3>
 <p>Il reste à montrer que la théorie prédit un photon sans masse. Cherchons donc là où les champs de jauge rencontrent le Higgs : le couplage minimal nous dit que c&rsquo;est le terme $(D_\mu\phi)^\dagger(D^\mu\phi)$.</p>
@@ -2797,8 +2812,8 @@ $
 Panneau de gauche : le triangle rectangle définissant l'angle de Weinberg. Côté horizontal étiqueté g, côté vertical (à droite) étiqueté g', angle theta_W au sommet gauche, marque d'angle droit au coin inférieur droit.
 Panneau de droite (AJOUT, pas dans le livre) : le mélange vu comme une rotation. Tracer un repère orthonormé dont les axes sont étiquetés W^3 et B, puis un second repère tourné de l'angle theta_W dont les axes sont étiquetés Z et A. Colorier en gras l'axe A et l'annoter « reste sans masse », et l'axe Z « devient massif ».
 Légende : « L'angle de Weinberg n'est pas un paramètre de plus : c'est l'angle de la rotation qui diagonalise les masses dans le plan (W^3, B). Le photon est la direction qui échappe à la masse. » -->
-<div style="text-align:center;margin:0.8em 0;">
-<img src="/angleweinberg.png" style="box-shadow:none;background:none;max-width:100%;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:500px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/angleweinberg.png" style="box-shadow:none;background:none;">
 </div>
 <p>En termes de ces nouveaux champs, le résultat du calcul se réécrit</p>
 <p style="text-align:center;">
@@ -2825,14 +2840,10 @@ $
 <div id="theo">
 <p style="text-align:center;">
 $\displaystyle
-\mathcal L \supset -g\sin\theta_{\mathrm W}\;\bar e\gamma^\mu e\,A_\mu + \frac{g}{\cos\theta_{\mathrm W}}\left(\sin^2\theta_{\mathrm W}\,\bar e_{\mathrm R}\gamma^\mu e_{\mathrm R} - \frac{1}{2}\cos 2\theta_{\mathrm W}\,\bar e_{\mathrm L}\gamma^\mu e_{\mathrm L} + \frac{1}{2}\bar\nu_e\gamma^\mu\nu_e\right)Z_\mu
-$
-</p>
-<p style="text-align:center;">
+\mathcal L \supset -g\sin\theta_{\mathrm W}\;\bar e\gamma^\mu e\,A_\mu + \frac{g}{\cos\theta_{\mathrm W}}\left(\sin^2\theta_{\mathrm W}\,\bar e_{\mathrm R}\gamma^\mu e_{\mathrm R} - \frac{1}{2}\cos 2\theta_{\mathrm W}\,\bar e_{\mathrm L}\gamma^\mu e_{\mathrm L} + \frac{1}{2}\bar\nu_e\gamma^\mu\nu_e\right)Z_\mu + \frac{g}{\sqrt 2}\left[\bar\nu_e\gamma^\mu e_{\mathrm L}\,W^\dagger_\mu + \bar e_{\mathrm L}\gamma^\mu\nu_e\,W_\mu\right]$<br>
+avec 
 $\displaystyle
-+\; \frac{g}{\sqrt 2}\left[\bar\nu_e\gamma^\mu e_{\mathrm L}\,W^\dagger_\mu + \bar e_{\mathrm L}\gamma^\mu\nu_e\,W_\mu\right]
-\qquad\text{avec}\qquad
-W_\mu = \frac{W^1_\mu + \mathrm{i}W^2_\mu}{\sqrt 2}
+\quad W_\mu = \frac{W^1_\mu + \mathrm{i}W^2_\mu}{\sqrt 2}
 $
 </p>
 </div>
@@ -2857,49 +2868,49 @@ $
 4. nu_e entrant, nu_e sortant, ligne tiretée Z_mu.
 5. e_L entrant, nu_e sortant, ligne pointillée W_mu : LE vertex remarquable, où la nature de la particule change.
 Distinguer clairement les trois types de lignes de médiateur (ondulée pour le photon, tiretée pour le Z, pointillée pour le W) et donner une légende de ces conventions. Encadrer le cinquième diagramme. Légende : « Les vertex électrofaibles. Le dernier est le plus étonnant : l'absorption d'un W transforme un électron en neutrino. » -->
-<div style="text-align:center;margin:0.8em 0;">
-<img src="/vertexelectrofaibles.png" style="box-shadow:none;background:none;max-width:100%;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:600px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/vertexelectrofaibles.png" style="box-shadow:none;background:none;">
 </div>
 <h3 id="la-confrontation-en-un-tableau">La confrontation, en un tableau</h3>
 <div style="overflow-x:auto;">
 <table>
 	<thead>
 			<tr>
-					<th>grandeur</th>
-					<th>prédiction du modèle</th>
-					<th>mesure</th>
+					<th style="text-align: center">grandeur</th>
+					<th style="text-align: center">prédiction du modèle</th>
+					<th style="text-align: center">mesure</th>
 			</tr>
 	</thead>
 	<tbody>
 			<tr>
-					<td>masse du $Z^0$</td>
-					<td>$M_W/\cos\theta_{\mathrm W}$</td>
-					<td>$91{,}19$ GeV</td>
+					<td style="text-align: center">masse du $Z^0$</td>
+					<td style="text-align: center">$M_W/\cos\theta_{\mathrm W}$</td>
+					<td style="text-align: center">$91{,}19$ GeV</td>
 			</tr>
 			<tr>
-					<td>masse du $W^\pm$</td>
-					<td>$g^2v^2/2$</td>
-					<td>$80{,}40$ GeV</td>
+					<td style="text-align: center">masse du $W^\pm$</td>
+					<td style="text-align: center">$g^2v^2/2$</td>
+					<td style="text-align: center">$80{,}40$ GeV</td>
 			</tr>
 			<tr>
-					<td>angle de Weinberg</td>
-					<td>$\cos\theta_{\mathrm W} = M_W/M_Z$</td>
-					<td>$\theta_{\mathrm W} \simeq 28°$</td>
+					<td style="text-align: center">angle de Weinberg</td>
+					<td style="text-align: center">$\cos\theta_{\mathrm W} = M_W/M_Z$</td>
+					<td style="text-align: center">$\theta_{\mathrm W} \simeq 28°$</td>
 			</tr>
 			<tr>
-					<td>masse du neutrino</td>
-					<td>exactement $0$</td>
-					<td>très petite, mais non nulle</td>
+					<td style="text-align: center">masse du neutrino</td>
+					<td style="text-align: center">exactement $0$</td>
+					<td style="text-align: center">très petite, mais non nulle</td>
 			</tr>
 			<tr>
-					<td>masse du photon</td>
-					<td>exactement $0$</td>
-					<td>$0$</td>
+					<td style="text-align: center">masse du photon</td>
+					<td style="text-align: center">exactement $0$</td>
+					<td style="text-align: center">$0$</td>
 			</tr>
 			<tr>
-					<td>boson de Higgs</td>
-					<td>existe</td>
-					<td>$\simeq 125$ GeV</td>
+					<td style="text-align: center">boson de Higgs</td>
+					<td style="text-align: center">existe</td>
+					<td style="text-align: center">$\simeq 125$ GeV</td>
 			</tr>
 	</tbody>
 </table>
@@ -2909,9 +2920,193 @@ Distinguer clairement les trois types de lignes de médiateur (ondulée pour le 
 <p><b>Ce tableau doit se lire dans le bon ordre chronologique</b>, car c&rsquo;est ce qui en fait la force. L&rsquo;angle de Weinberg avait été <b>estimé</b> par des mesures de sections efficaces de diffusion de leptons, bien avant qu&rsquo;on ne dispose des énergies nécessaires. Il fournissait donc une <b>prédiction</b> des masses du $W$ et du $Z$, et ces particules furent découvertes aux énergies prédites.</p>
 <p>Le boson de Higgs fut la dernière prédiction à tomber, en 2012.</p>
 </div>
-<p>Une nuance honnête, cependant, sur deux points.</p>
-<p>Le neutrino n&rsquo;est pas réellement sans masse : les oscillations de saveur l&rsquo;ont établi. Sa masse est toutefois minuscule devant celle de l&rsquo;électron, et l&rsquo;Univers décrit ici reste une excellente approximation du nôtre. Le modèle, tel quel, ne l&rsquo;explique pas.</p>
-<p>Et le Higgs n&rsquo;est pas « ce qui donne sa masse à tout ». Les masses du proton et du neutron, qui font l&rsquo;essentiel de la masse des objets quotidiens, sont dominées par l&rsquo;<strong>énergie de confinement</strong> des quarks. L&rsquo;image populaire est donc assez largement fausse.</p>
+<p>Deux lignes de ce tableau méritent de s&rsquo;y attarder : la seule case en défaut, celle du neutrino ; et ce que le Higgs donne réellement, et ne donne pas.</p>
+<h3 id="lénigme-de-la-masse-du-neutrino">L&rsquo;énigme de la masse du neutrino</h3>
+<p>La prédiction $m_\nu = 0$ n&rsquo;est pas un accident numérique du modèle : c&rsquo;est une conséquence de structure. Une masse de fermion exige un terme reliant les deux chiralités, or le neutrino droit n&rsquo;existe pas dans la théorie. Il n&rsquo;y a littéralement <b>rien</b> à quoi coupler $\nu_e$ pour le rendre massif. Et pourtant il l&rsquo;est. C&rsquo;est à ce jour le seul désaccord établi entre le modèle standard et une expérience de laboratoire, ce qui en fait une énigme précieuse.</p>
+<p><b>Les preuves expérimentales.</b> L&rsquo;histoire commence par un déficit. Dès la fin des années 1960, l&rsquo;expérience de Homestake, au fond d&rsquo;une mine du Dakota du Sud, ne compte qu&rsquo;environ un tiers des neutrinos électroniques attendus du Soleil. Pendant trente ans, on soupçonne tour à tour l&rsquo;expérience puis le modèle solaire. La réponse vient d&rsquo;ailleurs :</p>
+<ul>
+<li>en 1998, <b>Super-Kamiokande</b> observe que les neutrinos muoniques créés dans l'atmosphère disparaissent d'autant plus qu'ils ont voyagé loin&nbsp;: ceux qui tombent du ciel arrivent au complet, ceux qui ont traversé la Terre manquent à l'appel. Le déficit dépend de la distance parcourue, signature d'un phénomène qui se développe <b>en vol</b>&nbsp;;</li>
+<li>en 2002, <b>SNO</b> mesure séparément, sur les neutrinos solaires, le flux des seuls $\nu_e$ et le flux <b>total</b> des trois saveurs. Le total est exactement celui que prédit le modèle solaire&nbsp;: les $\nu_e$ manquants ne se sont pas perdus, ils sont arrivés sous une autre saveur.</li>
+</ul>
+<p>Les neutrinos <b>oscillent</b> donc entre saveurs pendant leur propagation. Ces deux résultats valurent le prix Nobel 2015 à Takaaki Kajita et Arthur McDonald.</p>
+<p><b>Pourquoi une oscillation prouve-t-elle une masse ?</b> L&rsquo;argument le plus court tient en une phrase : une particule sans masse voyage à la vitesse de la lumière, donc son temps propre est gelé ; or une oscillation est une horloge interne, et une horloge gelée ne bat pas. Voici la version précise. Les états de saveur, ceux que produit un vertex du $W$, ne coïncident pas avec les états de masse, ceux qui se propagent avec une énergie bien définie : les premiers sont des superpositions des seconds. Si les masses diffèrent, les phases des composantes évoluent à des rythmes différents, et la superposition se déforme en chemin.</p>
+<div id="preuve">
+<details>
+<summary>Le calcul, à deux saveurs</summary>
+<p>Notons $\theta$ l&rsquo;angle de mélange entre les états de saveur $(\nu_e, \nu_\mu)$ et les états de masse $(\nu_1, \nu_2)$ :</p>
+<p style="text-align:center;">
+$\displaystyle
+|\nu_e\rangle = \cos\theta\,|\nu_1\rangle + \sin\theta\,|\nu_2\rangle
+\qquad
+|\nu_\mu\rangle = -\sin\theta\,|\nu_1\rangle + \cos\theta\,|\nu_2\rangle
+$
+</p>
+<p>Un neutrino produit comme $\nu_e$ à $t = 0$ évolue, en unités naturelles, selon</p>
+<p style="text-align:center;">
+$\displaystyle
+|\nu(t)\rangle = \cos\theta\;\mathrm{e}^{-\mathrm{i}E_1 t}\,|\nu_1\rangle + \sin\theta\;\mathrm{e}^{-\mathrm{i}E_2 t}\,|\nu_2\rangle
+$
+</p>
+<p>Les neutrinos étant ultrarelativistes, on développe les énergies à impulsion $p$ commune :</p>
+<p style="text-align:center;">
+$\displaystyle
+E_i = \sqrt{p^2 + m_i^2} \simeq p + \frac{m_i^2}{2p}
+\qquad\Longrightarrow\qquad
+E_2 - E_1 \simeq \frac{\Delta m^2}{2E}
+\quad\text{avec}\quad
+\Delta m^2 = m_2^2 - m_1^2
+$
+</p>
+<p>L&rsquo;amplitude d&rsquo;être détecté comme $\nu_\mu$ après un temps $t \simeq L$ vaut alors</p>
+<p style="text-align:center;">
+$\displaystyle
+\langle\nu_\mu|\nu(t)\rangle = \sin\theta\cos\theta\,\big(\mathrm{e}^{-\mathrm{i}E_2 t} - \mathrm{e}^{-\mathrm{i}E_1 t}\big)
+$
+</p>
+<p>d&rsquo;où, en prenant le module au carré, la probabilité d&rsquo;oscillation</p>
+<p style="text-align:center;">
+$\displaystyle
+P(\nu_e \to \nu_\mu) = \sin^2(2\theta)\,\sin^2\!\left(\frac{\Delta m^2\,L}{4E}\right)
+$
+</p>
+<p>Deux lectures. <b>Si $\Delta m^2 = 0$, la probabilité est nulle</b> : observer une oscillation, c&rsquo;est prouver que les masses ne sont pas toutes égales, donc pas toutes nulles. Et <b>la mesure ne donne que $\Delta m^2$</b> : une différence de carrés, jamais une masse absolue.</p>
+</details>
+</div>
+<br>
+<div id="theo">
+<p><b>Ce que l&rsquo;on sait, et ce que l&rsquo;on ignore.</b> Les oscillations mesurent deux écarts, $\Delta m^2_{21} \simeq 7{,}5\times 10^{-5}\ \text{eV}^2$ et $|\Delta m^2_{32}| \simeq 2{,}4\times 10^{-3}\ \text{eV}^2$ : au moins deux des trois états sont donc massifs. L&rsquo;échelle absolue, elle, reste inconnue : la mesure directe (expérience KATRIN) borne la masse effective sous $0{,}45$ eV, et la cosmologie borne la somme des trois masses autour de $0{,}1$ eV. Même l&rsquo;ordre des trois états, hiérarchie dite normale ou inversée, n&rsquo;est pas tranché.</p>
+<p>Retenons l&rsquo;échelle : au moins six ordres de grandeur sous la masse de l&rsquo;électron ($0{,}511$ MeV), qui était déjà la plus légère des particules chargées.</p>
+</div>
+<p><b>Les tentatives d&rsquo;explication.</b> La plus sage consiste à compléter le modèle par le chaînon manquant : un neutrino droit $\nu_{\mathrm R}$. Ses charges sont forcées : $I = 0$, puisqu&rsquo;il ne participe pas à l&rsquo;interaction faible, comme $e_{\mathrm R}$ ; et pour que $Q = I_3 + Y/2$ donne zéro, $Y = 0$. Il ne se couple donc à <b>aucun</b> champ de jauge : on le dit <b>stérile</b>, invisible autrement que par la masse qu&rsquo;il permet. On peut alors écrire un couplage de Yukawa exactement comme pour l&rsquo;électron, à ceci près qu&rsquo;il faut utiliser le doublet conjugué $\tilde\phi$, dont la valeur dans le vide occupe la composante <b>haute</b>, celle qui regarde le neutrino :</p>
+<p style="text-align:center;">
+$\displaystyle
+\tilde\phi = \mathrm{i}\tau^2\phi^*
+\qquad
+\langle\tilde\phi\rangle_0 = \begin{pmatrix} v \\ 0 \end{pmatrix}
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+\mathcal L_\nu = -G_\nu\big(\bar L\,\tilde\phi\,\nu_{\mathrm R} + \bar\nu_{\mathrm R}\,\tilde\phi^\dagger L\big)
+\;\xrightarrow{\ \phi \to \langle\phi\rangle_0\ }\;
+m_\nu = G_\nu\,v
+$
+</p>
+<p>Rien ne l&rsquo;interdit. Mais pour $m_\nu \sim 0{,}05$ eV, il faut $G_\nu \sim 3\times 10^{-13}$, soit sept ordres de grandeur sous le couplage de l&rsquo;électron ($G_e \simeq 3\times 10^{-6}$), qui était déjà minuscule. La question n&rsquo;est pas résolue, elle est déplacée : pourquoi ce couplage-là serait-il si absurdement faible ?</p>
+<p>La seconde idée est propre au neutrino. Parmi les fermions élémentaires, il est le seul à être électriquement <b>neutre</b> : pour lui, et pour lui seul, on peut envisager qu&rsquo;il soit <b>sa propre antiparticule</b>. Un fermion de ce type, dit <b>de Majorana</b>, admet un terme de masse d&rsquo;un genre nouveau, construit avec le champ conjugué de charge $\nu^{\mathrm c}$ au lieu d&rsquo;une seconde chiralité indépendante :</p>
+<p style="text-align:center;">
+$\displaystyle
+\mathcal L_{\mathrm M} = -\frac{M}{2}\big(\bar\nu_{\mathrm R}^{\,\mathrm c}\,\nu_{\mathrm R} + \bar\nu_{\mathrm R}\,\nu_{\mathrm R}^{\,\mathrm c}\big)
+$
+</p>
+<p>Pour un $\nu_{\mathrm R}$ stérile, ce terme est invariant sous <b>toutes</b> les symétries de jauge : il n&rsquo;a pas besoin de la brisure pour exister, et rien ne protège $M$, qui peut être aussi grande que la physique le permet. Le prix à payer : ce terme viole la conservation du nombre leptonique, de deux unités.</p>
+<div id="theo">
+<p><b>La balançoire (« see-saw »).</b> Combinons les deux : un terme de Dirac $m_{\mathrm D} = G_\nu v$ d&rsquo;échelle électrofaible ordinaire, et un terme de Majorana $M$ énorme pour le neutrino stérile. La diagonalisation donne deux états : un très lourd, de masse $\simeq M$, et un très léger, de masse</p>
+<p style="text-align:center;">
+$\displaystyle
+m_\nu \simeq \frac{m_{\mathrm D}^2}{M}
+$
+</p>
+<p>Plus le partenaire est lourd, plus le neutrino observé est léger : les deux masses jouent aux extrémités d&rsquo;une balançoire. Avec $m_{\mathrm D} \sim 100$ GeV et $m_\nu \sim 0{,}05$ eV, on trouve $M \sim 10^{14}$ GeV, l&rsquo;échelle des théories de grande unification. La petitesse de la masse du neutrino ne serait alors pas une bizarrerie, mais un <b>message</b> : l&rsquo;ombre portée, à notre échelle, d&rsquo;une physique de très haute énergie.</p>
+</div>
+<br>
+<div id="preuve">
+<details>
+<summary>La diagonalisation de la balançoire</summary>
+<p>Dans la base des deux champs neutres, la matrice de masse s&rsquo;écrit</p>
+<p style="text-align:center;">
+$\displaystyle
+\mathcal M = \begin{pmatrix} 0 & m_{\mathrm D} \\ m_{\mathrm D} & M \end{pmatrix}
+$
+</p>
+<p>Ses valeurs propres sont les racines de $\lambda^2 - M\lambda - m_{\mathrm D}^2 = 0$ :</p>
+<p style="text-align:center;">
+$\displaystyle
+\lambda_\pm = \frac{M \pm \sqrt{M^2 + 4m_{\mathrm D}^2}}{2}
+\;\simeq\;
+M + \frac{m_{\mathrm D}^2}{M}
+\quad\text{et}\quad
+-\frac{m_{\mathrm D}^2}{M}
+\qquad (m_{\mathrm D} \ll M)
+$
+</p>
+<p>Le signe de la petite valeur propre s&rsquo;absorbe dans une redéfinition de phase du champ : les masses physiques sont $\simeq M$ et $\simeq m_{\mathrm D}^2/M$. Leur produit vaut $m_{\mathrm D}^2$ au signe près, c&rsquo;est le déterminant de la matrice : quand l&rsquo;une monte, l&rsquo;autre descend, d&rsquo;où l&rsquo;image de la balançoire.</p>
+</details>
+</div>
+<p>Comment trancher ? Si le neutrino est de Majorana, une désintégration aujourd&rsquo;hui jamais observée devient possible : la <b>double désintégration bêta sans neutrinos</b>, où un noyau convertit deux neutrons en n&rsquo;émettant que deux électrons, le neutrino émis par l&rsquo;un étant réabsorbé par l&rsquo;autre, ce qui n&rsquo;est permis que s&rsquo;il est sa propre antiparticule. Plusieurs expériences la traquent, aucune ne l&rsquo;a vue à ce jour. C&rsquo;est probablement là que se joue la suite de l&rsquo;énigme.</p>
+<h3 id="doù-vient-la-masse-un-bilan">D&rsquo;où vient la masse ? Un bilan</h3>
+<p>Ce chapitre a livré <b>deux</b> mécanismes de masse, et ils ne se ressemblent pas. Posons-les côte à côte, puis demandons ce qu&rsquo;ils pèsent réellement dans un objet quotidien. La réponse est une surprise : presque rien.</p>
+<div id="theo">
+<p><b>Mécanisme 1, pour les bosons de jauge : avaler une polarisation longitudinale.</b></p>
+<p>Un boson vecteur sans masse file à la vitesse de la lumière et n&rsquo;a que <b>deux</b> polarisations, transverses. Un boson massif peut être mis au repos, et en possède <b>trois</b>. Devenir massif exige donc un degré de liberté supplémentaire, et c&rsquo;est le condensat de Higgs qui le fournit : chaque mode de Goldstone mangé devient la polarisation longitudinale d&rsquo;un boson. Techniquement, le terme $(D_\mu\phi)^\dagger(D^\mu\phi)$, évalué sur le vide $\langle\phi\rangle_0$, dépose dans le lagrangien des termes quadratiques sans dérivée pour trois combinaisons de champs de jauge : des masses.</p>
+</div>
+<br>
+<div id="theo">
+<p><b>Mécanisme 2, pour les fermions : coupler les chiralités.</b></p>
+<p>Une masse de fermion est un terme en $\bar\psi_{\mathrm L}\psi_{\mathrm R} + \bar\psi_{\mathrm R}\psi_{\mathrm L}$ : elle <b>bascule</b> la chiralité à chaque insertion. La symétrie l&rsquo;interdisait ; le couplage de Yukawa au condensat la restaure. La propagation d&rsquo;un électron est un zigzag entre $e_{\mathrm L}$ et $e_{\mathrm R}$, chaque bascule payée d&rsquo;une interaction avec le Higgs du vide, et $m_e = G_e v$ : la masse mesure ce couplage.</p>
+</div>
+<p><b>Pourquoi appeler cela des masses ?</b> Dans les deux cas, la brisure fait apparaître dans le lagrangien un terme quadratique <b>sans dérivée</b>. Or c&rsquo;est exactement ce qui, dans les équations du mouvement, produit la relation de dispersion $E^2 = p^2c^2 + m^2c^4$ : une énergie non nulle à impulsion nulle, la possibilité d&rsquo;exister au repos, une inertie. C&rsquo;est la définition opératoire de la masse, et les deux mécanismes la satisfont.</p>
+<p><b>Faisons maintenant les comptes.</b> Un proton contient deux quarks $u$ et un quark $d$. Les masses que leur donne le mécanisme de Yukawa valent environ $m_u \simeq 2{,}2$ MeV et $m_d \simeq 4{,}7$ MeV, soit au total à peine $9$ MeV. Or le proton pèse $938$ MeV.</p>
+<div id="theo">
+<p><b>Le Higgs ne fournit qu&rsquo;environ 1 % de la masse du proton.</b> Les 99 % restants, c&rsquo;est-à-dire l&rsquo;essentiel de la masse de toute la matière ordinaire ont une autre origine : l&rsquo;<b>énergie piégée</b> dans le nucléon, celle du mouvement des quarks et du champ de gluons confinés. Et le fait qu&rsquo;une énergie piégée pèse est un effet de <b>relativité pure</b>, qui n&rsquo;a besoin ni du Higgs, ni même de la théorie quantique. Le voici sur l&rsquo;exemple le plus simple qui soit.</p>
+</div>
+<p><b>Le photon dans la boîte.</b> Prenons une boîte aux parois intérieures parfaitement réfléchissantes, dans laquelle on enferme de la lumière d&rsquo;énergie totale $E$. Chaque photon est rigoureusement sans masse. La boîte, pourtant, sera plus difficile à accélérer que la même boîte vide : la lumière piégée résiste.</p>
+<div id="preuve">
+<p>Modélisons la lumière par deux paquets d&rsquo;énergie $E/2$ filant en sens opposés le long de l&rsquo;axe $x$ et rebondissant entre les deux parois. Pour un photon, impulsion et énergie sont liées par $p = E/c$.</p>
+<p><b>Boîte au repos :</b> les deux impulsions se compensent,</p>
+<p style="text-align:center;">
+$\displaystyle
+p_{\mathrm{tot}} = \frac{E/2}{c} - \frac{E/2}{c} = 0
+$
+</p>
+<p><b>Boîte en mouvement</b> à la vitesse $v \ll c$ le long de $x$, autrement dit : regardons la même boîte depuis un référentiel où elle défile à la vitesse $v$. L&rsquo;effet Doppler, au premier ordre en $v/c$, décale les deux paquets en sens contraires :</p>
+<p style="text-align:center;">
+$\displaystyle
+E_\rightarrow = \frac{E}{2}\left(1 + \frac{v}{c}\right)
+\qquad
+E_\leftarrow = \frac{E}{2}\left(1 - \frac{v}{c}\right)
+$
+</p>
+<p>et l&rsquo;impulsion totale de la lumière ne se compense plus :</p>
+<p style="text-align:center;">
+$\displaystyle
+p_{\mathrm{tot}} = \frac{E_\rightarrow}{c} - \frac{E_\leftarrow}{c} = \frac{E}{2c}\left(1 + \frac{v}{c}\right) - \frac{E}{2c}\left(1 - \frac{v}{c}\right) = \frac{E}{c^2}\,v
+$
+</p>
+<p><b>C&rsquo;est l&rsquo;impulsion qu&rsquo;aurait une masse $m = E/c^2$ animée de la vitesse $v$.</b> Et ce n&rsquo;est pas une simple analogie : par conservation de l&rsquo;impulsion, toute force qui accélère la boîte doit fournir cette impulsion en plus de celle des parois. La lumière enfermée résiste donc à l&rsquo;accélération exactement comme le ferait une masse inerte</p>
+<p style="text-align:center;">
+$\displaystyle
+m = \frac{E}{c^2}
+$
+</p>
+<p><b>Le calcul exact, en prime.</b> Avec le facteur Doppler relativiste $D = \sqrt{\frac{1+\beta}{1-\beta}}$ où $\beta = v/c$, les deux paquets deviennent $\frac{E}{2}D$ et $\frac{E}{2}D^{-1}$, d&rsquo;où</p>
+<p style="text-align:center;">
+$\displaystyle
+E_{\mathrm{tot}} = \frac{E}{2}\big(D + D^{-1}\big) = \frac{E}{\sqrt{1-\beta^2}} = \gamma E
+\qquad
+p_{\mathrm{tot}} = \frac{E}{2c}\big(D - D^{-1}\big) = \gamma\,\frac{E}{c^2}\,v
+$
+</p>
+<p>Énergie et impulsion de la lumière piégée se transforment donc <b>exactement</b>, à toute vitesse, comme celles d&rsquo;une particule de masse $E/c^2$. En développant au second ordre, $E_{\mathrm{tot}} \simeq E + \frac{1}{2}\frac{E}{c^2}v^2$ : le supplément est l&rsquo;énergie cinétique de cette masse.</p>
+<p><b>Et l&rsquo;isotropie ?</b> Pour un paquet transverse, filant selon $y$, c&rsquo;est l&rsquo;aberration qui incline l&rsquo;impulsion sous le changement de référentiel, et l&rsquo;on retrouve la même composante $p_x = \gamma\frac{E}{c^2}v$. L&rsquo;inertie de l&rsquo;énergie piégée ne dépend pas de la direction de la poussée.</p>
+</div>
+<p>D&rsquo;où vient la résistance, mécaniquement ? Pendant qu&rsquo;on pousse la boîte vers l&rsquo;avant, la paroi arrière rattrape la lumière qu&rsquo;elle réfléchit et la décale vers le bleu ; la paroi avant la fuit et la décale vers le rouge. La pression de radiation est donc plus forte sur la paroi arrière que sur l&rsquo;avant, et ce déséquilibre s&rsquo;oppose à la poussée. L&rsquo;inertie de la lumière piégée <b>est</b> une pression de radiation déséquilibrée. Notez que rien dans tout cela n&rsquo;exige que le contenu soit de la lumière : n&rsquo;importe quelle énergie confinée, cinétique ou de champ, pèse de la même façon.</p>
+<p><b>Le nucléon est cette boîte.</b> Remplacez les miroirs par le confinement. À l&rsquo;intérieur d&rsquo;un proton, les quarks $u$ et $d$ sont presque sans masse et les gluons le sont rigoureusement : tout ce petit monde est ultrarelativiste, et la paroi est l&rsquo;interaction forte elle-même, dont nous avons vu plus haut qu&rsquo;elle <b>croît</b> avec la distance. L&rsquo;ordre de grandeur se devine à la Heisenberg : confiner un quark dans un rayon $r \simeq 1$ fm lui impose une impulsion $p \gtrsim \hbar/r$, donc une énergie</p>
+<p style="text-align:center;">
+$\displaystyle
+E \simeq p\,c \simeq \frac{\hbar c}{r} \simeq \frac{197\ \text{MeV}\cdot\text{fm}}{1\ \text{fm}} \simeq 200\ \text{MeV}
+$
+</p>
+<p>par quark. Trois quarks, plus l&rsquo;énergie du champ de gluons : quelques centaines de MeV, l&rsquo;ordre de grandeur de $m_p c^2 = 938$ MeV est atteint <b>sans avoir invoqué le Higgs une seule fois</b>. Le calcul complet existe : la chromodynamique sur réseau reproduit les masses des hadrons au pour-cent près, à partir du seul lagrangien de QCD.</p>
+<div id="theo">
+<p><b>La masse, en trois lignes.</b></p>
+<ul style="margin-top:0.5em;">
+<li>Les bosons $W^\pm$ et $Z^0$ pèsent parce qu'ils ont avalé un mode de Goldstone du condensat de Higgs&nbsp;: leur masse est une polarisation longitudinale acquise.</li>
+<li>Les fermions élémentaires pèsent parce que leur propagation bascule de chiralité dans ce même condensat&nbsp;: leur masse est un couplage de Yukawa, $m = G\,v$.</li>
+<li>Mais l'essentiel de la masse de la matière, la notre à 99&nbsp;%, est de l'énergie de mouvement et d'interaction <b>emprisonnée</b> dans les nucléons&nbsp;: $m = E/c^2$, un effet purement relativiste, sans Higgs.</li>
+</ul>
+</div>
+<p>Une dernière justice à rendre au Higgs : son petit pour-cent décide de tout. La taille des atomes est fixée par la masse de l&rsquo;électron, le rayon de Bohr variant comme $1/m_e$ : sans couplage de Yukawa, pas d&rsquo;atomes stables à notre échelle, pas de chimie, pas de lecteur pour ces lignes. Le Higgs pèse peu, mais il pèse au bon endroit. Quant à la masse du neutrino, elle attend toujours son mécanisme, et c&rsquo;est l&rsquo;un des chantiers ouverts du modèle.</p>
 <br>
 <h3 id="bilan-1">Bilan</h3>
 <p style="text-align:center;">
@@ -2952,6 +3147,15 @@ M_Z = \frac{M_W}{\cos\theta_{\mathrm W}}
 |e| = g\sin\theta_{\mathrm W}
 $
 </p>
+<p style="text-align:center;">
+$\displaystyle
+m_{W,Z} \;\longleftarrow\; \text{Goldstone avalé}
+\qquad
+m_e = G_e v \;\longleftarrow\; \text{Yukawa}
+\qquad
+m_p \simeq \frac{E_{\text{confinement}}}{c^2} \;\longleftarrow\; \text{relativité}
+$
+</p>
 <h3 id="pièges-1">Pièges</h3>
 <ul>
 <li>L'hypercharge $Y$ n'est <b>pas</b> la charge électrique. C'est la charge de la symétrie $U(1)$ d'avant la brisure, et $Q = I_3 + Y/2$ les relie.</li>
@@ -2962,6 +3166,7 @@ $
 <li>L'angle de Weinberg n'est pas un paramètre supplémentaire du modèle&nbsp;: c'est l'angle de la rotation qui diagonalise les masses dans le plan $(W^3, B)$, et il est entièrement fixé par le rapport $g'/g$.</li>
 <li>L'interaction faible est «&nbsp;faible&nbsp;» surtout parce qu'elle est <b>courte</b>&nbsp;: le facteur $1/M_W^2$ du propagateur écrase l'amplitude à basse énergie. À énergie comparable à $M_W$, elle n'est plus faible du tout.</li>
 <li>Le Higgs ne donne pas sa masse à «&nbsp;tout&nbsp;»&nbsp;: l'essentiel de la masse de la matière ordinaire vient de l'énergie de confinement des quarks, pas du couplage au Higgs.</li>
+<li>Les oscillations de neutrinos ne mesurent que des <b>différences de masses au carré</b>, $\Delta m^2$&nbsp;: elles prouvent que les masses ne sont pas toutes nulles, mais ne fixent ni l'échelle absolue ni l'ordre des trois états.</li>
 </ul>
 <div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>Et maintenant ? Le modèle électrofaible referme la boucle ouverte au tout début de ce cours : partis d&rsquo;une symétrie interne et du principe de jauge, nous voici en possession d&rsquo;une théorie qui prédit le spectre des particules observées et la valeur de leurs masses.<br><br>
 Restent des questions que ce modèle ne tranche pas. Pourquoi le neutrino n&rsquo;existe-t-il qu&rsquo;en version gauche ? D&rsquo;où viennent les trois générations de leptons et de quarks ? Et comment quantifier proprement une théorie de Yang–Mills, ce qui exige des techniques que nous avons contournées ? Ce sont les chantiers ouverts de la partie suivante.</p>
@@ -4311,16 +4516,16 @@ Restent des questions que ce modèle ne tranche pas. Pourquoi le neutrino n&rsqu
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1786581372"></script>
-    <script src="/js/perfect-scrollbar.min.js?1786581372"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1786581372"></script>
-    <script src="/js/jquery.sticky.js?1786581372"></script>
-    <script src="/js/featherlight.min.js?1786581372"></script>
-    <script src="/js/highlight.pack.js?1786581372"></script>
+    <script src="/js/clipboard.min.js?1786630772"></script>
+    <script src="/js/perfect-scrollbar.min.js?1786630772"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1786630772"></script>
+    <script src="/js/jquery.sticky.js?1786630772"></script>
+    <script src="/js/featherlight.min.js?1786630772"></script>
+    <script src="/js/highlight.pack.js?1786630772"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1786581372"></script>
-    <script src="/js/learn.js?1786581372"></script>
-    <script src="/js/hugo-learn.js?1786581372"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1786630772"></script>
+    <script src="/js/learn.js?1786630772"></script>
+    <script src="/js/hugo-learn.js?1786630772"></script>
     
     
 
