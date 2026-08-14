@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1786710437" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1786710437" rel="stylesheet">
-    <link href="/css/hybrid.css?1786710437" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1786710437" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1786710437" rel="stylesheet">
-    <link href="/css/auto-complete.css?1786710437" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1786710437" rel="stylesheet">
-    <link href="/css/theme.css?1786710437" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1786710437" rel="stylesheet">
+    <link href="/css/nucleus.css?1786711264" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1786711264" rel="stylesheet">
+    <link href="/css/hybrid.css?1786711264" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1786711264" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1786711264" rel="stylesheet">
+    <link href="/css/auto-complete.css?1786711264" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1786711264" rel="stylesheet">
+    <link href="/css/theme.css?1786711264" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1786711264" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1786710437" rel="stylesheet">
+    <link href="/css/theme-blue.css?1786711264" rel="stylesheet">
     
-    <link href="/css/foo.css?1786710437" rel="stylesheet"><link href="/css/bar.css?1786710437" rel="stylesheet">
+    <link href="/css/foo.css?1786711264" rel="stylesheet"><link href="/css/bar.css?1786711264" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1786710437"></script>
+    <script src="/js/jquery-3.3.1.min.js?1786711264"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1786710437"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1786710437"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1786711264"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1786711264"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1786710437"></script>
+<script type="text/javascript" src="/js/search.js?1786711264"></script>
 
     
   </div>
@@ -2150,8 +2150,8 @@ $\displaystyle
 $
 </p>
 Plutôt que $\hat{H}$, on obtient donc $\hat{H} -\frac{\hbar\omega}{2}$, le hamiltonien corrigé de l'énergie de point zéro. Cela ne semble pas un problème indépassable.
-<p>Les deux opérateurs $\hat{x}-\frac{\mathrm{i}}{m\omega}\hat{p}$ et $\hat{x}+\frac{\mathrm{i}}{m\omega}\hat{p}$ semblent voués à jouer un rôle important dans cette histoire. Ils sont adjoints l&rsquo;un de l&rsquo;autre (puisque $\hat{x}$ et $\hat{p}$ sont hermitiens) ce qui leur interdit d&rsquo;être eux-mêmes hermitiens et donc de correspondre à une quelconque observable.<br>
-Après un petit toilettage, introduisons les <strong>opérateurs d&rsquo;échelle</strong> :</p>
+<p>Les deux opérateurs $\hat{x}-\frac{\mathrm{i}}{m\omega}\hat{p}$ et $\hat{x}+\frac{\mathrm{i}}{m\omega}\hat{p}$ semblent voués à jouer un rôle important dans cette histoire. Ils sont adjoints<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> l&rsquo;un de l&rsquo;autre (puisque $\hat{x}$ et $\hat{p}$ sont hermitiens<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>) ce qui leur interdit d&rsquo;être eux-mêmes hermitiens et donc de correspondre à une quelconque observable<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>.<br></p>
+<p>Après un petit toilettage, introduisons les <strong>opérateurs d&rsquo;échelle</strong> :</p>
 <div id="def">
 <p style="text-align:center;">
 $\displaystyle
@@ -2854,7 +2854,21 @@ $
     <th style="text-align:center;"><a href="../">Sommaire</a></th><td><a href="../tqc0">Chapitre précédent</a></td><td><a href="../tqc2">Chapitre suivant</a></td>
     </tr>
 </table>
+</div><div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>L&rsquo;opération adjointe est l&rsquo;équivalent d&rsquo;une symétrie complexe. Pour l&rsquo;obtenir, on transpose l&rsquo;opérateur (on inverse ses lignes et ses colonnes si on le voit comme une matrice) et on prend le conjugué complexe de ses nombres (on change le signe de la partie imaginaire $\mathrm{i}$ en $-\mathrm{i}$). Si l&rsquo;on a un opérateur $\hat{A}$, son adjoint se note $\hat{A}^\dagger$.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>Un opérateur est dit hermitien s&rsquo;il est égal à son propre adjoint ($\hat{A} = \hat{A}^\dagger$). En mécanique quantique, cette propriété est capitale : elle garantit que les valeurs propres de cet opérateur (les résultats possibles d&rsquo;une mesure mathématique) sont strictement des nombres réels.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>Une observable une grandeur physique mesurable en laboratoire (comme la position, la vitesse, l&rsquo;énergie). Puisqu&rsquo;un cadran ou un détecteur ne peut afficher que des nombres réels (et non des nombres imaginaires), toute observable quantique doit obligatoirement être décrite par un opérateur hermitien.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
 </div>
+
 
 <footer class="footline">
 	
@@ -4191,16 +4205,16 @@ $
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1786710437"></script>
-    <script src="/js/perfect-scrollbar.min.js?1786710437"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1786710437"></script>
-    <script src="/js/jquery.sticky.js?1786710437"></script>
-    <script src="/js/featherlight.min.js?1786710437"></script>
-    <script src="/js/highlight.pack.js?1786710437"></script>
+    <script src="/js/clipboard.min.js?1786711264"></script>
+    <script src="/js/perfect-scrollbar.min.js?1786711264"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1786711264"></script>
+    <script src="/js/jquery.sticky.js?1786711264"></script>
+    <script src="/js/featherlight.min.js?1786711264"></script>
+    <script src="/js/highlight.pack.js?1786711264"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1786710437"></script>
-    <script src="/js/learn.js?1786710437"></script>
-    <script src="/js/hugo-learn.js?1786710437"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1786711264"></script>
+    <script src="/js/learn.js?1786711264"></script>
+    <script src="/js/hugo-learn.js?1786711264"></script>
     
     
 
