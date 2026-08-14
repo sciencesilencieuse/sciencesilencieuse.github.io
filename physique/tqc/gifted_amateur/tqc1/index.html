@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1786711264" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1786711264" rel="stylesheet">
-    <link href="/css/hybrid.css?1786711264" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1786711264" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1786711264" rel="stylesheet">
-    <link href="/css/auto-complete.css?1786711264" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1786711264" rel="stylesheet">
-    <link href="/css/theme.css?1786711264" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1786711264" rel="stylesheet">
+    <link href="/css/nucleus.css?1786711725" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1786711725" rel="stylesheet">
+    <link href="/css/hybrid.css?1786711725" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1786711725" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1786711725" rel="stylesheet">
+    <link href="/css/auto-complete.css?1786711725" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1786711725" rel="stylesheet">
+    <link href="/css/theme.css?1786711725" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1786711725" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1786711264" rel="stylesheet">
+    <link href="/css/theme-blue.css?1786711725" rel="stylesheet">
     
-    <link href="/css/foo.css?1786711264" rel="stylesheet"><link href="/css/bar.css?1786711264" rel="stylesheet">
+    <link href="/css/foo.css?1786711725" rel="stylesheet"><link href="/css/bar.css?1786711725" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1786711264"></script>
+    <script src="/js/jquery-3.3.1.min.js?1786711725"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1786711264"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1786711264"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1786711725"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1786711725"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1786711264"></script>
+<script type="text/javascript" src="/js/search.js?1786711725"></script>
 
     
   </div>
@@ -2286,10 +2286,15 @@ $
 <p>En supposant que les oscillateurs sont séparés d&rsquo;une distance $a$, les transformées de Fourier de $x_j$ et $p_j$ s&rsquo;écrivent :<a id="oscillcoup"></a></p>
 <p style="text-align:center;overflow-x:auto;">
 $\displaystyle
-x_j = \frac{1}{\sqrt{N}}\sum_k \tilde{x}_k \mathrm{e}^{\mathrm{i}kja}\qquad\qquad p_j = \frac{1}{\sqrt{N}}\sum_k \tilde{p}_k \mathrm{e}^{\mathrm{i}kja}
+x_j = \frac{1}{\sqrt{N}}\sum_k \tilde{x}_k \mathrm{e}^{\mathrm{i}kja}
 $
 </p>
-où $\tilde{x}_k$ et $\tilde{p}_k$ sont les nouveaux opérateurs dans l'espace des modes de Fourier.
+<p style="text-align:center;">
+$\displaystyle
+ p_j = \frac{1}{\sqrt{N}}\sum_k \tilde{p}_k \mathrm{e}^{\mathrm{i}kja}
+$
+</p>
+<p>où $\tilde{x}_k$ et $\tilde{p}_k$ sont les nouveaux opérateurs dans l&rsquo;espace des modes de Fourier.</p>
 <p>En substituant dans le hamiltonien, on obtient :</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -2321,13 +2326,23 @@ $
 <p>On peut à nouveau introduire des opérateurs de création et d&rsquo;annihilation :</p>
 <p style="text-align:center;overflow-x:auto;">
 $\displaystyle
-\hat{a}_k = \sqrt{\frac{m\omega_k}{2\hbar}}\left(\hat{x}_k+\frac{\mathrm{i}}{m\omega_k}\hat{p}_k\right)\qquad\displaystyle \hat{a}^\dagger_k = \sqrt{\frac{m\omega_k}{2\hbar}}\left(\hat{x}_{-k}-\frac{\mathrm{i}}{m\omega_k}\hat{p}_{-k}\right)
+\hat{a}_k = \sqrt{\frac{m\omega_k}{2\hbar}}\left(\hat{x}_k+\frac{\mathrm{i}}{m\omega_k}\hat{p}_k\right)
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+ \hat{a}^\dagger_k = \sqrt{\frac{m\omega_k}{2\hbar}}\left(\hat{x}_{-k}-\frac{\mathrm{i}}{m\omega_k}\hat{p}_{-k}\right)
 $
 </p>
 <p>À partir d&rsquo;eux, on peut isoler $\hat{x}_k$ et $\hat{p}_k$ :</p>
 <p style="text-align:center;overflow-x:auto;">
 $\displaystyle
-\hat{x}_k=\sqrt{\frac{\hbar}{2 m \omega_k}}\left(\hat{a}_k+\hat{a}_{-k}^{\dagger}\right) \qquad \hat{p}_k= -\mathrm{i} \sqrt{\frac{m \hbar \omega_k}{2}}\left(\hat{a}_k-\hat{a}_{-k}^{\dagger}\right)
+\hat{x}_k=\sqrt{\frac{\hbar}{2 m \omega_k}}\left(\hat{a}_k+\hat{a}_{-k}^{\dagger}\right) 
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+\hat{p}_k= -\mathrm{i} \sqrt{\frac{m \hbar \omega_k}{2}}\left(\hat{a}_k-\hat{a}_{-k}^{\dagger}\right)
 $
 </p>
 <p>En réinjectant dans le hamiltonien, on obtient finalement, après réindexation et utilisation de la relation de commutation $\left[\hat{a}_k, \hat{a}_{k^{\prime}}^{\dagger}\right]=\delta_{k, k^{\prime}}$ :</p>
@@ -4205,16 +4220,16 @@ $
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1786711264"></script>
-    <script src="/js/perfect-scrollbar.min.js?1786711264"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1786711264"></script>
-    <script src="/js/jquery.sticky.js?1786711264"></script>
-    <script src="/js/featherlight.min.js?1786711264"></script>
-    <script src="/js/highlight.pack.js?1786711264"></script>
+    <script src="/js/clipboard.min.js?1786711725"></script>
+    <script src="/js/perfect-scrollbar.min.js?1786711725"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1786711725"></script>
+    <script src="/js/jquery.sticky.js?1786711725"></script>
+    <script src="/js/featherlight.min.js?1786711725"></script>
+    <script src="/js/highlight.pack.js?1786711725"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1786711264"></script>
-    <script src="/js/learn.js?1786711264"></script>
-    <script src="/js/hugo-learn.js?1786711264"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1786711725"></script>
+    <script src="/js/learn.js?1786711725"></script>
+    <script src="/js/hugo-learn.js?1786711725"></script>
     
     
 
