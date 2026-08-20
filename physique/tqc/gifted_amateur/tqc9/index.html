@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1786753335" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1786753335" rel="stylesheet">
-    <link href="/css/hybrid.css?1786753335" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1786753335" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1786753335" rel="stylesheet">
-    <link href="/css/auto-complete.css?1786753335" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1786753335" rel="stylesheet">
-    <link href="/css/theme.css?1786753335" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1786753335" rel="stylesheet">
+    <link href="/css/nucleus.css?1787254053" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1787254053" rel="stylesheet">
+    <link href="/css/hybrid.css?1787254053" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1787254053" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1787254053" rel="stylesheet">
+    <link href="/css/auto-complete.css?1787254053" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1787254053" rel="stylesheet">
+    <link href="/css/theme.css?1787254053" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1787254053" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1786753335" rel="stylesheet">
+    <link href="/css/theme-blue.css?1787254053" rel="stylesheet">
     
-    <link href="/css/foo.css?1786753335" rel="stylesheet"><link href="/css/bar.css?1786753335" rel="stylesheet">
+    <link href="/css/foo.css?1787254053" rel="stylesheet"><link href="/css/bar.css?1787254053" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1786753335"></script>
+    <script src="/js/jquery-3.3.1.min.js?1787254053"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1786753335"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1786753335"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1787254053"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1787254053"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1786753335"></script>
+<script type="text/javascript" src="/js/search.js?1787254053"></script>
 
     
   </div>
@@ -1844,6 +1844,9 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
             
             
           
+            
+            
+          
         
         </ul>
       
@@ -2139,12 +2142,12 @@ details[open] > summary:first-of-type {
 </table>
 </div>
 <br>
-<p>Changement de moteur. Jusqu&rsquo;ici, la théorie quantique des champs roulait sur des opérateurs : quantification canonique, commutateurs, matrice $S$, théorème de Wick. Cette partie reconstruit tout sur un autre principe, celui des intégrales de chemin de Feynman : <i>une amplitude est une somme sur toutes les histoires possibles, chacune pondérée par sa phase $e^{iS/\hbar}$</i>.</p>
+<p>Changement de moteur. Jusqu&rsquo;ici, la théorie quantique des champs roulait sur des opérateurs : quantification canonique, commutateurs, matrice $S$, théorème de Wick. Cette partie reconstruit tout sur un autre principe, celui des intégrales de chemin de Feynman : <i>une amplitude est une somme sur toutes les histoires possibles, chacune pondérée par sa phase $\mathrm e^{\mathrm i S/\hbar}$</i>.</p>
 <p>Trois gains majeurs :</p>
 <ul>
 <li><b>La limite classique devient transparente</b>&nbsp;: la trajectoire de Lagrange n'est plus un postulat mais le survivant d'une interférence (phase stationnaire).</li>
-<li><b>Wick devient automatique</b>&nbsp;: la fonctionnelle génératrice $Z[J]$ de la partie précédente se calcule <i>d'un bloc</i> par une intégrale gaussienne&nbsp;; le carré complété donne $\mathcal Z_0[J] = e^{-\frac12\int J\Delta J}$, et toute la combinatoire de Wick est contenue dans les moments d'une gaussienne.</li>
-<li><b>La température rejoint le temps</b>&nbsp;: la rotation de Wick $t \to -i\tau$ transforme $e^{iS}$ en poids de Boltzmann $e^{-S_E}$, et la physique statistique se déroule en temps imaginaire périodique.</li>
+<li><b>Wick devient automatique</b>&nbsp;: la fonctionnelle génératrice $Z[J]$ de la partie précédente se calcule <i>d'un bloc</i> par une intégrale gaussienne&nbsp;; le carré complété donne $\mathcal Z_0[J] = \mathrm e^{-\frac12\int J\Delta J}$, et toute la combinatoire de Wick est contenue dans les moments d'une gaussienne.</li>
+<li><b>La température rejoint le temps</b>&nbsp;: la rotation de Wick $t \to -i\tau$ transforme $\mathrm e^{\mathrm iS}$ en poids de Boltzmann $\mathrm e^{-S_E}$, et la physique statistique se déroule en temps imaginaire périodique.</li>
 </ul>
 <p>Et on peut en tirer deux extensions :</p>
 <ul>
@@ -2158,7 +2161,7 @@ details[open] > summary:first-of-type {
 <div id="def">
 <p style="text-align:center;">
 $\displaystyle
-G(q_b, t_b\,; q_a, t_a) = \int \mathcal D[q(t)]\; e^{iS[q(t)]/\hbar}\\
+G(q_b, t_b\,; q_a, t_a) = \int \mathcal D[q(t)]\; \mathrm e^{\mathrm iS[q(t)]/\hbar}\\
 \displaystyle S[q] = \int_{t_a}^{t_b}\mathrm{d}t\; L[q(t)]
 $
 </p>
@@ -2171,10 +2174,10 @@ $
 <h3 id="doù-ça-sort-le-découpage-en-tranches">D&rsquo;où ça sort : le découpage en tranches</h3>
 <p>Ce n&rsquo;est pas un postulat de plus : la formule <i>découle</i> de la mécanique quantique ordinaire.</p>
 <div id="preuve">
-<p>Partons de l&rsquo;objet canonique $G = \langle q_b|\,e^{-\mathrm{i}\hat H T}\,|q_a\rangle$ ($T = t_b - t_a$, $\hbar = 1$ pour alléger) et découpons le temps en $N$ tranches $\delta t = T/N$ :</p>
+<p>Partons de l&rsquo;objet canonique $G = \langle q_b|\,\mathrm e^{-\mathrm{i}\hat H T}\,|q_a\rangle$ ($T = t_b - t_a$, $\hbar = 1$ pour alléger) et découpons le temps en $N$ tranches $\delta t = T/N$ :</p>
 <p style="text-align:center;">
 $\displaystyle
-e^{-\mathrm{i}\hat H T} = \big(e^{-\mathrm{i}\hat H \delta t}\big)^{\!N}
+\mathrm e^{-\mathrm{i}\hat H T} = \big(\mathrm e^{-\mathrm{i}\hat H \delta t}\big)^{\!N}
 $
 </p>
 <p>Puis insérons une relation de fermeture $\int\mathrm{d}q_j\,|q_j\rangle\langle q_j| = \mathbb 1$ entre chaque paire de facteurs. L&rsquo;amplitude devient une intégrale sur toutes les <b>positions intermédiaires</b> $q_1, \ldots, q_{N-1}$ $\to$ c&rsquo;est déjà la somme sur les chemins, version pixellisée.</p>
@@ -2184,20 +2187,20 @@ $
 <p>Reste à évaluer une tranche. Pour $\hat H = \hat p^2/2m + V(\hat q)$ et $\delta t$ petit (erreur en $O(\delta t^2)$ lorsqu&rsquo;on sépare les exponentielles<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, négligeable dans la limite) :</p>
 <p style="text-align:center;">
 $\displaystyle
-\langle q_{j+1}|e^{-i\hat H\delta t}|q_j\rangle
-\approx e^{-\mathrm{i}\delta t\, V(q_j)} \int\frac{\mathrm{d}p}{2\pi}\; e^{\mathrm{i}p(q_{j+1} - q_j)}\, e^{-\mathrm{i}\delta t\, p^2/2m}
+\langle q_{j+1}|\mathrm e^{-\mathrm i\hat H\delta t}|q_j\rangle
+\approx \mathrm e^{-\mathrm{i}\delta t\, V(q_j)} \int\frac{\mathrm{d}p}{2\pi}\; \mathrm e^{\mathrm{i}p(q_{j+1} - q_j)}\, \mathrm e^{-\mathrm{i}\delta t\, p^2/2m}
 $
 </p>
 <p>où l&rsquo;on a fait agir $V(\hat q)$ sur $|q_j\rangle$ et inséré une fermeture en impulsion pour la partie cinétique.</p>
 <p>L&rsquo;intégrale sur $p$ est <b>gaussienne</b> (la première d&rsquo;une longue série !) et donne :</p>
 <p style="text-align:center;overflow-x:auto;">
 $\displaystyle
-\langle q_{j+1}|e^{-\mathrm{i}\hat H\delta t}|q_j\rangle
+\langle q_{j+1}|\mathrm e^{-\mathrm{i}\hat H\delta t}|q_j\rangle
 \approx \sqrt{\frac{m}{2\pi \mathrm{i}\,\delta t}}\;
 \exp\left\{ \mathrm{i}\,\delta t\left[ \frac{m}{2}\Big(\frac{q_{j+1} - q_j}{\delta t}\Big)^2 - V(q_j) \right] \right\}
 $
 </p>
-<p>Le crochet est $L = \frac{m}{2}\dot q^2 - V$ évalué sur la tranche : le produit des $N$ tranches reconstruit $\exp\big[i\sum_j \delta t\, L\big] \to e^{iS}$, et la limite $N \to \infty$ du produit des $\int\mathrm{d}q_j$ (préfacteurs compris) <i>définit</i> $\int\mathcal D[q(t)]$.</p>
+<p>Le crochet est $L = \frac{m}{2}\dot q^2 - V$ évalué sur la tranche : le produit des $N$ tranches reconstruit $\exp\big[i\sum_j \delta t\, L\big] \to \mathrm e^{\mathrm iS}$, et la limite $N \to \infty$ du produit des $\int\mathrm{d}q_j$ (préfacteurs compris) <i>définit</i> $\int\mathcal D[q(t)]$.</p>
 <p>Moralité : le hamiltonien et les opérateurs sont entrés dans la machine, et il en ressort le <b>lagrangien</b> et des trajectoires ordinaires. L&rsquo;intégrale de chemin est la formulation lagrangienne de la mécanique quantique.</p>
 </div>
 <br>
@@ -2214,22 +2217,22 @@ $
 <div id="theo">
 <p style="text-align:center;">
 $\displaystyle
-\text{(0)}\;\; \int_{-\infty}^{\infty}\mathrm{d}x\; e^{-x^2} = \sqrt{\pi}
+\text{(0)}\;\; \int_{-\infty}^{\infty}\mathrm{d}x\; \mathrm e^{-x^2} = \sqrt{\pi}
 $
 </p>
 <p style="text-align:center;">
 $\displaystyle
-\text{(1)}\;\; \int\mathrm{d}x\; e^{-\frac{a x^2}{2}} = \sqrt{\frac{2\pi}{a}}
+\text{(1)}\;\; \int\mathrm{d}x\; \mathrm e^{-\frac{a x^2}{2}} = \sqrt{\frac{2\pi}{a}}
 $
 </p>
 <p style="text-align:center;">
 $\displaystyle
-\text{(2)}\;\; \int\mathrm{d}x\; e^{-\frac{a x^2}{2} + Jx} = \sqrt{\frac{2\pi}{a}}\; e^{\frac{J^2}{2a}}
+\text{(2)}\;\; \int\mathrm{d}x\; \mathrm e^{-\frac{a x^2}{2} + Jx} = \sqrt{\frac{2\pi}{a}}\; \mathrm e^{\frac{J^2}{2a}}
 $
 </p>
 <p style="text-align:center;">
 $\displaystyle
-\text{(3)}\;\; \int\mathrm{d}^n x\; e^{-\frac12 x^{\mathsf T}\! A\, x + J^{\mathsf T}\! x} = \frac{(2\pi)^{n/2}}{\sqrt{\det A}}\; e^{\frac12 J^{\mathsf T}\! A^{-1} J}
+\text{(3)}\;\; \int\mathrm{d}^n x\; \mathrm e^{-\frac12 x^{\mathsf T}\! A\, x + J^{\mathsf T}\! x} = \frac{(2\pi)^{n/2}}{\sqrt{\det A}}\; \mathrm e^{\frac12 J^{\mathsf T}\! A^{-1} J}
 $
 </p>
 </div>
@@ -2253,7 +2256,7 @@ $\to -Ax + J = 0$<br>
 Donc $x_\star = A^{-1}J$, et en réinjectant, $L(x_\star) = +\frac12\, J\, A^{-1} b$.<br>
 On a retrouvé <i>l&rsquo;exposant exact du résultat (3)</i>.
 <br><br>
-$e^{\frac12 JA^{-1}J}$ n&rsquo;est donc rien d&rsquo;autre que <b>l&rsquo;intégrande évalué au point stationnaire</b>. Pour une gaussienne, la phase stationnaire est exacte, et le déterminant n&rsquo;est que le prix (indépendant de $J$) des fluctuations autour.</p>
+$\mathrm e^{\frac12 JA^{-1}J}$ n&rsquo;est donc rien d&rsquo;autre que <b>l&rsquo;intégrande évalué au point stationnaire</b>. Pour une gaussienne, la phase stationnaire est exacte, et le déterminant n&rsquo;est que le prix (indépendant de $J$) des fluctuations autour.</p>
 </div></div>
 <br>
 <h3 id="loscillateur-harmonique-et-les-infinis-apprivoisés">L&rsquo;oscillateur harmonique, et les infinis apprivoisés</h3>
@@ -2305,13 +2308,13 @@ $
 <h3 id="bilan">Bilan</h3>
 <p style="text-align:center;">
 $\displaystyle
-\langle q_b|e^{-\mathrm{i}\hat H T}|q_a\rangle
+\langle q_b|\mathrm e^{-\mathrm{i}\hat H T}|q_a\rangle
 \;\overset{\text{tranches}}{\longrightarrow}\;
-\int\mathcal D[q]\, e^{\mathrm{i}S/\hbar}
+\int\mathcal D[q]\, \mathrm e^{\mathrm{i}S/\hbar}
 \;\overset{\delta S = 0}{\longrightarrow}\;
 \text{classique + fluctuations}
 \;\overset{\text{carré complété}}{\longrightarrow}\;
-e^{\frac12 J A^{-1} J}
+\mathrm e^{\frac12 J A^{-1} J}
 \;\overset{\det\, =\, \prod\lambda_n}{\longrightarrow}\;
 G_{\text{oscillateur}}
 $
@@ -2330,7 +2333,7 @@ $
 <p>De la particule au champ, le saut d&rsquo;écriture est minuscule : la trajectoire $q(t)$ devient une <b>configuration de champ</b> $\phi(x)$ sur tout l&rsquo;espace-temps, et l&rsquo;action devient $S = \int\mathrm{d}^4x\,\mathcal L[\phi]$ :</p>
 <p style="text-align:center;">
 $\displaystyle
-\int\mathcal D[\phi(x)]\; e^{\,\mathrm{i}\int\mathrm{d}^4x\,\mathcal L[\phi(x)]}
+\int\mathcal D[\phi(x)]\; \mathrm e^{\,\mathrm{i}\int\mathrm{d}^4x\,\mathcal L[\phi(x)]}
 $
 </p>
 <p>Point capital : <b>les $\phi(x)$ qui vivent sous cette intégrale sont des champs classiques</b>, des fonctions ordinaires, jamais passées à la machine de quantification canonique, sans relations de commutation.<br>
@@ -2341,7 +2344,7 @@ Bonne nouvelle : elle donne <b>la fonctionnelle génératrice</b> de la partie 
 <div id="def">
 <p style="text-align:center;">
 $\displaystyle
-\mathcal Z[J] = \frac{\displaystyle\int\mathcal D\phi\; e^{\,\mathrm{i}\int\mathrm{d}^4x\,[\mathcal L(\phi) + J\phi]}}{\displaystyle\int\mathcal D\phi\; e^{\,\mathrm{i}\int\mathrm{d}^4x\,\mathcal L(\phi)}}
+\mathcal Z[J] = \frac{\displaystyle\int\mathcal D\phi\; \mathrm e^{\,\mathrm{i}\int\mathrm{d}^4x\,[\mathcal L(\phi) + J\phi]}}{\displaystyle\int\mathcal D\phi\; \mathrm e^{\,\mathrm{i}\int\mathrm{d}^4x\,\mathcal L(\phi)}}
 $
 </p>
 </div>
@@ -2392,11 +2395,11 @@ $
 <p><u>Contrôle</u> :<br>
 la recette $\displaystyle G^{(2)} = \frac{1}{i^2}\frac{\delta^2\mathcal Z_0}{\delta J\delta J}\big|_0$ redonne bien $\displaystyle G^{(2)}(x,y) = \Delta(x-y)$, le propagateur, comme il se doit.</p>
 </div>
-<p>$\mathcal Z_0[J] = e^{\text{Dumbbell}}$ : l&rsquo;exposant $-\frac12\int J\Delta J$ est exactement le diagramme haltère (deux blobs $J$ reliés par un propagateur). Le théorème des amas liés est ici vérifié <i>exactement</i> : dans la théorie libre, l&rsquo;unique diagramme source-à-source connexe est l&rsquo;haltère, et $\mathcal Z_0$ en est l&rsquo;exponentielle, ni plus ni moins.</p>
+<p>$\mathcal Z_0[J] = \mathrm e^{\text{Dumbbell}}$ : l&rsquo;exposant $-\frac12\int J\Delta J$ est exactement le diagramme haltère (deux blobs $J$ reliés par un propagateur). Le théorème des amas liés est ici vérifié <i>exactement</i> : dans la théorie libre, l&rsquo;unique diagramme source-à-source connexe est l&rsquo;haltère, et $\mathcal Z_0$ en est l&rsquo;exponentielle, ni plus ni moins.</p>
 <br>
 <h3 id="les-interactions-et-les-règles-retrouvées">Les interactions, et les règles retrouvées</h3>
 <p>Retournons à la théorie $\phi^4$ $\to$ $\mathcal L_{\text{int}} = -\frac{\lambda}{4!}\phi^4$</p>
-<p>Dans l&rsquo;intégrale, chaque $\phi(z)$ en facteur de $e^{i\int J\phi}$ peut se fabriquer par une dérivée, $\phi(z) \to \frac{1}{i}\frac{\delta}{\delta J(z)}$. D&rsquo;où la formule compacte :</p>
+<p>Dans l&rsquo;intégrale, chaque $\phi(z)$ en facteur de $\mathrm e^{\mathrm i\int J\phi}$ peut se fabriquer par une dérivée, $\phi(z) \to \frac{1}{i}\frac{\delta}{\delta J(z)}$. D&rsquo;où la formule compacte :</p>
 <p style="text-align:center;">
 $\displaystyle
 \mathcal Z[J] \;\propto\; \exp\left[ -\mathrm{i}\frac{\lambda}{4!}\int\mathrm{d}^4z\, \Big(\frac{1}{\mathrm{i}}\frac{\delta}{\delta J(z)}\Big)^{\!4} \right]\; \mathcal Z_0[J]
@@ -2404,7 +2407,7 @@ $
 </p>
 <div id="grosseformule" style="margin:-0.5em 0;">
 </div>
-<p>On peut développer l&rsquo;exponentielle en puissances de $\lambda$ et laisser les dérivées mordre dans $e^{-\frac12 J\Delta J}$ :<br>
+<p>On peut développer l&rsquo;exponentielle en puissances de $\lambda$ et laisser les dérivées mordre dans $\mathrm e^{-\frac12 J\Delta J}$ :<br>
 Chaque paire de $\delta/\delta J$ décroche un $\Delta$, chaque $\delta/\delta J$ isolée s&rsquo;accroche à un $J$ restant.</p>
 <p>Au premier ordre, les quatre dérivées au même point $z$ produisent trois familles :</p>
 <ul style="margin-top:-0.5em;">
@@ -2416,7 +2419,7 @@ Chaque paire de $\delta/\delta J$ décroche un $\Delta$, chaque $\delta/\delta J
 <p>Les règles de Feynman sont retrouvées, sans quantification canonique, sans théorème de Wick, sans matrice $S$.</p>
 <div id="preuve">
 <p>Cascade des quatre dérivées.</p>
-<p>On agit sur $\mathcal Z_0[J] = e^{-\frac12\int J\Delta J}$ avec $\delta/\delta J(z)$, quatre fois de suite.</p>
+<p>On agit sur $\mathcal Z_0[J] = \mathrm e^{-\frac12\int J\Delta J}$ avec $\delta/\delta J(z)$, quatre fois de suite.</p>
 <p>En notant $(\Delta J)(z) \equiv \int\mathrm{d}^4y\,\Delta(z-y)J(y)$ :</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -2455,7 +2458,7 @@ $\displaystyle
 \;\overset{\int\text{par parties}}{\longrightarrow}\;
 -\tfrac12\phi K\phi + J\phi
 \;\overset{i\varepsilon}{\longrightarrow}\;
-\mathcal Z_0[J] = e^{-\frac12\int J\Delta J}
+\mathcal Z_0[J] = \mathrm e^{-\frac12\int J\Delta J}
 \;\overset{(\delta/\delta J)^n}{\longrightarrow}\;
 G^{(n)}
 \;\overset{\text{interactions}}{\longrightarrow}\;
@@ -2476,7 +2479,7 @@ $
 <br>
 <h2 id="la-théorie-statistique-des-champs">La théorie statistique des champs</h2>
 <h3 id="la-rotation-de-wick">La rotation de Wick</h3>
-<p>D&rsquo;un côté $e^{iS}$, de l&rsquo;autre $e^{-\beta E}$ : pour passer de l&rsquo;un à l&rsquo;autre, on <b>tourne le temps</b> : $t \to -i\tau$. On passe alors d&rsquo;ue la métrique de Minkowski $(+,-,-,-)$ à la métrique euclidienne $(+,+,+,+)$.<br>
+<p>D&rsquo;un côté $\mathrm e^{\mathrm iS}$, de l&rsquo;autre $\mathrm e^{-\beta E}$ : pour passer de l&rsquo;un à l&rsquo;autre, on <b>tourne le temps</b> : $t \to -i\tau$. On passe alors d&rsquo;ue la métrique de Minkowski $(+,-,-,-)$ à la métrique euclidienne $(+,+,+,+)$.<br>
 L&rsquo;action devient :</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -2484,7 +2487,7 @@ $\displaystyle
 \displaystyle L_E[q(\tau)] = \frac{m}{2}\Big(\frac{\mathrm{d}q}{\mathrm{d}\tau}\Big)^{\!2} + V(q)
 $
 </p>
-<p>Le potentiel s&rsquo;additionne : en temps imaginaire, cinétique et potentiel pèsent ensemble, et le poids $e^{-S_E}$ est réel positif, comme un poids de Boltzmann.</p>
+<p>Le potentiel s&rsquo;additionne : en temps imaginaire, cinétique et potentiel pèsent ensemble, et le poids $\mathrm e^{-S_E}$ est réel positif, comme un poids de Boltzmann.</p>
 <!-- Figure à redessiner (L&B fig. 25.1) : le plan complexe de p⁰, avec la rotation de −π/2 (flèche en quart de cercle) amenant l'axe réel sur l'axe imaginaire, ET les deux pôles panachés du propagateur de Feynman (en ±(E − iε), quadrants 2 et 4) : le contour tourné ne croise aucune singularité. Annoter « t → −iτ, p⁰ → iω » et « e^{iS} → e^{−S_E} » -->
 <div style="position:relative;margin-left:auto;margin-right:auto;width:340px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/figrotwick.png" style="box-shadow:none;background:none;">
@@ -2494,7 +2497,7 @@ $
 <p>Le propagateur de Feynman s&rsquo;écrit maintenant :</p>
 <p style="text-align:center;">
 $\displaystyle
-\Delta_E(x) = \int\frac{\mathrm{d}^4p}{(2\pi)^4}\, \frac{e^{-ip\cdot x}}{p^2 + m^2}\\
+\Delta_E(x) = \int\frac{\mathrm{d}^4p}{(2\pi)^4}\, \frac{\mathrm e^{-\mathrm ip\cdot x}}{p^2 + m^2}\\
 \displaystyle
 (-\partial_E^2 + m^2)\,\Delta_E(x-y) = \delta^{(4)}(x-y)
 $
@@ -2504,22 +2507,22 @@ $
 <p>La fonction de partition est une intégrale de chemin en temps imaginaire <b>périodique</b><sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> :</p>
 <p style="text-align:center;">
 $\displaystyle
-Z = \mathrm{Tr}\,\big[e^{-\beta\hat H}\big]
-= \oint  \mathcal D q\; e^{-\int_0^\beta \mathrm{d}\tau\, L_E[q(\tau)]}\\
+Z = \mathrm{Tr}\,\big[\mathrm e^{-\beta\hat H}\big]
+= \oint  \mathcal D q\; \mathrm e^{-\int_0^\beta \mathrm{d}\tau\, L_E[q(\tau)]}\\
 \displaystyle q(0) = q(\beta)
 $
 </p>
 <p>Et pour des champs :</p>
 <p style="text-align:center;">
 $\displaystyle
-Z = \displaystyle \oint \mathcal D\phi\; e^{-\int_0^\beta\mathrm{d}\tau\int\mathrm{d}^3x\,\mathcal L_E[\phi]}\\
+Z = \displaystyle \oint \mathcal D\phi\; \mathrm e^{-\int_0^\beta\mathrm{d}\tau\int\mathrm{d}^3x\,\mathcal L_E[\phi]}\\
 \displaystyle \phi(0, \mathbf x) = \phi(\beta, \mathbf x)$
 </p>
 </div>
 <br>
 <div id="preuve">
-<p>On sait décomposer $\langle q_B|e^{-i\hat H t_B}|q_A\rangle$ en somme sur les trajectoires de $0$ à $t_B$.<br>
-Que modifier pour calculer $\mathrm{Tr}\,e^{-\beta\hat H} = \sum_\lambda\langle\lambda|e^{-\beta\hat H}|\lambda\rangle$ ?</p>
+<p>On sait décomposer $\langle q_B|\mathrm e^{-\mathrm i\hat H t_B}|q_A\rangle$ en somme sur les trajectoires de $0$ à $t_B$.<br>
+Que modifier pour calculer $\mathrm{Tr}\,\mathrm e^{-\beta\hat H} = \sum_\lambda\langle\lambda|\mathrm e^{-\beta\hat H}|\lambda\rangle$ ?</p>
 <ul>
 <li>poser $|q_A\rangle = |q_B\rangle = |\lambda\rangle$ et sommer (la trace exige de <i>revenir au même état</i>)&nbsp;;</li> 
 <li>poser $t_B = -i\beta$&nbsp;;</li>
@@ -2589,11 +2592,11 @@ $
 $\displaystyle
 \underbrace{\int\frac{\mathrm{d}^4 p}{(2\pi)^4}\,\frac{1}{(p^0)^2 + E_{\mathbf p}^2}}_{\text{indépendant de } T}
 \; + \;
-\underbrace{\int\frac{\mathrm{d}^3p}{(2\pi)^3}\,\frac{1}{E_{\mathbf p}}\,\frac{1}{e^{\beta E_{\mathbf p}} - 1}}_{\text{la physique thermique}}
+\underbrace{\int\frac{\mathrm{d}^3p}{(2\pi)^3}\,\frac{1}{E_{\mathbf p}}\,\frac{1}{\mathrm e^{\beta E_{\mathbf p}} - 1}}_{\text{la physique thermique}}
 $
 </p>
 <p>Le premier morceau est la contribution du vide à $T = 0$ (divergente, elle attendra la renormalisation).<br>
-Le second fait apparaître <b>le facteur d&rsquo;occupation de Bose</b> $n_B(E_{\mathbf p}) = 1/(e^{\beta E_{\mathbf p}} - 1)$. La température ne se manifeste que par les quanta thermiquement peuplés.</p>
+Le second fait apparaître <b>le facteur d&rsquo;occupation de Bose</b> $n_B(E_{\mathbf p}) = 1/(\mathrm e^{\beta E_{\mathbf p}} - 1)$. La température ne se manifeste que par les quanta thermiquement peuplés.</p>
 <p>La partie thermique de la correction pour le diagramme en 8 s&rsquo;écrit alors :</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -2609,11 +2612,11 @@ $
 $\displaystyle
 t \to -i\tau
 \;\overset{\text{pôles évités}}{\longrightarrow}\;
-e^{iS} \to e^{-S_E}
+\mathrm e^{\mathrm iS} \to \mathrm e^{-S_E}
 \;\overset{\text{Tr}}{\longrightarrow}\;
 \phi(0) = \phi(\beta)
 \;\longrightarrow\;
-Z = \!\oint\mathcal D\phi\; e^{-S_E}
+Z = \!\oint\mathcal D\phi\; \mathrm e^{-S_E}
 \;\longrightarrow\;
 \omega_n = \tfrac{2\pi n}{\beta}
 \;\longrightarrow\;
@@ -2740,9 +2743,9 @@ $\displaystyle
 \mathcal L = (\partial^\mu\psi^\dagger - iqA^\mu\psi^\dagger)(\partial_\mu\psi + iqA_\mu\psi) + \mu^2\psi^\dagger\psi - \lambda(\psi^\dagger\psi)^2 - \frac14 F_{\mu\nu}F^{\mu\nu}
 $
 </p>
-<p>Invariant sous $\psi \to \psi\, e^{i\alpha(x)}$ tant qu&rsquo;on transforme aussi $A_\mu \to A_\mu - \frac1q\partial_\mu\alpha$. Avant brisure, la théorie décrit deux scalaires massifs de charges opposées et deux polarisations de photon sans masse.</p>
+<p>Invariant sous $\psi \to \psi\, \mathrm e^{\mathrm i\alpha(x)}$ tant qu&rsquo;on transforme aussi $A_\mu \to A_\mu - \frac1q\partial_\mu\alpha$. Avant brisure, la théorie décrit deux scalaires massifs de charges opposées et deux polarisations de photon sans masse.</p>
 <div id="preuve">
-<p>Passons en polaires, $\psi = \rho\,e^{i\theta}$.<br>
+<p>Passons en polaires, $\psi = \rho\, \mathrm e^{\mathrm i\theta}$.<br>
 $\partial_\mu \psi+\mathrm{i} q A_\mu \psi$ devient alors $\left(\partial_\mu \varrho\right) \mathrm{e}^{\mathrm{i} \theta}+\mathrm{i}\left(\partial_\mu \theta+q A_\mu\right) \varrho \mathrm{e}^{\mathrm{i} \theta}$.<br>
 $A_\mu$ n&rsquo;entre donc dans la théorie que par la combinaison <b>invariante de jauge</b> $C_\mu \equiv A_\mu + \frac1q\partial_\mu\theta$ puisqu&rsquo;elle laisse $F_{\mu\nu}$ inchangé ($F_{\mu \nu}=\partial_\mu A_\nu-\partial_\nu A_\mu=\partial_\mu C_\nu-\partial_\nu C_\mu$).</p>
 <p style="text-align:center;">
@@ -2774,7 +2777,7 @@ $
 </p>
 <p>Intégrable en $p \to 0$ pour $d &gt; 2$, <b>divergente pour $d \leq 2$</b>. Les fluctuations de grande longueur d&rsquo;onde (les Goldstones eux-mêmes) divergent et pulvérisent l&rsquo;ordre qu&rsquo;ils étaient censés signaler : la brisure s&rsquo;auto-détruit.</p>
 <p>C&rsquo;est le <strong>théorème de Coleman-Mermin-Wagner</strong> (pas de brisure de symétrie en dimension $≤2$ avec un paramètre d&rsquo;ordre possédant une symétrie continue).</p>
-<p>Version aimant, sans théorie des champs : les magnons (ondes de spin quantifiées) coûtent $E_{\mathbf p} = \alpha\mathbf p^2$, et leur population thermique $\int\mathrm{d}p\, p^{d-1}/(e^{\beta E_{\mathbf p}} - 1) \sim \int p^{\,d-3}\mathrm{d}p$ (pour des petits $\mathbf p$) diverge en $d \leq 2$ (les ondes de spin dévorent l&rsquo;aimantation, l&rsquo;ordre à grande échelle).</p>
+<p>Version aimant, sans théorie des champs : les magnons (ondes de spin quantifiées) coûtent $E_{\mathbf p} = \alpha\mathbf p^2$, et leur population thermique $\int\mathrm{d}p\, p^{d-1}/(\mathrm e^{\beta E_{\mathbf p}} - 1) \sim \int p^{\,d-3}\mathrm{d}p$ (pour des petits $\mathbf p$) diverge en $d \leq 2$ (les ondes de spin dévorent l&rsquo;aimantation, l&rsquo;ordre à grande échelle).</p>
 <p>Belle ironie : le théorème de Goldstone fournit lui-même l&rsquo;arme de sa propre limitation.</p>
 <br>
 <h3 id="bilan-3">Bilan</h3>
@@ -2890,14 +2893,14 @@ $
 <p>La solution normalisée de cette équation différentielle est :</p>
 <p style="text-align:center;">
 $\displaystyle
-\langle Q\vert{}\alpha\rangle = \frac{1}{\pi^{1/4}}e^{-(Q-\sqrt{2}\alpha)^2/2}
+\langle Q\vert{}\alpha\rangle = \frac{1}{\pi^{1/4}}\mathrm e^{-(Q-\sqrt{2}\alpha)^2/2}
 $
 </p>
-<p>La fonction d&rsquo;onde est donc une gaussienne. Son centre est décalé par rapport à l&rsquo;origine d&rsquo;une valeur $\sqrt{2}\alpha = \langle\hat{Q}\rangle + i\langle\hat{P}\rangle$.</p>
+<p>La fonction d&rsquo;onde est donc une gaussienne. Son centre est décalé par rapport à l&rsquo;origine d&rsquo;une valeur $\sqrt{2}\alpha = \langle\hat{Q}\rangle + \mathrm i\langle\hat{P}\rangle$.</p>
 <p>Par un raisonnement analogue, on peut montrer que la fonction d&rsquo;onde dans l&rsquo;espace des impulsions est donnée par :</p>
 <p style="text-align:center;">
 $\displaystyle
-\langle P\vert{}\alpha\rangle = \frac{1}{\pi^{1/4}}e^{-(P+i\sqrt{2}\alpha)^2/2}
+\langle P\vert{}\alpha\rangle = \frac{1}{\pi^{1/4}}\mathrm e^{-(P+\mathrm i\sqrt{2}\alpha)^2/2}
 $
 </p>
 <p>À l&rsquo;aide de ces fonctions d&rsquo;onde en position et en impulsion, il devient possible de calculer les incertitudes spatiales et impulsionnelles. La méthode la plus directe consiste à utiliser leurs définitions statistiques usuelles :</p>
@@ -2919,35 +2922,35 @@ C&rsquo;est précisément en ce sens que les états cohérents représentent l&r
 </li>
 </ul>
 <ul>
-<li><b>Il évolue classiquement</b>&nbsp;: $|\alpha(0)\rangle \to |\alpha(t)\rangle$ avec $\alpha(t) = \alpha_0\, e^{-i\omega t}$ (à une phase globale près), d'où $\langle\hat Q\rangle = \sqrt2\,\alpha_0\cos(\omega t - \theta)$ et $\langle\hat P\rangle = -\sqrt2\,\alpha_0\sin(\omega t - \theta)$&nbsp;: les moyennes exécutent le mouvement harmonique <i>classique</i>. Dans le plan $(Q, P)$, l'état est un petit «&nbsp;nuage&nbsp;» d'incertitude $\Delta Q = \Delta P = 1/\sqrt2$ qui orbite comme un point matériel.
+<li><b>Il évolue classiquement</b>&nbsp;: $|\alpha(0)\rangle \to |\alpha(t)\rangle$ avec $\alpha(t) = \alpha_0\, \mathrm e^{-\mathrm i\omega t}$ (à une phase globale près), d'où $\langle\hat Q\rangle = \sqrt2\,\alpha_0\cos(\omega t - \theta)$ et $\langle\hat P\rangle = -\sqrt2\,\alpha_0\sin(\omega t - \theta)$&nbsp;: les moyennes exécutent le mouvement harmonique <i>classique</i>. Dans le plan $(Q, P)$, l'état est un petit «&nbsp;nuage&nbsp;» d'incertitude $\Delta Q = \Delta P = 1/\sqrt2$ qui orbite comme un point matériel.
 <div id="preuve" style="margin-top:0.5em;">
 <details><summary>Démonstration&nbsp;:</summary>
-<p>Comment les états cohérents réagissent à l&rsquo;opérateur d&rsquo;évolution $\hat{U}(\theta) = e^{-i\theta\hat{n}}$, où $\theta$ est un angle (un nombre réel) et $\hat{n}$ est notre opérateur habituel du nombre de particules ?</p>
+<p>Comment les états cohérents réagissent à l&rsquo;opérateur d&rsquo;évolution $\hat{U}(\theta) = \mathrm e^{-\mathrm i\theta\hat{n}}$, où $\theta$ est un angle (un nombre réel) et $\hat{n}$ est notre opérateur habituel du nombre de particules ?</p>
 <p>Testons d&rsquo;abord l&rsquo;effet de cet opérateur sur un état de base $\vert{}n\rangle$ (qui vérifie $\hat{n}\vert{}n\rangle = n\vert{}n\rangle$). Pour ce faire, il suffit de se rappeler qu&rsquo;une exponentielle d&rsquo;opérateur peut se développer en série de Taylor :</p>
 <p style="text-align:center;">
 $\displaystyle
-\hat{U}(\theta)\vert{}n\rangle = \left(1 + (-i\theta\hat{n}) + \frac{(-i\theta\hat{n})^2}{2!} + \dots \right)\vert{}n\rangle = e^{-i\theta n}\vert{}n\rangle
+\hat{U}(\theta)\vert{}n\rangle = \left(1 + (-i\theta\hat{n}) + \frac{(-i\theta\hat{n})^2}{2!} + \dots \right)\vert{}n\rangle = \mathrm e^{-\mathrm i\theta n}\vert{}n\rangle
 $
 </p>
 <p>L&rsquo;astuce ici est que chaque fois que l&rsquo;opérateur $\hat{n}$ agit sur $\vert{}n\rangle$, il fait simplement sortir le nombre $n$. L&rsquo;exponentielle de l&rsquo;opérateur devient donc une simple exponentielle scalaire.</p>
 <p>Nous pouvons maintenant appliquer ce résultat à un état cohérent $\vert{}\alpha\rangle$, qui est par définition une superposition de tous les états $\vert{}n\rangle$ :</p>
 <p style="text-align:center;">
 $\displaystyle
-\hat{U}(\theta)\vert{}\alpha\rangle = e^{-\vert{}\alpha\vert{}^2/2} \sum_{n=0}^{\infty} \frac{(\alpha e^{-i\theta})^n}{\sqrt{n!}}\vert{}n\rangle = \vert{}\alpha e^{-i\theta}\rangle
+\hat{U}(\theta)\vert{}\alpha\rangle = \mathrm e^{-\vert{}\alpha\vert{}^2/2} \sum_{n=0}^{\infty} \frac{(\alpha \mathrm e^{-\mathrm i\theta})^n}{\sqrt{n!}}\vert{}n\rangle = \vert{}\alpha \mathrm e^{-\mathrm i\theta}\rangle
 $
 </p>
-<p>Conclusion de cette étape : L&rsquo;action de $\hat{U}(\theta)$ sur un état cohérent $\vert{}\alpha\rangle$ a simplement pour effet de le transformer en un nouvel état cohérent, dont la valeur propre est multipliée par la phase $e^{-i\theta}$.</p>
+<p>Conclusion de cette étape : L&rsquo;action de $\hat{U}(\theta)$ sur un état cohérent $\vert{}\alpha\rangle$ a simplement pour effet de le transformer en un nouvel état cohérent, dont la valeur propre est multipliée par la phase $\mathrm e^{-\mathrm i\theta}$.</p>
 <p>Ce résultat purement mathématique nous permet de déduire immédiatement l&rsquo;évolution temporelle d&rsquo;un état cohérent $\vert{}\alpha\rangle$ soumis au hamiltonien de l&rsquo;oscillateur harmonique $\hat{H} = \omega(\hat{n} + 1/2)$ (en posant $\hbar=1$).</p>
 <p>L&rsquo;évolution de l&rsquo;état au cours du temps $t$ s&rsquo;écrit :</p>
 <p style="text-align:center;">
 $\displaystyle
-\vert{}\alpha(t)\rangle = e^{-i\hat{H}t}\vert{}\alpha(0)\rangle = e^{-i\omega t/2}\vert{}\alpha(0)e^{-i\omega t}\rangle
+\vert{}\alpha(t)\rangle = \mathrm e^{-\mathrm i\hat{H}t}\vert{}\alpha(0)\rangle = \mathrm e^{-\mathrm i\omega t/2}\vert{}\alpha(0) \mathrm e^{-\mathrm i\omega t}\rangle
 $
 </p>
 <p>Ce résultat final se lit en deux parties :</p>
 <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
-<li>Le préfacteur exponentiel $e^{-i\omega t/2}$&nbsp;: c'est un simple facteur de phase global qui provient de l'énergie du point zéro (le $1/2$ du hamiltonien). Il n'affecte pas les probabilités physiques.</li>
-<li>L'état $\vert{}\alpha(0)e^{-i\omega t}\rangle$&nbsp;: c'est ici que réside le message fondamental. Ce terme nous prouve qu'un état cohérent reste un état cohérent au cours du temps. Sa valeur propre (le nombre complexe $\alpha$) se contente de tourner en rond dans le plan complexe à la vitesse angulaire $\omega$.</li>
+<li>Le préfacteur exponentiel $\mathrm e^{-\mathrm i\omega t/2}$&nbsp;: c'est un simple facteur de phase global qui provient de l'énergie du point zéro (le $1/2$ du hamiltonien). Il n'affecte pas les probabilités physiques.</li>
+<li>L'état $\vert{}\alpha(0) \mathrm e^{-\mathrm i\omega t}\rangle$&nbsp;: c'est ici que réside le message fondamental. Ce terme nous prouve qu'un état cohérent reste un état cohérent au cours du temps. Sa valeur propre (le nombre complexe $\alpha$) se contente de tourner en rond dans le plan complexe à la vitesse angulaire $\omega$.</li>
 </ul>
 <p>Nous venons donc de démontrer mathématiquement que la dynamique de cet état quantique reproduit parfaitement le mouvement oscillatoire régulier d&rsquo;un oscillateur harmonique !</p>
 </details>
@@ -2959,14 +2962,14 @@ $
 <img src="/etatcoherent.png" style="box-shadow:none;background:none;">
 </div>
 <h3 id="nombre-et-phase-variables-conjuguées">Nombre et phase, variables conjuguées</h3>
-<p>Écrivons $\alpha = |\alpha|e^{i\theta}$ et dérivons l&rsquo;état par rapport à sa phase. Le développement en $|n\rangle$ donne :</p>
+<p>Écrivons $\alpha = |\alpha| \mathrm e^{\mathrm i\theta}$ et dérivons l&rsquo;état par rapport à sa phase. Le développement en $|n\rangle$ donne :</p>
 <p style="text-align:center;">
 $\displaystyle
 -\mathrm i\frac{\partial}{\partial\theta}\,|\alpha\rangle = \hat n\,|\alpha\rangle
 $
 </p>
-<p>On obtient la même structure que $\hat p = -\mathrm i,\partial/\partial x$ $\to$ <b>le nombre et la phase sont conjugués</b>, avec l&rsquo;incertitude heuristique $\Delta n,\Delta\theta \gtrsim 1$.</p>
-<p>Définir rigoureusement un <i>opérateur</i> de phase est en revanche épineux (la tentative de Dirac, $\hat a = e^{i\hat\phi}\sqrt{\hat n}$, bute sur des incohérences $\to$ la phase n&rsquo;est pas une observable ordinaire). Mais la morale conjuguée tient, et elle est féconde :</p>
+<p>On obtient la même structure que $\hat p = -\mathrm i,\partial/\partial x$ $\to$ <b>le nombre et la phase sont conjugués</b>, avec l&rsquo;incertitude heuristique $\Delta n\,\Delta\theta \gtrsim 1$.</p>
+<p>Définir rigoureusement un <i>opérateur</i> de phase est en revanche épineux (la tentative de Dirac, $\hat a = \mathrm e^{\mathrm i\hat\phi}\sqrt{\hat n}$, bute sur des incohérences $\to$ la phase n&rsquo;est pas une observable ordinaire). Mais la morale conjuguée tient, et elle est féconde :</p>
 <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
 <li>un état à $n$ fixé a une phase totalement floue&nbsp;;</li>
 <li>un état de phase raide doit laisser flotter son nombre de particules.</li>
@@ -2974,7 +2977,7 @@ $
 <p>Deux incarnations :</p>
 <ul>
 <li><b>Le laser</b>&nbsp;: $n$ photons dans un mode de cavité, à nombre fixé, ont une phase totalement indéterminée&nbsp;; le même mode en état cohérent $|\alpha_{\mathbf k}\rangle$ a $\Delta n = |\alpha|$ mais une phase de plus en plus raide à mesure qu'on le remplit ($\Delta\cos\theta \sim 1/|\alpha|$)&nbsp;: c'est le bon modèle du champ dans un laser.</li>
-<li style="margin-top:0.8em;"><b>Le superfluide</b>&nbsp;: des bosons en interaction dans un état cohérent multimode vérifient $\hat\Psi(\mathbf x)|\psi\rangle = \psi(\mathbf x)|\psi\rangle$&nbsp;: le champ <i>quantique</i> a une valeur propre <i>classique</i>, la <b>fonction d'onde macroscopique</b>. Avec le mode $\mathbf p = 0$ macroscopiquement occupé, $\psi_0 = \sqrt{n_0}\\,e^{i\theta_0}$&nbsp;: fixer la phase $\theta_0$ partout, c'est <b>briser spontanément la symétrie de phase</b>&nbsp;: le chapitre sur la <a href="./#brisure-de-symétrie">brisure de symétrie</a> refait surface, avec $\psi(\mathbf x)$ pour paramètre d'ordre. Contre-épreuve parlante&nbsp;: dans un état à nombres d'occupation fixés, $\langle\hat\Psi(\mathbf x)\rangle = 0$, donc sans cohérence, pas de paramètre d'ordre.</li>
+<li style="margin-top:0.8em;"><b>Le superfluide</b>&nbsp;: des bosons en interaction dans un état cohérent multimode vérifient $\hat\Psi(\mathbf x)|\psi\rangle = \psi(\mathbf x)|\psi\rangle$&nbsp;: le champ <i>quantique</i> a une valeur propre <i>classique</i>, la <b>fonction d'onde macroscopique</b>. Avec le mode $\mathbf p = 0$ macroscopiquement occupé, $\psi_0 = \sqrt{n_0}\,\mathrm e^{\mathrm i\theta_0}$&nbsp;: fixer la phase $\theta_0$ partout, c'est <b>briser spontanément la symétrie de phase</b>&nbsp;: le chapitre sur la <a href="./#brisure-de-symétrie">brisure de symétrie</a> refait surface, avec $\psi(\mathbf x)$ pour paramètre d'ordre. Contre-épreuve parlante&nbsp;: dans un état à nombres d'occupation fixés, $\langle\hat\Psi(\mathbf x)\rangle = 0$, donc sans cohérence, pas de paramètre d'ordre.</li>
 </ul>
 <br>
 <h3 id="une-source-classique-fabrique-un-état-cohérent">Une source classique fabrique un état cohérent</h3>
@@ -2982,7 +2985,7 @@ $
 <p style="text-align:center;">
 $\displaystyle
 - \mathrm i\int\mathrm{d}t\;\hat H_I(t)\,|0\rangle
-= \mathrm i\int\mathrm{d}t\; f(t)\, \frac{\hat a\,e^{-\mathrm i\omega t} + \hat a^\dagger e^{\mathrm i\omega t}}{(2m\omega)^{1/2}}\,|0\rangle
+= \mathrm i\int\mathrm{d}t\; f(t)\, \frac{\hat a\,\mathrm e^{-\mathrm i\omega t} + \hat a^\dagger \mathrm e^{\mathrm i\omega t}}{(2m\omega)^{1/2}}\,|0\rangle
 = \frac{\mathrm i\tilde f(\omega)}{(2m\omega)^{1/2}}\,|1\rangle
 $
 </p>
@@ -2990,13 +2993,13 @@ $
 <p>À tous les ordres, les morceaux source-à-source déconnectés s&rsquo;exponentient (amas liés) et l&rsquo;émission de $n$ quanta se factorise :</p>
 <p style="text-align:center;">
 $\displaystyle
-\mathcal A_n = \frac{1}{\sqrt{n!}}\;\alpha^n\; e^{(\text{Dumbbell})}\\
-\displaystyle \alpha \equiv \frac{i\tilde f(\omega)}{(2m\omega)^{1/2}}
+\mathcal A_n = \frac{1}{\sqrt{n!}}\;\alpha^n\; \mathrm e^{(\text{Dumbbell})}\\
+\displaystyle \alpha \equiv \frac{\mathrm i\tilde f(\omega)}{(2m\omega)^{1/2}}
 $
 </p>
 <p>Le $\sqrt{n!}$ vient de la normalisation de $|n\rangle$.</p>
 <p>L&rsquo;état final est donc $\propto \sum_n \frac{\alpha^n}{\sqrt{n!}}\,|n\rangle$ : <b>c&rsquo;est l&rsquo;état cohérent $|\alpha\rangle$</b>.</p>
-<p>Une source classique branchée sur un mode quantique prépare exactement un état cohérent, d&rsquo;amplitude $\alpha = i\tilde f(\omega)/(2m\omega)^{1/2}$ (module <i>et</i> phase hérités de la source). C&rsquo;est le mécanisme du laser pompé, de l&rsquo;antenne, de tout champ « classique » rayonné : le monde classique émet du cohérent.</p>
+<p>Une source classique branchée sur un mode quantique prépare exactement un état cohérent, d&rsquo;amplitude $\alpha = \mathrm i\tilde f(\omega)/(2m\omega)^{1/2}$ (module <i>et</i> phase hérités de la source). C&rsquo;est le mécanisme du laser pompé, de l&rsquo;antenne, de tout champ « classique » rayonné : le monde classique émet du cohérent.</p>
 <br>
 <h3 id="bilan-4">Bilan</h3>
 <p style="text-align:center;">
@@ -3005,11 +3008,11 @@ Q, P\; \text{en quadrature}
 \;\longrightarrow\;
 \hat a|\alpha\rangle = \alpha|\alpha\rangle
 \;\longrightarrow\;
-|\alpha\rangle = e^{-\frac{|\alpha|^2}{2}}e^{\alpha\hat a^{\dagger}}|0\rangle
+|\alpha\rangle = \mathrm e^{-\frac{|\alpha|^2}{2}}\mathrm e^{\alpha\hat a^{\dagger}}|0\rangle
 \;\longrightarrow\;
 \text{Poisson},\;\, \Delta P\Delta Q = \tfrac12
 \;\longrightarrow\;
-\alpha(t) = \alpha_0 e^{-i\omega t}
+\alpha(t) = \alpha_0 \mathrm e^{-\mathrm i\omega t}
 \;\longrightarrow\;
 \hat n \leftrightarrow \theta
 \;\longrightarrow\;
@@ -3097,19 +3100,19 @@ $
 <p>La gaussienne de Grassmann inverse la place du déterminant :</p>
 <p style="text-align:center;">
 $\displaystyle
-\int\mathrm{d}\eta\,\mathrm{d}\bar\eta\;\, e^{\bar\eta\, a\, \eta} = a
+\int\mathrm{d}\eta\,\mathrm{d}\bar\eta\;\, \mathrm e^{\bar\eta\, a\, \eta} = a
 $
 </p>
 <p style="text-align:center;">
 $\displaystyle
-\int\mathrm{d}^N\!\eta\,\mathrm{d}^N\!\bar\eta\;\ e^{\bar\eta A \eta} = \det A
+\int\mathrm{d}^N\!\eta\,\mathrm{d}^N\!\bar\eta\;\ \mathrm e^{\bar\eta A \eta} = \det A
 $
 </p>
-<p>Là où la gaussienne bosonique complexe donne $\displaystyle\int\mathrm{d}z\,\mathrm{d}z^*\, e^{-z^* a z} = \pi/a$, les fermions donnent le déterminant <b>au numérateur</b>.</p>
+<p>Là où la gaussienne bosonique complexe donne $\displaystyle\int\mathrm{d}z\,\mathrm{d}z^*\, \mathrm e^{-z^* a z} = \pi/a$, les fermions donnent le déterminant <b>au numérateur</b>.</p>
 </div>
 <br>
 <div id="preuve">
-<p>Le cas $1\times 1$ tient en une ligne : $e^{\bar\eta a\eta} = 1 + \bar\eta a\eta$. La série de Taylor s&rsquo;arrête net, $(\bar\eta\eta)^2 = 0$. Et les règles de Berezin ne retiennent que le terme saturant les deux intégrales :</p>
+<p>Le cas $1\times 1$ tient en une ligne : $\mathrm e^{\bar\eta a\eta} = 1 + \bar\eta a\eta$. La série de Taylor s&rsquo;arrête net, $(\bar\eta\eta)^2 = 0$. Et les règles de Berezin ne retiennent que le terme saturant les deux intégrales :</p>
 <p style="text-align:center;">
 $\displaystyle
 \int\mathrm{d}\eta\,\mathrm{d}\bar\eta\; (1 + \bar\eta\, a\, \eta) = \int\mathrm{d}\eta\; a\,\eta = a
@@ -3123,27 +3126,27 @@ $
 <p>Avec $\hat c^\dagger$ le créateur d&rsquo;un fermion,</p>
 <p style="text-align:center;">
 $\displaystyle
-|\eta\rangle = e^{-\eta\hat c^{\dagger}}|0\rangle = |0\rangle - \eta\,|1\rangle
+|\eta\rangle = \mathrm e^{-\eta\hat c^{\dagger}}|0\rangle = |0\rangle - \eta\,|1\rangle
 $
 </p>
 <p>(la série s&rsquo;arrête d&rsquo;elle-même : $\eta^2 = 0$), en convenant que les nombres de Grassmann anticommutent aussi avec les opérateurs de fermions, $\{\eta, \hat c\} = 0$.</p>
 <p>On vérifie en une ligne que $\hat c\,|\eta\rangle = \eta\,|\eta\rangle$.</p>
 <p>Côté bra, on pose $\langle\bar\eta| = \langle 0| + \bar\eta\langle 1|$, où $\bar\eta$ n&rsquo;est <b>pas</b> le conjugué de $\eta$ mais une variable de Grassmann indépendante.</p>
-<p>Ces définitions impliquent le recouvrement (produit scalaire) $\langle\bar\zeta|\eta\rangle = e^{\bar\zeta\eta}$.</p>
+<p>Ces définitions impliquent le recouvrement (produit scalaire) $\langle\bar\zeta|\eta\rangle = \mathrm e^{\bar\zeta\eta}$.</p>
 <p>Enfin, pour que ces états cohérents soient utilisables, il leur faut une <b>relation de complétude</b> :</p>
 <p style="text-align:center;">
 $\displaystyle
-\int\mathrm{d}\eta\,\mathrm{d}\bar\eta\; e^{\bar\eta\eta}\,|\eta\rangle\langle\bar\eta| = \mathbb 1
+\int\mathrm{d}\eta\,\mathrm{d}\bar\eta\; \mathrm e^{\bar\eta\eta}\,|\eta\rangle\langle\bar\eta| = \mathbb 1
 $
 </p>
-<p>Attention, le ket porte $\eta$ et le bra porte $\bar\eta$, conformément aux définitions ci-dessus. Et le signe de l&rsquo;exposant est <b>affaire de convention</b> : il dépend de l&rsquo;ordre choisi pour $\mathrm d\eta,\mathrm d\bar\eta$ et de la règle d&rsquo;anticommutation entre nombres de Grassmann et états impairs. On trouve donc $e^{-\bar\eta\eta}$ dans une bonne partie de la littérature, sans que la physique en soit changée.</p>
+<p>Attention, le ket porte $\eta$ et le bra porte $\bar\eta$, conformément aux définitions ci-dessus. Et le signe de l&rsquo;exposant est <b>affaire de convention</b> : il dépend de l&rsquo;ordre choisi pour $\mathrm d\eta,\mathrm d\bar\eta$ et de la règle d&rsquo;anticommutation entre nombres de Grassmann et états impairs. On trouve donc $\mathrm e^{-\bar\eta\eta}$ dans une bonne partie de la littérature, sans que la physique en soit changée.</p>
 </div>
 <h3 id="la-gaussienne-avec-sources-et-le-propagateur">La gaussienne avec sources, et le propagateur</h3>
 <p>Reste l&rsquo;intégrale la plus importante de toutes : la gaussienne <b>avec sources</b>. Le carré se complète exactement comme chez les bosons (grâce aux règles de Berezin) :</p>
 <div id="theo">
 <p style="text-align:center;">
 $\displaystyle
-\int\mathrm{d}\psi\,\mathrm{d}\bar\psi\;\, e^{\bar\psi K\psi + \bar\eta\psi + \bar\psi\eta} = C\, e^{-\bar\eta K^{-1}\eta}
+\int\mathrm{d}\psi\,\mathrm{d}\bar\psi\;\, \mathrm e^{\bar\psi K\psi + \bar\eta\psi + \bar\psi\eta} = C\, \mathrm e^{-\bar\eta K^{-1}\eta}
 $
 </p>
 <p>Le $C$ partira dans la normalisation.</p>
@@ -3162,11 +3165,11 @@ $
 <p style="text-align:center;">
 $\displaystyle
 \mathcal Z[\bar\eta, \eta]
-= \frac{\displaystyle\int\mathcal D\psi\,\mathcal D\bar\psi\;\, e^{\,\mathrm i\int\mathrm{d}^4x\,[\mathcal L(\bar\psi,\psi) + \bar\eta\psi + \bar\psi\eta]}}{\displaystyle\int\mathcal D\psi\,\mathcal D\bar\psi\;\, e^{\,\mathrm i\int\mathrm{d}^4x\,\mathcal L(\bar\psi,\psi)}}
-= e^{-i\int \bar\eta(x)\,\hat K^{-1}(x,y)\,\eta(y)}
+= \frac{\displaystyle\int\mathcal D\psi\,\mathcal D\bar\psi\;\, \mathrm e^{\,\mathrm i\int\mathrm{d}^4x\,[\mathcal L(\bar\psi,\psi) + \bar\eta\psi + \bar\psi\eta]}}{\displaystyle\int\mathcal D\psi\,\mathcal D\bar\psi\;\, \mathrm e^{\,\mathrm i\int\mathrm{d}^4x\,\mathcal L(\bar\psi,\psi)}}
+= \mathrm e^{-i\int \bar\eta(x)\,\hat K^{-1}(x,y)\,\eta(y)}
 $
 </p>
-<p>Le propagateur se lit directement, c&rsquo;est $\mathrm i\hat K^{-1}$. Et la quantification est terminée. C&rsquo;est le jumeau exact du $\mathcal Z_0[J] = e^{-\frac12\int J\Delta J}$ bosonique, avec deux sources de Grassmann $\bar\eta, \eta$ au lieu d&rsquo;une source réelle.</p>
+<p>Le propagateur se lit directement, c&rsquo;est $\mathrm i\hat K^{-1}$. Et la quantification est terminée. C&rsquo;est le jumeau exact du $\mathcal Z_0[J] = \mathrm e^{-\frac12\int J\Delta J}$ bosonique, avec deux sources de Grassmann $\bar\eta, \eta$ au lieu d&rsquo;une source réelle.</p>
 </div>
 <p>À température finie s&rsquo;imposent les conditions <b>antipériodiques</b> $\psi(0) = -\psi(\beta)$ annoncées deux chapitres plus tôt (et les fréquences de Matsubara impaires $\omega_n = (2n+1)\pi/\beta$).</p>
 <p>Le $\det A$ au numérateur (contre $1/\det$ pour les bosons) est l&rsquo;origine profonde du <b>signe $(-1)$ de chaque boucle de fermions</b>, celui que le théorème de Wick fermionique annonçait par ses signatures de permutation. Deux langages, un seul fait : les fermions comptent avec des signes.</p>
@@ -3180,11 +3183,11 @@ f = a + b\eta
 \;\overset{\text{Berezin}}{\longrightarrow}\;
 {\textstyle\int}\mathrm{d}\eta\;\eta = 1
 \;\longrightarrow\;
-e^{\bar\eta A\eta} \to \det A
+\mathrm e^{\bar\eta A\eta} \to \det A
 \;\longrightarrow\;
 |\eta\rangle = |0\rangle - \eta|1\rangle
 \;\overset{\text{carré complété}}{\longrightarrow}\;
-\mathcal Z[\bar\eta,\eta] = e^{-i\int\bar\eta\hat K^{-1}\eta}
+\mathcal Z[\bar\eta,\eta] = \mathrm e^{-\mathrm i\int\bar\eta\hat K^{-1}\eta}
 $
 </p>
 <br>
@@ -4480,6 +4483,11 @@ $
             
         
                     
+                        
+            
+            
+        
+                    
             
         
                     
@@ -4560,16 +4568,16 @@ $
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1786753335"></script>
-    <script src="/js/perfect-scrollbar.min.js?1786753335"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1786753335"></script>
-    <script src="/js/jquery.sticky.js?1786753335"></script>
-    <script src="/js/featherlight.min.js?1786753335"></script>
-    <script src="/js/highlight.pack.js?1786753335"></script>
+    <script src="/js/clipboard.min.js?1787254053"></script>
+    <script src="/js/perfect-scrollbar.min.js?1787254053"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1787254053"></script>
+    <script src="/js/jquery.sticky.js?1787254053"></script>
+    <script src="/js/featherlight.min.js?1787254053"></script>
+    <script src="/js/highlight.pack.js?1787254053"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1786753335"></script>
-    <script src="/js/learn.js?1786753335"></script>
-    <script src="/js/hugo-learn.js?1786753335"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1787254053"></script>
+    <script src="/js/learn.js?1787254053"></script>
+    <script src="/js/hugo-learn.js?1787254053"></script>
     
     
 
