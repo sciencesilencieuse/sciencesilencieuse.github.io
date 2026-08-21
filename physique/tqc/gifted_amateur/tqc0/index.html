@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1787321232" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1787321232" rel="stylesheet">
-    <link href="/css/hybrid.css?1787321232" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1787321232" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1787321232" rel="stylesheet">
-    <link href="/css/auto-complete.css?1787321232" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1787321232" rel="stylesheet">
-    <link href="/css/theme.css?1787321232" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1787321232" rel="stylesheet">
+    <link href="/css/nucleus.css?1787342586" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1787342586" rel="stylesheet">
+    <link href="/css/hybrid.css?1787342586" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1787342586" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1787342586" rel="stylesheet">
+    <link href="/css/auto-complete.css?1787342586" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1787342586" rel="stylesheet">
+    <link href="/css/theme.css?1787342586" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1787342586" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1787321232" rel="stylesheet">
+    <link href="/css/theme-blue.css?1787342586" rel="stylesheet">
     
-    <link href="/css/foo.css?1787321232" rel="stylesheet"><link href="/css/bar.css?1787321232" rel="stylesheet">
+    <link href="/css/foo.css?1787342586" rel="stylesheet"><link href="/css/bar.css?1787342586" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1787321232"></script>
+    <script src="/js/jquery-3.3.1.min.js?1787342586"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1787321232"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1787321232"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1787342586"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1787342586"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1787321232"></script>
+<script type="text/javascript" src="/js/search.js?1787342586"></script>
 
     
   </div>
@@ -2103,7 +2103,9 @@ details[open] > summary:first-of-type {
 <li><b>La justification.</b> En mécanique quantique, chaque chemin porte une phase $\mathrm{e}^{\mathrm{i}S/\hbar}$, et seuls les chemins d'action stationnaire interfèrent constructivement.</li>
 </ul>
 <h2 id="lagrangien-et-principe-de-moindre-action">Lagrangien et principe de moindre action</h2>
-<p><img src="/tqctraj.png?width=500px" alt=""></p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:400px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/tqctraj.png" style="box-shadow:none;background:none;">
+</div>
 <p>La détermination de la trajectoire $x(t)$ d&rsquo;une particule entre A et B par intégration de la 2<sup>e</sup> loi de Newton, $F=m\ddot{x}$, ne cadre pas avec les enseignements de la mécanique quantique. Car si on peut bien mesurer la particule en A à $t=0$ et en B à $t=\tau$, un voile impénétrable nous empêche de savoir précisément ce qui s&rsquo;est passé entre les deux. En effet, $x(t+\mathrm{d}t) \approx x(t) + v(t)\,\mathrm{d}t$, donc la détermination précise de $x(t+\mathrm{d}t)$ dépend de celle de $x(t)$ et $v(t)$. Or la relation d&rsquo;incertitude de Heisenberg nous interdit justement de connaître précisément à la fois la position et la vitesse à un instant quelconque. Une équation différentielle ne semble donc pas un point de départ prometteur pour calculer $x(t)$&hellip;</p>
 <p>Concentrons-nous sur les variations de l&rsquo;énergie cinétique $T$ et l&rsquo;énergie potentielle $V$ le long de la trajectoire. L&rsquo;énergie totale $E=T+V$ doit être une constante du mouvement de la particule mais l&rsquo;équilibre entre les deux types d&rsquo;énergie peut varier.<br>
 Notons $\displaystyle\bar{T}[x]=\frac{1}{\tau}\int_0^\tau\frac{1}{2}m\,\dot{x}(s)^2\,\mathrm{d}s$ l&rsquo;énergie cinétique moyenne sur la trajectoire et $\displaystyle\bar{V}[x]=\frac{1}{\tau}\int_0^\tau V\big(x(s)\big)\,\mathrm{d}s$, l&rsquo;énergie potentielle moyenne. On a bien sûr $E=\bar{E}=\bar{T}+\bar{V}$.</p>
@@ -2120,6 +2122,7 @@ fonction $\xrightarrow{\text{fonctionnelle}}$ nombre
 <p>Toutes deux se nourrissent de la <strong>même</strong> fonction, la trajectoire $x$ ; mais pas de la même manière : $\bar{V}$ ne regarde que la <em>valeur</em> de $x$ à chaque instant, tandis que $\bar{T}$ ne regarde que sa <em>pente</em>. Cette distinction, anodine pour l&rsquo;instant, va organiser tout ce qui suit.</p>
 <div class="notice notice--piege" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Piège</span></div><div class="notice__corps"><p>Les crochets ne sont pas décoratifs : $\bar{V}[x]$ dépend de la trajectoire <strong>entière</strong>, alors que $V(x)$ est une fonction ordinaire d&rsquo;un nombre. Dans toute cette page, crochets $=$ fonctionnelle, parenthèses $=$ fonction. Attention aussi à ne pas confondre le $F$ générique d&rsquo;une fonctionnelle $F[f]$ avec le $F$ de la force : le second n&rsquo;apparaît plus au-delà de cette introduction.</p>
 </div></div>
+<br>
 <h3 id="dérivée-fonctionnelle">Dérivée fonctionnelle</h3>
 <p>La dérivée fonctionnelle de $F[f]$ nous dit comment le nombre produit par la fonctionnelle varie lorsqu&rsquo;on change légèrement la fonction $f$ qu&rsquo;elle mâchouille. On déforme $f$ en lui ajoutant un pic infiniment fin placé en $x$, et on regarde la réponse de $F$ au premier ordre en $\epsilon$.<br></p>
 <div id="def">
@@ -2131,7 +2134,7 @@ avec $\displaystyle \delta_{x}(y)=\delta(y-x)$
 </p>
 </div>
 <br>
-<p>Cette définition ne changera plus. Ce qui change d&rsquo;un cas à l&rsquo;autre, c&rsquo;est uniquement <strong>la façon dont l&rsquo;intégrande dépend de $f$</strong>. Les fonctionnelles qui nous occupent ont un intégrande de la forme $\mathcal{L}\big(f(y),f&rsquo;(y)\big)$ ; comme la dérivée fonctionnelle est linéaire, il suffit de savoir traiter deux briques élémentaires : celle qui ne voit que la valeur de $f$, et celle qui ne voit que sa pente. Dans les deux cas, $g$ est une fonction ordinaire d&rsquo;une variable réelle et $g&rsquo;$ désigne sa dérivée par rapport à son argument.</p>
+<p>Cette définition ne changera plus. Ce qui change d&rsquo;un cas à l&rsquo;autre, c&rsquo;est uniquement <strong>la façon dont l&rsquo;intégrande dépend de $f$</strong>. Les fonctionnelles qui nous occupent ont un intégrande de la forme $g\big(f(y),f&rsquo;(y)\big)$ ; comme la dérivée fonctionnelle est linéaire, il suffit de savoir traiter deux briques élémentaires : celle qui ne voit que la valeur de $f$, et celle qui ne voit que sa pente. Dans les deux cas, $g$ est une fonction ordinaire d&rsquo;une variable réelle et $g&rsquo;$ désigne sa dérivée par rapport à son argument.</p>
 <h4 id="première-brique-lintégrande-dépend-de-la-valeur-de-f">Première brique : l&rsquo;intégrande dépend de la valeur de $f$</h4>
 <p style="text-align:center;">
 $\displaystyle
@@ -2209,6 +2212,57 @@ $
 </p>
 </div>
 <p>Le résultat n&rsquo;est plus local : déplacer $f$ en un point modifie sa pente <em>de part et d&rsquo;autre</em> de ce point, d&rsquo;où l&rsquo;apparition d&rsquo;une dérivée supplémentaire, et du signe moins.</p>
+<div class="notice notice--info" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">D&#39;où viennent vraiment le signe moins et la dérivée ? Une lecture géométrique</span></div><div class="notice__corps"><p>L&rsquo;intégration par parties donne le résultat mais escamote sa raison d&rsquo;être. Discrétisons la fonction pour voir ce qui se passe réellement.</p>
+<p>Découpons l&rsquo;intervalle en nœuds régulièrement espacés, $y_n=a+nh$, et notons $f_n=f(y_n)$. Une pente ne vit pas sur un nœud mais sur un <strong>segment</strong> : notons $f&rsquo;_{n+1/2}$ celle du segment joignant les nœuds $n$ et $n+1$.</p>
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle
+f'_{n+1/2}=\frac{f_{n+1}-f_n}{h}$
+</p>
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle
+F\simeq\sum_n h\;g\big(f_n,\,f'_{n+1/2}\big)
+$
+</p>
+<p>Pinçons maintenant un seul nœud intérieur : $f_n\to f_n+\delta f$, tous les autres inchangés. Le nœud $n$ appartient à trois choses seulement : lui-même, le segment à sa gauche, le segment à sa droite. Trois contributions, donc.</p>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:400px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/lagrhist.png" style="box-shadow:none;background:none;">
+</div>
+<p><b>Contribution 1 : la valeur.</b> Le terme d&rsquo;indice $n$ voit son premier argument changer de $\delta f$ :</p>
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle
+\delta F_1=h\,\frac{\partial g}{\partial f}\bigg|_{n}\,\delta f
+$
+</p>
+<p><b>Contribution 2 : les deux pentes.</b> C&rsquo;est ici que tout se joue. Le segment de gauche voit son extrémité droite remonter : il se redresse, sa pente augmente de $\delta f/h$. Le segment de droite voit son extrémité gauche remonter : il se couche, sa pente diminue de $\delta f/h$. Les deux variations sont <b>opposées</b> :</p>
+<p style="text-align:center">
+$\displaystyle
+\Delta f'_{n-1/2}=+\frac{\delta f}{h}$
+<p style="text-align:center">
+$\displaystyle
+\Delta f'_{n+1/2}=-\frac{\delta f}{h}
+$
+</p>
+<p>D&rsquo;où, en sommant les deux termes concernés (celui d&rsquo;indice $n-1$, qui porte la pente de gauche, et celui d&rsquo;indice $n$, qui porte celle de droite) :</p>
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle
+\begin{aligned}
+\delta F_2&=h\,\frac{\partial g}{\partial f'}\bigg|_{n-1/2}\!\!\cdot\frac{\delta f}{h}\;+\;h\,\frac{\partial g}{\partial f'}\bigg|_{n+1/2}\!\!\cdot\left(-\frac{\delta f}{h}\right)\\[2mm]
+&=-\left(\frac{\partial g}{\partial f'}\bigg|_{n+1/2}-\frac{\partial g}{\partial f'}\bigg|_{n-1/2}\right)\delta f\\[2mm]
+&\simeq -h\,\frac{\mathrm{d}}{\mathrm{d}y}\left(\frac{\partial g}{\partial f'}\right)\bigg|_{y_n}\delta f
+\end{aligned}
+$
+</p>
+<p>Tout est là. Le <b>signe moins</b> vient de ce que les deux pentes bougent en sens contraire ; la <b>dérivée</b> vient de ce qu&rsquo;il reste une différence entre deux valeurs voisines de $\partial g/\partial f&rsquo;$, séparées de $h$. Aucune intégration par parties n&rsquo;a été nécessaire : le résultat est local, et l&rsquo;argument l&rsquo;est aussi.</p>
+<p><b>Retour au continu.</b> Le pic discret a une hauteur $\delta f$ sur une largeur $h$ : son aire vaut $h\,\delta f$, c&rsquo;est-à-dire exactement le $\epsilon$ de la définition, puisque $\int\epsilon\,\delta(y-x)\,\mathrm{d}y=\epsilon$. En divisant, les deux facteurs disparaissent ensemble :</p>
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle
+\frac{\delta F[f]}{\delta f(x)}=\lim_{h\to 0}\frac{\delta F_1+\delta F_2}{h\,\delta f}=\frac{\partial g}{\partial f}\bigg|_{x}-\frac{\mathrm{d}}{\mathrm{d}x}\left(\frac{\partial g}{\partial f'}\bigg|_{x}\right)
+$
+</p>
+<p>On retrouve les deux briques d&rsquo;un coup : le premier terme est la première brique, le second est la seconde. Et l&rsquo;on comprend au passage pourquoi la normalisation du $\delta$ de Dirac est la bonne comptabilité — c&rsquo;est elle qui rend la réponse indépendante de la finesse du pincement.</p>
+<p><b>Et les bords ?</b> Pinçons cette fois le <b>dernier</b> nœud. Il n&rsquo;a pas de segment à sa droite : la compensation ne peut pas avoir lieu, et il subsiste un terme isolé $\partial g/\partial f&rsquo;$ évalué au bord. C&rsquo;est, vu du côté discret, l&rsquo;exact terme entre crochets de l&rsquo;intégration par parties.</p>
+<br>
+<i>D'après la dérivation géométrique de Preetum Nakkiran, <a href="https://preetum.nakkiran.org/lagrange.html">Geometric Derivation of Euler-Lagrange Equation</a>.</i></div></div>
 <br>
 <h3 id="application-à-bar-t-et-bar-v">Application à $\bar T$ et $\bar V$</h3>
 <p>On peut maintenant vérifier comment $\bar{T}$ et $\bar{V}$ varient lorsque la trajectoire $x(t)$ est un peu modifiée. Chacune relève de l&rsquo;une des deux briques.</p>
@@ -2412,7 +2466,7 @@ $
 <li>Le lagrangien $L = T - V$ n'est pas l'énergie&nbsp;: ne pas le confondre avec $H = T + V$, qui entrera en scène à la partie&nbsp;2 via la transformation de Legendre.</li>
 <li>Une dérivée fonctionnelle dérive par rapport à une <b>fonction entière</b>, pas par rapport à un nombre&nbsp;: le résultat dépend du point $t$ où l'on pince la trajectoire.</li>
 <li>Le développement de Taylor de $g$ en $\epsilon\,\delta'(y-x)$ est <b>formel</b>&nbsp;: on développe une fonction ordinaire autour d'une distribution, ce qui n'a de sens qu'une fois l'intégration effectuée. La justification propre consiste à déformer $f$ par une fonction test régulière $h$, à écrire $\displaystyle \delta F=\int \frac{\delta F}{\delta f(y)}\,h(y)\,\mathrm{d}y$, puis à resserrer $h$ vers un pic. Le $\delta$ de Dirac n'est que la limite commode de ce procédé — commodité qu'on paiera plus tard, quand les produits de distributions au même point deviendront les divergences à renormaliser.</li>
-<li>Les termes de bord des intégrations par parties ne disparaissent pas par magie, et ne disparaissent pas toujours&nbsp;: ici ils s'annulent parce qu'on ne pince la trajectoire qu'à l'<b>intérieur</b> de l'intervalle, les extrémités A et B étant fixées. Si au contraire une extrémité est laissée libre, le terme de bord survit et impose une <b>condition aux limites naturelle</b>, $\partial\mathcal{L}/\partial f'=0$ à cette borne&nbsp;: la condition n'est plus choisie, elle est <i>produite</i> par le principe variationnel lui-même.</li>
+<li>Les termes de bord des intégrations par parties ne disparaissent pas par magie, et ne disparaissent pas toujours&nbsp;: ici ils s'annulent parce qu'on ne pince la trajectoire qu'à l'<b>intérieur</b> de l'intervalle, les extrémités A et B étant fixées. Si au contraire une extrémité est laissée libre, le terme de bord survit et impose une <b>condition aux limites naturelle</b>, $\partial g/\partial f'=0$ à cette borne&nbsp;: la condition n'est plus choisie, elle est <i>produite</i> par le principe variationnel lui-même.</li>
 <li>Le principe de moindre action n'est pas un axiome tombé du ciel&nbsp;: il hérite sa légitimité des interférences quantiques entre chemins, et c'est cette lecture qui reviendra avec les intégrales de chemin.</li>
 </ul>
 <div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>Et maintenant ? Le langage est en place : lagrangien, action, stationnarité. La partie suivante entre dans le vif en posant la brique élémentaire de toute la théorie quantique des champs : l&rsquo;oscillateur harmonique, ses opérateurs d&rsquo;échelle, et la découverte que créer un quantum d&rsquo;énergie, c&rsquo;est déjà créer une particule.</p>
@@ -3758,16 +3812,16 @@ $
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1787321232"></script>
-    <script src="/js/perfect-scrollbar.min.js?1787321232"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1787321232"></script>
-    <script src="/js/jquery.sticky.js?1787321232"></script>
-    <script src="/js/featherlight.min.js?1787321232"></script>
-    <script src="/js/highlight.pack.js?1787321232"></script>
+    <script src="/js/clipboard.min.js?1787342586"></script>
+    <script src="/js/perfect-scrollbar.min.js?1787342586"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1787342586"></script>
+    <script src="/js/jquery.sticky.js?1787342586"></script>
+    <script src="/js/featherlight.min.js?1787342586"></script>
+    <script src="/js/highlight.pack.js?1787342586"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1787321232"></script>
-    <script src="/js/learn.js?1787321232"></script>
-    <script src="/js/hugo-learn.js?1787321232"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1787342586"></script>
+    <script src="/js/learn.js?1787342586"></script>
+    <script src="/js/hugo-learn.js?1787342586"></script>
     
     
 
