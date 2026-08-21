@@ -43,6 +43,7 @@
 .notice--piege {
   --notice-accent: #99195E;
   --notice-fond: #FAC5DF;
+  --notice-glyphe: "\f1e2";              /* fa-bomb */
 }
 
 /* --- barre de titre : les 30 px du border-top d'origine ----------------- */
