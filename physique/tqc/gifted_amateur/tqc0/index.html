@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1787254053" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1787254053" rel="stylesheet">
-    <link href="/css/hybrid.css?1787254053" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1787254053" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1787254053" rel="stylesheet">
-    <link href="/css/auto-complete.css?1787254053" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1787254053" rel="stylesheet">
-    <link href="/css/theme.css?1787254053" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1787254053" rel="stylesheet">
+    <link href="/css/nucleus.css?1787319879" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1787319879" rel="stylesheet">
+    <link href="/css/hybrid.css?1787319879" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1787319879" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1787319879" rel="stylesheet">
+    <link href="/css/auto-complete.css?1787319879" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1787319879" rel="stylesheet">
+    <link href="/css/theme.css?1787319879" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1787319879" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1787254053" rel="stylesheet">
+    <link href="/css/theme-blue.css?1787319879" rel="stylesheet">
     
-    <link href="/css/foo.css?1787254053" rel="stylesheet"><link href="/css/bar.css?1787254053" rel="stylesheet">
+    <link href="/css/foo.css?1787319879" rel="stylesheet"><link href="/css/bar.css?1787319879" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1787254053"></script>
+    <script src="/js/jquery-3.3.1.min.js?1787319879"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1787254053"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1787254053"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1787319879"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1787319879"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1787254053"></script>
+<script type="text/javascript" src="/js/search.js?1787319879"></script>
 
     
   </div>
@@ -1989,6 +1989,10 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   <ul>
     <li><a href="#lagrangien-et-principe-de-moindre-action">Lagrangien et principe de moindre action</a>
       <ul>
+        <li><a href="#dérivée-fonctionnelle">Dérivée fonctionnelle</a></li>
+        <li><a href="#application-à-bar-t-et-bar-v">Application à $\bar T$ et $\bar V$</a></li>
+        <li><a href="#lagrangien-action-et-équations-deuler-lagrange">Lagrangien, action et équations d&rsquo;Euler-Lagrange</a></li>
+        <li><a href="#pourquoi-ça-marche-les-chemins-quantiques">Pourquoi ça marche : les chemins quantiques</a></li>
         <li><a href="#bilan">Bilan</a></li>
         <li><a href="#pièges">Pièges</a></li>
       </ul>
@@ -2085,12 +2089,14 @@ details[open] > summary:first-of-type {
 <div style="overflow-x: auto;text-align:center;">
 <table>
   <tr>
-    <th style="text-align:center;"><a href="../">Retour sommaire</a></th></td>
+    <th style="text-align:center;"><a href="../">Retour sommaire</a></th>
     </tr>
 </table>
 </div>
 <br>
-<p>Pourquoi tout ce cours va-t-il parler le langage des lagrangiens plutôt que celui des forces ? Cette partie liminaire répond avant de commencer. La deuxième loi de Newton exige de suivre la particule instant par instant, précisément ce que la mécanique quantique interdit ; le principe de moindre action, lui, ne compare que des trajectoires globales entre deux évènements mesurés. Trois étapes :</p>
+<p>En théorie quantique des champs (TQC), le langage est celui des lagrangiens plutôt que celui des forces. Pourquoi ? Cette partie liminaire tente de répondre avant de commencer.</p>
+<p>La deuxième loi de Newton exige de suivre la particule instant par instant, précisément ce que la mécanique quantique interdit ; le principe de moindre action, lui, ne compare que des trajectoires globales entre deux évènements mesurés.</p>
+<p>Trois étapes :</p>
 <ul>
 <li><b>L'outil.</b> Les fonctionnelles et leur dérivée&nbsp;: comment un nombre construit sur toute une trajectoire varie quand on déforme la trajectoire.</li>
 <li><b>La découverte.</b> Autour de la trajectoire classique, les énergies cinétique et potentielle moyennes varient de concert&nbsp;: leur différence est stationnaire. Cette différence reçoit un nom, le <b>lagrangien</b>, son intégrale s'appelle l'<b>action</b>, et la condition de stationnarité accouche des équations d'Euler-Lagrange, y compris en version champs.</li>
@@ -2098,83 +2104,179 @@ details[open] > summary:first-of-type {
 </ul>
 <h2 id="lagrangien-et-principe-de-moindre-action">Lagrangien et principe de moindre action</h2>
 <p><img src="/tqctraj.png?width=500px" alt=""></p>
-<p>La détermination de la trajectoire $x(t)$ d&rsquo;une particule entre A et B par intégration de la 2<sup>e</sup> loi de Newton, $F=m\ddot{x}$, ne cadre pas avec les enseignements de la mécanique quantique. Car si on peut bien mesurer la particule en A à $t=0$ et en B à $t=\tau$, un voile impénétrable nous empêche de savoir précisément ce qui s&rsquo;est passé entre les deux. Une équation différentielle ne semble donc pas un point de départ prometteur pour calculer $x(t)$&hellip;</p>
+<p>La détermination de la trajectoire $x(t)$ d&rsquo;une particule entre A et B par intégration de la 2<sup>e</sup> loi de Newton, $F=m\ddot{x}$, ne cadre pas avec les enseignements de la mécanique quantique. Car si on peut bien mesurer la particule en A à $t=0$ et en B à $t=\tau$, un voile impénétrable nous empêche de savoir précisément ce qui s&rsquo;est passé entre les deux. En effet, $x(t+\mathrm{d}t) \approx x(t) + v(t)\,\mathrm{d}t$, donc la détermination précise de $x(t+\mathrm{d}t)$ dépend de celle de $x(t)$ et $v(t)$. Or la relation d&rsquo;incertitude de Heisenberg nous interdit justement de connaître précisément à la fois la position et la vitesse à un instant quelconque. Une équation différentielle ne semble donc pas un point de départ prometteur pour calculer $x(t)$&hellip;</p>
 <p>Concentrons-nous sur les variations de l&rsquo;énergie cinétique $T$ et l&rsquo;énergie potentielle $V$ le long de la trajectoire. L&rsquo;énergie totale $E=T+V$ doit être une constante du mouvement de la particule mais l&rsquo;équilibre entre les deux types d&rsquo;énergie peut varier.<br>
-Notons $\displaystyle\bar{T}=\frac{1}{\tau}\int_0^\tau\frac{1}{2}m[\dot{x}(t)]^2\,\mathrm{d}t$ l&rsquo;énergie cinétique moyenne sur la trajectoire et $\displaystyle\bar{V}=\frac{1}{\tau}\int_0^\tau V[x(t)]\,\mathrm{d}t$, l&rsquo;énergie potentielle moyenne. On a bien sûr $E=\bar{E}=\bar{T}+\bar{V}$.<br>
-Mathématiquement, $\bar{T}$ et $\bar{V}$ sont des fonctionnelles. Là où des fonctions se nourrissent de nombres pour produire des nombres, les fonctionnelles produisent des nombres à partir de fonctions ($\bar{T}$ produit un nombre à partir de $\dot{x}(t)$ et $\bar{V}$ à partir de $x(t)$).</p>
-<div id="preuve">
-<p>La dérivée fonctionnelle de $F[f(x)]$ nous dit comment le nombre produit par la fonctionnelle varie lorsqu&rsquo;on change légèrement la fonction $f(x)$ qu&rsquo;elle mâchouille :<br></p>
+Notons $\displaystyle\bar{T}[x]=\frac{1}{\tau}\int_0^\tau\frac{1}{2}m\,\dot{x}(s)^2\,\mathrm{d}s$ l&rsquo;énergie cinétique moyenne sur la trajectoire et $\displaystyle\bar{V}[x]=\frac{1}{\tau}\int_0^\tau V\big(x(s)\big)\,\mathrm{d}s$, l&rsquo;énergie potentielle moyenne. On a bien sûr $E=\bar{E}=\bar{T}+\bar{V}$.</p>
+<p>Mathématiquement, $\bar{T}$ et $\bar{V}$ sont des <strong>fonctionnelles</strong>. Là où des fonctions se nourrissent de nombres pour produire des nombres, les fonctionnelles produisent des nombres à partir de fonctions.</p>
+<div id="def">
+<p style="text-align:center;">
+nombre $\xrightarrow{\text{fonction}}$ nombre
+</p>
+<p style="text-align:center;">
+fonction $\xrightarrow{\text{fonctionnelle}}$ nombre
+</p>
+</div>
+<br>
+<p>Toutes deux se nourrissent de la <strong>même</strong> fonction, la trajectoire $x$ ; mais pas de la même manière : $\bar{V}$ ne regarde que la <em>valeur</em> de $x$ à chaque instant, tandis que $\bar{T}$ ne regarde que sa <em>pente</em>. Cette distinction, anodine pour l&rsquo;instant, va organiser tout ce qui suit.</p>
+<div class="notice notice--piege" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Piège</span></div><div class="notice__corps"><p>Les crochets ne sont pas décoratifs : $\bar{V}[x]$ dépend de la trajectoire <strong>entière</strong>, alors que $V(x)$ est une fonction ordinaire d&rsquo;un nombre. Dans toute cette page, crochets $=$ fonctionnelle, parenthèses $=$ fonction. Attention aussi à ne pas confondre le $F$ générique d&rsquo;une fonctionnelle $F[f]$ avec le $F$ de la force : le second n&rsquo;apparaît plus au-delà de cette introduction.</p>
+</div></div>
+<h3 id="dérivée-fonctionnelle">Dérivée fonctionnelle</h3>
+<p>La dérivée fonctionnelle de $F[f]$ nous dit comment le nombre produit par la fonctionnelle varie lorsqu&rsquo;on change légèrement la fonction $f$ qu&rsquo;elle mâchouille. On déforme $f$ en lui ajoutant un pic infiniment fin placé en $x$, et on regarde la réponse de $F$ au premier ordre en $\epsilon$.<br></p>
+<div id="def">
 <p style="text-align:center;overflow-x:auto;">
 $\displaystyle
-\frac{\delta F}{\delta f(x)}=\lim_{\epsilon\to 0}\frac{F[f(x')+\epsilon\delta(x-x')]-F[f(x')]}{\epsilon}
+\frac{\delta F[f]}{\delta f(x)}
+=\lim_{\epsilon \to 0}\frac{1}{\epsilon}\Big(F\big[f+\epsilon\,\delta_{x}\big]-F[f]\Big)$<br>
+avec $\displaystyle \delta_{x}(y)=\delta(y-x)$
+</p>
+</div>
+<br>
+<p>Cette définition ne changera plus. Ce qui change d&rsquo;un cas à l&rsquo;autre, c&rsquo;est uniquement <strong>la façon dont l&rsquo;intégrande dépend de $f$</strong>. Les fonctionnelles qui nous occupent ont un intégrande de la forme $\mathcal{L}\big(f(y),f&rsquo;(y)\big)$ ; comme la dérivée fonctionnelle est linéaire, il suffit de savoir traiter deux briques élémentaires : celle qui ne voit que la valeur de $f$, et celle qui ne voit que sa pente. Dans les deux cas, $g$ est une fonction ordinaire d&rsquo;une variable réelle et $g&rsquo;$ désigne sa dérivée par rapport à son argument.</p>
+<h4 id="première-brique-lintégrande-dépend-de-la-valeur-de-f">Première brique : l&rsquo;intégrande dépend de la valeur de $f$</h4>
+<p style="text-align:center;">
+$\displaystyle
+F[f]=\int_a^b g\big(f(y)\big)\,\mathrm{d}y
 $
 </p>
-<details style="margin-bottom:0.5em;">
-<summary>Dérivées fonctionnelles utilisées dans la suite&nbsp;:</summary>
+<p>On a alors :</p>
+<div id="def">
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle
+\frac{\delta F[f]}{\delta f(x)} = g'\big(f(x)\big)
+$
+</p>
+</div>
 <br>
-<ul>
-<li>$F[f]=\int_a^b g[f(x)]\mathrm{d}x$ avec $g'=\mathrm{d}g/\mathrm{d}f$
+<div id="preuve">
+Le développement de $g$ au premier ordre donne $g\big(f(y)+\epsilon\,\delta(y-x)\big)\simeq g\big(f(y)\big)+\epsilon\,\delta(y-x)\,g'\big(f(y)\big)$, d'où&nbsp;:
 <p style="text-align:center;overflow-x:auto;">
 $\displaystyle
 \begin{aligned}
-\frac{\delta F[f]}{\delta f(x_0)}&=\lim_{\epsilon \to 0}\frac{1}{\epsilon}\left[\int g[f(x)+\epsilon \delta(x-x_0)]\mathrm{d}x-\int g[f(x)]\mathrm{d}x\right]\\
-&=\lim_{\epsilon \to 0}\frac{1}{\epsilon}\left[\int (g[f(x)]+\epsilon\delta(x-x_0)g'[f(x)])\mathrm{d}x - \int g[f(x)]\mathrm{d}x\right]\\
-&=\int \delta(x-x_0) g'[f(x)] \mathrm{d}x\\
-&= g'[f(x_0)]
+\frac{\delta F[f]}{\delta f(x)}
+&=\lim_{\epsilon \to 0}\frac{1}{\epsilon}\left[\int g\big(f(y)+\epsilon \delta(y-x)\big)\mathrm{d}y-\int g\big(f(y)\big)\mathrm{d}y\right]\\
+&=\lim_{\epsilon \to 0}\frac{1}{\epsilon}\left[\int \Big(g\big(f(y)\big)+\epsilon\,\delta(y-x)\,g'\big(f(y)\big)\Big)\mathrm{d}y - \int g\big(f(y)\big)\mathrm{d}y\right]\\
+&=\int \delta(y-x)\, g'\big(f(y)\big)\, \mathrm{d}y\\
+&= g'\big(f(x)\big)
 \end{aligned}
 $
 </p>
-<p>On détermine ainsi que $\displaystyle \frac{\delta \bar{V}[x]}{\delta x(t)}=\frac{1}{\tau}V&rsquo;[x(t)]$.</p>
-</li>
-<li>
-<p>$F[f]=\int g(f&rsquo;)\mathrm{d}y$ avec $f&rsquo;=\mathrm{d}f/\mathrm{d}y$</p>
-<p style="text-align:center;overflow-x:auto;">
-$\displaystyle
-\frac{\delta F[f]}{\delta f(x)}=\lim_{\epsilon \to 0}\frac{1}{\epsilon}\left[\int \mathrm{d}y \,g\!\left( \frac{\partial}{\partial y}[f(y)+\epsilon \delta(y-x)]\right) - \int \mathrm{d}y \,g\!\left(\frac{\partial f}{\partial y}\right)\right]
-$
+</div>
+<p>Le résultat est purement local : la fonctionnelle ne « voit » que la valeur de $f$ en $x$, et la dérivée fonctionnelle se réduit à la dérivée ordinaire de $g$ évaluée en ce point.</p>
+<h4 id="seconde-brique-lintégrande-dépend-de-la-pente-de-f">Seconde brique : l&rsquo;intégrande dépend de la pente de $f$</h4>
+<p style="text-align:center;">
+$\displaystyle F[f]=\int_a^b g\big(f'(y)\big) \, \mathrm{d}y$ avec $\displaystyle f'=\mathrm{d}f/\mathrm{d}y$
 </p>
-<p>Par un développement de Taylor au premier ordre, on obtient :</p>
-<p style="text-align:center;overflow-x:auto;">
-$\displaystyle
-g\left(\frac{\partial}{\partial y}[f(y)+\epsilon\delta(y-x)]\right)=g(f'+\epsilon\delta'(y-x))\approx g(f')+\epsilon\delta'(y-x)\frac{\mathrm{d}g(f')}{\mathrm{d} f'}
-$
-</p>
-<p>On aboutit à :</p>
-<p style="text-align:center;overflow-x:auto;">
-$\displaystyle
-\frac{\delta F[f]}{\delta f(x)}=\int \mathrm{d}y\,\delta'(y-x)\frac{\mathrm{d}g(f')}{\mathrm{d} f'}
-$
-</p>
-On utilise alors une intégration par parties&nbsp;:
-<p style="text-align:center;overflow-x:auto;">
-$\displaystyle
-\int \mathrm{d}y\, \delta'(y-x)\frac{\mathrm{d}g(f')}{\mathrm{d} f'}=\left[\delta(y-x)\frac{\mathrm{d}g(f')}{\mathrm{d} f'}\right]-\int \mathrm{d}y \,\delta(y-x)\frac{\mathrm{d}}{\mathrm{d} y}\left(\frac{\mathrm{d}g(f')}{\mathrm{d}f'}\right)
-$
-</p>
-Si $x$ est strictement à l'intérieur de l'intervalle d'intégration, le pic de la distribution $\delta$ n'atteint pas les bornes&nbsp;: le terme entre crochets s'annule et on obtient finalement&nbsp;:
+<p>On a alors :</p>
+<div id="def">
 <p style="text-align:center;">
 $\displaystyle
-\frac{\delta F[f]}{\delta f(x)}=-\frac{\mathrm{d}}{\mathrm{d} x}\left(\frac{\mathrm{d}g(f')}{\mathrm{d}f'}\right)
+\frac{\delta F[f]}{\delta f(x)}=-\frac{\mathrm{d}}{\mathrm{d} x}\Big(g'\big(f'(x)\big)\Big)
 $
 </p>
-<p>On détermine ainsi que $\displaystyle \frac{\delta \bar{T}[x]}{\delta x(t)}=-\frac{m\ddot{x}}{\tau}$.</p>
-<p>D&rsquo;autre part, si on a $F[\phi]=\int\left(\frac{\partial\phi}{\partial y}\right)^2\mathrm{d}y$, on obtient $\displaystyle \frac{\delta F[\phi]}{\delta\phi(x)}=-2\frac{\partial^2\phi}{\partial x^2}$.</p>
-<p>Résultat qui se généralise à 3 dimensions pour donner un truc plutôt utile :</p>
-<p>Si $\displaystyle I=\int(\boldsymbol{\nabla}\phi)^2\mathrm{d}^3 x$, alors $\displaystyle\frac{\delta I}{\delta\phi}=-2\boldsymbol{\nabla}^2\phi$.</p>
-</li>
-</ul>
-</details>
 </div>
-<p>On peut maintenant vérifier comment $\bar{T}$ et $\bar{V}$ varient lorsque la trajectoire $x(t)$ est un peu modifiée :</p>
+<br>
+<div id="preuve">
+Cette fois la déformation atteint $f$ à travers sa dérivée&nbsp;:
 <p style="text-align:center;overflow-x:auto;">
 $\displaystyle
-\frac{\delta \bar{V}[x]}{\delta x(t)}=\frac{V'[x(t)]}{\tau}\qquad \qquad\frac{\delta \bar{T}[x]}{\delta x(t)}=-\frac{m\ddot{x}}{\tau}
+\frac{\delta F[f]}{\delta f(x)}=\lim_{\epsilon \to 0}\frac{1}{\epsilon}\left[\int \mathrm{d}y \,g\!\left( \frac{\partial}{\partial y}\big[f(y)+\epsilon \delta(y-x)\big]\right) - \int \mathrm{d}y \,g\big(f'(y)\big)\right]
 $
 </p>
-<p>Or d&rsquo;après la 2<sup>e</sup> loi de Newton, la trajectoire classique correspond à $m\ddot{x}=-\mathrm{d}V/\mathrm{d}x$ et d&rsquo;après ce qui précède, cela entraîne que $\displaystyle \frac{\delta \bar{V}[x]}{\delta x(t)}=\frac{\delta \bar{T}[x]}{\delta x(t)}$.</p>
-<p>On en conclut que pour une légère déviation autour de la trajectoire classique, l&rsquo;énergie potentielle moyenne et l&rsquo;énergie cinétique moyenne vont varier ensemble (généralement augmenter) et de la même valeur !</p>
-<p>Cela peut se réécrire $\displaystyle \frac{\delta }{\delta x(t)}(\bar{T}[x]- \bar{V}[x])=0$.</p>
+<p>Le pic devient un <em>doublet</em> $\delta&rsquo;(y-x)$, et le développement de Taylor au premier
+ordre s&rsquo;écrit :</p>
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle
+g\!\left(\frac{\partial}{\partial y}\big[f(y)+\epsilon\delta(y-x)\big]\right)=g\big(f'+\epsilon\delta'(y-x)\big)\simeq g(f')+\epsilon\,\delta'(y-x)\,g'(f')
+$
+</p>
+<p>Il reste donc :</p>
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle
+\frac{\delta F[f]}{\delta f(x)}=\int \mathrm{d}y\,\delta'(y-x)\,g'\big(f'(y)\big)
+$
+</p>
+<p>La dérivée porte sur la distribution, pas sur $g&rsquo;$ : on la fait basculer par intégration par parties :</p>
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle
+\int \mathrm{d}y\, \delta'(y-x)\,g'\big(f'(y)\big)=\Big[\delta(y-x)\,g'\big(f'(y)\big)\Big]_{y=a}^{y=b}-\int \mathrm{d}y \,\delta(y-x)\,\frac{\mathrm{d}}{\mathrm{d} y}\Big(g'\big(f'(y)\big)\Big)
+$
+</p>
+<p>Si $x$ est strictement à l&rsquo;intérieur de l&rsquo;intervalle d&rsquo;intégration, le pic de la distribution $\delta$ n&rsquo;atteint pas les bornes : le terme entre crochets s&rsquo;annule et il vient :</p>
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle
+\frac{\delta F[f]}{\delta f(x)}=-\frac{\mathrm{d}}{\mathrm{d} x}\Big(g'\big(f'(x)\big)\Big)
+$
+</p>
+</div>
+<p>Le résultat n&rsquo;est plus local : déplacer $f$ en un point modifie sa pente <em>de part et d&rsquo;autre</em> de ce point, d&rsquo;où l&rsquo;apparition d&rsquo;une dérivée supplémentaire, et du signe moins.</p>
+<br>
+<h3 id="application-à-bar-t-et-bar-v">Application à $\bar T$ et $\bar V$</h3>
+<p>On peut maintenant vérifier comment $\bar{T}$ et $\bar{V}$ varient lorsque la trajectoire $x(t)$ est un peu modifiée. Chacune relève de l&rsquo;une des deux briques.</p>
+<div id="theo">
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle
+\frac{\delta \bar{V}[x]}{\delta x(t)}=\frac{V'\big(x(t)\big)}{\tau}
+$
+</p>
+</div>
+<br>
+<div id="preuve">
+<p style="text-align:center;">
+$\displaystyle
+\bar V[x]=\frac{1}{\tau}\int_0^\tau V\big(x(s)\big)\,\mathrm{d}s
+$
+</p>
+<p>L&rsquo;intégrande ne dépend que de la valeur de la trajectoire : c&rsquo;est la <strong>première brique</strong>, avec le dictionnaire $f\leftrightarrow x$, $y\leftrightarrow s$, $x\leftrightarrow t$ et $g\leftrightarrow V$ (le facteur $1/\tau$ sort par linéarité). Comme $g&rsquo;=V&rsquo;=\mathrm{d}V/\mathrm{d}x$ :</p>
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle \frac{\delta \bar{V}[x]}{\delta x(t)}=\frac{1}{\tau}V'\big(x(t)\big)
+$
+</p>
+<p>c&rsquo;est-à-dire, au facteur $1/\tau$ près, l&rsquo;opposé de la force ressentie à l&rsquo;instant $t$.</p>
+</div>
+<br>
+<div id="theo">
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle
+\frac{\delta \bar{T}[x]}{\delta x(t)}=-\frac{m\ddot{x}(t)}{\tau}
+$
+</p>
+</div>
+<br>
+<div id="preuve">
+<p style="text-align:center;">
+$\displaystyle
+\bar T[x]=\frac{1}{\tau}\int_0^\tau \frac{1}{2}m\,\dot x(s)^2\,\mathrm{d}s
+$
+</p>
+<p>L&rsquo;intégrande ne dépend que de la pente : c&rsquo;est la <strong>seconde brique</strong>, avec le même dictionnaire et $g(u)=\frac{1}{2}mu^2$, donc $g&rsquo;(u)=mu$.</p>
+<p>Évaluée sur la trajectoire, la quantité qu&rsquo;il faut dériver est $g&rsquo;\big(\dot x(s)\big)=m\dot x(s)=p(s)$, la quantité de mouvement :</p>
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle \frac{\delta \bar{T}[x]}{\delta x(t)}=-\frac{1}{\tau}\frac{\mathrm{d}}{\mathrm{d} t}\Big(m\dot x(t)\Big)=-\frac{m\ddot{x}(t)}{\tau}
+$
+</p>
+<p>L&rsquo;annulation du terme de bord traduit ici une hypothèse physique familière : on ne déforme la trajectoire qu&rsquo;à des instants $t$ strictement compris entre $0$ et $\tau$, les extrémités A et B restant fixées.</p>
+</div>
+<br>
+<p>Or d&rsquo;après la 2<sup>e</sup> loi de Newton, la trajectoire classique correspond à $m\ddot{x}=-V&rsquo;(x)$, et d&rsquo;après ce qui précède, cela entraîne que :</p>
+<div id="theo">
+<p style="text-align:center;">
+$\displaystyle
+\frac{\delta \bar{V}[x]}{\delta x(t)}=\frac{\delta \bar{T}[x]}{\delta x(t)}
+$
+</p>
+</div>
+<p>On en conclut que pour une légère déviation autour de la trajectoire classique, l&rsquo;énergie potentielle moyenne et l&rsquo;énergie cinétique moyenne vont varier ensemble et de la même valeur (dans les cas usuels, augmenter toutes les deux) !</p>
+<p>Cela peut se réécrire :</p>
+<div id="theo">
+<p style="text-align:center;">
+$\displaystyle
+\frac{\delta }{\delta x(t)}(\bar{T}[x]- \bar{V}[x])=0
+$
+</p>
+</div>
 <p>La <strong>différence</strong> entre les deux énergies moyennes est <em>stationnaire</em> près de la trajectoire classique.</p>
+<br>
+<h3 id="lagrangien-action-et-équations-deuler-lagrange">Lagrangien, action et équations d&rsquo;Euler-Lagrange</h3>
 <p>On décide alors de donner un nom à cette différence entre énergie cinétique et potentielle : le <strong>lagrangien</strong> $L$.</p>
 <div id="def">
 <p style="text-align:center;">
@@ -2187,12 +2289,12 @@ $
 <div id="def">
 <p style="text-align:center;">
 $\displaystyle
-S=\int_0^\tau L \mathrm{d}t
+S=\int_0^\tau L\,\mathrm{d}t
 $
 </p>
 </div>
 <p>Ces deux nouvelles grandeurs vont nous permettre de réécrire de manière synthétique ce qu&rsquo;on a découvert jusque-là.<br>
-$\displaystyle S=\int_0^\tau(T-V)\mathrm{d}t = \tau(\bar{T}[x]-\bar{V}[x])$, et donc</p>
+$\displaystyle S=\int_0^\tau(T-V)\,\mathrm{d}t = \tau\big(\bar{T}[x]-\bar{V}[x]\big)$, et donc</p>
 <div id="theo">
 <p style="text-align:center;">
 $\displaystyle
@@ -2204,7 +2306,7 @@ $
 <br>
 <div id="theo">
 <p><b>Équations d&rsquo;Euler-Lagrange</b> :</p>
-<p>Le lagrangien $L$ peut s&rsquo;écrire comme une fonction à la fois de la position et de la vitesse $L(x(t),\dot{x}(t))$. Le principe de moindre action donne alors :</p>
+<p>Le lagrangien $L$ peut s&rsquo;écrire comme une fonction à la fois de la position et de la vitesse, $L\big(x(t),\dot{x}(t)\big)$. Le principe de moindre action donne alors :</p>
 <p style="text-align:center;">
 $\displaystyle
 \frac{\partial L}{\partial x}-\frac{\mathrm{d}}{\mathrm{d}t}\frac{\partial L}{\partial\dot{x}} = 0
@@ -2213,34 +2315,41 @@ $
 </div>
 <br>
 <div id="preuve">
+<p>Aucun calcul nouveau n&rsquo;est nécessaire : l&rsquo;intégrande de $\displaystyle S=\int_0^\tau L\big(x(u),\dot{x}(u)\big),\mathrm{d}u$ dépend de la trajectoire à la fois par sa valeur et par sa pente. Par linéarité de $\delta/\delta x(t)$, il suffit d&rsquo;<strong>additionner les deux briques</strong> : la première appliquée à la dépendance en $x$ (elle fournit $\partial L/\partial x$), la seconde appliquée à la dépendance en $\dot{x}$ (elle fournit $-\frac{\mathrm{d}}{\mathrm{d}t},\partial L/\partial\dot{x}$).</p>
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle
+\frac{\delta S}{\delta x(t)}=\frac{\partial L}{\partial x}\bigg|_{t}-\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\partial L}{\partial\dot{x}}\bigg|_{t}\right)
+$
+</p>
 <details>
-<summary>Démonstration&nbsp;:</summary>
+<summary>Le même calcul, écrit en entier&nbsp;:</summary>
 <p style="text-align:center;overflow-x:auto;">
 $\displaystyle
 \begin{aligned}
-\frac{\delta S}{\delta x(t)} & = \int \mathrm{d}u\left[\frac{\partial L}{\partial x(u)}\frac{\partial x(u)}{\partial x(t)}+\frac{\partial L}{\partial \dot{x}(u)}\frac{\partial \dot{x}(u)}{\partial x(t)}\right]\\
-& = \int \mathrm{d}u\left[\frac{\partial L}{\partial x(u)}\delta(u-t)+\frac{\partial L}{\partial \dot{x}(u)}\frac{\mathrm{d}}{\mathrm{d}u}\delta(u-t)\right]\\
-&=\frac{\partial L}{\partial x(t)}+\left[\delta(u-t)\frac{\partial L}{\partial \dot{x}(u)}\right]_{t_i}^{t_f}-\int \mathrm{d}u\,\delta(u-t)\frac{\mathrm{d}}{\mathrm{d}u}\frac{\partial L}{\partial\dot{x}(u)}\\
+\frac{\delta S}{\delta x(t)} & = \int_0^\tau \mathrm{d}u\left[\frac{\partial L}{\partial x(u)}\frac{\delta x(u)}{\delta x(t)}+\frac{\partial L}{\partial \dot{x}(u)}\frac{\delta \dot{x}(u)}{\delta x(t)}\right]\\
+& = \int_0^\tau \mathrm{d}u\left[\frac{\partial L}{\partial x(u)}\delta(u-t)+\frac{\partial L}{\partial \dot{x}(u)}\frac{\mathrm{d}}{\mathrm{d}u}\delta(u-t)\right]\\
+&=\frac{\partial L}{\partial x(t)}+\left[\delta(u-t)\frac{\partial L}{\partial \dot{x}(u)}\right]_{u=0}^{u=\tau}-\int_0^\tau \mathrm{d}u\,\delta(u-t)\frac{\mathrm{d}}{\mathrm{d}u}\frac{\partial L}{\partial\dot{x}(u)}\\
 &=\frac{\partial L}{\partial x(t)}-\frac{\mathrm{d}}{\mathrm{d}t}\frac{\partial L}{\partial\dot{x}(t)}
 \end{aligned}
 $
 </p>
 </details>
 </div>
+<br>
 <p>On introduit aussi la densité lagrangienne $\mathcal{L}$ :</p>
 <div id="def">
 <p style="text-align:center;">
 $\displaystyle
-L=\int \mathrm{d}x\,\mathcal{L}
+L=\int \mathrm{d}^3x\,\mathcal{L}
 $
 </p>
 <p style="text-align:center;">
 $\displaystyle
-S=\int \mathrm{d}t\,\mathrm{d}x\,\mathcal{L}
+S=\int \mathrm{d}t\,\mathrm{d}^3x\,\mathcal{L}
 $
 </p>
 </div>
-<p>Plaçons-nous désormais dans un cadre relativiste : le lagrangien dépend maintenant d&rsquo;une fonction $\phi(x)$ où $x$ est un point de l&rsquo;espace-temps dont la dérivée est le quadrivecteur $\partial_\mu\phi$.</p>
+<p>Plaçons-nous désormais dans un cadre relativiste : le lagrangien dépend maintenant d&rsquo;une fonction $\phi(x)$ où $x$ est un point de l&rsquo;espace-temps, et le gradient de $\phi$ est le quadrivecteur $\partial_\mu\phi$.</p>
 <p>L&rsquo;action devient :</p>
 <p style="text-align:center;">
 $\displaystyle
@@ -2256,11 +2365,13 @@ $
 </p>
 </div>
 <br>
+<h3 id="pourquoi-ça-marche-les-chemins-quantiques">Pourquoi ça marche : les chemins quantiques</h3>
 <p>Le principe de moindre action tire sa justification de la mécanique quantique où les particules ne sont plus des particules mais des ondes. La particule allant d&rsquo;un point A à un point B en empruntant toutes les trajectoires possibles (jusqu&rsquo;aux plus saugrenues) devient donc une onde affublée d&rsquo;un facteur de phase $\mathrm{e}^{\mathrm{i}S/\hbar}$ où $S$ est l&rsquo;action. Une action stationnaire correspond alors à une phase stationnaire.</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:500px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/tqcchemsuiv.png">
 </div>
 <p>Lorsqu&rsquo;on se retrouve à sommer sur toutes les trajectoires possibles, les différents termes vont interférer. L&rsquo;interférence sera destructive dans l&rsquo;immense majorité des cas, là où la phase fluctuera fortement d&rsquo;une trajectoire à l&rsquo;autre. Au contraire, la trajectoire rendant l&rsquo;action stationnaire va émerger car toutes les trajectoires voisines auront des phases proches et interféreront constructivement.</p>
+<br>
 <h3 id="bilan">Bilan</h3>
 <p style="text-align:center;">
 $\displaystyle
@@ -2294,12 +2405,14 @@ $\displaystyle
 \text{seuls les chemins à } S \text{ stationnaire survivent}
 $
 </p>
+<br>
 <h3 id="pièges">Pièges</h3>
 <ul>
 <li>«&nbsp;Moindre action&nbsp;» est un abus de langage&nbsp;: l'action est <b>stationnaire</b> le long de la trajectoire classique, pas nécessairement minimale.</li>
 <li>Le lagrangien $L = T - V$ n'est pas l'énergie&nbsp;: ne pas le confondre avec $H = T + V$, qui entrera en scène à la partie&nbsp;2 via la transformation de Legendre.</li>
 <li>Une dérivée fonctionnelle dérive par rapport à une <b>fonction entière</b>, pas par rapport à un nombre&nbsp;: le résultat dépend du point $t$ où l'on pince la trajectoire.</li>
-<li>Les termes de bord des intégrations par parties ne disparaissent pas par magie&nbsp;: ils s'annulent parce que les variations sont nulles aux extrémités, ou parce que le pic de la distribution $\delta$ reste à l'intérieur de l'intervalle.</li>
+<li>Le développement de Taylor de $g$ en $\epsilon\,\delta'(y-x)$ est <b>formel</b>&nbsp;: on développe une fonction ordinaire autour d'une distribution, ce qui n'a de sens qu'une fois l'intégration effectuée. La justification propre consiste à déformer $f$ par une fonction test régulière $h$, à écrire $\displaystyle \delta F=\int \frac{\delta F}{\delta f(y)}\,h(y)\,\mathrm{d}y$, puis à resserrer $h$ vers un pic. Le $\delta$ de Dirac n'est que la limite commode de ce procédé — commodité qu'on paiera plus tard, quand les produits de distributions au même point deviendront les divergences à renormaliser.</li>
+<li>Les termes de bord des intégrations par parties ne disparaissent pas par magie, et ne disparaissent pas toujours&nbsp;: ici ils s'annulent parce qu'on ne pince la trajectoire qu'à l'<b>intérieur</b> de l'intervalle, les extrémités A et B étant fixées. Si au contraire une extrémité est laissée libre, le terme de bord survit et impose une <b>condition aux limites naturelle</b>, $\partial\mathcal{L}/\partial f'=0$ à cette borne&nbsp;: la condition n'est plus choisie, elle est <i>produite</i> par le principe variationnel lui-même.</li>
 <li>Le principe de moindre action n'est pas un axiome tombé du ciel&nbsp;: il hérite sa légitimité des interférences quantiques entre chemins, et c'est cette lecture qui reviendra avec les intégrales de chemin.</li>
 </ul>
 <div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>Et maintenant ? Le langage est en place : lagrangien, action, stationnarité. La partie suivante entre dans le vif en posant la brique élémentaire de toute la théorie quantique des champs : l&rsquo;oscillateur harmonique, ses opérateurs d&rsquo;échelle, et la découverte que créer un quantum d&rsquo;énergie, c&rsquo;est déjà créer une particule.</p>
@@ -2313,6 +2426,7 @@ $
     </tr>
 </table>
 </div>
+
 
 <footer class="footline">
 	
@@ -3644,16 +3758,16 @@ $
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1787254053"></script>
-    <script src="/js/perfect-scrollbar.min.js?1787254053"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1787254053"></script>
-    <script src="/js/jquery.sticky.js?1787254053"></script>
-    <script src="/js/featherlight.min.js?1787254053"></script>
-    <script src="/js/highlight.pack.js?1787254053"></script>
+    <script src="/js/clipboard.min.js?1787319879"></script>
+    <script src="/js/perfect-scrollbar.min.js?1787319879"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1787319879"></script>
+    <script src="/js/jquery.sticky.js?1787319879"></script>
+    <script src="/js/featherlight.min.js?1787319879"></script>
+    <script src="/js/highlight.pack.js?1787319879"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1787254053"></script>
-    <script src="/js/learn.js?1787254053"></script>
-    <script src="/js/hugo-learn.js?1787254053"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1787319879"></script>
+    <script src="/js/learn.js?1787319879"></script>
+    <script src="/js/hugo-learn.js?1787319879"></script>
     
     
 
