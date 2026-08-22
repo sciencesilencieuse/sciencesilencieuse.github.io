@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1787350436" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1787350436" rel="stylesheet">
-    <link href="/css/hybrid.css?1787350436" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1787350436" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1787350436" rel="stylesheet">
-    <link href="/css/auto-complete.css?1787350436" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1787350436" rel="stylesheet">
-    <link href="/css/theme.css?1787350436" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1787350436" rel="stylesheet">
+    <link href="/css/nucleus.css?1787356857" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1787356857" rel="stylesheet">
+    <link href="/css/hybrid.css?1787356857" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1787356857" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1787356857" rel="stylesheet">
+    <link href="/css/auto-complete.css?1787356857" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1787356857" rel="stylesheet">
+    <link href="/css/theme.css?1787356857" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1787356857" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1787350436" rel="stylesheet">
+    <link href="/css/theme-blue.css?1787356857" rel="stylesheet">
     
-    <link href="/css/foo.css?1787350436" rel="stylesheet"><link href="/css/bar.css?1787350436" rel="stylesheet">
+    <link href="/css/foo.css?1787356857" rel="stylesheet"><link href="/css/bar.css?1787356857" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1787350436"></script>
+    <script src="/js/jquery-3.3.1.min.js?1787356857"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1787350436"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1787350436"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1787356857"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1787356857"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1787350436"></script>
+<script type="text/javascript" src="/js/search.js?1787356857"></script>
 
     
   </div>
@@ -2100,7 +2100,7 @@ details[open] > summary:first-of-type {
 <ul>
 <li><b>L'outil.</b> Les fonctionnelles et leur dérivée&nbsp;: comment un nombre construit sur toute une trajectoire varie quand on déforme la trajectoire.</li>
 <li><b>La découverte.</b> Autour de la trajectoire classique, les énergies cinétique et potentielle moyennes varient de concert&nbsp;: leur différence est stationnaire. Cette différence reçoit un nom, le <b>lagrangien</b>, son intégrale s'appelle l'<b>action</b>, et la condition de stationnarité accouche des équations d'Euler-Lagrange, y compris en version champs.</li>
-<li><b>La justification.</b> En mécanique quantique, chaque chemin porte une phase $\mathrm{e}^{\mathrm{i}S/\hbar}$, et seuls les chemins d'action stationnaire interfèrent constructivement.</li>
+<li><b>La justification.</b> En mécanique quantique, chaque chemin porte une phase $\mathrm{e}^{\mathrm{i}S/\hbar}$, et seuls les chemins d'action stationnaire interfèrent constructivement. Ce raisonnement a un ancêtre classique inattendu&nbsp;: l'optique de Fermat et Huygens.</li>
 </ul>
 <h2 id="lagrangien-et-principe-de-moindre-action">Lagrangien et principe de moindre action</h2>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:400px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
@@ -2234,10 +2234,12 @@ $\displaystyle
 $
 </p>
 <p><b>Contribution 2 : les deux pentes.</b> C&rsquo;est ici que tout se joue. Le segment de gauche voit son extrémité droite remonter : il se redresse, sa pente augmente de $\delta f/h$. Le segment de droite voit son extrémité gauche remonter : il se couche, sa pente diminue de $\delta f/h$. Les deux variations sont <b>opposées</b> :</p>
-<p style="text-align:center">
+<p style="text-align:center;">
 $\displaystyle
-\Delta f'_{n-1/2}=+\frac{\delta f}{h}$
-<p style="text-align:center">
+\Delta f'_{n-1/2}=+\frac{\delta f}{h}
+$
+</p>
+<p style="text-align:center;">
 $\displaystyle
 \Delta f'_{n+1/2}=-\frac{\delta f}{h}
 $
@@ -2425,6 +2427,28 @@ $
 <img src="/tqcchemsuiv.png">
 </div>
 <p>Lorsqu&rsquo;on se retrouve à sommer sur toutes les trajectoires possibles, les différents termes vont interférer. L&rsquo;interférence sera destructive dans l&rsquo;immense majorité des cas, là où la phase fluctuera fortement d&rsquo;une trajectoire à l&rsquo;autre. Au contraire, la trajectoire rendant l&rsquo;action stationnaire va émerger car toutes les trajectoires voisines auront des phases proches et interféreront constructivement.</p>
+<p>Ce raisonnement a de quoi surprendre à cet endroit du récit : nous avons construit le lagrangien par un détour purement newtonien, et voilà que sa justification vient d&rsquo;ailleurs. Mais des chemins, une phase, des interférences, et la survie du seul chemin stationnaire : ce n&rsquo;est pas la mécanique quantique qui a inventé cet argument. C&rsquo;est mot pour mot celui que l&rsquo;optique tient depuis Huygens et Fermat. Hamilton avait remarqué la coïncidence près d&rsquo;un siècle avant Schrödinger.</p>
+<div class="notice notice--info" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Aparté : la mécanique est une optique (Hamilton, 1834)</span></div><div class="notice__corps"><p><strong>Deux principes, un seul énoncé</strong><br>
+L&rsquo;optique géométrique a son principe variationnel, antérieur de deux siècles à celui de Hamilton : un rayon traversant un milieu d&rsquo;indice $n(x)$ rend stationnaire le <strong>chemin optique</strong> $\int n,\mathrm{d}\ell$. C&rsquo;est le principe de Fermat.</p>
+<p>La mécanique a le sien, dû à Maupertuis. Il faut pour l&rsquo;énoncer changer de contrainte : au lieu de fixer la durée $\tau$, on fixe l&rsquo;énergie $E$, et l&rsquo;on ne cherche plus que la <strong>forme</strong> de l&rsquo;orbite, sans son horaire. La quantité stationnaire est l&rsquo;<strong>action réduite</strong> $\int p,\mathrm{d}\ell$, avec $p=\sqrt{2m(E-V)}$.</p>
+<p>Les deux énoncés sont le <strong>même énoncé</strong>. Il suffit de lire :</p>
+<div style="border:solid 3px #E7B586;width:fit-content;margin:auto;padding:0 10px;border-radius:5px;">
+<p style="text-align:center;">
+$\displaystyle
+n(x)=\sqrt{2m\big(E-V(x)\big)}
+$
+</p>
+</div>
+<p>Une particule dans un potentiel se comporte exactement comme un rayon dans un milieu dont le potentiel fixe l&rsquo;indice. Un mirage au-dessus d&rsquo;une route surchauffée est une trajectoire classique.</p>
+<p><strong>Et l&rsquo;égalité des taux ?</strong><br>
+Ce dictionnaire dissout l&rsquo;énigme qui a ouvert cette page. Nous avions constaté avec surprise que $\bar T$ et $\bar V$ varient de concert autour de la trajectoire classique, comme s&rsquo;il y avait entre elles une conspiration à expliquer. Or dans le langage de Fermat, il n&rsquo;y a plus <strong>qu&rsquo;une seule</strong> quantité : l&rsquo;indice $n$, où $T$ et $V$ ont fusionné. Le chemin optique est une <em>longueur</em>, mesurée avec une règle que le potentiel dilate ou contracte selon les endroits, et la trajectoire classique en est la géodésique. Sa stationnarité n&rsquo;est alors pas plus mystérieuse que celle de la ligne droite. La conspiration entre $\bar T$ et $\bar V$ était un artefact de notre découpage : c&rsquo;est nous qui avions coupé en deux un objet unique.</p>
+<p>Cette lecture de l&rsquo;action comme une longueur reviendra telle quelle en partie 2, sous la forme relativiste $S=-mc\int\mathrm{d}s$ : la particule libre suit une géodésique de l&rsquo;espace-temps.</p>
+<p><strong>Le pas non franchi</strong><br>
+L&rsquo;optique géométrique n&rsquo;est pas fondamentale : c&rsquo;est l&rsquo;<strong>approximation</strong> de l&rsquo;optique ondulatoire aux courtes longueurs d&rsquo;onde. Si la mécanique classique est une optique géométrique, elle doit donc être elle aussi l&rsquo;approximation d&rsquo;une <em>mécanique ondulatoire</em>, et il doit exister une longueur d&rsquo;onde. Elle se lit sur le facteur de phase : une onde $\mathrm{e}^{\mathrm{i}S/\hbar}$ a pour vecteur d&rsquo;onde $k=p/\hbar$, soit $\lambda=h/p$.</p>
+<p>C&rsquo;est la relation de de Broglie, obtenue sans aucune mécanique quantique. Hamilton n&rsquo;avait, en 1834, aucune raison de la prendre au sérieux : aucune expérience ne réclamait une ondulation de la matière, et $\hbar$ n&rsquo;apparaîtrait que soixante-dix ans plus tard. Il a construit l&rsquo;analogie, l&rsquo;a jugée profonde, et s&rsquo;est arrêté là. De Broglie en 1923, puis Schrödinger en 1926 (qui cite Hamilton explicitement) ont franchi le pas dans l&rsquo;autre sens : partant de l&rsquo;optique géométrique, remonter à l&rsquo;équation d&rsquo;onde dont elle est la limite. C&rsquo;est exactement le trajet que fait cette section, à l&rsquo;envers.</p>
+</div></div>
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>Toute cette histoire (Fermat, Huygens, Fresnel, Bernoulli, Maupertuis, Hamilton, Jacobi, de Broglie, Schrödinger, Feynman) est racontée en détail, avec les calculs et les simulations, sur la page <a href="../../../meca/action/">Principe de moindre action</a>.</p>
+</div></div>
 <br>
 <h3 id="bilan">Bilan</h3>
 <p style="text-align:center;">
@@ -2459,6 +2483,15 @@ $\displaystyle
 \text{seuls les chemins à } S \text{ stationnaire survivent}
 $
 </p>
+<p style="text-align:center;">
+$\displaystyle
+\underbrace{\int n\,\mathrm{d}\ell}_{\text{Fermat}}
+\;\equiv\;
+\underbrace{\int p\,\mathrm{d}\ell}_{\text{Maupertuis}}
+\;\xrightarrow{\ n\, =\, \sqrt{2m(E-V)}\ }\;
+\lambda=\frac{h}{p}
+$
+</p>
 <br>
 <h3 id="pièges">Pièges</h3>
 <ul>
@@ -2467,6 +2500,8 @@ $
 <li>Une dérivée fonctionnelle dérive par rapport à une <b>fonction entière</b>, pas par rapport à un nombre&nbsp;: le résultat dépend du point $t$ où l'on pince la trajectoire.</li>
 <li>Le développement de Taylor de $g$ en $\epsilon\,\delta'(y-x)$ est <b>formel</b>&nbsp;: on développe une fonction ordinaire autour d'une distribution, ce qui n'a de sens qu'une fois l'intégration effectuée. La justification propre consiste à déformer $f$ par une fonction test régulière $h$, à écrire $\displaystyle \delta F=\int \frac{\delta F}{\delta f(y)}\,h(y)\,\mathrm{d}y$, puis à resserrer $h$ vers un pic. Le $\delta$ de Dirac n'est que la limite commode de ce procédé — commodité qu'on paiera plus tard, quand les produits de distributions au même point deviendront les divergences à renormaliser.</li>
 <li>Les termes de bord des intégrations par parties ne disparaissent pas par magie, et ne disparaissent pas toujours&nbsp;: ici ils s'annulent parce qu'on ne pince la trajectoire qu'à l'<b>intérieur</b> de l'intervalle, les extrémités A et B étant fixées. Si au contraire une extrémité est laissée libre, le terme de bord survit et impose une <b>condition aux limites naturelle</b>, $\partial g/\partial f'=0$ à cette borne&nbsp;: la condition n'est plus choisie, elle est <i>produite</i> par le principe variationnel lui-même.</li>
+<li>Hamilton et Maupertuis ne fixent pas la même chose. Le principe de Hamilton fixe la <b>durée</b> $\tau$ et détermine la trajectoire complète, horaire compris&nbsp;; celui de Maupertuis fixe l'<b>énergie</b> $E$ et ne détermine que la forme géométrique de l'orbite. Les deux sont conjugués par une transformation de Legendre, $W=S+E\tau$ (voir partie&nbsp;2), et ne sont pas interchangeables&nbsp;: comparer des chemins à $E$ constant impose de laisser varier leur durée.</li>
+<li>L'analogie optique n'autorise pas à faire voyager la particule à la vitesse de son onde. La vitesse de phase $E/p$ décroît quand l'impulsion croît&nbsp;; la particule suit la vitesse de <b>groupe</b> $\mathrm{d}E/\mathrm{d}p$.</li>
 <li>Le principe de moindre action n'est pas un axiome tombé du ciel&nbsp;: il hérite sa légitimité des interférences quantiques entre chemins, et c'est cette lecture qui reviendra avec les intégrales de chemin.</li>
 </ul>
 <div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Note</span></div><div class="notice__corps"><p>Et maintenant ? Le langage est en place : lagrangien, action, stationnarité. La partie suivante entre dans le vif en posant la brique élémentaire de toute la théorie quantique des champs : l&rsquo;oscillateur harmonique, ses opérateurs d&rsquo;échelle, et la découverte que créer un quantum d&rsquo;énergie, c&rsquo;est déjà créer une particule.</p>
@@ -3812,16 +3847,16 @@ $
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1787350436"></script>
-    <script src="/js/perfect-scrollbar.min.js?1787350436"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1787350436"></script>
-    <script src="/js/jquery.sticky.js?1787350436"></script>
-    <script src="/js/featherlight.min.js?1787350436"></script>
-    <script src="/js/highlight.pack.js?1787350436"></script>
+    <script src="/js/clipboard.min.js?1787356857"></script>
+    <script src="/js/perfect-scrollbar.min.js?1787356857"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1787356857"></script>
+    <script src="/js/jquery.sticky.js?1787356857"></script>
+    <script src="/js/featherlight.min.js?1787356857"></script>
+    <script src="/js/highlight.pack.js?1787356857"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1787350436"></script>
-    <script src="/js/learn.js?1787350436"></script>
-    <script src="/js/hugo-learn.js?1787350436"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1787356857"></script>
+    <script src="/js/learn.js?1787356857"></script>
+    <script src="/js/hugo-learn.js?1787356857"></script>
     
     
 

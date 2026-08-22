@@ -10,7 +10,7 @@
 		
 		
 		
-			<lastBuildDate>Sat, 22 Aug 2026 00:13:52 +0200</lastBuildDate>
+			<lastBuildDate>Sat, 22 Aug 2026 01:59:30 +0200</lastBuildDate>
 		
 			<atom:link href="https://sciencesilencieuse.github.io/index.xml" rel="self" type="application/rss+xml" />
 			<item>
@@ -382,7 +382,7 @@
 				<link>https://sciencesilencieuse.github.io/physique/meca/action/</link>
 				<pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
 				<guid>https://sciencesilencieuse.github.io/physique/meca/action/</guid>
-				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;#preuve&#xA;{&#xA;    background-color:#EAEAEA;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;principe-de-moindre-action&#34;&gt;Principe de moindre action&lt;/h1&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://sciencesilencieuse.github.io/cmaction.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Maupertuis formule ainsi le principe de moindre action en 1744 :&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Lorsqu’il arrive quelque changement dans la nature, la quantité d’action, nécessaire pour ce changement, est la plus petite qui soit possible.&lt;/p&gt;</description>
+				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;#preuve&#xA;{&#xA;    background-color:#EAEAEA;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#def&#xA;{&#xA;    background-color:#DCEFFE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#theo&#xA;{&#xA;    background-color:#FBE1DE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;/* Pour rétablir le comportement de details */&#xA;details &gt; summary:first-of-type {&#xA;  display: list-item;     /* remet le triangle + l’accessibilité */&#xA;  cursor: pointer;        /* optionnel : feedback visuel */&#xA;}&#xA;&#xA;details &gt; summary:first-of-type {&#xA;  list-style: disclosure-closed inside;&#xA;}&#xA;details[open] &gt; summary:first-of-type {&#xA;  list-style-type: disclosure-open;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h1 id=&#34;principe-de-moindre-action&#34;&gt;Principe de moindre action&lt;/h1&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://sciencesilencieuse.github.io/cmaction.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Nombres particuliers</title>

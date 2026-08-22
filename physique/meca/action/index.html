@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1787350436" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1787350436" rel="stylesheet">
-    <link href="/css/hybrid.css?1787350436" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1787350436" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1787350436" rel="stylesheet">
-    <link href="/css/auto-complete.css?1787350436" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1787350436" rel="stylesheet">
-    <link href="/css/theme.css?1787350436" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1787350436" rel="stylesheet">
+    <link href="/css/nucleus.css?1787356857" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1787356857" rel="stylesheet">
+    <link href="/css/hybrid.css?1787356857" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1787356857" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1787356857" rel="stylesheet">
+    <link href="/css/auto-complete.css?1787356857" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1787356857" rel="stylesheet">
+    <link href="/css/theme.css?1787356857" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1787356857" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1787350436" rel="stylesheet">
+    <link href="/css/theme-blue.css?1787356857" rel="stylesheet">
     
-    <link href="/css/foo.css?1787350436" rel="stylesheet"><link href="/css/bar.css?1787350436" rel="stylesheet">
+    <link href="/css/foo.css?1787356857" rel="stylesheet"><link href="/css/bar.css?1787356857" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1787350436"></script>
+    <script src="/js/jquery-3.3.1.min.js?1787356857"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1787350436"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1787350436"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1787356857"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1787356857"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1787350436"></script>
+<script type="text/javascript" src="/js/search.js?1787356857"></script>
 
     
   </div>
@@ -2064,6 +2064,30 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     border-radius:10px;
     padding:5px 20px 5px 20px;
 }
+#def
+{
+    background-color:#DCEFFE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#theo
+{
+    background-color:#FBE1DE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+/* Pour rétablir le comportement de details */
+details > summary:first-of-type {
+  display: list-item;     /* remet le triangle + l’accessibilité */
+  cursor: pointer;        /* optionnel : feedback visuel */
+}
+
+details > summary:first-of-type {
+  list-style: disclosure-closed inside;
+}
+details[open] > summary:first-of-type {
+  list-style-type: disclosure-open;
+}
 </style>
 <h1 id="principe-de-moindre-action">Principe de moindre action</h1>
 <p><img src="/cmaction.png" alt=""></p>
@@ -2084,12 +2108,12 @@ En mécanique classique par exemple, le local, c&rsquo;est Newton : on construi
 <div style="position:relative;margin-left:auto;margin-right:auto;width:800px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/fermatmiroir.png" style="box-shadow:none;background:none;">
 </div>
-<p>Reprenons l&rsquo;idée de Fermat pour déterminer le chemin d&rsquo;un rayon lumineux réfracté d&rsquo;un milieu à l&rsquo;autre. L&rsquo;idée clé de cette manière de calculer par minimisation est de se donner un point de départ I et un point d&rsquo;arrivée F et de chercher, <strong>parmi toutes les trajectoires possibles</strong> les rejoignant, la plus courte.</p>
+<p>Reprenons l&rsquo;idée de Fermat pour déterminer le chemin d&rsquo;un rayon lumineux réfracté d&rsquo;un milieu à l&rsquo;autre. L&rsquo;idée clé de cette manière de calculer par minimisation est de se donner un point de départ I et un point d&rsquo;arrivée F et de chercher, <strong>parmi toutes les trajectoires possibles</strong> les rejoignant, celle que la lumière parcourt le plus vite. Attention : le principe porte sur le <em>temps</em> de parcours, pas sur la longueur géométrique du trajet. Les deux ne coïncident que dans un milieu homogène.</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/portraitfermat.png" style="box-shadow:none;background:none;">
 </div>
-<p>On constate déjà que si I et F sont dans le même milieu homogène, la trajectoire la plus courte sera le segment de droite [IF] et donc le principe de Fermat prédit bien que la lumière se propage rectilignement dans un milieu homogène.</p>
-<p>Et quand le point d&rsquo;arrivée F est dans un autre milieu que le point de départ I, la prise en compte de l&rsquo;effet du milieu comme un ralentissement apparent de la vitesse de la lumière (dans un milieu d&rsquo;indice optique $n$, la lumière voyage à la vitesse $c/n$ où $c$ est sa célérité dans le vide, soit $300\,000$ km/s) permet de retrouver le phénomène de réfraction : la lumière change de direction en passant d&rsquo;un milieu à l&rsquo;autre. La déviation est telle que le trajet global sera le moins long possible et donc la partie du trajet dans le milieu d&rsquo;indice optique supérieur sera plus petite que l&rsquo;autre.</p>
+<p>On constate déjà que si I et F sont dans le même milieu homogène, la vitesse y étant partout la même, le trajet le plus rapide est aussi le plus court : le segment de droite [IF]. Le principe de Fermat prédit donc bien que la lumière se propage rectilignement dans un milieu homogène.</p>
+<p>Et quand le point d&rsquo;arrivée F est dans un autre milieu que le point de départ I, la prise en compte de l&rsquo;effet du milieu comme un ralentissement apparent de la vitesse de la lumière (dans un milieu d&rsquo;indice optique $n$, la lumière voyage à la vitesse $c/n$ où $c$ est sa célérité dans le vide, soit $300\,000$ km/s) permet de retrouver le phénomène de réfraction : la lumière change de direction en passant d&rsquo;un milieu à l&rsquo;autre. La déviation est telle que la durée globale sera la plus courte possible : la portion parcourue dans le milieu d&rsquo;indice supérieur, où la lumière avance moins vite, s&rsquo;en trouve raccourcie par rapport à ce qu&rsquo;elle serait sur un trajet rectiligne.</p>
 <p>Dans le programme ci-dessous, les temps de parcours de différents trajets pour rejoindre un point dans l&rsquo;air à un point dans l&rsquo;eau sont comparés. Le trajet minimal est déterminé et on montre qu&rsquo;il respecte la loi de la réfraction de Snell-Descartes.</p>
 <div class="trinket-embed" style="margin:1rem 0;text-align:center;">
   <iframe id="trinket-0"
@@ -2137,7 +2161,7 @@ En mécanique classique par exemple, le local, c&rsquo;est Newton : on construi
 <p>Soit l&rsquo;ensemble des points $q$ jusqu&rsquo;où la lumière issue d&rsquo;un point $q_0$ peut traverser en un temps inférieur ou égal à $t$. La frontière de cet ensemble, $\Phi_{q_0}(t)$ est appelé le front d&rsquo;onde du point $q_0$ après un temps $t$ et regroupe les points que la lumière peut atteindre en un temps $t$ mais pas avant.</p>
 <p>Le principe de Huygens peut alors s&rsquo;exprimer ainsi :<br>
 soit $\Phi_{q_0}(t)$ le front d&rsquo;onde issu du point $q_0$ après un temps $t$. Pour chaque point $q$ de ce front, on considère le front d&rsquo;onde au temps $s$, $\Phi_{q}(s)$. Alors le front d&rsquo;onde issu du point $q_0$ après le temps $t+s$, $\Phi_{q_0}(t+s)$ sera l&rsquo;enveloppe des fronts $\Phi_{q}(s),q\in \Phi_{q_0}(t)$.</p>
-<p>En fixant un point $q_0$, on appelle fonction caractéristique $S_{q_0}(q)$ la fonction qui associe à tout point $q$ le longueur du chemin optique de $q_0$ à $q$.<br>
+<p>En fixant un point $q_0$, on appelle fonction caractéristique $S_{q_0}(q)$ la fonction qui associe à tout point $q$ la longueur du chemin optique de $q_0$ à $q$.<br>
 Les courbes de niveau de la fonction caractéristique ne sont autre que les fronts d&rsquo;onde.</p>
 <p>L&rsquo;animation ci-dessous montre comment l&rsquo;enveloppe des fronts d&rsquo;onde est naturellement déviée lors d&rsquo;un changement de milieu si la vitesse de propagation change, expliquant ainsi la réfraction.</p>
  <style>
@@ -2174,15 +2198,15 @@ Les courbes de niveau de la fonction caractéristique ne sont autre que les fron
 </div>
 <p>Si on peut comprendre géométriquement l&rsquo;apparition de zone brillante par superposition des réseaux d&rsquo;ondelettes, l&rsquo;existence de zone parfaitement sombre est plus mystérieuse. Comment des zones éclairées plusieurs fois pourraient-elles se trouver obscurcies ?</p>
 <h3 id="fresnel-et-la-phase">Fresnel et la phase</h3>
-<p>L&rsquo;ingrédient manquant pour expliquer les interférences est apporté en 1818 par Fresnel : il donne une <strong>phase</strong> aux ondelette ! Un traitement mathématique complet devenait possible et Fresnel fut ainsi capable de mettre au point la théorie de la diffraction.</p>
+<p>L&rsquo;ingrédient manquant pour expliquer les interférences est apporté en 1818 par Fresnel : il donne une <strong>phase</strong> aux ondelettes ! Un traitement mathématique complet devenait possible et Fresnel fut ainsi capable de mettre au point la théorie de la diffraction.</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/portraitfresnel.png" style="box-shadow:none;background:none;">
 </div>
 <p>Fresnel s&rsquo;imagine que la lumière est une vibration transversale de l&rsquo;éther analogue aux ondes mécaniques décrites au siècle précédent par d&rsquo;Alembert (1747).<br>
-Il donne alors aux ondelettes de Huygens le pouvoir d&rsquo;interférer grâce à la phase <b style="color:#970E53;">$\phi=\omega t-\vec{k}\cdot\vec{r}$</b> (avec $\|\vec{k}\|=k=\frac{n \omega}{c}$).</p>
+Il donne alors aux ondelettes de Huygens le pouvoir d&rsquo;interférer grâce à la phase <b style="color:#970E53;">$\phi=\vec{k}\cdot\vec{r}-\omega t$</b> (avec $\|\vec{k}\|=k=\frac{n \omega}{c}$). C&rsquo;est la convention retenue dans toute cette page ; l&rsquo;autre signe, tout aussi légitime, se rencontre couramment.</p>
 <p>Arago écrira :</p>
 <blockquote>
-<p>Quel est donc le procédé magique qui permet de transformer à volonté la lumière en ombre, le jour en nuit ? Ce procédé excitera plus de surprise encore que le fait en lui-même ; ce procédé consiste à diriger sur le papier, mais par une route légèrement différente, un second rayon lumineux qui, pris isolément aussi, l&rsquo;aurait fortement éclairé. Les deux rayons en se mêlant semblaient devoir produire une illumination plus vive ; le doute à cet égard ne semblait point permis ; eh bien ! ils se détruisent quelquefois tout à fait et l&rsquo;on se se trouve avoir créé les ténèbres en ajoutant de la lumière à la lumière.<br>
+<p>Quel est donc le procédé magique qui permet de transformer à volonté la lumière en ombre, le jour en nuit ? Ce procédé excitera plus de surprise encore que le fait en lui-même ; ce procédé consiste à diriger sur le papier, mais par une route légèrement différente, un second rayon lumineux qui, pris isolément aussi, l&rsquo;aurait fortement éclairé. Les deux rayons en se mêlant semblaient devoir produire une illumination plus vive ; le doute à cet égard ne semblait point permis ; eh bien ! ils se détruisent quelquefois tout à fait et l&rsquo;on se trouve avoir créé les ténèbres en ajoutant de la lumière à la lumière.<br>
 Un fait neuf exige un mot nouveau. Ce phénomène dans lequel des rayons, en se mêlant, se détruisent tout à fait ou seulement en partie, s&rsquo;appelle une <strong>interférence</strong>.</p>
 </blockquote>
 <p>Lumière ou obscurité se déduisent désormais du terme d&rsquo;interférence entre les différentes sources secondaires en un endroit donné.
@@ -2190,7 +2214,7 @@ Et grâce aux interférences, le principe de superposition de Huygens peut maint
 En sommant continument les multiples déphasages des ondelettes sur les fronts d&rsquo;onde<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, Fresnel est capable de prédire précisément les figures de diffraction obtenues dans plusieurs situations.</p>
 <p>Aujourd&rsquo;hui, le principe de superposition moderne mis au point par Fresnel porte le nom de ses deux papas : <strong>principe de Huygens-Fresnel</strong>.</p>
 <p>Fresnel est le grand artisan du basculement de paradigme d&rsquo;une description corpusculaire de la lumière (dont le géant Newton était le fer de lance) vers une description ondulatoire. Un fervent partisan des particules, Poisson, joua aussi un rôle amusant&hellip;<br>
-Lorsqu’il éplucha le mémoire de concours de Fresnel, Poisson reprit ses intégrales de diffraction et présenta ses résultats en 1819 devant la commission du « Grand Prix de la Diffraction » de l’Académie des sciences. Les calculs prédisent un point lumineux au centre de l’ombre d’un disque éclairé par une source ponctuelle. Totalement absurde pour un partisan des particules ! Poisson est convaincu qu&rsquo;il tient là l&rsquo;argument définitif contre la théorie ondulatoire. Arago qui présidait la commission voulut en avoir le cœur net et monta l&rsquo;expérience. Il observa alors bien ce qui sera désormais appelée tâche de Fresnel (Arago spot en anglais)<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> ! L&rsquo;argument définitif de Poisson fit finalement triompher les ondes<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>.</p>
+Lorsqu’il éplucha le mémoire de concours de Fresnel, Poisson reprit ses intégrales de diffraction et présenta ses résultats en 1819 devant la commission du « Grand Prix de la Diffraction » de l’Académie des sciences. Les calculs prédisent un point lumineux au centre de l’ombre d’un disque éclairé par une source ponctuelle. Totalement absurde pour un partisan des particules ! Poisson est convaincu qu&rsquo;il tient là l&rsquo;argument définitif contre la théorie ondulatoire. Arago qui présidait la commission voulut en avoir le cœur net et monta l&rsquo;expérience. Il observa alors bien ce qui sera désormais appelée tache de Fresnel (ou tache de Poisson) ! L&rsquo;argument définitif de Poisson fit finalement triompher les ondes<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:400px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/poissontache.png" style="box-shadow:none;background:none;border-radius:50%;">
 </div>
@@ -2199,7 +2223,12 @@ Lorsqu’il éplucha le mémoire de concours de Fresnel, Poisson reprit ses int�
 <div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/portraithelmoltz.png" style="box-shadow:none;background:none;">
 </div>
-<p><b style="color:#970E53;">$$\nabla^2 \Psi(\vec{r})+k^2 n^2(\vec{r}) \Psi(\vec{r})=0$$</b></p>
+<div id="theo">
+<p style="text-align:center;">
+<b style="color:#970E53;">$\displaystyle \nabla^2 \Psi(\vec{r})+k_0^2\, n^2(\vec{r})\, \Psi(\vec{r})=0$</b>
+</p>
+</div>
+<p>où $k_0=2\pi/\lambda_0$ est le nombre d&rsquo;onde dans le vide.</p>
 <p>L&rsquo;animation ci-dessous est calculée à partir de cette seule équation. Une série verticale de sources sur la gauche, un obstacle sphérique où l&rsquo;onde vaut zéro et on laisse la magie (ou la physique, c&rsquo;est selon) opérer.</p>
 <div style="position:relative;margin:auto;width:700px;max-width:100%;">
 <video controls preload="metadata"  poster="/fresnelposter.png" style="width:100%;border-radius:5px;">
@@ -2209,9 +2238,16 @@ Lorsqu’il éplucha le mémoire de concours de Fresnel, Poisson reprit ses int�
 </div>
 <h3 id="de-loptique-ondulatoire-à-loptique-géométrique">De l&rsquo;optique ondulatoire à l&rsquo;optique géométrique</h3>
 <p>L&rsquo;optique géométrique n&rsquo;est maintenant plus que la limite aux courtes longueurs d&rsquo;onde de l&rsquo;optique ondulatoire.</p>
-<p>En injectant dans l&rsquo;équation de Helmholtz une solution de la forme $\Psi(\vec{r})=A(\vec{r}) e^{i k_0 S(\vec{r})}$ (où la phase réduite $S$ et l&rsquo;amplitude $A$ changent peu sur des distances de l&rsquo;ordre de $\lambda$) et en ne gardant que le plus grand ordre en $k_0$ (ordre 2), on obtient l&rsquo;<strong>équation éikonale</strong> : $|\vec{\nabla} S|^2=n^2(\mathbf{r})$.</p>
+<p>En injectant dans l&rsquo;équation de Helmholtz une solution de la forme $\Psi(\vec{r})=A(\vec{r}) e^{i k_0 S(\vec{r})}$ (où la phase réduite $S$ et l&rsquo;amplitude $A$ changent peu sur des distances de l&rsquo;ordre de $\lambda$) et en ne gardant que le plus grand ordre en $k_0$ (ordre 2), on obtient l&rsquo;<strong>équation éikonale</strong> :</p>
+<div id="theo">
+<p style="text-align:center;">
+$\displaystyle
+|\vec{\nabla} S|^2=n^2(\mathbf{r})
+$
+</p>
+</div>
 <p>La phase totale étant $k_0S(\vec{r})$, on définit le vecteur d&rsquo;onde $\vec{k}(\vec{r})=\vec{\nabla}\phi=k_0\vec{\nabla}S$. En prenant son carré $|\vec{k}|^2$, on obtient $k_0^2|\vec{\nabla} S|^2=k_0^2 n^2(\vec{r})$. Et donc $|\vec{k}|=\frac{2 \pi}{\lambda_0} n(\vec{r})=\frac{2 \pi}{\lambda(\vec{r})}$. C&rsquo;est bien la norme attendue pour un vecteur d&rsquo;onde dans un milieu d&rsquo;indice $n$ (où la longueur d&rsquo;onde locale vaut $\lambda=\lambda_0/n$).</p>
-<p>Les surfaces de phase constante correspondent à $S(\vec{r})=\text{cste}$. Et comme le gradient d’une fonction scalaire est orthogonal aux surfaces de niveau, $\vec{n} =\vec{\nabla} S$ est la normale au front d’onde.<br>
+<p>Les surfaces de phase constante correspondent à $S(\vec{r})=\text{cste}$. Et comme le gradient d’une fonction scalaire est orthogonal aux surfaces de niveau, $\vec{\nabla} S$ est normal au front d’onde (on évite ici de le noter $\vec{n}$, lettre déjà prise par l&rsquo;indice optique).<br>
 Puisqu&rsquo;on a défini $\vec{k}$ comme proportionnel à $\vec{\nabla} S$, le vecteur d&rsquo;onde est colinéaire à la normale. Sa direction est celle du rayon en optique géométrique.</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-top:-40px;">
 <img src="/rayonsgeo.png" style="box-shadow:none;background:none;">
@@ -2233,8 +2269,8 @@ La mécanique a fait le chemin inverse, on a d&rsquo;abord eu les équations de 
 <div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/portraitbernoulli.png" style="box-shadow:none;background:none;">
 </div>
-<p>Bernoulli a en tête le principe de Fermat : la lumière suit toujours le trajet le plus court entre deux points. Et pour courber la trajectoire, il fait l&rsquo;analogie avec les mirages : il découpe verticalement l&rsquo;espace en strates d&rsquo;indices variables correspondant chacune à une vitesse différente. La conservation de l&rsquo;énergie lui donne une vitesse $v=\sqrt{2gy}$ à la strate d&rsquo;altitude $y$ et la loi de réfraction selon le principe de Fermat lui assure que $\frac{\sin\theta}{v}=\text{cste}$ et donc $\frac{\theta}{\sqrt{y}}=\text{cste}$ où $\theta$ est l&rsquo;angle par rapport à la verticale. Il réussit ainsi à démontrer que la courbe optimale est une cycloïde dont la tangente initiale est verticale au départ et qui est engendrée par un cercle dont le diamètre est la descente maximale du point.</p>
-<p>La raison pour laquelle $\frac{\theta}{\sqrt{y}}=\text{cste}$ correspond à une cycloïde est donnée dans cette vidéo de 3Blue1Brown.</p>
+<p>Bernoulli a en tête le principe de Fermat : la lumière suit toujours le trajet le plus rapide entre deux points. Et pour courber la trajectoire, il fait l&rsquo;analogie avec les mirages : il découpe verticalement l&rsquo;espace en strates d&rsquo;indices variables correspondant chacune à une vitesse différente. La conservation de l&rsquo;énergie lui donne une vitesse $v=\sqrt{2gy}$ à la strate d&rsquo;altitude $y$ et la loi de réfraction selon le principe de Fermat lui assure que $\frac{\sin\theta}{v}=\text{cste}$ et donc $\frac{\sin\theta}{\sqrt{y}}=\text{cste}$ où $\theta$ est l&rsquo;angle par rapport à la verticale. Il réussit ainsi à démontrer que la courbe optimale est une cycloïde dont la tangente initiale est verticale au départ et qui est engendrée par un cercle dont le diamètre est la descente maximale du point.</p>
+<p>La raison pour laquelle $\frac{\sin \theta}{\sqrt{y}}=\text{cste}$ correspond à une cycloïde est donnée dans cette vidéo de 3Blue1Brown.</p>
 <style>
 .video-aspect {
   position:relative;
@@ -2303,8 +2339,8 @@ La mécanique a fait le chemin inverse, on a d&rsquo;abord eu les équations de 
 <div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/portraitmaupertuis.png" style="box-shadow:none;background:none;">
 </div>
-<p>Pour Maupertuis, l&rsquo;action est l&rsquo;intégrale (une somme continue) de la quantité de mouvement le long de la trajectoire : $S_M=\int_{A\rightarrow B}mv\,\mathrm{d}s$ (où $s$ est l&rsquo;abscisse curviligne le long de la trajectoire).<br>
-Anachroniquement, on peut transformer $S_M$ en $\int_{A\rightarrow B}2T\mathrm{d}t$ où $T$ est l&rsquo;énergie cinétique. Minimiser l&rsquo;action de Maupertuis revient alors à minimiser l&rsquo;énergie cinétique au cours du temps, à énergie totale fixée.<br>
+<p>Pour Maupertuis, l&rsquo;action est l&rsquo;intégrale (une somme continue) de la quantité de mouvement le long de la trajectoire : <b style="color:#D41876;">$S_M=\int_{A\rightarrow B}mv\,\mathrm{d}s$</b> (où $s$ est l&rsquo;abscisse curviligne le long de la trajectoire).<br>
+Anachroniquement, on peut transformer $S_M$ en <b style="color:#D41876;">$\int_{A\rightarrow B}2T\mathrm{d}t$</b> où $T$ est l&rsquo;énergie cinétique. Minimiser l&rsquo;action de Maupertuis revient alors à minimiser l&rsquo;énergie cinétique au cours du temps, à énergie totale fixée.<br>
 L&rsquo;action trouve déjà là sa dimension définitive d&rsquo;une énergie multipliée par une durée, ou d&rsquo;une quantité de mouvement multipliée par une distance.</p>
 <p>Mais l&rsquo;action de Maupertuis est plus une jolie intuition métaphysique qu&rsquo;un véritable outil permettant de déduire les trajectoires des systèmes en mouvement. Pour cela, il faut attendre l&rsquo;avènement du calcul variationnel.</p>
 <h3 id="lagrange">Lagrange</h3>
@@ -2313,16 +2349,22 @@ L&rsquo;action trouve déjà là sa dimension définitive d&rsquo;une énergie m
 <div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/portraitlagrange.png" style="box-shadow:none;background:none;">
 </div>
-<p>La définition lagrangienne de l&rsquo;action généralise celle de Maupertuis tout en s&rsquo;en écartant quelque peu : $S_L=\int_{t_1}^{t_2} L(q, \dot{q}, t) \mathrm{d} t$ où $L$, le lagrangien, vaut $T-V$, la différence entre l&rsquo;énergie cinétique et l&rsquo;énergie potentielle.</p>
-<p>Le principe de stationnarité $\delta S_L= 0$ pour des extrémités fixées en temps conduit aux équations d&rsquo;Euler-Lagrange :<br>
-$$\frac{\mathrm{d}}{\mathrm{d} t}\frac{\partial L}{\partial \dot{q}_i} - \frac{\partial L}{\partial q_i} = 0$$</p>
+<p>La définition lagrangienne de l&rsquo;action généralise celle de Maupertuis tout en s&rsquo;en écartant quelque peu : <b style="color:#D41876;">$S_L=\int_{t_1}^{t_2} L(q, \dot{q}, t) \mathrm{d} t$</b> où $L$, le lagrangien, vaut <b style="color:#D41876;">$T-V$</b>, la différence entre l&rsquo;énergie cinétique et l&rsquo;énergie potentielle.</p>
+<p>Le principe de stationnarité $\delta S_L= 0$ pour des extrémités fixées en temps conduit aux équations d&rsquo;Euler-Lagrange :</p>
+<div id="theo">
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle
+\frac{\mathrm{d}}{\mathrm{d} t}\frac{\partial L}{\partial \dot{q}_i} - \frac{\partial L}{\partial q_i} = 0
+$
+</p>
+</div>
 <p>Le lagrangien se fera dès lors progressivement une place de plus en plus centrale en physique. Et depuis le cœur du 20<sup>e</sup> siècle, toute théorie digne de ce nom commence par se chercher un lagrangien duquel tout découle. Un des plus grands achèvements humains est ainsi l&rsquo;établissement du lagrangien du modèle standard qui réunit toute la physique hormis la gravité.</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/mugstandard.png" style="box-shadow:none;background:none;">
 </div>
 <h3 id="le-lagrangien-de-loptique-géométrique">Le lagrangien de l&rsquo;optique géométrique</h3>
 <p>Le principe de moindre temps et le principe de moindre action sont deux principes variationnels. Dans l&rsquo;optique géométrique de Fermat, l&rsquo;action correspond à la durée du trajet entre le point de départ et le point d&rsquo;arrivée. Mais qui joue le rôle du temps ? Répondre revient à déterminer le &ldquo;lagrangien&rdquo; de l&rsquo;optique géométrique.</p>
-<p>Supposons que le rayon se déplace dans un plan $(x,z)$ où $z$ serait l&rsquo;axe optique ou l&rsquo;axe de propagation. Le temps de parcours vaut alors $T=\frac1c \int_1^2 n(x,z)\mathrm{d}\ell=\frac1c \int_1^2 n(x,z)\sqrt{\mathrm{d}x^2+\mathrm{d}z^2}=\frac1c \int_1^2 n(x,z)\sqrt{1+\frac{\mathrm{d}x^2}{\mathrm{d}z^2}}\,\mathrm{d}z=\int_1^2\mathcal{L}(x,\tilde{x},z)\,\mathrm{d}z$ où on on note $\tilde{x}\equiv\frac{\mathrm{d}x}{\mathrm{d}z}$.</p>
+<p>Supposons que le rayon se déplace dans un plan $(x,z)$ où $z$ serait l&rsquo;axe optique ou l&rsquo;axe de propagation. La durée du parcours vaut alors (on la note $\Delta t$, la lettre $T$ étant réservée à l&rsquo;énergie cinétique) : $\Delta t=\frac1c \int_1^2 n(x,z)\,\mathrm{d}\ell=\frac1c \int_1^2 n(x,z)\sqrt{\mathrm{d}x^2+\mathrm{d}z^2}=\frac1c \int_1^2 n(x,z)\sqrt{1+\left(\frac{\mathrm{d}x}{\mathrm{d}z}\right)^2}\,\mathrm{d}z=\int_1^2\mathcal{L}(x,\tilde{x},z)\,\mathrm{d}z$ où l&rsquo;on note $\tilde{x}\equiv\frac{\mathrm{d}x}{\mathrm{d}z}$.</p>
 <p>Le rôle du temps de la mécanique est donc joué par la coordonnée $z$ selon l&rsquo;axe de propagation, $x$ garde son rôle et la vitesse $\dot{x}$ devient l&rsquo;inclinaison du rayon par rapport à la direction de propagation $\mathrm{d}x/\mathrm{d}z$. Notons que le lagrangien de l&rsquo;optique a la dimension de l&rsquo;inverse d&rsquo;une vitesse plutôt que d&rsquo;une énergie.</p>
 <p>L&rsquo;équation d&rsquo;Euler-Lagrange s&rsquo;écrit $\frac{\mathrm{d}}{\mathrm{d}z}\left(\frac{\partial\mathcal{L}}{\partial \tilde{x}}\right)=\frac{\partial\mathcal{L}}{\partial x}$ et on tire du lagrangien $\frac{\partial\mathcal{L}}{\partial \tilde{x}}=\frac{n(x,z)\tilde{x}}{c\sqrt{1+\tilde{x}^2}}$.<br>
 Supposons que l&rsquo;indice ne dépende pas de $x$ : $n(x,z)=n(z)$. On a alors $\frac{\partial\mathcal{L}}{\partial x}=0$ et donc $\frac{\partial\mathcal{L}}{\partial \tilde{x}}$ est une constante en $z$ conservée le long de l&rsquo;axe de propagation.</p>
@@ -2336,22 +2378,47 @@ Supposons que l&rsquo;indice ne dépende pas de $x$ : $n(x,z)=n(z)$. On a alors
 <img src="/portraithamilton.png" style="box-shadow:none;background:none;">
 </div>
 <p>On passe de la formulation de Lagrange à celle d&rsquo;Hamilton en définissant les moments $p_i=\partial L / \partial \dot{q}_i$ et en utilisant la transformée de Legendre $H(q, p, t)=\sum_i p_i \dot{q}_i-L$. Cela permet de remplacer la variable $\dot{q}$ par le moment conjugué $p$ (ou impulsion).</p>
-<p>L&rsquo;espace des configurations (l&rsquo;espace des coordonnées ${q}$) où prend racine la mécanique lagrangienne est ainsi déménagée vers l&rsquo;<strong>espace des phases</strong> $(q,p)$ où l&rsquo;impulsion $p$ est considérée comme une coordonnée libre au même titre que $q$ (ce qui ne pouvait pas être le cas de $\dot{q}=\frac{\mathrm{d}q}{\mathrm{d}t}$)<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>. <br></p>
-<p>L&rsquo;action devient pour Hamilton $S_H=\int_{t_1}^{t_2}\left(\sum_i p_i \dot{q}_i-H\right) \mathrm{d} t$.<br>
-La stationnarité $\delta S_H = 0$, pour des extrémités fixes en $(q,t)$ fournit les équations canoniques :<br>
-$\dot{q}_i=\frac{\partial H}{\partial p_i}, \quad \dot{p}_i=-\frac{\partial H}{\partial q_i}$.</p>
-<p>L&rsquo;espace des phases est déjà &ldquo;quantum-ready&rdquo; : les transformations canoniques entre $q$ et $p$ seront les mêmes, les crochets de Poisson (oui, le même que la tâche) préfigurent les commutateurs, les symétries d&rsquo;évolution à la Noether s&rsquo;y expriment naturellement, etc.</p>
+<p>L&rsquo;espace des configurations (l&rsquo;espace des coordonnées ${q}$) où prend racine la mécanique lagrangienne est ainsi déménagée vers l&rsquo;<strong>espace des phases</strong> $(q,p)$ où l&rsquo;impulsion $p$ est considérée comme une coordonnée libre au même titre que $q$ (ce qui ne pouvait pas être le cas de $\dot{q}=\frac{\mathrm{d}q}{\mathrm{d}t}$)<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>. <br></p>
+<p>L&rsquo;action devient pour Hamilton :</p>
+<div id="def">
+<p style="text-align:center;">
+$\displaystyle
+S_H=\int_{t_1}^{t_2}\left(\sum_i p_i \dot{q}_i-H\right) \mathrm{d} t
+$
+</p>
+</div>
+<p>La stationnarité $\delta S_H = 0$, pour des extrémités fixes en $(q,t)$ fournit les équations canoniques :<br></p>
+<div id="theo">
+<p style="text-align:center;">
+$\displaystyle
+\dot{q}_i=\frac{\partial H}{\partial p_i}
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+\dot{p}_i=-\frac{\partial H}{\partial q_i}
+$
+</p>
+</div>
+<p>L&rsquo;espace des phases est déjà &ldquo;quantum-ready&rdquo; : les transformations canoniques entre $q$ et $p$ seront les mêmes, les crochets de Poisson (oui, le même que la tache) préfigurent les commutateurs, les symétries d&rsquo;évolution à la Noether s&rsquo;y expriment naturellement, etc.</p>
 <h3 id="ondelettes-mécaniques">Ondelettes mécaniques</h3>
 <p>Le principe de moindre action à la Lagrange consistant à chercher un chemin dans l&rsquo;espace des configurations qui rende stationnaire l&rsquo;action est tout à fait analogue au principe de Fermat.</p>
 <p>Huygens ayant réussi à reproduire les résultats de Fermat avec ses ondelettes, Hamilton se demande si on ne pourrait pas trouver une formulation équivalente en mécanique. Une mécanique à base d&rsquo;ondelettes et de fronts d&rsquo;onde !</p>
 <p>Hamilton y parvient en envisageant l&rsquo;action sous un nouvel aspect. Plutôt que de fixer les points de départ ($q_0,t_0$) et d&rsquo;arrivée ($q_F,t_F$), il laisse ce dernier libre ($q,t$). Il obtient alors :</p>
-<ul style="margin-top:-0.5em;">
-<li><b style="color:#D41876;">$\displaystyle\frac{\partial S}{\partial q}=p$</b></li>
-<li style="margin-top:0.5em;"><b style="color:#D41876;">$\displaystyle\frac{\partial S}{\partial t}=-H$</b> (<b>équation de Hamilton-Jacobi</b>)</li>
-</ul>
+<div id="theo">
+<p style="text-align:center;">
+$\displaystyle
+\begin{aligned}
+\frac{\partial S}{\partial q} &= p\\
+\frac{\partial S}{\partial t}&=-H\quad\text{équation de Hamilton-Jacobi}
+\end{aligned}
+$
+</p>
+</div>
+<br>
 <div id="preuve">
 <details>
-<summary><a>► démonstration :</a></summary>
+<summary>démonstration&nbsp;:</summary>
 Imaginons qu'on fasse varier la position finale en gardant $t$ fixé&nbsp;:<br>
 $q(t) \rightarrow q(t)+\delta q$ et $\delta t =0$
 <p>On obtient $\delta S =\delta \int_{t_0}^t L d t=\int_{t_0}^t \delta L d t$.</p>
@@ -2362,15 +2429,19 @@ $\delta L=\left(\cancel{\dot{q}-\frac{\partial H}{\partial p}}\right) \delta p  
 Et comme on ne touche pas aux conditions initiales ($\delta q(t_0)=0$) :$\int_{t_0}^t \delta L d t=p(t) \delta q(t)$.<br>
 Or, on peut aussi écrire que $\delta S = \frac{\partial S}{\partial q} \delta q$.</p>
 <p>Par identification, $\frac{\partial S}{\partial q}=p(t)$.</p>
-<p>Pour déterminer la variation de $S$ en fonction du temps d&rsquo;arrivée, laissons la trajectoire évoluer sur son chemin optimal. On a alors $\mathrm{d}S=\mathcal{L}\mathrm{d}t$.</p>
-<p>D&rsquo;autre part, $\mathrm{d}S=\mathcal{L}\mathrm{d}t=\frac{\partial S}{\partial q}\mathrm{d}q+\frac{\partial S}{\partial t}\mathrm{d}t$.<br>
-Or on a vu que $\frac{\partial S}{\partial q}=p$, d&rsquo;où $\mathcal{L}\mathrm{d}t=\left(p \dot{q}+\frac{\partial S}{\partial t}\right) \mathrm{d} t$.</p>
-<p>On en déduit donc que $\frac{\partial S}{\partial t}=\mathcal{L}-p \dot{q}=-H$.</p>
+<p>Pour déterminer la variation de $S$ en fonction du temps d&rsquo;arrivée, laissons la trajectoire évoluer sur son chemin optimal. On a alors $\mathrm{d}S=L\,\mathrm{d}t$.</p>
+<p>D&rsquo;autre part, $\mathrm{d}S=L\,\mathrm{d}t=\frac{\partial S}{\partial q}\mathrm{d}q+\frac{\partial S}{\partial t}\mathrm{d}t$.<br>
+Or on a vu que $\frac{\partial S}{\partial q}=p$, d&rsquo;où $L\,\mathrm{d}t=\left(p \dot{q}+\frac{\partial S}{\partial t}\right) \mathrm{d} t$.</p>
+<p>On en déduit donc que $\frac{\partial S}{\partial t}=L-p \dot{q}=-H$.</p>
 </details>
 </div>
-<p>Dans le cas d&rsquo;un système conservatif, on déduit de l&rsquo;équation de Hamilton-Jacobi :
-$$S(q, t)=S_{0}(q)-E t$$
-Hamilton a alors l&rsquo;intuition géniale d&rsquo;y voir une phase $\phi(\vec{r},t) = \vec{k} \cdot\vec{r}-\omega t$. Mais sa quête n&rsquo;est pas celle d&rsquo;une mécanique purement ondulatoire (il faudra attendre Schrödinger pour ça), il souhaite obtenir la &ldquo;forme Huygens&rdquo; de l&rsquo;équivalence entre la mécanique et l&rsquo;optique géométrique.</p>
+<p>Dans le cas d&rsquo;un système conservatif, on déduit de l&rsquo;équation de Hamilton-Jacobi :</p>
+<p style="text-align:center;">
+$\displaystyle
+S(q, t)=S_{0}(q)-E t
+$
+</p>
+<p>Hamilton a alors l&rsquo;intuition géniale d&rsquo;y voir une phase $\phi(\vec{r},t) = \vec{k} \cdot\vec{r}-\omega t$. Mais sa quête n&rsquo;est pas celle d&rsquo;une mécanique purement ondulatoire (il faudra attendre Schrödinger pour ça), il souhaite obtenir la &ldquo;forme Huygens&rdquo; de l&rsquo;équivalence entre la mécanique et l&rsquo;optique géométrique.</p>
 <p>Par analogie avec la limite de l&rsquo;optique ondulatoire aux petites longueurs d&rsquo;onde et le principe de Huygens, on peut identifier $S_{0}(q)$ avec la fonction caractéristique donnant la longueur du chemin optique de $q_0$ à $q$.<br>
 Comme $\partial S_0(q) / \partial q=p$, le vecteur normal à la surface $S_0(q)=\text{cst}$, $\vec{\nabla} S_0(q)$ n&rsquo;est autre que le vecteur impulsion $\vec{p}$.</p>
 <p>La trajectoire mécanique suit les rayons (donnés par l&rsquo;impulsion) normaux aux fronts d&rsquo;onde constitués par les surfaces d&rsquo;action réduite constante !</p>
@@ -2389,16 +2460,16 @@ Comme $\partial S_0(q) / \partial q=p$, le vecteur normal à la surface $S_0(q)=
 <div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/portraitjacobi.png" style="box-shadow:none;background:none;">
 </div>
-<p>Il transforme en effet la recherche d&rsquo;une trajectoire minimisant l&rsquo;action en la recherche d&rsquo;une géodésique dans l&rsquo;espace des configurations ! Pour un système à énergie fixée, il réécrit ainsi l&rsquo;action réduite $W=\int_{q_1}^{q_2}p^i\mathrm{d}q_i$ en $\int_{q_1}^{q_2}ds_J$ en introduisant la métrique de Jacobi : $\mathrm{d}s_J^2 = 2(E-V(q)) g_{i j}(q) \mathrm{d} q^i \mathrm{d} q^j$ (où $g_{ij}$ est une métrique riemannienne). Le principe de Maupertuis devient alors un théorème géométrique.</p>
+<p>Il transforme en effet la recherche d&rsquo;une trajectoire minimisant l&rsquo;action en la recherche d&rsquo;une géodésique dans l&rsquo;espace des configurations ! Pour un système à énergie fixée, il réécrit ainsi l&rsquo;action réduite $W=\int_{q_1}^{q_2}p_i\,\mathrm{d}q^i$ en <b style="color:#D41876;">$\int_{q_1}^{q_2}\mathrm{d}s_J$</b> en introduisant la métrique de Jacobi : $\mathrm{d}s_J^2 = 2\big(E-V(q)\big) g_{i j}(q)\, \mathrm{d} q^i \mathrm{d} q^j$, où $g_{ij}$ est la métrique cinétique, celle définie par $T=\frac{1}{2}g_{ij}\dot{q}^i\dot{q}^j$ et qui porte donc les masses du système. <b>Le principe de Maupertuis devient alors un théorème géométrique</b>.</p>
 <br>
 <h2 id="lavènement-de-la-mécanique-quantique">L&rsquo;avènement de la mécanique quantique</h2>
 <h3 id="planck">Planck</h3>
 <p>À la fin du 19<sup>e</sup> siècle, réussir à modéliser l&rsquo;énergie libérée par un corps noir (une cavité dont les seules émissions de rayonnement sont thermiques) en fonction de la fréquence est une énigme qui résiste au physicien.</p>
-<p>Le nombre de modes de vibration augment avec la fréquence et à l&rsquo;équilibre thermique, chaque mode doit recevoir la même énergie, proportionnelle à la température. Moralité, la densité d&rsquo;énergie aux grandes fréquences explose, c&rsquo;est la catastrophe ultraviolette ! Bien sûr, la théorie est en violente contradiction avec l&rsquo;expérience qui présente zéro catastrophe.</p>
+<p>Le nombre de modes de vibration augmente avec la fréquence et à l&rsquo;équilibre thermique, chaque mode doit recevoir la même énergie, proportionnelle à la température. Moralité, la densité d&rsquo;énergie aux grandes fréquences explose, c&rsquo;est la catastrophe ultraviolette ! Bien sûr, la théorie est en violente contradiction avec l&rsquo;expérience qui présente zéro catastrophe.</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:500px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/predplanck.png" style="box-shadow:none;background:none;">
 </div>
-<p>Pour tenter de résoudre le problème, Planck utilise ce qu&rsquo;il pense être un expédiant provisoire : il introduit une discrétisation, un pas $h$ dont il compte bien se débarrasser ensuite en le faisant tendre vers zéro.</p>
+<p>Pour tenter de résoudre le problème, Planck utilise ce qu&rsquo;il pense être un expédient provisoire : il introduit une discrétisation, un pas $h$ dont il compte bien se débarrasser ensuite en le faisant tendre vers zéro.</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/portraitplanck.png" style="box-shadow:none;background:none;">
 </div>
@@ -2420,7 +2491,7 @@ Comme $\partial S_0(q) / \partial q=p$, le vecteur normal à la surface $S_0(q)=
 <div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/bohrmodel.png" style="box-shadow:none;background:none;">
 </div>
-<p>En supposant que la longueur d&rsquo;onde reste la même sur l&rsquo;orbite, on doit avoir : $n=\oint\frac{\mathrm{d}\ell}{\lambda}=\oint\frac{p}{h}\mathrm{d}\ell$ (où $n$ est un entier, plus rien à voir avec l&rsquo;indice optique). Et en supposant une orbite circulaire de rayon $r$, on obtient un moment cinétique $L$ valant : $L=mvr=\frac{nh}{2\pi}=n\hbar$, ce qui est exactement la relation <em>ad hoc</em> introduite par Bohr.</p>
+<p>En supposant que la longueur d&rsquo;onde reste la même sur l&rsquo;orbite, on doit avoir : $n=\oint\frac{\mathrm{d}\ell}{\lambda}=\oint\frac{p}{h}\mathrm{d}\ell$ (où $n$ est un entier, plus rien à voir avec l&rsquo;indice optique). Et en supposant une orbite circulaire de rayon $r$, on obtient un moment cinétique (noté ici $\sigma$, la lettre $L$ étant déjà prise par le lagrangien) valant : $\sigma=mvr=\frac{nh}{2\pi}=n\hbar$, ce qui est exactement la relation <em>ad hoc</em> introduite par Bohr.</p>
 <p>Il ne restait plus qu&rsquo;à faire le même pas pour la mécanique qu&rsquo;entre Huygens et Fresnel pour l&rsquo;optique. Ou comme le dit de Broglie :</p>
 <blockquote>
 <p>La nouvelle dynamique du point matériel (incluant le photon d’Einstein) est à l’ancienne (dynamique classique) ce que l’optique ondulatoire est à l’optique géométrique.</p>
@@ -2437,11 +2508,18 @@ Comme $\partial S_0(q) / \partial q=p$, le vecteur normal à la surface $S_0(q)=
 <p><i><b>Équation stationnaire</b></i> :<br>
 Cherchons une fonction d&rsquo;onde $\Psi(q)$ de la forme $\Psi(q)=A(q) \mathrm{e}^{i S_0(q) / \hbar}$ où $S_0$ est l&rsquo;action réduite liée à l&rsquo;énergie $E$ du système par $H(q, \nabla S_0)=E $.<br>
 En substituant dans Helmoltz, on impose une relation du type $\nabla^2 \Psi+K(q) \Psi=0$ et on identifie $K(q)$ pour que la limite $\hbar\rightarrow 0$ redonne le bon $|\nabla S|^2$.</p>
-<p>Pour une particule soumise à un potentiel $V(q)$, on obtient :<br>
-$$\color{#D41876}-\frac{\hbar^2}{2 m} \nabla^2 \Psi(q)+V(q) \Psi(q)=E \Psi(q)$$</p>
+<p>Pour une particule soumise à un potentiel $V(q)$, on obtient :</p>
+<div id="theo">
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle
+{\color{#D41876}-\frac{\hbar^2}{2 m} \nabla^2 \Psi(q)+V(q) \Psi(q)=E \Psi(q)}
+$
+</p>
+</div>
+<br>
 <div id="preuve">
 <details>
-<summary><a>► démonstration :</a></summary>
+<summary>démonstration&nbsp;:</summary>
 <p>Calcul de $\nabla^2\Psi$ :<br></p>
 <div style="overflow-x:auto;">
 $\nabla \Psi=\mathrm{e}^{\frac{\mathrm{i}}{\hbar} S_0}\left(\nabla A+\frac{\mathrm{i}}{\hbar} A \nabla S_0\right)$<br>
@@ -2454,13 +2532,20 @@ $\nabla^2 \Psi=\nabla \cdot\left[\mathrm{e}^{\frac{\mathrm{i}}{\hbar} S_0}\left(
 <p>Pour que dans la limite des petites longueurs d&rsquo;onde, on retrouve $|\nabla S_0(q)|^2=2 m(E-V(q))$, il faut donc poser $K(q)=\frac{2 m}{\hbar^2}(E-V(q))$.</p>
 </details>
 </div>
-<p>Cette équation est l’analogue directe de l’équation de Helmholtz pour la lumière, où $E-V$ joue le rôle de $k^2$.</p>
+<p>Cette équation est l’analogue direct de l’équation de Helmholtz pour la lumière, où c&rsquo;est $\frac{2m}{\hbar^2}(E-V)$ qui joue le rôle de $k_0^2n^2$.</p>
 <p><i><b>Équation dépendant du temps</i></b> :<br>
-Schrödinger remarque que pour décrire les états non stationnaires, il suffit de remplacer dans l’équation stationnaire $E$ par $\mathrm{i} \hbar \frac{\partial}{\partial t}$. En effet, pour une onde monochromatique classique de pulsation $\omega$, l’amplitude évolue dans le temps comme $\mathrm{e}^{\mathrm{i}\omega t}$. Et avec $E=h\nu=\hbar\omega$, on peut écrire $\Psi(q,t)=\Psi(q)\mathrm{e}^{\frac{\mathrm{i}}{\hbar}E t}$.<br>
+Schrödinger remarque que pour décrire les états non stationnaires, il suffit de remplacer dans l’équation stationnaire $E$ par $\mathrm{i} \hbar \frac{\partial}{\partial t}$. En effet, pour une onde monochromatique classique de pulsation $\omega$, l’amplitude évolue dans le temps comme $\mathrm{e}^{-\mathrm{i}\omega t}$. Et avec $E=h\nu=\hbar\omega$, on peut écrire $\Psi(q,t)=\Psi(q)\mathrm{e}^{-\frac{\mathrm{i}}{\hbar}E t}$ (le signe est imposé par $S=S_0-Et$ vu plus haut).<br>
 En dérivant temporellement cette solution, on obtient : $\frac{\partial}{\partial t} \Psi(q, t)=-\frac{i E}{\hbar} \Psi(q, t) \Longrightarrow E \Psi=i \hbar \frac{\partial \Psi}{\partial t}$.<br>
 Par identification, on voit que l&rsquo;énergie $E$ agit sur la fonction d&rsquo;onde comme un opérateur dérivée.</p>
-<p>On obtient alors l’équation de Schrödinger dépendant du temps :<br>
-$$\color{#D41876}\mathrm{i} \hbar \frac{\partial}{\partial t} \Psi(q, t)=\left(-\frac{\hbar^2}{2 m} \nabla^2+V(q)\right) \Psi(q, t)$$</p>
+<p>On obtient alors l’équation de Schrödinger dépendant du temps :<br></p>
+<div id="theo">
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle
+{\color{#D41876}\mathrm{i} \hbar \frac{\partial}{\partial t} \Psi(q, t)=\left(-\frac{\hbar^2}{2 m} \nabla^2+V(q)\right) \Psi(q, t)}
+$
+</p>
+</div>
+<br>
 <div style="position:relative;margin:auto;width:700px;max-width:100%;">
 <video controls preload="metadata" poster="/schrodi.png" style="width:100%;border-radius:5px;">
   <source src="/schrodi.mp4" type="video/mp4">
@@ -2474,7 +2559,17 @@ $$\color{#D41876}\mathrm{i} \hbar \frac{\partial}{\partial t} \Psi(q, t)=\left(-
   Votre navigateur ne prend pas en charge la balise <code>video</code>.
 </video>
 </div>
-<p>Et dans cette vidéo, on constate que le blob réfracté s&rsquo;éloigne de la normale au dioptre comme le ferait un rayon dans un milieu d&rsquo;indice optique inférieur. On pourrait s&rsquo;inquiéter que le blob aille moins vite dans ce milieu (alors qu&rsquo;en optique, un indice plus faible correspond à une vitesse supérieure). Mais non, tout va bien puisque l&rsquo;&ldquo;indice optique&rdquo; de la mécanique est donné par $\sqrt{2m(E-V)}$ (qui n&rsquo;est autre que $p$) or $E-V$ est plus faible à droite vu que le potentiel y est plus grand.</p>
+<p>Et dans cette vidéo, on constate que le blob réfracté s&rsquo;éloigne de la normale au dioptre comme le ferait un rayon dans un milieu d&rsquo;indice optique inférieur. On pourrait s&rsquo;inquiéter que le blob aille moins vite dans ce milieu (alors qu&rsquo;en optique, un indice plus faible correspond à une vitesse supérieure). Mais non, tout va bien. L&rsquo;&ldquo;indice optique&rdquo; de la mécanique est donné par $\sqrt{2m(E-V)}$ (qui n&rsquo;est autre que $p$) : comme $E-V$ est plus faible à droite vu que le potentiel y est plus grand, l&rsquo;indice y est bien plus faible.</p>
+<p>Reste l&rsquo;inquiétude sur la vitesse, et elle se dissipe en distinguant les deux vitesses de l&rsquo;onde. Le $v$ de $n=c/v$ calculé plus haut est la vitesse de <strong>phase</strong> :</p>
+<p style="text-align:center;overflow-x:auto;">
+$\displaystyle
+v_\varphi=\lambda\nu=\frac{h}{p}\frac{E}{h}=\frac{E}{p}\quad$
+tandis que
+$\displaystyle
+\quad v_g=\frac{\mathrm{d}\omega}{\mathrm{d}k}=\frac{\mathrm{d}E}{\mathrm{d}p}=\frac{p}{m}
+$
+</p>
+<p>Quand $n$ diminue, $v_\varphi=c/n$ augmente : l&rsquo;analogie optique est parfaitement respectée. Mais le blob, lui, est un paquet d&rsquo;ondes et se déplace à la vitesse de <strong>groupe</strong>, qui est la vitesse classique de la particule et qui, elle, diminue. Les deux vitesses vont en sens opposés, et c&rsquo;est exactement ce que doit faire une onde de matière. C&rsquo;est cette distinction qui a occupé de Broglie.</p>
 <h3 id="feynman">Feynman</h3>
 <p>La contribution de Feynman à la physique est à la confluence de cette longue évolution de l&rsquo;optique et de la mécanique. Le prix Nobel vient en effet récompenser son travail sur l&rsquo;électrodynamique quantique, théorie décrivant l&rsquo;interaction entre la matière et le rayonnement, où il a en particulier remis l&rsquo;action au centre du jeu.</p>
 <div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
@@ -2487,8 +2582,8 @@ $$\color{#D41876}\mathrm{i} \hbar \frac{\partial}{\partial t} \Psi(q, t)=\left(-
 <p>Néanmoins, ses particules ont des propriétés essentiellement ondulatoires. Selon Feynman, lorsqu&rsquo;une particule emprunte un chemin pour aller d&rsquo;un point I à un point F, elle emporte avec elle une phase qui oscille tout le long du chemin. Que vaut la phase finale pour un chemin entier ? $\frac{S}{\hbar}$ où l&rsquo;action $S$ est calculée sur le chemin considéré !</p>
 <p>On peut retrouver ce $\frac{S}{\hbar}$ à partir de la formule de la phase de l&rsquo;optique ondulatoire $kq-\omega t$ et des relations d&rsquo;Einstein $E=\hbar\omega$ et de de Broglie $p=\hbar k$.<br>
 Découpons le chemin en tronçons infinitésimaux : sur un de ces intervalles, la phase $\phi$ varie de $\mathrm{d}\phi=k \mathrm{d}q - \omega\mathrm{d}t$. En utilisant les équivalences avec l&rsquo;énergie et l&rsquo;impulsion, la petite variation de phase devient $\mathrm{d}\phi=\frac{1}{\hbar}(p\mathrm{d}q-E\mathrm{d}t)$.<br>
-On force ensuite $\mathrm{d}t$ en facteur : $\mathrm{d}\phi=\frac{1}{\hbar} ( p \frac{ \mathrm{d} q }{ \mathrm{d} t } - E ) \mathrm{d}t=\frac{1}{\hbar}(p\dot{q}-E)\mathrm{d}t$. Plus qu&rsquo;à substituer $E$ par l&rsquo;hamiltonien $H$ pour retrouver la formule du lagrangien : $\mathrm{d}\phi=\frac{1}{\hbar}\mathcal{L}\mathrm{d}t$.<br>
-Et pour obtenir la variation de phase sur l&rsquo;entièreté du chemin, on somme les petits déphasages de chaque tronçon infinitésimal, ce qui revient à intégrer le lagrangien le long du chemin : $\Delta\phi=\frac{1}{\hbar}\int_\text{chemin}\mathcal{L}\mathrm{d}t$. C&rsquo;est bien l&rsquo;action qu&rsquo;on retrouve ici et la variation de phase sur le chemin s&rsquo;écrit finalement $\Delta\phi=\frac{1}{\hbar}S_\text{chemin}$.</p>
+On force ensuite $\mathrm{d}t$ en facteur : $\mathrm{d}\phi=\frac{1}{\hbar} ( p \frac{ \mathrm{d} q }{ \mathrm{d} t } - E ) \mathrm{d}t=\frac{1}{\hbar}(p\dot{q}-E)\mathrm{d}t$. Plus qu&rsquo;à substituer $E$ par l&rsquo;hamiltonien $H$ pour retrouver la formule du lagrangien : $\mathrm{d}\phi=\frac{1}{\hbar}L\,\mathrm{d}t$.<br>
+Et pour obtenir la variation de phase sur l&rsquo;entièreté du chemin, on somme les petits déphasages de chaque tronçon infinitésimal, ce qui revient à intégrer le lagrangien le long du chemin : $\Delta\phi=\frac{1}{\hbar}\int_\text{chemin}L\,\mathrm{d}t$. C&rsquo;est bien l&rsquo;action qu&rsquo;on retrouve ici et la variation de phase sur le chemin s&rsquo;écrit finalement $\Delta\phi=\frac{1}{\hbar}S_\text{chemin}$.</p>
  <div style="position:relative;margin-left:auto;margin-right:auto;width:400px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
  <img src="/chemins.png" style="box-shadow:none;background:none;">
  </div>
@@ -2505,7 +2600,7 @@ La probabilité que le détecteur capte un photon doit être calculée en utilis
   Votre navigateur ne prend pas en charge la balise <code>video</code>.
 </video>
 </div>
-<p>Dans cette situation, l&rsquo;action obtenue sur chaque chemin dépend seulement de la longueur du trajet. En effet, à énergie constante, l&rsquo;action se réduit à $\int p\mathrm{d}q$ (action réduite), et comme l&rsquo;impulsion du photon est $p=\frac{E}{c}$, on obtient pour l&rsquo;action $E\frac{L}{c}$ ou encore $E\tau$. L&rsquo;action et donc le déphasage de chaque chemin est proportionnel au temps de parcours.<br>
+<p>Dans cette situation, l&rsquo;action obtenue sur chaque chemin dépend seulement de la longueur du trajet. En effet, à énergie constante, l&rsquo;action se réduit à $\int p\mathrm{d}q$ (action réduite), et comme l&rsquo;impulsion du photon est $p=\frac{E}{c}$, on obtient pour l&rsquo;action $E\frac{\ell}{c}$ (où $\ell$ est la longueur du trajet) ou encore $E\tau$. L&rsquo;action et donc le déphasage de chaque chemin est proportionnel au temps de parcours.<br>
 En sommant sur les chemins, on constate bien que les contributions les plus importantes (car de phases quasi constantes) sont celles proche de la trajectoire la plus courte (on a retrouvé Fermat !).</p>
  <br>
 <p><b><i> Sources :</i></b></p>
@@ -2524,13 +2619,10 @@ En sommant sur les chemins, on constate bien que les contributions les plus impo
 <p>le calcul infinitésimal et intégral fut développé parallèlement par Newton et Leibniz à la fin du 17<sup>e</sup> siècle.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2">
-<p>Amusant ce partage des attributions suivant les pays entre théoricien et expérimentateur.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>Ce n&rsquo;est pas sans rappeler comment Millikan confirma à son corps défendant l&rsquo;idée du photon d&rsquo;Einstein pour expliquer l&rsquo;effet photoélectrique.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3">
-<p>Ce n&rsquo;est pas sans rappeler comment Millikan confirma à son corps défendant l&rsquo;idée du photon d&rsquo;Einstein pour expliquer l&rsquo;effet photoélectrique.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:4">
-<p>La dynamique lagrangienne prend place dans le fibré tangent à l&rsquo;espace des configurations $(q,\dot{q})$, celle d&rsquo;Hamilton est très bien dans l&rsquo;espace des phases $(q,p)$ qui est donc l&rsquo;unique cadre géométrique (techniquement il s&rsquo;agit du fibré cotangent de l&rsquo;espace des configurations).&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>La dynamique lagrangienne prend place dans le fibré tangent à l&rsquo;espace des configurations $(q,\dot{q})$, celle d&rsquo;Hamilton est très bien dans l&rsquo;espace des phases $(q,p)$ qui est donc l&rsquo;unique cadre géométrique (techniquement il s&rsquo;agit du fibré cotangent de l&rsquo;espace des configurations).&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </div>
@@ -3866,16 +3958,16 @@ En sommant sur les chemins, on constate bien que les contributions les plus impo
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1787350436"></script>
-    <script src="/js/perfect-scrollbar.min.js?1787350436"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1787350436"></script>
-    <script src="/js/jquery.sticky.js?1787350436"></script>
-    <script src="/js/featherlight.min.js?1787350436"></script>
-    <script src="/js/highlight.pack.js?1787350436"></script>
+    <script src="/js/clipboard.min.js?1787356857"></script>
+    <script src="/js/perfect-scrollbar.min.js?1787356857"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1787356857"></script>
+    <script src="/js/jquery.sticky.js?1787356857"></script>
+    <script src="/js/featherlight.min.js?1787356857"></script>
+    <script src="/js/highlight.pack.js?1787356857"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1787350436"></script>
-    <script src="/js/learn.js?1787350436"></script>
-    <script src="/js/hugo-learn.js?1787350436"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1787356857"></script>
+    <script src="/js/learn.js?1787356857"></script>
+    <script src="/js/hugo-learn.js?1787356857"></script>
     
     
 
