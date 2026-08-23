@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1787426949" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1787426949" rel="stylesheet">
-    <link href="/css/hybrid.css?1787426949" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1787426949" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1787426949" rel="stylesheet">
-    <link href="/css/auto-complete.css?1787426949" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1787426949" rel="stylesheet">
-    <link href="/css/theme.css?1787426949" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1787426949" rel="stylesheet">
+    <link href="/css/nucleus.css?1787448350" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1787448350" rel="stylesheet">
+    <link href="/css/hybrid.css?1787448350" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1787448350" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1787448350" rel="stylesheet">
+    <link href="/css/auto-complete.css?1787448350" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1787448350" rel="stylesheet">
+    <link href="/css/theme.css?1787448350" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1787448350" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1787426949" rel="stylesheet">
+    <link href="/css/theme-blue.css?1787448350" rel="stylesheet">
     
-    <link href="/css/foo.css?1787426949" rel="stylesheet"><link href="/css/bar.css?1787426949" rel="stylesheet">
+    <link href="/css/foo.css?1787448350" rel="stylesheet"><link href="/css/bar.css?1787448350" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1787426949"></script>
+    <script src="/js/jquery-3.3.1.min.js?1787448350"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1787426949"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1787426949"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1787448350"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1787448350"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1787426949"></script>
+<script type="text/javascript" src="/js/search.js?1787448350"></script>
 
     
   </div>
@@ -2142,9 +2142,7 @@ Ce qui manquera encore à la fin, c'est le spin demi-entier. Il faudra pour cela
 <li><b>Étape 5&nbsp;:</b> mettre les opérateurs dans l'ordre normal pour se débarrasser des infinis de point zéro.</li>
 </ul>
 </div>
-<p>Deux remarques avant de dérouler la recette.</p>
-<p>D&rsquo;abord, l&rsquo;étape 4 est la seule qui ne soit pas garantie de fonctionner. Décomposer en modes d&rsquo;impulsion, c&rsquo;est diagonaliser l&rsquo;hamiltonien, et cela ne réussit que si celui-ci est <b>quadratique</b> en les champs et leurs dérivées. Les termes de couplage, eux, mélangent les modes et ruinent la diagonalisation. Attention à ne pas surinterpréter : la quantification canonique s&rsquo;applique parfaitement aux théories en interaction, ce sont seulement les solutions exactes en modes libres qui deviennent inaccessibles, et il faudra alors passer par la théorie des perturbations.</p>
-<p>Ensuite, la recette est un moule, pas une explication. C&rsquo;est en la voyant tourner sur des exemples de plus en plus riches qu&rsquo;on comprend ce que chaque étape apporte réellement.</p>
+<p>L&rsquo;étape 4 est la seule qui ne soit pas garantie de fonctionner. Décomposer en modes d&rsquo;impulsion, c&rsquo;est diagonaliser l&rsquo;hamiltonien, et cela ne réussit que si celui-ci est <b>quadratique</b> en les champs et leurs dérivées. Les termes de couplage, eux, mélangent les modes et ruinent la diagonalisation.</p>
 <!-- FIGURE 1 (à redessiner) : schéma de flux de la recette, en cinq boîtes verticales reliées par des flèches vers le bas.
 Boîte 1, étiquetée "classique" : la densité lagrangienne L(phi, d_mu phi).
 Boîte 2, encore "classique" : la densité hamiltonienne H(phi, Pi).
@@ -2195,7 +2193,7 @@ $$</p>
 <li>le deuxième est le coût d'une <b>variation spatiale</b>, celui qui pénalise les champs bosselés et qui assure que l'excitation se propage au lieu de rester sur place&nbsp;;</li>
 <li>le troisième est le coût d'avoir <b>un champ plutôt que rien</b>, et c'est lui que l'on appelle le terme de masse.</li>
 </ul>
-<p>Il vaut la peine de noter que le terme de masse est le seul des trois qui ne contienne aucune dérivée. C&rsquo;est exactement pour cette raison qu&rsquo;il pénalise l&rsquo;amplitude du champ en elle-même, et donc que $m$ finira par apparaître comme le seuil d&rsquo;énergie en dessous duquel aucune excitation n&rsquo;existe.</p>
+<p>Le terme de masse est le seul des trois qui ne contienne aucune dérivée. C&rsquo;est exactement pour cette raison qu&rsquo;il pénalise l&rsquo;amplitude du champ en elle-même, et donc que $m$ finira par apparaître comme le seuil d&rsquo;énergie en dessous duquel aucune excitation n&rsquo;existe.</p>
 <!-- FIGURE 2 (à redessiner) : les trois coûts énergétiques de la densité hamiltonienne.
 Trois vignettes côte à côte, chacune montrant le profil d'un champ phi(x) tracé sur un axe horizontal x, avec la valeur zéro en trait pointillé.
 Vignette de gauche, titrée "coût temporel" : un profil plat mais dessiné deux fois, à deux hauteurs différentes, relié par une flèche verticale double étiquetée d_0 phi ; la légende indique "le champ bouge dans le temps".
@@ -2214,8 +2212,8 @@ $$</p>
 </div>
 </div>
 <p>Les autres commutateurs sont nuls : $[\hat{\phi}(x), \hat{\phi}(y)]=\left[\hat{\Pi}^0(x), \hat{\Pi}^0(y)\right]=0$.</p>
-<p>Il faut prendre le temps de lire la distribution de Dirac qui apparaît à droite, car c&rsquo;est elle qui porte toute la physique de cette étape. Elle dit que le champ en un point et l&rsquo;impulsion en un <u>autre</u> point commutent, c&rsquo;est-à-dire que ce sont des degrés de liberté indépendants. Autrement dit, on vient de poser qu&rsquo;un champ est un oscillateur quantique par point de l&rsquo;espace, chacun ignorant les autres au moment de la quantification. Le couplage entre ces oscillateurs ne viendra pas des commutateurs mais du terme de gradient de l&rsquo;hamiltonien.</p>
-<p>C&rsquo;est aussi le bon moment pour remarquer que la relation est imposée <u>à temps égaux</u>. Cette restriction n&rsquo;est pas un détail technique : exiger la même chose à des temps différents entrerait en conflit avec la causalité relativiste, et c&rsquo;est en explorant les commutateurs à temps différents qu&rsquo;on découvre plus tard les propagateurs.</p>
+<p>La distribution de Dirac qui apparaît à droite nous dit que le champ en un point et l&rsquo;impulsion en un <u>autre</u> point commutent, c&rsquo;est-à-dire que ce sont des degrés de liberté indépendants. Autrement dit, on vient de poser qu&rsquo;un champ est un oscillateur quantique par point de l&rsquo;espace, chacun ignorant les autres au moment de la quantification. Le couplage entre ces oscillateurs ne viendra pas des commutateurs mais du terme de gradient de l&rsquo;hamiltonien.</p>
+<p>Remarquons aussi que la relation est imposée <u>à temps égaux</u>. Cette restriction n&rsquo;est pas un détail technique : exiger la même chose à des temps différents entrerait en conflit avec la causalité relativiste, et c&rsquo;est en explorant les commutateurs à temps différents qu&rsquo;on découvre plus tard les propagateurs.</p>
 <p>Exprimée à partir de ces opérateurs, la densité hamiltonienne $\mathcal{H}$ se mue en opérateur $\hat{\mathcal{H}}$ agissant sur les vecteurs d&rsquo;état. Mais nous voici bloqués : on ne sait pas comment un opérateur comme $\hat{\phi}(x)$ agit sur un état nombre d&rsquo;occupation $|n_1n_2n_3\ldots\rangle$. Par contre, on sait parfaitement comment les opérateurs de création et d&rsquo;annihilation, eux, agissent sur ces vecteurs. D&rsquo;où l&rsquo;étape suivante.</p>
 <br>
 <h3 id="étape4-la-décomposition-en-modes">Étape 4 : la décomposition en modes</h3>
@@ -2260,7 +2258,7 @@ $$</p>
 <div id="preuve">
 <details>
 <summary>Preuve&nbsp;:</summary>
-<p>L&rsquo;idée tient en une phrase : on encadre l&rsquo;opérateur d&rsquo;annihilation entre deux exponentielles de l&rsquo;hamiltonien, et comme celui-ci est diagonal dans la base des états nombre d&rsquo;occupation, chaque exponentielle se contente de produire un nombre.</p>
+<p>On encadre l&rsquo;opérateur d&rsquo;annihilation entre deux exponentielles de l&rsquo;hamiltonien, et comme celui-ci est diagonal dans la base des états nombre d&rsquo;occupation, chaque exponentielle se contente de produire un nombre.</p>
 <p>Prenons un état à trois modes peuplés et suivons les phases :</p>
 <div id="grosseformule">
 <p>$$
@@ -2291,7 +2289,7 @@ $$</p>
 <p style="text-align:center;">avec $E_{\boldsymbol{p}}=+\left(\boldsymbol{p}^2+m^2\right)^{\frac{1}{2}}$</p>
 </div>
 </div>
-<p>Cette formule est le cœur de toute la partie, et il faut la lire attentivement. Le champ, objet a priori mystérieux, s&rsquo;est dissous en une superposition d&rsquo;oscillateurs indépendants, un par impulsion. Chaque oscillateur contribue par deux termes, l&rsquo;un qui détruit une excitation et l&rsquo;autre qui en crée une. La racine de $E_{\boldsymbol{p}}$ au dénominateur, elle, n&rsquo;est pas cosmétique : c&rsquo;est elle qui assure la compatibilité avec le commutateur imposé à l&rsquo;étape 3, comme le montre la vérification suivante.</p>
+<p>Le champ, objet a priori mystérieux, s&rsquo;est dissous en une superposition d&rsquo;oscillateurs indépendants, un par impulsion. Chaque oscillateur contribue par deux termes, l&rsquo;un qui détruit une excitation et l&rsquo;autre qui en crée une. La racine de $E_{\boldsymbol{p}}$ au dénominateur assure la compatibilité avec le commutateur imposé à l&rsquo;étape 3, comme le montre la vérification suivante.</p>
 <p>La décomposition du champ nous offre en prime celle de sa densité d&rsquo;impulsion, puisque $\Pi^\mu(x)=\partial^\mu \phi(x)$.</p>
 <div id="preuve">
 <details>
@@ -2302,7 +2300,7 @@ $$</p>
 \hat{\Pi}^\mu(x)=\partial^\mu \hat{\phi}(x)=\int \frac{\mathrm{d}^3 p}{(2 \pi)^{\frac{3}{2}}\left(2 E_\boldsymbol{p}\right)^{\frac{1}{2}}}\left(-\mathrm{i} p^\mu\right)\left(\hat{a}_\boldsymbol{p} \mathrm{e}^{-\mathrm{i} p \cdot x}-\hat{a}_\boldsymbol{p}^{\dagger} \mathrm{e}^{\mathrm{i} p \cdot x}\right)
 $$</p>
 </div>
-<p>Pour la composante temporelle, ce facteur vaut simplement $-\mathrm{i}E_{\boldsymbol{p}}$. Le point important est que l&rsquo;opérateur champ porte $1/\sqrt{2E_{\boldsymbol{p}}}$ alors que sa densité d&rsquo;impulsion porte $\sqrt{E_{\boldsymbol{p}}/2}$ : dans le commutateur des deux, les énergies vont donc se compenser exactement, et c&rsquo;est là que tout se joue.</p>
+<p>Pour la composante temporelle, ce facteur vaut simplement $-\mathrm{i}E_{\boldsymbol{p}}$. Le point important est que l&rsquo;opérateur champ porte $1/\sqrt{2E_{\boldsymbol{p}}}$ alors que sa densité d&rsquo;impulsion porte $\sqrt{E_{\boldsymbol{p}}/2}$ : dans le commutateur des deux, les énergies vont donc se compenser exactement.</p>
 <p>En développant ce commutateur, seuls survivent les termes croisés $[\hat{a}_{\boldsymbol{p}}, \hat{a}_{\boldsymbol{q}}^{\dagger}]$ et $[\hat{a}_{\boldsymbol{p}}^{\dagger}, \hat{a}_{\boldsymbol{q}}]$, chacun proportionnel à $\delta^{(3)}(\boldsymbol{p}-\boldsymbol{q})$. Cette distribution force $E_{\boldsymbol{p}}=E_{\boldsymbol{q}}$, ce qui annule les phases temporelles (nous sommes à temps égaux) et réduit le préfacteur $\frac{1}{2}\sqrt{E_{\boldsymbol{q}}/E_{\boldsymbol{p}}}$ à $\frac{1}{2}$. Il ne reste alors qu&rsquo;à intégrer sur $\boldsymbol{q}$ :</p>
 <div id="grosseformule">
 <p>$$
@@ -2313,7 +2311,7 @@ $$</p>
 $$</p>
 </div>
 <p>Les deux intégrales sont deux écritures de la même distribution de Dirac, et les deux facteurs $\frac{1}{2}$ se recombinent en un.</p>
-<p>Moralité : les facteurs de normalisation de la décomposition en modes ne sont pas décoratifs, ce sont exactement ceux qui font que le commutateur postulé à l&rsquo;étape 3 est retrouvé à l&rsquo;étape 4.</p>
+<p>Moralité : les facteurs de normalisation de la décomposition en modes sont exactement ceux qui font que le commutateur postulé à l&rsquo;étape 3 est retrouvé à l&rsquo;étape 4.</p>
 </details>
 </div>
 <br>
@@ -2332,8 +2330,8 @@ $$</p>
 <p>Trois simplifications successives font tout le travail, et ce sont les seules étapes qui méritent l&rsquo;attention :</p>
 <ul>
 <li>l'<b>intégration sur $x$</b> utilise $\int \mathrm{d}^3 x \mathrm{e}^{\mathrm{i} \boldsymbol{p} \cdot \boldsymbol{x}}=(2 \pi)^3 \delta^{(3)}(\boldsymbol{p})$. Elle fait apparaître $\delta^{(3)}(\boldsymbol{p}-\boldsymbol{q})$ devant les termes du type $\hat{a}^\dagger \hat{a}$, et $\delta^{(3)}(\boldsymbol{p}+\boldsymbol{q})$ devant ceux du type $\hat{a}\hat{a}$ ou $\hat{a}^\dagger\hat{a}^\dagger$&nbsp;;</li>
-<li>l'<b>intégration sur $q$</b> consomme ces distributions. Les termes en $\hat{a}\hat{a}$ et $\hat{a}^\dagger\hat{a}^\dagger$ se retrouvent alors affectés du coefficient $\left(-E\_{\boldsymbol{p}}^2+\boldsymbol{p}^2+m^2\right)$&nbsp;;</li>
-<li>la <b>relation de dispersion</b> $E\_{\boldsymbol{p}}^2=\boldsymbol{p}^2+m^2$ annule précisément ce coefficient. Les termes qui auraient créé ou détruit deux excitations d'un coup disparaissent donc, et c'est heureux&nbsp;: leur présence signifierait que l'hamiltonien ne conserve pas le nombre de particules, dans une théorie sans interaction.</li>
+<li>l'<b>intégration sur $q$</b> consomme ces distributions. Les termes en $\hat{a}\hat{a}$ et $\hat{a}^\dagger\hat{a}^\dagger$ se retrouvent alors affectés du coefficient $\left(-E_{\boldsymbol{p}}^2+\boldsymbol{p}^2+m^2\right)$&nbsp;;</li>
+<li>la <b>relation de dispersion</b> $E_{\boldsymbol{p}}^2=\boldsymbol{p}^2+m^2$ annule précisément ce coefficient. Les termes qui auraient créé ou détruit deux excitations d'un coup disparaissent donc, et c'est heureux&nbsp;: leur présence signifierait que l'hamiltonien ne conserve pas le nombre de particules, dans une théorie sans interaction.</li>
 </ul>
 <p>Il ne survit que :</p>
 <div id="grosseformule">
@@ -2358,10 +2356,11 @@ $$</p>
 \langle0|\hat{H}|0\rangle = \frac{1}{2} \int \mathrm{~d}^3 p \, E_{\boldsymbol{p}}\,\delta^{(3)}(0)
 $$</p>
 </div>
-<p>Une énergie infinie pour le vide 😱 Il vaut la peine de séparer les deux infinis qui se cachent dans cette seule expression, car ils n&rsquo;ont rien à voir :</p>
+<p>Une énergie infinie pour le vide 😱<br>
+Séparons les deux infinis différents qui se cachent dans cette expression :</p>
 <ul>
 <li>le facteur $\delta^{(3)}(0)$ vaut $\frac{V}{(2\pi)^3}$, où $V$ est le volume de l'espace. Il diverge parce qu'on a pris un volume infini, et il disparaît dès qu'on raisonne en <b>densité</b> d'énergie plutôt qu'en énergie&nbsp;;</li>
-<li>l'intégrale $\int \mathrm{d}^3 p \, E_{\boldsymbol{p}}$ diverge, elle, parce qu'on somme les demi-énergies de point zéro d'une infinité de modes de plus en plus énergétiques. C'est une divergence de courtes longueurs d'onde, et c'est la première rencontre du livre avec ce qu'on appellera plus tard une divergence <b>ultraviolette</b>.</li>
+<li>l'intégrale $\int \mathrm{d}^3 p \, E_{\boldsymbol{p}}$ diverge, elle, parce qu'on somme les demi-énergies de point zéro d'une infinité de modes de plus en plus énergétiques. C'est une divergence de courtes longueurs d'onde, et c'est la première rencontre avec ce qu'on appellera plus tard une divergence <b>ultraviolette</b>.</li>
 </ul>
 <p>Rien de tout cela n&rsquo;est alarmant si l&rsquo;on se souvient que seul le mesurable nous intéresse. Or on ne mesure jamais que des différences d&rsquo;énergie, et ces différences ont le bon goût de faire disparaître ce terme constant. L&rsquo;infini obtenu ne signale finalement qu&rsquo;une mauvaise définition du niveau zéro.</p>
 <p>Malgré tout, ces infinis qui traînent partout, cela fait désordre. En ordonnant savamment les opérateurs, on va pouvoir les glisser discrètement sous le tapis.</p>
@@ -2376,7 +2375,7 @@ C&rsquo;est le &ldquo;<strong>problème de la constante cosmologique</strong>&qu
 <p>Exemples :</p>
 <p>$\color{#D41876 }N\left[\color{#000 }\hat{a} \hat{a}^{\dagger}\color{#D41876 }\right]\color{#000 }=\hat{a}^{\dagger} \hat{a}$, $\color{#D41876 }N\left[\color{#000 }\hat{a}^{\dagger} \hat{a}\color{#D41876 }\right]\color{#000 }=\hat{a}^{\dagger} \hat{a}$, $\color{#D41876 }N\left[\color{#000 }\hat{a}^{\dagger} \hat{a} \hat{a} \hat{a}^{\dagger} \hat{a}^{\dagger}\color{#D41876 }\right]\color{#000 }=\hat{a}^{\dagger} \hat{a}^{\dagger} \hat{a}^{\dagger} \hat{a} \hat{a}$, $\color{#D41876 }N[\color{#000 }\hat{a}_{\boldsymbol{p}} \hat{a}_{\boldsymbol{q}}^{\dagger} \hat{a}_{\boldsymbol{r}}\color{#D41876 }]\color{#000 }=\hat{a}_{\boldsymbol{q}}^{\dagger} \hat{a}_{\boldsymbol{p}} \hat{a}_{\boldsymbol{r}}$, $\color{#D41876 }N[\color{#000 }\hat{c}_{\boldsymbol{p}} \hat{c}_{\boldsymbol{q}}^{\dagger} \hat{c}_r\color{#D41876 }]\color{#000 }=-\hat{c}_{\boldsymbol{q}}^{\dagger} \hat{c}_{\boldsymbol{p}} \hat{c}_r$.</p>
 </div>
-<p>Il faut être honnête sur la nature de l&rsquo;opération. L&rsquo;ordre normal n&rsquo;est pas une astuce de calcul, c&rsquo;est une <strong>prescription</strong> : on décide que l&rsquo;hamiltonien de la théorie est $N[\hat{H}]$ plutôt que $\hat{H}$, ce qui revient à recaler le zéro d&rsquo;énergie. Cela est légitime précisément parce que le terme retiré est une constante, indépendante de l&rsquo;état.</p>
+<p>L&rsquo;ordre normal n&rsquo;est pas une astuce de calcul, c&rsquo;est une <strong>prescription</strong> : on décide que l&rsquo;hamiltonien de la théorie est $N[\hat{H}]$ plutôt que $\hat{H}$, ce qui revient à recaler le zéro d&rsquo;énergie. C&rsquo;est légitime précisément parce que le terme retiré est une constante, indépendante de l&rsquo;état.</p>
 <p>Appliquons-la :</p>
 <div id="grosseformule">
 <p>$$
@@ -2401,7 +2400,7 @@ $$</p>
 \langle0|N[\hat{H}]|0\rangle = 0
 $$</p>
 </div>
-<p>On retrouve ainsi le même hamiltonien que pour des particules indépendantes ! Les états d&rsquo;excitation du champ peuvent être vus comme des particules d&rsquo;impulsion quantifiée. Ce sont des bosons de spin $S=0$, et c&rsquo;est bien pourquoi on parlait de champ scalaire.</p>
+<p>On retrouve ainsi le même hamiltonien que pour des particules indépendantes ! Les états d&rsquo;excitation du champ peuvent être vus comme des particules d&rsquo;impulsion quantifiée. Ce sont des bosons de spin $S=0$, ce qui correspond bien à un champ <u>scalaire</u>.</p>
 <br>
 <h3 id="ce-que-raconte-la-décomposition-en-modes">Ce que raconte la décomposition en modes</h3>
 <p>Regardons ce qu&rsquo;il advient lorsqu&rsquo;on fait agir l&rsquo;opérateur champ sur le vide. Comme $\hat{a}_{\boldsymbol{p}}^{\dagger}|0\rangle=|\boldsymbol{p}\rangle$ et que le terme d&rsquo;annihilation ne survit pas, on a :</p>
@@ -2473,7 +2472,8 @@ $$</p>
 $$</p>
 </div>
 </div>
-<p>Insistons sur ce qui vient de se passer, car c&rsquo;est un mouvement qu&rsquo;on refera sans cesse. Nous n&rsquo;avons ajouté aucune physique, seulement changé de variables : $(\phi_1,\phi_2)$ et $(\psi,\psi^\dagger)$ décrivent le même système. Mais les nouvelles variables rendent la symétrie <b>manifeste</b>, et une symétrie manifeste est une charge conservée qu&rsquo;on peut cueillir.</p>
+<p>Nous n&rsquo;avons ajouté aucune physique, seulement changé de variables : $(\phi_1,\phi_2)$ et $(\psi,\psi^\dagger)$ décrivent le même système. Mais les nouvelles variables rendent la symétrie <b>manifeste</b>, et une symétrie manifeste est une charge conservée qu&rsquo;on peut cueillir.</p>
+<br>
 <h3 id="étapes2-à5-la-recette-sans-surprise">Étapes 2 à 5 : la recette, sans surprise</h3>
 <p>Chaque composante $\sigma$ du champ ($\sigma=\psi$ ou $\psi^\dagger$) possède sa propre densité d&rsquo;impulsion, et l&rsquo;on remarquera qu&rsquo;elles sont croisées :</p>
 <div id="grosseformule">
@@ -2524,6 +2524,7 @@ $$</p>
 </div>
 </div>
 <p>Les particules $a$ et $b$ ont donc exactement la même énergie $E_\boldsymbol{p}$, et donc la même masse. Ce sont deux espèces distinctes mais indiscernables par l&rsquo;hamiltonien, ce qui est la signature d&rsquo;une paire particule-antiparticule. Il reste à trouver ce qui les distingue, et c&rsquo;est le travail de Noether.</p>
+<br>
 <h3 id="la-charge-de-noether-ou-pourquoi-les-antiparticules-existent">La charge de Noether, ou pourquoi les antiparticules existent</h3>
 <p>Le champ scalaire complexe possède une <strong>symétrie interne</strong> $U(1)$, puisque les transformations globales suivantes laissent le lagrangien inchangé :</p>
 <div id="def">
@@ -2580,7 +2581,7 @@ $$</p>
 \hat{Q}_{\mathrm{N}}=\frac{1}{2} \int \mathrm{~d}^3 p\left(-\hat{a}_{\boldsymbol{p}}^{\dagger} \hat{a}_{\boldsymbol{p}}+\hat{b}_{\boldsymbol{p}} \hat{b}_{\boldsymbol{p}}^{\dagger}-\hat{a}_{\boldsymbol{p}} \hat{a}_{\boldsymbol{p}}^{\dagger}+\hat{b}_{\boldsymbol{p}}^{\dagger} \hat{b}_{\boldsymbol{p}}\right)
 $$</p>
 </div>
-<p>L&rsquo;étape qui porte l&rsquo;idée est la suivante : les opérateurs de type $a$ et ceux de type $b$ arrivent avec des <u>signes opposés</u>. Cela ne vient pas d&rsquo;un choix de notation mais du signe relatif entre $D\psi = +\mathrm{i}\psi$ et $D\psi^\dagger = -\mathrm{i}\psi^\dagger$, c&rsquo;est-à-dire du fait que la phase tourne dans un sens pour $\psi$ et dans l&rsquo;autre pour $\psi^\dagger$.</p>
+<p>Les opérateurs de type $a$ et ceux de type $b$ arrivent avec des <u>signes opposés</u>. Cela ne vient pas d&rsquo;un choix de notation mais du signe relatif entre $D\psi = +\mathrm{i}\psi$ et $D\psi^\dagger = -\mathrm{i}\psi^\dagger$, c&rsquo;est-à-dire du fait que la phase tourne dans un sens pour $\psi$ et dans l&rsquo;autre pour $\psi^\dagger$.</p>
 <p>L&rsquo;ordre normal élimine ensuite les constantes issues des commutateurs :</p>
 <div id="grosseformule">
 <p>$$
@@ -2593,7 +2594,7 @@ $$</p>
 </details>
 </div>
 <p>La charge conservée est donc la <u>différence</u> entre le nombre d&rsquo;antiparticules et le nombre de particules ! Chacune des deux espèces porte une charge de Noether de signe opposé, et c&rsquo;est précisément cela qui les distingue enfin.</p>
-<p>Le raisonnement mérite d&rsquo;être lu dans le sens inverse, car c&rsquo;est là qu&rsquo;il devient éclairant. Si une théorie possède une charge conservée, alors les processus autorisés ne peuvent pas créer une particule seule : il faut créer simultanément quelque chose qui porte la charge opposée. L&rsquo;existence des antiparticules n&rsquo;est donc pas un supplément exotique ajouté à la main, elle est <u>impliquée</u> par la conservation de la charge.</p>
+<p>Inversons le raisonnement. Si une théorie possède une charge conservée, alors les processus autorisés ne peuvent pas créer une particule seule : il faut créer simultanément quelque chose qui porte la charge opposée. L&rsquo;existence des antiparticules n&rsquo;est donc pas un supplément exotique ajouté à la main, elle est <u>impliquée</u> par la conservation de la charge.</p>
 <p>Une dernière précaution de vocabulaire. Si $J^\mu_N$ est conservé, il en est de même de $-J^\mu_N$ : le choix de l&rsquo;espèce qui porte la charge positive est arbitraire. Par convention, le courant nombre de particules $\hat{J}^\mu_{Nc}$ (« c » pour conventionnel) est défini positivement pour les particules et négativement pour les antiparticules. On pose donc $\hat{J}_{\mathrm{Nc}}^\mu=-N\left[\hat{J}_{\mathrm{N}}^\mu\right]$ et $\hat{Q}_{\mathrm{Nc}}=-N\left[\hat{Q}_{\mathrm{N}}\right]$, pour aboutir à :</p>
 <div id="theo">
 <div id="grosseformule">
@@ -2616,7 +2617,7 @@ $$</p>
 <br>
 <div id="preuve">
 <details>
-<summary>Vérification sur l'équation de Klein--Gordon&nbsp;:</summary>
+<summary>Vérification sur l'équation de Klein&ndash;Gordon&nbsp;:</summary>
 <p>Injectons cette forme dans l&rsquo;équation :</p>
 <div id="grosseformule">
 <p>$$
@@ -2653,7 +2654,7 @@ $$</p>
 $$</p>
 </div>
 <p>Le premier terme, en $1/m$, est négligeable devant les autres, et le troisième se télescope avec le terme de masse du lagrangien. Toute la dynamique de la théorie s&rsquo;est donc réfugiée dans le deuxième terme, celui qui ne contient qu&rsquo;<u>une seule</u> dérivée temporelle.</p>
-<p>Reste une subtilité de signe qui mérite qu&rsquo;on s&rsquo;y arrête. En décomposant en ondes planes $\mathrm{e}^{-\mathrm{i}p\cdot x}$, la dérivée temporelle de $\Psi$ apporte un facteur $-\mathrm{i}E_\boldsymbol{p}$ et celle de $\Psi^\dagger$ un facteur $+\mathrm{i}E_\boldsymbol{p}$ ; les deux morceaux de la parenthèse sont alors égaux, et $(\Psi^{\dagger} \partial_0 \Psi-\Psi \partial_0 \Psi^{\dagger})$ peut être remplacé par $2 \Psi^{\dagger} \partial_0 \Psi$. On aurait tout aussi bien pu choisir la décomposition en $\mathrm{e}^{+\mathrm{i}p\cdot x}$ et obtenir $-2 \Psi^{\dagger} \partial_0 \Psi$. C&rsquo;est donc <u>nous</u> qui décidons ici de favoriser la matière au détriment de l&rsquo;antimatière.</p>
+<p>Reste une subtilité de signe. En décomposant en ondes planes $\mathrm{e}^{-\mathrm{i}p\cdot x}$, la dérivée temporelle de $\Psi$ apporte un facteur $-\mathrm{i}E_\boldsymbol{p}$ et celle de $\Psi^\dagger$ un facteur $+\mathrm{i}E_\boldsymbol{p}$ ; les deux morceaux de la parenthèse sont alors égaux, et $(\Psi^{\dagger} \partial_0 \Psi-\Psi \partial_0 \Psi^{\dagger})$ peut être remplacé par $2 \Psi^{\dagger} \partial_0 \Psi$. On aurait tout aussi bien pu choisir la décomposition en $\mathrm{e}^{+\mathrm{i}p\cdot x}$ et obtenir $-2 \Psi^{\dagger} \partial_0 \Psi$. C&rsquo;est donc <u>nous</u> qui décidons ici de favoriser la matière au détriment de l&rsquo;antimatière.</p>
 <p>On obtient au final :</p>
 <div id="theo">
 <div id="grosseformule">
@@ -2663,7 +2664,7 @@ $$</p>
 </div>
 <p style="text-align:center;margin-top:-0.5em;">avec $g=\lambda/2m^2$</p>
 </div>
-<p>Ce lagrangien est celui de la matière condensée, et il faut mesurer ce qu&rsquo;il a coûté. Une seule dérivée en temps contre deux en espace : l&rsquo;asymétrie que nous avons injectée en choisissant la matière lui a fait perdre sa belle covariance relativiste. Ce n&rsquo;est pas un défaut, c&rsquo;est le contenu physique de l&rsquo;approximation : dans un monde où l&rsquo;on ne crée jamais de paires, il n&rsquo;y a plus de raison que le temps et l&rsquo;espace se ressemblent.</p>
+<p>Ce lagrangien est celui de la matière condensée. Il contient une seule dérivée en temps contre deux en espace : l&rsquo;asymétrie que nous avons injectée en choisissant la matière lui a fait perdre sa belle covariance relativiste. Ce n&rsquo;est pas un défaut, c&rsquo;est le contenu physique de l&rsquo;approximation : dans un monde où l&rsquo;on ne crée jamais de paires, il n&rsquo;y a plus de raison que le temps et l&rsquo;espace se ressemblent.</p>
 <div id="preuve">
 <details>
 <summary>La recette sur ce lagrangien non relativiste&nbsp;:</summary>
@@ -2718,6 +2719,7 @@ $$</p>
 <p>On retrouve un hamiltonien très ressemblant <a href="../tqc1/#hamiltonien">à celui prévu</a> pour les systèmes discrets. Et l&rsquo;on constate, comme annoncé au début de cette partie, que la partie potentielle n&rsquo;est pas diagonale : elle relie deux impulsions différentes $\boldsymbol{p}$ et $\boldsymbol{q}$, et c&rsquo;est exactement en ce sens que le couplage empêche la diagonalisation.</p>
 </details>
 </div>
+<br>
 <h3 id="la-relation-nombre-phase">La relation nombre-phase</h3>
 <p>Le champ scalaire complexe non relativiste conserve sa symétrie $U(1)$, ce qui autorise un autre jeu de variables, particulièrement adapté aux systèmes cohérents : l&rsquo;amplitude et la phase.</p>
 <div id="def">
@@ -2745,7 +2747,7 @@ $$</p>
 \end{aligned}
 $$</p>
 </div>
-<p>La seconde ligne est le résultat central de toute cette section, et il faut la lire lentement : <u>la densité d&rsquo;impulsion conjuguée à la phase est la densité de particules</u>. Le couple canonique de cette théorie n&rsquo;est donc pas position-impulsion, c&rsquo;est phase-densité.</p>
+<p>La seconde ligne nous dit que <b>la densité d&rsquo;impulsion conjuguée à la phase est la densité de particules</b>. Le couple canonique de cette théorie n&rsquo;est donc pas position-impulsion, c&rsquo;est phase-densité.</p>
 <p><b>Étape 3 :</b> on impose alors les relations de commutation habituelles à ce couple :</p>
 <div id="grosseformule">
 <p>$$
@@ -2758,8 +2760,8 @@ $$</p>
 <p>La transformation étant $\theta\rightarrow\theta+\alpha$, on a $D\theta = \left.\frac{\partial \theta}{\partial \alpha}\right|_{\alpha\rightarrow 0}=1$, ce qui est aussi simple qu&rsquo;on pouvait l&rsquo;espérer.</p>
 <p>$D\mathcal{L}=0$ puisque $\alpha$ est une constante (on regarde une transformation globale et non locale $\alpha(\cancel{t,\boldsymbol{x}})$). Et donc $W^\mu =0$.</p>
 <p>Les densités d&rsquo;impulsion valent $\Pi^0_\theta=-\rho$ et $\Pi^i_\theta=\frac{\rho}{m}\partial^i\theta$.</p>
-<details>
-<summary><a>Détail du calcul de la composante spatiale</a></summary>
+<details style="background-color:#F4F4F4;border-radius:5px;padding:5px 5px 5px 5px;">
+<summary>Détail du calcul de la composante spatiale</summary>
 <div style="overflow-x:auto;">
 $\Pi^i_\theta=\frac{\partial\mathcal{L}}{\partial(\partial_i\theta)}=\frac{-\rho}{2m}\frac{\partial(\boldsymbol{\nabla}\theta)^2}{\partial(\partial_i\theta)}=\frac{-\rho}{2m}\frac{\partial(\eta^{kl}\partial_k\theta\partial_l\theta)}{\partial(\partial_i\theta)}=\frac{-\rho}{2m}(\eta^{kl}\delta^i_k\partial_l\theta+\eta^{kl}\delta^i_l\partial_k\theta)=\frac{-\rho}{2m}(-\delta^{kl}\delta^i_k\partial_l\theta-\delta^{kl}\delta^i_l\partial_k\theta)=\frac{\rho}{m}\partial^i\theta$</div> avec la signature $(+,-,-,-)$
 </details>
@@ -2775,7 +2777,7 @@ $\Pi^i_\theta=\frac{\partial\mathcal{L}}{\partial(\partial_i\theta)}=\frac{-\rho
 $$</p>
 </div>
 </div>
-<p>C&rsquo;est la <strong>relation d&rsquo;incertitude nombre-phase</strong>. Elle dit que le nombre d&rsquo;excitations d&rsquo;un champ et sa phase sont deux observables conjuguées, exactement comme la position et l&rsquo;impulsion d&rsquo;une particule : on ne peut pas connaître précisément les deux à la fois. Un état de nombre de particules bien défini a une phase totalement indéterminée, et un état de phase bien définie, comme un condensat ou un supraconducteur, n&rsquo;a pas de nombre de particules bien défini. Toute la physique des jonctions Josephson tient dans cette ligne.</p>
+<p>C&rsquo;est la <strong>relation d&rsquo;incertitude nombre-phase</strong>. Elle dit que le nombre d&rsquo;excitations d&rsquo;un champ et sa phase sont deux observables conjuguées, exactement comme la position et l&rsquo;impulsion d&rsquo;une particule : on ne peut pas connaître précisément les deux à la fois. Un état de nombre de particules bien défini a une phase totalement indéterminée, et un état de phase bien définie, comme un condensat ou un supraconducteur, n&rsquo;a pas de nombre de particules bien défini.</p>
 <br>
 <h2 id="champ-à-plusieurs-composantes-généraliser-la-charge">Champ à plusieurs composantes : généraliser la charge</h2>
 <h3 id="symétries-internes-et-isospin">Symétries internes et isospin</h3>
@@ -4381,16 +4383,16 @@ Toutes les particules obtenues sont pourtant des <b>bosons</b>, de spin 0 ou 1. 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1787426949"></script>
-    <script src="/js/perfect-scrollbar.min.js?1787426949"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1787426949"></script>
-    <script src="/js/jquery.sticky.js?1787426949"></script>
-    <script src="/js/featherlight.min.js?1787426949"></script>
-    <script src="/js/highlight.pack.js?1787426949"></script>
+    <script src="/js/clipboard.min.js?1787448350"></script>
+    <script src="/js/perfect-scrollbar.min.js?1787448350"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1787448350"></script>
+    <script src="/js/jquery.sticky.js?1787448350"></script>
+    <script src="/js/featherlight.min.js?1787448350"></script>
+    <script src="/js/highlight.pack.js?1787448350"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1787426949"></script>
-    <script src="/js/learn.js?1787426949"></script>
-    <script src="/js/hugo-learn.js?1787426949"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1787448350"></script>
+    <script src="/js/learn.js?1787448350"></script>
+    <script src="/js/hugo-learn.js?1787448350"></script>
     
     
 
