@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1787663644" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1787663644" rel="stylesheet">
-    <link href="/css/hybrid.css?1787663644" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1787663644" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1787663644" rel="stylesheet">
-    <link href="/css/auto-complete.css?1787663644" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1787663644" rel="stylesheet">
-    <link href="/css/theme.css?1787663644" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1787663644" rel="stylesheet">
+    <link href="/css/nucleus.css?1787664520" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1787664520" rel="stylesheet">
+    <link href="/css/hybrid.css?1787664520" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1787664520" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1787664520" rel="stylesheet">
+    <link href="/css/auto-complete.css?1787664520" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1787664520" rel="stylesheet">
+    <link href="/css/theme.css?1787664520" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1787664520" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1787663644" rel="stylesheet">
+    <link href="/css/theme-blue.css?1787664520" rel="stylesheet">
     
-    <link href="/css/foo.css?1787663644" rel="stylesheet"><link href="/css/bar.css?1787663644" rel="stylesheet">
+    <link href="/css/foo.css?1787664520" rel="stylesheet"><link href="/css/bar.css?1787664520" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1787663644"></script>
+    <script src="/js/jquery-3.3.1.min.js?1787664520"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1787663644"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1787663644"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1787664520"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1787664520"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1787663644"></script>
+<script type="text/javascript" src="/js/search.js?1787664520"></script>
 
     
   </div>
@@ -2529,13 +2529,17 @@ $$
 pour tout $p\in G$.<br>
 <p>D’après le lemme de Schur, soit $\mu≠\nu$ (les deux représentations ne sont pas équivalentes) et alors $M_X = 0$, soit $\mu=\nu$ et $M_X=c_X E$ avec $c_X$ une constante (car on est dans le cas de l’automorphisme).<br></p>
 <p>Choisissons $X$ parmi les $n_\mu \times n_\nu$ matrices $X_l^k\left(k=1, \cdots, n_\nu ; l=1, \cdots, n_\mu\right)$ dont les éléments sont définis par : $\left(X_l^k\right)^i_j=\delta_j^k \delta_l^i$.</p>
-<p>Prenons un exemple pour fixer les idées, avec $n_\nu=4$ et $n_\mu=3$, $X^1_2$ s’écrit :<br>
-$X_2^1=\left(\begin{array}{llll}
-0 &amp; 0 &amp; 0 &amp; 0 \\
-1 &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; 0\\
-\end{array}\right)$<br>
-Un seul élément de chaque $X^k_l$ est non nul (et vaut 1), celui se trouvant colonne $k$, ligne $l$.</p>
+<p>Prenons un exemple pour fixer les idées, avec $n_\nu=4$ et $n_\mu=3$, $X^1_2$ s’écrit :<br></p>
+<p style="text-align:center;">
+$\displaystyle
+X_2^1=\left(\begin{array}{llll}
+0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0\\
+\end{array}\right)
+$
+</p>
+<p>Un seul élément de chaque $X^k_l$ est non nul (et vaut 1), celui se trouvant colonne $k$, ligne $l$.</p>
 <p>On a alors :<br>
 $\left(M_l^k\right)^i_j=\sum_g D_\mu^{\dagger}(g)^i_m\left(X_l^k\right)^m_n D^\nu(g)^n_j=\sum_g D_\mu^{\dagger}(g)^i_l D^\nu(g)^k_j$ qui doit être nul dans le cas $\mu≠\nu$, expliquant le terme $\delta^\mu_\nu$ dans la relation à démontrer.</p>
 <p>Et dans le cas $\mu=\nu$,  $\left(M_l^k\right)^i_j=c_l^k \,\delta_j^i$ où les $c_k^l$ sont des constantes.</p>
@@ -2611,9 +2615,13 @@ Grâce aux caractères, indépendants de la base, on pourrait maintenir un trait
 <p>Rappelons à toute fin utile que les caractères d’une représentation $U(G)$ sont les traces des opérateurs $U(g)$. Ils sont indépendant du choix de la base dans l’espace des représentations. Tous les éléments d’un groupe appartenant à une même classe ont par conséquent le même caractère dans une représentation donnée.</p>
 <div id="theo">
 <p>Soit $U^\mu(G)$ une représentation irréductible de $G$.<br>
-Alors la somme des $U^\mu(g)$ sur l’ensemble des éléments d’une classe donnée vaut :<br>
-$\sum_{h \in \zeta_i} U^\mu(h)=\frac{n_i}{n_\mu} \chi_i^\mu E$<br>
-où $\zeta_i$ est la classe $i$, $E$ l’opérateur identité, $n_\mu$ la dimension de la représentation et $n_i$ le nombre d’éléments dans la classe $i$.</p>
+Alors la somme des $U^\mu(g)$ sur l’ensemble des éléments d’une classe donnée vaut :</p>
+<p style="text-align:center;">
+$\displaystyle
+\sum_{h \in \zeta_i} U^\mu(h)=\frac{n_i}{n_\mu} \chi_i^\mu E
+$
+</p>
+<p>où $\zeta_i$ est la classe $i$, $E$ l’opérateur identité, $n_\mu$ la dimension de la représentation et $n_i$ le nombre d’éléments dans la classe $i$.</p>
 </div>
 <br>
 <div id="preuve">
@@ -2748,7 +2756,11 @@ Pour $\mathrm{S_3}$, on a bien deux représentations de dimension 1, déjà dét
 <p>C’est là que les caractères abattent leur atout maître :</p>
 <div id="theo">
 <p>Dans la réduction d’une représentation $U(G)$ d’un groupe $G$ en ses composantes irréductibles, le nombre de fois ($a_\nu$) qu’une représentation irréductible $U^\nu(G)$ apparaît est donné par :</p>
-<p>$\displaystyle a_\nu=\sum_i \frac{n_i}{n_G} \chi_\nu^{\dagger i} \chi_i=\tilde{\chi}_\nu^{\dagger} \cdot \tilde{\chi}$</p>
+<p style="text-align:center;">
+$\displaystyle
+a_\nu=\sum_i \frac{n_i}{n_G} \chi_\nu^{\dagger i} \chi_i=\tilde{\chi}_\nu^{\dagger} \cdot \tilde{\chi}
+$
+</p>
 </div>
 <br>
 <div id="preuve">
@@ -2923,7 +2935,14 @@ $$</p>
 <p>Elle consiste à utiliser les éléments mêmes du groupe comme base. Chacune des matrices, de dimension $n_G$, décrit alors les permutations que subit l’ensemble des éléments du groupe sous l’action d’un élément donné. On l’appelle <b>représentation régulière</b> : elle reproduit, en l’éclatant, la table de multiplication du groupe (élément par élément). Elle va nous permettre d’enfin démontrer la complétude des représentations irréductibles.</p>
 <div id="def">
 <p>Soit $G$ un groupe fini d’éléments $\{g_i, i=1, \cdots, n_G\}$. La loi de composition interne du groupe, $g_i g_j=g_k$, peut se réécrire formellement :</p>
-<p>$g_i g_j=g_m \Delta_{i j}^m \qquad$ où $\qquad \Delta_{i j}^m=\left\{\begin{array}{l}1 \text { si } m=k \\ 0 \text { si } m \neq k\end{array}\right.$</p>
+<p style="text-align:center;">
+$\displaystyle
+g_i g_j=g_m \Delta_{i j}^m \quad$ 
+où 
+$\displaystyle
+ \Delta_{i j}^m=\left\{\begin{array}{l}1 \text { si } m=k \\ 0 \text { si } m \neq k\end{array}\right.
+$
+</p>
 <p>Les matrices $\left(\Delta_i\right)_j^k=\Delta_{i j}^k$, $i=1, \cdots, n_G$, forment une représentation du groupe $G$ appelée <b>représentation régulière</b>.</p>
 </div>
 <br>
@@ -2938,7 +2957,15 @@ Preuve&nbsp;:
 Détaillons un peu&nbsp;:
 <p>le théorème de Cayley dit qu’à tout $a\in G$ on peut faire correspondre un $p_a \in S_n$ défini par $p_a(g)=a g$, pour tout $g\in G$.</p>
 <p>Or, sur le modèle de la preuve qui précède, on peut faire correspondre à tout $a$ une matrice $\Delta_a$ définie par :</p>
-<p>$a g_m=g_k\left(\Delta_a\right)_m^k \qquad$ avec $\qquad \Delta_{a m}^k=\left\{\begin{array}{l}1 \text { si } k=a m \\ 0 \text { si } k \neq a m\end{array}\right.$</p>
+<p style="text-align:center;">
+$\displaystyle
+a g_m=g_k\left(\Delta_a\right)_m^k\quad
+$
+avec
+$\displaystyle
+\quad \Delta_{a m}^k=\left\{\begin{array}{l}1 \text { si } k=a m \\ 0 \text { si } k \neq a m\end{array}\right.
+$
+</p>
 <p>en écrivant $am$ tel que $a g_m \equiv g_{a m}$.</p>
 <p>Or par définition $p_a\left(g_m\right)=a g_m \equiv g_{a m}=g_k \delta_{a m}^k$ avec $\delta_{a m}^k=\left\{\begin{array}{l}1 \text { si } k=a m \\ 0 \text { si } k \neq a m\end{array}\right.$</p>
 <p>C’est bien la même chose, et la forme en $\delta_{a m}^k$ permet d’ailleurs de prouver à nouveau que la représentation régulière est bien une représentation :</p>
@@ -2961,7 +2988,11 @@ Preuve&nbsp;:
 </div>
 <p>On en déduit la relation si longuement promise :</p>
 <div id="theo">
-<p>$\displaystyle \sum_\mu n_\mu^2=n_G$</p>
+<p style="text-align:center;">
+$\displaystyle
+\displaystyle \sum_\mu n_\mu^2=n_G
+$
+</p>
 </div>
 <br>
 <div id="preuve">
@@ -3017,7 +3048,7 @@ ex&nbsp;: le produit vectoriel entre deux vecteurs, défini comme $\overrightarr
 <p>Par définition :</p>
 <ul>
 <li>$\left\langle w_{k^{\prime}} \mid w_k\right\rangle=\delta_k^{k^{\prime}}=\delta_i^{i^{\prime}} \delta_j^{j^{\prime}}$ avec $k^{\prime}=\left(i^{\prime}, j^{\prime}\right)$ et $k=(i, j)$,</li>
-<li>$W=\\\{|x\rangle=\left|w_k\right\rangle x^k\\\}$ où les $x^k$ sont les composantes de $x$,</li>
+<li>$W=\{|x\rangle=\left|w_k\right\rangle x^k\}$ où les $x^k$ sont les composantes de $x$,</li>
 <li>$\langle x \mid y\rangle \equiv x_k^{\dagger} y^k$ où $x_k^{\dagger}=\left(x^k\right)^*$.</li>
 </ul>
 </div>
@@ -3087,7 +3118,11 @@ $$</p>
 <p>$\left|w_{\alpha l}^\lambda\right\rangle=\sum_{i, j}\left|w_{i, j}\right\rangle\left\langle i, j\right.$ $(\mu, \nu)\left|\alpha, \lambda, l\right\rangle$</p>
 <p>ou plus simplement $|\alpha, \lambda, l\rangle=\sum_{i, j}|i, j\rangle\langle i, j \mid \alpha, \lambda, l\rangle$, ou encore plus simple (sommation implicite sur les indices répétés) :</p>
 <div id="def">
-<p>$|\alpha, \lambda, l\rangle=|i, j\rangle\langle i, j \mid \alpha, \lambda, l\rangle$</p>
+<p style="text-align:center;">
+$\displaystyle
+|\alpha, \lambda, l\rangle=|i, j\rangle\langle i, j \mid \alpha, \lambda, l\rangle
+$
+</p>
 <p>Les $\langle i, j \mid \alpha, \lambda, l\rangle$ sont les éléments de la matrice semblable de changement de base, dont les lignes sont indexées par les $(i, j)$ et les colonnes par $(\alpha, \lambda, l)$. Ce sont des nombres complexes appelés <b>coefficients de Clebsch-Gordan</b>.</p>
 </div>
 <p>Remarque :<br>
@@ -3117,6 +3152,7 @@ $$</p>
 \end{aligned}
 $$</p>
 </div>
+<br>
 </div>
 <br>
 <div id="preuve">
@@ -3159,7 +3195,11 @@ $$</p>
 <p>Savoir décomposer un jeu arbitraire de vecteurs d’état et d’opérateurs censés rester invariants sous l’effet d’une certaine symétrie en leurs composantes irréductibles permettrait donc d’obtenir la description la plus adaptée du système physique au problème donné.</p>
 <div id="def">
 <p>Soit $U(G)$ une représentation unitaire définie sur un espace vectoriel préhilbertien $V$, et soit $V_\mu$ un sous-espace invariant sous l’action de $U(G)$ avec $\{\hat{e}_i^\mu ; i=1, \ldots, n_\mu\}$ une base orthonormée de $V_\mu$. Par définition :</p>
-<p>$U(g)\left|e_i^\mu\right\rangle=\left|e_j^\mu\right\rangle D^\mu(g)_i^j \qquad \forall g \in G$</p>
+<p style="text-align:center;">
+$\displaystyle
+U(g)\left|e_i^\mu\right\rangle=\left|e_j^\mu\right\rangle D^\mu(g)_i^j \qquad \forall g \in G
+$
+</p>
 <p>Ces vecteurs $\hat{e}_i^\mu$, engendrant l’espace sur lequel joue la représentation irréductible $\mu$, sont appelés <b>vecteurs (de base) irréductibles</b>.</p>
 </div>
 <br>
@@ -3193,9 +3233,17 @@ $$</p>
 <p>À l’image de l’opérateur de projection $E_i=\left|e_i\right\rangle\left\langle e_i\right|$ qui décompose un vecteur quelconque $|x\rangle$ sur la base $\left|e_i\right\rangle$, on va construire un opérateur de projection qui transforme un vecteur quelconque $|x\rangle$ en un vecteur de base irréductible selon une représentation irréductible donnée.</p>
 <div id="def">
 <p>Soit $U(G)$ une représentation du groupe $G$ sur un espace vectoriel $V$, et $D^\mu(G)$ la matrice d’une représentation irréductible de $G$. On construit un <b>opérateur de projection généralisé</b> de la manière suivante :</p>
-<p>$\displaystyle P_{\mu i}^j=\frac{n_\mu}{n_G} \sum_g D_\mu^{-1}(g)_i^j, U(g)$</p>
+<p style="text-align:center;">
+$\displaystyle
+P_{\mu i}^j=\frac{n_\mu}{n_G} \sum_g D_\mu^{-1}(g)_i^j\, U(g)
+$
+</p>
 <p>Et avec des représentations unitaires ($D^{-1}(g)=D^{\dagger}(g)$) :</p>
-<p>$\displaystyle P_{\mu i}^j=\frac{n_\mu}{n_G} \sum_g D_\mu^{\dagger}(g)_i^j, U(g)$</p>
+<p style="text-align:center;">
+$\displaystyle
+P_{\mu i}^j=\frac{n_\mu}{n_G} \sum_g D_\mu^{\dagger}(g)_i^j\, U(g)
+$
+</p>
 <p>Alors pour tout vecteur $|x\rangle$ de $V$, l’ensemble des vecteurs $\{P_{\mu i}^j|x\rangle ; i=1, \ldots, n_\mu\}$, avec un $j$ fixé, forment une base de vecteurs irréductibles selon la représentation $\mu$.</p>
 </div>
 <br>
@@ -3217,7 +3265,11 @@ $$</p>
 <br>
 <div id="theo">
 <p>Soit $\{\hat{e}_k^\nu ; k=1, \ldots, n_\nu\}$ une base de vecteurs irréductibles, alors :</p>
-<p>$P_{\mu i}^j\left|e_k^\nu\right\rangle=\left|e_i^\nu\right\rangle \delta_\nu^\mu \delta_k^j$</p>
+<p style="text-align:center;">
+$\displaystyle
+P_{\mu i}^j\left|e_k^\nu\right\rangle=\left|e_i^\nu\right\rangle \delta_\nu^\mu \delta_k^j
+$
+</p>
 </div>
 <br>
 <div id="preuve">
@@ -3237,7 +3289,11 @@ $$</p>
 <p>Cela montre que $P_{\mu i}^j$ n’est pas tout à fait un opérateur de projection car il faudrait pour cela plutôt un $\delta_k^i$. On va construire un peu plus loin de vrais opérateurs de projection à partir de cet opérateur plus général, mais seul celui-ci permet, et c’est ce qui le rend si utile, de construire une base de vecteurs irréductibles à partir d’un vecteur quelconque.</p>
 <p>Précisons d’abord quelques propriétés de ce premier opérateur.</p>
 <div id="theo">
-<p>$P_{\mu i}^j P_{\nu k}^l=\delta_\nu^\mu \delta_k^j P_{\mu i}^l$</p>
+<p style="text-align:center;">
+$\displaystyle
+P_{\mu i}^j P_{\nu k}^l=\delta_\nu^\mu \delta_k^j P_{\mu i}^l
+$
+</p>
 </div>
 <br>
 <div id="preuve">
@@ -3247,11 +3303,19 @@ Preuve&nbsp;:
 <br>
 <div id="theo">
 <p>Les $n_G$ opérateurs $U(g)$ peuvent s’écrire comme des combinaisons linéaires des $P_{\mu i}^j$ ($\mu=1, \ldots, n_c ; i, j=1, \ldots, n_\mu$) :</p>
-<p>$\displaystyle U(g)=\sum_{\mu, i, j} P_{\mu i}^j D^\mu(g)_j^i$</p>
+<p style="text-align:center;">
+$\displaystyle
+U(g)=\sum_{\mu, i, j} P_{\mu i}^j D^\mu(g)_j^i
+$
+</p>
 </div>
 <p>Ce n’est que l’inverse de la définition de $P_{\mu i}^j$. On en déduit :</p>
 <div id="theo">
-<p>$\displaystyle U(g) P_{\nu k}^l=\sum_i P_{\nu i}^l D^\nu(g)_k^i$</p>
+<p style="text-align:center;">
+$\displaystyle
+U(g) P_{\nu k}^l=\sum_i P_{\nu i}^l D^\nu(g)_k^i
+$
+</p>
 </div>
 <p>Qu’on démontre avec $P_{\mu i}^j P_{\nu k}^l=\delta_\nu^\mu \delta_k^j P_{\mu i}^l$ et qui ne fait que réexprimer sous forme «opérateurs» le fait que $P_{\nu k}^l$ permette de former une base irréductible selon la représentation $\nu$. Il suffit de se rappeler la définition du vecteur de base irréductible, $U(g)\left|e_i^\nu\right\rangle=\left|e_j^\nu\right\rangle D^\nu(g)_i^j$, pour s’en assurer.</p>
 <p>Construisons maintenant de vrais opérateurs de projection :</p>
@@ -3416,7 +3480,11 @@ $$</p>
 <p>Les opérateurs sur l’espace vectoriel des solutions physiques se transforment aussi de manière spécifique sous les symétries, et ils seront eux aussi classés selon les représentations irréductibles du groupe de symétrie, comme les vecteurs de base. L’exploitation des propriétés de transformation des opérateurs et des vecteurs d’état permet une immense simplification de la structure des quantités mesurables physiquement.</p>
 <div id="def">
 <p>Si un ensemble d’opérateurs $\{O_i^\mu ; i=1, \ldots, n_\mu\}$ sur un espace vectoriel $V$ se transforment sous un groupe de symétrie $G$ comme :</p>
-<p>$U(g) O_i^\mu U(g)^{-1}=O_j^\mu D^\mu(g)_i^j$</p>
+<p style="text-align:center;">
+$\displaystyle
+U(g) O_i^\mu U(g)^{-1}=O_j^\mu D^\mu(g)_i^j
+$
+</p>
 <p>où $D^\mu(G)$ est une matrice d’une représentation irréductible, alors ces opérateurs sont appelés <b>opérateurs irréductibles</b> (parfois <b>tenseurs irréductibles</b>).</p>
 </div>
 <p>Et comment l’ensemble des vecteurs $O_i^\mu\left|e_j^\nu\right\rangle$ se comporte-t-il sous une transformation de groupe ?</p>
@@ -3429,13 +3497,21 @@ U(g) O_i^\mu\left|e_j^\nu\right\rangle &amp; =U(g) O_i^\mu U(g)^{-1} U(g)\left|e
 $$</p>
 </div>
 <p>Donc ces états se transforment selon la représentation produit direct $D^{\mu \times \nu}$ !</p>
-<p>Comme vu plus haut, on peut alors exprimer cet ensemble de vecteurs en termes de vecteurs irréductibles $\left|w_{\alpha l}^\lambda\right\rangle$ comme :</p>
-<p>$\displaystyle O_i^\mu\left|e_j^\nu\right\rangle=\sum_{\alpha, \lambda, l}\left|w_{\alpha l}^\lambda\right\rangle\langle\alpha, \lambda, l,(\mu, \nu), i, j\rangle$</p>
+<p>Comme vu plus haut, on peut alors exprimer cet ensemble de vecteurs en termes de vecteurs irréductibles $\left|w_{\alpha l}^\lambda\right\rangle$ :</p>
+<p style="text-align:center;">
+$\displaystyle
+O_i^\mu\left|e_j^\nu\right\rangle=\sum_{\alpha, \lambda, l}\left|w_{\alpha l}^\lambda\right\rangle\langle\alpha, \lambda, l\,(\mu, \nu)\, i, j\rangle
+$
+</p>
 <p>Ce qui nous permet d’arriver au théorème de Wigner-Eckart :</p>
 <div id="theo">
 <p><b>Théorème de Wigner-Eckart</b> :</p>
 <p>soit $\{O_i^\mu\}$ un ensemble d’opérateurs tensoriels irréductibles, alors :</p>
-<p>$\displaystyle\left\langle e_l^\lambda\right| O_i^\mu\left|e_j^\nu\right\rangle=\sum_\alpha\langle\alpha, \lambda, l,(\mu, \nu), i, j\rangle\left\langle\lambda|O^\mu| \nu\right\rangle_\alpha$</p>
+<p style="text-align:center;">
+$\displaystyle
+\left\langle e_l^\lambda\right| O_i^\mu\left|e_j^\nu\right\rangle=\sum_\alpha\langle\alpha, \lambda, l\,(\mu, \nu)\, i, j\rangle\left\langle\lambda\|O^\mu\| \nu\right\rangle_\alpha
+$
+</p>
 <p>où $\left\langle\lambda|O^\mu| \nu\right\rangle_\alpha \equiv \frac{1}{n_\lambda} \sum_k\left\langle e_k^\lambda \mid w_{\alpha k}^\lambda\right\rangle$ est un <b>élément de matrice réduit</b>.</p>
 </div>
 <br>
@@ -4808,16 +4884,16 @@ Exemple&nbsp;:
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1787663644"></script>
-    <script src="/js/perfect-scrollbar.min.js?1787663644"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1787663644"></script>
-    <script src="/js/jquery.sticky.js?1787663644"></script>
-    <script src="/js/featherlight.min.js?1787663644"></script>
-    <script src="/js/highlight.pack.js?1787663644"></script>
+    <script src="/js/clipboard.min.js?1787664520"></script>
+    <script src="/js/perfect-scrollbar.min.js?1787664520"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1787664520"></script>
+    <script src="/js/jquery.sticky.js?1787664520"></script>
+    <script src="/js/featherlight.min.js?1787664520"></script>
+    <script src="/js/highlight.pack.js?1787664520"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1787663644"></script>
-    <script src="/js/learn.js?1787663644"></script>
-    <script src="/js/hugo-learn.js?1787663644"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1787664520"></script>
+    <script src="/js/learn.js?1787664520"></script>
+    <script src="/js/hugo-learn.js?1787664520"></script>
     
     
 
