@@ -8,7 +8,7 @@
 
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
-    <title>EPR - Science en vrac</title>
+    <title>Oscillateur harmonique - Science en vrac</title>
     
     
 
@@ -75,7 +75,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 
 	
   </head>
-  <body class="" data-url="/physique/quantique/epr/">
+  <body class="" data-url="/physique/tqc/oh/">
     <nav id="sidebar" class="">
 
 
@@ -1558,7 +1558,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/quantique/" title="Mécanique quantique" class="dd-item
-        parent
+        
         
         
         ">
@@ -1647,7 +1647,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
  
   
     
-      <li data-nav-id="/physique/quantique/epr/" title="EPR" class="dd-item active">
+      <li data-nav-id="/physique/quantique/epr/" title="EPR" class="dd-item ">
         <a href="/physique/quantique/epr/">
         EPR
         
@@ -1741,7 +1741,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   
     
     <li data-nav-id="/physique/tqc/" title="Théorie quantique des champs" class="dd-item
-        
+        parent
         
         
         ">
@@ -1865,7 +1865,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
  
   
     
-      <li data-nav-id="/physique/tqc/oh/" title="Oscillateur harmonique" class="dd-item ">
+      <li data-nav-id="/physique/tqc/oh/" title="Oscillateur harmonique" class="dd-item active">
         <a href="/physique/tqc/oh/">
         Oscillateur harmonique
         
@@ -1999,7 +1999,7 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
                   <span class="links">
                  
                  
-                   EPR
+                   Oscillateur harmonique
                  
                   </span>
                 </div>
@@ -2008,11 +2008,22 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#anti-réalisme">Anti-réalisme</a></li>
-    <li><a href="#superdéterminisme">Superdéterminisme</a></li>
-    <li><a href="#non-localité-temporelle">Non localité temporelle</a></li>
-    <li><a href="#rétrocausalité">Rétrocausalité</a></li>
-    <li><a href="#ghz">GHZ</a></li>
+    <li><a href="#quantification-de-loscillateur-harmonique-et-opérateurs-déchelle">Quantification de l&rsquo;oscillateur harmonique et opérateurs d&rsquo;échelle</a>
+      <ul>
+        <li><a href="#point-de-départ">Point de départ</a></li>
+        <li><a href="#le-mouvement-classique-une-rotation-rigide-du-plan">Le mouvement classique : une rotation rigide du plan</a></li>
+        <li><a href="#doù-viennent-a-et-adagger">D&rsquo;où viennent $a$ et $a^\dagger$</a></li>
+        <li><a href="#le-poids-dune-observable">Le poids d&rsquo;une observable</a></li>
+        <li><a href="#la-topologie-impose-un-poids-entier">La topologie impose un poids entier</a></li>
+        <li><a href="#conséquence-léchelle-et-son-pas-hbaromega">Conséquence : l&rsquo;échelle, et son pas $\hbar\omega$</a></li>
+        <li><a href="#où-sarrête-léchelle">Où s&rsquo;arrête l&rsquo;échelle ?</a></li>
+        <li><a href="#lhorloge-interne">L&rsquo;horloge interne</a></li>
+        <li><a href="#le-plan-de-phase-est-un-plan-complexe">Le plan de phase est un plan complexe</a></li>
+        <li><a href="#enrouler-dérouler">Enrouler, dérouler</a></li>
+        <li><a href="#le-rayon-laire-et-la-longueur-donde-de-de-broglie">Le rayon, l&rsquo;aire et la longueur d&rsquo;onde de de Broglie</a></li>
+      </ul>
+    </li>
+    <li><a href="#bilan">Bilan</a></li>
   </ul>
 </nav>
     </div>
@@ -2051,6 +2062,10 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
   {
     color: #006C65;
   }
+  #grosseformule 
+{
+    overflow-x: auto; 
+}
 #preuve
 {
     background-color:#EAEAEA;
@@ -2069,95 +2084,614 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     border-radius:10px;
     padding:5px 20px 5px 20px;
 }
-#axiom
+h2
 {
-    background-color:#E5F3E0;
-    border-radius:10px;
-    padding:5px 20px 5px 20px;
+color:#970E53 !important;
+}
+h3
+{
+color:#004D80 !important;
+}
+ul
+{
+margin-top:0em;
+margin-bottom:0.5em;
+}
+figure.fig
+{
+  margin:1.5em auto;
+  text-align:center;
+}
+figure.fig svg
+{
+  max-width:100%;
+  height:auto;
+}
+figure.fig figcaption
+{
+  font-size:0.85em;
+  color:#555;
+  margin-top:0.4em;
+}
+/* Pour rétablir le comportement de details */
+details > summary:first-of-type {
+  display: list-item;     /* remet le triangle + l’accessibilité */
+  cursor: pointer;        /* optionnel : feedback visuel */
+}
+
+details > summary:first-of-type {
+  list-style: disclosure-closed inside;
+}
+details[open] > summary:first-of-type {
+  list-style-type: disclosure-open;
 }
 </style>
-<h1 id="que-faire-de-la-non-localité-quantique">Que faire de la non localité quantique ?</h1>
-<div style="position:relative; width:600px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-			<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/QS_bw6PVfsE?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-		</div>
-
+<h2 id="quantification-de-loscillateur-harmonique-et-opérateurs-déchelle">Quantification de l&rsquo;oscillateur harmonique et opérateurs d&rsquo;échelle</h2>
+<h3 id="point-de-départ">Point de départ</h3>
+<div id="def">
+<p>Variables réduites sans dimension :</p>
+<p style="text-align:center;">$\displaystyle \hat X = \sqrt{\frac{m\omega}{\hbar}}\,\hat{x} $</p>
+<p style="text-align:center;">
+$\displaystyle
+\hat P = \frac{\hat{p}}{\sqrt{m\hbar\omega}} 
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+ [\hat X,\hat P] = \mathrm{i}
+$
+</p>
+</div>
+<p>Dans ces variables, le hamiltonien s&rsquo;écrit :</p>
+<div id="theo">
+<p style="text-align:center;">
+$\displaystyle
+\hat H = \frac{\hbar\omega}{2}\left(\hat X^2+\hat P^2\right)
+$
+</p>
+</div>
+<p>Les opérateurs d&rsquo;échelle sont :</p>
+<div id="def">
+<p style="text-align:center;">$\displaystyle \hat a = \frac{\hat X+\mathrm{i}\hat P}{\sqrt 2}  $</p>
+<p style="text-align:center;">
+$\displaystyle
+\hat a^\dagger = \frac{\hat X-\mathrm{i}\hat P}{\sqrt 2}
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+ [\hat a,\hat a^\dagger] = 1
+$
+</p>
+</div>
+<p>Action sur le hamiltonien :</p>
+<div id="theo">
+<p style="text-align:center;">
+En posant $\displaystyle
+\hat N = \hat a^\dagger \hat a
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+\hat H = \hbar\omega\left(\hat N+\frac12\right)
+$
+</p>
+<p style="text-align:center;">
+$\displaystyle
+[\hat N,\hat a^\dagger] = +\,\hat a^\dagger \qquad [\hat N,\hat a] = -\,\hat a
+$
+</p>
+</div>
+<p>Tentons de donner un sens géométrique à ces dernières lignes, et à en déduire le spectre sans jamais réutiliser les commutateurs comme point de départ.</p>
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Convention de notation</span></div><div class="notice__corps"><p>Pour s&rsquo;y repérer dans le va et vient entre classique et quantique, les <strong>opérateurs</strong> quantiques ($\hat X$, $\hat P$, $\hat a$, $\hat a^\dagger$, $\hat N$, $\hat H$) seront systématiquement coiffés d&rsquo;un chapeau et les <strong>fonctions classiques sur le plan de phase</strong> ($X$, $P$, et les combinaisons que nous en formerons) seront laissées nues. Ainsi $X$ est un nombre réel qui repère un point du plan, tandis que $\hat X$ est l&rsquo;opérateur qui lui correspond. Le chapeau marque donc exactement l&rsquo;endroit où l&rsquo;on quantifie.</p>
+</div></div>
+<h3 id="le-mouvement-classique-une-rotation-rigide-du-plan">Le mouvement classique : une rotation rigide du plan</h3>
+<p>Reprenons les équations de Hamilton pour l&rsquo;oscillateur, $\dot x = p/m$ et $\dot p = -m\omega^2 x$, et traduisons-les dans les variables réduites classiques. Il vient</p>
+<div id="theo">
+<p style="text-align:center;">
+$\displaystyle 
+\begin{cases}
+\dot X = \omega P\\
+\dot P = -\,\omega X
+\end{cases}
+$</p>
+<p><strong>Le flot classique est une rotation.</strong> Le système d&rsquo;équations ci-dessus est exactement celui d&rsquo;une rotation uniforme du plan $(X,P)$ à la vitesse angulaire $\omega$, dans le sens horaire.</p>
+</div>
+<figure class="fig" style="width:700px;">
+<svg viewBox="0 0 420 235" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Deux orbites circulaires de rayons différents balayant le même angle pendant la même durée">
+<defs><marker id="ar1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#970E53" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<defs><marker id="ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#004D80" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<line x1="25" y1="115" x2="235" y2="115" stroke="currentColor" stroke-width="0.6" opacity="0.6"/>
+<line x1="115" y1="15" x2="115" y2="215" stroke="currentColor" stroke-width="0.6" opacity="0.6"/>
+<text x="240" y="119" font-size="12" fill="currentColor">X</text>
+<text x="121" y="22" font-size="12" fill="currentColor">P</text>
+<circle cx="115" cy="115" r="45" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.4"/>
+<circle cx="115" cy="115" r="78" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.4"/>
+<line x1="115" y1="115" x2="160" y2="115" stroke="currentColor" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.6"/>
+<line x1="115" y1="115" x2="140.8" y2="151.9" stroke="#970E53" stroke-width="0.8" stroke-dasharray="3 3"/>
+<line x1="115" y1="115" x2="159.7" y2="178.9" stroke="#004D80" stroke-width="0.8" stroke-dasharray="3 3"/>
+<path d="M160 115 A45 45 0 0 1 140.8 151.9" fill="none" stroke="#970E53" stroke-width="2.4" marker-end="url(#ar1)"/>
+<path d="M193 115 A78 78 0 0 1 159.7 178.9" fill="none" stroke="#004D80" stroke-width="2.4" marker-end="url(#ar2)"/>
+<circle cx="160" cy="115" r="3" fill="#970E53"/>
+<circle cx="193" cy="115" r="3" fill="#004D80"/>
+<text x="258" y="100" font-size="12" fill="currentColor">pendant la même durée,</text>
+<text x="258" y="118" font-size="12" fill="currentColor">les deux points balayent</text>
+<text x="258" y="136" font-size="12" fill="currentColor">le même angle</text>
+</svg>
+<figcaption>Le plan tourne d'un bloc : la vitesse angulaire ne dépend pas du rayon.</figcaption>
+</figure>
+<p>La vitesse angulaire $\omega$ ne dépend d&rsquo;aucune des deux coordonnées. Le plan tourne d&rsquo;un bloc, comme un disque rigide. C&rsquo;est l&rsquo;isochronisme de l&rsquo;oscillateur harmonique : la période ne dépend pas de l&rsquo;amplitude. C&rsquo;est une propriété très particulière, liée au fait que le hamiltonien est une forme quadratique. Dans un potentiel anharmonique, chaque orbite aurait sa propre période et rien de ce qui suit ne fonctionnerait.</p>
+<p>Au bout d&rsquo;une durée $T = 2\pi/\omega$, la rotation vaut $2\pi$, c&rsquo;est-à-dire l&rsquo;identité. <strong>Le plan revient exactement sur lui-même, point par point.</strong> Retenons ce fait, il est le seul ingrédient dont nous aurons besoin pour obtenir un entier.</p>
+<h3 id="doù-viennent-a-et-adagger">D&rsquo;où viennent $a$ et $a^\dagger$</h3>
+<p>Les équations du mouvement forment un <strong>système couplé</strong>, aucune des deux quantités n&rsquo;évolue seule.</p>
+<p>Face à un système linéaire couplé, la méthode standard est le <strong>découplage</strong> : chercher des combinaisons linéaires dont l&rsquo;évolution ne fasse intervenir qu&rsquo;elles-mêmes. Une telle combinaison $f$ vérifie une équation <strong>autonome</strong>, dont le second membre ne contient plus que $f$ :</p>
+<p style="text-align:center;">$\displaystyle \dot f = \lambda f$</p>
+<h4 id="découpler-cest-diagonaliser">Découpler, c&rsquo;est diagonaliser</h4>
+<p>Les fonctions linéaires $f = uX+vP$ forment un espace vectoriel $\mathcal L$ de <strong>dimension 2</strong>, dont $(X,P)$ est une base : une telle fonction est entièrement décrite par son couple de coefficients $(u,v)$.</p>
+<p>L&rsquo;opération « dériver le long du mouvement », que nous noterons $\mathcal D : f \mapsto \dot f$, est linéaire, et elle envoie une fonction linéaire sur une fonction linéaire. C&rsquo;est donc un <strong>endomorphisme de $\mathcal L$</strong>. Calculons-le :</p>
+<p style="text-align:center;">$\displaystyle \dot f = u\dot X + v\dot P = u\,(\omega P) + v\,(-\omega X) = (-\omega v)\,X + (\omega u)\,P.$</p>
+<p>Le couple $(u,v)$ est donc envoyé sur $(-\omega v,\ \omega u)$, autrement dit</p>
+<p style="text-align:center;">$\displaystyle \mathcal D = \omega\begin{pmatrix} 0 & -1\\ 1 & 0\end{pmatrix}$</p>
+<p>dans la base $(X,P)$. Et dès lors, la condition de découplage $\dot f = \lambda f$ se relit :</p>
+<p style="text-align:center;">$\displaystyle \mathcal D f = \lambda f.$</p>
+<div id="theo">
+<p>Chercher une combinaison découplée, c&rsquo;est chercher un <strong>vecteur propre</strong> de $\mathcal D$, et la constante $\lambda$ est sa <strong>valeur propre</strong>. Découpler un système différentiel linéaire et diagonaliser sa matrice sont une seule et même opération.</p>
+</div>
+<p>Résolvons.</p>
+<div id="preuve">
+<p>La condition $\dot f = \lambda f = \lambda(uX+vP)$ impose, en identifiant les coefficients de $X$ et de $P$ :</p>
+<p style="text-align:center;">$\displaystyle -\,\omega v = \lambda u \quad$
+et 
+$\displaystyle\quad \omega u = \lambda v.$</p>
+<p>En substituant, on obtient $\lambda^2 = -\omega^2$, donc $\lambda = \mp\,\mathrm{i}\omega$. Pour $\lambda = -\mathrm{i}\omega$, la première équation donne $v = \mathrm{i}u$, donc $f \propto X + \mathrm{i}P$. Pour $\lambda = +\mathrm{i}\omega$, elle donne $v = -\mathrm{i}u$, donc $f \propto X - \mathrm{i}P$.</p>
 </div>
 <br>
-<p>Pour qui souhaitait cacher derrière l&rsquo;état quantique un élément de réalité $\lambda$, la violation des inégalités de Bell oblige semble-t-il à accepter une &ldquo;spooky action at a distance&rdquo; qui contredit violemment la localité relativiste.</p>
-<p>Selon la relativité restreinte, deux évènement de l&rsquo;espace-temps ne peuvent être reliés causalement que s&rsquo;ils se trouvent dans le cône de lumière l&rsquo;un de l&rsquo;autre. Tout évènement crée ainsi autour de lui une sphère de causalité se propageant à la vitesse $c$.</p>
-<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
-<img src="/gemintric.png" style="box-shadow:none;background:none;">
+<div id="theo">
+<p>Les seules fonctions linéaires sur le plan de phase dont l&rsquo;évolution est une simple multiplication par un nombre sont, à un facteur près, $X+\mathrm{i}P$ et $X-\mathrm{i}P$, et</p>
+<p style="text-align:center;">$\displaystyle (X+\mathrm{i}P)(t) = \mathrm{e}^{-\mathrm{i}\omega t}\,(X+\mathrm{i}P)(0), \qquad (X-\mathrm{i}P)(t) = \mathrm{e}^{+\mathrm{i}\omega t}\,(X-\mathrm{i}P)(0).$</p>
 </div>
-<p>Comment donc deux évènements de type espace, non atteints par la sphère de l&rsquo;autre, peuvent-ils s&rsquo;accorder sur leur réponse ?</p>
-<p>On pourrait croire que la violation des inégalités de Bell invalide la relativité, mais non. Il faudrait pour cela prouver que l&rsquo;on peut quantiquement transporter de l&rsquo;information plus vite que $c$. Or c&rsquo;est impossible. C&rsquo;est le théorème de non-communication qui nous le dit, un &ldquo;no-go&rdquo; théorème purement quantique&hellip;</p>
-<p>Le théorème stipule que la seule mesure d&rsquo;un état quantique intriqué ne permet pas à des observateurs de se transmettre de l&rsquo;information. Certes il y a corrélation, mais comme on ne peut pas choisir le résultat d&rsquo;une mesure, on ne peut pas communiquer une information par ce biais. On reçoit bien instantanément l&rsquo;information de ce qu&rsquo;a obtenu (ou obtiendra) l&rsquo;autre expérimentateur (un spin haut par exemple) mais à aucun moment on a choisi d&rsquo;envoyer cette information là (le dit spin haut).</p>
-<p>La théorie quantique et la relativité restreinte nous racontent deux histoires incohérente de l&rsquo;univers tout en s&rsquo;accordant sur ce qui est mesurable&hellip; Plutôt vicieux.</p>
-<h2 id="anti-réalisme">Anti-réalisme</h2>
-<p>Une approche possible pour absorber cette tension est de ne pas s&rsquo;en occuper. Il n&rsquo;y a pas de $\lambda$, aucune réalité physique, seulement des équations mathématiques permettant de faire des prédictions expérimentales.</p>
-<p>Une théorie physique doit pouvoir expliquer et prédire les résultats d&rsquo;expérience. Procurer une satisfaction intellectuelle ne fait pas partie de ses prérogatives.</p>
-<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
-<img src="/antirealistes.png" style="box-shadow:none;background:none;">
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Pourquoi a-t-il fallu passer aux complexes ?</span></div><div class="notice__corps"><p>Une rotation du plan réel ne laisse <strong>aucune</strong> direction réelle invariante ; c&rsquo;est même à peu près sa définition. La matrice $\mathcal D$ n&rsquo;est donc pas diagonalisable sur $\mathbb R$, et son polynôme caractéristique $\lambda^2+\omega^2$ n&rsquo;y a pas de racine. Les deux directions propres n&rsquo;existent qu&rsquo;après complexification, et c&rsquo;est la raison de fond pour laquelle des nombres complexes apparaissent dans un problème qui n&rsquo;en contenait aucun au départ.</p>
+</div></div>
+<h4 id="ce-que-la-valeur-propre-contrôle">Ce que la valeur propre contrôle</h4>
+<p>Une fois le découplage obtenu, l&rsquo;équation s&rsquo;intègre immédiatement :</p>
+<p style="text-align:center;">$\displaystyle f(t) = \mathrm{e}^{\lambda t}\,f(0).$</p>
+<p><strong>La nature du mouvement dépend entièrement de $\lambda$</strong>, et trois cas se présentent.</p>
+<figure class="fig" style="width:800px;">
+<svg viewBox="0 0 440 155" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Trois comportements selon la valeur propre : décroissance sur une demi-droite, rotation sur un cercle, spirale">
+<line x1="20" y1="70" x2="138" y2="70" stroke="currentColor" stroke-width="0.5" opacity="0.45"/>
+<line x1="70" y1="24" x2="70" y2="116" stroke="currentColor" stroke-width="0.5" opacity="0.45"/>
+<circle cx="130" cy="70" r="4.6" fill="#970E53"/>
+<circle cx="112" cy="70" r="3.4" fill="#970E53"/>
+<circle cx="99.4" cy="70" r="3.4" fill="#970E53"/>
+<circle cx="90.6" cy="70" r="3.4" fill="#970E53"/>
+<circle cx="84.4" cy="70" r="3.4" fill="#970E53"/>
+<circle cx="80" cy="70" r="3.4" fill="#970E53"/>
+<text x="70" y="136" font-size="11" fill="currentColor" text-anchor="middle">&#955; réel</text>
+<text x="70" y="150" font-size="9.5" fill="currentColor" text-anchor="middle" opacity="0.75">aucune rotation</text>
+<line x1="160" y1="70" x2="278" y2="70" stroke="currentColor" stroke-width="0.5" opacity="0.45"/>
+<line x1="215" y1="24" x2="215" y2="116" stroke="currentColor" stroke-width="0.5" opacity="0.45"/>
+<circle cx="215" cy="70" r="42" fill="none" stroke="currentColor" stroke-width="0.7" stroke-dasharray="4 3" opacity="0.45"/>
+<circle cx="257" cy="70" r="4.6" fill="#004D80"/>
+<circle cx="244.7" cy="40.3" r="3.4" fill="#004D80"/>
+<circle cx="215" cy="28" r="3.4" fill="#004D80"/>
+<circle cx="185.3" cy="40.3" r="3.4" fill="#004D80"/>
+<circle cx="173" cy="70" r="3.4" fill="#004D80"/>
+<circle cx="185.3" cy="99.7" r="3.4" fill="#004D80"/>
+<circle cx="215" cy="112" r="3.4" fill="#004D80"/>
+<circle cx="244.7" cy="99.7" r="3.4" fill="#004D80"/>
+<text x="215" y="136" font-size="11" fill="currentColor" text-anchor="middle">&#955; imaginaire pur</text>
+<text x="215" y="150" font-size="9.5" fill="currentColor" text-anchor="middle" opacity="0.75">module figé, rotation</text>
+<line x1="305" y1="70" x2="423" y2="70" stroke="currentColor" stroke-width="0.5" opacity="0.45"/>
+<line x1="360" y1="24" x2="360" y2="116" stroke="currentColor" stroke-width="0.5" opacity="0.45"/>
+<circle cx="415" cy="70" r="4.6" fill="#006C65"/>
+<circle cx="393.1" cy="36.9" r="3.4" fill="#006C65"/>
+<circle cx="360" cy="30.3" r="3.4" fill="#006C65"/>
+<circle cx="336.1" cy="46.1" r="3.4" fill="#006C65"/>
+<circle cx="331.3" cy="70" r="3.4" fill="#006C65"/>
+<circle cx="342.7" cy="87.3" r="3.4" fill="#006C65"/>
+<circle cx="360" cy="90.7" r="3.4" fill="#006C65"/>
+<circle cx="372.4" cy="82.4" r="3.4" fill="#006C65"/>
+<text x="360" y="136" font-size="11" fill="currentColor" text-anchor="middle">&#955; complexe</text>
+<text x="360" y="150" font-size="9.5" fill="currentColor" text-anchor="middle" opacity="0.75">spirale</text>
+</svg>
+<figcaption>La valeur de f à instants réguliers, dans le plan complexe, selon la valeur propre. Le gros point marque l'instant initial.</figcaption>
+</figure>
+<p>La fermeture est une conséquence du caractère imaginaire pur de la valeur propre. Reste à comprendre pourquoi c&rsquo;est ce cas-là qui se produit ici.</p>
+<div id="theo">
+<p><strong>L&rsquo;énergie interdit à $\lambda$ d&rsquo;avoir une partie réelle.</strong></p>
+<p>Un calcul direct donne $\dfrac{\mathrm{d}}{\mathrm{d}t}\left(X^2+P^2\right) = 2X\dot X + 2P\dot P = 2\omega XP - 2\omega PX = 0$. Si $\lambda$ avait une partie réelle, le module de $f$ croîtrait ou décroîtrait exponentiellement, donc $X^2+P^2$ aussi, donc l&rsquo;énergie ne serait pas conservée.</p>
 </div>
-<p>Cette approche &ldquo;anti-réaliste&rdquo; peut aussi prendre la forme implicite du célèbre &ldquo;shut up and calculate&rdquo;.</p>
-<p>Mais même les plus pragmatiques s&rsquo;opposent rarement à l&rsquo;ambition d&rsquo;aboutir à une théorie unificatrice des lois physique. Or une telle théorie achoppe aujourd&rsquo;hui sur la compatibilité entre relativité générale et le reste. Trouver un terrain d&rsquo;entente sur la localité devrait pouvoir nous rapprocher de ce Graal.</p>
-<h2 id="superdéterminisme">Superdéterminisme</h2>
-<p>Pour sauver la localité, on peut attaquer une des hypothèses posée pour démontrer les inégalités de Bell. Une de ces hypothèses est l&rsquo;<strong>indépendance statistique</strong>.</p>
-<p>Elle suppose que la variable cachée $\lambda$, l&rsquo;élément de réalité décrivant l&rsquo;état joint du système composite ne dépend pas du choix de l&rsquo;expérimentateur quant à la mesure à opérer.</p>
-<p>Bell utilise l&rsquo;analogie des chaussettes du physicien autrichien Bertlmann qui portait systématiquement des chaussettes dépareillées. Il suffisait d&rsquo;en apercevoir pour être instantanément certain que l&rsquo;autre n&rsquo;était pas de la même couleur. Dans ce cas, il y a bien sûr concertation au départ, au moment du choix dans le tiroir à chaussettes. Mais le dispositif des inégalités de Bell vise justement à prouver l&rsquo;impossibilité d&rsquo;une entente préalable en choisissant aléatoirement les mesures parmi un jeu précis de possibilités.</p>
-<p>Cela suppose cependant un choix des mesures réellement aléatoire ! C&rsquo;est ça l&rsquo;hypothèse d&rsquo;indépendance statistique.</p>
-<p>Mais ne se pourrait-il pas que le dispositif expérimental <em>et</em> la variable cachée $\lambda$ soit physiquement liés entre eux depuis un passé commun ? Dès lors, le libre arbitre de l&rsquo;expérimentateur se dissout dans un engrenage mécanique, le choix de la mesure étant inscrit dès l&rsquo;interaction préalable avec $\lambda$.</p>
-<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
-<img src="/superdeterminisme.png" style="box-shadow:none;background:none;">
+<p>Algébriquement, cela se lit sur la matrice : $\mathcal D$ est réelle et <strong>antisymétrique</strong>, et une matrice réelle antisymétrique a toujours ses valeurs propres imaginaires pures. L&rsquo;antisymétrie est la traduction matricielle de la conservation de l&rsquo;énergie.</p>
+<h4 id="retour-à-x-et-p">Retour à $X$ et $P$</h4>
+<p>Nous tenons les modes propres. Redescendons vers les variables de départ. En additionnant et en soustrayant les deux modes :</p>
+<p style="text-align:center;">$\displaystyle X = \tfrac12\Big[(X+\mathrm{i}P) + (X-\mathrm{i}P)\Big]\quad$
+donc
+$\displaystyle
+\quad X(t) = \tfrac12\Big[\mathrm{e}^{-\mathrm{i}\omega t}(X+\mathrm{i}P)(0) + \mathrm{e}^{+\mathrm{i}\omega t}(X-\mathrm{i}P)(0)\Big].$</p>
+<p>La variable réelle possède deux fréquences et non une seule.</p>
+<div id="theo">
+<p>Le prix à payer pour obtenir une fréquence unique est de renoncer à la réalité. C&rsquo;est la raison de fond pour laquelle $\hat a$ n&rsquo;est pas hermitien, donc n&rsquo;est pas une observable au sens strict, et pour laquelle il n&rsquo;apparaît jamais seul dans une grandeur physique mais toujours accompagné de $\hat a^\dagger$.</p>
 </div>
-<p>Une critique fréquente du superdéterminisme (et pas des moindres) est qu&rsquo;il fragiliserait la possibilité même d&rsquo;acquérir scientifiquement des connaissances tellement l&rsquo;indépendance scientifique joue un rôle crucial dans le raisonnement scientifique.</p>
-<p>Supposons par exemple que l&rsquo;on cherche à savoir si un système possède la propriété A ou la propriété B mais qu&rsquo;on ne puisse pas tester les deux propriétés en même temps. On réalise alors la même préparation 1000 fois de suite et on teste A la moitié du temps et B l&rsquo;autre moitié en décidant à pile ou face. Si l&rsquo;expérience sur A revient négative les $\approx$ 500 fois où elle est testée, on a envie de pouvoir conclure que pour cette préparation, le système n&rsquo;a jamais la propriété A.</p>
-<p>Cependant, une &ldquo;cause commune&rdquo; a pu faire en sorte que le système possède bien la propriété A, mais seulement lorsque B est testée ! C&rsquo;est ce type de conspiration qui semble saper la possibilité de connaissances scientifiques.</p>
-<p>Mais le bon côté du superdéterminisme (et pas des moindres là encore) est qu&rsquo;il gomme à la fois le non déterminisme et la non localité quantique, les deux principales incompatibilités avec les théories relativistes (restreinte et générale) qui sont bien, elles, déterministes et locales.</p>
-<h2 id="non-localité-temporelle">Non localité temporelle</h2>
-<p>La racine de la tension avec la relativité restreinte ne vient pas tant de la non localité en soit que de l&rsquo;<em>instantanéité</em> de cette influence non locale. Pourquoi supposer que cette influence est instantanée ? Cela revient à supposer que l&rsquo;état quantique est bien délocalisé spatialement mais toujours localisé temporellement. On garde ainsi sauve l&rsquo;idée que le passé influence le futur et pas l&rsquo;inverse.</p>
-<p>Mais si on accepte l&rsquo;influence directe du choix d&rsquo;une des mesures sur le résultat de l&rsquo;autre mesure, quel que soit le lieu et <em>quel que soit l&rsquo;instant</em> de la deuxième expérience, la contradiction avec la relativité s&rsquo;affaiblit. On restaure ainsi en effet la symétries entre espace et temps si chère à Einstein.</p>
-<p>À quoi pourrait ressembler une théorie non locale temporellement ? Le cours entier de l&rsquo;histoire serait décidé d&rsquo;un seul bloc par des lois physiques intemporelles. Un évènement à un instant $t$ donné dépend alors d&rsquo;évènements passés même s&rsquo;ils n&rsquo;ont pas laissé de traces à l&rsquo;instant $t$, mais aussi d&rsquo;évènements futurs&hellip;</p>
-<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
-<img src="/nonloctemp.jpg" style="box-shadow:none;background:none;">
+<p>Cette superposition de deux fréquences contraires a une traduction visuelle immédiate. La partie réelle de $X-\mathrm{i}P$ est $X$ : la valeur de $X$ est donc l&rsquo;<strong>ombre</strong> de celle de $X-\mathrm{i}P$, sa projection orthogonale sur l&rsquo;axe réel. Marquons huit instants également espacés sur une période.</p>
+<figure class="fig" style="width:700px;">
+<svg viewBox="0 0 420 262" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Huit instants régulièrement répartis sur le cercle des valeurs de X moins i P, dont la projection sur l'axe réel s'entasse aux bords">
+<line x1="92" y1="100" x2="250" y2="100" stroke="currentColor" stroke-width="0.5" opacity="0.5"/>
+<line x1="170" y1="25" x2="170" y2="180" stroke="currentColor" stroke-width="0.5" opacity="0.5"/>
+<text x="252" y="116" font-size="10" fill="currentColor">Re</text>
+<text x="176" y="22" font-size="10" fill="currentColor">Im</text>
+<circle cx="170" cy="100" r="68" fill="none" stroke="currentColor" stroke-width="0.9" stroke-dasharray="4 3" opacity="0.5"/>
+<line x1="238" y1="100" x2="238" y2="209" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.55"/>
+<line x1="218.1" y1="51.9" x2="218.1" y2="209" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.55"/>
+<line x1="170" y1="32" x2="170" y2="209" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.55"/>
+<line x1="121.9" y1="51.9" x2="121.9" y2="209" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.55"/>
+<line x1="102" y1="100" x2="102" y2="209" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.55"/>
+<line x1="218.1" y1="148.1" x2="218.1" y2="209" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.55"/>
+<line x1="121.9" y1="148.1" x2="121.9" y2="209" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.55"/>
+<line x1="170" y1="168" x2="170" y2="209" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.55"/>
+<circle cx="238" cy="100" r="5" fill="#004D80"/>
+<circle cx="218.1" cy="51.9" r="3.5" fill="#004D80"/>
+<circle cx="170" cy="32" r="3.5" fill="#004D80"/>
+<circle cx="121.9" cy="51.9" r="3.5" fill="#004D80"/>
+<circle cx="102" cy="100" r="3.5" fill="#004D80"/>
+<circle cx="121.9" cy="148.1" r="3.5" fill="#004D80"/>
+<circle cx="170" cy="168" r="3.5" fill="#004D80"/>
+<circle cx="218.1" cy="148.1" r="3.5" fill="#004D80"/>
+<text x="242" y="92" font-size="10" fill="currentColor">t = 0</text>
+<text x="268" y="70" font-size="10" fill="currentColor">valeur de X - iP :</text>
+<text x="268" y="84" font-size="10" fill="currentColor" opacity="0.75">les huit instants sont</text>
+<text x="268" y="98" font-size="10" fill="currentColor" opacity="0.75">régulièrement répartis</text>
+<line x1="102" y1="212" x2="238" y2="212" stroke="currentColor" stroke-width="1.4"/>
+<circle cx="102" cy="212" r="3.6" fill="#970E53"/>
+<circle cx="121.9" cy="212" r="3.6" fill="#970E53"/>
+<circle cx="170" cy="212" r="3.6" fill="#970E53"/>
+<circle cx="218.1" cy="212" r="3.6" fill="#970E53"/>
+<circle cx="238" cy="212" r="5" fill="#970E53"/>
+<text x="268" y="200" font-size="10" fill="currentColor">valeur de X :</text>
+<text x="268" y="214" font-size="10" fill="currentColor" opacity="0.75">les mêmes instants,</text>
+<text x="268" y="228" font-size="10" fill="currentColor" opacity="0.75">entassés aux bords</text>
+<text x="170" y="250" font-size="10.5" fill="currentColor" text-anchor="middle" opacity="0.8">projection sur l'axe réel</text>
+</svg>
+<figcaption>L'oscillation est l'ombre de la rotation.</figcaption>
+</figure>
+<p>Sur le cercle, les huit instants se répartissent régulièrement. Une fois projetés, ils s&rsquo;entassent aux bords, parce que c&rsquo;est là que le mouvement circulaire devient tangent à l&rsquo;axe. L&rsquo;entassement n&rsquo;est donc pas une propriété de $X$ : c&rsquo;est le prix de la projection, c&rsquo;est-à-dire de la superposition des deux fréquences opposées.</p>
+<p>$X$ et $P$ pris séparément ne sont donc pas de bonnes variables pour décrire un mouvement circulaire, exactement comme les coordonnées cartésiennes ne sont pas de bonnes variables pour décrire un cercle. $X\pm\mathrm{i}P$ en sont l&rsquo;équivalent polaire.</p>
+<p>Voilà l&rsquo;origine de $\hat a$ et $\hat a^\dagger$ : ce sont les <strong>coordonnées normales de la rotation</strong>, l&rsquo;analogue exact des vecteurs de polarisation circulaire $\hat{\mathbf e}_x \pm \mathrm{i}\hat{\mathbf e}_y$ pour une onde lumineuse. Le facteur $1/\sqrt2$ n&rsquo;est qu&rsquo;une normalisation, choisie pour que le commutateur vaille exactement $1$.</p>
+<h3 id="le-poids-dune-observable">Le poids d&rsquo;une observable</h3>
+<p>Le théorème précédent dit que $X-\mathrm{i}P$ est multipliée au cours du temps par $\mathrm{e}^{+\mathrm{i}\omega t}$, un nombre complexe de module $1$. Deux conséquences immédiates : son module ne change pas, et son argument avance linéairement avec le temps. La valeur de la fonction se déplace sur un cercle du plan complexe, à vitesse angulaire constante.</p>
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">En quel sens est-ce une observable ?</span></div><div class="notice__corps"><p>$X$ et $P$ sont les observables classiques élémentaires, position et impulsion en unités réduites. La combinaison $X-\mathrm{i}P$ est complexe, donc pas directement mesurable ; c&rsquo;est un <strong>empaquetage de deux observables réelles</strong>, exactement comme l&rsquo;amplitude complexe d&rsquo;un circuit en régime sinusoïdal ou d&rsquo;une onde lumineuse. Sa partie réelle est $X$, sa partie imaginaire vaut $-P$. On ne perd aucune information, on gagne le fait que l&rsquo;évolution devient une multiplication.</p>
+</div></div>
+<p>Ce qui rend cette combinaison particulière, et qui a justifié tout le détour par les modes propres, est qu&rsquo;elle ne porte <strong>qu&rsquo;une seule fréquence</strong>. $X$ et $P$ mêlent $+\omega$ et $-\omega$ ; $X-\mathrm{i}P$ ne porte que $+\omega$, et $X+\mathrm{i}P$ que $-\omega$. C&rsquo;est cette unicité qui rend un comptage possible : une phase qui avance à vitesse constante peut être comptée, une superposition de deux phases contraires ne le peut pas.</p>
+<p>Donnons un nom à la vitesse à laquelle cette phase s&rsquo;accumule.</p>
+<div id="def">
+<p>Une fonction $f$ non nulle sur le plan de phase a le <strong>poids</strong> $k$ si, le long du mouvement classique,</p>
+<p style="text-align:center;">$\displaystyle f(t) = \mathrm{e}^{\mathrm{i}k\omega t}\,f(0).$</p>
 </div>
-<p>La non localité temporelle est plus familière qu&rsquo;il n&rsquo;y paraît puisque la mécanique lagrangienne utilise bel et bien cette sorte d&rsquo;approche <strong>globale</strong> du temps. Le chemin emprunté par un système est en effet déterminé en optimisant le lagrangien sur l&rsquo;ensemble du chemin d&rsquo;un seul bloc. Mais si l&rsquo;approche lagrangienne est omniprésente en physique aujourd&rsquo;hui, on la cantonne à un rôle calculatoire sans considérer sérieusement qu&rsquo;elle puisse réellement décrire la réalité.</p>
-<p>Un espoir de connexion entre une théorie quantique non locale temporellement et la relativité générale vient de la nature des solutions des équations d&rsquo;Einstein. Bien que la relativité générale n&rsquo;autorise pas d&rsquo;action instantanée à distance, ce n&rsquo;est pas tout à fait une théorie locale dans le même sens que la mécanique classique puisqu&rsquo;une solution des équations d&rsquo;Einstein ne décrit pas un état du monde à un instant donné mais une histoire entière de l&rsquo;univers. Ces équations représentent donc elles aussi des lois de la nature non locales temporellement !</p>
-<h2 id="rétrocausalité">Rétrocausalité</h2>
-<p>La rétrocausalité est une autre possibilité pour expliquer l&rsquo;influence instantanée à distance entre états intriqués. Le temps est ici bien local mais à la chaîne causale habituelle du passé vers le futur s&rsquo;en ajoute une du futur vers le passé.</p>
-<div style="position:relative;margin-left:auto;margin-right:auto;width:400px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
-<img src="/backtofuture.png" style="box-shadow:none;background:none;">
+<p>Le poids est donc un <strong>rapport de fréquences</strong> : la phase de $f$ tourne à la vitesse $k\omega$, le plan de phase tourne à la vitesse $\omega$, et $k$ est le quotient. Autrement dit, $k$ est le nombre de tours que fait la phase de $f$ pendant que le plan en fait un. Rien, pour l&rsquo;instant, n&rsquo;impose que ce quotient soit entier.</p>
+<p>D&rsquo;après le théorème précédent :</p>
+<p style="text-align:center;">$\displaystyle k\left(X-\mathrm{i}P\right) = +1, \qquad k\left(X+\mathrm{i}P\right) = -1, \qquad k(1) = 0.$</p>
+<p>Une propriété immédiate :</p>
+<div id="theo">
+<p><strong>Les poids s&rsquo;additionnent.</strong></p>
+<p>Si $f$ a le poids $k_1$ et $g$ le poids $k_2$, alors $fg$ a le poids $k_1+k_2$.</p>
 </div>
-<p>On peut montrer semble-t-il (<a href="https://arxiv.org/pdf/1002.0906">Price 2010</a>, <a href="https://fr.wikipedia.org/wiki/Paradoxe_du_grand-p%C3%A8re#:~:text=Le%20paradoxe%20du%20grand%2Dp%C3%A8re,dernier%20ait%20eu%20des%20enfants.">Pusey et Leifer, 2017</a>) que toute interprétation de la mécanique quantique à la fois temporellement symétrique et locale se doit de faire intervenir la rétrocausalité. Remarquons que la mécanique classique est elle-même temporellement symétrique et locale et pourtant non rétrocausale. C&rsquo;est l&rsquo;aspect discret de la mécanique quantique qui semble être l&rsquo;ingrédient imposant l&rsquo;existence de signaux remontant le temps.</p>
-<p>L&rsquo;<a href="https://arxiv.org/pdf/2302.06748">interprétation transactionnelle</a> de la mécanique quantique proposée par John Cramer est un exemple de théorie utilisant la rétrocausalité. Tout évènement quantique y est décrit comme une onde stationnaire résultant de l&rsquo;interaction (poignée de main de Wheeler-Feynman<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>) entre une onde suivant la particule (en retard dans le temps) et une onde la précédant (en avance dans le temps).</p>
-<p>Mais comme dans les films de SF, ces interactions avec le futur font naître de multiples paradoxes du type <a href="https://fr.wikipedia.org/wiki/Paradoxe_du_grand-p%C3%A8re#:~:text=Le%20paradoxe%20du%20grand%2Dp%C3%A8re,dernier%20ait%20eu%20des%20enfants.">&ldquo;paradoxe du grand-père&rdquo;</a> dont on ne peut se protège qu&rsquo;au prix de contraintes fortes sur les conditions initiales et finales de l&rsquo;univers et sur les types d&rsquo;interaction entre les deux.</p>
-<p>Remarquons qu&rsquo;une théorie globale (non locale temporellement) est naturellement rétrocausale puisque tout évènement dépend de l&rsquo;histoire entière. Mais il n&rsquo;y a pas alors de flèches temporelles vers l&rsquo;avant ou vers l&rsquo;arrière (puisqu&rsquo;il n&rsquo;y a pas de flèche) et donc pas non plus de paradoxes temporels.</p>
-<blockquote>
-<p><b>Source</b> (certains passages ne sont qu&rsquo;une traduction maladroite) :<br>
-Emily Adlam, <i>Foundations of Quantum Mechanics</i>, Cambridge University Press, coll. « Elements in the Philosophy of Physics », 2021</p>
-</blockquote>
-<hr>
-<h2 id="ghz">GHZ</h2>
-<p>Les premières expériences (de pensée, puis réelles) qui ont battu en brèche le réalisme local étaient statistiques. En effet, pour violer les inégalités de Bell , il faut accumuler des expériences et en faire la moyenne.</p>
-<p>L&rsquo;expérience GHZ est, elle, déterministe. La preuve ne réside plus dans une inégalité mais dans une contradiction algébrique. Une seule mesure suffit donc en théorie !</p>
-<div style="position:relative; width:600px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-			<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/htd_1lAj2Tg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-		</div>
-
+<p>En particulier $\left(X-\mathrm{i}P\right)^n$ a le poids $n$. Voilà le mécanisme d&rsquo;empilement : chaque facteur $X-\mathrm{i}P$ ajoute un tour au décompte.</p>
+<h3 id="la-topologie-impose-un-poids-entier">La topologie impose un poids entier</h3>
+<p>Pourquoi $k$ ne pourrait-il pas valoir $0{,}37$ ou $\sqrt2$ ? La raison n&rsquo;est ni physique ni algébrique, mais topologique.</p>
+<div id="theo">
+<p><strong>Quantification du poids :</strong></p>
+<p>toute fonction de poids $k$ bien définie sur le plan de phase vérifie $k \in \mathbb Z$.</p>
 </div>
-<p><u>Remarque</u> :</p>
-<p>L’état GHZ à 3 photons a pour forme la plus simple :
-$$|\mathrm{GHZ}\rangle=\frac 1{\sqrt 2} \left(|\uparrow_v\rangle|\uparrow_v\rangle|\uparrow_v\rangle + |\downarrow_v\rangle|\downarrow_v\rangle|\downarrow_v\rangle\right)$$
-En écrivant chacun des états de spin dans la base h (avec $|\uparrow_v\rangle = \tfrac 1{\sqrt 2} \left(|\uparrow_h\rangle+|\downarrow_h\rangle\right)$ et $|\downarrow_v⟩ = \tfrac 1{\sqrt2} \left(|\uparrow_h\rangle-|\downarrow_h\rangle\right)$), on obtient la forme donnée dans la vidéo sur laquelle se déroule la démonstration.</p>
-<div class="footnotes" role="doc-endnotes">
-<hr>
+<br>
+<div id="preuve">
+<p>Prenons $t = T = 2\pi/\omega$. On a vu que le flot au temps $T$ est la rotation d&rsquo;angle $2\pi$, c&rsquo;est-à-dire l&rsquo;identité : chaque point du plan est revenu exactement là où il était.</p>
+<p>Or $f$ est une fonction du point. Si le point n&rsquo;a pas bougé, la valeur de $f$ n&rsquo;a pas changé. Donc, en tant que fonctions sur le plan,</p>
+<p style="text-align:center;">$\displaystyle f(T) = f(0).$</p>
+<p>Mais la définition du poids donne aussi $f(T) = \mathrm{e}^{\mathrm{i}k\omega T}f(0) = \mathrm{e}^{2\pi\mathrm{i}k}f(0)$.</p>
+<p>En comparant les deux, et puisque $f$ n&rsquo;est pas identiquement nulle, il vient $\mathrm{e}^{2\pi\mathrm{i}k} = 1$, c&rsquo;est-à-dire $k\in\mathbb Z$.</p>
+</div>
+<p>Cette démonstration n&rsquo;utilise à aucun moment la mécanique quantique. Elle n&rsquo;utilise pas $\hbar$. Elle n&rsquo;utilise même pas le hamiltonien, sinon pour savoir que son flot est une rotation. Elle utilise une seule chose : <strong>une rotation de $2\pi$ est l&rsquo;identité</strong>, autrement dit le groupe des rotations du plan est un cercle, un objet qui se referme.</p>
+<p>C&rsquo;est très exactement l&rsquo;argument qui quantifie le moment cinétique d&rsquo;une particule sur un anneau, ou qui impose des indices entiers aux séries de Fourier. Une fonction sur un cercle se décompose en $\mathrm{e}^{\mathrm{i}m\phi}$ avec $m$ entier, jamais avec $m$ fractionnaire, sous peine de ne pas se recoller après un tour.</p>
+<div class="notice notice--note" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Une remarque de vocabulaire</span></div><div class="notice__corps"><p>Le verbe « quantifier » a deux sens en physique : passer d&rsquo;une description classique à une description quantique, et obtenir un ensemble discret de valeurs. Nous venons d&rsquo;obtenir le second sans faire le premier. Le caractère entier n&rsquo;est pas sorti d&rsquo;un calcul quantique ; il était déjà inscrit dans la forme du plan de phase classique, et attendait qu&rsquo;on le lise.</p>
+</div></div>
+<h3 id="conséquence-léchelle-et-son-pas-hbaromega">Conséquence : l&rsquo;échelle, et son pas $\hbar\omega$</h3>
+<p>Traduisons le poids en langage quantique.</p>
+<div id="theo">
+<p><strong>Traduction quantique du poids</strong></p>
+<p>Un opérateur $\hat O$ correspondant à une fonction classique de poids $k$ vérifie, en représentation de Heisenberg, $\hat O(t) = \mathrm{e}^{\mathrm{i}k\omega t}\hat O$, ce qui équivaut à</p>
+<p style="text-align:center;">$\displaystyle \left[\hat H, \hat O\right] = k\,\hbar\omega\,\hat O\quad$
+c'est-à-dire
+$\displaystyle
+\quad [\hat N,\hat O] = k\,\hat O.$</p>
+</div>
+<br>
+<div id="preuve">
+<p>En représentation de Heisenberg, $\hat O(t) = \mathrm{e}^{\mathrm{i}\hat Ht/\hbar}\,\hat O\,\mathrm{e}^{-\mathrm{i}\hat Ht/\hbar}$.</p>
+<p>Dérivons cette expression par rapport au temps. Les deux exponentielles se dérivent en faisant descendre $\pm\,\mathrm{i}\hat H/\hbar$ :</p>
+<p style="text-align:center;">$\displaystyle \frac{\mathrm{d}\hat O}{\mathrm{d}t} = \frac{\mathrm{i}}{\hbar}\,\mathrm{e}^{\mathrm{i}\hat Ht/\hbar}\hat H\hat O\,\mathrm{e}^{-\mathrm{i}\hat Ht/\hbar} - \frac{\mathrm{i}}{\hbar}\,\mathrm{e}^{\mathrm{i}\hat Ht/\hbar}\hat O\hat H\,\mathrm{e}^{-\mathrm{i}\hat Ht/\hbar} = \frac{\mathrm{i}}{\hbar}\,\mathrm{e}^{\mathrm{i}\hat Ht/\hbar}\left[\hat H,\hat O\right]\mathrm{e}^{-\mathrm{i}\hat Ht/\hbar}.$</p>
+<p>En $t=0$ les exponentielles valent l&rsquo;identité, donc</p>
+<p style="text-align:center;">$\displaystyle \left.\frac{\mathrm{d}\hat O}{\mathrm{d}t}\right|_{t=0} = \frac{\mathrm{i}}{\hbar}\left[\hat H,\hat O\right].$</p>
+<p>Dérivons maintenant l&rsquo;autre écriture, $\hat O(t) = \mathrm{e}^{\mathrm{i}k\omega t}\hat O$, où seule l&rsquo;exponentielle scalaire dépend du temps :</p>
+<p style="text-align:center;">$\displaystyle \left.\frac{\mathrm{d}\hat O}{\mathrm{d}t}\right|_{t=0} = \mathrm{i}k\omega\,\hat O.$</p>
+<p>En identifiant les deux, $\frac{\mathrm{i}}{\hbar}\left[\hat H,\hat O\right] = \mathrm{i}k\omega\,\hat O$, soit $\left[\hat H,\hat O\right] = k\hbar\omega\,\hat O$.</p>
+<p>La réciproque est immédiate : si cette relation est vérifiée, alors $\hat O(t)$ satisfait l&rsquo;équation différentielle $\dot{\hat O} = \mathrm{i}k\omega\hat O$ avec la condition initiale $\hat O(0)=\hat O$, dont la solution est unique et vaut $\mathrm{e}^{\mathrm{i}k\omega t}\hat O$.</p>
+<p>Enfin, avec $\hat H = \hbar\omega\left(\hat N+\frac12\right)$, le terme $\frac12$ est un multiple de l&rsquo;identité et commute avec tout : $\left[\hat H,\hat O\right] = \hbar\omega\left[\hat N,\hat O\right]$. En divisant par $\hbar\omega$, il reste $\left[\hat N,\hat O\right] = k\hat O$.</p>
+</div>
+<p>Vérification immédiate : pour $\hat O = \hat a^\dagger$, on retrouve $[\hat N,\hat a^\dagger] = +\hat a^\dagger$, donc $k=+1$. Pour $\hat O=\hat a$, on retrouve $[\hat N,\hat a]=-\hat a$, donc $k=-1$. Les commutateurs dont nous étions partis ne sont donc rien d&rsquo;autre que l&rsquo;énoncé des poids. L&rsquo;algèbre rejoint la géométrie.</p>
+<div id="theo">
+<p><strong>Règle de sélection</strong></p>
+<p>Si $|\nu\rangle$ est vecteur propre de $\hat N$ pour la valeur propre $\nu$, et si $\hat O$ a le poids $k$, alors $\hat O|\nu\rangle$ est soit nul, soit vecteur propre de $\hat N$ pour la valeur propre $\nu+k$.</p>
+</div>
+<br>
+<div id="preuve">
+<p>On écrit $\hat N\hat O = \hat O\hat N + [\hat N,\hat O] = \hat O\hat N + k\hat O$, puis on applique à $|\nu\rangle$ :</p>
+<p style="text-align:center;">$\displaystyle \hat N\left(\hat O|\nu\rangle\right) = \hat O\,\hat N|\nu\rangle + k\,\hat O|\nu\rangle = (\nu+k)\left(\hat O|\nu\rangle\right).$</p>
+</div>
+<p>Assemblons. Les poids disponibles sont les entiers, et rien d&rsquo;autre. Donc les seules valeurs propres de $\hat N$ que l&rsquo;on peut atteindre à partir d&rsquo;une valeur propre donnée sont celles qui en diffèrent d&rsquo;un entier. Le spectre de $\hat N$ est une progression arithmétique de raison $1$, et celui de $\hat H = \hbar\omega\left(\hat N+\frac12\right)$ une progression arithmétique de raison $\hbar\omega$. <strong>Les niveaux d&rsquo;énergie sont donc équidistants.</strong></p>
+<p>L&rsquo;écart vaut $\hbar\omega$ parce que $\omega$ est la vitesse de rotation du plan de phase, que $\hbar$ convertit une fréquence en énergie, et que le seul nombre autorisé entre les deux est un entier.</p>
+<h3 id="où-sarrête-léchelle">Où s&rsquo;arrête l&rsquo;échelle ?</h3>
+<p>On a une progression arithmétique, mais on ne sait pas où elle commence, ni même si elle commence. Il faut un ingrédient de plus, et il est quantique.</p>
+<div id="theo">
+<p><strong>Positivité</strong></p>
+<p>Pour tout état $|\psi\rangle$, on a $\langle\psi|\hat N|\psi\rangle = \langle\psi|\hat a^\dagger \hat a|\psi\rangle = \left\lVert \hat a|\psi\rangle\right\rVert^2 \geqslant 0$. Le spectre de $\hat N$ est donc positif.</p>
+</div>
+<p>Une progression arithmétique de raison $1$ et minorée est nécessairement finie vers le bas. Il existe donc un état $|\nu_0\rangle$ dont on ne peut plus descendre, c&rsquo;est-à-dire tel que $\hat a|\nu_0\rangle = 0$. En appliquant $\hat a^\dagger$, il vient $\hat N|\nu_0\rangle = \hat a^\dagger \hat a|\nu_0\rangle = 0$, donc $\nu_0 = 0$.</p>
+<p>Le spectre de $\hat N$ est donc exactement $\mathbb N$, et celui de $\hat H$ vaut $E_n = \hbar\omega\left(n+\frac12\right)$.</p>
+<p>Nous verrons plus loin que ce plancher, obtenu ici par un argument de norme, admet lui aussi une lecture topologique.</p>
+<h3 id="lhorloge-interne">L&rsquo;horloge interne</h3>
+<p>Nous avons parlé du poids des fonctions classiques, parlons maintenant des états quantiques.</p>
+<p>L&rsquo;état $|n\rangle$ est vecteur propre de $\hat H$ pour la valeur propre $E_n$. En reportant dans l&rsquo;équation de Schrödinger $\mathrm{i}\hbar\,\partial_t|\psi\rangle = \hat H|\psi\rangle$ l&rsquo;écriture $|\psi(t)\rangle = c(t)\,|n\rangle$, il vient $\mathrm{i}\hbar\,\dot c = E_n c$, donc $c(t) = \mathrm{e}^{-\mathrm{i}E_nt/\hbar}$. Un état propre n&rsquo;évolue donc que par une phase, et cette phase tourne à la vitesse angulaire</p>
+<p style="text-align:center;">$\displaystyle \frac{E_n}{\hbar} = \left(n+\frac12\right)\omega.$</p>
+<p>Comparons cette vitesse à celle du plan de phase, qui vaut $\omega$ pour tous les états sans exception. Le rapport est $n+\frac12$ : <strong>pendant que le plan de phase fait un tour, la phase de l&rsquo;état $|n\rangle$ en fait $n+\frac12$.</strong></p>
+<p>Il y a donc deux rotations :</p>
+<table>
+	<thead>
+			<tr>
+					<th style="text-align: center">rotation</th>
+					<th style="text-align: center">vitesse</th>
+					<th style="text-align: center">dépend de $n$ ?</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: center">le plan de phase (mouvement classique)</td>
+					<td style="text-align: center">$\omega$</td>
+					<td style="text-align: center">non, isochronisme</td>
+			</tr>
+			<tr>
+					<td style="text-align: center">la phase quantique de l&rsquo;état (l&rsquo;horloge interne)</td>
+					<td style="text-align: center">$\left(n+\frac12\right)\omega$</td>
+					<td style="text-align: center">oui, linéairement</td>
+			</tr>
+	</tbody>
+</table>
+<p>$\hat a^\dagger$ n&rsquo;accélère pas le plan, il ajoute <strong>un tour d&rsquo;horloge interne par tour de plan</strong>. Le nombre quantique $n$ n&rsquo;est pas une quantité d&rsquo;énergie, c&rsquo;est un rapport de fréquences, et l&rsquo;énergie s&rsquo;en déduit en multipliant par $\hbar\omega$.</p>
+<p>Le $\frac12$ n&rsquo;est pas un tour. C&rsquo;est un décalage fixe, identique pour tous les états, issu de la non-commutation : en écrivant $\frac12(\hat X^2+\hat P^2) = \hat a^\dagger \hat a + \frac12$, le $\frac12$ n&rsquo;est autre que le commutateur $[\hat a,\hat a^\dagger]$. Il ne participe à aucun écart.</p>
+<h3 id="le-plan-de-phase-est-un-plan-complexe">Le plan de phase est un plan complexe</h3>
+<p>Nous allons maintenant rendre le décompte des tours entièrement explicite. Pour cela, il faut d&rsquo;abord voir que les formules définissant $\hat a$ et $\hat a^\dagger$ disent quelque chose de très concret sur la géométrie du plan.</p>
+<p>Un point du plan de phase est un couple $(X,P)$ de réels. Or un couple de réels, c&rsquo;est un nombre complexe. Le plan de phase <strong>est</strong> le plan complexe, et sa coordonnée naturelle est</p>
+<p style="text-align:center;">$\displaystyle \alpha = \frac{X+\mathrm{i}P}{\sqrt2}, \qquad \bar\alpha = \frac{X-\mathrm{i}P}{\sqrt2}.$</p>
+<div id="theo">
+<p>Les formules de départ ne disent donc rien d&rsquo;autre que ceci : <strong>$\hat a$ est la quantification de la coordonnée complexe du plan de phase, et $\hat a^\dagger$ celle de sa conjuguée.</strong></p>
+</div>
+<p>C&rsquo;est là toute la chair des définitions $\hat a = (\hat X+\mathrm{i}\hat P)/\sqrt2$ et $\hat a^\dagger = (\hat X-\mathrm{i}\hat P)/\sqrt2$. Elles ne cachent aucune astuce : elles nomment la coordonnée du plan, et sa conjuguée. Le module $|\alpha|$ est le rayon de l&rsquo;orbite, l&rsquo;argument est la position sur l&rsquo;orbite, et le mouvement classique se réduit à $\alpha(t)=\mathrm{e}^{-\mathrm{i}\omega t}\alpha(0)$.</p>
+<p>Reste à savoir de quoi un <strong>état</strong> peut bien être une fonction. Une fonction d&rsquo;onde ne dépend jamais de toutes les variables de l&rsquo;espace des phases : $\psi$ dépend de $x$, ou de $p$, mais jamais des deux à la fois, faute de quoi on violerait la relation d&rsquo;incertitude. Il faut donc choisir une moitié des variables. Dans le langage complexe, la moitié à retenir se choisit ainsi :</p>
+<div id="def">
+<p>Une fonction $f$ qui dépend de $z$ mais <strong>pas</strong> de $\bar z$ est dite <strong>holomorphe</strong>. La condition s&rsquo;écrit $\partial f/\partial\bar z = 0$ ; ce sont les relations de Cauchy-Riemann.</p>
+</div>
+<p>L&rsquo;holomorphie est donc la version complexe de « ne dépendre que de la moitié des variables ». Choisir des fonctions holomorphes plutôt que des fonctions de $x$, c&rsquo;est choisir une autre moitié, adaptée à la rotation plutôt qu&rsquo;à la position.</p>
+<p>Laquelle des deux coordonnées prendre comme variable ? Nous voulons compter des tours dans le sens du mouvement classique, et que multiplier par la variable ajoute un tour. Il faut donc prendre celle de poids $+1$, c&rsquo;est-à-dire $\bar\alpha$. Notons-la $z$.</p>
+<div id="def">
+<p><strong>La variable de Bargmann.</strong> On pose $z = \bar\alpha \propto X-\mathrm{i}P$, la coordonnée complexe de poids $+1$, et l&rsquo;on représente les états par des fonctions holomorphes de $z$.</p>
+</div>
+<p>Il reste à construire cette représentation, et tout se déduit d&rsquo;un seul choix.</p>
+<p>Puisque $\hat a^\dagger$ doit ajouter une unité de poids, et que sur les fonctions de $z$ l&rsquo;opération qui ajoute exactement une unité de degré est la multiplication par $z$, posons $\hat a^\dagger = \times\,z$. Le reste suit :</p>
+<div id="preuve">
+<p>Le vide a le poids $0$ : c&rsquo;est donc la fonction constante, que l&rsquo;on normalise à $1$.</p>
+<p>Les états excités s&rsquo;obtiennent par $|n\rangle = \dfrac{\left(\hat a^\dagger\right)^n}{\sqrt{n!}}|0\rangle$, ce qui donne, en appliquant $n$ fois la multiplication par $z$ à la constante $1$ :</p>
+<p style="text-align:center;">$\displaystyle |n\rangle \longleftrightarrow \frac{z^n}{\sqrt{n!}}.$</p>
+<p>Enfin, un état quelconque $|\psi\rangle = \sum_n c_n|n\rangle$ correspond par linéarité à</p>
+<p style="text-align:center;">$\displaystyle f(z) = \sum_{n\geqslant 0} c_n\,\frac{z^n}{\sqrt{n!}}.$</p>
+</div>
+<p>La base de Fock est donc simplement la base des monômes, et le développement d&rsquo;un état sur les niveaux d&rsquo;énergie est son développement en série entière. Le coefficient $c_n$ est à la fois l&rsquo;amplitude de probabilité de trouver $n$ quanta et le $n$-ième coefficient de Taylor.</p>
+<h3 id="enrouler-dérouler">Enrouler, dérouler</h3>
+<p>Il reste à identifier l&rsquo;opérateur d&rsquo;annihilation. Nous n&rsquo;allons pas le postuler : il est entièrement déterminé.</p>
+<div id="theo">
+<p>Dans cette représentation,</p>
+<p style="text-align:center;">$\displaystyle \hat a^\dagger = \times\,z, \qquad \hat a = \frac{\partial}{\partial z}, \qquad \hat N = z\frac{\partial}{\partial z}.$</p>
+</div>
+<br>
+<div id="preuve">
+<p>Cherchons un opérateur $\hat D$ qui baisse le degré d&rsquo;une unité, donc de la forme $\hat D\left(z^n\right) = d_n z^{n-1}$.</p>
+<p>Première contrainte, la régularité : appliqué à la constante, $\hat D$ ne peut pas produire $z^{-1}$, qui explose à l&rsquo;origine. Donc $d_0 = 0$.</p>
+<p>Seconde contrainte, le commutateur canonique $\left[\hat a,\hat a^\dagger\right]=1$, c&rsquo;est-à-dire $\left[\hat D, \times z\right] = \mathrm{id}$. Appliquons-le à $z^n$ :</p>
+<p style="text-align:center;">$\displaystyle \hat D\left(z^{n+1}\right) - z\,\hat D\left(z^n\right) = d_{n+1}z^n - d_n z^n = \left(d_{n+1}-d_n\right)z^n,$</p>
+<p>et cette quantité doit valoir $z^n$. Donc $d_{n+1}-d_n = 1$ pour tout $n$, ce qui joint à $d_0=0$ donne $d_n = n$.</p>
+<p>Ainsi $\hat D\left(z^n\right) = n z^{n-1}$, qui est exactement la dérivation. Enfin $\hat N = \hat a^\dagger \hat a = z\,\partial_z$.</p>
+</div>
+<div class="notice notice--le-commutateur-canonique-est-la-règle-de-leibniz" role="note"><div class="notice__entete"><span class="notice__icone" aria-hidden="true"></span><span class="notice__titre">Le Commutateur Canonique Est La Règle De Leibniz</span></div><div class="notice__corps"><p>Le calcul ci-dessus peut se lire à l&rsquo;envers : dériver un produit $zf$ fait tomber exactement un facteur $z$, $\partial_z(zf) = f + z\,\partial_z f$, c&rsquo;est-à-dire $\left[\partial_z, \times z\right] = \mathrm{id}$. La relation de commutation canonique, qui semble si mystérieuse en mécanique quantique, est ici une formule de dérivation apprise en terminale.</p>
+</div></div>
+<p>Lisons maintenant ces trois formules.</p>
+<p>$\hat N = z\partial_z$ est l&rsquo;opérateur d&rsquo;Euler : appliqué à un monôme, il rend son degré. Le nombre de quanta <strong>est</strong> le degré. Or le degré est aussi le nombre de tours que fait l&rsquo;argument de $z^n$ quand $z$ parcourt un cercle, puisque $\arg\left(z^n\right) = n\arg z$. Degré, enroulement, rapport de fréquences, nombre de quanta : quatre noms pour un seul entier.</p>
+<p>$\hat a^\dagger = \times z$ : multiplier par $z$ transforme $z^n$ en $z^{n+1}$ et ajoute donc exactement un tour. C&rsquo;est la loi d&rsquo;addition des poids, écrite sur les fonctions.</p>
+<p>$\hat a = \partial_z$ : dériver transforme $z^n$ en $nz^{n-1}$ et retire donc exactement un tour. Le facteur $n$ compte de combien de façons on peut retirer l&rsquo;un des $n$ facteurs identiques ; c&rsquo;est lui qui devient le $\sqrt n$ de $\hat a|n\rangle = \sqrt n\,|n-1\rangle$ une fois la normalisation $\sqrt{n!}$ prise en compte.</p>
+<p>Reste une question naturelle : pourquoi dérouler par une dérivée, et non par une division par $z$, qui semblerait plus symétrique ?</p>
+<div id="theo">
+<p><strong>Le plancher est topologique</strong></p>
+<p>Un état est une fonction qui doit rester finie partout sur le plan de phase, et en particulier à l&rsquo;origine, qui est un point parfaitement ordinaire. Son développement autour de $0$ ne contient donc que des puissances positives ou nulles de $z$. Comme le poids <strong>est</strong> la puissance, aucun état ne peut avoir un poids négatif.</p>
+</div>
+<p>Autrement dit : une fonction régulière possède un développement de Taylor $c_0 + c_1z + c_2z^2+\cdots$, sans aucun terme en $z^{-1}$. Un enroulement négatif exigerait précisément un tel terme, donc une fonction qui explose à l&rsquo;origine, ce qui n&rsquo;est pas un état.</p>
+<p>C&rsquo;est aussi ce qui rend la dérivée obligatoire. Toute opération qui baisse le poids d&rsquo;une unité en préservant la régularité doit envoyer la constante sur quelque chose de régulier de poids $-1$ ; or un tel objet n&rsquo;existe pas, donc elle <strong>annule</strong> nécessairement la constante. La division par $z$ ne l&rsquo;annule pas, elle fabrique le pôle interdit. La dérivation, elle, l&rsquo;annule d&rsquo;office : $\partial_z 1 = 0$. La fonction constante est le vide, l&rsquo;unique fonction sans enroulement, et la descente s&rsquo;y arrête d&rsquo;elle-même. <strong>On ne peut pas descendre en dessous de zéro tour, non pas parce que l&rsquo;énergie serait négative, mais parce qu&rsquo;il n&rsquo;existe pas de motif régulier faisant un nombre négatif de tours.</strong></p>
+<p>Cela explique enfin pourquoi $\hat a$ et $\hat a^\dagger$ ne peuvent pas être unitaires. L&rsquo;enroulement est un invariant topologique : aucune transformation qui déplace le système sans le déformer ne peut le changer. Changer $n$ exige donc un opérateur non unitaire, et cette non-unitarité n&rsquo;est pas un défaut technique, c&rsquo;est une nécessité.</p>
+<div id="def">
+<p><strong>Illustration interactive.</strong> Le bloc ci-dessous colorie le plan de phase par la teinte correspondant à $\arg\left(z^n\right)$. Le disque tourne à la vitesse $\omega$, identique pour tous les états ; le capteur, lui, reste fixe. On lit directement les deux compteurs, et la bande du bas déroule le cercle pour permettre de compter les enroulements.</p>
+</div>
+<div id="hoc-wrap" style="margin:1.5rem 0;font-family:inherit">
+<div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap">
+<div style="position:relative;width:280px;height:280px;flex:none">
+<canvas id="hoc-disk" width="280" height="280" style="position:absolute;left:0;top:0;width:280px;height:280px"></canvas>
+<svg viewBox="0 0 280 280" style="position:absolute;left:0;top:0;width:280px;height:280px">
+<line x1="8" y1="140" x2="272" y2="140" stroke="currentColor" stroke-width="0.5" opacity="0.5"/>
+<line x1="140" y1="8" x2="140" y2="272" stroke="currentColor" stroke-width="0.5" opacity="0.5"/>
+<text x="274" y="136" font-size="12" fill="currentColor" text-anchor="end">X</text>
+<text x="146" y="18" font-size="12" fill="currentColor">P</text>
+<circle cx="227" cy="140" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+</svg>
+</div>
+<div style="flex:1;min-width:250px">
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+<span style="font-size:0.9em;opacity:0.75;min-width:90px">enroulement n</span>
+<input type="range" id="hoc-n" min="0" max="6" step="1" value="2" style="flex:1">
+<span id="hoc-nv" style="font-size:0.9em;font-weight:500;min-width:14px">2</span>
+</div>
+<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+<label style="font-size:0.85em;opacity:0.75;display:flex;align-items:center;gap:6px">
+<input type="checkbox" id="hoc-g" checked> pondérer par la gaussienne du vide</label>
+</div>
+<div style="display:flex;gap:8px;margin-bottom:12px">
+<button id="hoc-pp" style="padding:5px 12px;font-size:0.85em;cursor:pointer">pause</button>
+<button id="hoc-rs" style="padding:5px 12px;font-size:0.85em;cursor:pointer">remise à zéro</button>
+</div>
+<div style="display:flex;gap:24px">
+<div><div id="hoc-t1" style="font-size:1.6em;font-weight:500">0.00</div><div style="font-size:0.8em;opacity:0.7">tours du plan</div></div>
+<div><div id="hoc-t2" style="font-size:1.6em;font-weight:500">0.00</div><div style="font-size:0.8em;opacity:0.7">tours d'horloge</div></div>
+</div>
+</div>
+</div>
+<div style="margin-top:14px">
+<div style="font-size:0.8em;opacity:0.7;margin-bottom:5px">le cercle déroulé de 0 à 2&pi; : compter les arcs-en-ciel</div>
+<canvas id="hoc-strip" width="640" height="30" style="width:100%;height:30px"></canvas>
+</div>
+</div>
+<script>
+(function(){
+var dk=document.getElementById('hoc-disk');if(!dk)return;
+var dc=dk.getContext('2d'),st=document.getElementById('hoc-strip'),sc=st.getContext('2d');
+var el=function(i){return document.getElementById(i)};
+var nn=el('hoc-n'),nv=el('hoc-nv'),gg=el('hoc-g'),pp=el('hoc-pp'),rs=el('hoc-rs');
+var t1=el('hoc-t1'),t2=el('hoc-t2');
+var N=2,TH=0,RUN=true,LAST=0,RMAX=3.2,SZ=280,C=140,SC=130/RMAX;
+function hsl(h,l){h=((h%360)+360)%360;var c=(1-Math.abs(2*l-1)),x=c*(1-Math.abs((h/60)%2-1)),m=l-c/2,r,g,b;
+if(h<60){r=c;g=x;b=0}else if(h<120){r=x;g=c;b=0}else if(h<180){r=0;g=c;b=x}
+else if(h<240){r=0;g=x;b=c}else if(h<300){r=x;g=0;b=c}else{r=c;g=0;b=x}
+return[(r+m)*255,(g+m)*255,(b+m)*255]}
+function draw(){
+var im=dc.createImageData(SZ,SZ),d=im.data,G=gg.checked;
+var mx=N===0?1:Math.pow(N,N/2)*Math.exp(-N/2);
+for(var y=0;y<SZ;y++)for(var x=0;x<SZ;x++){
+var X=(x-C)/SC,P=(C-y)/SC,r=Math.sqrt(X*X+P*P),i=(y*SZ+x)*4;
+if(r>RMAX){d[i+3]=0;continue}
+var am=G?Math.min(1,Math.pow(r,N)*Math.exp(-r*r/2)/mx):1;
+var c=hsl(N*Math.atan2(-P,X)*180/Math.PI,1-0.5*am);
+d[i]=c[0];d[i+1]=c[1];d[i+2]=c[2];d[i+3]=255}
+dc.putImageData(im,0,0);
+for(var k=0;k<st.width;k++){var q=hsl(-N*(k/st.width*360),0.5);
+sc.fillStyle='rgb('+q[0]+','+q[1]+','+q[2]+')';sc.fillRect(k,0,1,30)}}
+function tick(ts){if(!LAST)LAST=ts;var dt=(ts-LAST)/1000;LAST=ts;if(RUN)TH+=0.6*dt;
+dk.style.transform='rotate('+(TH*180/Math.PI)+'deg)';
+t1.textContent=(TH/(2*Math.PI)).toFixed(2);
+t2.textContent=(N*TH/(2*Math.PI)).toFixed(2);
+requestAnimationFrame(tick)}
+nn.addEventListener('input',function(){N=+nn.value;nv.textContent=N;draw()});
+gg.addEventListener('change',draw);
+pp.addEventListener('click',function(){RUN=!RUN;pp.textContent=RUN?'pause':'lecture'});
+rs.addEventListener('click',function(){TH=0});
+draw();requestAnimationFrame(tick)})();
+</script>
+<h3 id="le-rayon-laire-et-la-longueur-donde-de-de-broglie">Le rayon, l&rsquo;aire et la longueur d&rsquo;onde de de Broglie</h3>
+<p>Il reste à comprendre pourquoi l&rsquo;orbite classique associée au niveau $n$ s&rsquo;agrandit, et à quelle vitesse.</p>
+<h4 id="lintégrale-daction-de-loscillateur">L&rsquo;intégrale d&rsquo;action de l&rsquo;oscillateur</h4>
+<p>Le mouvement classique d&rsquo;énergie $E$ s&rsquo;écrit $x(t) = A\cos\omega t$ avec $E = \frac12 m\omega^2A^2$, et $p(t) = m\dot x = -m\omega A\sin\omega t$.</p>
+<div id="theo">
+<p><strong>Action d&rsquo;une période</strong></p>
+<p>Pour l&rsquo;oscillateur harmonique,</p>
+<p style="text-align:center;">$\displaystyle \oint p\,\mathrm{d}x = E\,T$</p>
+<p>où $T = 2\pi/\omega$ est la période.</p>
+</div>
+<br>
+<div id="preuve">
+<p>On paramètre par le temps :</p>
+<p style="text-align:center;">$\displaystyle \oint p\,\mathrm{d}x = \int_0^T p\,\dot x\,\mathrm{d}t = \int_0^T m\omega^2A^2\sin^2(\omega t)\,\mathrm{d}t = m\omega^2A^2\,\frac{T}{2}.$</p>
+<p>Comme $m\omega^2A^2 = 2E$, il vient $\oint p\,\mathrm{d}x = ET$.</p>
+</div>
+<p><strong>L&rsquo;action d&rsquo;une période est simplement le produit de l&rsquo;énergie par la période</strong>.</p>
+<h4 id="trois-lectures-dune-seule-intégrale">Trois lectures d&rsquo;une seule intégrale</h4>
+<p>Divisons l&rsquo;action par $h$ et lisons le résultat de trois façons.</p>
+<p><strong>Première lecture, une aire</strong><br>
+L&rsquo;intégrale $\oint p\,\mathrm{d}x$ est, par définition d&rsquo;une intégrale curviligne fermée, l&rsquo;aire enfermée par l&rsquo;orbite dans le plan $(x,p)$. Donc $\oint p\,\mathrm{d}x/h$ est le nombre de cellules d&rsquo;aire $h$ contenues dans l&rsquo;orbite.</p>
+<p><strong>Deuxième lecture, un décompte de longueurs d&rsquo;onde</strong><br>
+En un point $x$ du trajet, la longueur d&rsquo;onde de de Broglie locale vaut $\lambda(x) = h/|p(x)|$. Le nombre de longueurs d&rsquo;onde qui tiennent le long du trajet spatial complet, aller et retour, est donc</p>
+<p style="text-align:center;">$\displaystyle \oint \frac{\mathrm{d}x}{\lambda(x)} = \frac{1}{h}\oint |p|\,\mathrm{d}x = \frac{1}{h}\oint p\,\mathrm{d}x$</p>
+<p>C&rsquo;est la même intégrale. Le trajet spatial aller-retour entre les deux points de rebroussement est précisément un tour complet dans le plan de phase : la branche aller est le demi-plan $p&gt;0$, la branche retour le demi-plan $p&lt;0$. <strong>L&rsquo;aire dans l&rsquo;espace des phases n&rsquo;est pas l&rsquo;analogue du décompte spatial, elle en est la valeur.</strong></p>
+<figure class="fig" style="width:700px;">
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Un tour dans le plan de phase correspond à un aller-retour sur le segment spatial">
+<defs><marker id="ar6" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#970E53" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<defs><marker id="ar7" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#004D80" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<line x1="80" y1="80" x2="222" y2="80" stroke="currentColor" stroke-width="0.6" opacity="0.6"/>
+<line x1="150" y1="18" x2="150" y2="142" stroke="currentColor" stroke-width="0.6" opacity="0.6"/>
+<text x="226" y="84" font-size="11" fill="currentColor">x</text>
+<text x="155" y="25" font-size="11" fill="currentColor">p</text>
+<path d="M98 80 A52 52 0 0 1 202 80" fill="none" stroke="#970E53" stroke-width="2.2" marker-end="url(#ar6)"/>
+<path d="M202 80 A52 52 0 0 1 98 80" fill="none" stroke="#004D80" stroke-width="2.2" marker-end="url(#ar7)"/>
+<text x="150" y="22" font-size="11" fill="#970E53" text-anchor="middle"></text>
+<text x="262" y="60" font-size="11" fill="#970E53">aller, p &gt; 0</text>
+<text x="262" y="112" font-size="11" fill="#004D80">retour, p &lt; 0</text>
+<line x1="98" y1="80" x2="98" y2="196" stroke="currentColor" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.5"/>
+<line x1="202" y1="80" x2="202" y2="196" stroke="currentColor" stroke-width="0.6" stroke-dasharray="3 3" opacity="0.5"/>
+<line x1="98" y1="196" x2="202" y2="196" stroke="currentColor" stroke-width="1.4"/>
+<path d="M98 196 q6.5 -11 13 0 q6.5 11 13 0 q6.5 -11 13 0 q6.5 11 13 0 q6.5 -11 13 0 q6.5 11 13 0 q6.5 -11 13 0 q6.5 11 13 0" fill="none" stroke="#006C65" stroke-width="1.6"/>
+<text x="98" y="216" font-size="11" fill="currentColor" text-anchor="middle">-A</text>
+<text x="202" y="216" font-size="11" fill="currentColor" text-anchor="middle">+A</text>
+<text x="262" y="196" font-size="11" fill="currentColor">le trajet spatial</text>
+<text x="150" y="240" font-size="11" fill="currentColor" text-anchor="middle" opacity="0.75">un tour en haut = un aller-retour en bas</text>
+</svg>
+<figcaption>Les deux lectures portent sur le même chemin, décrit une fois dans le plan de phase et une fois sur l'axe des x.</figcaption>
+</figure>
+<p><strong>Troisième lecture, un décompte de tours d&rsquo;horloge</strong><br>
+En utilisant $\oint p\,\mathrm{d}x = ET$ :</p>
+<p style="text-align:center;">$\displaystyle \frac{1}{h}\oint p\,\mathrm{d}x = \frac{ET}{h} = \frac{E/\hbar}{2\pi/T} = \frac{\text{vitesse de l'horloge interne}}{\text{vitesse du plan}}.$</p>
+<p>C&rsquo;est exactement le rapport de fréquences de la section précédente.</p>
+<div id="theo">
+<p><strong>Les trois décomptes coïncident.</strong> Le nombre de cellules d&rsquo;aire $h$ enfermées par l&rsquo;orbite, le nombre de longueurs d&rsquo;onde de de Broglie le long du trajet spatial, et le nombre de tours d&rsquo;horloge interne par tour de plan sont un seul et même nombre, à savoir $n+\frac12$.</p>
+</div>
+<p>Puisque nous savons déjà que ce nombre s&rsquo;incrémente d&rsquo;une unité à chaque application de $\hat a^\dagger$, nous obtenons du même coup : chaque niveau ajoute une longueur d&rsquo;onde de de Broglie au trajet spatial, <strong>et</strong> une cellule d&rsquo;aire $h$ à l&rsquo;orbite. Ce sont deux énoncés du même fait.</p>
+<h4 id="le-rayon">Le rayon</h4>
+<p>Il ne reste plus qu&rsquo;à convertir en rayon. L&rsquo;aire vaut $h\left(n+\frac12\right)$, et en variables réduites l&rsquo;orbite est un cercle de rayon $R$ dont l&rsquo;aire physique vaut $\hbar\,\pi R^2$, puisque $\mathrm{d}x\,\mathrm{d}p = \hbar\,\mathrm{d}X\,\mathrm{d}P$. On en déduit $\pi R^2 = 2\pi\left(n+\frac12\right)$, soit</p>
+<p style="text-align:center;">$\displaystyle R_n = \sqrt{2n+1}.$</p>
+<figure class="fig" style="width:700px;">
+<svg viewBox="0 0 430 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cercles concentriques de rayons en racine de deux n plus un, séparés par des anneaux de même aire">
+<path fill-rule="evenodd" fill="#EF9F27" opacity="0.35" d="M40 125 a85 85 0 1 0 170 0 a85 85 0 1 0 -170 0 Z M59 125 a66 66 0 1 1 132 0 a66 66 0 1 1 -132 0 Z"/>
+<line x1="15" y1="125" x2="235" y2="125" stroke="currentColor" stroke-width="0.5" opacity="0.45"/>
+<line x1="125" y1="15" x2="125" y2="235" stroke="currentColor" stroke-width="0.5" opacity="0.45"/>
+<circle cx="125" cy="125" r="38" fill="none" stroke="#004D80" stroke-width="1"/>
+<circle cx="125" cy="125" r="66" fill="none" stroke="#004D80" stroke-width="1"/>
+<circle cx="125" cy="125" r="85" fill="none" stroke="#004D80" stroke-width="1"/>
+<circle cx="125" cy="125" r="100" fill="none" stroke="#004D80" stroke-width="1"/>
+<text x="133" y="82" font-size="11" fill="currentColor">n = 0</text>
+<text x="133" y="20" font-size="11" fill="currentColor">n = 3</text>
+<line x1="205" y1="112" x2="248" y2="92" stroke="currentColor" stroke-width="0.6" opacity="0.6"/>
+<text x="254" y="88" font-size="11" fill="currentColor">chaque anneau enferme</text>
+<text x="254" y="105" font-size="11" fill="currentColor">la même aire h</text>
+<text x="254" y="134" font-size="11" fill="currentColor" opacity="0.75">les rayons croissent en</text>
+<text x="254" y="151" font-size="11" fill="currentColor" opacity="0.75">racine de 2n+1, donc</text>
+<text x="254" y="168" font-size="11" fill="currentColor" opacity="0.75">les cercles se resserrent</text>
+</svg>
+<figcaption>C'est l'aire, et non le rayon ni la circonférence, qui augmente d'une quantité constante.</figcaption>
+</figure>
+<p>Le rayon croît donc comme $\sqrt n$, et les cercles se resserrent. C&rsquo;est l&rsquo;<strong>aire</strong> qui est le compteur linéaire. La raison en est visible sur la deuxième lecture : quand l&rsquo;orbite grandit, le trajet s&rsquo;allonge, mais l&rsquo;impulsion augmente aussi, donc la longueur d&rsquo;onde raccourcit. Les deux effets se multiplient, et le décompte croît comme $R^2$.</p>
+<p>Enfin le $\frac12$. L&rsquo;orbite du vide enferme une aire $h/2$ et non $0$ : l&rsquo;origine du plan de phase, où le système serait au repos exact, est interdite par la relation d&rsquo;incertitude $\Delta X\,\Delta P \geqslant \frac12$. Le vide occupe la plus petite orbite compatible avec cette contrainte, $R_0 = 1$. Ce décalage est le même pour tous les niveaux et disparaît de tout écart d&rsquo;énergie ; il n&rsquo;est pas un tour d&rsquo;horloge mais un décalage de l&rsquo;origine du comptage.</p>
+<h2 id="bilan">Bilan</h2>
+<p>L&rsquo;enchaînement complet, débarrassé de ses justifications :</p>
 <ol>
-<li id="fn:1">
-<p>L&rsquo;utilisation des solutions avancées des équations de Maxwell (et pas seulement les retardées) fut déjà proposée par Richard Feynman et John Archibald Wheeler en 1945 (théorie de l&rsquo;absorbeur) pour résoudre le problème de la self énergie de l&rsquo;électron.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
+<li>Le flot classique de l&rsquo;oscillateur est une rotation rigide du plan de phase, à vitesse $\omega$ indépendante de l&rsquo;orbite.</li>
+<li>Les seules fonctions linéaires que cette rotation se contente de multiplier par un nombre sont $X\pm\mathrm{i}P$ : ce sont les fonctions classiques associées à $\hat a$ et $\hat a^\dagger$, et ce sont aussi la coordonnée complexe du plan et sa conjuguée.</li>
+<li>Le poids d&rsquo;une fonction est le nombre de tours de sa phase par tour de plan. Les poids s&rsquo;additionnent quand on multiplie.</li>
+<li>Une rotation de $2\pi$ est l&rsquo;identité, donc une fonction bien définie sur le plan revient sur elle-même, donc son poids est un entier. C&rsquo;est le seul argument non trivial de la notice, et il est topologique.</li>
+<li>Un opérateur de poids $k$ décale la valeur propre de $\hat N$ de $k$. Les poids étant entiers, le spectre est une progression arithmétique de raison $1$, donc les niveaux d&rsquo;énergie sont espacés de $\hbar\omega$.</li>
+<li>La positivité de $\hat N$ borne l&rsquo;échelle par le bas ; topologiquement, aucune fonction régulière ne peut avoir un enroulement négatif.</li>
+<li>L&rsquo;état $|n\rangle$ correspond au monôme $z^n$, d&rsquo;enroulement $n$ ; $\hat a^\dagger$ multiplie par $z$ et enroule d&rsquo;un tour de plus, $\hat a$ dérive et en retire un. Le commutateur canonique n&rsquo;est autre que la règle de Leibniz.</li>
+<li>L&rsquo;intégrale d&rsquo;action $\oint p\,\mathrm{d}x = ET$ compte à la fois les cellules d&rsquo;aire $h$, les longueurs d&rsquo;onde de de Broglie et les tours d&rsquo;horloge. Chaque niveau en ajoute un de chaque, et le rayon suit en $\sqrt{2n+1}$.</li>
 </ol>
-</div>
+<p>L&rsquo;énergie n&rsquo;est donc pas la grandeur première. La grandeur première est un entier topologique, et l&rsquo;énergie s&rsquo;en déduit par $E = \hbar\omega\,n$ à un décalage près, où $\omega$ vient de la géométrie du flot et $\hbar$ de la conversion.</p>
 
 
 <footer class="footline">
@@ -3157,7 +3691,6 @@ En écrivant chacun des états de spin dans la base h (avec $|\uparrow_v\rangle 
             
                 
                     
-                    
                 
                 
 
@@ -3170,9 +3703,6 @@ En écrivant chacun des états de spin dans la base h (avec $|\uparrow_v\rangle 
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3222,7 +3752,6 @@ En écrivant chacun des états de spin dans la base h (avec $|\uparrow_v\rangle 
             
                 
                     
-                    
                 
                 
 
@@ -3238,9 +3767,6 @@ En écrivant chacun des états de spin dans la base h (avec $|\uparrow_v\rangle 
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3293,25 +3819,13 @@ En écrivant chacun des états de spin dans la base h (avec $|\uparrow_v\rangle 
             
                 
                     
+                    
                 
                 
 
                     
                     
                         
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
                     
                     
 
@@ -3319,110 +3833,10 @@ En écrivant chacun des états de spin dans la base h (avec $|\uparrow_v\rangle 
                         
             
             
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3432,6 +3846,123 @@ En écrivant chacun des états de spin dans la base h (avec $|\uparrow_v\rangle 
                     
 
                     
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
             
         
                     
@@ -3444,6 +3975,9 @@ En écrivant chacun des états de spin dans la base h (avec $|\uparrow_v\rangle 
             
             
                 
+                    
+                        
+                        
                     
                 
                 

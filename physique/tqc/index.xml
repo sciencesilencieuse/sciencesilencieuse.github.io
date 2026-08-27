@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Mon, 19 May 2025 19:53:23 +0200</lastBuildDate>
+			<lastBuildDate>Thu, 27 Aug 2026 14:33:07 +0200</lastBuildDate>
 		
 			<atom:link href="https://sciencesilencieuse.github.io/physique/tqc/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Oscillateur harmonique</title>
+				<link>https://sciencesilencieuse.github.io/physique/tqc/oh/</link>
+				<pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+				<guid>https://sciencesilencieuse.github.io/physique/tqc/oh/</guid>
+				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;  #grosseformule &#xA;{&#xA;    overflow-x: auto; &#xA;}&#xA;#preuve&#xA;{&#xA;    background-color:#EAEAEA;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#def&#xA;{&#xA;    background-color:#DCEFFE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#theo&#xA;{&#xA;    background-color:#FBE1DE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;h2&#xA;{&#xA;color:#970E53 !important;&#xA;}&#xA;h3&#xA;{&#xA;color:#004D80 !important;&#xA;}&#xA;ul&#xA;{&#xA;margin-top:0em;&#xA;margin-bottom:0.5em;&#xA;}&#xA;figure.fig&#xA;{&#xA;  margin:1.5em auto;&#xA;  text-align:center;&#xA;}&#xA;figure.fig svg&#xA;{&#xA;  max-width:100%;&#xA;  height:auto;&#xA;}&#xA;figure.fig figcaption&#xA;{&#xA;  font-size:0.85em;&#xA;  color:#555;&#xA;  margin-top:0.4em;&#xA;}&#xA;/* Pour rétablir le comportement de details */&#xA;details &gt; summary:first-of-type {&#xA;  display: list-item;     /* remet le triangle + l’accessibilité */&#xA;  cursor: pointer;        /* optionnel : feedback visuel */&#xA;}&#xA;&#xA;details &gt; summary:first-of-type {&#xA;  list-style: disclosure-closed inside;&#xA;}&#xA;details[open] &gt; summary:first-of-type {&#xA;  list-style-type: disclosure-open;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h2 id=&#34;quantification-de-loscillateur-harmonique-et-opérateurs-déchelle&#34;&gt;Quantification de l&amp;rsquo;oscillateur harmonique et opérateurs d&amp;rsquo;échelle&lt;/h2&gt;&#xA;&lt;h3 id=&#34;point-de-départ&#34;&gt;Point de départ&lt;/h3&gt;&#xA;&lt;div id=&#34;def&#34;&gt;&#xA;&lt;p&gt;Variables réduites sans dimension :&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>TQC-4</title>
 				<link>https://sciencesilencieuse.github.io/physique/tqc/tqcd/</link>

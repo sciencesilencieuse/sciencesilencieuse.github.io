@@ -10,7 +10,7 @@
 		
 		
 		
-			<lastBuildDate>Tue, 25 Aug 2026 15:48:59 +0200</lastBuildDate>
+			<lastBuildDate>Thu, 27 Aug 2026 14:33:07 +0200</lastBuildDate>
 		
 			<atom:link href="https://sciencesilencieuse.github.io/index.xml" rel="self" type="application/rss+xml" />
 			<item>
@@ -138,6 +138,13 @@
 				<pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
 				<guid>https://sciencesilencieuse.github.io/physique/quantique/fondations/</guid>
 				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;#preuve&#xA;{&#xA;    background-color:#EAEAEA;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#def&#xA;{&#xA;    background-color:#DCEFFE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#theo&#xA;{&#xA;    background-color:#FBE1DE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#axiom&#xA;{&#xA;    background-color:#E5F3E0;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#gros&#xA;{&#xA;    overflow-x: auto;&#xA;    margin-top:-0.5em;&#xA;    margin-bottom:-0.5em;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h1 style=&#34;overflow-x:auto;&#34;&gt;Notions fondamentales en mécanique quantique&lt;/h1&gt;&#xA;&lt;div style=&#34;position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;&#34;&gt;&#xA;&lt;img style=&#34;border-radius:10px;&#34; src=&#34;https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F039e8c19-4b94-46c8-9204-5c31902ef50e_1746x956.png&#34; style=&#34;box-shadow:none;background:none;&#34;&gt;&#xA;&lt;/div&gt;&#xA;&lt;p&gt;Le cinquième Conseil international de Solvay, en 1927, avait pour thème « Électrons et Photons » et porta principalement sur la mécanique quantique. 17 des 29 personnalités présentes à ce congrès étaient ou allaient devenir prix Nobel&amp;hellip;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Oscillateur harmonique</title>
+				<link>https://sciencesilencieuse.github.io/physique/tqc/oh/</link>
+				<pubDate>Sat, 06 Mar 2021 14:20:50 +0100</pubDate>
+				<guid>https://sciencesilencieuse.github.io/physique/tqc/oh/</guid>
+				<description>&lt;style&gt;&#xA; #correc&#xA;  {&#xA;    color: #006C65;&#xA;    border-left: solid 10px #C7DDDC;&#xA;  }&#xA; #comm&#xA;  {&#xA;    color: #004D80;&#xA;    border-left: solid 10px #B3CAD9;&#xA;  }&#xA; #commsum&#xA;  {&#xA;    color: #004D80;&#xA;  }&#xA; #correcsum&#xA;  {&#xA;    color: #006C65;&#xA;  }&#xA;  #grosseformule &#xA;{&#xA;    overflow-x: auto; &#xA;}&#xA;#preuve&#xA;{&#xA;    background-color:#EAEAEA;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#def&#xA;{&#xA;    background-color:#DCEFFE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;#theo&#xA;{&#xA;    background-color:#FBE1DE;&#xA;    border-radius:10px;&#xA;    padding:5px 20px 5px 20px;&#xA;}&#xA;h2&#xA;{&#xA;color:#970E53 !important;&#xA;}&#xA;h3&#xA;{&#xA;color:#004D80 !important;&#xA;}&#xA;ul&#xA;{&#xA;margin-top:0em;&#xA;margin-bottom:0.5em;&#xA;}&#xA;figure.fig&#xA;{&#xA;  margin:1.5em auto;&#xA;  text-align:center;&#xA;}&#xA;figure.fig svg&#xA;{&#xA;  max-width:100%;&#xA;  height:auto;&#xA;}&#xA;figure.fig figcaption&#xA;{&#xA;  font-size:0.85em;&#xA;  color:#555;&#xA;  margin-top:0.4em;&#xA;}&#xA;/* Pour rétablir le comportement de details */&#xA;details &gt; summary:first-of-type {&#xA;  display: list-item;     /* remet le triangle + l’accessibilité */&#xA;  cursor: pointer;        /* optionnel : feedback visuel */&#xA;}&#xA;&#xA;details &gt; summary:first-of-type {&#xA;  list-style: disclosure-closed inside;&#xA;}&#xA;details[open] &gt; summary:first-of-type {&#xA;  list-style-type: disclosure-open;&#xA;}&#xA;&lt;/style&gt;&#xA;&lt;h2 id=&#34;quantification-de-loscillateur-harmonique-et-opérateurs-déchelle&#34;&gt;Quantification de l&amp;rsquo;oscillateur harmonique et opérateurs d&amp;rsquo;échelle&lt;/h2&gt;&#xA;&lt;h3 id=&#34;point-de-départ&#34;&gt;Point de départ&lt;/h3&gt;&#xA;&lt;div id=&#34;def&#34;&gt;&#xA;&lt;p&gt;Variables réduites sans dimension :&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Représentations</title>
