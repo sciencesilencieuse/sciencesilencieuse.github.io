@@ -32,22 +32,22 @@ window.MathJax = {
     
 
     
-    <link href="/css/nucleus.css?1787963812" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1787963812" rel="stylesheet">
-    <link href="/css/hybrid.css?1787963812" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1787963812" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1787963812" rel="stylesheet">
-    <link href="/css/auto-complete.css?1787963812" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1787963812" rel="stylesheet">
-    <link href="/css/theme.css?1787963812" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1787963812" rel="stylesheet">
+    <link href="/css/nucleus.css?1787970005" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1787970005" rel="stylesheet">
+    <link href="/css/hybrid.css?1787970005" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1787970005" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1787970005" rel="stylesheet">
+    <link href="/css/auto-complete.css?1787970005" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1787970005" rel="stylesheet">
+    <link href="/css/theme.css?1787970005" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1787970005" rel="stylesheet">
     
-    <link href="/css/theme-blue.css?1787963812" rel="stylesheet">
+    <link href="/css/theme-blue.css?1787970005" rel="stylesheet">
     
-    <link href="/css/foo.css?1787963812" rel="stylesheet"><link href="/css/bar.css?1787963812" rel="stylesheet">
+    <link href="/css/foo.css?1787970005" rel="stylesheet"><link href="/css/bar.css?1787970005" rel="stylesheet">
 
 
-    <script src="/js/jquery-3.3.1.min.js?1787963812"></script>
+    <script src="/js/jquery-3.3.1.min.js?1787970005"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -101,14 +101,14 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1787963812"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1787963812"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1787970005"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1787970005"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/sciencesilencieuse.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1787963812"></script>
+<script type="text/javascript" src="/js/search.js?1787970005"></script>
 
     
   </div>
@@ -2056,12 +2056,17 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 <p>Si l&rsquo;on cherche à calculer une quantité déterministe (comme la valeur d&rsquo;une intégrale complexe ou l&rsquo;espérance d&rsquo;une variable aléatoire), on peut reformuler le problème sous la forme de l&rsquo;espérance mathématique d&rsquo;une fonction $f(X)$ d&rsquo;une variable aléatoire $X$.
 En générant un très grand nombre $N$ de réalisations indépendantes et identiquement distribuées $(x_1, x_2, \dots, x_N)$ de la variable $X$, la moyenne empirique converge presque sûrement vers la valeur théorique recherchée grâce à la <strong>Loi des Grands Nombres</strong> :
 $$\lim_{N \to \infty} \frac{1}{N} \sum_{i=1}^N f(x_i) = \mathbb{E}[f(X)]$$</p>
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-			<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/t1X1Agp1CWA?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-		</div>
-
+<div class="yt-plus"
+     style="width:800px;max-width:100%;margin:1.5rem auto;aspect-ratio:16 / 9;border-radius:0.75rem;overflow:hidden;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+  <iframe src="https://www.youtube-nocookie.com/embed/t1X1Agp1CWA"
+          style="display:block;width:100%;height:100%;border:0;"
+          title="Lecteur vidéo YouTube"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
 </div>
+
 <p>Dans la deuxième partie de la vidéo, on cherche à répondre à la grande question suivante : comment s&rsquo;assurer d&rsquo;avoir suffisamment d&rsquo;échantillons pour obtenir des statistiques fiables ? Ou plus prosaïquement : à partir de combien est-ce suffisant ?</p>
 <p>Grâce au <strong>Théorème Central Limite</strong>, on sait que la distribution de la moyenne empirique $\bar{X}_N = \frac{1}{N} \sum f(x_i)$ se répartit selon une courbe en cloche autour de la cible $\mathbb{E}[f(X)]$. On va donc pouvoir quantifier les fluctuations autour de la cible. On construit pour cela un estimateur à partir de l&rsquo;<strong>inégalité de Bienaymé-Tchebychev</strong>.</p>
 <h2 id="monte-carlo-pour-lestimation-dincertitudes-types-en-science-expérimentale">Monte Carlo pour l&rsquo;estimation d&rsquo;incertitudes-types en science expérimentale</h2>
@@ -3480,16 +3485,16 @@ $$C_A=(1,250 \pm 0,009)\cdot 10^{-2}\; \pu{mol*L-1}$$
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1787963812"></script>
-    <script src="/js/perfect-scrollbar.min.js?1787963812"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1787963812"></script>
-    <script src="/js/jquery.sticky.js?1787963812"></script>
-    <script src="/js/featherlight.min.js?1787963812"></script>
-    <script src="/js/highlight.pack.js?1787963812"></script>
+    <script src="/js/clipboard.min.js?1787970005"></script>
+    <script src="/js/perfect-scrollbar.min.js?1787970005"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1787970005"></script>
+    <script src="/js/jquery.sticky.js?1787970005"></script>
+    <script src="/js/featherlight.min.js?1787970005"></script>
+    <script src="/js/highlight.pack.js?1787970005"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1787963812"></script>
-    <script src="/js/learn.js?1787963812"></script>
-    <script src="/js/hugo-learn.js?1787963812"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1787970005"></script>
+    <script src="/js/learn.js?1787970005"></script>
+    <script src="/js/hugo-learn.js?1787970005"></script>
     
     
 
