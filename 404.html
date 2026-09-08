@@ -8,15 +8,15 @@
   <title>404 Page not found</title>
 
    
-    <link href="/css/nucleus.css?1788867379" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1788867379" rel="stylesheet">
-    <link href="/css/hybrid.css?1788867379" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1788867379" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1788867379" rel="stylesheet">
-    <link href="/css/theme.css?1788867379" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1788867379" rel="stylesheet">
+    <link href="/css/nucleus.css?1788873403" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1788873403" rel="stylesheet">
+    <link href="/css/hybrid.css?1788873403" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1788873403" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1788873403" rel="stylesheet">
+    <link href="/css/theme.css?1788873403" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1788873403" rel="stylesheet">
     
-      <link href="/css/theme-blue.css?1788867379" rel="stylesheet">
+      <link href="/css/theme-blue.css?1788873403" rel="stylesheet">
     
 <style>
     :root #header + #content > #left > #rlblock_left {
@@ -45,6 +45,21 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdownHighlight.js">
 </script>
 <script>quizdown.register(quizdownHighlight).register(quizdownKatex).init()</script> 
+
+<style>
+ 
+#sidebar .ps-scrollbar-x-rail { display: none !important; }
+</style>
+
+<script>
+window.addEventListener('load', function () {
+  var $el = jQuery('#sidebar .highlightable');
+  if ($el.length && $el.perfectScrollbar) {
+    $el.perfectScrollbar('destroy');
+    $el.perfectScrollbar({ suppressScrollX: true });
+  }
+});
+</script>
 
 
 </head>
