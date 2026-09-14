@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sciencesilencieuse.github.io/sitemap.xml

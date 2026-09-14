@@ -1,0 +1,325 @@
+<style>
+    body { margin: 0; padding: 0; overflow: hidden; }
+</style>
+
+<div id="glowscript" class="glowscript">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link type="text/css" href="https://www.glowscript.org/css/redmond/2.1/jquery-ui.custom.css" rel="stylesheet" />
+<link type="text/css" href="https://www.glowscript.org/css/ide.css" rel="stylesheet" />
+<script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/lib/jquery/2.1/jquery-ui.custom.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/package/glow.3.2.min.js"></script>
+<script type="text/javascript" src="https://www.glowscript.org/package/RSrun.3.2.min.js"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+
+// START JAVASCRIPT
+;(function() {;
+var ρσ_modules = {};
+ρσ_modules.pythonize = {};
+
+(function(){
+    function strings() {
+        var string_funcs, exclude, name;
+        string_funcs = set("capitalize strip lstrip rstrip islower isupper isspace lower upper swapcase center count endswith startswith find rfind index rindex format join ljust rjust partition rpartition replace split rsplit splitlines zfill".split(" "));
+        if (!arguments.length) {
+            exclude = (function(){
+                var s = ρσ_set();
+                s.jsset.add("split");
+                s.jsset.add("replace");
+                return s;
+            })();
+        } else if (arguments[0]) {
+            exclude = Array.prototype.slice.call(arguments);
+        } else {
+            exclude = null;
+        }
+        if (exclude) {
+            string_funcs = string_funcs.difference(set(exclude));
+        }
+        var ρσ_Iter0 = string_funcs;
+        ρσ_Iter0 = ((typeof ρσ_Iter0[Symbol.iterator] === "function") ? (ρσ_Iter0 instanceof Map ? ρσ_Iter0.keys() : ρσ_Iter0) : Object.keys(ρσ_Iter0));
+        for (var ρσ_Index0 of ρσ_Iter0) {
+            name = ρσ_Index0;
+            (ρσ_expr_temp = String.prototype)[(typeof name === "number" && name < 0) ? ρσ_expr_temp.length + name : name] = (ρσ_expr_temp = ρσ_str.prototype)[(typeof name === "number" && name < 0) ? ρσ_expr_temp.length + name : name];
+        }
+    };
+    if (!strings.__module__) Object.defineProperties(strings, {
+        __module__ : {value: "pythonize"}
+    });
+
+    ρσ_modules.pythonize.strings = strings;
+})();
+async function __main__() {
+"use strict";
+    var display = canvas;
+    var scene = canvas();
+
+    var version, print, arange, __name__, type, ρσ_ls, ρσ_unpack, L, H, W, posM1, posM2, aquarium, M1, M2, n1, n2, c, nb, PtsInterface, i, Balles, TpsParcours, Nb, X, Y, x, xmin, g1, graphAngle1, graphMin1, g2, graphAngle2, graphMin2, t, dt, test, compte, k, normale, Angles1, Angles2, tmin, tmax, angle1min, angle2min, Couleurs, Chemins;
+    version = ρσ_list_decorate([ "3.2", "glowscript" ]);
+    Array.prototype['+'] = function(r) {return this.concat(r)}
+    Array.prototype['*'] = function(r) {return __array_times_number(this, r)}
+    window.__GSlang = "vpython";
+    print = GSprint;
+    arange = range;
+    __name__ = "__main__";
+    type = pytype;
+    var strings = ρσ_modules.pythonize.strings;
+
+    strings();
+    "3";
+    ρσ_unpack = [10, 5, 5];
+    L = ρσ_unpack[0];
+    H = ρσ_unpack[1];
+    W = ρσ_unpack[2];
+    "5";
+    posM1 = vec(1["-u"]()["*"](3.8), 2.8, 0);
+    "6";
+    posM2 = vec(2.5, 1["-u"]()["*"](4.2), 0);
+    "7";
+    scene.width = window.innerWidth;
+    "8";
+    scene.height = scene.width;
+    "9";
+    scene.align = "left";
+    "11";
+    aquarium = ρσ_interpolate_kwargs.call(this, box, [ρσ_desugar_kwargs({pos: vector(0, 1["-u"]()["*"](H)["/"](2), 0), length: L, height: H, width: W, color: vec(86, 193, 255)["/"](255), opacity: .5})]);
+    "12";
+    M1 = ρσ_interpolate_kwargs.call(this, sphere, [ρσ_desugar_kwargs({pos: posM1, radius: .1})]);
+    "13";
+    M2 = ρσ_interpolate_kwargs.call(this, sphere, [ρσ_desugar_kwargs({pos: posM2, radius: .1})]);
+    "16";
+    n1 = 1;
+    "17";
+    n2 = 1.33;
+    "18";
+    c = 1;
+    "20";
+    nb = 20;
+    "21";
+    PtsInterface = (function() {
+        var ρσ_Iter = range(nb), ρσ_Result = [], i;
+        ρσ_Iter = ((typeof ρσ_Iter[Symbol.iterator] === "function") ? (ρσ_Iter instanceof Map ? ρσ_Iter.keys() : ρσ_Iter) : Object.keys(ρσ_Iter));
+        for (var ρσ_Index of ρσ_Iter) {
+            i = ρσ_Index;
+            ρσ_Result.push(vec(1["-u"]()["*"](L)["/"](2)["+"](L["/"](nb["-"](1["*"](1)))["*"](i)), 0, 0));
+        }
+        ρσ_Result = ρσ_list_constructor(ρσ_Result);
+        return ρσ_Result;
+    })();
+    "22";
+    Balles = (function() {
+        var ρσ_Iter = range(nb), ρσ_Result = [], i;
+        ρσ_Iter = ((typeof ρσ_Iter[Symbol.iterator] === "function") ? (ρσ_Iter instanceof Map ? ρσ_Iter.keys() : ρσ_Iter) : Object.keys(ρσ_Iter));
+        for (var ρσ_Index of ρσ_Iter) {
+            i = ρσ_Index;
+            ρσ_Result.push(ρσ_interpolate_kwargs.call(this, sphere, [ρσ_desugar_kwargs({pos: posM1, v: hat(ρσ_getitem(PtsInterface, i)["-"](1["*"](posM1)))["*"](c)["/"](n1), radius: .05, color: vec(29, 177, 0)["/"](255), make_trail: true, trail_type: "points", trail_radius: .02, interval: 100})]));
+        }
+        ρσ_Result = ρσ_list_constructor(ρσ_Result);
+        return ρσ_Result;
+    })();
+    "23";
+    TpsParcours = (function() {
+        var ρσ_Iter = range(nb), ρσ_Result = [], i;
+        ρσ_Iter = ((typeof ρσ_Iter[Symbol.iterator] === "function") ? (ρσ_Iter instanceof Map ? ρσ_Iter.keys() : ρσ_Iter) : Object.keys(ρσ_Iter));
+        for (var ρσ_Index of ρσ_Iter) {
+            i = ρσ_Index;
+            ρσ_Result.push(0);
+        }
+        ρσ_Result = ρσ_list_constructor(ρσ_Result);
+        return ρσ_Result;
+    })();
+    "25";
+    async function f(x) {
+        "26";
+        return sqrt(Math.pow(posM1.y, 2)["+"](Math.pow((x["-"](1["*"](posM1.x))), 2)))["/"](c["/"](n1))["+"](sqrt(Math.pow(posM2.y, 2)["+"](Math.pow((x["-"](1["*"](posM2.x))), 2)))["/"](c["/"](n2)));
+    };
+    if (!f.__argnames__) Object.defineProperties(f, {
+        __argnames__ : {value: ["x"]},
+        __module__ : {value: null}
+    });
+
+    "28";
+    Nb = 1e4;
+    "29";
+    X = (function() {
+        var ρσ_Iter = range(Nb), ρσ_Result = [], i;
+        ρσ_Iter = ((typeof ρσ_Iter[Symbol.iterator] === "function") ? (ρσ_Iter instanceof Map ? ρσ_Iter.keys() : ρσ_Iter) : Object.keys(ρσ_Iter));
+        for (var ρσ_Index of ρσ_Iter) {
+            i = ρσ_Index;
+            ρσ_Result.push(1["-u"]()["*"](L)["/"](2)["+"](L["/"](Nb["-"](1["*"](1)))["*"](i)));
+        }
+        ρσ_Result = ρσ_list_constructor(ρσ_Result);
+        return ρσ_Result;
+    })();
+    "30";
+    Y = ρσ_list_decorate([]);
+    "31";
+    var ρσ_Iter1 = X;
+    ρσ_Iter1 = ((typeof ρσ_Iter1[Symbol.iterator] === "function") ? (ρσ_Iter1 instanceof Map ? ρσ_Iter1.keys() : ρσ_Iter1) : Object.keys(ρσ_Iter1));
+    for (var ρσ_Index1 of ρσ_Iter1) {
+        x = ρσ_Index1;
+        "32";
+        Y.append((await f(x)));
+    }
+    "33";
+    xmin = ρσ_getitem(X, Y.index(min(Y)));
+    "34";
+    g1 = ρσ_interpolate_kwargs.call(this, graph, [ρσ_desugar_kwargs({width: scene.width, height: scene.height["/"](2), fast: false, align: "left", ytitle: "t (s)", xtitle: "angle (°)"})]);
+    "35";
+    graphAngle1 = ρσ_interpolate_kwargs.call(this, gcurve, [ρσ_desugar_kwargs({graph: g1, color: vec(29, 177, 0)["/"](255), markers: true})]);
+    "36";
+    graphMin1 = ρσ_interpolate_kwargs.call(this, gdots, [ρσ_desugar_kwargs({graph: g1, color: vec(1, 0, 0), radius: 5})]);
+    "37";
+    g2 = ρσ_interpolate_kwargs.call(this, graph, [ρσ_desugar_kwargs({width: scene.width, height: scene.height["/"](2), fast: false, align: "left", ytitle: "t (s)", xtitle: "angle (°)"})]);
+    "38";
+    graphAngle2 = ρσ_interpolate_kwargs.call(this, gcurve, [ρσ_desugar_kwargs({graph: g2, color: vec(0, 118, 186)["/"](255), markers: true})]);
+    "39";
+    graphMin2 = ρσ_interpolate_kwargs.call(this, gdots, [ρσ_desugar_kwargs({graph: g2, color: vec(1, 0, 0), radius: 5})]);
+    "41";
+    t = 0;
+    "42";
+    dt = .001;
+    "43";
+    test = true;
+    "44";
+    compte = 0;
+    "45";
+    k = 0;
+    "46";
+    while (test) {
+        "47";
+        (await rate(4["/"](dt)));
+        "48";
+        for (var ρσ_Index2 = 0; ρσ_Index2["<"](nb); ρσ_Index2++) {
+            i = ρσ_Index2;
+            "49";
+            if (mag(ρσ_getitem(Balles, i).pos["-"](1["*"](posM2)))[">"](.002)) {
+                "50";
+                ρσ_getitem(Balles, i).pos=ρσ_getitem(Balles, i).pos["+"](ρσ_getitem(Balles, i).v["*"](dt));
+                "51";
+                ρσ_setitem(TpsParcours, i, ρσ_getitem(TpsParcours, i)["+"](dt));
+                "52";
+                if ((ρσ_getitem(Balles, i).pos["-"](1["*"](ρσ_getitem(Balles, i).v)["*"](dt))).y["*"](ρσ_getitem(Balles, i).pos.y)["<"](0)) {
+                    "53";
+                    ρσ_getitem(Balles, i).v = hat(posM2["-"](1["*"](ρσ_getitem(PtsInterface, i))))["*"](c)["/"](n2);
+                    "54";
+                }
+            } else {
+                "55";
+                ρσ_getitem(Balles, i).v = vec(0, 0, 0);
+                "56";
+                compte=compte["+"](1);
+                "57";
+            }
+        }
+        if ((compte === nb || typeof compte === "object" && ρσ_equals(compte, nb))) {
+            "58";
+            test = false;
+        }
+        "59";
+        t=t["+"](dt);
+        "60";
+        compte = 0;
+    }
+    "63";
+    normale = vec(0, 1, 0);
+    "64";
+    Angles1 = (function() {
+        var ρσ_Iter = range(nb), ρσ_Result = [], i;
+        ρσ_Iter = ((typeof ρσ_Iter[Symbol.iterator] === "function") ? (ρσ_Iter instanceof Map ? ρσ_Iter.keys() : ρσ_Iter) : Object.keys(ρσ_Iter));
+        for (var ρσ_Index of ρσ_Iter) {
+            i = ρσ_Index;
+            ρσ_Result.push((ρσ_getitem(PtsInterface, i).x[">"](posM1.x)) ? diff_angle(normale, posM1["-"](1["*"](ρσ_getitem(PtsInterface, i))))["/"](pi)["*"](180) : 1["-u"]()["*"](diff_angle(normale, posM1["-"](1["*"](ρσ_getitem(PtsInterface, i)))))["/"](pi)["*"](180));
+        }
+        ρσ_Result = ρσ_list_constructor(ρσ_Result);
+        return ρσ_Result;
+    })();
+    "65";
+    Angles2 = (function() {
+        var ρσ_Iter = range(nb), ρσ_Result = [], i;
+        ρσ_Iter = ((typeof ρσ_Iter[Symbol.iterator] === "function") ? (ρσ_Iter instanceof Map ? ρσ_Iter.keys() : ρσ_Iter) : Object.keys(ρσ_Iter));
+        for (var ρσ_Index of ρσ_Iter) {
+            i = ρσ_Index;
+            ρσ_Result.push((ρσ_getitem(PtsInterface, i).x["<"](posM2.x)) ? diff_angle(1["-u"]()["*"](normale), posM2["-"](1["*"](ρσ_getitem(PtsInterface, i))))["/"](pi)["*"](180) : 1["-u"]()["*"](diff_angle(1["-u"]()["*"](normale), posM2["-"](1["*"](ρσ_getitem(PtsInterface, i)))))["/"](pi)["*"](180));
+        }
+        ρσ_Result = ρσ_list_constructor(ρσ_Result);
+        return ρσ_Result;
+    })();
+    "66";
+    for (var ρσ_Index3 = 0; ρσ_Index3["<"](nb); ρσ_Index3++) {
+        i = ρσ_Index3;
+        "67";
+        graphAngle1.plot(ρσ_getitem(Angles1, i), ρσ_getitem(TpsParcours, i));
+        "68";
+        graphAngle2.plot(ρσ_getitem(Angles2, i), ρσ_getitem(TpsParcours, i));
+    }
+    "70";
+    tmin = min(TpsParcours);
+    "71";
+    tmax = max(TpsParcours);
+    "73";
+    angle1min = diff_angle(normale, posM1["-"](1["*"](vec(xmin, 0, 0))))["/"](pi)["*"](180);
+    "74";
+    angle2min = diff_angle(1["-u"]()["*"](normale), posM2["-"](1["*"](vec(xmin, 0, 0))))["/"](pi)["*"](180);
+    "75";
+    graphMin1.plot(angle1min, tmin);
+    "76";
+    graphMin2.plot(angle2min, tmin);
+    "78";
+    g1.ymin = tmin["-"](1["*"](tmax["-"](1["*"](tmin)))["/"](10));
+    "79";
+    g1.ymax = tmax["+"](tmax["-"](1["*"](tmin))["/"](10));
+    "80";
+    g2.ymin = tmin["-"](1["*"](tmax["-"](1["*"](tmin)))["/"](10));
+    "81";
+    g2.ymax = tmax["+"](tmax["-"](1["*"](tmin))["/"](10));
+    "83";
+    for (var ρσ_Index4 = 0; ρσ_Index4["<"](nb); ρσ_Index4++) {
+        i = ρσ_Index4;
+        "84";
+        ρσ_getitem(Balles, i).clear_trail();
+    }
+    "85";
+    Couleurs = (function() {
+        var ρσ_Iter = TpsParcours, ρσ_Result = [], t;
+        ρσ_Iter = ((typeof ρσ_Iter[Symbol.iterator] === "function") ? (ρσ_Iter instanceof Map ? ρσ_Iter.keys() : ρσ_Iter) : Object.keys(ρσ_Iter));
+        for (var ρσ_Index of ρσ_Iter) {
+            t = ρσ_Index;
+            ρσ_Result.push(vec(1["-u"]()["*"](t)["+"](tmax)["/"](tmax["-"](1["*"](tmin))), 0, .3));
+        }
+        ρσ_Result = ρσ_list_constructor(ρσ_Result);
+        return ρσ_Result;
+    })();
+    "86";
+    Chemins = (function() {
+        var ρσ_Iter = range(nb), ρσ_Result = [], i;
+        ρσ_Iter = ((typeof ρσ_Iter[Symbol.iterator] === "function") ? (ρσ_Iter instanceof Map ? ρσ_Iter.keys() : ρσ_Iter) : Object.keys(ρσ_Iter));
+        for (var ρσ_Index of ρσ_Iter) {
+            i = ρσ_Index;
+            ρσ_Result.push(ρσ_interpolate_kwargs.call(this, curve, [ρσ_desugar_kwargs({pos: ρσ_list_decorate([ posM1, ρσ_getitem(PtsInterface, i), posM2 ]), color: ρσ_getitem(Couleurs, i)})]));
+        }
+        ρσ_Result = ρσ_list_constructor(ρσ_Result);
+        return ρσ_Result;
+    })();
+    "87";
+    ρσ_interpolate_kwargs.call(this, curve, [ρσ_desugar_kwargs({pos: ρσ_list_decorate([ posM1, vec(xmin, 0, 0), posM2 ]), color: vec(1, 1, 0)})]);
+    "89";
+    print();
+    "90";
+    print("i1_min = "["+"](ρσ_str.format("{:.1f}", angle1min))["+"]("°"));
+    "91";
+    print("i2_min = "["+"](ρσ_str.format("{:.1f}", angle2min))["+"]("°"));
+    "92";
+    print("n1 × sin i1_min = "["+"](ρσ_str.format("{:.5f}", n1["*"](sin(angle1min["/"](180)["*"](pi)))))["+"](""));
+    "93";
+    print("n2 × sin i2_min = "["+"](ρσ_str.format("{:.5f}", n2["*"](sin(angle2min["/"](180)["*"](pi)))))["+"](""));
+};
+if (!__main__.__module__) Object.defineProperties(__main__, {
+    __module__ : {value: null}
+});
+
+;$(function(){ window.__context = { glowscript_container: $("#glowscript").removeAttr("id") }; __main__() })})()
+// END JAVASCRIPT
+
+//--><!]]></script>
+</div>
