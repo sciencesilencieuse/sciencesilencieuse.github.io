@@ -364,6 +364,8 @@ on reconnaît un <b>propagateur</b> pris en deux points confondus. Les lignes in
 
 ### Le terme de Fock
 
+Voyons voir...
+
 <div style="position:relative;margin-left:auto;margin-right:auto;width:450px;max-width:100%;">
 <img src="/diagfock.png" style="box-shadow:none;background:none;">
 </div>
