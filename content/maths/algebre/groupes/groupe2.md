@@ -449,7 +449,7 @@ Tout ce qui va suivre découle de cette décomposition...
 
 Avec le bon choix de base, les matrices de la représentation $U(g)$ apparaîtront donc **diagonales par bloc**.
 
-<div id="grosseformule" style="margin-top:-0em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0em;margin-bottom:-1em;">
 
 $$
 D(g)=\left(\begin{array}{cccc}
@@ -464,7 +464,7 @@ $$
 
 Pour tout $g,g^\prime \in G$,
 
-<div id="grosseformule" style="margin-top:-0em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0em;margin-bottom:-1em;">
 
 $$
 D(g) D(g^{\prime})=\left(\begin{array}{cccc}
@@ -567,7 +567,7 @@ $$\displaystyle\sum_g\langle\mu, i, k \mid g\rangle\langle g \mid \nu, j, l\rang
 
 Cette forme permet d'appréhender plus facilement son interprétation géométrique. Il faut s’imaginer un espace vectoriel complexe à $n_G$ dimensions où chaque axe correspond à un élément du groupe.<br>
 Chaque $D^\mu(g)^j_i$ peut donc être vues comme un «vecteur» à $n_G$ composantes (avec $g$ parcourant $G$), tous orthogonaux entre eux. Le premier de ces vecteurs serait par exemple&nbsp;:<br>
-<div id="grosseformule" style="margin-top:-2em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-2em;margin-bottom:-1em;">
 
 $
 \left(D^1(e)^1_1, D^1\left(g_1\right)^1_1, D^1\left(g_2\right)^1_1, \ldots, D^1\left(g\_{n_G}\right)^1_1\right)
@@ -895,7 +895,7 @@ Notons $A_i$ le membre de gauche de l’équation. On a alors $U^\mu(g) A_i U^\m
 
 Les caractères de représentations irréductibles non équivalentes d’un groupe $G$ satisfont les relations suivantes&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0em;margin-bottom:-1em;">
 
 $$
 \sum_i \frac{n_i}{n_G} \chi_\mu^{\dagger i} \chi_i^\nu=\delta_\mu^\nu \quad \text { orthonormalité }
@@ -903,7 +903,7 @@ $$
 
 </div>
 
-<div id="grosseformule" style="margin-top:-0em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0em;margin-bottom:-1em;">
 
 $$
 \frac{n_i}{n_G} \sum_\mu \chi_i^\mu \chi_\mu^{\dagger j}=\delta_i^j \quad \text { complétude }
@@ -922,7 +922,7 @@ Preuve&nbsp;:
 On part de la condition d’orthonormalité des représentations irréductibles en imposant $i=k$ et $j=l$ pour obtenir les traces.
 
 À gauche, on obtient&nbsp;:
-<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-1em;">
 
 $$
 \left(n\_\mu / n\_G\right) \sum\_g \chi\_\mu^{\dagger}(g) \chi^\nu(g)=\left(n\_\mu / n\_G\right) \sum\_i n\_i \chi\_\mu^{\dagger i}(g) \chi\_i^\nu(g)
@@ -937,7 +937,7 @@ En simplifiant par $n_\mu$, il reste bien la condition d’orthonormalité annon
 
 Partons maintenant de la relation de complétude entre représentations irréductibles&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0em;margin-bottom:-1em;">
 
 $$
 \sum\_{\mu, l, k} \frac{n\_\mu}{n\_G} D^\mu(g)\_k^l D\_\mu^{\dagger}\left(g^{\prime}\right)^k\_l=\delta\_{g g^{\prime}}
@@ -947,7 +947,7 @@ $$
 
 et sommons les $g$ parmi les éléments de la classe $\zeta_i$, et les $g^\prime$ parmi les éléments de la classe $\zeta_j$&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0em;margin-bottom:-1em;">
 
 $$
 \sum\_{\mu, l, k} \frac{n\_\mu}{n\_G} \sum\_{g \in \zeta\_i} D^\mu(g)\_k^l \sum\_{g^{\prime} \in \zeta\_j} D\_\mu^{\dagger}\left(g^{\prime}\right)^k\_l=\sum\_{g \in \zeta\_i} \sum\_{g^{\prime} \in \zeta\_j} \delta\_{g g^{\prime}}
@@ -958,7 +958,7 @@ $$
 
 On obtient&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0em;margin-bottom:-1em;">
 
 $$
 \sum\_{\mu, l, k} \frac{n\_\mu}{n\_G} \frac{n\_i}{n\_\mu} \chi\_i^\mu E\_k^l \frac{n\_j}{n\_\mu} \chi\_\mu^{\dagger j} E\_l^k=\sum\_{\mu, l, k} \frac{n\_i n\_j}{n\_\mu n\_G} \chi\_i^\mu \chi\_\mu^{\dagger j} E\_k^l E\_l^k
@@ -968,7 +968,7 @@ $$
 
 Or $\sum\_{l, k} E^l\_k E^k\_l=\sum\_l E\_l^l=\operatorname{Tr} E=n\_\mu$. D'où&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0em;margin-bottom:-1em;">
 
 $$
 \sum\_{\mu, l, k} \frac{n\_\mu}{n\_G} \frac{n\_i}{n\_\mu} \chi\_i^\mu E\_k^l \frac{n\_j}{n\_\mu} \chi\_\mu^{\dagger j} E\_l^k=\sum\_\mu \frac{n\_i n\_j}{n\_G} \chi\_i^\mu \chi\_\mu^{\dagger j}
@@ -1227,7 +1227,7 @@ On peut d’abord vérifier la réductibilité&nbsp;: $1 \times 4^2+3 \times 2^2
 
 Ensuite, on peut chercher combien de fois chacune des 3 représentations irréductibles du groupe se trouve dans cette représentation&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-1em;">
 
 $$
 \begin{aligned}
@@ -1566,7 +1566,7 @@ Preuve&nbsp;:
 
 le produit direct conserve l’homomorphisme des représentations&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-1em;">
 
 $$
 \begin{aligned}
@@ -1601,7 +1601,7 @@ Si $D^\mu(G)$ et $D^\nu(G)$ sont des représentations irréductibles de $G$ de d
 
 Le nombre de fois $a_\lambda$ qu’une représentation $D^\lambda(G)$ apparaît dans la décomposition de $D^{\mu \times \nu}(G)$ est donné par la relation vue plus haut&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0em;margin-bottom:-1em;">
 
 $$
 a_\lambda^{\mu \times \nu}=\tilde{\chi}_\lambda^{\dagger} \cdot \tilde{\chi}^{\mu \times \nu}=\sum_i\left(n_i / n_G\right)\left(\chi_i^\lambda\right)^* \chi_i^\mu \chi_i^\nu
@@ -1618,7 +1618,7 @@ $D^{1 \times 1} \sim D^1$, $D^{1 \times 2} \sim D^2$, $D^{2 \times 2} \sim D^1$,
 
 Pour $D^{3 \times 3}$, c’est moins immédiat&nbsp;: la représentation est à 4 dimensions et peut donc être réduite. Appliquons la formule détaillant la décomposition&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-1em;">
 
 $$
 \begin{aligned}
@@ -1638,7 +1638,11 @@ Les représentations $D^1$, $D^2$ et $D^3$ apparaissent donc chacune une fois da
 
 ### Coefficients de Clebsch-Gordan
 
+<div id="def">
+
 On peut écrire en général $D^{\mu \times \nu}=\sum_{\lambda \oplus} a_\lambda D^\lambda$.
+
+</div>
 
 L’espace vectoriel $W$ est alors décomposé en une somme directe de sous-espaces stables $W_\alpha^\lambda$, où $\lambda$ désigne la représentation irréductible et $\alpha$ ($=1, \cdots, a_\lambda$) distingue les espaces correspondant à un même $\lambda$.
 
@@ -1714,17 +1718,17 @@ $$
 <div id="preuve">
 Preuve&nbsp;:
 
-L’inverse de (a) est bien sûr $|i, j\rangle=|\alpha, \lambda, l\rangle\langle\alpha, \lambda, l \mid i, j\rangle$ &nbsp;(b).
+L’inverse de $|\alpha, \lambda, l \rangle=|i, j \rangle\langle i, j \mid \alpha, \lambda, l \rangle$&nbsp;<b style="color:#0076BA">(a)</b> est bien sûr $|i, j\rangle=|\alpha, \lambda, l\rangle\langle\alpha, \lambda, l \mid i, j\rangle$ &nbsp;<b style="color:#0076BA">(b)</b>.
 
 Et on sait que les deux bases sont définies par&nbsp;:
 
-$U(g)|i, j\rangle=\left|i^{\prime}, j^{\prime}\right\rangle D^\mu(g)_i^{i^{\prime}} D^\nu(g)_j^{j^{\prime}}$ &nbsp;(c)
+$U(g)|i, j\rangle=\left|i^{\prime}, j^{\prime}\right\rangle D^\mu(g)_i^{i^{\prime}} D^\nu(g)_j^{j^{\prime}}$ &nbsp;<b style="color:#0076BA">(c)</b>
 
-$U(g)|\alpha, \lambda, l\rangle=\left|\alpha, \lambda, l^{\prime}\right\rangle D^\lambda(g)_l^{l^{\prime}}$ &nbsp;(d)
+$U(g)|\alpha, \lambda, l\rangle=\left|\alpha, \lambda, l^{\prime}\right\rangle D^\lambda(g)_l^{l^{\prime}}$ &nbsp;<b style="color:#0076BA">(d)</b>
 
-Utilisons (b) sur le membre de gauche de (c), cela donne&nbsp;:
+Utilisons <b style="color:#0076BA">(b)</b> sur le membre de gauche de <b style="color:#0076BA">(c)</b>, cela donne&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-1em;">
 
 $$
 \begin{aligned}
@@ -1736,13 +1740,13 @@ $$
 
 </div>
 
-où on a utilisé (d) à la deuxième ligne et (a) à la troisième.
+où on a utilisé <b style="color:#0076BA">(d)</b> à la deuxième ligne et <b style="color:#0076BA">(a)</b> à la troisième.
 
-En comparant au membre de droite de (c), on obtient la première relation du théorème (les vecteurs de base sont linéairement indépendants).
+En comparant au membre de droite de <b style="color:#0076BA">(c)</b>, on obtient la première relation du théorème (les vecteurs de base sont linéairement indépendants).
 
-Pour obtenir la relation réciproque, on peut utiliser la même méthode en substituant (a) dans (d), ou partir de la première relation et utiliser la complétude des coefficients de Clebsch-Gordan&nbsp;:
+Pour obtenir la relation réciproque, on peut utiliser la même méthode en substituant <b style="color:#0076BA">(a)</b> dans <b style="color:#0076BA">(d)</b>, ou partir de la première relation et utiliser la complétude des coefficients de Clebsch-Gordan&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-1em;">
 
 $$
 \begin{aligned}
@@ -1802,7 +1806,7 @@ Soit $\\\{\hat{u}\_i^\mu ; i=1, \ldots, n_\mu\\\}$ et $\\\{\hat{v}\_i^\nu ; i=1,
 <div id="preuve">
 Preuve&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-1em;">
 
 $$
 \begin{aligned}
@@ -1869,7 +1873,7 @@ Preuve&nbsp;:
 
 En oubliant le facteur de normalisation $\left(n_\mu / n_G\right)$, on a&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-1em;">
 
 $$
 \begin{aligned}
@@ -1904,7 +1908,7 @@ $
 <div id="preuve">
 Preuve&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-1em;">
 
 $$
 \begin{aligned}
@@ -2080,7 +2084,7 @@ On reprend la démarche entreprise plus haut consistant à partir d’une base c
 
 Pour obtenir un vecteur irréductible d’une représentation donnée, il suffit d’appliquer $P_{\mu i}$ sur une des orbitales atomiques de départ. Dans le cas des représentations 1 et 2, unidimensionnelles, le vecteur obtenu sera logiquement unique. Les représentations unidimensionnelles permettent une autre simplification puisque $P_{\mu i}$ se confond alors avec $P_\mu$&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-1em;">
 
 $$
 P_{\mu i}=P_{\mu i}^i=\frac{n_\mu}{n_G} \sum_g D_\mu^{\dagger}(g)\_i^i\, U(g)=\frac{n_\mu}{n_G} \sum_g \chi_\mu^{\dagger}(g)\, U(g)=P_\mu
@@ -2090,7 +2094,7 @@ $$
 
 Commençons par la première représentation. On obtient, en notant $e$, $a$, $b$, $c$, $d$, $f$ respectivement l’élément neutre, les réflexions (permutations deux à deux) $s_2 \leftrightarrow s_3$, $s_1 \leftrightarrow s_3$, $s_1 \leftrightarrow s_2$, et les rotations $s_1 \rightarrow s_2 \rightarrow s_3$ et $s_1 \rightarrow s_3 \rightarrow s_2$&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-1em;">
 
 $$
 \begin{aligned}
@@ -2106,7 +2110,7 @@ On obtient bien le vecteur irréductible de la représentation 1 que l’on avai
 
 La représentation 2 est elle aussi unidimensionnelle donc $P_2 s_1=\frac{n_2}{n_G} \sum_g \chi_2^{\dagger}(g) U(g) s_1$ doit pouvoir nous donner le vecteur irréductible recherché. On obtient&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-1em;">
 
 $$
 \begin{aligned}
@@ -2126,7 +2130,7 @@ Il reste la représentation 3, qui est cette fois-ci bidimensionnelle. Deux solu
 
 Commençons avec $P_{31} s_1$&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-1em;">
 
 $$
 \begin{aligned}
@@ -2140,7 +2144,7 @@ $$
 
 Et pour l’autre&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-1em;">
 
 $$
 \begin{aligned}
@@ -2156,7 +2160,7 @@ Malheur, où se cache le deuxième vecteur&nbsp;? On vient en fait de montrer qu
 
 Essayons d’appliquer $P_{32}$ sur $s_2$ pour le montrer&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-1em;">
 
 $$
 \begin{aligned}
@@ -2172,7 +2176,7 @@ Ah, le voilà. Et on l’obtiendrait aussi à partir de $s_3$.
 
 L’utilisation de $P_{32}^1$ sur $\left[2 s_1-s_2-s_3\right]$ est certes, ici, plus longue mais aboutit à coup sûr&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-1em;">
 
 $$
 \begin{aligned}
@@ -2204,13 +2208,12 @@ $\displaystyle |k, y\rangle=P_k|y\rangle=\sum_n T(n)|y\rangle e^{i k n b}=\sum_n
 
 Ces états sont les états propres des translations avec la valeur propre $e^{-i k m b}$. En effet&nbsp;:
 
-<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0em;">
-
-$$
+<p style="text-align:center;">
+$\displaystyle
 T(m)|k, y\rangle=\sum_n T(m+n)|y\rangle e^{i k n b}=\sum_{n^{\prime}} T\left(n^{\prime}\right)|y\rangle e^{i k\left(n^{\prime}-m\right) b}=|k, y\rangle e^{-i k m b}
-$$
+$
+</p>
 
-</div>
 
 De $|k, y\rangle=\sum_n|n b+y\rangle e^{i k n b}$, on déduit que les probabilités de trouver un électron dans n’importe laquelle des «cellules» du réseau sont toutes égales (les probabilités relatives valent $\left|e^{i k n b}\right|^2=1$).
 
@@ -2250,7 +2253,7 @@ où $D^\mu(G)$ est une matrice d’une représentation irréductible, alors ces 
 
 Et comment l’ensemble des vecteurs $O_i^\mu\left|e_j^\nu\right\rangle$ se comporte-t-il sous une transformation de groupe&nbsp;?
 
-<div id="grosseformule" style="margin-top:-0em;margin-bottom:-0em;">
+<div id="grosseformule" style="margin-top:-0em;margin-bottom:-1em;">
 
 $$
 \begin{aligned}
