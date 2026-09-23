@@ -501,7 +501,7 @@ Dans le jellium, la charge positive uniforme du fond compense <b>exactement</b> 
 
 C'est un soulagement mathématique autant que physique&nbsp;: $\tilde{V}\_{\boldsymbol{q}=0}$ diverge pour un potentiel coulombien, et cette divergence était le symptôme d'un système chargé. Un métal ne l'est pas.
 
-{{%notice note "Aparté&nbsp;: qui a baptisé la gelée&nbsp;?"%}}
+{{%notice note "Aparté : qui a baptisé la gelée ?"%}}
 Le nom de <i>jellium</i> est dû à John Bardeen. C'est l'un de ces modèles caricaturaux dont la caricature est précisément la vertu&nbsp;: en gommant les ions, il isole ce qui, dans un métal, relève des électrons seuls.
 {{%/notice%}}
 
