@@ -21,7 +21,7 @@ td, th {
 <h1 style="overflow-x: auto;">Thermodynamique et physique statistique</h1>
 
 <p style="text-align:left;">
-La <b>thermodynamique</b> s'occupe des formes (utilisables ou non) et des transferts d'énergie entre systèmes. On y définit des grandeurs comme la pression, la température, la capacité thermique, etc. dénuées de sens à l'échelle des atomes et molécules. La thermodynamique <i>émerge</i> en effet du comportement collectif de multitudes d'entités. 
+La <b>thermodynamique</b> s'occupe des formes d'énergie (utilisables ou non) et de ses transferts entre systèmes. On y définit des grandeurs comme la pression, la température ou la capacité thermique, qui sont dénuées de sens à l'échelle des atomes et molécules. La thermodynamique <i>émerge</i> en effet du comportement collectif de multitudes d'entités. 
 </p>
 <p style="text-align:left;">
 C'est la mission de la <b>physique statistique</b> que de construire le pont entre le comportement microscopique des entités et les grandeurs et lois macroscopiques de la thermodynamique.

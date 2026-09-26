@@ -88,7 +88,7 @@ Le paradoxe de Berry rend non calculable la complexité de Kolmogorov. Et cette 
 
 ---
 
-## [Induction et inférences bayésiennes](../maths/bayes/)
+## [Induction et inférences bayésiennes](../maths/stat/bayes/)
 
 <a href="../maths/bayes/"><div style="position:relative;margin-left:auto;margin-right:auto;width:500px;max-width:100%;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;">
 <img src="https://media.istockphoto.com/id/1803791347/photo/farmer-is-feeding-hen-from-hand.jpg?s=612x612&w=0&k=20&c=SQgBpyF27UqHag0WFJRvaXyacL7ldeyXp7aLkk_VDpM=" style="box-shadow:none;background:none;border-radius:10px;"></a>
