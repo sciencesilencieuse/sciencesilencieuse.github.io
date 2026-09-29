@@ -166,7 +166,7 @@ En raisonnant sur la moyenne arithmétique, on a un problème&nbsp;:<br>
 si $v_{tot} = \frac{v_{1}+v_{2}}{2}$, alors $v_{tot} = 2 v_{1}$ entraîne $v_2=3v_1$.<br>
 Prenons un exemple pour constater que ça cloche&nbsp;: si l'athlète fait un tour de piste en $\pu{60 s}$ ($v_1 = \pu{6,7 m\*s-1}$), alors il devra faire le second en $\pu{20 s}$ ($v_2=3v_1 = \pu{20 m\*s-1}$). Que vaut la vitesse moyenne totale&nbsp;? $v_{tot}=\frac{800}{80} = \pu{10 m*s-1}\neq 2v_1$. On ne peut pas utiliser la moyenne arithmétique pour des vitesses lorsque la distance est fixe&nbsp;!
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Il n'y aurait par contre aucun problème à utiliser la moyenne arithmétique des vitesses pour des durées identiques&nbsp;!
 {{%/notice%}}
 

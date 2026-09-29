@@ -168,7 +168,7 @@ $
 
 Ces trois dernières relations vont être **redémontrées** à partir de la seule géométrie du plan de phase. Nous établirons que l'équidistance des niveaux est un fait topologique, que $\\hat a$ et $\\hat a^\\dagger$ sont les objets qui le rendent lisible, et que $n$ est un nombre de tours.
 
-{{%notice note "Convention de notation"%}}
+{{%notice type="note" title="Convention de notation" round="true"%}}
 Pour s'y repérer dans le va et vient entre classique et quantique, les **opérateurs** quantiques ($\\hat X$, $\\hat P$, $\\hat a$, $\\hat a^\\dagger$, $\\hat N$, $\\hat H$) seront systématiquement coiffés d'un chapeau et les **fonctions classiques sur le plan de phase** ($X$, $P$, et les combinaisons que nous en formerons) seront laissées nues. Ainsi $X$ est un nombre réel qui repère un point du plan, tandis que $\\hat X$ est l'opérateur qui lui correspond. Le chapeau marque donc exactement l'endroit où l'on quantifie.
 {{%/notice%}}
 
@@ -278,7 +278,7 @@ $
 
 </div>
 
-{{%notice note "Pourquoi a-t-il fallu passer aux complexes ?"%}}
+{{%notice type="note" title="Pourquoi a-t-il fallu passer aux complexes ?" round="true"%}}
 
 Une rotation du plan réel ne laisse aucune direction réelle invariante&nbsp;; c'est à peu près sa définition. Le polynôme caractéristique $\\lambda^2+\\omega^2$ n'a pas de racine réelle, et $\\mathcal D$ n'est pas diagonalisable sur $\\mathbb R$. Les deux directions propres n'existent qu'après complexification&nbsp;: c'est de là que viennent les nombres complexes dans un problème qui n'en contenait aucun.
 
@@ -348,7 +348,7 @@ Algébriquement, $\\mathcal D$ est réelle et antisymétrique, ce qui force ses 
 
 $\\hat a$ et $\\hat a^\\dagger$ sont donc les **coordonnées normales de la rotation**, l'analogue des vecteurs de polarisation circulaire $\\hat{\\mathbf e}_x \\pm \\mathrm{i}\\hat{\\mathbf e}_y$. Le facteur $1/\\sqrt2$ n'est qu'une normalisation, choisie pour que le commutateur vaille $1$.
 
-{{%notice note "Pourquoi X porte deux fréquences et non une"%}}
+{{%notice type="note" title="Pourquoi X porte deux fréquences et non une" round="true"%}}
 
 En additionnant les deux modes propres, $X = \\tfrac12\\left[(X+\\mathrm{i}P)+(X-\\mathrm{i}P)\\right]$, donc
 
@@ -469,7 +469,7 @@ Comme $f$ n'est pas identiquement nulle, $\\mathrm{e}^{2\\pi\\mathrm{i}k} = 1$, 
 Cette démonstration n'utilise ni $\\hbar$, ni la mécanique quantique, ni même le hamiltonien sinon pour savoir que son flot est une rotation. Elle repose sur un seul fait&nbsp;: **une rotation de $2\\pi$ est l'identité**. C'est l'argument qui impose des indices entiers aux séries de Fourier, et qui quantifie le moment cinétique d'une particule sur un anneau.
 
 
-{{%notice note "Une remarque de vocabulaire"%}}
+{{%notice type="note" title="Une remarque de vocabulaire" round="true"%}}
 
 Le verbe «&nbsp;quantifier&nbsp;» a deux sens&nbsp;: passer du classique au quantique, et obtenir un ensemble discret de valeurs. Nous venons d'obtenir le second sans faire le premier. Le caractère entier était déjà inscrit dans la forme du plan de phase classique.
 
@@ -632,7 +632,7 @@ Enfin $\\hat N = \\hat a^\\dagger\\hat a = z\\,\\partial_z$.
 
 </div>
 
-{{%notice note "Le commutateur canonique est la règle de Leibniz"%}}
+{{%notice type="note" title="Le commutateur canonique est la règle de Leibniz" round="true"%}}
 
 Dériver un produit $zf$ fait tomber exactement un facteur $z$&nbsp;: $\\partial_z(zf) = f + z\\,\\partial_z f$, c'est-à-dire $\\left[\\partial_z, \\times z\\right] = \\mathrm{id}$. La relation $[\\hat a,\\hat a^\\dagger]=1$ n'est rien d'autre que cette formule de dérivation du lycée.
 

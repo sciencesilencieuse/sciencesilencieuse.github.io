@@ -83,7 +83,7 @@ Une <b>représentation</b>, c’est la description d’un groupe dans un <b>espa
 
 Mais maintenant qu’on a un peu de vocabulaire, disons qu'une représentation d'un groupe est le résultat d’un homomorphisme de ce groupe vers le groupe des opérateurs linéaires sur les espaces vectoriels (espace des états physiques pour ce qui nous intéresse). Ces opérateurs sont incarnés par des matrices dès qu’on a une base.
 
-{{%notice note "Remarque"%}}
+{{%notice type="note" title="Remarque" round="true"%}}
 
 On peut vérifier que les matrices carrées d’un ordre donné forment bien des groupes vis-à-vis de la loi de multiplication entre matrices si néanmoins elles ont le bon goût d’être inversibles&nbsp;:
 <ul>
@@ -583,7 +583,7 @@ $$\sum_{\mu, l, k}\langle g \mid \mu, l, k\rangle\left\langle\mu, l, k \mid g^{\
 
 </div>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 
 On s’applique en mécanique quantique à vérifier des relations du même type sur les vecteurs de base de l’espace vectoriel des états (c’est d’ailleurs une des motivations pour la notation compacte en bra-ket adoptée ici). Mais au terme «complétude», les quanticiens préfèrent la mieux tournée «**relation de fermeture**» dont le contenu est le même&nbsp;; il s’agit de prouver que l’espace ainsi décomposé est complet, c’est-à-dire que tout état peut se décomposer sur les vecteurs de base.
 
@@ -1830,7 +1830,7 @@ On généralise ainsi le fait que des vecteurs propres d’un opérateur hermiti
 
 Que dire si $\mu=\nu$&nbsp;? Deux possibilités&nbsp;: soit les deux sous-espaces ne coïncident aucunement (les deux espaces se distinguent alors par la valeur propre d’un autre opérateur, non lié au groupe de symétrie considéré), soit ils coïncident complètement (les deux bases sont alors liées par une matrice semblable).
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 
 Cela éclaire certains résultats plus familiers comme, par exemple, la fonction d’onde de l’électron d’un atome d’hydrogène (l’espace est alors l’espace de Hilbert). Le groupe de symétrie est $\mathrm{R_3}$ (rotations à 3D) et les représentations irréductibles de $\mathrm{R_3}$, comme on le verra plus loin, sont les différents moments angulaires. Or on sait que des états de moments angulaires différents (cas $\mu \neq \nu$), quel que soit le nombre quantique principal (correspondant à l’éloignement radial), sont orthogonaux. Et c’est aussi le cas d’états de même moment angulaire mais de nombre quantique principal différent (cas $\mu=\nu$ mais non coïncident).
 

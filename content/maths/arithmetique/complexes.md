@@ -34,7 +34,7 @@ weight = 4
 
 # Nombres complexes
 
-{{% notice note %}}
+{{% notice type="note" round="true" %}}
 [Très belle série de vidéos](https://www.youtube.com/playlist?list=PLiaHhY2iBX9g6KIvZ_703G3KJXapKkNaF) présentant les complexes.
 {{% /notice %}} 
 
@@ -59,7 +59,7 @@ Sont tracés ci-dessous les racines pour des degrés croissants de ces polynôme
 
 ![](/racdegres.png)
 
-{{% notice note %}}
+{{% notice type="note" round="true" %}}
 [Cette page](https://math.ucr.edu/home/baez/roots/) pour en savoir plus. Ça parle même de dragons&nbsp;!
 {{% /notice %}}
 

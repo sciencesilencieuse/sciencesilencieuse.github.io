@@ -79,7 +79,7 @@ details[open] > summary:first-of-type {
 
 # Théorie quantique des champs -- Partie 16
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Notes de lecture du livre *Quantum field theory for the gifted amateur* de Thomas Lancaster et Stephen Blundell.
 {{%/notice%}}
 
@@ -110,7 +110,7 @@ Et elle ne se contente pas d'éponger les infinis. Elle **prédit deux effets me
 <li>la charge électrique n'est pas une constante&nbsp;: elle dépend de l'échelle à laquelle on la mesure&nbsp;;</li>
 <li>le facteur $g$ de l'électron n'est pas tout à fait 2.</li>
 </ul>
-{{%notice note "L'itinéraire du chapitre"%}}
+{{%notice type="note" title="L'itinéraire du chapitre" round="true"%}}
 Quatre stations.
 <ol style="margin-top:-0.5em; margin-bottom:0.5em;">
 <li>Mettre en place le programme&nbsp;: trois fonctions de Green divergentes, trois contretermes, trois conditions de renormalisation.</li>
@@ -461,7 +461,7 @@ En pratique, on choisit le point le plus commode. À transfert nul pour QED, où
 ### La self-énergie du photon&nbsp;: le vide est un diélectrique
 
 Concentrons-nous sur le photon, dont le cas est le plus riche.
-{{%notice note "Le plan"%}}
+{{%notice type="note" title="Le plan" round="true"%}}
 <ul style="margin-top:-0.5em; margin-bottom:0em;">
 <li>On identifie ce que contient la self-énergie du photon (une paire virtuelle)&nbsp;;</li>
 <li>on laisse l'identité de Ward réduire ses seize composantes à une <b>unique fonction scalaire</b>&nbsp;;</li>
@@ -874,7 +874,7 @@ la somme portant sur les fermions déjà «&nbsp;allumés&nbsp;» à l'échelle 
 
 Le résultat de la confrontation est le suivant. La boucle d'électron seule prédit $\alpha^{-1}(M_Z) = 134{,}5$&nbsp;; en ajoutant tous les leptons et quarks accessibles, on tombe sur la valeur mesurée au LEP par diffusion Bhabha, $\alpha^{-1}(M_Z) = 128{,}9$. Numériquement, la «&nbsp;constante&nbsp;» de structure fine passe donc de $1/137$ aux grandes distances à environ $1/129$ à l'échelle électrofaible&nbsp;: un effet de six pour cent, mesuré, et prédit à condition de compter correctement les particules.
 
-{{%notice note "Aparté : le signe opposé qui vaut un prix Nobel"%}}
+{{%notice type="note" title="Aparté : le signe opposé qui vaut un prix Nobel" round="true"%}}
 Retenir le raisonnement, car il se retourne spectaculairement ailleurs. En chromodynamique quantique, les gluons portent eux-mêmes la charge de couleur, et leurs boucles contribuent à la fonction $\beta$ avec le signe <b>moins</b>, qui l'emporte&nbsp;: le couplage fort <b>décroît</b> à courte distance. C'est la liberté asymptotique (Gross, Politzer, Wilczek, Nobel 2004)&nbsp;: les quarks sont quasi libres au cœur du proton et inséparables de loin. Anti-écrantage&nbsp;: le vide de QCD se comporte comme un milieu paramagnétique plutôt que diélectrique. Même mathématique, physique inversée, et l'on comprend pourquoi le signe de $\beta$ est la première chose qu'on calcule dans une théorie de jauge.
 {{%/notice%}}
 
@@ -897,7 +897,7 @@ $
 
 La partie&nbsp;13 a montré le tour de force de Dirac&nbsp;: là où la mécanique quantique non relativiste devait postuler $g = 2$, son équation le <b>prédit</b>. La question de cette section est alors naturelle&nbsp;: le nuage de photons virtuels qui habille tout électron modifie-t-il cet aimant&nbsp;? La réponse de Schwinger (1948) est oui&nbsp;: la possibilité d'émettre et de réabsorber des photons virtuels déforme le vertex électron–photon d'une manière mesurable, et fait passer $g$ de $2$ à $2 + \frac{\alpha}{\pi}$, sans aucun paramètre libre.
 
-{{%notice note "Le plan en une phrase"%}}
+{{%notice type="note" title="Le plan en une phrase" round="true"%}}
 On définit l'objet qui généralise le vertex nu (la fonction de vertex)&nbsp;; on montre par un argument de <b>moment cinétique</b> qu'il tient tout entier dans deux fonctions scalaires, les facteurs de forme $F_1$ et $F_2$&nbsp;; on relie $g$ à $F_2(0)$&nbsp;; et le calcul de $F_2(0)$ occupe la section suivante.
 {{%/notice%}}
 
@@ -1172,7 +1172,7 @@ C'est le <b>diagramme de Schwinger</b>, et il fait l'objet de la section suivant
 
 Le matériel nécessaire a été construit dans les chapitres précédents, à savoir les règles de Feynman de QED et l'algèbre des matrices $\gamma$ avec ses identités de contraction (partie précédente), les paramètres de Feynman et le décalage d'impulsion, et la décomposition de Gordon. Et pourtant, au bout de l'assemblage, il sort un **nombre pur**, sans masse, sans coupure et sans logarithme, qui prédit une décimale mesurée. Voyons-le en cinq étapes.
 
-{{%notice note "Le plan en une phrase"%}}
+{{%notice type="note" title="Le plan en une phrase" round="true"%}}
 On écrit l'intégrale du diagramme, on nettoie le numérateur avec l'algèbre de Dirac, on symétrise le dénominateur par les paramètres de Feynman, on trie le numérateur en séparant ce qui est $\gamma^\mu$ (donc $F_1$) de ce qui est $\sigma^{\mu\nu}q_\nu$ (donc $F_2$), et l'on intègre.<br><br>
 <b>Aucune divergence n'apparaîtra dans la partie $F_2$</b>&nbsp;: c'est la clef de la prédictibilité.
 {{%/notice%}}
@@ -1435,7 +1435,7 @@ Relisons enfin l'histoire complète du facteur $g$, car elle résume toute la pa
 
 Les trois lignes ne testent pas la même chose, et c'est ce qui rend le tableau instructif. Le $g$ de l'électron teste le **vertex** et la structure du couplage. Le déplacement de Lamb teste la **self-énergie de l'électron** (pour l'essentiel) et la **polarisation du vide** (pour la petite part calculée ici), avec la particularité de porter sur une dégénérescence que la théorie de Dirac prédisait exacte&nbsp;: sans champ quantifié, l'effet serait rigoureusement nul. Et la course de $\alpha$ teste le **groupe de renormalisation** lui-même, en vérifiant qu'une constante fondamentale n'en est pas une.
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Dans les trois cas, la colonne «&nbsp;sans QED&nbsp;» donne un résultat <b>net et faux</b>&nbsp;: exactement 2, exactement 0, exactement constant. Ce n'est pas une théorie vague que la renormalisation vient préciser, c'est une théorie précise qu'elle vient corriger. C'est ce qui donne aux mesures leur pouvoir de trancher.
 {{%/notice%}}
 
@@ -1495,7 +1495,7 @@ $
 
 
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Et maintenant&nbsp;? Nous possédons une théorie quantique des champs complète pour l'électromagnétisme et la matière chargée&nbsp;: construite sur le principe de jauge, renormalisée, et vérifiée sur une dizaine de chiffres significatifs. Difficile de faire mieux.<br><br>
 Mais QED ne décrit qu'une seule des interactions. Les deux autres reposent elles aussi sur des symétries de jauge, à ceci près que leurs groupes, $SU(2)$ et $SU(3)$, sont <b>non abéliens</b>&nbsp;: leurs éléments ne commutent pas. La partie suivante reprend donc le principe de jauge dans ce cadre, et découvre que le champ de jauge y devient <b>sa propre source</b>, ce qui explique enfin la liberté asymptotique. Elle applique ensuite ce mécanisme, augmenté d'une brisure spontanée de symétrie, au <b>modèle de Weinberg–Salam</b>&nbsp;: l'unification de l'électromagnétisme et de l'interaction faible, d'où sortent la masse de l'électron, un neutrino sans masse, un photon sans masse et les bosons $W^\pm$ et $Z^0$.
 {{%/notice%}}

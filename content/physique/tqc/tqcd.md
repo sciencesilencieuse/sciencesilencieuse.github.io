@@ -63,7 +63,7 @@ margin-top:-0.5em;
 
 # Théorie quantique des champs
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Notes de lecture du livre *Quantum field theory for the gifted amateur* de Thomas Lancaster et Stephen Blundell. Très souvent une simple traduction.
 {{%/notice%}}
 

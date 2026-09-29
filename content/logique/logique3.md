@@ -71,7 +71,7 @@ td, th {
 <img src="/duparc.png" style="border-radius:10px;">
 </div>
 
-{{%notice info%}}
+{{%notice type="info" round="true"%}}
 Notes de lecture du livre *La logique pas à pas* de Jacques Duparc que je paraphrase allégrement. 
 {{%/notice%}}
 
@@ -857,7 +857,7 @@ $$
 </ul>
 </div>
 
-{{%notice info%}}
+{{%notice type="info" round="true"%}}
 La logique intuitionniste, contrairement à la logique classique, vise à obtenir des preuves **constructives**. Établir la vérité de $\phi$ ne suffit pas, il faut la construire étape par étape. Or les raisonnements par l'absurde classique ne construisent pas réellement la vérité de $\phi$ puisqu'ils se contentent d'établir une contradiction mettant en jeu $\neg\phi$. De même, le tiers exclu nous affirme que $\phi=\psi\lor\neg\psi$ sans jamais établir la vérité de $\psi$ ou $\neg\psi$.<br><br>
 Exemple classique de l'utilisation du tiers exclu en mathématique&nbsp;:<br>
 prouvons qu'il existe un couple de nombres irrationnels $(a,b)$ ($a,b\in\mathbb{R}\setminus \mathbb{Q}$) tels que $a^b$ soit rationnel ($a^b\in\mathbb{Q}$).<br>
@@ -1050,7 +1050,7 @@ Par <i>modus ponens</i>, on obtient donc $\Gamma\vdash_{\\!c}\phi$.
 
 </div>
 
-{{%notice tip%}}
+{{%notice type="tip" round="true"%}}
 De façon informelle, la correction stipule que toute formule prouvable est vraie, alors que la complétude, de son côté, affirme que toutes les formules vraies sont prouvables.<br>
 Et dit autrement encore, on peut prouver **toute la vérité** (**complétude**) et **rien que la vérité** (**correction**).
 {{%/notice%}}
@@ -1111,7 +1111,7 @@ $\mathcal{K}=(\mathcal{T}_\mathcal{K},\Vdash)$ est un <b>modèle de Kripke</b> a
 
 <br>
 
-{{%notice info%}}
+{{%notice type="info" round="true"%}}
 Un modèle de Kripke avec un seul nœud peut être vu comme un modèle de la logique classique car les conditions de la relations de forcing ($\Vdash$) sont alors identiques à celles de la relation de vérité sémantique ($\models$).
 {{%/notice%}}
 
@@ -1470,7 +1470,7 @@ Il existe une preuve sans coupure de $\Gamma\vdash\Delta$. Or on peut vérifier 
 
 <br>
 
-{{%notice info%}}
+{{%notice type="info" round="true"%}}
 Une conséquence de la propriété de la sous-formule est qu'une preuve d'une disjonction en logique intuitionniste passe nécessairement par une preuve d'un des termes de la disjonction&nbsp;:
 <br>
 $\vdash_{\\!i}\phi\lor\psi$ si et seulement si ($\vdash_{\\!i}\phi$ ou $\vdash_{\\!i}\psi$).

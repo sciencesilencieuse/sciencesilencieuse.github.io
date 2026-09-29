@@ -169,7 +169,7 @@ Pour résumer :
 
 <br>
 
-{{%notice tip%}}
+{{%notice type="tip" round="true"%}}
 Lorsqu'on ne connaît rien sur les données, on peut toujours commencer par prendre la racine carrée du nombre de points dans l'ensemble d'entraînement comme *k* de départ.
 {{%/notice%}}
 
@@ -198,30 +198,30 @@ Puis on compte dans chaque cadran le nombre de données correspondant au recouvr
 À partir de ces effectifs, on peut calculer 3 grandeurs permettant d'évaluer la qualité de la prédiction&nbsp;:
 
 
-{{% notice def "Précision" %}}
+{{% notice type="def" title="Précision" round="true" %}}
 Nombre de données bien prédites parmi les prédictions positives&nbsp;:
 $$\frac{VP}{VP+FP}$$ 
 {{% /notice %}}
 
 
-{{% notice def "Rappel ou sensibilité" %}}
+{{% notice type="def" title="Rappel ou sensibilité" round="true" %}}
 Nombre de données bien prédites parmi les données positives&nbsp;:
 $$\frac{VP}{VP+FN}$$<br>
 {{% /notice %}}
 
 
-{{% notice def "Exactitude (accuracy)" %}}
+{{% notice type="def" title="Exactitude (accuracy)" round="true" %}}
 $$\frac{VP+VN}{VP+VN+FP+FN}$$<br>
 {{% /notice %}}
 
-{{%notice info%}}
+{{%notice type="info" round="true"%}}
 Un algorithme peut très bien être très précis (les prédictions positives sont bien des 3), mais peu sensible, avec un faible taux de rappel (parmi tous les 3, peu ont été identifiés).<br>
 À l'inverse, on peut avoir une bonne sensibilité (la plupart des vrais 3 ont été identifiés comme tel), mais peu précis (beaucoup de chiffres identifiés comme des 3 sont en fait d'autres chiffres).
 {{%/notice%}}
 
 ![](/matconfus.png?width=800px)
 
-{{% notice tip %}}
+{{% notice type="tip" round="true" %}}
 On peut tout aussi bien définir la matrice de confusion avec les prédictions sur les lignes et la réalité sur les colonnes.
 {{%/notice%}}
 
@@ -297,7 +297,7 @@ Confirmons en simulant des données séparées en 5 tas et en retraçant la cour
 Là encore, le coude indique le nombre *k* idéal.<br>
 On semble donc avoir trouver une tactique utilisable lorsqu'on n'a pas d'autres indices.
 
-{{%notice tip%}}
+{{%notice type="tip" round="true"%}}
 Il existe des méthodes plus précises pour déterminer *k*, mais elles sont aussi plus gourmandes en calcul. La plus répandue utilise les *coefficients de silhouette* de chaque point  (différence entre la distance moyenne avec les points du même groupe (cohésion) et la distance moyenne avec les points des autres groupes voisins (séparation)).
 {{%/notice%}}
 ![](/xkcdkmeans.png?width=400px)
@@ -571,14 +571,14 @@ L'**arène** dans laquelle le jeu prend place est un **graphe orienté biparti**
     content: 'Graphe biparti';
 }
 </style>
-{{% notice def bipa %}}
+{{% notice type="def" title="bipa" round="true" %}}
 Un graphe biparti (ou bipartite) $G$ est un graphe dont l'ensemble des sommets peut être divisé en deux sous-ensembles de sommets disjoints $S_1$ et $S_2$ ($S_1$ et $S_2$ sont une partition de $S$&nbsp;: $S_1\cup S_2=S$, $S_1\cap S_2=\varnothing$) tels que chaque arête de $G$ a une extrémité dans $S_1$ et l'autre dans $S_2$.
 {{% /notice %}}
 
 
 ![](/animbipar.gif)
 
-{{% notice tip %}}
+{{% notice type="tip" round="true" %}}
 Un graphe est biparti si on peut colorier tous les sommets du graphe avec seulement deux couleurs de manière à ce que deux sommets voisins n'aient jamais la même couleur (on parle alors de **2-coloriage**).<br>
 On peut montrer qu'un graphe est biparti si et seulement si il ne possède pas de cycle de longueur impaire.<br>
 {{% /notice %}}
@@ -632,7 +632,7 @@ On a indiqué en jaune le sommet à atteindre pour Eve (sommet de $F$).
 
 Le graphe est ici plutôt simple, mais on verra [dans le TP](http://localhost:1313/semestre_3/tp13/#jeux-daccessibilité-à-deux-joueurs) que pour des nombres d'allumettes plus grand, on sera content de pouvoir confier la tâche de sa construction à python.
 
-{{% notice tip %}}
+{{% notice type="tip" round="true" %}}
 Ce jeu est une variante du jeu de Nim (voir TP) comme en fait tout jeu impartial à deux joueurs (théorème de Sprague-Grundy). Un **jeu impartial** est un jeu tour par tour dans lequel les coups autorisés, ainsi que les gains obtenus, dépendent uniquement de la position, et pas du joueur dont c'est le tour. C'est le cas de Chomp qui est donc, lui aussi, un jeu de Nim déguisé... Un jeu qui n'est pas impartial est appelé **jeu partisan** (le morpion ou les échecs par exemple).
 {{% /notice %}}
 
@@ -668,7 +668,7 @@ Formalisons un peu tout ça en définissant la suite $Attr_i(F)$ qui contient l'
 $$ \begin{array}{lll} Attr_0(F) &= &F \\\\  Attr\_{i+1}(F) &= &Attr\_{i}(F) \\\\ &&\cup \\{s \in S_1|Succ(s)\cap Attr_i(F) ≠ \varnothing \\} \\\\ &&\cup \\{s\in S_2| Succ(s)\subseteq Attr_i(F)\\} \end{array} $$
 Étant donné que $Attr_i(F) \subseteq Attr\_{i+1}(F) \subseteq S$, pour tout $i≥0$, si on suppose le graphe fini, la suite est croissante et bornée et donc stationnaire (à partir d'un certain $i=i_0$, $Attr_i(F)$ est constante, et si $|G|=n$, $i_0$ vaut au plus $n-1$).
 
-{{%notice info%}}
+{{%notice type="info" round="true"%}}
 On appelle **attracteur** de $F$ pour le joueur $J_1$  la limite de $Attr_i(F)$. On le note $Attr(F)$.<br>
 Tout sommet dans l'attracteur est une **position gagnante** pour $J_1$.
 {{%/notice%}}
@@ -736,7 +736,7 @@ def propage(sommet,Joueur1,Attr,Pred,n):
     content: 'Stratégie sans mémoire gagnante';
 }
 </style>
-{{% notice def moryless %}}
+{{% notice type="def" title="moryless" round="true" %}}
 Une **stratégie sans mémoire** est une fonction $\sigma$ qui assigne un mouvement autorisé à un joueur pour chaque position non terminale&nbsp;: $\forall s\in S, (s,\sigma(s))\in A.$<br>
 Un joueur sur une position $s$ suit une stratégie s'il emprunte le chemin $<s,\sigma(s),\sigma^2(s),\ldots>$. Elle est dite sans mémoire car pour une position donnée, la stratégie est indépendante du chemin qui y a mené ($\sigma$ ne dépend que du sommet).<br>
 Une **stratégie sans mémoire gagnante** depuis une position donnée garantit la victoire au joueur en un nombre de coups limité. Pour le joueur 1, une stratégie gagnante garantit d'arriver sur un sommet de $F$. Mais suivant la position de départ, une telle stratégie n'existe pas forcément...
@@ -768,7 +768,7 @@ L'idée est de se contenter d'une recherche partielle autour de la position actu
     content: 'Heuristique';
 }
 </style>
-{{% notice def heuri %}}
+{{% notice type="def" title="heuri" round="true" %}}
 Une heuristique est une méthode de calcul qui fournit rapidement une solution réalisable, pas nécessairement optimale ou exacte, pour un problème d'optimisation difficile. Elle  s'impose quand les algorithmes de résolution exacte sont impraticables, à savoir de complexité polynomiale de haut degré, exponentielle ou plus.<br>
 Une heuristique est donc un compromis entre d'un côté l'optimalité (trouver la meilleure solution) et/ou la complétude (trouver toutes les solutions) de l'algorithme et de l'autre côté sa vitesse.
 {{% /notice %}}
@@ -1012,7 +1012,7 @@ Les données d'apprentissage rendent les modèles de langage particulièrement s
 Les IA génératives peuvent ainsi reproduire des préjugés sexistes&nbsp;; si les données d'apprentissage contiennent plus d'infirmiers ou secrétaires femmes et de patrons ou ingénieurs hommes, le modèle a alors tendance à plus associer une femme à une infirmière qu'à une ingénieure.<br>
 Au-delà du genre, ces modèles peuvent renforcer un large éventail de stéréotypes lié à la race, à l'âge, la nationalité, la religion ou le milieu d'origine.
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Sur ce point, les modèles de langage n'ont pas grand chose à envier aux humains.<br>
 [Une étude de 2004](/ziegler.pdf) montre en effet que sur 144 étudiantes allemandes, 32% seulement savent résoudre la petite énigme suivante&nbsp;:<br>
 <i>Un père et son fils ont un grave accident de voiture. Le père meurt. Le fils est entre la vie et la mort. On l'amène aux urgences et le chirurgien qui le voit dit : "Je ne peux pas l'opérer car c'est mon fils."</i><br>

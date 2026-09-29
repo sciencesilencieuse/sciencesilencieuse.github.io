@@ -49,7 +49,7 @@ Le système décimale nous est si familier qu'il nous paraît incongru de compte
 <img src="/base20.png" style="box-shadow:none;background:none;">
 </div>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Chiffres de Kaktovik :<br>
 Toutes les langues eskimo-aléoutes d'Alaska et du Canada utilisent un système vigésimal pour compter. Les chiffres arabes, qui ont été conçus pour un système décimal, sont inadéquats pour l'iñupiaq et les autres langues inuites. Pour remédier à ce problème, des élèves d'une école de Kaktovik, en Alaska, ont inventé un système à base 20 en 1994 (représenté ci-dessus), qui s'est répandu parmi les Iñupiat en Alaska et a été envisagé au Canada.
 {{%/notice%}}

@@ -79,7 +79,7 @@ details[open] > summary:first-of-type {
 
 # Théorie quantique des champs -- Partie 13
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Notes de lecture du livre *Quantum field theory for the gifted amateur* de Thomas Lancaster et Stephen Blundell.
 {{%/notice%}}
 
@@ -1897,7 +1897,7 @@ Un mot sur ce que signifie «&nbsp;inéquivalentes&nbsp;». Un changement de bas
 
 Il existe donc deux espèces de spineurs, qui <b>tournent de la même façon</b> et se <b>boostent en sens opposés</b>. Au repos, aucun boost n'est à l'œuvre et rien ne les distingue&nbsp;: ce sont exactement les $\psi_L$ et $\psi_R$ tombés de l'équation de Dirac au chapitre précédent, et l'on comprend enfin pourquoi ils y étaient indiscernables au repos.
 
-{{%notice note "Aparté : la classification $(\frac{1}{2}, 0) \oplus (0, \frac{1}{2})$, pour cartographier"%}}
+{{%notice type="note" title="Aparté : la classification $(\frac{1}{2}, 0) \oplus (0, \frac{1}{2})$, pour cartographier" round="true"%}}
 
 La manière propre de voir les deux espèces&nbsp;: définir $\boldsymbol J_\pm = \frac{1}{2}(\boldsymbol J \pm \mathrm{i}\boldsymbol K)$. Un calcul direct montre que les $\boldsymbol J_+$ commutent avec les $\boldsymbol J_-$ et que chacun satisfait séparément l'algèbre de $SU(2)$&nbsp;:
 
@@ -2298,7 +2298,7 @@ $
 
 
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Et maintenant&nbsp;? Nous possédons l'équation, ses solutions et la nature exacte de l'objet sur lequel elle porte. Mais tout cela reste une théorie à <b>une particule</b>, et nous savons depuis le premier chapitre que cet échafaudage est intenable en régime relativiste&nbsp;: l'énergie disponible permet toujours de créer des paires, et les états d'énergie négative n'ont pas été guéris, seulement contournés.<br><br>
 La partie suivante franchit le pas&nbsp;: elle <b>quantifie</b> le champ de Dirac, ce qui exigera de remplacer les commutateurs par des <b>anticommutateurs</b> sous peine d'univers instable, et livre au passage le principe de Pauli. Puis, en exigeant l'invariance de jauge locale, elle fabrique l'<b>électrodynamique quantique</b> et ses premières sections efficaces calculables.
 {{%/notice%}}

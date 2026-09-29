@@ -76,7 +76,7 @@ details[open] > summary:first-of-type {
 
 # Théorie quantique des champs -- Partie 10
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Notes de lecture du livre *Quantum field theory for the gifted amateur* de Thomas Lancaster et Stephen Blundell.
 {{%/notice%}}
 
@@ -295,7 +295,7 @@ Et il est <b>stable</b>. Pour effacer un kink, il faudrait soulever une demi-dro
 <img src="/kinkantikink.png" style="box-shadow:none;background:none;">
 </div>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Le jumeau expérimental du kink est la <b>paroi de domaine</b> d'un aimant. Les deux vides sont «&nbsp;tous les spins vers le haut&nbsp;» et «&nbsp;tous les spins vers le bas&nbsp;», un domaine est une région où la symétrie est brisée d'une façon donnée, et la paroi est la zone de largeur finie où les spins basculent. Les parois de domaines sont bien réelles et détectables. Nambu a proposé l'idée vertigineuse que l'Univers, en brisant ses symétries au refroidissement, aurait pu se découper de la même façon en domaines cosmiques aux vides différents.
 {{%/notice%}}
 
@@ -494,7 +494,7 @@ $
 
 </div>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Ce vortex jaugé n'est pas une curiosité de théoricien&nbsp;: c'est le vortex d'Abrikosov des supraconducteurs de type II, où le paramètre d'ordre joue le rôle de $\phi$ et où le flux traverse le matériau en tubes portant chacun un quantum $2\pi/q$ (avec $q = 2e$, la charge des paires de Cooper). L'étape suivante de cette logique, un objet topologique en (3+1) dimensions, existe aussi&nbsp;: c'est le <b>monopôle magnétique</b>, étudié plus tard.
 {{%/notice%}}
 
@@ -536,7 +536,7 @@ $
 
 Le chapitre précédent a montré des objets topologiques vivant dans des théories ordinaires. On franchit maintenant un cran&nbsp;: construire une théorie qui est <i>elle-même</i> topologique, c'est-à-dire dont le lagrangien ignore la métrique. Le terrain de jeu est l'espace-temps (2+1)-dimensionnel, le «&nbsp;flatland&nbsp;», et il faut commencer par une surprise sur les statistiques quantiques.
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 <b>Deux notations à ne pas confondre dans ce chapitre.</b><br><br>
 $\Phi$ reste réservé au <b>flux magnétique</b>, comme dans tout le chapitre précédent&nbsp;: c'est lui qui vaut $2\pi n/q$ pour le vortex, et c'est lui qui reviendra à la toute fin, attaché aux charges par la théorie de Chern–Simons.<br><br>
 L'<b>angle d'enroulement</b> d'une particule autour d'une autre sera noté $\vartheta$, et le <b>facteur de phase</b> qu'un processus fait acquérir à la fonction d'onde sera noté $W(\vartheta)$. Le symbole $\phi$, lui, garde son sens habituel de champ scalaire.
@@ -790,7 +790,7 @@ $
 </ul>
 
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Et maintenant&nbsp;? Après cette parenthèse où les intégrales ne dépendaient pas de la métrique, retour aux intégrales qui en dépendent trop&nbsp;: celles qui divergent. La partie suivante affronte la <b>renormalisation</b>, l'art d'apprivoiser les infinis, et découvrira que les «&nbsp;constantes&nbsp;» de couplage n'en sont pas&nbsp;: elles varient avec l'échelle d'observation.
 {{%/notice%}}
 

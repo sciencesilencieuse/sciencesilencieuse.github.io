@@ -113,7 +113,7 @@ $
 </blockquote>
 </details>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 3Blue1Brown a fait [une merveilleuse vidéo](https://youtu.be/fsLh-NYhOoU) sur cette formule à partir d'une conférence filmée.
 {{%/notice%}}
 

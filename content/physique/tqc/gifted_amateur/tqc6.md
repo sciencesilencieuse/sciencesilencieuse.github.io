@@ -76,7 +76,7 @@ details[open] > summary:first-of-type {
 
 # Théorie quantique des champs -- Partie 6
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Notes de lecture du livre *Quantum field theory for the gifted amateur* de Thomas Lancaster et Stephen Blundell.
 {{%/notice%}}
 
@@ -725,7 +725,7 @@ Finalement, on n'a pas calculé la transformée de $G^+$, mais celle de $G^+(\ta
 Autrement dit&nbsp;: *mesurer le propagateur, c'est mesurer le spectre.*<br>
 En théorie des champs, ça va devenir&nbsp;: *le pôle du propagateur exact définit la masse physique de la particule* (c'est ce qui donnera un sens à la renormalisation de la masse).
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Point notation&nbsp;: on ne distingue pas toujours la transformée de Fourier du propagateur par un ~ étant donné que l'argument nous informe sur la nature de l'objet&nbsp;: temps → propagateur, énergie → transformée du propagateur.
 {{%/notice%}}
 
@@ -1062,7 +1062,7 @@ Ce qui violerait la relativité, c'est qu'une intervention en $y$ modifie une pr
 <li><b>Non-signalisation.</b> Toute intervention en $y$ s'exprime par des opérateurs construits sur les champs au voisinage de $y$. Si tous les opérateurs locaux en $x$ commutent avec tous ceux en $y$ (ce que garantit $[\hat\phi(x), \hat\phi(y)] = 0$ qui s'étend au cas des polynômes de champs), les statistiques de mesure en $x$ sont rigoureusement insensibles à ce qui a été fait en $y$. C'est l'axiome de <b>micro-causalité</b>.</li>
 </ul>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Pour le champ complexe, $[\hat\psi(x), \hat\psi^\dagger(y)] = D_a(z) - D_b(-z)$, où $D_a$ est construit sur les modes de particules et $D_b$ sur ceux d'antiparticules. L'annulation hors du cône exige que les deux intégrales se compensent identiquement, ce qui force l'existence du second jeu de modes <b>et</b> l'égalité des masses. Autrement dit&nbsp;: la causalité <i>impose</i> les antiparticules, de même masse que les particules (c'est le cœur de la conférence de Feynman «&nbsp;[The reason for antiparticles](https://scispace.com/pdf/elementary-particles-and-the-laws-of-physics-the-reason-for-qvzqjmen7f.pdf)&nbsp;»).
 {{%/notice%}}
 
@@ -1385,7 +1385,7 @@ $$
 
 Ce potentiel est **attractif** entre charges de même signe (fait remarquable de l'échange scalaire).
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Le caractère attractif/répulsif vient du <b>spin du médiateur</b>&nbsp;: l'échange de spin pair (scalaire, graviton) fait s'<i>attirer</i> les charges identiques, l'échange de spin impair (photon) les fait se <i>repousser</i>. D'où «&nbsp;la gravitation attire tout&nbsp;» (spin 2) et «&nbsp;les charges semblables se repoussent&nbsp;» (spin 1).
 {{%/notice%}}
 
@@ -1500,7 +1500,7 @@ $
 
 <br>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Et maintenant&nbsp;? Nous disposons de l'amplitude élémentaire, $\Delta_F$, et nous avons vu avec la série de Dyson qu'une interaction se décompose en propagations libres entrecoupées de chocs ponctuels. Deux ingrédients, donc, mais aucune méthode systématique pour les combiner.<br><br>
 La partie suivante fournit cette méthode&nbsp;: la <b>matrice $S$</b>, qui n'enregistre que ce qu'on sait mesurer, le théorème de <b>Wick</b>, qui convertit mécaniquement les produits chronologiques en produits de propagateurs, et enfin les <b>diagrammes de Feynman</b>, où chaque terme du développement devient un dessin dont on lit l'intégrale directement.
 {{%/notice%}}

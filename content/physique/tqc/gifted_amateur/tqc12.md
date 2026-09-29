@@ -76,7 +76,7 @@ details[open] > summary:first-of-type {
 
 # Théorie quantique des champs -- Partie 12
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Notes de lecture du livre *Quantum field theory for the gifted amateur* de Thomas Lancaster et Stephen Blundell.
 {{%/notice%}}
 
@@ -972,7 +972,7 @@ On traite donc le pas I en perturbation, par des diagrammes de Feynman. Mais plu
 
 Quelles fonctions faut-il corriger&nbsp;? Le comptage de puissances du chapitre "[Le problème et sa solution](../tqc11/#le-problème-divergences-et-sa-solution-contretermes)" a établi que le degré de divergence superficiel d'un diagramme de $\phi^4$ en dimension 4 vaut $D = 4 - B_E$, où $B_E$ est le nombre de pattes externes. Seules la fonction à <b>deux</b> pattes ($D = 2$) et celle à <b>quatre</b> pattes ($D = 0$) sont donc sensibles à la coupure&nbsp;; à six pattes et au-delà, $D < 0$ et la contribution est négligeable aux grandes échelles. Il n'y a donc <b>que deux fonctions à surveiller</b>, et c'est pour cela qu'il n'y a que deux couplages dans le flot.
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 <b>Ce comptage-là et celui de tout à l'heure n'en font qu'un.</b><br><br>
 Nous avons rencontré deux fois l'expression «&nbsp;comptage de puissances&nbsp;», sur deux objets apparemment sans rapport&nbsp;: la dimension d'un couplage, $y_n = d - n\frac{d-2}{2}$, et le degré de divergence d'un diagramme, $D = 4 - B_E$. Évaluons la première en dimension 4&nbsp;: il vient $y_n = 4 - n$, à comparer à $D = 4 - B_E$.<br><br>
 <b>C'est la même formule.</b> Et ce n'est pas une coïncidence de notation&nbsp;: un couplage $g_n$ porte $n$ champs, et un diagramme corrigeant la fonction à $n$ points a exactement $n$ pattes externes. Le même entier joue les deux rôles.<br><br>
@@ -1283,7 +1283,7 @@ L'opération est acrobatique, une dimension fractionnaire n'ayant aucun sens gé
 
 Reste que nous n'avons toujours pas répondu à la question de départ.
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 <b>En quoi développe-t-on, au juste&nbsp;?</b><br><br>
 Nous avons maintenant deux petites quantités en jeu, $\lambda$ et $\varepsilon$, et il serait inquiétant qu'elles soient indépendantes&nbsp;: rien ne garantirait alors qu'une troncature à une boucle ait un sens. La réponse rassurante est qu'<b>elles n'en font qu'une</b>, mais on ne peut la donner qu'après coup.<br><br>
 Ce qui gouverne le comportement critique n'est pas la valeur initiale du couplage, mais sa valeur <b>au point fixe</b>, puisque toutes les trajectoires y aboutissent. Or nous trouverons $\lambda^\*/16\pi^2 = \varepsilon/3$. Comme chaque boucle supplémentaire coûte un facteur $\lambda\Omega$, il vient que <b>le développement en boucles et le développement en $\varepsilon$ sont le même développement</b>. En dimension 4 exactement, $\lambda^* = 0$&nbsp;: la théorie critique est libre et le champ moyen est exact. En dimension 3, $\varepsilon = 1$, et rien n'est petit.<br><br>
@@ -1492,7 +1492,7 @@ Le résultat tient en un tableau, et il est très parlant&nbsp;:
 **Le point de Wilson–Fisher est mixte**, et c'est exactement le profil qu'on attend d'un point critique. Sa direction attractive explique l'universalité&nbsp;: peu importe la valeur initiale du couplage, on aboutit au même point fixe. Son unique direction répulsive explique qu'un seul paramètre, la température, doive être réglé pour atteindre la criticité.
 
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 <b>L'échange de stabilité</b><br>
 Les deux valeurs propres dans la direction $\lambda$ ($+\varepsilon$ au point gaussien, $-\varepsilon$ à Wilson–Fisher) sont opposées, et changent de signe ensemble quand $\varepsilon$ traverse zéro. Les deux points fixes <b>échangent leurs rôles</b> en dimension 4, en se croisant. C'est le mécanisme même de la naissance du point de Wilson–Fisher, et l'on comprend du même coup pourquoi il n'a rien à dire au-dessus de quatre dimensions.
 {{%/notice%}}
@@ -1578,7 +1578,7 @@ La gradation dit tout&nbsp;: le champ moyen surestime toujours $T_c$, et l'écar
 
 <b>Côté matériaux</b>, les aimants de basse dimensionnalité effective sont les témoins les plus parlants. Un composé quasi unidimensionnel, où l'échange le long des chaînes est énorme mais le couplage entre chaînes minuscule, s'ordonne à une température très inférieure à ce que l'échange laisserait prévoir&nbsp;; sans le faible couplage tridimensionnel résiduel, il ne s'ordonnerait pas du tout. Même chose pour les plans cuivre-oxygène des cuprates. Le théorème de Mermin–Wagner en donne la version rigoureuse&nbsp;: à symétrie continue et $d \le 2$, aucun ordre à longue portée à température non nulle, quelle que soit la force de l'interaction.
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Ce que la renormalisation a résolu, c'est d'abord l'énigme des <b>exposants</b>. Guggenheim avait montré dès 1945 que les courbes de coexistence de huit fluides différents se superposaient sur une même courbe d'exposant $\beta \approx 1/3$, et non $1/2$&nbsp;: un fait mesuré, reproductible, universel, et sans explication pendant vingt-six ans. La solution exacte d'Onsager en 1944 avait par ailleurs <i>prouvé</i> que le champ moyen se trompait en deux dimensions. On savait donc depuis longtemps que quelque chose clochait, sans savoir quoi.<br><br>
 La suppression de $T_c$ était, elle, connue et attribuée aux fluctuations de façon qualitative bien avant Wilson. Ce que le groupe de renormalisation apporte est le <b>critère quantitatif</b>&nbsp;: le critère de Ginzburg dit dans quelle fenêtre de température les fluctuations dominent, et cette fenêtre dépend violemment du système. Dans un supraconducteur conventionnel, où la longueur de cohérence est immense devant la distance interatomique, elle vaut de l'ordre de $10^{-12}$&nbsp;K et reste inobservable&nbsp;: c'est exactement pourquoi la théorie de Landau–Ginzburg y fonctionne si magnifiquement. Dans les cuprates, où la longueur de cohérence ne fait que quelques distances interatomiques, elle s'élargit à plusieurs kelvins et les effets de fluctuation sont bel et bien mesurés au-dessus de $T_c$.
 {{%/notice%}}
@@ -1616,7 +1616,7 @@ Puis vient le geste particulièrement effronté&nbsp;: pour décrire le monde r�
 
 L'ordre $\varepsilon^2$ s'approche des valeurs acceptées pour le modèle d'Ising tridimensionnel, elles-mêmes en bon accord avec l'expérience.
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 <b>Une vérification à ne pas mener trop naïvement.</b> On pourrait vouloir tester les quatre relations d'échelle sur les colonnes de ce tableau. Trois d'entre elles passent (Rushbrooke donne $0{,}167 + 0{,}667 + 1{,}167 = 2$ à l'ordre $\varepsilon$), mais celle de Josephson échoue en apparence&nbsp;: $\nu d = 0{,}583 \times 3 = 1{,}75$ alors que $2 - \alpha = 1{,}83$.<br><br>
 Ce n'est pas une erreur. Les relations sont <b>exactes</b> en fonction de $y_t$ et $y_h$, mais leurs <i>développements tronqués</i> ne le sont qu'à l'ordre calculé&nbsp;: l'écart observé est d'ordre $\varepsilon^2$, donc hors de portée d'un calcul à l'ordre $\varepsilon$. La colonne d'ordre $\varepsilon^2$ resserre d'ailleurs l'écart, et la colonne des valeurs acceptées satisfait les quatre relations à la troisième décimale.
 {{%/notice%}}
@@ -1691,7 +1691,7 @@ $
 
 <br>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Et maintenant&nbsp;? La machine est complète pour les champs scalaires&nbsp;: quasiparticules, contretermes, self-énergie, flot. Mais les électrons ne sont pas des scalaires. La partie suivante donne un spin à la théorie des champs&nbsp;: l'équation de Dirac, les spineurs, et la découverte que l'antimatière est une conséquence de la relativité jointe à la mécanique quantique.
 {{%/notice%}}
 

@@ -88,7 +88,7 @@ la toupie, le centre de masse etant ramené en position verticale.
 ![](/tippe3.png?width=1000px)
 
 
-{{<notice note>}}
+{{<notice type="note" round="true">}}
  L'inversion du sens de rotation propre de la toupie entre le début et la fin illustre joliment la conservation du moment cinétique.
 {{</notice>}}
 

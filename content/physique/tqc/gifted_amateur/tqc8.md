@@ -76,7 +76,7 @@ details[open] > summary:first-of-type {
 
 # Théorie quantique des champs -- Partie 8
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Notes de lecture du livre *Quantum field theory for the gifted amateur* de Thomas Lancaster et Stephen Blundell.
 {{%/notice%}}
 
@@ -176,7 +176,7 @@ Moralité&nbsp;: multiplier par la matrice densité et tracer sur les états ré
 
 </div>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Sans champ extérieur, un système de spins sans interaction a $\langle\hat\phi_i\rangle_t = 0$ pour tout $i$ (autant de chances vers le haut que vers le bas). Un système <b>ordonné</b> (magnétiquement) a $\langle\hat\phi_i\rangle_t \neq 0$&nbsp;: la moyenne du champ devient un <i>paramètre d'ordre</i>.<br>
 Le jumeau côté théorie des champs ($\langle\Omega|\hat\phi|\Omega\rangle \neq 0$) est la porte de la brisure spontanée de symétrie.
 {{%/notice%}}
@@ -787,7 +787,7 @@ $
 
 
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Et maintenant&nbsp;? Le calcul <i>direct</i> de $Z[J]$ par l'intégrale de chemin de Feynman (où la théorie libre donnera la jolie forme fermée $Z_0[J] \propto \exp\big[-\tfrac12\int J\Delta J\big]$), et la correspondance profonde temps imaginaire $\leftrightarrow$ température ($\beta \leftrightarrow it$), qui transformera l'analogie de ce chapitre en identité.
 {{%/notice%}}
 

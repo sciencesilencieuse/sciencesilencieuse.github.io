@@ -77,7 +77,7 @@ details[open] > summary:first-of-type {
 
 # Théorie quantique des champs -- Partie 2
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Notes de lecture du livre *Quantum field theory for the gifted amateur* de Thomas Lancaster et Stephen Blundell.<br>
 Le premier encadré gris est issu de *No-Nonsense Classical Mechanics* de Jakob Schwichtenberg.
 {{%/notice%}}
@@ -1308,7 +1308,7 @@ $
 <li>$\hbar = c = 1$ n'est pas une approximation&nbsp;: c'est un choix d'unités, et tout facteur manquant se restaure par analyse dimensionnelle.</li>
 </ul>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Et maintenant&nbsp;? Nous avons des champs classiques et un catalogue de lagrangiens, mais pas encore de quoi les quantifier proprement. La partie suivante rassemble l'outillage&nbsp;: la représentation d'Heisenberg, où les opérateurs portent la dynamique, taillée sur mesure pour des champs d'opérateurs&nbsp;; les transformations continues et leurs générateurs&nbsp;; et le théorème de Noether, qui convertit chaque symétrie continue en loi de conservation. Les particules émergeront ensuite comme excitations des champs quantifiés.
 {{%/notice%}}
 

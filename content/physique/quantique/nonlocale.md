@@ -571,7 +571,7 @@ On peut remarquer aussi que le **théorème de non-clonage** est fortement lié 
 
 [^2]: La mesure détruit ce qui n'est pas cherché. La mesure d'un qubit sur $X$ rend inaccessible l'information sur $Y$ par exemple. Mais avec une batterie de clones, on peut tout chercher à la fois. Et ces statistiques nous informeraient aussi entièrement sur les réglages d'Alice lors de sa mesure. Le théorème de non-clonage protège donc le non-signalement.
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Le principe de causalité informationnelle et son utilisation pour retrouver la borne de Tsirelson sont des découvertes étonnamment récentes puisque cela date d'un [article](https://arxiv.org/pdf/0905.2292) de 2009 de Pawłowski <i>et al</i> dans Nature intitulé <i>Information Causality as a Physical Principle</i>.
 {{%/notice%}}
 

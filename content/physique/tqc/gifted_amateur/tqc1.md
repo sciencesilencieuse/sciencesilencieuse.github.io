@@ -77,7 +77,7 @@ details[open] > summary:first-of-type {
 
 # Théorie quantique des champs -- Partie 1
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Notes de lecture du livre *Quantum field theory for the gifted amateur* de Thomas Lancaster et Stephen Blundell. 
 {{%/notice%}}
 
@@ -320,7 +320,7 @@ Et en généralisant, $\displaystyle |n\rangle=\frac{(\hat{a}^\dagger)^n}{\sqrt{
 **Le problème ondulatoire de départ a spontanément produit des particules&nbsp;!**
 
 
-{{%notice%}}
+{{%notice type="note" round="true"%}}
 Des [détails supplémentaires](../../oh) sur la quantification de l'oscillateur harmonique et les opérateurs d'échelle afin de se forger une meilleure intuition.
 {{%/notice%}}
 <br>
@@ -1256,7 +1256,7 @@ $
 <li>«&nbsp;Seconde quantification&nbsp;» est un nom trompeur&nbsp;: on ne quantifie pas deux fois, on change de représentation pour décrire un nombre variable de particules.</li>
 </ul>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Et maintenant&nbsp;? Les modèles de cette partie vivaient sur des réseaux discrets, taillés pour la matière condensée. La partie suivante quitte le réseau pour le continu et prépare le grand saut&nbsp;: la mécanique analytique des champs classiques, la relativité restreinte, et une première tentative d'équation d'onde relativiste, l'équation de Klein-Gordon, avec les paradoxes qu'elle soulève.
 {{%/notice%}}
 

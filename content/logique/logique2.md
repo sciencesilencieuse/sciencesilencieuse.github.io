@@ -66,7 +66,7 @@ td, th {
 <img src="/duparc.png" style="border-radius:10px;">
 </div>
 
-{{%notice info%}}
+{{%notice type="info" round="true"%}}
 Notes de lecture du livre *La logique pas à pas* de Jacques Duparc que je paraphrase allégrement. 
 {{%/notice%}}
 
@@ -195,7 +195,7 @@ Deux formules $\phi$ et $\psi$ sont deux formules **équivalentes** ($\phi\equiv
 
 </div>
 
-{{%notice info%}}
+{{%notice type="info" round="true"%}}
 $\equiv$ est une équivalence sémantique alors que $\leftrightarrow$ est une équivalence syntaxique, parfois appelée équivalence matérielle.
 {{%/notice%}}
 
@@ -270,7 +270,7 @@ En effet, $\mathcal{T'}$ est une conséquence sémantique de $\mathcal{T}$ si el
 
 Deux théories équivalentes ont exactement les mêmes modèles ($\mathcal{T}\equiv \mathcal{T'}$ correspond à avoir à la fois $\mathcal{T}\models \mathcal{T'}$ et $\mathcal{T'}\models \mathcal{T}$), ce qui revient à dire qu'il n'existe pas de modèle pouvant les discriminer. Elles ne sont pas nécessairement égales (pas nécessairement le même ensemble de formules), mais elles sont égales sur le plan sémantique puisqu'elles signifient la même chose.
 
-{{%notice info%}}
+{{%notice type="info" round="true"%}}
 La notion de conséquence sémantique est la version sémantique de la notion de déduction. Dire qu'une formule est une conséquence sémantique d'une théorie, c'est affirmer que partout où la théorie est satisfaite (c.-à-d. quand les hypothèses sont vraies), la formule l'est également. La formule découle donc de la théorie.
 {{%/notice%}}
 
@@ -658,7 +658,7 @@ $
 
 Et pour construire de la même manière une formule sous forme normale disjonctive, il suffit d'utiliser à la fin la distribution de la conjonction par rapport à la distribution puisqu'il s'agit cette fois-ci de faire descendre $\land$ dans l'arbre.
 
-{{%notice tip%}}
+{{%notice type="tip" round="true"%}}
 Sans stratégie, **tester la validité** d'une formule revient à vérifier sa véracité pour chaque combinaison des valeurs des variables, ce qui va dépendre exponentiellement du nombre de variables (ce qui devient vite impraticable). L'équivalence entre le tableau de vérité de la formule et sa forme normale conjonctive ($\phi=\bigwedge_{i}\phi_i$) permet un test syntaxique rapide de la validité. Pour vérifier que chaque $\phi_i$ est une tautologie, il suffit de s'assurer de la présence dans chaque $\phi_i=\bigvee_j P_j$ d'une couple contradictoire $P_j$ et $\neg P_j$.<br>
 Et pour un **test de satisfabilité**, la forme normale disjonctive $\phi=\bigvee_j \phi_i$ est plus adaptée. On va à nouveau tester la présence d'un couple de variables contradictoires dans les $\phi_i=\bigwedge_{j}P_j$. Si on revient bredouille pour au moins un $i$ alors la formule est satisfaisable.
 {{%/notice%}}
@@ -862,7 +862,7 @@ $
 </ul>
 </div>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 C'est ainsi qu'un ordinateur peut être construit entièrement avec des portes logiques NAND ou NOR qui sont dites universelles (il semblerait que l'Apollo Guidance Computer qui servit à poser l'homme sur la Lune pendant le programme Apollo était construit exclusivement avec des portes NOR). Ces portes réalisent en effet électroniquement les opérations logiques $\not\\!\\!\land$ et $\not\\!\lor$ et permettent donc de construire toutes les formules de la logique des propositions. 
 {{%/notice%}}
 
@@ -871,7 +871,7 @@ C'est ainsi qu'un ordinateur peut être construit entièrement avec des portes l
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Agc_view.jpg/1280px-Agc_view.jpg" style="border-radius:20px;"></div>
 <br>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Après la notion de **modèle**, on va maintenant s'intéresser à la notion de **preuve**. Et ces deux notions seront réunies par le **théorème de complétude**.
 {{%/notice%}}
 

@@ -585,7 +585,7 @@ L'équation du rayon lumineux et la deuxième loi de Newton sont donc la même �
 
 Le calcul révèle au passage un partage des rôles très net entre les deux énergies. L'indice $n=p=\sqrt{2mT}$ est **purement cinétique** et fixe l'échelle locale du rayon, donc sa longueur d'onde $\lambda=h/p$. Son gradient $\vec{\nabla}n=-m\vec{\nabla}V/p$ est **purement potentiel** et fixe la courbure. Autrement dit&nbsp;: $T$ règle la finesse de l'onde, $V$ règle sa déviation. Les deux énergies ne se coordonnent pas mystérieusement, elles se partagent le travail.
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Avec $S_0$, on retrouve finalement l'action de Maupertuis, renommée <b>action réduite</b> $W=\int\_{q\_A}^q p \\,\mathrm dq$. En effet, $S_M=\int\_{A\rightarrow B}mv\\,\mathrm{d}s=\int\_{A\rightarrow B}p\\,\mathrm{d}q=\int\_{A\rightarrow B}(p\dot{q} - H +H)\\,\mathrm{d}t=S_H+E(t_B-t_A)=S_0(q)$ ($E$ est fixe ici).
 {{%/notice%}}
 

@@ -69,7 +69,7 @@ td, th {
 
 Jusque là, rien de bien folichon... Mais si on libère la variable de nos polynômes en lui permettant de se balader dans l'espace des complexes, tout devient plus sympa. Déjà, plus d'histoires de 0, 1 ou 2 solutions pour un polynôme de degré 2... En complexe, un polynôme de degré 2 a toujours 2 solutions. C'est quand même plus propre comme ça. Et d'ailleurs, un polynôme de degré n a toujours n racines et peut donc se factoriser en n polynômes de degré 1. C'est le **théorème fondamental de l'algèbre**. 
 
-{{% notice note %}}
+{{% notice type="note" round="true" %}}
 [Jolie série de vidéos](https://www.youtube.com/playlist?list=PLiaHhY2iBX9g6KIvZ_703G3KJXapKkNaF) sur les complexes.
 {{% /notice %}}
 

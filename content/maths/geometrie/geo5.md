@@ -33,7 +33,7 @@ hidden = false
 # Poursuites
 
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Cette page est *très* inspirée du livre *Chases and Escapes The Mathematics of Pursuit and Evasion* de Paul Nahin.
 {{%/notice%}}
 

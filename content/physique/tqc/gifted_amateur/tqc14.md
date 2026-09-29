@@ -79,7 +79,7 @@ details[open] > summary:first-of-type {
 
 # Théorie quantique des champs -- Partie 14
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Notes de lecture du livre *Quantum field theory for the gifted amateur* de Thomas Lancaster et Stephen Blundell.
 {{%/notice%}}
 
@@ -338,7 +338,7 @@ L'énergie de toute particule comme de toute antiparticule est désormais strict
 </div>
 
 
-{{%notice note "Aparté : pourquoi des anticommutateurs ? La catastrophe du vide"%}}
+{{%notice type="note" title="Aparté : pourquoi des anticommutateurs ? La catastrophe du vide" round="true"%}}
 
 Ce choix n'est pas une préférence esthétique&nbsp;: il est <b>forcé</b>, sous peine d'univers instable. Refaisons le calcul en imposant des commutateurs, comme pour un boson, et regardons où cela mène.
 
@@ -963,7 +963,7 @@ Trois termes&nbsp;: le photon libre, l'électron libre, et leur interaction, cet
 
 </div>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 
 Pour une motivation du terme de Maxwell en lien avec la symétrie de jauge et la géométrie différentielle&nbsp;:  [**C'est ici** (partie 5)](../tqc5/#théorie-de-jauge-la-plus-simple-lélectromagnétisme).
 
@@ -1916,7 +1916,7 @@ $
 
 <br>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Et maintenant&nbsp;? Nous disposons de la théorie complète&nbsp;: le champ de Dirac quantifié, le principe de jauge qui dicte l'interaction, le propagateur du photon et les règles de Feynman de QED. Un premier processus a même été mené jusqu'à une distribution angulaire.<br><br>
 La partie suivante fait tourner cette machine sur trois processus <b>historiques</b>&nbsp;: <b>Rutherford</b>, qui fit découvrir le noyau, sa version relativiste de <b>Mott</b>, et <b>Compton</b>. On y acquiert surtout un savoir-faire, l'algorithme des traces, sans lequel aucun calcul réaliste de QED n'est praticable.
 {{%/notice%}}

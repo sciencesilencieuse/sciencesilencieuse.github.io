@@ -61,7 +61,7 @@ hidden = true
 <img src="/duparc.png" style="border-radius:10px;">
 </div>
 
-{{%notice info%}}
+{{%notice type="info" round="true"%}}
 Notes de lecture du livre *La logique pas à pas* de Jacques Duparc que je paraphrase allégrement. 
 {{%/notice%}}
 
@@ -204,7 +204,7 @@ On écrit $\Gamma\vdash_\textbf{S}\phi$ s'il existe un ensemble fini de formules
 
 <br>
 
-{{%notice info%}}
+{{%notice type="info" round="true"%}}
 Attention, ici les hypothèses n'ont pas le même sens qu'en logique des propositions. En effet, pour prouver le séquent $\phi\vdash_\textbf{S}\psi$, on ne peut pas ajouter $\phi$ aux axiomes et tenter d'atteindre $\psi$ à partir des règles (*modus ponens*, substitution uniforme et nécessitation). Il faut ici réussir à prouver la formule $\phi\rightarrow\psi$ sur la base des seuls axiomes.
 <br><br>
 Si on pouvait faire comme en logique des propositions, prouver $\phi\vdash_\textbf{S}\Box\phi$ deviendrait évident&nbsp;: on place $\phi$ dans les axiomes et on applique la règle de nécessitation. Mais non, il faut pouvoir prouver $\vdash_\textbf{S}\phi\rightarrow\Box\phi$ et comme on va le voir, dans le système $\textbf{K}$, la formule $P\rightarrow\Box P$ n'est pas prouvable ($P\nvdash_\textbf{K}\Box P$).
@@ -1010,7 +1010,7 @@ On représente graphiquement par une flèche "$\mathscr{C}\_x\longrightarrow\tex
 ![](/compcomplet.png?width=1200px)
 
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 La notion de conséquence sémantique $\models$ demande une satisfaction sur tous les modèle alors que la notion de conséquence syntaxique $\vdash$ demande seulement l'existence d'une preuve.<br>
 Dit autrement, $\models$ est définie avec un quantificateur universel $\forall$ et $\vdash$ avec un quantificateur existentiel $\exists$ or la négation du quantificateur universel est le quantificateur existentiel et inversement.<br>
 Démontrer qu'une formule est non démontrable est donc très difficile du côté de la  théorie de la démonstration puisque cela oblige à montrer que **toutes** les preuves échouent. Par contre, sur le versant sémantique, il suffit de trouver **un** modèle où la négation de la formule est satisfaite (un contre-exemple suffit).<br>

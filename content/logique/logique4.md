@@ -61,7 +61,7 @@ hidden = false
 <img src="/duparc.png" style="border-radius:10px;">
 </div>
 
-{{%notice info%}}
+{{%notice type="info" round="true"%}}
 Notes de lecture du livre *La logique pas à pas* de Jacques Duparc que je paraphrase allégrement. 
 {{%/notice%}}
 
@@ -317,7 +317,7 @@ On a bien $\langle\mathcal{S},\mathcal{V}\rangle\Vdash^{\forall a}Q\lor\neg Q$. 
 On peut donc avoir une formule $\phi\lor\psi$ satisfaite sans que ni $\phi$ ni $\psi$ ne le soient&nbsp;!
 
 
-{{%notice info%}}
+{{%notice type="info" round="true"%}}
 On retrouve les modèles du calcul des propositions en se restreignant aux systèmes de transition contenant un seul nœud. Dit autrement, une formule $\phi$ de <b>profondeur modale</b> nulle est une formule du calcul des propositions.<br>
 Soit $\mathcal{M}$ un modèle du calcul des propositions défini par la distribution de valeur de vérité $\delta_\mathcal{M}$ qui associe aux variables apparaissant dans $\phi$ la valeur 1 lorsqu'elles sont vraies dans $\mathcal{M}$ et 0 sinon ($\delta_\mathcal{M}(P)=1$ ssi $\mathcal{M}\models P$). La formule $\phi$ st vraie dans $\mathcal{M}$ (noté $\mathcal{M}\models\phi$) si et seulement si cette même formule $\phi$ est vraie dans le système de transition $\mathcal{S}\_\mathcal{M}=(N,A)$, où $N=\set{a}$ et $A=\emptyset$, équipé de la valuation $\mathcal{V}\_{\delta_\mathcal{M}}$ définie par&nbsp;: $\mathcal{V}\_{\delta_\mathcal{M}}(P)=\set{a}$ si et seulement si $\delta_\mathcal{M}(P)=1$ et $\mathcal{V}\_{\delta_\mathcal{M}}(P)=\emptyset$ si et seulement si $\delta_\mathcal{M}(P)=0$.<br>
 Cela s'écrit&nbsp;: $\mathcal{M}\models\phi$ ssi $\langle\mathcal{S},\mathcal{V}\_{\delta_\mathcal{M}}\rangle\Vdash^{\forall a}\phi$
@@ -694,7 +694,7 @@ Dans ce modèle, on a $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash P$ et $\lan
 
 </div>
 
-{{%notice tip%}}
+{{%notice type="tip" round="true"%}}
 Plus prosaïquement, la conséquence locale dit que partout où il y a $\Gamma$, il y a $\phi$, alors que la conséquence globale dit que s'il y a $\Gamma$ partout alors il y a $\phi$ partout.
 {{%/notice%}}
 

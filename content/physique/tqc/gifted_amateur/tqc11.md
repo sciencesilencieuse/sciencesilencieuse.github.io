@@ -76,7 +76,7 @@ details[open] > summary:first-of-type {
 
 # Théorie quantique des champs -- Partie 11
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Notes de lecture du livre *Quantum field theory for the gifted amateur* de Thomas Lancaster et Stephen Blundell.
 {{%/notice%}}
 
@@ -1436,7 +1436,7 @@ Puis trois pas&nbsp;:
 <img src="/wilson1.png" style="box-shadow:none;background:none;">
 </div>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 L'intégrale du pas I n'est pas une intégrale sur les impulsions&nbsp;: c'est l'<b>intégrale fonctionnelle</b>
 $\int\mathcal D\phi_{\mathrm f}$, c'est-à-dire une somme sur toutes les<i>configurations possibles</i> du champ rapide. C'est très exactement une marginalisation au sens des probabilités&nbsp;: de même qu'on passe d'une loi jointe à une loi marginale par $P(x)=\int P(x,y)\\,\mathrm dy$, on passe ici de $Z=\int\mathcal D\phi_{\mathrm s}\mathcal D\phi_{\mathrm f}\\,\mathrm e^{-S}$ à $Z=\int\mathcal D\phi_{\mathrm s}\\,\mathrm e^{-S_{\text{eff}}[\phi_{\mathrm s}]}$.<br>
 L'anglais dit <i>integrate out</i>, «&nbsp;éliminer par intégration&nbsp;», et le
@@ -1459,7 +1459,7 @@ français perd le <i>out</i> en route.<br><br>
 Si tout se passe bien, le lagrangien final a <b>la même forme</b> que le lagrangien initial, avec des couplages modifiés&nbsp;: on a fabriqué la transformation $g_i \to g_i'$, et il suffit de l'itérer en pensée pour engendrer le flot complet. En posant $b = e^\ell$ et en envoyant $\ell\to\infty$, on suit la physique aux grandes longueurs d'onde.
 
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Le «&nbsp;groupe&nbsp;» de renormalisation n'est pas un groupe, et il vaut la peine de comprendre pourquoi. Les changements d'échelle purs forment bien un groupe, mais l'opération complète (intégrer une coquille de modes rapides, <i>puis</i> rééchelonner) détruit de l'information&nbsp;: les détails fins sont perdus et rien ne permet de les reconstruire. La transformation n'a pas d'inverse&nbsp;: c'est un <b>semi-groupe</b>, au sens des normes académiques françaises (loi de composition interne associative, sans inverses). Cette irréversibilité n'est pas un défaut technique, c'est le contenu physique de la méthode&nbsp;: la physique de basse énergie oublie les détails microscopiques, et c'est précisément ce qui rendra l'universalité possible au chapitre suivant.
 {{%/notice%}}
 
@@ -1478,7 +1478,7 @@ C'est le rétrécissement des pas II et III qui ramène la coupure à $\Lambda$ 
 </ul>
 Dans les deux cas non critiques, la raison est la même&nbsp;: $\xi' = \xi/b$, la longueur de corrélation rétrécit à chaque étape mesurée en unités de la maille. Seul $\xi = \infty$ y résiste, et c'est la définition du point critique.
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 <b>Deux limites du dessin, à garder en tête.</b><br><br>
 La transformation porte en réalité sur l'<b>action</b>, non sur une configuration particulière&nbsp;: ce que l'on voit ici est une réalisation tirée au sort, pas l'objet sur lequel le groupe de renormalisation agit.<br><br>
 Et le passage de (a) à (b) apparaît comme une simple <b>troncature</b>, alors que l'élimination des modes rapides engendre aussi une correction $\delta\mathcal L$ aux couplages des modes lents. Cette moitié-là de l'opération est invisible sur le tracé, et c'est pourtant elle qui porte toute la physique du procédé.
@@ -1617,7 +1617,7 @@ $
 
 
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Et maintenant&nbsp;? Nous possédons la méthode complète&nbsp;: éliminer les modes rapides, redilater, lire comment les couplages varient d'une échelle à l'autre. Mais nous ne l'avons encore fait tourner sur aucun système réel, et aucun nombre comparable à une mesure n'en est sorti.<br><br>
 La partie suivante y est entièrement consacrée&nbsp;: la transition ferromagnétique du fer passée dans la machine, le point fixe de Wilson–Fisher, les exposants critiques calculés à l'ordre $\varepsilon$, et le miracle de l'<b>universalité</b>, qui veut qu'un barreau de fer, du dioxyde de carbone et un mélange de deux liquides obéissent aux mêmes nombres.
 {{%/notice%}}

@@ -62,7 +62,7 @@ Qu'est-ce que l'entropie&nbsp;?
 </div>
 
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 
 PW Atkins a écrit un livre merveilleux sur l'entropie&nbsp;: *The Second Law*.<br>
 Il fait partie de la vieille collection [*Scientific American Library*](https://en.wikipedia.org/wiki/Scientific_American_Library) qui est bourrée de pépites.

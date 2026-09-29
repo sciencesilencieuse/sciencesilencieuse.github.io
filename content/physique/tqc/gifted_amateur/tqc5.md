@@ -75,7 +75,7 @@ details[open] > summary:first-of-type {
 
 # Théorie quantique des champs -- Partie 5
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Notes de lecture du livre *Quantum field theory for the gifted amateur* de Thomas Lancaster et Stephen Blundell.
 {{%/notice%}}
 
@@ -320,7 +320,7 @@ Le terme $-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}$ est l'unique terme cinétique renorm
 
 </div>
 
-{{%notice type="note" title="Courbure du champ de jauge"%}}
+{{%notice type="note" title="Courbure du champ de jauge" round="true"%}}
 
 Plutôt que de tâtonner, la géométrie différentielle nous donne le tenseur de Maxwell automatiquement. En calculant le commutateur des deux dérivées covariantes $[D_\mu, D_\nu] = D_\mu D_\nu - D_\nu D_\mu$  agissant sur le champ $\psi$, les dérivées ordinaires s'annulent et il ne reste que&nbsp;:
 
@@ -1013,7 +1013,7 @@ $
 
 <br>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Et maintenant&nbsp;? Nous avons vu ce que les symétries <b>imposent</b> à une théorie&nbsp;: l'invariance locale fabrique l'électromagnétisme, les symétries discrètes contraignent les processus autorisés. Mais nous ne savons toujours pas <b>calculer</b> une amplitude&nbsp;: aucun nombre comparable à une mesure n'est encore sorti de la machine.<br><br>
 La partie suivante fournit l'objet qui manque, le <b>propagateur</b>, c'est-à-dire l'amplitude pour qu'un quantum aille d'un point à un autre. On le construit d'abord en mécanique quantique, où il se révèle être une simple fonction de Green, puis pour un champ relativiste, où il faudra résoudre une crise de causalité. La récompense est immédiate&nbsp;: le potentiel de Yukawa, et l'explication des forces par échange de particules virtuelles.
 {{%/notice%}}

@@ -76,7 +76,7 @@ details[open] > summary:first-of-type {
 
 # Théorie quantique des champs -- Partie 7
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Notes de lecture du livre *Quantum field theory for the gifted amateur* de Thomas Lancaster et Stephen Blundell.
 {{%/notice%}}
 
@@ -162,7 +162,7 @@ L'unitarité de $\hat S$ est la conservation des probabilités déguisée, et de
 
 </div>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Hypothèse cachée&nbsp;: aux temps asymptotiques, les particules sont si éloignées que l'interaction est négligeable, et les états sont «&nbsp;libres&nbsp;». C'est raisonnable pour la diffusion, mais subtil sur deux points&nbsp;: les états liés (qui n'existent que <i>par</i> l'interaction) et l'auto-interaction d'une particule avec son propre champ (une particule n'est jamais «&nbsp;nue&nbsp;», elle est habillée par son nuage de quanta). Ces subtilités sont remisées jusqu'au chapitre de renormalisation. Pour ce chapitre, on suppose l'interaction «&nbsp;éteinte&nbsp;» aux temps infinis.
 {{%/notice%}}
 
@@ -346,7 +346,7 @@ D'où $\hat S = T\exp\big(-i\int\mathrm{d}^4x\\,\hat{\mathcal H}_I(x)\big)$.
 
 <u>Rq</u> (covariance)&nbsp;: dans la forme $\hat S = T\exp(-i\int\mathrm{d}^4x\\,\hat{\mathcal H}_I)$, chaque ingrédient est Lorentz-invariant&nbsp;: $\mathrm{d}^4x$, la densité scalaire $\hat{\mathcal H}_I$, et le $T$ (grâce à la micro-causalité du chapitre précédent qui rendait le produit chronologique non ambigu hors du cône).  La théorie des perturbations est ainsi bien relativiste ordre par ordre.
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 La série de Dyson est <b>asymptotique</b>, pas convergente. Dyson a même développé un argument expliquant que si elle convergeait, le vide pourrait devenir instable. Moralité, on ne peut qu'utiliser la série tronquée à un ordre fini. Pour l'électrodynamique, cela suffit à obtenir 12 chiffres significatifs...
 {{%/notice%}}
 
@@ -1164,7 +1164,7 @@ $\displaystyle
 </ul>
 
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 On n'a pas encore dit comment <i>faire</i> ces intégrales, et pour cause&nbsp;: beaucoup divergent&nbsp;! Apprivoiser ces infinis révèle une grande part de la physique cachée de la théorie des champs (renormalisation, ch. 32 du livre)&nbsp;; certaines intégrales convergent, et le chapitre suivant en tire déjà de la physique mesurable.
 {{%/notice%}}
 
@@ -1341,7 +1341,7 @@ On peut vérifier chacune de ces contractions comme on l'a fait au chapitre pré
 ### Premières récoltes&nbsp;: le têtard et l'huître
 
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Convention d'étiquetage pour toute la suite&nbsp;: entrées $p, k$, sorties $p', k'$, la lettre $q$ restant réservée aux impulsions des lignes <i>internes</i>.
 {{%/notice%}}
 
@@ -1367,7 +1367,7 @@ Premier câblage&nbsp;:
 Lecture&nbsp;: le psion traverse le vertex $y$ en émettant un phion, lequel aboutit au vertex $w$ où une boucle de psion se referme sur elle-même. Ce diagramme est baptisé le <b>têtard</b>[^y2].<br>
 Intuition de sa valeur&nbsp;: la boucle $\hat\psi^\dagger(w)\hat\psi(w)$ au même point mesure la <i>densité de psions dans l'état fondamental</i> $\to$ nulle dans le vide, d'où un diagramme nul ici.
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 En matière condensée, où l'état fondamental est peuplé, les têtards vivent très bien.
 {{%/notice%}}
 
@@ -1551,7 +1551,7 @@ $s$, $t$ et $u$ sont les <b>variables de Mandelstam</b>.
 </div>
 
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Les trois variables ne sont pas indépendantes.<br>
 Cela donne un bonus utile pour vérifier ses calculs&nbsp;: pour tout processus $2\to 2$, $s + t + u = \sum_i m_i^2$ (ici $4m^2$). 
 {{%/notice%}}
@@ -1772,7 +1772,7 @@ $
 
 </div>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Une honnêteté de comptable&nbsp;: l'identification $\mathrm i\mathcal M \leftrightarrow -\mathrm i\tilde V(\mathbf q)$ est un peu cavalière, car les deux membres ne portent pas la même normalisation d'états. Les états relativistes traînent un facteur $\sqrt{2E_{\mathbf p}} \approx \sqrt{2m}$ par patte externe que la mécanique quantique non relativiste ignore. Le raccordement soigneux fait donc apparaître des facteurs $2m$ qu'on absorbe dans les conventions. Ce qui est <i>robuste</i>, et qui porte toute la physique est la <b>dépendance en $\mathbf q$</b> (donc la forme du potentiel et sa portée $1/\mu$) et le <b>signe</b>.
 {{%/notice%}}
 
@@ -1816,7 +1816,7 @@ $
 
 <br>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Et maintenant&nbsp;? Nous savons dessiner une amplitude et la convertir en section efficace, mais nous avons esquivé une difficulté majeure&nbsp;: dès qu'un diagramme contient une <b>boucle</b>, l'intégrale sur l'impulsion interne <b>diverge</b>.<br><br>
 La partie suivante prépare le terrain en donnant un second moteur à la machine, l'<b>intégrale de chemin</b> et la fonctionnelle génératrice $Z[J]$, qui feront apparaître les mêmes diagrammes par une tout autre route. Les infinis, eux, seront affrontés plus loin, avec la renormalisation.
 {{%/notice%}}

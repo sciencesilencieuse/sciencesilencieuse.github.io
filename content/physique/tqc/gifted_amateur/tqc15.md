@@ -79,7 +79,7 @@ details[open] > summary:first-of-type {
 
 # Théorie quantique des champs -- Partie 15
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Notes de lecture du livre *Quantum field theory for the gifted amateur* de Thomas Lancaster et Stephen Blundell.
 {{%/notice%}}
 
@@ -991,7 +991,7 @@ $
 <li>Le croisement échange les variables de Mandelstam mais aussi leurs <b>signes et leurs domaines</b>&nbsp;: les singularités d'une amplitude vivent dans des régions différentes selon le processus considéré, et les facteurs de flux ne se croisent pas.</li>
 </ul>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Et maintenant&nbsp;? Nous savons calculer une section efficace et la comparer à une mesure. Mais tous ces calculs se sont arrêtés à l'<b>ordre le plus bas</b>, et pour une bonne raison&nbsp;: dès qu'un diagramme contient une <b>boucle</b>, l'intégrale sur l'impulsion interne <b>diverge</b>.<br><br>
 La partie suivante lève l'obstacle en <b>renormalisant</b> QED, et en tire les deux résultats qui ont fait sa réputation&nbsp;: la charge électrique qui dépend de l'échelle à laquelle on la mesure, et le <b>moment magnétique anormal</b> de l'électron, vérifié aujourd'hui sur une dizaine de chiffres significatifs.
 {{%/notice%}}

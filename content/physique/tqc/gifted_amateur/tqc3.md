@@ -77,7 +77,7 @@ details[open] > summary:first-of-type {
 
 # Théorie quantique des champs -- Partie 3
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Notes de lecture du livre *Quantum field theory for the gifted amateur* de Thomas Lancaster et Stephen Blundell.
 {{%/notice%}}
 
@@ -418,7 +418,7 @@ Un **groupe** est un ensemble $G$ muni d'une loi de composition interne $\bullet
 </ul>
 </div>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 [Des vieilles notes de lecture d'un autre chouette livre](https://sciencesilencieuse.github.io/maths/groupes/) pour en savoir un peu plus sur les groupes discrets.
 {{%/notice%}}
 
@@ -939,7 +939,7 @@ $
 </p>
 </div>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Les transformations $L$ du groupe de Lorentz sont l'ensemble des transformations linéaires de $\mathbb{R}^{1,3}$ qui préservent la forme bilinéaire de Lorentz (ou pseudo-norme de Minkowski)&nbsp;: $(L(x),L(y))=(x,y)$
 {{%/notice%}}
 
@@ -1303,7 +1303,7 @@ Un champ symétrique par rapport aux translations voit son énergie et son impul
 
 </div>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 [Petit article de Quantamagazine](https://www.quantamagazine.org/how-noethers-theorem-revolutionized-physics-20250207/) sur le théorème de Noether.
 {{%/notice%}}
 <div style="position:relative;margin-left:auto;margin-right:auto;width:500px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
@@ -1374,7 +1374,7 @@ $
 <li>Invariance et conservation ne sont pas synonymes&nbsp;: l'une compare avant/après une <b>transformation</b>, l'autre avant/après un <b>évènement</b>. Le théorème de Noether est précisément le pont entre les deux.</li>
 </ul>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Et maintenant&nbsp;? Tout est en place&nbsp;: des lagrangiens de champs classiques, la représentation d'Heisenberg pour héberger des opérateurs dynamiques, et le théorème de Noether pour surveiller les symétries. La partie suivante peut accomplir le programme annoncé&nbsp;: promouvoir les champs classiques en champs d'opérateurs, et voir les particules émerger comme leurs excitations quantifiées.
 {{%/notice%}}
 

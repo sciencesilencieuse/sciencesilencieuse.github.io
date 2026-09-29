@@ -85,7 +85,7 @@ Ici, elle vient de ce merveilleux petit livre illustré&nbsp;: [**Relativity vis
 <br>
 
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 
 Néanmoins, si les diagrammes utilisant le temps propre permettent de bonnes intuitions, ils ne peuvent pas réellement se substituer aux diagrammes de Minkowski comme outil de travail.<br>
 Ce ne sont même pas vraiment des diagrammes d'espace-temps puisque le temps propre n'est pas une coordonnée globale (il dépend du référentiel).<br>

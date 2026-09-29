@@ -76,7 +76,7 @@ details[open] > summary:first-of-type {
 
 # Théorie quantique des champs -- Partie 0
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Notes de lecture du livre *Quantum field theory for the gifted amateur* de Thomas Lancaster et Stephen Blundell. 
 {{%/notice%}}
 
@@ -127,7 +127,7 @@ fonction $\xrightarrow{\text{fonctionnelle}}$ nombre
 
 Toutes deux se nourrissent de la **même** fonction, la trajectoire $x$&nbsp;; mais pas de la même manière&nbsp;: $\bar{V}$ ne regarde que la *valeur* de $x$ à chaque instant, tandis que $\bar{T}$ ne regarde que sa *pente*. Cette distinction, anodine pour l'instant, va organiser tout ce qui suit.
 
-{{%notice piege%}}
+{{%notice type="piege" round="true"%}}
 Les crochets ne sont pas décoratifs&nbsp;: $\bar{V}[x]$ dépend de la trajectoire **entière**, alors que $V(x)$ est une fonction ordinaire d'un nombre. Dans toute cette page, crochets $=$ fonctionnelle, parenthèses $=$ fonction. Attention aussi à ne pas confondre le $F$ générique d'une fonctionnelle $F[f]$ avec le $F$ de la force&nbsp;: le second n'apparaît plus au-delà de cette introduction.
 {{%/notice%}}
 
@@ -255,7 +255,7 @@ $
 Le résultat n'est plus local&nbsp;: déplacer $f$ en un point modifie sa pente <em>de part et d'autre</em> de ce point, d'où l'apparition d'une dérivée supplémentaire, et du signe moins.
 
 
-{{%notice info "D'où viennent vraiment le signe moins et la dérivée ? Une lecture géométrique"%}}
+{{%notice type="info" title="D'où viennent vraiment le signe moins et la dérivée ? Une lecture géométrique" round="true"%}}
 
 L'intégration par parties donne le résultat mais escamote sa raison d'être. Discrétisons la fonction pour voir ce qui se passe réellement.
 
@@ -552,7 +552,7 @@ Le principe de moindre action tire sa justification de la mécanique quantique o
 Lorsqu'on se retrouve à sommer sur toutes les trajectoires possibles, les différents termes vont interférer. L'interférence sera destructive dans l'immense majorité des cas, là où la phase fluctuera fortement d'une trajectoire à l'autre. Au contraire, la trajectoire rendant l'action stationnaire va émerger car toutes les trajectoires voisines auront des phases proches et interféreront constructivement.
 
 
-{{%notice info "Aparté : la mécanique est une optique (Hamilton, 1834)"%}}
+{{%notice type="info" title="Aparté : la mécanique est une optique (Hamilton, 1834)" round="true"%}}
 
 **Deux principes, un seul énoncé**<br>
 L'optique géométrique a son principe variationnel, antérieur de deux siècles à celui de Hamilton&nbsp;: un rayon traversant un milieu d'indice $n(x)$ rend stationnaire le **chemin optique** $\int n\\,\mathrm{d}\ell$. C'est le principe de Fermat.
@@ -582,7 +582,7 @@ Hamilton n'avait, en 1834, aucune raison de la prendre au sérieux&nbsp;: aucune
 
 {{%/notice%}}
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Toute cette histoire (Fermat, Huygens, Fresnel, Bernoulli, Maupertuis, Hamilton, Jacobi, de&nbsp;Broglie, Schrödinger, Feynman) est racontée en détail sur la page [Principe de moindre action](../../../meca/action/).
 {{%/notice%}}
 
@@ -640,7 +640,7 @@ $
 <li>Le principe de moindre action n'est pas un axiome tombé du ciel&nbsp;: il hérite sa légitimité des interférences quantiques entre chemins, et c'est cette lecture qui reviendra avec les intégrales de chemin.</li>
 </ul>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Et maintenant&nbsp;? Le langage est en place&nbsp;: lagrangien, action, stationnarité. La partie suivante entre dans le vif en posant la brique élémentaire de toute la théorie quantique des champs&nbsp;: l'oscillateur harmonique, ses opérateurs d'échelle, et la découverte que créer un quantum d'énergie, c'est déjà créer une particule.
 {{%/notice%}}
 

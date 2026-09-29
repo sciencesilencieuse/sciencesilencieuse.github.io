@@ -200,7 +200,7 @@ Selon ces hypothèses, $|\psi\rangle$ est réel&nbsp;! Quelle que soit la propri
 
 Dans le monde des fondements de la quantique, il s'agit d'un des résultats les plus importants depuis les inégalités de Bell.
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Parmi les puristes ($\lambda\equiv|\psi\rangle$), des extra puristes ont décidé d'avaler la pilule des dimensions élevées pour regagner la localité et la séparabilité des états. En admettant que notre espace à trois dimensions n'est que l'ombre d'un espace multidimensionnel dans lequel évolue la fonction d'onde, on évacue en effet toutes les galères (extra dimensions mises à part), du moins jusqu'à la mesure...<br>
 [**Cette petite page**](./3ndimensions) explique l'attrait de ce compromis.
 {{%/notice%}}

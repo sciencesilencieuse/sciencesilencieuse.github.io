@@ -60,7 +60,7 @@ td, th {
 <img src="/duparc.png" style="border-radius:10px;">
 </div>
 
-{{%notice info%}}
+{{%notice type="info" round="true"%}}
 Notes de lecture du livre *La logique pas à pas* de Jacques Duparc que je paraphrase allégrement. 
 {{%/notice%}}
 
@@ -145,7 +145,7 @@ On peut représenter les formules du calcul propositionnel par des **arbres** do
 
 La **hauteur** d'une formule est la longueur de sa plus longue branche.
 
-{{%notice tip%}}
+{{%notice type="tip" round="true"%}}
 C'est une définition par **récurrence** (ou **inductive**)&nbsp;: on a d'abord défini les feuilles, cas de base de hauteur 0, puis on a donné la recette pour passer d'un arbre de hauteur $n$ à un arbre de hauteur $n+1$.
 {{%/notice%}}
 
@@ -186,7 +186,7 @@ $$
 
 <br>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 La **syntaxe**, c'est l'articulation des symboles. La **sémantique**, c'est ce que ça raconte.
 {{%/notice%}}
 

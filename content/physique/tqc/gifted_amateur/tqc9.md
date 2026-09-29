@@ -76,7 +76,7 @@ details[open] > summary:first-of-type {
 
 # Théorie quantique des champs -- Partie 9
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Notes de lecture du livre *Quantum field theory for the gifted amateur* de Thomas Lancaster et Stephen Blundell.
 {{%/notice%}}
 
@@ -263,7 +263,7 @@ Et le passage au continu s'écrit tout seul&nbsp;: $x_i \to \phi(x)$, la matrice
 <u>Rq</u>&nbsp;: dans (3), $x$ et $J$ sont des vecteurs et $A$ est une matrice. $J^TA^{-1}J$ est donc une double somme qui se transforme en double intégrale dans la version continue.
 
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Prenons $L = -\frac12 x A x + Jx$ et appliquons Euler–Lagrange (de manière très cavalière) comme si $A$ était un nombre&nbsp;:<br>
 $\to -Ax + J = 0$<br>
 Donc $x_\star = A^{-1}J$, et en réinjectant, $L(x_\star) = +\frac12\\, J\\, A^{-1} b$.<br>
@@ -623,7 +623,7 @@ Le potentiel s'additionne&nbsp;: en temps imaginaire, cinétique et potentiel p�
 
 
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Le sens de la rotation ($-\pi/2$, pas $+\pi/2$) n'est pas un caprice&nbsp;: c'est le $i\varepsilon$ qui l'impose. Dans le plan $p^0$, le contour s'appuyant sur l'axe des réels doit être déformé vers l'axe imaginaire sans rencontrer aucun pôle sur la route pour que l'intégrale reste la même (théorème intégral de Cauchy). Or aucun des deux pôles panachés du propagateur de Feynman n'est rencontré si l'axe réel tourne dans le sens trigo ($+\pi/2$) et comme $p_0=\mathrm{i}\partial_t$, cela oblige $t$ à tourner négativement ($-\pi/2$) pour que $p_0$ aille dans le bon sens.
 {{%/notice%}}
 
@@ -1676,7 +1676,7 @@ $
 
 <br>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Et maintenant&nbsp;? Le livre est équipé de <b>deux moteurs complets</b> (canonique et fonctionnel) et de la température. La suite en tire les grandes récoltes&nbsp;: les théories effectives et la renormalisation (où l'intégrale de chemin règne sans partage), et la physique de la matière condensée (où états cohérents, Matsubara et brisure de symétrie travaillent ensemble, supraconducteurs en tête).
 {{%/notice%}}
 

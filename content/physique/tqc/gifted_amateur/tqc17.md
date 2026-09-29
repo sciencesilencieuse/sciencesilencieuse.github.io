@@ -92,7 +92,7 @@ details[open] > summary:first-of-type {
 
 # Théorie quantique des champs -- Partie 17
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Notes de lecture du livre *Quantum field theory for the gifted amateur* de Thomas Lancaster et Stephen Blundell.
 {{%/notice%}}
 
@@ -1543,7 +1543,7 @@ $
 <li>Les oscillations de neutrinos ne mesurent que des <b>différences de masses au carré</b>, $\Delta m^2$&nbsp;: elles prouvent que les masses ne sont pas toutes nulles, mais ne fixent ni l'échelle absolue ni l'ordre des trois états.</li>
 </ul>
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Et maintenant&nbsp;? Le modèle électrofaible referme la boucle ouverte au tout début de ce cours&nbsp;: partis d'une symétrie interne et du principe de jauge, nous voici en possession d'une théorie qui prédit le spectre des particules observées et la valeur de leurs masses.<br><br>
 Restent des questions que ce modèle ne tranche pas. Pourquoi le neutrino n'existe-t-il qu'en version gauche&nbsp;? D'où viennent les trois générations de leptons et de quarks&nbsp;? Et comment quantifier proprement une théorie de Yang–Mills, ce qui exige des techniques que nous avons contournées&nbsp;?
 {{%/notice%}}

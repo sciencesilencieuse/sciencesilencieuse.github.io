@@ -77,7 +77,7 @@ details[open] > summary:first-of-type {
 
 # Théorie quantique des champs -- Partie 18
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Notes de lecture du livre *Quantum field theory for the gifted amateur* de Thomas Lancaster et Stephen Blundell.
 {{%/notice%}}
 
@@ -94,7 +94,7 @@ La théorie quantique des champs n'est pas réservée aux particules relativiste
 
 Ce chapitre traite le cas d'école&nbsp;: un grand nombre de fermions non relativistes enfermés dans une boîte, ce qui est le modèle de base des électrons dans un solide. On n'aura pas besoin de l'artillerie des spineurs de Dirac, car les énergies en jeu dans un métal (quelques électronvolts) sont ridicules devant l'énergie de masse de l'électron (511&nbsp;keV)&nbsp;: les électrons se contenteront d'interagir via un potentiel coulombien instantané.
 
-{{%notice note "L'itinéraire du chapitre"%}}
+{{%notice type="note" title="L'itinéraire du chapitre" round="true"%}}
 Cinq stations&nbsp;:
 
 <ol>
@@ -277,7 +277,7 @@ $C\_0$ est le **terme de Cooper**, $D\_0$ le **terme direct de Hartree**, $F\_0$
 
 Le terme de Cooper se règle vite&nbsp;: il contient $\langle 0|\hat{a}^\dagger\_n\hat{a}^\dagger\_m|0\rangle$, la moyenne d'un opérateur qui <b>change le nombre de particules de deux unités</b>. Entre deux fois le même état, cela donne zéro. Dans des circonstances normales, $C\_0$ ne contribue donc pas.
 
-{{%notice note "Aparté&nbsp;: le terme qu'on a tort de jeter"%}}
+{{%notice type="note" title="Aparté&nbsp;: le terme qu'on a tort de jeter" round="true"%}}
 «&nbsp;Dans des circonstances normales&nbsp;»&nbsp;: la formule est prudente à dessein. Il existe un état de la matière où $\langle\hat{a}^\dagger\hat{a}^\dagger\rangle \neq 0$, parce que l'état fondamental n'a plus un nombre de particules bien défini et devient une superposition cohérente de paires. C'est l'état supraconducteur, et $C\_0$ y devient la vedette. Le jeter ici est une décision, pas une évidence.
 {{%/notice%}}
 
@@ -404,7 +404,7 @@ Comparons avec le terme de Hartree&nbsp;: là-bas, chaque moyenne ramenait le ch
 
 Il y a beaucoup de physique cachée dans ce terme d'échange, à commencer par l'ordre magnétique dans les métaux, sur lequel on reviendra en fin de chapitre.
 
-{{%notice note "Deux noms sur les termes"%}}
+{{%notice type="note" title="Deux noms sur les termes" round="true"%}}
 Douglas Hartree (1897–1956) et Vladimir Fock (1898–1974) ont introduit ces approximations dans le contexte du calcul des atomes à plusieurs électrons, bien avant qu'on sache les dessiner sous forme de diagrammes. Le vocabulaire du chapitre est donc celui de la chimie quantique des années 1930, relu en langage de théorie des champs des années 1950.
 {{%/notice%}}
 
@@ -501,7 +501,7 @@ Dans le jellium, la charge positive uniforme du fond compense <b>exactement</b> 
 
 C'est un soulagement mathématique autant que physique&nbsp;: $\tilde{V}\_{\boldsymbol{q}=0}$ diverge pour un potentiel coulombien, et cette divergence était le symptôme d'un système chargé. Un métal ne l'est pas.
 
-{{%notice note "Aparté : qui a baptisé la gelée ?"%}}
+{{%notice type="note" title="Aparté : qui a baptisé la gelée ?" round="true"%}}
 Le nom de <i>jellium</i> est dû à John Bardeen. C'est l'un de ces modèles caricaturaux dont la caricature est précisément la vertu&nbsp;: en gommant les ions, il isole ce qui, dans un métal, relève des électrons seuls.
 {{%/notice%}}
 
@@ -651,11 +651,11 @@ $\displaystyle
 $
 </p>
 
-{{%notice note "Stupidity energy"%}}
+{{%notice type="note" title="Stupidity energy" round="true"%}}
 «&nbsp;Énergie de corrélation&nbsp;» est une appellation un peu flatteuse pour ce qui est, après tout, la mesure de notre ignorance&nbsp;: tout ce que l'approximation de champ moyen a raté. Feynman suggérait de l'appeler plutôt l'<b>énergie de stupidité</b>.
 {{%/notice%}}
 
-{{%notice note %}}
+{{%notice type="note" round="true" %}}
 Eugene Wigner (1902–1995) a laissé son empreinte sur des pans entiers de la physique et des mathématiques&nbsp;; sa sœur avait épousé Dirac, lequel la présentait volontiers comme «&nbsp;la sœur de Wigner&nbsp;».<br>
 Frederick Seitz (1911–2008) est sans doute le meilleur candidat au titre de père fondateur de la physique du solide.
 {{%/notice%}}
@@ -1117,7 +1117,7 @@ La théorie Hartree-Fock prédit une masse effective **nulle** au voisinage de l
 
 Le diagnostic est net. La théorie Hartree-Fock est entièrement **statique**&nbsp;: elle traite un électron comme s'il se propageait dans le champ figé de tous les autres. En réalité, les électrons <b>réarrangent leur configuration</b> au passage de l'intrus, ce qui produit des corrélations dépendant du temps. Il faut donc enrichir la self-énergie de processus supplémentaires.
 
-{{%notice note "Une exception qui confirme la règle"%}}
+{{%notice type="note" title="Une exception qui confirme la règle" round="true"%}}
 On ignore ici les matériaux à fermions lourds, dans lesquels $m^{*}$ peut atteindre mille fois $m$. Que la masse effective puisse s'écarter de $m$ par trois ordres de grandeur <b>vers le haut</b> ne console évidemment pas d'une prédiction qui la fait tomber à zéro.
 {{%/notice%}}
 
@@ -1137,7 +1137,7 @@ Mauvaise nouvelle&nbsp;: son amplitude <b>diverge à petit $\boldsymbol{q}$</b>,
 
 Pour un gaz d'électrons de forte densité, la correction la plus importante à Hartree-Fock est la correction d'ordre le plus bas à l'ondulation d'interaction. Pour des raisons historiques, elle s'appelle l'**approximation des phases aléatoires** (RPA, <i>random phase approximation</i>), et elle a été formulée par David Bohm et David Pines.
 
-{{%notice note "Aparté&nbsp;: d'où vient ce nom bizarre&nbsp;?"%}}
+{{%notice type="note" title="Aparté&nbsp;: d'où vient ce nom bizarre&nbsp;?" round="true"%}}
 Le caractère aléatoire d'une phase n'a aucun rôle dans la présentation adoptée ici. Le nom provient d'un traitement alternatif, dans lequel on montre qu'un terme $\sum\_l \mathrm{e}^{\mathrm{i}\boldsymbol{q}\cdot\boldsymbol{x}\_l}$, où $\boldsymbol{x}\_l$ repère la position d'un électron, est négligeable&nbsp;: si les $\boldsymbol{x}\_l$ sont répartis sur un grand domaine, les phases sont distribuées au hasard et la somme s'annule statistiquement.
 {{%/notice%}}
 
@@ -1287,7 +1287,7 @@ où $q\_{\mathrm{TF}}$ est le **vecteur d'onde de Thomas-Fermi**.
 
 La permittivité <b>diverge</b> quand $|\boldsymbol{q}|\to 0$. Contre toute intuition, c'est une excellente nouvelle&nbsp;: cela signifie qu'un champ électrique uniforme ne peut pas pénétrer un métal, ce à quoi on s'attend fermement.
 
-{{%notice note "L'ordre des limites n'est pas négociable"%}}
+{{%notice type="note" title="L'ordre des limites n'est pas négociable" round="true"%}}
 On a d'abord pris la limite statique, puis fait tendre $\boldsymbol{q}$ vers zéro. L'ordre inverse (considérer d'emblée un champ uniforme, $\boldsymbol{q}=\boldsymbol{0}$, puis faire tendre $q^0$ vers zéro) décrit une tout autre situation&nbsp;: la réponse du métal à un champ alternatif, donc ses propriétés de <b>transport</b>. Deux limites qui ne commutent pas, deux physiques différentes.
 {{%/notice%}}
 

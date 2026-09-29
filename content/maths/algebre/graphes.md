@@ -47,7 +47,7 @@ td, th {
 
 # Graphes
 
-{{%notice tip%}}
+{{%notice type="tip" round="true"%}}
 [**Cours sur les graphes**](https://info-tsi-vieljeux.github.io/semestre_2/graphes/) donné à des élèves de TSI1 en informatique.
 {{%/notice%}}
 

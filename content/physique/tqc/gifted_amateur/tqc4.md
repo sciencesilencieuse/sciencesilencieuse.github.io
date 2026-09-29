@@ -77,7 +77,7 @@ details[open] > summary:first-of-type {
 
 # Théorie quantique des champs -- Partie 4
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Notes de lecture du livre *Quantum field theory for the gifted amateur* de Thomas Lancaster et Stephen Blundell.
 {{%/notice%}}
 
@@ -266,7 +266,7 @@ Panneau de gauche, titré "chaîne d'oscillateurs (partie 1)" : une rangée de s
 Panneau de droite, titré "champ continu" : une courbe continue et lisse tracée au-dessus d'un axe horizontal x ; à une abscisse quelconque, une flèche verticale étiquetée phi(x) indique la valeur du champ ; sous l'axe, la mention "un oscillateur par point".
 -->
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 L'ensemble des quadri-impulsions $p$ satisfaisant la relation de dispersion relativiste $p^2=m^2$ décrit ce qu'on appelle la "couche de masse" (mass shell en anglais). C'est l'équivalent dans l'espace de Minkowski de la sphère dans l'espace euclidien&nbsp;; elle forme un hyperboloïde de révolution.<br>
 ![](/massshell.png?width=400px)
 En restreignant la mesure de Lebesgue $\frac{\mathrm{d}^4 p}{(2 \pi)^{4}}$ à la nappe d'énergie positive de cette couche, c'est-à-dire en intégrant contre $2\pi\\,\delta\left(p^2-m^2\right)\theta\left(p^0\right)$, on obtient la **mesure invariante de Lorentz** $\frac{\mathrm{d}^3 p}{(2 \pi)^{3}} \frac{1}{2 E\_{\boldsymbol{p}}}$.<br>
@@ -475,7 +475,7 @@ Rien de tout cela n'est alarmant si l'on se souvient que seul le mesurable nous 
 
 Malgré tout, ces infinis qui traînent partout, cela fait désordre. En ordonnant savamment les opérateurs, on va pouvoir les glisser discrètement sous le tapis.
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 Le terme constant devient en revanche un gros (!) problème lorsqu'on essaie de réconcilier théorie quantique des champs et relativité générale. Dans cette dernière, ce ne sont plus les différences d'énergie qui importent&nbsp;: le tenseur énergie-impulsion figure directement au second membre des équations d'Einstein, et une densité d'énergie du vide y agit comme une constante cosmologique.<br>
 C'est le "**problème de la constante cosmologique**"&nbsp;: en coupant l'intégrale divergente à l'échelle de Planck, la densité d'énergie du vide prévue dépasse la valeur observée de quelque $10^{120}$ 😵‍💫 ordres de grandeur (facile la pire prédiction jamais faite en physique)...
 {{%/notice%}}
@@ -1344,7 +1344,7 @@ Cet opérateur ne compte pas des particules, il en <u>convertit</u>&nbsp;: il d�
  
 Cette charge conservée à trois composantes <u>est</u> l'**isospin**&nbsp;! Le produit vectoriel de la première formule est la signature du moment cinétique, et c'est bien pourquoi l'isospin se manipule avec les mêmes règles que le spin, sans avoir le moindre rapport avec une rotation dans l'espace physique.
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 L'exemple à trois champs de même masse n'est pas qu'un jouet&nbsp;: c'est, à peu de choses près, le triplet de pions $(\pi^+, \pi^0, \pi^-)$, dont les masses sont effectivement très voisines (environ 140&nbsp;MeV, à quelques MeV près). L'écart résiduel entre elles mesure justement le degré auquel la symétrie d'isospin n'est qu'approchée.
 {{%/notice%}}
 

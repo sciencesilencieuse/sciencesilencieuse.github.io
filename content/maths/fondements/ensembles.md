@@ -831,7 +831,7 @@ $$\mathbb{R} = \mathcal{C} / \sim$$
 
 
 
-{{%notice note%}}
+{{%notice type="note" round="true"%}}
 C'est exactement la même année, 1872, que Cantor publie sa construction par les classes d'équivalence de suites, et que Richard Dedekind publie son traité (Stetigkeit und irrationale Zahlen) où il présente sa méthode par les coupures.<br>
 Les deux hommes (qui étaient amis et correspondaient beaucoup) ont résolu le problème de la nature du continu géométrique au même moment, par deux voies totalement différentes.
 {{%/notice%}}
