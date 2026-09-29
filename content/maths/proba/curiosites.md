@@ -92,7 +92,7 @@ et parmi elles, {} comprennent 2 filles, soit {:.2f} %.".format(n,S,cas[c],s,s/S
 Où comment un tirage aléatoire permet de gagner de l'information&nbsp;!
 
 
-{{< youtube-plus id="lhIkXOZ2o-s" ratio="short" width="300px" rounded=true shadow=false >}}
+{{< youtube-plus id="lhIkXOZ2o-s" ratio="short" width="300px" rounded=true shadow=true >}}
 
 
 On vous présente deux papiers pliés où sont écrits deux nombres choisis aléatoirement $a$ et $b$.
