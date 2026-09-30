@@ -239,11 +239,10 @@ print(f"Sélectionner ensuite le premier candidat dépassant les {Resultats.inde
 {{< /runpython >}}
 
 
-{{%notice type="note" round="true"%}}
+{{%notice type="note" title="fonction shuffle" round="true" collapse="true"%}}
 Si on avait besoin de construire la fonction de mélange des éléments d'une liste (`shuffle`)&nbsp;:
-{{%/notice%}}
 
-{{< runpython lang="python" mode="toggle" default="code" height="300" width="800" >}}
+{{< runpython lang="python" mode="toggle" default="code" width="800" >}}
 from random import random
 
 def shuffle(L):
@@ -260,5 +259,8 @@ L = ["blob",5,18.3,(1,2,6),"Ok"]
 print(L)
 print(shuffle(L))
 {{< /runpython >}}
+{{%/notice%}}
+
+
 
 {{< youtube-plus id="wc4r2zUEGEU" ratio="16x9" width="800px" rounded=true shadow=true >}}
