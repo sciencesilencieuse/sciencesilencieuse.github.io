@@ -327,7 +327,6 @@ Les deux premiers termes sont l'analogue exact du cas abélien, $A_\mu \to A_\mu
 <details>
 <summary>D'où vient le terme en produit vectoriel&nbsp;?</summary>
 
-<b>Ce qu'on exige</b><br>
 Il faut que $D_\mu\Psi$ se transforme comme $\Psi$, c'est-à-dire
 
 <p style="text-align:center;">
@@ -344,7 +343,6 @@ $\displaystyle
 $
 </p>
 
-<b>Ce qu'on obtient</b><br>
 Supposons que le champ se transforme en $\boldsymbol W_\mu + \delta\boldsymbol W_\mu$, et calculons directement $D_\mu\Psi$ après transformation. Le résultat contient les mêmes termes, mais le dernier apparaît avec les deux matrices dans l'<b>ordre inverse</b>&nbsp;:
 
 <p style="text-align:center;">
@@ -353,7 +351,7 @@ $\displaystyle
 $
 </p>
 
-<b>C'est tout le nœud de l'affaire.</b> En $U(1)$, ces deux produits seraient identiques et se compenseraient sans laisser de trace. Ici, $[\boldsymbol\tau\cdot\boldsymbol\alpha]$ et $[\boldsymbol\tau\cdot\boldsymbol W_\mu]$ ne commutent pas, et leur différence subsiste.
+En $U(1)$, ces deux produits seraient identiques et se compenseraient sans laisser de trace. Ici, $[\boldsymbol\tau\cdot\boldsymbol\alpha]$ et $[\boldsymbol\tau\cdot\boldsymbol W_\mu]$ ne commutent pas, et leur différence subsiste.
 
 <b>La comparaison</b> des deux expressions donne alors la condition sur $\delta\boldsymbol W_\mu$&nbsp;:
 
@@ -472,15 +470,12 @@ En développant $\boldsymbol G_{\mu\nu}\cdot\boldsymbol G^{\mu\nu}$, le produit 
 <img src="/autointbos.png" style="box-shadow:none;background:none;">
 </div>
 
-<div id="theo">
 
 <b>La raison est une question de charge.</b> Le photon ne porte <b>aucune</b> charge électrique&nbsp;: il ne peut donc pas se coupler à lui-même, et les interactions photon–photon n'existent pas en électromagnétisme abélien.
 
 Le champ $\boldsymbol W_\mu$, au contraire, porte une unité d'isospin ($I = 1$). Comme c'est précisément l'isospin qui joue le rôle de charge dans cette théorie, <b>le champ de jauge est chargé sous sa propre interaction</b>. Il peut donc agir comme sa propre source.
 
-</div>
 
-<br>
 
 <div id="preuve">
 
@@ -507,9 +502,9 @@ L'auto-interaction du champ de jauge donne la clé d'un phénomène rencontré �
 
 Rappelons le cas abélien. Autour d'une charge électrique, le vide se polarise en paires électron–positron virtuelles, qui l'<b>écrantent</b>&nbsp;: vue de loin, la charge paraît plus petite. C'est ce que dit le signe positif de la fonction $\beta$ de QED.
 
-<div id="theo">
-
 <b>Dans le cas non abélien, un second mécanisme s'ajoute, et il l'emporte.</b>
+
+<div id="theo">
 
 L'écrantage par paires de quarks existe toujours. Mais l'auto-interaction permet en plus à un <b>gluon de se scinder en deux gluons</b>. Or les gluons portent eux-mêmes de la charge de couleur&nbsp;: cette cascade <b>répand</b> donc de la charge de même signe autour du quark, au lieu de la neutraliser.
 

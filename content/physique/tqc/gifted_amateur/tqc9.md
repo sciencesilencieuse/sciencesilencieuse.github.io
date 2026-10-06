@@ -867,7 +867,7 @@ On ne garde que les puissances <i>paires</i> comme l'exige la symétrie $M \to -
 
 </div>
 
-[^p6]: Le schéma de Landau est une <i>théorie de champ moyen</i>&nbsp;: l'aimantation y est un champ uniforme, les fluctuations sont ignorées. Le livre y reviendra en force (notamment ch. 43).
+[^p6]: Le schéma de Landau est une <i>théorie de champ moyen</i>&nbsp;: l'aimantation y est un champ uniforme, les fluctuations sont ignorées.
 
 <br>
 
