@@ -47,9 +47,7 @@ chapter = false
 - Non-clonage quantique
 - Téléportation quantique
 
-<div style="position:relative; width:600px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube reIcNs4Ul-c>}}
-</div>
+{{< youtube-plus id="reIcNs4Ul-c" ratio="16x9" width="800" shadow=true rounded=true >}}
 
 
 ## [Théorie-jouet de Spekkens](./spekkens)
@@ -67,9 +65,7 @@ L'idée est de partir d'un système classique le plus simple possible et d'y ajo
 
 ## [Paradoxe EPR](./epr)
 
-<div style="position:relative; width:600px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube QS_bw6PVfsE>}}
-</div>
+{{< youtube-plus id="QS_bw6PVfsE" ratio="16x9" width="800" shadow=true rounded=true >}}
 
 La violation des inégalités de Bell met la quantique et la relativité restreinte (et donc générale) en tension. Comment reconnecter ces deux mondes&nbsp;?
 
