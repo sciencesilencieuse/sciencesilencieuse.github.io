@@ -30,7 +30,6 @@ weight = 3
 
 {{< youtube-plus id="i-EMZHPWGcg" ratio="16x9" width="800" shadow=true rounded=true >}}
 
-<br>
 
 Simulations de Troyens dans un système où la grosse masse $M$ et la petite masse $m$ sont dans les proportions $m=M\frac{\mu}{1-\mu} $ avec $\mu=1/200$
 

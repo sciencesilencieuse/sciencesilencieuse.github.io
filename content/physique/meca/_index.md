@@ -33,9 +33,7 @@ chapter = false
 
 Une approche historique sur l'émergence du concept d'énergie en mécanique, de Descartes à Einstein.
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube ivc3-Tt56Uo>}}
-</div>
+{{< youtube-plus id="ivc3-Tt56Uo" ratio="16x9" width="800" shadow=true rounded=true >}}
 
 Sources :
 
@@ -50,9 +48,9 @@ Sources :
 Trois démonstrations de la formule de l'énergie cinétique.
 
 Je trouve la deuxième (celle de Johann Bernoulli) fabuleuse d'intuition géométrique (elle utilise l'[escargot de Pythagore](https://youtu.be/2Ea1hh81dds)).
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube 3a2qOozWpr0>}}
-</div>
+
+{{< youtube-plus id="3a2qOozWpr0" ratio="16x9" width="800" shadow=true rounded=true >}}
+
 
 Sources :
 
@@ -98,9 +96,7 @@ Comprendre cet effet permet d'expliquer les rotations des masses d'air cycloniqu
 
 Petits exercices de niveau licence/prépa traitant de voyages autour ou à travers la Terre.
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube QVibTnN4rpY>}}
-</div>
+{{< youtube-plus id="QVibTnN4rpY" ratio="16x9" width="800" shadow=true rounded=true >}}
 
 <br>
 
