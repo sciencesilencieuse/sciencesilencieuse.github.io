@@ -65,9 +65,7 @@ On place un échantillon d'eau dans un récipient hermétique à 25&nbsp;°C. On
 
 En contournant le point critique, on peut passer de l'état liquide à l'état gazeux (et inversement) **continument**, sans seuil. On parle alors de **transition de phase du deuxième ordre**. Au moment du contournement du point critique (lorsque $P>P_C$ et $T>T_C$), on dit que la matière est dans un nouvel état (un 5<sup>e</sup> état avec les solides, liquides, gaz et plasmas), le **fluide supercritique**. 
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube P9EftqFYaHg>}}
-</div>
+{{< youtube-plus id="P9EftqFYaHg" ratio="16x9" width="800" shadow="true" rounded="true" >}}
 
 Cet état possède à la fois des propriétés d'un gaz et d'un liquide&nbsp;; comme un gaz, il occupe tout l'espace disponible, possède une grande diffusivité mais pas de tension superficielle, et comme un liquide, il a une grand pouvoir de dissolution de solutés non volatils. Il peut donc pénétrer plus efficacement les petites ouvertures d'un mélange solide et en extraire les composants solubles. Ces propriétés font des fluides supercritiques des solvants extrêmement utiles pour un large éventail d'applications. Par exemple, le dioxyde de carbone supercritique est devenu un solvant très populaire dans l'industrie alimentaire, étant utilisé pour décaféiner le café, éliminer les graisses des chips et extraire les composés aromatiques et les fragrances des huiles d'agrumes. Il est non toxique et relativement peu coûteux. Après utilisation, le $\ce{CO2}$ peut être facilement récupéré en réduisant la pression et en collectant le gaz résultant.
 
@@ -94,15 +92,10 @@ Les transitions du premier ordre sont des transitions *avec sauts* alors que cel
 
 Deux vidéos impressionnantes de qualité sur les transitions de phase&nbsp;:
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube itRV2jEtV8Q>}}
-</div>
+{{< youtube-plus id="itRV2jEtV8Q" ratio="16x9" width="800" shadow="true" rounded="true" >}}
 
-<br>
+{{< youtube-plus id="yEcysu5xZH0" ratio="16x9" width="800" shadow="true" rounded="true" >}}
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube yEcysu5xZH0>}}
-</div>
 
 
 

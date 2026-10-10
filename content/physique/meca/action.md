@@ -101,7 +101,7 @@ Et quand le point d'arrivée F est dans un autre milieu que le point de départ 
 Dans le programme ci-dessous, les temps de parcours de différents trajets pour rejoindre un point dans l'air à un point dans l'eau sont comparés. Le trajet minimal est déterminé et on montre qu'il respecte la loi de la réfraction de Snell-Descartes.
 
 
-{{< runpython lang="vpython" mode="output" file="fermat.py" width="500"  mode="output"  autorun="false">}}
+{{< runpython lang="vpython" mode="output" file="fermat.py" width="500"  mode="output"  autorun="true">}}
 {{< /runpython >}}
 
 
@@ -628,7 +628,7 @@ Le nombre de modes de vibration augmente avec la fréquence et à l'équilibre t
 
 Pour tenter de résoudre le problème, Planck utilise ce qu'il pense être un expédient provisoire&nbsp;: il introduit une discrétisation, un pas $h$ dont il compte bien se débarrasser ensuite en le faisant tendre vers zéro.
 
-<div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:160px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/portraitplanck.png" style="box-shadow:none;background:none;">
 </div>
 
@@ -643,7 +643,7 @@ Dans son élan fabuleux de 1905, Einstein explique l'effet photoélectrique en d
 
 De Broglie comprend alors que la formule $E=h\nu$ n'est pas réservée aux photons puisque le rayonnement échange de l'énergie avec la matière. 
 
-<div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:160px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/portraitdebroglie.png" style="box-shadow:none;background:none;">
 </div>
 
@@ -671,7 +671,7 @@ Il ne restait plus qu'à faire le même pas pour la mécanique qu'entre Huygens 
 
 C'est Schrödinger qui franchira le cap et il va suivre pour cela les pas d'Hamilton.
 
-<div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:160px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/portraitschrodinger.png" style="box-shadow:none;background:none;">
 </div>
 
@@ -780,7 +780,7 @@ La vitesse de groupe est la vitesse classique de la particule et elle diminue bi
 
 La contribution de Feynman à la physique est à la confluence de cette longue évolution de l'optique et de la mécanique. Le prix Nobel vient en effet récompenser son travail sur l'électrodynamique quantique, théorie décrivant l'interaction entre la matière et le rayonnement, où il a en particulier remis l'action au centre du jeu.
 
-<div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:160px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/portraitfeynman.png" style="box-shadow:none;background:none;">
 </div>
 

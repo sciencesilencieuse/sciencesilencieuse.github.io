@@ -57,14 +57,13 @@ margin-top:-0.5em;
 
 Qu'est-ce que l'entropie&nbsp;?
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube rtgSC2Bw70c>}}
-</div>
+
+{{< youtube-plus id="rtgSC2Bw70c" ratio="16x9" width="800" shadow="true" rounded="true" >}}
 
 
-{{%notice type="note" round="true"%}}
+{{%notice title="Un petit livre merveilleux" type="info" round="true"%}}
 
-PW Atkins a écrit un livre merveilleux sur l'entropie&nbsp;: *The Second Law*.<br>
+*The Second Law* de PW Atkins<br>
 Il fait partie de la vieille collection [*Scientific American Library*](https://en.wikipedia.org/wiki/Scientific_American_Library) qui est bourrée de pépites.
 
 {{%/notice%}}
@@ -81,11 +80,7 @@ En théorie de l'information, Claude **Shannon** a appelé entropie la mesure de
 
 Cherchant une réponse au paradoxe de Maxwell, Leó Szilárd a formulé en 1929 une équivalence entre l'énergie et l'information grâce à une version simplifiée du **démon de Maxwell**. Il en a déduit l'énergie nécessaire au démon pour faire varier l'information d'un bit. **Landauer** en a fait un principe (en 1961) qui stipule que l'énergie dissipée lors de l'effacement d'un bit d'information vaut au minimum $k_BT \ln(2)$.
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube XY-mbr-aAZE>}}
-</div>
-
-<br>
+{{< youtube-plus id="XY-mbr-aAZE" ratio="16x9" width="800" shadow="true" rounded="true" >}}
 
 <div id="preuve">
 
@@ -115,13 +110,8 @@ John Wheeler est un des premiers à militer pour qu'on s'oriente vers [une expli
 
 Le fait qu'un trou noir ait une entropie proportionnelle à son aire et non à sa masse, comme l'ont montré Stephen Hawking et Jacob Bekenstein, semble donner corps à cette idée que le bit est l'atome de notre compréhension de l'univers. Tout horizon se présenterait en effet comme une sorte d'écran sur lequel s'écrit l'information qu'il contient. C'est le **principe holographique**.
 
-<br>
+{{< youtube-plus id="RIqVnFtOSr4" ratio="16x9" width="800" shadow="true" rounded="true" >}}
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube RIqVnFtOSr4>}}
-</div>
-
-<br>
 
 Et plus récemment, Leonard Suskind a jeté un nouveau pont entre physique et information en [liant le volume d'un trou noir et sa complexité](https://www.quantamagazine.org/in-new-paradox-black-holes-appear-to-evade-heat-death-20230606/).
 

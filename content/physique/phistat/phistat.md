@@ -57,21 +57,14 @@ margin-top:-0.5em;
 
 Petite série de vidéo sur la physique statistique, de la définition de la température à l'entropie en passant par le facteur de Boltzmann et la loi de Planck&nbsp;:
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube JbVNRi2R2kY>}}
-</div>
 
-<br>
+{{< youtube-plus id="JbVNRi2R2kY" ratio="16x9" width="800" shadow="true" rounded="true" >}}
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube vyPktcRPX7A>}}
-</div>
+{{< youtube-plus id="vyPktcRPX7A" ratio="16x9" width="800" shadow="true" rounded="true" >}}
 
-<br>
+{{< youtube-plus id="ES7HYTVPhgY" ratio="16x9" width="800" shadow="true" rounded="true" >}}
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube ES7HYTVPhgY>}}
-</div>
+
 
 
 

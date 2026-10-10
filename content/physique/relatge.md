@@ -45,11 +45,9 @@ Wheeler est aussi l'un des 3 auteurs (les deux autres sont ses anciens thésards
 
 
 Vidéo sur les ondes gravitationnelles et sur leur détection par le clignotement des pulsars.
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube qK5qKJeM41Y>}}
-</div>
 
-<br>
+{{< youtube-plus id="qK5qKJeM41Y" ratio="16x9" width="800" shadow="true" rounded="true" >}}
+
 
 Je m'étais lancé, il y a longtemps, dans la rédaction de notes "améliorées" après visionnage [de ces vidéos de **Léonard Susskind**](https://www.youtube.com/playlist?list=PL6C8BDEEBA6BDC78D) sur la relativité générale.<br>
 Susskind est un immense physicien théoricien et les vidéos sont des captations de ses cours donnés dans le cadre du Stanford Continuing Studies Program (sorte de cours du soir pour enthousiastes).
@@ -68,13 +66,10 @@ Susskind est un immense physicien théoricien et les vidéos sont des captations
 
 <br>
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube 05jFhuRs-w0>}}
-</div>
+{{< youtube-plus id="05jFhuRs-w0" ratio="16x9" width="800" shadow="true" rounded="true" >}}
 
-<br>
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube OpOER8Eec2A>}}
-</div>
+{{< youtube-plus id="OpOER8Eec2A" ratio="16x9" width="800" shadow="true" rounded="true" >}}
+
+
 

@@ -53,3 +53,7 @@ Physique et maths des lentilles avec simulations VPython.
 <br>
 
 ## Polarisation
+
+{{< geogebra id="vAuzFnWR" maxwidth="800" rounded="true" shadow="true" >}}
+
+{{< geogebra id="PYvHHmNx" maxwidth="800" rounded="true" shadow="true" >}}
