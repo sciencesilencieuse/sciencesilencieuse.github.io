@@ -323,7 +323,7 @@ Les <b>conditions de renormalisation</b> fixent ensuite le sens physique de chaq
 
 <div id="theo">
 
-<b>Le problème posé.</b> Les contretermes ont une <i>forme</i> imposée par les symétries, mais leurs constantes $A$, $B$, $C$, $D$ ne sont pas déterminées. Chacune doit absorber une partie divergente (cela fixe leur comportement à grande coupure) mais rien n'empêche d'y ajouter en plus n'importe quelle quantité <b>finie</b>.
+<b>Le problème posé.</b> Les contretermes ont une <i>forme</i> imposée par les symétries, mais leurs constantes $A$, $B$, $C$, $D$ ne sont pas déterminées. Chacune doit absorber une partie divergente (cela fixe leur comportement à grande coupure) mais rien n'empêche d'y ajouter n'importe quelle quantité <b>finie</b>.
 
 Il manque donc, pour chaque contreterme, <b>une information venue de l'extérieur de la théorie</b>. Cette information est une <b>mesure</b>.
 
