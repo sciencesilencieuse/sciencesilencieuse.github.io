@@ -169,7 +169,7 @@ $
 Ces trois dernières relations vont être **redémontrées** à partir de la seule géométrie du plan de phase. Nous établirons que l'équidistance des niveaux est un fait topologique, que $\\hat a$ et $\\hat a^\\dagger$ sont les objets qui le rendent lisible, et que $n$ est un nombre de tours.
 
 {{%notice type="note" title="Convention de notation" round="true"%}}
-Pour s'y repérer dans le va et vient entre classique et quantique, les **opérateurs** quantiques ($\\hat X$, $\\hat P$, $\\hat a$, $\\hat a^\\dagger$, $\\hat N$, $\\hat H$) seront systématiquement coiffés d'un chapeau et les **fonctions classiques sur le plan de phase** ($X$, $P$, et les combinaisons que nous en formerons) seront laissées nues. Ainsi $X$ est un nombre réel qui repère un point du plan, tandis que $\\hat X$ est l'opérateur qui lui correspond. Le chapeau marque donc exactement l'endroit où l'on quantifie.
+Pour s'y repérer dans le va-et-vient entre classique et quantique, les **opérateurs** quantiques ($\\hat X$, $\\hat P$, $\\hat a$, $\\hat a^\\dagger$, $\\hat N$, $\\hat H$) seront systématiquement coiffés d'un chapeau et les **fonctions classiques sur le plan de phase** ($X$, $P$, et les combinaisons que nous en formerons) seront laissées nues. Ainsi $X$ est un nombre réel qui repère un point du plan, tandis que $\\hat X$ est l'opérateur qui lui correspond. Le chapeau marque donc exactement l'endroit où l'on quantifie.
 {{%/notice%}}
 
 

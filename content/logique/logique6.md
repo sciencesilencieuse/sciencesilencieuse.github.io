@@ -77,7 +77,7 @@ En logique modale, un "<b>monde possible</b>" contient les propositions qui sont
 <div style="position:relative;width:800px;max-width:100%;margin-right:auto;margin-left:auto;border-radius:10px">
 <img src="/resumodal.png" style="border-radius:10px;">
 </div>
-L'un des objectifs fondamentaux des systèmes logiques est de fournir un cadre où les propositions peuvent être systématiquement et formellement prouvées ou réfutées. On cherche au final une recette pour mettre à jour les tautologies de la théorie, les vérités absolues, les formules validées dans tout modèle. Cette exigence conduit à une axiomatisation, l'établissement d'un ensemble de règles d'inférences et de principes de base pour forger une machine à produire du vrai.<br>
+L'un des objectifs fondamentaux des systèmes logiques est de fournir un cadre où les propositions peuvent être systématiquement et formellement prouvées ou réfutées. On cherche au final une recette pour mettre à jour les tautologies de la théorie, les vérités absolues, les formules validées dans tout modèle. Cette exigence conduit à une axiomatisation, l'établissement d'un ensemble de règles d'inférence et de principes de base pour forger une machine à produire du vrai.<br>
 Avec pour axiomes les tautologies du calcul des propositions auxquelles on ajoute l'axiome modal $\text{(K)}$ (qui distribue $\Box$ dans une implication), et les règles de nécessitation (si $\vdash\phi$, alors on a aussi $\vdash\Box\phi$), de substitution uniforme (une formule prouvable où toute occurrence d'une proposition est remplacée par une même formule quelconque est tout autant prouvable) et de <i>modus ponens</i> pour assurer la cohérence de la machinerie, on se retrouve avec la <b>logique modale normale</b> de base $\mathbf{K}$ qui permet de produire l'ensemble des formules universellement vraies. Toute formule obtenue dans $\mathbf{K}$ est vraie dans tout monde possible de toute structure de Kripke, et inversement. On dit alors qu'il y a <b>correction</b> et <b>complétude</b> entre le système formel et les modèles associés&nbsp;: $\vdash_\textbf{K}\phi$ ssi $\Vdash_\mathscr{C}\phi$ où $\vdash_\textbf{K}\phi$ dit que $\phi$ a été prouvée dans $\mathbf{K}$, et $\Vdash_\mathscr{C}\phi$ dit que $\phi$ est valide (vraie dans tout monde) pour tout modèle de la classe $\mathscr{C}$ qui désigne l'ensemble des systèmes de transition.<br>
 En ajoutant de nouveaux axiomes modaux au système formel, on ajoute par là même des contraintes aux modèles associés (les graphes gagnent de nouvelles propriétés). À chaque jeu d'axiomes va correspondre une certaine classe de systèmes de transition où la vérité pourra se déployer. En ajoutant l'axiome $\text{(B)}=P\rightarrow \Box\Diamond P$, par exemple, la validité des formules obtenues sera limitée aux graphes non orientés $\mathscr{C}_{sym.}$ puisque l'axiome $\text{(B)}$ ajoute la symétrie aux structures.
 
@@ -120,7 +120,7 @@ Parmi les autres axiomes qu'on a pu rencontrer, deux semblent plus adaptés à c
 </li>
 </ul>
 
-Le système logique normale adapté à la logique aléthique semble donc être $\textbf{KBT}$ et la classe de modèles adaptée est donc celle des systèmes de transition à la fois réflexifs et symétriques.
+Le système logique normal adapté à la logique aléthique semble donc être $\textbf{KBT}$ et la classe de modèles adaptée est donc celle des systèmes de transition à la fois réflexifs et symétriques.
 
 <div style="position:relative;width:600px;max-width:100%;margin-right:auto;margin-left:auto;border-radius:10px">
 <img src="/batnaval.png" style="border-radius:10px;">
@@ -129,13 +129,13 @@ Le système logique normale adapté à la logique aléthique semble donc être $
 Aristote est à l'origine de la logique aléthique et il en donne un exemple célèbre dans *De l'interprétation*&nbsp;:
 > Nécessairement il y aura demain une bataille navale ou il n'y en aura pas. Mais il n'est pas nécessaire qu'il y ait demain une bataille navale, pas plus qu'il n'est nécessaire qu'il n'y en ait pas. Mais qu'il y ait ou qu'il n'y ait pas demain une bataille navale, voilà qui est nécessaire.
 
-En appelant $P$ l'affirmation "il y aura une bataille navale demain", la première et troisième phrase se traduisent par la même formule, $\Box(P\lor\neg P)$, alors que la deuxième phrase se traduit par $\neg\Box P\land\neg\Box\neg P$.
+En appelant $P$ l'affirmation "il y aura une bataille navale demain", la première et la troisième phrase se traduisent par la même formule, $\Box(P\lor\neg P)$, alors que la deuxième phrase se traduit par $\neg\Box P\land\neg\Box\neg P$.
 
 Le modèle ci-dessous représente les deux mondes possibles (avec ou sans bataille navale). Les deux formules sont vérifiées en chacun des mondes.
 
 ![](/batnavale.png?width=400px)
 
-La logique modale "moderne" a elle aussi d'abord été aléthique lorsqu'elle née du désir de C.I. Lewis, en 1913, de renforcer l'implication matérielle $P\rightarrow Q$. Il a voulu lui substituer une implication stricte qui s'avérera finalement une implication matérielle renforcée du caractère de la nécessité. L'étude de l'implication stricte revenait donc à celle de la logique aléthique. La logique modale s'est ensuite développée de manière purement axiomatique jusqu'au début des années 60, quand S. Kripke introduit l'idée des mondes possibles pour créer une sémantique à la logique modale.
+La logique modale "moderne" a elle aussi d'abord été aléthique lorsqu'elle est née du désir de C.I. Lewis, en 1913, de renforcer l'implication matérielle $P\rightarrow Q$. Il a voulu lui substituer une implication stricte qui s'avérera finalement une implication matérielle renforcée du caractère de la nécessité. L'étude de l'implication stricte revenait donc à celle de la logique aléthique. La logique modale s'est ensuite développée de manière purement axiomatique jusqu'au début des années 60, quand S. Kripke introduit l'idée des mondes possibles pour créer une sémantique à la logique modale.
 
 Mais revenons à l'implication. La formule $(P\rightarrow Q)\lor(Q\rightarrow P)$ est une tautologie du calcul des propositions. Pour deux propositions quelconques, il y en a donc toujours une qui implique l'autre, ce qui paraît absurde puisque les propositions peuvent être totalement indépendantes&nbsp;!<br>
 Avec l'implication stricte (implication ordinaire renforcée de la nécessité), le paradoxe disparaît car $\Box(P\rightarrow Q)\lor\Box(Q\rightarrow P)$ n'est pas valide. En effet, aucun des mondes du modèle ci-dessous ne satisfait la formule.
@@ -169,12 +169,12 @@ Cette logique porte sur l'**obligation** ou la **permission**.
 
 <ul>
 <li>$\Box P\rightarrow P$&nbsp;: si $P$ est obligatoire, alors $P$ est vraie. Ça n'a ici pas de sens puisque c'est le caractère propre de l'obligation que de pouvoir être transgressée&nbsp;! Il ne s'agirait pas sinon d'une obligation mais bien d'une nécessité.
-<li>$P\rightarrow \Box\Diamond P$&nbsp;: si $P$ est vraie, alors $P$ doit être permise. C'est à nouveau dénué de sens puisque des choses non permises arrivent. Considérer la propositions vraies revient d'ailleurs à tomber dans le sophisme naturaliste qui stipule que tout ce qui est naturel est bon ("il n'y a pas de vêtements dans la nature, donc il ne faut pas autoriser les vêtements").
+<li>$P\rightarrow \Box\Diamond P$&nbsp;: si $P$ est vraie, alors $P$ doit être permise. C'est à nouveau dénué de sens puisque des choses non permises arrivent. Considérer cette proposition comme vraie revient d'ailleurs à tomber dans le sophisme naturaliste qui stipule que tout ce qui est naturel est bon ("il n'y a pas de vêtements dans la nature, donc il ne faut pas autoriser les vêtements").
 </ul>
 
-Mais quelle formule s'adapte à la logique déontique&nbsp;? L'axiome $\text{(D)}=\Box P\rightarrow\Diamond P$ affirmant que "si quelque chose est obligatoire, alors elle est permise", convient naturellement. En triturant un peu la formule, on obtient $\Box P\rightarrow\Diamond P\equiv\neg\Box P\lor\Diamond P\equiv\Diamond\neg P\lor\Diamond P$ "soit c'est permis de faire une chose, soit c'est permis de ne pas la faire". Ou encore&nbsp;: $\Diamond\neg P\lor\Diamond P\equiv \neg\Box P\lor\neg\Box\neg P\equiv\neg (\Box P\land\Box\neg P)$ "ne peuvent être obligatoire à la fois une chose et son contraire". Tout cela semble plutôt évident.
+Mais quelle formule s'adapte à la logique déontique&nbsp;? L'axiome $\text{(D)}=\Box P\rightarrow\Diamond P$ affirmant que "si quelque chose est obligatoire, alors c'est permis", convient naturellement. En triturant un peu la formule, on obtient $\Box P\rightarrow\Diamond P\equiv\neg\Box P\lor\Diamond P\equiv\Diamond\neg P\lor\Diamond P$ "soit c'est permis de faire une chose, soit c'est permis de ne pas la faire". Ou encore&nbsp;: $\Diamond\neg P\lor\Diamond P\equiv \neg\Box P\lor\neg\Box\neg P\equiv\neg (\Box P\land\Box\neg P)$ "ne peuvent être obligatoires à la fois une chose et son contraire". Tout cela semble plutôt évident.
 
-Le système formel correspondant est donc $\textbf{KD}$ et la classe de systèmes de transition associée est $\mathscr{C}_{n.b.d.}$. La raison de cette topologie ouverte, avec des mondes qui ont tous un échappatoire est qu'une impasse est par construction un monde ou rien n'est permis&nbsp;!
+Le système formel correspondant est donc $\textbf{KD}$ et la classe de systèmes de transition associée est $\mathscr{C}_{n.b.d.}$. La raison de cette topologie ouverte, avec des mondes qui ont tous une échappatoire est qu'une impasse est par construction un monde où rien n'est permis&nbsp;!
 
 <div style="position:relative;width:500px;max-width:100%;margin-right:auto;margin-left:auto;border-radius:10px">
 <img src="/lettreross.png" style="border-radius:10px;width:100%;">
@@ -213,7 +213,7 @@ Donc si aider Bob lors d'un vol est obligatoire, il devient alors tout aussi obl
 
 Une façon de se sortir de ces pièges est de maintenir une séparation stricte entre les descriptions des faits et les prescriptions déontiques. Cela évite d'inférer des faits (comme l'existence d'une victime) à partir des obligations morales ou légales.<br>
 
-Mais plus fondamentalement, en habillant modalement les deux tautologies ($P\rightarrow(P\lor Q)$ et $(A\land B\rightarrow B$) qui ont servi d'axiome dans les démonstrations, on permet de les interpréter sous un jour plus concret révélant leur bizarrerie. Le ver était dans le fruit dès l'utilisation de l'implication matérielle classique (celle que Lewis cherchait justement à dompter avec la modalité).
+Mais plus fondamentalement, en habillant modalement les deux tautologies ($P\rightarrow(P\lor Q)$ et $(A\land B)\rightarrow B$) qui ont servi d'axiome dans les démonstrations, on permet de les interpréter sous un jour plus concret révélant leur bizarrerie. Le ver était dans le fruit dès l'utilisation de l'implication matérielle classique (celle que Lewis cherchait justement à dompter avec la modalité).
 
 Pourquoi ces paradoxes sont-ils attachés à la logique déontique alors qu'on peut très bien obtenir les mêmes formules dans les autres logiques modales (puisqu'aucun axiome n'est nécessaire)&nbsp;?<br>
 La logique déontique vise à proposer un guide éthique, des normes à suivre, là où la logique aléthique, par exemple, n'énonce qu'un état de fait. Devant l'affirmation que la nécessité du postage d'une lettre rend nécessaire son postage ou sa destruction par le feu, on a moins envie de monter au rideau (même si ça reste un peu bizarre). Une chose nécessaire s'impose physiquement et non moralement, il n'y a pas le choix, et l'application brute de la logique "mathématique" fait donc plus sens. En tant que prescripteur de comportement, la logique déontique a besoin d'une plus grande incarnation et de plus d'attention sur l'interprétation.
@@ -223,7 +223,7 @@ La logique déontique vise à proposer un guide éthique, des normes à suivre, 
 </div>
 
 Le **dilemme du libre choix** (aussi dû à Ross) est une autre curiosité qui voit une hypothèse d'allure bénigne se transformer en boîte de Pandore.<br>
-"Tu peux soit dormir sur le sofa soit dans la chambre d'amis" semble impliquer que "tu peux dormir sur le sofa et tu peux dormir dans la chambre d'amis". On imagine ainsi que l'implication $\Diamond(A\lor B)\rightarrow(\Diamond A\land\Diamond B)$ est prouvable dans le système. Mais ce n'est pas le cas (voir ci-dessous). Qu'à cela ne tienne&nbsp;! Ajoutons-là aux hypothèses. Cela serait dommage de se passer d'une implication si naturelle... Mais là, patatras, tout devient possible&nbsp;! Imaginons en effet qu'il existe une quelconque possibilité $\Diamond A$, alors $\Diamond (A\lor B)$ aussi est vraie, et ce quel que soit $B$ (s'il ya un monde accessible où $A$ est vraie, alors dans ce même monde, $A\lor B$ est vraie) et grâce à notre pernicieux nouvel axiome, on déduit la vérité de $\Diamond A\land\Diamond B$ qui se réduit à celle de $\Diamond B$ (puisque par hypothèse $\Diamond A$ est vraie). On a finalement $\Diamond A\rightarrow \Diamond B$ pour tout $B$. La possibilité de $A$ rend tout possible grâce à cet axiome diabolique.
+"Tu peux soit dormir sur le sofa soit dans la chambre d'amis" semble impliquer que "tu peux dormir sur le sofa et tu peux dormir dans la chambre d'amis". On imagine ainsi que l'implication $\Diamond(A\lor B)\rightarrow(\Diamond A\land\Diamond B)$ est prouvable dans le système. Mais ce n'est pas le cas (voir ci-dessous). Qu'à cela ne tienne&nbsp;! Ajoutons-la aux hypothèses. Cela serait dommage de se passer d'une implication si naturelle... Mais là, patatras, tout devient possible&nbsp;! Imaginons en effet qu'il existe une quelconque possibilité $\Diamond A$, alors $\Diamond (A\lor B)$ aussi est vraie, et ce quel que soit $B$ (s'il y a un monde accessible où $A$ est vraie, alors dans ce même monde, $A\lor B$ est vraie) et grâce à notre pernicieux nouvel axiome, on déduit la vérité de $\Diamond A\land\Diamond B$ qui se réduit à celle de $\Diamond B$ (puisque par hypothèse $\Diamond A$ est vraie). On a finalement $\Diamond A\rightarrow \Diamond B$ pour tout $B$. La possibilité de $A$ rend tout possible grâce à cet axiome diabolique.
 
 
 <div id="preuve">
@@ -236,11 +236,11 @@ On prouve que $\Diamond(A\lor B)\rightarrow(\Diamond A\land\Diamond B)$ n'est pa
 
 <br>
 
-Un dernier pour la route&nbsp;: le **dilemme de Sartre** (dû à Lemmon). Il décrit l'impossibilité de représenter un conflit d'obligations en logique déontique standard (à cause de l'axiome $\text{(D)}$). La situation dans laquelle se retrouve Jephté dans la Bible en est une illustration parfaite. Jephté promet à Dieu de sacrifier le premier être vivant qu'il croise s'il gagne la guerre. Il gagne la guerre et croise sa fille (c'est ballot). On a bien conflit d'obligations puisque l'obligation de ne pas tuer sa fille doit bien figurer quelque part aussi... On a donc une situation où il est obligatoire de faire une chose $\Box A$ et aussi obligatoire de ne pas la faire $\Box \neg A$. Or $\Box A\rightarrow \Diamond A$ d'après $\text{(D)}$ et par dualité, on obtient $\Box A\rightarrow \neg \Box\neg A$. La situation de départ (la satisfaction de $\Box A$ et $\neg\Box A$), bien qu'envisageable, aboutit à une inconsistance interdisant donc même son existence dans le système formel $\textbf{KD}$ (qui commet sûrement là un pécher). 
+Un dernier pour la route&nbsp;: le **dilemme de Sartre** (dû à Lemmon). Il décrit l'impossibilité de représenter un conflit d'obligations en logique déontique standard (à cause de l'axiome $\text{(D)}$). La situation dans laquelle se retrouve Jephté dans la Bible en est une illustration parfaite. Jephté promet à Dieu de sacrifier le premier être vivant qu'il croise s'il gagne la guerre. Il gagne la guerre et croise sa fille (c'est ballot). On a bien conflit d'obligations puisque l'obligation de ne pas tuer sa fille doit bien figurer quelque part aussi... On a donc une situation où il est obligatoire de faire une chose $\Box A$ et aussi obligatoire de ne pas la faire $\Box \neg A$. Or $\Box A\rightarrow \Diamond A$ d'après $\text{(D)}$ et par dualité, on obtient $\Box A\rightarrow \neg \Box\neg A$. La situation de départ (la satisfaction de $\Box A$ et $\Box\neg A$), bien qu'envisageable, aboutit à une inconsistance interdisant donc même son existence dans le système formel $\textbf{KD}$ (qui commet sûrement là un péché). 
 
 <br><br>
 
-Malgré ses "petits" défauts, la logique déontique connait différentes applications en informatique. En autorisant l'expression de raisonnements normatifs, elle permet de spécifier la marche à suivre en cas de comportement anormal. De manière plus général, elle propose un cadre pour gérer les autorisations et politiques d'accès, et on la retrouve dans le secteur de l'automatisation juridique ou encore celui des contraintes sur les bases de données.
+Malgré ses "petits" défauts, la logique déontique connait différentes applications en informatique. En autorisant l'expression de raisonnements normatifs, elle permet de spécifier la marche à suivre en cas de comportement anormal. De manière plus générale, elle propose un cadre pour gérer les autorisations et politiques d'accès, et on la retrouve dans le secteur de l'automatisation juridique ou encore celui des contraintes sur les bases de données.
 
 <br><br>
 
@@ -264,7 +264,7 @@ C'est elle qui est au cœur de notre histoire introductive de dragons ou de cett
 
 <br>
 
-La règle de nécessitation associée à l'axiome $\text{(K)}$ (valables dans tout nœud de tout système d'une logique normale) impliquent l'**omniscience logique** de l'agent $i$. En effet, par nécessitation $A\rightarrow B$ devient $\[i](A\rightarrow B)$ et $\text{(K)}=\[i](A\rightarrow B)\rightarrow([i]A\rightarrow [i]B)$. Par conséquent, l'agent connait toutes les conséquences logique ($[i]B$) de ce qu'il sait ($[i]A$).
+La règle de nécessitation et l'axiome $\text{(K)}$ (valables dans tout nœud de tout système d'une logique normale) impliquent l'**omniscience logique** de l'agent $i$. En effet, par nécessitation $A\rightarrow B$ devient $\[i](A\rightarrow B)$ et $\text{(K)}=\[i](A\rightarrow B)\rightarrow([i]A\rightarrow [i]B)$. Par conséquent, l'agent connait toutes les conséquences logiques ($[i]B$) de ce qu'il sait ($[i]A$).
 
 <div style="position:relative;width:500px;max-width:100%;margin-right:auto;margin-left:auto;border-radius:10px">
 <img src="/epistocerveau.png" style="border-radius:10px;">
@@ -279,9 +279,9 @@ Les axiomes doivent être vérifiés dans tous les mondes possibles. Ainsi $\tex
 
 L'agent de la logique $\textbf{S5}$ est une sorte d'agent idéal pour lequel l'accès à la connaissance est maximal (sans qu'il ne sache tout pour autant). Il n'est tellement pas humain qu'il ne peut pas croire 
 
-On place parfois l'agent dans une logique inférieure, $\textbf{S4}$, qui perd la symétrie (et donc l'indistinguabilité&nbsp;!). L'introspection négative disparaît alors et est remplacée par l'**introspection positive** $\text{(4)}:[i]P\rightarrow [i][i] P$ où si l'agent sait quelque chose, alors il sait qu'il sait. Mine de rien, ça lui limite pas mal l'accès à la connaissance par rapport à l'autre introspection. L'agent reste idéal en ce qu'il conserve une omniscience logique totale, mais il peut vivre dans un monde ou il peut croire possible qu'il sait quelque chose qu'il ne sait pas (la honte).
+On place parfois l'agent dans une logique inférieure, $\textbf{S4}$, qui perd la symétrie (et donc l'indistinguabilité&nbsp;!). L'introspection négative disparaît alors et est remplacée par l'**introspection positive** $\text{(4)}:[i]P\rightarrow [i][i] P$ où si l'agent sait quelque chose, alors il sait qu'il sait. Mine de rien, ça lui limite pas mal l'accès à la connaissance par rapport à l'autre introspection. L'agent reste idéal en ce qu'il conserve une omniscience logique totale, mais il peut vivre dans un monde où il peut croire possible qu'il sait quelque chose qu'il ne sait pas (la honte).
 
-Dans $\textbf{S4}$, l'accessibilité n'est plus nécessairement réciproque entre les mondes. Cela introduit une hiérarchie, un ordre où certains mondes peuvent être considérés comme des extensions ou des raffinements d'autres, des mondes "plus informés". C'est pertinent pour modéliser la communication dans des réseau où l'information n'est pas toujours réciproquement échangée (dès que les canaux sont asymétriques comme c'est le cas dans la plupart des structures hiérarchiques).<br>
+Dans $\textbf{S4}$, l'accessibilité n'est plus nécessairement réciproque entre les mondes. Cela introduit une hiérarchie, un ordre où certains mondes peuvent être considérés comme des extensions ou des raffinements d'autres, des mondes "plus informés". C'est pertinent pour modéliser la communication dans des réseaux où l'information n'est pas toujours réciproquement échangée (dès que les canaux sont asymétriques comme c'est le cas dans la plupart des structures hiérarchiques).<br>
 Couplé à une logique temporelle, cela permet de modéliser un apprentissage progressif où l'acquisition d'information se fait de manière séquentielle ou cumulative. En robotique ou en intelligence artificielle, cela permet dans la même veine de modéliser des processus de planification où chaque décision ou action mène à un nouvel état du monde qui intègre toutes les connaissances et conséquences des actions précédentes.
 
 <br><br>
@@ -292,7 +292,7 @@ Il y a beaucoup de logiques temporelles qui multiplient généralement les opér
 
 ![](/carretempo.png?width=800px)
 
-La logique temporale peut aussi bien s'intéresser au passé qu'au futur.
+La logique temporelle peut aussi bien s'intéresser au passé qu'au futur.
 
 Le temps dont il est question ici est discret, chaque monde possible correspondant à un instant $t$. 
 
@@ -308,12 +308,12 @@ Pas de raison particulière pour que la relation d'accessibilité entre ces mond
 - $\Box\neg(\texttt{started}\land\neg\texttt{ready})$&nbsp;:  il est impossible d'atteindre un état où $\texttt{started}$ est activé, mais pas $\texttt{ready}$,
 - $\Box(\texttt{request}\rightarrow\Diamond\texttt{acknowledged})$&nbsp;: pour tout état, si une demande (de quelque ressource que ce soit) est effectuée, alors elle sera finalement reconnue,
 
-Le temps des logique temporelles peut prendre une forme linéaire ou arborescente.<br>
+Le temps des logiques temporelles peut prendre une forme linéaire ou arborescente.<br>
 Dans la logique temporelle linéaire (LTL), les instants s'enchaînent en un collier de perles infini. C'est idéal pour explorer un système déterministe ou une seule branche d'exécution et vérifier efficacement que toutes les spécifications sont satisfaites.
 
 ![](/tpslin.png?width=800px)
 
-Dans une logique temporelle arborescente (CTL), le champ des possibles s'ouvrent. Elle permet de modéliser des systèmes non déterministes ou des choix amenant sur des branches différentes peuvent être faits.
+Dans une logique temporelle arborescente (CTL), le champ des possibles s'ouvre. Elle permet de modéliser des systèmes non déterministes où des choix amenant sur des branches différentes peuvent être faits.
 
 ![](/tpsarb.png?width=500px)
 
@@ -333,7 +333,7 @@ On peut même coder sans problème un arbre de preuve complet (tout ce qu'on peu
 <img src="/godprouve.png" style="border-radius:10px;">
 </div>
 
-Le **premier théorème d'incomplétude de Gödel** s'appuie sur une formule affirmant sa propre non prouvabilité $\neg\Box\phi\leftrightarrow \phi$. Si on peut démontrer la formule $\neg\Box\phi\leftrightarrow \phi$ dans un système donné, alors on prouve qu'il existe une formule non démontrable et pourtant vraie, ce qui impose l'incomplétude du système.
+Le **premier théorème d'incomplétude de Gödel** s'appuie sur une formule affirmant sa propre non-prouvabilité $\neg\Box\phi\leftrightarrow \phi$. Si on peut démontrer la formule $\neg\Box\phi\leftrightarrow \phi$ dans un système donné, alors on prouve qu'il existe une formule non démontrable et pourtant vraie, ce qui impose l'incomplétude du système.
 
 <div id="theo">
 
@@ -370,7 +370,7 @@ La formule autoréférente de Gödel est proche du fameux paradoxe du menteur "c
 <div id="theo">
 
 <b>Premier théorème d'incomplétude</b>&nbsp;:<br>
-Dans un système formel consistant (= cohérent = système dans lequel on ne peut pas prouver le faux) suffisamment expressif pour décrire l'arithmétique, on ne peut pas prouver toutes les formules vraies (comme la formule qui affirme sa non prouvabilité). La prouvabilité est plus faible que la vérité.
+Dans un système formel consistant (= cohérent = système dans lequel on ne peut pas prouver le faux) suffisamment expressif pour décrire l'arithmétique, on ne peut pas prouver toutes les formules vraies (comme la formule qui affirme sa non-prouvabilité). La prouvabilité est plus faible que la vérité.
 </div>
 
 Montrons dans la logique $\textbf{K4}$ que $\vdash\phi\leftrightarrow\neg\Box\phi$ permet d'arriver à $\vdash\neg\Box\bot\rightarrow\neg\Box\phi$&nbsp;; la formule n'est pas prouvable si aucune contradiction n'est prouvable. On obtient donc bien l'essence du premier théorème d'incomplétude.
@@ -390,7 +390,7 @@ Montrons dans la logique $\textbf{K4}$ que $\vdash\phi\leftrightarrow\neg\Box\ph
 </ol>
 </div>
 
-Le théorème de Löb utilise un autre formule autoréférente, $\Box(\Box\phi\rightarrow\phi)\rightarrow\Box\phi$, s'apparentant plutôt, dans son cas, au paradoxe d'un diseur de vérité "ce que je dis là est vrai" (aucune valeur de vérité ne semble applicable puisqu'un menteur dirait la même chose).<br>
+Le théorème de Löb utilise une autre formule autoréférente, $\Box(\Box\phi\rightarrow\phi)\rightarrow\Box\phi$, s'apparentant plutôt, dans son cas, au paradoxe d'un diseur de vérité "ce que je dis là est vrai" (aucune valeur de vérité ne semble applicable puisqu'un menteur dirait la même chose).<br>
 Et la surprise est que de tels points fixes sont prouvables et par conséquent vrais.
 
 <div id="theo">
@@ -421,7 +421,7 @@ $\vdash\sigma\leftrightarrow (\Box\sigma\rightarrow\phi)$ ("ma propre prouvabili
 <li>$\vdash \Box\sigma\rightarrow\phi$ (car $\vdash \Box\sigma\rightarrow\Box\phi\rightarrow\phi$ puisqu'on suppose $\vdash \Box\phi\rightarrow\phi$)</li>
 <li>$\vdash (\Box\sigma\rightarrow\phi)\rightarrow\sigma$ (sens réciproque de la formule autoréférente)</li>
 <li>$\vdash\sigma$ par <i>modus ponens</i> de 4. et 5.
-<li>$\vdash\Box\sigma$ par nécessitation.</i>
+<li>$\vdash\Box\sigma$ par nécessitation.</li>
 <li>$\vdash \phi$  par <i>modus ponens</i> de 4. et 7.</li>
 
 </ol>
@@ -524,7 +524,7 @@ Si $ \vdash_\textbf{GL} \phi$, alors $\models_{\mathscr{C}_{\text{arbres finis}}
 
 <div id="preuve">
 
-Comme $\text{(L)}$ est le seule axiome ajouté à $\textbf{K}$, il faut montrer que l'ensemble des systèmes de transition qui valide l'axiome de Löb est restreint aux seuls arbres <b>finis</b> (l'axiome $\text{(K)}$ est valide dans $\mathscr{C}$ et les règles de la logique modale normale conserve la validation).
+Comme $\text{(L)}$ est le seul axiome ajouté à $\textbf{K}$, il faut montrer que l'ensemble des systèmes de transition qui valide l'axiome de Löb est restreint aux seuls arbres <b>finis</b> (l'axiome $\text{(K)}$ est valide dans $\mathscr{C}$ et les règles de la logique modale normale conservent la validation).
 
 Supposons que l'axiome ne soit pas satisfait en un nœud $a$ d'un arbre fini $\mathcal{T}=(N,A)$. On a donc $\langle \mathcal{T},a\rangle \not\models \Box(\Box P\rightarrow P)\rightarrow \Box P$.<br>
 Cela implique&nbsp;: 
@@ -532,7 +532,7 @@ Cela implique&nbsp;:
 <li>$\langle \mathcal{T},a\rangle \models \Box(\Box P\rightarrow P)$, et</li> 
 <li> $\langle \mathcal{T},a\rangle \not\models  \Box P$.</li>
 </ol>
-La deuxième affirmation entraîne qu'il existe un nœud $a'\in N$ tel que $a\longrightarrow a'$ et $\langle \mathcal{T},a\rangle \not\models  P$<br>
+La deuxième affirmation entraîne qu'il existe un nœud $a'\in N$ tel que $a\longrightarrow a'$ et $\langle \mathcal{T},a'\rangle \not\models  P$<br>
 Par contre, la première affirmation nous assure que $\langle \mathcal{T},a'\rangle \models \Box P\rightarrow P$.<br>
 Par conséquent $\langle \mathcal{T},a'\rangle \not\models \Box P$. Cela signifie qu'il existe un nœud $a''\in N$, successeur de $a'$ ($a'\longrightarrow a''$) tel que  $\langle \mathcal{T},a''\rangle \not\models P$.<br>
 Par transitivité, $a \longrightarrow a''$. Or si on retourne à l'affirmation $1.$, on a aussi $\langle \mathcal{T},a''\rangle \models \Box P\rightarrow P$, ce qui va conduire de fil en aiguille à une séquence infinie de successeurs de $a$, contredisant ainsi que $\mathcal{T}$ soit fini.<br>
