@@ -252,20 +252,20 @@ td, th {
 <div class="theme-subgroup">
 <span class="theme-title">Lois & Modèles</span>
 <div class="link-list">
-  <a href="./proba/#loi-binomiale" class="math-btn">Binomiale</a>
-  <a href="./proba/#loi-normale" class="math-btn">Normale</a>
-  <a href="./proba/#densité-de-probabilités" class="math-btn">Densité</a>
-  <a href="./proba/#probabilités-conditionnelles-et-bayes" class="math-btn">Bayes</a>
-  <a href="./proba/#chaînes-de-markov" class="math-btn">Markov</a>
+  <a href="./proba/lois/#loi-binomiale" class="math-btn">Binomiale</a>
+  <a href="./proba/lois/#loi-normale" class="math-btn">Normale</a>
+  <a href="./proba/lois/#densité-de-probabilités" class="math-btn">Densité</a>
+  <a href="./proba/lois/#probabilités-conditionnelles-et-bayes" class="math-btn">Bayes</a>
+  <a href="./proba/lois/#chaînes-de-markov" class="math-btn">Markov</a>
 </div>
 </div>
 <div class="theme-subgroup">
 <span class="theme-title">Curiosités</span>
 <div class="link-list">
-  <a href="./proba/#spaghetti-et-inégalité-triangulaire" class="math-btn">Spaghetti</a>
-  <a href="./proba/#anniversaires-simultanés" class="math-btn">Anniversaires</a>
-  <a href="./proba/#paradoxe-des-deux-enfants" class="math-btn">2 Enfants</a>
-  <a href="./proba/#paradoxe-de-cover" class="math-btn">Cover</a>
+  <a href="./proba/curiosites/#spaghetti-et-inégalité-triangulaire" class="math-btn">Spaghetti</a>
+  <a href="./proba/curiosites/#anniversaires-simultanés" class="math-btn">Anniversaires</a>
+  <a href="./proba/curiosites/#paradoxe-des-deux-enfants" class="math-btn">2 Enfants</a>
+  <a href="./proba/curiosites/#paradoxe-de-cover" class="math-btn">Cover</a>
 </div>
 </div>
 </div>

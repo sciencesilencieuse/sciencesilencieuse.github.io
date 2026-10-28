@@ -22,6 +22,7 @@ ton-site-hugo/
 ├── static/
 │   ├── trinket/
 │   │   ├── player.html                       ← le moteur d'exécution
+│   │   ├── pyhost.js                         ← Python (Pyodide) partagé par les fenêtres d'une page
 │   │   ├── skulpt_libraries/                  ← (recommandé) Skulpt en local (voir §2)
 │   │   └── glowscript_libraries/             ← À AJOUTER pour VPython (voir §3)
 │   └── programmes/                           ← tes "gros" programmes .py
@@ -184,6 +185,14 @@ l'onglet Code, elle reprend sa hauteur d'origine (ou celle du code avec
 `height="auto"`). VPython garde son ajustement à la scène ; en présentation
 reveal.js, l'ajustement est désactivé (une diapositive a une taille fixe).
 
+**Largeur adaptée au graphe** (`python` et `pyodide`) : quand la sortie
+contient un graphe (figure matplotlib, dessin turtle), la fenêtre se
+resserre à la largeur utile — la plus grande entre le graphe, la plus longue
+ligne de texte (un tableau pandas n'est pas coupé) et la barre d'outils — et
+se centre dans la page. Elle ne dépasse jamais la place disponible ni
+`width` s'il est déclaré (un graphe plus large est alors réduit). Sans
+graphe, et de retour sur l'onglet Code, elle reprend sa largeur d'origine.
+
 Un bouton ■ (Arrêter) apparaît pendant l'exécution. Il stoppe le programme
 (utile pour les boucles d'animation VPython) en réinitialisant la fenêtre tout
 en conservant le code en cours d'édition.
@@ -242,6 +251,22 @@ depuis le CDN jsDelivr, en **version épinglée** (`LIBS.pyodide` en haut de
   marquée d'un point rouge (comme en `python`).
 - **Fichiers** : les fichiers texte écrits apparaissent dans « Fichiers générés ».
 - **Variables** : chaque exécution repart de zéro.
+
+**Une seule installation par page.** Toutes les fenêtres `pyodide` d'une
+même page partagent **une seule instance** de Python : la première qui en a
+besoin la démarre (avec ses bibliothèques), les suivantes la réutilisent
+aussitôt — numpy, matplotlib ou seaborn ne sont installés qu'une fois.
+L'instance est hébergée par la page elle-même (via `pyhost.js`, à déployer
+avec `player.html`), pas par une fenêtre : recharger une fenêtre (bouton ■)
+ne la perd pas. Chaque exécution garde ses propres variables et ses propres
+fichiers. Les exécutions passent **une à la fois** : une fenêtre lancée
+pendant qu'une autre tourne affiche « En attente… » quelques instants. Si la
+page n'est pas accessible (fenêtre ouverte seule, autre domaine), chaque
+fenêtre retombe sur sa propre instance.
+
+Skulpt (`python`) et GlowScript (`vpython`) restent propres à chaque
+fenêtre : ils sont légers (et mis en cache par le navigateur), et VPython a
+besoin d'un état neuf à chaque exécution.
 
 Ce qu'il faut savoir :
 

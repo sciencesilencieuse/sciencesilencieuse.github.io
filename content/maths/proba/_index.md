@@ -53,7 +53,7 @@ Les **probabilités** sont des calculs a priori, visant à prédire les issues d
   </tr>
      <th style="text-align:center;"><a href="./curiosites/" style="color:#FF644E;">Curiosités et énigmes</a><br>
 <ul style="font-size:1em;color:#FF644E;text-align:left;font-weight:normal;display:inline-block;">
-    <li><a href="./lois/#anniversaires-simultanés" style="color:#FF644E;">Anniversaires simultanés</a></li>
+    <li><a href="./curiosites/#anniversaires-simultanés" style="color:#FF644E;">Anniversaires simultanés</a></li>
     <li><a href="./curiosites/#spaghetti-et-inégalité-triangulaire" style="color:#FF644E;">Spaghetti et inégalité triangulaire</a></li>
     <li><a href="./curiosites/#paradoxe-des-deux-enfants" style="color:#FF644E;">Paradoxe des deux enfants</a></li>
     <li><a href="./curiosites/#paradoxe-de-cover" style="color:#FF644E;">Paradox de Cover</a></li>
