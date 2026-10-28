@@ -213,7 +213,7 @@ Dans le pas 2, écrire les indices transforme des matrices, qui ne commutent pas
 
 ## Rutherford&nbsp;: la découverte du noyau
 
-Un électron diffuse sur un noyau de charge $Z|e|$, si lourd qu'il ne recule pas. C'est la célèbre expérience de Rutherford (article de 1911) faite en bombardant des particules alpha sur une feuille d'or.
+Un électron diffuse sur un noyau de charge $Z|e|$, si lourd qu'il ne recule pas. C'est la célèbre expérience de Rutherford (article de 1911), réalisée en bombardant une feuille d'or de particules alpha.
 
 ### Le noyau comme potentiel classique
 
@@ -249,7 +249,7 @@ $\displaystyle
 $
 </p>
 
-où $\alpha=\frac{e^2}{4\pi}$ est la constante de structure fine
+où $\alpha=\frac{e^2}{4\pi}$ est la constante de structure fine.
 
 </div>
 
@@ -575,7 +575,7 @@ $
 Conclusion<br>
 Le quadrivecteur définissant $s$ est purement temporel, garantissant une valeur strictement positive. Celui définissant $t$ est purement spatial en diffusion élastique, ce qui garantit $t \leq 0$ sur tout le domaine physique (puisque $1 - \cos\theta \geq 0$).
 
-L'approche générale montre en revanche que $u$ n'est pas obligatoirement négatif&nbsp;! Il est majoré par $(E_1 - E_2)^2$, lui- même majoré par $(m_1 - m_2)^2$. L'affirmation selon laquelle $u \leq 0$ n'est absolument vraie que si les masses incidentes sont égales, ou si l'on se place dans la limite ultra-relativiste ($p \gg m$, rendant la différence de masse négligeable devant l'impulsion).
+L'approche générale montre en revanche que $u$ n'est pas obligatoirement négatif&nbsp;! Il est majoré par $(E_1 - E_2)^2$, lui-même majoré par $(m_1 - m_2)^2$. L'affirmation selon laquelle $u \leq 0$ n'est absolument vraie que si les masses incidentes sont égales, ou si l'on se place dans la limite ultra-relativiste ($p \gg m$, rendant la différence de masse négligeable devant l'impulsion).
 </div>
 
 <br>
@@ -622,7 +622,7 @@ $\displaystyle
 $
 </p>
 
-Cette quantité est bien positive, puisque on a $u < 0$ dans ce domaine.
+Cette quantité est bien positive, puisqu'on a $u < 0$ dans ce domaine.
 
 </div>
 
@@ -633,7 +633,7 @@ Pour la démonstration, on va faire tourner l'algorithme des cinq pas, sans racc
 <details>
 <summary>Le canal $s$, déroulé en entier</summary>
 
-Dans la limite où on néglige la masse de l'électron devant sont énergie (limite ultrarelativiste), toutes les pattes sont sur le cône&nbsp;: $p_i^2 = 0$ pour $i = 1, \ldots, 4$. Le dénominateur du propagateur vaut alors $(p_1+p_2)^2 = s$, et l'amplitude se réduit à
+Dans la limite où on néglige la masse de l'électron devant son énergie (limite ultra-relativiste), toutes les pattes sont sur le cône&nbsp;: $p_i^2 = 0$ pour $i = 1, \ldots, 4$. Le dénominateur du propagateur vaut alors $(p_1+p_2)^2 = s$, et l'amplitude se réduit à
 
 <p style="text-align:center;">
 $\displaystyle
