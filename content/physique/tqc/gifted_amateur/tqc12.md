@@ -333,7 +333,7 @@ $\displaystyle \chi = \int \mathrm d^dr\;G(r)$
 
 L'énoncé est intuitif&nbsp;: plus les spins sont corrélés sur de grandes distances, plus le matériau répond en bloc à un champ appliqué. (C'est le théorème de fluctuation-dissipation, sous sa forme la plus simple.)
 
-Rappelons que par définition de $\eta$, la corrélation suit la loi de puissanec $G(r) \sim r^{-(d-2+\eta)}$. Cette même loi vaut encore <i>au voisinage</i> de $T_c$ et non seulement dessus, tant qu'on regarde à des distances $r \ll \xi$&nbsp;; au-delà de $\xi$, la corrélation meurt exponentiellement et ne contribue plus. Autrement dit, on suppose la forme d'échelle
+Rappelons que par définition de $\eta$, la corrélation suit la loi de puissance $G(r) \sim r^{-(d-2+\eta)}$. Cette même loi vaut encore <i>au voisinage</i> de $T_c$ et non seulement dessus, tant qu'on regarde à des distances $r \ll \xi$&nbsp;; au-delà de $\xi$, la corrélation meurt exponentiellement et ne contribue plus. Autrement dit, on suppose la forme d'échelle
 
 <p style="text-align:center;">
 $\displaystyle G(r) = \frac{1}{r^{\,d-2+\eta}}\;g\!\left(\frac{r}{\xi}\right)$

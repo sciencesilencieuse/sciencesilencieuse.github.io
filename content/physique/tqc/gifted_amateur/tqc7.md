@@ -385,7 +385,7 @@ La <b>contraction</b> de deux champs est l'écart entre ordre chronologique et o
 
 <div id="theo">
 
-La contraction de deux champs est un simple <b>nombre</b> (un multiple de l'identité), pas un opérateur (ce que Dirac appellait un «&nbsp;<i>c</i>-nombre&nbsp;»). Et ce nombre est le propagateur de Feynman&nbsp;:
+La contraction de deux champs est un simple <b>nombre</b> (un multiple de l'identité), pas un opérateur (ce que Dirac appelait un «&nbsp;<i>c</i>-nombre&nbsp;»). Et ce nombre est le propagateur de Feynman&nbsp;:
 
 <div style="text-align:center;margin:-1em 0;">
 <img src="/wick-theo-contraction.svg" style="box-shadow:none;background:none;height:2.5em;">

@@ -103,7 +103,7 @@ Cette logique doit contenir toutes les formules qui sont des tautologies du calc
 <br>
 <li>De plus, si $\phi$ appartient à la logique, la satisfaction de $\phi$ en un nœud $a$ donné est indépendante de la valuation $\mathcal{V}$ (que $P$ soit vraie ou fausse, $P$ est forcée au nœud $a$). Par conséquent, que $\psi$ soit vraie ou fausse, la satisfaction de la formule $\phi[\psi/P]$ ne varie pas. Toutes <b>substitutions uniformes</b> opérées sur les variables d'une formule appartenant à la logique sera aussi dans la logique.</li>
 <br>
-<li>Enfin, la logique de la classe de tous les systèmes de transition est close par <b><i>modus ponens</i></b>&nbsp;; si $\phi \rightarrow\psi$ et $\psi$ appartiennent toutes deux à la logique, alors $\psi$ également. En effet, le <i>modus ponens</i> préserve la validité puisque si un modèle vérifie en un noud à la fois $\psi$ et $\psi\rightarrow\phi$, alors (par définition de l'interprétation de l'implication) il vérifie également $\phi$.</li>
+<li>Enfin, la logique de la classe de tous les systèmes de transition est close par <b><i>modus ponens</i></b>&nbsp;; si $\phi \rightarrow\psi$ et $\psi$ appartiennent toutes deux à la logique, alors $\psi$ également. En effet, le <i>modus ponens</i> préserve la validité puisque si un modèle vérifie en un nœud à la fois $\psi$ et $\psi\rightarrow\phi$, alors (par définition de l'interprétation de l'implication) il vérifie également $\phi$.</li>
 </ul>
 
 Pour déterminer des nouvelles tautologies en calcul des propositions, on a utilisé des systèmes de déduction (à la Hilbert, déduction naturelle, calcul des séquents). La modalité complique un peu les choses et seul le système à la Hilbert va pouvoir s'adapter facilement.
@@ -258,7 +258,7 @@ Dans ce modèle, on a $a\Vdash P$ mais aussi $a\nVdash \Box P$ et par conséquen
 Cet axiome $\text{(K)}$ (K en l'honneur de Kripke) est appelé **axiome de distribution** car il permet de distribuer l'opérateur modal $\Box$ à l'intérieur de l'implication. On l'appelle aussi parfois axiome d'omniscience logique car il stipule que si un agent sait que $P$ implique $Q$, alors s’il sait également que $P$ il doit savoir que $Q$. En d’autres termes, l'agent doit connaître toutes les conséquences logiques de ce qu'il sait déjà. 
 
 
-L'axiome $\text{(dual)}$ permet, lui, de passer d'un opérateur modal à l'autre et est aussi valide dans tout sytème de transition (être sûr de la présence d'un truc revient à ne pas être sûr de son absence, ou pour rester sur la structure du système de transition, dire qu'il existe un chemin vers $P$ revient à ne pas dire que tous les chemins vont vers $\neg P$).<br>
+L'axiome $\text{(dual)}$ permet, lui, de passer d'un opérateur modal à l'autre et est aussi valide dans tout système de transition (être sûr de la présence d'un truc revient à ne pas être sûr de son absence, ou pour rester sur la structure du système de transition, dire qu'il existe un chemin vers $P$ revient à ne pas dire que tous les chemins vont vers $\neg P$).<br>
 La relation sœur permettant de passer de l'opérateur boite à l'opérateur diamant $\Box P \leftrightarrow \neg\Diamond\neg P$ (si tous les chemins mènent à $P$, il n'existe pas de chemin menant à $\neg P$) est elle aussi vraie partout.<br>
 Ces deux relations soulignent bien la nature duale des opérateurs $\Diamond$ et $\Box$.
 
@@ -396,7 +396,7 @@ $\text{(5) :}$ $\Diamond P\rightarrow \Box\Diamond P$
 La formule $\text{(5)}$ dit que s'il n'est pas nécessaire que quelque chose ne soit pas, alors elle est nécessaire.<br>
 En logique déontique&nbsp;: si quelque chose est permise, c'est obligatoire qu'elle soit permise.<br>
 En logique épistémique&nbsp;: si je ne sais pas quelque chose, alors je sais que je ne le sais pas. L'interprétation épistémique décrit un agent parfaitement conscient de ce qu'il ne sait pas.<br>
-En logique doxastique&nbsp;: si je ne crois pas quelsue chose, alors je crois que je ne le crois pas. L'interprétation doxastique décrit un agent parfaitement conscient de ce qu'il ne croit pas.<br>
+En logique doxastique&nbsp;: si je ne crois pas quelque chose, alors je crois que je ne le crois pas. L'interprétation doxastique décrit un agent parfaitement conscient de ce qu'il ne croit pas.<br>
 On appelle $\text{(5)}$ l'axiome d'introspection négative dans le cadre de la logique épistémique.
 
 Et [nous avons vu](../logique4/#eucl) qu'un système de transition valide $\text{(5)}$ si et seulement si ce système est **euclidien**. $\text{(5)}$ est donc aussi l'axiome d'euclidité.
@@ -711,7 +711,7 @@ $$\text{si } \vdash_\mathbb{L}\phi \text{ alors }\models_{\mathscr{C}}\phi$$
 <div id="preuve">
 
 On a déjà en fait déjà tout démontré.<br>
-En effet, on a montré que les axiomes de la logique normale minimale (tautologies du calcul des propositions, $\text{(K)}$ et $\text{(dual)}$) sont satisfaites en tout nœud et pour toute valuation de tous les systèmes de transitions. Et on a montré que les trois opérations utilisés pour les preuves (la nécéssitation, la substitution uniforme et le <i>modus ponens</i>) préservent la validité. Donc une formule prouvable dans $\textbf{K}$ est valide dans tout système de transition ( $\textbf{K}$ est $\mathscr{C}$-correcte).
+En effet, on a montré que les axiomes de la logique normale minimale (tautologies du calcul des propositions, $\text{(K)}$ et $\text{(dual)}$) sont satisfaites en tout nœud et pour toute valuation de tous les systèmes de transitions. Et on a montré que les trois opérations utilisés pour les preuves (la nécessitation, la substitution uniforme et le <i>modus ponens</i>) préservent la validité. Donc une formule prouvable dans $\textbf{K}$ est valide dans tout système de transition ( $\textbf{K}$ est $\mathscr{C}$-correcte).
 
 Ensuite, on a montré que chacun des axiomes modaux supplémentaires ajoutés à $\textbf{K}$ pour obtenir les autres logiques normales ont une validité limitée à une classe spécifique de systèmes de transition.
 
@@ -980,14 +980,14 @@ Conséquence de 2. et 3.
 </li>
 <li>$\mathcal{M}_\textbf{KT}\in\mathscr{C}_{ref.}$&nbsp;:<br>
 Il faut montrer que $\Xi\longrightarrow \Xi$ est vérifié pour tout nœud $\Xi$ de $\mathcal{M}_\textbf{KT}$.<br>
-La formule $\text{(T)}=\Box P\rightarrow P$ est équivalente à $\neg\Diamond\neg P\rightarrow P$ et par contraposition à $\neg P\rightarrow\diamond\neg P$. Comme $\Xi$ est clos par substitution uniforme, la formule $\neg \neg \phi\rightarrow\diamond\neg \neg\phi$ est dans $\Xi$ et donc $\phi\rightarrow\Diamond\phi$ est dans $\Xi$. La cloture par <i>modus ponens</i> permet alors de déduire que pour toute formule $\phi\in\Xi$, $\Diamond\phi\in\Xi$, ce qui est la condition nécessaire à la relation $\Xi\longrightarrow \Xi$.
+La formule $\text{(T)}=\Box P\rightarrow P$ est équivalente à $\neg\Diamond\neg P\rightarrow P$ et par contraposition à $\neg P\rightarrow\diamond\neg P$. Comme $\Xi$ est clos par substitution uniforme, la formule $\neg \neg \phi\rightarrow\diamond\neg \neg\phi$ est dans $\Xi$ et donc $\phi\rightarrow\Diamond\phi$ est dans $\Xi$. La clôture par <i>modus ponens</i> permet alors de déduire que pour toute formule $\phi\in\Xi$, $\Diamond\phi\in\Xi$, ce qui est la condition nécessaire à la relation $\Xi\longrightarrow \Xi$.
 </li>
 <li>$\mathcal{M}_\textbf{S4}\in\mathscr{C}_{ref.,tr.}$&nbsp;:<br>
 Conséquence de 2. et 5.
 </li>
 <li>$\mathcal{M}_\textbf{KB}\in\mathscr{C}_{sym.}$&nbsp;:<br>
 il faut montrer que pour tout couple de nœuds $\Xi_1$ et $\Xi_2$ de $\mathcal{M}_\textbf{KB}$, $\Xi_1\longrightarrow \Xi_2$ alors $\Xi_2\longrightarrow \Xi_1$.<br>
-$\text{(B)}= P\rightarrow \Box\Diamond P$ . Comme $\Xi_1$ est clos par substitution uniforme, les formules $\phi\rightarrow\Box\Diamond\phi$ sont dans $\Xi_1$. La cloture par <i>modus ponens</i> de $\Xi_1$ nous dit alors que si $\phi\in\Xi_1$, alors $\Box\Diamond\phi\in\Xi_1$. Or d'après le lemme ($\longrightarrow$ et $\Box$), si $\Xi_1\longrightarrow\Xi_2$ alors pour toute formule $\phi$, si $\Box\phi\in\Xi_1$, alors $\phi\in\Xi_2$. Par conséquent, pour tout $\phi\in\Xi_1$, $\Diamond\phi\in\Xi_2$, ce qui est la condition nécessaire pour définir $\Xi_2\longrightarrow\Xi_1$.
+$\text{(B)}= P\rightarrow \Box\Diamond P$ . Comme $\Xi_1$ est clos par substitution uniforme, les formules $\phi\rightarrow\Box\Diamond\phi$ sont dans $\Xi_1$. La clôture par <i>modus ponens</i> de $\Xi_1$ nous dit alors que si $\phi\in\Xi_1$, alors $\Box\Diamond\phi\in\Xi_1$. Or d'après le lemme ($\longrightarrow$ et $\Box$), si $\Xi_1\longrightarrow\Xi_2$ alors pour toute formule $\phi$, si $\Box\phi\in\Xi_1$, alors $\phi\in\Xi_2$. Par conséquent, pour tout $\phi\in\Xi_1$, $\Diamond\phi\in\Xi_2$, ce qui est la condition nécessaire pour définir $\Xi_2\longrightarrow\Xi_1$.
 </li>
 <li>$\mathcal{M}_\textbf{KB4}\in\mathscr{C}_{sym.tr.}$&nbsp;:<br>
 Conséquence de 2. et 7.

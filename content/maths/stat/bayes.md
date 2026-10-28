@@ -169,7 +169,7 @@ On peut utiliser la représentation graphique décrite dans la vidéo d'introduc
 
 > En supposant que le portrait corresponde à 40% des bibliothécaires et à 5% des agriculteurs, que vaut la probabilité a posteriori que Steve soit bibliothécaire ?
 
-> La probabilté que le portrait corresponde à un bibliothécaire devrait être combien de fois supérieure à celle qu'il corresponde à un agriculteur pour faire basculer la probabilité a posteriori que Steve soit bibliothécaire au-delà de 50% ? Comparez au ratio bibliothécaires sur agriculteurs.
+> La probabilité que le portrait corresponde à un bibliothécaire devrait être combien de fois supérieure à celle qu'il corresponde à un agriculteur pour faire basculer la probabilité a posteriori que Steve soit bibliothécaire au-delà de 50% ? Comparez au ratio bibliothécaires sur agriculteurs.
 
 Moralité, le portrait correspond probablement plus à un agriculteur !
 
@@ -392,7 +392,7 @@ $$
 **3<sup>e</sup> étape :<br>**
 On transpose ces résultats à la situation actuelle sur Terre.<br>
 Posons les deux hypothèses rivales suivantes&nbsp;:
-- apocalypes précoce : l'humanité va s'éteindre dans le prochain siècle et la quantité totale d'humain ayant existé sera d'environ 200 milliards.
+- apocalypse précoce : l'humanité va s'éteindre dans le prochain siècle et la quantité totale d'humain ayant existé sera d'environ 200 milliards.
 - apocalypse tardive : l'humanité va survivre le prochain siècle et coloniser la galaxie. Le nombre total d'humain ayant existé s'élèvera à 200 mille milliards.
 
 > Quelle probabilité a priori attribuez-vous à chacun de ces scénarios&nbsp;?

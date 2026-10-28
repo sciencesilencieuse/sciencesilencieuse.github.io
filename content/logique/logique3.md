@@ -574,7 +574,7 @@ $
 $
 <br>
 <br>
-Si une contradiction découle d'un jeu d'hypothèses, alors n'importe quelle formule est démontrable avec ces mêms hypothèses.
+Si une contradiction découle d'un jeu d'hypothèses, alors n'importe quelle formule est démontrable avec ces mêmes hypothèses.
 </div>
 
 <br>
@@ -1447,7 +1447,7 @@ Tout séquent est donc prouvable par utilisation des seuls axiomes, règles logi
 
 <div id="preuve">
 
-S'il existait une preuve du séquent $\vdash$, il en existerait aussi une sans utilisation de la règle de coupure. Or toutes les autres règles introduisent une formule soit à droite, soit à gauche, soit des deux côtés à la fois. La seule règle permettant de faire disparaître une formule est la règle de contraction, mais elle ne la fait pas disparaître complètement puisqu'elle se contente d'en faire disparaître les occurences. On ne pourra donc jamais aboutir à "$\vdash$" sans la règle de coupure et donc d'après le théorème d'élimination des coupures, on ne peut pas démontrer $\vdash$ en calcul des séquents. Youpi.
+S'il existait une preuve du séquent $\vdash$, il en existerait aussi une sans utilisation de la règle de coupure. Or toutes les autres règles introduisent une formule soit à droite, soit à gauche, soit des deux côtés à la fois. La seule règle permettant de faire disparaître une formule est la règle de contraction, mais elle ne la fait pas disparaître complètement puisqu'elle se contente d'en faire disparaître les occurrences. On ne pourra donc jamais aboutir à "$\vdash$" sans la règle de coupure et donc d'après le théorème d'élimination des coupures, on ne peut pas démontrer $\vdash$ en calcul des séquents. Youpi.
 </div>
 
 <br>
@@ -1457,7 +1457,7 @@ S'il existait une preuve du séquent $\vdash$, il en existerait aussi une sans u
 
 <b>Propriété de la sous-formule</b>
 
-Si le séquent $\Gamma\vdash\Delta$ est prouvable en logique classique (respectivement intuitionniste), alors il existe une preuve en logique classique (respectivement intuitionniste) de ce séquent dans laquelle n'apparaîssent que des séquents constitués de sous-formules des formules de $\Gamma$ et de $\Delta$.
+Si le séquent $\Gamma\vdash\Delta$ est prouvable en logique classique (respectivement intuitionniste), alors il existe une preuve en logique classique (respectivement intuitionniste) de ce séquent dans laquelle n'apparaissent que des séquents constitués de sous-formules des formules de $\Gamma$ et de $\Delta$.
 
 </div>
 

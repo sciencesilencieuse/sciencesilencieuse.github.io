@@ -75,7 +75,7 @@ Les lignes qui suivent en résument brièvement les axiomes et en illustrent que
 
 ## Un jeu d'axiomes
 
-L'interprétation de la mécanique correspondant à l'**école de Copenhague**, repose sur un jeu d'axiomes[^1]&nbsp;:
+L'interprétation de la mécanique quantique correspondant à l'**école de Copenhague** repose sur un jeu d'axiomes[^1]&nbsp;:
 
 <div id="axiom">
 <ul><li>Axiome 1&nbsp;: <b>État quantique</b><br>
@@ -93,7 +93,7 @@ En particulier, l’évolution dans le temps obéit à l’<b>équation de Schr�
 
 $$\mathrm{i}\\,\hbar\frac{\partial}{\partial t}\lvert \psi\rangle \\;=\\; \hat H \lvert \psi\rangle ,$$
 
-où $\hat H$ est l’opérateur <b>Hamiltonien</b>.
+où $\hat H$ est l’opérateur <b>hamiltonien</b>.
 </li></ul>
 </div>
 
@@ -157,7 +157,7 @@ Pour représenter plus d’information, on considère une chaîne de bits&nbsp;:
 ###	Le qubit
 L’analogue quantique du bit est le <b>qubit</b>. C’est le système quantique non trivial le plus simple. À l’issue d’une mesure, il distingue également deux possibilités, correspondant aux éléments d’une base orthonormale de l’espace de Hilbert à deux dimensions $\mathcal{H}_2$. 
 
-On note $\lvert0\rangle$ et $\lvert1\rangle$ les deux vecteurs de base. On peut les réaliser physiquement de plein de façons&nbsp;: le premier et deuxième niveau d'énergie d'un atome d'hydrogène, le spin haut et le spin bas d'une particule de spin $1/2$, la polarisation horizontale et verticale d'un photon, etc.
+On note $\lvert0\rangle$ et $\lvert1\rangle$ les deux vecteurs de base. On peut les réaliser physiquement de plein de façons&nbsp;: le premier et le deuxième niveau d'énergie d'un atome d'hydrogène, le spin haut et le spin bas d'une particule de spin $1/2$, la polarisation horizontale et verticale d'un photon, etc.
 
 <div id="theo">
 
@@ -270,7 +270,7 @@ Il existe une représentation géométrique élégante des qubits qui facilite g
 
 Dans la représentation par matrice densité d’un état pur, on compte à première vue deux coefficients complexes, soit quatre nombres réels. La condition de normalisation (trace = 1) en élimine un. Il reste donc trois degrés de liberté réels pour un état mixte. Et comme on a vu que deux états purs ne se différentiant que par une phase globale sont en fait identiques,  il ne reste que deux degrés de liberté pour un état pur[^2]. Cela permet de représenter les états purs sur la surface d’une sphère et les états mixtes dans son intérieur.
 
-[^2]: La normalisation $|\alpha|^2+|\beta|^2=1$ contraint de vivre à la surface d'une sphère $S^3$ dans $\mathbb{R}^4$. Multiplier par une phase globale $\mathrm{e}^{\mathrm{i}\gamma}$ fait parcourir un cercle $S_1$ dans cette sphère. Puisqu'on identifie tous ces points, on quotiente $S^3$ par $S^1$. Et $S^3/S^1\simeq S^2$, la sphère ordinaire.
+[^2]: La normalisation $|\alpha|^2+|\beta|^2=1$ contraint de vivre à la surface d'une sphère $S^3$ dans $\mathbb{R}^4$. Multiplier par une phase globale $\mathrm{e}^{\mathrm{i}\gamma}$ fait parcourir un cercle $S^1$ dans cette sphère. Puisqu'on identifie tous ces points, on quotiente $S^3$ par $S^1$. Et $S^3/S^1\simeq S^2$, la sphère ordinaire.
 
 <div id="def">
 
@@ -312,7 +312,7 @@ Chaque paire de vecteurs propres est une base de l'espace de Hilbert qui défini
 <img src="/blochsph.png" style="box-shadow:none;background:none;">
 </div>
 
-Attention, ça ne veut pas dire que ces trois bases sont orthogonales (ça n'aurait pas de sens puisque chacune est complète)&nbsp;; elles sont **mutuellement non biaisées**[^3] (c'est ça que traduit géométriquement les axes orthogonaux de la sphère de Bloch).  
+Attention, ça ne veut pas dire que ces trois bases sont orthogonales (ça n'aurait pas de sens puisque chacune est complète)&nbsp;; elles sont **mutuellement non biaisées**[^3] (c'est ça que traduisent géométriquement les axes orthogonaux de la sphère de Bloch).  
 
 Par combinaison convexe, on fait passer les états purs situés sur la surface de la sphère de Bloch vers des états mixtes à l’intérieur de celle‑ci. L’état maximalement mixte, $\mathbb{I}/2$, se situe au centre de la sphère de Bloch.
 
@@ -321,7 +321,7 @@ $\bigl|\langle e_i | f_j\rangle\bigr|^2 \\;=\\;\text{cste}$.<br>
 Pour des bases orthonormales, on peut démontrer que la constante vaut $\frac 1 d$ où $d=\dim\mathcal H$ grâce à la relation suivante $\langle e_i|\Bigl(\sum_j |f_j\rangle\langle f_j|\Bigr)|e_i\rangle
 \\;=\\;\sum_j \bigl|\langle f_j|e_i\rangle\bigr|^2
 \\;=\\;\langle e_i|\mathbb I|e_i\rangle\\;=\\;1$ où on a utilisé la complétude de la base $\\{f_i\\}$, $\sum_j |f_j\rangle\langle f_j| = \mathbb I$, et la normalité des éléments $\\{e_i\\}$. Si tous les termes $\bigl|\langle f_j|e_i\rangle\bigr|^2$ sont en plus égaux (définition de bases non biaisées), chacun vaut forcément $\frac1d$ (puisqu'il y a autant de vecteurs dans chaque base que de dimensions).<br>
-La conséquence géométrique est que des états mutuellement non biaisés sont équidistances sur la sphère de Bloch puisque les angles entre eux sont identiques.
+La conséquence géométrique est que des états mutuellement non biaisés sont équidistants sur la sphère de Bloch puisque les angles entre eux sont identiques.
 
 ## Paire de Qubits
 
@@ -354,7 +354,7 @@ Un état général de deux qubits est donc une combinaison linéaire de ces quat
 
 Au cours de l’évolution, un tel état bipartite peut devenir un **état intriqué** comme, par exemple, l'état de Bell&nbsp;:
 $$
-|{\rm Bell}\rangle
+|{\rm Bell}\rangle =
 \frac{1}{\sqrt{2}}\bigl(|00\rangle+|11\rangle\bigr)
 $$
 </div>

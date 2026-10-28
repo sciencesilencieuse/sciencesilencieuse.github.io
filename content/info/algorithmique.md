@@ -54,7 +54,7 @@ details[open] > summary:first-of-type {
 
 <br>
 
-La notion de complexité permet de classer des algorithmes réalisant la même tâche comme dans la vidéo suivante. C'est finalement une sorte d'échelle de raffinement&nbsp;; descendre d'un barreau la complexité temporelle ou spatiale demande le plus souvent de pousser la réflexion plus loin voire de repenser entièrement le problème. Et c'est ainsi qu'une recherche de doublons dans une liste se transforme en la chasse de cycles sur un graphe dans l'ultime mouture pour atteindre le Graal ($\mathcal{O}(n)$ en temps et $\mathcal{O}(1)$ en espace sans mutation).
+La notion de complexité permet de classer des algorithmes réalisant la même tâche comme dans la vidéo suivante. C'est finalement une sorte d'échelle de raffinement&nbsp;; descendre d'un barreau la complexité temporelle ou spatiale demande le plus souvent de pousser la réflexion plus loin, voire de repenser entièrement le problème. Et c'est ainsi qu'une recherche de doublons dans une liste se transforme en chasse aux cycles sur un graphe dans l'ultime mouture pour atteindre le Graal ($\mathcal{O}(n)$ en temps et $\mathcal{O}(1)$ en espace sans mutation).
 
 <br>
 
@@ -203,11 +203,11 @@ for i in range(len(distance)):
 
 La logique de cet algorithme repose sur la relation de récurrence suivante : $C(S,i) = \min_{j \in S,\ j \neq i} \left\\{ C\left(S \setminus \\{i\\}, j\right) + \mathrm{d}(j,i) \right\\}$ où $C(S,i)$ représente la plus petite distance pour parcourir chaque ville de l'ensemble $S$ et terminer dans la ville $i$ et $d(i,j)$ est la distance entre la ville $i$ et la ville $j$.
 
-Sa complexité temporelle est en $\mathcal{O(n^22^n)}$. En effet, tous les sous-ensembles de villes sont inspectés $\mathcal{O}(2^n)$ et pour chacun, on parcourt toutes les paires ville de départ - ville d'arrivée possibles $\mathcal{O}(n)\times\mathcal{O}(n)$ sans jamais faire autre chose que des opérations en temps constant $\mathcal{O}(1)$ pour chaque paire.
+Sa complexité temporelle est en $\mathcal{O}(n^2 2^n)$. En effet, tous les sous-ensembles de villes sont inspectés $\mathcal{O}(2^n)$ et pour chacun, on parcourt toutes les paires ville de départ - ville d'arrivée possibles $\mathcal{O}(n)\times\mathcal{O}(n)$ sans jamais faire autre chose que des opérations en temps constant $\mathcal{O}(1)$ pour chaque paire.
 
 ### Récursivité
 
-Un algorithme de programmation dynamique ne se laisse pas approcher facilement, particulièrement dans sa forme non-récursive avec sa grosse matrice mystérieuse. Mais c'est plutôt rare que la forme itérative d'un algorithme vole la vedette à sa forme récursive tant la récursivité sait insuffler un air de magie aux algorithmes en permettant à de tout petits codes de réaliser des tâches étonnamment complexes. 
+Un algorithme de programmation dynamique ne se laisse pas approcher facilement, particulièrement dans sa forme non récursive avec sa grosse matrice mystérieuse. Mais c'est plutôt rare que la forme itérative d'un algorithme vole la vedette à sa forme récursive tant la récursivité sait insuffler un air de magie aux algorithmes en permettant à de tout petits codes de réaliser des tâches étonnamment complexes. 
 
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 {{<youtube lIIXLQvcd4Q>}}
@@ -356,13 +356,13 @@ def triRapide(elements):
 <img src="/hannibal.png" style="box-shadow:none;background:none;">
 </div>
 
-Mais attention, l'élégance de ce code cache sa lâcheté puisqu'en ne rangeant plus en place, il esquive la principale difficulté d'un algorithme de tri. S'interdire la création de nouvelles listes oblige en effet à gérer astucieusement les permutations au sein de la liste de départ. Et si cela donne souvent des codes plus verbeux, il n'en sont pas moins beaucoup plus fins.
+Mais attention, l'élégance de ce code cache sa lâcheté puisqu'en ne rangeant plus en place, il esquive la principale difficulté d'un algorithme de tri. S'interdire la création de nouvelles listes oblige en effet à gérer astucieusement les permutations au sein de la liste de départ. Et si cela donne souvent des codes plus verbeux, ils n'en sont pas moins beaucoup plus fins.
 
 <br>
 
 #### Algorithmes gloutons
 
-Les algorithmes gloutons sont très faciles à comprendre et à implémenter. Si on devait leur trouver un défaut, elle est à chercher du côté de leur correction, pas toujours simple à démontrer...
+Les algorithmes gloutons sont très faciles à comprendre et à implémenter. Si on devait leur trouver un défaut, il est à chercher du côté de leur correction, pas toujours simple à démontrer...
 
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 {{<youtube yrOj8XvroIE>}}
@@ -394,7 +394,7 @@ Pour inventorier les sommets d'un graphe, deux stratégies sont possibles :
 {{<youtube QCj7VijRkiM>}}
 </div>
 
-Le code est identique entre les deux algorithmes à la structure de donnée utilisée près&nbsp;! On utilise une **file** (queue en anglais) pour le parcours en largeur et une **pile** pour le parcours en profondeur.
+Le code est identique entre les deux algorithmes à la structure de données utilisée près&nbsp;! On utilise une **file** (queue en anglais) pour le parcours en largeur et une **pile** pour le parcours en profondeur.
 
  ![](https://info-tsi-vieljeux.github.io/queue.png?width=600)
 
@@ -423,7 +423,7 @@ def BFS(G,depart):
     return Sommets
 ```
 
-Avec sa logique LIFO (dernier, arrivée, premier parti, comme pour une pile d'assiette pendant la vaisselle), DFS s'enfonce dans une branche du graphe jusqu'à son extrémité puis revient à la dernière jonction rencontrée et explore une nouvelle branche, et ainsi de suite.
+Avec sa logique LIFO (dernier arrivé, premier parti, comme pour une pile d'assiettes pendant la vaisselle), DFS s'enfonce dans une branche du graphe jusqu'à son extrémité puis revient à la dernière jonction rencontrée et explore une nouvelle branche, et ainsi de suite.
 
  ![](https://info-tsi-vieljeux.github.io/piles.png?width=550)
  
@@ -456,7 +456,7 @@ def DFS(G,depart,Vus,Sommets=[]):
     return Sommets
 ```
 
-On peut voir Dijkstra comme un parcours de graphe où la structure de donnée n'est plus une file ou une pile mais une file de priorité (qui donne en $\mathcal{O}(1)$ l'élément stocké de plus grand score).
+On peut voir Dijkstra comme un parcours de graphe où la structure de données n'est plus une file ou une pile mais une file de priorité (qui donne en $\mathcal{O}(1)$ l'élément stocké de plus grand score).
 
 Pour implémenter une file de priorité, on peut utiliser un tas (heap), arbre binaire presque ordonné dont la racine est l'élément prioritaire.
 
@@ -518,7 +518,7 @@ def Dijkstra(G, depart):
 
 #### Algorithme d'Euclide
 
-Une des plus vieux algorithmes ($\approx$-300).
+Un des plus vieux algorithmes ($\approx$-300).
 
 
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
@@ -532,7 +532,7 @@ La suite de Fibonacci est un peu la tarte à la crème du mathématicien de sér
 {{<youtube X6WnBdmNYiM>}}
 </div>
 
-On peut utiliser le pulvérisateur (algorithme d'Euclide étendu) ci-dessous. Le code est corrigé par rapport à celui de la vidéo qui présente une erreur dans la cas de base (on doit retourner `b, 0, 1` comme Euclide bien sûr et non `a,0,1`).
+On peut utiliser le pulvérisateur (algorithme d'Euclide étendu) ci-dessous. Le code est corrigé par rapport à celui de la vidéo qui présente une erreur dans le cas de base (on doit retourner `b, 0, 1` comme Euclide bien sûr et non `a,0,1`).
 
 {{< runpython lang="python" mode="toggle" default="code" height="240" width="800" >}}
 def pulverisateur(a, b):
@@ -565,7 +565,7 @@ print(frac_ctn(144,89))
 
 #### Algorithme X
 
-Polyominos et Sudoku ont le droit à leur algorithme au nom aguicheur&nbsp;: X.
+Polyominos et Sudoku ont droit à leur algorithme au nom aguicheur&nbsp;: X.
 
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 {{<youtube NTzoLEB7lO0>}}

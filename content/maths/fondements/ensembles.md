@@ -61,7 +61,7 @@ margin-bottom:0em;
 </style>
 
 
-<h1 style="overflow-x:auto;">Échaufaudage des nombres</h1>
+<h1 style="overflow-x:auto;">Échafaudage des nombres</h1>
 
 > Dieu a crée les entiers naturels, le reste est l'œuvre de l'Homme.<br>
 > Leopold Kronecker
@@ -242,7 +242,7 @@ Dans un **corps** $(\mathbb{K},+,\times)$, les deux opérations sont (presque) s
 
 </div>
 
-### Notion d'odre
+### Notion d'ordre
 
 <div id="def">
 

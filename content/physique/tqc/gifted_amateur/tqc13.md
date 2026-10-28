@@ -1774,7 +1774,7 @@ D(\theta^3) = \mathrm{e}^{-\frac{\mathrm{i}}{2}\sigma^3\theta^3}
 $
 </p>
 
-Or $\sigma^3 = \begin{pmatrix} 1 & 0 \\\\ 0 & -1 \end{pmatrix}$ est sympatiquement <b>diagonale</b>.
+Or $\sigma^3 = \begin{pmatrix} 1 & 0 \\\\ 0 & -1 \end{pmatrix}$ est sympathiquement <b>diagonale</b>.
 
 Et comme $\mathrm{e}^{\begin{pmatrix} a & 0 \\\\ 0 & b \end{pmatrix}} = \begin{pmatrix} \mathrm{e}^a & 0 \\\\ 0 & \mathrm{e}^b \end{pmatrix}$,
 

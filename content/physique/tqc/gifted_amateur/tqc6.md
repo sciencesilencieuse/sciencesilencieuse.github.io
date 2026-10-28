@@ -1020,7 +1020,7 @@ $$
 
 <div id="preuve">
 
-<b>Étape 1&nbsp;: calcul du commutateur.</b> Mêmes claculs que pour $D$, mais seuls les crochets croisés survivent&nbsp;:
+<b>Étape 1&nbsp;: calcul du commutateur.</b> Mêmes calculs que pour $D$, mais seuls les crochets croisés survivent&nbsp;:
 
 <p style="text-align:center;">
 $\displaystyle
@@ -1031,7 +1031,7 @@ $\displaystyle
 $
 </p>
 
-Remarque&nbsp;: il ne reste aucun opérateur. Le commutateur est un simple nombre, un multiple de l'identité (ce que Dirac appellait un «&nbsp;<i>c</i>-nombre&nbsp;»), le même dans tous les états. La causalité du champ libre est cinématique, pas dynamique.
+Remarque&nbsp;: il ne reste aucun opérateur. Le commutateur est un simple nombre, un multiple de l'identité (ce que Dirac appelait un «&nbsp;<i>c</i>-nombre&nbsp;»), le même dans tous les états. La causalité du champ libre est cinématique, pas dynamique.
 
 <b>Étape 2&nbsp;: réduction au cas purement spatial.</b> Si $z^2 < 0$, alors $|z^0| < |\mathbf z|$, et le boost le long de $\mathbf z$ de vitesse $\beta = z^0/|\mathbf z|$ (licite car $|\beta| < 1$ <i>précisément parce que</i> $z$ est de genre espace) amène $z$ sur la forme $z = (0, \mathbf r)$. Par l'invariance de Lorentz de $D$, il suffit de traiter ce cas.
 
@@ -1179,7 +1179,7 @@ où **$p^0$ est une variable d'intégration indépendante de $\mathbf p$** (on i
 
 <div id="preuve">
 
-$p^2 = (p^0)^2 - |\mathbf{p}|^2$ et $E_{\mathbf{p}}^2 = |\mathbf{p}|^2 + m^2$, doù $p^2 - m^2 = (p^0)^2 - |\mathbf{p}|^2 - m^2 = (p^0)^2 - E_{\mathbf{p}}^2$.
+$p^2 = (p^0)^2 - |\mathbf{p}|^2$ et $E_{\mathbf{p}}^2 = |\mathbf{p}|^2 + m^2$, d'où $p^2 - m^2 = (p^0)^2 - |\mathbf{p}|^2 - m^2 = (p^0)^2 - E_{\mathbf{p}}^2$.
 
 En posant $\varepsilon' = \frac{\varepsilon}{2E_{\mathbf p}}$, on a au premier ordre&nbsp;:
 

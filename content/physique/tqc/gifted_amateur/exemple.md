@@ -95,7 +95,7 @@ Interlude et remboursement de dette. Les chapitres précédents ont laissé deux
 
 
 
-## Détour par la physique statitique
+## Détour par la physique statistique
 
 
 <ul style="margin-top:1em;">

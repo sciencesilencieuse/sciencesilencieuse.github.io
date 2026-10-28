@@ -274,7 +274,7 @@ $$
 
 <div id="def">
 
-La <b>combinaison convexe</b> de deux états épistémiques disjoints est l'union de leurs bases ontiques si cette union forme un état épistémique valide. Sinon, et pour les états non-disjonoints, la combinaison convexe est non définie.
+La <b>combinaison convexe</b> de deux états épistémiques disjoints est l'union de leurs bases ontiques si cette union forme un état épistémique valide. Sinon, et pour les états non disjoints, la combinaison convexe est non définie.
 
 </div>
 

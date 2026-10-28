@@ -147,7 +147,7 @@ On appelle ces graphes dirigés des **systèmes de transition** (*frame* en angl
 Pour $I$ un ensemble non vide, un système de transition étiqueté par $I$ (ou de signature $I$) est une structure relationnelle (un graphe dirigé étiqueté) 
 $$\mathcal{S}=(N,A)$$
 où $N$ est un ensemble non vide dont les éléments sont appelés nœuds 
-<br>et $A$ est un ensemble de ralations binaires sur $\mathbb{N}$ indicées par $I$ ($A=\set{A_i\subseteq N\times N|i\in I}$).
+<br>et $A$ est un ensemble de relations binaires sur $\mathbb{N}$ indicées par $I$ ($A=\set{A_i\subseteq N\times N|i\in I}$).
 </div>
 
 <br>
@@ -254,7 +254,7 @@ Imaginons maintenant que l'on soit dans le monde 5 où Apophis et Bahamut ont le
 
 ![](/kripkedragons3.png?width=800px)
 
-La déclaration de l'étranger ne fait pas beaucoup d'effet car ils étaient déjà tous les trois au courant qu'au moins l'un d'eux avait les yeux bleus... Par conséquent, le soir même, personne ne part. Et ça par contre, ça change pas mal de choses&nbsp;! En effet, les mondes 2 et 3 deviennet d'un coup impossibles puisque on a vu que les mondes où seul un des dragon a les yeux bleus voient ce dragon décamper dès le premier soir.
+La déclaration de l'étranger ne fait pas beaucoup d'effet car ils étaient déjà tous les trois au courant qu'au moins l'un d'eux avait les yeux bleus... Par conséquent, le soir même, personne ne part. Et ça par contre, ça change pas mal de choses&nbsp;! En effet, les mondes 2 et 3 deviennent d'un coup impossibles puisque on a vu que les mondes où seul un des dragon a les yeux bleus voient ce dragon décamper dès le premier soir.
 
 ![](/kripkedragons4.png?width=800px)
 
@@ -598,7 +598,7 @@ Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont 
 <ul>
 <li>$(1)\Rightarrow(2)$<br>
 Soient $\mathcal{S}$ un système de transition non borné à droite, $\mathcal{V}$ une valuation et $a$ un nœud.<br>
-On suppose que $a\Vdash\Box P$. La seule possibilité pour que $a\nVdash\Diamond P$, c'est que le nœud $a$ n'est aucun successeur or l'hypothèse que $\mathcal{S}$ est non broné à droite nous l'interdit, donc nécessairement $a\Vdash\Diamond P$.
+On suppose que $a\Vdash\Box P$. La seule possibilité pour que $a\nVdash\Diamond P$, c'est que le nœud $a$ n'est aucun successeur or l'hypothèse que $\mathcal{S}$ est non borné à droite nous l'interdit, donc nécessairement $a\Vdash\Diamond P$.
 </li>
 <li>$(2)\Rightarrow(1)$<br>
 Si un système de transition n'est pas borné à droite, il existe un nœud $a$ sans successeur. Supposons une valuation $\mathcal{V}$ telle que seul $a\in \mathcal{V}(P)$. On a alors $a\Vdash \Box P$ mais aussi $a\nvdash \Diamond P$.

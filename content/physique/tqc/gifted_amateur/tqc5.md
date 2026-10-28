@@ -121,7 +121,7 @@ $
 
 Comme on l'a vu, la symétrie $U(1)$ se traduit par la non variation du lagrangien (et par extension des équations du mouvement) lors de la transformation $\psi(x) \rightarrow \psi(x) \mathrm{e}^{\mathrm{i} \alpha}$. Il s'agit là d'une **transformation globale** puisqu'elle change le champ d'une même valeur en tout point de l'espace-temps. La théorie est donc dite invariante par transformation $U(1)$ globale.
 
-Que se passerait-il si on imposait une invariance **locale** par rapport à la phase&nbsp;? Il faudrait que la transformation $\psi(x) \rightarrow \psi(x) \mathrm{e}^{\mathrm{i} \alpha(x)}$ (où $\alpha(x)$ peut maintenant différer d'un point à l'autre) soit sans effet sur les équations du mouvement. Cela semble une demande un peu extrême, mais elles se révèle surprenemment féconde&nbsp;: l'électromagnétisme en découle&nbsp;!
+Que se passerait-il si on imposait une invariance **locale** par rapport à la phase&nbsp;? Il faudrait que la transformation $\psi(x) \rightarrow \psi(x) \mathrm{e}^{\mathrm{i} \alpha(x)}$ (où $\alpha(x)$ peut maintenant différer d'un point à l'autre) soit sans effet sur les équations du mouvement. Cela semble une demande un peu extrême, mais elles se révèle étonnamment féconde&nbsp;: l'électromagnétisme en découle&nbsp;!
 
 On n'est pas embêté par le terme de masse&nbsp;: $m^2\psi^\dagger\psi\rightarrow m^2\psi^\dagger \mathrm{e}^{-\mathrm{i} \alpha(x)} \mathrm{e}^{\mathrm{i} \alpha(x)} \psi = m^2\psi^\dagger\psi $. Par contre, le terme contenant les dérivées pose problème puisque la dérivée agit maintenant sur $\alpha(x)$&nbsp;:
 
@@ -647,7 +647,7 @@ Et comme un champ scalaire $\hat{\psi}(x)$ peut s'écrire $\hat{\psi}(x)=\int_{\
 
 Comme $\mathrm{C}^2=I$, les valeurs propre de $\mathrm{C}$ ne peuvent être que $\pm 1$. La plupart des particules ne sont pas des états propres de $\mathrm{C}$ puisque si elles l'étaient, on aurait $\mathrm{C}|p\rangle=|\bar{p}\rangle= \pm|p\rangle$, ce qui impliquerait que $|\bar{p}\rangle$ est le même état que $|p\rangle$ et donc que la particule est sa propre antiparticule. C'est vrai pour les particules sans charge quantique.
 
-Le photon $\gamma$, lui, est un état propre de $\mathrm{C}$ avec la valeur propre $-1$, puisqu'en changeant totues les particules en leurs antiparticules, le champ électromagnétique est renversé ($A^\mu \rightarrow-A^\mu$). C'est aussi le cas pour le pion neutre $\pi^0$, mais avec la valeur propre $+1$. Cela explique pourquoi la réaction $\pi^0 \rightarrow \gamma+\gamma$ est autorisée alors que $\pi^0 \rightarrow \gamma+\gamma+\gamma$ est impossible.
+Le photon $\gamma$, lui, est un état propre de $\mathrm{C}$ avec la valeur propre $-1$, puisqu'en changeant toutes les particules en leurs antiparticules, le champ électromagnétique est renversé ($A^\mu \rightarrow-A^\mu$). C'est aussi le cas pour le pion neutre $\pi^0$, mais avec la valeur propre $+1$. Cela explique pourquoi la réaction $\pi^0 \rightarrow \gamma+\gamma$ est autorisée alors que $\pi^0 \rightarrow \gamma+\gamma+\gamma$ est impossible.
 
 </div>
 
@@ -687,9 +687,9 @@ $
 
 L'opérateur $\mathrm{P}$ est hermitien et son propre inverse ($\mathrm{P}^2=I$), donc $\mathrm{P}$ est aussi un opérateur unitaire.
 
-L'opérateur de parité est sans effet sur les scalaires mais renverse les vecteurs. Mais il existe une classe spéciale de scalaire et de vecteurs (même si pas réellement des scalaires et des vecteurs mais plutôt des ojets composites) pour lesquels ce n'est pas vrai&nbsp;: les **pseudoscalaires** formés par un produit mixte et les **pseudovecteurs** (aussi appelés vecteurs axiaux) formés par un produit vectoriel entre vecteurs ordinaires (aussi appelés vecteurs polaires).
+L'opérateur de parité est sans effet sur les scalaires mais renverse les vecteurs. Mais il existe une classe spéciale de scalaire et de vecteurs (même si pas réellement des scalaires et des vecteurs mais plutôt des objets composites) pour lesquels ce n'est pas vrai&nbsp;: les **pseudoscalaires** formés par un produit mixte et les **pseudovecteurs** (aussi appelés vecteurs axiaux) formés par un produit vectoriel entre vecteurs ordinaires (aussi appelés vecteurs polaires).
 
-Le champ électrique $\boldsymbol{E}$ agit comme un vecteur ordianaire (polaire) alors que le champ magnitique et le moment cinétique $\boldsymbol{L}$ sont des pesudovecteurs (vecteurs axiaux).
+Le champ électrique $\boldsymbol{E}$ agit comme un vecteur ordinaire (polaire) alors que le champ magnétique et le moment cinétique $\boldsymbol{L}$ sont des pesudovecteurs (vecteurs axiaux).
 
 <div id="def">
 <p style="text-align:center;">
@@ -897,7 +897,7 @@ Là, le déterminant est clairement $-1$. En combinant avec $SO(3)$, c'est-à-di
 
 <div id="preuve">
 
-L'othogonalité implique $R^TR = I$ et en prenant le déterminant $\operatorname{det} \mathbf{R} \times \operatorname{det} \mathbf{R}^{\mathrm{T}}=1$. Et comme $\operatorname{det} \mathbf{R}=\operatorname{det} \mathbf{R}^{\mathrm{T}}$, on obtient $(\operatorname{det} \mathbf{R})^2=1$. D'où les deux possibilités $\operatorname{det} \mathbf{R}= \pm 1$.
+L'orthogonalité implique $R^TR = I$ et en prenant le déterminant $\operatorname{det} \mathbf{R} \times \operatorname{det} \mathbf{R}^{\mathrm{T}}=1$. Et comme $\operatorname{det} \mathbf{R}=\operatorname{det} \mathbf{R}^{\mathrm{T}}$, on obtient $(\operatorname{det} \mathbf{R})^2=1$. D'où les deux possibilités $\operatorname{det} \mathbf{R}= \pm 1$.
 
 </div>
 

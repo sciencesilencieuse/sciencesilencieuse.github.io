@@ -838,7 +838,7 @@ On peut ensuite tenir le même raisonnement en partant du sous-groupe invariant 
 
 Enfin, le sous-groupe invariant $\\{e,c\\}$ nous donne la quatrième et dernière&nbsp;: $(e, a, b, c) \xrightarrow{d_4}(1,-1,-1,1)$.
 
-On vérifie bien que les 4 «vecteur» sont orthonornaux comme il se doit et qu’aucun autre ne peut exister par la même condition.
+On vérifie bien que les 4 «vecteur» sont orthonormaux comme il se doit et qu’aucun autre ne peut exister par la même condition.
 
 </div>
 

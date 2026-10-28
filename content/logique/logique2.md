@@ -120,7 +120,7 @@ Imaginons qu'un ensemble de formules ne possèdent que deux variables $P$ et $Q$
 <div id="def">
 
 Pour un modèle $\mathcal{M}$, si $\delta(P)=1$, on note $\mathcal{M}\models P$. Cela signifie que $P$ est vraie dans le modèle $\mathcal{M}$.<br>
-À linverse, si $\delta(P)=0$, on écrira $\mathcal{M}\not\models P$.
+À l'inverse, si $\delta(P)=0$, on écrira $\mathcal{M}\not\models P$.
 
 </div>
 <br>
@@ -365,7 +365,7 @@ Cela signifie qu'un des deux joueurs a une <b>stratégie gagnante</b>.
 
 <div id="preuve">
 
-Pour pouver ce résultat, on va représenter toutes les configurations possibles dans le jeu par un arbre dont les nœuds sont étiquetés par un des deux joueurs (0 ou 1) et les arêtes sont ses coups possibles depuis cette position. Les feuilles de l'arbre correspondent à des positions gagnantes, soit pour 0, soit pour 1. Puis on va décrire un algorithme permettant de déterminer lequel des deux joueurs a une stratégie gagnante sur une position donnée.
+Pour prouver ce résultat, on va représenter toutes les configurations possibles dans le jeu par un arbre dont les nœuds sont étiquetés par un des deux joueurs (0 ou 1) et les arêtes sont ses coups possibles depuis cette position. Les feuilles de l'arbre correspondent à des positions gagnantes, soit pour 0, soit pour 1. Puis on va décrire un algorithme permettant de déterminer lequel des deux joueurs a une stratégie gagnante sur une position donnée.
 
 On commence par colorier en <b style="color:#EE220C">rouge</b> les feuilles gagnantes pour <b style="color:#EE220C">0</b> et en <b style="color:#1DB100">vert</b> les feuilles gagnantes pour <b style="color:#1DB100">1</b>.
 
@@ -453,7 +453,7 @@ Les trois stratégies gagnantes possibles pour le Falsificateur sont les suivant
 
 <br>
 
-Une **table de vérité** est un tableau regroupant de manière synthétique tous les modèles d'une fomrule donnée.
+Une **table de vérité** est un tableau regroupant de manière synthétique tous les modèles d'une formule donnée.
 
 Si la formule possède $n$ variables propositionnelles, le tableau contient $2^n$ lignes, une ligne par modèle.
 
@@ -632,7 +632,7 @@ Par construction, $\psi_i$ est vraie dans tous les modèles de $\phi$, à l'exce
 
 <li>Ébauchons une preuve syntaxique (par un jeu de réécriture)&nbsp;:</li>
 <ul>
-    <li>on commence par se débarrasser des connecteurs $\rightarrow$ et $\leftrightarrow$ pous n'avoir plus que $\lor$, $\land$ et $\neg$ et on se débarrasse des doubles négations,</li>
+    <li>on commence par se débarrasser des connecteurs $\rightarrow$ et $\leftrightarrow$ pour n'avoir plus que $\lor$, $\land$ et $\neg$ et on se débarrasse des doubles négations,</li>
     <li>on utilise les lois de De Morgan pour faire entrer les négations à l'intérieur des formules jusqu'à ce que tous les symboles de négation soient placés devant une variable,</li>
     <li>on distribue la disjonction par rapport à la conjonction pour faire descendre les $\lor$ dans l'arbre de la formule jusqu'à ce qu'ils ne relient plus entre eux que des littéraux (des variables et leur négation).</li>
 </div>
@@ -660,7 +660,7 @@ Et pour construire de la même manière une formule sous forme normale disjoncti
 
 {{%notice type="tip" round="true"%}}
 Sans stratégie, **tester la validité** d'une formule revient à vérifier sa véracité pour chaque combinaison des valeurs des variables, ce qui va dépendre exponentiellement du nombre de variables (ce qui devient vite impraticable). L'équivalence entre le tableau de vérité de la formule et sa forme normale conjonctive ($\phi=\bigwedge_{i}\phi_i$) permet un test syntaxique rapide de la validité. Pour vérifier que chaque $\phi_i$ est une tautologie, il suffit de s'assurer de la présence dans chaque $\phi_i=\bigvee_j P_j$ d'une couple contradictoire $P_j$ et $\neg P_j$.<br>
-Et pour un **test de satisfabilité**, la forme normale disjonctive $\phi=\bigvee_j \phi_i$ est plus adaptée. On va à nouveau tester la présence d'un couple de variables contradictoires dans les $\phi_i=\bigwedge_{j}P_j$. Si on revient bredouille pour au moins un $i$ alors la formule est satisfaisable.
+Et pour un **test de satisfiabilité**, la forme normale disjonctive $\phi=\bigvee_j \phi_i$ est plus adaptée. On va à nouveau tester la présence d'un couple de variables contradictoires dans les $\phi_i=\bigwedge_{j}P_j$. Si on revient bredouille pour au moins un $i$ alors la formule est satisfaisable.
 {{%/notice%}}
 
 <br>

@@ -101,7 +101,7 @@ Il ne faut pas confondre la contraposée avec **la négation de l'antécédent**
 | 1   | 0   | 1                |
 | 1   | 1   | 1                 |
 
-La négation de l'antécédant est équivalent à la réciproque de la contraposée. L'utiliser en pensant qu'il est équivalent à l'implication est un raisonnement fallacieux ou **sophisme**.
+La négation de l'antécédent est équivalent à la réciproque de la contraposée. L'utiliser en pensant qu'il est équivalent à l'implication est un raisonnement fallacieux ou **sophisme**.
 
 Une proposition $F$ est une **conséquence logique** d'un ensemble de formules $\Gamma$ si lorsque les $\Gamma$ sont vraies, alors $F$ est vraie.  On note $\Gamma\models F$.<br>Cela revient à dire que $\Gamma\rightarrow F$ est une tautologie.<br>
 Comme $\equiv$, $\models$ est un élément du méta-langage.
@@ -221,9 +221,9 @@ $B \land (A\rightarrow B)  \not\models A$<br>
  - Les **variables** ($x$, $y$, $z$, etc.) représentent les objets dont on parle.
  - Les **constantes** ($a$, $b$, $c$, etc.) sont des valeurs particulières des objets (ici Socrate).
  - Variables et constantes sont des **termes** du langage.
- - les **fonctions** ($f$, $g$, $h$, etc.) permettent de fabriquer de nouveaux termes à partir d'anciens. Le nombre de terme auquels la fonction s'applique s'appelle sont **arité**. Une constante est une fonction d'arité 0. 
+ - les **fonctions** ($f$, $g$, $h$, etc.) permettent de fabriquer de nouveaux termes à partir d'anciens. Le nombre de termes auxquels la fonction s'applique s'appelle sont **arité**. Une constante est une fonction d'arité 0. 
  - les **prédicats** ($P$, $Q$, $R$, etc.) rendent compte des relation entre les termes (ici "être un homme" et "être mortel"). L'arité d'un prédicat est à nouveau le nombre de termes qu'il prend en argument.
- - les quantificateurs sont d'une part le **quantificateur universel** $\foralll$ qui sinfie ("pour tout") et le **quantificateur existentiel** $\exists$ qui signifie ("il existe").
+ - les quantificateurs sont d'une part le **quantificateur universel** $\foralll$ qui signifie ("pour tout") et le **quantificateur existentiel** $\exists$ qui signifie ("il existe").
  
  Les constantes et les variables sont issues d’un même ensemble appelé le **domaine**.
  
@@ -241,7 +241,7 @@ $B \land (A\rightarrow B)  \not\models A$<br>
 
 <br>
   
-En combinant deux prédicats $P$ et $Q$, leur négation et les deux quantificateurs, on peut construire 4 propositions donts les relations sont représentées dans le carré d'Aristote.
+En combinant deux prédicats $P$ et $Q$, leur négation et les deux quantificateurs, on peut construire 4 propositions dont les relations sont représentées dans le carré d'Aristote.
 
 ![](/carraristote.png?width=800px)
 
@@ -298,7 +298,7 @@ Les syllogismes, c'est mignons, mais ils n'ont à peu près jamais été utilis�
 <br>
  
 On dit qu’une occurrence de la variable $x$ dans une formule $F$ est **liée** si un quantificateur porte sur elle.<br>
-Si aucun quantificateur ne porte sur l'occurence de la variable, on parle d’occurrence **libre**. <br>
+Si aucun quantificateur ne porte sur l'occurrence de la variable, on parle d’occurrence **libre**. <br>
 Une variable est **libre** si toutes ses occurrences sont libres.<br>
 Une variable est **liée** si elle a au moins une occurrence liée. On parle aussi de variable muette dans ce dernier cas.
 

@@ -62,7 +62,7 @@ L'intelligence artificielle hérite-t-elle de nos biais cognitifs&nbsp;? On revi
 
 ## Histoire de l'IA
 
-L'**intelligence arificielle** (IA) est une discipline  scientifique qui a vu officiellement le jour en 1956. Elle repose sur la conjecture selon laquelle toutes les fonctions cognitives, en particulier l'apprentissage, le raisonnement, le calcul, la perception, la mémorisation, voire la découverte scientifique ou la créativité artistique, peuvent être reproduite par des ordinateurs.
+L'**intelligence artificielle** (IA) est une discipline  scientifique qui a vu officiellement le jour en 1956. Elle repose sur la conjecture selon laquelle toutes les fonctions cognitives, en particulier l'apprentissage, le raisonnement, le calcul, la perception, la mémorisation, voire la découverte scientifique ou la créativité artistique, peuvent être reproduite par des ordinateurs.
 
 #### La première programmeuse : Ada Lovelace
 
@@ -553,7 +553,7 @@ Malheureusement, le mème qui suit résume aujourd'hui assez bien notre compréh
 
 ## Jeux d'accessibilité sur un graphe
 
-Cette partie du cours a moins à voir avec les jeux vidéo qu'avec la modélisation de systèmes réactifs (automate bancaire, système-environnement), les problèmes de contrôle, la théorie de la décision, les problèmes de routage sur Internet, l'économie... Autant de domaînes admettant une description en terme d'opposition entre adversaires sur une arêne (un des adversaires pouvant modéliser l'environnement). La détermination d'une stratégie gagnante résout alors le problème posé en assurant sa correction.
+Cette partie du cours a moins à voir avec les jeux vidéo qu'avec la modélisation de systèmes réactifs (automate bancaire, système-environnement), les problèmes de contrôle, la théorie de la décision, les problèmes de routage sur Internet, l'économie... Autant de domaines admettant une description en termes d'opposition entre adversaires sur une arène (un des adversaires pouvant modéliser l'environnement). La détermination d'une stratégie gagnante résout alors le problème posé en assurant sa correction.
 
 <br>
 
@@ -687,7 +687,7 @@ L'attracteur dans l'exemple du jeu Chomp contient 9 sommets, dont le somme de d�
 
 ![](/chompattract.gif)
 
-Dans le cas de la variante de Nim, l'attracteur se réduit à $Attr(G) = \\{(0,0,1) , (1,1,0) , (2,2,0) \\}$ où la troisième valeur des triplets correspond au joueur qui contôle le sommet (0 pour Eve et 1 pour Adam). Le sommet de départ $(5,4,0)$ n'est pas dedans $\Rightarrow$ c'est perdu pour Eve 😭..
+Dans le cas de la variante de Nim, l'attracteur se réduit à $Attr(G) = \\{(0,0,1) , (1,1,0) , (2,2,0) \\}$ où la troisième valeur des triplets correspond au joueur qui contrôle le sommet (0 pour Eve et 1 pour Adam). Le sommet de départ $(5,4,0)$ n'est pas dedans $\Rightarrow$ c'est perdu pour Eve 😭..
 
 ![](/nimvarattr.png?width=600px)
 
@@ -773,7 +773,7 @@ Une heuristique est une méthode de calcul qui fournit rapidement une solution r
 Une heuristique est donc un compromis entre d'un côté l'optimalité (trouver la meilleure solution) et/ou la complétude (trouver toutes les solutions) de l'algorithme et de l'autre côté sa vitesse.
 {{% /notice %}}
 
-Pour implémenter efficacement cette recherche partielle, l'idée est d'utiliser un arbre plutôt que l'arêne précédente. Quelle différence&nbsp;? L'absence de cycle qui va permettre d'élaguer&nbsp;! On le paye au prix de la redondance des sommets (le même sommet peut apparaître plusieurs fois dans l'arbre). Pour chaque position, les différents coups possibles correspondent aux différentes branches et on avance ainsi niveau par niveau jusqu'aux feuilles représentant les positions terminales.
+Pour implémenter efficacement cette recherche partielle, l'idée est d'utiliser un arbre plutôt que l'arène précédente. Quelle différence&nbsp;? L'absence de cycle qui va permettre d'élaguer&nbsp;! On le paye au prix de la redondance des sommets (le même sommet peut apparaître plusieurs fois dans l'arbre). Pour chaque position, les différents coups possibles correspondent aux différentes branches et on avance ainsi niveau par niveau jusqu'aux feuilles représentant les positions terminales.
 
 Le gros avantage d'un arbre est qu'il permet facilement de ne garder que quelques niveaux (on raccourci alors toutes les branches jusqu'à la profondeur considérée).
 
@@ -781,7 +781,7 @@ Muni de cet arbre, l'algorithme se lance dans un parcours en profondeur jusqu'à
 - sur un niveau correspondant au joueur 1, on sélectionne la valeur **maximale** parmi les branches, 
 - et sur un niveau correspondant à l'adversaire, on sélectionne la valeur **minimale**.  
 
-Le pricipe est de maximiser les gains du joueur 1 tout en minimisant ceux du joueur 2. 
+Le principe est de maximiser les gains du joueur 1 tout en minimisant ceux du joueur 2. 
 La valeur est au final transmise à la racine (la position depuis laquelle on a lancé la recherche) et la meilleure branche est sélectionnée.
 
 Prenons l'exemple du jeu de Morpion. Une heuristique possible pour évaluer un plateau pourrait consister à compter $+1$ pour chaque alignement encore possible pour le joueur et  $-1$ pour ceux encore possibles pour son adversaire.
@@ -953,12 +953,12 @@ Un champ de recherche immense s'est ouvert pour tenter de comprendre le fonction
 
 L'intelligence artificielle repose en grande partie sur la collecte de données et leur traitement. Or des biais très importants aux conséquences potentiellement dramatique peuvent s'immiscer lors de cette étape cruciale.
 
-Prenons l'exemple du **biais des sruvivants** qui est un des plus importants **biais de sélection**.
+Prenons l'exemple du **biais des survivants** qui est un des plus importants **biais de sélection**.
 
 
 ### Biais des survivants
 
-Il tire son nom des efforts du statisticien Abraham Wald du Statistical Research Group qui analysait les impacts sur les bombardiers amériacains revenus de mission pendant la seconde guerre mondiale afin de déterminer les zones où il fallait améliorer le blindage.
+Il tire son nom des efforts du statisticien Abraham Wald du Statistical Research Group qui analysait les impacts sur les bombardiers américains revenus de mission pendant la seconde guerre mondiale afin de déterminer les zones où il fallait améliorer le blindage.
 ![](/survivorshipbias.png?width=700)
 
 En voyant cette image l'erreur de logique consisterait à vouloir blinder les zones les plus impactées. C'est tomber dans le biais des survivants&nbsp;! En effet, les avions étudié sont ceux qui sont revenus, les "survivants", ce qui signifie que les impacts reçus ne les ont pas détruit. Par contre, l'absence d'impact dans certaines zones pourrait indiquer qu'il s'agit là d'endroits critiques où un tir provoque plus certainement une avarie grave et donc l'absence de survivants y présentant des impacts. Il faut en conclusion blinder d'avantage les zones sans impact&nbsp;!
@@ -977,7 +977,7 @@ Et au final, le biais des survivants n'est bien qu'une forme de **biais de séle
 
 ![](/samplingbias.jpeg?width=600px)
 
-Une fois récoltées, les données sont traîtées et en particulier, on cherche à établir des corrélations entre des groupes de données. En effet, ces corrélations permettent d'extrapoler dans des zones de l'espace vides de données et ainsi prédire les valeurs ou catégories de données manquantes. Par contre, on doit alors faire attention à un autre biais classique résumé par un des mantras de la statistique : "La corrélation n'implique pas la causalité".
+Une fois récoltées, les données sont traitées et en particulier, on cherche à établir des corrélations entre des groupes de données. En effet, ces corrélations permettent d'extrapoler dans des zones de l'espace vides de données et ainsi prédire les valeurs ou catégories de données manquantes. Par contre, on doit alors faire attention à un autre biais classique résumé par un des mantras de la statistique : "La corrélation n'implique pas la causalité".
 
 ### La corrélation n'implique pas la causalité
 
