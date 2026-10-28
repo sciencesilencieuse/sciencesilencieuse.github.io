@@ -168,9 +168,9 @@ Les deux opérateurs $\hat{x}-\frac{\mathrm{i}}{m\omega}\hat{p}$ et $\hat{x}+\fr
 
 [^1]: L'opération adjointe est l'équivalent d'une symétrie complexe. Pour l'obtenir, on transpose l'opérateur (on inverse ses lignes et ses colonnes si on le voit comme une matrice) et on prend le conjugué complexe de ses nombres (on change le signe de la partie imaginaire $\mathrm{i}$ en $-\mathrm{i}$). Si l'on a un opérateur $\hat{A}$, son adjoint se note $\hat{A}^\dagger$.
 
-[^2]: Un opérateur est dit hermitien s'il est égal à son propre adjoint ($\hat{A} = \hat{A}^\dagger$). En mécanique quantique, cette propriété est capitale&nbsp;: elle garantit que les valeurs propres de cet opérateur (les résultats possibles d'une mesure mathématique) sont strictement des nombres réels.
+[^2]: Un opérateur est dit hermitien s'il est égal à son propre adjoint ($\hat{A} = \hat{A}^\dagger$). En mécanique quantique, cette propriété est capitale&nbsp;: elle garantit que les valeurs propres de cet opérateur (les résultats possibles d'une mesure) sont strictement des nombres réels.
 
-[^3]: Une observable une grandeur physique mesurable en laboratoire (comme la position, la vitesse, l'énergie). Puisqu'un cadran ou un détecteur ne peut afficher que des nombres réels (et non des nombres imaginaires), toute observable quantique doit obligatoirement être décrite par un opérateur hermitien.
+[^3]: Une observable est une grandeur physique mesurable en laboratoire (comme la position, la vitesse, l'énergie). Puisqu'un cadran ou un détecteur ne peut afficher que des nombres réels (et non des nombres imaginaires), toute observable quantique doit obligatoirement être décrite par un opérateur hermitien.
 
 Après un petit toilettage, introduisons les **opérateurs d'échelle**&nbsp;:
 
@@ -233,7 +233,7 @@ $
 </div>
 
 
-Appelons $|n\rangle$ un état propre de $\hat{a}^\dagger\hat{a}$ pour une valeur propre $n$. Alors $|n\rangle$ sera aussi vecteur propre de $\hat{H}$ mais pour une valeur propre $\hbar\omega(n+\frac{1}{2})$. Si $n$ vaut 0, 1, 2, ...., on aura bien retrouvé les valeurs propres d'un oscillateur harmonique&nbsp;!
+Appelons $|n\rangle$ un état propre de $\hat{a}^\dagger\hat{a}$ pour une valeur propre $n$. Alors $|n\rangle$ sera aussi vecteur propre de $\hat{H}$ mais pour une valeur propre $\hbar\omega(n+\frac{1}{2})$. Si $n$ vaut 0, 1, 2, ..., on aura bien retrouvé les valeurs propres d'un oscillateur harmonique&nbsp;!
 
 <div id="preuve">
 
@@ -247,7 +247,7 @@ $
 
 Montrons ensuite que $n$ ne prend que des valeurs entières.
 
-On commence par définir l'**opérateur nombre** de quantas de vibration $\hat{n} = \hat{a}^\dagger\hat{a}$. On a alors $\hat{n}|n\rangle = n|n\rangle$.<br>
+On commence par définir l'**opérateur nombre** de quanta de vibration $\hat{n} = \hat{a}^\dagger\hat{a}$. On a alors $\hat{n}|n\rangle = n|n\rangle$.<br>
 Nombre de quoi&nbsp;? $n$ correspond au numéro du barreau d'échelle atteint et donc au nombre de quanta d'énergie $\hbar\omega$ qu'il a fallu ajouter au système dans son état fondamental.
 
 On peut réécrire le hamiltonien $\hat{H}=\hbar\omega\left(\hat{n}+\frac{1}{2}\right)$. Et donc $\hat{H}|n\rangle = \left(\hat{n}+\frac{1}{2}\right) \hbar\omega |n\rangle$. $|n\rangle$ est ainsi un raccourci simple pour les vilains $\psi_n(\xi)$.
@@ -256,11 +256,11 @@ De $[\hat{a},\hat{a}^\dagger]=1$, on déduit $\hat{a}\hat{a}^\dagger = 1 +\hat{a
 $\hat{n}\hat{a}^\dagger|n\rangle = \hat{a}^\dagger\hat{a}\hat{a}^\dagger|n\rangle=\hat{a}^\dagger(1+\hat{n})|n\rangle=(n+1)\hat{a}^\dagger|n\rangle$. Par conséquent, $\hat{a}^\dagger|n\rangle$ est un état propre de $\hat{H}$ pour une valeur propre un rang au-dessus de celle de $|n\rangle$. $\hat{a}^\dagger$ a donc pour effet d'ajouter un quantum d'énergie&nbsp;! C'est l'<b>opérateur de création</b>.
 
 En utilisant la relation de commutation $[\hat{n},\hat{a}]=\hat{n}\hat{a}-\hat{a}\hat{n}=\hat{a}^\dagger\hat{a}\hat{a}-{\color{#970E53}\hat{a}\hat{a}^\dagger}\hat{a}=\hat{a}^\dagger\hat{a}\hat{a}-{\color{#970E53}(1+\hat{a}^\dagger\hat{a})}\hat{a}=-\hat{a}$, on obtient $\hat{n}\hat{a}|n\rangle = (-\hat{a}+\hat{a}\hat{n})|n\rangle=(n-1)\hat{a}|n\rangle$.<br>
-$\hat{a}|n\rangle$ est un état propre de $\hat{H}$ pour une valeur propre un rang en-dessous de celle de $|n\rangle$. $\hat{a}$ fait donc descendre d'un étage. C'est l'<b>opérateur d'annihilation</b>.
+$\hat{a}|n\rangle$ est un état propre de $\hat{H}$ pour une valeur propre un rang en dessous de celle de $|n\rangle$. $\hat{a}$ fait donc descendre d'un étage. C'est l'<b>opérateur d'annihilation</b>.
 
 En appliquant de manière répétée l'opérateur $\hat{a}$ à $|n\rangle$, on pourrait finir avec une énergie négative, ce qui semble physiquement blasphématoire. Il faut donc qu'il existe un état fondamental $|0\rangle$ tel que $\hat{n}|0\rangle = 0$.
 
-Et en appliquant maintenant $\hat{a}^\dagger$ depuis $|0\rangle$, on se retrouve bien avec des valeurs de $n$ entières !
+Et en appliquant maintenant $\hat{a}^\dagger$ depuis $|0\rangle$, on se retrouve bien avec des valeurs de $n$ entières&nbsp;!
 
 </div>
 
@@ -293,7 +293,7 @@ On a montré que $\hat{a}|n\rangle$ est proportionnel à $|n-1\rangle$&nbsp;: $\
 Prenons la norme de cet état&nbsp;: $|\hat a|n\rangle|^2 = \langle n|\hat{a}^\dagger\hat{a}|n\rangle=|k|^2\langle n-1|n-1\rangle=|k|^2$ (vu que les états propres de l'oscillateur harmonique sont normalisés).<br>
 Mais on peut remarquer aussi que $\langle n|\hat{a}^\dagger\hat{a}|n\rangle=\langle n|\hat{n}|n\rangle =n$.<br>
 On obtient par conséquent $k=\sqrt{n}$ (cela suppose $k$ réel mais comme les états sont définis à une phase près, on peut toujours choisir la phase afin que $k$ soit bien réel).<br>
-On a aussi montré que $\hat{a}^\dagger|n\rangle=c|n+1\rangle$ et $|a^\dagger|n\rangle|^2 = \langle n|\hat{a}\hat{a}^\dagger|n\rangle=|c|^2\langle n+1|n+1\rangle=|c|^2$.<br>
+On a aussi montré que $\hat{a}^\dagger|n\rangle=c|n+1\rangle$ et $|\hat{a}^\dagger|n\rangle|^2 = \langle n|\hat{a}\hat{a}^\dagger|n\rangle=|c|^2\langle n+1|n+1\rangle=|c|^2$.<br>
 Et comme $\hat{a}\hat{a}^\dagger=1+\hat{n}$, $\langle n|\hat{a}\hat{a}^\dagger|n\rangle=\langle n|1+\hat{n}|n\rangle=n+1$.<br>
 Et donc $c=\sqrt{n+1}$
 </details>
@@ -327,7 +327,7 @@ Des [détails supplémentaires](../../oh) sur la quantification de l'oscillateur
 
 ### $N$ oscillateurs couplés
 
-Supposons maintenant qu'on ait affaire à un troupeau de $N$ oscillateurs harmoniques indépendants, sans couplage. le hamiltonien devient $\displaystyle \hat{H}=\sum_{k=1}^N\hat{H}\_k$ qu'on peut réécrire&nbsp;: 
+Supposons maintenant qu'on ait affaire à un troupeau de $N$ oscillateurs harmoniques indépendants, sans couplage. Le hamiltonien devient $\displaystyle \hat{H}=\sum_{k=1}^N\hat{H}\_k$ qu'on peut réécrire&nbsp;: 
 
 <div id="def">
 
@@ -479,9 +479,9 @@ Les paquets d'énergie que peut accepter le phonon ressemblent à des particules
 
 On va se débarrasser des fonctions d'ondes en passant de la représentation $(x,p)$ à un nouveau type de représentation.
 
-On place une particule dans une boite de taille $L$ (on prend dans la suite $\hbar=1$). 
+On place une particule dans une boîte de taille $L$ (on prend dans la suite $\hbar=1$). 
 
-L'opérateur impulsion $\hat{p}$ pour un mouvement dans la direction $x$ est $\hat{p}=-\mathrm{i}\frac{\partial}{\partial x}$. Les solutions de l'équation de Schrödinger pour la particule dans la boite sont les états propres de l'opérateur impulsion, les ondes planes $\psi(x)=\frac{1}{\sqrt{L}}\mathrm{e}^{\mathrm{i}px}$. Utiliser des conditions aux limites périodiques ($\psi(x+L)=\psi(x)$) entraîne que $\mathrm{e}^{\mathrm{i}p(x+L)}={\mathrm{e}}^{\mathrm{i}px}$ et implique donc que $\mathrm{e}^{\mathrm{i}pL}=1$. Satisfaire la condition nécessite que $pL=2\pi m$ avec $m$ entier. Cela impose donc une quantification des états d'impulsion que peut prendre la particule dans la boite&nbsp;:
+L'opérateur impulsion $\hat{p}$ pour un mouvement dans la direction $x$ est $\hat{p}=-\mathrm{i}\frac{\partial}{\partial x}$. Les solutions de l'équation de Schrödinger pour la particule dans la boîte sont les états propres de l'opérateur impulsion, les ondes planes $\psi(x)=\frac{1}{\sqrt{L}}\mathrm{e}^{\mathrm{i}px}$. Utiliser des conditions aux limites périodiques ($\psi(x+L)=\psi(x)$) entraîne que $\mathrm{e}^{\mathrm{i}p(x+L)}={\mathrm{e}}^{\mathrm{i}px}$ et implique donc que $\mathrm{e}^{\mathrm{i}pL}=1$. Satisfaire la condition nécessite que $pL=2\pi m$ avec $m$ entier. Cela impose donc une quantification des états d'impulsion que peut prendre la particule dans la boîte&nbsp;:
 
 <p style="text-align:center;">
 $\displaystyle
@@ -489,7 +489,7 @@ p_m = \frac{2\pi m}{L}
 $
 </p>
 
-Si on a plusieurs particules sans interaction dans la boite, l'énergie totale est donnée par $\sum_m n_{p_m}E_{p_m}$ où $n_{p_m}$ est le nombre de particules dans l'état $|p_m\rangle$.
+Si on a plusieurs particules sans interaction dans la boîte, l'énergie totale est donnée par $\sum_m n_{p_m}E_{p_m}$ où $n_{p_m}$ est le nombre de particules dans l'état $|p_m\rangle$.
 
 Plutôt que de noter un état à plusieurs particules identiques de cette façon $|p_1 p_2 p_1 p_3 p_5\rangle$ (ici pour 5 particules), on va juste lister le nombre de particules dans chacun des états, ce qui donne pour l'exemple précédent $|21101\rangle$. On dit qu'on passe alors à une **représentation en nombre d'occupation** qu'on a déjà rencontrée dans le chapitre précédent.
 
@@ -515,7 +515,7 @@ $
 
 On crée ainsi un état général de plusieurs oscillateurs harmoniques en agissant sur l'état du vide. Mais on veut aller plus loin qu'une création de quanta dans des oscillateurs... **L'ambition est une création de particules dans des états d'impulsion donnés.** On veut un opérateur de création $\hat{a}^\dagger_{p_m}$ pour faire naître une particule dans l'état d'impulsion $|p_m\rangle$. Peut-on juste changer $k$ en $p_m$ pour passer de la création d'un quantum dans l'oscillateur $k$ à une particule dans l'état d'impulsion $|p_m\rangle$&nbsp;? Presque... Juste une petite question de symétrie à régler.
 
-Considérons par exemple un système à deux états d'impulsion $p_1$ et $p_2$ décrits dans la représentation en nombre d'occupation $|n_1n_2\rangle$. Chacun de ses états est formé en agissant sur l'état du vide $|0\rangle$. Définissons $\hat{a}\_{p_1}^\dagger|0\rangle=|10\rangle$ et $\hat{a}\_{p_2}^\dagger|0\rangle=|01\rangle$ et ajoutons une nouvelle particule dans l'état inoccupé&nbsp;: $\hat{a}\_{p_2}^\dagger\hat{a}\_{p_1}^\dagger|0\rangle\propto|11\rangle$, $\hat{a}\_{p_1}^\dagger\hat{a}\_{p_2}^\dagger|0\rangle\propto|11\rangle$ où la constante de proportionnalité reste à déterminer.
+Considérons par exemple un système à deux états d'impulsion $p_1$ et $p_2$ décrits dans la représentation en nombre d'occupation $|n_1n_2\rangle$. Chacun de ces états est formé en agissant sur l'état du vide $|0\rangle$. Définissons $\hat{a}\_{p_1}^\dagger|0\rangle=|10\rangle$ et $\hat{a}\_{p_2}^\dagger|0\rangle=|01\rangle$ et ajoutons une nouvelle particule dans l'état inoccupé&nbsp;: $\hat{a}\_{p_2}^\dagger\hat{a}\_{p_1}^\dagger|0\rangle\propto|11\rangle$, $\hat{a}\_{p_1}^\dagger\hat{a}\_{p_2}^\dagger|0\rangle\propto|11\rangle$ où la constante de proportionnalité reste à déterminer.
 
 Suivant qu'on ajoute une particule dans l'état $p_1$ puis une autre dans l'état $p_2$ ou dans l'ordre inverse, on doit finir avec le même état $|11\rangle$, ce qui implique $\hat{a}\_{p_1}^\dagger\hat{a}\_{p_2}^\dagger = \lambda\hat{a}\_{p_2}^\dagger\hat{a}\_{p_1}^\dagger$ où $\lambda$ est une constante.
 
@@ -575,7 +575,7 @@ $
 
 #### Cas 2&nbsp;: $\lambda=-1$, les fermions
 
-On va noter les opérateurs des fermions $\hat{c}\_i^\dagger$ pour les différentier de ceux des bosons. 
+On va noter les opérateurs des fermions $\hat{c}\_i^\dagger$ pour les différencier de ceux des bosons. 
 
 <div id="theo">
 
@@ -617,7 +617,7 @@ Où $(-1)^{\sum_i}=(-1)^{n_1+n_2+\cdots+n_{i-1}}$. Cela donne un facteur $(-1)$ 
 
 <summary>Prenons un exemple pour s'aguerrir et vérifier la formule</summary>
 
-Pour échanger de place de particules, on va leur faire suivre le processus suivant $|110\rangle\rightarrow|101\rangle\rightarrow|011\rangle\rightarrow|110\rangle$.
+Pour échanger de place deux particules, on va leur faire suivre le processus suivant $|110\rangle\rightarrow|101\rangle\rightarrow|011\rangle\rightarrow|110\rangle$.
 
 Bouger une particule de place consiste à détruire la particule à un endroit et à la créer à un autre.<br>
 Déplacer une particule de l'état 2 vers l'état 3 s'écrit donc $\hat{a}^\dagger_{3}\hat{a}\_2|110\rangle$. L'enchaînement total proposé peut être décrit par l'enchaînement $\hat{a}^\dagger_{1}\hat{a}\_3\hat{a}^\dagger_{2}\hat{a}\_1\hat{a}^\dagger_{3}\hat{a}_2|110\rangle$. Et le résultat est censé être $\pm|110\rangle$ ($+$ pour des bosons et $-$ pour des fermions).
@@ -644,7 +644,7 @@ $\hat{c}^\dagger_{1}\hat{c}\_3\hat{c}^\dagger_{2}\hat{c}\_1\hat{c}^\dagger_{3}\h
   
 <br>  
 
-On était jusque-là confiné dans une boite, mais que se passe-t-il si on écarte ses murs infiniment&nbsp;? On passe alors à la **limite du continu**. Le symbole de Kronecker $\delta_{ij}$ des commutateurs devient une fonction delta de Dirac $\delta^{(3)}(\boldsymbol{p})$ et les sommes discrètes deviennent des intégrales.
+On était jusque-là confiné dans une boîte, mais que se passe-t-il si on écarte ses murs infiniment&nbsp;? On passe alors à la **limite du continu**. Le symbole de Kronecker $\delta_{ij}$ des commutateurs devient une fonction delta de Dirac $\delta^{(3)}(\boldsymbol{p})$ et les sommes discrètes deviennent des intégrales.
   
 Le commutateur se transforme donc en&nbsp;:
 
@@ -698,7 +698,7 @@ Par un changement de base, $|\boldsymbol{x}\rangle = \int\mathrm{d}q\\,\phi^*\_\
 
 <details style="background-color:#F4F4F4;border-radius:5px;padding:5px 5px 5px 5px;">
 <summary>
-changement de base
+Changement de base
 </summary>
 
 L'état $|\boldsymbol{x}\rangle$ peut s'écrire dans une nouvelle base en utilisant la relation de fermeture $1=\int\mathrm{d}^3q\\,|\boldsymbol{q}\rangle\langle\boldsymbol{q}|$ de telle sorte que $|\boldsymbol{x}\rangle = \int\mathrm{d}^3q\\,|\boldsymbol{q}\rangle\langle\boldsymbol{q}|\boldsymbol{x}\rangle$. Et comme $\langle\boldsymbol{x}|\boldsymbol{q}\rangle=\phi\_\boldsymbol{q}(\boldsymbol{x})$ et $\langle\boldsymbol{q}|\boldsymbol{x}\rangle=\phi^\*\_\boldsymbol{q}(\boldsymbol{x})$, on obtient bien $|\boldsymbol{x}\rangle = \int\mathrm{d}q\\,\phi^*\_\boldsymbol{q}(\boldsymbol{x})|\boldsymbol{q}\rangle$.
@@ -753,7 +753,7 @@ Et on a aussi $\int\mathrm{d}^3 x\\,\mathrm{e}^{-\mathrm{i}\boldsymbol{p}\cdot\b
 
 </div>
 
-On sait d'ores et déjà créer une particule d'impulsion $\boldsymbol{p}$ à partir de l'état du vide en appliquant l'opérateur de création&nbsp;: $\hat{a}^\dagger\_\boldsymbol{p}|0\rangle$. On obtient ainsi une particule complètement localisée dans l'espace des impulsions et donc s'étendant sur tout l'espace des coordonnées. Supposons maintenant que l'on veuille créer une **particule localisée** dans l'espace des coordonnées. Dans ce but, on construit des nouveaux opérateurs de création et d'annihilation appelés **opérateur de champ** par transformée de Fourier discrète des opérateurs $\hat{a}^\dagger\_\boldsymbol{p}$ et $\hat{a}\_\boldsymbol{p}$.
+On sait d'ores et déjà créer une particule d'impulsion $\boldsymbol{p}$ à partir de l'état du vide en appliquant l'opérateur de création&nbsp;: $\hat{a}^\dagger\_\boldsymbol{p}|0\rangle$. On obtient ainsi une particule complètement localisée dans l'espace des impulsions et donc s'étendant sur tout l'espace des coordonnées. Supposons maintenant que l'on veuille créer une **particule localisée** dans l'espace des coordonnées. Dans ce but, on construit de nouveaux opérateurs de création et d'annihilation appelés **opérateurs de champ** par transformée de Fourier discrète des opérateurs $\hat{a}^\dagger\_\boldsymbol{p}$ et $\hat{a}\_\boldsymbol{p}$.
 
 <div id="def">
 
@@ -841,7 +841,7 @@ où les $\mathcal{A}_{\alpha\beta}=\langle\alpha|\hat{\mathcal{A}}|\beta\rangle$
 
 L'idée va être de passer de cette transition entre états à un transfert de particules (mort de l'une suivie de la naissance d'une autre).
 
-L'espace de Hilbert permet de décrire l'état d'une particule. L'**espace de Fock** rend possible, lui, la description d'états à $N$ particules (l'espace de Fock $\mathcal{F}$ inclut tous les états à $N$-particules pour toutes les valeurs de $N$&nbsp;: $\mathcal{F}=\bigoplus_{N=0}^\infty \mathcal{F}\_{\\! N}=\mathcal{F}\_{\\! 0}\oplus\mathcal{F}\_{\\! 1}\oplus\cdots$ où $\mathcal{F}\_{\\! 0}=\\{|0\rangle\\}$ est un ensemble ne contenant que l'état du vide et $\mathcal{F}\_{\\! 1}$ est l'espace de Hilbert. Les sous-espaces $\mathcal{F}\_{\\! N\geq 2}$ doivent être symétrisés pour des bosons et antisymétrisés pour des fermions (donc $\mathcal{F}\_{\\! 2}$ n'est pas seulement $\mathcal{F}\_{\\! 1}\otimes\mathcal{F}\_{\\! 1}$ mais seulement sa partie symétrique ou antisymétrique). Les opérateurs de création permettent de passer d'un élément de $\mathcal{F}\_{\\! N}$ à un élément de $\mathcal{F}_{\\! N+1}$ et les opérateurs d'annihilation font l'inverse.
+L'espace de Hilbert permet de décrire l'état d'une particule. L'**espace de Fock** rend possible, lui, la description d'états à $N$ particules (l'espace de Fock $\mathcal{F}$ inclut tous les états à $N$ particules pour toutes les valeurs de $N$&nbsp;: $\mathcal{F}=\bigoplus_{N=0}^\infty \mathcal{F}\_{\\! N}=\mathcal{F}\_{\\! 0}\oplus\mathcal{F}\_{\\! 1}\oplus\cdots$ où $\mathcal{F}\_{\\! 0}=\\{|0\rangle\\}$ est un ensemble ne contenant que l'état du vide et $\mathcal{F}\_{\\! 1}$ est l'espace de Hilbert). Les sous-espaces $\mathcal{F}\_{\\! N\geq 2}$ doivent être symétrisés pour des bosons et antisymétrisés pour des fermions (donc $\mathcal{F}\_{\\! 2}$ n'est pas $\mathcal{F}\_{\\! 1}\otimes\mathcal{F}\_{\\! 1}$ tout entier mais seulement sa partie symétrique ou antisymétrique). Les opérateurs de création permettent de passer d'un élément de $\mathcal{F}\_{\\! N}$ à un élément de $\mathcal{F}_{\\! N+1}$ et les opérateurs d'annihilation font l'inverse.
 
 La **version seconde quantification $\hat{A}$ de l'opérateur $\hat{\mathcal{A}}$** qui correspond à l'upgrade d'un opérateur à une particule agissant sur l'espace de Hilbert vers un opérateur multi-particules agissant sur l'espace de Fock est simplement donnée par&nbsp;:
 
@@ -855,7 +855,7 @@ $
 
 </div>
 
-Les éléments de matrice $\mathcal{A}\_{\alpha\beta}$ sont les mêmes qu'au-dessus et ils continuent à représenter l'ensemble des transitions possibles d'une particule seule. Mais $\hat{A}$ opère bien maintenant sur un état à plusieurs particules. On commence par utiliser $\hat{a}\_\beta$ pour retirer une particule dans l'état $|\beta\rangle$, on multiplie par l'élément de matrice $\mathcal{A}\_{\alpha\beta}$ donnant l'amplitude de la transition vers le nouvel état, et enfin on utilise $\hat{a}^\dagger_\alpha$ pour placer la particules dans l'état final $|\alpha\rangle$.
+Les éléments de matrice $\mathcal{A}\_{\alpha\beta}$ sont les mêmes qu'au-dessus et ils continuent à représenter l'ensemble des transitions possibles d'une particule seule. Mais $\hat{A}$ opère bien maintenant sur un état à plusieurs particules. On commence par utiliser $\hat{a}\_\beta$ pour retirer une particule dans l'état $|\beta\rangle$, on multiplie par l'élément de matrice $\mathcal{A}\_{\alpha\beta}$ donnant l'amplitude de la transition vers le nouvel état, et enfin on utilise $\hat{a}^\dagger_\alpha$ pour placer la particule dans l'état final $|\alpha\rangle$.
 
 ![](/tqcopchamp.png?width=150px)
 
@@ -890,7 +890,7 @@ $\displaystyle\hat{H}=\sum\_\boldsymbol{p}\frac{\boldsymbol{p}^2}{2m}\hat{n}
 
 </div>
 
-$\hat{H}$ est diagonal dans la base des états nombre d'occupation puisqu'ils sont des états propres de $\hat{n}\_\boldsymbol{p}$. Et de fait, pour diagonaliser tout hamiltonien (ce qui revient à trouver les énergies des états propres), on n'a qu'à l'exprimer en termes de nombres d'opérateurs. Donc ici, on dit finalement que l'énergie totale du système est donnée par la somme des énergies $\frac{\boldsymbol{p}^2}{2m}$ de toutes les particules. Ça paraît sensé.
+$\hat{H}$ est diagonal dans la base des états nombre d'occupation puisqu'ils sont des états propres de $\hat{n}\_\boldsymbol{p}$. Et de fait, pour diagonaliser tout hamiltonien (ce qui revient à trouver les énergies des états propres), on n'a qu'à l'exprimer en termes d'opérateurs nombre. Donc ici, on dit finalement que l'énergie totale du système est donnée par la somme des énergies $\frac{\boldsymbol{p}^2}{2m}$ de toutes les particules. Ça paraît sensé.
 
 </div>
 
@@ -902,7 +902,7 @@ Et si l'opérateur est une fonction de $\hat{\boldsymbol{x}}$ plutôt que $\hat{
 
 La formule de promotion reste valable si les états $|\alpha\rangle$ et $|\beta\rangle$ sont des états de position. Il suffit de remplacer les opérateurs de création et d'annihilation par les opérateurs de champ, et la somme sur les impulsions par une intégrale sur l'espace.<br>
 
-On peut ainsi écrire l'opérateur $\hat{V}$ en version seconde-quantification&nbsp;: 
+On peut ainsi écrire l'opérateur $\hat{V}$ en version seconde quantification&nbsp;: 
 
 <p style="text-align:center;">
 $\displaystyle
@@ -1006,7 +1006,7 @@ $\displaystyle \hat{V} = \int \mathrm{d}^3 x \\, V(\boldsymbol{x}) \hat{\rho}(\b
 
 <br>
 
-Le cadre non-relativiste dans lequel on se place jusqu'ici est limité mais il permet déjà de jouer avec des modèles de matière condensée. Finissons donc le chapitre en appliquant notre nouveau formalisme à des électrons se déplaçant sur un réseau d'atomes.
+Le cadre non relativiste dans lequel on se place jusqu'ici est limité mais il permet déjà de jouer avec des modèles de matière condensée. Finissons donc le chapitre en appliquant notre nouveau formalisme à des électrons se déplaçant sur un réseau d'atomes.
 
 ### Modèle des liaisons fortes pour l'énergie cinétique
 
@@ -1018,7 +1018,7 @@ $\displaystyle
 $
 </p>
 
-Chaque terme de la somme correspond à un processus où une particule est annihilée au site $j$ puis recréée au site $i$, modélisant un saut et sauvant ainsi l'énergie $t_{ij}$.
+Chaque terme de la somme correspond à un processus où une particule est annihilée au site $j$ puis recréée au site $i$, modélisant un saut et économisant ainsi l'énergie $t_{ij}$.
 
 ![](/tqcresij.png?width=300px)
 
@@ -1073,7 +1073,7 @@ $
 
 Le $\frac{1}{2}$ compense le double comptage des interactions. L'ordre des opérateurs n'est pas anodin&nbsp;! Celui utilisé est appelé **ordre normal** et sa vertu principale est d'assurer que l'opérateur $\hat{V}$ ait une valeur moyenne prédite (espérance quantique) nulle pour l'état de vide ($\langle 0|\hat{V}|0\rangle=0$).
 
-On restreint le potentiel à la forme $V(\boldsymbol{x}-\boldsymbol{y})$ ne dépendant que de la séparation relative des particules (cela va garantir la conservation de l'impulsion dans l'interaction) et on décompose en modes d'impulsion les opérateurs champ&nbsp;:
+On restreint le potentiel à la forme $V(\boldsymbol{x}-\boldsymbol{y})$ ne dépendant que de la séparation relative des particules (cela va garantir la conservation de l'impulsion dans l'interaction) et on décompose en modes d'impulsion les opérateurs de champ&nbsp;:
 
 <p style="text-align:center;overflow-x:auto;">
 $\displaystyle
@@ -1098,13 +1098,13 @@ La formule peut s'interpréter comme une diffusion dans l'espace des impulsions 
 
 Une particule arrive avec une impulsion $\boldsymbol{p}\_2$, émet une particule porteuse de force d'impulsion $\boldsymbol{q}$, réduisant ainsi son impulsion finale à $\boldsymbol{p}\_2-\boldsymbol{q}$. La particule porteuse de force est absorbée par une autre particule dont l'impulsion passe alors de $\boldsymbol{p}\_1$ à $\boldsymbol{p}\_1+\boldsymbol{q}$. On constate que l'impulsion est conservée aux points de croisement du diagramme.
 
-Pour réussir à évaluer l'énergie facilement, l'idée est de transformer toutes les combinaisons d'opérateurs en opérateurs nombre. Mais on se heurte à la non diagonalité du potentiel (les problèmes impliquant une énergie potentielle ne peuvent généralement pas être résolus de manière exacte). Malgré cela, le potentiel à deux particules peut nous mener à des richesses physiques insoupçonnées (magnétisme, superfluidité, supraconductivité,...).
+Pour réussir à évaluer l'énergie facilement, l'idée est de transformer toutes les combinaisons d'opérateurs en opérateurs nombre. Mais on se heurte à la non-diagonalité du potentiel (les problèmes impliquant une énergie potentielle ne peuvent généralement pas être résolus de manière exacte). Malgré cela, le potentiel à deux particules peut nous mener à des richesses physiques insoupçonnées (magnétisme, superfluidité, supraconductivité...).
 
 ### Modèle de Hubbard
 
 Le modèle de Hubbard est central en matière condensée. Il permet de capturer les implications physiques de la compétition entre énergie cinétique (qui favorise la délocalisation des électrons) et énergie potentielle (qui favorise leur localisation).
 
-Le hamiltonien du modèle de Hubbard est construit à partir de nos deux ingrédients précédents&nbsp;: le hamiltonien du modèle de liaisons fortes pour modéliser l'énergie cinétique et le potentiel à deux particules pour modéliser les interactions electron-electron&nbsp;:
+Le hamiltonien du modèle de Hubbard est construit à partir de nos deux ingrédients précédents&nbsp;: le hamiltonien du modèle de liaisons fortes pour modéliser l'énergie cinétique et le potentiel à deux particules pour modéliser les interactions électron-électron&nbsp;:
 
 <p style="text-align:center;overflow-x:auto;">
 $\displaystyle
@@ -1128,7 +1128,7 @@ $\displaystyle
 $
 </p>
 
-Bien que simple d'allure, obtenir les états propres est souvent une tâche complexe et ceux-ci sont généralement fortement corrélés.
+Bien que ce hamiltonien soit simple d'allure, obtenir les états propres est souvent une tâche complexe et ceux-ci sont généralement fortement corrélés.
 
 <div id="preuve">
 
@@ -1154,7 +1154,7 @@ Ajoutons un électron dans le système. S'il a le même spin, la solution est si
 Montrons-le par le calcul&nbsp;:
 </summary>
 Pour la partie potentiel, on obtient bien 0 puisque $U (\hat{n}_{1\uparrow} \hat{n}_{1\downarrow}+\hat{n}_{2\uparrow} \hat{n}_{2\downarrow})|\uparrow,\uparrow\rangle=U(1\times 0+1\times 0)|\uparrow,\uparrow\rangle = 0$ (puisque l'opérateur qui compte les spins bas trouve toujours zéro).<br>
-Et pour la partie cinétique, on ne garde que les termes de spin haut de le hamiltonien&nbsp;: $-t (\hat{c}^\dagger_{1\uparrow} \hat{c}_{2\uparrow}+\hat{c}^\dagger_{2\uparrow} \hat{c}_{1\uparrow})$. Et on réécrit $|\uparrow,\uparrow\rangle$ comme $\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{2\uparrow}|0\rangle$.<br>
+Et pour la partie cinétique, on ne garde que les termes de spin haut du hamiltonien&nbsp;: $-t (\hat{c}^\dagger_{1\uparrow} \hat{c}_{2\uparrow}+\hat{c}^\dagger_{2\uparrow} \hat{c}_{1\uparrow})$. Et on réécrit $|\uparrow,\uparrow\rangle$ comme $\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{2\uparrow}|0\rangle$.<br>
 <div style="overflow-x:auto;">
 $-t (\hat{c}^\dagger_{1\uparrow} \hat{c}_{2\uparrow}+\hat{c}^\dagger_{2\uparrow} \hat{c}_{1\uparrow})\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{2\uparrow}|0\rangle=-t \hat{c}^\dagger_{1\uparrow} \hat{c}_{2\uparrow}\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{2\uparrow}|0\rangle-t\hat{c}^\dagger_{2\uparrow} \hat{c}_{1\uparrow}\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{2\uparrow}|0\rangle=t \hat{c}^\dagger_{1\uparrow} \hat{c}_{2\uparrow}\hat{c}^\dagger_{2\uparrow}\hat{c}^\dagger_{1\uparrow}|0\rangle-t\hat{c}^\dagger_{2\uparrow} \hat{c}_{1\uparrow}\hat{c}^\dagger_{1\uparrow}\hat{c}^\dagger_{2\uparrow}|0\rangle=t \hat{c}^\dagger_{1\uparrow}(1-\hat{n}_{2\uparrow})\hat{c}^\dagger_{1\uparrow}|0\rangle-t\hat{c}^\dagger_{2\uparrow}(1-\hat{n}_{1\uparrow})\hat{c}^\dagger_{2\uparrow}|0\rangle = t  \cancel{\hat{c}^\dagger_{1\uparrow}  \hat{c}^\dagger_{1\uparrow} }|0\rangle - t\hat{c}^\dagger_{1\uparrow}\cancel{\hat{n}_{2\uparrow}|\uparrow,0\rangle}- t\cancel{\hat{c}^\dagger_{2\uparrow}\hat{c}^\dagger_{2\uparrow}}|0\rangle+t\hat{c}^\dagger_{2\uparrow}\cancel{\hat{n}_{1\uparrow}|0,\uparrow\rangle}=0$</div>
 </details>
@@ -1175,10 +1175,10 @@ $
 
 <details style="background-color:#F4F4F4;border-radius:5px;padding:5px 5px 5px 5px;">
 <summary>
-Détaillons juste l'action de le hamiltonien sur $|\uparrow\downarrow,0\rangle$ pour s'en convaincre&nbsp;:
+Détaillons juste l'action du hamiltonien sur $|\uparrow\downarrow,0\rangle$ pour s'en convaincre&nbsp;:
 </summary>
 
-Terme potentiel&nbsp;: $U \hat{n}\_{1\uparrow}\hat{n}\_{1\downarrow}|\uparrow\downarrow,0\rangle = U\times 1\times 1=U$ et $U \hat{n}\_{2\uparrow}\hat{n}\_{2\downarrow}|\uparrow\downarrow,0\rangle = U\times 0\times 0=0$ (puisque l'opérateur $\hat{n}$ ne fait que compter le nombres de particules dans un site donné).
+Terme potentiel&nbsp;: $U \hat{n}\_{1\uparrow}\hat{n}\_{1\downarrow}|\uparrow\downarrow,0\rangle = U\times 1\times 1=U$ et $U \hat{n}\_{2\uparrow}\hat{n}\_{2\downarrow}|\uparrow\downarrow,0\rangle = U\times 0\times 0=0$ (puisque l'opérateur $\hat{n}$ ne fait que compter le nombre de particules dans un site donné).
 
 Terme cinétique&nbsp;: comme $i$ et $j$ doivent être différents, on a 4 termes dans la somme&nbsp;: $(-t) \hat{c}^\dagger_{1\uparrow} \hat{c}\_{2\uparrow}+(-t) \hat{c}^\dagger_{2\uparrow} \hat{c}\_{1\uparrow}+(-t) \hat{c}^\dagger_{1\downarrow} \hat{c}\_{2\downarrow}+(-t) \hat{c}^\dagger_{2\downarrow} \hat{c}\_{1\downarrow}$.<br>
 Seuls les deux termes contenant un opérateur d'annihilation sur le site 1 ne donneront pas un résultat nul. Il nous reste $-t(\hat{c}^\dagger_{2\uparrow} \hat{c}\_{1\uparrow} +\hat{c}^\dagger_{2\downarrow} \hat{c}\_{1\downarrow})$.<br>
@@ -1248,7 +1248,7 @@ $
 ### Pièges
 
 <ul>
-<li>L'énergie de point zéro $\hbar\omega/2$ n'est pas un artefact&nbsp;: elle vient du commutateur $[\hat{x},\hat{p}]=\mathrm{i}\hbar$, qui empêche la factorisation de le hamiltonien d'être exacte.</li>
+<li>L'énergie de point zéro $\hbar\omega/2$ n'est pas un artefact&nbsp;: elle vient du commutateur $[\hat{x},\hat{p}]=\mathrm{i}\hbar$, qui empêche la factorisation du hamiltonien d'être exacte.</li>
 <li>$\hat{a}$ et $\hat{a}^\dagger$ ne sont pas hermitiens&nbsp;: ce ne sont pas des observables. L'observable, c'est l'opérateur nombre $\hat{n}=\hat{a}^\dagger\hat{a}$.</li>
 <li>Pour les fermions, l'ordre des opérateurs n'est jamais indifférent&nbsp;: chaque échange coûte un signe, comptabilisé par le facteur $(-1)^{n_1+\cdots+n_{i-1}}$. L'oublier fait rater le principe de Pauli.</li>
 <li>L'opérateur de champ $\hat{\psi}^\dagger(\boldsymbol{x})$ n'est pas une fonction d'onde&nbsp;: c'est un opérateur qui crée une particule localisée en $\boldsymbol{x}$, construit comme transformée de Fourier des $\hat{a}^\dagger_{\boldsymbol{p}}$.</li>
