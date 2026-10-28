@@ -103,7 +103,7 @@ Avant de quantifier des champs, encore faut-il en avoir. Cette partie construit 
 ## Théorie classique des champs
 
 
-### Du lagrangien à l'hamiltonien
+### Du lagrangien au hamiltonien
 
 Le taux de variation du lagrangien est donné par&nbsp;:
 
@@ -159,11 +159,11 @@ Le passage de $L$ à $H$ correspond mathématiquement à une transformation de L
 
 La transformation de Legendre permet d'encoder différemment l'information d'une fonction. En particulier, elle permet de changer la dépendance en une coordonnée en sa coordonnée conjuguée. Ici, elle va nous permettre de passer de $\dot{q}$ à $p$.
 
-Imaginons une fonction $L(v)$ convexe et calculons la pente $p(v)=\frac{\partial L(v)}{\partial v}$ (une fonction convexe voit sa pente croître de manière monotone ce qui implique que $p$ et $v$ sont en bijection (si la fonction est concave, il suffit de considérer son opposée)).
+Imaginons une fonction $L(v)$ convexe et calculons la pente $p(v)=\frac{\partial L(v)}{\partial v}$ (une fonction convexe voit sa pente croître de manière monotone, ce qui implique que $p$ et $v$ sont en bijection&nbsp;; si la fonction est concave, il suffit de considérer son opposée).
 
 On peut aussi écrire que la fonction de départ est la primitive de sa pente&nbsp;: $L(v)=\int\_0^vp(v')\mathrm{d}v'$. $L(v)$ devient ainsi l'aire sous la courbe définie par la pente $p(v)$. 
 
-Mais comme on s'est assuré grâce à la convexité de $L$ qu'à chaque $v$ corresponde un et un unique $p$, on peut aussi considérer la fonction $v(p)$.
+Mais comme on s'est assuré grâce à la convexité de $L$ qu'à chaque $v$ correspond un et un seul $p$, on peut aussi considérer la fonction $v(p)$.
 
 Appelons $H(p)$ l'aire sous la courbe de $v(p)$&nbsp;: $H(p)\equiv\int\_0^p v(p')\mathrm{d}p'$.
 
@@ -228,7 +228,7 @@ Puis considérons une fonction $F$ des coordonnées généralisées $q\_i$ et $p
 $\displaystyle
 \begin{aligned}
 \frac{\mathrm{d}F}{\mathrm{d}t} &= \frac{\partial F}{\partial t} + \frac{\partial F}{\partial q_i}{\color{#0076BA}\dot{q}_i} +  \frac{\partial F}{\partial p_i}{\color{#D41876}\dot{p}_i}\\
- &= \frac{\partial F}{\partial t} + \frac{\partial F}{\partial q_i}\left({\color{#0076BA}-\frac{\partial H}{\partial p_i}}\right) +  \frac{\partial F}{\partial p_i}{\color{#D41876}\frac{\partial H}{\partial q_i}}\\
+ &= \frac{\partial F}{\partial t} + \frac{\partial F}{\partial q_i}{\color{#0076BA}\frac{\partial H}{\partial p_i}} +  \frac{\partial F}{\partial p_i}\left({\color{#D41876}-\frac{\partial H}{\partial q_i}}\right)\\
  &=\frac{\partial F}{\partial t} + \{F, H\}
 \end{aligned}
 $
@@ -742,9 +742,9 @@ Or on sait maintenant interpréter ces modes normaux comme des oscillateurs harm
 
 ## Mécanique quantique relativiste, première tentative
 
-### Equation de Klein-Gordon
+### Équation de Klein-Gordon
 
-Rappelons le raisonnement permettant d'aboutir à l'équation de Schrödinger (cadre&nbsp;: particule libre en mécanique quantique non-relativiste)&nbsp;:
+Rappelons le raisonnement permettant d'aboutir à l'équation de Schrödinger (cadre&nbsp;: particule libre en mécanique quantique non relativiste)&nbsp;:
 <ul style="margin-top:-0.5em; margin-bottom:1em;">
 <li>on part de la relation de dispersion qui lie énergie et impulsion de la particule&nbsp;: $E=\frac{\boldsymbol{p}^2}{2m}$&nbsp;;</li>
 <li>on transforme $E$ et $\boldsymbol{p}$ en opérateurs&nbsp;: $E\rightarrow\hat{E}$ et $\boldsymbol{p}\rightarrow \hat{\boldsymbol{p}}$&nbsp;;</li>
@@ -825,7 +825,7 @@ $
 </p>
 </div>
 
-C'est Schrödinger qui découvrit le premier l'équation de Klein-Gordon... mais il l'a vite rejetée car elle ne donnait pas la bonne structure fine pour l'atome d'hydrogène. Il n'a finalement gardé que sa limite non-relativiste, l'équation de Schrödinger (on [verra plus loin](../tqc4/#limite-non-relativiste) comment on passe de l'une à l'autre).
+C'est Schrödinger qui découvrit le premier l'équation de Klein-Gordon... mais il l'a vite rejetée car elle ne donnait pas la bonne structure fine pour l'atome d'hydrogène. Il n'a finalement gardé que sa limite non relativiste, l'équation de Schrödinger (on [verra plus loin](../tqc4/#limite-non-relativiste) comment on passe de l'une à l'autre).
 
 Pour résoudre l'équation, tentons la solution $\phi(\boldsymbol{x},t)=N\mathrm{e}^{-\mathrm{i}Et+\mathrm{i}\boldsymbol{p}\cdot\boldsymbol{x}}=N\mathrm{e}^{-\mathrm{i}p\cdot x}$ (en unités naturelles, $\boldsymbol{k}=\boldsymbol{p}$ et $\omega=E$ et comme on est plus intéressé par l'énergie et l'impulsion des particules, ce sont eux qu'on utilise).
 
@@ -933,7 +933,7 @@ $
 </p>
 </div>
 
-En substituant la solution $\phi(x)=N\mathrm{e}^{-\mathrm{i}p\cdot x}$, on obtient une composante temporelle de la probabilité de courant, la densité de probabilité, à l'allure inquiétante&nbsp;:
+En substituant la solution $\phi(x)=N\mathrm{e}^{-\mathrm{i}p\cdot x}$, on obtient une composante temporelle du courant de probabilité, la densité de probabilité, à l'allure inquiétante&nbsp;:
 
 <p style="text-align:center;overflow-x:auto;">
 $\displaystyle
@@ -957,9 +957,9 @@ m \frac{\mathrm{d}^2 x^\mu}{\mathrm{d}\tau^2} = q F^{\mu\nu} \frac{\mathrm{d}x_\
 $
 </p>
 
-Changer le signe du temps propre $\tau$ dans l'équation a la même conséquence que changer le signe de la charge $q$. Donc une particule remontant le temps est équivalente a une particule de charge opposée avec un temps s'écoulant normalement.
+Changer le signe du temps propre $\tau$ dans l'équation a la même conséquence que changer le signe de la charge $q$. Donc une particule remontant le temps est équivalente à une particule de charge opposée avec un temps s'écoulant normalement.
 
-Pour nos solutions de la forme $\mathrm{e}^{-\mathrm{i}(Et-\boldsymbol{p}\cdot\boldsymbol{x})}$ (avec $E<0$), changer $t\rightarrow -t$ doit être compensé par $E\rightarrow -E$ pour rétablir le sens normal d'écoulement du temps. Mais le reversement du temps touche aussi l'impulsion $\boldsymbol{p}\rightarrow\boldsymbol{-p}$. Cela donne au final $\mathrm{e}^{-\mathrm{i}(Et+\boldsymbol{p}\cdot\boldsymbol{x})}$ avec $E>0$. La particule incidente d'énergie négative devient une particule émise d'énergie positive.
+Pour nos solutions de la forme $\mathrm{e}^{-\mathrm{i}(Et-\boldsymbol{p}\cdot\boldsymbol{x})}$ (avec $E<0$), changer $t\rightarrow -t$ doit être compensé par $E\rightarrow -E$ pour rétablir le sens normal d'écoulement du temps. Mais le renversement du temps touche aussi l'impulsion $\boldsymbol{p}\rightarrow\boldsymbol{-p}$. Cela donne au final $\mathrm{e}^{-\mathrm{i}(Et+\boldsymbol{p}\cdot\boldsymbol{x})}$ avec $E>0$. La particule incidente d'énergie négative devient une particule émise d'énergie positive.
 
 On sait maintenant gérer les énergies négatives&nbsp;: une particule d'énergie négative se transforme en antiparticule d'énergie positive en changeant le signe de la charge et de l'impulsion tridimensionnelle.
 
@@ -1005,7 +1005,7 @@ $
 </p>
 </div>
 
-Il se développe en $\mathcal{L}=\frac{1}{2}\left(\partial\_0 \phi\right)^2-\frac{1}{2} (\boldsymbol{\nabla} \phi)^2$ pour lui donner un air de $\mathcal{L}=$ (énergie cinétique)- (énergie potentielle). Comme d'habitude, le facteur ($\frac{1}{2}$, ici) est là pour faire coller les prédictions du lagrangien à ce qu'on connaît.
+Il se développe en $\mathcal{L}=\frac{1}{2}\left(\partial\_0 \phi\right)^2-\frac{1}{2} (\boldsymbol{\nabla} \phi)^2$ pour lui donner un air de $\mathcal{L}=$ (énergie cinétique) − (énergie potentielle). Comme d'habitude, le facteur ($\frac{1}{2}$, ici) est là pour faire coller les prédictions du lagrangien à ce qu'on connaît.
 
 Comme $\frac{\partial \mathcal{L}}{\partial \phi}=0$ et $\frac{\partial \mathcal{L}}{\partial\left(\partial\_\mu \phi\right)}=\partial^\mu \phi$, l'équation d'Euler-Lagrange implique l'équation de mouvement suivante&nbsp;:
 
@@ -1045,7 +1045,7 @@ Comme $E\_{\boldsymbol{p}}=0$ en $|\boldsymbol{p}|=0$, on dit que la relation de
 
 Cette équation décrira plus loin l'énergie des excitations quantiques du système et puisque c'est la version $m=0$ de la relation de dispersion relativiste $E\_p=\sqrt{p^2+m^2}$, on parle de particules non massives ainsi que d'un champ scalaire sans masse.
 
-L'équation d'onde étant linéaire, les ondes solutions obéissent au principe de superposition. Les particules correspondantes sont alors dites libres ou sans interaction. Si on les envoie les unes contres les autres, elles se traversent sans se voir.
+L'équation d'onde étant linéaire, les ondes solutions obéissent au principe de superposition. Les particules correspondantes sont alors dites libres ou sans interaction. Si on les envoie les unes contre les autres, elles se traversent sans se voir.
 
 <br>
 
