@@ -47,15 +47,15 @@ Et chez les complexes, ces racines peuvent tracer de jolies figures comme on va 
 
 ## Entiers algébriques
 
-Un nombre algébrique est un nombre réel ou complexe solution d'une équation polynomiale à coefficients dans le corps $\mathbb{Q}$ des rationnels. Et si les coefficient sont entiers, on parle d'entiers algébriques.
+Un nombre algébrique est un nombre réel ou complexe solution d'une équation polynomiale à coefficients dans le corps $\mathbb{Q}$ des rationnels. Et si les coefficients sont entiers, on parle d'entiers algébriques.
 
-Traçons l'ensemble des racines des $2^{21}$ (≈ 2 millions) polynômes de degré 20 possible si chacun des coefficients vaut soit 1, soit -1.<br>
+Traçons l'ensemble des racines des $2^{21}$ (≈ 2 millions) polynômes de degré 20 possibles si chacun des coefficients vaut soit 1, soit -1.<br>
 Exemple d'un de ces polynômes&nbsp;: $-x^{20}+x^{19}+x^{18}+x^{17}-x^{16}-x^{15}-x^{14}-x^{13}+x^{12}-x^{11}+x^{10}-x^{9}+x^{8}+x^{7}+x^{6}-x^{5}-x^{4}-x^{3}-x^{2}+x+1$<br>
 Un polynôme de degré 20 a 20 racines complexes. On se retrouve donc avec 40 millions de points (dont beaucoup sont aux mêmes endroits)... Et cela donne ça&nbsp;:
 
 ![](/racine0.png)
 
-Sont tracés ci-dessous les racines pour des degrés croissants de ces polynômes à coefficients unitaires.
+Sont tracées ci-dessous les racines pour des degrés croissants de ces polynômes à coefficients unitaires.
 
 ![](/racdegres.png)
 
@@ -87,7 +87,7 @@ $$|z|^2 = \left(-\frac{b}{2a}\right)^2 + \left(\frac{\sqrt{4ac - b^2}}{2a}\right
 
 </div>
 
-Le module est donc $|z| = \sqrt{\frac{c}{a}}$. Cela signifie que pour un couple $(a, c)$ fixé, toutes les racines obtenues en faisant varier $b$ se trouvent sur un cercle centré à l'origine. Les rayons visibles sont donc des racines de fractions rationnelles ($\sqrt{1}$, $\sqrt{2}$, $\sqrt{1/2}$, etc.).
+Le module est donc $|z| = \sqrt{\frac{c}{a}}$. Cela signifie que pour un couple $(a, c)$ fixé, toutes les racines obtenues en faisant varier $b$ se trouvent sur un cercle centré à l'origine. Les rayons visibles sont donc des racines carrées de nombres rationnels ($\sqrt{1}$, $\sqrt{2}$, $\sqrt{1/2}$, etc.).
 
 <ul style="margin-bottom: 1em;">
 <li>Et si on fixe $b$ et $c$ et qu'on fait varier $a$&nbsp;?</li>
@@ -128,7 +128,7 @@ Substituons cette expression de $a$ dans l'équation de la partie réelle&nbsp;:
 
 $$\left(-\frac{b}{2x}\right)(x^2 - y^2) + bx + c = 0$$
 
-Multiplions tout l'équation par $-2x$ (pour $x \neq 0$)&nbsp;:
+Multiplions toute l'équation par $-2x$ (pour $x \neq 0$)&nbsp;:
 
 $$b(x^2 - y^2) - 2bx^2 - 2cx = 0$$
 $$-bx^2 - by^2 - 2cx = 0$$
@@ -193,8 +193,8 @@ $$\left|z - \frac{p}{q}\right| \ge \frac{1}{q\sqrt{100}} = \frac{1}{10q}$$
 
 Conclusion :
 
-Autour de $0$ ($\frac{0}{1}$) : Le rayon d'exclusion est de $\frac{1}{10 \times 1} = 0,1$. C'est le grand trou central.<br>
-Autour de $1$ et $-1$ ($\frac{1}{1}$ et $\frac{-1}{1}$)&nbsp;: le rayon d'exclusion minimum est également de $\frac{1}{10 \times 1} = 0,1$, mais en pratique, le fait que la partie réelle vale $-\frac{b}{2a}=\pm 1$ impose $|b|=2|a|$ et donc $a$ se ballade jusqu'à 50 seulement rendant le trou $\sqrt{2}$ fois plus gros.<br>
+Autour de $0$ ($\frac{0}{1}$)&nbsp;: le rayon d'exclusion est de $\frac{1}{10 \times 1} = 0,1$. C'est le grand trou central.<br>
+Autour de $1$ et $-1$ ($\frac{1}{1}$ et $\frac{-1}{1}$)&nbsp;: le rayon d'exclusion minimum est également de $\frac{1}{10 \times 1} = 0,1$, mais en pratique, le fait que la partie réelle vale $-\frac{b}{2a}=\pm 1$ impose $|b|=2|a|$ et donc $a$ se balade jusqu'à 50 seulement rendant le trou $\sqrt{2}$ fois plus gros.<br>
 
 Cette loi en $\frac{1}{10q}$ explique pourquoi la taille des zones d'exclusion décroît de manière fractale à mesure que le dénominateur de la fraction augmente.
 
@@ -222,7 +222,7 @@ Pour chaque point $c$ (qui correspond à un pixel de l'image)&nbsp;:
 </video>
 
 
-La vidéo montre une zone à la frontière de l'ensemble appelée vallée des hippocampes pour un nombre d'iteration croissant.
+La vidéo montre une zone à la frontière de l'ensemble appelée vallée des hippocampes pour un nombre d'itérations croissant.
 
 <pre><code class="language-python">import numpy as np
 import matplotlib.pyplot as plt

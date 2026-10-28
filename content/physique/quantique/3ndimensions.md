@@ -51,7 +51,7 @@ Supposons que l'on ait deux particules préparées dans un état singulet de spi
 <img src="/doublestern.png" style="box-shadow:none;background:none;">
 </div>
 
-On appelle $\text{A}$, $\text{B}$, $\text{C}$ et $\text{D}$ les 4 localisations possibles après les déflections.
+On appelle $\text{A}$, $\text{B}$, $\text{C}$ et $\text{D}$ les 4 localisations possibles après les déflexions.
 
 Comme les particules deviennent intriquées avec les appareils de mesure, elles se trouvent au final dans un état intriqué non pas seulement par rapport à leurs spins mais aussi par rapport à leurs positions&nbsp;:
 
@@ -81,9 +81,9 @@ Le schéma bi-champ efface la corrélation “si et seulement si” entre la loc
 
 ### Séparabilité et localité
 
-Vouloir décrire la fonction d'onde dans un espace impose d'accepter la non séparabilité et/ou la non localité de la théorie.
+Vouloir décrire la fonction d'onde dans un espace impose d'accepter la non-séparabilité et/ou la non-localité de la théorie.
 
-- Une métaphysique est **séparable** si les parties (R<sub>1</sub> et R<sub>2</sub>) permettent de déduire le tout (R<sub>1</sub> $\cup$ R<sub>2</sub>) .
+- Une métaphysique est **séparable** si les parties (R<sub>1</sub> et R<sub>2</sub>) permettent de déduire le tout (R<sub>1</sub> $\cup$ R<sub>2</sub>).
 
 - La **localité** signifie que deux régions non causalement reliées ne peuvent pas s'influencer.
 
@@ -96,7 +96,7 @@ Dans l'ontologie de la fonction d'onde, la physique est bien séparable et local
 - L’équation de Schrödinger est une équation aux dérivées partielles locales dans cet espace&nbsp;: $\partial_t\psi(q,t)=\hat H(q)\psi(q,t)$.
 - Un « point » $q=(\mathbf r_1,\mathbf r_2,\dots)$ est par construction une région élémentaire&nbsp;; donner $\psi$ sur deux sous-régions disjointes $Q_1,Q_2\subset\mathbb R^{3N}$ suffit à fixer $\psi$ sur leur union.
 
-Revenons à l'état singulet avec les deux stern-Gerlach.
+Revenons à l'état singulet avec les deux Stern-Gerlach.
 
 - La fonction d'onde sur les deux points $q_{\text{AD}}=\text{AD}$ et $q_\text{BC}=\text{BC}$ dans $\mathbb R^{6}$ s'écrit $\psi(q)=\tfrac1{\sqrt2}\bigl[\delta(q-q_\text{AD})-\delta(q-q_\text{BC})\bigr]$.<br>
 Restreindre $\psi$ à la petite boule $Q_\text{AD}$ autour de $q_{\text{AD}}$ et à $Q_\text{BC}$ autour de $q_\text{BC}$ suffit pour connaître tout $\psi$. Cela montre la séparabilité.<br>

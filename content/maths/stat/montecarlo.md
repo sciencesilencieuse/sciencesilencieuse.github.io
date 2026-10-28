@@ -48,7 +48,7 @@ Grâce au **Théorème Central Limite**, on sait que la distribution de la moyen
 
 ## Monte Carlo pour l'estimation d'incertitudes-types en science expérimentale
 
-La méthode de Monte Carlo permet d'obtenir empiriquement une incertitude-type composée (sans en passer par une formule de propagation.
+La méthode de Monte Carlo permet d'obtenir empiriquement une incertitude-type composée (sans en passer par une formule de propagation).
 
 Prenons l'exemple de la détermination de l'incertitude-type sur la concentration d'une solution obtenue par un titrage.<br>
 Supposons que la concentration mystère $C_A$ soit donnée par la formule&nbsp;: $C_A = C_B\times\frac{V_E}{V_A}$

@@ -64,7 +64,7 @@ Dans la vidéo, on a défini la **moyenne généralisée**&nbsp;:
 
 
 $$
-M_p = \left(a_1^p + a_2 \dotsm + a_n^p\right)^\frac1p
+M_p = \left(\frac{a_1^p + a_2^p + \dotsb + a_n^p}{n}\right)^\frac1p
 $$
 
 </div>
@@ -78,7 +78,7 @@ Et on a vu que&nbsp;:
 <li>$M_{0} = MG$ moyenne géométrique</li>
 </ul>
 
-Prouvons le dernier point, un peu plus délicat&nbsp;
+Prouvons le dernier point, un peu plus délicat&nbsp;:
 
 <div id="theo">
 <div id="grosseformule">
@@ -121,7 +121,7 @@ $$\ln(M_p) = \frac{f(p) - f(0)}{p - 0}$$
 
 La limite de $\ln(M_p)$ lorsque $p \to 0$ est donc exactement la définition du nombre dérivé $f'(0)$.
 
-Or on sait que $\left(\ln(u(p)\right)'=\frac{u'(p)}{u(p)}$ et pour dériver $a_i^p$ par rapport à $p$, on se rappelle que $a_i^p = e^{p \ln(a_i)}\Rightarrow \left(a_i^p\right)' = \ln(a_i) a_i^p$.<br>
+Or on sait que $\left(\ln(u(p))\right)'=\frac{u'(p)}{u(p)}$ et pour dériver $a_i^p$ par rapport à $p$, on se rappelle que $a_i^p = e^{p \ln(a_i)}\Rightarrow \left(a_i^p\right)' = \ln(a_i) a_i^p$.<br>
 On obtient ainsi :
 
 $$f'(p) = \frac{\frac{1}{n} \sum_{i=1}^n \ln(a_i) a_i^p}{\frac{1}{n} \sum_{i=1}^n a_i^p}$$
@@ -178,16 +178,16 @@ $$\Rightarrow \frac{2}{v_2}=0$$
 
 Cela donne l'impression que quelque chose est encore de travers, mais non, c'est la bonne réponse&nbsp;!<br>
 En effet, le problème est impossible. La seule solution est d'avoir une vitesse $v_2$ infinie&nbsp;: l'athlète devra parcourir son deuxième tour en exactement $\pu{0 s}$...<br>
-On aurait plus simplement pu s'en rendre compte en écrivant que $v_{tot} = \frac{2d}{\Delta t_1 + \Delta t_2} = 2 v_1 = 2\frac{d}{\Delta t_1} = \frac{2d}{\Delta t_1}$ qui impose $\Delta t_2 = 0$. Mais au moins, la moyenne harmonique ne nous a pas trahi.
+On aurait plus simplement pu s'en rendre compte en écrivant que $v_{tot} = \frac{2d}{\Delta t_1 + \Delta t_2} = 2 v_1 = 2\frac{d}{\Delta t_1} = \frac{2d}{\Delta t_1}$ qui impose $\Delta t_2 = 0$. Mais au moins, la moyenne harmonique ne nous a pas trahis.
 
 
 
 
 ## Estimation de Fermi et moyennes
 
-Les estimations de Fermi sont des calculs de coin de table visant à trouver un ordre de grandeur. Le physicien italien Enrico Fermi brillait dans l'exercice et un de ses faits d'armes légendaires est d'avoir estimé l'énergie de l'explosion du premier essai atomique de l'histoire en mesurant la distance à laquelle furent emportés des petits bouts de papiers qu'il lâcha dans le souffle.
+Les estimations de Fermi sont des calculs de coin de table visant à trouver un ordre de grandeur. Le physicien italien Enrico Fermi brillait dans l'exercice et un de ses faits d'armes légendaires est d'avoir estimé l'énergie de l'explosion du premier essai atomique de l'histoire en mesurant la distance à laquelle furent emportés des petits bouts de papier qu'il lâcha dans le souffle.
 
-Lorsqu'on fait ce type de calcul, on est amené à estimer plein de valeurs. L'idée est alors d'encadrer grossièrement par différents ordres de grandeurs (un ou deux suivant notre méconnaissance) puis de prendre la moyenne. Mais quelle moyenne&nbsp;?
+Lorsqu'on fait ce type de calcul, on est amené à estimer plein de valeurs. L'idée est alors d'encadrer grossièrement par différents ordres de grandeur (un ou deux suivant notre méconnaissance) puis de prendre la moyenne. Mais quelle moyenne&nbsp;?
 
 Lorsqu'on estime, l'erreur est plus naturellement relative qu'absolue. On estime à un facteur près. Si on suppose par exemple que le nombre d'étoiles visibles dans le ciel est d'environ 1000, cela a plus de sens d'encadrer entre 200 (5 fois moins) et 5000 (5 fois plus) qu'entre 200 (800 en moins) et 1800 (800 en plus) ou entre -3000 et 5000... Dit autrement, on a tendance à viser une position sur une échelle logarithmique plutôt que linéaire. C'est bien ça d'ailleurs, par définition, un ordre de grandeur&nbsp;: un barreau sur une échelle en logarithme décimal. Et comment se place-t-on entre deux graduations d'une telle échelle&nbsp;? Grâce à la moyenne géométrique pardi. 
 
@@ -207,13 +207,13 @@ Cherchons à vérifier l'affirmation suivante&nbsp;:
 </ul>
 Disons que les océans font $\pu{3 km}$ de profondeur en moyenne (entre $1$ et $10$ km). La Terre est une sphère d'environ $\pu{10000 km}$ de diamètre recouverte aux deux tiers par les océans. Ça représente un volume d'environ $2/3\times 4\pi \times \left(\frac{10^7}{2}\right)^2\times 3\times 10^3\approx \pu{6E17 m^3}$ d'eau.
 
-Un estimation plus sérieuse donne un volume total d'eau sur Terre de 1,4 milliards de km<sup>3</sup>, soit $\pu{1,4e18 m^3}$. On est arrivé à moins d'un ordre de grandeur, c'est pas mal.
+Une estimation plus sérieuse donne un volume total d'eau sur Terre de 1,4 milliard de km<sup>3</sup>, soit $\pu{1,4e18 m^3}$. On est arrivé à moins d'un ordre de grandeur, c'est pas mal.
 
 <ul style="margin-bottom:0.5em;">
 <li>Voyons maintenant la quantité d'eau passée dans les dinosaures.</li>
 </ul>
 Estimation de la population de dinosaures&nbsp;: entre $1$ et $10$ dinos par km<sup>2</sup> de terres émergées semble raisonnable pour une espèce dominante. Ça fait environ $1/3\times 4\pi\times (10^7)^2 / 10^6 \times 3 \approx  10^9$ dinos à un moment donné. Disons que le dino moyen pèse entre $1$ et $100$ humains, soit $1$ tonne environ. En supposant une hydratation humaine, notre dino modèle boira entre $10$ et $100$ litres par jour, soit environ $\pu{30 L}$, ce qui représente en une année $10\,000 \text{ L}$ ou $\pu{10 m3}$. <br>
-Or les dinosaures ont régné sur Terre très, très longtemps... Une ère de l'ordre de $100$ millions d'année. Ça représente donc en tout environ $(10\; \mathrm{m^3/dino/an})\times (10^9 \text{ dinos})\times (10^8 \text{ ans})\approx  10^{18} \;\mathrm{m^3}$. 
+Or les dinosaures ont régné sur Terre très, très longtemps... Une ère de l'ordre de $100$ millions d'années. Ça représente donc en tout environ $(10\; \mathrm{m^3/dino/an})\times (10^9 \text{ dinos})\times (10^8 \text{ ans})\approx  10^{18} \;\mathrm{m^3}$. 
 
 <ul style="margin-bottom:0.5em;">
 <li>Conclusion&nbsp;:</li>
@@ -228,7 +228,7 @@ Comme l'eau a une certaine tendance à s'homogénéiser, chaque verre devrait co
 <img src="/eausurterre.png" style="box-shadow:none;background:none;">
 </div>
 
-<p style="text-align:center;width:700px;margin:auto;color:#777;">La plus grande sphère bleue représente toute l'eau sur Terre, la plus petite l'eau des rivières et des lacs et l'intermédiaire l'ensemble de l'eau douce (Credit: Howard Perlman, USGS&nbsp;; illustration du globe de Jack Cook, Woods Hole Oceanographic Institution). </p>
+<p style="text-align:center;width:700px;margin:auto;color:#777;">La plus grande sphère bleue représente toute l'eau sur Terre, la plus petite l'eau des rivières et des lacs et l'intermédiaire l'ensemble de l'eau douce (Crédit&nbsp;: Howard Perlman, USGS&nbsp;; illustration du globe de Jack Cook, Woods Hole Oceanographic Institution). </p>
 
 
 

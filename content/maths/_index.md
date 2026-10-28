@@ -197,7 +197,7 @@ td, th {
 <div class="link-list">
   <a href="./arithmetique/numeration" class="math-btn">Numération</a>
     <a href="./arithmetique/complexes/" class="math-btn">Nombres complexes</a>
-  <a href="./arithmetique/complexes/#nombre-algébriques" class="math-btn">Nombres algébriques</a>
+  <a href="./arithmetique/complexes/#entiers-algébriques" class="math-btn">Nombres algébriques</a>
   <a href="./arithmetique/nombresapart/#divisibilité-et-nombres-premiers" class="math-btn">Nombres premiers</a>
   <a href="./arithmetique/complexes/#triplets-pythagoriciens" class="math-btn">Triplets pythagoriciens</a>
     <a href="./arithmetique/nombresapart/#nombre-dor" class="math-btn">Nombre d'or</a>

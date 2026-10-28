@@ -34,7 +34,7 @@ weight = 3
 
 ## Anniversaires simultanés
 
-Quelle est la probabilité que deux élèves d'une classe est un anniversaire le même jour&nbsp;?
+Quelle est la probabilité que deux élèves d'une classe aient un anniversaire le même jour&nbsp;?
 
 Lorsqu'on n'a jamais fait le calcul ou entendu parler du résultat, notre intuition nous amène généralement à soupçonner une probabilité bien plus petite qu'elle ne l'est.<br>
 C'est d'ailleurs assez fréquent que notre intuition soit aux fraises lorsqu'il s'agit d'estimer une probabilité ou expliquer des statistiques (voir [le paradoxe de Simpson](../stat/#paradoxe-de-simpson)).
@@ -70,7 +70,7 @@ n = 100000
 c = int(input("Une famille a deux enfants\n\
 dont au moins une fille :                    taper 0\n\
 dont au moins une fille qui aime les maths : taper 1\n\
-dont au moins fille née un dimanche :        taper 2\n"))
+dont au moins une fille née un dimanche :    taper 2\n"))
 a = [1,2,7]
 cas = ['',' qui aime les maths',' née un dimanche']
 
@@ -89,7 +89,7 @@ et parmi elles, {} comprennent 2 filles, soit {:.2f} %.".format(n,S,cas[c],s,s/S
 
 ## Paradoxe de Cover
 
-Où comment un tirage aléatoire permet de gagner de l'information&nbsp;!
+Ou comment un tirage aléatoire permet de gagner de l'information&nbsp;!
 
 
 {{< youtube-plus id="lhIkXOZ2o-s" ratio="short" width="300px" rounded=true shadow=true >}}
@@ -149,7 +149,7 @@ print("Proba de succ\u00E8s : \n{:.2f} %".format(succes/N*100))
 
 Par quel miracle&nbsp;???
 
-Déjà, comme $Z$ est issue d'une loi continues, on n'aura jamais $Z=a$ ou $Z=b$ et pour que la méthode permette de deviner correctement, il faut que&nbsp;:
+Déjà, comme $Z$ est issu d'une loi continue, on n'aura jamais $Z=a$ ou $Z=b$ et pour que la méthode permette de deviner correctement, il faut que&nbsp;:
 
 <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
 <li>$X=\max(a,b)$ (une chance sur deux) <b>et</b> $ Z < X $ </li>
@@ -192,7 +192,7 @@ $$P_\text { succ }=\frac{1}{2}+\frac{1}{2}(f(a)-f(b))>\frac{1}{2}$$
 
 En effet, $f(a)>f(b)$ par croissance stricte de $f$. 
 
-Les deux démonstrations sont équivalentes. Suffit de poser $f(x)=P(Z<x)$ (bien strictement croissante) pour s'en convaincre. $P_\text { succ }$ devient alors $\frac{1}{2}+\frac{1}{2}(P(Z<\max(a,b))-P(Z<\min(a,b))$.
+Les deux démonstrations sont équivalentes. Suffit de poser $f(x)=P(Z<x)$ (bien strictement croissante) pour s'en convaincre. $P_\text { succ }$ devient alors $\frac{1}{2}+\frac{1}{2}(P(Z<\max(a,b))-P(Z<\min(a,b)))$.
 
 Dans le code ci-dessus, les nombres $a$ et $b$ sont volontairement très éloignés de 0 ($\sigma=100$). La fonction logistique donne alors soit $\approx 0$ (nombre $\ll 0$), soit $\approx 1$ (nombre $\gg 0$). Donc $f(a)-f(b)$ va donner $1$ lorsque $a$ et $b$ sont de signes différents (50% des cas) et $0$ dans les autres cas. Ça nous donne une espérance de succès de $\tfrac12+\tfrac12\tfrac12=\tfrac34$.<br>
 

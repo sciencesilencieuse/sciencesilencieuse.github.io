@@ -66,7 +66,7 @@ Un champ électrique suffisamment costaud.
 
 Imaginons qu'un électron soit arraché à une molécule d'air. Il est alors accéléré par le champ électrique ambiant et gagne ainsi de l'énergie cinétique. Si au moment de rencontrer une nouvelle molécule, l'électron a atteint une énergie suffisante pour la ioniser, on peut se retrouver avec une cascade d'ionisations successives&nbsp;!
 
-Le secret est donc d'avoir un champ suffisant pour donner à un électron une énergie cinétique de l'ordre de grandeur de l'énergie de ionisation d'une molécule (autour de la dizaine d'électronvolts) sur une distance correspondant à son **libre parcours moyen** dans l'air.
+Le secret est donc d'avoir un champ suffisant pour donner à un électron une énergie cinétique de l'ordre de grandeur de l'énergie d'ionisation d'une molécule (autour de la dizaine d'électronvolts) sur une distance correspondant à son **libre parcours moyen** dans l'air.
 
 <br>
 
@@ -109,7 +109,7 @@ $$
 
 </div>
 
-On suppose en effet que les vitesses des particules 1 et 2 ne sont pas corrélées (${\vec{v}\_2\cdot\vec{v}\_1}=0$) et que leurs valeurs moyennes sont les mêmes ($\overline{\vec{v}\_2^2}=\overline{\vec{v}\_2^2}=\overline{v}^2$).
+On suppose en effet que les vitesses des particules 1 et 2 ne sont pas corrélées (${\vec{v}\_2\cdot\vec{v}\_1}=0$) et que leurs valeurs moyennes sont les mêmes ($\overline{\vec{v}\_1^2}=\overline{\vec{v}\_2^2}=\overline{v}^2$).
 
 Le nombre de collisions d'une particule pendant un laps de temps $\Delta t$ peut être estimé comme le nombre moyen de fois que le centre de masse d'une particule se trouve dans le volume balayé par la section efficace $\sigma$ pendant $\Delta t$, c'est-à-dire sur une distance $\overline{v\_{rel}}\Delta t$.
 <div style="position:relative;margin-left:auto;margin-right:auto;width:480px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
@@ -190,7 +190,7 @@ Y. Itikawa et al. <a href="https://srd.nist.gov/jpcrdreprint/1.555762.pdf">Cross
 
 <br>
 
-D'après le graphique, l'énergie minimale que doit atteindre l'électron pour obtenir la ionisation du diazote semble être un peu supérieure à $\pu{20 eV}$, et la section efficace associée vaut approximativement $\pu{4e-17 cm2}$. 
+D'après le graphique, l'énergie minimale que doit atteindre l'électron pour obtenir l'ionisation du diazote semble être un peu supérieure à $\pu{20 eV}$, et la section efficace associée vaut approximativement $\pu{4e-17 cm2}$. 
 
 Cela nous donne un libre parcours moyen de $\frac{1}{\sqrt{2}n\sigma}=7\text{ μm}$, largement supérieur à notre prédiction initiale&nbsp;!<br>
 Le champ électrique correspondant vaut, roulement de tambour... $20\text{ eV}/7 \text{ μm}\approx\pu{30 kV/cm}$. Youpi&nbsp;!

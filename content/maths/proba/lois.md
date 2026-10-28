@@ -46,7 +46,7 @@ details[open] > summary:first-of-type {
 # Lois et variables aléatoires
 
 
-## Loi Binomiale
+## Loi binomiale
 
 D'une épreuve de Bernoulli à la loi binomiale :
 
@@ -142,7 +142,7 @@ ia, ib = intervalle(n, p, seuil)
 print(f"\nL'intervalle de fluctuation au seuil de {seuil * 100:.1f} % (probabilité de {proba_intervalle * 100:.1f} %) pour une proportion p = {p * 100:.1f} % dans un échantillon de taille {n} est :\n[{(ia / n) * 100:.1f} % ; {(ib / n) * 100:.1f} %]\n(soit entre {ia} et {ib} individus)")
 {{< /runpython >}}
 
-On pourra vérifier l'intervalle graphiquement avec l'applet geogebra suivant.
+On pourra vérifier l'intervalle graphiquement avec l'applet GeoGebra suivant.
 
 <div style="max-width: 800px; margin: 0 auto;">
   <iframe
@@ -155,14 +155,14 @@ On pourra vérifier l'intervalle graphiquement avec l'applet geogebra suivant.
 
 Ça permet de répondre à des questions du type :
 
-> Sur 40 lancers d’un dé à 6 faces 13 ont donné 6. Le dé est-il pipé&nbsp;?
+> Sur 40 lancers d’un dé à 6 faces, 13 ont donné 6. Le dé est-il pipé&nbsp;?
 
 
 <details>
 <summary id="correcsum">
 Correction (cliquer pour afficher)</summary>
 <blockquote id="correc">
-L'intervalle de fluctuation à 95 % $[a ; b]$ pour le nombre de succès est $I=[\frac{2}{40} ; \frac{12}{40}] = [0,05 ; 0,30]$ .<br>
+L'intervalle de fluctuation à 95 % $[a ; b]$ pour le nombre de succès est $I=[\frac{2}{40} ; \frac{12}{40}] = [0,05 ; 0,30]$.<br>
 La fréquence observée dans l'échantillon est $f = \frac{13}{40} = 0,325$. On constate que $f \notin I$ (ou que $13 > 12$).<br>
 La fréquence observée étant en dehors de l'intervalle de fluctuation associé à une probabilité de 95&nbsp;%, on conclut que le dé est pipé avec un risque d'erreur de 5&nbsp;%.
 </blockquote>
@@ -209,7 +209,7 @@ La célèbre gaussienne (ou courbe en cloche)&nbsp;:
 
 <br>
 
-On peut à nouveau tirer profit de l'applet géogebra qui précède pour obtenir des intervalles de fluctuation.
+On peut à nouveau tirer profit de l'applet GeoGebra qui précède pour obtenir des intervalles de fluctuation.
 
 
 
