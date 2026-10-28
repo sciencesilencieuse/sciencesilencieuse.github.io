@@ -50,9 +50,9 @@ details[open] > summary:first-of-type {
 
 >En s'appuyant sur le théorème de Bayes, l'inférence bayésienne permet de structurer et mathématiser le <b>raisonnement inductif</b>.
 
-Le raisonnement inductif vise à déduire des faits généraux à partir d'observations ponctuelles, à dévoiler le tableau complet sans n'en avoir vu que des morceaux.
+Le raisonnement inductif vise à déduire des faits généraux à partir d'observations ponctuelles, à dévoiler le tableau complet en n'en ayant vu que des morceaux.
 
-Contrairement au raisonnement déductif dont la conclusion est nécessairement vraie, le raisonnement inductif est, lui, probabiliste et peut donc très bien aboutir à des conclusions fausses. Le logicien anglais Russel prend l'exemple du poulet qui a appris à associer la main qui le nourrit à quelque chose de bénéfique jusqu'au jour où cette même main vient lui tordre le cou. Il s'agit avant tout d'un pari... Parfois perdant.
+Contrairement au raisonnement déductif dont la conclusion est nécessairement vraie, le raisonnement inductif est, lui, probabiliste et peut donc très bien aboutir à des conclusions fausses. Le logicien anglais Russell prend l'exemple du poulet qui a appris à associer la main qui le nourrit à quelque chose de bénéfique jusqu'au jour où cette même main vient lui tordre le cou. Il s'agit avant tout d'un pari... Parfois perdant.
 
 <div style="position:relative;margin-left:auto;margin-right:auto;width:500px;max-width:100%;margin-bottom:-1em;margin-top:-1em;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;">
 <img src="https://media.istockphoto.com/id/1803791347/photo/farmer-is-feeding-hen-from-hand.jpg?s=612x612&w=0&k=20&c=SQgBpyF27UqHag0WFJRvaXyacL7ldeyXp7aLkk_VDpM=" style="box-shadow:none;background:none;border-radius:10px;">
@@ -60,7 +60,7 @@ Contrairement au raisonnement déductif dont la conclusion est nécessairement v
 
 Malgré son imperfection logique, le raisonnement inductif est partout. Les sciences naturelles se sont en grande partie construites sur lui en proposant des règles extrapolées depuis des résultats d'expériences. On le trouve aussi au cœur des tribunaux (les preuves et témoins sont autant de points de données partiels utilisés pour établir la "vérité"). Et c'est encore lui qui se cache derrière tout diagnostic médical (les indices que sont les symptômes ou les résultats de tests permettent d'inférer l'état du patient).
 
-La recherche en neuroscience va même jusqu'à supposer que nos cerveaux ont une structure biologique adaptée à ce type de raisonnement. Comme le poulet de Russel, notre cerveau semble tirer instinctivement des conclusions des régularités rencontrées. Une étude parue dans Science en 2012[^1] l'illustre bien en montrant que des bébés de 8 mois regardent plus longtemps une boite remplie de boules blanches et rouges lorsqu'on dévoile son contenu si le mélange ne semble pas correspondre à celui inféré à partir d'un échantillon de boules sorties préalablement de la boite&nbsp;!
+La recherche en neuroscience va même jusqu'à supposer que nos cerveaux ont une structure biologique adaptée à ce type de raisonnement. Comme le poulet de Russell, notre cerveau semble tirer instinctivement des conclusions des régularités rencontrées. Une étude parue dans Science en 2012[^1] l'illustre bien en montrant que des bébés de 8 mois regardent plus longtemps une boite remplie de boules blanches et rouges lorsqu'on dévoile son contenu si le mélange ne semble pas correspondre à celui inféré à partir d'un échantillon de boules sorties préalablement de la boite&nbsp;!
 
 [^1]: Alison Gopnik, “Scientific Thinking in Young Children: Theoretical Advances, Empirical Research, and Policy Implications”, *Science*, 337(6102), 1623–1627 (2012). DOI: 10.1126/science.1223416. <a href="https://www.alisongopnik.com/Papers_Alison/Scientific%20Thinking%20in%20young%20Children.pdf" target="_blank"><i class="fa-solid fa-book"></i></a>
 
@@ -93,7 +93,7 @@ L'inférence bayésienne est considérée par des chercheurs en neuroscience com
 
 ### Bibliothécaire vs agriculteur
 
-On trouve dans le livre "*Système 1 / Système 2. Les deux vitesses de la pensée*" du prix Nobel d'économie Daniel Kahneman une expérience illustrant ce que peut nous apporter une meilleur familiarité avec le bayésianisme. 
+On trouve dans le livre "*Système 1 / Système 2. Les deux vitesses de la pensée*" du prix Nobel d'économie Daniel Kahneman une expérience illustrant ce que peut nous apporter une meilleure familiarité avec le bayésianisme. 
 
 L'expérience consistait à présenter à un amphi le portrait suivant&nbsp;: 
 
@@ -108,15 +108,15 @@ Puis on demande à l'audience si Steve est plus susceptible d'être bibliothéca
 Une large majorité répond alors bibliothécaire tant le portrait est proche du stéréotype associé à cette profession.<br>
 Et c'était aussi le cas de ChatGPT 3.5[^3] au départ (dans une logique de production de discours visant à satisfaire l'utilisateur)&nbsp;:
 
-[^3]: Les modèle d'aujourd'hui connaissent ce type de biais.
+[^3]: Les modèles d'aujourd'hui connaissent ce type de biais.
 
 <div style="position:relative; width:600px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:10px;">
 <img src="/chatgptbayesagriculteur.png"  style="border-radius:10px;">
 </div>
 
-Mais sachant qu'aux Etats-Unis, où l'étude a été menée, il y a au moins 20 fois plus d'agriculteurs que de bibliothécaires, les chances que Steve soit bibliothécaire sont minces.
+Mais sachant qu'aux États-Unis, où l'étude a été menée, il y a au moins 20 fois plus d'agriculteurs que de bibliothécaires, les chances que Steve soit bibliothécaire sont minces.
 
-Un **raisonnement bayésien** nous aurait prémuni d'une conclusion trop hâtive sur la profession de Steve. Il consiste non pas à déduire une probabilité d'une information donnée mais à **mettre à jour** une **probabilité *a priori*** à partir de cette information. 
+Un **raisonnement bayésien** nous aurait prémunis contre une conclusion trop hâtive sur la profession de Steve. Il consiste non pas à déduire une probabilité d'une information donnée mais à **mettre à jour** une **probabilité *a priori*** à partir de cette information. 
 
 La probabilité *a priori* de l'hypothèse $H$ est $\textcolor{#0076BA}{P(H)}$.<br>
 Ici, l'hypothèse est que Steve est bibliothécaire et la probabilité *a priori* vaut 4,8% $\left(\frac{1}{20+1}\right)$.
@@ -155,7 +155,7 @@ Et encore plus trivial avec le plus grand effort pédagogique fait ci-dessous&nb
 <img src="/preuvebayes.png" style="border-radius:15px;">
 </div>
 
-On peut utiliser la représentation graphique décrite dans la vidéo d'introduction pour nous aider à faire les calculs en fonction de nos estimations. C'est ce qui est fait dans l'appliquette Geogebra ci-dessous.
+On peut utiliser la représentation graphique décrite dans la vidéo d'introduction pour nous aider à faire les calculs en fonction de nos estimations. C'est ce qui est fait dans l'appliquette GeoGebra ci-dessous.
 
 
 <!--<p style="position:relative;margin-left:auto;margin-right:auto;width:800px;max-width:100%;">
@@ -188,7 +188,7 @@ Pour les bayésiens, une probabilité mesure un degré de conviction qui est mis
 Exemple d'énoncé où les deux approches divergent&nbsp;:<br>
 Dire &laquo;&nbsp;<b>il y a 95 % de chances que le dé soit pipé</b>&nbsp;&raquo; est mathématiquement rigoureux en approche bayésienne mais est dénué de sens en approche fréquentiste.<br>
 En effet, pour un **fréquentiste**, le dé est soit pipé, soit équilibré, il n'y a pas de hasard là-dedans : ce n'est pas une variable aléatoire. La probabilité étant considérée comme une réalité physique objective, attribuer une probabilité à une hypothèse concernant un objet dont la nature est fixe est impossible. La démarche est alors de calculer la probabilité d'obtenir un tel résultat (ou un résultat plus extrême) sous l'hypothèse que le dé est équilibré. Et si cette probabilité est inférieure à un <b>seuil</b> que l'on s'est fixé au préalable, on rejette l'hypothèse. L'hypothèse n'est donc pas plus ou moins probable mais acceptée ou rejetée. Le fréquentiste dira par exemple &laquo;&nbsp;je peux affirmer que le dé est pipé avec un risque d'erreur de 5%&nbsp;&raquo;.<br>
-Pour un **bayésien**, la probabilité change de nature&nbsp;; c'est un état de connaissance ou un <b>degré de croyance</b> de l'observateur face à l'incertitude. Le dé possède une nature fixe, mais puisque on l'ignore, sa nature devient bien pour nous une variable aléatoire. Cela semble bien plus intuitif&nbsp;!
+Pour un **bayésien**, la probabilité change de nature&nbsp;; c'est un état de connaissance ou un <b>degré de croyance</b> de l'observateur face à l'incertitude. Le dé possède une nature fixe, mais puisqu'on l'ignore, sa nature devient bien pour nous une variable aléatoire. Cela semble bien plus intuitif&nbsp;!
 {{%/notice%}}
 
 <br>
@@ -209,7 +209,7 @@ Correction (cliquer pour afficher)</summary>
 <blockquote id="correc">
 $H$ : les deux enfants sont des filles.<br>
 $I$ : l'un des deux enfants est une fille.<br>
-$P(H) = 1/4$ (dans l'hypothèse où il y a autant de chance d'avoir une fille qu'un garçon).<br>
+$P(H) = 1/4$ (dans l'hypothèse où il y a autant de chances d'avoir une fille qu'un garçon).<br>
 $P(I) = 3/4$ (puisque cela correspond à 3 possibilités parmi 4 équiprobables&nbsp;: GG, FF, FG et GF). <br>
 $P(I|H)$ : la probabilité qu'un des deux enfants soit une fille sachant que les deux enfants sont des filles est bien sûr de 100%.<br>
 C'est tout l'intérêt du théorème de Bayes de permettre de retourner $P(I|H)$ qui est évident en $P(H|I)$ que l'on cherche&nbsp;:<br>
@@ -258,7 +258,7 @@ Un couple a deux enfants. On aperçoit une fille dans le jardin. Quelle est la p
 Correction (cliquer pour afficher)</summary>
 <blockquote id="correc">
 Oui !<br>
-Dans l'hypothèse $H$ où il y a deux filles (1 chance sur 4), il y a 100% de chance de voir une fille dans le jardin. On a donc comme précédemment $P(I|H)=1$.<br> 
+Dans l'hypothèse $H$ où il y a deux filles (1 chance sur 4), il y a 100% de chances de voir une fille dans le jardin. On a donc comme précédemment $P(I|H)=1$.<br> 
 Mais dans l'hypothèse où les deux enfants ne sont pas deux filles ($P(\bar{H})=3/4$), la probabilité de voir une fille dans le jardin vaut $P(I|\bar{H})=1/3$. En effet, il faut à la fois que les parents aient un garçon et une fille (2 chances sur 3 dans l'hypothèse $\bar{H}$), et il faut que cela soit la fille dans le jardin et non le garçon (1 chance sur 2).<br>
 Par conséquent $P(I)$ devient&nbsp;: $P(I)=P(I|H)\times P(H) + P(I|\bar{H})\times P(\bar{H})=1\times 1/4 + 1/3\times 3/4 = 1/2 $<br>
 On a donc $P(H|I)=\frac{1\times 1/4}{1\times 1/4 + 1/3\times 3/4}=\frac{1}{2}$.
@@ -303,7 +303,7 @@ Dans le premier cas, l'information supplémentaire laisse trois possibilités é
 
 Dans un ancien jeu télévisé américain, présenté par Monty Hall, un candidat devait choisir une porte parmi trois. Derrière l'une d'elles se cache une voiture et derrière les deux autres une chèvre.
 
-Après que le candidat ait indiqué son choix, Monty ouvre une des deux autres portes derrière laquelle il sait que se trouve une chèvre (s'il y a une chèvre derrière les deux portes non choisies, il en choisit une au hasard).
+Après que le candidat a indiqué son choix, Monty ouvre une des deux autres portes derrière laquelle il sait que se trouve une chèvre (s'il y a une chèvre derrière les deux portes non choisies, il en choisit une au hasard).
 
 Il demande ensuite au candidat s'il veut garder sa porte ou s'il veut choisir l'autre porte.
 
@@ -334,7 +334,7 @@ Correction (cliquer pour afficher)</summary>
 
 ### L'argument de l'Apocalypse
 
-Le philosophe Nick Bolstrom présente sa version du "Doomsday Argument" à peu près ainsi&nbsp;:
+Le philosophe Nick Bostrom présente sa version du "Doomsday Argument" à peu près ainsi&nbsp;:
 
 **1<sup>re</sup> étape :<br>**
 Imaginez un univers constitué de 100 boites habitées chacune par un humain.<br>
@@ -347,7 +347,7 @@ L'extérieur des boites est peint en bleu pour 90 d'entre elles et en rouge pour
 <summary id="correcsum">
 Correction (cliquer pour afficher)</summary>
 <blockquote id="correc">
-Si vous supposez qu'il y a 90% de chance que votre boite soit bleue, vous êtes SSA (self-sampling assumption) dans la terminologie de Bostrom. Et si vous pensez plutôt qu'il n'y a que 50% de chance qu'elle soit bleue, vous échappez à la conclusion du Doomsday.
+Si vous supposez qu'il y a 90% de chances que votre boite soit bleue, vous êtes SSA (self-sampling assumption) dans la terminologie de Bostrom. Et si vous pensez plutôt qu'il n'y a que 50% de chances qu'elle soit bleue, vous échappez à la conclusion du Doomsday.
 </blockquote>
 </details>
 
@@ -360,7 +360,7 @@ Vous vous retrouvez dans une de ces boites et on vous demande s'il y a 10 ou 100
 
 > N'ayant pas d'information supplémentaire, que répondez-vous&nbsp;?
 
-> Et si on vous demande d'estimer la probabilité que le numéro de votre pièce soit entre 1 et 10 selon chacune des deux possibilités pour le pile ou face&nbsp;?
+> Et si on vous demande d'estimer la probabilité que le numéro de votre boite soit entre 1 et 10 selon chacune des deux possibilités pour le pile ou face&nbsp;?
 
 Supposons maintenant que vous sortiez de votre boite pour découvrir que son numéro est le 7. 
 
@@ -392,14 +392,14 @@ $$
 **3<sup>e</sup> étape :<br>**
 On transpose ces résultats à la situation actuelle sur Terre.<br>
 Posons les deux hypothèses rivales suivantes&nbsp;:
-- apocalypse précoce : l'humanité va s'éteindre dans le prochain siècle et la quantité totale d'humain ayant existé sera d'environ 200 milliards.
-- apocalypse tardive : l'humanité va survivre le prochain siècle et coloniser la galaxie. Le nombre total d'humain ayant existé s'élèvera à 200 mille milliards.
+- apocalypse précoce : l'humanité va s'éteindre dans le prochain siècle et la quantité totale d'humains ayant existé sera d'environ 200 milliards.
+- apocalypse tardive : l'humanité va survivre le prochain siècle et coloniser la galaxie. Le nombre total d'humains ayant existé s'élèvera à 200 mille milliards.
 
 > Quelle probabilité a priori attribuez-vous à chacun de ces scénarios&nbsp;?
 
-Vous n'êtes pas loin d'être l'humain n°100 milliards (en terme d'ordre de naissance).
+Vous n'êtes pas loin d'être l'humain n°100 milliards (en termes d'ordre de naissance).
 
-> Comme le théorème de Bayes va-t-il faire glisser les probabilités attribuées à chacun des scénarios sachant cela (faire le parallèle avec l'univers des boites numérotées).
+> Comment le théorème de Bayes va-t-il faire glisser les probabilités attribuées à chacun des scénarios sachant cela (faire le parallèle avec l'univers des boites numérotées).
 
 
 
@@ -407,8 +407,8 @@ Vous n'êtes pas loin d'être l'humain n°100 milliards (en terme d'ordre de nai
 <summary id="commsum">
 Commentaire (cliquer pour afficher)</summary>
 <blockquote id="comm">
-On peut échapper à cette conclusion sinistre en rejetant SSA. On peut en effet considérer qu'il y a plus de chance qu'il y ait 100 personnes que 10 car le fait que j'existe devient alors plus probable.<br>
-Sans connaître le numéro de la boite, on peut donc penser qu'il y a 10 fois plus de chances que dieu ait tiré face. Cela rééquilibre <i>a posteriori</i> les deux hypothèses car maintenant, $P(\text{Pile}|7)$ vaut 1/2 et de même, les deux scénarios d'apocalypse retrouvent leurs probabilités <i>a priori</i>.
+On peut échapper à cette conclusion sinistre en rejetant SSA. On peut en effet considérer qu'il y a plus de chances qu'il y ait 100 personnes que 10 car le fait que j'existe devient alors plus probable.<br>
+Sans connaître le numéro de la boite, on peut donc penser qu'il y a 10 fois plus de chances que le dieu ait tiré face. Cela rééquilibre <i>a posteriori</i> les deux hypothèses car maintenant, $P(\text{Pile}|7)$ vaut 1/2 et de même, les deux scénarios d'apocalypse retrouvent leurs probabilités <i>a priori</i>.
 </blockquote>
 </details>
 
@@ -422,7 +422,7 @@ Nick Bostrom a aussi développé des arguments semblables sur la probabilité qu
 
 ### Bayes et cote
 
-Le théorème de Bayes peut se réexprimer en terme de cotes. Cela permet de simplifier à la fois son calcul et son interprétation.
+Le théorème de Bayes peut se réexprimer en termes de cotes. Cela permet de simplifier à la fois son calcul et son interprétation.
 
 La **cote** d'un événement (*odds* en anglais) est le ratio de la probabilité que l'événement se produise par la probabilité qu'il ne se produise pas. On l'exprime en général comme une paire de nombres (le numérateur et le dénominateur). 
 
@@ -434,7 +434,7 @@ Par exemple, si un évènement a une probabilité de 5% de se produire, il a don
 
 L'utilisation des cotes est très commune pour les paris sportifs en Angleterre.
 
-**Théorème de Bayes exprimé en termes de cote**&nbsp;:
+**Théorème de Bayes exprimé en termes de cotes**&nbsp;:
 
 <div style="position:relative;border:solid 4px red;padding:10px;margin-left:auto;margin-right:auto; width:50%;text-align:center">
 La cote de $H$ sachant $I$ vaut la cote de $H$ multipliée par le facteur de Bayes $\left(\frac{P(I|H)}{P(I|\overline{H})}\right)$.
@@ -448,7 +448,7 @@ Vérifions avec Steve :
 
 La cote de $H$ correspond au ratio bibliothécaires/agriculteurs (soit 1/20) et le facteur de Bayes correspond à combien de fois le portrait $I$ correspond plus à un bibliothécaire qu'à un agriculteur. Si le facteur de Bayes vaut 20, on trouve une cote de 1 pour la cote a posteriori, ce qui correspond bien à une probabilité de 50% que Steve soit bibliothécaire.
 
-> <span style="font-size: 1.1rem;color: #999;">Reprenez la première questions du paradoxe des deux filles en utilisant les cotes.</span>
+> <span style="font-size: 1.1rem;color: #999;">Reprenez la première question du paradoxe des deux enfants en utilisant les cotes.</span>
 
 
 
@@ -475,7 +475,7 @@ Parmi les femmes dont le test est positif, combien sont atteintes d'un cancer du
 Un peu de vocabulaire :
 
 - La **sensibilité** d'un test mesure sa capacité à donner un résultat positif lorsqu'une hypothèse est vérifiée = capacité à détecter un maximum de malades (avoir le moins possible de faux négatifs).
-- La **spécificité** d'un test mesure sa capacité à donner une résultat négatif lorsque l'hypothèse n'est pas vérifiée = capacité à ne détecter que les malades (avoir le moins possible de faux positifs).
+- La **spécificité** d'un test mesure sa capacité à donner un résultat négatif lorsque l'hypothèse n'est pas vérifiée = capacité à ne détecter que les malades (avoir le moins possible de faux positifs).
 
 En notant VP et FP les vrais et les faux positifs, et VN et FN les vrais et faux négatifs, on a&nbsp;:
 
@@ -494,7 +494,7 @@ En notant VP et FP les vrais et les faux positifs, et VN et FN les vrais et faux
 
 En utilisant le code couleur du schéma précédent, un test sera d'autant plus sensible que l'ensemble des malades (hachuré rouge) ne déborde pas de l'ensemble des tests positifs (hachuré bleu). La **sensibilité** est en effet donnée par la proportion entre l'aire à la fois hachurée rouge et bleue (les VP) sur toute l'aire hachurée rouge (les malades).
 
-Et la **spécificité** correspond à la proportion d'aire verte seule (les non malades avec un test négatifs, VN) sur toute l'aire verte (verte seule + verte hachurée bleue, alias l'ensemble des non malades). 
+Et la **spécificité** correspond à la proportion d'aire verte seule (les non malades avec un test négatif, VN) sur toute l'aire verte (verte seule + verte hachurée bleue, alias l'ensemble des non malades). 
 
 ---
 
@@ -572,7 +572,7 @@ Passons-la maintenant à 0,1&nbsp;%&nbsp;:
 > <span style="font-size: 1.1rem;color: #999;">Que vaut $P(cancer|+)$  maintenant&nbsp;?
 </span>
 
-Augmentons la spécificité à 99&nbsp;% et reprenant une prévalence de 1&nbsp;%.
+Augmentons la spécificité à 99&nbsp;% en reprenant une prévalence de 1&nbsp;%.
 
 <table>
 <tr>
@@ -591,7 +591,7 @@ Augmentons la spécificité à 99&nbsp;% et reprenant une prévalence de 1&nbsp;
 
 Et si le test est négatif ?
 
-> <span style="font-size: 1.1rem;color: #999;">Reprendre les données de départ et trouvez la probabilité de ne pas avoir de cancer si on a été testé négatif.</span>
+> <span style="font-size: 1.1rem;color: #999;">Reprenez les données de départ et trouvez la probabilité de ne pas avoir de cancer si on a été testé négatif.</span>
 
 > <span style="font-size: 1.1rem;color: #999;">Et si on passe un second test négatif&nbsp;?</span>
 
@@ -638,7 +638,7 @@ P(\text{maladie}|\text{symptômes})=\frac{P(\text{symptômes}|\text{maladie})\ti
 $$
 </div>
 
-> Vous êtes internes au service de maladies infectieuses du CHU de Limoges et une personne se présente avec à la fois de la fièvre, pas de courbatures et des douleurs oculaires. La personne revient d’un pays dans lequel aucune des trois maladies n’est épidémique. On considère donc a priori que les trois maladies sont équiprobables.
+> Vous êtes interne au service de maladies infectieuses du CHU de Limoges et une personne se présente avec à la fois de la fièvre, pas de courbatures et des douleurs oculaires. La personne revient d’un pays dans lequel aucune des trois maladies n’est épidémique. On considère donc a priori que les trois maladies sont équiprobables.
 >
 >	- Calculer la probabilité que la personne présente ces 3 symptômes ensemble pour chacune des maladies $P(\text{symptômes}|\text{maladie})$.
 >		
@@ -646,7 +646,7 @@ $$
 >
 > - Quelles sont les probabilités a posteriori de chaque maladie si cette personne présente ces symptômes&nbsp;? Quel est selon vous le diagnostic le plus probable dans ce cas&nbsp;?
 >
-> Si vous apprenez maintenant qu'en fait la personne revient d'un pays dans lequel sévit une épidémie de Chikungunya. A priori, il y a 90&nbsp;% de chances qu’elle ait été infectée par le Chikungunya et 5&nbsp;% par chacune des deux autres maladies. Quel est le diagnostic le plus probable dans ce cas&nbsp;?
+> Si vous apprenez maintenant qu'en fait la personne revient d'un pays dans lequel sévit une épidémie de chikungunya. A priori, il y a 90&nbsp;% de chances qu’elle ait été infectée par le chikungunya et 5&nbsp;% par chacune des deux autres maladies. Quel est le diagnostic le plus probable dans ce cas&nbsp;?
 
 
 <br>
