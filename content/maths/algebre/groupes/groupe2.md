@@ -74,7 +74,7 @@ margin-top:-0.5em;
 
 La physique semble soumise aux symétries (jamais les solutions d'un problème ne s'affranchissent des symétries qui contraignent le système). Essence des symétries, les groupes sont l'objet idéal pour décoder ce lien indéfectible.
 
-Mais on ne manipule pas "la physique", seulement des objets mathématiques sensés modéliser la réalité sous-jacente. Ces objets sont toujours les solutions d’équations différentielles ou intégrales et vivent donc dans des espaces vectoriels. Le mariage entre physique et espaces vectoriels fut même entièrement consommé à l’avènement de la physique quantique puisqu’ils constituent le cadre fondamental de la théorie.
+Mais on ne manipule pas "la physique", seulement des objets mathématiques censés modéliser la réalité sous-jacente. Ces objets sont toujours les solutions d’équations différentielles ou intégrales et vivent donc dans des espaces vectoriels. Le mariage entre physique et espaces vectoriels fut même entièrement consommé à l’avènement de la physique quantique puisqu’ils constituent le cadre fondamental de la théorie.
 
 Cela serait donc sympa que l’on réussisse à balancer nos symétries dans ces espaces vectoriels... Les représentations sont là pour ça.
 
@@ -122,7 +122,7 @@ Appelons $\mathrm{s}_1$, $\mathrm{s}_2$, $\mathrm{s}_3$, les orbitales 1s des at
 
 On dénombre 6 éléments de symétrie dans le groupe :
 <ul>
-<li>on peut tout laisser à l’identique (élément neutre) ,</li>
+<li>on peut tout laisser à l’identique (élément neutre),</li>
 <li>on peut permuter circulairement les orbitales $\mathrm{s}_i$ des hydrogènes dans un sens ou dans l’autre&nbsp;: $\mathrm{s}_1 \rightarrow \mathrm{s}_2 \rightarrow \mathrm{s}_3 \rightarrow \mathrm{s}_1$&nbsp;, $\mathrm{s}_1 \rightarrow \mathrm{s}_3 \rightarrow \mathrm{s}_2 \rightarrow \mathrm{s}_1$,</li>
 <li> on peut permuter deux à deux les orbitales 1s, ça fait 3 possibilités.</li>
 </ul>
@@ -139,7 +139,7 @@ On peut partir de la table de multiplication de ce groupe (voir [chapitre préc�
 
 <ul>
 <li>La table est respectée par une première représentation de dimension 1 plutôt triviale consistant à associer le nombre 1 à chaque élément du groupe.</li>
-<li>Une autre représentation de dimension 1 un peu plus intéressante consiste à représenter les rotations par des $1$ et les réflexions par des $-1$.<br>Une rotation suivie d’une rotation donne bien une autre rotation ($1\times 1=1$), de même qu’une réflexion suivi d’une autre réflexion ($(-1)\times (-1)=1$), alors que les compositions croisées correspondent effectivement toutes à des réflexions ($1\times(-1)=-1$).</li>
+<li>Une autre représentation de dimension 1 un peu plus intéressante consiste à représenter les rotations par des $1$ et les réflexions par des $-1$.<br>Une rotation suivie d’une rotation donne bien une autre rotation ($1\times 1=1$), de même qu’une réflexion suivie d’une autre réflexion ($(-1)\times (-1)=1$), alors que les compositions croisées correspondent effectivement toutes à des réflexions ($1\times(-1)=-1$).</li>
 </ul>
 
 
@@ -183,7 +183,7 @@ $$
 </li>
 
 <li>
-et les 3 permutation deux à deux (réflexions) par&nbsp;:
+et les 3 permutations deux à deux (réflexions) par&nbsp;:
 
 <div id="grosseformule">
 
@@ -253,7 +253,7 @@ $$
 
 </li>
 <li>
-et les 3 permutation deux à deux (réflexions)&nbsp;:
+et les 3 permutations deux à deux (réflexions)&nbsp;:
 
 <div id="grosseformule">
 
@@ -299,7 +299,7 @@ Afin de classer les représentations, il faut d’abord être sûr qu’elles so
 
 <div id="def">
 
-Soit $U(G)$ est une représentation du groupe $G$ sur l’espace vectoriel $V$ et $S$ n’importe quel opérateur inversible sur $V$.<br>
+Soit $U(G)$ une représentation du groupe $G$ sur l’espace vectoriel $V$ et $S$ n’importe quel opérateur inversible sur $V$.<br>
 Alors la représentation $U^{\prime}(G)$ telle que $U^{\prime}(G)=S U(G) S^{-1}$ (les matrices associées sont alors semblables) forme aussi une représentation de $G$ sur $V$, de même dimension. On dit que $U(G)$ et $U^{\prime}(G)$ sont <b>équivalentes</b> (on note alors $U \sim U^{\prime}$).
 
 Et l’ensemble des représentations équivalentes forme une <b>classe d’équivalence</b>. Il suffit de connaître un élément de chaque classe puisqu’on peut générer tous les autres à partir de celui-ci.
@@ -308,7 +308,7 @@ Et l’ensemble des représentations équivalentes forme une <b>classe d’équi
 
 On n’a fait là qu’importer la notion de classes des groupes aux représentations.
 
-Pour répertorier les différentes représentation d’un groupe, on se concentre donc sur les représentations non équivalentes.
+Pour répertorier les différentes représentations d’un groupe, on se concentre donc sur les représentations non équivalentes.
 
 Et pour s’assurer que deux représentations sont équivalentes ou non, il faut une grandeur variant d’une classe à l’autre mais pas à l’intérieur d’une classe. On appelle une telle quantité un <b>invariant de similitude</b> (puisqu’il est identique pour deux matrices semblables). La trace en est un (ça lui donne d’ailleurs son nom&nbsp;: indépendante d’un changement de base, la trace caractérise la matrice)&nbsp;!
 
@@ -324,7 +324,7 @@ Le caractère caractérise donc une classe.
 
 Les différentes représentations équivalentes sont autant de doublons à balayer mais une autre redondance pollue aussi l’analyse&nbsp;: une représentation donnée peut être décrite comme la somme de ses sous-parties.
 
-Supposons que l’on ait deux représentations $U_1(G)$ et $U_2(G)$ dans deux espaces orthogonaux $V_1$ et $V_2$. On peut alors construire une nouvelle représentation dans l’espace somme directe de $V_1$ et $V_2$&nbsp;: $V_1 \oplus V_2$. La représentations est alors dite <b>somme directe</b> des représentations&nbsp;: $U(G)=U_1(G) \oplus U_2(G)$. Chacun des deux sous-espaces reste invariant sous l’action de $U$ par construction (on dit plutôt qu’ils sont laissés stables).
+Supposons que l’on ait deux représentations $U_1(G)$ et $U_2(G)$ dans deux espaces orthogonaux $V_1$ et $V_2$. On peut alors construire une nouvelle représentation dans l’espace somme directe de $V_1$ et $V_2$&nbsp;: $V_1 \oplus V_2$. La représentation est alors dite <b>somme directe</b> des représentations&nbsp;: $U(G)=U_1(G) \oplus U_2(G)$. Chacun des deux sous-espaces reste invariant sous l’action de $U$ par construction (on dit plutôt qu’ils sont laissés stables).
 
 C’est l’opération inverse qui va nous intéresser&nbsp;: quand une représentation donnée peut être décomposée en sous-représentations laissant stables certains sous-espaces. La représentation est alors dite <b>réductible</b>.
 
@@ -387,7 +387,7 @@ On peut retrouver le lien entre représentation unitaire et opération de symét
 
 Soit $|\psi\rangle$ un «vecteur d’état» d’un système sur un espace vectoriel d’états physiques. Une opération de symétrie transforme $|\psi\rangle$ en $|\psi^\prime\rangle$. Les deux ensembles de vecteurs $\\{|\psi\rangle\\}$ et $\\{|\psi^\prime\rangle\\}$ doivent fournir des descriptions équivalentes du système physique ce qui implique que l’opérateur de symétrie soit linéaire. 
 
-De plus, toute observable physique doit rester invariante sous la transformation or ces observable sont toujours exprimées sous la forme de produits scalaires du type $\langle\phi \mid \psi\rangle$. Et des transformations linéaires qui préservent le produit scalaire sont induites par des opérateurs unitaires&nbsp;!
+De plus, toute observable physique doit rester invariante sous la transformation or ces observables sont toujours exprimées sous la forme de produits scalaires du type $\langle\phi \mid \psi\rangle$. Et des transformations linéaires qui préservent le produit scalaire sont induites par des opérateurs unitaires&nbsp;!
 
 Les représentations unitaires ont une propriété remarquable qui va beaucoup nous occuper&nbsp;:
 
@@ -477,7 +477,7 @@ $$
 
 </div>
 
-Le non croisement des termes montre que $D(G)$ ne contient pas de nouvelles informations par rapport à l’ensemble des $D_i(G)$ justifiant que l’on puisse parler de redondance entre une représentation et l’ensemble de ses représentations irréductibles.
+Le non-croisement des termes montre que $D(G)$ ne contient pas de nouvelles informations par rapport à l’ensemble des $D_i(G)$ justifiant que l’on puisse parler de redondance entre une représentation et l’ensemble de ses représentations irréductibles.
 
 Cette décomposition n’est a priori possible que pour des représentations unitaires mais c’est finalement peu restreignant car outre le fait que les groupes de symétrie qui intéressent le physicien sont naturellement associés à des transformations unitaires, toute représentation d’un groupe fini ou compact (éléments variant sur un espace compact) est équivalente à une représentation unitaire.
 
@@ -540,7 +540,7 @@ $\displaystyle \frac{n\_\mu}{n\_G} \sum\_g  D_\mu^{\dagger}(g)^k\_i  \\, D^\nu(g
 
 </li>
 <br>
-<li>Et une conditions de complétude (le mot a beau sonné vilain, il traduit que le pavage de l’espace des représentations par les morceaux irréductibles est complet)&nbsp;:
+<li>Et une condition de complétude (le mot a beau sonner vilain, il traduit que le pavage de l’espace des représentations par les morceaux irréductibles est complet)&nbsp;:
 
 $\displaystyle \sum\_{\mu, l, k} \frac{n\_\mu}{n\_G} D^\mu(g)^l\_k \\, D\_\mu^{\dagger}\left(g^{\prime}\right)^k\_l=\delta^g\_{g^{\prime}}$
 
@@ -566,7 +566,7 @@ $$\displaystyle\sum_g\langle\mu, i, k \mid g\rangle\langle g \mid \nu, j, l\rang
 
 
 Cette forme permet d'appréhender plus facilement son interprétation géométrique. Il faut s’imaginer un espace vectoriel complexe à $n_G$ dimensions où chaque axe correspond à un élément du groupe.<br>
-Chaque $D^\mu(g)^j_i$ peut donc être vues comme un «vecteur» à $n_G$ composantes (avec $g$ parcourant $G$), tous orthogonaux entre eux. Le premier de ces vecteurs serait par exemple&nbsp;:<br>
+Chaque $D^\mu(g)^j_i$ peut donc être vu comme un «vecteur» à $n_G$ composantes (avec $g$ parcourant $G$), tous orthogonaux entre eux. Le premier de ces vecteurs serait par exemple&nbsp;:<br>
 <div id="grosseformule" style="margin-top:-2em;margin-bottom:-1em;">
 
 $
@@ -607,10 +607,10 @@ Prenons une représentation $U_1(G)$ d’un groupe $G$ dans un espace vectoriel 
 On aurait ainsi $v_2^{\prime}=U_2(g) v_2=U_2(g) A v_1=A v_1^{\prime}=A U_1(g) v_1$.
 
 Formalisons&nbsp;:
-Soient $U_1(G) \in V_1$ et $U_2(G) \in V_2$ deux représentations. L’**opérateur d’entrelacement** $A$ (ou homomorphisme de représentations) est une application linéaire de $V_1$ sur $V_2$ tel que $A U_1(g)=U_2(g) A$ pour tout $g\in G$.<br>
+Soient $U_1(G) \in V_1$ et $U_2(G) \in V_2$ deux représentations. L’**opérateur d’entrelacement** $A$ (ou homomorphisme de représentations) est une application linéaire de $V_1$ sur $V_2$ telle que $A U_1(g)=U_2(g) A$ pour tout $g\in G$.<br>
 On dit que $A$ entrelace $U_1$ et $U_2$ ce qui est plutôt mignon.<br>
 On dit aussi que $A$ est une application G-équivariante, sobriquet assez parlant bien que moins poétique.<br>
-Et pour les esprits schématiques, l’opérateur d’entrelacement peut aussi être définit tel que le diagramme suivant commute pour tout $g\in G$, le chemin rouge et le chemin bleu arrivant au même endroit&nbsp;:
+Et pour les esprits schématiques, l’opérateur d’entrelacement peut aussi être défini tel que le diagramme suivant commute pour tout $g\in G$, le chemin rouge et le chemin bleu arrivant au même endroit&nbsp;:
 
 <div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/schur2.png" style="box-shadow:none;background:none;">
@@ -625,7 +625,7 @@ L’ensemble de tous les opérateurs d’entrelacement de $U_1$ à $U_2$ est not
 <div id="theo">
 <b>Lemme de Schur</b>&nbsp;:
 
-Soit $U_1(G)$ et $U_2(G)$ deux représentations irréductible d’un groupe $G$ sur des espaces vectoriels $V_1$ et $V_2$ et $A \in \operatorname{Hom}\_G\left(U_1, U_2\right)$, un opérateur d’entrelacement.<br>
+Soit $U_1(G)$ et $U_2(G)$ deux représentations irréductibles d’un groupe $G$ sur des espaces vectoriels $V_1$ et $V_2$ et $A \in \operatorname{Hom}\_G\left(U_1, U_2\right)$, un opérateur d’entrelacement.<br>
 On a alors : soit $A=0$, soit $V_1$ et $V_2$ sont isomorphes et les représentations $U_1$ et $U_2$ sont équivalentes.
 
 </div>
@@ -640,10 +640,10 @@ Si $A=0$, il n’y a rien à démontrer. Supposons alors $A≠0$.<br>
 <li>Montrons que $A$ est surjectif&nbsp;:<br> 
 comme $A≠0$, il existe au moins deux vecteurs $v_2$ et $v_1$ respectivement de $V_2$ et $V_1$ tels que $v_2=A v_1$.<br> 
 Et pour tout  $g\in G$, on a&nbsp;:  $U_2(g) v_2=U_2(g) A v_1=A\left(U_1(g) v_1\right)$ qui appartient à $A V_1$.<br> 
-Par conséquent, $A V_1$ est un sous-espace stable non nul de $V_2$ par rapport à $U_2$ et comme $U_2$ est irréductible, on doit avoir $AV_1 = V_2$ .
+Par conséquent, $A V_1$ est un sous-espace stable non nul de $V_2$ par rapport à $U_2$ et comme $U_2$ est irréductible, on doit avoir $AV_1 = V_2$.
 </li>
 <li>Montrons que $A$ est injectif&nbsp;:
-soit maintenant $W$ le noyau de $A$. $A$ est une application linéaire, or le noyau d’une application linéaire change un tantinet de ceux côtoyés jusqu’ici puisque l’élément neutre n’est plus l’identité mais le vecteur nul (la composition interne considérée est l’addition). Le noyau étant définit comme l’ensemble aboutissant à l’élément neutre, on a $W=\left\{v_1 \in V_1 ; A v_1=0\right\}$.<br>  
+soit maintenant $W$ le noyau de $A$. $A$ est une application linéaire, or le noyau d’une application linéaire change un tantinet de ceux côtoyés jusqu’ici puisque l’élément neutre n’est plus l’identité mais le vecteur nul (la composition interne considérée est l’addition). Le noyau étant défini comme l’ensemble aboutissant à l’élément neutre, on a $W=\left\{v_1 \in V_1 ; A v_1=0\right\}$.<br>  
 Prenons un élément $v_1$ de ce noyau. Alors $A\left(U_1(g) v_1\right)=U_2(g) A v_1=U_2(g) 0=0$, donc $U_1(g) v_1$  appartient à $W$ et ce, pour tout $g$. Ce qui implique que $W$ est un sous-espace invariant de $V_1$ pour $U_1$, or comme $U_1$ est irréductible, soit $W=V_1$ mais alors $A=0$, soit $W=\{0\}$ (injection).</li>
 </ul>
 
@@ -673,10 +673,10 @@ Mais par définition d’une valeur propre, $A- λE$ n’est pas inversible donc
 </div>
 
 Remarque&nbsp;:<br>
-C’est la première fois qu’on s’impose de travailler sur un espace vectoriel complexe. Lui-seul permet d’affirmer qu’un opérateur linéaire sur un espace vectoriel de dimension finie possède une valeur propre. C’est une conséquence de l’existence d’une racine pour tout polynôme de degré ≥ 1 dans $\mathbb{C}$ (le théorème fondamental de l'algèbre dit bien qu'un polynôme de degré $n$ a $n$ racines). En particulier, le polynôme caractéristique de l’opérateur a donc une racine.<br>
+C’est la première fois qu’on s’impose de travailler sur un espace vectoriel complexe. Lui seul permet d’affirmer qu’un opérateur linéaire sur un espace vectoriel de dimension finie possède une valeur propre. C’est une conséquence de l’existence d’une racine pour tout polynôme de degré ≥ 1 dans $\mathbb{C}$ (le théorème fondamental de l'algèbre dit bien qu'un polynôme de degré $n$ a $n$ racines). En particulier, le polynôme caractéristique de l’opérateur a donc une racine.<br>
 Et cela marche aussi pour un espace vectoriel complexe de dimension infinie mais complet, ce qui permet d’étendre la propriété aux cas qu’on rencontrera dans les chapitres suivants.
 
-Notons que l’automorphisme d’une représentations commute, par définition, avec tous les éléments de cette représentation.<br>
+Notons que l’automorphisme d’une représentation commute, par définition, avec tous les éléments de cette représentation.<br>
 Par conséquent, la propriété peut se reformuler ainsi&nbsp;:
 
 <div id="theo">
@@ -702,17 +702,17 @@ Toute représentation irréductible d’un groupe abélien est de dimension 1.
 Preuve&nbsp;:
 
 Soit $U(G)$ une représentation irréductible du groupe abélien $G$. Soit $p$ un élément de $G$. Comme $G$ est abélien, on a $U(p) U(g)=U(g) U(p)$ pour tout $g\in G$.<br>
-D’après le lemme de Schur, on a alors $U(p)=\lambda_p E$. Et cela marche pour tout les $p\in G$. Par conséquent, la représentation $U(G)$ est équivalente à la représentation unidimensionnelle $p \rightarrow \lambda_p \in \mathbb{C}$ pour tous les $p\in G$.
+D’après le lemme de Schur, on a alors $U(p)=\lambda_p E$. Et cela marche pour tous les $p\in G$. Par conséquent, la représentation $U(G)$ est équivalente à la représentation unidimensionnelle $p \rightarrow \lambda_p \in \mathbb{C}$ pour tous les $p\in G$.
  
 </div>
 
 En physique, ces considérations généralisent un résultat bien connu&nbsp;: des opérateurs qui commutent possèdent un jeu complet de vecteurs propres communs (cf. la recherche d’un «**ECOC**», ensemble complet d’observables qui commutent, en mécanique quantique). 
  
-Précisons cela dans le cas de l’**Hamiltonien**.<br>
-La dynamique d’un système physique est déterminée par un opérateur appelé l’Hamiltonien $H$ et cet opérateur doit, par définition, rester invariant sous les opérations de symétrie laissant invariant le système physique lui-même.<br>
-Mathématiquement, cela revient à dire que $H$ commute avec les opérateurs unitaires de la symétrie considérée. Et par conséquent, dans une représentation irréductible donnée du groupe de symétrie, l’Hamiltonien a pour représentation un multiple de la matrice identité.<br>
-En d’autres mots, tous les vecteurs de la représentation irréductible sont des vecteurs propres de l’Hamiltonien pour la même valeur propre.<br>
-Cette valeur propre de l’Hamiltonien n’est autre que l’énergie du système et donc l’ensemble des états symétriques qu’on obtient (les vecteurs de la représentation irréductible) sont à énergie fixée.
+Précisons cela dans le cas de l’**hamiltonien**.<br>
+La dynamique d’un système physique est déterminée par un opérateur appelé l’hamiltonien $H$ et cet opérateur doit, par définition, rester invariant sous les opérations de symétrie laissant invariant le système physique lui-même.<br>
+Mathématiquement, cela revient à dire que $H$ commute avec les opérateurs unitaires de la symétrie considérée. Et par conséquent, dans une représentation irréductible donnée du groupe de symétrie, l’hamiltonien a pour représentation un multiple de la matrice identité.<br>
+En d’autres mots, tous les vecteurs de la représentation irréductible sont des vecteurs propres de l’hamiltonien pour la même valeur propre.<br>
+Cette valeur propre de l’hamiltonien n’est autre que l’énergie du système et donc l’ensemble des états symétriques qu’on obtient (les vecteurs de la représentation irréductible) sont à énergie fixée.
 
 <br>
 
@@ -724,7 +724,7 @@ On est maintenant armé pour prouver l’**orthonormalité** des représentation
 On veut prouver $ \frac{n_\mu}{n_G} \sum_g  D_\mu^{\dagger}(g)^k_i  \, D^\nu(g)^j_l=\delta^\nu_\mu \, \delta^j_i \,\delta^k_l$.
 
 Soit $X$ une matrice $n_\mu \times n_\nu$ quelconque à partir de laquelle on forme&nbsp;:<br>
- $M_X=\sum_g D_\mu^{\dagger}(g) X D^\nu(g)$ où  $D_\mu(g)$ (resp. $D_\nu(g)$) est une matrice de la représentation irréductible unitaires de $G$ d’ordre $\mu$ (resp. $\nu$). L'unitarité implique $D_\mu^{\dagger}(g)=D_\mu^{-1}(g)$.<br>
+ $M_X=\sum_g D_\mu^{\dagger}(g) X D^\nu(g)$ où  $D_\mu(g)$ (resp. $D_\nu(g)$) est une matrice de la représentation irréductible unitaire de $G$ d’ordre $\mu$ (resp. $\nu$). L'unitarité implique $D_\mu^{\dagger}(g)=D_\mu^{-1}(g)$.<br>
 
 En découle&nbsp;:
 <div id="grosseformule" style="margin-top:-2em;margin-bottom:-1em;">
@@ -786,8 +786,8 @@ Voyons maintenant comment utiliser l’orthogonalité pour construire de nouvell
 <div id="preuve">
 Exemple&nbsp;:
 
-$\mathrm{C}_2$, groupe le plus simple, a, comme tout les groupes, une représentations évidentes&nbsp;: l’identité $d_1$ définit comme $(e, a) \xrightarrow{d_1}(1,1)$ (notation signifiant $d_1(e)=1$ et $d_1(a)=1$). La notation réduite prend tout son sens avec la relation d’orthogonalité où les représentations sont vues comme des vecteurs). Si une deuxième représentation non équivalente $d_2$ est aussi regardé comme un vecteur a deux composantes, alors il doit être orthogonal à $(1,1)$. $(1,-1)$ est la seule possibilité à la fois orthogonale et normalisable. Donc le seul candidat pour une seconde représentation irréductible est $(e, a) \xrightarrow{d_2}(1,-1)$.<br>
-On ne peut trouver d’autres vecteurs orthogonaux, on a donc l’ensemble des représentation irréductibles de $\mathrm{C}_2$. 
+$\mathrm{C}_2$, groupe le plus simple, a, comme tous les groupes, une représentation évidente&nbsp;: l’identité $d_1$ définie comme $(e, a) \xrightarrow{d_1}(1,1)$ (notation signifiant $d_1(e)=1$ et $d_1(a)=1$). La notation réduite prend tout son sens avec la relation d’orthogonalité où les représentations sont vues comme des vecteurs. Si une deuxième représentation non équivalente $d_2$ est aussi regardée comme un vecteur à deux composantes, alors il doit être orthogonal à $(1,1)$. $(1,-1)$ est la seule possibilité à la fois orthogonale et normalisable. Donc le seul candidat pour une seconde représentation irréductible est $(e, a) \xrightarrow{d_2}(1,-1)$.<br>
+On ne peut trouver d’autres vecteurs orthogonaux, on a donc l’ensemble des représentations irréductibles de $\mathrm{C}_2$. 
 </div>
 
 Partir de représentations simples comme l’identité est une des astuces. 
@@ -814,14 +814,14 @@ Cela induit une représentation unidimensionnelle de $\mathrm{S_3}$ associant $1
 </div>
 
 Remarque&nbsp;:<br>
-les représentations dégénérées et la manière de les rendre fidèle (ces choix sémantiques traduisent-ils une croisade morale de certains mathématiciens&nbsp;?) reviendront sur le devant de la scène quand on parlera des groupes compacts (comme les rotations) et des topologies associées. 
+les représentations dégénérées et la manière de les rendre fidèles (ces choix sémantiques traduisent-ils une croisade morale de certains mathématiciens&nbsp;?) reviendront sur le devant de la scène quand on parlera des groupes compacts (comme les rotations) et des topologies associées. 
 
 Ce nouvel outil peut faciliter grandement la recherche de représentations irréductibles comme on va le voir dans l’exemple suivant.
 
 <div id="preuve">
 Exemple&nbsp;: 
 
-considérons le groupe dihédral $\mathrm{D_2}$ dont la table de multiplication est&nbsp;:
+considérons le groupe diédral $\mathrm{D_2}$ dont la table de multiplication est&nbsp;:
 <div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/tabd2.png" style="box-shadow:none;background:none;">
 </div>
@@ -829,7 +829,7 @@ Le groupe correspond aux symétries de la figure suivante :
 <div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/d2sym.png" style="box-shadow:none;background:none;">
 </div>
-Les 4 éléments de symétrie sont l’identité, les deux réflexions $(13)$ et $(24)$ et la rotation d’angle π. Associés deux à deux, ça redonne un des 4. Et comme ils commutent tous, le groupe est abélien. Par conséquent, on s’attend à des représentations unidimensionnelle.<br>
+Les 4 éléments de symétrie sont l’identité, les deux réflexions $(13)$ et $(24)$ et la rotation d’angle π. Associés deux à deux, ça redonne un des 4. Et comme ils commutent tous, le groupe est abélien. Par conséquent, on s’attend à des représentations unidimensionnelles.<br>
 La première de ces représentations est la triviale identité&nbsp;: $(e, a, b, c) \xrightarrow{d_1}(1,1,1,1)$.
 
 Maintenant, l’astuce : les éléments $\\{e,a\\}$ forment un sous-groupe invariant et le groupe quotient $\\{\\{e, a\\},\\{b, c\\}\\}$ est isomorphe à $\mathrm{C_2}$ (il n’y a qu’un groupe à deux éléments) dont on connait déjà les deux représentations irréductibles. Les deux représentations de $\mathrm{C_2}$ induisent deux représentations dégénérées sur $\mathrm{D_2}$. La première est la perpétuelle représentation identité, la deuxième associe $-1$ à $b$ et $c$&nbsp;: $(e, a, b, c) \xrightarrow{d_2}(1,1,-1,-1)$.
@@ -838,7 +838,7 @@ On peut ensuite tenir le même raisonnement en partant du sous-groupe invariant 
 
 Enfin, le sous-groupe invariant $\\{e,c\\}$ nous donne la quatrième et dernière&nbsp;: $(e, a, b, c) \xrightarrow{d_4}(1,-1,-1,1)$.
 
-On vérifie bien que les 4 «vecteur» sont orthonormaux comme il se doit et qu’aucun autre ne peut exister par la même condition.
+On vérifie bien que les 4 «vecteurs» sont orthonormaux comme il se doit et qu’aucun autre ne peut exister par la même condition.
 
 </div>
 
@@ -846,7 +846,7 @@ Remarques&nbsp;:
 
 <ul>
 <li>
-La relation $\Sigma_\mu n_\mu^2=n_G$ (que l’on démontrera plus loin) nous assure que pour tout groupe abélien (représentation unidimensionnelle $\Leftrightarrow n_\mu=1$), il y a autant de représentation que d’éléments ($n_G$) et les vecteurs formés par les représentations (étiquetés par $\mu$) forment alors un ensemble orthogonal complet.<br>
+La relation $\Sigma_\mu n_\mu^2=n_G$ (que l’on démontrera plus loin) nous assure que pour tout groupe abélien (représentation unidimensionnelle $\Leftrightarrow n_\mu=1$), il y a autant de représentations que d’éléments ($n_G$) et les vecteurs formés par les représentations (étiquetés par $\mu$) forment alors un ensemble orthogonal complet.<br>
 Les représentations de $\mathrm{C_2}$ et $\mathrm{D_2}$ débusquées dans les exemples précédents illustrent bien ce point.<br>
 Plus besoin dans ce cas de guillemets au mot vecteur, il ne s’agit plus d’une collection pachydermique de $n_G$ objets de dimension $n_\mu^2$ mais bien d’une collection ordonnée de $n_G$ nombres qu’on désigne plus volontiers ainsi (ou des tenseurs de rang 1 si on veut fanfaronner), même si techniquement, les gros objets formés par une représentation quelconque peuvent tout autant revendiquer l’appellation.
 </li>
@@ -863,7 +863,7 @@ Grâce aux caractères, indépendants de la base, on pourrait maintenir un trait
 
 ## Conditions d’orthonormalité et de complétude pour les caractères irréductibles
 
-Rappelons à toute fin utile que les caractères d’une représentation $U(G)$ sont les traces des opérateurs $U(g)$. Ils sont indépendant du choix de la base dans l’espace des représentations. Tous les éléments d’un groupe appartenant à une même classe ont par conséquent le même caractère dans une représentation donnée.
+Rappelons à toutes fins utiles que les caractères d’une représentation $U(G)$ sont les traces des opérateurs $U(g)$. Ils sont indépendants du choix de la base dans l’espace des représentations. Tous les éléments d’un groupe appartenant à une même classe ont par conséquent le même caractère dans une représentation donnée.
 
 <div id="theo">
 
@@ -999,11 +999,11 @@ $$\tilde{\chi}^\dagger_\mu\cdot \tilde{\chi}^\nu = \delta^\nu_\mu$$
 
 où le $\cdot$ représente un produit scalaire dans l’espace vectoriel de dimension $n_c$.
 
-On tire de ces relations sur les caractères une information très intéressante sur leurs grandes soeurs, les représentations irréductibles&nbsp;:
+On tire de ces relations sur les caractères une information très intéressante sur leurs grandes sœurs, les représentations irréductibles&nbsp;:
 
 <div id="theo">
 
-Le nombre de représentations irréductibles non équivalentes d’un groupe fini  est égal aux nombre de classes distinctes de $G$&nbsp;: $n_c$. 
+Le nombre de représentations irréductibles non équivalentes d’un groupe fini  est égal au nombre de classes distinctes de $G$&nbsp;: $n_c$. 
 
 </div>
 
@@ -1016,7 +1016,7 @@ Exemple :
 
 pour les groupes abéliens, chaque élément forme une classe à lui tout seul et toutes les représentations irréductibles sont unidimensionnelles. Donc $D^\mu(g)=\chi^\mu_i$. 
 
-Par conséquent les «vecteurs» $D^\mu(g)$ formés pour chaque $g$ dans les exemple de $\mathrm{C}_2$ et $\mathrm{D}_2$ constituent aussi les tables de caractère de ces groupes si on fait correspondre une classe $i$ à l’élément $g$&nbsp;:
+Par conséquent les «vecteurs» $D^\mu(g)$ formés pour chaque $g$ dans les exemples de $\mathrm{C}_2$ et $\mathrm{D}_2$ constituent aussi les tables de caractères de ces groupes si on fait correspondre une classe $i$ à l’élément $g$&nbsp;:
 
 <p style="text-align:center;">Table de caractères de $\mathrm{C_2}$</p>
 
@@ -1032,7 +1032,7 @@ Par conséquent les «vecteurs» $D^\mu(g)$ formés pour chaque $g$ dans les exe
 
 </div>
 
-Les caractères $\chi^\mu_i$ sont beaucoup plus pratiques que les matrices $D^\mu (g)^k_{\\;\\,l}$ dans l’étude des représentations irréductibles d’un groupe (car plus simple et indépendants de la base).<br>
+Les caractères $\chi^\mu_i$ sont beaucoup plus pratiques que les matrices $D^\mu (g)^k_{\\;\\,l}$ dans l’étude des représentations irréductibles d’un groupe (car plus simples et indépendants de la base).<br>
 Leur utilité est telle (spécialement en chimie pour l’étude des spectres et des orbitales moléculaires) que les tables de caractères de la plupart des groupes de symétrie ont été compilées et se retrouvent un peu partout ([ici](https://en.wikipedia.org/wiki/List_of_character_tables_for_chemically_important_3D_point_groups) par exemple).
 
 <div id="preuve">
@@ -1048,11 +1048,11 @@ On en a déjà trouvé 2 sûres :
 <li>la représentation triviale&nbsp;: $p\mapsto 1$ pour tout $p\in \mathrm{S_3}$.
 Attribuons-lui un beau $\mu =1$. Les 3 caractères sont $(1,1,1)$.
 </li>
-<li>on a aussi trouvé une autre représentation irréductible de dimension 1 ($\mu=2$), grâce aux groupes quotients, dans laquelle les permutations paires (1-cycle et 3-cycles) étaient envoyés sur 1 et les permutations impaires (2-cycle) sur -1. Ce qui donne comme caractère&nbsp;: $(1,-1,1)$.
+<li>on a aussi trouvé une autre représentation irréductible de dimension 1 ($\mu=2$), grâce aux groupes quotients, dans laquelle les permutations paires (1-cycle et 3-cycles) étaient envoyées sur 1 et les permutations impaires (2-cycle) sur -1. Ce qui donne comme caractère&nbsp;: $(1,-1,1)$.
 </li>
 </ul>
 
-La dernière représentation irréductible ($\mu=3$) doit être de dimension 2 d’après $\sum_\mu n_\mu^{\\;2} = n_G$ donnant ici $n_G=6=1+1+{n_3}^2$ (relation qu’on a d’ailleurs toujours pas démontrée, patience...).
+La dernière représentation irréductible ($\mu=3$) doit être de dimension 2 d’après $\sum_\mu n_\mu^{\\;2} = n_G$ donnant ici $n_G=6=1+1+{n_3}^2$ (relation qu’on n’a d’ailleurs toujours pas démontrée, patience...).
 
 Pour déterminer les 3 $\chi_i^3$ on commence par $\chi_1^3 = \mbox{Tr }D(e)=\mbox{Tr }E=2$.<br> 
 De $\tilde{\chi}^\dagger_1\cdot \tilde{\chi}^3 = 0$, on tire&nbsp;: $\frac{1}{6}\times 2+\frac{3}{6}\chi^3_2+\frac{2}{6}\chi^3_3 = 0$<br>  
@@ -1064,7 +1064,7 @@ On en déduit $\chi_3^3 = -1$.
 <img src="/tabcarnh3.png" style="box-shadow:none;background:none;">
 </div>
  
- On peut vérifier alors qu’on a bien $\tilde{\chi}^\dagger_3\cdot \tilde{\chi}^3 = \frac{1}{6}\times 4+0+\frac{2}{6}\times1=1$ et que les relations de complétude sont elles-aussi bien respectées. 
+ On peut vérifier alors qu’on a bien $\tilde{\chi}^\dagger_3\cdot \tilde{\chi}^3 = \frac{1}{6}\times 4+0+\frac{2}{6}\times1=1$ et que les relations de complétude sont elles aussi bien respectées. 
 
 
 </div>
@@ -1502,13 +1502,13 @@ Sur l’exemple de $\mathrm{D_3}$, aux trois représentations irréductibles non
 </div>
 
 <ul>
-<li>les grandeurs se transformant suivant la 3<sup>ème</sup> représentation sont les <b>vecteurs</b>, définis par l’action qu’ont sur eux les rotations (elles les font tourner) et les réflexions (elles les inversent).<br>
+<li>les grandeurs se transformant suivant la 3<sup>e</sup> représentation sont les <b>vecteurs</b>, définis par l’action qu’ont sur eux les rotations (elles les font tourner) et les réflexions (elles les inversent).<br>
 ex&nbsp;: $\overrightarrow{OA}$, $\overrightarrow{OB}$, $\overrightarrow{AB}$ sont des vecteurs (on peut le vérifier...)
 </li>
-<li style="margin-top:0.5em;">les grandeurs se transformant suivant la 1<sup>ère</sup> représentation (les $1$) sont les <b>scalaires</b>, invariants par rotation ou réflexion.<br>
+<li style="margin-top:0.5em;">les grandeurs se transformant suivant la 1<sup>re</sup> représentation (les $1$) sont les <b>scalaires</b>, invariants par rotation ou réflexion.<br>
 ex&nbsp;: $OA^2$
 </li>
-<li style="margin-top:0.5em;">les grandeurs se transformant suivant la 2<sup>ème</sup> représentation (les $1$ et $-1$) sont les <b>pseudo-scalaires</b>. Ils sont laissés invariants par les rotations mais pas par la parité (réflexion).<br>
+<li style="margin-top:0.5em;">les grandeurs se transformant suivant la 2<sup>e</sup> représentation (les $1$ et $-1$) sont les <b>pseudo-scalaires</b>. Ils sont laissés invariants par les rotations mais pas par la parité (réflexion).<br>
 ex&nbsp;: le produit vectoriel entre deux vecteurs, défini comme $\overrightarrow{OA} \wedge \overrightarrow{OB}=(OA)_x(OB)_y-(OA)_y(OB)_x$
 </li>
 </ul>
@@ -1862,7 +1862,7 @@ P_{\mu i}^j=\frac{n_\mu}{n_G} \sum_g D_\mu^{\dagger}(g)_i^j\, U(g)
 $
 </p>
 
-Alors pour tout vecteur $|x\rangle$ de $V$, l’ensemble des vecteurs $\\\{P_{\mu i}^j|x\rangle ; i=1, \ldots, n_\mu\\\}$, avec un $j$ fixé, forment une base de vecteurs irréductibles selon la représentation $\mu$.
+Alors pour tout vecteur $|x\rangle$ de $V$, l’ensemble des vecteurs $\\\{P_{\mu i}^j|x\rangle ; i=1, \ldots, n_\mu\\\}$, avec un $j$ fixé, forme une base de vecteurs irréductibles selon la représentation $\mu$.
 
 </div>
 
