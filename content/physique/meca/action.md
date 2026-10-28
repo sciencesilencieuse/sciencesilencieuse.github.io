@@ -73,7 +73,7 @@ De tels principes sont dits **variationnels** car il s'agit d'étudier et minimi
 Leur motivation originelle était métaphysique&nbsp;: par sa perfection, la nature se devait d'être optimale. On trouva ensuite des justifications plus scientifiques...
 
 Conceptuellement, il s'agit d'une démarche descendante (top-down) consistant à fixer un but global et à en déduire ensuite les équations locales qui ont été nécessaires pour l'atteindre. C'est l'inverse de la démarche ascendante (bottom-up) plus familière (car c'est celle enseignée au lycée) qui part des équations locales pour aboutir de proche en proche au global (par un processus itératif).<br>
-En mécanique classique par exemple, le local, c'est Newton&nbsp;: on construit la trajectoire complète en intégrant une équation différentielle depuis une position et une vitesse initiale. Et le global, c'est Lagrange ou Hamilton&nbsp;: on fixe deux points et on cherche la bonne trajectoire parmi l'ensemble des trajectoires possibles (celle pour laquelle l'action est stationnaire).
+En mécanique classique par exemple, le local, c'est Newton&nbsp;: on construit la trajectoire complète en intégrant une équation différentielle depuis une position et une vitesse initiales. Et le global, c'est Lagrange ou Hamilton&nbsp;: on fixe deux points et on cherche la bonne trajectoire parmi l'ensemble des trajectoires possibles (celle pour laquelle l'action est stationnaire).
 
 Les théories mécaniques sont progressivement passées d'ascendantes à descendantes. Pour la lumière, c'est l'inverse.
 
@@ -123,13 +123,13 @@ Huygens parvient avec son **principe de superposition** à retrouver l'ensemble 
 
 Pour être plus précis et faciliter le parallèle avec Hamilton ensuite, explicitons les définitions.
 
-Soit l'ensemble des points $q$ jusqu'où la lumière issue d'un point $q_0$ peut traverser en un temps inférieur ou égal à $t$. La frontière de cet ensemble, $\Phi_{q_0}(t)$ est appelé le front d'onde du point $q_0$ après un temps $t$ et regroupe les points que la lumière peut atteindre en un temps $t$ mais pas avant.
+Soit l'ensemble des points $q$ jusqu'où la lumière issue d'un point $q_0$ peut traverser en un temps inférieur ou égal à $t$. La frontière de cet ensemble, $\Phi_{q_0}(t)$, est appelée le front d'onde du point $q_0$ après un temps $t$ et regroupe les points que la lumière peut atteindre en un temps $t$ mais pas avant.
 
 Le principe de Huygens peut alors s'exprimer ainsi&nbsp;:<br>
 soit $\Phi_{q_0}(t)$ le front d'onde issu du point $q_0$ après un temps $t$. Pour chaque point $q$ de ce front, on considère le front d'onde au temps $s$, $\Phi_{q}(s)$. Alors le front d'onde issu du point $q_0$ après le temps $t+s$, $\Phi_{q_0}(t+s)$ sera l'enveloppe des fronts $\Phi_{q}(s),q\in \Phi_{q_0}(t)$.
 
 En fixant un point $q_0$, on appelle fonction caractéristique $S_{q_0}(q)$ la fonction qui associe à tout point $q$ la longueur du chemin optique de $q_0$ à $q$.<br>
-Les courbes de niveau de la fonction caractéristique ne sont autre que les fronts d'onde.
+Les courbes de niveau de la fonction caractéristique ne sont autres que les fronts d'onde.
 
 
 
@@ -185,7 +185,7 @@ En étirant le segment avec de nouvelles sources, les enveloppes finissent par m
 <img src="/huygplane.png" style="box-shadow:none;background:none;">
 </div>
 
-Si on peut comprendre géométriquement l'apparition de zone brillante par superposition des réseaux d'ondelettes, l'existence de zone parfaitement sombre est plus mystérieuse. Comment des zones éclairées plusieurs fois pourraient-elles se trouver obscurcies&nbsp;?
+Si on peut comprendre géométriquement l'apparition de zones brillantes par superposition des réseaux d'ondelettes, l'existence de zones parfaitement sombres est plus mystérieuse. Comment des zones éclairées plusieurs fois pourraient-elles se trouver obscurcies&nbsp;?
 
 
 
@@ -212,11 +212,11 @@ En sommant continument les multiples déphasages des ondelettes sur les fronts d
 
 Aujourd'hui, le principe de superposition moderne mis au point par Fresnel porte le nom de ses deux papas&nbsp;: **principe de Huygens-Fresnel**.
 
-[^1]: le calcul infinitésimal et intégral fut développé parallèlement par Newton et Leibniz à la fin du 17<sup>e</sup> siècle.
+[^1]: Le calcul infinitésimal et intégral fut développé parallèlement par Newton et Leibniz à la fin du 17<sup>e</sup> siècle.
 
 
 Fresnel est le grand artisan du basculement de paradigme d'une description corpusculaire de la lumière (dont le géant Newton était le fer de lance) vers une description ondulatoire. Un fervent partisan des particules, Poisson, joua aussi un rôle amusant...<br>
-Lorsqu’il éplucha le mémoire de concours de Fresnel, Poisson reprit ses intégrales de diffraction et présenta ses résultats en 1819 devant la commission du « Grand Prix de la Diffraction » de l’Académie des sciences. Les calculs prédisent un point lumineux au centre de l’ombre d’un disque éclairé par une source ponctuelle. Totalement absurde pour un partisan des particules&nbsp;! Poisson est convaincu qu'il tient là l'argument définitif contre la théorie ondulatoire. Arago qui présidait la commission voulut en avoir le cœur net et monta l'expérience. Il observa alors bien ce qui sera désormais appelée tache de Fresnel (ou tache de Poisson)&nbsp;! L'argument définitif de Poisson fit finalement triompher les ondes[^3].
+Lorsqu’il éplucha le mémoire de concours de Fresnel, Poisson reprit ses intégrales de diffraction et présenta ses résultats en 1819 devant la commission du « Grand Prix de la Diffraction » de l’Académie des sciences. Les calculs prédisent un point lumineux au centre de l’ombre d’un disque éclairé par une source ponctuelle. Totalement absurde pour un partisan des particules&nbsp;! Poisson est convaincu qu'il tient là l'argument définitif contre la théorie ondulatoire. Arago qui présidait la commission voulut en avoir le cœur net et monta l'expérience. Il observa alors bien ce qui sera désormais appelé tache de Fresnel (ou tache de Poisson)[^2]&nbsp;! L'argument définitif de Poisson fit finalement triompher les ondes[^3].
 
 [^2]: Amusant ce partage des attributions suivant les pays entre théoricien et expérimentateur.
 
@@ -306,7 +306,7 @@ La mécanique a fait le chemin inverse, on a d'abord eu les équations de Newton
 
 En 1696, Jean Bernoulli utilise l'optique pour résoudre un problème de mécanique qui chiffonnait les physiciens de l'époque, le problème de la brachistochrone. 
 
-Quelle courbe dévalée par un point matériel pesant sans frottement ni vitesse initiale permet de rejoindre le plus vite le point de départ à un point d'arrivée fixé (en aval par rapport au champ de pesanteur supposé uniforme)&nbsp;?
+Quelle courbe dévalée par un point matériel pesant sans frottement ni vitesse initiale permet de relier le plus vite le point de départ à un point d'arrivée fixé (en aval par rapport au champ de pesanteur supposé uniforme)&nbsp;?
 
 <div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/portraitbernoulli.png" style="box-shadow:none;background:none;">
@@ -349,7 +349,7 @@ La raison pour laquelle $\frac{\sin \theta}{\sqrt{y}}=\text{cste}$ correspond à
 Et le petit programme ci-dessous permet de tester manuellement différentes courbes et vérifier que le temps minimal est obtenu quand on s'approche de la cycloïde (courbe jaune).
 
 
-{{< runpython lang="vpython" mode="output" fit="native" version="3.1" width="600" file="brachistochrone.py"autorun="true" />}}
+{{< runpython lang="vpython" mode="output" fit="native" version="3.1" width="600" file="brachistochrone.py" autorun="true" />}}
 
 La formulation de ce problème est typiquement variationnelle et cela en fait un tremplin (cycloïdique) vers les théories à venir (surtout que toutes les stars du moment s'y confrontent et proposent une solution&nbsp;: le frère de Jean, Jacques Bernoulli, L'Hôpital, Leibniz, Newton, etc.).
 
@@ -433,7 +433,7 @@ Hamilton a pavé la voie pour la transition de la mécanique classique à la mé
 
 On passe de la formulation de Lagrange à celle d'Hamilton en définissant les moments $p_i=\partial L / \partial \dot{q}\_i$ et en utilisant la transformée de Legendre $H(q, p, t)=\sum\_i p\_i \dot{q}\_i-L$. Cela permet de remplacer la variable $\dot{q}$ par le moment conjugué $p$ (ou impulsion). 
 
-L'espace des configurations (l'espace des coordonnées $\{q\}$) où prend racine la mécanique lagrangienne est ainsi déménagée vers l'**espace des phases** $(q,p)$ où l'impulsion $p$ est considérée comme une coordonnée libre au même titre que $q$ (ce qui ne pouvait pas être le cas de $\dot{q}=\frac{\mathrm{d}q}{\mathrm{d}t}$)[^4]. <br>
+L'espace des configurations (l'espace des coordonnées $\{q\}$) où prend racine la mécanique lagrangienne est ainsi déménagé vers l'**espace des phases** $(q,p)$ où l'impulsion $p$ est considérée comme une coordonnée libre au même titre que $q$ (ce qui ne pouvait pas être le cas de $\dot{q}=\frac{\mathrm{d}q}{\mathrm{d}t}$)[^4]. <br>
 
 [^4]: La dynamique lagrangienne prend place dans le fibré tangent à l'espace des configurations $(q,\dot{q})$, celle d'Hamilton est très bien dans l'espace des phases $(q,p)$ qui est donc l'unique cadre géométrique (techniquement il s'agit du fibré cotangent de l'espace des configurations).
 
@@ -602,7 +602,7 @@ L'admiration que vouait Schrödinger à Hamilton joua un rôle clé dans l'étab
 
 ### Jacobi
 
-Si Hamilton jette les base de la révolution quantique, les lubies géométriques de Jacobi préfigurent une autre révolution du 20<sup>e</sup> siècle, celle de la relativité générale.
+Si Hamilton jette les bases de la révolution quantique, les lubies géométriques de Jacobi préfigurent une autre révolution du 20<sup>e</sup> siècle, celle de la relativité générale.
 
 <div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/portraitjacobi.png" style="box-shadow:none;background:none;">
@@ -618,7 +618,7 @@ Il transforme en effet la recherche d'une trajectoire minimisant l'action en la 
 
 ### Planck
 
-À la fin du 19<sup>e</sup> siècle, réussir à modéliser l'énergie libérée par un corps noir (une cavité dont les seules émissions de rayonnement sont thermiques) en fonction de la fréquence est une énigme qui résiste au physicien.
+À la fin du 19<sup>e</sup> siècle, réussir à modéliser l'énergie libérée par un corps noir (une cavité dont les seules émissions de rayonnement sont thermiques) en fonction de la fréquence est une énigme qui résiste aux physiciens.
 
 Le nombre de modes de vibration augmente avec la fréquence et à l'équilibre thermique, chaque mode doit recevoir la même énergie, proportionnelle à la température. Moralité, la densité d'énergie aux grandes fréquences explose, c'est la catastrophe ultraviolette&nbsp;! Bien sûr, la théorie est en violente contradiction avec l'expérience qui présente zéro catastrophe.
 
@@ -632,7 +632,7 @@ Pour tenter de résoudre le problème, Planck utilise ce qu'il pense être un ex
 <img src="/portraitplanck.png" style="box-shadow:none;background:none;">
 </div>
 
-Et ça marche&nbsp;! Il obtient la courbe attendue du corps noir. Mais à son grand désarroi, il n'arrive pas à se débarrasser de $h$. En le faisant tendre vers zéro, il perd la courbe. Et l'accord avec les résultats expérimentaux lui fixent même une valeur pour son petit pas&nbsp;: $\pu{6,63E-34 J*s}$. Car oui, ce pas de discrétisation (qui deviendra la constante de Planck $h$) a la dimension d'une action, c'est un quantum d'action&nbsp;!
+Et ça marche&nbsp;! Il obtient la courbe attendue du corps noir. Mais à son grand désarroi, il n'arrive pas à se débarrasser de $h$. En le faisant tendre vers zéro, il perd la courbe. Et l'accord avec les résultats expérimentaux lui fixe même une valeur pour son petit pas&nbsp;: $\pu{6,63E-34 J*s}$. Car oui, ce pas de discrétisation (qui deviendra la constante de Planck $h$) a la dimension d'une action, c'est un quantum d'action&nbsp;!
 
 Pour la première fois, une modélisation de la nature s'avère fondamentalement discontinue et c'est l'action qui refuse de se faire découper infiniment.
 
@@ -685,7 +685,7 @@ Rappelons-nous qu'en optique géométrique, l'équation éikonale $|\nabla S|^2=
 
 <i><b>Équation stationnaire</b></i>&nbsp;:<br>
 Cherchons une fonction d'onde $\Psi(q)$ de la forme $\Psi(q)=A(q) \mathrm{e}^{i S_0(q) / \hbar}$ où $S_0$ est l'action réduite liée à l'énergie $E$ du système par $H(q, \nabla S_0)=E $.<br>
-En substituant dans Helmoltz, on impose une relation du type $\nabla^2 \Psi+K(q) \Psi=0$ et on identifie $K(q)$ pour que la limite $\hbar\rightarrow 0$ redonne le bon $|\nabla S|^2$.
+En substituant dans Helmholtz, on impose une relation du type $\nabla^2 \Psi+K(q) \Psi=0$ et on identifie $K(q)$ pour que la limite $\hbar\rightarrow 0$ redonne le bon $|\nabla S|^2$.
 
 Pour une particule soumise à un potentiel $V(q)$, on obtient&nbsp;:
 
@@ -723,10 +723,10 @@ Pour que dans la limite des petites longueurs d'onde, on retrouve $|\nabla S_0(q
 
 Cette équation est l’analogue direct de l’équation de Helmholtz pour la lumière, où c'est $\frac{2m}{\hbar^2}(E-V)$ qui joue le rôle de $k_0^2n^2$.
 
-<i><b>Équation dépendant du temps</i></b>&nbsp;:<br>
+<i><b>Équation dépendant du temps</b></i>&nbsp;:<br>
 Schrödinger remarque que pour décrire les états non stationnaires, il suffit de remplacer dans l’équation stationnaire $E$ par $\mathrm{i} \hbar \frac{\partial}{\partial t}$. En effet, pour une onde monochromatique classique de pulsation $\omega$, l’amplitude évolue dans le temps comme $\mathrm{e}^{-\mathrm{i}\omega t}$. Et avec $E=h\nu=\hbar\omega$, on peut écrire $\Psi(q,t)=\Psi(q)\mathrm{e}^{-\frac{\mathrm{i}}{\hbar}E t}$ (le signe est imposé par $S=S_0-Et$ vu plus haut).<br>
 En dérivant temporellement cette solution, on obtient&nbsp;: $\frac{\partial}{\partial t} \Psi(q, t)=-\frac{i E}{\hbar} \Psi(q, t) \Longrightarrow E \Psi=i \hbar \frac{\partial \Psi}{\partial t}$.<br>
-Par identification, on voit que l'énergie $E$ agit sur la fonction d'onde comme un opérateur dérivée.
+Par identification, on voit que l'énergie $E$ agit sur la fonction d'onde comme un opérateur de dérivation.
 
 On obtient alors l’équation de Schrödinger dépendant du temps&nbsp;:<br>
 
@@ -816,7 +816,7 @@ La probabilité que le détecteur capte un photon doit être calculée en utilis
 </div>
 
 Dans cette situation, l'action obtenue sur chaque chemin dépend seulement de la longueur du trajet. En effet, à énergie constante, l'action se réduit à $\int p\mathrm{d}q$ (action réduite), et comme l'impulsion du photon est $p=\frac{E}{c}$, on obtient pour l'action $E\frac{\ell}{c}$ (où $\ell$ est la longueur du trajet) ou encore $E\tau$. L'action et donc le déphasage de chaque chemin est proportionnel au temps de parcours.<br>
-En sommant sur les chemins, on constate bien que les contributions les plus importantes (car de phases quasi constantes) sont celles proche de la trajectoire la plus courte (on a retrouvé Fermat&nbsp;!).
+En sommant sur les chemins, on constate bien que les contributions les plus importantes (car de phases quasi constantes) sont celles proches de la trajectoire la plus courte (on a retrouvé Fermat&nbsp;!).
 
 
  <br>
@@ -826,6 +826,6 @@ En sommant sur les chemins, on constate bien que les contributions les plus impo
 - Mesli, A. «&nbsp;Genèse et développement du principe de moindre action. Première partie : de Fermat (1655) à Lagrange (1756)&nbsp;», Photoniques n° 80, p. 34–40 (janvier 2016). 
 - Mesli, A. «&nbsp;Genèse et développement du principe de moindre action. Deuxième partie : de Hamilton (1834) à Feynman (1942)&nbsp;», Photoniques n° 81, p. 37–45 (avril 2016). [🌐](https://www.photoniques.com/articles/photon/pdf/2016/02/photon201681p37.pdf)
 - Vaquero Vallina, M. « On the Geometry of the Hamilton–Jacobi Equation », thèse de doctorat, Universidad Autónoma de Madrid – Instituto de Ciencias Matemáticas (ICMAT), soutenue le 27 novembre 2015.  [🌐](https://www.icmat.es/Thesis/MVaqueroVallina.pdf)
-- Houchmandzadeh, B. “The Hamilton–Jacobi equation: An alternative approach”, American Journal of Physics 88 (5), 353–359 (Mai 2020) [🌐](https://arxiv.org/pdf/1910.09414.pdf)
+- Houchmandzadeh, B. “The Hamilton–Jacobi equation: An alternative approach”, American Journal of Physics 88 (5), 353–359 (mai 2020) [🌐](https://arxiv.org/pdf/1910.09414.pdf)
 - Wheeler, N. “Schrödinger’s train of thought”, Reed College Physics Department essay, avril 2006. [🌐](https://www.reed.edu/physics/faculty/wheeler/documents/Quantum%20Mechanics/Miscellaneous%20Essays/Schrodinger%27s%20Train%20of%20Thought.pdf)
 - les portraits sont plus ou moins hallucinés par IA.
