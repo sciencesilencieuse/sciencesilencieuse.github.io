@@ -109,7 +109,7 @@ Le principe de jauge a produit l'électrodynamique quantique&nbsp;: une symétri
 
 <ul>
 <li><b>La machinerie.</b> Le premier chapitre reprend le principe de jauge pour un groupe dont les éléments <b>ne commutent pas</b>. Tout se passe comme avant, à un détail près qui change tout&nbsp;: un terme supplémentaire survit dans la transformation du champ de jauge, et il rend la théorie <b>non linéaire même en l'absence de matière</b>. Le champ de jauge devient sa propre source. C'est la théorie de <b>Yang–Mills</b>, et c'est de là que sort la liberté asymptotique.</li>
-<li><b>L'application.</b> Le second chapitre construit le <b>modèle de Weinberg–Salam</b>, qui unifie l'électromagnétisme et l'interaction faible. On y écrit le lagrangien d'un Univers <b>plus symétrique que le nôtre</b>, celui des premiers $10^{-12}$ secondes, où électrons et neutrinos sont sans masse et indiscernables&nbsp;; puis on laisse le champ de Higgs briser la symétrie, et l'on regarde ce qui en sort.</li>
+<li><b>L'application.</b> Le second chapitre construit le <b>modèle de Weinberg–Salam</b>, qui unifie l'électromagnétisme et l'interaction faible. On y écrit le lagrangien d'un Univers <b>plus symétrique que le nôtre</b>, celui des $10^{-12}$ premières secondes, où électrons et neutrinos sont sans masse et indiscernables&nbsp;; puis on laisse le champ de Higgs briser la symétrie, et l'on regarde ce qui en sort.</li>
 </ul>
 
 Ce qui en sort est le monde que nous habitons&nbsp;: un électron massif, un photon sans masse, et trois bosons lourds $W^+$, $W^-$ et $Z^0$ dont les masses furent <b>prédites avant d'être mesurées</b>. C'est l'une des plus grandes réussites de la physique du vingtième siècle.
@@ -1172,7 +1172,7 @@ Distinguer clairement les trois types de lignes de médiateur (ondulée pour le 
 | grandeur | prédiction du modèle | mesure |
 |:---:|:---:|:---:|
 | masse du $Z^0$ | $M_W/\cos\theta_{\mathrm W}$ | $91{,}19$ GeV |
-| masse du $W^\pm$ | $g^2v^2/2$ | $80{,}40$ GeV |
+| masse du $W^\pm$ | $M_W^2 = g^2v^2/2$ | $80{,}40$ GeV |
 | angle de Weinberg | $\cos\theta_{\mathrm W} = M_W/M_Z$ | $\theta_{\mathrm W} \simeq 28°$ |
 | masse du neutrino | exactement $0$ | très petite, mais non nulle |
 | masse du photon | exactement $0$ | $0$ |
@@ -1382,7 +1382,7 @@ Une masse de fermion est un terme en $\bar\psi_{\mathrm L}\psi_{\mathrm R} + \ba
 
 <div id="theo">
 
-<b>Le Higgs ne fournit qu'environ 1&nbsp;% de la masse du proton.</b> Les 99&nbsp;% restants, c'est-à-dire l'essentiel de la masse de toute la matière ordinaire ont une autre origine&nbsp;: l'<b>énergie piégée</b> dans le nucléon, celle du mouvement des quarks et du champ de gluons confinés. Et le fait qu'une énergie piégée pèse est un effet de <b>relativité pure</b>, qui n'a besoin ni du Higgs, ni même de la théorie quantique. Le voici sur l'exemple le plus simple qui soit.
+<b>Le Higgs ne fournit qu'environ 1&nbsp;% de la masse du proton.</b> Les 99&nbsp;% restants, c'est-à-dire l'essentiel de la masse de toute la matière ordinaire, ont une autre origine&nbsp;: l'<b>énergie piégée</b> dans le nucléon, celle du mouvement des quarks et du champ de gluons confinés. Et le fait qu'une énergie piégée pèse est un effet de <b>relativité pure</b>, qui n'a besoin ni du Higgs, ni même de la théorie quantique. Le voici sur l'exemple le plus simple qui soit.
 
 </div>
 
@@ -1461,7 +1461,7 @@ par quark. Trois quarks, plus l'énergie du champ de gluons&nbsp;: quelques cent
 <ul style="margin-top:0.5em;">
 <li>Les bosons $W^\pm$ et $Z^0$ pèsent parce qu'ils ont avalé un mode de Goldstone du condensat de Higgs&nbsp;: leur masse est une polarisation longitudinale acquise.</li>
 <li>Les fermions élémentaires pèsent parce que leur propagation bascule de chiralité dans ce même condensat&nbsp;: leur masse est un couplage de Yukawa, $m = G\,v$.</li>
-<li>Mais l'essentiel de la masse de la matière, la notre à 99&nbsp;%, est de l'énergie de mouvement et d'interaction <b>emprisonnée</b> dans les nucléons&nbsp;: $m = E/c^2$, un effet purement relativiste, sans Higgs.</li>
+<li>Mais l'essentiel de la masse de la matière, la nôtre à 99&nbsp;%, est de l'énergie de mouvement et d'interaction <b>emprisonnée</b> dans les nucléons&nbsp;: $m = E/c^2$, un effet purement relativiste, sans Higgs.</li>
 </ul>
 
 </div>
