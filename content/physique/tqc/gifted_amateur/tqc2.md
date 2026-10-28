@@ -825,7 +825,7 @@ $
 </p>
 </div>
 
-C'est Schrödinger qui découvrit le premier l'équation de Klein-Gordon... mais il l'a vite rejetée car elle ne donnait pas la bonne structure fine pour l'atome d'hydrogène. Il n'a finalement gardé que sa limite non relativiste, l'équation de Schrödinger (on [verra plus loin](../tqc4/#limite-non-relativiste) comment on passe de l'une à l'autre).
+C'est Schrödinger qui découvrit le premier l'équation de Klein-Gordon... mais il l'a vite rejetée car elle ne donnait pas la bonne structure fine pour l'atome d'hydrogène. Il n'a finalement gardé que sa limite non relativiste, l'équation de Schrödinger (on [verra plus loin](../tqc4/#limite-non-relativiste-le-prix-de-la-covariance) comment on passe de l'une à l'autre).
 
 Pour résoudre l'équation, tentons la solution $\phi(\boldsymbol{x},t)=N\mathrm{e}^{-\mathrm{i}Et+\mathrm{i}\boldsymbol{p}\cdot\boldsymbol{x}}=N\mathrm{e}^{-\mathrm{i}p\cdot x}$ (en unités naturelles, $\boldsymbol{k}=\boldsymbol{p}$ et $\omega=E$ et comme on est plus intéressé par l'énergie et l'impulsion des particules, ce sont eux qu'on utilise).
 

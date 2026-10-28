@@ -1384,7 +1384,7 @@ $$
 
 C'est l'<b>équation de Proca</b>.
 
-Elle contient une contrainte cachée qu'un seul calcul révèle. Dérivons-la une fois de plus et contractons&nbsp;: par antisymétrie de $F^{\mu\nu}$, on a $\partial\_\nu\partial\_\mu F^{\mu \nu}=0$, et il ne reste que $m^2 \partial\_\nu A^\nu=0$. Comme $m\neq 0$, le champ est nécessairement à divergence nulle&nbsp;:
+Elle contient une contrainte cachée qu'un seul calcul révèle. Dérivons-la une fois de plus et contractons&nbsp;: par antisymétrie de $F^{\mu\nu}$, on a $\partial\_\nu\partial\_\mu F^{\mu \nu}=0$, et il ne reste que $m^2 \partial\_\nu A^\nu=0$. Comme $m\neq 0$, le champ est nécessairement à divergence nulle&nbsp;:<a id="ancrelorenz"></a>
 
 <div id="grosseformule">
 

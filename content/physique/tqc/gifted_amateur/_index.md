@@ -90,13 +90,13 @@ Notes de lecture du livre <i>Quantum field theory for the gifted amateur</i> de 
     </tr>
      <tr>
     <th rowspan="3"><a href="./tqc4/">Partie&nbsp;4&nbsp;:</a></th>
-    <td style="border-bottom:none;"><a href="./tqc4/#quantification-canonique-dun-champ-scalaire-réel">Quantification d'un champ scalaire réel</a></td>
+    <td style="border-bottom:none;"><a href="./tqc4/#champ-scalaire-réel-le-laboratoire">Quantification d'un champ scalaire réel</a></td>
     </tr>
     <tr>
-    <td style="border-bottom:none;border-top:none;"><a href="./tqc4/#quantification-canonique-dun-champ-scalaire-complexe">Quantification d'un champ scalaire complexe</a></td>
+    <td style="border-bottom:none;border-top:none;"><a href="./tqc4/#champ-scalaire-complexe-pour-avoir-une-charge">Quantification d'un champ scalaire complexe</a></td>
     </tr>
     <tr>
-    <td style="border-top:none;"><a href="./tqc4/#quantification-canonique-dun-champ-à-plusieurs-composantes">Quantification d'un champ à plusieurs composantes et symétries internes</a></td>
+    <td style="border-top:none;"><a href="./tqc4/#champ-à-plusieurs-composantes-généraliser-la-charge">Quantification d'un champ à plusieurs composantes et symétries internes</a></td>
     </tr>
       <tr>
     <th rowspan="2"><a href="./tqc5/">Partie&nbsp;5&nbsp;:</a></th>

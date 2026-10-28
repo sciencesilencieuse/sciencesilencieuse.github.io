@@ -119,9 +119,9 @@ $
 </p>
 </div>
 
-Comme on l'a vu, la symétrie $U(1)$ se traduit par la non variation du lagrangien (et par extension des équations du mouvement) lors de la transformation $\psi(x) \rightarrow \psi(x) \mathrm{e}^{\mathrm{i} \alpha}$. Il s'agit là d'une **transformation globale** puisqu'elle change le champ d'une même valeur en tout point de l'espace-temps. La théorie est donc dite invariante par transformation $U(1)$ globale.
+Comme on l'a vu, la symétrie $U(1)$ se traduit par la non-variation du lagrangien (et par extension des équations du mouvement) lors de la transformation $\psi(x) \rightarrow \psi(x) \mathrm{e}^{\mathrm{i} \alpha}$. Il s'agit là d'une **transformation globale** puisqu'elle change le champ d'une même valeur en tout point de l'espace-temps. La théorie est donc dite invariante par transformation $U(1)$ globale.
 
-Que se passerait-il si on imposait une invariance **locale** par rapport à la phase&nbsp;? Il faudrait que la transformation $\psi(x) \rightarrow \psi(x) \mathrm{e}^{\mathrm{i} \alpha(x)}$ (où $\alpha(x)$ peut maintenant différer d'un point à l'autre) soit sans effet sur les équations du mouvement. Cela semble une demande un peu extrême, mais elles se révèle étonnamment féconde&nbsp;: l'électromagnétisme en découle&nbsp;!
+Que se passerait-il si on imposait une invariance **locale** par rapport à la phase&nbsp;? Il faudrait que la transformation $\psi(x) \rightarrow \psi(x) \mathrm{e}^{\mathrm{i} \alpha(x)}$ (où $\alpha(x)$ peut maintenant différer d'un point à l'autre) soit sans effet sur les équations du mouvement. Cela semble une demande un peu extrême, mais elle se révèle étonnamment féconde&nbsp;: l'électromagnétisme en découle&nbsp;!
 
 On n'est pas embêté par le terme de masse&nbsp;: $m^2\psi^\dagger\psi\rightarrow m^2\psi^\dagger \mathrm{e}^{-\mathrm{i} \alpha(x)} \mathrm{e}^{\mathrm{i} \alpha(x)} \psi = m^2\psi^\dagger\psi $. Par contre, le terme contenant les dérivées pose problème puisque la dérivée agit maintenant sur $\alpha(x)$&nbsp;:
 
@@ -269,7 +269,7 @@ $
 
 Ce que cela interdit (la masse du photon)&nbsp;:<br>
 Si l'on tentait de lui donner une masse avec un terme classique de type $m^2 A_\mu A^\mu$, la transformation de jauge ajouterait des termes parasites contenant $\partial_\mu\alpha$ qui ne s'annuleraient jamais.<br>
-Conséquence&nbsp;: La symétrie de jauge interdit au photon d'avoir une masse. $m_\gamma = 0$ n'est pas mesuré, c'est exigé mathématiquement.
+Conséquence&nbsp;: la symétrie de jauge interdit au photon d'avoir une masse. $m_\gamma = 0$ n'est pas mesuré, c'est exigé mathématiquement.
 
 <b>La géométrie à la rescousse (d'où vient $F_{\mu\nu}$&nbsp;?)</b><br>
 Nous devons donc construire un objet mathématique avec des dérivées de $A_\mu$, qui soit insensible à la jauge.
@@ -305,8 +305,8 @@ Nous avons notre terme&nbsp;! Il s'écrira proportionnellement à $F_{\mu\nu}F^{
 Pourquoi le facteur $-\frac{1}{4}$&nbsp;?
 C'est ici qu'interviennent les conventions physiques de base pour retomber sur nos pattes&nbsp;:
 <ul style="margin-top:-0.5em; margin-bottom:1em;">
-<li>Le signe moins&nbsp;: Il est crucial pour que l'énergie cinétique (liée aux champs électriques et magnétiques) soit positive. Si le signe était positif, le photon aurait une énergie cinétique négative, ce qui produirait une particule fantôme qui déstabiliserait le vide quantique.</li>
-<li>Le facteur $1/4$&nbsp;: Le tenseur $F_{\mu\nu}$ est antisymétrique. Lorsqu'on fait la double somme sur $\mu$ et $\nu$, chaque terme croisé est compté deux fois (un facteur $2$), et les équations d'Euler--Lagrange font encore descendre un facteur $2$ de l'exposant. Le $1/4$ sert à neutraliser ces facteurs pour que les équations du mouvement générées soient exactement les équations de Maxwell classiques $\partial_\mu F^{\mu\nu} = J^\nu$.</li>
+<li>Le signe moins&nbsp;: il est crucial pour que l'énergie cinétique (liée aux champs électriques et magnétiques) soit positive. Si le signe était positif, le photon aurait une énergie cinétique négative, ce qui produirait une particule fantôme qui déstabiliserait le vide quantique.</li>
+<li>Le facteur $1/4$&nbsp;: le tenseur $F_{\mu\nu}$ est antisymétrique. Lorsqu'on fait la double somme sur $\mu$ et $\nu$, chaque terme croisé est compté deux fois (un facteur $2$), et les équations d'Euler--Lagrange font encore descendre un facteur $2$ de l'exposant. Le $1/4$ sert à neutraliser ces facteurs pour que les équations du mouvement générées soient exactement les équations de Maxwell classiques $\partial_\mu F^{\mu\nu} = J^\nu$.</li>
 </ul>
 
 Pourquoi pas des puissances supérieures&nbsp;?<br>
@@ -343,11 +343,11 @@ C'est le changement de paradigme fondamental apporté par la géométrie différ
 Pour comprendre pourquoi le terme cinétique $F_{\mu\nu}$ est une courbure, il faut adopter la vision des mathématiciens (la théorie des espaces fibrés).
 <ul style="margin-top:-0.5em; margin-bottom:1em;">
 <li>Le potentiel $A_\mu$ est une «&nbsp;connexion&nbsp;»&nbsp;: en géométrie, une connexion est l'outil qui permet de comparer des objets situés en des points différents. Ici, $A_\mu$ nous dit comment la «&nbsp;phase&nbsp;» (l'angle interne) d'un électron tourne lorsqu'on le déplace d'un point à un autre de l'espace.</li>
-<li>Le tenseur $F_{\mu\nu}$ est la «&nbsp;courbure&nbsp;»&nbsp;: comment mesure-t-on la courbure d'un espace ? En marchant le long d'une boucle fermée. Sur Terre, si nous marchons vers le pôle Nord, tournons à 90°, marchons jusqu'à l'équateur, tournons à 90° et revenons au point de départ, vous ne regardez plus dans la même direction.<br>
+<li>Le tenseur $F_{\mu\nu}$ est la «&nbsp;courbure&nbsp;»&nbsp;: comment mesure-t-on la courbure d'un espace&nbsp;? En marchant le long d'une boucle fermée. Sur Terre, si nous marchons vers le pôle Nord, tournons à 90°, marchons jusqu'à l'équateur, tournons à 90° et revenons au point de départ, nous ne regardons plus dans la même direction.<br>
 En physique quantique, si on prend un électron, qu'on le déplace le long d'une minuscule boucle spatio-temporelle fermée et qu'on le ramène à son point de départ, sa phase quantique aura tourné. La quantité exacte dont la phase a tourné est mesurée par $F_{\mu\nu}$.</li>
 </ul>
 
-C'est exactement ce que dit la formule mathématique du commutateur &nbsp;:
+C'est exactement ce que dit la formule mathématique du commutateur&nbsp;:
 <p style="text-align:center;">
 $\displaystyle
 [D_\mu, D_\nu]\psi = \mathrm{i}q F_{\mu\nu}\psi
@@ -357,7 +357,7 @@ $
 Faire $D_\mu D_\nu - D_\nu D_\mu$, c'est faire un petit pas dans la direction $\nu$, puis $\mu$, et soustraire le chemin inverse ($\mu$ puis $\nu$). C'est le contour d'un rectangle infinitésimal.<br>
 Ainsi, le terme cinétique du photon $-\frac{1}{4}F_{\mu\nu}F^{\mu\nu}$ se lit géométriquement comme&nbsp;: la somme des courbures au carré de l'espace interne de la particule. Ce principe a été généralisé par Yang et Mills pour décrire la force nucléaire forte (les gluons) et faible (les bosons $W$ et $Z$) avec des courbures non plus de simples phases, mais de matrices complexes.
 
-<b>La force de gravité (Relativité Générale)</b><br>
+<b>La force de gravité (relativité générale)</b><br>
 Si les physiciens des particules ont découvert que les forces étaient la courbure d'espaces «&nbsp;internes&nbsp;», Einstein, lui, l'avait déjà découvert pour l'espace physique lui-même&nbsp;!<br>
 Dans la relativité générale, le champ qui varie n'est pas un potentiel $A_\mu$, c'est la métrique de l'espace-temps lui-même, notée $g_{\mu\nu}$ (qui permet de mesurer les distances).
 <ul style="margin-top:-0.5em; margin-bottom:1em;">
@@ -365,7 +365,7 @@ Dans la relativité générale, le champ qui varie n'est pas un potentiel $A_\mu
 <li>La courbure (l'équivalent de $F_{\mu\nu}$) est le tenseur de Riemann $R^\rho_{\sigma\mu\nu}$, qui mesure littéralement à quel point l'espace-temps est tordu.</li>
 </ul>
 
-Quel est le terme « cinétique » du champ gravitationnel dans le lagrangien d'Einstein-Hilbert ?
+Quel est le terme « cinétique » du champ gravitationnel dans le lagrangien d'Einstein-Hilbert&nbsp;?
 
 <p style="text-align:center;">
 $\displaystyle
@@ -379,7 +379,7 @@ C'est tout. $R$ (le scalaire de Ricci) est simplement la contraction du tenseur 
 La règle est donc parfaite pour les forces (les bosons vecteurs de spin 1 et le graviton de spin 2).<br>
 En revanche, pour les champs de matière (les fermions de spin 1/2 comme l'électron, ou le scalaire de spin 0 comme le Higgs), le terme cinétique n'est pas une courbure.
 <ul style="margin-top:-0.5em; margin-bottom:1em;">
-<li>Terme cinétique de Dirac&nbsp;: $\bar$\bar\psi\,\mathrm{i}\gamma^\mu D_\mu\,\psi$</li>
+<li>Terme cinétique de Dirac&nbsp;: $\bar\psi\,\mathrm{i}\gamma^\mu D_\mu\,\psi$</li>
 <li>Terme cinétique de Klein-Gordon&nbsp;: $(D_\mu\phi)^\dagger(D^\mu\phi)$</li>
 </ul>
 
@@ -524,7 +524,7 @@ On appelle **principe de jauge** la notion selon laquelle un champ de jauge intr
 
 ### Quantification canonique du champ électromagnétique
 
-Le terme de masse du champ massif de spin 1 [vu précédemment](../tqc4/#quantification-canonique-dun-champ-à-plusieurs-composantes) lui ôtait toute possibilité d'invariance de jauge alors que la nature non massive du champ de jauge lui confère cette invariance et lui retire une composante.
+Le terme de masse du champ massif de spin 1 [vu précédemment](../tqc4/#champ-vectoriel-massif-quand-les-composantes-vivent-dans-minkowski) lui ôtait toute possibilité d'invariance de jauge alors que la nature non massive du champ de jauge lui confère cette invariance et lui retire une composante.
 
 On obtient <i>in fine</i>&nbsp;:
 
@@ -552,7 +552,7 @@ Les excitations du champ électromagnétique sont des **photons** qu'on peut obs
 
 Ces particules ont un spin $S=1$ et on en trouve deux types&nbsp;: $\hat{a}\_{\boldsymbol{p} 1}^{\dagger}|0\rangle$ et $\hat{a}_{\boldsymbol{p} 2}^{\dagger}|0\rangle.$
 
-Considérons un photon se propageant selon la direction $z$ avec l'impulsion $q^\mu=(|\boldsymbol{q}|, 0,0,|\boldsymbol{q}|)$. Dans une base de polarisation circulaire, on peut écrire $\epsilon_{\lambda=\mathrm{R}}^\*(q)=-\frac{1}{\sqrt{2}}(0,1, \mathrm{i}, 0)$ (correspondant à $S_z = 1$) et $\epsilon_{\lambda=\mathrm{L}}^\*(q)=\frac{1}{\sqrt{2}}(0,1,-\mathrm{i}, 0)$ (correspondant à $S_z = -1$). Il n'y a pas de photon avec $S^z = 0$ puisque cela correspondrait à une polarisation longitudinale interdite $\epsilon_{\lambda=3}^*(p)=(0,0,0,1).$
+Considérons un photon se propageant selon la direction $z$ avec l'impulsion $q^\mu=(|\boldsymbol{q}|, 0,0,|\boldsymbol{q}|)$. Dans une base de polarisation circulaire, on peut écrire $\epsilon_{\lambda=\mathrm{R}}^\*(q)=-\frac{1}{\sqrt{2}}(0,1, \mathrm{i}, 0)$ (correspondant à $S_z = 1$) et $\epsilon_{\lambda=\mathrm{L}}^\*(q)=\frac{1}{\sqrt{2}}(0,1,-\mathrm{i}, 0)$ (correspondant à $S_z = -1$). Il n'y a pas de photon avec $S_z = 0$ puisque cela correspondrait à une polarisation longitudinale interdite $\epsilon_{\lambda=3}^*(p)=(0,0,0,1).$
 
 <br>
 
@@ -645,7 +645,7 @@ Et comme un champ scalaire $\hat{\psi}(x)$ peut s'écrire $\hat{\psi}(x)=\int_{\
 
 <div id="preuve">
 
-Comme $\mathrm{C}^2=I$, les valeurs propre de $\mathrm{C}$ ne peuvent être que $\pm 1$. La plupart des particules ne sont pas des états propres de $\mathrm{C}$ puisque si elles l'étaient, on aurait $\mathrm{C}|p\rangle=|\bar{p}\rangle= \pm|p\rangle$, ce qui impliquerait que $|\bar{p}\rangle$ est le même état que $|p\rangle$ et donc que la particule est sa propre antiparticule. C'est vrai pour les particules sans charge quantique.
+Comme $\mathrm{C}^2=I$, les valeurs propres de $\mathrm{C}$ ne peuvent être que $\pm 1$. La plupart des particules ne sont pas des états propres de $\mathrm{C}$ puisque si elles l'étaient, on aurait $\mathrm{C}|p\rangle=|\bar{p}\rangle= \pm|p\rangle$, ce qui impliquerait que $|\bar{p}\rangle$ est le même état que $|p\rangle$ et donc que la particule est sa propre antiparticule. C'est vrai pour les particules sans charge quantique.
 
 Le photon $\gamma$, lui, est un état propre de $\mathrm{C}$ avec la valeur propre $-1$, puisqu'en changeant toutes les particules en leurs antiparticules, le champ électromagnétique est renversé ($A^\mu \rightarrow-A^\mu$). C'est aussi le cas pour le pion neutre $\pi^0$, mais avec la valeur propre $+1$. Cela explique pourquoi la réaction $\pi^0 \rightarrow \gamma+\gamma$ est autorisée alors que $\pi^0 \rightarrow \gamma+\gamma+\gamma$ est impossible.
 
@@ -675,7 +675,7 @@ $
 </p>
 </div>
 
-L'effet sur les coordonnées de l'impulsion est le même ($p \rightarrow-\boldsymbol{p}$) et donc&nbsp;:
+L'effet sur les coordonnées de l'impulsion est le même ($\boldsymbol{p} \rightarrow-\boldsymbol{p}$) et donc&nbsp;:
 
 <div id="def">
 <p style="text-align:center;">
@@ -687,9 +687,9 @@ $
 
 L'opérateur $\mathrm{P}$ est hermitien et son propre inverse ($\mathrm{P}^2=I$), donc $\mathrm{P}$ est aussi un opérateur unitaire.
 
-L'opérateur de parité est sans effet sur les scalaires mais renverse les vecteurs. Mais il existe une classe spéciale de scalaire et de vecteurs (même si pas réellement des scalaires et des vecteurs mais plutôt des objets composites) pour lesquels ce n'est pas vrai&nbsp;: les **pseudoscalaires** formés par un produit mixte et les **pseudovecteurs** (aussi appelés vecteurs axiaux) formés par un produit vectoriel entre vecteurs ordinaires (aussi appelés vecteurs polaires).
+L'opérateur de parité est sans effet sur les scalaires mais renverse les vecteurs. Mais il existe une classe spéciale de scalaires et de vecteurs (même si pas réellement des scalaires et des vecteurs mais plutôt des objets composites) pour lesquels ce n'est pas vrai&nbsp;: les **pseudoscalaires** formés par un produit mixte et les **pseudovecteurs** (aussi appelés vecteurs axiaux) formés par un produit vectoriel entre vecteurs ordinaires (aussi appelés vecteurs polaires).
 
-Le champ électrique $\boldsymbol{E}$ agit comme un vecteur ordinaire (polaire) alors que le champ magnétique et le moment cinétique $\boldsymbol{L}$ sont des pesudovecteurs (vecteurs axiaux).
+Le champ électrique $\boldsymbol{E}$ agit comme un vecteur ordinaire (polaire) alors que le champ magnétique et le moment cinétique $\boldsymbol{L}$ sont des pseudovecteurs (vecteurs axiaux).
 
 <div id="def">
 <p style="text-align:center;">
@@ -722,7 +722,7 @@ $
 
 Comme pour $\mathrm{C}$, cela signifie que les valeurs propres de $\mathrm{P}$ sont $\pm1$. Les scalaires et pseudovecteurs ont une valeur de parité de $+1$ alors que pseudoscalaires et vecteurs ont une parité de $-1$.
 
-Le photon étant une excitation d'un champ vectoriel non massique, il possède une parité intrinsèque de $-1$. Le pion est, lui, décrit par un champ pseudoscalaire et a donc aussi une parité de $-1$. On verra plus tard que la parité d'un fermion est opposée à celle de son antiparticule.
+Le photon étant une excitation d'un champ vectoriel sans masse, il possède une parité intrinsèque de $-1$. Le pion est, lui, décrit par un champ pseudoscalaire et a donc aussi une parité de $-1$. On verra plus tard que la parité d'un fermion est opposée à celle de son antiparticule.
 
 La complication avec l'opérateur de parité est qu'il agit à la fois sur les coordonnées du champ et sur la nature même du champ.
 
@@ -744,7 +744,7 @@ C'est possible si $\mathrm{P}^{-1} \hat{a}\_{\boldsymbol{p}} \mathrm{P}=\hat{a}\
 
 ### Renversement du temps
 
-L'opérateur renversement du temps $\mathrm{T}$ transforme un champ scalaire $\phi(t, \boldsymbol{x})$ en $\phi(-t, \boldsymbol{x})$. Elle laisse donc le vecteur position tranquille&nbsp;:
+L'opérateur renversement du temps $\mathrm{T}$ transforme un champ scalaire $\phi(t, \boldsymbol{x})$ en $\phi(-t, \boldsymbol{x})$. Il laisse donc le vecteur position tranquille&nbsp;:
 
 <div id="def">
 <p style="text-align:center;">
@@ -754,7 +754,7 @@ $
 </p>
 </div>
 
-Mais elle renverse l'impulsion&nbsp;:
+Mais il renverse l'impulsion&nbsp;:
 
 <div id="def">
 <p style="text-align:center;">
@@ -776,7 +776,7 @@ L'opérateur antiunitaire archétypal est $\mathrm{K}$, l'opérateur de conjugai
 
 <div id="preuve">
 
-Pour des particules sans spin, on peut choisir $\mathrm{U}=I$ et $\mathrm{U}=\mathrm{K}$. Ce n'est pas surprenant si on regarde l'effet de la conjugaison complexe sur l'équation de Schrödinger&nbsp;:
+Pour des particules sans spin, on peut choisir $\mathrm{U}=I$ et donc $\mathrm{T}=\mathrm{K}$. Ce n'est pas surprenant si on regarde l'effet de la conjugaison complexe sur l'équation de Schrödinger&nbsp;:
 
 <p style="text-align:center;">
 $\displaystyle
@@ -806,7 +806,7 @@ $\displaystyle
 $
 </p>
 
-En se rappelant que seul la matrice de Pauli $\sigma_y$ a des composantes complexes, l'action de l'opérateur de conjugaison complexe sur les opérateurs de spin est plus tordue&nbsp;:
+En se rappelant que seule la matrice de Pauli $\sigma_y$ a des composantes complexes, l'action de l'opérateur de conjugaison complexe sur les opérateurs de spin est plus tordue&nbsp;:
 
 <p style="text-align:center;">
 $\displaystyle
@@ -832,7 +832,7 @@ $
 
 Pour un électron unique, on a $S=\frac{1}{2}$ et donc $\mathrm{T}^2=-1$. Cela reste le cas si on a un nombre impair d'électrons, mais si le nombre est pair, alors $\mathrm{T}^2=1$.
 
-Plaçons-nous dans le cas où le nombre d'électrons est impair et supposons que le hamiltonien $\mathcal{H}$ du système est invariant par rapport à une inversion temporelle ($\mathcal{H}$ commute avec $\mathrm{T}$). Les états $|\psi\rangle$ et $\mathrm{T}|\psi\rangle$ ont alors la même énergie. Mais correspondent-ils au même état&nbsp;? S'ils l'étaient, on aurait $\mathrm{T}|\psi\rangle=\alpha|\psi\rangle$ où $\alpha$ est un nombre complexe. Mais alors, $\mathrm{T}^2|\psi\rangle=\mathrm{T} \alpha|\psi\rangle=\alpha^* \mathrm{~T}|\psi\rangle=|\alpha|^2|\psi\rangle$ et comme $\mathrm{T}^2=-1$, on aboutit à une contradiction $|\alpha|^2=-1$. Conclusion, $|\psi\rangle$ et $\mathrm{T}|\psi\rangle$ sont linéairement indépendants et sont appelés **doublets de Kramers**. On vient ainsi de déduire que les niveaux d'énergie d'un système temporellement symétrique avec un nombre impair d'électrons sont $n$-fois dégénérés avec un $n$ pair. C'est le **théorème de Kramers**. Pour séparer ces paires, il faut introduire une perturbation qui brise la symétrie temporelle, comme un champ magnétique.
+Plaçons-nous dans le cas où le nombre d'électrons est impair et supposons que le hamiltonien $\mathcal{H}$ du système est invariant par rapport à une inversion temporelle ($\mathcal{H}$ commute avec $\mathrm{T}$). Les états $|\psi\rangle$ et $\mathrm{T}|\psi\rangle$ ont alors la même énergie. Mais correspondent-ils au même état&nbsp;? S'ils l'étaient, on aurait $\mathrm{T}|\psi\rangle=\alpha|\psi\rangle$ où $\alpha$ est un nombre complexe. Mais alors, $\mathrm{T}^2|\psi\rangle=\mathrm{T} \alpha|\psi\rangle=\alpha^* \mathrm{~T}|\psi\rangle=|\alpha|^2|\psi\rangle$ et comme $\mathrm{T}^2=-1$, on aboutit à une contradiction $|\alpha|^2=-1$. Conclusion, $|\psi\rangle$ et $\mathrm{T}|\psi\rangle$ sont linéairement indépendants et sont appelés **doublets de Kramers**. On vient ainsi de déduire que les niveaux d'énergie d'un système temporellement symétrique avec un nombre impair d'électrons sont $n$ fois dégénérés avec un $n$ pair. C'est le **théorème de Kramers**. Pour séparer ces paires, il faut introduire une perturbation qui brise la symétrie temporelle, comme un champ magnétique.
 
 
 </details>
@@ -906,14 +906,14 @@ Le groupe $O(3)$ est composé de deux ensembles disjoints liés l'un à l'autre 
 
 <div id="preuve">
 
-Pour obtenir $\text{diag}(-1,-1,-1)$, l'opération de parité, on peut faire le produit d'une réflexion par un miroir dans le plan $x-y$, représentée par $\text{diag}(1,1,-1)$ par une rotation de $\pi$ autour de l'axe $z$, représentée par $\text{diag}(-1,-1,1)$. En tant que produit entre une rotation impropre et une rotation propre, l'opération de parité est une rotation impropre.
+Pour obtenir $\text{diag}(-1,-1,-1)$, l'opération de parité, on peut faire le produit d'une réflexion par un miroir dans le plan $x-y$, représentée par $\text{diag}(1,1,-1)$, et d'une rotation de $\pi$ autour de l'axe $z$, représentée par $\text{diag}(-1,-1,1)$. En tant que produit entre une rotation impropre et une rotation propre, l'opération de parité est une rotation impropre.
 
 </div>
 
-$SO(3)$ est un **groupe connexe** dans le sens où on peut se promener continument d'un élément à l'autre. Au contraire, $O(3)$ consiste en l'union de deux ensembles disjoints&nbsp;; celui des éléments de déterminant $+1$ et celui des déterminants $-1$.
+$SO(3)$ est un **groupe connexe** dans le sens où on peut se promener continûment d'un élément à l'autre. Au contraire, $O(3)$ consiste en l'union de deux ensembles disjoints&nbsp;; celui des éléments de déterminant $+1$ et celui des éléments de déterminant $-1$.
 
 
-On obtient quelque chose de similaire avec le **groupe de Lorentz** (souvent appelé $O(3,1)$, pour distinguer les 3 directions spatiales de la direction temporelle) contenant toutes les rotations, réflexions et boosts de Lorentz. Ce groupe consiste en 4 composants séparés topologiquement car en plus de $\mathrm{P}$, on doit considérer $\mathrm{T}$.
+On obtient quelque chose de similaire avec le **groupe de Lorentz** (souvent appelé $O(3,1)$, pour distinguer les 3 directions spatiales de la direction temporelle) contenant toutes les rotations, réflexions et boosts de Lorentz. Ce groupe consiste en 4 composantes séparées topologiquement car en plus de $\mathrm{P}$, on doit considérer $\mathrm{T}$.
 
 Dans une représentation à 4 dimensions, $\mathrm{P}=\operatorname{diag}(1,-1,-1,-1)$ et $\mathrm{T}=\operatorname{diag}(-1,1,1,1)$. Le sous-groupe du groupe de Lorentz qui ne renverse ni les coordonnées spatiales ni temporelles est appelé sous-groupe **propre** (conserve l'orientation spatiale) **orthochrone** (conserve l'orientation du temps) de Lorentz $SO^+(1,3)$. Ce sous-groupe connexe est une des quatre composantes du groupe de Lorentz. On accède aux autres composantes à partir de $SO^+(1,3)$&nbsp;:
 <ul>
@@ -923,13 +923,13 @@ Dans une représentation à 4 dimensions, $\mathrm{P}=\operatorname{diag}(1,-1,-
 </ul>
 
 
-Revenons enfin sur $SO(3)$ et sa topologie. Une rotation est caractérisée par un axe et un angle. Par conséquent, tous les points dans une boule de rayon $\pi$ peuvent représenter une rotation (l'axe est donné par le vecteur entre le centre de la sphère et le point choisi et l'angle est donné par la norme de ce vecteur). Dans cette représentation, deux points antipodaux correspondent à le même rotation (une rotation de $\pi$ autour d'un axe est équivalente à une rotation de $-\pi$ autour de l'axe inverse). La topologie de $SO(3)$ est donc celle d'une boule dont les points antipodaux de la surface sont identifiés entre eux (on peut se téléporter d'un point à l'autre). 
+Revenons enfin sur $SO(3)$ et sa topologie. Une rotation est caractérisée par un axe et un angle. Par conséquent, tous les points dans une boule de rayon $\pi$ peuvent représenter une rotation (l'axe est donné par le vecteur entre le centre de la sphère et le point choisi et l'angle est donné par la norme de ce vecteur). Dans cette représentation, deux points antipodaux correspondent à la même rotation (une rotation de $\pi$ autour d'un axe est équivalente à une rotation de $-\pi$ autour de l'axe inverse). La topologie de $SO(3)$ est donc celle d'une boule dont les points antipodaux de la surface sont identifiés entre eux (on peut se téléporter d'un point à l'autre). 
 
 <div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/doublecover.png" style="box-shadow:none;background:none;">
 </div>
 
-Cela signifie que l'espace topologique de $SO(3)$ est connexe mais pas **simplement connexe**. En effet, dans un espace simplement connexe, tout lacet (chemin continu fermé) doit pouvoir se réduire continument à un point. Or ici, le lacet allant d'un pôle à l'autre (ce chemin est bien un lacet puisque ses extrémités correspondent à un seul et même point) n'est pas déformable en un point puisque tout mouvement d'une extrémité s'accompagne d'un mouvement opposé de l'autre extrémité pour rester antipodal. Par contre, en faisant un deuxième tour d'un pôle à l'autre, on peut maintenant faire disparaître le lacet comme le montre le dessin ci-dessus. Cela montre que les rotations de $4\pi$ sont continument déformables en un point alors que les rotations de $2\pi$ ne le sont pas. La ["ceinture de Dirac"](https://www.math.utah.edu/%7Epalais/Links/Movies/Belt.mov) ou les ["assiettes de Feynman"](https://www.math.utah.edu/%7Epalais/Links/Movies/Plate.mov) tentent d'illustrer expérimentalement ce phénomène. 
+Cela signifie que l'espace topologique de $SO(3)$ est connexe mais pas **simplement connexe**. En effet, dans un espace simplement connexe, tout lacet (chemin continu fermé) doit pouvoir se réduire continûment à un point. Or ici, le lacet allant d'un pôle à l'autre (ce chemin est bien un lacet puisque ses extrémités correspondent à un seul et même point) n'est pas déformable en un point puisque tout mouvement d'une extrémité s'accompagne d'un mouvement opposé de l'autre extrémité pour rester antipodal. Par contre, en faisant un deuxième tour d'un pôle à l'autre, on peut maintenant faire disparaître le lacet comme le montre le dessin ci-dessus. Cela montre que les rotations de $4\pi$ sont continûment déformables en un point alors que les rotations de $2\pi$ ne le sont pas. La ["ceinture de Dirac"](https://www.math.utah.edu/%7Epalais/Links/Movies/Belt.mov) ou les ["assiettes de Feynman"](https://www.math.utah.edu/%7Epalais/Links/Movies/Plate.mov) tentent d'illustrer expérimentalement ce phénomène. 
 
 <div style="position:relative; width:640px; max-width:100%; height:360px; margin-left: auto; margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <iframe width="640" height="360" src="https://www.youtube.com/embed/JaIR-cWk_-o?si=zKfe0yRkB0Pw4xvv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen  style="max-width:100%"></iframe>
@@ -1005,7 +1005,7 @@ $
 <ul>
 <li>$\mathrm T$ n'est pas un opérateur unitaire mais <b>antiunitaire</b>&nbsp;: il conjugue les nombres complexes. C'est cette propriété, et non une subtilité technique, qui donne $\mathrm T^2 = -1$ pour un spin demi-entier et fait exister les doublets de Kramers.</li>
 <li>La plupart des particules ne sont <b>pas</b> des états propres de $\mathrm C$&nbsp;: seules celles qui sont leur propre antiparticule le sont. Parler de la «&nbsp;valeur propre de $\mathrm C$&nbsp;» d'un électron n'a pas de sens.</li>
-<li>$\mathrm C$, $\mathrm P$ et $\mathrm T$ sont chacune violée quelque part dans la nature&nbsp;: $\mathrm P$ par l'interaction faible, $\mathrm{CP}$ dans le secteur des saveurs. Seul le <b>produit</b> $\mathrm{CPT}$ résiste, et c'est un théorème, pas une observation.</li>
+<li>$\mathrm C$, $\mathrm P$ et $\mathrm T$ sont chacune violées quelque part dans la nature&nbsp;: $\mathrm P$ par l'interaction faible, $\mathrm{CP}$ dans le secteur des saveurs. Seul le <b>produit</b> $\mathrm{CPT}$ résiste, et c'est un théorème, pas une observation.</li>
 <li>La parité est une rotation <b>impropre</b> et ne fait donc pas partie de $SO(3)$&nbsp;: on ne peut pas l'atteindre continûment depuis l'identité. C'est précisément ce qui la rend discrète.</li>
 <li>Le facteur $\theta/2$ dans $\mathbf R(\hat{\boldsymbol n}, \theta) = \exp(-\mathrm i\frac{\theta}{2}\boldsymbol\sigma\cdot\boldsymbol n)$ n'est pas une coquille&nbsp;: c'est lui qui produit le double recouvrement, donc le signe moins après un tour complet.</li>
 <li>Une rotation de $2\pi$ n'est <b>pas</b> l'identité sur un spineur, mais une rotation de $4\pi$ l'est. Ce n'est pas un artefact de calcul&nbsp;: c'est la topologie de $SO(3)$, et la ceinture de Dirac le montre à la main.</li>
