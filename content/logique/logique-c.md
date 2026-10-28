@@ -101,7 +101,7 @@ Il ne faut pas confondre la contraposée avec **la négation de l'antécédent**
 | 1   | 0   | 1                |
 | 1   | 1   | 1                 |
 
-La négation de l'antécédent est équivalent à la réciproque de la contraposée. L'utiliser en pensant qu'il est équivalent à l'implication est un raisonnement fallacieux ou **sophisme**.
+La négation de l'antécédent est équivalente à la réciproque de la contraposée. L'utiliser en pensant qu'elle est équivalente à l'implication est un raisonnement fallacieux ou **sophisme**.
 
 Une proposition $F$ est une **conséquence logique** d'un ensemble de formules $\Gamma$ si lorsque les $\Gamma$ sont vraies, alors $F$ est vraie.  On note $\Gamma\models F$.<br>Cela revient à dire que $\Gamma\rightarrow F$ est une tautologie.<br>
 Comme $\equiv$, $\models$ est un élément du méta-langage.
@@ -191,7 +191,7 @@ $B \land (A\rightarrow B)  \not\models A$<br>
     Le sol est mouillé ($B$)<br>
     Alors il a plu ($A$)
     
-    C'est faux. Le sol peut être mouillé pour d'autres raisons.C'est une confusion entre la possibilité et la nécessité.<br>
+    C'est faux. Le sol peut être mouillé pour d'autres raisons. C'est une confusion entre la possibilité et la nécessité.<br>
 | $A$ | $B$ |$A\rightarrow B$ |  $B \land (A\rightarrow B) $ |$B \land (A\rightarrow B) \rightarrow A$ |
 |-----|-----|-------------------|-------------------|-------------------|
 | 0   | 0   | 1                 |  0  | 1 |
@@ -221,13 +221,13 @@ $B \land (A\rightarrow B)  \not\models A$<br>
  - Les **variables** ($x$, $y$, $z$, etc.) représentent les objets dont on parle.
  - Les **constantes** ($a$, $b$, $c$, etc.) sont des valeurs particulières des objets (ici Socrate).
  - Variables et constantes sont des **termes** du langage.
- - les **fonctions** ($f$, $g$, $h$, etc.) permettent de fabriquer de nouveaux termes à partir d'anciens. Le nombre de termes auxquels la fonction s'applique s'appelle sont **arité**. Une constante est une fonction d'arité 0. 
- - les **prédicats** ($P$, $Q$, $R$, etc.) rendent compte des relation entre les termes (ici "être un homme" et "être mortel"). L'arité d'un prédicat est à nouveau le nombre de termes qu'il prend en argument.
- - les quantificateurs sont d'une part le **quantificateur universel** $\foralll$ qui signifie ("pour tout") et le **quantificateur existentiel** $\exists$ qui signifie ("il existe").
+ - les **fonctions** ($f$, $g$, $h$, etc.) permettent de fabriquer de nouveaux termes à partir d'anciens. Le nombre de termes auxquels la fonction s'applique s'appelle son **arité**. Une constante est une fonction d'arité 0. 
+ - les **prédicats** ($P$, $Q$, $R$, etc.) rendent compte des relations entre les termes (ici "être un homme" et "être mortel"). L'arité d'un prédicat est à nouveau le nombre de termes qu'il prend en argument.
+ - les quantificateurs sont d'une part le **quantificateur universel** $\forall$ qui signifie ("pour tout") et le **quantificateur existentiel** $\exists$ qui signifie ("il existe").
  
  Les constantes et les variables sont issues d’un même ensemble appelé le **domaine**.
  
- Une **formule atomique** est de la forme $P(t_1,\ldots,t_n)$ où $P$ est une prédicat d'arité $n$ et $t_1,\ldots,t_n$ sont des termes.<br>
+ Une **formule atomique** est de la forme $P(t_1,\ldots,t_n)$ où $P$ est un prédicat d'arité $n$ et $t_1,\ldots,t_n$ sont des termes.<br>
  On construit des **formules complexes** en combinant des formules atomiques grâce à des connecteurs.
  
  Revenons à l'exemple de départ.<br>
@@ -245,12 +245,12 @@ En combinant deux prédicats $P$ et $Q$, leur négation et les deux quantificate
 
 ![](/carraristote.png?width=800px)
 
-- Deux propositions sont **contradictoires** si elles ne peuvent être ni vraies ni fausses en même temps.<br>Sont donc contradictoire deux propositions dont l'une est la négation de l'autre.<br>
+- Deux propositions sont **contradictoires** si elles ne peuvent être ni vraies ni fausses en même temps.<br>Sont donc contradictoires deux propositions dont l'une est la négation de l'autre.<br>
 Pour mieux le voir, on va réécrire les propositions universelles sous des formes logiquement équivalentes utilisant le quantificateur existentiel.<br>
 Il est ainsi équivalent de dire $\forall x(P(x)\rightarrow Q(x))$ (tout $P$ est $Q$) et $\neg\exists x (P(x)\land\neg Q(x))$ (il n'existe pas de $P$ qui soit non $Q$). On retrouve bien ainsi que **A** est la négation de **O**.<br>
 De même, $\forall x(P(x)\rightarrow \neg Q(x)$ ("aucun $P$ n'est $Q$" ou plus clairement "tous les $P$ sont non $Q$") est équivalent à $\neg\exists x (P(x)\land  Q(x))$ ("il n'existe pas de $P$ qui soit $Q$"). Donc **E** nie bien **I**.
 
-- Deux propositions sont **contraires** ne peuvent pas être vraies en même temps (comme les contradictoires) mais elles peuvent être fausses en même temps par contre. Pour une proposition donnée, on peut trouver plusieurs propositions contraires. Le fait qu'une propositions soit fausse n'entraîne pas qu'une de ses propositions contraires soit vraie.
+- Deux propositions **contraires** ne peuvent pas être vraies en même temps (comme les contradictoires) mais elles peuvent être fausses en même temps par contre. Pour une proposition donnée, on peut trouver plusieurs propositions contraires. Le fait qu'une proposition soit fausse n'entraîne pas qu'une de ses propositions contraires soit vraie.
 
 - Des propositions **subcontraires** peuvent être vraies en même temps mais pas fausses en même temps.
 
@@ -263,13 +263,13 @@ De même, $\forall x(P(x)\rightarrow \neg Q(x)$ ("aucun $P$ n'est $Q$" ou plus c
 Aristote s'est amusé à définir et répertorier tous les **syllogismes** possibles.<br>
 Un syllogisme est un raisonnement mettant en œuvre trois propositions&nbsp;: les deux premières sont les **prémisses** et elles conduisent à une conclusion.
 
-- La 1<sup>re</sup> prémisse est la majeure. C'est une des propositions universelles **A** ou **I**.
+- La 1<sup>re</sup> prémisse est la majeure. C'est une des propositions universelles **A** ou **E**.
 - La 2<sup>e</sup> prémisse est la mineure. Elle peut être d'une des 4 formes **A**, **E**, **I** ou **O**, mais elle doit avoir un terme commun avec la majeure.
 - La conclusion peut être d'une des 4 formes, mais elle doit avoir un terme commun avec la majeure.
 
-De toutes les possibilités, Aristote a isolé 24 syllogismes valides dont 4 ont un statut particulier puisqu'ils peuvent générer les autres. Au Moyen-Âge, les scolastiques ont fabriqué des moyens mnémotechniques à base des lettres correspondant aux formes des propositions. Les 4 stars sont alors&nbsp;:
+De toutes les possibilités, Aristote a isolé 24 syllogismes valides dont 4 ont un statut particulier puisqu'ils peuvent générer les autres. Au Moyen Âge, les scolastiques ont fabriqué des moyens mnémotechniques à base des lettres correspondant aux formes des propositions. Les 4 stars sont alors&nbsp;:
 
-- B**a**rb**a**r**a** (pour **AAA**) dont l'exemple type est celui du début avec Socrate (où il faut remplacer "Socrate est un homme" et "Socrate est mortel" par "tous les Socrates sont des hommes" et "tous les Socrates sont mortels".<br>
+- B**a**rb**a**r**a** (pour **AAA**) dont l'exemple type est celui du début avec Socrate (où il faut remplacer "Socrate est un homme" et "Socrate est mortel" par "tous les Socrates sont des hommes" et "tous les Socrates sont mortels").<br>
     > Tout P est Q<br>
     Tout R est P<br>
     Donc tout R est Q
@@ -289,7 +289,7 @@ De toutes les possibilités, Aristote a isolé 24 syllogismes valides dont 4 ont
     Quelque R est P<br>
     donc quelque R n'est pas Q
 
-Les syllogismes, c'est mignons, mais ils n'ont à peu près jamais été utilisés par les mathématiciens pour leurs démonstrations...
+Les syllogismes, c'est mignon, mais ils n'ont à peu près jamais été utilisés par les mathématiciens pour leurs démonstrations...
  
  ---
  
@@ -305,7 +305,7 @@ Une variable est **liée** si elle a au moins une occurrence liée. On parle a
 Exemple&nbsp;:<br>
 Dans $\forall x (P(x)\rightarrow Q(x,y))$, $x$ est lié et $y$ est libre.
 
-Une formule sans variable libre est dit **close** (ou fermée).<br>
+Une formule sans variable libre est dite **close** (ou fermée).<br>
 Une **théorie** est un ensemble de formules closes.
 
 <br>
@@ -321,7 +321,7 @@ Les **interprétations** visent à donner une valeur de vérité aux formules. P
 
 Une formule atomique $P(t_1,\ldots,t_n)$ est vraie dans une interprétation $I$ sur le domaine $D$ si et seulement si les éléments du domaine qui sont l'interprétation des termes $t_1,\ldots,t_n$ sont dans la relation correspondant à l'interprétation du prédicat $P$.
 
-La valeur de vérité d'une formule complexe est calculée à partir des valeurs de vérités des atomes dont elle est composée en suivant les règles de la logique des propositions.
+La valeur de vérité d'une formule complexe est calculée à partir des valeurs de vérité des atomes dont elle est composée en suivant les règles de la logique des propositions.
 
 Exemples :<br>
 
@@ -343,7 +343,7 @@ Exemples :<br>
 
 
 > De manière moins arbitraire, on cherche en général une interprétation qui a du sens.<br>
-> La formule $F = \forall x\forall y (P(x,a)\land P(y,x)\rightarrow \neg P(y,a)$ peut vouloir dire "les amis des amis de $a$ ne sont pas amis de $a$" en interprétant $P$ comme une relation d'amité.<br>
+> La formule $F = \forall x\forall y (P(x,a)\land P(y,x)\rightarrow \neg P(y,a)$ peut vouloir dire "les amis des amis de $a$ ne sont pas amis de $a$" en interprétant $P$ comme une relation d'amitié.<br>
 Considérons l'interprétation suivante&nbsp;: $D=\\{\text{Anna}, \text{Bob}, \text{Joe}, \text{Clovis},  \text{Aline}\\}$, $a_I=\text{Anna}$, $P_I=\\{ (\text{Anna},\text{Joe}), (\text{Anna},\text{Bob}), (\text{Joe},\text{Clovis}), (\text{Bob},\text{Aline}) \\}$.<br>
 Anna est amie avec Joe et Bob, Joe est ami avec Clovis, Bob est ami avec Aline, et ni Clovis, ni Aline ne sont amis avec Anna. Donc la formule est vraie dans cette interprétation.
 >
@@ -358,7 +358,7 @@ Une formule est **valide** (tautologie) si elle est vraie quelle que soit l'inte
 Aucune des deux formules en exemple n'est valide.<br>
 Exemple de formule valide&nbsp;: $\forall x P(x) \rightarrow \exists x P(x)$ (si une propriété est vraie pour tout $x$, alors elle est vraie pour au moins un $x$).
 
-Une formule est **satisfaisable** (ou consistante) s'il elle possède un modèle.
+Une formule est **satisfaisable** (ou consistante) si elle possède un modèle.
 
 
 <u>Rq</u> : une formule peut donc être invalide et consistante.
@@ -375,10 +375,10 @@ Exemple&nbsp;: $\neg\neg P(x) \equiv P(x)$
 <br>
 
 Un ensemble de formules $\\{F_1,\ldots,F_n\\}$ **satisfait** une formule $F$ si tout modèle de $\\{F_1,\ldots,F_n\\}$ est aussi modèle de $F$.<br>
-On dit que $F$ est **conséquence sémantique** de la théorie$T = \\{F_1,\ldots,F_n\\}$ et on note $\\{F_1,\ldots,F_n\\} \models F$.<br>
+On dit que $F$ est **conséquence sémantique** de la théorie $T = \\{F_1,\ldots,F_n\\}$ et on note $\\{F_1,\ldots,F_n\\} \models F$.<br>
 Exemple&nbsp;: $P(a)\models \exists x P(x)$
 
-Si $F$ est une formule **valide**, on note $\models F$ (il y a une quantification universelle implicite sur toutes les représentations).
+Si $F$ est une formule **valide**, on note $\models F$ (il y a une quantification universelle implicite sur toutes les interprétations).
 
 <br>
 
