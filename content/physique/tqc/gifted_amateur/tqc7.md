@@ -204,7 +204,7 @@ Les indices disent la représentation&nbsp;: $|\psi_S\rangle$ est l'état en rep
 
 Si $\hat H' = 0$, l'évolution se réduit à $|\psi_S(t)\rangle = e^{-i\hat H_0 t}|\psi_S(0)\rangle$&nbsp;: une «&nbsp;rotation&nbsp;» libre dans l'espace de Hilbert, connue et sans intérêt. Multiplier par $e^{+i\hat H_0 t}$ défait exactement cette rotation (c'est passer dans le <b>référentiel tournant</b> qui accompagne l'évolution libre). Dans ce référentiel, un état libre est immobile, et tout mouvement résiduel est imputable à l'interaction seule. La définition est <i>conçue</i> pour cela.
 
-La loi de transformation des opérateurs n'est pas un choix indépendant&nbsp;: elle est forcée par l'exigence que les grandeurs physiques ne dépendent pas de la représentation&nbsp;: en effet, pour avoir $\langle\psi_S|\hat O_S|\psi_S\rangle = \langle\psi_I|\hat O_I|\psi_I\rangle$ pour tout état, il faut $\hat O_I = e^{i\hat H_0 t}\hat O_S\\, e^{-i\hat H_0 t}$ (suffit d'insérer $|\psi_I\rangle = e^{i\hat H_0 t}|\psi_S\rangle$). Noter qu'à $t = 0$, les trois représentations coïncident.
+La loi de transformation des opérateurs n'est pas un choix indépendant&nbsp;: elle est forcée par l'exigence que les grandeurs physiques ne dépendent pas de la représentation&nbsp;: en effet, pour avoir $\langle\psi_S|\hat O_S|\psi_S\rangle = \langle\psi_I|\hat O_I|\psi_I\rangle$ pour tout état, il faut $\hat O_I = e^{i\hat H_0 t}\hat O_S\\, e^{-i\hat H_0 t}$ (il suffit d'insérer $|\psi_I\rangle = e^{i\hat H_0 t}|\psi_S\rangle$). Noter qu'à $t = 0$, les trois représentations coïncident.
 
 <div id="theo">
 
@@ -883,7 +883,7 @@ Le renversement final&nbsp;: connaissant la correspondance dessins ↔ contracti
 <ul style="margin-bottom:1em;">
 <li>Chaque <b>vertex</b> contribue un facteur $-i\lambda$.</li>
 <li>Chaque <b>ligne interne</b> apporte un propagateur $\Delta(x-y)$ où $x$ et $y$ sont le départ et l'arrivée de la ligne.</li>
-<li>Une <b>ligne externe entrante</b> contribue une onde entrante $\mathrm{e}^{-\mathrm{i}p\cdot x}$ et une <b>ligne externe sortante</b> contribue une onde sortante $\mathrm{e}^{-\mathrm{i}p\cdot x}$ pour ligne sortante</li>
+<li>Une <b>ligne externe entrante</b> contribue une onde entrante $\mathrm{e}^{-\mathrm{i}p\cdot x}$ et une <b>ligne externe sortante</b> contribue une onde sortante $\mathrm{e}^{+\mathrm{i}p\cdot x}$.</li>
 <li><b>Intégrer</b> les positions des vertex sur tout l'espace-temps.</li>
 <li><b>Diviser</b> par le facteur de symétrie $D$.</li>
 </ul>
@@ -1008,7 +1008,7 @@ On applique maintenant le théorème de Wick pour obtenir les différents diagra
 <img src="/diagsat.png" style="box-shadow:none;background:none;">
 </div>
 
-Avec une patte entrante sur le vertex $w$, une sortante sur le vertex $y$, et les trois pattes restantes de chaque côté nouées deux à deux. Cela donne une onde entrante en $w$, une sortante en $y$ et trois propagateurs $\Delta(y-w)$) Et comme on l'a vu, $D=6$.
+Avec une patte entrante sur le vertex $w$, une sortante sur le vertex $y$, et les trois pattes restantes de chaque côté nouées deux à deux. Cela donne une onde entrante en $w$, une sortante en $y$ et trois propagateurs $\Delta(y-w)$. Et comme on l'a vu, $D=6$.
 
 L'amplitude pour le diagramme de Feynman sunset est donc donnée par&nbsp;:
 
@@ -1088,7 +1088,7 @@ Même nombre d'intégrales qu'en position, mais <b>plus aucune exponentielle</b>
 
 </div>
 
-Les lignes externes ne portent <b>pas</b> de propagateur. Et on n'intègre que les impulsions dont les deltas n'ont pas déjà fixées (au moindre doute&nbsp;: mettre un delta par vertex et intégrer tout).
+Les lignes externes ne portent <b>pas</b> de propagateur. Et on n'intègre que les impulsions que les deltas n'ont pas déjà fixées (au moindre doute&nbsp;: mettre un delta par vertex et intégrer tout).
 
 
 <div style="position:relative;margin-left:auto;margin-right:auto;width:580px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
@@ -1098,7 +1098,7 @@ Les lignes externes ne portent <b>pas</b> de propagateur. Et on n'intègre que l
 
 <div id="preuve">
 
-Pour s'entraîner, calculons les contributions à $\langle|q\hat S|p\rangle$ des 3 diagrammes ci-dessus&nbsp;:
+Pour s'entraîner, calculons les contributions à $\langle q|\hat S|p\rangle$ des 3 diagrammes ci-dessus&nbsp;:
 
 <ol class="lettres-parentheses" style="margin:1em 0; overflow-x:auto;">
 <li>Ligne + une boucle&nbsp;:<br>
@@ -1418,7 +1418,7 @@ Les flèches&nbsp;:
 <li>les phions n'en portent pas (particule = antiparticule).</li>
 </ul>
 
- Ces flèches ne représentent <b>pas l'impulsion</b> mais le <b>flot du nombre de particules conservé</b> (le courant de Noether de la symétrie $U(1)$, $\hat Q = \int\mathrm{d}^3p\\,(\hat n^{(a)}\_{\mathbf p} - \hat n^{(b)}_{\mathbf p})$ («&nbsp;flèche = flot de charge&nbsp;»)&nbsp;: un psion entrant augmente le nombre, ligne qui rentre&nbsp;; un antipsion entrant le diminue, ligne qui <i>sort</i>.<br>
+ Ces flèches ne représentent <b>pas l'impulsion</b> mais le <b>flot du nombre de particules conservé</b> (le courant de Noether de la symétrie $U(1)$, $\hat Q = \int\mathrm{d}^3p\\,(\hat n^{(a)}\_{\mathbf p} - \hat n^{(b)}_{\mathbf p})$, d'où «&nbsp;flèche = flot de charge&nbsp;»)&nbsp;: un psion entrant augmente le nombre, ligne qui rentre&nbsp;; un antipsion entrant le diminue, ligne qui <i>sort</i>.<br>
  Conséquence&nbsp;: <b>un antipsion a son impulsion opposée à son flot de nombre</b> (d'où l'astuce de dessiner des flèches d'impulsion séparées à côté des lignes  pour y voir plus clair).
 
 <br>
@@ -1472,7 +1472,7 @@ Second câblage, mêmes ingrédients, sorties permutées&nbsp;:
 
 C'est le <b>canal $u$</b>&nbsp;: identique au canal $t$ <i>à l'échange près des particules finales</i>. Les psions étant indiscernables, personne ne peut dire laquelle des deux sorties vient de laquelle des entrées&nbsp;: <b>on additionne donc les amplitudes</b> $t$ et $u$ (c'est l'indiscernabilité quantique en action).
 
-<b>Psion contre antipsion.</b> Entrées&nbsp;: psion $p$, antipsion $\bar k$&nbsp;; sorties&nbsp;: psion $p'$, antipsion $\bar k'$. L'élément est $\langle p'\bar k'|\hat S|\bar k\\, p\rangle = \langle 0|\hat b_{\mathbf k'}\hat a_{\mathbf p'}\\,\hat S\\,\hat a^{\dagger}\_{\mathbf p}\hat b^{\dagger}_{\mathbf k}|0\rangle$)&nbsp;: le câblage type canal $t$ existe toujours (avec des lignes d'antipsions à flèches descendantes), mais une possibilité <b>nouvelle</b> se révèle&nbsp;:
+<b>Psion contre antipsion.</b> Entrées&nbsp;: psion $p$, antipsion $\bar k$&nbsp;; sorties&nbsp;: psion $p'$, antipsion $\bar k'$. L'élément est $\langle p'\bar k'|\hat S|\bar k\\, p\rangle = \langle 0|\hat b_{\mathbf k'}\hat a_{\mathbf p'}\\,\hat S\\,\hat a^{\dagger}\_{\mathbf p}\hat b^{\dagger}_{\mathbf k}|0\rangle$&nbsp;: le câblage type canal $t$ existe toujours (avec des lignes d'antipsions à flèches descendantes), mais une possibilité <b>nouvelle</b> se révèle&nbsp;:
 
 <!-- LaTeX (simplewick), canal s :
 \contraction[2ex]{\langle 0|}{\hat b_{\mathbf q_1}}{\hat a_{\mathbf q_2}\hat\psi^{\dagger}(y)}{\hat\psi(y)}
@@ -1495,7 +1495,7 @@ Lecture&nbsp;: au vertex $w$, le psion et l'antipsion entrants <b>s'annihilent</
 Qui s'additionne avec quoi&nbsp;?
 <ul>
 <li>Pour $\psi\psi \to \psi\psi$, canaux $t + u$&nbsp;;</li>
-<li>pour $\psi\bar\psi \to \psi\bar\psi$, canaux $t + s$ (car dans ce cas «&nbsp;échanger les sorties&nbsp;» échange <i>un psion et un antipsion</i>, particules parfaitement discernables. Le câblage type $u$ décrit alors un <i>autre</i> élément de matrice ($\langle \bar p' k'|\hat S|\bar k\, p\rangle$), pas le nôtre.</li>
+<li>pour $\psi\bar\psi \to \psi\bar\psi$, canaux $t + s$ (car dans ce cas «&nbsp;échanger les sorties&nbsp;» échange <i>un psion et un antipsion</i>, particules parfaitement discernables). Le câblage type $u$ décrit alors un <i>autre</i> élément de matrice ($\langle \bar p' k'|\hat S|\bar k\, p\rangle$), pas le nôtre.</li>
 </ul>
 
 <br>
@@ -1773,7 +1773,7 @@ $
 </div>
 
 {{%notice type="note" round="true"%}}
-Une honnêteté de comptable&nbsp;: l'identification $\mathrm i\mathcal M \leftrightarrow -\mathrm i\tilde V(\mathbf q)$ est un peu cavalière, car les deux membres ne portent pas la même normalisation d'états. Les états relativistes traînent un facteur $\sqrt{2E_{\mathbf p}} \approx \sqrt{2m}$ par patte externe que la mécanique quantique non relativiste ignore. Le raccordement soigneux fait donc apparaître des facteurs $2m$ qu'on absorbe dans les conventions. Ce qui est <i>robuste</i>, et qui porte toute la physique est la <b>dépendance en $\mathbf q$</b> (donc la forme du potentiel et sa portée $1/\mu$) et le <b>signe</b>.
+Une honnêteté de comptable&nbsp;: l'identification $\mathrm i\mathcal M \leftrightarrow -\mathrm i\tilde V(\mathbf q)$ est un peu cavalière, car les deux membres ne portent pas la même normalisation d'états. Les états relativistes traînent un facteur $\sqrt{2E_{\mathbf p}} \approx \sqrt{2m}$ par patte externe que la mécanique quantique non relativiste ignore. Le raccordement soigneux fait donc apparaître des facteurs $2m$ qu'on absorbe dans les conventions. Ce qui est <i>robuste</i>, et qui porte toute la physique, c'est la <b>dépendance en $\mathbf q$</b> (donc la forme du potentiel et sa portée $1/\mu$) et le <b>signe</b>.
 {{%/notice%}}
 
 Dans la partie sur le propagateur de Feynman, ce potentiel avait été <i>obtenu</i> en résolvant Klein–Gordon statique avec une source (un raccourci semi-classique). Ici, il <b>ressort tout seul</b> de la théorie des champs complète&nbsp;: échange d'un phion en canal $t$, limite non relativiste, dictionnaire de Born. Les deux routes se rejoignent exactement, signe attractif compris (des «&nbsp;charges&nbsp;» identiques s'attirent par échange scalaire), portée $1/\mu$ comprise. 
