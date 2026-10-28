@@ -1,5 +1,5 @@
 +++
-title = "Limites de la non localité"
+title = "Limites de la non-localité"
 date = 2021-03-06T14:20:50+01:00
 weight = 4
 chapter = false
@@ -59,7 +59,7 @@ hidden = false
 
 # Pourquoi la quantique n'est-elle pas moins locale&nbsp;?
 
-La non localité traduit la corrélation instantanée entre composantes éloignées d'un système. Cette corrélation à distance, inexistante en mécanique classique, est une des plus grandes bizarreries quantiques. Mais il se trouve que cela pourrait être plus bizarre encore, la mécanique quantique se restreignant finalement à des corrélations mesurées.... Tâchons de comprendre l'explication possible de cette économie.
+La non-localité traduit la corrélation instantanée entre composantes éloignées d'un système. Cette corrélation à distance, inexistante en mécanique classique, est une des plus grandes bizarreries quantiques. Mais il se trouve que cela pourrait être plus bizarre encore, la mécanique quantique se restreignant finalement à des corrélations mesurées... Tâchons de comprendre l'explication possible de cette économie.
 
 Commençons par déterminer la limite quantique des corrélations instantanées à distance que permet l'intrication en utilisant l'inégalité CHSH.
 
@@ -135,7 +135,7 @@ Et que prévoit la mécanique quantique&nbsp;?
 Utilisons l'état intriqué singulet&nbsp;: $|\psi\rangle=\frac{1}{\sqrt{2}}(|01\rangle-|10\rangle)$.<br>
 La corrélation quantique entre deux détecteurs orientés avec un angle relatif $\theta$ est $E(\theta)=-\cos (\theta)$ pour cet état.
 
-Pour maximiser $|S|$, Alice et Bob peuvent choisir les angles suivant&nbsp;:
+Pour maximiser $|S|$, Alice et Bob peuvent choisir les angles suivants&nbsp;:
 <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
 <li>$a=0°$ et $a'=90°$ pour Alice</li>
 <li>$b=45°$ et $b'=-45°$ pour Bob</li>
@@ -154,7 +154,7 @@ En injectant dans $S$, on obtient&nbsp;:<br>
 
 $|S|=\left| \left(-\frac{\sqrt{2}}{2}\right)+\left(-\frac{\sqrt{2}}{2}\right)+\left(-\frac{\sqrt{2}}{2}\right)-\left(\frac{\sqrt{2}}{2}\right)\right|=4 \times \frac{\sqrt{2}}{2}=2 \sqrt{2}>2$
 
-**La mécanique quantique prévoit donc une violation de l'inégalité CHSH**. Et c'est bien ce qu'a vérifié les expériences d'Alain Aspect entre autres.
+**La mécanique quantique prévoit donc une violation de l'inégalité CHSH**. Et c'est bien ce qu'ont vérifié les expériences d'Alain Aspect entre autres.
 
 Représentons l'évolution de $|S|$ en fonction de $\theta$ en posant $a=0°$, $b=\theta$, $a'=2\theta$ et $b'=3\theta$.
 
@@ -184,7 +184,7 @@ La variable cachée $\lambda$ est ici l'orientation parfaitement opposée des de
 
 Que vaut alors $E(\theta)$&nbsp;? Il s'agit, rappelons-le, de la moyenne des produits des résultats obtenus par Alice et Bob. Cette moyenne est proportionnelle à la probabilité que les deux trous se retrouvent au-dessus du même demi-disque. Et cette probabilité est elle-même proportionnelle à l'écart angulaire entre les deux réglages et passe de $1$ pour $\theta=0°$ à $0$ pour $\theta=180°$. À $\theta=0°$, la corrélation vaut donc $-1$ et elle vaut $1$ pour $\theta=180°$ en passant par $0$ à $\theta=90°$. 
 
-Cela donne une corrélation évoluant linéairement&nbsp;: $E(\theta)=-1+\frac{2\theta}{180}$ pour $\theta\in[0°,180°]$. Et par symétrie,  $E(\theta)=1-\frac{2\theta}{180}$ pour $\theta\in[180°,360°]$. Par conséquent, la pente de $E(3\theta)$ change deux fois de signes entre $0°$ et $180°$&nbsp;: elle croît sur $[0°,60°]$, décroît sur $[60°,120°]$ (car on a alors $3\theta \in [180°,360°]$), puis croît à nouveau sur $[120°,180°]$. Cela explique l'allure bizarre de la courbe classique sur le graphe $|S(\theta)|$.
+Cela donne une corrélation évoluant linéairement&nbsp;: $E(\theta)=-1+\frac{2\theta}{180}$ pour $\theta\in[0°,180°]$. Et par symétrie,  $E(\theta)=1-\frac{2\theta}{180}$ pour $\theta\in[180°,360°]$. Par conséquent, la pente de $E(3\theta)$ change deux fois de signe entre $0°$ et $180°$&nbsp;: elle croît sur $[0°,60°]$, décroît sur $[60°,120°]$ (car on a alors $3\theta \in [180°,360°]$), puis croît à nouveau sur $[120°,180°]$. Cela explique l'allure bizarre de la courbe classique sur le graphe $|S(\theta)|$.
 
 
 
@@ -235,7 +235,7 @@ Plus on veut qu'un état quantique soit porteur d'une information $a$, moins il 
 
 Et hors des lois quantiques, la borne de Tsirelson reste-t-elle indépassable&nbsp;? Non.
 
-## Boites PR : corrélation maximale
+## Boîtes PR : corrélation maximale
 
 On s'affranchit maintenant de tout espace vectoriel et autres contraintes de norme pour ne plus s'occuper que de logique.
 
@@ -243,7 +243,7 @@ Retournons à la définition de $S$&nbsp;: $E(a, b)+E\left(a, b^{\prime}\right)+
  
  Comme chaque corrélation $E$ est comprise entre $-1$ et $1$, le maximum théorique de $S$ est $4$ avec $E(a,b)=E(a',b)=E(a,b')=±1$ et $E(a',b')=\mp 1$. 
  
- Mais peut-on atteindre ce maximum sans communication entre Alice et Bob&nbsp;? Pour cela, il faut que les observations locales d'Alice (ses statistiques de résultats) ne dépendent pas des choix de réglage fait par Bob à l'autre bout de l'univers (et vice versa). Dit autrement, Alice ne doit pas savoir quel réglage Bob a choisi en regardant ses résultats.
+ Mais peut-on atteindre ce maximum sans communication entre Alice et Bob&nbsp;? Pour cela, il faut que les observations locales d'Alice (ses statistiques de résultats) ne dépendent pas des choix de réglage faits par Bob à l'autre bout de l'univers (et vice versa). Dit autrement, Alice ne doit pas savoir quel réglage Bob a choisi en regardant ses résultats.
  
  On va y parvenir à l'aide d'une boîte PR (pour Popescu et Rohrlich).
  
@@ -263,7 +263,7 @@ Retournons à la définition de $S$&nbsp;: $E(a, b)+E\left(a, b^{\prime}\right)+
   
   Montrons d'abord que cette boîte est bien non signalante.
   
-  Imaginons par exemple que Bob entre la valeur $0$ et Alice entre la valeur $1$ dans leurs parties respectives de la boite. Alors la boîte pourra fournir $1$ aux deux ou $0$ aux deux ($x\cdot y = 0\cdot 1 = 0$ et donc la boîte impose $a\oplus b = 0$, ce qui implique que $a$ et $b$ soient identiques). Par conséquent, Alice a $50\\%$ de chance de recevoir un $0$ et $50\\%$ de recevoir un $1$. Et cela restera le cas quel que soit le réglage de Bob (la marginale d'Alice[^1] vaut $50\\%$), ce qui empêche Alice d'inférer quoi que ce soit sur son réglage ; on a bien non signalisation.  
+  Imaginons par exemple que Bob entre la valeur $0$ et Alice entre la valeur $1$ dans leurs parties respectives de la boîte. Alors la boîte pourra fournir $1$ aux deux ou $0$ aux deux ($x\cdot y = 0\cdot 1 = 0$ et donc la boîte impose $a\oplus b = 0$, ce qui implique que $a$ et $b$ soient identiques). Par conséquent, Alice a $50\\%$ de chances de recevoir un $0$ et $50\\%$ de recevoir un $1$. Et cela restera le cas quel que soit le réglage de Bob (la marginale d'Alice[^1] vaut $50\\%$), ce qui empêche Alice d'inférer quoi que ce soit sur son réglage ; on a bien non-signalisation.  
   
   [^1]: Pour un système complexe avec plusieurs acteurs (comme Alice et Bob), la marginale est ce qu'un seul acteur voit "dans son coin", sans tenir compte des résultats de l'autre.<br>
   Soit deux variables aléatoires discrètes $X$ et $Y$ dont la loi de probabilité jointe est donnée par $P(X,Y)$.<br>
@@ -285,7 +285,7 @@ La corrélation $E(x,y)$ vaut par définition la moyenne des produits des résul
 
 Les couples de réglages possibles pour Alice et Bob sont $(0,0)$, $(0,1)$, $(1,0)$ et $(1,1)$. D'où $S=E(0,0)+E(0,1)+E(1,0)-E(1,1)$.
 
-Appliquons la règle $a \oplus b=x \cdot y$ pour chaque couple de réglage&nbsp;:
+Appliquons la règle $a \oplus b=x \cdot y$ pour chaque couple de réglages&nbsp;:
 
 <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
 <li>Pour $(x,y)=(0,0)$ : $a\oplus b=0\cdot 0 = 0\Longrightarrow E(0,0)=1$.</li>
@@ -319,9 +319,9 @@ Une réponse plutôt convaincante se cache dans le monde de l'information.
 
 Supposons qu'Alice ait deux bits $x_0$ et $x_1$. Elle envoie classiquement un bit unique $m$ à Bob (qu'elle intrique comme elle le souhaite avec les deux bits qu'elle possède). Bob doit alors essayer de deviner l'un des deux bits d'Alice (celui de son choix).
 
-La probabilité de succès pour Bob mesure donc la capacité d'Alice a faire tenir deux bits d'information sur un seul bit envoyé.
+La probabilité de succès pour Bob mesure donc la capacité d'Alice à faire tenir deux bits d'information sur un seul bit envoyé.
 
-Alice et Bob partagent à nouveau un système bipartite (que cela soit un état quantique intriqué, une boîte PR, ou autre) qu'on va appeler génériquement boîte non-signalante (les réponses de la boîte de Bob n'informent pas sur les réglages et réponses de la boîte d'Alice). 
+Alice et Bob partagent à nouveau un système bipartite (que cela soit un état quantique intriqué, une boîte PR, ou autre) qu'on va appeler génériquement boîte non signalante (les réponses de la boîte de Bob n'informent pas sur les réglages et réponses de la boîte d'Alice). 
 
 Ils suivent le protocole suivant&nbsp;:
 
@@ -403,7 +403,7 @@ $$
 
 <ul>
 <li>En classique ($S=2$), $P=\frac34$. Bob est totalement informé sur un des deux bits, mais quand il veut l'autre, il n'a qu'une chance sur deux de succès. Toute l'info que lui envoie Alice est concentrée sur un des deux bits.</li>
-<li>En quantique ($S=2\sqrt{2}$), $P\approx 85\%%$. Bob améliore ses chances par rapport à la situation classique car l'information envoyée par Alice concerne maintenant les deux bits à la fois.</li>
+<li>En quantique ($S=2\sqrt{2}$), $P\approx 85\%$. Bob améliore ses chances par rapport à la situation classique car l'information envoyée par Alice concerne maintenant les deux bits à la fois.</li>
 <li>Avec une boîte PR ($S=4$), $P=1$. Bob connaît $x_0$ et $x_1$ avec certitude dès qu'il reçoit le bit $m$.</li>
 </ul>
 
@@ -420,7 +420,7 @@ Le **principe de causalité informationnelle** (CI) stipule que&nbsp;:
 Bob ne peut pas obtenir plus d'information que le nombre de bits qu'Alice a envoyé.
 </div>
 
-Dans notre petit jeu, Bob ne peut deviner au mieux qu'un bit d'Alice selon ce principe, même si le bit $m$ envoyé par Alice est corrélé (quantiquement intriqué par exemple) à ses autres bits. Ça paraît somme toute assez raisonnable... Mais on verra dans la suite que les possibles conséquences de sa violation finissent de convaincre de son bien fondé.
+Dans notre petit jeu, Bob ne peut deviner au mieux qu'un bit d'Alice selon ce principe, même si le bit $m$ envoyé par Alice est corrélé (quantiquement intriqué par exemple) à ses autres bits. Ça paraît somme toute assez raisonnable... Mais on verra dans la suite que les possibles conséquences de sa violation finissent de convaincre de son bien-fondé.
 
 Pour l'exprimer mathématiquement, on utilise l'information mutuelle $I$ qui mesure la réduction d'incertitude, c'est-à-dire l'information gagnée. Pour un bit dont on devine la valeur avec une probabilité $P$, l'information gagnée est&nbsp;: $I=1-H(P)$ où $H(P)$ est l'entropie binaire. 
 
@@ -436,11 +436,11 @@ Pour deux bits $x_0$ et $x_1$, le principe de CI impose que la somme des informa
 
 $$I(x_0)+I(x_1)≤1$$
 
-Dans le cas classique, on a vu qu'en moyenne, Bob a $P=75\\%$ de chance de deviner le bit choisi. Pour chaque bit, on a donc&nbsp;: $H(P)=-\frac{1}{\ln 2}\left(P\ln P+  (1-P)\ln(1-P)\right)\approx 0,81 \Longrightarrow I(x_k)\approx 0,19$. Et donc&nbsp;: $I=I(x_0)+I(x_1) \approx 0,38$. On est large inférieur à $1$.
+Dans le cas classique, on a vu qu'en moyenne, Bob a $P=75\\%$ de chances de deviner le bit choisi. Pour chaque bit, on a donc&nbsp;: $H(P)=-\frac{1}{\ln 2}\left(P\ln P+  (1-P)\ln(1-P)\right)\approx 0,81 \Longrightarrow I(x_k)\approx 0,19$. Et donc&nbsp;: $I=I(x_0)+I(x_1) \approx 0,38$. On est largement inférieur à $1$.
 
 Dans le cas quantique, $P$ grimpe à $85\\%$, ce qui tire l'information mutuelle sur un bit à $0,40$ et donc l'information mutuelle totale à $0,80$, toujours inférieure à $1$.
 
-Et qu'obtiendrait-on si Alice et Bob utilise des boîtes PR &nbsp;?
+Et qu'obtiendrait-on si Alice et Bob utilisent des boîtes PR&nbsp;?
 
 Dans ce cas, $P=100\\%$. L'information mutuelle pour un bit deviné avec certitude est $I=1$.
 
@@ -455,7 +455,7 @@ Mais pour obtenir précisément le point de rupture où le degré de corrélatio
 Supposons qu'Alice ait maintenant 4 bits ($x_0,x_1,x_2,x_3$) à faire deviner à Bob en lui envoyant un seul bit. Pour fabriquer le bit à envoyer, Alice va procéder par concaténations successives grâce à une structure en pyramide sur deux niveaux&nbsp;:
 
 <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
-<li>Niveau 1 : Elle utilise une première boîte sur $(x_0,x_1)$ qui produit un message $m_0$, et et une deuxième boîte sur $(x_2,x_3)$ qui produit $m_1$.</li>
+<li>Niveau 1 : Elle utilise une première boîte sur $(x_0,x_1)$ qui produit un message $m_0$, et une deuxième boîte sur $(x_2,x_3)$ qui produit $m_1$.</li>
 <li>Niveau 2 : Elle utilise une troisième boîte sur ces messages intermédiaires $(m_0,m_1)$ pour produire le message final $m$ qu'elle envoie à Bob.</li>
 </ul>
 
@@ -564,7 +564,7 @@ Un univers où $S>2\sqrt{2}$ est un univers où la communication classique est "
 
 La mécanique quantique se cale exactement sur la valeur qui sature cette limite sans la dépasser.
 
-Le principe que suit la nature est peut être alors&nbsp;: un bit contient toujours exactement un bit d'information, pas plus, mais pas moins non plus.<br>
+Le principe que suit la nature est peut-être alors&nbsp;: un bit contient toujours exactement un bit d'information, pas plus, mais pas moins non plus.<br>
 Dans un univers réel où un système quantique n'est en effet jamais parfaitement isolé mais plus ou moins intriqué avec tous les autres systèmes quantiques, un bit contient toujours des multitudes qui se réduisent finalement à un bit d'information par funambulisme sur la frontière de Tsirelson.
 
 On peut remarquer aussi que le **théorème de non-clonage** est fortement lié au respect du principe de CI. En empêchant de contourner l'incertitude de la mesure[^2], on évite en effet de retirer trop d'information du message d'Alice. 
