@@ -443,7 +443,7 @@ Cette prédiction se teste par diffusion Compton sur les métaux, et l'accord es
 
 ### Le liquide de Fermi de Landau
 
-Landau propose une autre façon, phénoménologique, de penser les métaux&nbsp;: décrire un métal <i>fortement</i> en interaction comme presque identique au gaz de Fermi libre. L'idée paraît saugrenue&nbsp;: comment des électrons interagissant fortement au sein du métal, comme dans un liquide, pourraient être modélisés par un gaz&nbsp;? Mais c'est pourtant devenu le modèle standard du métal.<br>
+Landau propose une autre façon, phénoménologique, de penser les métaux&nbsp;: décrire un métal <i>fortement</i> en interaction comme presque identique au gaz de Fermi libre. L'idée paraît saugrenue&nbsp;: comment des électrons interagissant fortement au sein du métal, comme dans un liquide, pourraient-ils être modélisés par un gaz&nbsp;? Mais c'est pourtant devenu le modèle standard du métal.<br>
 Attention&nbsp;: les quasiparticules de Landau ne sont pas celles de la théorie des champs vues plus haut. Nous verrons la différence dans un instant.
 
 L'idée maîtresse est la <b>continuité adiabatique</b>. On allume l'interaction très lentement, et on postule que chaque état propre à une particule du gaz évolue continûment vers un état propre à une particule du liquide. Chaque électron du gaz, y compris ceux enfouis au fond de la mer de Fermi, devient une quasiparticule de Landau&nbsp;: la correspondance est <b>un pour un</b>, et la distribution d'impulsion du fondamental est inchangée. Chaque électron finit habillé par son nuage d'interaction.
@@ -497,7 +497,7 @@ Puisque $E_3$ et $E_4$ sont strictement positifs, leur somme est positive. Cela 
 C'est une grosse contrainte&nbsp;!
 
 <ul style="margin-top:-0em; margin-bottom:-0em;">
-<li>Le partenaire de collision (particule 2) ne peut pas être pris n'importe où au fond du liquide : il doit être pris dans une minuscule tranche juste sous la surface de Fermi, d'une épaisseur maximale $E_1$. (C'est le premier facteur limitant, proportionnel à $E_1$).</li>
+<li>Le partenaire de collision (particule 2) ne peut pas être pris n'importe où au fond du liquide&nbsp;: il doit être pris dans une minuscule tranche juste sous la surface de Fermi, d'une épaisseur maximale $E_1$. (C'est le premier facteur limitant, proportionnel à $E_1$).</li>
 <li>Une fois la particule 2 choisie, les particules 3 et 4 doivent se partager la petite énergie restante ($E_1 + E_2$). Le nombre de configurations finales possibles est lui aussi proportionnel à cette petite énergie $E_1$. (C'est le second facteur limitant, proportionnel à $E_1$).</li>
 </ul>
 
@@ -699,7 +699,7 @@ La méthode systématique s'illustre sur le diagramme sunset (une self-énergie 
 <img src="/diagsaturne.png" style="box-shadow:none;background:none;">
 </div>
 
-L'amplitude correspondante est &nbsp;:
+L'amplitude correspondante est&nbsp;:
 
 <p style="text-align:center;overflow-x:auto;">
 $\displaystyle
@@ -711,7 +711,7 @@ Appelons $I$ cette intégrale.
 
 L'idée clé, qui rend tout systématique&nbsp;: <b>un diagramme de Feynman se développe en série de Taylor de l'impulsion externe</b>. 
 
-Pour sunset, la symétrie $\phi \to -\phi$ du lagrangien interdit les puissances impaires, donc
+Pour le sunset, la symétrie $\phi \to -\phi$ du lagrangien interdit les puissances impaires, donc
 
 <p style="text-align:center;">
 $\displaystyle
@@ -728,7 +728,7 @@ Toute la divergence est concentrée dans les <i>coefficients</i> de ce polynôme
 <li>Deux dérivations de plus rendent l'intégrale convergente&nbsp;: $\gamma$ et la suite sont finis, on s'arrête là.</li>
 </ul>
 
-La série de Taylor permet donc d'isoler toute la « maladie » de l'infini dans les tous premiers termes de la série (qui sont de simples constantes), tandis que la queue infinie de la série est totalement saine.
+La série de Taylor permet donc d'isoler toute la « maladie » de l'infini dans les tout premiers termes de la série (qui sont de simples constantes), tandis que la queue infinie de la série est totalement saine.
 
 Il faut donc deux contretermes&nbsp;: un coefficient $A$ (quadratique en $\Lambda$) sans facteur cinématique, et un coefficient $B$ (logarithmique) accompagné d'un facteur $p^2$. 
 
@@ -1244,7 +1244,7 @@ $\displaystyle
 $
 </p>
 
-Le remplacement de $\lambda^2$ par $\lambda_{\mathrm P}^2$ dans le terme correctif est légitime&nbsp;: les deux quantités $\lambda$ et $\lambda_p$ ne diffèrent que d'un terme d'ordre $\lambda^2$ d'après la première équation.
+Le remplacement de $\lambda^2$ par $\lambda_{\mathrm P}^2$ dans le terme correctif est légitime&nbsp;: les deux quantités $\lambda$ et $\lambda_{\mathrm P}$ ne diffèrent que d'un terme d'ordre $\lambda^2$ d'après la première équation.
 
 Deuxième pas, injecter&nbsp;: 
 
@@ -1438,7 +1438,7 @@ Puis trois pas&nbsp;:
 
 {{%notice type="note" round="true"%}}
 L'intégrale du pas I n'est pas une intégrale sur les impulsions&nbsp;: c'est l'<b>intégrale fonctionnelle</b>
-$\int\mathcal D\phi_{\mathrm f}$, c'est-à-dire une somme sur toutes les<i>configurations possibles</i> du champ rapide. C'est très exactement une marginalisation au sens des probabilités&nbsp;: de même qu'on passe d'une loi jointe à une loi marginale par $P(x)=\int P(x,y)\\,\mathrm dy$, on passe ici de $Z=\int\mathcal D\phi_{\mathrm s}\mathcal D\phi_{\mathrm f}\\,\mathrm e^{-S}$ à $Z=\int\mathcal D\phi_{\mathrm s}\\,\mathrm e^{-S_{\text{eff}}[\phi_{\mathrm s}]}$.<br>
+$\int\mathcal D\phi_{\mathrm f}$, c'est-à-dire une somme sur toutes les <i>configurations possibles</i> du champ rapide. C'est très exactement une marginalisation au sens des probabilités&nbsp;: de même qu'on passe d'une loi jointe à une loi marginale par $P(x)=\int P(x,y)\\,\mathrm dy$, on passe ici de $Z=\int\mathcal D\phi_{\mathrm s}\mathcal D\phi_{\mathrm f}\\,\mathrm e^{-S}$ à $Z=\int\mathcal D\phi_{\mathrm s}\\,\mathrm e^{-S_{\text{eff}}[\phi_{\mathrm s}]}$.<br>
 L'anglais dit <i>integrate out</i>, «&nbsp;éliminer par intégration&nbsp;», et le
 français perd le <i>out</i> en route.<br><br>
 <b>On ne jette pas les modes rapides, on les moyenne</b>. Leur influence survit, encodée dans le $\delta\mathcal L$ qui modifie les couplages des modes lents. Une simple troncature ne produirait aucun flot.
@@ -1460,7 +1460,7 @@ Si tout se passe bien, le lagrangien final a <b>la même forme</b> que le lagran
 
 
 {{%notice type="note" round="true"%}}
-Le «&nbsp;groupe&nbsp;» de renormalisation n'est pas un groupe, et il vaut la peine de comprendre pourquoi. Les changements d'échelle purs forment bien un groupe, mais l'opération complète (intégrer une coquille de modes rapides, <i>puis</i> rééchelonner) détruit de l'information&nbsp;: les détails fins sont perdus et rien ne permet de les reconstruire. La transformation n'a pas d'inverse&nbsp;: c'est un <b>semi-groupe</b>, au sens des normes académiques françaises (loi de composition interne associative, sans inverses). Cette irréversibilité n'est pas un défaut technique, c'est le contenu physique de la méthode&nbsp;: la physique de basse énergie oublie les détails microscopiques, et c'est précisément ce qui rendra l'universalité possible au chapitre suivant.
+Le «&nbsp;groupe&nbsp;» de renormalisation n'est pas un groupe, et il vaut la peine de comprendre pourquoi. Les changements d'échelle purs forment bien un groupe, mais l'opération complète (intégrer une coquille de modes rapides, <i>puis</i> rééchelonner) détruit de l'information&nbsp;: les détails fins sont perdus et rien ne permet de les reconstruire. La transformation n'a pas d'inverse&nbsp;: c'est un <b>semi-groupe</b> (loi de composition interne associative, sans inverses). Cette irréversibilité n'est pas un défaut technique, c'est le contenu physique de la méthode&nbsp;: la physique de basse énergie oublie les détails microscopiques, et c'est précisément ce qui rendra l'universalité possible au chapitre suivant.
 {{%/notice%}}
 
 Illustration schématique des trois pas, sur une réalisation d'un champ représenté le long d'une direction&nbsp;:
@@ -1488,7 +1488,7 @@ Et le passage de (a) à (b) apparaît comme une simple <b>troncature</b>, alors 
 
 ### Application 1&nbsp;: la liberté asymptotique
 
-La théorie des perturbations est un développement en puissances des couplages&nbsp;: elle marche là où ils sont petits. Or ils varient avec l'échelle. En électrodynamique quantique, la fonction $\beta$ de la charge est <b>positive</b> ($\mu\\,\mathrm de/\mathrm d\mu = |e|^3/12\pi^2$ au premier ordre, dérivée dans un chapitre ultérieure)&nbsp;: la charge effective croît vers l'ultraviolet et décroît vers l'infrarouge. L'image physique est l'<b>écrantage</b>&nbsp;: le vide, peuplé de paires virtuelles polarisables, se comporte comme un diélectrique, et plus on s'approche de la charge (hautes impulsions), moins elle est masquée, donc plus elle paraît grande. La théorie des perturbations de l'électrodynamique est excellente à basse énergie et se dégrade en montant.
+La théorie des perturbations est un développement en puissances des couplages&nbsp;: elle marche là où ils sont petits. Or ils varient avec l'échelle. En électrodynamique quantique, la fonction $\beta$ de la charge est <b>positive</b> ($\mu\\,\mathrm de/\mathrm d\mu = |e|^3/12\pi^2$ au premier ordre, dérivée dans un chapitre ultérieur)&nbsp;: la charge effective croît vers l'ultraviolet et décroît vers l'infrarouge. L'image physique est l'<b>écrantage</b>&nbsp;: le vide, peuplé de paires virtuelles polarisables, se comporte comme un diélectrique, et plus on s'approche de la charge (hautes impulsions), moins elle est masquée, donc plus elle paraît grande. La théorie des perturbations de l'électrodynamique est excellente à basse énergie et se dégrade en montant.
 
 Pour une classe de théories, dont les théories de jauge non abéliennes de Yang–Mills (chapitre ultérieur), la surprise est totale&nbsp;: $\beta$ est <b>négative</b>. Le couplage fond vers l'ultraviolet et enfle vers l'infrarouge. C'est la <b>liberté asymptotique</b>&nbsp;: la théorie est presque libre à haute énergie et férocement couplée à basse énergie. Le vide non abélien <i>anti-écrante</i>, les gluons virtuels portant eux-mêmes la charge de couleur et renforçant le champ au lieu de le masquer. Le phénomène explique d'un coup les deux visages de l'interaction forte&nbsp;: dans les expériences de diffusion profondément inélastique, les quarks frappés à très haute énergie se comportent comme des particules quasi libres, tandis qu'à basse énergie le couplage devient si fort qu'aucun quark ne peut être isolé (on ne les trouve qu'en états liés, mésons et baryons). Une image mécanique aide&nbsp;: des masses reliées par des ressorts interagissent faiblement à courte distance et de plus en plus fort à mesure qu'on les écarte.
 
@@ -1512,7 +1512,7 @@ Les deux régimes limites se calculent par analyse dimensionnelle&nbsp;: un mét
 </div>
 
 
-En dimension 3, la courbe $\beta(g)$ traverse zéro en un point fixe répulsif $g_c$&nbsp;: c'est le seuil de mobilité, plus propre que $g_c$le flot emporte vers le métal, plus sale il emporte vers l'isolant. En dimensions 1 et 2, la courbe reste sous zéro&nbsp;: <b>aucun point fixe, aucun seuil</b>. La moindre poussière suffit, à taille assez grande, à rendre le système isolant. Un énoncé profond obtenu en raccordant deux asymptotes.
+En dimension 3, la courbe $\beta(g)$ traverse zéro en un point fixe répulsif $g_c$&nbsp;: c'est le seuil de mobilité, plus propre que $g_c$, le flot emporte vers le métal&nbsp;; plus sale, il emporte vers l'isolant. En dimensions 1 et 2, la courbe reste sous zéro&nbsp;: <b>aucun point fixe, aucun seuil</b>. La moindre poussière suffit, à taille assez grande, à rendre le système isolant. Un énoncé profond obtenu en raccordant deux asymptotes.
 
 <br>
 
@@ -1558,7 +1558,7 @@ Ce raisonnement à un seul vortex ignore les interactions entre vortex et l'écr
 
 </div>
 
-L'analyse de renormalisation suit deux couplages en fonction de l'échelle&nbsp;: $K^{-1} = T/J$ (l'inverse de la raideur réduite) et la <b>fugacité</b> $y = e^{-S^{\text{cœur}}(a)}$, qui mesure à quel point le système sent la présence des vortex (petit $y$&nbsp;: cœurs coûteux et rares&nbsp;; grand $y&nbsp;$&nbsp;: vortex libres bon marché).
+L'analyse de renormalisation suit deux couplages en fonction de l'échelle&nbsp;: $K^{-1} = T/J$ (l'inverse de la raideur réduite) et la <b>fugacité</b> $y = e^{-S^{\text{cœur}}(a)}$, qui mesure à quel point le système sent la présence des vortex (petit $y$&nbsp;: cœurs coûteux et rares&nbsp;; grand $y$&nbsp;: vortex libres bon marché).
 
 <!-- Figure à redessiner (L&B fig. 34.9) : plan (K⁻¹ en abscisse, y en ordonnée). Des trajectoires de flot : dans la région de droite, elles montent vers K⁻¹, y → ∞ (annoter « phase haute température ») ; dans le coin inférieur gauche, elles plongent vers l'axe y = 0 et s'y arrêtent (annoter « phase basse température ») ; la séparatrice aboutit au point K⁻¹ = π/2 sur l'axe. Légende : le flot de Kosterlitz–Thouless ; la ligne de points fixes y = 0 se termine en K⁻¹ = π/2 -->
 <div style="position:relative;margin-left:auto;margin-right:auto;width:380px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
@@ -1612,7 +1612,7 @@ $
 <li>Électrodynamique et chromodynamique tirent en sens opposés&nbsp;: écrantage ($\beta > 0$, la charge croît vers l'ultraviolet) contre anti-écrantage ($\beta < 0$, liberté asymptotique)&nbsp;; la différence vient de ce que les gluons portent eux-mêmes la charge de couleur.</li>
 <li>Kosterlitz–Thouless ne contredit pas Coleman–Mermin–Wagner&nbsp;: aucune symétrie n'est brisée, aucune aimantation n'apparaît. La transition est topologique (déliement de vortex), et le paramètre qui la détecte est la raideur, pas l'ordre.</li>
 <li>Les vortex de ce chapitre sont les vortex <b>globaux</b> (non jaugés) du chapitre sur les objets topologiques&nbsp;: leur énergie en $\pi K\ln(L/a)$ est exactement la divergence logarithmique qui les rendait instables à $T = 0$. La température recycle le défaut en physique.</li>
-<li>Dans l'argument entropique, tout repose sur le fait que énergie et entropie portent le <i>même</i> $\ln(L/a)$&nbsp;: c'est cette coïncidence de forme qui produit une température de transition finie et indépendante de la taille.</li>
+<li>Dans l'argument entropique, tout repose sur le fait que l'énergie et l'entropie portent le <i>même</i> $\ln(L/a)$&nbsp;: c'est cette coïncidence de forme qui produit une température de transition finie et indépendante de la taille.</li>
 </ul>
 
 
