@@ -381,19 +381,19 @@ où $\theta(\mathbf x) = \tan^{-1}(x^2/x^1)$ est l'angle qui repère la position
 
 <div id="preuve">
 
-(a) **Le Hérisson** ($n=1, \varphi=0$ )<br>
-Ici, la relation est $\alpha = 1\times\theta + 0$. La flèche pointe exactement dans la même direction que la position. Quand on fait un tour complet anti-horaire, la flèche fait exactement 1 tour complet dans le sens anti-horaire. Donc $n=1$.
+(a) **Le hérisson** ($n=1, \varphi=0$)<br>
+Ici, la relation est $\alpha = 1\times\theta + 0$. La flèche pointe exactement dans la même direction que la position. Quand on fait un tour complet antihoraire, la flèche fait exactement 1 tour complet dans le sens antihoraire. Donc $n=1$.
 
-(b) **Le Tourbillon** ($n=1, \varphi=\pi/2$ )<br>
+(b) **Le tourbillon** ($n=1, \varphi=\pi/2$)<br>
 Ici, la relation est $\alpha = 1\times\theta + \pi/2$.<br>
 C'est exactement la même image que (a), sauf que toutes les flèches ont été tournées de 90 degrés vers la gauche (c'est le rôle de la phase arbitraire $\varphi$).<br>
-Résultat&nbsp;: si on marche autour du centre, la flèche tourne toujours dans le même sens que nous, à la même vitesse. Elle fait 1 tour complet anti-horaire. Donc $n=1$.
+Résultat&nbsp;: si on marche autour du centre, la flèche tourne toujours dans le même sens que nous, à la même vitesse. Elle fait 1 tour complet antihoraire. Donc $n=1$.
 
-(c) **La Selle** ($n=-1$)<br>
+(c) **La selle** ($n=-1$)<br>
 Ici, la relation est $\alpha = -1\times\theta$ (en supposant $\varphi=0$). L'angle de la flèche tourne dans le sens inverse du déplacement&nbsp;!<br>
-Pendant qu'on fait 1 tour anti-horaire, la flèche fait 1 tour dans le sens horaire (sens des aiguilles d'une montre). Le signe moins indique cette rotation inversée. Donc $n=-1$.
+Pendant qu'on fait 1 tour antihoraire, la flèche fait 1 tour dans le sens horaire (sens des aiguilles d'une montre). Le signe moins indique cette rotation inversée. Donc $n=-1$.
 
-(d) **Le Double Tour** ($n=2$)<br>
+(d) **Le double tour** ($n=2$)<br>
 Ici, la relation est $\alpha = 2\times\theta$. La flèche tourne deux fois plus vite que nous&nbsp;!<br>
 En faisant un seul tour autour du centre, on voit la flèche faire 2 tours complets sur elle-même. Donc $n=2$.
 
