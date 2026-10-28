@@ -95,7 +95,7 @@ Notes de lecture du livre *La logique pas à pas* de Jacques Duparc que je parap
 
 <br>
 
-La sémantique concerne l'interprétation des formules. Le calcul propositionnel est très frustre à cet égard. Une variable propositionnelle vaut soit 1, soit 0, c'est-à-dire qu'elle est soit vraie, soit fausse. Et il en est de même pour une formule dont l'interprétation se déduit de celles des variables et des règles qu'impliquent les connecteurs.
+La sémantique concerne l'interprétation des formules. Le calcul propositionnel est très fruste à cet égard. Une variable propositionnelle vaut soit 1, soit 0, c'est-à-dire qu'elle est soit vraie, soit fausse. Et il en est de même pour une formule dont l'interprétation se déduit de celles des variables et des règles qu'impliquent les connecteurs.
 
 <div id="def">
 
@@ -108,7 +108,7 @@ $\delta$ permet de définir un **modèle** $\mathcal{M}$ du calcul propositionne
 
 ![](/semantique1.png?width=500px)
 
-Imaginons qu'un ensemble de formules ne possèdent que deux variables $P$ et $Q$. On a alors 4 modèles différents possibles&nbsp;:
+Imaginons qu'un ensemble de formules ne possède que deux variables $P$ et $Q$. On a alors 4 modèles différents possibles&nbsp;:
 
 ![](/semantique2.png?width=1300px)
 
@@ -217,7 +217,7 @@ $\phi\equiv\psi$ ssi (pour tout modèle $\mathcal{M}$, $\mathcal{M}\models \phi\
 
 - **réflexive** : $\phi\equiv\phi$
 - **symétrique** : $\phi\equiv\psi$ ssi $\psi\equiv\phi$
-- **transitive** : Si ($\phi\equiv\psi$ et $\psi \equiv\theta$) alors $\psi\equiv\theta$
+- **transitive** : Si ($\phi\equiv\psi$ et $\psi \equiv\theta$) alors $\phi\equiv\theta$
 
 <p style="margin-top:-1em;">Donc il s'agit bien d'une <b>relation d'équivalence</b>.</p>
 
@@ -277,8 +277,8 @@ La notion de conséquence sémantique est la version sémantique de la notion de
 <div id="theo">
 <ul>
 <li>Si $\mathcal{T}$ est satisfaisable et $\mathcal{T'}\subseteq\mathcal{T}$, alors $\mathcal{T'}$ est également satisfaisable.<br>
-En restreignant une théorie, on conserve la non contradiction.<br>
-Le contraire n'est évidemment pas vrai. Si on étend une théorie (en ajoutant de nouvelles formules), on diminue le nombre de modèles qui la satisfait. Et on accroît ce nombre de modèles en enlevant des formules à la théorie, pour atteindre à la limite tous les modèles possibles lorsque la théorie devient vide.</li>
+En restreignant une théorie, on conserve la non-contradiction.<br>
+Le contraire n'est évidemment pas vrai. Si on étend une théorie (en ajoutant de nouvelles formules), on diminue le nombre de modèles qui la satisfont. Et on accroît ce nombre de modèles en enlevant des formules à la théorie, pour atteindre à la limite tous les modèles possibles lorsque la théorie devient vide.</li>
 
 <li>Si $\mathcal{T'}$ est inconsistante et $\mathcal{T'}\subseteq\mathcal{T}$, alors $\mathcal{T}$ est également inconsistante.<br>
 Étendre une théorie inconsistante ne peut pas la rendre satisfaisable.</li>
@@ -302,11 +302,11 @@ En d'autres termes, déduire $\phi\rightarrow\psi$ de nos hypothèses $\mathcal{
 
 <br>
 
-### Substitution de sous formules équivalentes
+### Substitution de sous-formules équivalentes
 
 <br>
 
-Dans une formule, **substituer** une sous-formule par une autre revient à retirer toutes la partie de l'arbre qui descend d'un nœud et la remplacer par un autre sous-arbre.
+Dans une formule, **substituer** une sous-formule par une autre revient à retirer toute la partie de l'arbre qui descend d'un nœud et la remplacer par un autre sous-arbre.
 
 Si la sous-formule "greffée" est équivalente à la sous-formule retirée, alors la nouvelle formule est équivalente à l'originale.
 
@@ -343,7 +343,7 @@ On utilise pour cela les deux substitutions suivantes&nbsp;:
 
 </div>
 
-Dans l'exemple suivant, on détermine une formule équivalente avec $\neg$ et $\lor$ comme seuls connecteurs logiques (et on élimine les doubles négations dans la dernière étape.
+Dans l'exemple suivant, on détermine une formule équivalente avec $\neg$ et $\lor$ comme seuls connecteurs logiques (et on élimine les doubles négations dans la dernière étape).
 
 ![](/gifsubstit.gif)
 
@@ -418,7 +418,7 @@ Prouvons-le par induction sur la hauteur de la formule $\phi$&nbsp;:<br>
     Le jeu d'évaluation impliquant $\psi$ est le même que celui impliquant $\phi$ à un changement de rôle près. Si $\psi$ est vraie, alors <b style="color:#1DB100">V</b> a une stratégie gagnante dans $\mathbb{E}v(\mathcal{M},\psi)$ (par hypothèse d'induction) et donc <b style="color:#EE220C">F</b> a une stratégie gagnante dans $\mathbb{E}v(\mathcal{M},\phi)$ (par la règle de changement de rôle). Une $\phi$ fausse donne bien une stratégie gagnante pour <b style="color:#EE220C">F</b>. Et inversement, une $\phi$ vraie donnera bien une stratégie gagnante pour <b style="color:#1DB100">V</b>.</li>
     <li> si $\phi=\psi_1\land\psi_2$, alors l'hypothèse d'induction opère sur $\psi_1$ et $\psi_2$.<br>
     Puisqu'on est sur un $\land$, les règles du jeu stipulent que c'est au tour de <b style="color:#EE220C">F</b> de jouer.<br>
-    $\phi$ vraie implique $\psi_1$ et $\psi_2$ vraie, ce qui donne une stratégie gagnante pour <b style="color:#1DB100">V</b> puisque les deux branches sont gagnantes. Et à l'inverse, si $\phi$ est fausse, cela implique qu'au moins une des sous-formules soit fausse et donc que <b style="color:#EE220C">F</b> dispose d'au moins une branche avec une stratégie gagnante ce qui assure que le nœud $\land$ est gagnant pour <b style="color:#EE220C">F</b>.</li>
+    $\phi$ vraie implique $\psi_1$ et $\psi_2$ vraies, ce qui donne une stratégie gagnante pour <b style="color:#1DB100">V</b> puisque les deux branches sont gagnantes. Et à l'inverse, si $\phi$ est fausse, cela implique qu'au moins une des sous-formules soit fausse et donc que <b style="color:#EE220C">F</b> dispose d'au moins une branche avec une stratégie gagnante ce qui assure que le nœud $\land$ est gagnant pour <b style="color:#EE220C">F</b>.</li>
     <li> si $\phi=\psi_1\lor\psi_2$, alors l'hypothèse d'induction opère sur $\psi_1$ et $\psi_2$.<br>
     C'est au tour de <b style="color:#1DB100">V</b> de jouer d'après les règles. Il n'a besoin que d'une branche gagnante pour rendre le nœud victorieux. Or si $\phi$ est vraie, c'est bien le cas&nbsp;: au moins une des sous-formules est vraie et donc au moins une branche victorieuse s'ouvre à <b style="color:#1DB100">V</b>.<br>
     Et une $\phi$ fausse implique que les deux sous-formules sont fausses aussi et donc victorieuses pour <b style="color:#EE220C">F</b>, ce qui donne le nœud $\lor$ à <b style="color:#EE220C">F</b>.</li>
@@ -485,7 +485,7 @@ $\phi\equiv \psi$ ssi $\phi\leftrightarrow\psi\equiv\top$
 <br>
 
 <div id="def">
-$\phi$ est une <b>contradiction</b> ssi $\phi$ est une tautologie. On note alors $\phi\equiv\bot$.
+$\phi$ est une <b>contradiction</b> ssi $\neg\phi$ est une tautologie. On note alors $\phi\equiv\bot$.
 </div>
 
 Une contradiction est fausse dans tout modèle. Elle n'a donc pas de modèle&nbsp;; une contradiction ne peut jamais avoir lieu.
@@ -615,7 +615,7 @@ Pour toute formule $\phi$, il existe une formule $\psi$ sous forme normale conjo
 <ul>
 <li>Preuve sémantique&nbsp;:</li>
 
-   On va construire une formule sur le modèle de celle ayant aboutit à la forme normale disjonctive mais on va maintenant supposer qu'on veut une formule $\psi$ qui soit vraie dans tout modèle à l'exception de certains.<br>
+   On va construire une formule sur le modèle de celle ayant abouti à la forme normale disjonctive mais on va maintenant supposer qu'on veut une formule $\psi$ qui soit vraie dans tout modèle à l'exception de certains.<br>
 Considérons $\set{\mathcal{M}\_i: i\in I}$ l'ensemble des modèles dans lesquels $\phi$ est fausse. Si l'ensemble est vide, $\phi$ est une tautologie et $\psi=\bigwedge_{1≤i≤k} (\bigvee_{1≤j≤n_i} P_{i,j})$ marche. Sinon, considérons pour chaque $i$ dans $I$, la formule&nbsp;:<br>
 <div style="overflow-x: auto;">
 
@@ -656,10 +656,10 @@ $
 </div>
 </blockquote>
 
-Et pour construire de la même manière une formule sous forme normale disjonctive, il suffit d'utiliser à la fin la distribution de la conjonction par rapport à la distribution puisqu'il s'agit cette fois-ci de faire descendre $\land$ dans l'arbre.
+Et pour construire de la même manière une formule sous forme normale disjonctive, il suffit d'utiliser à la fin la distribution de la conjonction par rapport à la disjonction puisqu'il s'agit cette fois-ci de faire descendre $\land$ dans l'arbre.
 
 {{%notice type="tip" round="true"%}}
-Sans stratégie, **tester la validité** d'une formule revient à vérifier sa véracité pour chaque combinaison des valeurs des variables, ce qui va dépendre exponentiellement du nombre de variables (ce qui devient vite impraticable). L'équivalence entre le tableau de vérité de la formule et sa forme normale conjonctive ($\phi=\bigwedge_{i}\phi_i$) permet un test syntaxique rapide de la validité. Pour vérifier que chaque $\phi_i$ est une tautologie, il suffit de s'assurer de la présence dans chaque $\phi_i=\bigvee_j P_j$ d'une couple contradictoire $P_j$ et $\neg P_j$.<br>
+Sans stratégie, **tester la validité** d'une formule revient à vérifier sa véracité pour chaque combinaison des valeurs des variables, ce qui va dépendre exponentiellement du nombre de variables (ce qui devient vite impraticable). L'équivalence entre le tableau de vérité de la formule et sa forme normale conjonctive ($\phi=\bigwedge_{i}\phi_i$) permet un test syntaxique rapide de la validité. Pour vérifier que chaque $\phi_i$ est une tautologie, il suffit de s'assurer de la présence dans chaque $\phi_i=\bigvee_j P_j$ d'un couple contradictoire $P_j$ et $\neg P_j$.<br>
 Et pour un **test de satisfiabilité**, la forme normale disjonctive $\phi=\bigvee_j \phi_i$ est plus adaptée. On va à nouveau tester la présence d'un couple de variables contradictoires dans les $\phi_i=\bigwedge_{j}P_j$. Si on revient bredouille pour au moins un $i$ alors la formule est satisfaisable.
 {{%/notice%}}
 
@@ -669,7 +669,7 @@ Et pour un **test de satisfiabilité**, la forme normale disjonctive $\phi=\bigv
 
 <br>
 
-Appelons $*$ un connecteur binaire quelconque. On a 4 modèles possibles à considérer et comme la valeur de $P\*Q$ dans chacun de ces modèles peut être soit vraie, soit fausse, cela fait en tout $4^2$ tables de vérité possibles et donc 16 connecteurs binaires différents&nbsp;:
+Appelons $*$ un connecteur binaire quelconque. On a 4 modèles possibles à considérer et comme la valeur de $P\*Q$ dans chacun de ces modèles peut être soit vraie, soit fausse, cela fait en tout $2^4$ tables de vérité possibles et donc 16 connecteurs binaires différents&nbsp;:
 
 <div style="overflow-x: auto;">
 <table id="tabcondit">
@@ -747,24 +747,24 @@ Imaginons par exemple que les variables propositionnelles de $\gamma$ soient $P_
 
 Construisons maintenant une formule $\phi$ vraie dans tous les modèles $\mathcal{M}\_i$ tels que $\mathcal{M}\_i \models \gamma$ en formant la disjonction des formules $\phi_{\mathcal{M}\_i}$&nbsp;: $\phi = \bigvee\_{1≤i≤n}\phi_{\mathcal{M}_i}$.
 
-$\phi$ est vraie dans un modèle possible de $\gamma$ si seulement si $\gamma$ est vraie dans ce modèle. On a donc bien $\phi\equiv\gamma$.
+$\phi$ est vraie dans un modèle possible de $\gamma$ si et seulement si $\gamma$ est vraie dans ce modèle. On a donc bien $\phi\equiv\gamma$.
 </div>
 <br>
 <div id="def">
-<p>Un ensemble de connecteurs est appelé <b>système complet de connecteurs</b> si pour toute formule $\phi \in \mathcal{F}$, il existe une formule $\gamma$ écrite seulement avec ces connecteurs et telle que $\phi\equiv\psi$.</p>
+<p>Un ensemble de connecteurs est appelé <b>système complet de connecteurs</b> si pour toute formule $\phi \in \mathcal{F}$, il existe une formule $\gamma$ écrite seulement avec ces connecteurs et telle que $\phi\equiv\gamma$.</p>
 
 <p>Ce système complet est dit <b>minimal</b> si tout ensemble plus petit de connecteurs n'est pas complet.</p>
 </div>
 
 
-On a déjà montré que toute formule du calcul des propositions peut s'écrire avec uniquement les connecteurs $\set{\neg,\lor\land\rightarrow,\leftrightarrow}$ et plus avant, on a vu qu'on pouvait écrire les autres connecteurs à partir de $\set{\neg,\lor}$ ou de $\set{\neg,\land}$.
+On a déjà montré que toute formule du calcul des propositions peut s'écrire avec uniquement les connecteurs $\set{\neg,\lor,\land,\rightarrow,\leftrightarrow}$ et plus avant, on a vu qu'on pouvait écrire les autres connecteurs à partir de $\set{\neg,\lor}$ ou de $\set{\neg,\land}$.
 
 
 <div id="theo">
-$\set{\neg,\lor,\land\rightarrow,\leftrightarrow}$, $\set{\neg,\lor}$ et $\set{\neg,\land}$ sont donc des systèmes complets de connecteurs.
+$\set{\neg,\lor,\land,\rightarrow,\leftrightarrow}$, $\set{\neg,\lor}$ et $\set{\neg,\land}$ sont donc des systèmes complets de connecteurs.
 </div>
 
-On voit tout de suite que $\set{\neg,\lor,\land\rightarrow,\leftrightarrow}$ n'est pas minimal mais qu'en est-il pour les deux autres&nbsp;?
+On voit tout de suite que $\set{\neg,\lor,\land,\rightarrow,\leftrightarrow}$ n'est pas minimal mais qu'en est-il pour les deux autres&nbsp;?
 
 <div id="theo">
 $\set{\neg,\lor}$ et $\set{\neg,\land}$ sont des systèmes complets minimaux de connecteurs.
@@ -781,7 +781,7 @@ $\set{\neg,\lor}$ et $\set{\neg,\land}$ sont des systèmes complets minimaux de 
 <li>si $R\not = P,Q$, on considère n'importe quel modèle où $R$ est fausse et $P$ est vraie pour aboutir à une contradiction.</li>
 </ul>
 </li>
-<li> $\set{\neg}$ : dans ce cas les formules s'écrivent $\neg\cdots\neg R $. Si elle contient un nombre pair de négations, on retombe sur le cas précédent, sinon il suffit de trouver une formule du calcul des propositions qui ne puisse pas être équivalente à $\neg R$.  Et $P\lor Q$ convient à nouveau. Raisonnons par l'absurde en supposant que $\neg R\equiv P\lor Q$&nbsp;:&nbsp;:
+<li> $\set{\neg}$ : dans ce cas les formules s'écrivent $\neg\cdots\neg R $. Si elle contient un nombre pair de négations, on retombe sur le cas précédent, sinon il suffit de trouver une formule du calcul des propositions qui ne puisse pas être équivalente à $\neg R$.  Et $P\lor Q$ convient à nouveau. Raisonnons par l'absurde en supposant que $\neg R\equiv P\lor Q$&nbsp;:
 <ul>
 <li>si $R=P$, il suffit d'un modèle où $P$ est vraie pour aboutir à une contradiction.</li>
 <li>si $R=Q$, il suffit d'un modèle où $Q$ est vraie pour aboutir à une contradiction.</li>
