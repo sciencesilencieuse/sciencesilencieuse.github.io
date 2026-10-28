@@ -270,25 +270,25 @@ $\displaystyle
 $
 </p>
 
-<b>L'intégration spatial</b><br>
+<b>L'intégration spatiale</b><br>
 Nous devons maintenant multiplier $\hat\psi^\dagger$ par $\mathrm{i}\partial_0 \hat\psi$ et intégrer sur le volume $\mathrm{d}^3x$. Ce produit génère 4 termes (deux directs et deux croisés).<br>
 L'intégrale spatiale n'agit que sur les parties spatiales des exponentielles complexes, $\mathrm{e}^{\pm\mathrm{i}\boldsymbol p \cdot \boldsymbol x}$. En utilisant l'identité de Fourier $\int \mathrm{d}^3x \\, \mathrm{e}^{\mathrm{i}(\boldsymbol p - \boldsymbol q)\cdot\boldsymbol x} = (2\pi)^3\delta^{(3)}(\boldsymbol p - \boldsymbol q)$, cette intégrale s'effondre de façon très propre. Les $(2\pi)^3$ de la fonction delta annulent exactement les facteurs $(2\pi)^{3/2}$ aux dénominateurs de nos deux intégrales de départ.
 
 Regardons les termes&nbsp;:
 <ul style="margin-top:-0.5em; margin-bottom:1em;">
-<li>Terme $\hat a^\dagger \hat a$ : Produit les exponentielles $\mathrm{e}^{\mathrm{i}\boldsymbol q\cdot\boldsymbol x}\mathrm{e}^{-\mathrm{i}\boldsymbol p\cdot\boldsymbol x}$. L'intégrale donne $\delta^{(3)}(\boldsymbol p - \boldsymbol q)$. Cela force $\boldsymbol q = \boldsymbol p$.</li>
-<li>Terme $\hat b \hat b^\dagger$ : Produit les exponentielles $\mathrm{e}^{-\mathrm{i}\boldsymbol q\cdot\boldsymbol x}\mathrm{e}^{\mathrm{i}\boldsymbol p\cdot\boldsymbol x}$. L'intégrale donne aussi $\delta^{(3)}(\boldsymbol p - \boldsymbol q)$. Force $\boldsymbol q = \boldsymbol p$.</li>
-<li>Termes croisés ($\hat a^\dagger \hat b^\dagger$ et $\hat b \hat a$) : Ils produisent respectivement $\delta^{(3)}(\boldsymbol p + \boldsymbol q)$. Ils forcent $\boldsymbol q = -\boldsymbol p$.</li>
+<li>Terme $\hat a^\dagger \hat a$&nbsp;: produit les exponentielles $\mathrm{e}^{\mathrm{i}\boldsymbol q\cdot\boldsymbol x}\mathrm{e}^{-\mathrm{i}\boldsymbol p\cdot\boldsymbol x}$. L'intégrale donne $\delta^{(3)}(\boldsymbol p - \boldsymbol q)$. Cela force $\boldsymbol q = \boldsymbol p$.</li>
+<li>Terme $\hat b \hat b^\dagger$&nbsp;: produit les exponentielles $\mathrm{e}^{-\mathrm{i}\boldsymbol q\cdot\boldsymbol x}\mathrm{e}^{\mathrm{i}\boldsymbol p\cdot\boldsymbol x}$. L'intégrale donne aussi $\delta^{(3)}(\boldsymbol p - \boldsymbol q)$. Cela force $\boldsymbol q = \boldsymbol p$.</li>
+<li>Termes croisés ($\hat a^\dagger \hat b^\dagger$ et $\hat b \hat a$)&nbsp;: ils produisent respectivement $\delta^{(3)}(\boldsymbol p + \boldsymbol q)$. Ils forcent $\boldsymbol q = -\boldsymbol p$.</li>
 </ul>
 
 <b>L'application de l'orthogonalité des spineurs</b><br>
-Grâce aux fonctions delta, l'intégrale sur $\mathrm{d}^3q$ disparaît (puisqu'on évalue tout en $\boldsymbol q = \pm\boldsymbol p$). L'énergie devient $E_{\boldsymbol q} = E_{\boldsymbol p}$, et les racines carrées au dénominateur se combinent : $\sqrt{2E_{\boldsymbol p}}\sqrt{2E_{\boldsymbol p}} = 2E_{\boldsymbol p}$.
+Grâce aux fonctions delta, l'intégrale sur $\mathrm{d}^3q$ disparaît (puisqu'on évalue tout en $\boldsymbol q = \pm\boldsymbol p$). L'énergie devient $E_{\boldsymbol q} = E_{\boldsymbol p}$, et les racines carrées au dénominateur se combinent&nbsp;: $\sqrt{2E_{\boldsymbol p}}\sqrt{2E_{\boldsymbol p}} = 2E_{\boldsymbol p}$.
 
 Voyons ce qu'il reste de nos 4 termes. Comme l'objet manipulé est $\hat\psi^\dagger \ldots \hat\psi$ et non $\hat{\bar\psi}\ldots\hat\psi$, ce sont les <b>relations hermitiennes</b> du chapitre précédent qui s'appliquent, et non les relations barrées&nbsp;: $u^{r\dagger}u^s = v^{r\dagger}v^s = 2E_{\boldsymbol p}\delta^{rs}$, et $u^{r\dagger}(\tilde p)v^s(p) = 0$ pour des impulsions spatialement opposées.
 <ul style="margin-top:-0.5em; margin-bottom:1em;">
-<li>Termes croisés ($\hat a^\dagger \hat b^\dagger$ et $\hat b \hat a$) : Puisque $\boldsymbol q = -\boldsymbol p$, ils font intervenir $u^{r\dagger}(\tilde p)\,v^s(p)$ (et son symétrique), qui est <b>nul</b> par la troisième relation hermitienne. Les termes croisés disparaissent&nbsp;! C'est précisément le cas de figure pour lequel cette relation avait été établie.</li>
-<li>Terme $\hat a^\dagger \hat a$ : Le temps s'annule des exponentielles ($\mathrm{e}^{\mathrm{i}E_{\boldsymbol p}t}\mathrm{e}^{-\mathrm{i}E_{\boldsymbol p}t} = 1$). Il reste $u^{r\dagger}(p) u^s(p) = 2E_{\boldsymbol p}\delta_{rs}$.</li>
-<li>Terme $\hat b \hat b^\dagger$ : Là encore, le temps s'annule, et il reste $v^{r\dagger}(p) v^s(p) = 2E_{\boldsymbol p}\delta_{rs}$, <b>positif lui aussi</b>, et c'est ici que le basculement de signe entre $\bar v v = -2m$ et $v^\dagger v = +2E_{\boldsymbol p}$ prend toute son importance. Attention en revanche à ne pas oublier le signe moins gardé depuis la dérivée temporelle&nbsp;!</li>
+<li>Termes croisés ($\hat a^\dagger \hat b^\dagger$ et $\hat b \hat a$)&nbsp;: puisque $\boldsymbol q = -\boldsymbol p$, ils font intervenir $u^{r\dagger}(\tilde p)\,v^s(p)$ (et son symétrique), qui est <b>nul</b> par la troisième relation hermitienne. Les termes croisés disparaissent&nbsp;! C'est précisément le cas de figure pour lequel cette relation avait été établie.</li>
+<li>Terme $\hat a^\dagger \hat a$&nbsp;: le temps s'annule des exponentielles ($\mathrm{e}^{\mathrm{i}E_{\boldsymbol p}t}\mathrm{e}^{-\mathrm{i}E_{\boldsymbol p}t} = 1$). Il reste $u^{r\dagger}(p) u^s(p) = 2E_{\boldsymbol p}\delta_{rs}$.</li>
+<li>Terme $\hat b \hat b^\dagger$&nbsp;: là encore, le temps s'annule, et il reste $v^{r\dagger}(p) v^s(p) = 2E_{\boldsymbol p}\delta_{rs}$, <b>positif lui aussi</b>, et c'est ici que le basculement de signe entre $\bar v v = -2m$ et $v^\dagger v = +2E_{\boldsymbol p}$ prend toute son importance. Attention en revanche à ne pas oublier le signe moins gardé depuis la dérivée temporelle&nbsp;!</li>
 </ul>
 
 En insérant cela, le facteur $2E_{\boldsymbol p}$ du numérateur s'annule avec celui du dénominateur. Le $\delta_{rs}$ écrase la double somme sur les spins $r, s$  en une somme simple sur $s$. Il nous reste cette expression brute pour l'énergie&nbsp;:
@@ -300,10 +300,10 @@ $
 </p>
 
 <b>L'ordre normal (le retournement du signe)</b><br>
-Si l'on s'arrête ici, la théorie a un problème gigantesque : le terme $-\hat b\hat b^\dagger$ signifie que les antiparticules contribuent à l'énergie globale avec un signe négatif. Plus on créerait d'antiparticules, plus l'énergie du système s'effondrerait vers l'infini négatif&nbsp;!
+Si l'on s'arrête ici, la théorie a un problème gigantesque&nbsp;: le terme $-\hat b\hat b^\dagger$ signifie que les antiparticules contribuent à l'énergie globale avec un signe négatif. Plus on créerait d'antiparticules, plus l'énergie du système s'effondrerait vers l'infini négatif&nbsp;!
 
-C'est ici qu'intervient l'ordre normal fermionique (noté $: \dots :$ ). La prescription de l'ordre normal dicte que pour extraire la partie physiquement mesurable d'un opérateur, il faut déplacer tous les opérateurs de création ($\dagger$) à gauche des opérateurs d'annihilation.<br>
-Cependant, comme nos opérateurs obéissent à des règles d'anticommutation $\\{\hat b, \hat b^\dagger\\} = \delta$ , échanger l'ordre de deux opérateurs fermioniques génère un signe moins&nbsp;:
+C'est ici qu'intervient l'ordre normal fermionique (noté $: \dots :$). La prescription de l'ordre normal dicte que pour extraire la partie physiquement mesurable d'un opérateur, il faut déplacer tous les opérateurs de création ($\dagger$) à gauche des opérateurs d'annihilation.<br>
+Cependant, comme nos opérateurs obéissent à des règles d'anticommutation $\\{\hat b, \hat b^\dagger\\} = \delta$, échanger l'ordre de deux opérateurs fermioniques génère un signe moins&nbsp;:
 
 <p style="text-align:center;">
 $\displaystyle
@@ -331,7 +331,7 @@ $\displaystyle
 $
 </p>
 
-L'énergie de toute particule comme de toute antiparticule est désormais strictement positive !
+L'énergie de toute particule comme de toute antiparticule est désormais strictement positive&nbsp;!
 
 </details>
 
@@ -942,7 +942,7 @@ Légende : « La symétrie ne donne pas seulement une charge conservée : promue
 <img src="/orgaqed.png" style="box-shadow:none;background:none;">
 </div>
 
-Le schéma résume la situation, et sa forme importe autant que son contenu. Deux chemins partent de la même boîte, «&nbsp;symétrie globale&nbsp;»&nbsp;: l'un horizontal, celui de Noether, qui mène à la charge conservée&nbsp;; l'autre vertical, celui de la promotion en symétrie locale. **Et les deux se rejoignent sur la boîte «&nbsp;interaction&nbsp;»**, parce qu'il faut les deux pour l'obtenir : la symétrie locale fournit la <i>forme</i> du couplage, $-J^\mu A_\mu$, et le courant de Noether fournit l'<i>objet</i> qu'on y branche.
+Le schéma résume la situation, et sa forme importe autant que son contenu. Deux chemins partent de la même boîte, «&nbsp;symétrie globale&nbsp;»&nbsp;: l'un horizontal, celui de Noether, qui mène à la charge conservée&nbsp;; l'autre vertical, celui de la promotion en symétrie locale. **Et les deux se rejoignent sur la boîte «&nbsp;interaction&nbsp;»**, parce qu'il faut les deux pour l'obtenir&nbsp;: la symétrie locale fournit la <i>forme</i> du couplage, $-J^\mu A_\mu$, et le courant de Noether fournit l'<i>objet</i> qu'on y branche.
 
 C'est cette confluence qui fait la force du principe de jauge, et c'est elle qu'il faut retenir du chapitre.
 
@@ -1214,7 +1214,7 @@ où $Q$ est la charge de la particule en unités de $|e|$ ($Q = -1$ pour l'élec
 
 #### Un seul vertex
 
-Ce terme d'interaction ne contient que <b>trois</b> champs, $\hat{\bar\psi}$, $\hat\psi$ et $\hat A_\mu$. Or dans la série de Dyson, chaque ordre apporte un facteur $\hat{\mathcal H}_{\mathrm I}$, et chacun de ces facteurs doit voir ses trois champs contractés avec le reste du diagramme. **Chaque point d'interaction porte donc exactement trois lignes** : une ligne fermionique qui entre, une qui sort, une ligne de photon. Il n'y a pas d'autre possibilité, parce qu'il n'y a pas d'autre terme.
+Ce terme d'interaction ne contient que <b>trois</b> champs, $\hat{\bar\psi}$, $\hat\psi$ et $\hat A_\mu$. Or dans la série de Dyson, chaque ordre apporte un facteur $\hat{\mathcal H}_{\mathrm I}$, et chacun de ces facteurs doit voir ses trois champs contractés avec le reste du diagramme. **Chaque point d'interaction porte donc exactement trois lignes**&nbsp;: une ligne fermionique qui entre, une qui sort, une ligne de photon. Il n'y a pas d'autre possibilité, parce qu'il n'y a pas d'autre terme.
 
 Et il n'y a pas d'autre terme parce que nous ne l'avons pas choisi&nbsp;: le principe de jauge l'a <b>dicté</b>. Reste à vérifier que rien d'autre ne pouvait s'y glisser.
 
