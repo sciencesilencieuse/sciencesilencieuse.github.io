@@ -34,13 +34,13 @@ hidden = false
 
 
 {{%notice type="note" round="true"%}}
-Cette page est *très* inspirée du livre *Chases and Escapes The Mathematics of Pursuit and Evasion* de Paul Nahin.
+Cette page est *très* inspirée du livre *Chases and Escapes: The Mathematics of Pursuit and Evasion* de Paul Nahin.
 {{%/notice%}}
 
 
 ## Paradoxe d'Achille et de la tortue
 
-Dans *La Physique*, Aristote rapporte les célèbres paradoxes de Zénon d'Élée dont celui d'Achille et la tortue.&nbsp;:
+Dans *La Physique*, Aristote rapporte les célèbres paradoxes de Zénon d'Élée dont celui d'Achille et de la tortue&nbsp;:
 
 > Celui qui court le plus lentement ne sera jamais rattrapé par le plus rapide. Car le poursuivant doit d'abord atteindre le point d'où est parti le poursuivi, si bien que le plus lent doit toujours avoir une longueur d'avance.
 
@@ -51,9 +51,9 @@ Dans *La Physique*, Aristote rapporte les célèbres paradoxes de Zénon d'Élé
 
  Le but de Zénon d'Élée était de prouver l'impossibilité même du mouvement en piégeant le concept avec ces histoires d'infini. 
  
- Réussir à imaginer que la somme d'un nombre infini de termes positifs puisse donner un résultat fini constitua une montagne mathématique qu'on mis très longtemps à gravir.
+ Réussir à imaginer que la somme d'un nombre infini de termes positifs puisse donner un résultat fini constitua une montagne mathématique qu'on a mis très longtemps à gravir.
  
-Ajourd'hui, on sait que ce type de série géométrique converge si sa raison est comprise dans $]-1;1[$. Et dans notre exemple, comme l'illustre l'animation ci-dessous, la série converge pour donner $2T$.
+Aujourd'hui, on sait que ce type de série géométrique converge si sa raison est comprise dans $]-1;1[$. Et dans notre exemple, comme l'illustre l'animation ci-dessous, la série converge pour donner $2T$.
 
 ![](/gifserieconv.gif)
 
@@ -61,7 +61,7 @@ Ajourd'hui, on sait que ce type de série géométrique converge si sa raison es
 
 ## Courbe de poursuite
 
-Ok, on peut rattraper la tortue, mais comment faire en pratique si on devait programmer Achille en supposant que les deux démarrent dans les poitions notées ci-dessous&nbsp;?
+Ok, on peut rattraper la tortue, mais comment faire en pratique si on devait programmer Achille en supposant que les deux démarrent dans les positions notées ci-dessous&nbsp;?
 
 - Le plus rapidement&nbsp;: calculer la direction de la ligne droite à suivre permettant d'intercepter la tortue.
 - Le plus simple&nbsp;: toujours orienter son vecteur vitesse (la direction de son mouvement) vers la cible.
@@ -79,7 +79,7 @@ Comme l'explique le manuel, si un poursuivant se dirige en permanence vers sa ci
 Si on voulait déterminer analytiquement l'équation de cette courbe, on poserait que&nbsp;: 
 - la pente $p(x)$ de la trajectoire du chasseur est donnée par $\displaystyle p(x)=\frac{dy}{dx}=\frac{y-V_{cible}t}{x-x_0}$ d'après le schéma ci-dessous.
 ![](/schemapoursuite.png?width=400px)
-- et le chasseur parcours en un temps $t$ le morceau de trajectoire compris enntre $0$ et $x$&nbsp;: $\displaystyle V_{chasseur} t = \int_0^x \sqrt{1+\left(\frac{dy}{dx'}\right)^2}dx' = \int_0^x \sqrt{1+p(x')^2}dx' $  
+- et le chasseur parcourt en un temps $t$ le morceau de trajectoire compris entre $0$ et $x$&nbsp;: $\displaystyle V_{chasseur} t = \int_0^x \sqrt{1+\left(\frac{dy}{dx'}\right)^2}dx' = \int_0^x \sqrt{1+p(x')^2}dx' $  
 
 En résolvant pour $t$, on obtient $\displaystyle \frac{1}{V_{chasseur}}\int_0^x\sqrt{1+p(x')^2}dx' = \frac{y}{V_{cible}}-p(x)\frac{(x-x_0)}{V_{cible}}$
 
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <br>
 
-Et dans ce deuxième programme, on prend le point de vue du passager de l'avion cible pour confirmer la mise-en-garde du manuel&nbsp;; si le chasseur semble glisser dans le ciel tout en grossissant, ça n'est pas bon signe...<br>
+Et dans ce deuxième programme, on prend le point de vue du passager de l'avion cible pour confirmer la mise en garde du manuel&nbsp;; si le chasseur semble glisser dans le ciel tout en grossissant, ça n'est pas bon signe...<br>
 
 <br>
 
@@ -243,9 +243,9 @@ Arrêtons maintenant de poursuivre bêtement et essayons d'intercepter.
 
 ![](/appollonius.png?width=400px)
 
-Supposons que le chasseur est en $A$ à $t=0$ et que la cible est en $B$ au même instant et supposons aussi qu'ils ont chacun un mouvement rectiligne uniforme (à $v_{chasseur}$ et $v_{cible}$). À quelle condition le chasseur intercepte-t-il la cible au point $I$&nbsp;?
+Supposons que le chasseur soit en $A$ à $t=0$ et que la cible soit en $B$ au même instant et supposons aussi qu'ils aient chacun un mouvement rectiligne uniforme (à $v_{chasseur}$ et $v_{cible}$). À quelle condition le chasseur intercepte-t-il la cible au point $I$&nbsp;?
 
-Il faut que le ratio des distances et des vitesses soient les mêmes&nbsp;: $\displaystyle \frac{BI}{AI}=\frac{v_{cible}}{v_{chasseur}}=n$.<br>
+Il faut que les rapports des distances et des vitesses soient les mêmes&nbsp;: $\displaystyle \frac{BI}{AI}=\frac{v_{cible}}{v_{chasseur}}=n$.<br>
 Les points $I$ solutions doivent donc vérifier&nbsp;: $\displaystyle \frac{\sqrt{(x-p)^2+y^2}}{\sqrt{(x-m)^2+y^2}}=n$.
 
 Cela donne l'équation d'un cercle, le **cercle d'Apollonius**&nbsp;: $\displaystyle \left[x-\frac{n^2 m-p}{n^2-1}\right]^2 + y^2 = \left[\frac{n(p-m)}{1-n^2}\right]^2$.<br>
@@ -281,7 +281,7 @@ window.addEventListener('resize', adjustIframeHeight);
 
 <br>
 
-On remarque que même si la cible va plus vite que le chasseur $n>1$, il peut y avoir interseption (et pour deux directions différentes du chasseur). Mais pour cela, l'angle $\theta$ de la direction de la cible ne doit pas être supérieur à $\displaystyle \sin^{-1}\left(\frac{v_{chasseur}}{v_{cible}}\right)$.
+On remarque que même si la cible va plus vite que le chasseur $n>1$, il peut y avoir interception (et pour deux directions différentes du chasseur). Mais pour cela, l'angle $\theta$ de la direction de la cible ne doit pas être supérieur à $\displaystyle \sin^{-1}\left(\frac{v_{chasseur}}{v_{cible}}\right)$.
 
 En effet, la situation limite correspond à une direction de la cible tangente au cercle d'Apollonius (voir dessin ci-dessous).
 
@@ -293,7 +293,7 @@ On a bien $\displaystyle \sin\theta = \frac{CI}{CB} = \frac{\frac{n(p-m)}{n^2-1}
 
 ## Manœuvre d'évitement de l'Enola Gay
 
-Juste après avoir lâcher sa terrible bombe sur Hiroshima, l'Enola Gay a manœuvré pour tenter d'éviter au maximum le souffle de l'explosion atomique.
+Juste après avoir lâché sa terrible bombe sur Hiroshima, l'Enola Gay a manœuvré pour tenter d'éviter au maximum le souffle de l'explosion atomique.
 
 Le B-29 avait une vitesse de $\pu{529 km/h}$ par rapport au sol au moment du largage de la bombe. Sachant que l'explosion a eu lieu après une chute de $\pu{19700 ft}$, soit $\pu{9,053 km}$, on peut en déduire le délai entre le largage et l'explosion&nbsp;: dans l'hypothèse d'une chute libre (poids comme seule force), la distance verticale parcourue est donnée par $h=\frac{1}{2}gt^2$, d'où $t=\sqrt{\frac{2h}{g}}\approx\pu{43 s}$. C'est en accord avec la valeur généralement admise. Le pilote a donc environ 43 secondes pour s'éloigner le plus possible de la zone d'impact. 
 
@@ -301,11 +301,11 @@ Le B-29 avait une vitesse de $\pu{529 km/h}$ par rapport au sol au moment du lar
 
 Pendant ces 43 secondes, la bombe continue d'avancer horizontalement à la vitesse de l'avion au moment du largage, ce qui donne une distance parcourue de $\pu{6,3 km}$. Le pilote parle plutôt d'une distance horizontale de 3,5 mi, soit $\pu{5,6 km}$. Vu la forme de la bombe, cela paraît logique que son mouvement horizontal soit plus impacté par les frottements que son mouvement vertical.
 
-Au moment du largage, le pilote va évidemment chercher à séloigner le plus possible de la future explosion. Pour cela il entreprend immédiatement un virage à pleine vitesse (350 mph par rapport à l'air, soit $\pu{563 km/h}$) en braquant ses ailes à un angle $\alpha = 60^\circ$.
+Au moment du largage, le pilote va évidemment chercher à s'éloigner le plus possible de la future explosion. Pour cela il entreprend immédiatement un virage à pleine vitesse (350 mph par rapport à l'air, soit $\pu{563 km/h}$) en braquant ses ailes à un angle $\alpha = 60^\circ$.
 
 ![](/enola3.png?width=500px)
 
-Si le B-29 tourne, c'est grâce à l'inclinaison de la force de portance $\vec{L}$, perpendiculaire aux ailles. On va supposer que la trajectoire pendant le virage est circulaire de rayon $R$ et que la vitesse $v$ de l'avion par rapport à l'air reste constante. L'accélération est alors horizontale et purement centripète et  vaut $\displaystyle a = \frac{v^2}{R}$.
+Si le B-29 tourne, c'est grâce à l'inclinaison de la force de portance $\vec{L}$, perpendiculaire aux ailes. On va supposer que la trajectoire pendant le virage est circulaire de rayon $R$ et que la vitesse $v$ de l'avion par rapport à l'air reste constante. L'accélération est alors horizontale et purement centripète et  vaut $\displaystyle a = \frac{v^2}{R}$.
 
 
 Le PFD (2<sup>e</sup> loi de Newton) appliqué à l'avion nous dit que&nbsp;: $\displaystyle\vec{P}+\vec{L} = m\vec{a}$.<br>
@@ -318,11 +318,11 @@ Et puisque $\displaystyle a=\frac{v^2}{R}$, on obtient&nbsp;: $\displaystyle R =
 
 ![](/enola2.png?width=600px)
 
-Il nous reste à trouver quand quitter le virage. $(AH)$ et $(HB)$ sont tangentes au cercle formé et $AH=AB$. Les triangles $HBC$ et $HAC$ sont donc identiques impliquant l'égalité des angles $\widehat{HCB}$ et $\widehat{HCA}$ ($\beta$ sur le schéma). Le bombardier quitte le virage au bout d'une déviation de $2\beta$ où $\beta = \arctan\left(\frac{AH}{R}\right)=\arctan(5,6/1,4)$. Cela donne une déviation totale $2\beta$ d'environ $152^\circ$.
+Il nous reste à trouver quand quitter le virage. $(AH)$ et $(HB)$ sont tangentes au cercle formé et $HA=HB$. Les triangles $HBC$ et $HAC$ sont donc identiques impliquant l'égalité des angles $\widehat{HCB}$ et $\widehat{HCA}$ ($\beta$ sur le schéma). Le bombardier quitte le virage au bout d'une déviation de $2\beta$ où $\beta = \arctan\left(\frac{AH}{R}\right)=\arctan(5,6/1,4)$. Cela donne une déviation totale $2\beta$ d'environ $152^\circ$.
 
 La distance parcourue sur le cercle vaut alors $\frac{2\beta}{360}\times 2\pi R \approx \pu{3,7 km}$ et le temps pour la parcourir vaut $3,7/545\times 3600 = \pu{24 s}$. Pour la vitesse de l'avion, on fait une moyenne entre la vitesse de l'avion par rapport au sol au moment du largage et sa vitesse par rapport à l'air. Il reste alors $43-24=\pu{19 s}$ pour s'éloigner à tout berzingue avant que la bombe n'explose. Le bombardier sera alors à une distance $d=5,6+545\times 19/3600 \approx \pu{8,5 km}$.
 
-Au bout de combien de temps sera-t-il touché par le souffle de l'explosion, et à quelle distance de l'impact sera-t-il alors&nbsp;? Supposons une onde de choc se déplaçant à $v_c$ d'environ $\pu{1300 km/h}$ (un peu plus rapide que le son) et appelons $t_i$ le temps au bout duquel le souffle rattrape le bombardier (de vitesse $v_b = \pu{545 km/h}$). N'oublions pas que le bombardier est à la  hauteur $h$ par rapport au point d'impact ($\approx\pu{9,1 km}$) au-dessus du point d'impact. Pythagore donne alors&nbsp;: $(v_c\times t_i)^2 = (d+v_b\times t_i)^2+h^2$. La solution positive de ce trinôme du second degré en $t_i$ est $\pu{0,0144 h}$ soit $\pu{52 s}$ environ. Le pilote parle plutôt d'un délai de $\pu{45 s}$ après la détonation et d'une distance de $\pu{11,5 mi}$ au point d'impact. Si notre résultat surestime le délai, il donne une distance à l'impact de $0,0144\times 1300 \approx \pu{18,7 km} = \pu{11,6 mi}$. L'accord n'est pas mauvais.
+Au bout de combien de temps sera-t-il touché par le souffle de l'explosion, et à quelle distance de l'impact sera-t-il alors&nbsp;? Supposons une onde de choc se déplaçant à $v_c$ d'environ $\pu{1300 km/h}$ (un peu plus rapide que le son) et appelons $t_i$ le temps au bout duquel le souffle rattrape le bombardier (de vitesse $v_b = \pu{545 km/h}$). N'oublions pas que le bombardier est à la hauteur $h$ ($\approx\pu{9,1 km}$) au-dessus du point d'impact. Pythagore donne alors&nbsp;: $(v_c\times t_i)^2 = (d+v_b\times t_i)^2+h^2$. La solution positive de ce trinôme du second degré en $t_i$ est $\pu{0,0144 h}$ soit $\pu{52 s}$ environ. Le pilote parle plutôt d'un délai de $\pu{45 s}$ après la détonation et d'une distance de $\pu{11,5 mi}$ au point d'impact. Si notre résultat surestime le délai, il donne une distance à l'impact de $0,0144\times 1300 \approx \pu{18,7 km} = \pu{11,6 mi}$. L'accord n'est pas mauvais.
 
 ![](/enolapoursuite.gif)
 
@@ -388,17 +388,17 @@ Et la distance parcourue vaut donc $\displaystyle D = \frac{r(0)}{ \sin(\pi/n)}$
 
 ![](/tortuecarre.png?width=500px)
 
-Dans le cas d'un carré, les expressions deviennnent encore plus simples&nbsp;:
+Dans le cas d'un carré, les expressions deviennent encore plus simples&nbsp;:
 
 $\displaystyle r(\theta) = r(0)\exp\left(-\theta \right)$
 
 Et $\displaystyle D = r(0)\frac{\sqrt{2}}{2} = a$, en appelant $a$ le côté du carré. Donc le long de leur spirale, les tortues parcourent au final la longueur d'un côté du carré initial.
 
-On peut expliquer ça simplement par le fait que la **vitesse relative** entre deux tortues restent en permanence identique à $v$ puisque leurs vecteurs vitesse sont à tout moment orthogonaux.
+On peut expliquer ça simplement par le fait que la **vitesse relative** entre deux tortues reste en permanence identique à $v$ puisque leurs vecteurs vitesse sont à tout moment orthogonaux.
 
 <br>
 
-On peut s'amuser à combiner les poursuites pour faire des jolies figures... Ci-dessous, on assemblé 6 poursuites à 3 tortues pour former un hexagone.
+On peut s'amuser à combiner les poursuites pour faire de jolies figures... Ci-dessous, on a assemblé 6 poursuites à 3 tortues pour former un hexagone.
 
 ![](/nbugspurs2.png?width=1000px)
 
@@ -419,7 +419,7 @@ On peut s'amuser à combiner les poursuites pour faire des jolies figures... Ci-
 
 <br>
 
-Comme le montre cette très chouette vidéo de fouloscopie, nos histoires de poursuite participent à l'explication des comportements collectifs fascinants des bancs de possions ou des murmurations d'étourneaux. Un poisson (ou oiseau) ne ferait en fait que poursuivre les quelques individus immédiatement dans son champ de vision.
+Comme le montre cette très chouette vidéo de fouloscopie, nos histoires de poursuite participent à l'explication des comportements collectifs fascinants des bancs de poissons ou des murmurations d'étourneaux. Un poisson (ou oiseau) ne ferait en fait que poursuivre les quelques individus immédiatement dans son champ de vision.
 
 Le code suivant utilise les 6 premiers voisins et permet de voyager un peu dans le diagramme de phase.
 

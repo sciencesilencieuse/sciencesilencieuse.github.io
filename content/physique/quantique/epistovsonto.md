@@ -34,7 +34,7 @@ hidden = false
 </style>
 
 
-# Épistémique vs. ontiques
+# Épistémique vs. ontique
 
 En mécanique quantique, l’évolution d’un système isolé est **unitaire**, c’est‑à‑dire décrite par un opérateur qui conserve la norme (ou la probabilité totale) du vecteur d’état ; cette dynamique, entièrement **déterministe**, est gouvernée par l’**équation de Schrödinger**. 
 
@@ -78,7 +78,7 @@ L'état quantique représente alors notre connaissance (incomplète) de cette r�
 
 [^2]: Le [**modèle jouet de Spekkens**](./spekkens) illustre ça très bien.
 
-Supposons qu'une théorie ou modèle associe au système une propriété physique $\lambda$ (la réalité) qui détermine la probabilité des différents résultats obtenus lors de la mesure du système. $\lambda$ est la variable cachée d'Einstein.<br>
+Supposons qu'une théorie ou un modèle associe au système une propriété physique $\lambda$ (la réalité) qui détermine la probabilité des différents résultats obtenus lors de la mesure du système. $\lambda$ est la variable cachée d'Einstein.<br>
 La théorie quantique va, elle, associer un état quantique $|\psi\rangle$ à un système préparé d'une certaine façon. Mais l'état physique $\lambda$ n'est pas nécessairement fixé de manière unique par la préparation qui a produit $|\psi\rangle$. On dira que la préparation a produit un état physique $\lambda$ selon une distribution de probabilité $\mu_\psi(\lambda)$.<br>
 
 <div style="position:relative;margin-left:auto;margin-right:auto;width:800px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
@@ -87,7 +87,7 @@ La théorie quantique va, elle, associer un état quantique $|\psi\rangle$ à un
 
 
 Supposons maintenant que pour toute paire d'états quantiques $|\psi_1\rangle$ et $|\psi_2\rangle$, les distributions $\mu_1(\lambda)$ et $\mu_2(\lambda)$ ne se recouvrent jamais. L'état quantique $|\psi\rangle$ peut alors être inféré de manière unique à partir de l'état physique du système. Ça définit bien au final une "propriété physique" pour l'état quantique (puisqu'il y a une correspondance un pour un entre état quantique et propriété physique $\lambda\leftrightarrow\psi$). C'est la vision ψ-ontique.<br>
-À l'inverse, s'il y a recouvrement pour au moins une paire d'états quantiques, alors $|\psi\rangle$ peut être vu que comme un simple porteur d'information sans réalité. Comment l'état quantique pourrait être l'incarnation d'une réalité si la même réalité physique peut se cacher derrière différents états quantiques&nbsp;? C'est bien la possibilité même du chevauchement qui rend un ψ‑épistémique ψ‑épistémique (où serait l'incertitude sans cela&nbsp;?).
+À l'inverse, s'il y a recouvrement pour au moins une paire d'états quantiques, alors $|\psi\rangle$ ne peut être vu que comme un simple porteur d'information sans réalité. Comment l'état quantique pourrait-il être l'incarnation d'une réalité si la même réalité physique peut se cacher derrière différents états quantiques&nbsp;? C'est bien la possibilité même du chevauchement qui rend un ψ‑épistémique ψ‑épistémique (où serait l'incertitude sans cela&nbsp;?).
 
 Cette distinction entre état épistémique et état ontique reposant sur le non‑recouvrement a été développée par Harrigan et Spekkens dans un article de 2010&nbsp;:
 
@@ -106,7 +106,7 @@ Tous les ψ‑épistémiques s'accordent sur le statut probabiliste de la foncti
 
 Un argument fort pour cette vision probabiliste de la fonction d'onde est justement le fait que la théorie quantique peut être considérée comme une généralisation non commutative de la théorie classique des probabilités comme l'a montré von Neumann.
 
-Et de façon moins abstraite, la malléabilité de l'état quantique, le fait qu'une mesure le reprépare dans un nouvel état le mettant ainsi à jour, semble étroitement lié à la malléabilité de l'état de connaissance et sa mise à jour à chaque fois que l'observateur obtient de nouvelles informations.
+Et de façon moins abstraite, la malléabilité de l'état quantique, le fait qu'une mesure le reprépare dans un nouvel état le mettant ainsi à jour, semble étroitement liée à la malléabilité de l'état de connaissance et sa mise à jour à chaque fois que l'observateur obtient de nouvelles informations.
 
 Un argument fort pour la ψ-épistémologie est l'apparente dissolution qu'elle entraîne du problème de la mesure. Rappelons-nous que la tension nait de la double règle d'évolution du formalisme quantique&nbsp;: l'une douce et continue lorsque le système est isolé et non observé et l'autre instantanée et discontinue lors d'une mesure. Comme une mesure n'est théoriquement qu'une interaction physique, on peut se demander pourquoi l'équation de Schrödinger ne serait pas apte à la modéliser. Mais c'est en suivant cette voie qu'on se retrouve avec des situations apparemment absurdes comme celle du chat mort *et* vivant. 
 
@@ -124,7 +124,7 @@ Les ψ-ontiques associent, eux, une réalité à la fonction d'onde. On peut les
 
 - et ceux qui supplémentent $\psi$ avec des variables additionnelles $\xi$ ($\lambda=(\psi,\xi)$).
 
-*A priori*, les ψ-ontistes n'ont pas grand-chose pour eux&nbsp;; le problème de la mesure redevient un problème sérieux, la fonction d'onde vit dans un espace à grande dimension, les inégalités de Bell imposent une non localité des variables cachées et le théorème de Kochen‑Specker impose leur contextualité. Pour les ψ-ontistes purs et durs, c'est moins compliqué à avaler puisqu'ils ont signé en connaissance de cause (la quantique est non locale et contextuelle), mais pour ceux qui espéraient cacher des propriétés plus sympathiques dans $\xi$, c'est râpé.
+*A priori*, les ψ-ontistes n'ont pas grand-chose pour eux&nbsp;; le problème de la mesure redevient un problème sérieux, la fonction d'onde vit dans un espace à grande dimension, les inégalités de Bell imposent une non-localité des variables cachées et le théorème de Kochen‑Specker impose leur contextualité. Pour les ψ-ontistes purs et durs, c'est moins compliqué à avaler puisqu'ils ont signé en connaissance de cause (la quantique est non locale et contextuelle), mais pour ceux qui espéraient cacher des propriétés plus sympathiques dans $\xi$, c'est râpé.
 
 Les ψ‑ontiques devaient passer pour de sacrés masos aux yeux des ψ‑épistémiques jusqu'au jour où le théorème PBR leur est tombé dessus.
 
@@ -139,11 +139,11 @@ Revenons à la distinction entre ψ‑ontiques et ψ‑épistémiques résumée 
 
 Les trois physiciens Pusey, Barrett et Rudolph ont réussi à montrer que si les distributions de probabilité d'une propriété physique (ontologiques) se recouvrent ($\mu_1(\lambda)\cdot\mu_2(\lambda)=q>0$) pour deux états quantiques distincts $|\psi_1\rangle$ et $|\psi_2\rangle$ (plus précisément si la mesure de l'intersection $\Delta$ des supports n'est pas nulle), alors il y a une contradiction avec les prédictions de la théorie quantique.
 
-PBR est donc un *no-go theorem*.  Pour des hypothèses somme-toute assez raisonnables, il prouve qu'une interprétation épistémique de la fonction d'onde n'est pas compatible avec des propriétés physiques réelles[^3]. 
+PBR est donc un *no-go theorem*.  Pour des hypothèses somme toute assez raisonnables, il prouve qu'une interprétation épistémique de la fonction d'onde n'est pas compatible avec des propriétés physiques réelles[^3]. 
 
 [^3]: Et c'est maintenant au tour des ψ-épistémiques de se lancer dans des circonvolutions à base de recherche de loopholes pour échapper aux conclusions du théorème&nbsp;!
 
-Il aurait suffit pour prouver que $|\psi\rangle$ est épistémique de trouver une seule paire d'états dont les densités de probabilité se recouvrent alors que pour prouver qu'il est ontique, il faut s'assurer que c'est le cas d'aucune paire... Mais c'est bien ce que PBR a réussi à faire&nbsp;!
+Il aurait suffi pour prouver que $|\psi\rangle$ est épistémique de trouver une seule paire d'états dont les densités de probabilité se recouvrent alors que pour prouver qu'il est ontique, il faut s'assurer que c'est le cas d'aucune paire... Mais c'est bien ce que PBR a réussi à faire&nbsp;!
 
 L'absence de recouvrement quand les deux états quantiques sont orthogonaux n'est pas vraiment surprenante. Par contre, le fait que cela tienne pour des états non orthogonaux est plus troublant ($\mu_1(\lambda) \mu_2(\lambda)=0$ pour tout $\lambda$ même si $\left\langle\psi_1 \mid \psi_2\right\rangle \neq 0$). 
 
@@ -167,7 +167,7 @@ Prenons la paire non orthogonale $|0\rangle$, $|+\rangle$ ($\langle 0 \mid+\rang
 
 Le but est de démontrer que $\mu_0(\lambda) \mu_{+}(\lambda)=0$ pour tout $\lambda$. On va le prouver par l'absurde en supposant qu'il y a une probabilité $q>0$ telle que les deux états quantiques résultent d'un $\lambda$ dans la région $\Delta$ de recouvrement.
 
-Considérons maintenant deux systèmes dont les états physique ne sont pas corrélés. On peut les obtenir par exemple en opérant deux copies d'un dispositif de préparation indépendamment. Chaque système peut être préparé tel que son état quantique soit $|0\rangle$ ou $|+\rangle$.
+Considérons maintenant deux systèmes dont les états physiques ne sont pas corrélés. On peut les obtenir par exemple en opérant deux copies d'un dispositif de préparation indépendamment. Chaque système peut être préparé tel que son état quantique soit $|0\rangle$ ou $|+\rangle$.
 
 Les états physiques $\lambda_1$ et $\lambda_2$ ont alors la probabilité $q^2>0$ d'être tous les deux dans la région de chevauchement $\Delta$.<br>
 Cela signifie qu'il y a une probabilité non nulle que l'état physique des deux systèmes soit compatible avec n'importe lequel des quatre états quantiques possibles $|0\rangle \otimes|0\rangle$, $|0\rangle \otimes|+\rangle$, $|+\rangle \otimes|0\rangle$ et $|+\rangle \otimes|+\rangle$.
@@ -180,7 +180,7 @@ Les deux systèmes sont ramenés ensemble et mesurés dans une base orthogonale 
 
 Cette base a été choisie pour avoir $\left\langle\phi_1 \mid 00\right\rangle=0$, $\left\langle\phi_2 \mid 0+\right\rangle=0$, $\left\langle\phi_3 \mid+0\right\rangle=0$ et $\left\langle\phi_4 \mid++\right\rangle=0$.<br>
 Quel que soit le résultat de la mesure ($|\phi_1\rangle$, $|\phi_2 \rangle$, $|\phi_3 \rangle$ ou $|\phi_4 \rangle$), il élimine forcément l'une des possibilités ($|00\rangle$, $|0+\rangle$, $|+0\rangle$ ou $|++\rangle$). Cela entraîne que la probabilité de recouvrement des quatre états physiques est nulle. Contradiction&nbsp;!<br>
-Il y a $q^2$ chance que l'appareil de mesure ne sache pas laquelle des quatre méthode de préparation a été utilisée, et lorsque ça arrive, il prend le risque de produire un résultat qui n'est sensé jamais arriver. 
+Il y a $q^2$ chances que l'appareil de mesure ne sache pas laquelle des quatre méthodes de préparation a été utilisée, et lorsque ça arrive, il prend le risque de produire un résultat qui n'est censé jamais arriver. 
 
 </details>
 </div>
@@ -192,7 +192,7 @@ Les hypothèses du théorème sont&nbsp;:
 <li>il existe une réalité fondamentale $\lambda$,</li>
 <li>des $\lambda$ préparés séparément sont statistiquement indépendants,</li>
 <li>les prédictions statistiques de la mécanique quantique sont correctes,</li>
-<li>la réalité de l'état quantique (ψ-ontique) est définie comme le non recouvrement des distributions de probabilité de $\lambda$.</li>
+<li>la réalité de l'état quantique (ψ-ontique) est définie comme le non-recouvrement des distributions de probabilité de $\lambda$.</li>
 </ul>
 
 

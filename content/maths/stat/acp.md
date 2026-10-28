@@ -85,7 +85,7 @@ replaceIframesWithImages();
 });
 </script>
 
-L'analyse en composante principale fait parler les statistiques. Elle soutire un à un les secrets d'un jeu de données, du plus important au plus anodin.
+L'analyse en composantes principales fait parler les statistiques. Elle soutire un à un les secrets d'un jeu de données, du plus important au plus anodin.
 
 
 {{< youtube-plus id="sRMplEDuEig" ratio="16x9" width="800px" rounded=true shadow=true >}}
@@ -109,9 +109,9 @@ Un autre exemple sur le modèle de celui des prénoms (cf. vidéo).
   </table>
 </div>
 
-L'idée, ici, est de récupérer toute un série de données départementales disparates sur le [site de l'INSEE](https://www.insee.fr/fr/statistiques?taille=100&debut=0&idprec=2012683&categorie=4&geo=COMPRD-1) pour voir si les composantes principales font ou non ressurgir une géographie identifiable de ce brouillard de chiffres. On peut alors s'amuser à balbutier des interprétations pour ces axes de différentiation territoriaux et probablement irriter ainsi fortement tout sociologue un tant soit peu éduqué. C'est la magie même de l'ACP de permettre à un quidam de se prendre pour un sociologue...
+L'idée, ici, est de récupérer toute une série de données départementales disparates sur le [site de l'INSEE](https://www.insee.fr/fr/statistiques?taille=100&debut=0&idprec=2012683&categorie=4&geo=COMPRD-1) pour voir si les composantes principales font ou non ressurgir une géographie identifiable de ce brouillard de chiffres. On peut alors s'amuser à balbutier des interprétations pour ces axes de différenciation territoriaux et probablement irriter ainsi fortement tout sociologue un tant soit peu éduqué. C'est la magie même de l'ACP de permettre à un quidam de se prendre pour un sociologue...
 
-Cherchant à étudier la variabilité entre départements, à faire ressortir leurs spécificités, on choisit ici de n'avoir que des données sous forme de taux quitte à rendre relative certaines données brutes en divisant par la population du département. Certes, un vecteur associant les variables non relatives aurait probablement constitué la 1<sup>re</sup> composante principale puisque la démographie explique alors une large part de la variance, et comme chaque composante est orthogonale aux suivantes, cela aurait peut-être éliminé ce biais dès la 2<sup>e</sup> composante... Mais autant s'en débarrasser dans les données pour éviter toute confusion.
+Cherchant à étudier la variabilité entre départements, à faire ressortir leurs spécificités, on choisit ici de n'avoir que des données sous forme de taux quitte à rendre relatives certaines données brutes en divisant par la population du département. Certes, un vecteur associant les variables non relatives aurait probablement constitué la 1<sup>re</sup> composante principale puisque la démographie explique alors une large part de la variance, et comme chaque composante est orthogonale aux suivantes, cela aurait peut-être éliminé ce biais dès la 2<sup>e</sup> composante... Mais autant s'en débarrasser dans les données pour éviter toute confusion.
 
 Un tableau de 96 lignes (les départements métropolitains) et 51 colonnes (code du département + nom du département + 49 variables statistiques) constitue les données de base. Un export en `.csv` ([accès au fichier](/tableau_insee.csv)) et direction Pandas.
 
@@ -130,7 +130,7 @@ departements = data.columns[2:]
 data_cleaned = data[columns_to_use].replace(',', '.', regex=True).apply(pd.to_numeric, errors='coerce')
 ```
 
-Puis on standardise les vecteurs : pour chaque série de 96 valeurs (les valeurs départementales de chaque catégorie statistique), on centre les données en soustrayant la moyenne et on les met à l’échelle en divisant par l’écart type, de sorte que les coordonnées des vecteurs aient tous une moyenne de 0 et un écart type de 1.
+Puis on standardise les vecteurs : pour chaque série de 96 valeurs (les valeurs départementales de chaque catégorie statistique), on centre les données en soustrayant la moyenne et on les met à l’échelle en divisant par l’écart-type, de sorte que les coordonnées des vecteurs aient toutes une moyenne de 0 et un écart-type de 1.
 
 ```python
 from sklearn.preprocessing import StandardScaler
@@ -227,7 +227,7 @@ On constate que la 1<sup>re</sup> composante explique presque 40% de la variance
 
 ### Première composante
 
-Affichons les valeurs de la première composante sur une carte de France. Les départements scorant positivement fort sur cette composante apparaisse jaune et ceux scorant le plus négativement sont en bleu.
+Affichons les valeurs de la première composante sur une carte de France. Les départements scorant positivement fort sur cette composante apparaissent en jaune et ceux scorant le plus négativement sont en bleu.
 
 ```python
 # Ajouter les codes départements et leurs noms à la dataframe des composantes principales
@@ -261,7 +261,7 @@ fig.show()
 
 Cette composante semble opposer les départements dont la population vit pour une large part en ville aux départements plus ruraux.
 
-Dévoilons la recette de cette 1<sup>re</sup> composante en détaillant les proportions dans lesquelles interviennent chaque ingrédient (les variables statistiques). Pour cela, on trace l'histogramme des différentes charges (ou loadings) triées. Les coefficients de charges correspondent aux poids respectifs de chaque variable dans le vecteur.
+Dévoilons la recette de cette 1<sup>re</sup> composante en détaillant les proportions dans lesquelles intervient chaque ingrédient (les variables statistiques). Pour cela, on trace l'histogramme des différentes charges (ou loadings) triées. Les coefficients de charges correspondent aux poids respectifs de chaque variable dans le vecteur.
 
 ```python
 numero_composante = 1
@@ -301,7 +301,7 @@ fig.show()
 <iframe src="/graphes/plotly_graph_comp1_histo.html" class="plot-frame" scrolling="no"  ></iframe>
 
 Les marqueurs de l’urbanité sont bien opposés à ceux de la ruralité.<br>
-Les différences de mode de vie entre ces environnements semblent donc responsables du plus gros de la distinction entre départements (du moins pour le lot de variables choisis qui sont malgré tout très disparates).
+Les différences de mode de vie entre ces environnements semblent donc responsables du plus gros de la distinction entre départements (du moins pour le lot de variables choisies qui sont malgré tout très disparates).
 
  On peut renforcer cette interprétation en vérifiant comment une nouvelle variable, la "part de la population vivant dans une unité urbaine en 2017" score sur un plan formé par les deux premières composantes. 
 
@@ -314,7 +314,7 @@ Une fois cette opposition ville-campagne retirée, que reste-t-il pour expliquer
 
 ### Deuxième composante
 
-Après l'opposition ville campagne, l'axe sur lequel les valeurs des départements s'étalent le plus semble correspondre à une dimension socio-économique. La répartition des richesses sur le territoire serait donc loin d'être homogène à l'échelle des départements&nbsp;; certains concentrent les marqueurs de richesse quand d'autres accumulent les stigmates de la pauvreté.
+Après l'opposition ville-campagne, l'axe sur lequel les valeurs des départements s'étalent le plus semble correspondre à une dimension socio-économique. La répartition des richesses sur le territoire serait donc loin d'être homogène à l'échelle des départements&nbsp;; certains concentrent les marqueurs de richesse quand d'autres accumulent les stigmates de la pauvreté.
 
 <iframe src="/graphes/plotly_graph_comp2_carte.html" class="plot-frame" scrolling="no"  ></iframe>
 <iframe src="/graphes/plotly_graph_comp2_histo.html" class="plot-frame" scrolling="no"  ></iframe>
@@ -328,14 +328,14 @@ La troisième composante matérialise une opposition géographique entre le Nord
 
 ### Quatrième composante
 
-La quatrième composante distingue principalement positivement Paris avec de forts taux de fonctionnaires, de médecins et de mariages de même sexe, et des petits taux de voitures par ménage et d'employés. Le contraste est maximale avec la Corse, le nord des Alpes et la grande couronne.
+La quatrième composante distingue principalement positivement Paris avec de forts taux de fonctionnaires, de médecins et de mariages de même sexe, et des petits taux de voitures par ménage et d'employés. Le contraste est maximal avec la Corse, le nord des Alpes et la grande couronne.
 
 <iframe src="/graphes/plotly_graph_comp4_carte.html" class="plot-frame" scrolling="no"  ></iframe>
 <iframe src="/graphes/plotly_graph_comp4_histo.html" class="plot-frame" scrolling="no"  ></iframe>
 
 ### Cinquième composante
 
-La cinquième composante semble très politique avec un axe allant de Mélenchon-Lassalle à Zemmour-Le Pen. Le vote protestataire semble ainsi se polariser  territorialement. L'urbanité de la Seine-Saint-Denis en soutien de Mélenchon allié au Sud-Ouest rural de Lassalle contre un vote d'extrême-droite plus à l'Est.
+La cinquième composante semble très politique avec un axe allant de Mélenchon-Lassalle à Zemmour-Le Pen. Le vote protestataire semble ainsi se polariser  territorialement. L'urbanité de la Seine-Saint-Denis en soutien de Mélenchon allié au Sud-Ouest rural de Lassalle contre un vote d'extrême droite plus à l'Est.
 
 <iframe src="/graphes/plotly_graph_comp5_carte.html" class="plot-frame" scrolling="no"  ></iframe>
 <iframe src="/graphes/plotly_graph_comp5_histo.html" class="plot-frame" scrolling="no"  ></iframe>
@@ -350,7 +350,7 @@ Voilà ce que deviennent ces valeurs après multiplication par les charges de la
  
   <iframe src="/graphes/plotly_graph_paris_composante5.html" class="plot-frame" scrolling="no"  ></iframe>
   
-  Et en sommant toutes ces valeurs, on obtient la projection de Paris et la composante 5. Le résultat d'environ -3,8 est bien celui attribuée à Paris dans la carte de la composante. On voit ainsi que les variables politiques ne sont pas celles qui participent au score de Paris.
+  Et en sommant toutes ces valeurs, on obtient la projection de Paris sur la composante 5. Le résultat d'environ -3,8 est bien celui attribué à Paris dans la carte de la composante. On voit ainsi que les variables politiques ne sont pas celles qui participent au score de Paris.
 
 ### Sixième composante
 
@@ -368,11 +368,11 @@ L'attelage leader de cette composante est pour le moins curieux : les Hauts-de-S
 <iframe src="/graphes/plotly_graph_creuse_comp6.html" class="plot-frame" scrolling="no"  ></iframe>
 <iframe src="/graphes/plotly_graph_hds_comp6.html" class="plot-frame" scrolling="no"  ></iframe>
 
-Le semblant d'homogénéité géographique avec un centre qui s'oppose aux bords laisse cependant supposer que quelque chose se trame dans cette composante et on peut hasarder quelques hypothèses sociologiques de bistrot. La composante semble agglomérer une France rurale âgée au tissu sociale distendue (plus de morts, moins de mariages) votant plus qu'ailleurs pour la droite historique. Et elle lui adjoint deux départements (Hauts-de-Seine et Yvelines) abritant une haute bourgeoisie plus dense qu'ailleurs ayant pour seul point commun notable de voter pour cette même droite.
+Le semblant d'homogénéité géographique avec un centre qui s'oppose aux bords laisse cependant supposer que quelque chose se trame dans cette composante et on peut hasarder quelques hypothèses sociologiques de bistrot. La composante semble agglomérer une France rurale âgée au tissu social distendu (plus de morts, moins de mariages) votant plus qu'ailleurs pour la droite historique. Et elle lui adjoint deux départements (Hauts-de-Seine et Yvelines) abritant une haute bourgeoisie plus dense qu'ailleurs ayant pour seul point commun notable de voter pour cette même droite.
 
 ### Septième composante
 
-La septième composante a pour pôles la proportion d'écoles privées d'un côté et les mariages de même sexe de l'autre. L'opposition est amusante mais le reste du vecteur ne semble pas vouloir se prêter à des interprétations faciles pas plus que la répartition géographique (au-delà de la zone bretonne au sens large ou le privé est surreprésenté).
+La septième composante a pour pôles la proportion d'écoles privées d'un côté et les mariages de même sexe de l'autre. L'opposition est amusante mais le reste du vecteur ne semble pas vouloir se prêter à des interprétations faciles pas plus que la répartition géographique (au-delà de la zone bretonne au sens large où le privé est surreprésenté).
 
 <iframe src="/graphes/plotly_graph_comp7_carte.html" class="plot-frame" scrolling="no"  ></iframe>
 <iframe src="/graphes/plotly_graph_comp7_histo.html" class="plot-frame" scrolling="no"  ></iframe>

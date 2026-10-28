@@ -45,14 +45,14 @@ L'expression *Curse of dimensionality* (*Fléau de la dimension* dans sa traduct
 
 Mais qu'est-ce donc que ce "fléau"&nbsp;?
 
-Le volume d'un cube de côté $a$ dans un espace à $n$ dimensions vaut $a^n$. Jusque là, ça va.
+Le volume d'un cube de côté $a$ dans un espace à $n$ dimensions vaut $a^n$. Jusque-là, ça va.
 
 Pour la boule, de rayon $R$, c'est plus compliqué...
-- à 1D, la boule se réduit à un segment de longueur $R$.
+- à 1D, la boule se réduit à un segment de longueur $2R$.
 - à 2D, c'est un disque de "volume" $\pi R^2$. Ce qu'on appelle aire dans notre monde 3D est bien le volume (l'espace contenu à l'intérieur) d'un monde 2D.
 - à 3D, le volume de la boule vaut $\frac{4}{3}\pi R^3$.
 
-Pour des boules de rayon 1, ça nous donne les volumes suivant&nbsp;: $1$ à 1D, $\pi$ à 2D, $\frac{4\pi}{3}$ à 3D. Est-ce que cela continue d'augmenter pour les dimensions supérieures&nbsp;?<br>
+Pour des boules de rayon 1, ça nous donne les volumes suivants&nbsp;: $2$ à 1D, $\pi$ à 2D, $\frac{4\pi}{3}$ à 3D. Est-ce que cela continue d'augmenter pour les dimensions supérieures&nbsp;?<br>
 Aussi bizarre que cela puisse paraître, on va voir que le volume culmine en dimension 5 puis s'effondre jusqu'à presque s'évanouir&nbsp;!
 
 La petite énigme suivante va nous familiariser avec ces bizarreries.
@@ -63,10 +63,10 @@ La petite énigme suivante va nous familiariser avec ces bizarreries.
 
 > On prend un $n$-cube (cube de dimension $n$) de côté $4$ et on y place à l'intérieur autant de  $n$-boules de rayon $1$ que l'on peut.<br>Quel sera le rayon de la plus grande $n$-boule possible que l'on pourra placer au centre de la boite, dans l'espace laissé libre par les autres boules&nbsp;?
 
-On peut décomposer la boite en $2^n$ sous-boites de côté $2$ contenant chacune une boule de côté $1$.
+On peut décomposer la boite en $2^n$ sous-boites de côté $2$ contenant chacune une boule de rayon $1$.
 
 - à 1D, il ne reste aucune place pour une sphère au milieu&nbsp;: le $1$-cube de côté $4$ est un segment de longueur $4$ dans lequel on peut placer deux $1$-boules de rayon $1$ qui sont des segments de longueur $2$.
-- à 2D, 4 $2$-boules (disques) sont placés dans le $2$-cube (carré). Pythagore nous dit que la distance entre le centre de chaque boule et le centre de la boite vaut $\sqrt{R^2+R^2}=R\sqrt{2}$. Par conséquent, le rayon de la plus grande $2$-boule (disque) que l'on peut placer au centre est de $R\sqrt{2}-R\Rightarrow\sqrt{2}-1$.
+- à 2D, 4 $2$-boules (disques) sont placées dans le $2$-cube (carré). Pythagore nous dit que la distance entre le centre de chaque boule et le centre de la boite vaut $\sqrt{R^2+R^2}=R\sqrt{2}$. Par conséquent, le rayon de la plus grande $2$-boule (disque) que l'on peut placer au centre est de $R\sqrt{2}-R\Rightarrow\sqrt{2}-1$.
 
 ![](/dimncube.png?width=500px)
 
@@ -84,7 +84,7 @@ Mais regardons maintenant ce que cela signifie.<br>
 
 ### Volume d'une $n$-boule
 
-Le volume $V_n$ d'une $n$-boule de rayon $R$ peut se déterminer grâce à la formule de récurrence suivante&nbsp; $\displaystyle V_n(R)=\frac{2\pi R^2}{n} V_{n-2}(R)$<br>
+Le volume $V_n$ d'une $n$-boule de rayon $R$ peut se déterminer grâce à la formule de récurrence suivante&nbsp;: $\displaystyle V_n(R)=\frac{2\pi R^2}{n} V_{n-2}(R)$<br>
 En prenant $V_0(R) =1$ (à partir de la formule du cube $a^n$) et $V_1(R)=2R$, on peut déterminer le volume en toute dimension.
 
 <br>
@@ -93,7 +93,7 @@ En prenant $V_0(R) =1$ (à partir de la formule du cube $a^n$) et $V_1(R)=2R$, o
 <summary id="correcsum">
 <a style="color:#006C65;">Démonstration de la formule de récurrence&nbsp;:</a></summary>
 <blockquote id="correc"> 
-Le volume du $n$-boule est par définition $\displaystyle V_n(R) = \underset{x_1^2+x_2^2+\cdots+x_n^2≤R^2}{\int\cdots\int} dx_1 dx_2\cdots dx_n$.<br>
+Le volume de la $n$-boule est par définition $\displaystyle V_n(R) = \underset{x_1^2+x_2^2+\cdots+x_n^2≤R^2}{\int\cdots\int} dx_1 dx_2\cdots dx_n$.<br>
 Séparons l'intégration en deux&nbsp;:
 $\displaystyle V_n(R) = \underset{x_1^2+x_2^2≤R^2}{\iint}\left(\underset{x_3^2+\cdots+x_n^2≤R^2-x_1^2-x_2^2}{\int\cdots\int} dx_3\cdots dx_n\right)dx_1dx_2 = \underset{x_1^2+x_2^2≤R^2}{\iint}V_{n-2}\left(\sqrt{R^2-x_1^2-x_2^2}\right)dx_1dx_2$<br>
 Passons en coordonnées polaires pour les deux premières dimensions en posant $x_1 = r\cos\theta$ et $x_2 = r\sin\theta$.<br>
@@ -117,7 +117,7 @@ $
 3Blue1Brown a fait [une merveilleuse vidéo](https://youtu.be/fsLh-NYhOoU) sur cette formule à partir d'une conférence filmée.
 {{%/notice%}}
 
-On va ne s'intéresser ici qu'aux $n$-boules de rayon un. Le petit programme suivant nous permet d'obtenir leurs volumes&nbsp;:
+On ne va s'intéresser ici qu'aux $n$-boules de rayon un. Le petit programme suivant nous permet d'obtenir leurs volumes&nbsp;:
 
 {{< runpython lang="python" mode="toggle" default="code" height="210" width="800" >}}
 import math
@@ -133,17 +133,17 @@ for i in range(23):
 
 ![](/voldim.png?width=1200px)
 
-Le volume culmine en dimension 5 puis ne fait que diminuer. Qu'a de particulier la dimension 5&nbsp;? Pas grand chose...
+Le volume culmine en dimension 5 puis ne fait que diminuer. Qu'a de particulier la dimension 5&nbsp;? Pas grand-chose...
 
 Regardons ce que nous dit la formule de récurrence&nbsp;:
 
 - si $n$ est pair&nbsp;:<br>
-$\displaystyle V_n(R) = \frac{2\pi R}{n}\times\frac{2\pi R}{n-2}\times\cdots\times \frac{2\pi R}{4}\times\frac{2\pi R}{2}\times V_0(R)$, avec $V_0(R) = 1$<br>
+$\displaystyle V_n(R) = \frac{2\pi R^2}{n}\times\frac{2\pi R^2}{n-2}\times\cdots\times \frac{2\pi R^2}{4}\times\frac{2\pi R^2}{2}\times V_0(R)$, avec $V_0(R) = 1$<br>
 Donc $\displaystyle V_n(R) = \frac{2^{n/2}\pi^{n/2}R^n}{n\cdot (n-2)\cdots  4 \cdot 2} =  \frac{\pi^{n/2}R^n}{\left(\frac{n}{2}\right)!}$
 - si $n$ est impair&nbsp;:<br>
-$\displaystyle V_n(R) = \frac{2\pi R}{n}\times\frac{2\pi R}{n-2}\times\cdots\times \frac{2\pi R}{3}\times\frac{2\pi R}{1}\times V_1(R)$, avec$V_1(R)=2R$<br>
+$\displaystyle V_n(R) = \frac{2\pi R^2}{n}\times\frac{2\pi R^2}{n-2}\times\cdots\times \frac{2\pi R^2}{3}\times V_1(R)$, avec $V_1(R)=2R$<br>
 Donc $\displaystyle V_n(R) = \frac{2^{\frac{n+1}{2}}\pi^{\frac{n-1}{2}}R^n}{n\cdot (n-2)\cdots  3\cdot 1} $<br>
-L'ensemble des deux formules peuvent se combiner en une seule utilisant la fonction gamma $\Gamma$&nbsp;:<br>
+L'ensemble des deux formules peut se combiner en une seule utilisant la fonction gamma $\Gamma$&nbsp;:<br>
 $\displaystyle V_n(R) = \frac{\pi^{\frac{n}{2}}R^n}{\Gamma\left(\frac{n}{2}+1\right)} $
 
 En traçant l'évolution du volume pour différents rayons, on constate que le maximum change de dimension.
@@ -167,7 +167,7 @@ Le rapport des deux volumes s'écrabouille très très vite. Il faut une échell
 
 ![](/ratiodimlog.png?width=1000px)
 
-À 11 dimensions,  la boule ne représente plus qu'un millième du volume de la boite et c'est environ un millionième en dimension 17, soit pas grand chose... Alors qu'il s'agit bien à chaque fois de la plus grande sphère possible calée dans la boite&nbsp;! Si on augmentait son rayon d'un poil, elle déborderait.
+À 11 dimensions,  la boule ne représente plus qu'un millième du volume de la boite et c'est environ un millionième en dimension 17, soit pas grand-chose... Alors qu'il s'agit bien à chaque fois de la plus grande sphère possible calée dans la boite&nbsp;! Si on augmentait son rayon d'un poil, elle déborderait.
 
 Raison de cette apparente étrangeté&nbsp;: la différence entre le volume du cube et celui de la sphère est à chercher dans les coins&nbsp;!
 
@@ -175,7 +175,7 @@ Raison de cette apparente étrangeté&nbsp;: la différence entre le volume du c
 ![](/boule23.png?width=700px)
 
 
-Or plus la dimension augmente, plus le cube a de coins... En effet, un $n$-cube possède $2^n$ coins. Ajoutez à cela que les diagonales deviennent de plus en plus grandes ($\sqrt{n}$), et on commense à se convaincre que le volume de la sphère va vite devenir négligeable...
+Or plus la dimension augmente, plus le cube a de coins... En effet, un $n$-cube possède $2^n$ coins. Ajoutez à cela que les diagonales deviennent de plus en plus grandes ($\sqrt{n}$), et on commence à se convaincre que le volume de la sphère va vite devenir négligeable...
 
 <br>
 
@@ -207,9 +207,9 @@ for i in range(1,N):
 {{< /runpython >}}
 
 
-La raison de cette concentration devient évidente à la lecture du programme&nbsp;; pour qu'un point soit près d'un bords, il suffit qu'une de ses coordonnées soit près d'un bord. Or si on augmente le nombre de dimensions, on augmente par la même le nombre de coordonnées et donc le nombre de tirages. Plus la dimension augmente moins ça devient possible qu'aucune des coordonnées ne tombe près d'un bord. 
+La raison de cette concentration devient évidente à la lecture du programme&nbsp;; pour qu'un point soit près d'un bord, il suffit qu'une de ses coordonnées soit près d'un bord. Or si on augmente le nombre de dimensions, on augmente par là même le nombre de coordonnées et donc le nombre de tirages. Plus la dimension augmente, moins ça devient possible qu'aucune des coordonnées ne tombe près d'un bord. 
 
-Cela permet d'ailleurs d'expliquer que le volume de l'hypersphère de rayon 1 se ratatine&nbsp;: ses points doivent être presque tous loin des bords. En effet, la sphère touche les bords qu'au centre des faces or un hypercube de dimension $n$ compte seulement $2n$ faces (hypercubes de dimension $n-1$) pour $2^n$ sommets&nbsp;!
+Cela permet d'ailleurs d'expliquer que le volume de l'hypersphère de rayon 1 se ratatine&nbsp;: ses points doivent être presque tous loin des bords. En effet, la sphère ne touche les bords qu'au centre des faces or un hypercube de dimension $n$ compte seulement $2n$ faces (hypercubes de dimension $n-1$) pour $2^n$ sommets&nbsp;!
 
 <br>
 
@@ -217,7 +217,7 @@ Cela permet d'ailleurs d'expliquer que le volume de l'hypersphère de rayon 1 se
 
 Ce résultat a une conséquence très importante en science des données&nbsp;: augmenter le nombre de variables descriptives revient à augmenter le nombre de dimensions et donc à renforcer dans le même mouvement la probabilité d'obtenir des valeurs hors normes. Si ces variables décrivent différents aspects d'un individu, on en arrive à la conclusion que l'**individu moyen n'existe pas** puisqu'il y aura presque toujours au moins une de ces variables qui sortira des standards.
 
-L'U.S. Air Force l'a découvert au prix fort à la fin des années 40. Beaucoup de pilotes se crashaient (jusqu'à 17 le même jour&nbsp;!), mais personne ne savait trop pourquoi... Jusqu'à ce qu'un jeune scientifique qui venait d'être engagé par l'armée, Gilbert Daniels, se résolut à mesurer tous les pilotes.
+L'U.S. Air Force l'a découvert au prix fort à la fin des années 40. Beaucoup de pilotes se crashaient (jusqu'à 17 le même jour&nbsp;!), mais personne ne savait trop pourquoi... Jusqu'à ce qu'un jeune scientifique qui venait d'être engagé par l'armée, Gilbert Daniels, se résolve à mesurer tous les pilotes.
 
 <div style="position:relative; width:500px; max-width:100%; margin-left: auto; margin-right: auto;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius:20px;">
 <img src="/pilotemoyen.png" style="border-radius:20px;">
@@ -234,7 +234,7 @@ Cela fit changer son fusil d'épaule à l'armée américaine qui se mit à adapt
 
 Une autre bizarrerie apparaît lorsqu'on regarde la distance séparant deux points pris au hasard dans un hypercube.
 
-Les histogrammes suivant représentent la répartition des distances obtenues entre chaque paire pour 1000 points tirés au hasard uniformément dans l'hypercube. Les pointillés indiquent les distances minimales (0) et maximales ($\sqrt{n}$) possibles pour ces distances.
+Les histogrammes suivants représentent la répartition des distances obtenues entre chaque paire pour 1000 points tirés au hasard uniformément dans l'hypercube. Les pointillés indiquent les distances minimales (0) et maximales ($\sqrt{n}$) possibles pour ces distances.
 
 ![](/distptdim.png)
 
@@ -246,7 +246,7 @@ Ce n'est finalement pas si dur à intuiter. Tirer un point au hasard dans l'hype
 
 Pour $n$ grand, la probabilité que ces deux vecteurs soient orthogonaux (ce qui signifie que leurs directions sont indépendantes) devient énorme. En effet, il suffit qu'une des coordonnées soit quasiment nulle pour qu'il y ait orthogonalité et en multipliant les tirages, ça va finir par arriver.
 
-En supposant pour simplifier que chacun des points se ballade à peu près au milieu d'une demi-diagonale de l'hypercube (puisqu'il est bourré de diagonales en grande dimension), on se retrouve avec deux vecteurs orthogonaux éloignés de $\frac{\sqrt{n}}{4}$ du centre. Leur distance sera donc approximativement $\sqrt{\left(\frac{\sqrt{n}}{4}\right)^2+\left(\frac{\sqrt{n}}{4}\right)^2}=\frac{1}{2\sqrt{2}}\sqrt{n}\approx 0,35\sqrt{n}$. La distance entre deux points augmenterait ainsi comme la racine carrée du nombre de dimensions.
+En supposant pour simplifier que chacun des points se balade à peu près au milieu d'une demi-diagonale de l'hypercube (puisqu'il est bourré de diagonales en grande dimension), on se retrouve avec deux vecteurs orthogonaux éloignés de $\frac{\sqrt{n}}{4}$ du centre. Leur distance sera donc approximativement $\sqrt{\left(\frac{\sqrt{n}}{4}\right)^2+\left(\frac{\sqrt{n}}{4}\right)^2}=\frac{1}{2\sqrt{2}}\sqrt{n}\approx 0,35\sqrt{n}$. La distance entre deux points augmenterait ainsi comme la racine carrée du nombre de dimensions.
 
 En ajustant la courbe obtenue en traçant la distance moyenne par une fonction $a\sqrt{n}$, l'accord est plutôt très bon&nbsp;! On obtient $a=0,41$. Pour le coup, ce n'est pas tout à fait nos $0,35$ mais pour un modèle ultra simplifié, on n'est pas si loin...
 
@@ -260,13 +260,13 @@ La raison de cette conservation de l'écart-type est à chercher du côté  de s
   <source src="/evolution_ecart_type.mp4" type="video/mp4">
 </video>
 
-Or ici, le nombre d'échantillons correspond à la dimension. Par conséquent l'augmentation de la variabilité provoquée par l'augmentation des distances ($\propto\sqrt{n}$) est compensée par la diminution de cette même variabilité du fait de l'augmentation du nombre de tirages ($\propto 1/\sqrt{n}$) .
+Or ici, le nombre d'échantillons correspond à la dimension. Par conséquent l'augmentation de la variabilité provoquée par l'augmentation des distances ($\propto\sqrt{n}$) est compensée par la diminution de cette même variabilité du fait de l'augmentation du nombre de tirages ($\propto 1/\sqrt{n}$).
 
 ![](/suphisto.png)
 
 
 
-On comprend mieux pourquoi un algorithme comme KNN qui vise à prédire une valeur ou catégorie en regardant celle des plus proches voisins galère à grande dimension&nbsp;; tous les voisins sont à peu près à la même distance...
+On comprend mieux pourquoi un algorithme comme KNN qui vise à prédire une valeur ou catégorie en regardant celle des plus proches voisins galère en grande dimension&nbsp;; tous les voisins sont à peu près à la même distance...
 
 
 

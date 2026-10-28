@@ -52,8 +52,8 @@ Wolfgang Pauli et Niels Bohr, deux immenses physiciens au cœur de la révolutio
 
 ![](/tippe1.png?width=600px)
 
-Comme le centre de masse s'est élevé, on a envie de s'inquiéter pour la conservation de l'énergie Mais il ne faut pas&nbsp;! Elle est solide...  La toupie tourne moins vite à la fin qu'au début. Une partie de l'énergie de rotation est partie dans les frottements et une autre dans le retournement.<br>
-D'où vient la force qui amène la toupie à se retourner ? Pauli et Bohr se sont sans doute posés la question moins d'un quart de seconde
+Comme le centre de masse s'est élevé, on a envie de s'inquiéter pour la conservation de l'énergie. Mais il ne faut pas&nbsp;! Elle est solide...  La toupie tourne moins vite à la fin qu'au début. Une partie de l'énergie de rotation est partie dans les frottements et une autre dans le retournement.<br>
+D'où vient la force qui amène la toupie à se retourner ? Pauli et Bohr se sont sans doute posé la question moins d'un quart de seconde
 mais chacun son rythme...<br>
 Comme c'est une toupie, on pense rapidement à un mouvement de précession. La précession est un mouvement de rotation lent (par rapport à la rotation propre) du centre de masse du solide. Or elle naît quand un couple est appliqué sur le solide et cette rotation se fait autour de la direction de la force provoquant le couple.
 
@@ -64,7 +64,7 @@ Comme c'est une toupie, on pense rapidement à un mouvement de précession. La p
 
 <br>
 
-Première candidat pour l'origine du couple redressant la toupie&nbsp;: le poids. Bof... Le moment du poids n'a pas la bonne direction puisqu'il entraîne la toupie dans un mouvement de rotation autour d'un axe vertical et non horizontal (et contrairement à une toupie classique, le centre de masse est très bas et donc le bras de levier très court, ce qui donne un couple de faible intensité).
+Premier candidat pour l'origine du couple redressant la toupie&nbsp;: le poids. Bof... Le moment du poids n'a pas la bonne direction puisqu'il entraîne la toupie dans un mouvement de rotation autour d'un axe vertical et non horizontal (et contrairement à une toupie classique, le centre de masse est très bas et donc le bras de levier très court, ce qui donne un couple de faible intensité).
 
 Il nous faudrait une précession autour d'un axe horizontal pour faire pivoter la toupie et pour ça, on a besoin d'un moment d'axe vertical et donc finalement une force elle-même horizontale&nbsp;!
 
@@ -80,10 +80,10 @@ Lorsque la toupie est horizontale, la rotation de la toupie autour de son axe de
 
 Une fois la position horizontale dépassée, la rotation propre de la toupie redémarre, mais elle est inversée par rapport à celle de départ (c'est toujours la conservation du moment cinétique qui se manifeste). Et l'échange entre les deux rotations (celle autour de l'axe vertical et celle autour de l'axe de symétrie de la toupie) continue, mais au bénéfice maintenant de la rotation propre qui se fait de plus en plus rapide au fur et à mesure du basculement. Le moment lié aux forces de frottement reprend lui aussi du poil de la bête et va se renforcer avec la vitesse de rotation propre. Et surtout, il est dans le même sens que précédemment puisque l'inversion de la rotation propre de la toupie est compensée par l'inversion du sens des forces de frottement&nbsp;! Il continue donc de redresser la toupie. 
 
-Vient ensuite le contact entre le pied et le sol. Le bras de levier du moment des forces de frottement augmente d'un coup donnant un petit "kick" à la remontée. Il faut néanmoins une réserve d'énergie suffisante, les frottements ayant dispersé dans le support une partie non négligeable de l'énergie initiale et l'élévation du centre de masse ayant lui-aussi aussi puisé dans la réserve cinétique.
+Vient ensuite le contact entre le pied et le sol. Le bras de levier du moment des forces de frottement augmente d'un coup donnant un petit "kick" à la remontée. Il faut néanmoins une réserve d'énergie suffisante, les frottements ayant dispersé dans le support une partie non négligeable de l'énergie initiale et l'élévation du centre de masse ayant lui aussi puisé dans la réserve cinétique.
 
 Une fois redressée, les frottements (sur les bords du pied) continuent à stabiliser la position de
-la toupie, le centre de masse etant ramené en position verticale.
+la toupie, le centre de masse étant ramené en position verticale.
 
 ![](/tippe3.png?width=1000px)
 
@@ -121,7 +121,7 @@ La 2<sup>e</sup> loi de Newton appliquée à la masse $i$ nous dit que $\vec{F}\
 
 ![](/rattle3.png?width=600px)
 
-Maintenant si on redécale les deux masses par rapport à l'axe de symétrie dans la direction de $\vec{j}$, on comprend mieux comment la rotation selon $\vec{j}$ se couple avec celle selon $\vec{i}$. La masse la plus basse exerce sur l'anagyre une force plus grande que la plus haute, ce qui provoque un moment auour de $\vec{i}$.
+Maintenant si on redécale les deux masses par rapport à l'axe de symétrie dans la direction de $\vec{j}$, on comprend mieux comment la rotation selon $\vec{j}$ se couple avec celle selon $\vec{i}$. La masse la plus basse exerce sur l'anagyre une force plus grande que la plus haute, ce qui provoque un moment autour de $\vec{i}$.
 
 Finalement, lorsque l'anagyre oscille d'avant en arrière, la partie surélevée va chuter "en se tournant" du côté de sa masse ajoutée. Imaginons que c'est la partie avant qui redescend en entraînant une rotation autour de $\vec{i}$ dans le sens négatif (cf. vidéo ci-dessous). 
 
@@ -159,7 +159,7 @@ Lors d'une oscillation d'avant en arrière, l'anagyre va reposer préférentiell
 
 ## L'oiseau buveur
 
-L'oiseau buveur estt une star (on le retrouve dans Alien ou les Simpsons par exemple).
+L'oiseau buveur est une star (on le retrouve dans Alien ou les Simpsons par exemple).
 
 <div style="position:relative; width:600px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:20px;">
 <img src="/drinkbird.png" style="border-radius:20px;">
