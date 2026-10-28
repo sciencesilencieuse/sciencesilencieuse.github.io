@@ -618,7 +618,7 @@ Les deux thèses à retenir, car ce sont elles que la renormalisation va renvers
 </ul>
 
 La <b>thèse 2 est fausse</b> en dessous de quatre dimensions&nbsp;: on mesure $\beta \approx 0{,}33$ et non $1/2$, et c'était l'énigme ouverte depuis 1945.<br><br>
-La <b>thèse 1 est fausse aussi</b>, et c'est plus inattendu&nbsp;: nous verrons que la vraie frontière entre les phases n'est pas la ligne $m^2 = 0$, mais une séparatrice passant par un point situé à $m^2 < 0$. Autrement dit, il existe des systèmes à masse carrée négative qui restent pourtant désordonnés&nbsp;: <b>les fluctuations peuvent voler la transition au champ moyen</b>.
+La <b>thèse 1 est fausse aussi</b>, et c'est plus inattendu&nbsp;: nous verrons que la vraie frontière entre les phases n'est pas la ligne $m^2 = 0$, mais une séparatrice passant par un point situé à $m^2 < 0$. Autrement dit, il existe des systèmes à masse au carré négative qui restent pourtant désordonnés&nbsp;: <b>les fluctuations peuvent voler la transition au champ moyen</b>.
 
 
 <br>
@@ -1184,7 +1184,7 @@ Nous voici au second temps, celui qui produit des nombres. Mais avant de calcule
 
 Pire, l'équation de flot que nous venons d'obtenir dit que le terme $(4-d)\lambda$ est **positif** dès que $d < 4$&nbsp;: le couplage est pertinent, il enfle quand on va vers les grandes échelles. Or la criticité est justement un phénomène de très grande échelle, puisque $\xi \to \infty$. La théorie des perturbations naïve y est donc condamnée, non parce que le couplage microscopique serait grand, mais parce que le couplage **effectif** grandit en chemin.
 
-**La dimension 4 est un seuil.** La même équation de flot dit cependant autre chose. En dimension 4 exactement, le terme $(4-d)\lambda$ **disparaît** : le couplage cesse d'enfler, il devient marginal, et l'obstacle s'évanouit. La dimension 4 sépare donc deux régimes, celui où les fluctuations finissent toujours par dominer et celui où elles s'éteignent.
+**La dimension 4 est un seuil.** La même équation de flot dit cependant autre chose. En dimension 4 exactement, le terme $(4-d)\lambda$ **disparaît**&nbsp;: le couplage cesse d'enfler, il devient marginal, et l'obstacle s'évanouit. La dimension 4 sépare donc deux régimes, celui où les fluctuations finissent toujours par dominer et celui où elles s'éteignent.
 
 Ce seuil est assez important pour qu'on le vérifie autrement qu'en se fiant à notre calcul.
 
@@ -1405,7 +1405,7 @@ Deux remarques, avant même d'étudier la stabilité&nbsp;:
 
 <ul>
 
-<li>Le point de Wilson–Fisher <b>n'existe séparément du point gaussien que si $\varepsilon \neq 0$</b>&nbsp;: en dimension 4 exactement, les deux se confondent. Et pour $\varepsilon < 0$, c'est-à-dire au-dessus de quatre dimensions, il se retrouve à couplage négatif, donc hors du domaine physique (le ressort repousse, l'énergie minimum est en $-\infty$, le vide est instable). C'est en dessous de quatre dimensions, et là seulement, qu'il entre en scène.</li>
+<li>Le point de Wilson–Fisher <b>n'existe séparément du point gaussien que si $\varepsilon \neq 0$</b>&nbsp;: en dimension 4 exactement, les deux se confondent. Et pour $\varepsilon < 0$, c'est-à-dire au-dessus de quatre dimensions, il se retrouve à couplage négatif, donc hors du domaine physique (le ressort repousse, l'énergie minimale est en $-\infty$, le vide est instable). C'est en dessous de quatre dimensions, et là seulement, qu'il entre en scène.</li>
 <li>Ensuite, il se trouve à $m^{2*} < 0$. Retenons-le, car ce détail apparemment technique aura une conséquence physique considérable une fois le diagramme de flot dessiné.</li>
 
 </ul>
@@ -1551,7 +1551,7 @@ Avec $y_t$ et $y_h$ en main, les formules de Widom livrent les six exposants. Ma
 
 Les trajectoires partant de $m^2 > 0$ filent toutes vers les grands $m^2$ positifs&nbsp;: paramagnétisme, en accord avec le champ moyen. 
 
-Mais côté $m^2 < 0$, la surprise&nbsp;: <b>partir avec une masse carrée négative ne garantit plus le ferromagnétisme</b>. La vraie frontière entre les phases n'est pas la ligne $m^2 = 0$ du champ moyen, c'est la <b>séparatrice</b>, qui passe par le point de Wilson–Fisher, lequel se trouve en $m^{2*} = -\varepsilon/6 < 0$. Si le couplage $\lambda$ (l'intensité des fluctuations) est assez fort, le flot ramène le système côté paramagnétique&nbsp;: les fluctuations peuvent voler la transition au champ moyen.
+Mais côté $m^2 < 0$, la surprise&nbsp;: <b>partir avec une masse au carré négative ne garantit plus le ferromagnétisme</b>. La vraie frontière entre les phases n'est pas la ligne $m^2 = 0$ du champ moyen, c'est la <b>séparatrice</b>, qui passe par le point de Wilson–Fisher, lequel se trouve en $m^{2*} = -\varepsilon/6 < 0$. Si le couplage $\lambda$ (l'intensité des fluctuations) est assez fort, le flot ramène le système côté paramagnétique&nbsp;: les fluctuations peuvent voler la transition au champ moyen.
 
 <br>
 
@@ -1609,10 +1609,10 @@ Puis vient le geste particulièrement effronté&nbsp;: pour décrire le monde r�
 
 | | $\alpha$ | $\beta$ | $\gamma$ | $\delta$ | $\nu$ | $\eta$ |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| $\varepsilon = 0$ (champ moyen, $d=4$) | 0 | 0.5 | 1 | 3 | 0.5 | 0 |
-| $\varepsilon = 1$, ordre $\varepsilon$ | 0.167 | 0.333 | 1.167 | 4 | 0.583 | 0 |
-| $\varepsilon = 1$, ordre $\varepsilon^2$ | 0.077 | 0.340 | 1.244 | 4.462 | 0.626 | 0.019 |
-| Ising 3D (valeurs acceptées) | 0.110 | 0.327 | 1.237 | 4.789 | 0.630 | 0.036 |
+| $\varepsilon = 0$ (champ moyen, $d=4$) | 0 | 0,5 | 1 | 3 | 0,5 | 0 |
+| $\varepsilon = 1$, ordre $\varepsilon$ | 0,167 | 0,333 | 1,167 | 4 | 0,583 | 0 |
+| $\varepsilon = 1$, ordre $\varepsilon^2$ | 0,077 | 0,340 | 1,244 | 4,462 | 0,626 | 0,019 |
+| Ising 3D (valeurs acceptées) | 0,110 | 0,327 | 1,237 | 4,789 | 0,630 | 0,036 |
 
 L'ordre $\varepsilon^2$ s'approche des valeurs acceptées pour le modèle d'Ising tridimensionnel, elles-mêmes en bon accord avec l'expérience.
 
@@ -1683,7 +1683,7 @@ $
 <li>Le champ moyen est <i>aveugle aux fluctuations</i>&nbsp;: le résultat le plus contre-intuitif du flot est qu'un $m^2 < 0$ initial peut aboutir à un paramagnétique si $\lambda$ est grand. La transition n'appartient pas au lagrangien, elle appartient au flot.</li>
 <li>Dans le calcul à une boucle du groupe de renormalisation, les intégrales internes ne courent que <b>sur la coquille</b> $\Lambda/b \leq |p| \leq \Lambda$.</li>
 <li>Le développement en $\varepsilon = 4 - d$ est utilisé à $\varepsilon = 1$, hors de tout domaine de validité contrôlé, et la série est de surcroît asymptotique&nbsp;: son succès est un fait d'expérience (et un petit miracle), pas un théorème.</li>
-<li>$\eta = 0$ à une boucle&nbsp;: l'exposant de la fonction de corrélation n'apparaît qu'à deux boucles. Un $\eta$ non nul mesure l'écart du champ à sa dimension naïve, d'où le nom de dimension anormale.</li>
+<li>$\eta = 0$ à une boucle&nbsp;: l'exposant de la fonction de corrélation n'apparaît qu'à deux boucles. Un $\eta$ non nul mesure l'écart du champ à sa dimension naïve, d'où le nom de dimension anomale.</li>
 <li>Vocabulaire à verrouiller&nbsp;: <b>pertinent</b> (grandit sous le flot, gouverne la physique aux grandes échelles), <b>non pertinent</b> (rétrécit, oubliable), <b>marginal</b> (immobile au premier ordre, tout se joue aux ordres suivants). En dimension $4-\varepsilon$, $\lambda$ est pertinent près du point gaussien&nbsp;; en dimension $> 4$, il devient non pertinent et le champ moyen dit vrai.</li>
 <li>Les <b>facteurs de symétrie</b> des diagrammes sont la source d'erreur la plus fréquente de tout le chapitre, et ils ne s'improvisent pas&nbsp;: ils se comptent, en dénombrant les appariements de Wick équivalents et en les divisant par les factorielles du vertex. Ici, la boucle simple porte $1/2$, et la bulle porte $1/2$ multiplié par les 3 canaux. Une erreur d'un facteur 2 à cet endroit déplace le point fixe et fausse tous les exposants.</li>
 <li>L'universalité n'affirme pas que tout est pareil&nbsp;: $T_c$, les amplitudes, les détails hors du régime critique restent propres à chaque matériau. Seuls les <i>exposants</i> (et certains rapports d'amplitudes) sont universels.</li>

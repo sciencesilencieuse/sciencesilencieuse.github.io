@@ -1453,7 +1453,7 @@ français perd le <i>out</i> en route.<br><br>
 </div>
 
 <ul>
-<li>Pas III&nbsp;: <b>Rééchelonner les champs.</b> On pose $\tilde\phi(p'/b) = b^{\,d - d_\phi}\,\tilde\phi'(p')$, en choisissant l'exposant $d_\phi$ (baptisé, dans le jargon volontiers ésotérique du domaine, <b>dimension anormale</b>) pour laisser invariant le terme jugé dominant, en pratique le terme de gradient.</li>
+<li>Pas III&nbsp;: <b>Rééchelonner les champs.</b> On pose $\tilde\phi(p'/b) = b^{\,d - d_\phi}\,\tilde\phi'(p')$, en choisissant l'exposant $d_\phi$ (baptisé, dans le jargon volontiers ésotérique du domaine, <b>dimension anomale</b>) pour laisser invariant le terme jugé dominant, en pratique le terme de gradient.</li>
 </ul>
 
 Si tout se passe bien, le lagrangien final a <b>la même forme</b> que le lagrangien initial, avec des couplages modifiés&nbsp;: on a fabriqué la transformation $g_i \to g_i'$, et il suffit de l'itérer en pensée pour engendrer le flot complet. En posant $b = e^\ell$ et en envoyant $\ell\to\infty$, on suit la physique aux grandes longueurs d'onde.
