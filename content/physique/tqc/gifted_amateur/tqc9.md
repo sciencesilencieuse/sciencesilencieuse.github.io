@@ -197,7 +197,7 @@ Pour une trajectoire typique, $S \gg \hbar$&nbsp;: la phase $S/\hbar$ pointe n'i
 
 Seule exception&nbsp;: le voisinage d'une trajectoire où l'action est <i>stationnaire</i>, $\delta S = 0$. Là, toutes les voisines ont la même phase et s'additionnent en cohérence. Or $\delta S/\delta q = 0$ est précisément l'équation d'Euler–Lagrange&nbsp;: <b>la trajectoire classique est celle qui survit à l'interférence</b>, et les effets quantiques (les «&nbsp;fluctuations quantiques&nbsp;») vivent dans son voisinage immédiat, de largeur $\sim\hbar$[^p3].
 
-[^p3]: L'approximation qui ne garde que la trajectoire classique et la forme quadratique des fluctuations autour d'elle porte le nom d'<i>approximation de la phase stationnaire</i>..
+[^p3]: L'approximation qui ne garde que la trajectoire classique et la forme quadratique des fluctuations autour d'elle porte le nom d'<i>approximation de la phase stationnaire</i>.
 
 <!-- Figure à redessiner (L&B fig. 23.3) : les points A et B, le chemin classique en trait plein, une gerbe de chemins voisins en tirets qui s'en écartent peu ; légende : seuls les voisins du chemin stationnaire interfèrent constructivement -->
 <div style="position:relative;margin-left:auto;margin-right:auto;width:320px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
@@ -266,7 +266,7 @@ Et le passage au continu s'écrit tout seul&nbsp;: $x_i \to \phi(x)$, la matrice
 {{%notice type="note" round="true"%}}
 Prenons $L = -\frac12 x A x + Jx$ et appliquons Euler–Lagrange (de manière très cavalière) comme si $A$ était un nombre&nbsp;:<br>
 $\to -Ax + J = 0$<br>
-Donc $x_\star = A^{-1}J$, et en réinjectant, $L(x_\star) = +\frac12\\, J\\, A^{-1} b$.<br>
+Donc $x_\star = A^{-1}J$, et en réinjectant, $L(x_\star) = +\frac12\\, J\\, A^{-1} J$.<br>
 On a retrouvé <i>l'exposant exact du résultat (3)</i>. 
 <br><br>
 $\mathrm e^{\frac12 JA^{-1}J}$ n'est donc rien d'autre que <b>l'intégrande évalué au point stationnaire</b>. Pour une gaussienne, la phase stationnaire est exacte, et le déterminant n'est que le prix (indépendant de $J$) des fluctuations autour. 
@@ -279,7 +279,7 @@ $\mathrm e^{\frac12 JA^{-1}J}$ n'est donc rien d'autre que <b>l'intégrande éva
 
 On cherche l'amplitude de <b>retour à l'origine</b> $G(0, T\\,; 0, 0)$. Cela revient à poser la particule au fond du puits harmonique, puis revenir au temps $T$ et se demander si elle est encore là. 
 
-On veut donc &nbsp;:
+On veut donc&nbsp;:
 
 <p style="text-align:center;overflow-x:auto">
 $\displaystyle
@@ -291,7 +291,7 @@ $
 
 Problème&nbsp;: comme le lagrangien d'un oscillateur harmonique s'écrit $L=\frac{m \dot{q}(t)^2}{2}-\frac{m \omega_0^2 q(t)^2}{2}$, on a $G=\int \mathcal{D}[q(t)] \mathrm{e}^{\frac{\mathrm{i} m}{2} \int \mathrm{~d} t\left[\left(\frac{\mathrm{~d} q(t)}{\mathrm{d} t}\right)^2-\omega_0^2 q(t)^2\right]}$ qui n'est pas dans une forme connue.
 
-Le truc est d'intégrer par partie la partie cinétique $I=\int \mathrm{d} t\left(\frac{\partial q(t)}{\partial t}\right)^2=\int \mathrm{d} t\left(\frac{\partial q(t)}{\partial t}\right)\left(\frac{\partial q(t)}{\partial t}\right)$.
+Le truc est d'intégrer par parties la partie cinétique $I=\int \mathrm{d} t\left(\frac{\partial q(t)}{\partial t}\right)^2=\int \mathrm{d} t\left(\frac{\partial q(t)}{\partial t}\right)\left(\frac{\partial q(t)}{\partial t}\right)$.
 
 Cela donne&nbsp;:
 
@@ -453,7 +453,7 @@ Toute la théorie libre, en une ligne fermée...
 
 <div id="preuve">
 
-L'exposant est $\displaystyle \mathrm{i}\int \mathrm{d}x^4 \big[\frac12(\partial\phi)^2 - \frac{m^2}{2}\phi^2 + J\phi\big]$. 
+L'exposant est $\displaystyle \mathrm{i}\int \mathrm{d}^4x \big[\frac12(\partial\phi)^2 - \frac{m^2}{2}\phi^2 + J\phi\big]$. 
 
 Une intégration par parties donne $\frac12(\partial\phi)^2 \to -\frac12\phi\\,\partial^2\phi$. D'où la forme (3) en version continue «&nbsp;$-\frac12\phi K\phi + J\phi$&nbsp;» avec l'opérateur $K = \partial^2 + m^2$.
 
@@ -604,7 +604,7 @@ $
 
 ### La rotation de Wick
 
-D'un côté $\mathrm e^{\mathrm iS}$, de l'autre $\mathrm e^{-\beta E}$&nbsp;: pour passer de l'un à l'autre, on <b>tourne le temps</b>&nbsp;: $t \to -i\tau$. On passe alors d'ue la métrique de Minkowski $(+,-,-,-)$ à la métrique euclidienne $(+,+,+,+)$.<br>
+D'un côté $\mathrm e^{\mathrm iS}$, de l'autre $\mathrm e^{-\beta E}$&nbsp;: pour passer de l'un à l'autre, on <b>tourne le temps</b>&nbsp;: $t \to -i\tau$. On passe alors de la métrique de Minkowski $(+,-,-,-)$ à la métrique euclidienne $(+,+,+,+)$.<br>
 L'action devient&nbsp;:
 
 <p style="text-align:center;">
@@ -682,7 +682,7 @@ Le retour au même état, sommé sur tous les états, se traduit sur les traject
 
 <b>La physique statistique se déroule en temps imaginaire périodique</b>. Plus il fait chaud, plus le cylindre de temps est court ($\beta \to 0$). Les trajectoires quantiques sont forcées de faire des boucles minuscules et finissent par être écrasées sur le plan spatial. La dimension temporelle "disparaît" macroscopiquement, et l'on retrouve la physique statistique classique, uniquement spatiale. 
 
-À température nulle, le cylindre se déroule complètement. Le temps imaginaire redevient une ligne droite infinie. La particule a toute la place temporelle pour faire ses fluctuations quantiques. On retrouve la pure Théorie Quantique des Champs du vide.
+À température nulle, le cylindre se déroule complètement. Le temps imaginaire redevient une ligne droite infinie. La particule a toute la place temporelle pour faire ses fluctuations quantiques. On retrouve la pure théorie quantique des champs du vide.
 
 <!-- Figure à redessiner (L&B fig. 25.2) : trois panneaux : (a) une trajectoire de champ dans le temps réel t (axe vertical), libre ; (b) la tranche de temps imaginaire 0 ≤ τ ≤ β (un « mur » d'épaisseur β) avec une trajectoire qui revient à son point de départ ; (c) l'axe τ gradué 0, β, 2β, 3β avec la trajectoire périodique répétée -->
 <div style="position:relative;margin-left:auto;margin-right:auto;width:540px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
@@ -737,7 +737,7 @@ Par contre on a retrouvé le propagateur scalaire classique $1/(\omega_n^2 + \ma
 
 <b>Deux diagrammes pour se faire la main</b>
 
-La correction au premier ordre de $\ln Z[J=0]$ est donné par le diagramme en double boucle.
+La correction au premier ordre de $\ln Z[J=0]$ est donnée par le diagramme en double boucle.
 
 <div style="position:relative;margin-left:auto;margin-right:auto;width:50px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/doubleboucle.png" style="box-shadow:none;background:none;">
@@ -788,7 +788,7 @@ $
 
 Ce terme représente la toute première correction apportée par les interactions à la thermodynamique du gaz de phions. 
 
-Le même mécanisme mathématique s'applique au propagateur avec l'insertion de la boucle : l'interaction avec le milieu décale l'énergie propre des particules. Par conséquent, l'inertie est modifiée et la <b>masse devient une fonction de la température</b> (on parle de masse thermique). 
+Le même mécanisme mathématique s'applique au propagateur avec l'insertion de la boucle&nbsp;: l'interaction avec le milieu décale l'énergie propre des particules. Par conséquent, l'inertie est modifiée et la <b>masse devient une fonction de la température</b> (on parle de masse thermique). 
 
 </div>
 
@@ -988,7 +988,7 @@ Quatre signatures accompagnent d'ailleurs toute brisure dans un système à gran
 ### Marier la brisure à une jauge&nbsp;: le photon mange le Goldstone
 
 Que devient tout cela si la symétrie brisée est <b>locale</b>&nbsp;?<br>
-Comme on l'a vu, un lagrangien avec une symétrie locale contient des champs de jauge. Le plus simple est le champ de jauge scalaire complexe avec masse retournée&nbsp;:
+Comme on l'a vu, un lagrangien avec une symétrie locale contient des champs de jauge. Le plus simple est celui du champ scalaire complexe couplé à un champ de jauge, avec masse retournée&nbsp;:
 
 <p style="text-align:center;">
 $\displaystyle
@@ -1130,7 +1130,7 @@ $
 
 <div id="preuve">
 
-Un état cohérent est la somme infini des états propres de l'énergie&nbsp;: $|\alpha\rangle=\sum_{n=0}^{\infty} c_n|n\rangle $. Et en substituant dans la définition $\hat a\\,|\alpha\rangle = \alpha\\,|\alpha\rangle$, on se retrouve avec une relation de récurrence&nbsp;: $c_{n+1}=\alpha c_n / \sqrt{n+1}$.
+Un état cohérent est la somme infinie des états propres de l'énergie&nbsp;: $|\alpha\rangle=\sum_{n=0}^{\infty} c_n|n\rangle $. Et en substituant dans la définition $\hat a\\,|\alpha\rangle = \alpha\\,|\alpha\rangle$, on se retrouve avec une relation de récurrence&nbsp;: $c_{n+1}=\alpha c_n / \sqrt{n+1}$.
 
 D'où $\displaystyle |\alpha\rangle = c_0 \big( |0 \rangle+\frac{\alpha}{\sqrt{1!}} |1\rangle+\frac{\alpha^2}{\sqrt{2!}} |2\rangle + \frac{\alpha^3}{\sqrt{3!}} |3\rangle+\ldots \big)$.
 
@@ -1146,7 +1146,7 @@ Et par normalisation $\langle \alpha | \alpha \rangle = 1$, on a finalement $c_0
 
 </div>
 
-L'amplitude de probabilité de trouvé $|\alpha\rangle$ dans l'état $| n\rangle$ vaut $c_n=\langle n | \alpha\rangle=\mathrm{e}^{-\frac{|\alpha|^2}{2}} \alpha^n / \sqrt{n!}$ donnant une densité de probabilité $P_n=\left|c_n\right|^2=\mathrm{e}^{-|\alpha|^2}|\alpha|^{2 n} / n!$ $\to$ $P_n$ suit une **distribution de Poisson**.
+L'amplitude de probabilité de trouver $|\alpha\rangle$ dans l'état $| n\rangle$ vaut $c_n=\langle n | \alpha\rangle=\mathrm{e}^{-\frac{|\alpha|^2}{2}} \alpha^n / \sqrt{n!}$ donnant une probabilité $P_n=\left|c_n\right|^2=\mathrm{e}^{-|\alpha|^2}|\alpha|^{2 n} / n!$ $\to$ $P_n$ suit une **distribution de Poisson**.
 
 Trois propriétés&nbsp;:
 
@@ -1265,7 +1265,7 @@ C'est précisément en ce sens que les états cohérents représentent l'approxi
 
 <details><summary>Démonstration&nbsp;:</summary>
 
-Comment les états cohérents réagissent à l'opérateur d'évolution $\hat{U}(\theta) = \mathrm e^{-\mathrm i\theta\hat{n}}$, où $\theta$ est un angle (un nombre réel) et $\hat{n}$ est notre opérateur habituel du nombre de particules&nbsp;?
+Comment les états cohérents réagissent-ils à l'opérateur d'évolution $\hat{U}(\theta) = \mathrm e^{-\mathrm i\theta\hat{n}}$, où $\theta$ est un angle (un nombre réel) et $\hat{n}$ est notre opérateur habituel du nombre de particules&nbsp;?
 
 Testons d'abord l'effet de cet opérateur sur un état de base $\vert{}n\rangle$ (qui vérifie $\hat{n}\vert{}n\rangle = n\vert{}n\rangle$). Pour ce faire, il suffit de se rappeler qu'une exponentielle d'opérateur peut se développer en série de Taylor&nbsp;:
 
@@ -1285,7 +1285,7 @@ $\displaystyle
 $
 </p>
 
-Conclusion de cette étape&nbsp;: L'action de $\hat{U}(\theta)$ sur un état cohérent $\vert{}\alpha\rangle$ a simplement pour effet de le transformer en un nouvel état cohérent, dont la valeur propre est multipliée par la phase $\mathrm e^{-\mathrm i\theta}$.
+Conclusion de cette étape&nbsp;: l'action de $\hat{U}(\theta)$ sur un état cohérent $\vert{}\alpha\rangle$ a simplement pour effet de le transformer en un nouvel état cohérent, dont la valeur propre est multipliée par la phase $\mathrm e^{-\mathrm i\theta}$.
 
 Ce résultat purement mathématique nous permet de déduire immédiatement l'évolution temporelle d'un état cohérent $\vert{}\alpha\rangle$ soumis au hamiltonien de l'oscillateur harmonique $\hat{H} = \omega(\hat{n} + 1/2)$ (en posant $\hbar=1$).
 
@@ -1451,7 +1451,7 @@ $\displaystyle
 $
 </p>
 
-De plus, l'opérateur dérivé lui-même anticommute. Si $\zeta$ est un autre nombre de Grassmann, on a $\frac{\partial}{\partial \eta} \zeta \eta=-\zeta \frac{\partial}{\partial \eta} \eta=-\zeta$.
+De plus, l'opérateur de dérivation lui-même anticommute. Si $\zeta$ est un autre nombre de Grassmann, on a $\frac{\partial}{\partial \eta} \zeta \eta=-\zeta \frac{\partial}{\partial \eta} \eta=-\zeta$.
 
 
 </div>
@@ -1620,7 +1620,7 @@ $
 
 </div>
 
-Pour toute théorie fermionique dont le lagrangien peut se mettre sous la forme en $\bar\psi(x)\hat K\psi(x)$, on a donc&nbsp;:
+Pour toute théorie fermionique dont le lagrangien peut se mettre sous la forme $\bar\psi(x)\hat K\psi(x)$, on a donc&nbsp;:
 
 <div id="theo">
 
