@@ -523,7 +523,7 @@ Pour les <b>antiparticules</b> (les solutions d'énergie négative, réinterpré
 <details>
 <summary>Aparté&nbsp;: pourquoi l'interaction faible rend tout cela vital</summary>
 
-Imaginons une interaction qui ne se couple qu'aux états de chiralité gauche. Dans la limite ultra-relativiste, où chiralité $=$ hélicité, seuls les particules d'hélicité $-1$ et les antiparticules d'hélicité $+1$ interagiraient. C'est <b>exactement</b> ce que fait l'interaction faible&nbsp;: le champ $W^\mu$ ne se couple qu'aux fermions gauches. Conséquences concrètes&nbsp;:
+Imaginons une interaction qui ne se couple qu'aux états de chiralité gauche. Dans la limite ultra-relativiste, où chiralité $=$ hélicité, seules les particules d'hélicité $-1$ et les antiparticules d'hélicité $+1$ interagiraient. C'est <b>exactement</b> ce que fait l'interaction faible&nbsp;: le champ $W^\mu$ ne se couple qu'aux fermions gauches. Conséquences concrètes&nbsp;:
 
 <ul style="margin-top:-0.5em; margin-bottom:1em;">
 <li>seuls des neutrinos gauches (hélicité $-1$) et des antineutrinos droits (hélicité $+1$) ont jamais été observés&nbsp;;</li>
@@ -832,7 +832,7 @@ u(p) = \begin{pmatrix} \sqrt{E_{\boldsymbol p} - |\boldsymbol p|}\begin{pmatrix}
 $
 </p>
 
-Que devient le spineur dans la limite ultra-relativiste&nbsp;? Cela revient à lui appliquer un boost infini qui lui procure une impulsion infini ($|\boldsymbol p|\to\infty$).
+Que devient le spineur dans la limite ultra-relativiste&nbsp;? Cela revient à lui appliquer un boost infini qui lui procure une impulsion infinie ($|\boldsymbol p|\to\infty$).
 
 $E_{\boldsymbol p} = \sqrt{m^2+|\boldsymbol p|^2}  \xrightarrow{\\;|\boldsymbol p|\to\infty\\;} |\boldsymbol p|$, ce qui entraîne $\sqrt{E_{\boldsymbol p} + |\boldsymbol p|}  \xrightarrow{\\;|\boldsymbol p|\to\infty\\;} \sqrt{2 E_{\boldsymbol p}}$. 
 
@@ -1409,7 +1409,7 @@ $\displaystyle
 $
 </p>
 
-En notant $\hat E = \mathrm{i}\partial_0$ l'opérateur agissant uniquement sur l'enveloppe lente $\phi_{L,R}$, on remplace $\mathrm{i}\partial_0 \phi_{L,R}$ par $\hat E \phi_{L,R}$ :
+En notant $\hat E = \mathrm{i}\partial_0$ l'opérateur agissant uniquement sur l'enveloppe lente $\phi_{L,R}$, on remplace $\mathrm{i}\partial_0 \phi_{L,R}$ par $\hat E \phi_{L,R}$&nbsp;:
 
 <p style="text-align:center;">
 $\displaystyle
@@ -1466,7 +1466,7 @@ $
 <summary>Détails&nbsp;:</summary>
 
 On cherche d'abord à exprimer $\phi_R$ à l'aide de la seconde équation.<br>
-On isole $m\phi_R$ puis on divise tout par $m$ :
+On isole $m\phi_R$ puis on divise tout par $m$&nbsp;:
 
 <p style="text-align:center;">
 $\displaystyle
@@ -1482,14 +1482,14 @@ $\displaystyle
 $
 </p>
 
-Développons le produit des deux parenthèses terme en distribuant $(m + \hat E - \boldsymbol\sigma\cdot\hat{\boldsymbol p})$&nbsp;:
+Développons le produit des deux parenthèses terme à terme en distribuant $(m + \hat E - \boldsymbol\sigma\cdot\hat{\boldsymbol p})$&nbsp;:
 <ul style="margin-top:-0.5em; margin-bottom:1em;">
-<li>Fois $1$ : $m + \hat E - \boldsymbol\sigma\cdot\hat{\boldsymbol p}$</li>
-<li>Fois $\frac{\hat E}{m}$ : $\hat E + \frac{\hat E^2}{m} - \frac{(\boldsymbol\sigma\cdot\hat{\boldsymbol p})\hat E}{m}$</li>
-<li>Fois $\frac{\boldsymbol\sigma\cdot\hat{\boldsymbol p}}{m}$ : $\boldsymbol\sigma\cdot\hat{\boldsymbol p} + \frac{\hat E(\boldsymbol\sigma\cdot\hat{\boldsymbol p})}{m} - \frac{(\boldsymbol\sigma\cdot\hat{\boldsymbol p})^2}{m}$</li>
+<li>Fois $1$&nbsp;: $m + \hat E - \boldsymbol\sigma\cdot\hat{\boldsymbol p}$</li>
+<li>Fois $\frac{\hat E}{m}$&nbsp;: $\hat E + \frac{\hat E^2}{m} - \frac{(\boldsymbol\sigma\cdot\hat{\boldsymbol p})\hat E}{m}$</li>
+<li>Fois $\frac{\boldsymbol\sigma\cdot\hat{\boldsymbol p}}{m}$&nbsp;: $\boldsymbol\sigma\cdot\hat{\boldsymbol p} + \frac{\hat E(\boldsymbol\sigma\cdot\hat{\boldsymbol p})}{m} - \frac{(\boldsymbol\sigma\cdot\hat{\boldsymbol p})^2}{m}$</li>
 </ul>
 
-Dans ce vide libre, l<b>'énergie</b> $\hat E$ (dérivée temporelle) <b>et l'impulsion</b> $\hat{\boldsymbol p}$ (dérivée spatiale) <b>commutent</b>. Les termes croisés avec un signe opposé s'annulent parfaitement. Il nous reste&nbsp;:
+Dans ce vide libre, l'<b>énergie</b> $\hat E$ (dérivée temporelle) <b>et l'impulsion</b> $\hat{\boldsymbol p}$ (dérivée spatiale) <b>commutent</b>. Les termes croisés avec un signe opposé s'annulent parfaitement. Il nous reste&nbsp;:
 
 <p style="text-align:center;">
 $\displaystyle
@@ -1497,7 +1497,7 @@ $\displaystyle
 $
 </p>
 
-Replaçons cela cela dans l'équation globale&nbsp;:
+Replaçons cela dans l'équation globale&nbsp;:
 
 <p style="text-align:center;">
 $\displaystyle
@@ -1505,7 +1505,7 @@ $\displaystyle
 $
 </p>
 
-**Les masses s'annulent !**
+**Les masses s'annulent&nbsp;!**
 
 Puisque l'on est à la limite non relativiste (basse énergie), l'énergie cinétique $\hat E$ est minuscule devant l'énergie de masse $m$ ($\hat E \ll m$). Le terme $\hat E^2/m$ est donc infime comparé à $2\hat E$&nbsp;:
 
@@ -1604,7 +1604,7 @@ $\displaystyle
 $
 </p>
 
-En divisant par le $2m$ de l'équation de Pauli, on tombe sur l'équation finale :
+En divisant par le $2m$ de l'équation de Pauli, on tombe sur l'équation finale&nbsp;:
 
 <p style="text-align:center;">
 $\displaystyle
@@ -1618,7 +1618,7 @@ $
 
 Regardons le nouveau terme généré par ce calcul&nbsp;: $H_{\text{mag}} = - \frac{q}{2m}\\,\boldsymbol\sigma\cdot\boldsymbol B$.
 
-En physique classique/phénoménologique, l'énergie d'un moment magnétique $\boldsymbol\mu$ dans un champ $\boldsymbol B$ s'écrit : 
+En physique classique/phénoménologique, l'énergie d'un moment magnétique $\boldsymbol\mu$ dans un champ $\boldsymbol B$ s'écrit&nbsp;: 
 
 <div id="def">
 
@@ -1665,8 +1665,8 @@ $
 
 Comparons maintenant cette forme phénoménologique avec ce que notre calcul de Dirac a dicté&nbsp;:
 <ul style="margin-top:-0.5em; margin-bottom:1em;">
-<li>Théorie attendue : $-g \frac{q}{4m} \boldsymbol\sigma\cdot\boldsymbol B$</li>
-<li>Résultat de Dirac : $- \frac{q}{2m} \boldsymbol\sigma\cdot\boldsymbol B$</li>
+<li>Théorie attendue&nbsp;: $-g \frac{q}{4m} \boldsymbol\sigma\cdot\boldsymbol B$</li>
+<li>Résultat de Dirac&nbsp;: $- \frac{q}{2m} \boldsymbol\sigma\cdot\boldsymbol B$</li>
 </ul>
 
 Pour que les deux correspondent, on doit obligatoirement poser&nbsp;:
@@ -1688,7 +1688,7 @@ $
 
 </div>
 
-Sans avoir rien demandé, la structure matricielle imposée par la relativité restreinte a généré ce terme magnétique, prouvant que l'électron se comporte (presque) comme s'il tournait sur lui-même deux fois plus efficacement qu'un objet classique. C'est le moment où la mécanique quantique et la relativité se serrent formellement la main !
+Sans avoir rien demandé, la structure matricielle imposée par la relativité restreinte a généré ce terme magnétique, prouvant que l'électron se comporte (presque) comme s'il tournait sur lui-même deux fois plus efficacement qu'un objet classique. C'est le moment où la mécanique quantique et la relativité se serrent formellement la main&nbsp;!
 
 
 Historiquement, ce résultat fut décisif pour asseoir l'équation de Dirac&nbsp;: le facteur 2, mystérieux dans la théorie de Pauli où on le mettait à la main, sort ici du formalisme sans qu'on lui demande rien. L'expérience donne $g = 2{,}002\,319\,304\ldots$&nbsp;; l'écart n'est pas une imperfection de Dirac mais le signal que $\psi$ n'est pas une fonction d'onde à une particule&nbsp;: c'est un champ, dont les fluctuations quantiques corrigent $g$. La [partie 14](https://sciencesilencieuse.github.io/physique/tqc/gifted_amateur/tqc14/) calculera la première correction et retrouvera les décimales.
