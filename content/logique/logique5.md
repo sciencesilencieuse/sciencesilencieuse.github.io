@@ -96,17 +96,17 @@ La <b>logique de la classe $\mathscr{C}$</b> est la classe de toutes les formule
 
 <br>
 
-Cette logique doit contenir toutes les formules qui sont des tautologies du calcul des propositions puisque ces formule de profondeur modale nulle (pas d'opérateurs modaux) sont nécessairement forcées en tout nœud de n'importe quel modèle.
+Cette logique doit contenir toutes les formules qui sont des tautologies du calcul des propositions puisque ces formules de profondeur modale nulle (pas d'opérateurs modaux) sont nécessairement forcées en tout nœud de n'importe quel modèle.
 
 <ul>
 <li>Si la logique contient la formule $\phi$, elle doit aussi contenir $\Box\phi$. En effet, si $\phi$ est forcée en tout nœud, alors le successeur de tout nœud force aussi $\phi$. On appelle ça la <b>nécessitation</b> (ou généralisation) d'une formule.</li>
 <br>
-<li>De plus, si $\phi$ appartient à la logique, la satisfaction de $\phi$ en un nœud $a$ donné est indépendante de la valuation $\mathcal{V}$ (que $P$ soit vraie ou fausse, $P$ est forcée au nœud $a$). Par conséquent, que $\psi$ soit vraie ou fausse, la satisfaction de la formule $\phi[\psi/P]$ ne varie pas. Toutes <b>substitutions uniformes</b> opérées sur les variables d'une formule appartenant à la logique sera aussi dans la logique.</li>
+<li>De plus, si $\phi$ appartient à la logique, la satisfaction de $\phi$ en un nœud $a$ donné est indépendante de la valuation $\mathcal{V}$ (que $P$ soit vraie ou fausse, $P$ est forcée au nœud $a$). Par conséquent, que $\psi$ soit vraie ou fausse, la satisfaction de la formule $\phi[\psi/P]$ ne varie pas. Toute <b>substitution uniforme</b> opérée sur les variables d'une formule appartenant à la logique donne une formule qui sera aussi dans la logique.</li>
 <br>
-<li>Enfin, la logique de la classe de tous les systèmes de transition est close par <b><i>modus ponens</i></b>&nbsp;; si $\phi \rightarrow\psi$ et $\psi$ appartiennent toutes deux à la logique, alors $\psi$ également. En effet, le <i>modus ponens</i> préserve la validité puisque si un modèle vérifie en un nœud à la fois $\psi$ et $\psi\rightarrow\phi$, alors (par définition de l'interprétation de l'implication) il vérifie également $\phi$.</li>
+<li>Enfin, la logique de la classe de tous les systèmes de transition est close par <b><i>modus ponens</i></b>&nbsp;; si $\phi \rightarrow\psi$ et $\phi$ appartiennent toutes deux à la logique, alors $\psi$ également. En effet, le <i>modus ponens</i> préserve la validité puisque si un modèle vérifie en un nœud à la fois $\psi$ et $\psi\rightarrow\phi$, alors (par définition de l'interprétation de l'implication) il vérifie également $\phi$.</li>
 </ul>
 
-Pour déterminer des nouvelles tautologies en calcul des propositions, on a utilisé des systèmes de déduction (à la Hilbert, déduction naturelle, calcul des séquents). La modalité complique un peu les choses et seul le système à la Hilbert va pouvoir s'adapter facilement.
+Pour déterminer de nouvelles tautologies en calcul des propositions, on a utilisé des systèmes de déduction (à la Hilbert, déduction naturelle, calcul des séquents). La modalité complique un peu les choses et seul le système à la Hilbert va pouvoir s'adapter facilement.
 
 <div id="def">
 
@@ -122,14 +122,14 @@ Pour déterminer des nouvelles tautologies en calcul des propositions, on a util
 <div id="def">
 
 Soient $I$ un ensemble non vide, $\phi$ une formule et $\textbf{S}$ un système formel.<br>
-Une <b>preuve</b> de la formule $\varphi$ dans le système formel $\textbf{S}$ est une suite finie de formule $\langle\varphi_1,\varphi_2,\ldots,\varphi_n\rangle$ telle que&nbsp;:
+Une <b>preuve</b> de la formule $\varphi$ dans le système formel $\textbf{S}$ est une suite finie de formules $\langle\varphi_1,\varphi_2,\ldots,\varphi_n\rangle$ telle que&nbsp;:
 <ul>
 <li>$\varphi_n=\phi$</li>
 <br>
 <li>chaque $\varphi_l$ vérifie l'une des quatre conditions suivantes&nbsp;:
 <ul>
 <li>$\varphi_l \in \textbf{S}$ ($\varphi_l$ est un axiome)</li>
-<li>$\varphi_l$ est obtenue par application de la règle du <i>modus ponens</i> à deux formules d'indice inférieurs $\varphi_j$ et $\varphi_k$ où $j , k < l$ ($\varphi_j = \varphi_k\rightarrow\varphi_l$)</li>
+<li>$\varphi_l$ est obtenue par application de la règle du <i>modus ponens</i> à deux formules d'indice inférieur $\varphi_j$ et $\varphi_k$ où $j , k < l$ ($\varphi_j = \varphi_k\rightarrow\varphi_l$)</li>
 <li>$\varphi_l = \varphi_k[\theta /P]$ où $k < l$ (substitution d'une variable $P$ quelconque par une formule $\theta$ quelconque dans une formule d'indice inférieure)</li>
 <li>$\varphi_l = [i]\varphi_j$ où $j < l$ ($\varphi_l$ est obtenue à partir de l'application de la règle de nécessitation appliquée à une formule d'indice inférieure pour une étiquette $i\in I$ quelconque)</li>
 </ul>
@@ -146,16 +146,16 @@ Exemple 1&nbsp;:
 
 Si $\textbf{S}$ désigne l'ensemble des tautologies du calcul des propositions, alors la suite 
 <div style="overflow-x:auto;margin-top:-1em;">
-$$\langle P\rightarrow(P\lor\neg P),\Diamond  Q\rightarrow(\Diamond Q\rightarrow\lor\neg\Diamond Q),\Box (\Diamond  Q\rightarrow(\Diamond Q\rightarrow\lor\neg\Diamond Q)),\Box (\Diamond  \phi\rightarrow(\Diamond \phi\rightarrow\lor\neg\Diamond \phi))\rangle$$
+$$\langle P\rightarrow(P\lor\neg P),\Diamond  Q\rightarrow(\Diamond Q\lor\neg\Diamond Q),\Box (\Diamond  Q\rightarrow(\Diamond Q\lor\neg\Diamond Q)),\Box (\Diamond  \phi\rightarrow(\Diamond \phi\lor\neg\Diamond \phi))\rangle$$
 </div>
-est une preuve de $\Box (\Diamond  Q\rightarrow(\Diamond Q\rightarrow\lor\neg\Diamond Q)),\Box (\Diamond  \phi\rightarrow(\Diamond \phi\rightarrow\lor\neg\Diamond \phi)$ dans ce système.
+est une preuve de $\Box (\Diamond  Q\rightarrow(\Diamond Q\lor\neg\Diamond Q)),\Box (\Diamond  \phi\rightarrow(\Diamond \phi\lor\neg\Diamond \phi))$ dans ce système.
 
 En effet&nbsp;:
 <ul style="margin-top:-0.5em;">
 <li>$\varphi_1=P\rightarrow(P\lor\neg P)$ est une tautologie du calcul des propositions et donc un axiome du système formel $\textbf{S}$,</li>
-<li>$\varphi_2 = \Diamond  Q\rightarrow(\Diamond Q\rightarrow\lor\neg\Diamond Q) = P\rightarrow(P\lor\neg P)[\Diamond Q /P]$ est la substitution de la formule $\Diamond Q$ à $P$ dans $\varphi_0$,</li>
-<li>$\varphi_3 = \Box (\Diamond  Q\rightarrow(\Diamond Q\rightarrow\lor\neg\Diamond Q))$ est obtenu par nécessitation de $\varphi_1$,</li>
-<li>$\varphi_4 = \Box (\Diamond  \phi\rightarrow(\Diamond \phi\rightarrow\lor\neg\Diamond \phi) = \varphi_3[\phi/Q]$</li>
+<li>$\varphi_2 = \Diamond  Q\rightarrow(\Diamond Q\lor\neg\Diamond Q) = P\rightarrow(P\lor\neg P)[\Diamond Q /P]$ est la substitution de la formule $\Diamond Q$ à $P$ dans $\varphi_1$,</li>
+<li>$\varphi_3 = \Box (\Diamond  Q\rightarrow(\Diamond Q\lor\neg\Diamond Q))$ est obtenu par nécessitation de $\varphi_2$,</li>
+<li>$\varphi_4 = \Box (\Diamond  \phi\rightarrow(\Diamond \phi\lor\neg\Diamond \phi)) = \varphi_3[\phi/Q]$</li>
 </ul>
 
 
@@ -168,11 +168,11 @@ $$
 \RightLabel{$\scriptsize\;ax$}
 \UnaryInfC{$P\rightarrow(P\lor\neg P)$}
 \RightLabel{$\scriptsize\;sub.$}
-\UnaryInfC{$\Diamond  Q\rightarrow(\Diamond Q\rightarrow\lor\neg\Diamond Q)$}
+\UnaryInfC{$\Diamond  Q\rightarrow(\Diamond Q\lor\neg\Diamond Q)$}
 \RightLabel{$\scriptsize\;nec.$}
-\UnaryInfC{$\Box (\Diamond  Q\rightarrow(\Diamond Q\rightarrow\lor\neg\Diamond Q))$}
+\UnaryInfC{$\Box (\Diamond  Q\rightarrow(\Diamond Q\lor\neg\Diamond Q))$}
 \RightLabel{$\scriptsize\;sub.$}
-\UnaryInfC{$\Box (\Diamond  \phi\rightarrow(\Diamond \phi\rightarrow\lor\neg\Diamond \phi)$}
+\UnaryInfC{$\Box (\Diamond  \phi\rightarrow(\Diamond \phi\lor\neg\Diamond \phi)$}
 \end{prooftree}
 $$
 </div>
@@ -198,7 +198,7 @@ Si $\textbf{S}$ désigne l'ensemble des tautologies du calcul des propositions a
 <div id="def">
 
 Soient $\textbf{S}$ un système formel et $\Gamma$ un ensemble de formules appelées hypothèses.<br>
-On écrit $\Gamma\vdash_\textbf{S}\phi$ s'il existe un ensemble fini de formules $\set{\psi_1,\psi_2,\ldots,\psi_n}\subseteq\Gamma$ tel que la formule $(\psi_1\land\psi_2\land\ldots\land\psi_n)\rightarrow\phi$ puisse être prouvée dans le système formel $\textbf{S}$. Autrement dit le séquent $\vdash_\textbf{S}(\psi_1\land\psi_2\land\ldots\land\psi_n)\rightarrow\phi$ est vérifiée pour un nombre fini de formules bien choisies de $\Gamma$.
+On écrit $\Gamma\vdash_\textbf{S}\phi$ s'il existe un ensemble fini de formules $\set{\psi_1,\psi_2,\ldots,\psi_n}\subseteq\Gamma$ tel que la formule $(\psi_1\land\psi_2\land\ldots\land\psi_n)\rightarrow\phi$ puisse être prouvée dans le système formel $\textbf{S}$. Autrement dit le séquent $\vdash_\textbf{S}(\psi_1\land\psi_2\land\ldots\land\psi_n)\rightarrow\phi$ est vérifié pour un nombre fini de formules bien choisies de $\Gamma$.
 
 </div>
 
@@ -263,7 +263,7 @@ La relation sœur permettant de passer de l'opérateur boite à l'opérateur dia
 Ces deux relations soulignent bien la nature duale des opérateurs $\Diamond$ et $\Box$.
 
 
-Mais ce système formel n'est pas encore suffisamment riche pour contenir toutes les formules valides dans tous les modèles quels qu'ils soient. Pour cela, il faudrait également considérer toutes les substitutions uniformes possibles (entre autre dans la formule  $\text{(K)}$). On passe alors aux **logiques modales**.
+Mais ce système formel n'est pas encore suffisamment riche pour contenir toutes les formules valides dans tous les modèles quels qu'ils soient. Pour cela, il faudrait également considérer toutes les substitutions uniformes possibles (entre autres dans la formule  $\text{(K)}$). On passe alors aux **logiques modales**.
 
 <br>
 
@@ -335,7 +335,7 @@ $\text{(D) :}$ $\Box P\rightarrow \Diamond P$
 
 </div>
 
-La formule $\text{(D)}$ dit que si quelque chose est nécessaire, alors elle doit être possible. On peut aussi l'interpréter différemment dans d'autres types de logiques que nous allons entrevoir ensuite&nbsp;: en logique déontique, la formule dit que quelque chose d'obligatoire doit être permis&nbsp;; en logique épistémique, elle dit que si je sais $P$, alors il est faux que je sache $\neg P$&nbsp;; et en logique doxastique, que si je crois que $P$, alors il est faux que je crois que $\neg P$.<br>
+La formule $\text{(D)}$ dit que si quelque chose est nécessaire, alors cela doit être possible. On peut aussi l'interpréter différemment dans d'autres types de logiques que nous allons entrevoir ensuite&nbsp;: en logique déontique, la formule dit que quelque chose d'obligatoire doit être permis&nbsp;; en logique épistémique, elle dit que si je sais $P$, alors il est faux que je sache $\neg P$&nbsp;; et en logique doxastique, que si je crois que $P$, alors il est faux que je crois que $\neg P$.<br>
 $\text{(D)}$ est parfois appelé axiome de consistance.
 
 [Comme on l'a vu plus tôt](../logique4/#nbd), un système de transition qui valide $\text{(D)}$ n'admet **pas d'impasse**. Autrement dit, les arcs doivent être **non bornés à droite**.
@@ -348,7 +348,7 @@ $\text{(T) :}$ $\Box P\rightarrow P$
 
 </div>
 
-La formule $\text{(T)}$ dit que si quelque chose est nécessaire, alors elle est. On l'appelle parfois axiome de factivité.<br>
+La formule $\text{(T)}$ dit que si quelque chose est nécessaire, alors cela est. On l'appelle parfois axiome de factivité.<br>
 En logique déontique&nbsp;: ce qui est obligatoire est.<br>
 En logique épistémique&nbsp;: si je sais $P$, alors $P$ est avéré.<br>
 En logique doxastique&nbsp;: si je crois que $P$, alors $P$ est également avéré.
@@ -363,9 +363,9 @@ $\text{(B) :}$ $P\rightarrow \Box\Diamond P$
 
 </div>
 
-La formule $\text{(B)}$ dit que si quelque chose est vraie, alors il est nécessaire qu'elle soit possible.<br>
+La formule $\text{(B)}$ dit que si quelque chose est vrai, alors il est nécessaire que cela soit possible.<br>
 En logique déontique&nbsp;: ce qui est, est obligatoirement permis.<br>
-En logique épistémique&nbsp;: si je $P$ est avéré, alors je sais que je ne sais pas $\neg P$.<br>
+En logique épistémique&nbsp;: si $P$ est avéré, alors je sais que je ne sais pas $\neg P$.<br>
 En logique doxastique&nbsp;: si $P$ est avéré, alors je crois que je ne crois pas $\neg P$.
 
 Et [nous avons vu](../logique4/#syme) qu'un système de transition valide $\text{(B)}$ si et seulement si ce système est **symétrique**. $\text{(B)}$ est donc aussi l'axiome de symétrie.
@@ -378,9 +378,9 @@ $\text{(4) :}$ $\Box P\rightarrow \Box\Box P$
 
 </div>
 
-La formule $\text{(4)}$ dit que si quelque chose est nécessaire, alors elle est nécessairement nécessaire.<br>
-En logique déontique&nbsp;: si quelque chose est obligatoire, c'est obligatoire qu'elle le soit.<br>
-En logique épistémique&nbsp;: si je sais $P$, alors je sais que je sais $P$. Et transitivement, on sait que l'on sait que l'on sait... Autrement dit, avec la formule (4) nous décrivons des agents parfaitement rationnel.<br>
+La formule $\text{(4)}$ dit que si quelque chose est nécessaire, alors cela est nécessairement nécessaire.<br>
+En logique déontique&nbsp;: si quelque chose est obligatoire, c'est obligatoire que cela le soit.<br>
+En logique épistémique&nbsp;: si je sais $P$, alors je sais que je sais $P$. Et transitivement, on sait que l'on sait que l'on sait... Autrement dit, avec la formule (4) nous décrivons des agents parfaitement rationnels.<br>
 On appelle $\text{(4)}$ l'axiome d'introspection positive dans le cadre de la logique épistémique.
 
 Et [nous avons vu](../logique4/#trans) qu'un système de transition valide $\text{(4)}$ si et seulement si ce système est **transitif**. $\text{(4)}$ est donc aussi l'axiome de transitivité.
@@ -393,8 +393,8 @@ $\text{(5) :}$ $\Diamond P\rightarrow \Box\Diamond P$
 
 </div>
 
-La formule $\text{(5)}$ dit que s'il n'est pas nécessaire que quelque chose ne soit pas, alors elle est nécessaire.<br>
-En logique déontique&nbsp;: si quelque chose est permise, c'est obligatoire qu'elle soit permise.<br>
+La formule $\text{(5)}$ dit que s'il n'est pas nécessaire que quelque chose ne soit pas, alors il est nécessaire que cela soit possible.<br>
+En logique déontique&nbsp;: si quelque chose est permis, c'est obligatoire que cela soit permis.<br>
 En logique épistémique&nbsp;: si je ne sais pas quelque chose, alors je sais que je ne le sais pas. L'interprétation épistémique décrit un agent parfaitement conscient de ce qu'il ne sait pas.<br>
 En logique doxastique&nbsp;: si je ne crois pas quelque chose, alors je crois que je ne le crois pas. L'interprétation doxastique décrit un agent parfaitement conscient de ce qu'il ne croit pas.<br>
 On appelle $\text{(5)}$ l'axiome d'introspection négative dans le cadre de la logique épistémique.
@@ -404,11 +404,11 @@ Et [nous avons vu](../logique4/#eucl) qu'un système de transition valide $\text
 
 <br>
 
-En prenant ensemble les formules $\text{(5)}$ et $\text{(T)}$, on regarde des systèmes de transition à la fois **euclidiens** et **réflexifs**. Or la conjonction de ces deux propriétés est équivalentes à la conjonction des trois propriétés d'une relation d'équivalence&nbsp;!
+En prenant ensemble les formules $\text{(5)}$ et $\text{(T)}$, on regarde des systèmes de transition à la fois **euclidiens** et **réflexifs**. Or la conjonction de ces deux propriétés est équivalente à la conjonction des trois propriétés d'une relation d'équivalence&nbsp;!
 
 <div id="theo">
 
-Un système de transition est à la fois **euclidien** et **réflexif** si et seulement si il est à la fois **réflexif**, **symétrique** et **transitif**.
+Un système de transition est à la fois **euclidien** et **réflexif** si et seulement s'il est à la fois **réflexif**, **symétrique** et **transitif**.
 
 </div>
 
@@ -439,7 +439,7 @@ Autrement dit, un graphe euclidien et réflexif est en fait ni plus ni moins qu'
 
 <br>
 
-Par la suite, nous confonderons un système formel et la logique qu'il induit par clôture. Les systèmes formels qu'on va introduire sont tous des extensions du système $\textbf{K}$.
+Par la suite, nous confondrons un système formel et la logique qu'il induit par clôture. Les systèmes formels qu'on va introduire sont tous des extensions du système $\textbf{K}$.
 
 <div id="def">
 
@@ -470,7 +470,7 @@ Comme $\text{(B)}$ est vraie dans tout système de transition symétrique, il su
 <div style="position:relative;width:350px;max-width:100%;margin-left:auto;margin-right:auto;">
 <img src="/preuvekbpask4.png">
 </div>
-Comme $P$ est satisfait dans tout les successeurs de $a$, $a\Vdash\Box P$. Mais pour avoir $a\Vdash\Box\Box P$, il faudrait que tous les successeurs de $a$ satisfassent $\Box P$, or ce n'est pas le cas de $b$ (qui a pour successeur $a$ lui-même par symétrie et $a\nVdash P$). D'où $a\nVdash \Box\Box P$.
+Comme $P$ est satisfait dans tous les successeurs de $a$, $a\Vdash\Box P$. Mais pour avoir $a\Vdash\Box\Box P$, il faudrait que tous les successeurs de $a$ satisfassent $\Box P$, or ce n'est pas le cas de $b$ (qui a pour successeur $a$ lui-même par symétrie et $a\nVdash P$). D'où $a\nVdash \Box\Box P$.
 </div>
 
 <br>
@@ -676,7 +676,7 @@ Dit autrement, on doit pouvoir déduire du système formel **tout le vrai** (**c
 
 <br>
 
-On va d'abord chercher à faire correspondre une logique modale normale à chaque classe de systèmes de transitions.
+On va d'abord chercher à faire correspondre une logique modale normale à chaque classe de systèmes de transition.
 
 <div id="def">
 
@@ -711,19 +711,19 @@ $$\text{si } \vdash_\mathbb{L}\phi \text{ alors }\models_{\mathscr{C}}\phi$$
 <div id="preuve">
 
 On a déjà en fait déjà tout démontré.<br>
-En effet, on a montré que les axiomes de la logique normale minimale (tautologies du calcul des propositions, $\text{(K)}$ et $\text{(dual)}$) sont satisfaites en tout nœud et pour toute valuation de tous les systèmes de transitions. Et on a montré que les trois opérations utilisés pour les preuves (la nécessitation, la substitution uniforme et le <i>modus ponens</i>) préservent la validité. Donc une formule prouvable dans $\textbf{K}$ est valide dans tout système de transition ( $\textbf{K}$ est $\mathscr{C}$-correcte).
+En effet, on a montré que les axiomes de la logique normale minimale (tautologies du calcul des propositions, $\text{(K)}$ et $\text{(dual)}$) sont satisfaits en tout nœud et pour toute valuation de tous les systèmes de transition. Et on a montré que les trois opérations utilisées pour les preuves (la nécessitation, la substitution uniforme et le <i>modus ponens</i>) préservent la validité. Donc une formule prouvable dans $\textbf{K}$ est valide dans tout système de transition ( $\textbf{K}$ est $\mathscr{C}$-correcte).
 
-Ensuite, on a montré que chacun des axiomes modaux supplémentaires ajoutés à $\textbf{K}$ pour obtenir les autres logiques normales ont une validité limitée à une classe spécifique de systèmes de transition.
+Ensuite, on a montré que chacun des axiomes modaux supplémentaires ajoutés à $\textbf{K}$ pour obtenir les autres logiques normales a une validité limitée à une classe spécifique de systèmes de transition.
 
 <ul>
 <li>$\text{(T)}$ est valide dans tout système de transition réflexif.</li>
 <li>$\text{(B)}$ est valide dans tout système de transition symétrique.</li>
 <li>$\text{(4)}$ est valide dans tout système de transition transitif.</li>
 <li>$\text{(D)}$ est valide dans tout système de transition non borné à droite.</li>
-<li>$\text{(4)}$ est valide dans tout système de transition euclidien.</li>
+<li>$\text{(5)}$ est valide dans tout système de transition euclidien.</li>
 </ul>
 
-Et on a montré qu'un graphe est à la fois réflexif et euclidien si et seulement si il est réflexif, symétrique et transitif.
+Et on a montré qu'un graphe est à la fois réflexif et euclidien si et seulement s'il est réflexif, symétrique et transitif.
 
 </div>
 
@@ -731,7 +731,7 @@ On représente graphiquement par une flèche "$\textbf{X}\longrightarrow\mathscr
 
 ![](/compsolide.png?width=1200px)
 
-On va essayer maintenant d'associer les classe aux logiques, la sémantique à la syntaxe.
+On va essayer maintenant d'associer les classes aux logiques, la sémantique à la syntaxe.
 
 
 <div id="def">
@@ -788,7 +788,7 @@ Dans le cas contraire, $\Gamma$ est dit $\textbf{S}$-inconsistant.
 <div id="theo">
 <b>Lemme d'existence</b>
 
-Soient $\mathscr{C}$ une classe de système de transition et $\mathbb{L}$ une logique modale normale,<br>
+Soient $\mathscr{C}$ une classe de systèmes de transition et $\mathbb{L}$ une logique modale normale,<br>
 <p style="text-align:center;">
 $\mathbb{L}$ est $\mathscr{C}$-(fortement) complète si et seulement si pour tout $\Gamma\subseteq\mathbb{L}$ qui est $\mathbb{L}$-consistant, il existe $\mathcal{S}\in\mathscr{C},\mathcal{V}$ et $a$ tels que $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Gamma$.
 </p>
@@ -814,7 +814,7 @@ montrons la contraposée. On suppose donc que $\mathbb{L}$ n'est pas $\mathscr{C
 <br>
 
 L'idée pour démontrer la complétude est de chercher un modèle $\langle\mathcal{S},\mathcal{V}\rangle$ dont le système de transition fait partie de la classe considérée et un nœud $a$ tels que $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Gamma$ où $\Gamma$ est un ensemble de formules $\mathbb{L}$-consistant.<br>
-On va mettre au point un tel modèle en modelant les nœuds de son système de distribution directement à partir d'ensembles de formules&nbsp;! La sémantique détourne ainsi la syntaxe à son profit en donnant vie à une sorte de Golem syntaxique.
+On va mettre au point un tel modèle en modelant les nœuds de son système de transition directement à partir d'ensembles de formules&nbsp;! La sémantique détourne ainsi la syntaxe à son profit en donnant vie à une sorte de Golem syntaxique.
 
 <br>
 
@@ -856,7 +856,7 @@ Soit $(\phi_n)_{n\in\mathbb{N}}$ une énumération de toutes les formules. On d�
 $\Gamma_{n+1}=\begin{cases}\Gamma_n\cup\set{\phi_n} \text{ si } \Gamma_n\cup\set{\phi_n}\nvdash_\mathbb{L}\bot\\ \Gamma_n\cup\set{\neg\phi_n} \text{ sinon}\end{cases}$</li>
 <li>$\displaystyle \Gamma_{max}=\bigcup_{n\in\mathbb{N}}\Gamma_n$
 </ul>
-$\Gamma_{max}$ est $\mathbb{L}$-consistant car sinon il existerait un plus petit entier $n$ tel que $\Gamma_{n+1}\vdash_\mathbb{L}\bot$. Nous aurions alors $\Gamma_n\cup\set{\phi_n}\vdash_\mathbb{L}\bot$ et $\Gamma_n\cup\set{\neg\phi_n}\vdash_\mathbb{L}\bot$ par construction de $\Gamma_{max}$. En utilisant le raisonnement par l'absurde, nous obtenons à la fois $\Gamma_n\vdash_\mathbb{L}\phi_n$ et $\Gamma_n\vdash_\mathbb{L}\neg\phi_n$, ce qui entraîne $\Gamma_n\vdash_\mathbb{L}\bot$, contredisant la fait que par minimalité de l'entier $n$, $\Gamma_n$ est $\mathbb{L}$-consistant.
+$\Gamma_{max}$ est $\mathbb{L}$-consistant car sinon il existerait un plus petit entier $n$ tel que $\Gamma_{n+1}\vdash_\mathbb{L}\bot$. Nous aurions alors $\Gamma_n\cup\set{\phi_n}\vdash_\mathbb{L}\bot$ et $\Gamma_n\cup\set{\neg\phi_n}\vdash_\mathbb{L}\bot$ par construction de $\Gamma_{max}$. En utilisant le raisonnement par l'absurde, nous obtenons à la fois $\Gamma_n\vdash_\mathbb{L}\phi_n$ et $\Gamma_n\vdash_\mathbb{L}\neg\phi_n$, ce qui entraîne $\Gamma_n\vdash_\mathbb{L}\bot$, contredisant le fait que par minimalité de l'entier $n$, $\Gamma_n$ est $\mathbb{L}$-consistant.
 
 $\Gamma_{max}$ est maximal car sinon il existerait $\Gamma'$ $\mathbb{L}$-consistant tel que $\Gamma_{max}\subsetneq\Gamma'$. Dans ce cas, une formule quelconque $\psi$ telle que $\psi\in\Gamma'\setminus\Gamma_{max}$ apparaîtrait dans l'énumération $(\phi_n)\_{n\in\mathbb{N}}$ de toutes les formules et il existerait ainsi un entier $n$ tel que $\psi=\phi_n$. Par construction de $\Gamma_{max}$, comme $\phi_n\not\in\Gamma_{max}$, $\Gamma_n\cup\set{\phi_n}\vdash_\mathbb{L}\bot$ est vérifiée. Donc $\Gamma_{max}\cup\set{\phi_n}\vdash_\mathbb{L}\bot$ ce qui entraîne $\Gamma'\vdash_\mathbb{L}\bot$, contredisant la $\mathbb{L}$-consistance de $\Gamma'$.
 </div>
@@ -940,15 +940,15 @@ La démonstration se fait par induction sur la hauteur de la formule $\phi$.
 <li> si $ht(\phi)=0$, alors $\phi=\top$ ou $\phi=\bot$ ou $\phi$ est une variable propositionnelle et $\Gamma\Vdash\phi$ ssi $\phi\in\Gamma$ est la définition même de la valuation $\mathcal{V}_\mathbb{L}$.</li>
 <li> si $ht(\phi)=n+1$
 <ul>
-<li>si $\phi=\neg\psi$, alors $\Gamma\Vdash\neg\phi$ ssi $\Gamma\nVdash\psi$. Or par hypothèse d'induction $\Gamma\nVdash\psi$ ssi $\psi\not\in\Gamma$. Par maximalité de $\Gamma$, on obtient $\neg\psi\in\Gamma$.</li>
+<li>si $\phi=\neg\psi$, alors $\Gamma\Vdash\neg\psi$ ssi $\Gamma\nVdash\psi$. Or par hypothèse d'induction $\Gamma\nVdash\psi$ ssi $\psi\not\in\Gamma$. Par maximalité de $\Gamma$, on obtient $\neg\psi\in\Gamma$.</li>
 <li>si $\phi=(\psi_1\lor\psi_2)$, alors $\Gamma\Vdash(\psi_1\lor\psi_2)$ ssi $\Gamma\Vdash\psi_1$ ou $\Gamma\Vdash\psi_2$.<br>
 Par hypothèse d'induction, $\Gamma\Vdash\psi_1$ ssi $\psi_1\in\Gamma$ et $\Gamma\Vdash\psi_2$ ssi $\psi_2\in\Gamma$. Et par maximalité de $\Gamma$, $\psi_1\in\Gamma$ ou $\psi_2\in\Gamma$ ssi $(\psi_1\lor\psi_2)\in\Gamma$.</li>
-<li>si $\phi=(\psi_1\land\psi_2)$, alors $\Gamma\Vdash(\psi_1\lor\psi_2)$ ssi $\Gamma\Vdash\psi_1$ et $\Gamma\Vdash\psi_2$.<br>
+<li>si $\phi=(\psi_1\land\psi_2)$, alors $\Gamma\Vdash(\psi_1\land\psi_2)$ ssi $\Gamma\Vdash\psi_1$ et $\Gamma\Vdash\psi_2$.<br>
 Par hypothèse d'induction, $\Gamma\Vdash\psi_1$ ssi $\psi_1\in\Gamma$ et $\Gamma\Vdash\psi_2$ ssi $\psi_2\in\Gamma$. Or par $\mathbb{L}$-consistance, $\psi_1\in\Gamma$ et $\psi_2\in\Gamma$ ssi $(\psi_1\land\psi_2)\in\Gamma$.</li>
 <li>si $\phi=(\psi_1\rightarrow\psi_2)$. On déduit ce cas de $\neg\psi_1\lor\psi_2$.</li>
 <li>si $\phi=(\psi_1\leftrightarrow\psi_2)$. On déduit ce cas de $(\psi_1\rightarrow\psi_2)\land(\psi_2\rightarrow\psi_1)$.</li>
 <li>si $\phi=\Diamond\psi$, alors $\Gamma\Vdash\Diamond \psi$ ssi il existe $\Gamma',\Gamma\longrightarrow\Gamma'$ et $\Gamma'\Vdash\psi$. Or par hypothèse d'induction $\Gamma'\Vdash\psi$ ssi $\psi\in\Gamma'$. Finalement, par définition de la relation $\Gamma\longrightarrow\Gamma'$ et par le lemme ($\longrightarrow$ et $\Diamond$) $\psi\in\Gamma'$ ssi $\Diamond\psi\in\Gamma$.</li>
-<li>si $\phi=\Box\psi$, alors $\Gamma\Vdash\Box\phi$ ssi $\Gamma\Vdash\neg\Diamond\neg\psi$ ssi $\neg\Diamond\neg\psi\in\Gamma$ ssi $\Box\psi\in\Gamma$ (par maximal $\mathbb{L}$-consistance).</li>
+<li>si $\phi=\Box\psi$, alors $\Gamma\Vdash\Box\psi$ ssi $\Gamma\Vdash\neg\Diamond\neg\psi$ ssi $\neg\Diamond\neg\psi\in\Gamma$ ssi $\Box\psi\in\Gamma$ (par maximale $\mathbb{L}$-consistance).</li>
 </ul>
 </li>
 </ul>
@@ -965,10 +965,10 @@ Pour chaque logique normale, nous allons choisir le modèle canonique $\mathcal{
 Il ne reste plus qu'à vérifier à chaque fois que le modèle canonique est bien construit sur la base d'un système de transition de la classe $\mathscr{C}$ considérée.
 
 <ol>
-<li>$\mathcal{M}_\textbf{K}\in\mathscr{C}$&nbsp;: comme $\mathscr{C}$ désigne la classe de tous les systèmes de transition, il n'ya rien à montrer.</li>
+<li>$\mathcal{M}_\textbf{K}\in\mathscr{C}$&nbsp;: comme $\mathscr{C}$ désigne la classe de tous les systèmes de transition, il n'y a rien à montrer.</li>
 <li>$\mathcal{M}_\textbf{K4}\in\mathscr{C}_{tr.}$&nbsp;:<br>
 il faut montrer que pour tout nœud $\Xi_1$, $\Xi_2$ et $\Xi_3$ de $\mathcal{M}_\textbf{K4}$, si $\Xi_1\longrightarrow \Xi_2$ et $\Xi_2\longrightarrow \Xi_3$, alors $\Xi_1\longrightarrow \Xi_3$.<br>
-La formule $\text{(4)}=\Box p\rightarrow\Box\Box P$ est équivalente (par dualité) à la formule $\neg\Diamond\neg P\rightarrow\neg\Diamond\neg\neg\Diamond\neg P$ elle même équivalente à $\Diamond\Diamond\neg P\rightarrow\Diamond\neg P$ (en passant par la contraposée et en éliminant les doubles négations). Comme $\Diamond\Diamond\neg P\rightarrow\Diamond\neg P\in\Gamma$, on a aussi $\Diamond\Diamond\neg P\rightarrow\Diamond\neg P\in\Xi_1$ et puisque $\Xi_1$ est clos par substitution uniforme, $\Diamond\Diamond\neg \neg\phi\rightarrow\Diamond\neg \neg\phi\in\Xi_1$. Et donc chaque formule $\Diamond\Diamond\rightarrow\Diamond$ appartient à $\Xi_1$.<br>
+La formule $\text{(4)}=\Box P\rightarrow\Box\Box P$ est équivalente (par dualité) à la formule $\neg\Diamond\neg P\rightarrow\neg\Diamond\neg\neg\Diamond\neg P$ elle-même équivalente à $\Diamond\Diamond\neg P\rightarrow\Diamond\neg P$ (en passant par la contraposée et en éliminant les doubles négations). Comme $\Diamond\Diamond\neg P\rightarrow\Diamond\neg P\in\Gamma$, on a aussi $\Diamond\Diamond\neg P\rightarrow\Diamond\neg P\in\Xi_1$ et puisque $\Xi_1$ est clos par substitution uniforme, $\Diamond\Diamond\neg \neg\phi\rightarrow\Diamond\neg \neg\phi\in\Xi_1$. Et donc chaque formule $\Diamond\Diamond\rightarrow\Diamond$ appartient à $\Xi_1$.<br>
 Par définition de $\Xi_1\longrightarrow \Xi_2$ et $\Xi_2\longrightarrow \Xi_3$, pour une formule $\phi$ quelconque, si $\phi\in\Xi_3$, alors $\Diamond\phi\in\Xi_2$ et $\Diamond\Diamond\phi\in\Xi_1$. Et comme $\Xi_1$ est clos par <i>modus ponens</i>, si à la fois $\Diamond\Diamond\phi\in\Xi_1$ et $\Diamond\Diamond\phi\rightarrow\Diamond\phi\in\Xi_1$, alors $\Diamond\phi\in\Xi_1$. Cela prouve que pour toute formule $\phi$, si $\phi\in\Xi_3$, alors $\Diamond\phi\in\Xi_1$, et par conséquent $\Xi_1\longrightarrow\Xi_3$.
 </li>
 <li>$\mathcal{M}_\textbf{KD}\in\mathscr{C}_{n.b.d.}$&nbsp;:<br>
@@ -980,14 +980,14 @@ Conséquence de 2. et 3.
 </li>
 <li>$\mathcal{M}_\textbf{KT}\in\mathscr{C}_{ref.}$&nbsp;:<br>
 Il faut montrer que $\Xi\longrightarrow \Xi$ est vérifié pour tout nœud $\Xi$ de $\mathcal{M}_\textbf{KT}$.<br>
-La formule $\text{(T)}=\Box P\rightarrow P$ est équivalente à $\neg\Diamond\neg P\rightarrow P$ et par contraposition à $\neg P\rightarrow\diamond\neg P$. Comme $\Xi$ est clos par substitution uniforme, la formule $\neg \neg \phi\rightarrow\diamond\neg \neg\phi$ est dans $\Xi$ et donc $\phi\rightarrow\Diamond\phi$ est dans $\Xi$. La clôture par <i>modus ponens</i> permet alors de déduire que pour toute formule $\phi\in\Xi$, $\Diamond\phi\in\Xi$, ce qui est la condition nécessaire à la relation $\Xi\longrightarrow \Xi$.
+La formule $\text{(T)}=\Box P\rightarrow P$ est équivalente à $\neg\Diamond\neg P\rightarrow P$ et par contraposition à $\neg P\rightarrow\Diamond\neg P$. Comme $\Xi$ est clos par substitution uniforme, la formule $\neg \neg \phi\rightarrow\Diamond\neg \neg\phi$ est dans $\Xi$ et donc $\phi\rightarrow\Diamond\phi$ est dans $\Xi$. La clôture par <i>modus ponens</i> permet alors de déduire que pour toute formule $\phi\in\Xi$, $\Diamond\phi\in\Xi$, ce qui est la condition nécessaire à la relation $\Xi\longrightarrow \Xi$.
 </li>
 <li>$\mathcal{M}_\textbf{S4}\in\mathscr{C}_{ref.,tr.}$&nbsp;:<br>
 Conséquence de 2. et 5.
 </li>
 <li>$\mathcal{M}_\textbf{KB}\in\mathscr{C}_{sym.}$&nbsp;:<br>
 il faut montrer que pour tout couple de nœuds $\Xi_1$ et $\Xi_2$ de $\mathcal{M}_\textbf{KB}$, $\Xi_1\longrightarrow \Xi_2$ alors $\Xi_2\longrightarrow \Xi_1$.<br>
-$\text{(B)}= P\rightarrow \Box\Diamond P$ . Comme $\Xi_1$ est clos par substitution uniforme, les formules $\phi\rightarrow\Box\Diamond\phi$ sont dans $\Xi_1$. La clôture par <i>modus ponens</i> de $\Xi_1$ nous dit alors que si $\phi\in\Xi_1$, alors $\Box\Diamond\phi\in\Xi_1$. Or d'après le lemme ($\longrightarrow$ et $\Box$), si $\Xi_1\longrightarrow\Xi_2$ alors pour toute formule $\phi$, si $\Box\phi\in\Xi_1$, alors $\phi\in\Xi_2$. Par conséquent, pour tout $\phi\in\Xi_1$, $\Diamond\phi\in\Xi_2$, ce qui est la condition nécessaire pour définir $\Xi_2\longrightarrow\Xi_1$.
+$\text{(B)}= P\rightarrow \Box\Diamond P$. Comme $\Xi_1$ est clos par substitution uniforme, les formules $\phi\rightarrow\Box\Diamond\phi$ sont dans $\Xi_1$. La clôture par <i>modus ponens</i> de $\Xi_1$ nous dit alors que si $\phi\in\Xi_1$, alors $\Box\Diamond\phi\in\Xi_1$. Or d'après le lemme ($\longrightarrow$ et $\Box$), si $\Xi_1\longrightarrow\Xi_2$ alors pour toute formule $\phi$, si $\Box\phi\in\Xi_1$, alors $\phi\in\Xi_2$. Par conséquent, pour tout $\phi\in\Xi_1$, $\Diamond\phi\in\Xi_2$, ce qui est la condition nécessaire pour définir $\Xi_2\longrightarrow\Xi_1$.
 </li>
 <li>$\mathcal{M}_\textbf{KB4}\in\mathscr{C}_{sym.tr.}$&nbsp;:<br>
 Conséquence de 2. et 7.
@@ -1005,13 +1005,13 @@ Conséquence de 2. et 5. et 7.
 
 </div>
 
-On représente graphiquement par une flèche "$\mathscr{C}\_x\longrightarrow\textbf{X}$" la relation de forte-complétude&nbsp;: "si $\Gamma\models_{\mathscr{C}\_x}\phi$, alors $\Gamma\vdash_\textbf{X}\phi$".
+On représente graphiquement par une flèche "$\mathscr{C}\_x\longrightarrow\textbf{X}$" la relation de forte complétude&nbsp;: "si $\Gamma\models_{\mathscr{C}\_x}\phi$, alors $\Gamma\vdash_\textbf{X}\phi$".
 
 ![](/compcomplet.png?width=1200px)
 
 
 {{%notice type="note" round="true"%}}
-La notion de conséquence sémantique $\models$ demande une satisfaction sur tous les modèle alors que la notion de conséquence syntaxique $\vdash$ demande seulement l'existence d'une preuve.<br>
+La notion de conséquence sémantique $\models$ demande une satisfaction sur tous les modèles alors que la notion de conséquence syntaxique $\vdash$ demande seulement l'existence d'une preuve.<br>
 Dit autrement, $\models$ est définie avec un quantificateur universel $\forall$ et $\vdash$ avec un quantificateur existentiel $\exists$ or la négation du quantificateur universel est le quantificateur existentiel et inversement.<br>
 Démontrer qu'une formule est non démontrable est donc très difficile du côté de la  théorie de la démonstration puisque cela oblige à montrer que **toutes** les preuves échouent. Par contre, sur le versant sémantique, il suffit de trouver **un** modèle où la négation de la formule est satisfaite (un contre-exemple suffit).<br>
 C'est la **correction** qui nous permet le changement de versant (on passe de la syntaxe à la sémantique).<br>
