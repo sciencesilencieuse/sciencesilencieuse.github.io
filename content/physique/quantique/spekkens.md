@@ -64,7 +64,7 @@ Aaronson, S. “Lecture 28, Tues May 2: Stabilizer Formalism”, Introduction to
 
 
 Spekkens propose en 2007 un modèle jouet  qui reproduit qualitativement la physique d’un qubit à partir d'une théorie classique à laquelle on ajoute un principe limitant la connaissance qu'on peut obtenir sur n'importe quel système. La théorie permet d'éclairer certains phénomènes quantiques sous un autre jour, ce qui pour l'auteur devrait nous inciter à adopter une vision épistémique de l'état quantique. Dans cette vision, l'état quantique devient porteur d'une information incomplète sur une réalité sous-jacente, cachée. <br>
-Étant donnée que la théorie de Spekkens est locale, les inégalités de Bell impliquent qu'elle ne peut reproduire toute la mécanique quantique. Ce n'est qu'une théorie-jouet après tout.
+Étant donné que la théorie de Spekkens est locale, les inégalités de Bell impliquent qu'elle ne peut reproduire toute la mécanique quantique. Ce n'est qu'une théorie-jouet après tout.
 
 ## Le système élémentaire 
 
@@ -129,7 +129,7 @@ Quelques définitions pour préciser les choses&nbsp;:
 ensemble minimal de questions oui/non suffisantes pour identifier sans ambiguïté l’état ontique d'un système donné.
 </div>
 
-Pour un système élémentaire dans les états ontiques 1, 2, 3 ou 4, un méthode inefficace pour déterminer l'état serait&nbsp;:
+Pour un système élémentaire dans les états ontiques 1, 2, 3 ou 4, une méthode inefficace pour déterminer l'état serait&nbsp;:
 $$\left\\{
 \begin{array}{l}
 \text{ 'Est-ce 1 ?'},\\\\
@@ -147,7 +147,7 @@ $$\left\\{
 \end{array}\right\\}
 $$
 
-Chaque question coupe l’espace des possibles en deux. Pour un système élémentaire à 4 états, 2 questions suffisent donc (pas forcément ces deux là).  
+Chaque question coupe l’espace des possibles en deux. Pour un système élémentaire à 4 états, 2 questions suffisent donc (pas forcément ces deux-là).  
 
 <div id="def">
 La <b>mesure de la connaissance</b> $K$ selon Spekkens est définie comme le nombre maximal de questions aux réponses connues parmi tous les ensembles canoniques.
@@ -182,7 +182,7 @@ Ce déficit de connaissance, imposé *a priori*, suffit à reproduire plusieurs 
 
 ## Analogue d'un qubit état pur
 
-On peut établir une correspondance bi‑univoque entre les sept états permis d’un bit‑jouet (épistémiques) et sept états particulièrement importants en information quantique&nbsp;: les six états propres $±1$ des trois matrices de Pauli $X$, $Y$, $Z$ et l’état maxim­alement mixte. Le « dictionnaire » est&nbsp;:
+On peut établir une correspondance bi‑univoque entre les sept états permis d’un bit‑jouet (épistémiques) et sept états particulièrement importants en information quantique&nbsp;: les six états propres $±1$ des trois matrices de Pauli $X$, $Y$, $Z$ et l’état maximalement mixte. Le « dictionnaire » est&nbsp;:
 
 $$
 \begin{array}{rcl}
@@ -209,7 +209,7 @@ Deux états épistémiques sont <b>disjoints</b> si leurs bases ontiques n’ont
 
 </div>
 
-Les couples analogues aux paires orthogonales ($\lvert0\rangle$, $\lvert1\rangle$), ($\lvert+\rangle$, $\lvert-\rangle$), ($\lvert{+\mathrm i}\rangle$, $\lvert{-\mathrm i}\rangle$) deviennent ainsi trois paires de bits‑jouets diamétralement opposées, leur intersection vide se lisant d’un coup d’œil (aucune case colorées en commun).
+Les couples analogues aux paires orthogonales ($\lvert0\rangle$, $\lvert1\rangle$), ($\lvert+\rangle$, $\lvert-\rangle$), ($\lvert{+\mathrm i}\rangle$, $\lvert{-\mathrm i}\rangle$) deviennent ainsi trois paires de bits‑jouets diamétralement opposées, leur intersection vide se lisant d’un coup d’œil (aucune case colorée en commun).
 
 <div id="def">
 
@@ -220,7 +220,7 @@ $$\mathcal{F}[\bar{p},\bar{q}] \\;=\\; \sum_{k}\sqrt{p_k}\sqrt{q_k}$$
 
 
 
-La **fidélité** est une mesure de la non disjonction. La disjonction et l'égalité sont deux cas particuliers de fidélités respectives $\mathcal{F}=0$ et $\mathcal{F}=1$.
+La **fidélité** est une mesure de la non-disjonction. La disjonction et l'égalité sont deux cas particuliers de fidélités respectives $\mathcal{F}=0$ et $\mathcal{F}=1$.
 
 
 <div id="preuve">
@@ -378,7 +378,7 @@ $$
 </div>
 
 
-Deux états épistémiques disjoints (tout comme deux états quantiques orthogonaux) sont parfaitement distinguables par un choix appropriés de la direction de mesure. La mesure $\begin{array}{|c|c|c|c|}
+Deux états épistémiques disjoints (tout comme deux états quantiques orthogonaux) sont parfaitement distinguables par un choix approprié de la direction de mesure. La mesure $\begin{array}{|c|c|c|c|}
 \hline 
 \color{#1DB100} \text{I} &\color{#D41876} \text{II} &\color{#1DB100} \text{I} & \color{#D41876}\text{II}\\\\
 \hline
@@ -458,7 +458,7 @@ Ce n'est pas un état épistémique valide pour deux raisons&nbsp;:
 
 <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
 <li>si on regarde isolément un des systèmes en ignorant l'autre, on n'obtient qu'un seul état ontique et donc on peut répondre à plus de la moitié des questions pour l'ensemble canonique de ce sous-système.  </li>
-<li style="margin-top:0.5em; ">En appliquant le principe d'équilibre des connaissance au système composite entier, on est sensé ne pouvoir répondre qu'à $2$ des $2n=4$ questions. Or un état ontique unique fixe d'un coup les $4$ réponses.</li>
+<li style="margin-top:0.5em; ">En appliquant le principe d'équilibre des connaissances au système composite entier, on est censé ne pouvoir répondre qu'à $2$ des $2n=4$ questions. Or un état ontique unique fixe d'un coup les $4$ réponses.</li>
 </ul>
 
 Cet exemple nous montre que&nbsp;:
@@ -477,7 +477,7 @@ Lorsqu'on ignore l’information concernant un sous-système, on obtient une dis
 <li>ignorer le système 2 revient à projeter toutes les colonnes sur une sous-colonne unique.</li>
 </ul>
 
-[^1]: [Petit cours](https://www.unige.ch/math/mgene/cours/slides7.pdf) sur les distribution conjointe et marginale en probabilité.
+[^1]: [Petit cours](https://www.unige.ch/math/mgene/cours/slides7.pdf) sur les distributions conjointe et marginale en probabilité.
 
 Cette opération joue un rôle analogue à la **trace partielle** en mécanique quantique.
 
@@ -487,7 +487,7 @@ Le principe d'équilibre doit être respecté à la fois sur le système composi
 
 </div>
 
-Cela permet de rejeter certains des $1820$ états à 4 cases colorées puisqu'ils violent le principe d'équilibre des connaissance sur l'un de leurs sous-systèmes.<br>
+Cela permet de rejeter certains des $1820$ états à 4 cases colorées puisqu'ils violent le principe d'équilibre des connaissances sur l'un de leurs sous-systèmes.<br>
 Les deux exemples ci-dessous sont par exemple invalides&nbsp;; dans l'exemple de gauche, le principe est violé pour le système 1 et dans l'exemple de droite, c'est pour le système 2. 
 
 <div style="position:relative;margin-left:auto;margin-right:auto;width:380px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
@@ -576,9 +576,9 @@ Que peut-on dire de l'état suivant&nbsp;?
 <img src="/spek17.png" style="box-shadow:none;background:none;">
 </div>
 
-Il respecte le principe d'équilibre de la connaissance (nombre d'états quantiques $>4$ sur le système composite et $>2$ sur chaque marginale) et comme on a 8 états ontiques plutôt que les 4 attendus pour un bit-jouet pur, on est en présence d'un état mixte.<br>
+Il respecte le principe d'équilibre de la connaissance (nombre d'états ontiques $>4$ sur le système composite et $>2$ sur chaque marginale) et comme on a 8 états ontiques plutôt que les 4 attendus pour un bit-jouet pur, on est en présence d'un état mixte.<br>
 Les marginales sont toutes deux $1\lor 2\lor 3\lor 4$, ce qui correspond à une ignorance totale. Leur produit cartésien serait la grille complète de 16 cases, pas seulement 8. Il ne s'agit donc pas d'un état produit mais d'un état corrélé.<br>
-C'est une corrélation "par blocs"&nbsp;: connaître un des deux états-jouets détermine le demi-espace de l'autre mais pas une valeur unique. Et chaque bloc est un état produit de deux états purs ($(1\lor 2)\cdot(1\lor 2)$ pour le bloc du bas et $(3\lor 4)\cdot(3\lor 4)$ pour celui de haut).<br>
+C'est une corrélation "par blocs"&nbsp;: connaître un des deux états-jouets détermine le demi-espace de l'autre mais pas une valeur unique. Et chaque bloc est un état produit de deux états purs ($(1\lor 2)\cdot(1\lor 2)$ pour le bloc du bas et $(3\lor 4)\cdot(3\lor 4)$ pour celui du haut).<br>
 On a donc au final une corrélation statistique plutôt qu'une corrélation pure, un mélange classique de deux états produits.
 
 
@@ -621,7 +621,7 @@ Cela donne en tout $60$ bits-jouets purs pour deux systèmes élémentaires.
 
 ## Interdiction du clonage
 
-Dans la théorie-jouet, «&nbsp;cloner&nbsp;» un état de connaissance incomplète signifie appliquer ce même état épistémique à un second système tout en le conservant pour le premier.  Il ne s’agit pas de «&nbsp;dupliquer une part de la réalité&nbsp;» puisque les états épistémiques ne font pas partie de la réalité physique mais seulement de notre interprétation. Tout comme les états quantiques, les états-jouets sont également non-clonables.
+Dans la théorie-jouet, «&nbsp;cloner&nbsp;» un état de connaissance incomplète signifie appliquer ce même état épistémique à un second système tout en le conservant pour le premier.  Il ne s’agit pas de «&nbsp;dupliquer une part de la réalité&nbsp;» puisque les états épistémiques ne font pas partie de la réalité physique mais seulement de notre interprétation. Tout comme les états quantiques, les états-jouets sont également non clonables.
 
 Un cloneur idéal devrait réaliser la transformation
 
@@ -672,7 +672,7 @@ Comme les seules transformations autorisées dans la théorie-jouet sont celles 
 
 Une restriction discrète de la mécanique quantique permet de dresser un parallèle assez fort avec la théorie jouet&nbsp;: le formalisme stabilisateur. Il a été inventé pour décrire les codes correcteurs d’erreurs quantiques, mais il sert aujourd’hui aussi à la simulation efficace de certains circuits quantiques, à la cryptographie, à l’algorithmique et à l’informatique “à état magique”.
 
-Deux points d'entrée complémentaire pour présenter ce formalisme&nbsp;:
+Deux points d'entrée complémentaires pour présenter ce formalisme&nbsp;:
 <ul style="margin-top:-0.5em; margin-bottom:-0.5em;">
 <li>par les portes quantiques,</li>
 <li>par les matrices de Pauli.</li>
@@ -687,7 +687,7 @@ Deux points d'entrée complémentaire pour présenter ce formalisme&nbsp;:
 Les 3 portes élémentaires <b>Hadamard</b> ($H=\frac{1}{\sqrt{2}}\left[\begin{array}{cc}
 1 & 1 \\\\
 1 & -1
-\end{array}\right]$), <b>phase</b> ($P=\frac{1}{\sqrt{2}}\left[\begin{array}{cc}
+\end{array}\right]$), <b>phase</b> ($P=\left[\begin{array}{cc}
 1 & 0 \\\\
 0 & \mathrm{i}
 \end{array}\right]$) et <b>CNOT</b> (retourne le qubit cible si et seulement si le qubit de contrôle est $|1\rangle$), sont appelées <b>portes stabilisatrices</b>.
@@ -728,7 +728,7 @@ $,
  <li>puis on ajoute l'intrication grâce à CNOT (contrôle = qubit 0, cible = qubit 1) $\Rightarrow \frac{|00\rangle+|11\rangle}{\sqrt{2}}$.</li>
  </ul> 
  
-Il y a 60 états atteignables à 2 qubits (autant que les bits-jouets à nouveau). Et pour chacun, une mesure dans la base $\\{|0\rangle,|1\rangle\\}$ donne soit $|0\rangle$, soit $|1\rangle$, soit $|0\rangle$ et $|1\rangle$ avec des probablités égales.
+Il y a 60 états atteignables à 2 qubits (autant que les bits-jouets à nouveau). Et pour chacun, une mesure dans la base $\\{|0\rangle,|1\rangle\\}$ donne soit $|0\rangle$, soit $|1\rangle$, soit $|0\rangle$ et $|1\rangle$ avec des probabilités égales.
 
 
 ### Matrices de Pauli
@@ -741,9 +741,9 @@ On dit qu'un <b>opérateur unitaire</b> $U$ <b>stabilise</b> un état pur $|\Psi
 
 Attention, la phase est importante ici&nbsp;: si $U|\Psi\rangle=-|\Psi\rangle$, alors $U$ ne stabilise pas $|\Psi\rangle$.
 
-Si $U$ et $V$ stabilisent tous deux $|\Psi\rangle$, alors $UV$ et $VU$ aussi, ainsi que $U^{-1}$ et $V^{-1}$. Et comme $I$ stabilise tout, l'ensemble des opérateurs unitaires qui stabilisent $|\Psi\rangle$ forment un <b>groupe</b> multiplicatif.
+Si $U$ et $V$ stabilisent tous deux $|\Psi\rangle$, alors $UV$ et $VU$ aussi, ainsi que $U^{-1}$ et $V^{-1}$. Et comme $I$ stabilise tout, l'ensemble des opérateurs unitaires qui stabilisent $|\Psi\rangle$ forme un <b>groupe</b> multiplicatif.
 
-Vérifions maintenant que chacun des six états stabilisateurs à 1 qubit correspondent à une matrice de Pauli qui le stabilise&nbsp;:
+Vérifions maintenant que chacun des six états stabilisateurs à 1 qubit correspond à une matrice de Pauli qui le stabilise&nbsp;:
 <ul style="margin-top:-0.5em;">
 <li>$I$ stabilise tout</li>
 <li>$-I$ ne stabilise rien</li>
@@ -779,16 +779,16 @@ Pour un $n$-qubit $|\Psi\rangle$, on définit le <b>groupe stabilisateur</b> de 
 Exemple&nbsp;: quel est le groupe stabilisateur de l'état de Bell $\frac{|00\rangle+|11\rangle}{\sqrt{2}}$&nbsp;?<br>
 $XX$ est dedans puisque $\frac{X|0\rangle \otimes X|0\rangle+X|1\rangle \otimes X|1\rangle}{\sqrt{2}}=\frac{|11\rangle+|00\rangle}{\sqrt{2}}=\frac{|00\rangle+|11\rangle}{\sqrt{2}}$.<br>
 De même pour $-YY$ et le résultat de la multiplication $XX\cdot-YY = -(\mathrm{i}Z)(\mathrm{i}Z) = ZZ$.<br>
-Le groupe au complet est alors $\\{II,XX,-YY-ZZ\\}$.
+Le groupe au complet est alors $\\{II,XX,-YY,ZZ\\}$.
 
 
 <div id="theo">
 
-Les états stabilisateurs à $n$-qubits sont exactement les états à $n$-qubits qui ont un groups stabilisateur de taille $2^n$.
+Les états stabilisateurs à $n$-qubits sont exactement les états à $n$-qubits qui ont un groupe stabilisateur de taille $2^n$.
 
 </div>
 
 Les états stabilisateurs à 1 qubit sont ainsi les états ayant un groupe stabilisateur à 2 éléments,  les états stabilisateurs à 2 qubits sont ceux avec un groupe à 4 éléments, etc.
 
-On a ainsi caractériser les états stabilisateurs d'une manière complètement différente, sans mention de circuit stabilisateur. Cela nous a permis d'en savoir plus sur l'invariant que les circuits stabilisateurs préservent.
+On a ainsi caractérisé les états stabilisateurs d'une manière complètement différente, sans mention de circuit stabilisateur. Cela nous a permis d'en savoir plus sur l'invariant que les circuits stabilisateurs préservent.
 

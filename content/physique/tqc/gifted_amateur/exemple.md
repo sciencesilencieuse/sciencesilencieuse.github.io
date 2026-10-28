@@ -110,7 +110,7 @@ Interlude et remboursement de dette. Les chapitres précédents ont laissé deux
 <div id="def">
 
 Un système de hamiltonien $\hat H_0$, d'états propres $|\alpha\rangle$ d'énergies $E_\alpha$, à la température $T$.<br>
-la probabilité d'occuper l'état $|\alpha\rangle$ est donnée par la distribution de Gibbs&nbsp;:
+La probabilité d'occuper l'état $|\alpha\rangle$ est donnée par la distribution de Gibbs&nbsp;:
 
 
 <p style="text-align:center;">
@@ -286,7 +286,7 @@ On secoue un système avec une force $f(t)$ (ici l'oscillateur $\hat H' = -f(t)\
 
 <div id="preuve">
 
-On représente d'interaction, au premier ordre (la série de Dyson, tronquée)&nbsp;:
+On se place en représentation d'interaction et on développe au premier ordre (la série de Dyson, tronquée)&nbsp;:
 
 <p style="text-align:center;">
 $\displaystyle
@@ -316,7 +316,7 @@ $
 
 La fonction de Green <b>retardée classique</b> de l'oscillateur, à l'identique. Rien d'étonnant&nbsp;: le commutateur est un simple nombre, la réponse moyenne d'un oscillateur quantique est exactement classique (Ehrenfest). 
 
-Conséquence remarquable, objet des questions&nbsp;: ce nombre ne dépend pas de l'état . <b>La réponse est la même à toute température</b>.
+Conséquence remarquable, objet des questions&nbsp;: ce nombre ne dépend pas de l'état. <b>La réponse est la même à toute température</b>.
 
 </div>
 
@@ -505,7 +505,7 @@ Le $1/n!$ est mangé par les $n!$ façons d'attribuer les $n$ dérivées aux $n$
 <img src="/fonctgen.png" style="box-shadow:none;background:none;">
 </div>
 
-Le programme est posé. Reste à savoir <b>calculer</b> $\mathcal Z[J]$. Deux voies existent&nbsp;: la relier à la matrice $S$ (ce chapitre), ou l'intégrale de chemin de Feynman (chapitres suivant). 
+Le programme est posé. Reste à savoir <b>calculer</b> $\mathcal Z[J]$. Deux voies existent&nbsp;: la relier à la matrice $S$ (ce chapitre), ou l'intégrale de chemin de Feynman (chapitres suivants). 
 
 <br>
 
@@ -564,7 +564,7 @@ On branche l'interaction <i>adiabatiquement</i> depuis $t = -\infty$&nbsp;: en �
 
 En insérant cette construction des deux côtés d'une chaîne $T\hat\phi\cdots\hat\phi$, les opérateurs d'évolution se recollent en un $\hat S$ au numérateur, et <b>toutes les phases et normes parasites se rangent exactement dans le $\langle 0|\hat S|0\rangle$ du dénominateur</b> (c'est lui qui fait le ménage). 
 
-On reconnaît l'hypothèse adiabatique du chapitre sur la matrice $S$. Cest ici qu'elle travaille le plus dur.
+On reconnaît l'hypothèse adiabatique du chapitre sur la matrice $S$. C'est ici qu'elle travaille le plus dur.
 
 </details>
 
@@ -675,7 +675,7 @@ La fonctionnelle normalisée gagne ainsi son identité propre&nbsp;: <b>l'expone
 <li>On peut ajouter le diagramme (a) à notre bestiaire. C'est l'<b>haltère</b> (Dumbbell).</li>
 <li>(b) est un haltère avec une self-énergie.</li> 
 <li>(c) est un diagramme du vide</li> 
-<li>Et (d) est un diagramme connexe composé de (a) et (c).</li>
+<li>Et (d) est un diagramme déconnecté composé de (a) et (c).</li>
 </ul>
 
 
@@ -713,7 +713,7 @@ Enseignements&nbsp;:
 <ul style="margin-top:-0.5em;">
 <li>On a obtenu une troisième dérivation du potentiel de Yukawa, et c'est la plus profonde.
 <ul>
-<li>Chapitre propagateurs: fonction de Green statique (raccourci semi-classique).</li>
+<li>Chapitre propagateurs&nbsp;: fonction de Green statique (raccourci semi-classique).</li>
 <li>Chapitre diffusion&nbsp;: limite de Born (il fallait des particules qui se croisent).</li>
 <li>Ici&nbsp;: <b>l'énergie du vide déformé par deux sources immobiles, lue directement dans $Z[J]$</b>. Pas de diffusion, pas de limite non relativiste&nbsp;: deux clous, et le vide qui répond en abaissant son énergie. La «&nbsp;force&nbsp;» est un déplacement d'énergie de point zéro.</li>
 </ul>
