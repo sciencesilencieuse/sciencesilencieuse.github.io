@@ -176,7 +176,7 @@ Deux grandes dynasties de groupe se partagent le royaume&nbsp;:
 
 Le groupe cyclique $\boldsymbol{C_n}$ (dont on a déjà côtoyé un membre avec $\boldsymbol{C_2}$) a la structure générale $\\{e,a,a^2,\ldots,a^{n-1};a^n=e\\}$ avec $n$ un entier positif quelconque. On le note aussi $\<a\>$.
 
-a générant tous les éléments du groupe est appelé... **générateur** du groupe.
+L'élément $a$ générant tous les éléments du groupe est appelé... **générateur** du groupe.
 
 <div id="def">
 On appelle <b>période</b> ou <b>ordre</b> d’un élément $a$ d’un groupe le plus petit entier positif $m$ tel que $a^m=e$. Si $m$ n’existe pas, $a$ est dit d’ordre infini.
@@ -185,12 +185,12 @@ On appelle <b>période</b> ou <b>ordre</b> d’un élément $a$ d’un groupe le
 
 Le générateur $a$ de $\boldsymbol{C_n}$ est donc, par définition, de période (ou d’ordre) $n$.
 
-L’ordre d’un groupe cyclique coïncide avec l’ordre de son générateur (ce qui explique l’utilisation du termes ordre au lieu de période pour un élément).
+L’ordre d’un groupe cyclique coïncide avec l’ordre de son générateur (ce qui explique l’utilisation du terme ordre au lieu de période pour un élément).
 
 Tous les groupes cycliques sont abéliens (car $a^i a^j=a^j a^i=a^{i+j}$).
 
 <div id="preuve">
-Les racines n-ième de l’unité $\{\exp{^{i2\pi/n}}\}$ munies de la règle usuelle de multiplication sont l’exemple concret le plus direct d’un groupe cyclique.
+Les racines $n$-ièmes de l’unité $\{\exp{^{i2\pi/n}}\}$ munies de la règle usuelle de multiplication sont l’exemple concret le plus direct d’un groupe cyclique.
 </div>
 
 Les lignes et colonnes de la table de multiplication de ces groupes sont en permutation circulaire (telle que l’ordre reste le même) les unes par rapport aux autres, d’où son nom.
@@ -289,7 +289,7 @@ $$\begin{aligned}
 \end{aligned}
 $$
 
-L’ordre d’écriture est indifférent et il est d’usage d’omettre les 1-cycle ou éléments non permutés ($(12)(3)=(12)$).
+L’ordre d’écriture est indifférent et il est d’usage d’omettre les 1-cycles ou éléments non permutés ($(12)(3)=(12)$).
 
 </div>
 
@@ -465,7 +465,7 @@ L’ensemble des $p_a$ (pour tous les $a$ de $G$) forme donc un sous-groupe de $
 ### Classes
 
 <div id="def">
-Deux éléments $a$ et $b$ de $G$ sont dit <b>conjugués</b> s’il existe un troisième élément $p$ de $G$ tel que $b=pap^{-1}$. On écrit $b\sim a$ car il s’agit d’une <b>relation d’équivalence</b>. 
+Deux éléments $a$ et $b$ de $G$ sont dits <b>conjugués</b> s’il existe un troisième élément $p$ de $G$ tel que $b=pap^{-1}$. On écrit $b\sim a$ car il s’agit d’une <b>relation d’équivalence</b>. 
 </div>
 
 Une relation d’équivalence se doit d’être symétrique ($a\sim b \Rightarrow b\sim a$), réflexive ($a\sim a$) et transitive (si on a $a\sim b$ et $b\sim c$ alors $a\sim c$), ce qu’on vérifie bien avec la relation de conjugaison.
@@ -483,7 +483,7 @@ L’identité (élément neutre) forme une classe à elle seule.
 <br>
 
 <div id="theo">
-Dans un groupe symétrique, les cycle d’une même longueur appartienne à une même classe.
+Dans un groupe symétrique, les cycles d’une même longueur appartiennent à une même classe.
 </div>
 
 <br>
@@ -534,7 +534,7 @@ $\boldsymbol{S_3}$ est donc constitué de 3 classes&nbsp;:
 <li>$\{(12),(23),(13)\}$</li>
 <li>$\{(123),(321)\}$</li>
 </ul>
-Comme l’isomorphisme entre $\boldsymbol{D_3}$ et $\boldsymbol{S_3}$ l’impose, ces classes trouves bien leurs correspondances dans $\boldsymbol{S_3}$ puisqu’on peut vérifier que l’identité, les deux rotations et les trois réflexions forment là encore trois classes de conjugaison.
+Comme l’isomorphisme entre $\boldsymbol{D_3}$ et $\boldsymbol{S_3}$ l’impose, ces classes trouvent bien leurs correspondances dans $\boldsymbol{D_3}$ puisqu’on peut vérifier que l’identité, les deux rotations et les trois réflexions forment là encore trois classes de conjugaison.
 <div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/grclasse1.png" style="box-shadow:none;background:none;">
 </div>
@@ -543,7 +543,7 @@ Comme l’isomorphisme entre $\boldsymbol{D_3}$ et $\boldsymbol{S_3}$ l’impose
 
 Chaque élément d’un groupe appartient à une et une seule classe puisque l’action de conjugaison consiste en une translation à gauche et une translation à droite (composer tous les éléments du groupe par un même élément revient à les décaler (ou permuter) tous de la même façon) et donc associe un élément conjugué différent à chaque élément différent du groupe (c’est une bijection). 
 
-Et d’autre part, deux classes différentes sont disjointes par transitivité (si elle ne sont pas disjointes, elles coïncident).
+Et d’autre part, deux classes différentes sont disjointes par transitivité (si elles ne sont pas disjointes, elles coïncident).
 Par conséquent, l’union de toutes les classes d’un groupe reforme le groupe, ou dit autrement, <b>les classes forment une partition du groupe</b>.
 
 <div id="def">
@@ -608,7 +608,7 @@ Et chaque classe à gauche (ou à droite) suivant un sous-groupe $H$ a nécessai
 
 <div id="theo">
 
-On en déduit que pour un sous-groupe $H$ d’ordre $n_H$, l’ensemble des classes à gauche (ou à droite) forme une partition des éléments de $H$ en ensembles disjoints de $n_H$ éléments chacun.
+On en déduit que pour un sous-groupe $H$ d’ordre $n_H$, l’ensemble des classes à gauche (ou à droite) forme une partition des éléments de $G$ en ensembles disjoints de $n_H$ éléments chacun.
 
 </div>
 
@@ -685,9 +685,9 @@ Plus simplement&nbsp;: $pHqH=pqH$. </li>
 <div id="preuve">
 Exemple 1 :
 
-Considérons $\mathbb{Z}/2\mathbb{Z}$ où $\mathbb{Z}$ est l’ensemble des entiers relatifs munis de l’addition comme loi de composition interne. $2\mathbb{Z}$ est donc l’ensemble des entiers relatifs pairs. Et par conséquent, $\mathbb{Z}/2\mathbb{Z}$ est formé de deux sous-groupes distincts&nbsp;: les entiers pairs et les entiers impairs. Le groupe quotient $\mathbb{Z}/2\mathbb{Z}$ est donc isomorphe au groupe cyclique à deux éléments $\boldsymbol{C_2}$. Il correspond aussi à l’ensemble $\\{0,1\\}$ muni de l’addition modulo 2.
+Considérons $\mathbb{Z}/2\mathbb{Z}$ où $\mathbb{Z}$ est l’ensemble des entiers relatifs muni de l’addition comme loi de composition interne. $2\mathbb{Z}$ est donc l’ensemble des entiers relatifs pairs. Et par conséquent, $\mathbb{Z}/2\mathbb{Z}$ est formé de deux classes distinctes&nbsp;: les entiers pairs et les entiers impairs. Le groupe quotient $\mathbb{Z}/2\mathbb{Z}$ est donc isomorphe au groupe cyclique à deux éléments $\boldsymbol{C_2}$. Il correspond aussi à l’ensemble $\\{0,1\\}$ muni de l’addition modulo 2.
 
-On peut généraliser en disant que $\mathbb{Z}/2\mathbb{Z}$ est isomorphe au groupe cyclique $\boldsymbol{C_n}$ et correspond aussi à l’ensemble des restes dans la division euclidienne de $k$ par $n$, soit l’ensemble $\\{0,1,\ldots,n\\}$ muni de l’addition modulo $n$.
+On peut généraliser en disant que $\mathbb{Z}/n\mathbb{Z}$ est isomorphe au groupe cyclique $\boldsymbol{C_n}$ et correspond aussi à l’ensemble des restes dans la division euclidienne de $k$ par $n$, soit l’ensemble $\\{0,1,\ldots,n-1\\}$ muni de l’addition modulo $n$.
 </div>
 
 L’exemple précédent permet de mieux comprendre pourquoi $G/H$ se lit $G$ <b>modulo</b> $H$.
@@ -699,13 +699,13 @@ Dans le cas de $\boldsymbol{S_3}$, $H=\\{e,(123),(321)\\}$ est un sous-groupe in
 
 $G/H$ contient deux éléments : $H$ et $M=\\{(12),(23),(31)\\}$.
 
-$H$ est l’ensemble des permutations paires à 3 éléments (l’identité correspond à aucune permutation et les 3 cycles à des permutations doubles). On appelle aussi $H$ $\boldsymbol{A_3}$, groupe alterné d’ordre 3.<br>
+$H$ est l’ensemble des permutations paires à 3 éléments (l’identité ne correspond à aucune permutation et les 3-cycles à des permutations doubles). On appelle aussi $H$ $\boldsymbol{A_3}$, groupe alterné d’ordre 3.<br>
 $M$ est l’ensemble des permutations impaires.
 
 On voit facilement que la composition de deux permutations impaires ou paires donne une permutation paire alors qu’une composition mixte donne une permutation impaire&nbsp;:<br>
 $HM=MH=M$, $HH=H$ et $MM=H$.
 
-On en déduit que $G/H$ est isomorphe à $\boldsymbol{C_2}$ (H est envoyé sur l’identité et $\boldsymbol{M}$ correspond à l’autre élément).
+On en déduit que $G/H$ est isomorphe à $\boldsymbol{C_2}$ ($H$ est envoyé sur l’identité et $\boldsymbol{M}$ correspond à l’autre élément).
 
 </div>
 
@@ -715,7 +715,7 @@ Le deuxième exemple illustre un théorème qui va se révéler bien utile mais 
 
 <div id="def">
 
-Soit f un homomorphisme de $G$ à $G^{\prime}$. On appelle <b>noyau</b> $K$ de cet homomorphisme l’ensemble des éléments de $G$ qui sont envoyé sur l’élément neutre de $G’$ ($K=\\{g \in G ; g \stackrel{f}{\longmapsto} e^{\prime} \in G^{\prime}\\}$).
+Soit f un homomorphisme de $G$ à $G^{\prime}$. On appelle <b>noyau</b> $K$ de cet homomorphisme l’ensemble des éléments de $G$ qui sont envoyés sur l’élément neutre de $G’$ ($K=\\{g \in G ; g \stackrel{f}{\longmapsto} e^{\prime} \in G^{\prime}\\}$).
 
 </div>
 
@@ -763,7 +763,7 @@ Les éléments du groupe quotient $G/K$ sont les classes latérales $pK$.
 Considérons l’application envoyant les classes latérales vers l’image de $f$, $p K \xrightarrow{\rho} f(p)=p^{\prime} \in G^{\prime}$.
 <ul>
 <li>
-$\rho$ est bien définie&nbsp;: si $pK=qK$ pour $p,q\in K$, alors $q^{-1}p$ est aussi dans $K$ (puisque $K$ est un groupe) et donc comme $f$ est un homomorphisme&nbsp;:
+$\rho$ est bien définie&nbsp;: si $pK=qK$ pour $p,q\in G$, alors $q^{-1}p$ est aussi dans $K$ (puisque $K$ est un groupe) et donc comme $f$ est un homomorphisme&nbsp;:
 
 $
 \begin{aligned}
@@ -815,7 +815,7 @@ Le dessin ci-dessus illustre le cas d’un groupe $G$ contenant 15 éléments av
 <div id="preuve">
 Exemple :
 
-on a vu dans un exemple précédent que l’homomorphisme de $\boldsymbol{S_3}$ sur $\boldsymbol{C_2}$ devient un isomorphisme si on quotiente $\boldsymbol{S_3}$ par le sous groupe invariant $H=\\{e,(123),(321)\\}$&nbsp;: $\boldsymbol{S_3} / H \simeq \boldsymbol{C_2}$. Or $H$ est bien le noyau $K$ de l’homomorphisme comme le prévoit le théorème d’isomorphisme.
+on a vu dans un exemple précédent que l’homomorphisme de $\boldsymbol{S_3}$ sur $\boldsymbol{C_2}$ devient un isomorphisme si on quotiente $\boldsymbol{S_3}$ par le sous-groupe invariant $H=\\{e,(123),(321)\\}$&nbsp;: $\boldsymbol{S_3} / H \simeq \boldsymbol{C_2}$. Or $H$ est bien le noyau $K$ de l’homomorphisme comme le prévoit le théorème d’isomorphisme.
 <div style="position:relative;margin-left:auto;margin-right:auto;width:450px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <img src="/griso3.png" style="box-shadow:none;background:none;">
 </div>
@@ -842,7 +842,7 @@ Pour un homomorphisme $f$ tel que $G \xrightarrow{f} G^{\prime}$&nbsp;:
 Soit $H_1$ et $H_2$ deux sous-groupes du groupe $G$ avec les deux propriétés suivantes&nbsp;:
 <ul>
 <li>les éléments de $H_1$ commutent avec les éléments de $H_2$.</li>
-<li>chaque élément de $g\in G$ peut s’écrire $g=h_1h_2$ avec $h_1\in H_1$ et $h_2\in H_2$.</li>
+<li>chaque élément $g\in G$ peut s’écrire $g=h_1h_2$ avec $h_1\in H_1$ et $h_2\in H_2$.</li>
  $G$ est alors le <b>produit direct</b> de $H_1$ et $H_2$&nbsp;: $G=H_1 \otimes H_2$.
 
 </div>
@@ -880,7 +880,7 @@ Pour $a_1\in H_1$, $g a_1 g^{-1}=h_1 h_2 a_1\left(h_1 h_2\right)^{-1}=h_1 h_2 a_
 
 </div>
 
-On peut donc construire les groupes quotient $G/H_1$ et $G/H_2$. On montre alors que $G / H_1 \simeq H_2$ et $G / H_2 \simeq H_1$, ce qui éclaire un peu plus le terme de groupe quotient.
+On peut donc construire les groupes quotients $G/H_1$ et $G/H_2$. On montre alors que $G / H_1 \simeq H_2$ et $G / H_2 \simeq H_1$, ce qui éclaire un peu plus le terme de groupe quotient.
 
 <br>
 
