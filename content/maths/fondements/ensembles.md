@@ -63,7 +63,7 @@ margin-bottom:0em;
 
 <h1 style="overflow-x:auto;">Échafaudage des nombres</h1>
 
-> Dieu a crée les entiers naturels, le reste est l'œuvre de l'Homme.<br>
+> Dieu a créé les entiers naturels, le reste est l'œuvre de l'Homme.<br>
 > Leopold Kronecker
 
 ## Un désir de symétrie
@@ -118,7 +118,7 @@ $$
 
 </div>
 
-Pour l'addition, on a bien un élément neutre ($0$, puisque pour tout $x$, $x+0=0+x=x$), mais pas de symétriques... Du moins, dans $\mathbb{N}$. L'idée est alors d'augmenter $\mathbb{N}$ de tous les symétriques de ses éléments vis à vis de l'addition, notés $x':= -x$ (tels que $x+(-x)=(-x)+x=0$) et appelés opposés. On obtient ainsi les entiers relatifs $\mathbb{Z} = \\{\ldots,-2,-1,0,1,2,\ldots\\}$. 
+Pour l'addition, on a bien un élément neutre ($0$, puisque pour tout $x$, $x+0=0+x=x$), mais pas de symétriques... Du moins, dans $\mathbb{N}$. L'idée est alors d'augmenter $\mathbb{N}$ de tous les symétriques de ses éléments vis-à-vis de l'addition, notés $x':= -x$ (tels que $x+(-x)=(-x)+x=0$) et appelés opposés. On obtient ainsi les entiers relatifs $\mathbb{Z} = \\{\ldots,-2,-1,0,1,2,\ldots\\}$. 
 
 Dans $\mathbb{Z}$, on peut définir l'opération inverse de l'addition, la **soustraction**, comme l'addition de l'opposé d'un nombre ($a-b = a + (-b)$). Et maintenant, $5+x=2$ a bien une solution puisque $x=2-5 = 2+(-5)=-3 \in\mathbb{Z}$.
 
@@ -169,7 +169,7 @@ $$
 \begin{array}{rcll}
 5\times 3 &=& 5\times (1+1+1)&\\\\
 &=&5\times 1 + 5\times 1 + 5 \times 1 \quad& \text{distributivité}\\\\
-&=& 5 + 5 + 5 &\text{muliplication par l'élément neutre}\\\\
+&=& 5 + 5 + 5 &\text{multiplication par l'élément neutre}\\\\
 &=& 15
 \end{array}
 $$
@@ -246,7 +246,7 @@ Dans un **corps** $(\mathbb{K},+,\times)$, les deux opérations sont (presque) s
 
 <div id="def">
 
-Une **relation d'ordre** (notée $\leq$) sur un ensemble $E$ est une relation binaire qui permet de hiérarchiser ses éléments. Elle doit obligatoirement vérifier les trois axiomes suivant pour tous éléments $x$, $y$ et $z$ appartenant à $E$ :
+Une **relation d'ordre** (notée $\leq$) sur un ensemble $E$ est une relation binaire qui permet de hiérarchiser ses éléments. Elle doit obligatoirement vérifier les trois axiomes suivants pour tous éléments $x$, $y$ et $z$ appartenant à $E$ :
 
 <ul style="margin:-0.5em 0 1em 0;">
 <li> Soit $x\leq y$, soit $y\leq x$</li>
@@ -259,11 +259,11 @@ Une **relation d'ordre** (notée $\leq$) sur un ensemble $E$ est une relation bi
 
 <div id="def">
 
-Un **ensemble ordonné** $(E,\leq)$ est un ensemble $E$ muni d'une relation d'ordre $\leq$  formé d'un ensemble $E$ et d'une relation d'ordre $\leq$ définie sur cet ensemble.
+Un **ensemble ordonné** $(E,\leq)$ est un ensemble $E$ muni d'une relation d'ordre $\leq$.
 
 </div>
 
-Les ensembles de nombres qu'on a rencontré jusqu'à maintenant ($\mathbb{N}$, $\mathbb{Z}$, $\mathbb{Q}$) étaient tous des ensembles ordonnés. Et pour cause, les nombres qu'ils contiennent peuvent à chaque fois être rangés sur une droite.
+Les ensembles de nombres qu'on a rencontrés jusqu'à maintenant ($\mathbb{N}$, $\mathbb{Z}$, $\mathbb{Q}$) étaient tous des ensembles ordonnés. Et pour cause, les nombres qu'ils contiennent peuvent à chaque fois être rangés sur une droite.
 
 
 Pour obtenir un corps ordonné, il faut s'assurer que la relation d'ordre est bien compatible avec les opérations d'addition et de multiplication.
@@ -271,7 +271,7 @@ Pour obtenir un corps ordonné, il faut s'assurer que la relation d'ordre est bi
 <div id="def">
 
 <p id="compat">
-Un <b>corps ordonné</b> est muni d'une relation d'ordre vérifiant les axiomes de compatibilité suivant&nbsp;:
+Un <b>corps ordonné</b> est muni d'une relation d'ordre vérifiant les axiomes de compatibilité suivants&nbsp;:
 </p>
 <ul style="margin:-0.5em 0 1em 0;">
 <li>compatibilité avec l'addition&nbsp;:<br>
@@ -298,7 +298,7 @@ Que nous a apporté la symétrisation de nos ensembles de nombres&nbsp;?
 
 <ul style="margin:1em 0 1em 0;">
 <li>la symétrie par rapport à l'addition a créé les nombres négatifs ($\mathbb{N}\rightarrow\mathbb{Z}$) et a permis de définir la soustraction&nbsp;;</li>
-<li>le symétrie par rapport à la multiplication a créé les fractions ($\mathbb{Z}\rightarrow\mathbb{Q}$) et a permis de définir la division.</li>
+<li>la symétrie par rapport à la multiplication a créé les fractions ($\mathbb{Z}\rightarrow\mathbb{Q}$) et a permis de définir la division.</li>
 </ul>
 
 </div>
@@ -316,7 +316,7 @@ Les pythagoriciens, déjà, avaient démontré qu'en prenant un carré de côté
 
 La démonstration de l'irrationalité de $\sqrt{2}$ est un grand classique. C'est une preuve par contradiction&nbsp;: on suppose que $\sqrt{2}$ est une fraction et on aboutit à une contradiction.
 
-Supposons donc que $\sqrt{2}$ peut s'exprimer sous la forme d'une fraction. Toute fraction peut se réduire en simplifiant numérateur et dénominateur jusqu'à ce qu'il n'aient plus de diviseurs communs.<br>
+Supposons donc que $\sqrt{2}$ peut s'exprimer sous la forme d'une fraction. Toute fraction peut se réduire en simplifiant numérateur et dénominateur jusqu'à ce qu'ils n'aient plus de diviseurs communs.<br>
 Posons donc $\sqrt{2}=\frac{p}{q}$ avec $p\wedge q = 1$.<br>
 On prend le carré de cette équation&nbsp;: $2=\frac{p^2}{q^2}\Leftrightarrow p^2=2\times q^2\Leftrightarrow p\times p = q\times q \times 2$.<br>
 Comme $q$ ne divise pas $p$ par hypothèse ($p\wedge q =1$), $p$ doit être divisible par $2$.<br>
@@ -329,15 +329,15 @@ On est parti de l'hypothèse que $p$ et $q$ n'ont pas de diviseurs communs (autr
 
 On dit que $\mathbb{Q}$ n'est pas **complet**.
 
-Or l'intuition semble nous indiquer que la droite géométrique et l'ensemble des nombres devraient être en parfaite correspondance. On a là en effet deux "objets" constitués d'éléments parfaitement ordonnés qu'on peut translater à gauche ou à droite (additionner ou soustraire) et qu'on peut dilater où rétrécir (multiplier ou diviser).<br>
-Le corps ordonné des rationnels $\mathbb{Q}$ coche jusqu'ici toutes les cases. Mais la droite géométrique a tout l'air d'être continu, elle, au contraire de $\mathbb{Q}$.
+Or l'intuition semble nous indiquer que la droite géométrique et l'ensemble des nombres devraient être en parfaite correspondance. On a là en effet deux "objets" constitués d'éléments parfaitement ordonnés qu'on peut translater à gauche ou à droite (additionner ou soustraire) et qu'on peut dilater ou rétrécir (multiplier ou diviser).<br>
+Le corps ordonné des rationnels $\mathbb{Q}$ coche jusqu'ici toutes les cases. Mais la droite géométrique a tout l'air d'être continue, elle, au contraire de $\mathbb{Q}$.
 
 Appelons alors **réels** $\mathbb{R}$, les éléments constitutifs de cette droite continue. Comment construire ce corps ordonné **complet** qu'est $\mathbb{R}$ à partir de $\mathbb{Q}$&nbsp;?
 
 
 ### Le plus petit majorant
 
-L'idée pour compléter les rationnels et de leur conférer *la* propriété qui leur manque cruellement.
+L'idée pour compléter les rationnels est de leur conférer *la* propriété qui leur manque cruellement.
 
 On va alors définir l'ensemble des réels $\mathbb{R}$, l'extension complète des rationnels (on se contente ici de supposer que cet ensemble existe, on verra plus loin comment le construire explicitement à partir de $\mathbb{Q}$), comme l'ensemble qui contient les rationnels (le contraire serait bizarre) et possède la propriété clé suivante&nbsp;:
 
@@ -351,7 +351,7 @@ On va alors définir l'ensemble des réels $\mathbb{R}$, l'extension complète d
 
 Cela suffit pour boucher les trous de $\mathbb{Q}$ (ne pas se tromper de préposition)&nbsp;! 
 
-Assurons-nous d'abord que cette borne supérieure est bien parfois absente de $\mathbb{Q}$. Pour cela, utilisons à nouveau notre exemple fil-rouge historique&nbsp;: $\sqrt{2}$.
+Assurons-nous d'abord que cette borne supérieure est bien parfois absente de $\mathbb{Q}$. Pour cela, utilisons à nouveau notre exemple fil rouge historique&nbsp;: $\sqrt{2}$.
 
 <div id="preuve">
 
@@ -359,7 +359,7 @@ Soit $E$ l'ensemble des rationnels dont le carré est inférieur à $2$&nbsp;: $
 
 <ul>
 <li>$E$ est non vide (il contient $1$, entre autres).</li>
-<li>$E$ est majoré (tous ces éléments sont inférieurs à $1,5$ par exemple).</li>
+<li>$E$ est majoré (tous ses éléments sont inférieurs à $1,5$ par exemple).</li>
 </ul>
 
 Mais y a-t-il un plus petit majorant de $E$ dans $\mathbb{Q}$&nbsp;? Non&nbsp;!<br>
@@ -367,16 +367,16 @@ Comme $\sqrt{2}$ n'appartient pas à $\mathbb{Q}$, tout ce qu'on pourra faire, c
 
 </div>
 
-Imaginons qu'on veule encadrer $\sqrt{2}$ par des intervalles rationnels enchâssés les uns dans les autres, tels des poupées russes $([1;2]$, $ [1,4;1,5]$, $[1,41;1,42]$, $\cdots)$.<br>
+Imaginons qu'on veuille encadrer $\sqrt{2}$ par des intervalles rationnels enchâssés les uns dans les autres, telles des poupées russes $([1;2]$, $ [1,4;1,5]$, $[1,41;1,42]$, $\cdots)$.<br>
 Que donnera l'intersection infinie de ces intervalles&nbsp;?<br>
 Elle sera vide&nbsp;!<br>
-À l'inverse, grâce à l'existence d'un plus petit majorant, ce type d'intersection n'est jamais vide dans les réels. C'est un corollaire de la propriété de la borne supérieure qui rend encore plus transparente l'idée qu'il n'y a aucun trous dans les réels.
+À l'inverse, grâce à l'existence d'un plus petit majorant, ce type d'intersection n'est jamais vide dans les réels. C'est un corollaire de la propriété de la borne supérieure qui rend encore plus transparente l'idée qu'il n'y a aucun trou dans les réels.
 
 <div id="theo">
 
 **Propriété des segments emboîtés**
 
-Pour tout $n \in \mathbb{N}$, on considère un intervalle fermé $I_n = [a_n, b_n] = \\{x \in \mathbb{R} \mid a_n \leq x \leq b_n\\}$ .
+Pour tout $n \in \mathbb{N}$, on considère un intervalle fermé $I_n = [a_n, b_n] = \\{x \in \mathbb{R} \mid a_n \leq x \leq b_n\\}$.
 Supposons que ces intervalles soient emboîtés les uns dans les autres, c'est-à-dire que $I_{n+1} \subseteq I_n$ pour tout $n$.
 $$I_1 \supseteq I_2 \supseteq I_3 \supseteq \dots$$
 Alors, l'intersection de tous ces intervalles n'est pas vide&nbsp;:
@@ -413,7 +413,7 @@ Pour tout $n$, on a $a_n \leq x \leq b_n$. Le nombre réel $x$ appartient donc �
 
 </div>
 
-En décrétant que *toute* partie majorée possède obligatoirement un plus petit majorant, on force la droite numérique a fournir un point (un nombre) à l'exact endroit du trou que l'on avait dans $\mathbb{Q}$. On est maintenant garanti qu'aucun processus d'approximation ou d'encadrement se terminera par un vide.
+En décrétant que *toute* partie majorée possède obligatoirement un plus petit majorant, on force la droite numérique à fournir un point (un nombre) à l'exact endroit du trou que l'on avait dans $\mathbb{Q}$. On est maintenant assuré qu'aucun processus d'approximation ou d'encadrement ne se terminera par un vide.
 
 Et pour illustrer, montrons que $\sqrt{2}$ a bien finalement trouvé sa place chez les réels.
 
@@ -451,7 +451,7 @@ $$
 
 Comme $\alpha^2 <2$, il reste un peu de place entre $\alpha^2$ et $2$ pour y caler $ \frac{2\alpha + 1}{n}$. Il suffit de prendre un $n$ suffisamment grand.
 
-$\alpha + \frac{1}{n}$ appartient donc à l'ensemble $T$. $\alpha + \frac{1}{n} + \alpha>\alpha$ entre en contradiction avec le fait que $\alpha$ soit défini comme un majorant de $T$.
+$\alpha + \frac{1}{n}$ appartient donc à l'ensemble $T$. $\alpha + \frac{1}{n}>\alpha$ entre en contradiction avec le fait que $\alpha$ soit défini comme un majorant de $T$.
 
 <ul>
 <li>$\alpha^2 > 2$ viole le fait que $\alpha$ soit <i>le plus petit</i> des majorants de $T$.</li>
@@ -562,7 +562,7 @@ L'objectif est de construire explicitement une fraction de la forme $\frac{m}{n}
 </ol>
 
 Puisque $a < b$, la distance qui les sépare est strictement positive : $b - a > 0$.<br>
-D'après la Propriété d'Archimède (point ii), on peut trouver un entier naturel $n \in \mathbb{N}$ suffisamment grand pour que l'écart $\frac{1}{n}$ soit plus petit que cette distance :
+D'après la propriété d'Archimède (point ii), on peut trouver un entier naturel $n \in \mathbb{N}$ suffisamment grand pour que l'écart $\frac{1}{n}$ soit plus petit que cette distance :
 
 $$\frac{1}{n} < b - a$$
 
@@ -803,7 +803,7 @@ $$\forall \epsilon > 0, \exists N \in \mathbb{N}, \forall p \ge N, \forall q \ge
 
 Ici, la convergence est une propriété interne à la suite (on ne mesure pas la distance entre la limite externe $L$ et les éléments de $(u_n)$).
 
-Cela permet d'avoir des suites définies dans $\mathbb{Q}$ qui convergent même si leurs cibles n'est pas dans $\mathbb{Q}$ (la suite des approximations décimales de $\sqrt{2}$ par exemple).
+Cela permet d'avoir des suites définies dans $\mathbb{Q}$ qui convergent même si leur cible n'est pas dans $\mathbb{Q}$ (la suite des approximations décimales de $\sqrt{2}$ par exemple).
 
 Et ainsi, Cantor réussit à construire les nombres irrationnels (les "trous") en n'utilisant que le matériel disponible, c'est-à-dire les rationnels&nbsp;: il décrète que les irrationnels sont les suites elles-mêmes. La cible de ces suites n'a pas d'existence dans les rationnels, mais l'ensemble des éléments de ces suites de Cauchy, si.
 
@@ -838,7 +838,7 @@ Les deux hommes (qui étaient amis et correspondaient beaucoup) ont résolu le p
 
 ## Et $\mathbb{C}$ alors&nbsp;?
 
-La volonté d'étendre les ensembles de nombres afin qu'ils contiennent les solutions à des équations qui n'en n'avaient pas dans l'ensemble de départ peut être vue, main dans la main avec la recherche de symétrie, comme le véritable moteur de notre quête&nbsp;:
+La volonté d'étendre les ensembles de nombres afin qu'ils contiennent les solutions à des équations qui n'en avaient pas dans l'ensemble de départ peut être vue, main dans la main avec la recherche de symétrie, comme le véritable moteur de notre quête&nbsp;:
 
 $$
 \begin{aligned}
@@ -850,18 +850,18 @@ x^2 = -1 &\Rightarrow \mathbb{R}\rightarrow\mathbb{C}
 $$
 
 
-Avec $\mathbb{R}$, on a obtenu un corps topologiquement complet. Et on peut même montré qu'il s'agit du **seul** corps ordonné complet (intuitivement, il n'y a qu'une seule droite des réels).<br>
+Avec $\mathbb{R}$, on a obtenu un corps topologiquement complet. Et on peut même montrer qu'il s'agit du **seul** corps ordonné complet (intuitivement, il n'y a qu'une seule droite des réels).<br>
 Mais $\mathbb{R}$ n'est pas algébriquement clos dans le sens où certaines équations polynomiales n'y ont pas de solution comme $x^2+1=0$.
 
 On construit alors $\mathbb{C}$ comme la clôture algébrique de $\mathbb{R}$ en faisant en sorte que tout polynôme ait des racines. 
 
-Les mathématiciens utilisent $i=\sqrt{-1}$ depuis le 16<sup>e</sup> siècle pour obtenir les racines de ces polynômes récalcitrants, mais sans vraiment lui conférer le statut de nombre à part entière. $i$ restait une astuce de calcul un peu honteuse. Il fallut attendre la mathématicien irlandais Hamilton pour qu'une construction entièrement basée sur $\mathbb{R}$ permette de se passer du parachutage d'un nombre magique.
+Les mathématiciens utilisent $i=\sqrt{-1}$ depuis le 16<sup>e</sup> siècle pour obtenir les racines de ces polynômes récalcitrants, mais sans vraiment lui conférer le statut de nombre à part entière. $i$ restait une astuce de calcul un peu honteuse. Il fallut attendre le mathématicien irlandais Hamilton pour qu'une construction entièrement basée sur $\mathbb{R}$ permette de se passer du parachutage d'un nombre magique.
 
 Hamilton propose de changer de dimension&nbsp;! 
 
 <div id="def">
 
-L'**ensemble des nombres complexes** $\mathbb{C}$ est défini comme l'ensemble des couples de nombres réels $\mathbb{R}^2 = \\{(a, b) \mid a \in \mathbb{R}, b \in \mathbb{R}\\}$ , muni de deux lois de composition interne définies ainsi pour tous couples $(a,b)$ et $(c,d)$&nbsp;:
+L'**ensemble des nombres complexes** $\mathbb{C}$ est défini comme l'ensemble des couples de nombres réels $\mathbb{R}^2 = \\{(a, b) \mid a \in \mathbb{R}, b \in \mathbb{R}\\}$, muni de deux lois de composition interne définies ainsi pour tous couples $(a,b)$ et $(c,d)$&nbsp;:
 
 <ul style="margin-bottom:1em;">
 <li>l'addition&nbsp;: $(a, b) + (c, d) := (a+c, b+d)$</li>
@@ -1004,11 +1004,11 @@ Tout polynôme de degré $n$ (avec $n ≥ 1$) à coefficients complexes possède
 </div>
 
 Cela signifie que l'ensemble **$\mathbb{C}$ est algébriquement clos**.<br>
-Quelle que soit l'équation polynomiale[^2] à coefficient dans $\mathbb{C}$, toutes ses solutions sont déjà dans $\mathbb{C}$. Il n'y a plus aucun trou algébrique. Le système s'est refermé sur lui-même de manière parfaite.
+Quelle que soit l'équation polynomiale[^2] à coefficients dans $\mathbb{C}$, toutes ses solutions sont déjà dans $\mathbb{C}$. Il n'y a plus aucun trou algébrique. Le système s'est refermé sur lui-même de manière parfaite.
 
 [^2]: Le polynôme n'est rien d'autre que l'expression la plus générale possible construite avec les opérations natives du corps.
 
-$\mathbb{R}$ et $\mathbb{C}$ représente un double aboutissement dans la quête des nombres. Avec l'unique corps ordonné complet $\mathbb{R}$, on modélise enfin la droite géométrique, et avec $\mathbb{C}$, on obtient sa clôture algébrique.
+$\mathbb{R}$ et $\mathbb{C}$ représentent un double aboutissement dans la quête des nombres. Avec l'unique corps ordonné complet $\mathbb{R}$, on modélise enfin la droite géométrique, et avec $\mathbb{C}$, on obtient sa clôture algébrique.
 
 ## Et après&nbsp;?
 
@@ -1019,7 +1019,7 @@ Sur sa lancée, Hamilton voulut transposer à trois dimensions la modélisation 
 
 Mais chacune de ces extensions se fait au détriment de propriétés importantes&nbsp;: les quaternions perdent la commutativité et les octonions perdent l'associativité. Et si on veut aller plus loin, on perd carrément la division...
 
-D'autres ont jouer à changer de géométrie avec les **nombres $p$-adiques** qui complètent les rationnels de manière analogue aux réels, mais avec une toute autre définition de la distance entre deux fractions que la valeur absolue, une distance basée sur la divisibilité par un nombre premier $p$.<br>
+D'autres ont joué à changer de géométrie avec les **nombres $p$-adiques** qui complètent les rationnels de manière analogue aux réels, mais avec une toute autre définition de la distance entre deux fractions que la valeur absolue, une distance basée sur la divisibilité par un nombre premier $p$.<br>
 On n'obtient plus alors la droite réelle mais une géométrie fractale...
 
 Manipuler les infinis en les intégrant aux systèmes de nombres est une autre tentation qui a donné naissance au corps ordonné des **nombres hyperréels** (une extension des nombres réels où la propriété d'Archimède ne tient plus et où la notion de limite n'a plus d'utilité).
