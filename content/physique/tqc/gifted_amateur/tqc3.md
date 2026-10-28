@@ -322,7 +322,7 @@ Premier coup dur&nbsp;: la probabilité de trouver la particule en dehors de son
 Deuxième coup porté&nbsp;: imaginons que l'on cloisonne la particule entre deux murs (des barrières de potentiel) séparés d'une distance bien inférieure à sa longueur d'onde de Compton $\lambda=h/(mc)$ ($1/m$ en unités naturelles). La minuscule incertitude sur la position ($\Delta x \ll \lambda$) entraîne une incertitude sur l'impulsion telle ($\Delta p \gg 1/\lambda=m$) que l'énergie de la particule devient suffisante pour faire jaillir des paires de particules-antiparticules. La boite devrait alors contenir en moyenne plus d'une particule, situation que la mécanique quantique "classique" n'est pas câblée pour décrire.
 
 Ces objets définis localement (en un point $x$ de l'espace-temps) que sont les champs et plus précisément les **champs d'opérateurs** $\hat{\phi}(x)$ vont tirer la quantique de ce mauvais pas. Et puisqu'il s'agit de placer au premier plan des opérateurs dynamiques, la représentation d'Heisenberg va se trouver être la représentation idoine.<br>
-Pour rendre un champ d'opérateurs compatible avec la relativité, il suffit de s'assurer que des opérateurs éloignés d'un intervalle de type espace commutent ($[\hat{\phi}(x), \hat{\phi}(y)]=0$ si $(x-y)^2<0$). Cela empêche que le résultat de l'une des mesures puisse influer causalement le résultat de l'autre.
+Pour rendre un champ d'opérateurs compatible avec la relativité, il suffit de s'assurer que des opérateurs éloignés d'un intervalle de type espace commutent ($[\hat{\phi}(x), \hat{\phi}(y)]=0$ si $(x-y)^2<0$). Cela empêche que le résultat de l'une des mesures puisse influer causalement sur le résultat de l'autre.
 
 <br>
 
@@ -419,7 +419,7 @@ Un **groupe** est un ensemble $G$ muni d'une loi de composition interne $\bullet
 </div>
 
 {{%notice type="note" round="true"%}}
-[Des vieilles notes de lecture d'un autre chouette livre](https://sciencesilencieuse.github.io/maths/groupes/) pour en savoir un peu plus sur les groupes discrets.
+[De vieilles notes de lecture d'un autre chouette livre](https://sciencesilencieuse.github.io/maths/groupes/) pour en savoir un peu plus sur les groupes discrets.
 {{%/notice%}}
 
 L'opérateur de translation peut aussi être vu comme la transformation d'un opérateur&nbsp;:
@@ -1061,7 +1061,7 @@ $\displaystyle
 $
 </p>
 
-Supposons que l'action n'est pas modifiée par la transformation&nbsp;:
+Supposons que l'action ne soit pas modifiée par la transformation&nbsp;:
 
 <p style="text-align:center; ">
 $\displaystyle
@@ -1304,7 +1304,7 @@ Un champ symétrique par rapport aux translations voit son énergie et son impul
 </div>
 
 {{%notice type="note" round="true"%}}
-[Petit article de Quantamagazine](https://www.quantamagazine.org/how-noethers-theorem-revolutionized-physics-20250207/) sur le théorème de Noether.
+[Petit article de Quanta Magazine](https://www.quantamagazine.org/how-noethers-theorem-revolutionized-physics-20250207/) sur le théorème de Noether.
 {{%/notice%}}
 <div style="position:relative;margin-left:auto;margin-right:auto;width:500px;max-width:100%;margin-bottom:-40px;margin-top:-40px;">
 <a href="https://www.quantamagazine.org/how-noethers-theorem-revolutionized-physics-20250207/"><img src="https://www.quantamagazine.org/wp-content/uploads/2025/02/NoethersTheorem-crKristinaArmitage-Lede-scaled.webp" style="box-shadow:none;background:none;width:50px;border-radius:10px;"></a>

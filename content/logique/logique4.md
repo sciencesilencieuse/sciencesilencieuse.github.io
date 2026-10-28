@@ -82,7 +82,7 @@ Notes de lecture du livre *La logique pas à pas* de Jacques Duparc que je parap
 
 ![](/iledragons.png)
 
-Une petite communauté de dragons vivent sur une île aux règles spéciales. Si un dragon apprend qu'il a les yeux bleus, c'est la honte et il doit partir le soir même. Mais les autres dragons n'ont pas le droit de lui dire et aucun de ces dragons n'a de reflet et ne peut donc constater la couleur de ses propres yeux.
+Une petite communauté de dragons vit sur une île aux règles spéciales. Si un dragon apprend qu'il a les yeux bleus, c'est la honte et il doit partir le soir même. Mais les autres dragons n'ont pas le droit de lui dire et aucun de ces dragons n'a de reflet et ne peut donc constater la couleur de ses propres yeux.
 
 Trois dragons peuplent l'île, **A**pophis, **B**ahamut et **C**araxès, lorsqu'un jour, un étranger débarque.<br>
 L'étranger déclare&nbsp;:
@@ -138,7 +138,7 @@ Une substitution uniforme consiste dans un premier temps à retirer toutes les o
 
 <br>
 
-On va utiliser les **modèles de Kripke**, c'est-à-dire des graphes dirigés, pour interpréter les formules de la logique modale. Mais on se cantonnera ici à la logique classique (les interprétations de la négation et de l'implication seront traditionnels et non intuitionnistes). Chaque nœud va correspondre à des **mondes possibles** qui sont ou non liés entre eux par des arcs.
+On va utiliser les **modèles de Kripke**, c'est-à-dire des graphes dirigés, pour interpréter les formules de la logique modale. Mais on se cantonnera ici à la logique classique (les interprétations de la négation et de l'implication seront traditionnelles et non intuitionnistes). Chaque nœud va correspondre à un **monde possible** qui sont ou non liés entre eux par des arcs.
 
 On appelle ces graphes dirigés des **systèmes de transition** (*frame* en anglais)&nbsp;:
 
@@ -147,7 +147,7 @@ On appelle ces graphes dirigés des **systèmes de transition** (*frame* en angl
 Pour $I$ un ensemble non vide, un système de transition étiqueté par $I$ (ou de signature $I$) est une structure relationnelle (un graphe dirigé étiqueté) 
 $$\mathcal{S}=(N,A)$$
 où $N$ est un ensemble non vide dont les éléments sont appelés nœuds 
-<br>et $A$ est un ensemble de relations binaires sur $\mathbb{N}$ indicées par $I$ ($A=\set{A_i\subseteq N\times N|i\in I}$).
+<br>et $A$ est un ensemble de relations binaires sur $N$ indicées par $I$ ($A=\set{A_i\subseteq N\times N|i\in I}$).
 </div>
 
 <br>
@@ -205,7 +205,7 @@ La <b>satisfaction</b> d'une formule $\phi$ au nœud $a$ (au sein de $\mathcal{S
 
 - S'il n'existe pas de nœud $b$ tel que $a\xrightarrow{i}b$, alors quelle que soit la formule $\phi$, $a\Vdash\langle i\rangle\phi$ est toujours fausse. Autrement dit, $a\nVdash \langle i\rangle\phi$.
 
-- Par contre, s'il n'existe pas de nœud $b$ tel que $a\xrightarrow{i}b$, alors $a\Vdash[i]\phi$ est toujours vraie quelle que soit la formule $\phi$. En effet pour que $a\Vdash[i]\phi$ soit vérifiée il faut que si $a\xrightarrow{i}b$, alors $b\Vdash\phi$. Mais s'il n'y a aucun $a\xrightarrow{i}b$ alors l'implication est tojours vérifiée.
+- Par contre, s'il n'existe pas de nœud $b$ tel que $a\xrightarrow{i}b$, alors $a\Vdash[i]\phi$ est toujours vraie quelle que soit la formule $\phi$. En effet pour que $a\Vdash[i]\phi$ soit vérifiée il faut que si $a\xrightarrow{i}b$, alors $b\Vdash\phi$. Mais s'il n'y a aucun $a\xrightarrow{i}b$ alors l'implication est toujours vérifiée.
 
 <div id="def">
 
@@ -224,21 +224,21 @@ Revenons à nos dragons&nbsp;:
 
 <div id="preuve">
 
-les mondes possibles (les nœuds du graphe) vont correspondre aux différentes combinaisons possibles de couleurs d'yeux pour les trois dragons $A$, $B$ et $C$. On a deux possibilités (yeux bleus ou non) pour chacun des trois dragons. Cela fait 8 mondes possibles. 
+Les mondes possibles (les nœuds du graphe) vont correspondre aux différentes combinaisons possibles de couleurs d'yeux pour les trois dragons $A$, $B$ et $C$. On a deux possibilités (yeux bleus ou non) pour chacun des trois dragons. Cela fait 8 mondes possibles. 
 
-Les arcs entre mondes vont être étiquetés chacun par un des trois dragons et vont correspondre aux différents mondes que ce dragon pense possible depuis le monde où il est.
+Les arcs entre mondes vont être étiquetés chacun par un des trois dragons et vont correspondre aux différents mondes que ce dragon pense possibles depuis le monde où il est.
 
 ![](/kripkedragons.png?width=800px)
 
 Par exemple, dans le monde où seul $B$ a les yeux bleus (le monde 3) $A$ imagine aussi possible  le monde où $A$ et $B$ ont tous les deux les yeux bleus (le monde 5). Une flèche étiquetée par $A$ rejoint donc ces deux mondes possibles. Et bien sûr, dans le monde où $A$ et $B$ ont les yeux bleus, $A$ imagine possible le monde où seul $B$ a les yeux bleus (il y a donc une flèche de 5 vers 3). Et comme c'est vrai dans chaque cas et pour les trois dragons, cela montre que ce système de transition est **symétrique**. Il est de plus évident que chaque monde semble possible pour les dragons qui s'y trouvent. Le système est donc aussi **réflexif**.
 
-Imaginons que l'on soit dans le monde 2. L'ensemble des mondes possibles se simplifient alors grandement.
+Imaginons que l'on soit dans le monde 2. L'ensemble des mondes possibles se simplifie alors grandement.
 
 ![](/kripkedragons1.png?width=800px)
 
-La déclaration de l'étranger n'est pas une surprise pour $B$ et $C$ qui voient bien que le pauvre $A$ a les yeux bleus et est donc sans effet pour eux. Par contre $A$ comprend que l'autre monde qu'il pensait possible, le monde béni où il n'avait pas des yeux infames (le monde 1) est en fait impossible.
+La déclaration de l'étranger n'est pas une surprise pour $B$ et $C$ qui voient bien que le pauvre $A$ a les yeux bleus et est donc sans effet pour eux. Par contre $A$ comprend que l'autre monde qu'il pensait possible, le monde béni où il n'avait pas des yeux infâmes (le monde 1) est en fait impossible.
 
-Avant la déclaration de l'étranger, $2\Vdash\color{#00AB8E}\langle A\rangle \color{#000}\neg A$ puisqu'il y a une flèche étiquetée par <span style="color:#00AB8E">$A$</span> qui rejoint 1 (qui réalise $\neg A$). On peut traduire ça par&nbsp;: "dans le monde 2, Apophis croit possible qu'il n'ait pas les yeux bleus". De même $2\Vdash\color{#FEAE00}\langle B\rangle \color{#000}\neg B$ à cause de la flèche étiquetée par <span style="color:#FEAE00">$B$</span> vers le monde 5 et $2\Vdash\color{#FF42A1}\langle C\rangle \color{#000}\neg C$ à cause de la flèche étiquetée par <span style="color:#FF42A1">$C$</span> vers le monde 6. Donc chaque dragon croit encore possible d'avoir les yeux bleus.
+Avant la déclaration de l'étranger, $2\Vdash\color{#00AB8E}\langle A\rangle \color{#000}\neg A$ puisqu'il y a une flèche étiquetée par <span style="color:#00AB8E">$A$</span> qui rejoint 1 (qui réalise $\neg A$). On peut traduire ça par&nbsp;: "dans le monde 2, Apophis croit possible qu'il n'ait pas les yeux bleus". De même $2\Vdash\color{#FEAE00}\langle B\rangle \color{#000}\neg B$ à cause de la flèche étiquetée par <span style="color:#FEAE00">$B$</span> vers le monde 5 et $2\Vdash\color{#FF42A1}\langle C\rangle \color{#000}\neg C$ à cause de la flèche étiquetée par <span style="color:#FF42A1">$C$</span> vers le monde 6. Donc chaque dragon croit encore possible de ne pas avoir les yeux bleus.
 <br>D'autre part, on peut écrire que $2\Vdash\color{#FF42A1}[C] \color{#000} A$ puisque les trois arcs étiquetés par <span style="color:#FF42A1">$C$</span> qui partent de 2 vont dans des mondes (2, 5 et 6) où $A$ est réalisée. Ça peut se lire&nbsp;: "dans le monde 2, Caraxès sait qu'Apophis a les yeux bleus".<br>
 On peut aussi compliquer les énoncés avec par exemple&nbsp;: $6 \Vdash \color{#FF42A1}\langle C\rangle \color{#FEAE00}\langle B\rangle \color{#000} (B\land\neg C)$ (une flèche rose part de 6 vers 2 et une flèche jaune part de 2 vers 5 où $B$ a les yeux bleus mais pas $C$).
 
@@ -254,7 +254,7 @@ Imaginons maintenant que l'on soit dans le monde 5 où Apophis et Bahamut ont le
 
 ![](/kripkedragons3.png?width=800px)
 
-La déclaration de l'étranger ne fait pas beaucoup d'effet car ils étaient déjà tous les trois au courant qu'au moins l'un d'eux avait les yeux bleus... Par conséquent, le soir même, personne ne part. Et ça par contre, ça change pas mal de choses&nbsp;! En effet, les mondes 2 et 3 deviennent d'un coup impossibles puisque on a vu que les mondes où seul un des dragon a les yeux bleus voient ce dragon décamper dès le premier soir.
+La déclaration de l'étranger ne fait pas beaucoup d'effet car ils étaient déjà tous les trois au courant qu'au moins l'un d'eux avait les yeux bleus... Par conséquent, le soir même, personne ne part. Et ça par contre, ça change pas mal de choses&nbsp;! En effet, les mondes 2 et 3 deviennent d'un coup impossibles puisqu'on a vu que les mondes où seul un des dragons a les yeux bleus voient ce dragon décamper dès le premier soir.
 
 ![](/kripkedragons4.png?width=800px)
 
@@ -265,7 +265,7 @@ La dernière situation possible correspond au monde 8.
 
 ![](/kripkedragons5.png?width=800px)
 
-On reprend le raisonnement précédent. Personne ne part au premier soir, mais cette fois-ci, ça ne permet d'éliminer aucun monde possible... Et par conséquent, au deuxième soir, personne ne s'envole. Mais là, bingo&nbsp;! Ça élimine les mondes où seuls deux dragons ont les yeux piscine. Finalement, ils comprennent tous les trois qu'ils sont banis et s'envolent au troisième soir.<br>
+On reprend le raisonnement précédent. Personne ne part au premier soir, mais cette fois-ci, ça ne permet d'éliminer aucun monde possible... Et par conséquent, au deuxième soir, personne ne s'envole. Mais là, bingo&nbsp;! Ça élimine les mondes où seuls deux dragons ont les yeux piscine. Finalement, ils comprennent tous les trois qu'ils sont bannis et s'envolent au troisième soir.<br>
 La situation de départ correspondait donc au monde 8.
 
 </div>
@@ -274,7 +274,7 @@ La situation de départ correspondait donc au monde 8.
 
 On peut remarquer en passant différentes équivalences&nbsp;:
 - $a\Vdash\neg\color{#00AB8E}[A] \color{#000} \phi$ ssi $a\Vdash \color{#00AB8E}\langle A\rangle \color{#000} \neg \phi$<br>
-Pour A, ne pas savoir quelque chose est équivalent à croire possible sont contraire.
+Pour A, ne pas savoir quelque chose est équivalent à croire possible son contraire.
 - $a\Vdash\color{#00AB8E}[A] \color{#000} \phi$ ssi $a\Vdash \neg\color{#00AB8E}\langle A\rangle \color{#000} \neg \phi$<br>
 Pour A, savoir quelque chose est identique à ne pas croire possible le contraire de cette chose.
 - $a\Vdash\neg\color{#00AB8E}[A] \color{#000} \neg\phi$ ssi $a\Vdash \color{#00AB8E}\langle A\rangle \color{#000}  \phi$<br>
@@ -319,7 +319,7 @@ On peut donc avoir une formule $\phi\lor\psi$ satisfaite sans que ni $\phi$ ni $
 
 {{%notice type="info" round="true"%}}
 On retrouve les modèles du calcul des propositions en se restreignant aux systèmes de transition contenant un seul nœud. Dit autrement, une formule $\phi$ de <b>profondeur modale</b> nulle est une formule du calcul des propositions.<br>
-Soit $\mathcal{M}$ un modèle du calcul des propositions défini par la distribution de valeur de vérité $\delta_\mathcal{M}$ qui associe aux variables apparaissant dans $\phi$ la valeur 1 lorsqu'elles sont vraies dans $\mathcal{M}$ et 0 sinon ($\delta_\mathcal{M}(P)=1$ ssi $\mathcal{M}\models P$). La formule $\phi$ st vraie dans $\mathcal{M}$ (noté $\mathcal{M}\models\phi$) si et seulement si cette même formule $\phi$ est vraie dans le système de transition $\mathcal{S}\_\mathcal{M}=(N,A)$, où $N=\set{a}$ et $A=\emptyset$, équipé de la valuation $\mathcal{V}\_{\delta_\mathcal{M}}$ définie par&nbsp;: $\mathcal{V}\_{\delta_\mathcal{M}}(P)=\set{a}$ si et seulement si $\delta_\mathcal{M}(P)=1$ et $\mathcal{V}\_{\delta_\mathcal{M}}(P)=\emptyset$ si et seulement si $\delta_\mathcal{M}(P)=0$.<br>
+Soit $\mathcal{M}$ un modèle du calcul des propositions défini par la distribution de valeur de vérité $\delta_\mathcal{M}$ qui associe aux variables apparaissant dans $\phi$ la valeur 1 lorsqu'elles sont vraies dans $\mathcal{M}$ et 0 sinon ($\delta_\mathcal{M}(P)=1$ ssi $\mathcal{M}\models P$). La formule $\phi$ est vraie dans $\mathcal{M}$ (noté $\mathcal{M}\models\phi$) si et seulement si cette même formule $\phi$ est vraie dans le système de transition $\mathcal{S}\_\mathcal{M}=(N,A)$, où $N=\set{a}$ et $A=\emptyset$, équipé de la valuation $\mathcal{V}\_{\delta_\mathcal{M}}$ définie par&nbsp;: $\mathcal{V}\_{\delta_\mathcal{M}}(P)=\set{a}$ si et seulement si $\delta_\mathcal{M}(P)=1$ et $\mathcal{V}\_{\delta_\mathcal{M}}(P)=\emptyset$ si et seulement si $\delta_\mathcal{M}(P)=0$.<br>
 Cela s'écrit&nbsp;: $\mathcal{M}\models\phi$ ssi $\langle\mathcal{S},\mathcal{V}\_{\delta_\mathcal{M}}\rangle\Vdash^{\forall a}\phi$
 {{%/notice%}}
 
@@ -331,7 +331,7 @@ $$\mathcal{S}\Vdash^{\forall a,\forall \mathcal{V}} \phi$$
 
 </div>
 
-**La notion de validité est globale**, elle aussis. Et à nouveau, une formule $\phi\lor\psi$ peut être valide dans un système de transition sans que ni $\phi$, ni $\psi$ ne le soit.
+**La notion de validité est globale**, elle aussi. Et à nouveau, une formule $\phi\lor\psi$ peut être valide dans un système de transition sans que ni $\phi$, ni $\psi$ ne le soit.
 
 <br>
 
@@ -359,7 +359,7 @@ On va montrer la suite des implications suivante $(1)\rightarrow(2)$, $(2)\right
 <ul>
 <li>$(1)\rightarrow(2)$ et $(2)\rightarrow(3)$ sont immédiates.</li>
 <li>Pour montrer $(3)\rightarrow(4)$, nous allons montrer la contraposée $\neg(4)\rightarrow\neg(3)$.<br>
-Supposons que $\phi$ n'est pas une tautologie du calcul des propositions. Il existe donc un modèle $\mathcal{M}$ pour lequel la formule est fausse. Équipons alors le système de transition $\mathcal{T}=(\set{a},\emptyset)$ de la valuation où pour chacune des variables propositionnelles $P$ apparaissant dans $\phi$, $a\in\mathcal{V}(P)$ si et seulement si $\mathcal{M}\models P$.<br>
+Supposons que $\phi$ ne soit pas une tautologie du calcul des propositions. Il existe donc un modèle $\mathcal{M}$ pour lequel la formule est fausse. Équipons alors le système de transition $\mathcal{T}=(\set{a},\emptyset)$ de la valuation où pour chacune des variables propositionnelles $P$ apparaissant dans $\phi$, $a\in\mathcal{V}(P)$ si et seulement si $\mathcal{M}\models P$.<br>
 Par définition de la satisfaction locale d'une formule $\langle \mathcal{T},\mathcal{V},a\rangle\Vdash \phi$ ssi $\mathcal{M}\models\phi$.<br>
 Comme notre hypothèse est que $\mathcal{M}\not\models\phi$, on en déduit que $\langle \mathcal{T},\mathcal{V},a\rangle\nVdash \phi$. On a donc trouvé une valuation qui contredit $(3)$.
 </li>
@@ -403,7 +403,7 @@ Et comme c'est vrai pour tout $b$ successeur de $a$, on en déduit $\langle \mat
 
 <div id="theo">
 
-Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalents&nbsp;:
+Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalentes&nbsp;:
 <ol>
 <li>$\mathcal{S}$ est <b>réflexif</b></li>
 <li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\Box\phi\rightarrow\phi)$</li>
@@ -420,7 +420,7 @@ Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont 
 Si un nœud $a$ quelconque, pour une valuation quelconque, vérifie $a\Vdash\Box \phi$, alors par définition, pour tout $b$ tel que $a\longrightarrow b$, $b\Vdash\phi$. Puisque $\mathcal{S}$ est réflexif, $a$ est lui-même un de ces $b$ et donc $a\Vdash\phi$.
 </li>
 <li>$(2)\Rightarrow(1)$<br>
-Supposons que $\mathcal{S}$ ne soit pas réflexif. Il s'en suit qu'il existe un nœud $a$ tel que $a\,\,\not\!\!\longrightarrow a$. Soit $\phi=P$ une formule de hauteur nulle et $\mathcal{V}$ une valuation telle que $b\in\mathcal{V}(P)$ si et seulement si $a\longrightarrow b$. Par définition de $\mathcal{V}$, on a à la fois $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box P$ et $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash P$, donc $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash (\Box P\rightarrow P)$. Cela prouve ainsi que $\mathcal{S}\nvdash ^{\forall a,\forall\mathcal{V}}(\Box P\rightarrow P)$, ce qui contredit l'hypothèse.
+Supposons que $\mathcal{S}$ ne soit pas réflexif. Il s'ensuit qu'il existe un nœud $a$ tel que $a\,\,\not\!\!\longrightarrow a$. Soit $\phi=P$ une formule de hauteur nulle et $\mathcal{V}$ une valuation telle que $b\in\mathcal{V}(P)$ si et seulement si $a\longrightarrow b$. Par définition de $\mathcal{V}$, on a à la fois $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box P$ et $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash P$, donc $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash (\Box P\rightarrow P)$. Cela prouve ainsi que $\mathcal{S}\nvdash ^{\forall a,\forall\mathcal{V}}(\Box P\rightarrow P)$, ce qui contredit l'hypothèse.
 </li>
 </ul>
 
@@ -439,7 +439,7 @@ On note $\mathscr{C}_{ref.}$ la classe de tous les systèmes de transition réfl
 
 <div id="theo">
 
-Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalents&nbsp;:
+Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalentes&nbsp;:
 <ol>
 <li>$\mathcal{S}$ est <b>famélique</b></li>
 <li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\phi\rightarrow\Box\phi)$</li>
@@ -473,7 +473,7 @@ Dans le cas où il existe un nœud $a$ possédant un successeur $b$ différent d
 
 <div id="theo">
 
-Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalents&nbsp;:
+Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalentes&nbsp;:
 <ol>
 <li>$\mathcal{S}$ est <b>transitif</b></li>
 <li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\Box\phi\rightarrow \Box\Box\phi )$</li>
@@ -510,7 +510,7 @@ On note $\mathscr{C}_{tr.}$ la classe de tous les systèmes de transition transi
 
 <div id="theo">
 
-Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalents&nbsp;:
+Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalentes&nbsp;:
 <ol>
 <li>$\mathcal{S}$ est <b>symétrique</b></li>
 <li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\phi\rightarrow \Box\Diamond\phi)$
@@ -551,7 +551,7 @@ On note $\mathscr{C}_{sym.}$ la classe de tous les systèmes de transition symé
 
 <div id="theo">
 
-Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalents&nbsp;:
+Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalentes&nbsp;:
 <ol>
 <li>$\mathcal{S}$ est <b>dense</b></li>
 <li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\Box\Box\phi\rightarrow \Box\phi)$
@@ -573,7 +573,7 @@ Soit $c$ un nœud vérifiant $a\longrightarrow c$. $\mathcal{S}$ étant dense, i
 Soit un système de transition non dense $\mathcal{S}$ qui vérifie $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\Box\Box\phi\rightarrow \Box\phi)$ pour n'importe quelle formule $\phi$.<br>
 Si $\mathcal{S}$ n'est pas dense, il existe deux nœuds $a$ et $c$ tels que $a\longrightarrow c$ sans qu'aucun $b$ ne vérifie à la fois $a\longrightarrow b$ et $b\longrightarrow c$.<br>
 Considérons la valuation $\mathcal{V}$ définie par $d\in\mathcal{V}(P)$ si et seulement si $d\neq c$.<br>
-Il s'en suit que si $\langle\mathcal{S},\mathcal{V},c\rangle\nVdash P$ alors $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash\Box P$, et pourtant $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box\Box P$. D'où $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash\Box\Box P \rightarrow \Box P$.
+Il s'ensuit que si $\langle\mathcal{S},\mathcal{V},c\rangle\nVdash P$ alors $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash\Box P$, et pourtant $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box\Box P$. D'où $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash\Box\Box P \rightarrow \Box P$.
 </li>
 </ul>
 
@@ -583,7 +583,7 @@ Il s'en suit que si $\langle\mathcal{S},\mathcal{V},c\rangle\nVdash P$ alors $\l
 
 <div id="theo">
 
-Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalents&nbsp;:
+Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalentes&nbsp;:
 <ol>
 <li>$\mathcal{S}$ est <b>non borné à droite</b></li>
 <li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\Box\phi\rightarrow \Diamond\phi)$
@@ -598,7 +598,7 @@ Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont 
 <ul>
 <li>$(1)\Rightarrow(2)$<br>
 Soient $\mathcal{S}$ un système de transition non borné à droite, $\mathcal{V}$ une valuation et $a$ un nœud.<br>
-On suppose que $a\Vdash\Box P$. La seule possibilité pour que $a\nVdash\Diamond P$, c'est que le nœud $a$ n'est aucun successeur or l'hypothèse que $\mathcal{S}$ est non borné à droite nous l'interdit, donc nécessairement $a\Vdash\Diamond P$.
+On suppose que $a\Vdash\Box P$. La seule possibilité pour que $a\nVdash\Diamond P$, c'est que le nœud $a$ n'ait aucun successeur or l'hypothèse que $\mathcal{S}$ est non borné à droite nous l'interdit, donc nécessairement $a\Vdash\Diamond P$.
 </li>
 <li>$(2)\Rightarrow(1)$<br>
 Si un système de transition n'est pas borné à droite, il existe un nœud $a$ sans successeur. Supposons une valuation $\mathcal{V}$ telle que seul $a\in \mathcal{V}(P)$. On a alors $a\Vdash \Box P$ mais aussi $a\nvdash \Diamond P$.
@@ -618,7 +618,7 @@ On note $\mathscr{C}_{n.b.d.}$ la classe de tous les systèmes de transition non
 
 <div id="theo">
 
-Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalents&nbsp;:
+Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalentes&nbsp;:
 <ol>
 <li>$\mathcal{S}$ est <b>euclidien</b></li>
 <li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\Diamond\phi\rightarrow \Box\Diamond\phi)$
@@ -652,7 +652,7 @@ Soit $\Gamma$ un ensemble de formules. On écrit&nbsp;:
 $\mathcal{S}$ est un système de transition tel qu'en tout nœud et quelle que soit la valuation considérée, il satisfait tout ce que "raconte" $\Gamma$. C'est donc par sa seule forme que ce système de transition vérifie l'ensemble des formules de $\Gamma$.
 
 - $\mathscr{C} \Vdash\Gamma$ si et seulement si pour toute formule $\phi\in\Gamma$, $\mathscr{C}\Vdash \phi$<br>
-Même affirmation que la précédente mais pour une classe de systèmes de transition toute entière plutôt que pour un seul représentant. En ce sens, la plus grande classe $\mathscr{C}$ qui vérifie $\mathscr{C}\Vdash\Gamma$ octroie une sorte de caractérisation par la seule forme des graphes de ce que raconte $\Gamma$.
+Même affirmation que la précédente mais pour une classe de systèmes de transition tout entière plutôt que pour un seul représentant. En ce sens, la plus grande classe $\mathscr{C}$ qui vérifie $\mathscr{C}\Vdash\Gamma$ octroie une sorte de caractérisation par la seule forme des graphes de ce que raconte $\Gamma$.
 
 <br>
 
@@ -715,7 +715,7 @@ $\Box^n$ permet en quelque sorte de généraliser la vérité d'un nœud puisque
 
 <ul>
 <li>$\Leftarrow$<br>
-Si on a $\Gamma$ en tout nœud, alors en un nœud $a$ quelconque, on a nécessairement $\Box^n\psi$ vraie pour tout $n$ et tout $\psi$ dans $\Gamma$. Or par hypothèse, cela implique que $\phi$ est vraie en ce nœud. Et comme la raisonnement ne dépend pas du nœud $a$, cela montre que $\phi$ est vraie en tout nœud.
+Si on a $\Gamma$ en tout nœud, alors en un nœud $a$ quelconque, on a nécessairement $\Box^n\psi$ vraie pour tout $n$ et tout $\psi$ dans $\Gamma$. Or par hypothèse, cela implique que $\phi$ est vraie en ce nœud. Et comme le raisonnement ne dépend pas du nœud $a$, cela montre que $\phi$ est vraie en tout nœud.
 </li>
 <li>$\Rightarrow$<br>
 Démontrons la contraposée&nbsp;: si $\set{\Box^n\psi|n\in\mathbb{N},\psi\in\Gamma}\not\models_\mathscr{C}\phi$ alors $\Gamma\not\models^{\forall a}_\mathscr{C}\phi$.<br>
@@ -750,7 +750,7 @@ Deux modèles sont distinguables par la logique modale s'ils n'ont pas la même 
 
 <div id="def">
 
-On appelle <b>théorie locale d'un modèle</b> $\langle\mathcal{S},\mathcal{V}\rangle$ au nœud $a$ l'ensemble de toutes les formules qui sont vraies dans ce modèle&nbsp;:
+On appelle <b>théorie locale d'un modèle</b> $\langle\mathcal{S},\mathcal{V}\rangle$ au nœud $a$ l'ensemble de toutes les formules qui sont vraies en ce nœud&nbsp;:
 $$Th_{(\mathcal{M},a)}=\set{\phi|\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\phi}$$
 
 </div>
@@ -784,7 +784,7 @@ La <b>bisimulation</b> va nous permettre de reconnaître que ces modèles sont l
 
 <br>
 
-Deux modèles correspondent en quelque sorte à deux univers parallèles. Mais il se peut que depuis un des mondes du premier univers, tout paraisse exactement identique à ce que l'on perçoit depuis un monde du deuxième univers. Bien que les univers soient différents, ses "habitants" ne peuvent pas les différentier. On dit qu'ils sont <b>indiscernables</b> ou <b>bisimilaires</b>. Deux mondes sont indiscernables s'il n'existe pas de formule vraie dans l'un et fausse dans l'autre.
+Deux modèles correspondent en quelque sorte à deux univers parallèles. Mais il se peut que depuis un des mondes du premier univers, tout paraisse exactement identique à ce que l'on perçoit depuis un monde du deuxième univers. Bien que les univers soient différents, ses "habitants" ne peuvent pas les différencier. On dit qu'ils sont <b>indiscernables</b> ou <b>bisimilaires</b>. Deux mondes sont indiscernables s'il n'existe pas de formule vraie dans l'un et fausse dans l'autre.
 
 Un jeu à deux joueurs à information parfaite, le jeu de bisimulation, est défini de telle sorte que le joueur appelé <b>Duplicateur</b> possède une stratégie gagnante si et seulement si les deux mondes (associés à leurs modèles respectifs) qui interviennent dans le jeu sont indiscernables.
 
@@ -803,7 +803,7 @@ Un coup, pour chacun des joueurs, consiste à choisir un nœud dans un système 
 </li>
 <br>
 <li>
-À chaque tour, pour une position $a'$ dans $\mathcal{M}$ et une position $b'$ dans $\mathcal{N}$, $\text{C}_{or}$ choisit d'abord de jouer dans $\mathcal{S}$ ou dans $\mathcal{T}$ puis il choisit un arc permettant d'arriver à un successeur du nœud $a'$ ou $b'$ et $\text{D}_{up}$ répond en choisissant un successeur dans l'autre modèle tel que les nœuds choisit dans chaque modèle satisfont les mêmes variables propositionnelles.
+À chaque tour, pour une position $a'$ dans $\mathcal{M}$ et une position $b'$ dans $\mathcal{N}$, $\text{C}_{or}$ choisit d'abord de jouer dans $\mathcal{S}$ ou dans $\mathcal{T}$ puis il choisit un arc permettant d'arriver à un successeur du nœud $a'$ ou $b'$ et $\text{D}_{up}$ répond en choisissant un successeur dans l'autre modèle tel que les nœuds choisis dans chaque modèle satisfont les mêmes variables propositionnelles.
 </li>
 <br>
 <li>Fin de la partie&nbsp;:
@@ -826,9 +826,9 @@ Exemple 1&nbsp;:
 </div>
 Le Corrupteur possède une stratégie gagnante&nbsp;:
 <ul>
-<li>$\text{C}_{or}$ choisit de joueur dans $\mathcal{N}$ puis va en $b'$.</li>
+<li>$\text{C}_{or}$ choisit de jouer dans $\mathcal{N}$ puis va en $b'$.</li>
 <li>$\text{D}_{up}$ n'a pas d'autre choix que d'aller en $b$.</li>
-<li>$\text{C}_{or}$ choisit à nouveau de joueur dans $\mathcal{N}$ et va en $c'$.</li>
+<li>$\text{C}_{or}$ choisit à nouveau de jouer dans $\mathcal{N}$ et va en $c'$.</li>
 <li>$\text{D}_{up}$ perd car il ne peut plus avancer.</li>
 </ul>
 
@@ -862,7 +862,7 @@ Exemple 3&nbsp;:
 Le modèle $\mathcal{N}$ est défini par&nbsp;:
 <ul>
 <li>l'ensemble des nœuds est $\mathbb{N}$,</li>
-<li>de tout nœud $n\in\mathbb{N}$ part deux arcs&nbsp;: $n\longrightarrow n+1$ et $n\longrightarrow n+2$</li>
+<li>de tout nœud $n\in\mathbb{N}$ partent deux arcs&nbsp;: $n\longrightarrow n+1$ et $n\longrightarrow n+2$</li>
 <li>$2n\Vdash P$ et $2n+1\nVdash P$</li>
 </ul>
 Le Duplicateur possède une stratégie gagnante qui consiste à tout moment de la partie&nbsp;:
@@ -879,7 +879,7 @@ De la sorte, le jeu continue indéfiniment.
 
 <div id="theo">
 
-<b>Théorème de Henessy-Milner</b>&nbsp;: $(\mathcal{M},a)\equiv(\mathcal{N},b)$ si et seulement si $\text{D}_{up}$ a une stratégie gagnante dans $\mathbb{Bis}((\mathcal{M},a),(\mathcal{N},b))$.
+<b>Théorème de Hennessy-Milner</b>&nbsp;: $(\mathcal{M},a)\equiv(\mathcal{N},b)$ si et seulement si $\text{D}_{up}$ a une stratégie gagnante dans $\mathbb{Bis}((\mathcal{M},a),(\mathcal{N},b))$.
 
 </div>
 
