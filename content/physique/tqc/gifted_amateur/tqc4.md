@@ -99,7 +99,7 @@ Cette partie est celle où l'on apprend à faire tourner la machine. Elle a la f
 <b>Le fil de cette partie&nbsp;:</b>
 <ul style="margin-top:1em; margin-bottom:1em;">
 <li>Le <b><a href="./#champ-scalaire-réel-le-laboratoire">champ scalaire réel</a></b> nous sert de laboratoire pour roder la recette. Il livre une théorie parfaitement satisfaisante, mais dans laquelle chaque particule est sa propre antiparticule, et donc dans laquelle aucune charge n'a de sens.</li>
-<li>Le <b><a href="./#champ-scalaire-réel-le-laboratoire">champ scalaire complexe</a></b> répond à ce manque. Sa symétrie interne fournit une charge conservée, et cette charge exige que les particules aillent par paires de signes opposés&nbsp;: les antiparticules apparaissent.</li>
+<li>Le <b><a href="./#champ-scalaire-complexe-pour-avoir-une-charge">champ scalaire complexe</a></b> répond à ce manque. Sa symétrie interne fournit une charge conservée, et cette charge exige que les particules aillent par paires de signes opposés&nbsp;: les antiparticules apparaissent.</li>
 <li>Sa <b><a href="./#limite-non-relativiste-le-prix-de-la-covariance">limite non relativiste</a></b> montre le prix à payer quand on renonce à la covariance, et offre en récompense la relation d'incertitude nombre-phase, qui est le socle de toute la physique de la matière condensée cohérente.</li>
 <li>Le <b><a href="./#champ-à-plusieurs-composantes-généraliser-la-charge">champ à plusieurs composantes</a></b> généralise l'idée de charge&nbsp;: si une symétrie interne à un paramètre donne une charge, une symétrie à trois paramètres donne trois charges, et ces trois charges sont l'isospin.</li>
 <li>Le <b><a href="./#champ-vectoriel-massif-quand-les-composantes-vivent-dans-minkowski">champ vectoriel massif</a></b> ajoute la dernière nouveauté de la partie&nbsp;: des composantes internes qui ne vivent plus dans un espace abstrait mais dans l'espace de Minkowski lui-même. Ce sont les polarisations.</li>
@@ -477,7 +477,7 @@ Malgré tout, ces infinis qui traînent partout, cela fait désordre. En ordonna
 
 {{%notice type="note" round="true"%}}
 Le terme constant devient en revanche un gros (!) problème lorsqu'on essaie de réconcilier théorie quantique des champs et relativité générale. Dans cette dernière, ce ne sont plus les différences d'énergie qui importent&nbsp;: le tenseur énergie-impulsion figure directement au second membre des équations d'Einstein, et une densité d'énergie du vide y agit comme une constante cosmologique.<br>
-C'est le "**problème de la constante cosmologique**"&nbsp;: en coupant l'intégrale divergente à l'échelle de Planck, la densité d'énergie du vide prévue dépasse la valeur observée de quelque $10^{120}$ 😵‍💫 ordres de grandeur (facile la pire prédiction jamais faite en physique)...
+C'est le "**problème de la constante cosmologique**"&nbsp;: en coupant l'intégrale divergente à l'échelle de Planck, la densité d'énergie du vide prévue dépasse la valeur observée de quelque $10^{120}$ 😵‍💫 ordres de grandeur (facilement la pire prédiction jamais faite en physique)...
 {{%/notice%}}
 
 <br>
@@ -1345,7 +1345,7 @@ Cet opérateur ne compte pas des particules, il en <u>convertit</u>&nbsp;: il d�
 Cette charge conservée à trois composantes <u>est</u> l'**isospin**&nbsp;! Le produit vectoriel de la première formule est la signature du moment cinétique, et c'est bien pourquoi l'isospin se manipule avec les mêmes règles que le spin, sans avoir le moindre rapport avec une rotation dans l'espace physique.
 
 {{%notice type="note" round="true"%}}
-L'exemple à trois champs de même masse n'est pas qu'un jouet&nbsp;: c'est, à peu de choses près, le triplet de pions $(\pi^+, \pi^0, \pi^-)$, dont les masses sont effectivement très voisines (environ 140&nbsp;MeV, à quelques MeV près). L'écart résiduel entre elles mesure justement le degré auquel la symétrie d'isospin n'est qu'approchée.
+L'exemple à trois champs de même masse n'est pas qu'un jouet&nbsp;: c'est, à peu de chose près, le triplet de pions $(\pi^+, \pi^0, \pi^-)$, dont les masses sont effectivement très voisines (environ 140&nbsp;MeV, à quelques MeV près). L'écart résiduel entre elles mesure justement le degré auquel la symétrie d'isospin n'est qu'approchée.
 {{%/notice%}}
 
 <br>
