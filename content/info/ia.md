@@ -48,7 +48,7 @@ Processus qui permettent d'apprendre, de comprendre ou de s'adapter à des situa
 
 ## Un cerveau pas si rationnel
 
-Les psychologues Kahneman et Tverski ont montré à partir des années 1960 que la capacité des humains à prendre les décisions les plus rationnelles est en réalité très limitée. La belle mécanique logique du raisonnement humain est en réalité criblée de grains de sable qui déraillent la machine, les biais, ou illusions cognitives. Ces recherches ont contribué à détruire le mythe de l'agent rationnel parfait au centre des théories économiques et valurent le prix Nobel d'économie à Kahneman, 6 ans après la mort de Tverski.
+Les psychologues Kahneman et Tversky ont montré à partir des années 1960 que la capacité des humains à prendre les décisions les plus rationnelles est en réalité très limitée. La belle mécanique logique du raisonnement humain est en réalité criblée de grains de sable qui font dérailler la machine, les biais, ou illusions cognitives. Ces recherches ont contribué à détruire le mythe de l'agent rationnel parfait au centre des théories économiques et valurent le prix Nobel d'économie à Kahneman, 6 ans après la mort de Tversky.
 
 <br>
 
@@ -62,7 +62,7 @@ L'intelligence artificielle hérite-t-elle de nos biais cognitifs&nbsp;? On revi
 
 ## Histoire de l'IA
 
-L'**intelligence artificielle** (IA) est une discipline  scientifique qui a vu officiellement le jour en 1956. Elle repose sur la conjecture selon laquelle toutes les fonctions cognitives, en particulier l'apprentissage, le raisonnement, le calcul, la perception, la mémorisation, voire la découverte scientifique ou la créativité artistique, peuvent être reproduite par des ordinateurs.
+L'**intelligence artificielle** (IA) est une discipline  scientifique qui a vu officiellement le jour en 1956. Elle repose sur la conjecture selon laquelle toutes les fonctions cognitives, en particulier l'apprentissage, le raisonnement, le calcul, la perception, la mémorisation, voire la découverte scientifique ou la créativité artistique, peuvent être reproduites par des ordinateurs.
 
 #### La première programmeuse : Ada Lovelace
 
@@ -109,7 +109,7 @@ On va s'intéresser à l'apprentissage automatique dit "classique"[^2] qui regro
 Cette branche de l'apprentissage automatique se décompose principalement en deux familles d'algorithmes&nbsp;: **l'apprentissage supervisé** (on apprend à la machine) et son pendant, **l'apprentissage non supervisé** (la machine apprend par elle-même). Nous allons étudier un algorithme star de chacune de ces familles.
 ![](https://i.vas3k.ru/7w1.jpg?width=800px)
 
-[^2]: graphe issue de [cette introduction assez sympa](https://vas3k.com/blog/machine_learning/) à l'apprentissage automatique.
+[^2]: Graphe issu de [cette introduction assez sympa](https://vas3k.com/blog/machine_learning/) à l'apprentissage automatique.
 
 <br>
 
@@ -121,7 +121,7 @@ Cette branche de l'apprentissage automatique se décompose principalement en deu
 </tr>
 </table>
 
-L'algorithme des *k* plus proches voisin (*k*-nearest neighbors ou KNN) est une des techniques les plus simples en apprentissage automatique. Sa facilité d'utilisation et sa rapidité en font un outil de choix dans l'industrie.
+L'algorithme des *k* plus proches voisins (*k*-nearest neighbors ou KNN) est une des techniques les plus simples en apprentissage automatique. Sa facilité d'utilisation et sa rapidité en font un outil de choix dans l'industrie.
 
 KNN est un algorithme d'apprentissage supervisé&nbsp;; cela signifie que l'algorithme nécessite des données classifiées en amont qui vont lui servir à trouver la bonne étiquette pour d'autres données non encore classifiées.
 
@@ -133,13 +133,13 @@ Suivant la nature de l'étiquette, KNN peut servir à&nbsp;:
 
 ### Principe
 
-KNN enregistre, dans un premier temps, tous les points de données étiquetées qui vont lui servir à l'apprentissage (c'est le training set). Puis, quand arrive un point de donnée non étiqueté, l'algorithme calcule sa distance aux autres points et sélectionne les **k** plus proches. On a alors deux cas possibles :
+KNN enregistre, dans un premier temps, tous les points de données étiquetés qui vont lui servir à l'apprentissage (c'est le training set). Puis, quand arrive un point de donnée non étiqueté, l'algorithme calcule sa distance aux autres points et sélectionne les **k** plus proches. On a alors deux cas possibles :
 - si les étiquettes sont des catégories, l'algorithme calcule **le mode** des catégories des voisins sélectionnés (catégorie la plus représentée).
 - si les étiquettes sont des nombres, l'algorithme calcule **la moyenne** des étiquettes des voisins sélectionnés.
 
 
 L'algorithme des *k* plus proches voisins est **non paramétrique** dans le sens où aucun modèle mathématique de classification ou régression n'est construit à partir des données (pas de paramètre à ajuster) puisque toutes les données d'apprentissage sont enregistrées telles quelles.<br>
-Cela signifie qu'on ne présuppose rien de particulier sur les données (à part que des points proches appartiennent à la même catégorie). L'algorithme est donc particulièrement robuste (les données parlent d'elles-même) et simple à mettre à jour (suffit d'ajouter les nouvelles données d'apprentissage).
+Cela signifie qu'on ne présuppose rien de particulier sur les données (à part que des points proches appartiennent à la même catégorie). L'algorithme est donc particulièrement robuste (les données parlent d'elles-mêmes) et simple à mettre à jour (suffit d'ajouter les nouvelles données d'apprentissage).
 
 <br>
 
@@ -149,7 +149,7 @@ Cela signifie qu'on ne présuppose rien de particulier sur les données (à part
 
 Comme le montre la petite animation ci-dessus, le **choix de k** modifie le résultat obtenu.
 - Si *k* est trop petit, le moyennage est faible et donc la variabilité va être très grande. On parle alors de surapprentissage (**overfitting**).
-- En augmentant *k*, les résultats obtenus se stabilisent (vote de la majorité) et les erreurs diminuent, jusqu'au moment où la boule à l'intérieur de laquelle se fait le moyennage devient trop grosse, amenant in fine l'algorithme a choisir systématiquement la catégorie majoritaire, quel que soit le point... On augmente alors le **biais** (ici, le biais est le préjudice en faveur du plus grand nombre). L'ajustement ne suit plus les variations, on parle de sous-apprentissage (**underfitting**).
+- En augmentant *k*, les résultats obtenus se stabilisent (vote de la majorité) et les erreurs diminuent, jusqu'au moment où la boule à l'intérieur de laquelle se fait le moyennage devient trop grosse, amenant in fine l'algorithme à choisir systématiquement la catégorie majoritaire, quel que soit le point... On augmente alors le **biais** (ici, le biais est le préjudice en faveur du plus grand nombre). L'ajustement ne suit plus les variations, on parle de sous-apprentissage (**underfitting**).
 
 
 Pour résumer :
@@ -216,7 +216,7 @@ $$\frac{VP+VN}{VP+VN+FP+FN}$$<br>
 
 {{%notice type="info" round="true"%}}
 Un algorithme peut très bien être très précis (les prédictions positives sont bien des 3), mais peu sensible, avec un faible taux de rappel (parmi tous les 3, peu ont été identifiés).<br>
-À l'inverse, on peut avoir une bonne sensibilité (la plupart des vrais 3 ont été identifiés comme tel), mais peu précis (beaucoup de chiffres identifiés comme des 3 sont en fait d'autres chiffres).
+À l'inverse, on peut avoir une bonne sensibilité (la plupart des vrais 3 ont été identifiés comme tels), mais une faible précision (beaucoup de chiffres identifiés comme des 3 sont en fait d'autres chiffres).
 {{%/notice%}}
 
 ![](/matconfus.png?width=800px)
@@ -246,7 +246,7 @@ Si notre but est de reconnaître le mieux possible les 9 manuscrits, il semblera
 
 Le boulot de l'algorithme des ***k*-moyennes** (k-means) n'est pas d'étiqueter les données, mais de les regrouper par famille. C'est donc un algorithme de **partitionnement** des données (clustering).
 
-Contrairement à KNN, l'algorithme des *k*-moyennes ne nécessite pas de données préétiquetées. Il fait ainsi parti des algorithmes d'apprentissage automatique **non-supervisé** (il se débrouille tout seul avec les données mystères).<br>
+Contrairement à KNN, l'algorithme des *k*-moyennes ne nécessite pas de données préétiquetées. Il fait ainsi partie des algorithmes d'apprentissage automatique **non supervisé** (il se débrouille tout seul avec les données mystères).<br>
 
 Par contre, l'algorithme partage avec KNN sa grande simplicité d'emploi et son efficacité qui le rendent lui aussi très populaire dans l'industrie.
 
@@ -268,7 +268,7 @@ On répète les deux dernières opérations (attribution des points les plus pr�
 
 L'algorithme vise à résoudre au final un problème d'optimisation ; son but est en effet de trouver le minimum de la distance entre les points à l'intérieur de chaque partition.
 
-Mathématiquement, étant donné un ensemble de points $(x_1,x_2,\ldots,x_n)$, on cherche à partitionner les $n$ points en $k$ ensembles $S=\\{S_1,S_2,\ldots,S_k\\}$ en minimisant la grandeur &nbsp;:
+Mathématiquement, étant donné un ensemble de points $(x_1,x_2,\ldots,x_n)$, on cherche à partitionner les $n$ points en $k$ ensembles $S=\\{S_1,S_2,\ldots,S_k\\}$ en minimisant la grandeur&nbsp;:
 $$I = \sum_{i=1}^{k}\sum_{x_j \in S_i}||x_i-\mu_i||^2$$
 où $\mu_i$ est le barycentre des points dans $S_i$.
 
@@ -295,7 +295,7 @@ Confirmons en simulant des données séparées en 5 tas et en retraçant la cour
 ![](/inertiefctk5.png?width=1400px)
 
 Là encore, le coude indique le nombre *k* idéal.<br>
-On semble donc avoir trouver une tactique utilisable lorsqu'on n'a pas d'autres indices.
+On semble donc avoir trouvé une tactique utilisable lorsqu'on n'a pas d'autres indices.
 
 {{%notice type="tip" round="true"%}}
 Il existe des méthodes plus précises pour déterminer *k*, mais elles sont aussi plus gourmandes en calcul. La plus répandue utilise les *coefficients de silhouette* de chaque point  (différence entre la distance moyenne avec les points du même groupe (cohésion) et la distance moyenne avec les points des autres groupes voisins (séparation)).
@@ -324,7 +324,7 @@ Autre souci des *k*-moyennes&nbsp;: des difficultés pour partitionner des clust
 
 ### Applications
 
-L'algorithme des *k*-moyennes ne présuppose rien sur les données et peut s'avérer, par le fait, très utile en première approche dans un rôle de défricheur.
+L'algorithme des *k*-moyennes ne présuppose rien sur les données et peut s'avérer, de ce fait, très utile en première approche dans un rôle de défricheur.
 
 L'algorithme permet aussi de trancher des débats de la plus haute importance sur les couleurs comme  "<font color=#00aaaa>est-ce plus vert que bleu&nbsp;?</font>" en organisant un combat entre les centroïdes de chaque couleur.
 
@@ -524,7 +524,7 @@ La simplicité de *k*-moyennes en fait un bon outil de dégrossissage des donné
 <table>
 <tr>
 <th style="text-align:center;"><a href="/act-renforcement.pdf"><b>Activité 3</b></a></th>
-</ter>
+</tr>
 </table>
 
 En plus de l'apprentissage supervisé (utilisé par exemple dans la reconnaissance d'image) et non supervisé (utilisé par exemple dans les systèmes de recommandation), une machine peut aussi apprendre **par renforcement** (utilisé dans les prises de décision). Dans la plupart des applications, les trois sont mélangés.
@@ -537,7 +537,7 @@ L'apprentissage par renforcement a permis à la machine de maîtriser de nombreu
 
 L'apprentissage profond (deep learning) révolutionne le secteur de l'IA dans les années 2010. Il consiste à entraîner un ordinateur à “apprendre” en analysant un grand nombre d’exemples. Il fait cela à l’aide de structures mathématiques appelées réseaux de neurones, qui s’inspirent vaguement du fonctionnement du cerveau humain. L’idée de “profondeur” vient du fait que les réseaux de neurones utilisés dans le deep learning ont de nombreuses couches. Chaque couche effectue une partie de l’analyse et transmet ses résultats à la suivante. C’est un peu comme si un problème complexe était résolu par une série d’étapes simples, chacune se concentrant sur un détail particulier.
 
- Quoi de mieux que la leçon inaugurale au Collège de France d'un de ses fondateurs, Yann Le Cun, pour nous expliquer de quoi il retourne&nbsp;?
+ Quoi de mieux que la leçon inaugurale au Collège de France d'un de ses fondateurs, Yann LeCun, pour nous expliquer de quoi il retourne&nbsp;?
 
 
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
@@ -571,7 +571,7 @@ L'**arène** dans laquelle le jeu prend place est un **graphe orienté biparti**
     content: 'Graphe biparti';
 }
 </style>
-{{% notice type="def" title="bipa" round="true" %}}
+{{% notice type="def" title="Graphe biparti" round="true" %}}
 Un graphe biparti (ou bipartite) $G$ est un graphe dont l'ensemble des sommets peut être divisé en deux sous-ensembles de sommets disjoints $S_1$ et $S_2$ ($S_1$ et $S_2$ sont une partition de $S$&nbsp;: $S_1\cup S_2=S$, $S_1\cap S_2=\varnothing$) tels que chaque arête de $G$ a une extrémité dans $S_1$ et l'autre dans $S_2$.
 {{% /notice %}}
 
@@ -580,7 +580,7 @@ Un graphe biparti (ou bipartite) $G$ est un graphe dont l'ensemble des sommets p
 
 {{% notice type="tip" round="true" %}}
 Un graphe est biparti si on peut colorier tous les sommets du graphe avec seulement deux couleurs de manière à ce que deux sommets voisins n'aient jamais la même couleur (on parle alors de **2-coloriage**).<br>
-On peut montrer qu'un graphe est biparti si et seulement si il ne possède pas de cycle de longueur impaire.<br>
+On peut montrer qu'un graphe est biparti si et seulement s'il ne possède pas de cycle de longueur impaire.<br>
 {{% /notice %}}
 
 > Démonstration de "graphe biparti $\Leftrightarrow$ pas de cycle impair"&nbsp;:
@@ -590,7 +590,7 @@ On peut montrer qu'un graphe est biparti si et seulement si il ne possède pas d
 > 	Donc un graphe sans cycle est toujours biparti.<br>
 > 	Place aux cycles maintenant. Supposons que deux des chemins partant d'un sommet se rejoignent, alors on a deux possibilités&nbsp;:
 > 	- la jonction se fait entre deux sommets de couleurs différentes et le 2-coloriage reste possible.<br>
-> 	Dans ce cas, on joint un chemin de longueur pair et un chemin de longueur impair, ce qui donne un cycle de longueur pair (avec le +1 de l'arête de la jonction).
+> 	Dans ce cas, on joint un chemin de longueur paire et un chemin de longueur impaire, ce qui donne un cycle de longueur paire (avec le +1 de l'arête de la jonction).
 > 	- la jonction se fait entre sommets de la même couleur rendant impossible le 2-coloriage.<br>
 > 	Dans ce deuxième cas, on obtient nécessairement un cycle de longueur impaire puisqu'on joint deux chemins de la même parité (+ 1 de l'arête de jonction).<br>
 > 		
@@ -611,7 +611,7 @@ Un jeu d'accessibilité est alors défini par un quadruplet $(G,S_1,S_2,F)$ où 
 
 Chomp est un jeu où les deux adversaires mangent à tour de rôle des carrés de chocolat d'une tablette avec la "contrainte" de manger tous les carrés à droite et au-dessus du carré choisi. Le perdant doit manger le brocoli qui reste à la fin.
 
-Eve commence le jeu avec la tablette ci-dessous composé de 5 carrés. Il existe alors 9 configurations possibles, pas toutes atteignables par les deux joueurs.
+Eve commence le jeu avec la tablette ci-dessous composée de 5 carrés. Il existe alors 9 configurations possibles, pas toutes atteignables par les deux joueurs.
 
 Traçons l'arène (les ronds bleus sont les positions contrôlées par Eve et les carrés roses par Adam).
 
@@ -625,12 +625,12 @@ $F$ (sommet gagnant pour Eve) est le carré rose avec un brocoli puisque l'attei
 
 Un tas d'allumettes est disposé devant Eve et Adam. Eve joue en premier et peut retirer autant d'allumettes qu'elle le souhaite du moment qu'elle en prend au moins une et qu'elle en laisse au moins une. C'est ensuite au tour d'Adam de retirer des allumettes avec pour tous les tours qui suivent une contrainte supplémentaire&nbsp;: on ne peut pas retirer plus de deux fois le nombre d'allumettes prises par son adversaire au tour précédent. Le joueur qui retire la dernière allumette gagne. Il n'y a pas de match nul.
 
-Traçons le graphe du jeu en supposant que l'on commence avec 5 allumettes et étiquetons les sommets avec le couple (nombre d'allumettes présentes, nombres d'allumettes prenables). L'étiquette du nœud de départ est donc (5,4).<br>
+Traçons le graphe du jeu en supposant que l'on commence avec 5 allumettes et étiquetons les sommets avec le couple (nombre d'allumettes présentes, nombre d'allumettes prenables). L'étiquette du nœud de départ est donc (5,4).<br>
 On a indiqué en jaune le sommet à atteindre pour Eve (sommet de $F$).
 
 ![](/variantenim.png?width=600px)
 
-Le graphe est ici plutôt simple, mais on verra [dans le TP](http://localhost:1313/semestre_3/tp13/#jeux-daccessibilité-à-deux-joueurs) que pour des nombres d'allumettes plus grand, on sera content de pouvoir confier la tâche de sa construction à python.
+Le graphe est ici plutôt simple, mais on verra [dans le TP](http://localhost:1313/semestre_3/tp13/#jeux-daccessibilité-à-deux-joueurs) que pour des nombres d'allumettes plus grands, on sera content de pouvoir confier la tâche de sa construction à Python.
 
 {{% notice type="tip" round="true" %}}
 Ce jeu est une variante du jeu de Nim (voir TP) comme en fait tout jeu impartial à deux joueurs (théorème de Sprague-Grundy). Un **jeu impartial** est un jeu tour par tour dans lequel les coups autorisés, ainsi que les gains obtenus, dépendent uniquement de la position, et pas du joueur dont c'est le tour. C'est le cas de Chomp qui est donc, lui aussi, un jeu de Nim déguisé... Un jeu qui n'est pas impartial est appelé **jeu partisan** (le morpion ou les échecs par exemple).
@@ -640,7 +640,7 @@ Ce jeu est une variante du jeu de Nim (voir TP) comme en fait tout jeu impartial
 
 #### Morpion (tic-tac-toe)
 
-Pas besoin de rappeler les règles du morpion (oxo en belgique).<br>
+Pas besoin de rappeler les règles du morpion (oxo en Belgique).<br>
 Dans cet exemple, Eve démarre sur un jeu déjà avancé, elle a les ronds.<br>
 Cette fois-ci, $F$ contient plusieurs sommets (toujours indiqués en jaune).
 
@@ -660,7 +660,7 @@ Pour déterminer l'ensemble des positions gagnantes pour Eve sur l'arène, on tr
 - un sommet d'Eve est gagnant si **un** de ses arcs sortants le lie à un sommet gagnant.<br>
 Eve n'a alors plus qu'à emprunter ce chemin.<br>
 ![](/sommetgagnant1.png?width=200px)
-- un sommet d'Adam est gagnant (pour Eve) si **tous** ses arcs sortants le lie à un sommet gagnant.<br>
+- un sommet d'Adam est gagnant (pour Eve) si **tous** ses arcs sortants le lient à un sommet gagnant.<br>
 En effet, Adam ne peut alors pas éviter de mettre Eve dans une position gagnante.
 ![](/sommetgagnant2.png?width=200px)
 
@@ -683,7 +683,7 @@ Cette position est donc perdante...
 
 ##### Détermination "à la main" de l'attracteur dans les exemples précédents
 
-L'attracteur dans l'exemple du jeu Chomp contient 9 sommets, dont le somme de départ.
+L'attracteur dans l'exemple du jeu Chomp contient 9 sommets, dont le sommet de départ.
 
 ![](/chompattract.gif)
 
@@ -699,7 +699,7 @@ Enfin, sur l'exemple du morpion, l'attracteur contient 13 sommets dont celui de 
 
 #####     Programme permettant de calculer l'attracteur
 
-On peut écrire un programme récursif calculant l'attracteur en temps linéaire en $|S | + |A|$ ([rappelons-nous](https://info-tsi-vieljeux.github.io/semestre_2/graphes/#parcours-dun-graphe) que le parcours complet d'un graphe est au mieux en $O(|S | + |A|)$ car cela correspond à parcourir les $|S|$ sommets et les $|A|$ arêtes). Pour éviter de calculer plusieurs fois le même élément, l'algorithme tient à jour, pour chaque sommet $s$, un compteur `n` des successeurs non encore inspectés (sous la forme d'un dictionnaire) .
+On peut écrire un programme récursif calculant l'attracteur en temps linéaire en $|S | + |A|$ ([rappelons-nous](https://info-tsi-vieljeux.github.io/semestre_2/graphes/#parcours-dun-graphe) que le parcours complet d'un graphe est au mieux en $O(|S | + |A|)$ car cela correspond à parcourir les $|S|$ sommets et les $|A|$ arêtes). Pour éviter de calculer plusieurs fois le même élément, l'algorithme tient à jour, pour chaque sommet $s$, un compteur `n` des successeurs non encore inspectés (sous la forme d'un dictionnaire).
 
 
 ```python
@@ -736,7 +736,7 @@ def propage(sommet,Joueur1,Attr,Pred,n):
     content: 'Stratégie sans mémoire gagnante';
 }
 </style>
-{{% notice type="def" title="moryless" round="true" %}}
+{{% notice type="def" title="Stratégie sans mémoire" round="true" %}}
 Une **stratégie sans mémoire** est une fonction $\sigma$ qui assigne un mouvement autorisé à un joueur pour chaque position non terminale&nbsp;: $\forall s\in S, (s,\sigma(s))\in A.$<br>
 Un joueur sur une position $s$ suit une stratégie s'il emprunte le chemin $<s,\sigma(s),\sigma^2(s),\ldots>$. Elle est dite sans mémoire car pour une position donnée, la stratégie est indépendante du chemin qui y a mené ($\sigma$ ne dépend que du sommet).<br>
 Une **stratégie sans mémoire gagnante** depuis une position donnée garantit la victoire au joueur en un nombre de coups limité. Pour le joueur 1, une stratégie gagnante garantit d'arriver sur un sommet de $F$. Mais suivant la position de départ, une telle stratégie n'existe pas forcément...
@@ -747,7 +747,7 @@ En construisant l'attracteur, on répond à notre première question&nbsp;: **la
 Si c'est le cas, une stratégie gagnante est facile à mettre en place&nbsp;; il faut faire en sorte que chaque déplacement sur le graphe (chaque coup joué) se fasse vers un sommet de l'attracteur. Chaque coup d'Eve vers un sommet de l'attracteur piège aussi le coup suivant d'Adam dans l'attracteur.<br>
 Comme son nom l'indique, l'attracteur attire irrémédiablement vers $F$, assurant la victoire au joueur 1.
 
-Le joueur 2 aussi, bien sûr, a son attracteur, et il appartient au complémentaire de l'attracteur du joueur 1, piège du joueur 1. Donc un seul écart du joueur 1 en dehors de son attracteur, et s'en est fini pour lui, le joueur 2 peut le condanner à rester dans le piège.
+Le joueur 2 aussi, bien sûr, a son attracteur, et il appartient au complémentaire de l'attracteur du joueur 1, piège du joueur 1. Donc un seul écart du joueur 1 en dehors de son attracteur, et c'en est fini pour lui, le joueur 2 peut le condamner à rester dans le piège.
 ![](https://media2.giphy.com/media/yEIJLJXHwJHZm/giphy.gif)
 
 Revenons à nos exemples :
@@ -768,14 +768,14 @@ L'idée est de se contenter d'une recherche partielle autour de la position actu
     content: 'Heuristique';
 }
 </style>
-{{% notice type="def" title="heuri" round="true" %}}
+{{% notice type="def" title="Heuristique" round="true" %}}
 Une heuristique est une méthode de calcul qui fournit rapidement une solution réalisable, pas nécessairement optimale ou exacte, pour un problème d'optimisation difficile. Elle  s'impose quand les algorithmes de résolution exacte sont impraticables, à savoir de complexité polynomiale de haut degré, exponentielle ou plus.<br>
 Une heuristique est donc un compromis entre d'un côté l'optimalité (trouver la meilleure solution) et/ou la complétude (trouver toutes les solutions) de l'algorithme et de l'autre côté sa vitesse.
 {{% /notice %}}
 
 Pour implémenter efficacement cette recherche partielle, l'idée est d'utiliser un arbre plutôt que l'arène précédente. Quelle différence&nbsp;? L'absence de cycle qui va permettre d'élaguer&nbsp;! On le paye au prix de la redondance des sommets (le même sommet peut apparaître plusieurs fois dans l'arbre). Pour chaque position, les différents coups possibles correspondent aux différentes branches et on avance ainsi niveau par niveau jusqu'aux feuilles représentant les positions terminales.
 
-Le gros avantage d'un arbre est qu'il permet facilement de ne garder que quelques niveaux (on raccourci alors toutes les branches jusqu'à la profondeur considérée).
+Le gros avantage d'un arbre est qu'il permet facilement de ne garder que quelques niveaux (on raccourcit alors toutes les branches jusqu'à la profondeur considérée).
 
 Muni de cet arbre, l'algorithme se lance dans un parcours en profondeur jusqu'à la profondeur maximale stipulée. Lorsque ce niveau est atteint (2, par exemple, si on veut que l'IA ait deux coups d'avance), l'algorithme évalue les feuilles grâce à son heuristique, puis il propage ce score vers les niveaux supérieurs en suivant le **principe du minimax**&nbsp;:
 - sur un niveau correspondant au joueur 1, on sélectionne la valeur **maximale** parmi les branches, 
@@ -789,11 +789,11 @@ Prenons l'exemple du jeu de Morpion. Une heuristique possible pour évaluer un p
 ![](/minimaxgif.gif)
 
 
-L'arbre total du morpion n'est pas si gros&nbsp;; le **facteur de ramification** $b$ est de 5 en moyenne et il y a au plus 9 niveaux (9 coups), ce qui donne $\approx 5^9 = 1\\,953\\,125$ (à titre de comparaison, aux échecs, $b\approx35$ et un partie dure en moyenne 100 coups, ce qui donne $b^m\approx10^{54}$ sommets à inspecter...). 
+L'arbre total du morpion n'est pas si gros&nbsp;; le **facteur de ramification** $b$ est de 5 en moyenne et il y a au plus 9 niveaux (9 coups), ce qui donne $\approx 5^9 = 1\\,953\\,125$ (à titre de comparaison, aux échecs, $b\approx35$ et une partie dure en moyenne 100 coups, ce qui donne $b^m\approx10^{54}$ sommets à inspecter...). 
 
 L'algorithme minimax appliqué au morpion inspecte en réalité environ 4 fois moins de sommets que les deux millions prédits, car ce chiffre ne tient pas compte des nombreuses parties potentielles se terminant avant le neuvième coup. Il en inspecte néanmoins beaucoup plus qu'il ne faudrait (il n'y a que $9!=362\\,880$ coups possibles si l'ordi commence et seulement $8!=40\\,320$ si l'humain a l'honneur), ce qui illustre le fait qu'un arbre contient beaucoup de sommets redondants par rapport au graphe du jeu dont il est tiré (c'est le prix à payer pour casser les cycles).
 
-La taille modéré de l'arbre permet de l'explorer jusqu'aux parties finales, mais on peut constater en jouant avec le petit programme ci-dessous que la réduction à une profondeur d'un seul niveau grâce à l'heuristique[^3] est tout autant redoutable en inspectant presque 4000 fois moins de sommets&nbsp;!
+La taille modérée de l'arbre permet de l'explorer jusqu'aux parties finales, mais on peut constater en jouant avec le petit programme ci-dessous que la réduction à une profondeur d'un seul niveau grâce à l'heuristique[^3] est tout autant redoutable en inspectant presque 4000 fois moins de sommets&nbsp;!
 
 
 {{< runpython lang="python" height="600" mode="toggle" file="morpionminimax.py">}}
@@ -806,7 +806,7 @@ Cela prouve qu'au morpion, 1 coup d'avance, c'est bien suffisant... Mais ce n'es
 
 Dans le cas des échecs, l'heuristique permettant d'évaluer un état de l'échiquier est bien plus complexe qu'au morpion. Elle doit prendre en compte la quantité de pièces et pions restants, la qualité des pièces et les positions de tout ce beau monde (domination du centre, structure compacte, etc.).
 
-La taille du jeu de Go rend vaine toute tentative de type minimax. C'est au point que les grands joueurs de Go ont longtemps refusé de jouer contre des ordinateurs, non par peur de perdre, mais parcequ'ils les trouvaient trop mauvais. C'est l'essor du deep learning, et donc une philosophie basée sur l'apprentissage plus que sur la stratégie, qui a permis à [la machine](https://www.deepmind.com/research/highlighted-research/alphago) de devenir un adversaire coriace à ce jeu-là aussi.
+La taille du jeu de Go rend vaine toute tentative de type minimax. C'est au point que les grands joueurs de Go ont longtemps refusé de jouer contre des ordinateurs, non par peur de perdre, mais parce qu'ils les trouvaient trop mauvais. C'est l'essor du deep learning, et donc une philosophie basée sur l'apprentissage plus que sur la stratégie, qui a permis à [la machine](https://www.deepmind.com/research/highlighted-research/alphago) de devenir un adversaire coriace à ce jeu-là aussi.
 
 <br>
 
@@ -816,9 +816,9 @@ Voyons enfin une autre utilisation d'heuristique avec le problème du sac à dos
 
 Le problème du sac à dos est un problème classique d'optimisation avec d'importantes applications théoriques et industrielles.
 
-Soit $x\in\mathbb{N}^{\*}$, soit $v$ une séquence de $n$ éléments appartenant à $\mathbb{N}^{*}$, et soit $p$ une séquence de $n$ éléments appartenant à $\\{1,2,...,c\\}$.<br>
+Soit $c\in\mathbb{N}^{\*}$, soit $v$ une séquence de $n$ éléments appartenant à $\mathbb{N}^{*}$, et soit $p$ une séquence de $n$ éléments appartenant à $\\{1,2,...,c\\}$.<br>
 Nous appelons $c$ la capacité, $v$ la séquence de valeurs et $p$ la séquence de poids.<br>
-Le problème du sac à dos consiste à mettre des objets de poids $p$, dans un sac à dos qui peut contenir un poids maximal $c$, de telle sorte que la valeur des objets choisis est maximisée.<br>
+Le problème du sac à dos consiste à mettre des objets de poids $p$, dans un sac à dos qui peut contenir un poids maximal $c$, de telle sorte que la valeur des objets choisis soit maximisée.<br>
 Plus formellement, cela revient à maximiser
 $$\text{val}(x)=\sum_{i=1}^n x[i]\cdot v[i]$$
 sous la contrainte $c≥\sum_{i=1}^n x[i]\cdot p[i]$, où $x\in\\{0,1\\}^n$ indique les objets choisis.
@@ -829,7 +829,7 @@ Exemple : supposons que le sac ait une capacité de 900 et que l'on cherche à y
 | valeurs $v$ |  5  | 50 |  65  |  20 |  10 |  12 |
 | poids $p$   | 320 |  700 | 845 | 180 | 70 | 420 |
 
-Le plus simple pour arriver à nos fins est de suivre une **stratégie gloutonne** (une stratégie étape par étape où un critère de classement permet de sélectionner le prochain objet à ajouter). Un critère qui semble prometteur est le ratio valeur/poids de chaque objet. L'idée est alors de placer les objets dans le sac dans l'ordre inverse de leur ratio. Cela semble une bonne stratégie puisque les objets ajoutés maximisent ainsi la valeur qu'ils apportent par rappor à la place qu'ils prennent. Mais si l'approche gloutonne a l'avantage d'être très simple, le revers de la médaille est qu'elle est à courte vue, on perd la vision d'ensemble. Et dans certaines configurations, comme c'est le cas dans notre exemple, cela s'avère contre-productif. 
+Le plus simple pour arriver à nos fins est de suivre une **stratégie gloutonne** (une stratégie étape par étape où un critère de classement permet de sélectionner le prochain objet à ajouter). Un critère qui semble prometteur est le ratio valeur/poids de chaque objet. L'idée est alors de placer les objets dans le sac dans l'ordre inverse de leur ratio. Cela semble une bonne stratégie puisque les objets ajoutés maximisent ainsi la valeur qu'ils apportent par rapport à la place qu'ils prennent. Mais si l'approche gloutonne a l'avantage d'être très simple, le revers de la médaille est qu'elle est à courte vue, on perd la vision d'ensemble. Et dans certaines configurations, comme c'est le cas dans notre exemple, cela s'avère contre-productif. 
 
 | objets      | 🥏 |  🎺 | 🥊 | 🧸 |  🪠 | ⏰  |
 |-------------|:-:|:--:|:-:|:-:|:--:|:--:|
@@ -841,7 +841,7 @@ Cet exemple nous montre que l'approche gloutonne ne garantit pas l'optimalité (
 
 
 Puisqu'on suppose, dans cette version "0/1" du problème qu'un objet est soit présent, soit absent (pas de fraction et pas de multiple), on peut représenter l'ensemble des possibilités par un **arbre binaire**.<br>
-Une méthode sûre pour résoudre le problème consiste alors à parcourir l'arbre dans son entièreté et regarder la valeur et le poids de chaque branche complète (de la racine jusqu'à la feuille), pour choisir au final la branche la plus rémunératrice et repectant la contrainte de capacité.<br>
+Une méthode sûre pour résoudre le problème consiste alors à parcourir l'arbre dans son entièreté et regarder la valeur et le poids de chaque branche complète (de la racine jusqu'à la feuille), pour choisir au final la branche la plus rémunératrice et respectant la contrainte de capacité.<br>
 C'est la méthode par **force brute**.
 
 ![](/arbreknapsack.png)
@@ -864,9 +864,9 @@ def sacadosBrute(v,p,c,i,valeur,poids):
 
 Comme vous l'aurez deviné, la résolution du problème du sac à dos par force brute est en $O(2^n)$ où $n$ est le nombre d'objets. Donc au-delà de quelques dizaines d'objets, c'est mort...
 
-Pour améliorer les choses, on peut utiliser la méthode "séparation et évaluation" (**branch and bond** ou BB en anglais) qui vise à élaguer l'arbre autant que faire se peut.<br>
-Arrivé à un certain sommet de l'arbre, si l'objet se trouvant en-dessous amène à un dépassement de la capacité, cela ne sert plus à rien de continuer sa branche, alors on coupe.<br>
-L'autre idée est d'utiliser la détermination de la valeur optimale du sac par la méthode gloutonne comme une **heuristique**&nbsp;; si sous un sommet, la somme des valeurs des objets restant aboutit à une valeur totale inférieure à l'heuristique, on coupe.
+Pour améliorer les choses, on peut utiliser la méthode "séparation et évaluation" (**branch and bound** ou BB en anglais) qui vise à élaguer l'arbre autant que faire se peut.<br>
+Arrivé à un certain sommet de l'arbre, si l'objet se trouvant en dessous amène à un dépassement de la capacité, cela ne sert plus à rien de continuer sa branche, alors on coupe.<br>
+L'autre idée est d'utiliser la détermination de la valeur optimale du sac par la méthode gloutonne comme une **heuristique**&nbsp;; si sous un sommet, la somme des valeurs des objets restants aboutit à une valeur totale inférieure à l'heuristique, on coupe.
 
 Voilà un code possible&nbsp;:
 ```python
@@ -907,7 +907,7 @@ Une autre technique possible est d'utiliser la **programmation dynamique** qui e
 
 L'apprentissage profond (deep learning) révolutionne le secteur de l'IA dans les années 2010. Il consiste à entraîner un ordinateur à “apprendre” en analysant un grand nombre d’exemples. Il fait cela à l’aide de structures mathématiques appelées réseaux de neurones, qui s’inspirent vaguement du fonctionnement du cerveau humain. L’idée de “profondeur” vient du fait que les réseaux de neurones utilisés dans le deep learning ont de nombreuses couches. Chaque couche effectue une partie de l’analyse et transmet ses résultats à la suivante. C’est un peu comme si un problème complexe était résolu par une série d’étapes simples, chacune se concentrant sur un détail particulier.
 
- Quoi de mieux que la leçon inaugurale au Collège de France d'un de ses fondateurs, Yann Le Cun, pour nous expliquer de quoi il retourne. 
+ Quoi de mieux que la leçon inaugurale au Collège de France d'un de ses fondateurs, Yann LeCun, pour nous expliquer de quoi il retourne. 
 
 <br>
 
@@ -925,7 +925,7 @@ Malheureusement, le mème qui suit résume aujourd'hui assez bien notre compréh
 
 ### Avènement des grands modèles de langage
 
-Les grands modèles de langage (LLM en anglais) révolutionnent à leur tour l'IA dans les années 2020. Avec leur architecture non-récurrente, le transformeur, basée sur un mécanisme dit d'attention, ils peuvent avec succès traiter des données séquentielles tout en étant parallélisable lors de l'entrainement (cela permet des gains en performance énormes et ainsi d'augmenter de plusieurs ordres de grandeur le nombre de paramètres de leurs modèles, d'où le qualificatif "grand").
+Les grands modèles de langage (LLM en anglais) révolutionnent à leur tour l'IA dans les années 2020. Avec leur architecture non récurrente, le transformeur, basée sur un mécanisme dit d'attention, ils peuvent avec succès traiter des données séquentielles tout en étant parallélisables lors de l'entrainement (cela permet des gains en performance énormes et ainsi d'augmenter de plusieurs ordres de grandeur le nombre de paramètres de leurs modèles, d'où le qualificatif "grand").
 
 Stephen Wolfram a écrit [un long article pédagogique](https://writings.stephenwolfram.com/2023/02/what-is-chatgpt-doing-and-why-does-it-work/) sur le fonctionnement de ChatGPT (l'agent conversationnel basé sur un LLM qui a sidéré le  grand public lors de sa mise à disposition en 2022).
 
@@ -937,7 +937,7 @@ Le génial 3Blue1Brown a réalisé une série de vidéos sur les LLM, mais il a 
 {{< youtube LPZh9BOjkQs>}}
 </div>
 
-Un champ de recherche immense s'est ouvert pour tenter de comprendre le fonctionnement interne des LLM. Des chercheurs d'Anthropic (l'entreprise à l'origine de Claude) ont trouver une méthode pour aller en quelque sorte sonder le "cerveau" de Claude jusqu'à localiser l'emplacement de différents concepts et réussissant même à booster l'activation d'un concept par rapport aux autres. C'est ainsi qu'est né [Golden Gate Claude](https://www.anthropic.com/news/golden-gate-claude) qui pu, pendant 24h, interagir avec les utilisateurs et partager sa totale obsession pour le pont de San Francisco. Dans l'exemple d'interaction suivant, à la fois drôle et douloureux, Claude semble lutter contre sa psychose&nbsp;:
+Un champ de recherche immense s'est ouvert pour tenter de comprendre le fonctionnement interne des LLM. Des chercheurs d'Anthropic (l'entreprise à l'origine de Claude) ont trouvé une méthode pour aller en quelque sorte sonder le "cerveau" de Claude jusqu'à localiser l'emplacement de différents concepts et réussissant même à booster l'activation d'un concept par rapport aux autres. C'est ainsi qu'est né [Golden Gate Claude](https://www.anthropic.com/news/golden-gate-claude) qui a pu, pendant 24h, interagir avec les utilisateurs et partager sa totale obsession pour le pont de San Francisco. Dans l'exemple d'interaction suivant, à la fois drôle et douloureux, Claude semble lutter contre sa psychose&nbsp;:
 
 ![](/goldenclaude.jpeg?width=700px)
 
@@ -951,19 +951,19 @@ Un champ de recherche immense s'est ouvert pour tenter de comprendre le fonction
 
 <br>
 
-L'intelligence artificielle repose en grande partie sur la collecte de données et leur traitement. Or des biais très importants aux conséquences potentiellement dramatique peuvent s'immiscer lors de cette étape cruciale.
+L'intelligence artificielle repose en grande partie sur la collecte de données et leur traitement. Or des biais très importants aux conséquences potentiellement dramatiques peuvent s'immiscer lors de cette étape cruciale.
 
 Prenons l'exemple du **biais des survivants** qui est un des plus importants **biais de sélection**.
 
 
 ### Biais des survivants
 
-Il tire son nom des efforts du statisticien Abraham Wald du Statistical Research Group qui analysait les impacts sur les bombardiers américains revenus de mission pendant la seconde guerre mondiale afin de déterminer les zones où il fallait améliorer le blindage.
+Il tire son nom des efforts du statisticien Abraham Wald du Statistical Research Group qui analysait les impacts sur les bombardiers américains revenus de mission pendant la Seconde Guerre mondiale afin de déterminer les zones où il fallait améliorer le blindage.
 ![](/survivorshipbias.png?width=700)
 
-En voyant cette image l'erreur de logique consisterait à vouloir blinder les zones les plus impactées. C'est tomber dans le biais des survivants&nbsp;! En effet, les avions étudié sont ceux qui sont revenus, les "survivants", ce qui signifie que les impacts reçus ne les ont pas détruit. Par contre, l'absence d'impact dans certaines zones pourrait indiquer qu'il s'agit là d'endroits critiques où un tir provoque plus certainement une avarie grave et donc l'absence de survivants y présentant des impacts. Il faut en conclusion blinder d'avantage les zones sans impact&nbsp;!
+En voyant cette image, l'erreur de logique consisterait à vouloir blinder les zones les plus impactées. C'est tomber dans le biais des survivants&nbsp;! En effet, les avions étudiés sont ceux qui sont revenus, les "survivants", ce qui signifie que les impacts reçus ne les ont pas détruits. Par contre, l'absence d'impact dans certaines zones pourrait indiquer qu'il s'agit là d'endroits critiques où un tir provoque plus certainement une avarie grave et donc l'absence de survivants y présentant des impacts. Il faut en conclusion blinder davantage les zones sans impact&nbsp;!
 
-C'est le biais des survivants qui nous fait dire par exemple dire que les constructions anciennes étaient plus solides ou la musique meilleure il y a quelques décennies.
+C'est le biais des survivants qui nous fait dire par exemple que les constructions anciennes étaient plus solides ou la musique meilleure il y a quelques décennies.
 
 Le biais du survivant s'immisce partout où il y a sélection puisque le critère de sélection laisse fatalement de côté les données ne respectant pas les critères et il faut donc se garder de conclusions générales ne prenant pas en compte la population écartée.
 
@@ -973,7 +973,7 @@ Le biais du survivant s'immisce partout où il y a sélection puisque le critèr
 
 ![](/survivorshipxkcd.png)
 
-Et au final, le biais des survivants n'est bien qu'une forme de **biais de sélection**. En effet, un biais de sélection désigne généralement toute situation où l’échantillon utilisé pour une analyse ou une prise de décision n’est pas représentatif de la population globale en raison de la méthode utilisée pour sélectionner les données. Avec le biais des survivants, l'erreur de représentativité consiste à considérer, comme son nom l'indique, uniquement les survivants, mais ce n'est qu'un exemple parmi d'autre de sélection non représentative de données. L'entraînement des IA, en particulier celui des IA génératives, est très sensible à ces défauts de représentation de la même façon qu'un enfant élevé dans un milieu particulier (secte par exemple) aura beaucoup de mal à se faire une représentation adaptée du reste du monde.
+Et au final, le biais des survivants n'est bien qu'une forme de **biais de sélection**. En effet, un biais de sélection désigne généralement toute situation où l’échantillon utilisé pour une analyse ou une prise de décision n’est pas représentatif de la population globale en raison de la méthode utilisée pour sélectionner les données. Avec le biais des survivants, l'erreur de représentativité consiste à considérer, comme son nom l'indique, uniquement les survivants, mais ce n'est qu'un exemple parmi d'autres de sélection non représentative de données. L'entraînement des IA, en particulier celui des IA génératives, est très sensible à ces défauts de représentation de la même façon qu'un enfant élevé dans un milieu particulier (secte par exemple) aura beaucoup de mal à se faire une représentation adaptée du reste du monde.
 
 ![](/samplingbias.jpeg?width=600px)
 
@@ -992,7 +992,7 @@ Réponse (cliquer pour afficher)</summary>
 <ul>
 <li>Hasard.</li>
 <li>Un troisième facteur cause les deux autres (exemple classique de la corrélation entre la vente de glace et les attaques de requins ou entre le nombre d'enfants et le nombre de cigognes - on parle d'ailleurs parfois d'effet cigogne).</li>
-<li>Peut être que la relation de cause à effet est dans l'autre sens que le sens envisagé.</li>
+<li>Peut-être que la relation de cause à effet est dans l'autre sens que le sens envisagé.</li>
 <ul>
 <div style="position:relative; width:700px; max-width: 100%; margin-left: auto;margin-right: auto;">
 <img src="https://images.prismic.io/sketchplanations/f1f6cafb-6444-453f-a5c5-8f603ab41a23_SP+562+-+Correlation+is+not+causation.png" 
@@ -1000,20 +1000,20 @@ Réponse (cliquer pour afficher)</summary>
 </blockquote>
 </details>
 
-[Ce chouette site](https://tylervigen.com/spurious-correlations) recense un tas de correlations amusantes.
+[Ce chouette site](https://tylervigen.com/spurious-correlations) recense un tas de corrélations amusantes.
 
 ![](/correlchat.png?width=600px)
 ![](https://imgs.xkcd.com/comics/correlation.png)
 
-Comme semble le montrer [cet article scientifique récent](https://arxiv.org/pdf/2306.05836.pdf) ("Can Large Language Models infer causation from correlation?"), les grands modèles de langages (LLM type ChatGPT) semblent encore assez mauvais pour déduire si oui ou non une relation de causalité est à l'origine de la corrélation.
+Comme semble le montrer [cet article scientifique récent](https://arxiv.org/pdf/2306.05836.pdf) ("Can Large Language Models infer causation from correlation?"), les grands modèles de langage (LLM type ChatGPT) semblent encore assez mauvais pour déduire si oui ou non une relation de causalité est à l'origine de la corrélation.
 
 Les données d'apprentissage rendent les modèles de langage particulièrement sensibles à ce type de confusion. 
 
 Les IA génératives peuvent ainsi reproduire des préjugés sexistes&nbsp;; si les données d'apprentissage contiennent plus d'infirmiers ou secrétaires femmes et de patrons ou ingénieurs hommes, le modèle a alors tendance à plus associer une femme à une infirmière qu'à une ingénieure.<br>
-Au-delà du genre, ces modèles peuvent renforcer un large éventail de stéréotypes lié à la race, à l'âge, la nationalité, la religion ou le milieu d'origine.
+Au-delà du genre, ces modèles peuvent renforcer un large éventail de stéréotypes liés à la race, à l'âge, la nationalité, la religion ou le milieu d'origine.
 
 {{%notice type="note" round="true"%}}
-Sur ce point, les modèles de langage n'ont pas grand chose à envier aux humains.<br>
+Sur ce point, les modèles de langage n'ont pas grand-chose à envier aux humains.<br>
 [Une étude de 2004](/ziegler.pdf) montre en effet que sur 144 étudiantes allemandes, 32% seulement savent résoudre la petite énigme suivante&nbsp;:<br>
 <i>Un père et son fils ont un grave accident de voiture. Le père meurt. Le fils est entre la vie et la mort. On l'amène aux urgences et le chirurgien qui le voit dit : "Je ne peux pas l'opérer car c'est mon fils."</i><br>
 Était alors demandé aux étudiantes si ce problème était explicable en une phrase simple et elles devaient soit répondre non soit donner l'explication.
@@ -1051,6 +1051,6 @@ Pour illustrer cette idée, il utilise son célèbre exemple d'une IA dont le bu
 
 >« Supposons que nous ayons une IA dont l'unique but soit de faire autant de trombones que possible. L'IA se rendra vite compte que ce serait bien mieux s'il n'y avait pas d'humains, parce que les humains pourraient décider de l'éteindre. Parce que si les humains le faisaient, il y aurait moins de trombones. De plus, le corps humain contient beaucoup d'atomes qui pourraient être transformés en trombones. L'avenir vers lequel l'IA essaierait de se diriger serait un futur avec beaucoup de trombones mais aucun humain. »
 
-Vous pouvez incarner l'IA à la tête de l'usine de trombone dans [ce petit jeu en ligne](https://www.decisionproblem.com/paperclips/).
+Vous pouvez incarner l'IA à la tête de l'usine de trombones dans [ce petit jeu en ligne](https://www.decisionproblem.com/paperclips/).
 
 Bostrom considère que chercher à maîtriser une superintelligence n'est pas une solution viable, et qu'il faut aligner la superintelligence avec des valeurs morales de sorte qu'elle soit « fondamentalement de notre côté ».
