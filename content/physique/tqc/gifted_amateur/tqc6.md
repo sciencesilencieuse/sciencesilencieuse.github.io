@@ -174,7 +174,7 @@ Si $\hat L$ est à <b>coefficients constants</b> alors on a <b>invariance par tr
 
 <div id="preuve">
 
-Si l'opérateur $\hat{L}$ est à coefficients constants, il commute alors avec tous les opérateurs de translation $T_a$ (tels que $(T_a f)(x) = f(x-a))$&nbsp;:
+Si l'opérateur $\hat{L}$ est à coefficients constants, il commute alors avec tous les opérateurs de translation $T_a$ (tels que $(T_a f)(x) = f(x-a)$)&nbsp;:
 
 <ul>
 <li>La dérivation commute avec $T_a$&nbsp;: $\frac{\mathrm{d}}{\mathrm{d}x}[f(x-a)] = f'(x-a)\Rightarrow \frac{\mathrm{d}}{\mathrm{d}x} T_a f = T_a \frac{\mathrm{d}f}{\mathrm{d}x}$.</li>
@@ -325,7 +325,7 @@ Le potentiel total est la somme des potentiels de charges ponctuelles. Toute la 
 
 #### Transformée de Fourier
 
-Si $\hat L$ est à coefficients constants, la transformée de Fourier le tourne en multiplication par un polynôme $L(k)$, d'où&nbsp;:
+Si $\hat L$ est à coefficients constants, la transformée de Fourier le transforme en multiplication par un polynôme $L(k)$, d'où&nbsp;:
 
 <div id="theo">
   $$
@@ -620,7 +620,7 @@ $\displaystyle
 $
 </p>
 
-De $\mathrm e^{-\mathrm i\hat H(t-t')} = \mathrm e^{-\mathrm i\hat H(t-t'')} \mathrm e^{-\mathrm i\hat H(t''-t')}$ et de la relation de fermeture $\int |x''\rangle\langle x''|\mathrm{d}x'' = \mathbb 1$, on tire la **loi de composition** ($t > t'' > t'$) :
+De $\mathrm e^{-\mathrm i\hat H(t-t')} = \mathrm e^{-\mathrm i\hat H(t-t'')} \mathrm e^{-\mathrm i\hat H(t''-t')}$ et de la relation de fermeture $\int |x''\rangle\langle x''|\mathrm{d}x'' = \mathbb 1$, on tire la **loi de composition** ($t > t'' > t'$)&nbsp;:
 
 <div id="theo">
 
@@ -636,7 +636,7 @@ $
 L'amplitude d'aller de $x'$ à $x$ est la **somme sur tous les points intermédiaires** des amplitudes des trajets en deux étapes[^1]. On obtient là un équivalent du **principe de Huygens** pour l'amplitude quantique&nbsp;: chaque point $x''$ atteint à l'instant $t''$ se comporte comme une source secondaire d'amplitude. C'est ce mécanisme qui rend possibles à la fois l'intégrale de chemin et la lecture «&nbsp;diagrammatique&nbsp;» de la théorie des perturbations que l'on va découvrir dans la suite.
 
 
-[^1]: On retrouve les deux règles de composition des amplitudes de Feynman&nbsp;:<ul><li>événements **successifs** → les amplitudes se **multiplient**&nbsp;;</li><li>alternatives **indiscernables** (par où est-elle passée ?) → les amplitudes s'**additionnent** (ici, s'intègrent).</li></ul>
+[^1]: On retrouve les deux règles de composition des amplitudes de Feynman&nbsp;:<ul><li>événements **successifs** → les amplitudes se **multiplient**&nbsp;;</li><li>alternatives **indiscernables** (par où est-elle passée&nbsp;?) → les amplitudes s'**additionnent** (ici, s'intègrent).</li></ul>
 
 <u>Rq</u>&nbsp;: si $t''$ sort de l'intervalle, l'un des $\theta$ s'annule et le membre de droite est nul alors que le gauche ne l'est pas. Les propagateurs *retardés* ne composent que dans l'ordre chronologique.
 
@@ -749,7 +749,7 @@ Rien ne garantit a priori que la mémoire de la causalité (le $\theta$) ait sur
 
 Avec $E = x + \mathrm iy$, on a $|\mathrm e^{-\mathrm iE\tau}| = \mathrm e^{y\tau}$. Le lemme de Jordan[^2] impose alors&nbsp;:
 
-- **$\tau > 0$**&nbsp;: pour que ça converge, il faut fermer le contour dans le **demi-plan inférieur** ($y < 0$). On y attrape tous les pôles $E_n - \mathrm i\varepsilon$ ; la somme des résidus redonne $-\mathrm i\sum_n \phi_n \phi_n^*\\, \mathrm e^{-\mathrm iE_n\tau}$ (signe $-$ car on tourne dans le sens négatif).
+- **$\tau > 0$**&nbsp;: pour que ça converge, il faut fermer le contour dans le **demi-plan inférieur** ($y < 0$). On y attrape tous les pôles $E_n - \mathrm i\varepsilon$&nbsp;; la somme des résidus redonne $-\mathrm i\sum_n \phi_n \phi_n^*\\, \mathrm e^{-\mathrm iE_n\tau}$ (signe $-$ car on tourne dans le sens négatif).
 - **$\tau < 0$**&nbsp;: on ferme dans le **demi-plan supérieur**. Aucun pôle → intégrale nulle. 
 
 C'est la fonction $\theta(\tau)$ qui réapparaît&nbsp;!
@@ -770,7 +770,7 @@ Moralité&nbsp;: **le déplacement infinitésimal des pôles** n'est donc pas un
 
 </div>
 
-La troisième ligne tease chapitre suivant&nbsp;: en théorie relativiste, le spectre en fréquences contient des solutions d'énergie négative réinterprétées comme des antiparticules remontant le temps.
+La troisième ligne annonce le chapitre suivant&nbsp;: en théorie relativiste, le spectre en fréquences contient des solutions d'énergie négative réinterprétées comme des antiparticules remontant le temps.
 
 [^2]: Soit $g(E)$ tendant vers $0$ uniformément quand $|E| \to \infty$ dans le demi-plan inférieur. Alors, pour $\tau > 0$, l'intégrale de $g(E) \\, \mathrm e^{-\mathrm iE\tau}$ sur le demi-cercle inférieur de rayon $R$ tend vers $0$ quand $R \to \infty$ (énoncé miroir en haut pour $\tau < 0$). Ici $g(E) = \frac{1}{E - E_n + \mathrm i\varepsilon} \sim \frac 1E \to 0$. L'hypothèse est satisfaite. Donc $$\int_{-\infty}^{+\infty} = \oint_{\mathcal C} - \underbrace{\int_{\text{arc}}}_{\to\\, 0}
 $$ où $\mathcal C$ est le contour fermé (droite réelle + arc).
@@ -816,7 +816,7 @@ $$
 
 </div>
 
-Il s'agit en réalité de $G^+$ et $G_0^+$ comme l'atteste la présence de $+i\varepsilon$ (en l'absence d'ambigüité, on se passe du $+$ pour alléger l'écriture).
+Il s'agit en réalité de $G^+$ et $G_0^+$ comme l'atteste la présence de $+i\varepsilon$ (en l'absence d'ambiguïté, on se passe du $+$ pour alléger l'écriture).
 
 L'identité matricielle $\dfrac{1}{A - B} = \dfrac{1}{A} + \dfrac{1}{A} B \dfrac{1}{A - B}$ (à vérifier en multipliant par $A - B$) donne l'**équation de Dyson**&nbsp;:
 
@@ -836,7 +836,7 @@ $$
 
 <div id="preuve">
 
-Suffit de poser $A=E - \hat H_0 + i\varepsilon$ et $B=\hat V$ et de réutiliser l'identité matricielle récursivement sur le nouveau $\frac{1}{A-B}$ obtenu.
+Il suffit de poser $A=E - \hat H_0 + i\varepsilon$ et $B=\hat V$ et de réutiliser l'identité matricielle récursivement sur le nouveau $\frac{1}{A-B}$ obtenu.
 
 </div>
 
@@ -850,7 +850,7 @@ Suffit de poser $A=E - \hat H_0 + i\varepsilon$ et $B=\hat V$ et de réutiliser 
 - un vertex = un facteur $\hat V$ (elle diffuse une fois sur le potentiel)&nbsp;;
 - on **somme sur toutes les positions et instants intermédiaires** (en représentation position, chaque terme est une intégrale sur les points d'interaction).
 
-La série dit : *amplitude exacte = (jamais diffusé) + (diffusé une fois, n'importe où) + (diffusé deux fois, n'importe où) + …* Ce sont déjà des diagrammes de Feynman (il ne manque que la seconde quantification pour que les vertex deviennent des créations/annihilations de particules).
+La série dit&nbsp;: *amplitude exacte = (jamais diffusé) + (diffusé une fois, n'importe où) + (diffusé deux fois, n'importe où) + …* Ce sont déjà des diagrammes de Feynman (il ne manque que la seconde quantification pour que les vertex deviennent des créations/annihilations de particules).
 
 <u>Remarque</u>&nbsp;: la forme fermée $G = (G_0^{-1} - \hat V)^{-1}$ montre qu'une série infinie de diagrammes peut se resommer en déplaçant le pôle. C'est le prototype de la **self-énergie** $\Sigma$ et de la masse renormalisée qu'on rencontrera plus loin ($G^{-1} = G_0^{-1} - \Sigma$).
 
@@ -1308,7 +1308,7 @@ $$
 
 </div>
 
-Opérateur à coefficients constants&nbsp;: son <b>symbole</b> (le nom savant du polynôme $L(\mathbf q)$ du chapitre précédent), c'est-à-dire sa valeur propre sur les ondes planes, $\hat L\\, \mathrm e^{\mathrm i\mathbf q\cdot\mathbf r} = L(\mathbf q)\\, \mathrm e^{\mathrm i\mathbf q\cdot\mathbf r}$) vaut ici $L(\mathbf q) = \mathbf q^2 + m^2$.<br>
+Opérateur à coefficients constants&nbsp;: son <b>symbole</b> (le nom savant du polynôme $L(\mathbf q)$ du chapitre précédent, c'est-à-dire sa valeur propre sur les ondes planes, $\hat L\\, \mathrm e^{\mathrm i\mathbf q\cdot\mathbf r} = L(\mathbf q)\\, \mathrm e^{\mathrm i\mathbf q\cdot\mathbf r}$) vaut ici $L(\mathbf q) = \mathbf q^2 + m^2$.<br>
 <i>Aucun zéro réel</i> ($L \geq m^2 > 0$)&nbsp;: pas de mode propagatif en statique, donc aucune subtilité de contour ni de $\mathrm i\varepsilon$&nbsp;; les seuls zéros sont en $\mathbf q$ complexe, $q = \pm im$. D'où&nbsp;:
 
 <div id="theo">
