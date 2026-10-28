@@ -43,16 +43,16 @@ Pourquoi lors d’une réflexion sur un milieu transparent (eau, verre, etc.), l
 </div>
 <p style="margin-top:-2em;text-align:center;font-size:0.9em;"><i>photo : <a href="https://fr.m.wikipedia.org/wiki/Fichier:Grandtetonnational_park59887215.jpg">Chascar</a> (Parc national du Grand Teton près du Jackson Lake Lodge)</i></p>
 
-C’est là qu’un Feynman capée de sa déconcertante facilité débarque : «c’est une histoire de petites flèches pauvre créature limitée». Et il développa ces histoires de flèches dans une série de conférences tout public consacrées à l’électrodynamique quantique (*QED the strange theory of light and matter*).<br>
-L’électrodynamique quantique, hmm... D’après Wikipedia, cette théorie s’occupe des interactions entre électrons, donc de la lumière. On lit aussi que la QED s’inscrit dans un cadre conceptuel plus large : la **théorie quantique des champs** (TQC). Là, on a peur : la réponse serait-elle aussi inaccessible que le Grand Téton&nbsp;? Mais puisque l’irritant génie te dit que ce n’est qu’une histoire de flèches...<br>
+C’est là qu’un Feynman capé de sa déconcertante facilité débarque : «c’est une histoire de petites flèches, pauvre créature limitée». Et il développa ces histoires de flèches dans une série de conférences tout public consacrées à l’électrodynamique quantique (*QED the strange theory of light and matter*).<br>
+L’électrodynamique quantique, hmm... D’après Wikipédia, cette théorie s’occupe des interactions entre électrons, donc de la lumière. On lit aussi que la QED s’inscrit dans un cadre conceptuel plus large : la **théorie quantique des champs** (TQC). Là, on a peur : la réponse serait-elle aussi inaccessible que le Grand Téton&nbsp;? Mais puisque l’irritant génie te dit que ce n’est qu’une histoire de flèches...<br>
 Tentons de colporter Sa parole.<br>
 
 
 ## Long préalable : des flèches qui tournent
 
-La quantique nous apprend que l’observation d’un évènement est probabiliste : on a une certaine probabilité d’observé un photon à un endroit donné, et la probabilité complémentaire de ne pas l’observer. La TQC ajoute que cette probabilité finale résulte d’une interférence entre de multiples ondelettes de probabilité qui se propagent partout dans l’espace sur un champ mystérieux.
+La quantique nous apprend que l’observation d’un évènement est probabiliste : on a une certaine probabilité d’observer un photon à un endroit donné, et la probabilité complémentaire de ne pas l’observer. La TQC ajoute que cette probabilité finale résulte d’une interférence entre de multiples ondelettes de probabilité qui se propagent partout dans l’espace sur un champ mystérieux.
 
-Précisons un peu&nbsp;: quelque soit l’évènement, la probabilité de le détecter s’obtient par superposition (ou somme) de toutes les probabilités attachées à chaque réalisation possible de l’évènement (même la plus saugrenue !). Techniquement, on somme des amplitudes de probabilités qui se propagent en oscillant au cours du temps le long de chaque chemin de réalisation considéré.
+Précisons un peu&nbsp;: quel que soit l’évènement, la probabilité de le détecter s’obtient par superposition (ou somme) de toutes les probabilités attachées à chaque réalisation possible de l’évènement (même la plus saugrenue !). Techniquement, on somme des amplitudes de probabilités qui se propagent en oscillant au cours du temps le long de chaque chemin de réalisation considéré.
 
 Mais sommer des trucs qui oscillent n’est pas tout à fait aussi simple que de sommer des carottes. Cela revient en fait à sommer des flèches qui tournent.
 
@@ -63,7 +63,7 @@ Mais sommer des trucs qui oscillent n’est pas tout à fait aussi simple que de
 Remarque&nbsp;: une flèche qui tourne peut être modélisée par un nombre complexe $\mathrm{e}^{\mathrm{i}t}$ (les complexes permettent de représenter un vecteur, une flèche, en un seul nombre, la partie imaginaire servant de 2<sup>e</sup> axe, et $\mathrm{e}^{\mathrm{i}t}$ représente une flèche qui fait un tour par seconde). Grâce aux complexes, on somme presque des ondes comme des carottes.<br>
 Ajoutons que le nombre de tours par seconde que font ces flèches (la fréquence des ondes) est proportionnel à l’énergie (plus précisément à l’hamiltonien $H$, ce qui donne une amplitude complexe en $\mathrm{e}^{\mathrm{i}Ht}$).
 
-N’importe quel processus, comme aller d’un point A à un point B, peut se faire d’une infinité de façons. La TQC assure que toutes ces possibilités sont à prendre en compte et à sommer, y compris la promenade du photon au jardin des tuileries avant de revenir en B. Dans un monde très simplifié où le photon n’interagit avec personne lors de son parcours (énergie constante et uniforme), chacune de ces possibilités a la même probabilité de se réaliser, et par conséquent, chacune correspond à une flèche de même taille (très très petite). Même taille d’accord, mais pas même orientation. Chaque flèche aura tourné d’un angle proportionnel au temps du parcours&nbsp;!
+N’importe quel processus, comme aller d’un point A à un point B, peut se faire d’une infinité de façons. La TQC assure que toutes ces possibilités sont à prendre en compte et à sommer, y compris la promenade du photon au jardin des Tuileries avant de revenir en B. Dans un monde très simplifié où le photon n’interagit avec personne lors de son parcours (énergie constante et uniforme), chacune de ces possibilités a la même probabilité de se réaliser, et par conséquent, chacune correspond à une flèche de même taille (très très petite). Même taille d’accord, mais pas même orientation. Chaque flèche aura tourné d’un angle proportionnel au temps du parcours&nbsp;!
 
 <div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/qed2.png" style="box-shadow:none;background:none;">
@@ -75,7 +75,7 @@ Et cette rotation qui n’a l’air de rien est primordiale. En effet, on peut s
 <img src="/qed3.png" style="box-shadow:none;background:none;">
 </div>
 
-On ajoute donc des petites flèches les unes aux autres, une flèche par possibilité, et la probabilité final d’observer l’évènement va dépendre de l’angle dont les flèches tournent d’un chemin à l’autre (le chemin étant une possibilité de réalisation).
+On ajoute donc des petites flèches les unes aux autres, une flèche par possibilité, et la probabilité finale d’observer l’évènement va dépendre de l’angle dont les flèches tournent d’un chemin à l’autre (le chemin étant une possibilité de réalisation).
 Rq&nbsp;: cette somme sur l’ensemble des chemins correspond aux intégrales de chemin de Feynman.
 
 Mais voyons où peuvent nous mener ces flèches qui tournent...
@@ -91,7 +91,7 @@ En effet, près de la ligne droite, les différents chemins sont quasiment aussi
 <img src="/qed4.png" style="box-shadow:none;background:none;">
 </div>
 
-On redécouvre là le **principe de Fermat** (et tous les autres **principes variationnels** qui se résument au **principe de moindre action** puisque c’est elle, $H\times t$, qui fait la phase de nos ondes)&nbsp;! Mais la lumière ne «cherche» pas à minimiser son temps de parcours, c’est seulement que près de ce chemin particulier, la quasi stationnarité des phases augmente la probabilité de présence. Un extrémum dans la variation de parcours correspond à des flèches variant peu d’angles pour des parcours proches et donc à une accumulation d’amplitudes de probabilité dans cette zone. Et à l’inverse, si on s’écarte de cet extrémum (puits ou col) les variations sont grandes et la somme devient vite destructive (les flèches tournent en rond).
+On redécouvre là le **principe de Fermat** (et tous les autres **principes variationnels** qui se résument au **principe de moindre action** puisque c’est elle, $H\times t$, qui fait la phase de nos ondes)&nbsp;! Mais la lumière ne «cherche» pas à minimiser son temps de parcours, c’est seulement que près de ce chemin particulier, la quasi stationnarité des phases augmente la probabilité de présence. Un extrémum dans la variation de parcours correspond à des flèches variant peu d’angle pour des parcours proches et donc à une accumulation d’amplitudes de probabilité dans cette zone. Et à l’inverse, si on s’écarte de cet extrémum (puits ou col) les variations sont grandes et la somme devient vite destructive (les flèches tournent en rond).
 
 Si le milieu de propagation des photons est inhomogène, faisant varier spatialement la vitesse de la lumière (on verra plus bas que cette variation est artificielle), l’extrémisation des temps de trajet ne donne alors plus une ligne droite ! D’où la réfraction (et les mirages).
 
@@ -106,7 +106,7 @@ Mais que peut-il alors bien se passer si on empêche les ondes de probabilité d
 
 ## Diffraction
 
-Envoyons un photon depuis A et comparons la probabilité qu’il arrive en B ou en C. On a compris l’histoire : dans le 1er cas, il faut sommer tous les chemins possibles entra A et B, et dans le 2<sup>e</sup>, entre A et C. D’un chemin à l’autre, il y a plus de variation entre A et C, donc les flèches tournent plus et les ondes de probabilité ont donc plus vite fait de se détruire.<br>Résultat&nbsp;: une probabilité de détection beaucoup plus faible en C qu’en B (négligeable même).
+Envoyons un photon depuis A et comparons la probabilité qu’il arrive en B ou en C. On a compris l’histoire : dans le 1er cas, il faut sommer tous les chemins possibles entre A et B, et dans le 2<sup>e</sup>, entre A et C. D’un chemin à l’autre, il y a plus de variation entre A et C, donc les flèches tournent plus et les ondes de probabilité ont donc plus vite fait de se détruire.<br>Résultat&nbsp;: une probabilité de détection beaucoup plus faible en C qu’en B (négligeable même).
 
 <div style="position:relative;margin-left:auto;margin-right:auto;width:400px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/qed5.png" style="box-shadow:none;background:none;">
@@ -124,7 +124,7 @@ Moins de chemins sont maintenant accessibles et les ondes de probabilité n’on
 <img src="/diffrchat.png" style="box-shadow:none;background:none;border-radius:15px;">
 </div>
 
-On peut aussi jouer les vicieux et obturer certains passages de manière à ce que les flèches arrivent toute en phase en un point où, sans cela, la probabilité de détection aurait été très faible.
+On peut aussi jouer les vicieux et obturer certains passages de manière à ce que les flèches arrivent toutes en phase en un point où, sans cela, la probabilité de détection aurait été très faible.
 
 Sans bouchons, c’est pas terrible&nbsp;:
 
@@ -148,10 +148,10 @@ Mais revenons au Grand Téton.
 
 
 Il nous manque un ingrédient pour parler de réflexion : la diffusion d’un photon par un atome (la lumière réfléchie n’est pas la lumière incidente, c’est de la lumière toute neuve, crachée par un atome éclairé).<br>
-Il va y a voir une certaine probabilité d’être diffusé, une nouvelle flèche... Sa taille donne la proba de diffusion dans la direction qui nous intéresse, chose qu’on ne sait pas calculer dans le cas du verre ou de l’eau mais qu’on peut déduire expérimentalement comme on le verra plus loin.<br>
+Il va y avoir une certaine probabilité d’être diffusé, une nouvelle flèche... Sa taille donne la proba de diffusion dans la direction qui nous intéresse, chose qu’on ne sait pas calculer dans le cas du verre ou de l’eau mais qu’on peut déduire expérimentalement comme on le verra plus loin.<br>
 On a sa taille (enfin non mais on fait comme si), il manque encore la direction&nbsp;:<br>
-dans le cas d’un milieu transparent, la proba de diffusion fait un quart de tour par rapport à la proba de passer sans encombre (+90°). Effectivement, la flèche finale (être et ne pas être diffusée) ne doit pas se trouvée réduite (dans l’approximation où le milieu est parfaitement transparent et donc n’absorbe pas, ça semble logique), ni agrandie (car ça serait bizarre). Seule possibilité restante&nbsp;: l’ajout d’une petite flèche à 90° qui fait seulement tourner la probabilité de ne pas être diffusé.<br>
-En vrai, bien sûr, le milieu absorbe un peu. Il suffit, pour le retranscrire en flèches, de courber à peu moins de 90° la flèche de la diffusion, ce qui réduira la taille de la flèche finale.
+dans le cas d’un milieu transparent, la proba de diffusion fait un quart de tour par rapport à la proba de passer sans encombre (+90°). Effectivement, la flèche finale (être et ne pas être diffusée) ne doit pas se trouver réduite (dans l’approximation où le milieu est parfaitement transparent et donc n’absorbe pas, ça semble logique), ni agrandie (car ça serait bizarre). Seule possibilité restante&nbsp;: l’ajout d’une petite flèche à 90° qui fait seulement tourner la probabilité de ne pas être diffusé.<br>
+En vrai, bien sûr, le milieu absorbe un peu. Il suffit, pour le retranscrire en flèches, de courber à un peu moins de 90° la flèche de la diffusion, ce qui réduira la taille de la flèche finale.
 
 <div style="position:relative;margin-left:auto;margin-right:auto;width:600px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
 <img src="/qed9.png" style="box-shadow:none;background:none;">
@@ -175,9 +175,9 @@ Il suffit de déplacer le récepteur au niveau de l’émetteur (pour rester ave
 
 La lumière qui retourne au récepteur a nécessairement été diffusée (flèche verte) et suivant la profondeur de l’atome diffusant, le parcours total est plus ou moins long, et donc, d’une possibilité de diffusion à l’autre, les flèches vertes tournent (la probabilité d’être détecté après diffusion sur l’atome 4 est déphasée par rapport à celle correspondant à l’atome 3).
 Mises bout à bout, les probabilités de diffusion, de même taille et un peu déphasées, tournent en rond. Le résultat final peut alors se résumer à la somme de deux rayons de cercle (flèche bleue + flèche rouge). Suivant l’épaisseur de la vitre traversée, la probabilité de détecter un photon réfléchi varie donc entre 0 et le diamètre du cercle dessiné par les probabilités.
-Expérimentalement, cette oscillation de la réflexion en fonction d l’épaisseur est bien observée et on la trouve comprise entre 0 et 16%. Mais cela suppose une épaisseur de vitre parfaitement déterminée (à une fraction de longueur d’onde près). Dans un cas plus ordinaire, la flèche rouge s’affole et fait pleins de tours, son orientation devient aléatoire. La probabilité d’être détecté se réduit à la flèche bleue. On mesure donc facilement le rayon du cercle puisqu’il correspond à la probabilité de réflexion moyenne sur une surface vitrée (8%).
+Expérimentalement, cette oscillation de la réflexion en fonction de l’épaisseur est bien observée et on la trouve comprise entre 0 et 16%. Mais cela suppose une épaisseur de vitre parfaitement déterminée (à une fraction de longueur d’onde près). Dans un cas plus ordinaire, la flèche rouge s’affole et fait plein de tours, son orientation devient aléatoire. La probabilité d’être détecté se réduit à la flèche bleue. On mesure donc facilement le rayon du cercle puisqu’il correspond à la probabilité de réflexion moyenne sur une surface vitrée (8%).
 
-On remarque que la flèche verte n°1, correspondant à la probabilité de diffusion sur un atome de la surface (le tout premier), fait un angle de -90° par rapport à la flèche bleue. La flèche bleue a par conséquent un angle de rotation opposé (+π) à la flèche qui représenterait la probabilité de faire le même trajet aller-retour, mais sans avoir été diffusé (si c’était possible), rebond du photon sur la face avant quoi. Par ailleurs, la flèche rouge a, elle, une orientation correspondante à un trajet long comme l’aller-retour jusqu’à la face postérieure (la diffusion sur le petit dernier, n°6, fait bien un angle d’environ +90° avec elle).
+On remarque que la flèche verte n°1, correspondant à la probabilité de diffusion sur un atome de la surface (le tout premier), fait un angle de -90° par rapport à la flèche bleue. La flèche bleue a par conséquent un angle de rotation opposé (+π) à la flèche qui représenterait la probabilité de faire le même trajet aller-retour, mais sans avoir été diffusé (si c’était possible), rebond du photon sur la face avant quoi. Par ailleurs, la flèche rouge a, elle, une orientation correspondant à un trajet long comme l’aller-retour jusqu’à la face postérieure (la diffusion sur le petit dernier, n°6, fait bien un angle d’environ +90° avec elle).
 
 On peut maintenant simplifier notre description. La réflexion sur une vitre se résume à l’interférence entre deux trajets possibles pour le photon&nbsp;:
 <ul style="margin-top:-0em;">
@@ -186,5 +186,5 @@ On peut maintenant simplifier notre description. La réflexion sur une vitre se 
 </ul>
 Et si la vitre est ordinaire (épaisseur aléatoire sur une taille caractéristique d’une fraction de longueur d’onde), tout se résume à un rebond sur la face avant&nbsp;!
 
-Et l’agacement nerveux provoqué par les deux Grands Tétons s’apaisent enfin (les quelques secondes où on réussi à étouffer le désespérant bourdonnement des millions de questions qui essaiment derrière ces flèches).
+Et l’agacement nerveux provoqué par les deux Grands Tétons s’apaise enfin (les quelques secondes où on réussit à étouffer le désespérant bourdonnement des millions de questions qui essaiment derrière ces flèches).
 
