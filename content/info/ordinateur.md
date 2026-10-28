@@ -31,7 +31,7 @@ chapter = false
 
 ## Ordinateur
 
-Petite série de vidéo sur le fonctionnement simplifié d'un ordinateur.
+Petite série de vidéos sur le fonctionnement simplifié d'un ordinateur.
 
 {{%notice type="note" round="true"%}}
 Source : "But how do it know?" de J. Clark Scott

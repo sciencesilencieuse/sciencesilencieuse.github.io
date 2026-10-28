@@ -55,9 +55,9 @@ chapter = false
 L'idée est de partir d'un système classique le plus simple possible et d'y ajouter des ingrédients conceptuels permettant de rendre la théorie jouet capable de reproduire certaines bizarreries quantiques. Les ingrédients clés peuvent alors peut-être nous renseigner sur l'essence même de la mécanique quantique. Ou pas.
 
 
-## [Epistémique vs. ontique](./epistovsonto)
+## [Épistémique vs. ontique](./epistovsonto)
 
-- Distinction selon Harrigan et Speckens
+- Distinction selon Harrigan et Spekkens
 - Attraits de la vision épistémique
 - Théorème PBR et nécessité de l'ontologie
 
@@ -69,7 +69,7 @@ L'idée est de partir d'un système classique le plus simple possible et d'y ajo
 
 La violation des inégalités de Bell met la quantique et la relativité restreinte (et donc générale) en tension. Comment reconnecter ces deux mondes&nbsp;?
 
-## [Limites de la non localité](./nonlocale)
+## [Limites de la non-localité](./nonlocale)
 
 - Borne de Tsirelson
 - Boîtes PR

@@ -55,7 +55,7 @@ margin-top:-0.5em;
 
 # Physique statistique
 
-Petite série de vidéo sur la physique statistique, de la définition de la température à l'entropie en passant par le facteur de Boltzmann et la loi de Planck&nbsp;:
+Petite série de vidéos sur la physique statistique, de la définition de la température à l'entropie en passant par le facteur de Boltzmann et la loi de Planck&nbsp;:
 
 
 {{< youtube-plus id="JbVNRi2R2kY" ratio="16x9" width="800" shadow="true" rounded="true" >}}

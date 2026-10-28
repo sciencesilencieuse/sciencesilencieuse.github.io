@@ -66,9 +66,9 @@ L'idée d'associer un nombre entier à une formule ou à une preuve a permis à 
 <img src="/godprouve.png" style="border-radius:10px;">
 </div>
 
-Le **premier théorème d'incomplétude de Gödel** s'appuie sur une formule affirmant sa propre non prouvabilité $\neg\Box\phi\leftrightarrow \phi$. Si on peut démontrer la formule $\neg\Box\phi\leftrightarrow \phi$ dans un système donné, alors on prouve qu'il existe une formule non démontrable et pourtant vraie, ce qui impose l'incomplétude du système.
+Le **premier théorème d'incomplétude de Gödel** s'appuie sur une formule affirmant sa propre non-prouvabilité $\neg\Box\phi\leftrightarrow \phi$. Si on peut démontrer la formule $\neg\Box\phi\leftrightarrow \phi$ dans un système donné, alors on prouve qu'il existe une formule non démontrable et pourtant vraie, ce qui impose l'incomplétude du système.
 
-La démonstration de Gödel est un impresssionnant tour de force de 30 pages, mais elle devient bien plus triviale avec la notion de machine de Turing. La plupart des langages de programmation (comme Python) sont Turing-complet, ce qui signifie qu'ils sont équivalents à une machine de Turing universelle capable de calculer tout ce qui est calculable. Or Turing a aussi découvert ce qu'une telle machine ne sait pas faire&nbsp;: déterminer (en un temps fini) si un programme (une suite d'instructions) va tourner à l'infini ou finir par s'arrêter. C'est le **problème de l'arrêt**.
+La démonstration de Gödel est un impressionnant tour de force de 30 pages, mais elle devient bien plus triviale avec la notion de machine de Turing. La plupart des langages de programmation (comme Python) sont Turing-complets, ce qui signifie qu'ils sont équivalents à une machine de Turing universelle capable de calculer tout ce qui est calculable. Or Turing a aussi découvert ce qu'une telle machine ne sait pas faire&nbsp;: déterminer (en un temps fini) si un programme (une suite d'instructions) va tourner à l'infini ou finir par s'arrêter. C'est le **problème de l'arrêt**.
 
 <div id="preuve">
 Pour prouver qu'aucun programme ne peut résoudre le problème de l'arrêt, Turing a raisonné par l'absurde&nbsp;:<br>

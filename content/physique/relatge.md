@@ -28,7 +28,7 @@ weight = 4
 
 # Relativité générale
 
-Le plus impressionnant livre sur la relativité générale est sans contexte à mes yeux "**A Journey into Gravity
+Le plus impressionnant livre sur la relativité générale est sans conteste à mes yeux "**A Journey into Gravity
 and Spacetime**" du génial **John Archibald Wheeler**. Il réussit le tour de force d'expliquer la relativité générale quasiment sans mathématiques tout en n'esquivant rien de la profondeur conceptuelle de la théorie, au contraire.<br>
 Le livre démarre par un long poème dont les derniers vers dévoilent la notion au cœur de son explication, relation fondamentale de la topologie algébrique qui peut sembler de prime abord assez cryptique&nbsp;: **le bord d'un bord est vide**.
 > Help me to make this account<br>
@@ -49,7 +49,7 @@ Vidéo sur les ondes gravitationnelles et sur leur détection par le clignotemen
 {{< youtube-plus id="qK5qKJeM41Y" ratio="16x9" width="800" shadow="true" rounded="true" >}}
 
 
-Je m'étais lancé, il y a longtemps, dans la rédaction de notes "améliorées" après visionnage [de ces vidéos de **Léonard Susskind**](https://www.youtube.com/playlist?list=PL6C8BDEEBA6BDC78D) sur la relativité générale.<br>
+Je m'étais lancé, il y a longtemps, dans la rédaction de notes "améliorées" après visionnage [de ces vidéos de **Leonard Susskind**](https://www.youtube.com/playlist?list=PL6C8BDEEBA6BDC78D) sur la relativité générale.<br>
 Susskind est un immense physicien théoricien et les vidéos sont des captations de ses cours donnés dans le cadre du Stanford Continuing Studies Program (sorte de cours du soir pour enthousiastes).
 
 <center>

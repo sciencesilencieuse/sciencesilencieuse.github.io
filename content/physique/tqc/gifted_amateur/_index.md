@@ -124,7 +124,7 @@ Notes de lecture du livre <i>Quantum field theory for the gifted amateur</i> de 
     </tr>
     <tr>
     <th rowspan="1"><a href="./tqc8/">Partie&nbsp;8&nbsp;:</a></th>
-    <td><a href="./tqc8/#détour-par-la-physique-statitique">Détour par la physique statistique</a></td>
+    <td><a href="./tqc8/#détour-par-la-physique-statistique">Détour par la physique statistique</a></td>
     </tr>
      <tr>
     <th rowspan="6"><a href="./tqc9/">Partie&nbsp;9&nbsp;:</a></th>

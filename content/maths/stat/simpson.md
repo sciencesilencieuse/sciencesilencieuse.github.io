@@ -33,7 +33,7 @@ weight = 3
 
 # Paradoxe de Simpson
 
-Ce paradoxe a fait des dégâts lors de la campagne de vaccination pour le Covid. Les chiffres de la vidéo sont proches des chiffres communiqués par l'état d'Israël qui était un des premiers pays à pouvoir vacciner.
+Ce paradoxe a fait des dégâts lors de la campagne de vaccination pour le Covid. Les chiffres de la vidéo sont proches des chiffres communiqués par l'État d'Israël qui était un des premiers pays à pouvoir vacciner.
 
 {{< youtube-plus id="Bu3znAquSuk" ratio="16x9" width="800px" rounded=true shadow=true >}}
 

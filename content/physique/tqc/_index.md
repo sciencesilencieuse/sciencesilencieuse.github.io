@@ -40,14 +40,14 @@ font-size:1em !important;
 
 
 <p style="font-size:1.2em !important;color:grey;">
-<i>"Particules et ondes ne sont que les excitations d'un champ quantique s'étendant dans l'espace temps."</i>
+<i>"Particules et ondes ne sont que les excitations d'un champ quantique s'étendant dans l'espace-temps."</i>
 </p>
 
 <div style="position:relative;margin-left:auto;margin-right:auto;width:800px;max-width:100%;margin-bottom:-0em;margin-top:0em;">
 <img src="/vanfeynman.png" style="box-shadow:none;background:none;border-radius:15px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 </div>
 
-La théorie quantique des champs (TQC) est considéré à ce jour comme la meilleure (à défaut d'être l'ultime) théorie explicative de l'univers qui nous entoure.<br>C'est à la fois la théorie testée avec la plus grande précision 😎, mais aussi celle qui a produit le plus grand écart entre théorie et expérience 😱 (catastrophe du vide).
+La théorie quantique des champs (TQC) est considérée à ce jour comme la meilleure (à défaut d'être l'ultime) théorie explicative de l'univers qui nous entoure.<br>C'est à la fois la théorie testée avec la plus grande précision 😎, mais aussi celle qui a produit le plus grand écart entre théorie et expérience 😱 (catastrophe du vide).
 
 
 <ul style="text-align:left;">
@@ -59,7 +59,7 @@ La théorie quantique des champs (TQC) est considéré à ce jour comme la meill
 <br>
 <li><a href="https://www.quantamagazine.org/a-new-map-of-the-standard-model-of-particle-physics-20201022/"><b>Chouette article</b></a> de <i>Quanta Magazine</i> qui résume et illustre le <b>modèle standard</b> des particules dont la structure repose sur la théorie quantique des champs&nbsp;; l'état actuel de notre compréhension du monde.</li>
 <br>
-<li><a href="https://arxiv.org/pdf/1410.6753"><b>Génial article</b></a> de Malcadena qui explique les <b>théories de jauge</b> par analogie avec l'arbitrages de devise.</li>
+<li><a href="https://arxiv.org/pdf/1410.6753"><b>Génial article</b></a> de Maldacena qui explique les <b>théories de jauge</b> par analogie avec l'arbitrage de devises.</li>
 
 [![](https://www.quantamagazine.org/wp-content/uploads/2020/10/SM_graphic-FINAL_T02.svg)](https://www.quantamagazine.org/a-new-map-of-the-standard-model-of-particle-physics-20201022/) 
 

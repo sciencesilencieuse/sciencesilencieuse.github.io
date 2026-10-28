@@ -51,7 +51,7 @@ weight = 2
 Supplementary notes for a calculus-based introductory physics course
 Daniel V. Schroeder [🌐](https://physics.weber.edu/schroeder/mrr/MRRnotes.pdf)
 
-Formule de Larmor et Diffusion Rayleigh sans douleur jusqu'au bleu du ciel et au rougeoiement du soleil couchant. 
+Formule de Larmor et diffusion Rayleigh sans douleur jusqu'au bleu du ciel et au rougeoiement du soleil couchant. 
 
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 {{<youtube jqwOif-TwrM>}}
@@ -59,7 +59,7 @@ Formule de Larmor et Diffusion Rayleigh sans douleur jusqu'au bleu du ciel et au
 
 <br>
 
-Trois animations montrant le champ rayonné (densité et lignes) pour diverses accélérations (rebond, arrêt brutal, osccillation).
+Trois animations montrant le champ rayonné (densité et lignes) pour diverses accélérations (rebond, arrêt brutal, oscillation).
 
 <video width="640" controls poster="/posterem1.png" style="display:block;max-width:100%;position:relative;margin-left:auto;margin-right: auto; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
   <source src="/allerretour.mp4" type="video/mp4">

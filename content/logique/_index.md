@@ -65,7 +65,7 @@ La logique est à l'intersection de l'informatique, des mathématiques et de la 
 ## Paradoxe de Berry
 
 <p style="text-align:left;font-size:1em;">
-Le paradoxe de Berry rend non calculable la complexité de Kolmogorov. Et cette non calculabilité tue dans l'œuf <a href="https://www.scientificamerican.com/article/the-strange-story-of-the-algorithm-meant-to-solve-life-the-universe-and" target="_blank">le rêve du jeune Ray Solomonoff</a> d'un super algorithme capable de résoudre l'intégralité des problèmes scientifiques 😢
+Le paradoxe de Berry rend non calculable la complexité de Kolmogorov. Et cette non-calculabilité tue dans l'œuf <a href="https://www.scientificamerican.com/article/the-strange-story-of-the-algorithm-meant-to-solve-life-the-universe-and" target="_blank">le rêve du jeune Ray Solomonoff</a> d'un super algorithme capable de résoudre l'intégralité des problèmes scientifiques 😢
 </p>
 
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">

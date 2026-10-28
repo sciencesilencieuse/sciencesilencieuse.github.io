@@ -102,16 +102,16 @@ Le calcul des propositions (ou **calcul propositionnel** ou **logique des propos
 </ul>
 </div>
 
-On désigna par $VAR=\Set{P,Q,R\dots}$ l'ensemble des variables propositionnelles, potentiellement infini.
+On désigne par $VAR=\Set{P,Q,R\dots}$ l'ensemble des variables propositionnelles, potentiellement infini.
 
 <div id="def">
 <ul>
-<li>Le connectecteur logique $\neg$ est unaire (ou d'arité 1) puisqu'il transforme à lui seul une formule en une autre formule. C'est le symbole de <b>négation</b> et il se dit <b>non</b>.</li>
+<li>Le connecteur logique $\neg$ est unaire (ou d'arité 1) puisqu'il transforme à lui seul une formule en une autre formule. C'est le symbole de <b>négation</b> et il se dit <b>non</b>.</li>
 <li>Les autres connecteurs logiques sont binaires (d'arité 2) puisqu'ils lient deux formules en une nouvelle.</li>
 <ul>
     <li>$\lor$ est le symbole de <b>disjonction</b> ("<b>ou</b>")</li>
     <li>$\land$ est le symbole de <b>conjonction</b> ("<b>et</b>")</li>
-    <li>$\rightarrow$ est le symbole d'<b>implication</b> ("<b>mplique</b>")</li>
+    <li>$\rightarrow$ est le symbole d'<b>implication</b> ("<b>implique</b>")</li>
     <li>$\leftrightarrow$ est le symbole de <b>double implication</b> ou d'<b>équivalence</b> ("<b>si et seulement si</b>" ou "<b>équivaut à</b>")</li>
 </ul>
 </ul>
@@ -149,7 +149,7 @@ La **hauteur** d'une formule est la longueur de sa plus longue branche.
 C'est une définition par **récurrence** (ou **inductive**)&nbsp;: on a d'abord défini les feuilles, cas de base de hauteur 0, puis on a donné la recette pour passer d'un arbre de hauteur $n$ à un arbre de hauteur $n+1$.
 {{%/notice%}}
 
-Une **sous formule** d'une formule $\phi$ est un sous-arbre de $\phi$ dont l'un des nœuds de $\phi$ est la racine.
+Une **sous-formule** d'une formule $\phi$ est un sous-arbre de $\phi$ dont l'un des nœuds de $\phi$ est la racine.
 
 ![](/sousformules.png?width=600px)
 
@@ -160,7 +160,7 @@ La formule de hauteur 5 ci-dessus contient&nbsp;:
 - 1 sous-formule de hauteur 3 (en rose),
 - 1 sous-formule de hauteur 4 (en jaune).
 
-Lorsqu'une sous-formule apparaît plusieurs fois dans une formule, on dit qu'elle a plusieurs **occurences**.
+Lorsqu'une sous-formule apparaît plusieurs fois dans une formule, on dit qu'elle a plusieurs **occurrences**.
 
 <br>
 

@@ -29,13 +29,13 @@ weight = 2
 
 # Numération
 
-Le système décimale nous est si familier qu'il nous paraît incongru de compter autrement. Et pourtant, bien d'autres systèmes sont ou ont été utilisés&nbsp;:
+Le système décimal nous est si familier qu'il nous paraît incongru de compter autrement. Et pourtant, bien d'autres systèmes sont ou ont été utilisés&nbsp;:
 
 <ul style="margin-top:-0.2em; margin-bottom:-0.5em;">
 <li>système binaire (base 2) utilisé dans des langues d'Amérique du Sud et d'Océanie, et utilisé de nos jours en informatique.</li>
 </ul>
 
-- système quinaire (base 5) dont il reste des traces jusqu'au xx<sup>e</sup> siècle dans des langues africaines, mais aussi, partiellement, dans les notations tchouvache, suzhou, romaine et maya. Le nom des chiffres 6, 7, 8 et 9 dans de nombreuses langues témoignent de ce système quinaire&nbsp;: ils se disent 5+1, 5+2, 5+3 et 5+4 en wolof (langue de la famille nigéro-congolaise), en khmer (langue austro-asiatique), en nahuatl (langue uto-aztèque), et, dans de nombreuses langues austronésiennes telles qu'en lote ou en ngadha (sous forme partielle). La base quinaire apparait parfois comme base auxiliaire ou sous-base de la base décimale, comme dans le système romain, ou de la base vigésimale.
+- système quinaire (base 5) dont il reste des traces jusqu'au xx<sup>e</sup> siècle dans des langues africaines, mais aussi, partiellement, dans les notations tchouvache, suzhou, romaine et maya. Le nom des chiffres 6, 7, 8 et 9 dans de nombreuses langues témoigne de ce système quinaire&nbsp;: ils se disent 5+1, 5+2, 5+3 et 5+4 en wolof (langue de la famille nigéro-congolaise), en khmer (langue austro-asiatique), en nahuatl (langue uto-aztèque), et, dans de nombreuses langues austronésiennes telles qu'en lote ou en ngadha (sous forme partielle). La base quinaire apparait parfois comme base auxiliaire ou sous-base de la base décimale, comme dans le système romain, ou de la base vigésimale.
 
 ![](/romain.png?width=600px)
 

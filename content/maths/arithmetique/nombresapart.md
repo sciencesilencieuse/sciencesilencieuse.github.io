@@ -88,7 +88,7 @@ Et cette vidéo explique une propriété de prime abord étonnante&nbsp;: si on 
 ## Algorithme d'Euclide
 
 
-Un des plus anciens algorithmes connus. Sa formulation est simplissime (comme le montre le code python ci-dessous) mais sa puissance est redoutable.
+Un des plus anciens algorithmes connus. Sa formulation est simplissime (comme le montre le code Python ci-dessous) mais sa puissance est redoutable.
 
 
 ```python
@@ -113,7 +113,7 @@ Quand est-ce que l'algo galère le plus&nbsp;? Quand $a$ et $b$ sont deux nombre
 
 Les fractions continues permettent d'enquêter visuellement sur le degré de rationalité d'un nombre irrationnel en déterminant les fractions successives qui l'approximent le mieux.
 
-Elles rendent plus transparents les différents compromis qu'on est amené à faire pour tenter de caler des nombres carrés dans des nombres ronds du fait de périodicités incompatibles. On explique ainsi les calendriers, les almanachs d'éclipses et les 12 notes de musiques.
+Elles rendent plus transparents les différents compromis qu'on est amené à faire pour tenter de caler des nombres carrés dans des nombres ronds du fait de périodicités incompatibles. On explique ainsi les calendriers, les almanachs d'éclipses et les 12 notes de musique.
 
 
 {{< youtube-plus id="zSnFffFo9bk" ratio="16x9" width="800px" rounded=true shadow=true >}}
@@ -128,7 +128,7 @@ Le nombre d'or est une sorte de tarte à la crème des mathématiques. D'infinie
 
 On ne peut nier cependant qu'il apparaît parfois dans des endroits étonnants. Reste seulement à démystifier sa présence.
 
-La vidéo suivante explique ainsi comment suite de Fibonacci et nombre d'or apparaissent dans certains arrangements des plantes. Armé d'un peu de physique et des fractions continues, leurs présences devient somme toute logique, voire triviale.
+La vidéo suivante explique ainsi comment suite de Fibonacci et nombre d'or apparaissent dans certains arrangements des plantes. Armé d'un peu de physique et des fractions continues, on comprend que leur présence est somme toute logique, voire triviale.
 
 
 {{< youtube-plus id="_V4GjyvDTfI" ratio="4x3" width="640px" rounded=true shadow=true >}}

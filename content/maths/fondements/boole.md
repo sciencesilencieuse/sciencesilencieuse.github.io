@@ -38,7 +38,7 @@ L'algèbre de Boole est à la base de la théorie des ensembles (le ET logique $
 
 Le calcul booléen permet d'algébriser la logique et est devenu le langage naturel des circuits électroniques à la base de l'informatique.
 
-L'algèbre de Boole est donc solidement installé à l'intersection des mathématiques, de la logique et de l'informatique. Belle consécration pour les travaux de ce savant britanique dut abandonner ses études à 16 ans pour aider financièrement sa famille.
+L'algèbre de Boole est donc solidement installée à l'intersection des mathématiques, de la logique et de l'informatique. Belle consécration pour les travaux de ce savant britannique qui dut abandonner ses études à 16 ans pour aider financièrement sa famille.
 
 <br>
 
@@ -48,7 +48,7 @@ L'algèbre de Boole est donc solidement installé à l'intersection des mathéma
 
 <br>
 
-Contemporain et compatriote de Boole avec qui il était en relation, Auguste De Morgan a contribué lui aussi à la fondation de la la logique moderne. On lui doit, entre autres, les lois de De Morgan qu'on démontre dans la vidéo suivante à l'aide du calcul booléen.
+Contemporain et compatriote de Boole avec qui il était en relation, Auguste De Morgan a contribué lui aussi à la fondation de la logique moderne. On lui doit, entre autres, les lois de De Morgan qu'on démontre dans la vidéo suivante à l'aide du calcul booléen.
 
 Ces deux lois établissent une relation de dualité entre la disjonction ($\lor$) et la conjonction ($\land$) en stipulant que la négation d'une disjonction est la conjonction des négations et que la négation d'une conjonction est la disjonction des négations.
 

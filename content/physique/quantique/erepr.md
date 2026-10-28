@@ -31,10 +31,10 @@ hidden = false
 
 # ER = EPR
 
-Le paradoxe EPR est depuis quelques temps au cœur d'avancées prometteuses vers le graal de la physique théorique&nbsp;: une théorie de la gravité quantique. En effet, la conjecture ER = EPR proposée en 2013 par Léonard Susskind et Joan Maldacena connecterait les particules intriquées par des trou de vers (pont d’Einstein-Rosen)[^1].<br>
+Le paradoxe EPR est depuis quelque temps au cœur d'avancées prometteuses vers le graal de la physique théorique&nbsp;: une théorie de la gravité quantique. En effet, la conjecture ER = EPR proposée en 2013 par Leonard Susskind et Joan Maldacena connecterait les particules intriquées par des trous de ver (pont d’Einstein-Rosen)[^1].<br>
 C'est la géométrie même de l'espace-temps qui serait déterminée par l'intrication quantique.
 
-[^1]: Intéressant qu'Einstein et Rosen soit présent dans les deux acronymes, faisant résonner le lien d'aujourd'hui avec l'histoire des idées et des collaborations...
+[^1]: Intéressant qu'Einstein et Rosen soient présents dans les deux acronymes, faisant résonner le lien d'aujourd'hui avec l'histoire des idées et des collaborations...
 
 
 Ces articles de [Quanta Magazine]() introduisent gentiment ces questions au centre de la physique théorique aujourd'hui&nbsp;:

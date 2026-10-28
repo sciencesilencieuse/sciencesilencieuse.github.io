@@ -65,7 +65,7 @@ Les objets de la mécanique classique dans sa formulation newtonienne sont des v
 
 Mais la fin du 18<sup>e</sup> et la première moitié du 19<sup>e</sup> siècle ont vu naître de nouvelles formulations de la mécanique où l'arène même dans laquelle s'ébattent les objets physiques étudiés est chamboulée. On peut littéralement parler de nouvelles façons de voir.
 
-Souhaitant s'affranchir de la géométrie (quel souhait étrange), **Lagrange** vise une approche purement analytique (il ventait l'absence de tout schéma dans son manuel de mécanique...). Son idée centrale fut de basculer de l'étude de $N$ systèmes comme $N$ vecteurs dans $\mathbb{R}^3$ à un seul système composite, un seul vecteur, évoluant dans $\mathbb{R}^{3N}$. Toute configuration des $N$ systèmes devient un unique point dans l'espace $\mathbb{R}^{3N}$ appelé alors **espace des configurations**. Et l'évolution de l'ensemble des $N$ objets dessine un chemin unique dans l'espace des configurations.
+Souhaitant s'affranchir de la géométrie (quel souhait étrange), **Lagrange** vise une approche purement analytique (il vantait l'absence de tout schéma dans son manuel de mécanique...). Son idée centrale fut de basculer de l'étude de $N$ systèmes comme $N$ vecteurs dans $\mathbb{R}^3$ à un seul système composite, un seul vecteur, évoluant dans $\mathbb{R}^{3N}$. Toute configuration des $N$ systèmes devient un unique point dans l'espace $\mathbb{R}^{3N}$ appelé alors **espace des configurations**. Et l'évolution de l'ensemble des $N$ objets dessine un chemin unique dans l'espace des configurations.
 
 **Hamilton** souhaite, lui, retrouver la source géométrique de la mécanique mais tout en conservant une approche analytique. L'arène d'Hamilton ne doit plus seulement décrire la position du système mais son état physique entier, ce qui nécessite de savoir comment le système bouge. On a besoin pour cela de l'**espace des phases** dont chaque point informe à la fois de la position *et* de la quantité de mouvement de chacun des $N$ objets du système. L'espace des phases est donc de dimension $2\times 3N$&nbsp;!
 
@@ -104,11 +104,11 @@ Petits exercices de niveau licence/prépa traitant de voyages autour ou à trave
 
 De manière "amusante", le ratio des contributions de la Lune et du Soleil aux forces de marée sur Terre est donné par le ratio de leurs masses volumiques respectives&nbsp;:
 
-$$\frac{F_\text{maréee,Lune}}{F_\text{maréee,Soleil}}\approx\frac{\rho_\text{Lune}}{\rho_\text{Soleil}}$$
+$$\frac{F_\text{marée,Lune}}{F_\text{marée,Soleil}}\approx\frac{\rho_\text{Lune}}{\rho_\text{Soleil}}$$
 
 En effet, les forces de marée exercées par un astre sur la Terre sont proportionnelles au gradient de son champ gravitationnel, donc à $\displaystyle\frac{M_\text{Astre}}{d_\text{Astre-Terre}^3}$ .
 
-Mais on sait aussi que la Lune et le Soleil sont à peu près vu sous le même diamètre apparent de 30' depuis la Terre (un indice parmi d'autres : les éclipses solaires parfois annulaires, parfois totales). Par conséquent, les distances des deux astres sont dans le rapport de leurs rayons (Thalès)&nbsp;:
+Mais on sait aussi que la Lune et le Soleil sont à peu près vus sous le même diamètre apparent de 30' depuis la Terre (un indice parmi d'autres : les éclipses solaires parfois annulaires, parfois totales). Par conséquent, les distances des deux astres sont dans le rapport de leurs rayons (Thalès)&nbsp;:
 
 $$\frac{d_\text{Terre-Lune}}{d_\text{Terre-Soleil}}\approx\frac{r_\text{Lune}}{r_\text{Soleil}}$$
 
@@ -121,7 +121,7 @@ On a donc bien au final&nbsp;:
 
 $$
 \begin{aligned}
-\frac{F_\text{maréee,Lune}}{F_\text{maréee,Soleil}} &=\frac{M_\text{Lune}}{d_\text{Lune-Terre}^3}\left/\frac{M_\text{Soleil}}{d_\text{Soleil-Terre}^3}\right.\\\\
+\frac{F_\text{marée,Lune}}{F_\text{marée,Soleil}} &=\frac{M_\text{Lune}}{d_\text{Lune-Terre}^3}\left/\frac{M_\text{Soleil}}{d_\text{Soleil-Terre}^3}\right.\\\\
 &=\frac{M_\text{Lune}}{M_\text{Soleil}}\times \frac{d_\text{Soleil-Terre}^3}{d_\text{Lune-Terre}^3}\\\\
 &\approx \frac{M_\text{Lune}}{M_\text{Soleil}}\times \frac{r_\text{Soleil}^3}{r_\text{Lune}^3}\\\\
 &=\frac{M_\text{Lune}}{r_\text{Lune}^3}\left/\frac{M_\text{Soleil}}{r_\text{Soleil}^3}\right.\\\\

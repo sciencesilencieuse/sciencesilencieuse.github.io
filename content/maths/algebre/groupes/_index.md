@@ -43,12 +43,11 @@ Trois sources majoritairement plagiées pour les pages qui suivent&nbsp;:
 
 <br>
 
-La théorie des groupes découpe et structure les représentations physiques que l’on se fait du monde. Elle prescrit le choix même des grandeurs physique. Son importance est phénoménale.
+La théorie des groupes découpe et structure les représentations physiques que l’on se fait du monde. Elle prescrit le choix même des grandeurs physiques. Son importance est phénoménale.
 
 
 
-Mais il faut abandonner tout espoir de trouver ici rigueur mathématique ou exhaustivité. Vous serez en échange comblés de graves approximations, voir errances, émaillées d’«inclartés». Je tente seulement de faire apparaître, en paraphrasant souvent mal mes source, les angles de ce qu’il a été pour moi important de comprendre.
-Les deux premiers chapitres décrivent les résultats généraux obtenus sur les groupes discrets. Leur rédaction s’appuie grandement sur le Wu-Ki Tung, très très grandement...
+Mais il faut abandonner tout espoir de trouver ici rigueur mathématique ou exhaustivité. Vous serez en échange comblés de graves approximations, voire errances, émaillées d’«inclartés». Je tente seulement de faire apparaître, en paraphrasant souvent mal mes sources, les angles de ce qu’il a été pour moi important de comprendre.
 
 Les deux premiers chapitres décrivent les résultats généraux obtenus sur les groupes discrets. Leur rédaction s’appuie grandement sur le Wu-Ki Tung, très très grandement...
 

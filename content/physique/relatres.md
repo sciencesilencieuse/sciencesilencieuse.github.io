@@ -61,7 +61,7 @@ Série de vidéos sur la relativité restreinte avec un angle plutôt géométri
 
 
 **FloatHeadPhysics** communique bien dans la vidéo suivante la joie de la découverte d'un modèle explicatif simple.<br>
-Ici, elle vient de ce merveilleux petit livre illustré&nbsp;: [**Relativity visualized** de Lewis Caroll Epstein](https://archive.org/details/L.EpsteinRelativityVisualizedelemTxt1994Insight/mode/2up?view=theater).
+Ici, elle vient de ce merveilleux petit livre illustré&nbsp;: [**Relativity visualized** de Lewis Carroll Epstein](https://archive.org/details/L.EpsteinRelativityVisualizedelemTxt1994Insight/mode/2up?view=theater).
 
 
 {{< youtube-plus id="TJmgKdc7H34" ratio="16x9" width="800" shadow="true" rounded="true" >}}
