@@ -127,7 +127,7 @@ Si on veut que nos démonstrations aboutissent à des résultats ayant du sens, 
 Les systèmes axiomatiques ou systèmes **"à la Hilbert"** reposent sur un petit nombre de vérités élémentaires, les **axiomes**, et sur des **règles** de construction qui préservent la vérité.<br>
 Les démonstrations obtenues sont concises mais très peu explicatives. Ça marche, mais on ne sait pas pourquoi, faute au manque de structure de ces preuves.
 
-Exemple d'un système axiomatique reposant sur le système complet de connecteur $\set{\neg,\rightarrow}$ et comportant 3 axiomes pour une seule règle&nbsp;:
+Exemple d'un système axiomatique reposant sur le système complet de connecteurs $\set{\neg,\rightarrow}$ et comportant 3 axiomes pour une seule règle&nbsp;:
 
 <div style="overflow-x: auto;">
 <table>
@@ -217,7 +217,7 @@ La **règle** est la brique de base de la démonstration. Une démonstration est
 - les règles d'**introduction**,
 - et les règles d'**élimination**.
 
-On va dans la suite considérer le système complet de connecteur $\set{\neg,\land,\lor,\rightarrow}$. 
+On va dans la suite considérer le système complet de connecteurs $\set{\neg,\land,\lor,\rightarrow}$. 
 
 <p style="margin-bottom:-0.5em;">En dehors des <b>axiomes</b> représentés par le séquent $\phi \vdash\phi$, les règles peuvent être regroupées en deux catégories&nbsp;:</p>
 
@@ -440,9 +440,9 @@ L'ensemble d'hypothèses $\Gamma\cup\set{\psi,\psi}$ est le même que $\Gamma\cu
 <p style="margin-bottom:-0.5em;">Chaque règle peut être regardée comme un arbre simple lu de haut en bas et dont la racine est en bas (pour une fois). Le séquent conclusion est donc la racine et les prémisses sont les feuilles.</p>
 
 - L'axiome n'est qu'une racine. 
-- Les éliminations de la conjonction, les introductions de la disjonctions, l'introduction de l'implication, l'introduction de la négation, l'affaiblissement et la contraction sont des arbres à une racine et une feuille.
+- Les éliminations de la conjonction, les introductions de la disjonction, l'introduction de l'implication, l'introduction de la négation, l'affaiblissement et la contraction sont des arbres à une racine et une feuille.
 - l'introduction de la conjonction, l'élimination de l'implication et l'élimination de la négation sont des arbres à une racine et deux feuilles.
-- l'élimination de la disjonction et un arbre à une racine et trois feuilles.
+- l'élimination de la disjonction est un arbre à une racine et trois feuilles.
 
 Pour construire une preuve, on va assembler ces arbres.
 
@@ -544,7 +544,7 @@ Rq&nbsp;: pour raccourcir les preuves, on va intégrer dorénavant les affaiblis
 
 <br>
 
-La notion de preuve telle qu'on l'a défini ne s'appuie que sur un enchaînement de règles pour aboutir à la conclusion. Il s'agit donc d'une conséquence **syntaxique** des formules en hypothèse.
+La notion de preuve telle qu'on l'a définie ne s'appuie que sur un enchaînement de règles pour aboutir à la conclusion. Il s'agit donc d'une conséquence **syntaxique** des formules en hypothèse.
 
 De la même manière qu'on a défini l'équivalence sémantique à partir de la notion de conséquence sémantique, on va définir une équivalence au sens syntaxique à partir des séquents.
 
@@ -651,7 +651,7 @@ $
 $
 <br>
 <br>
-Si une contradiction découle d'un jeu d'hypothèse auquel on ajoute la négation d'une formule, alors la formule est démontrable à partir du jeu d'hypothèses de départ.
+Si une contradiction découle d'un jeu d'hypothèses auquel on ajoute la négation d'une formule, alors la formule est démontrable à partir du jeu d'hypothèses de départ.
 </div>
 
 <br>
@@ -740,7 +740,7 @@ L'ajout de l'absurdité classique aux règles de la logique minimale n'est pas l
 
 <div id="preuve">
 
-Nous allons montré que les inclusions sont vérifiées dans les deux sens.
+Nous allons montrer que les inclusions sont vérifiées dans les deux sens.
 <ul>
 <li>Pour le sens $\supset$, c'est déjà fait.<br>
 En effet, on a démontré plus haut que chacun des axiomes ajoutés peut se démontrer en logique classique sans hypothèse supplémentaire.</li>
@@ -886,14 +886,14 @@ Si $\Gamma\vdash_{\\!c}\phi$ alors $\Gamma\models\phi$
 
 <div id="preuve">
 
-Une preuve étant une suite finie de séquent, on va procéder par induction sur la longueur de la preuve.<br>
+Une preuve étant une suite finie de séquents, on va procéder par induction sur la longueur de la preuve.<br>
 
 <ul>
 <li>Si la preuve a une longueur 1, le séquent ne peut être qu'un axiome de la forme $\phi\vdash\phi$.<br>
 Reste à montrer que $\phi\models\phi$ est vraie. Et c'est bien sûr le cas&nbsp;: par définition, $\phi\models\phi$ est vraie si $\phi$ est vraie dans chaque modèle où $\phi$ est vraie...<br>
 <li>On suppose maintenant la propriété vraie pour toutes les preuves de longueur $n$.<br>
 Une preuve de longueur $n+1$ est une preuve de longueur $n$ à laquelle on ajoute un séquent qui est soit un axiome (on revient au cas précédent), soit une des règles.<br>
-Il faut montrer que les règles ont été judicieusement choisies pour "conserver" la notion de conséquence sémantique entre els prémisses et la conclusion.<br>
+Il faut montrer que les règles ont été judicieusement choisies pour "conserver" la notion de conséquence sémantique entre les prémisses et la conclusion.<br>
 Ici, les prémisses sont bien des conséquences sémantiques par application de l'hypothèse d'induction (elles correspondent à des séquents de longueur $≤n$).<br>
 On doit maintenant vérifier sur chaque règle que le séquent conclusion est une conséquence sémantique des prémisses.<br>
 Montrons-le pour la règle d'élimination de l'implication
@@ -933,7 +933,7 @@ Si $\Gamma\models\phi$ alors $\Gamma\vdash_{\\!c}\phi$
 
 <div id="preuve">
 
-Soit $\phi$, une formule quelconque du calcul des propositions dont les variables sont parmis $\set{P_1,\ldots,P_n}$, et $\mathcal{M}$, un modèle possible de $\phi$. On note&nbsp;:
+Soit $\phi$, une formule quelconque du calcul des propositions dont les variables sont parmi $\set{P_1,\ldots,P_n}$, et $\mathcal{M}$, un modèle possible de $\phi$. On note&nbsp;:
 <ul>
 <li> $P_i^\mathcal{M} = P_i$ si $P_i$ est vraie dans $\mathcal{M}$,</li>
 <li> $P_i^\mathcal{M} = \neg P_i$ sinon.</li>
@@ -1096,7 +1096,7 @@ Soit $\set{P_1,\ldots,P_k}$ un ensemble de variables propositionnelles.<br>
 $\mathcal{K}=(\mathcal{T}_\mathcal{K},\Vdash)$ est un <b>modèle de Kripke</b> arborescent fini sur les variables $P\_1,\ldots,P\_k$ si&nbsp;:
 
 <ul>
-<li>$\mathcal{T}_\mathcal{K}$ est un arbre fini dont la <b>relation d'ancestralité</b> entre deux nœuds est noté $\alpha≤\beta$ ($\alpha$ est un ancêtre de $\beta$).</li>
+<li>$\mathcal{T}_\mathcal{K}$ est un arbre fini dont la <b>relation d'ancestralité</b> entre deux nœuds est notée $\alpha≤\beta$ ($\alpha$ est un ancêtre de $\beta$).</li>
 <br>
 <li>$\Vdash$ est une relation binaire appelée <b>relation de forcing</b> entre les nœuds de $\mathcal{T}_\mathcal{K}$ et les variables propositionnelles qui vérifie&nbsp;:<br>
 
@@ -1112,7 +1112,7 @@ $\mathcal{K}=(\mathcal{T}_\mathcal{K},\Vdash)$ est un <b>modèle de Kripke</b> a
 <br>
 
 {{%notice type="info" round="true"%}}
-Un modèle de Kripke avec un seul nœud peut être vu comme un modèle de la logique classique car les conditions de la relations de forcing ($\Vdash$) sont alors identiques à celles de la relation de vérité sémantique ($\models$).
+Un modèle de Kripke avec un seul nœud peut être vu comme un modèle de la logique classique car les conditions de la relation de forcing ($\Vdash$) sont alors identiques à celles de la relation de vérité sémantique ($\models$).
 {{%/notice%}}
 
 La relation de forcing fait en sorte que si une formule est vraie dans un nœud (qui représente un monde, comme on le verra en logique modale), alors elle reste vraie dans tous les nœuds accessibles depuis le nœud de départ (tous les mondes accessibles).
@@ -1199,7 +1199,7 @@ $\Vdash_i\phi$ ssi $\vdash_{\\!i} \phi$
 
 <br>
 
-En abandonnant la condition "pour tout nœud $\alpha$&nbsp;: $\alpha\not\Vdash\bot$" on obtient le modèle de Kripke adaptée à la logique minimale.
+En abandonnant la condition "pour tout nœud $\alpha$&nbsp;: $\alpha\not\Vdash\bot$" on obtient le modèle de Kripke adapté à la logique minimale.
 
 La condition de forcing de la négation devient alors $\alpha\Vdash\neg\phi$ ssi $\alpha\Vdash\phi\rightarrow\bot$ (pour tout nœud $\beta$ de $\mathcal{T}_\mathcal{K}$ tel que $\alpha≤\beta$, si $\beta\Vdash\phi$ alors $\beta\Vdash\bot$).
 
@@ -1223,7 +1223,7 @@ En effet, $\beta\not\Vdash P$ par définition, d'où $\beta\Vdash \neg P$. Mais 
 $\alpha\not\Vdash P$ et $\beta\not\Vdash P$ par définition, d'où $\beta\Vdash \neg P$. Mais $\alpha\not\Vdash \neg\neg P$ puisque $\alpha\not\Vdash\bot$. On a aussi $\alpha\not\Vdash\neg\neg P\rightarrow P$ puisque $\beta\Vdash \neg\neg P$ et $\beta\not\Vdash P$. Par conséquent, $\alpha\Vdash \neg(\neg\neg P\rightarrow P)$ puisqu'à la fois $\alpha\not\Vdash\neg\neg P \rightarrow P$ et $\beta\not\Vdash \neg\neg P\rightarrow P$. D'où $\alpha\not\Vdash\neg\neg(\neg\neg P\rightarrow P)$ puisqu'à la fois $\alpha\Vdash\neg(\neg\neg P \rightarrow P)$ et $\alpha\not\Vdash\bot$.
 
 Il existe donc un nœud du modèle qui ne force pas la formule $\neg\neg(\neg\neg P\rightarrow P)$. Le théorème de complétude de la logique minimale nous dit alors que $\neg\neg(\neg\neg P\rightarrow P)$ n'est pas un théorème de la logique minimale.<br>
-Or on a montré que cette formule était un théorème de la logique intuitionniste. Le séquent $\vdash\neg\neg(\neg\neg P\rightarrow P)$ est donc prouvable en logique intuitionniste mais pas en logique minimale. Cela prouve que la logique minimale forme un sous-ensemble strict de la logique intuitionniste, elle-même strictement inclue dans la logique classique.
+Or on a montré que cette formule était un théorème de la logique intuitionniste. Le séquent $\vdash\neg\neg(\neg\neg P\rightarrow P)$ est donc prouvable en logique intuitionniste mais pas en logique minimale. Cela prouve que la logique minimale forme un sous-ensemble strict de la logique intuitionniste, elle-même strictement incluse dans la logique classique.
 ![](/troislogiques.png?width=600px)
 
 <br>
@@ -1252,7 +1252,7 @@ Un <b>séquent</b> (noté $\Gamma\vdash\Delta$) est un couple où&nbsp;:
 <br>
 
 Intuitivement, un séquent $\Gamma\vdash\Delta$ où $\Gamma=\set{\phi_1,\ldots,\phi_n}$ et $\Delta=\set{\psi_1,\ldots,\psi_k}$ est interprété comme $\bigwedge_{1≤i≤n}\phi_i \vdash \bigvee_{1≤j≤k} \psi_j$. Une conjonction d'hypothèses prouve une disjonction de conclusions.<br>
-La conjonction vide d'hypothèse est interprété comme le vrai, alors que la disjonction vide de conclusion est interprétée comme le faux.<br>
+La conjonction vide d'hypothèses est interprétée comme le vrai, alors que la disjonction vide de conclusion est interprétée comme le faux.<br>
 $\vdash\Delta$ signifie donc $(\psi_1\lor\psi_2\lor\ldots\lor\psi_k)$, alors que le séquent $\Gamma\vdash$ signifie $(\phi_1\land\phi_2\land\ldots\land\phi_n)\rightarrow\bot$, c'est-à-dire $\neg(\phi_1\land\phi_2\land\ldots\land\phi_n)$.<br>
 Enfin $\vdash$, qui signifie "vrai implique faux", est interprété comme l'absurde (il correspond au séquent $\vdash\bot$ de la déduction naturelle).
 
@@ -1273,7 +1273,7 @@ $$
 $$
 </div>
 
-En déduction naturelle, cela correspond aux deux prémisses $\Gamma\vdash\phi$ et $\phi\vdash\psi$ desquels on déduit $\Gamma\vdash\psi$.<br>
+En déduction naturelle, cela correspond aux deux prémisses $\Gamma\vdash\phi$ et $\phi\vdash\psi$ desquelles on déduit $\Gamma\vdash\psi$.<br>
 La règle de coupure est souvent utilisée dans les preuves pour simplifier la déduction en introduisant des lemmes ou des théorèmes intermédiaires.<br>
 Étant donné qu'il n'y a plus de règles d'élimination, c'est la règle de coupure qui permet de rétablir la transitivité dans les déductions.
 
@@ -1364,7 +1364,7 @@ La <b>logique intuitionniste</b> est la version du calcul des séquents dont les
 <br>
 
 L'idée est d'obliger une preuve à indiquer spécifiquement la conclusion dérivée, sans ambiguïté.<br>
-Et la négation est interprétée comme l'absence de preuve puisque puisque c'est maintenant seulement $\phi\vdash\bot$ qui donne $\vdash\neg\phi$. Cela rend par conséquent l'utilisation de la négation à droite impossible dans la deuxième preuve alors qu'il n'y a pas de problème dans la première.
+Et la négation est interprétée comme l'absence de preuve puisque c'est maintenant seulement $\phi\vdash\bot$ qui donne $\vdash\neg\phi$. Cela rend par conséquent l'utilisation de la négation à droite impossible dans la deuxième preuve alors qu'il n'y a pas de problème dans la première.
 
 
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
@@ -1410,7 +1410,7 @@ $$
 $$
 </div>
 
-Cette règle est essentielle pour tenir compte de la manière dont nous raisonnons puisqu'il arrive très souvent que l'on utilise les conclusions d'un raisonnements antérieur comme hypothèses pour de nouvelles démonstrations (hypothèses que nous faisons disparaître sur la base du fait que nous les avons démontrées).
+Cette règle est essentielle pour tenir compte de la manière dont nous raisonnons puisqu'il arrive très souvent que l'on utilise les conclusions d'un raisonnement antérieur comme hypothèses pour de nouvelles démonstrations (hypothèses que nous faisons disparaître sur la base du fait que nous les avons démontrées).
 
 Mais si notre objectif est d'automatiser les preuves, de les algorithmiser, les règles de coupure deviennent un handicap.
 
@@ -1440,7 +1440,7 @@ Tout séquent est donc prouvable par utilisation des seuls axiomes, règles logi
 
 <br>
 
-"$\vdash$" signifie que le vrai entraîne le faux. Nous voilà plutôt soulagé d'être dans l'incapacité de prouver ce résultat qui ferait s'effondrer tout l'édifice logique patiemment construit. Si $\vdash$ était prouvable, alors par affaiblissement, tout séquent $\vdash\Delta$ le serait également...
+"$\vdash$" signifie que le vrai entraîne le faux. Nous voilà plutôt soulagés d'être dans l'incapacité de prouver ce résultat qui ferait s'effondrer tout l'édifice logique patiemment construit. Si $\vdash$ était prouvable, alors par affaiblissement, tout séquent $\vdash\Delta$ le serait également...
 
 
 <br>
