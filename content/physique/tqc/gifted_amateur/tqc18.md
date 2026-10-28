@@ -802,7 +802,7 @@ Les $\hat{c}\_{\boldsymbol{p}}$ décrivent les **électrons**, les $\hat{b}\_{\b
 
 </div>
 
-Le sens des fonctions $\theta$ est le suivant&nbsp;: les opérateurs électroniques n'agissent que <b>au-dessus</b> de la surface de Fermi, les opérateurs de trou uniquement <b>en dessous</b>. Détruire un électron sous la mer de Fermi, c'est créer un trou&nbsp;; d'où le $\hat{b}^\dagger$ qui apparaît dans la définition de $\hat{a}$.
+Le sens des fonctions $\theta$ est le suivant&nbsp;: les opérateurs électroniques n'agissent qu'<b>au-dessus</b> de la surface de Fermi, les opérateurs de trou uniquement <b>en dessous</b>. Détruire un électron sous la mer de Fermi, c'est créer un trou&nbsp;; d'où le $\hat{b}^\dagger$ qui apparaît dans la définition de $\hat{a}$.
 
 Réécrivons l'énergie cinétique dans ce langage&nbsp;:
 
