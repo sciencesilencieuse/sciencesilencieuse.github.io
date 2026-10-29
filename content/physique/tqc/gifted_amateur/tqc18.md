@@ -552,7 +552,7 @@ Le crochet correspond à la partie huître du diagramme&nbsp;; on l'appelle la *
 
 </div>
 
-<div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;">
 <img src="/tqc18selffock.png" style="box-shadow:none;background:none;">
 </div>
 
@@ -730,6 +730,11 @@ $
 
 Diagrammatiquement, ces deux potentiels effectifs s'obtiennent en refermant deux des quatre pattes du vertex&nbsp;: en recollant deux pattes du même côté on fabrique le <b>têtard</b>, en recollant deux pattes opposées on fabrique l'<b>huître</b>.
 
+
+<div style="position:relative;margin-left:auto;margin-right:auto;width:600px;max-width:100%;">
+<img src="/tethuitre.png" style="box-shadow:none;background:none;">
+</div>
+
 <div style="position:relative;margin-left:auto;margin-right:auto;width:600px;max-width:100%;">
 <img src="/tqc18champmoyen.png" style="box-shadow:none;background:none;">
 </div>
@@ -770,9 +775,11 @@ $
 
 </div>
 
-<br>
+<div style="position:relative;margin-left:auto;margin-right:auto;width:500px;max-width:100%;">
+<img src="/tracep.png" style="box-shadow:none;background:none;">
+</div>
 
-Cette courbe est tracée sur la figure de la fonction $F$ (partie basse)&nbsp;: la parabole libre y est déformée, et la déformation devient brutale au voisinage de $p\_{\mathrm{F}}$, là où la pente de $F$ diverge.
+On constate sur la courbe représentative que la parabole libre y est déformée, et la déformation devient brutale au voisinage de $p\_{\mathrm{F}}$, là où la pente de $F$ diverge.
 
 Il faut insister lourdement sur un point&nbsp;: **ce n'est pas ce qu'on mesure dans un vrai métal**. L'approximation Hartree-Fock capture mal la physique, et des corrections d'ordre supérieur sont indispensables. Pour les organiser, il va falloir sortir la machinerie complète&nbsp;: propagateurs et règles de Feynman.
 
@@ -895,7 +902,7 @@ C'est la même structure que pour des particules scalaires, au signe près. Comm
 
 <p style="text-align:center;">
 $\displaystyle
-\tilde{G}\_0(p) = \frac{\mathrm{i}}{E-E_{\boldsymbol{p}}+\mathrm{i}\delta_{\boldsymbol{p}}} \quad$
+\tilde{G}_0(p) = \frac{\mathrm{i}}{E-E_{\boldsymbol{p}}+\mathrm{i}\delta_{\boldsymbol{p}}} \quad$
 avec
 $\displaystyle
 \quad \delta_{\boldsymbol{p}} = \begin{cases}+\varepsilon & |\boldsymbol{p}| > p_{\mathrm{F}}\\ -\varepsilon & |\boldsymbol{p}| < p_{\mathrm{F}}\end{cases}
@@ -925,9 +932,9 @@ Toute la physique de la mer de Fermi est encapsulée dans ce signe&nbsp;: il dit
 
 <br>
 
-La dernière règle est la seule qui soit propre à ce problème, et elle mérite qu'on s'y arrête. Elle est nécessaire pour les deux morceaux de diagrammes suivants&nbsp;:
+La dernière règle est la seule qui soit propre à ce problème. Elle est nécessaire pour les deux morceaux de diagrammes suivants&nbsp;:
 
-<div style="position:relative;margin-left:auto;margin-right:auto;width:250px;max-width:100%;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;">
 <img src="/tqc18lignesinstant.png" style="box-shadow:none;background:none;">
 </div>
 
@@ -945,7 +952,7 @@ $
 
 Les diagrammes de vide d'ordre le plus bas sont précisément le double têtard et l'huître&nbsp;: la ruse de champ moyen, qui nous avait donné l'approximation Hartree-Fock, correspond donc exactement aux termes du <b>premier ordre</b> du développement perturbatif de l'énergie de l'état fondamental. Les ordres suivants fournissent les diagrammes plus élaborés ci-dessous.
 
-<div style="position:relative;margin-left:auto;margin-right:auto;width:450px;max-width:100%;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;">
 <img src="/tqc18diagvide.png" style="box-shadow:none;background:none;">
 </div>
 
@@ -965,7 +972,7 @@ $\displaystyle
 $
 </p>
 
-<div style="position:relative;margin-left:auto;margin-right:auto;width:550px;max-width:100%;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:850px;max-width:100%;">
 <img src="/tqc181pi.png" style="box-shadow:none;background:none;">
 </div>
 
@@ -1010,7 +1017,14 @@ $\displaystyle
 $
 </p>
 
-dont la structure de pôles est celle décrite plus haut. Fermer le contour dans le demi-plan supérieur capture tous les pôles des états $|\boldsymbol{k}|<p\_{\mathrm{F}}$&nbsp;; le fermer dans le demi-plan inférieur capturerait ceux des états $|\boldsymbol{k}|>p\_{\mathrm{F}}$. Le facteur de convergence choisit pour nous&nbsp;: dans le demi-plan inférieur, où la partie imaginaire de $E$ devient grande et négative, $\mathrm{e}^{\mathrm{i}E0^+}$ diverge&nbsp;; dans le demi-plan supérieur, il s'annule quand le contour devient très grand. On ferme donc par le haut, et l'on récolte les pôles de la mer de Fermi, chacun de résidu $\mathrm{i}$&nbsp;:
+dont la structure de pôles est celle décrite plus haut. Fermer le contour dans le demi-plan supérieur capture tous les pôles des états $|\boldsymbol{k}|<p\_{\mathrm{F}}$&nbsp;; le fermer dans le demi-plan inférieur capturerait ceux des états $|\boldsymbol{k}|>p\_{\mathrm{F}}$. Le facteur de convergence choisit pour nous&nbsp;: dans le demi-plan inférieur, où la partie imaginaire de $E$ devient grande et négative, $\mathrm{e}^{\mathrm{i}E0^+}$ diverge&nbsp;; dans le demi-plan supérieur, il s'annule quand le contour devient très grand. 
+
+
+<div style="position:relative;margin-left:auto;margin-right:auto;width:400px;max-width:100%;">
+<img src="/contourfermi.png" style="box-shadow:none;background:none;">
+</div>
+
+On ferme donc par le haut, et l'on récolte les pôles de la mer de Fermi, chacun de résidu $\mathrm{i}$&nbsp;:
 
 <p style="text-align:center;">
 $\displaystyle
@@ -1042,15 +1056,9 @@ $
 
 </div>
 
-<div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;">
-<img src="/tqc18contour.png" style="box-shadow:none;background:none;">
-</div>
 
 On n'a, pour l'instant, rien appris de neuf&nbsp;: la théorie des propagateurs redonne exactement Hartree-Fock. Sa supériorité est ailleurs&nbsp;: elle nous dit <b>quoi faire</b> de la self-énergie, à savoir renormaliser le propagateur en sommant à l'infini les insertions d'huîtres.
 
-<div style="position:relative;margin-left:auto;margin-right:auto;width:400px;max-width:100%;">
-<img src="/tqc18sommefock.png" style="box-shadow:none;background:none;">
-</div>
 
 ### La catastrophe de la masse effective
 
@@ -1123,7 +1131,7 @@ On ignore ici les matériaux à fermions lourds, dans lesquels $m^{*}$ peut atte
 
 L'étape logique serait d'évaluer les contributions à la self-énergie contenant <b>deux</b> ondulations d'interaction, dont le diagramme de la **paire-bulle**.
 
-<div style="position:relative;margin-left:auto;margin-right:auto;width:250px;max-width:100%;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:200px;max-width:100%;">
 <img src="/tqc18pairbubble.png" style="box-shadow:none;background:none;">
 </div>
 
@@ -1137,7 +1145,7 @@ Mauvaise nouvelle&nbsp;: son amplitude <b>diverge à petit $\boldsymbol{q}$</b>,
 
 Pour un gaz d'électrons de forte densité, la correction la plus importante à Hartree-Fock est la correction d'ordre le plus bas à l'ondulation d'interaction. Pour des raisons historiques, elle s'appelle l'**approximation des phases aléatoires** (RPA, <i>random phase approximation</i>), et elle a été formulée par David Bohm et David Pines.
 
-{{%notice type="note" title="Aparté&nbsp;: d'où vient ce nom bizarre&nbsp;?" round="true"%}}
+{{%notice type="note" title="Aparté: d'où vient ce nom bizarre ?" round="true"%}}
 Le caractère aléatoire d'une phase n'a aucun rôle dans la présentation adoptée ici. Le nom provient d'un traitement alternatif, dans lequel on montre qu'un terme $\sum\_l \mathrm{e}^{\mathrm{i}\boldsymbol{q}\cdot\boldsymbol{x}\_l}$, où $\boldsymbol{x}\_l$ repère la position d'un électron, est négligeable&nbsp;: si les $\boldsymbol{x}\_l$ sont répartis sur un grand domaine, les phases sont distribuées au hasard et la somme s'annule statistiquement.
 {{%/notice%}}
 
@@ -1159,7 +1167,7 @@ $
 
 </div>
 
-<div style="position:relative;margin-left:auto;margin-right:auto;width:550px;max-width:100%;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:750px;max-width:100%;">
 <img src="/tqc18diagpi.png" style="box-shadow:none;background:none;">
 </div>
 
@@ -1175,7 +1183,7 @@ $
 
 </div>
 
-<div style="position:relative;margin-left:auto;margin-right:auto;width:450px;max-width:100%;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:800px;max-width:100%;">
 <img src="/tqc18sommebulles.png" style="box-shadow:none;background:none;">
 </div>
 
@@ -1299,7 +1307,7 @@ $\displaystyle
 $
 </p>
 
-<div style="position:relative;margin-left:auto;margin-right:auto;width:350px;max-width:100%;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;">
 <img src="/tqc18veffq.png" style="box-shadow:none;background:none;">
 </div>
 
@@ -1337,7 +1345,7 @@ $
 
 </div>
 
-<div style="position:relative;margin-left:auto;margin-right:auto;width:350px;max-width:100%;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:300px;max-width:100%;">
 <img src="/tqc18friedel.png" style="box-shadow:none;background:none;">
 </div>
 
@@ -1419,7 +1427,7 @@ Il vaut la peine de mesurer le chemin parcouru&nbsp;: partis d'un hamiltonien à
 
 Rappelons pourquoi on a fait ce détour&nbsp;: corriger l'énergie d'excitation $E\_{\boldsymbol{p}}$. Il suffit maintenant d'insérer l'interaction renormalisée (la bulle grisée des figures précédentes) dans nos diagrammes. L'huître corrigée devient&nbsp;:
 
-<div style="position:relative;margin-left:auto;margin-right:auto;width:550px;max-width:100%;">
+<div style="position:relative;margin-left:auto;margin-right:auto;width:800px;max-width:100%;">
 <img src="/tqc18oysterrpa.png" style="box-shadow:none;background:none;">
 </div>
 
@@ -1452,6 +1460,10 @@ Les enseignements de la RPA permettent enfin de dessiner la relation de dispersi
 Deux régions bien distinctes. À basse énergie, les excitations sont des paires quasiélectron-quasitrou&nbsp;; à plus haute énergie apparaît la branche collective des plasmons.
 
 Le trait le plus remarquable est que les excitations de basse énergie ne forment pas une courbe mais un **continuum de largeur $2p\_{\mathrm{F}}$**. La raison est purement géométrique&nbsp;: exciter le système consiste à promouvoir un électron depuis l'intérieur d'une sphère de Fermi de <b>diamètre</b> $2p\_{\mathrm{F}}$. Pour une énergie d'excitation donnée, l'impulsion transférée peut donc valoir $|\boldsymbol{p}|$ si l'on part du côté le plus proche de la surface de Fermi, ou environ $|\boldsymbol{p}|+2p\_{\mathrm{F}}$ si l'on part du côté le plus éloigné, et tout ce qui se trouve entre les deux.
+
+<div style="position:relative;margin-left:auto;margin-right:auto;width:500px;max-width:100%;">
+<img src="/2pf.png" style="box-shadow:none;background:none;">
+</div>
 
 <br>
 

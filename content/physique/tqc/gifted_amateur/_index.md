@@ -194,6 +194,27 @@ Notes de lecture du livre <i>Quantum field theory for the gifted amateur</i> de 
    <tr>
     <td style="border-top:none;"><a href="./tqc17/#le-modèle-de-weinbergsalam">Le modèle de Weinberg-Salam</a></td>
     </tr>
+       <th rowspan="7"><a href="./tqc18/">Partie&nbsp;18&nbsp;:</a></th>
+    <td style="border-bottom:none;"><a href="./tqc18/#le-cadre-des-électrons-dans-une-boîte">Des électrons dans une boîte</a></td>
+    </tr>
+     <tr>
+    <td style="border-top:none;border-bottom:none;"><a href="./tqc18/#la-théorie-de-champ-moyen">La théorie de champ moyen</a></td>
+    </tr>
+    <tr>
+    <td style="border-top:none;border-bottom:none;"><a href="./tqc18/#lénergie-hartree-fock-dun-métal">L'énergie Hartree-Fock d'un métal</a></td>
+    </tr>
+    <tr>
+    <td style="border-top:none;border-bottom:none;"><a href="./tqc18/#les-excitations-en-champ-moyen">Les excitations en champ moyen</a></td>
+    </tr>
+    <tr>
+    <td style="border-top:none;border-bottom:none;"><a href="./tqc18/#électrons-et-trous">Électrons et trous</a></td>
+    </tr>
+     <tr>
+    <td style="border-top:none;border-bottom:none;"><a href="./tqc18/#propagateurs-et-règles-de-feynman-du-métal">Propagateurs et règles de Feynman du métal</a></td>
+    </tr>
+	 <tr>
+    <td style="border-top:none;"><a href="./tqc18/#lapproximation-des-phases-aléatoires">L'approximation des phases aléatoires</a></td>
+    </tr>
 </table></div>
 
 <h2 style="text-align:left !important;"> Notations</h2>
