@@ -142,7 +142,7 @@ La rétrocausalité est une autre possibilité pour expliquer l'influence instan
 <img src="/backtofuture.png" style="box-shadow:none;background:none;">
 </div>
 
-On peut montrer semble-t-il ([Price 2010](https://arxiv.org/pdf/1002.0906), [Pusey et Leifer, 2017](https://fr.wikipedia.org/wiki/Paradoxe_du_grand-père#:~:text=Le%20paradoxe%20du%20grand%2Dpère,dernier%20ait%20eu%20des%20enfants.)) que toute interprétation de la mécanique quantique à la fois temporellement symétrique et locale se doit de faire intervenir la rétrocausalité. Remarquons que la mécanique classique est elle-même temporellement symétrique et locale et pourtant non rétrocausale. C'est l'aspect discret de la mécanique quantique qui semble être l'ingrédient imposant l'existence de signaux remontant le temps.
+On peut montrer semble-t-il ([Price 2010](https://arxiv.org/pdf/1002.0906), [Pusey et Leifer, 2017](https://arxiv.org/pdf/1607.07871)) que toute interprétation de la mécanique quantique à la fois temporellement symétrique et locale se doit de faire intervenir la rétrocausalité. Remarquons que la mécanique classique est elle-même temporellement symétrique et locale et pourtant non rétrocausale. C'est l'aspect discret de la mécanique quantique qui semble être l'ingrédient imposant l'existence de signaux remontant le temps.
 
 L'[interprétation transactionnelle](https://arxiv.org/pdf/2302.06748) de la mécanique quantique proposée par John Cramer est un exemple de théorie utilisant la rétrocausalité. Tout évènement quantique y est décrit comme une onde stationnaire résultant de l'interaction (poignée de main de Wheeler-Feynman[^1]) entre une onde suivant la particule (en retard dans le temps) et une onde la précédant (en avance dans le temps).
 

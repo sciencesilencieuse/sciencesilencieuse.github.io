@@ -784,7 +784,7 @@ La contribution de Feynman à la physique est à la confluence de cette longue �
 <img src="/portraitfeynman.png" style="box-shadow:none;background:none;">
 </div>
 
-Feynman semble pourtant à contre-courant du lent cheminement des particules vers les ondes. En effet, pour lui, tout est particule, même la lumière. Il écrit ainsi dans *QED: The Strange Theory of Light and Matter* (une introduction tout public à l'électrodynamique quantique de laquelle j'ai tiré [ce texte](../../tqc/qelight) il y a très longtemps)&nbsp;:
+Feynman semble pourtant à contre-courant du lent cheminement des particules vers les ondes. En effet, pour lui, tout est particule, même la lumière. Il écrit ainsi dans *QED: The Strange Theory of Light and Matter* (une introduction tout public à l'électrodynamique quantique de laquelle j'ai tiré [ce texte](../../tqc/qed-light/) il y a très longtemps)&nbsp;:
 > I want to emphasize to you that light comes in this form – particles. It is very important to know light behaves like particles, especially for those of you who have gone to school where you were probably told something about light behaving like waves. I’m going to tell you the way it does behave like particles.
 
  Néanmoins, ses particules ont des propriétés essentiellement ondulatoires. Selon Feynman, lorsqu'une particule emprunte un chemin pour aller d'un point I à un point F, elle emporte avec elle une phase qui oscille tout le long du chemin. Que vaut la phase finale pour un chemin entier&nbsp;? $\frac{S}{\hbar}$ où l'action $S$ est calculée sur le chemin considéré&nbsp;! 

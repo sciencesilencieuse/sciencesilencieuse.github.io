@@ -37,4 +37,6 @@ Fonctionnement simplifié d'un ordinateur
 
 Histoire, exemples et dangers
 
+[**Jeux d'accessibilité sur un graphe**](./jeux/)
+
 

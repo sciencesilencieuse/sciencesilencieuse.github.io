@@ -419,7 +419,7 @@ Un **groupe** est un ensemble $G$ muni d'une loi de composition interne $\bullet
 </div>
 
 {{%notice type="note" round="true"%}}
-[De vieilles notes de lecture d'un autre chouette livre](https://sciencesilencieuse.github.io/maths/groupes/) pour en savoir un peu plus sur les groupes discrets.
+[De vieilles notes de lecture d'un autre chouette livre](/maths/algebre/groupes/) pour en savoir un peu plus sur les groupes discrets.
 {{%/notice%}}
 
 L'opérateur de translation peut aussi être vu comme la transformation d'un opérateur&nbsp;:

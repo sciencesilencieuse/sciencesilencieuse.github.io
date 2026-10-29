@@ -37,7 +37,7 @@ weight = 3
 Quelle est la probabilité que deux élèves d'une classe aient un anniversaire le même jour&nbsp;?
 
 Lorsqu'on n'a jamais fait le calcul ou entendu parler du résultat, notre intuition nous amène généralement à soupçonner une probabilité bien plus petite qu'elle ne l'est.<br>
-C'est d'ailleurs assez fréquent que notre intuition soit aux fraises lorsqu'il s'agit d'estimer une probabilité ou expliquer des statistiques (voir [le paradoxe de Simpson](../stat/#paradoxe-de-simpson)).
+C'est d'ailleurs assez fréquent que notre intuition soit aux fraises lorsqu'il s'agit d'estimer une probabilité ou expliquer des statistiques (voir [le paradoxe de Simpson](../../stat/simpson)).
 
 
 {{< youtube-plus id="1Wpajb8Dk04" ratio="16x9" width="800px" rounded=true shadow=true >}}

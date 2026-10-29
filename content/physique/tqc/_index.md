@@ -55,7 +55,7 @@ La théorie quantique des champs (TQC) est considérée à ce jour comme la meil
 <br>
 <li><a href="./gifted_amateur"><b>Notes de lecture</b></a> du livre <i>Quantum field theory for the gifted amateur</i> de Thomas Lancaster et Stephen Blundell.</li>
 <br>
-<li><a href="./qed"><b>Vieux texte</b></a> qui reprend des idées développées dans le petit livre grand public de Feynman sur l'électrodynamique quantique <i>QED: The Strange Theory of Light and Matter</i>.</li>
+<li><a href="./qed-light/"><b>Vieux texte</b></a> qui reprend des idées développées dans le petit livre grand public de Feynman sur l'électrodynamique quantique <i>QED: The Strange Theory of Light and Matter</i>.</li>
 <br>
 <li><a href="https://www.quantamagazine.org/a-new-map-of-the-standard-model-of-particle-physics-20201022/"><b>Chouette article</b></a> de <i>Quanta Magazine</i> qui résume et illustre le <b>modèle standard</b> des particules dont la structure repose sur la théorie quantique des champs&nbsp;; l'état actuel de notre compréhension du monde.</li>
 <br>
