@@ -489,7 +489,7 @@ Comment expliquer alors que dans la salle de classe, le filet d'eau soit notable
 
 <br>
 
-## Le vrai coupable : la conduction ionique (influence électrostatique)
+## Le vrai coupable : la conduction ionique
 
 Ce que l'explication «&nbsp;chimiste&nbsp;» oublie complètement, c'est que l'eau qui sort du robinet (et même l'eau distillée ou ultra-pure) **n'est pas un isolant parfait, mais un conducteur électrolytique** relié à la terre par la tuyauterie métallique (ou le réservoir)&nbsp;!
 
