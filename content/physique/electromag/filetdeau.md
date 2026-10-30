@@ -5,6 +5,10 @@ weight = 2
 +++
 
 <style>
+  #grosseformule
+  {
+   overflow-x:auto;
+  }
  #correc
   {
     color: #006C65;
