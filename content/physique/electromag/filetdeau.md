@@ -798,12 +798,14 @@ $$
 
 **D'où vient la formule $\vec{E}\_{\text{dép}} = -\frac{\vec{P}}{2\varepsilon\_0}$&nbsp;?** On la retrouve très simplement par **superposition**&nbsp;:
 
-1. **Champ interne d'un cylindre uniformément chargé en volume**&nbsp;: considérons d'abord un cylindre infini d'axe $Oz$ et de rayon $a$ portant une densité volumique de charge uniforme $+\rho\_0$. Par symétrie, le champ électrostatique en un point intérieur $M$ situé à la distance $r < a$ de l'axe est radial&nbsp;: $\vec{E}\_+(M) = E\_+(r)\vec{u}\_r$. Le théorème de Gauss appliqué à un cylindre coaxial de rayon $r$ et de hauteur $h$ donne&nbsp;:
-   $$2\pi r h \\, E\_+(r) = \frac{Q\_{\text{int}}}{\varepsilon\_0} = \frac{\rho\_0 (\pi r^2 h)}{\varepsilon\_0} \quad \Longrightarrow \quad \vec{E}\_+(M) = \frac{\rho\_0}{2\varepsilon\_0}\overrightarrow{OM}$$
+1. **Champ interne d'un cylindre uniformément chargé en volume**&nbsp;: considérons d'abord un cylindre infini d'axe $Oz$ et de rayon $a$ portant une densité volumique de charge uniforme $+\rho\_0$. Par symétrie, le champ électrostatique en un point intérieur $M$ situé à la distance $r < a$ de l'axe est radial&nbsp;: $\vec{E}\_+(M) = E\_+(r)\vec{u}\_r$. Le théorème de Gauss appliqué à un cylindre coaxial de rayon $r$ et de hauteur $h$ donne&nbsp;:<br>
+   $\displaystyle 2\pi r h \\, E\_+(r) = \frac{Q\_{\text{int}}}{\varepsilon\_0} = \frac{\rho\_0 (\pi r^2 h)}{\varepsilon\_0} \quad \Longrightarrow \quad \vec{E}\_+(M) = \frac{\rho\_0}{2\varepsilon\_0}\overrightarrow{OM}$<br>
    (où $O$ est le projeté de $M$ sur l'axe. On voit que le facteur $\frac{1}{2}$ provient directement du rapport entre l'aire du disque $\pi r^2$ et le périmètre $2\pi r$ en géométrie cylindrique 2D, là où la géométrie sphérique 3D aurait donné $\frac{\frac{4}{3}\pi r^3}{4\pi r^2} = \frac{1}{3}$).
+   
 2. **Superposition de deux cylindres décalés**&nbsp;: un cylindre d'eau polarisé transversalement avec une polarisation $\vec{P}$ s'obtient en superposant un cylindre d'ions/noyaux positifs ($+\rho\_0$, d'axe passant par $O\_+$) et un cylindre de nuages électroniques négatifs ($-\rho\_0$, d'axe passant par $O\_-$) légèrement décalés l'un par rapport à l'autre d'un vecteur microscopique $\overrightarrow{O\_- O\_+} = \vec{\delta}$ tel que $\vec{P} = \rho\_0 \vec{\delta}$.
-3. Par théorème de superposition, le champ électrique créé en tout point intérieur $M$ par l'ensemble de ces charges liées est alors **parfaitement uniforme** et vaut&nbsp;:
-   $$\vec{E}\_{\text{dép}}(M) = \frac{\rho\_0}{2\varepsilon\_0}\overrightarrow{O\_+ M} - \frac{\rho\_0}{2\varepsilon\_0}\overrightarrow{O\_- M} = \frac{\rho\_0}{2\varepsilon\_0}\left(\overrightarrow{O\_+ M} + \overrightarrow{M O\_-}\right) = \frac{\rho\_0}{2\varepsilon\_0}\overrightarrow{O\_+ O\_-} = -\frac{\rho\_0 \vec{\delta}}{2\varepsilon\_0} = -\frac{\vec{P}}{2\varepsilon\_0}$$
+
+3. Par théorème de superposition, le champ électrique créé en tout point intérieur $M$ par l'ensemble de ces charges liées est alors **parfaitement uniforme** et vaut&nbsp;:<br>
+   $\displaystyle\vec{E}\_{\text{dép}}(M) = \frac{\rho\_0}{2\varepsilon\_0}\overrightarrow{O\_+ M} - \frac{\rho\_0}{2\varepsilon\_0}\overrightarrow{O\_- M} = \frac{\rho\_0}{2\varepsilon\_0}\left(\overrightarrow{O\_+ M} + \overrightarrow{M O\_-}\right) = \frac{\rho\_0}{2\varepsilon\_0}\overrightarrow{O\_+ O\_-} = -\frac{\rho\_0 \vec{\delta}}{2\varepsilon\_0} = -\frac{\vec{P}}{2\varepsilon\_0}$
 
 </div>
 
@@ -970,15 +972,17 @@ $$
 
 **Détail du raisonnement donnant $C\_\ell$, $E$ et $|\lambda\_q|$&nbsp;:**
 
-1. **Champ propre créé par le cylindre d'eau chargé (théorème de Gauss)**&nbsp;: une fois que la règle a induit la charge linéique $\lambda\_q$ sur le filet d'eau de rayon $a$, les lignes de champ au voisinage du fin filet ($\rho \ge a$) convergent vers ce cylindre conducteur. Le théorème de Gauss appliqué à un cylindre coaxial de rayon $\rho$ et de hauteur $h$ donne l'expression radiale du champ au voisinage du filet&nbsp;:
-   $$2\pi \rho h \\, E(\rho) = \frac{Q\_{\text{int}}}{\varepsilon\_0} = \frac{|\lambda\_q| h}{\varepsilon\_0} \quad \Longrightarrow \quad E(\rho) = \frac{|\lambda\_q|}{2\pi\varepsilon\_0 \rho}$$
-2. **Calcul du potentiel par intégration radiale du champ ($E(\rho) = -\frac{\mathrm{d}V}{\mathrm{d}\rho}$)**&nbsp;: pour que le filet d'eau reste au potentiel de la terre ($V = 0$ en $\rho = a$) alors que la règle impose un potentiel de l'ordre de $|V\_0|$ à la distance $\rho = r$, l'intégrale radiale du champ entre $\rho = a$ et $\rho = r$ doit compenser exactement la tension $|V\_0|$&nbsp;:
-   $$|V\_0| \approx \int\_a^r E(\rho)\\,\mathrm{d}\rho = \frac{|\lambda\_q|}{2\pi\varepsilon\_0}\int\_a^r \frac{\mathrm{d}\rho}{\rho} = \frac{|\lambda\_q|}{2\pi\varepsilon\_0}\ln\left(\frac{r}{a}\right)$$
+1. **Champ propre créé par le cylindre d'eau chargé (théorème de Gauss)**&nbsp;: une fois que la règle a induit la charge linéique $\lambda\_q$ sur le filet d'eau de rayon $a$, les lignes de champ au voisinage du fin filet ($\rho \ge a$) convergent vers ce cylindre conducteur. Le théorème de Gauss appliqué à un cylindre coaxial de rayon $\rho$ et de hauteur $h$ donne l'expression radiale du champ au voisinage du filet&nbsp;:<br>
+   $\displaystyle 2\pi \rho h \\, E(\rho) = \frac{Q\_{\text{int}}}{\varepsilon\_0} = \frac{|\lambda\_q| h}{\varepsilon\_0} \quad \Longrightarrow \quad E(\rho) = \frac{|\lambda\_q|}{2\pi\varepsilon\_0 \rho}$
+   
+2. **Calcul du potentiel par intégration radiale du champ ($E(\rho) = -\frac{\mathrm{d}V}{\mathrm{d}\rho}$)**&nbsp;: pour que le filet d'eau reste au potentiel de la terre ($V = 0$ en $\rho = a$) alors que la règle impose un potentiel de l'ordre de $|V\_0|$ à la distance $\rho = r$, l'intégrale radiale du champ entre $\rho = a$ et $\rho = r$ doit compenser exactement la tension $|V\_0|$&nbsp;:<br>
+   $\displaystyle |V\_0| \approx \int\_a^r E(\rho)\\,\mathrm{d}\rho = \frac{|\lambda\_q|}{2\pi\varepsilon\_0}\int\_a^r \frac{\mathrm{d}\rho}{\rho} = \frac{|\lambda\_q|}{2\pi\varepsilon\_0}\ln\left(\frac{r}{a}\right)$
+   
 3. **Capacité linéique et charge induite par le champ $E$**&nbsp;:
    * En identifiant $|\lambda\_q| = C\_\ell |V\_0|$ dans la relation précédente, on obtient la capacité linéique du système&nbsp;:
      $$C\_\ell = \frac{|\lambda\_q|}{|V\_0|} \approx \frac{2\pi\varepsilon\_0}{\ln(r/a)}$$
-   * De même, pour que ce cylindre d'eau chargé raccorde son champ propre $E(\rho) = \frac{|\lambda\_q|}{2\pi\varepsilon\_0 \rho}$ à l'ordre de grandeur du champ extérieur $E$ imposé par la règle à l'échelle de distance $\rho \sim r$, la charge linéique $\lambda\_q$ fabriquée par influence doit vérifier&nbsp;:
-     $$E \sim \frac{|\lambda\_q|}{2\pi\varepsilon\_0 r} \approx \frac{|V\_0|}{r \ln(r/a)} \quad \Longleftrightarrow \quad |\lambda\_q| \approx 2\pi\varepsilon\_0 E \\, r$$
+   * De même, pour que ce cylindre d'eau chargé raccorde son champ propre $E(\rho) = \frac{|\lambda\_q|}{2\pi\varepsilon\_0 \rho}$ à l'ordre de grandeur du champ extérieur $E$ imposé par la règle à l'échelle de distance $\rho \sim r$, la charge linéique $\lambda\_q$ fabriquée par influence doit vérifier&nbsp;:<br>
+     $\displaystyle E \sim \frac{|\lambda\_q|}{2\pi\varepsilon\_0 r} \approx \frac{|V\_0|}{r \ln(r/a)} \quad \Longleftrightarrow \quad |\lambda\_q| \approx 2\pi\varepsilon\_0 E \\, r$<br>
      (Numériquement, avec $r = \pu{2 cm}$ et $a = \pu{1 mm}$, le facteur logarithmique vaut $\ln(r/a) = \ln(20) \approx 3,0$ : un potentiel $|V\_0| \approx \pu{6 kV}$ permet de retrouver la bonne valeur du champ $E \approx \frac{\pu{6000 V}}{\pu{0,02 m} \times 3} = \pu{1e5 V/m}$).
 
 </div>
