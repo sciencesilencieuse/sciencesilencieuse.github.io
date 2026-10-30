@@ -482,14 +482,14 @@ $$
 
 </div>
 
-Pas ultra spectaculaire...
+Pas vraiment spectaculaire, et pourtant...
 
-
-Et pourtant...
 
 <div style="text-align: center; margin: 24px auto;">
   <video src="/filetdeau_boomerang.mp4" autoplay loop muted playsinline style="width: 200px; max-width: 100%; border-radius: 14px; box-shadow: 0 6px 20px rgba(15,23,42,0.12); display: inline-block;"></video>
 </div>
+
+Qui donc alors produit cette déviation&nbsp;?
 
 
 ## Le vrai coupable : la conduction ionique
@@ -592,12 +592,14 @@ On remarque d'ailleurs que le rapport entre la vraie accélération ionique $a_{
 
 Sur un temps de vol total de $\pu{0,15 s}$ jusqu'au bas de l'évier, la déviation latérale atteint alors&nbsp;:
 
+<div id="theo">
 <div id="grosseformule">
 
 $$
 \Delta x_{\text{ion}} = \frac{1}{2} a_{\text{ion}} t^2 \approx 0,5 \times 3,5 \times (0,15)^2 \approx \pu{4 cm}
 $$
 
+</div>
 </div>
 
 On retrouve enfin quelque chose de compatible avec l'observation&nbsp;!
