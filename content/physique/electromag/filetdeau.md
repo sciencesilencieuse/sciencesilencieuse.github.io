@@ -88,7 +88,7 @@ C'est l'une des expériences les plus célèbres des cours de physique-chimie au
 
 Dans la quasi-totalité des manuels scolaires, cette expérience (réalisée pour la première fois en 1741 par Jean-Théophile Desaguliers) est présentée comme la preuve expérimentale directe du **caractère polaire de la molécule d'eau** ($\text{H}_2\text{O}$). L'histoire racontée est séduisante&nbsp;: les molécules d'eau étant de petits dipôles électriques permanents, elles s'orienteraient dans le champ électrique créé par la tige et seraient attirées vers les zones de champ fort.
 
-Il n'y a qu'un seul problème avec cette explication&nbsp;: **elle est physiquement fausse** (d'environ trois ordres de grandeur)&nbsp;!
+Il n'y a qu'un seul problème avec cette explication&nbsp;: **elle est physiquement fausse** (de plus de deux ordres de grandeur)&nbsp;!
 
 Comment le vérifier par un calcul d'ordres de grandeur à partir des lois de l'électrostatique et de la physique statistique, et quel est le véritable mécanisme à l'œuvre&nbsp;?
 
@@ -1015,13 +1015,13 @@ $$
 
 </div>
 
-Pour un filet d'eau millimétrique situé à $2$ ou $\pu{3 cm}$ de la tige, la force de Coulomb sur les ions libres induits l'emporte donc systématiquement d'un facteur $400$ à $1000$ (**près de trois ordres de grandeur**) sur la force dipolaire&nbsp;!
+Pour un filet d'eau millimétrique situé à $1$ ou $\pu{2 cm}$ de la tige, la force de Coulomb sur les ions libres induits l'emporte donc systématiquement d'un facteur $100$ à $1000$ (**deux à trois ordres de grandeur**) sur la force dipolaire&nbsp;!
 
 </div>
 
 <br>
 
-Appliquons maintenant notre cinématique de chute libre en deux temps avec cette accélération $a\_{\text{ion}} \approx \pu{3,5 m/s2}$&nbsp;:
+Appliquons maintenant notre cinématique de chute libre en deux temps avec cette accélération $a\_{\text{ion}} \approx \pu{3,5 m/s2}$ (pour la règle placée à $r = \pu{2 cm}$)&nbsp;:
 
 * **Pendant la traversée de la zone d'interaction** ($h = \pu{5 cm}$, durée $\Delta t\_1 \approx \pu{0,04 s}$ à la vitesse verticale moyenne $v\_{z,1} \approx \pu{1,2 m/s}$)&nbsp;: le filet s'incurve de $\Delta x\_1 = \frac{1}{2} a\_{\text{ion}} (\Delta t\_1)^2 \approx \pu{0,28 cm} \approx \pu{3 mm}$ et acquiert une vitesse latérale $v\_x = a\_{\text{ion}} \\, \Delta t\_1 \approx \pu{14 cm/s}$&nbsp;;
 * **Pendant la poursuite de la chute libre hors de la zone de champ** ($D = \pu{20 cm}$, durée $\Delta t\_2 \approx \pu{0,10 s}$ à la vitesse verticale moyenne $v\_{z,2} \approx \pu{2,0 m/s}$)&nbsp;: l'eau dérive latéralement à la vitesse $v\_x$ de $\Delta x\_2 = v\_x \\, \Delta t\_2 \approx \pu{1,4 cm}$.
@@ -1032,13 +1032,19 @@ Au bas du jet, la déviation latérale totale atteint alors&nbsp;:
 <div id="grosseformule">
 
 $$
-\Delta x\_{\text{ion}} = \underbrace{\frac{1}{2} a\_{\text{ion}} (\Delta t\_1)^2}\_{\approx \\, \pu{0,28 cm}} + \underbrace{(a\_{\text{ion}} \\, \Delta t\_1)\Delta t\_2}\_{\approx \\, \pu{1,4 cm}} = a\_{\text{ion}} \\, \Delta t\_1 \left(\frac{1}{2}\Delta t\_1 + \Delta t\_2\right) \approx \pu{1,7 cm} \approx \pu{2 cm}
+\Delta x\_{\text{ion}} = \underbrace{\frac{1}{2} a\_{\text{ion}} (\Delta t\_1)^2}\_{\approx \\, \pu{0,28 cm}} + \underbrace{(a\_{\text{ion}} \\, \Delta t\_1)\Delta t\_2}\_{\approx \\, \pu{1,4 cm}} = a\_{\text{ion}} \\, \Delta t\_1 \left(\frac{1}{2}\Delta t\_1 + \Delta t\_2\right) \approx \pu{1,7 cm} 
 $$
 
 </div>
 </div>
 
-On retrouve bien une déviation centimétrique immédiatement visible à l'œil nu (qui grimpe facilement à $3$ ou $\pu{4 cm}$ si l'on approche la règle à $\pu{1,5 cm}$ du filet ou si la hauteur de chute est un peu plus grande)&nbsp;!
+<br>
+
+<div id="preuve">
+
+**Et si l'on approche la règle à $r = \pu{1 cm}$ du filet&nbsp;?** À potentiel $|V\_0| \approx \pu{6 kV}$ fixé sur la règle, rapprocher celle-ci de $r = \pu{2 cm}$ à $r = \pu{1 cm}$ fait grimper le champ électrique à $E \approx \frac{|V\_0|}{r\ln(r/a)} \approx \frac{\pu{6000 V}}{\pu{0,01 m}\times \ln(10)} \approx \pu{2,6e5 V/m}$. Comme $a\_{\text{ion}} = \frac{2\varepsilon\_0 r E^2}{\rho a^2} \propto \frac{V\_0^2}{r[\ln(r/a)]^2}$, l'accélération ionique triple pour atteindre $a\_{\text{ion}} \approx \pu{12 m/s2}$ (supérieure à $g$&nbsp;!), ce qui produit en bas de la chute une déviation $\Delta x\_{\text{ion}} \approx \pu{5 à 6 cm}$, tandis que la déviation dipolaire reste inférieure au demi-millimètre ($\Delta x\_{\text{dip}} = \frac{\Delta x\_{\text{ion}}}{(r/a)^2} = \frac{\Delta x\_{\text{ion}}}{100} \approx \pu{0,5 mm}$).
+
+</div>
 
 <br>
 
