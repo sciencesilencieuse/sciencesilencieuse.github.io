@@ -485,9 +485,12 @@ $$
 Pas ultra spectaculaire...
 
 
-Comment expliquer alors que dans la salle de classe, le filet d'eau soit notablement dévié&nbsp;?
+Et pourtant...
 
-<br>
+<div style="text-align: center; margin: 24px auto;">
+  <video src="/filetdeau_boomerang.mp4" autoplay loop muted playsinline style="width: 200px; max-width: 100%; border-radius: 14px; box-shadow: 0 6px 20px rgba(15,23,42,0.12); display: inline-block;"></video>
+</div>
+
 
 ## Le vrai coupable : la conduction ionique
 
@@ -1149,7 +1152,9 @@ animate();
 })();
 </script>
 
- Le même contresens touche une autre expérience célèbre d'introduction à l'électrostatique&nbsp;: **l'attraction de petits bouts de papier par une règle frottée**&nbsp;! Là encore, ce n'est pas la polarisation diélectrique de la cellulose du papier qui permet de soulever les confettis contre la gravité, mais la légère conductivité électrique du papier (due à son humidité résiduelle au contact de la table) qui permet de les charger par influence avant qu'ils ne décollent.
+La présence d'ions dans l'eau étant grandement favorisée par la polarité des molécules d'eau, on peut en partie sauver la face de l'interprétation classique&nbsp;: on ne prouve certes pas la polarité, mais quand même l'une de ses conséquences.
+
+ La même erreur d'interprétation touche une autre expérience célèbre d'introduction à l'électrostatique&nbsp;: **l'attraction de petits bouts de papier par une règle frottée**&nbsp;! Là encore, ce n'est pas la polarisation diélectrique de la cellulose du papier qui permet de soulever les confettis contre la gravité, mais la légère conductivité électrique du papier (due à son humidité résiduelle au contact de la table) qui permet de les charger par influence avant qu'ils ne décollent.
 
 <br>
 

@@ -204,3 +204,7 @@ Ce code a été obtenu à partir de <a href="https://www.semanticscholar.org/rea
 Où on essaye de retrouver l'ordre de grandeur de la valeur du champ électrique qui rend l'air conducteur.
 
 
+## [Déviation du filet d'eau](./filetdeau)
+
+Retour sur un classique des salles de classes&nbsp;: la déviation d'un filet d'eau par l'approche d'une règle ou d'un ballon de baudruche frottés sur un pull en laine. L'expérience est souvent annoncé comme démontrant le caractère polaire de l'eau bien que la polarité des molécules n'y soit pas pour grand-chose.
+
