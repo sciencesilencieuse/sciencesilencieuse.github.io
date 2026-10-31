@@ -305,7 +305,7 @@ $$
 
 </div>
 
-En posant $t = x - u$ dans l'intégrale, on obtient l'**équation intégrale de renouvellement** (identique à l'équation de Picard-Dyson vue au [volet 2](../../geometrie/simplexes/#2-itération-de-picard-dyson-et-causalité))&nbsp;:
+En posant $t = x - u$ dans l'intégrale, on obtient l'**équation intégrale de renouvellement** (identique à l'équation de Picard-Dyson vue [ici](../../geometrie/simplexes/#itération-de-picard))&nbsp;:
 
 <div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0.5em;">
 

@@ -87,6 +87,15 @@ details[open] > summary:first-of-type {
     font-style: italic;
     margin-top: -0.6em;
 }
+.tableau-large
+{
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.tableau-large table
+{
+    min-width: 30rem;
+}
 </style>
 
 
@@ -280,22 +289,59 @@ $$
 
 ### Approche 2 : Pavage du cube par les $k!$ permutations
 
-Il existe une seconde manière, encore plus directe et sans le moindre calcul d'intégrale, de comprendre pourquoi $\operatorname{Vol}\_k(\Delta\_k) = \frac{1}{k!}$&nbsp;: par **symétrie de permutation** dans l'hypercube unité $[0, 1]^k$ (dont le volume total vaut $1^k = 1$).
+Il existe une seconde manière, sans le moindre calcul d'intégrale, de comprendre pourquoi $\operatorname{Vol}\_k(\Delta\_k) = \frac{1}{k!}$&nbsp;: un **argument de symétrie** dans l'hypercube unité $[0, 1]^k$, dont le volume total vaut $1$.
 
-Prenons un point $(t\_1, t\_2, \dots, t\_k)$ dans $[0, 1]^k$ dont les $k$ coordonnées sont deux à deux distinctes. De combien de façons peut-on ranger ces $k$ nombres du plus petit au plus grand&nbsp;?
+**En dimension 2.** La diagonale $t\_1 = t\_2$ coupe le carré unité en deux triangles&nbsp;: celui où $t\_1 \le t\_2$ (c'est $\Delta\_2$) et celui où $t\_2 \le t\_1$. Échanger les noms des deux axes, c'est-à-dire faire la symétrie par rapport à la diagonale, envoie l'un sur l'autre&nbsp;: ils ont donc la même aire, qui vaut forcément $\frac{1}{2}$.
+
+<div class="svg-container">
+<svg viewBox="0 0 230 230" role="img" aria-label="Le carré unité coupé par sa diagonale en deux triangles" style="width:100%;max-width:230px;height:auto;">
+<defs><marker id="fa1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
+<polygon points="45.0,190.0 195.0,190.0 195.0,40.0" fill="#e0eaf0" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="45.0,190.0 45.0,40.0 195.0,40.0" fill="#ecd4e0" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+<line x1="45.0" y1="190.0" x2="195.0" y2="40.0" stroke="#64748b" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="45.0" y1="190.0" x2="220.0" y2="190.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#fa1)"/>
+<line x1="45.0" y1="190.0" x2="45.0" y2="15.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#fa1)"/>
+<text x="222.0" y="208.0" text-anchor="end" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >t₁</text>
+<text x="35.0" y="26.0" text-anchor="end" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >t₂</text>
+<text x="37.0" y="206.0" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >0</text>
+<text x="195.0" y="208.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >1</text>
+<text x="37.0" y="45.0" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >1</text>
+<text x="90.0" y="82.0" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >t₁ ≤ t₂</text>
+<text x="150.0" y="151.0" text-anchor="middle" font-size="14" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >t₂ ≤ t₁</text>
+</svg>
+</div>
+<p class="legende">Les deux ordres possibles de $(t_1, t_2)$ découpent le carré en deux triangles symétriques.</p>
+
+**En dimension $k$.** Prenons un point $(t\_1, t\_2, \dots, t\_k)$ de l'hypercube dont les $k$ coordonnées sont deux à deux distinctes, et **trions ses coordonnées** de la plus petite à la plus grande. Combien de résultats différents ce tri peut-il donner&nbsp;?
 <ul>
-<li>Il y a $k$ choix pour la coordonnée la plus petite&nbsp;;</li>
-<li>$k - 1$ choix parmi les coordonnées restantes pour la deuxième plus petite&nbsp;;</li>
-<li>et ainsi de suite jusqu'à la plus grande, soit exactement <b>$k(k-1)\cdots 2 \times 1 = k!$ ordres possibles</b>, chacun associé à une permutation $\sigma \in \mathfrak{S}_k$&nbsp;!</li>
+<li>$k$ choix pour la coordonnée la plus petite&nbsp;;</li>
+<li>$k - 1$ choix parmi les coordonnées restantes pour la deuxième&nbsp;;</li>
+<li>et ainsi de suite, soit <b>$k(k-1)\cdots 2 \times 1 = k!$ ordres possibles</b>, chacun associé à une permutation $\sigma \in \mathfrak{S}_k$.</li>
 </ul>
 
-En dimension $k = 3$ par exemple, les $3! = 6$ ordres possibles des trois coordonnées $(t\_1, t\_2, t\_3)$ sont&nbsp;:
+L'hypercube se découpe donc en $k!$ régions, une par ordre possible. Comme un simple échange des noms des axes envoie n'importe laquelle de ces régions sur n'importe quelle autre, elles ont toutes le même volume&nbsp;: $\frac{1}{k!}$.
+
+**En dimension 3**, les $3! = 6$ ordres possibles sont&nbsp;:
 
 <p style="text-align:center;">
 $\displaystyle t_1 \le t_2 \le t_3 \;\; (\Delta_3), \quad t_1 \le t_3 \le t_2, \quad t_2 \le t_1 \le t_3,$ $\displaystyle \quad t_2 \le t_3 \le t_1, \quad t_3 \le t_1 \le t_2, \quad t_3 \le t_2 \le t_1.$
 </p>
 
-Géométriquement, les trois plans bissecteurs $t\_1 = t\_2$, $t\_2 = t\_3$ et $t\_1 = t\_3$ passent tous par la grande diagonale du cube joignant $(0,0,0)$ à $(1,1,1)$ et découpent le cube unité en **$6$ tétraèdres trirectangles isométriques** (appelés *orthoschémas de Schläfli*), disposés autour de la grande diagonale exactement comme les $6$ quartiers d'une orange&nbsp;!
+Géométriquement, les trois plans $t\_1 = t\_2$, $t\_2 = t\_3$ et $t\_1 = t\_3$ passent tous par la grande diagonale du cube, de $(0,0,0)$ à $(1,1,1)$. Ils découpent le cube en **$6$ tétraèdres isométriques** disposés autour de cette diagonale comme les quartiers d'une orange. Ces tétraèdres sont des *orthoschémas*&nbsp;: trois de leurs arêtes successives sont deux à deux orthogonales (pour $\Delta\_3$, le chemin $(0,0,0) \to (0,0,1) \to (0,1,1) \to (1,1,1)$).
+
+<div class="svg-container">
+<svg viewBox="15 15 290 320" role="img" aria-label="Le cube unité éclaté en six tétraèdres disposés autour de sa grande diagonale" style="width:100%;max-width:290px;height:auto;">
+<style>.cb4{transform:translate(-5.8px,-13.4px)}@keyframes cb4-k{from{transform:translate(-1.5px,-3.4px)}to{transform:translate(-9.7px,-22.4px)}}.cb5{transform:translate(9.6px,-11.4px)}@keyframes cb5-k{from{transform:translate(2.4px,-2.8px)}to{transform:translate(16.0px,-19.0px)}}.cb1{transform:translate(-15.4px,-2.0px)}@keyframes cb1-k{from{transform:translate(-3.9px,-0.5px)}to{transform:translate(-25.7px,-3.4px)}}.cb3{transform:translate(15.4px,2.0px)}@keyframes cb3-k{from{transform:translate(3.9px,0.5px)}to{transform:translate(25.7px,3.4px)}}.cb0{transform:translate(-9.6px,11.4px)}@keyframes cb0-k{from{transform:translate(-2.4px,2.8px)}to{transform:translate(-16.0px,19.0px)}}.cb2{transform:translate(5.8px,13.4px)}@keyframes cb2-k{from{transform:translate(1.5px,3.4px)}to{transform:translate(9.7px,22.4px)}}@media (prefers-reduced-motion:no-preference){.cb4{animation:cb4-k 7s ease-in-out infinite alternate}.cb5{animation:cb5-k 7s ease-in-out infinite alternate}.cb1{animation:cb1-k 7s ease-in-out infinite alternate}.cb3{animation:cb3-k 7s ease-in-out infinite alternate}.cb0{animation:cb0-k 7s ease-in-out infinite alternate}.cb2{animation:cb2-k 7s ease-in-out infinite alternate}}</style>
+<line x1="160.0" y1="217.5" x2="160.0" y2="122.5" stroke="#64748b" stroke-width="1.2" stroke-dasharray="5 4"/>
+<g class="cb4"><polygon points="160.0,208.3 84.1,127.8 160.0,131.7" fill="#d0dee8" stroke="#004D80" stroke-opacity="0.75" stroke-width="1.1" stroke-linejoin="round"/><polygon points="160.0,208.3 173.4,68.8 160.0,131.7" fill="#d9e4ec" stroke="#004D80" stroke-opacity="0.75" stroke-width="1.1" stroke-linejoin="round"/><polygon points="84.1,127.8 173.4,68.8 160.0,131.7" fill="#d0dee8" stroke="#004D80" stroke-opacity="0.75" stroke-width="1.1" stroke-linejoin="round"/></g>
+<g class="cb5"><polygon points="160.0,208.3 249.3,149.3 160.0,131.7" fill="#d3e0e9" stroke="#004D80" stroke-opacity="0.75" stroke-width="1.1" stroke-linejoin="round"/><polygon points="249.3,149.3 173.4,68.8 160.0,131.7" fill="#d3e1e9" stroke="#004D80" stroke-opacity="0.75" stroke-width="1.1" stroke-linejoin="round"/></g>
+<g class="cb1"><polygon points="160.0,208.3 70.7,190.7 160.0,131.7" fill="#d3e0e9" stroke="#004D80" stroke-opacity="0.75" stroke-width="1.1" stroke-linejoin="round"/><polygon points="84.1,127.8 70.7,190.7 160.0,131.7" fill="#d0dee8" stroke="#004D80" stroke-opacity="0.75" stroke-width="1.1" stroke-linejoin="round"/></g>
+<g class="cb3"><polygon points="160.0,208.3 235.9,212.2 160.0,131.7" fill="#d0dee8" stroke="#004D80" stroke-opacity="0.75" stroke-width="1.1" stroke-linejoin="round"/><polygon points="249.3,149.3 235.9,212.2 160.0,131.7" fill="#d3e1e9" stroke="#004D80" stroke-opacity="0.75" stroke-width="1.1" stroke-linejoin="round"/></g>
+<g class="cb0"><polygon points="160.0,208.3 146.6,271.2 160.0,131.7" fill="#e3bed1" stroke="#970E53" stroke-opacity="0.75" stroke-width="1.1" stroke-linejoin="round"/><polygon points="146.6,271.2 70.7,190.7 160.0,131.7" fill="#d9a7c0" stroke="#970E53" stroke-opacity="0.75" stroke-width="1.1" stroke-linejoin="round"/></g>
+<g class="cb2"><polygon points="146.6,271.2 235.9,212.2 160.0,131.7" fill="#c7d8e3" stroke="#004D80" stroke-opacity="0.75" stroke-width="1.1" stroke-linejoin="round"/></g>
+</svg>
+</div>
+<p class="legende">Le cube unité éclaté en ses $3! = 6$ tétraèdres, vu dans l'axe de la grande diagonale (en pointillés)&nbsp;; en magenta, le simplexe canonique $\Delta_3$.</p>
 
 <div id="theo">
 
@@ -321,7 +367,7 @@ $$
 
 <div id="preuve">
 
-Pour toute permutation $\sigma \in \mathfrak{S}\_k$, l'application linéaire $\Phi\_\sigma : (t\_1, \dots, t\_k) \mapsto (t\_{\sigma(1)}, \dots, t\_{\sigma(k)})$ ne fait qu'échanger les noms des axes de coordonnées orthogonaux du cube. C'est une isométrie (réflexion ou rotation) qui conserve les distances et les volumes, et qui envoie bijectivement le secteur $D\_\sigma$ sur le simplexe canonique $\Delta\_k = D\_{\mathrm{id}}$.
+Pour toute permutation $\sigma \in \mathfrak{S}\_k$, l'application linéaire $\Phi\_\sigma : (t\_1, \dots, t\_k) \mapsto (t\_{\sigma(1)}, \dots, t\_{\sigma(k)})$ ne fait qu'échanger les noms des axes de coordonnées orthogonaux du cube. C'est une isométrie (sa matrice est une matrice de permutation, donc orthogonale) qui conserve les volumes, et qui envoie bijectivement le secteur $D\_\sigma$ sur le simplexe canonique $\Delta\_k = D\_{\mathrm{id}}$.
 
 Comme les $k!$ secteurs $D\_\sigma$ ont tous le même volume $\operatorname{Vol}\_k(\Delta\_k)$ et que leur réunion forme l'hypercube $[0, 1]^k$ de volume $1$, on a immédiatement&nbsp;:
 
@@ -336,900 +382,369 @@ $\displaystyle 1 = \operatorname{Vol}_k\left([0, 1]^k\right) = \sum_{\sigma \in 
 
 ## L'hypercube dilaté
 
-### Découpage en couches combinatoires (2D, 3D et dimension $n$)
+### Découpage en couches (2D, 3D et dimension $n$)
 
-Maintenant que nous savons que $\frac{1}{k!}$ est le volume d'un simplexe de dimension $k$, regardons ce que représente géométriquement la suite de Bernoulli $u\_n = \left(1 + \frac{1}{n}\right)^n$&nbsp;: c'est le **volume d'un hypercube de dimension $n$** dont chaque arête de longueur initiale $1$ a été allongée d'une petite épaisseur $\varepsilon = \frac{1}{n}$.
+Maintenant que nous savons que $\frac{1}{k!}$ est le volume d'un simplexe de dimension $k$, revenons à la suite de Bernoulli $u\_n = \left(1 + \frac{1}{n}\right)^n$. Géométriquement, c'est le **volume d'un hypercube de dimension $n$** dont chaque côté mesure $1 + \frac{1}{n}$&nbsp;: un cube unité légèrement «&nbsp;dilaté&nbsp;».
 
-Pour bien visualiser les **morceaux supplémentaires** créés par cette dilatation avant de passer à la dimension $n$, observons ce qui se passe en dimension $2$ (un carré dilaté) et en dimension $3$ (un cube dilaté)&nbsp;:
+L'idée est de couper chaque côté en deux morceaux, un de longueur $1$ et un de longueur $\frac{1}{n}$, puis de **classer les pavés obtenus selon le nombre $k$ de leurs côtés qui mesurent $\frac{1}{n}$**.
+
+**En 2D**, le carré de côté $1 + \frac{1}{n}$ se découpe en $4$ morceaux&nbsp;:
 <ul>
-<li><b>En 2D, le carré $\left[0, 1 + \frac{1}{n}\right]^2$ se découpe en $2^2 = 4$ morceaux&nbsp;:</b>
-  <ul>
-  <li>$k = 0$&nbsp;: <b>$1$ carré central</b> $1 \times 1$ (aire $1$)&nbsp;;</li>
-  <li>$k = 1$&nbsp;: <b>$2$ bandes latérales</b> de dimensions $1 \times \frac{1}{n}$ (aire $2 \times \frac{1}{n}$)&nbsp;;</li>
-  <li>$k = 2$&nbsp;: <b>$1$ petit carré de coin</b> $\frac{1}{n} \times \frac{1}{n}$ (aire $\frac{1}{n^2}$).</li>
-  </ul>
-</li>
-<li><b>En 3D, le cube $\left[0, 1 + \frac{1}{n}\right]^3$ se découpe en $2^3 = 8$ morceaux&nbsp;:</b>
-  <ul>
-  <li>$k = 0$&nbsp;: <b>$1$ cube central (le cœur)</b> $1 \times 1 \times 1$, de volume $1$&nbsp;;</li>
-  <li>$k = 1$&nbsp;: <b>$3$ plaques de faces</b> de dimensions $1 \times 1 \times \frac{1}{n}$ plaquées sur les trois faces du cube (volume $3 \times \frac{1}{n}$)&nbsp;;</li>
-  <li>$k = 2$&nbsp;: <b>$3$ baguettes d'arêtes</b> de dimensions $1 \times \frac{1}{n} \times \frac{1}{n}$ le long des trois arêtes d'intersection des plaques (volume $3 \times \frac{1}{n^2}$)&nbsp;;</li>
-  <li>$k = 3$&nbsp;: <b>$1$ minuscule dé de coin</b> de dimensions $\frac{1}{n} \times \frac{1}{n} \times \frac{1}{n}$ au sommet extérieur (volume $\frac{1}{n^3}$).</li>
-  </ul>
-</li>
+<li>$k = 0$&nbsp;: <b>$1$ carré central</b> $1 \times 1$, d'aire $1$&nbsp;;</li>
+<li>$k = 1$&nbsp;: <b>$2$ bandes</b> $1 \times \frac{1}{n}$, d'aire totale $\frac{2}{n}$&nbsp;;</li>
+<li>$k = 2$&nbsp;: <b>$1$ petit carré de coin</b> $\frac{1}{n} \times \frac{1}{n}$, d'aire $\frac{1}{n^2}$.</li>
 </ul>
 
-En **dimension $n$**, l'hypercube dilaté $\left[0, 1 + \frac{1}{n}\right]^n$ se partitionne exactement de la même manière en $2^n$ pavés orthogonaux, classés selon leur **ordre d'extension $k$** (le nombre de coordonnées qui débordent dans la tranche $\left[1, 1 + \frac{1}{n}\right]$)&nbsp;:
-
+**En 3D**, le cube de côté $1 + \frac{1}{n}$ se découpe en $8$ morceaux&nbsp;:
 <ul>
-<li><b>Couche $k = 0$ (le cœur)&nbsp;:</b> $\binom{n}{0} = 1$ hypercube unité $[0,1]^n$, de volume <b>$V_{n,0} = 1 = \frac{1}{0!}$</b>.</li>
-<li><b>Couche $k = 1$ (les $n$ plaques de faces)&nbsp;:</b> une seule coordonnée $x_i$ déborde dans $\left[1, 1+\frac{1}{n}\right]$. Il y a $\binom{n}{1} = n$ plaques d'épaisseur $\frac{1}{n}$, dont le volume total vaut toujours <b>$V_{n,1} = n \times \frac{1}{n} = 1 = \frac{1}{1!}$</b>.</li>
-<li><b>Couche $k = 2$ (les $\binom{n}{2}$ baguettes d'arêtes)&nbsp;:</b> deux coordonnées $x_i, x_j$ débordent simultanément. Chaque baguette a pour volume $\frac{1}{n^2}$ et il y en a $\binom{n}{2} = \frac{n(n-1)}{2!}$, soit un volume total $\displaystyle V_{n,2} = \binom{n}{2}\frac{1}{n^2} = \frac{1}{2!}\left(1 - \frac{1}{n}\right) \xrightarrow[n \to +\infty]{} \mathbf{\frac{1}{2!}}$.</li>
-<li><b>Couche générale d'ordre $k$&nbsp;:</b> $k$ coordonnées débordent simultanément. Il y a $\binom{n}{k}$ pavés d'ordre $k$, chacun de volume $\frac{1}{n^k}$, soit un volume cumulé qui converge vers le volume du simplexe $\Delta_k$&nbsp;:<br>
-<span style="display:block;text-align:center;margin:0.3em 0;">$\displaystyle V_{n,k} = \binom{n}{k}\frac{1}{n^k} = \frac{\overbrace{n(n-1)\cdots(n-k+1)}^{\sim\,n^k}}{k!} \cdot \frac{1}{n^k}$ $\displaystyle \xrightarrow[n \to +\infty]{} \mathbf{\frac{1}{k!}} = \operatorname{Vol}_k(\Delta_k)$</span>
-</li>
+<li>$k = 0$&nbsp;: <b>$1$ cœur</b> $1 \times 1 \times 1$, de volume $1$&nbsp;;</li>
+<li>$k = 1$&nbsp;: <b>$3$ plaques</b> $1 \times 1 \times \frac{1}{n}$ plaquées sur trois faces du cœur, de volume total $\frac{3}{n}$&nbsp;;</li>
+<li>$k = 2$&nbsp;: <b>$3$ baguettes</b> $1 \times \frac{1}{n} \times \frac{1}{n}$ le long de trois arêtes, de volume total $\frac{3}{n^2}$&nbsp;;</li>
+<li>$k = 3$&nbsp;: <b>$1$ dé de coin</b> $\frac{1}{n} \times \frac{1}{n} \times \frac{1}{n}$, de volume $\frac{1}{n^3}$.</li>
 </ul>
 
-**Pourquoi le volume de la couche d'ordre $k$ converge-t-il vers le volume du simplexe $\Delta\_k$&nbsp;?**
-Parce que choisir un pavé d'ordre $k$ parmi les $n$ dimensions revient à choisir un sous-ensemble de $k$ indices d'axes $\\{i\_1, \dots, i\_k\\} \subset \\{1, \dots, n\\}$. Pour ne compter chaque sous-ensemble qu'une seule fois, on range ses indices par ordre strictement croissant $1 \le i\_1 < i\_2 < \dots < i\_k \le n$. En divisant ces indices par $n$, les coordonnées réduites $t\_m = \frac{i\_m}{n} \in [0, 1]$ forment un quadrillage discret de pas $\frac{1}{n}$ qui remplit exactement le **simplexe continu $\Delta\_k = \\{0 \le t\_1 \le t\_2 \le \dots \le t\_k \le 1\\}$** lorsque $n \to +\infty$&nbsp;!
+<div class="svg-container">
+<svg viewBox="0 0 260 265" role="img" aria-label="Le carré dilaté découpé en un cœur, deux bandes et un coin" style="width:100%;max-width:260px;height:auto;">
+<rect x="50.0" y="75.0" width="140.0" height="140.0" rx="2" fill="#e6edf2" stroke="#004D80" stroke-opacity="0.55"/>
+<text x="120.0" y="150.0" text-anchor="middle" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" >1</text>
+<rect x="199.0" y="75.0" width="46.7" height="140.0" rx="2" fill="#b2cad9" stroke="#004D80" stroke-opacity="0.55"/>
+<text x="222.3" y="150.0" text-anchor="middle" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >1/n</text>
+<rect x="50.0" y="19.3" width="140.0" height="46.7" rx="2" fill="#b2cad9" stroke="#004D80" stroke-opacity="0.55"/>
+<text x="120.0" y="47.7" text-anchor="middle" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >1/n</text>
+<rect x="199.0" y="19.3" width="46.7" height="46.7" rx="2" fill="#6b98b5" stroke="#004D80" stroke-opacity="0.55"/>
+<text x="222.3" y="47.7" text-anchor="middle" font-size="12.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" >1/n²</text>
+<line x1="50.0" y1="230.0" x2="50.0" y2="240.0" stroke="#94a3b8" stroke-width="1" />
+<line x1="190.0" y1="230.0" x2="190.0" y2="240.0" stroke="#94a3b8" stroke-width="1" />
+<line x1="50.0" y1="235.0" x2="190.0" y2="235.0" stroke="#94a3b8" stroke-width="1" />
+<text x="120.0" y="251.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >1</text>
+<line x1="199.0" y1="230.0" x2="199.0" y2="240.0" stroke="#94a3b8" stroke-width="1" />
+<line x1="245.7" y1="230.0" x2="245.7" y2="240.0" stroke="#94a3b8" stroke-width="1" />
+<line x1="199.0" y1="235.0" x2="245.7" y2="235.0" stroke="#94a3b8" stroke-width="1" />
+<text x="222.3" y="251.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >1/n</text>
+<line x1="25.0" y1="215.0" x2="35.0" y2="215.0" stroke="#94a3b8" stroke-width="1" />
+<line x1="25.0" y1="75.0" x2="35.0" y2="75.0" stroke="#94a3b8" stroke-width="1" />
+<line x1="30.0" y1="215.0" x2="30.0" y2="75.0" stroke="#94a3b8" stroke-width="1" />
+<text x="24.0" y="150.0" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >1</text>
+<line x1="25.0" y1="66.0" x2="35.0" y2="66.0" stroke="#94a3b8" stroke-width="1" />
+<line x1="25.0" y1="19.3" x2="35.0" y2="19.3" stroke="#94a3b8" stroke-width="1" />
+<line x1="30.0" y1="66.0" x2="30.0" y2="19.3" stroke="#94a3b8" stroke-width="1" />
+<text x="24.0" y="47.7" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >1/n</text>
+</svg>
+<svg viewBox="0 0 300 320" role="img" aria-label="Le cube dilaté éclaté en huit morceaux : un cœur, trois plaques, trois baguettes et un dé de coin" style="width:100%;max-width:300px;height:auto;">
+<style>.cd001{transform:translate(0.0px,-31.6px)}@keyframes cd001-k{from{transform:translate(0.0px,-12.6px)}to{transform:translate(0.0px,-42.2px)}}.cd010{transform:translate(-15.8px,13.3px)}@keyframes cd010-k{from{transform:translate(-6.3px,5.3px)}to{transform:translate(-21.1px,17.7px)}}.cd100{transform:translate(30.7px,7.0px)}@keyframes cd100-k{from{transform:translate(12.3px,2.8px)}to{transform:translate(40.9px,9.3px)}}.cd011{transform:translate(-15.8px,-18.3px)}@keyframes cd011-k{from{transform:translate(-6.3px,-7.3px)}to{transform:translate(-21.1px,-24.5px)}}.cd101{transform:translate(30.7px,-24.7px)}@keyframes cd101-k{from{transform:translate(12.3px,-9.9px)}to{transform:translate(40.9px,-32.9px)}}.cd110{transform:translate(14.9px,20.2px)}@keyframes cd110-k{from{transform:translate(5.9px,8.1px)}to{transform:translate(19.8px,27.0px)}}.cd111{transform:translate(14.9px,-11.4px)}@keyframes cd111-k{from{transform:translate(5.9px,-4.6px)}to{transform:translate(19.8px,-15.2px)}}@media (prefers-reduced-motion:no-preference){.cd001{animation:cd001-k 7s ease-in-out infinite alternate}.cd010{animation:cd010-k 7s ease-in-out infinite alternate}.cd100{animation:cd100-k 7s ease-in-out infinite alternate}.cd011{animation:cd011-k 7s ease-in-out infinite alternate}.cd101{animation:cd101-k 7s ease-in-out infinite alternate}.cd110{animation:cd110-k 7s ease-in-out infinite alternate}.cd111{animation:cd111-k 7s ease-in-out infinite alternate}}</style>
+<g><polygon points="118.0,97.0 184.0,112.0 150.0,140.5 84.0,125.6" fill="#e6edf2" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/><polygon points="184.0,180.0 150.0,208.5 150.0,140.5 184.0,112.0" fill="#ccdbe6" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/><polygon points="84.0,193.6 150.0,208.5 150.0,140.5 84.0,125.6" fill="#d9e4ec" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/></g>
+<g class="cd001"><polygon points="118.0,74.3 184.0,89.3 150.0,117.9 84.0,102.9" fill="#b2cad9" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/><polygon points="184.0,112.0 150.0,140.5 150.0,117.9 184.0,89.3" fill="#99b8cc" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/><polygon points="84.0,125.6 150.0,140.5 150.0,117.9 84.0,102.9" fill="#a6c1d3" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/></g>
+<g class="cd010"><polygon points="84.0,125.6 150.0,140.5 138.6,150.0 72.7,135.1" fill="#b2cad9" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/><polygon points="150.0,208.5 138.6,218.0 138.6,150.0 150.0,140.5" fill="#99b8cc" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/><polygon points="72.7,203.1 138.6,218.0 138.6,150.0 72.7,135.1" fill="#a6c1d3" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/></g>
+<g class="cd100"><polygon points="184.0,112.0 205.9,116.9 171.9,145.5 150.0,140.5" fill="#b2cad9" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/><polygon points="205.9,184.9 171.9,213.5 171.9,145.5 205.9,116.9" fill="#99b8cc" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/><polygon points="150.0,208.5 171.9,213.5 171.9,145.5 150.0,140.5" fill="#a6c1d3" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/></g>
+<g class="cd011"><polygon points="84.0,102.9 150.0,117.9 138.6,127.4 72.7,112.4" fill="#6b98b5" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/><polygon points="150.0,140.5 138.6,150.0 138.6,127.4 150.0,117.9" fill="#5286a9" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/><polygon points="72.7,135.1 138.6,150.0 138.6,127.4 72.7,112.4" fill="#5e8faf" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/></g>
+<g class="cd101"><polygon points="184.0,89.3 205.9,94.3 171.9,122.8 150.0,117.9" fill="#6b98b5" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/><polygon points="205.9,116.9 171.9,145.5 171.9,122.8 205.9,94.3" fill="#5286a9" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/><polygon points="150.0,140.5 171.9,145.5 171.9,122.8 150.0,117.9" fill="#5e8faf" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/></g>
+<g class="cd110"><polygon points="150.0,140.5 171.9,145.5 160.6,155.0 138.6,150.0" fill="#6b98b5" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/><polygon points="171.9,213.5 160.6,223.0 160.6,155.0 171.9,145.5" fill="#5286a9" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/><polygon points="138.6,218.0 160.6,223.0 160.6,155.0 138.6,150.0" fill="#5e8faf" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/></g>
+<g class="cd111"><polygon points="150.0,117.9 171.9,122.8 160.6,132.4 138.6,127.4" fill="#0d5686" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/><polygon points="171.9,145.5 160.6,155.0 160.6,132.4 171.9,122.8" fill="#004d80" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/><polygon points="138.6,150.0 160.6,155.0 160.6,132.4 138.6,127.4" fill="#004d80" stroke="#004D80" stroke-opacity="0.55" stroke-width="1" stroke-linejoin="round"/></g>
+<rect x="22" y="292" width="14" height="14" rx="3" fill="#e6edf2" stroke="#004D80" stroke-opacity="0.55"/>
+<text x="42.0" y="304.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >k = 0</text>
+<rect x="92" y="292" width="14" height="14" rx="3" fill="#b2cad9" stroke="#004D80" stroke-opacity="0.55"/>
+<text x="112.0" y="304.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >k = 1</text>
+<rect x="162" y="292" width="14" height="14" rx="3" fill="#6b98b5" stroke="#004D80" stroke-opacity="0.55"/>
+<text x="182.0" y="304.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >k = 2</text>
+<rect x="232" y="292" width="14" height="14" rx="3" fill="#0d5686" stroke="#004D80" stroke-opacity="0.55"/>
+<text x="252.0" y="304.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >k = 3</text>
+</svg>
+</div>
+<p class="legende">Le carré et le cube de côté $1 + \frac{1}{n}$ éclatés en leurs $2^2 = 4$ et $2^3 = 8$ morceaux (ici $n = 3$), de plus en plus foncés quand $k$ augmente.</p>
+
+On reconnaît au passage la formule du binôme&nbsp;: $\left(1 + \frac{1}{n}\right)^3 = 1 + \frac{3}{n} + \frac{3}{n^2} + \frac{1}{n^3}$, où chaque terme est une couche.
+
+**En dimension $n$**, l'hypercube dilaté $\left[0, 1 + \frac{1}{n}\right]^n$ se découpe de la même façon en $2^n$ pavés. Un pavé de la **couche $k$** est obtenu en choisissant les $k$ axes (parmi $n$) le long desquels il mesure $\frac{1}{n}$&nbsp;: il y en a $\binom{n}{k}$, chacun de volume $\frac{1}{n^k}$. Le volume total de la couche $k$ vaut donc&nbsp;:
+
+<div id="grosseformule">
+
+$$
+V\_{n,k} = \binom{n}{k}\frac{1}{n^k} = \frac{n(n-1)\cdots(n-k+1)}{k!\\;n^k} = \frac{1}{k!}\left(1 - \frac{1}{n}\right)\left(1 - \frac{2}{n}\right)\cdots\left(1 - \frac{k-1}{n}\right) \xrightarrow[n \to +\infty]{} \mathbf{\frac{1}{k!}}
+$$
+
+</div>
+
+Les couches $k = 0$ et $k = 1$ valent toujours exactement $1$ (le cœur, puis $n$ plaques de volume $\frac{1}{n}$). Les suivantes grandissent avec $n$ et se rapprochent de $\frac{1}{k!}$&nbsp;:
+
+<div class="tableau-large">
+
+| Couche | $n = 3$ | $n = 10$ | $n = 100$ | Limite $\frac{1}{k!}$ |
+| :---: | :---: | :---: | :---: | :---: |
+| $k = 0$ | $1$ | $1$ | $1$ | $1$ |
+| $k = 1$ | $1$ | $1$ | $1$ | $1$ |
+| $k = 2$ | $0{,}333$ | $0{,}450$ | $0{,}495$ | $0{,}5$ |
+| $k = 3$ | $0{,}037$ | $0{,}120$ | $0{,}162$ | $0{,}167$ |
+| $k = 4$ | $0$ | $0{,}021$ | $0{,}039$ | $0{,}042$ |
+| **Total** | $u\_3 \approx 2{,}370$ | $u\_{10} \approx 2{,}594$ | $u\_{100} \approx 2{,}705$ | $\mathrm{e} \approx 2{,}718$ |
+
+</div>
+
+En sommant toutes les couches, $u\_n = \sum\_{k=0}^{n} V\_{n,k}$ tend donc vers $\sum\_{k=0}^{+\infty} \frac{1}{k!} = \mathrm{e}$. (Pour être rigoureux, il faut justifier l'échange de la limite et de la somme&nbsp;: c'est possible ici car $0 \le V\_{n,k} \le \frac{1}{k!}$ pour tous $n$ et $k$, et la série $\sum \frac{1}{k!}$ converge&nbsp;; c'est le *théorème de Tannery*.)
+
+**Pourquoi la couche $k$ ressemble-t-elle au simplexe $\Delta\_k$&nbsp;?** Choisir un pavé de la couche $k$, c'est choisir $k$ axes parmi $n$, autrement dit $k$ indices $i\_1 < i\_2 < \dots < i\_k$ (rangés dans l'ordre croissant pour ne compter chaque choix qu'une fois). Associons à ce choix le petit cube de côté $\frac{1}{n}$ dont le coin supérieur est $\left(\frac{i\_1}{n}, \dots, \frac{i\_k}{n}\right)$. Comme les indices sont strictement croissants, ces petits cubes s'empilent en escalier **à l'intérieur de $\Delta\_k$**, et leur volume total est exactement $\binom{n}{k}\frac{1}{n^k} = V\_{n,k}$. Quand $n$ grandit, les marches s'affinent et l'escalier remplit tout le simplexe.
+
+<div class="svg-container">
+<svg viewBox="0 0 420 220" role="img" aria-label="Les couples d'indices i₁ < i₂ forment un escalier qui remplit le triangle Δ₂" style="width:100%;max-width:420px;height:auto;">
+<rect x="40" y="35" width="150" height="150" fill="none" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<rect x="40.00" y="125.00" width="30.00" height="30.00" fill="#adc6d6" stroke="#fff" stroke-width="1.2"/>
+<rect x="40.00" y="95.00" width="30.00" height="30.00" fill="#adc6d6" stroke="#fff" stroke-width="1.2"/>
+<rect x="40.00" y="65.00" width="30.00" height="30.00" fill="#adc6d6" stroke="#fff" stroke-width="1.2"/>
+<rect x="40.00" y="35.00" width="30.00" height="30.00" fill="#adc6d6" stroke="#fff" stroke-width="1.2"/>
+<rect x="70.00" y="95.00" width="30.00" height="30.00" fill="#adc6d6" stroke="#fff" stroke-width="1.2"/>
+<rect x="70.00" y="65.00" width="30.00" height="30.00" fill="#adc6d6" stroke="#fff" stroke-width="1.2"/>
+<rect x="70.00" y="35.00" width="30.00" height="30.00" fill="#adc6d6" stroke="#fff" stroke-width="1.2"/>
+<rect x="100.00" y="65.00" width="30.00" height="30.00" fill="#adc6d6" stroke="#fff" stroke-width="1.2"/>
+<rect x="100.00" y="35.00" width="30.00" height="30.00" fill="#adc6d6" stroke="#fff" stroke-width="1.2"/>
+<rect x="130.00" y="35.00" width="30.00" height="30.00" fill="#adc6d6" stroke="#fff" stroke-width="1.2"/>
+<polygon points="40.0,185.0 40.0,35.0 190.0,35.0" fill="none" stroke="#970E53" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="115.0" y="209.0" text-anchor="middle" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >n = 5</text>
+<text x="148.0" y="147.5" text-anchor="middle" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >aire 0,40</text>
+<rect x="250" y="35" width="150" height="150" fill="none" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<rect x="250.00" y="165.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="250.00" y="155.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="250.00" y="145.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="250.00" y="135.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="250.00" y="125.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="250.00" y="115.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="250.00" y="105.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="250.00" y="95.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="250.00" y="85.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="250.00" y="75.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="250.00" y="65.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="250.00" y="55.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="250.00" y="45.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="250.00" y="35.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="260.00" y="155.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="260.00" y="145.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="260.00" y="135.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="260.00" y="125.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="260.00" y="115.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="260.00" y="105.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="260.00" y="95.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="260.00" y="85.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="260.00" y="75.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="260.00" y="65.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="260.00" y="55.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="260.00" y="45.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="260.00" y="35.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="270.00" y="145.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="270.00" y="135.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="270.00" y="125.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="270.00" y="115.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="270.00" y="105.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="270.00" y="95.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="270.00" y="85.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="270.00" y="75.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="270.00" y="65.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="270.00" y="55.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="270.00" y="45.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="270.00" y="35.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="280.00" y="135.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="280.00" y="125.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="280.00" y="115.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="280.00" y="105.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="280.00" y="95.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="280.00" y="85.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="280.00" y="75.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="280.00" y="65.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="280.00" y="55.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="280.00" y="45.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="280.00" y="35.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="290.00" y="125.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="290.00" y="115.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="290.00" y="105.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="290.00" y="95.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="290.00" y="85.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="290.00" y="75.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="290.00" y="65.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="290.00" y="55.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="290.00" y="45.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="290.00" y="35.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="300.00" y="115.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="300.00" y="105.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="300.00" y="95.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="300.00" y="85.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="300.00" y="75.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="300.00" y="65.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="300.00" y="55.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="300.00" y="45.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="300.00" y="35.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="310.00" y="105.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="310.00" y="95.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="310.00" y="85.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="310.00" y="75.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="310.00" y="65.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="310.00" y="55.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="310.00" y="45.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="310.00" y="35.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="320.00" y="95.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="320.00" y="85.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="320.00" y="75.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="320.00" y="65.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="320.00" y="55.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="320.00" y="45.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="320.00" y="35.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="330.00" y="85.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="330.00" y="75.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="330.00" y="65.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="330.00" y="55.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="330.00" y="45.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="330.00" y="35.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="340.00" y="75.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="340.00" y="65.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="340.00" y="55.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="340.00" y="45.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="340.00" y="35.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="350.00" y="65.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="350.00" y="55.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="350.00" y="45.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="350.00" y="35.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="360.00" y="55.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="360.00" y="45.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="360.00" y="35.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="370.00" y="45.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="370.00" y="35.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<rect x="380.00" y="35.00" width="10.00" height="10.00" fill="#adc6d6" stroke="#fff" stroke-width="0.6"/>
+<polygon points="250.0,185.0 250.0,35.0 400.0,35.0" fill="none" stroke="#970E53" stroke-width="1.6" stroke-linejoin="round"/>
+<text x="325.0" y="209.0" text-anchor="middle" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >n = 15</text>
+<text x="358.0" y="147.5" text-anchor="middle" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >aire 0,47</text>
+</svg>
+</div>
+<p class="legende">Pour $k = 2$&nbsp;: chaque couple $i_1 &lt; i_2$ donne un carré de côté $\frac{1}{n}$. L'escalier, d'aire $\binom{n}{2}\frac{1}{n^2} = V_{n,2}$, remplit le triangle $\Delta_2$ quand $n$ grandit.</p>
 
 ### Invariance d'aire sous l'hyperbole
 
-Une troisième figure géométrique classique relie la suite de Bernoulli à $\mathrm{e}$&nbsp;: l'aire sous l'hyperbole $y = \frac{1}{x}$.
-Si l'on étire les abscisses d'un facteur $c > 0$ ($X = c\\,x$) tout en comprimant les ordonnées du même facteur ($Y = \frac{y}{c}$), l'hyperbole $Y = \frac{1}{X}$ reste globalement invariante, et les aires sont conservées ($c \times \frac{1}{c} = 1$).
+Une troisième figure classique relie la suite de Bernoulli à $\mathrm{e}$&nbsp;: l'aire sous l'hyperbole $y = \frac{1}{x}$. Notons $\mathcal{A}(a, b)$ l'aire sous la courbe entre les abscisses $a$ et $b$ (c'est $\ln b - \ln a$, et $\mathrm{e}$ est précisément le nombre tel que $\mathcal{A}(1, \mathrm{e}) = 1$).
 
-En prenant $c = 1 + \frac{1}{n}$, les $n$ tranches successives entre $x = 1$ et $x = u\_n = \left(1 + \frac{1}{n}\right)^n$ ont **toutes exactement la même aire**&nbsp;:
+**La propriété clé&nbsp;:** si l'on étire les abscisses d'un facteur $c > 0$ tout en comprimant les ordonnées du même facteur, l'hyperbole ne bouge pas (le point $(x, \frac{1}{x})$ va en $(cx, \frac{1}{cx})$), et les aires sont conservées (elles sont multipliées par $c \times \frac{1}{c} = 1$). Ainsi $\mathcal{A}(ca, cb) = \mathcal{A}(a, b)$&nbsp;: une tranche plus loin mais proportionnellement plus large a la même aire.
 
-<p style="text-align:center;">
-$\displaystyle \mathcal{A}\left(1,\, 1 + \tfrac{1}{n}\right) = \mathcal{A}\left(1 + \tfrac{1}{n},\, \left(1 + \tfrac{1}{n}\right)^2\right)$ $\displaystyle = \cdots = \mathcal{A}\left(\left(1 + \tfrac{1}{n}\right)^{n-1},\, \left(1 + \tfrac{1}{n}\right)^n\right)$
-</p>
+En prenant $c = 1 + \frac{1}{n}$, les $n$ tranches successives $\left[c^j, c^{j+1}\right]$ entre $x = 1$ et $x = c^n = u\_n$ ont donc **toutes la même aire** que la première&nbsp;:
 
-Or, sur la première tranche $\left[1, 1 + \frac{1}{n}\right]$ de largeur $\frac{1}{n}$, l'hyperbole $y = \frac{1}{x}$ est comprise entre $\frac{n}{n+1}$ et $1$. En multipliant par $n$, l'aire totale $\mathcal{A}(1, u\_n)$ est pincée entre $\frac{n}{n+1}$ et $1$&nbsp;: lorsque $n \to +\infty$, $\mathcal{A}(1, u\_n) \to 1 = \mathcal{A}(1, \mathrm{e})$, donc $u\_n \to \mathrm{e}$.
+<div class="svg-container">
+<svg viewBox="0 0 430 265" role="img" aria-label="Aire sous l'hyperbole y = 1/x découpée en tranches d'aires égales" style="width:100%;max-width:430px;height:auto;">
+<defs><marker id="fh" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
+<polygon points="80.0,220.0 80.0,61.7 81.3,63.0 82.7,64.3 84.0,65.5 85.3,66.8 86.7,68.0 88.0,69.2 89.3,70.4 90.7,71.6 92.0,72.7 93.3,73.8 94.7,75.0 96.0,76.1 97.3,77.1 98.7,78.2 100.0,79.3 101.3,80.3 102.7,81.3 104.0,82.3 105.3,83.3 106.7,84.3 108.0,85.2 109.3,86.2 110.7,87.1 112.0,88.1 113.3,89.0 114.7,89.9 116.0,90.7 117.3,91.6 118.7,92.5 120.0,93.3 120.0,220.0" fill="#c7d8e3" stroke="#fff" stroke-width="2"/>
+<text x="100.0" y="154.6" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic">𝒜</text>
+<polygon points="120.0,220.0 120.0,93.3 121.7,94.4 123.3,95.4 125.0,96.4 126.7,97.4 128.3,98.4 130.0,99.4 131.7,100.3 133.3,101.2 135.0,102.2 136.7,103.1 138.3,104.0 140.0,104.8 141.7,105.7 143.3,106.6 145.0,107.4 146.7,108.2 148.3,109.1 150.0,109.9 151.7,110.6 153.3,111.4 155.0,112.2 156.7,113.0 158.3,113.7 160.0,114.4 161.7,115.2 163.3,115.9 165.0,116.6 166.7,117.3 168.3,118.0 170.0,118.7 170.0,220.0" fill="#e0eaf0" stroke="#fff" stroke-width="2"/>
+<text x="145.0" y="168.7" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic">𝒜</text>
+<polygon points="170.0,220.0 170.0,118.7 172.1,119.5 174.2,120.3 176.2,121.1 178.3,121.9 180.4,122.7 182.5,123.5 184.6,124.3 186.7,125.0 188.8,125.7 190.8,126.5 192.9,127.2 195.0,127.9 197.1,128.6 199.2,129.3 201.2,129.9 203.3,130.6 205.4,131.2 207.5,131.9 209.6,132.5 211.7,133.1 213.8,133.8 215.8,134.4 217.9,135.0 220.0,135.6 222.1,136.1 224.2,136.7 226.3,137.3 228.3,137.8 230.4,138.4 232.5,138.9 232.5,220.0" fill="#c7d8e3" stroke="#fff" stroke-width="2"/>
+<text x="201.2" y="180.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic">𝒜</text>
+<polygon points="232.5,220.0 232.5,138.9 235.1,139.6 237.7,140.3 240.3,140.9 242.9,141.5 245.5,142.2 248.1,142.8 250.7,143.4 253.3,144.0 255.9,144.6 258.5,145.2 261.1,145.7 263.8,146.3 266.4,146.9 269.0,147.4 271.6,147.9 274.2,148.5 276.8,149.0 279.4,149.5 282.0,150.0 284.6,150.5 287.2,151.0 289.8,151.5 292.4,152.0 295.0,152.4 297.6,152.9 300.2,153.4 302.8,153.8 305.4,154.3 308.0,154.7 310.6,155.1 310.6,220.0" fill="#e0eaf0" stroke="#fff" stroke-width="2"/>
+<text x="271.6" y="189.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic">𝒜</text>
+<polyline points="57.6,35.9 59.3,38.1 60.9,40.3 62.6,42.4 64.3,44.4 66.0,46.4 67.6,48.4 69.3,50.3 71.0,52.2 72.6,54.0 74.3,55.8 76.0,57.6 77.7,59.3 79.3,61.0 81.0,62.7 82.7,64.3 84.4,65.9 86.0,67.4 87.7,68.9 89.4,70.4 91.0,71.9 92.7,73.3 94.4,74.7 96.1,76.1 97.7,77.5 99.4,78.8 101.1,80.1 102.7,81.4 104.4,82.6 106.1,83.9 107.8,85.1 109.4,86.3 111.1,87.4 112.8,88.6 114.4,89.7 116.1,90.8 117.8,91.9 119.5,93.0 121.1,94.0 122.8,95.1 124.5,96.1 126.2,97.1 127.8,98.1 129.5,99.1 131.2,100.0 132.8,101.0 134.5,101.9 136.2,102.8 137.9,103.7 139.5,104.6 141.2,105.5 142.9,106.3 144.5,107.2 146.2,108.0 147.9,108.8 149.6,109.6 151.2,110.4 152.9,111.2 154.6,112.0 156.2,112.8 157.9,113.5 159.6,114.3 161.3,115.0 162.9,115.7 164.6,116.4 166.3,117.1 168.0,117.8 169.6,118.5 171.3,119.2 173.0,119.9 174.6,120.5 176.3,121.2 178.0,121.8 179.7,122.4 181.3,123.1 183.0,123.7 184.7,124.3 186.3,124.9 188.0,125.5 189.7,126.1 191.4,126.6 193.0,127.2 194.7,127.8 196.4,128.3 198.0,128.9 199.7,129.4 201.4,130.0 203.1,130.5 204.7,131.0 206.4,131.5 208.1,132.1 209.8,132.6 211.4,133.1 213.1,133.6 214.8,134.1 216.4,134.5 218.1,135.0 219.8,135.5 221.5,136.0 223.1,136.4 224.8,136.9 226.5,137.3 228.1,137.8 229.8,138.2 231.5,138.7 233.2,139.1 234.8,139.5 236.5,140.0 238.2,140.4 239.8,140.8 241.5,141.2 243.2,141.6 244.9,142.0 246.5,142.4 248.2,142.8 249.9,143.2 251.6,143.6 253.2,144.0 254.9,144.4 256.6,144.7 258.2,145.1 259.9,145.5 261.6,145.8 263.3,146.2 264.9,146.6 266.6,146.9 268.3,147.3 269.9,147.6 271.6,148.0 273.3,148.3 275.0,148.6 276.6,149.0 278.3,149.3 280.0,149.6 281.6,150.0 283.3,150.3 285.0,150.6 286.7,150.9 288.3,151.2 290.0,151.5 291.7,151.8 293.4,152.1 295.0,152.4 296.7,152.7 298.4,153.0 300.0,153.3 301.7,153.6 303.4,153.9 305.1,154.2 306.7,154.5 308.4,154.8 310.1,155.1 311.7,155.3 313.4,155.6 315.1,155.9 316.8,156.1 318.4,156.4 320.1,156.7 321.8,156.9 323.4,157.2 325.1,157.5 326.8,157.7 328.5,158.0 330.1,158.2 331.8,158.5 333.5,158.7 335.2,159.0 336.8,159.2 338.5,159.5 340.2,159.7 341.8,159.9 343.5,160.2 345.2,160.4 346.9,160.7 348.5,160.9 350.2,161.1 351.9,161.3 353.5,161.6 355.2,161.8 356.9,162.0 358.6,162.2 360.2,162.5 361.9,162.7 363.6,162.9 365.2,163.1 366.9,163.3 368.6,163.5 370.3,163.7 371.9,163.9 373.6,164.2 375.3,164.4 377.0,164.6 378.6,164.8 380.3,165.0 382.0,165.2 383.6,165.4 385.3,165.6 387.0,165.8 388.7,165.9 390.3,166.1 392.0,166.3" fill="none" stroke="#004D80" stroke-width="2"/>
+<line x1="40.0" y1="220.0" x2="412.0" y2="220.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#fh)"/>
+<line x1="40.0" y1="220.0" x2="40.0" y2="22.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#fh)"/>
+<text x="414.0" y="238.0" text-anchor="end" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >x</text>
+<text x="32.0" y="30.0" text-anchor="end" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >y</text>
+<line x1="36.0" y1="61.7" x2="44.0" y2="61.7" stroke="#94a3b8" stroke-width="1" />
+<text x="32.0" y="66.7" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >1</text>
+<text x="376.0" y="154.4" text-anchor="middle" font-size="14" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >y = 1/x</text>
+<line x1="80.0" y1="220.0" x2="80.0" y2="224.0" stroke="#94a3b8" stroke-width="1" />
+<text x="80.0" y="238.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >1</text>
+<line x1="310.6" y1="220.0" x2="310.6" y2="224.0" stroke="#94a3b8" stroke-width="1" />
+<text x="310.6" y="238.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >u<tspan dy='3' font-size='10'>4</tspan></text>
+<line x1="354.9" y1="220.0" x2="354.9" y2="161.8" stroke="#970E53" stroke-width="1.4" stroke-dasharray="4 3"/>
+<text x="354.9" y="238.0" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >e</text>
+</svg>
+</div>
+<p class="legende">Pour $n = 4$&nbsp;: les tranches $[c^j, c^{j+1}]$ avec $c = 1 + \frac{1}{4}$ s'élargissent mais gardent toutes la même aire $\mathcal{A}$.</p>
 
-### Explorateur géométrique interactif (2D & 3D)
+L'aire totale vaut donc $\mathcal{A}(1, u\_n) = n \times \mathcal{A}\left(1, 1 + \frac{1}{n}\right)$. Or, sur la première tranche, de largeur $\frac{1}{n}$, la courbe reste comprise entre $\frac{n}{n+1}$ et $1$, si bien que $\mathcal{A}\left(1, 1 + \frac{1}{n}\right)$ est comprise entre $\frac{1}{n+1}$ et $\frac{1}{n}$. En multipliant par $n$&nbsp;:
 
-L'explorateur interactif ci-dessous réunit ces **trois visions géométriques**&nbsp;:
-<ol>
-<li><b>Mode 1 — Dilatation 2D &amp; 3D $(1+1/n)^n$&nbsp;:</b> observez simultanément le <b>carré 2D dilaté</b> (à gauche) et le <b>cube 3D dilaté éclaté en ses $8$ morceaux</b> (au centre, que vous pouvez faire tourner à la souris&nbsp;: $1$ cœur $k=0$, $3$ plaques de faces $k=1$, $3$ baguettes d'arêtes $k=2$ et $1$ dé de coin $k=3$), ainsi que le diagramme de convergence vers $\sum \frac{1}{k!}$ (à droite).</li>
-<li><b>Mode 2 — Cube $[0,1]^3$ &amp; $3!=6$ Simplexes $\Delta_3$&nbsp;:</b> faites pivoter le cube unité et éclatez-le le long des plans diagonaux $t_i = t_j$ pour voir les $6$ tétraèdres de Schläfli isométriques de volume $\frac{1}{6}$.</li>
-<li><b>Mode 3 — Hyperbole $y = 1/x$&nbsp;:</b> visualisez les $n$ tranches d'aires invariantes qui convergent vers $x = \mathrm{e}$.</li>
-</ol>
+$$
+\frac{n}{n+1} \le \mathcal{A}(1, u\_n) \le 1.
+$$
 
-<div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 12px; padding: 18px; margin: 25px auto; max-width: 860px; box-shadow: 0 4px 10px -2px rgba(0,0,0,0.07); font-family: system-ui, -apple-system, sans-serif;">
-<div style="text-align: center; margin-bottom: 12px;">
-<span style="font-size: 1.08em; font-weight: 700; color: #004D80;">Explorateur Géométrique 2D &amp; 3D&nbsp;: Dilatation $(1+1/n)^n$, Simplexes $\Delta_k$ et Hyperbole $1/x$</span>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 12px;">
-<button id="geomMode1Btn" style="padding: 8px 14px; border-radius: 8px; border: 2px solid #004D80; background: #004D80; color: #fff; font-weight: 700; cursor: pointer; font-size: 0.87em; transition: all 0.15s;">
-1. Dilatation 2D &amp; 3D $(1 + 1/n)^n$
-</button>
-<button id="geomMode2Btn" style="padding: 8px 14px; border-radius: 8px; border: 2px solid #970E53; background: #fff; color: #970E53; font-weight: 600; cursor: pointer; font-size: 0.87em; transition: all 0.15s;">
-2. Cube $[0,1]^3$ &amp; $3!=6$ Simplexes $\Delta_3$
-</button>
-<button id="geomMode3Btn" style="padding: 8px 14px; border-radius: 8px; border: 2px solid #006C65; background: #fff; color: #006C65; font-weight: 600; cursor: pointer; font-size: 0.87em; transition: all 0.15s;">
-3. Hyperbole $y = 1/x$ ($n$ tranches)
-</button>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; background: #f1f5f9; padding: 10px 14px; border-radius: 8px; border: 1px solid #e2e8f0; margin-bottom: 10px;">
-<div style="flex: 1; min-width: 200px;">
-<div style="display: flex; justify-content: space-between; font-size: 0.85em; font-weight: 600; color: #1e293b; margin-bottom: 4px;">
-<span id="geomSlider1Label">Éclatement 3D des pièces (k=1, 2, 3)&nbsp;:</span>
-<span id="geomSlider1Val" style="color: #970E53; font-family: monospace;">45 %</span>
-</div>
-<input type="range" id="geomSlider1" min="0" max="100" value="45" style="width: 100%; accent-color: #970E53; cursor: pointer;">
-</div>
-<div style="flex: 1; min-width: 200px;">
-<div style="display: flex; justify-content: space-between; font-size: 0.85em; font-weight: 600; color: #1e293b; margin-bottom: 4px;">
-<span>Paramètre entier $n$ (finesse $1/n$)&nbsp;:</span>
-<span id="geomNVal" style="color: #004D80; font-family: monospace;">n = 4</span>
-</div>
-<input type="range" id="geomNSlider" min="1" max="15" value="4" step="1" style="width: 100%; accent-color: #004D80; cursor: pointer;">
-</div>
-<div id="geomLayerFilterBox" style="display: flex; gap: 4px; flex-wrap: wrap; align-items: center;">
-<span style="font-size: 0.8em; font-weight: 700; color: #334155; margin-right: 2px;">Couche&nbsp;:</span>
-<button class="geomLayerBtn" data-layer="-1" style="padding: 4px 8px; border-radius: 5px; border: 1px solid #004D80; background: #004D80; color: #fff; font-size: 0.78em; font-weight: 700; cursor: pointer;">Toutes</button>
-<button class="geomLayerBtn" data-layer="0" style="padding: 4px 8px; border-radius: 5px; border: 1px solid #004D80; background: #fff; color: #004D80; font-size: 0.78em; font-weight: 600; cursor: pointer;">k=0 (Cœur)</button>
-<button class="geomLayerBtn" data-layer="1" style="padding: 4px 8px; border-radius: 5px; border: 1px solid #006C65; background: #fff; color: #006C65; font-size: 0.78em; font-weight: 600; cursor: pointer;">k=1 (Faces)</button>
-<button class="geomLayerBtn" data-layer="2" style="padding: 4px 8px; border-radius: 5px; border: 1px solid #970E53; background: #fff; color: #970E53; font-size: 0.78em; font-weight: 600; cursor: pointer;">k=2 (Arêtes)</button>
-<button class="geomLayerBtn" data-layer="3" style="padding: 4px 8px; border-radius: 5px; border: 1px solid #d97706; background: #fff; color: #d97706; font-size: 0.78em; font-weight: 600; cursor: pointer;">k=3 (Coin)</button>
-</div>
-</div>
-<div style="position: relative; width: 100%; background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; overflow: hidden;">
-<canvas id="geomSimplexCanvas" style="width: 100%; height: 435px; display: block; cursor: grab;"></canvas>
-</div>
-<div id="geomReadout" style="margin-top: 10px; padding: 10px 14px; background: #fff; border-radius: 8px; border-left: 5px solid #004D80; font-size: 0.86em; color: #334155; line-height: 1.5;">
-</div>
-</div>
-<script>
-(function() {
-const canvas = document.getElementById('geomSimplexCanvas');
-if (!canvas) return;
-const ctx = canvas.getContext('2d');
-const btn1 = document.getElementById('geomMode1Btn');
-const btn2 = document.getElementById('geomMode2Btn');
-const btn3 = document.getElementById('geomMode3Btn');
-const slider1 = document.getElementById('geomSlider1');
-const slider1Label = document.getElementById('geomSlider1Label');
-const slider1Val = document.getElementById('geomSlider1Val');
-const nSlider = document.getElementById('geomNSlider');
-const nVal = document.getElementById('geomNVal');
-const layerBox = document.getElementById('geomLayerFilterBox');
-const layerBtns = document.querySelectorAll('.geomLayerBtn');
-const readout = document.getElementById('geomReadout');
-let mode = 1; // 1: 2D & 3D Dilation, 2: 3D Cube & 6 Simplices, 3: Hyperbola 1/x
-let explode = 0.45;
-let nParam = 4;
-let activeLayer = -1; // -1 = all, 0, 1, 2, 3
-let selectedSlice = 1;
-let rotYaw = -0.62;
-let rotPitch = 0.44;
-let isDragging = false;
-let lastX = 0, lastY = 0;
-const E_CONST = Math.E;
-const FACT = [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800];
-function factorial(k) {
-if (k < FACT.length) return FACT[k];
-let r = 1;
-for (let i = 2; i <= k; i++) r *= i;
-return r;
-}
-const SUB_MAP = {'0':'₀','1':'₁','2':'₂','3':'₃','4':'₄','5':'₅','6':'₆','7':'₇','8':'₈','9':'₉','n':'ₙ','k':'ₖ','j':'ⱼ'};
-const SUP_MAP = {'0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹','n':'ⁿ','k':'ᵏ','j':'ʲ','+':'⁺'};
-function toSub(str) { return String(str).split('').map(c => SUB_MAP[c] || c).join(''); }
-function toSup(str) { return String(str).split('').map(c => SUP_MAP[c] || c).join(''); }
-const PERMS_S3 = [
-{ perm: [0, 1, 2], label: '0 ≤ t₁ ≤ t₂ ≤ t₃ ≤ 1 (Δ₃ canonique)', short: 't₁ ≤ t₂ ≤ t₃', color: '#970E53', fill: 'rgba(151, 14, 83, 0.78)' },
-{ perm: [0, 2, 1], label: '0 ≤ t₁ ≤ t₃ ≤ t₂ ≤ 1', short: 't₁ ≤ t₃ ≤ t₂', color: '#004D80', fill: 'rgba(0, 77, 128, 0.42)' },
-{ perm: [1, 0, 2], label: '0 ≤ t₂ ≤ t₁ ≤ t₃ ≤ 1', short: 't₂ ≤ t₁ ≤ t₃', color: '#006C65', fill: 'rgba(0, 108, 101, 0.42)' },
-{ perm: [1, 2, 0], label: '0 ≤ t₂ ≤ t₃ ≤ t₁ ≤ 1', short: 't₂ ≤ t₃ ≤ t₁', color: '#d97706', fill: 'rgba(217, 119, 6, 0.42)' },
-{ perm: [2, 0, 1], label: '0 ≤ t₃ ≤ t₁ ≤ t₂ ≤ 1', short: 't₃ ≤ t₁ ≤ t₂', color: '#7c3aed', fill: 'rgba(124, 58, 237, 0.42)' },
-{ perm: [2, 1, 0], label: '0 ≤ t₃ ≤ t₂ ≤ t₁ ≤ 1', short: 't₃ ≤ t₂ ≤ t₁', color: '#2563eb', fill: 'rgba(37, 99, 235, 0.42)' }
-];
-function getTetraVertices(perm) {
-const v0 = [0, 0, 0];
-const v1 = [0, 0, 0]; v1[perm[2]] = 1;
-const v2 = [v1[0], v1[1], v1[2]]; v2[perm[1]] = 1;
-const v3 = [1, 1, 1];
-return [v0, v1, v2, v3];
-}
-function project3D(pt, cx, cy, scale, centerOffset = 0.5) {
-const x0 = pt[0] - centerOffset;
-const y0 = pt[1] - centerOffset;
-const z0 = pt[2] - centerOffset;
-const cosY = Math.cos(rotYaw), sinY = Math.sin(rotYaw);
-const x1 = x0 * cosY - y0 * sinY;
-const y1 = x0 * sinY + y0 * cosY;
-const z1 = z0;
-const cosP = Math.cos(rotPitch), sinP = Math.sin(rotPitch);
-const x2 = x1;
-const y2 = y1 * cosP - z1 * sinP;
-const z2 = y1 * sinP + z1 * cosP;
-return {
-x: cx + x2 * scale,
-y: cy - z2 * scale,
-depth: y2
-};
-}
-function updateModeUI() {
-const styles = [
-{ btn: btn1, active: mode === 1, color: '#004D80' },
-{ btn: btn2, active: mode === 2, color: '#970E53' },
-{ btn: btn3, active: mode === 3, color: '#006C65' }
-];
-styles.forEach(s => {
-s.btn.style.background = s.active ? s.color : '#ffffff';
-s.btn.style.color = s.active ? '#ffffff' : s.color;
-});
-layerBox.style.display = mode === 1 ? 'flex' : 'none';
-if (mode === 1) {
-slider1Label.innerHTML = 'Éclatement 3D des pièces (k=1, 2, 3)&nbsp;:';
-slider1.min = 0; slider1.max = 100;
-slider1.value = Math.round(explode * 100);
-slider1Val.textContent = Math.round(explode * 100) + ' %';
-canvas.style.cursor = isDragging ? 'grabbing' : 'grab';
-} else if (mode === 2) {
-slider1Label.innerHTML = 'Éclatement des 6 tétraèdres (groupe 𝔖₃)&nbsp;:';
-slider1.min = 0; slider1.max = 100;
-slider1.value = Math.round(explode * 100);
-slider1Val.textContent = Math.round(explode * 100) + ' %';
-canvas.style.cursor = isDragging ? 'grabbing' : 'grab';
-} else {
-slider1Label.innerHTML = 'Tranche hyperbolique mise en évidence&nbsp;:';
-slider1.min = 1; slider1.max = nParam;
-if (selectedSlice < 1 || selectedSlice > nParam) selectedSlice = 1;
-slider1.value = selectedSlice;
-slider1Val.textContent = 'Tranche #' + selectedSlice + ' / ' + nParam;
-canvas.style.cursor = 'default';
-}
-nVal.textContent = 'n = ' + nParam;
-const lColors = { '-1': '#004D80', '0': '#004D80', '1': '#006C65', '2': '#970E53', '3': '#d97706' };
-layerBtns.forEach(b => {
-const lv = parseInt(b.getAttribute('data-layer'), 10);
-const col = lColors[String(lv)];
-if (lv === activeLayer) {
-b.style.background = col;
-b.style.color = '#ffffff';
-b.style.fontWeight = '700';
-} else {
-b.style.background = '#ffffff';
-b.style.color = col;
-b.style.fontWeight = '600';
-}
-});
-}
-function computeUnTerms(n) {
-const terms = [];
-for (let k = 0; k <= n; k++) {
-let prod = 1;
-for (let j = 1; j <= k - 1; j++) prod *= (1 - j / n);
-terms.push(prod / factorial(k));
-}
-return terms;
-}
-function drawComparisonPanel(x0, y0, w, h) {
-ctx.save();
-ctx.fillStyle = '#f8fafc';
-ctx.strokeStyle = '#e2e8f0';
-ctx.lineWidth = 1;
-ctx.beginPath();
-ctx.roundRect(x0, y0, w, h, 8);
-ctx.fill();
-ctx.stroke();
-ctx.fillStyle = '#0f172a';
-ctx.font = 'bold 12px system-ui, sans-serif';
-ctx.textAlign = 'left';
-ctx.fillText(`Couches n-dim vs Simplexes (n = ${nParam})`, x0 + 12, y0 + 18, w - 24);
-const unTerms = computeUnTerms(nParam);
-const unTotal = unTerms.reduce((a, b) => a + b, 0);
-let snTotal = 0;
-for (let k = 0; k <= nParam; k++) snTotal += 1 / factorial(k);
-const layerColors = ['#004D80', '#006C65', '#970E53', '#d97706', '#7c3aed', '#2563eb', '#64748b'];
-const barLeft = x0 + 12;
-const barW = Math.max(w - 24, 60);
-const maxVal = 3.0;
-const yBar1 = y0 + 40;
-ctx.fillStyle = '#334155';
-ctx.font = '600 10.5px system-ui, sans-serif';
-const sText = w < 270 ? `S${toSub(nParam)} = Σ 1/k! = ${snTotal.toFixed(4)}` : `Somme des simplexes S${toSub(nParam)} = Σ 1/k! = ${snTotal.toFixed(5)}`;
-ctx.fillText(sText, barLeft, yBar1 - 5, barW);
-let curX = barLeft;
-for (let k = 0; k <= Math.min(nParam, 7); k++) {
-const val = 1 / factorial(k);
-const segW = (val / maxVal) * barW;
-ctx.fillStyle = layerColors[k % layerColors.length];
-ctx.globalAlpha = (activeLayer === -1 || activeLayer === k) ? 1.0 : 0.25;
-ctx.fillRect(curX, yBar1, Math.max(segW - 1, 1), 22);
-if (segW > 20) {
-ctx.fillStyle = '#ffffff';
-ctx.font = 'bold 9.5px system-ui, sans-serif';
-ctx.textAlign = 'center';
-ctx.fillText(k <= 1 ? '1' : `1/${k}!`, curX + segW / 2, yBar1 + 14, Math.max(segW - 2, 8));
-}
-curX += segW;
-}
-ctx.globalAlpha = 1.0;
-const yBar2 = y0 + 90;
-ctx.textAlign = 'left';
-ctx.fillStyle = '#334155';
-ctx.font = '600 10.5px system-ui, sans-serif';
-const uText = w < 270 ? `u${toSub(nParam)} = (1+1/${nParam})${toSup(nParam)} = ${unTotal.toFixed(4)}` : `Hypercube u${toSub(nParam)} = (1 + 1/${nParam})${toSup(nParam)} = ${unTotal.toFixed(5)}`;
-ctx.fillText(uText, barLeft, yBar2 - 5, barW);
-curX = barLeft;
-for (let k = 0; k <= Math.min(nParam, 7); k++) {
-const val = unTerms[k];
-const segW = (val / maxVal) * barW;
-ctx.fillStyle = layerColors[k % layerColors.length];
-ctx.globalAlpha = (activeLayer === -1 || activeLayer === k) ? 0.85 : 0.22;
-ctx.fillRect(curX, yBar2, Math.max(segW - 1, 1), 22);
-if (segW > 20) {
-ctx.fillStyle = '#ffffff';
-ctx.font = 'bold 9.5px system-ui, sans-serif';
-ctx.textAlign = 'center';
-ctx.fillText(`V${toSub(k)}`, curX + segW / 2, yBar2 + 14, Math.max(segW - 2, 8));
-}
-curX += segW;
-}
-ctx.globalAlpha = 1.0;
-const eX = barLeft + (E_CONST / maxVal) * barW;
-ctx.strokeStyle = '#dc2626';
-ctx.lineWidth = 1.8;
-ctx.setLineDash([4, 3]);
-ctx.beginPath();
-ctx.moveTo(eX, yBar1 - 8);
-ctx.lineTo(eX, yBar2 + 28);
-ctx.stroke();
-ctx.setLineDash([]);
-ctx.fillStyle = '#dc2626';
-ctx.font = 'bold 10px system-ui, sans-serif';
-ctx.textAlign = 'center';
-ctx.fillText('e ≈ 2,718', eX, yBar2 + 40);
-const tableTop = y0 + 152;
-const col0 = barLeft;
-const col1 = barLeft + Math.floor(barW * 0.23);
-const col2 = barLeft + Math.floor(barW * 0.52);
-const col3 = barLeft + Math.floor(barW * 0.78);
-const colW = Math.floor(barW * 0.24);
-ctx.textAlign = 'left';
-ctx.fillStyle = '#0f172a';
-ctx.font = 'bold 10.5px system-ui, sans-serif';
-ctx.fillText('Couche', col0, tableTop, colW);
-ctx.fillText(w < 260 ? '3D' : '3D (d=3)', col1, tableTop, colW);
-ctx.fillText(w < 260 ? 'Vₙ,ₖ' : `V${toSub(nParam)},ₖ`, col2, tableTop, colW);
-ctx.fillText('Vol(Δₖ)', col3, tableTop, colW);
-ctx.strokeStyle = '#cbd5e1';
-ctx.beginPath();
-ctx.moveTo(barLeft, tableTop + 4);
-ctx.lineTo(barLeft + barW, tableTop + 4);
-ctx.stroke();
-const cube3DCounts = ['1×1', '3×(1/n)', '3×(1/n²)', '1×(1/n³)', '—', '—'];
-const maxRows = Math.min(nParam, 5);
-for (let k = 0; k <= maxRows; k++) {
-const ry = tableTop + 20 + k * 21;
-const vk = unTerms[k];
-const sk = 1 / factorial(k);
-const isHi = activeLayer === k;
-if (isHi) {
-ctx.fillStyle = 'rgba(0, 77, 128, 0.08)';
-ctx.fillRect(barLeft - 4, ry - 13, barW + 8, 18);
-}
-ctx.fillStyle = layerColors[k % layerColors.length];
-ctx.beginPath();
-ctx.arc(col0 + 4, ry - 4, 3.5, 0, Math.PI * 2);
-ctx.fill();
-ctx.fillStyle = '#1e293b';
-ctx.font = isHi ? 'bold 10px monospace' : '600 10px monospace';
-ctx.fillText(`k=${k}`, col0 + 12, ry, colW);
-ctx.fillStyle = '#475569';
-ctx.fillText(cube3DCounts[k] || '—', col1, ry, colW);
-ctx.fillStyle = '#0f172a';
-ctx.fillText(vk.toFixed(4), col2, ry, colW);
-ctx.fillStyle = '#970E53';
-ctx.fillText(`1/${k}!=${sk.toFixed(3)}`, col3, ry, colW);
-}
-const cube3DVol = Math.pow(1 + 1 / nParam, 3);
-ctx.fillStyle = '#334155';
-ctx.font = '600 10.5px system-ui, sans-serif';
-const sum3DTxt = w < 280
-? `(1 + 1/${nParam})³ = ${cube3DVol.toFixed(4)}`
-: `En 3D : (1 + 1/${nParam})³ = 1 + 3/${nParam} + 3/${nParam}² + 1/${nParam}³ = ${cube3DVol.toFixed(4)}`;
-ctx.fillText(sum3DTxt, barLeft, y0 + h - 10, barW);
-ctx.restore();
-}
-function createBox3D(bx0, bx1, by0, by1, bz0, bz1, orderK, label) {
-const verts = [
-[bx0, by0, bz0], [bx1, by0, bz0], [bx1, by1, bz0], [bx0, by1, bz0],
-[bx0, by0, bz1], [bx1, by0, bz1], [bx1, by1, bz1], [bx0, by1, bz1]
-];
-const faces = [
-[0, 1, 2, 3], [4, 5, 6, 7],
-[0, 1, 5, 4], [2, 3, 7, 6],
-[1, 2, 6, 5], [0, 3, 7, 4]
-];
-return { verts, faces, orderK, label };
-}
-function draw2DSquare(x0, y0, w, h) {
-ctx.save();
-ctx.fillStyle = '#0f172a';
-ctx.font = 'bold 12px system-ui, sans-serif';
-ctx.textAlign = 'center';
-ctx.fillText(`1. Carré 2D (1 + 1/${nParam})²`, x0 + w * 0.5, y0 + 18, w - 16);
-ctx.fillStyle = '#64748b';
-ctx.font = '10.5px system-ui, sans-serif';
-ctx.fillText('1 cœur + 2 bandes + 1 coin', x0 + w * 0.5, y0 + 33, w - 16);
-const pad2D = 16;
-const avail2D = Math.max(Math.min(w - 2 * pad2D, h - 130, 180), 70);
-const totalSide = 1 + 1 / nParam;
-const unitPx = avail2D / totalSide;
-const extPx = unitPx / nParam;
-const gap2D = explode * 8;
-const sx = Math.floor(x0 + (w - avail2D - gap2D) / 2);
-const sy = y0 + 44;
-ctx.globalAlpha = (activeLayer === -1 || activeLayer === 0) ? 1.0 : 0.2;
-ctx.fillStyle = 'rgba(0, 77, 128, 0.22)';
-ctx.strokeStyle = '#004D80';
-ctx.lineWidth = 2;
-ctx.fillRect(sx, sy + extPx + gap2D, unitPx, unitPx);
-ctx.strokeRect(sx, sy + extPx + gap2D, unitPx, unitPx);
-ctx.fillStyle = '#004D80';
-ctx.font = 'bold 11px system-ui, sans-serif';
-ctx.textAlign = 'center';
-ctx.fillText('k = 0 (Cœur)', sx + unitPx / 2, sy + extPx + gap2D + unitPx / 2 - 4, unitPx - 4);
-ctx.font = '10px system-ui, sans-serif';
-ctx.fillText('Aire = 1', sx + unitPx / 2, sy + extPx + gap2D + unitPx / 2 + 10, unitPx - 4);
-ctx.globalAlpha = (activeLayer === -1 || activeLayer === 1) ? 1.0 : 0.2;
-ctx.fillStyle = 'rgba(0, 108, 101, 0.42)';
-ctx.strokeStyle = '#006C65';
-ctx.lineWidth = 1.6;
-ctx.fillRect(sx + unitPx + gap2D, sy + extPx + gap2D, extPx, unitPx);
-ctx.strokeRect(sx + unitPx + gap2D, sy + extPx + gap2D, extPx, unitPx);
-ctx.fillRect(sx, sy, unitPx, extPx);
-ctx.strokeRect(sx, sy, unitPx, extPx);
-ctx.globalAlpha = (activeLayer === -1 || activeLayer === 2) ? 1.0 : 0.2;
-ctx.fillStyle = 'rgba(151, 14, 83, 0.72)';
-ctx.strokeStyle = '#970E53';
-ctx.lineWidth = 1.8;
-ctx.fillRect(sx + unitPx + gap2D, sy, extPx, extPx);
-ctx.strokeRect(sx + unitPx + gap2D, sy, extPx, extPx);
-ctx.globalAlpha = 1.0;
-const legY = sy + avail2D + gap2D + 18;
-ctx.textAlign = 'left';
-ctx.font = '600 10px system-ui, sans-serif';
-ctx.fillStyle = '#004D80';
-ctx.fillText(`• Cœur (k=0) : 1 × 1 = 1`, x0 + 12, legY, w - 24);
-ctx.fillStyle = '#006C65';
-ctx.fillText(`• 2 bandes (k=1) : 2 × (1/${nParam}) = ${(2/nParam).toFixed(3)}`, x0 + 12, legY + 15, w - 24);
-ctx.fillStyle = '#970E53';
-ctx.fillText(`• 1 coin (k=2) : 1/${nParam}² = ${(1/(nParam*nParam)).toFixed(4)}`, x0 + 12, legY + 30, w - 24);
-ctx.fillStyle = '#1e293b';
-ctx.font = 'bold 10px system-ui, sans-serif';
-ctx.fillText(`Total 2D = (1 + 1/${nParam})² = ${Math.pow(1+1/nParam, 2).toFixed(3)}`, x0 + 12, legY + 47, w - 24);
-ctx.restore();
-}
-function draw3DExpandedCube(x0, y0, w, h) {
-ctx.save();
-const cx3 = x0 + w * 0.5;
-const cy3 = y0 + (h - 40) * 0.52;
-const eps = 1 / nParam;
-const gap3 = explode * 0.36;
-const scale3 = Math.min(w, h - 50) * (0.37 / (1 + eps + gap3 * 0.7));
-const centerOff = (1 + eps + gap3) * 0.5;
-ctx.fillStyle = '#0f172a';
-ctx.font = 'bold 12px system-ui, sans-serif';
-ctx.textAlign = 'center';
-ctx.fillText(`2. Cube 3D dilaté (1 + 1/${nParam})³ : 8 morceaux`, cx3, y0 + 18, w - 16);
-ctx.fillStyle = '#64748b';
-ctx.font = '10.5px system-ui, sans-serif';
-ctx.fillText('(Glisser pour tourner — 1 cœur, 3 faces, 3 arêtes, 1 coin)', cx3, y0 + 33, w - 16);
-const boxes = [];
-for (let ix = 0; ix < 2; ix++) {
-for (let iy = 0; iy < 2; iy++) {
-for (let iz = 0; iz < 2; iz++) {
-const k = ix + iy + iz;
-const bx0 = ix === 0 ? 0 : 1 + gap3;
-const bx1 = ix === 0 ? 1 : 1 + gap3 + eps;
-const by0 = iy === 0 ? 0 : 1 + gap3;
-const by1 = iy === 0 ? 1 : 1 + gap3 + eps;
-const bz0 = iz === 0 ? 0 : 1 + gap3;
-const bz1 = iz === 0 ? 1 : 1 + gap3 + eps;
-boxes.push(createBox3D(bx0, bx1, by0, by1, bz0, bz1, k));
-}
-}
-}
-const kFill = [
-'rgba(0, 77, 128, 0.52)',
-'rgba(0, 108, 101, 0.68)',
-'rgba(151, 14, 83, 0.82)',
-'rgba(217, 119, 6, 0.92)'
-];
-const kStroke = ['#004D80', '#006C65', '#970E53', '#b45309'];
-const allPolys = [];
-boxes.forEach(box => {
-const projV = box.verts.map(v => project3D(v, cx3, cy3, scale3, centerOff));
-box.faces.forEach(f => {
-const d = (projV[f[0]].depth + projV[f[1]].depth + projV[f[2]].depth + projV[f[3]].depth) / 4;
-allPolys.push({
-pts: [projV[f[0]], projV[f[1]], projV[f[2]], projV[f[3]]],
-depth: d,
-k: box.orderK
-});
-});
-});
-allPolys.sort((a, b) => b.depth - a.depth);
-allPolys.forEach(poly => {
-const isVis = activeLayer === -1 || activeLayer === poly.k;
-ctx.globalAlpha = isVis ? 1.0 : 0.12;
-ctx.beginPath();
-ctx.moveTo(poly.pts[0].x, poly.pts[0].y);
-ctx.lineTo(poly.pts[1].x, poly.pts[1].y);
-ctx.lineTo(poly.pts[2].x, poly.pts[2].y);
-ctx.lineTo(poly.pts[3].x, poly.pts[3].y);
-ctx.closePath();
-ctx.fillStyle = kFill[poly.k];
-ctx.fill();
-ctx.strokeStyle = kStroke[poly.k];
-ctx.lineWidth = poly.k >= 2 ? 1.4 : 1.0;
-ctx.stroke();
-});
-ctx.globalAlpha = 1.0;
-const botY = y0 + h - 30;
-const legW3D = Math.min(w * 0.46, 120);
-ctx.font = 'bold 10px system-ui, sans-serif';
-ctx.textAlign = 'center';
-ctx.fillStyle = '#004D80';
-ctx.fillText(`k=0 : 1 cœur (1)`, cx3 - legW3D * 0.5, botY, legW3D);
-ctx.fillStyle = '#006C65';
-ctx.fillText(`k=1 : 3 plaques (3/${nParam})`, cx3 + legW3D * 0.5, botY, legW3D);
-ctx.fillStyle = '#970E53';
-ctx.fillText(`k=2 : 3 arêtes (3/${nParam}²)`, cx3 - legW3D * 0.5, botY + 15, legW3D);
-ctx.fillStyle = '#d97706';
-ctx.fillText(`k=3 : 1 coin (1/${nParam}³)`, cx3 + legW3D * 0.5, botY + 15, legW3D);
-ctx.restore();
-}
-function drawMode1(W, H) {
-if (W >= 780) {
-const w2D = Math.floor(W * 0.26);
-const w3D = Math.floor(W * 0.38);
-const x3D = w2D;
-const xRight = w2D + w3D;
-draw2DSquare(0, 0, w2D, H);
-ctx.strokeStyle = '#e2e8f0';
-ctx.lineWidth = 1;
-ctx.beginPath();
-ctx.moveTo(x3D, 14);
-ctx.lineTo(x3D, H - 14);
-ctx.stroke();
-draw3DExpandedCube(x3D, 0, w3D, H);
-drawComparisonPanel(xRight + 6, 12, W - xRight - 14, H - 24);
-} else if (W >= 520) {
-const hRow1 = 330;
-const w2D = Math.floor(W * 0.44);
-const w3D = W - w2D;
-draw2DSquare(0, 0, w2D, hRow1);
-ctx.strokeStyle = '#e2e8f0';
-ctx.lineWidth = 1;
-ctx.beginPath();
-ctx.moveTo(w2D, 14);
-ctx.lineTo(w2D, hRow1 - 14);
-ctx.stroke();
-draw3DExpandedCube(w2D, 0, w3D, hRow1);
-drawComparisonPanel(8, hRow1 + 10, W - 16, H - hRow1 - 20);
-} else {
-const hRow1 = 260;
-const hRow2 = 320;
-draw2DSquare(0, 0, W, hRow1);
-draw3DExpandedCube(0, hRow1 + 10, W, hRow2);
-drawComparisonPanel(6, hRow1 + hRow2 + 20, W - 12, H - (hRow1 + hRow2 + 30));
-}
-const v2 = (nParam * (nParam - 1) / 2) / (nParam * nParam);
-const v3 = nParam >= 3 ? (nParam * (nParam - 1) * (nParam - 2) / 6) / (nParam * nParam * nParam) : 0;
-readout.innerHTML = `<b>Morceaux supplémentaires de la dilatation ($n = ${nParam}$)&nbsp;:</b> en 3D, le cube dilaté $\left(1+\frac{1}{${nParam}}\right)^3$ ajoute au cœur $1$ (bleu) <b>3 plaques de faces</b> d'épaisseur $\frac{1}{${nParam}}$ (vert), <b>3 baguettes d'arêtes</b> de section $\frac{1}{${nParam}^2}$ (grenat) et <b>1 petit cube de coin</b> de volume $\frac{1}{${nParam}^3}$ (ambre). En dimension $n = ${nParam}$, la couche d'ordre $k=2$ vaut $V_{${nParam},2} = \binom{${nParam}}{2}\frac{1}{${nParam}^2} = ${v2.toFixed(4)} \to \frac{1}{2!} = 0,5$, et la couche $k=3$ vaut $V_{${nParam},3} = ${v3.toFixed(4)} \to \frac{1}{3!} \approx 0,1667$.`;
-if (window.MathJax && window.MathJax.typesetPromise) {
-window.MathJax.typesetPromise([readout]).catch(() => {});
-}
-}
-function drawMode2(W, H) {
-const isNarrow = W < 640;
-const leftW = isNarrow ? W : Math.floor(W * 0.54);
-const panelH = isNarrow ? 370 : H;
-const cx = leftW * 0.5;
-const cy = panelH * 0.53;
-const scale = Math.min(leftW, panelH) * 0.44;
-ctx.fillStyle = '#0f172a';
-ctx.font = 'bold 12.5px system-ui, sans-serif';
-ctx.textAlign = 'center';
-ctx.fillText('Pavage du cube [0,1]³ en 3! = 6 simplexes isométriques (Vol = 1/6)', cx, 22, leftW - 16);
-ctx.fillStyle = '#64748b';
-ctx.font = '10.5px system-ui, sans-serif';
-ctx.fillText('(Glisser pour tourner en 3D — La diagonale noire est t₁ = t₂ = t₃)', cx, 38, leftW - 16);
-const cubeCorners = [
-[0,0,0],[1,0,0],[1,1,0],[0,1,0],
-[0,0,1],[1,0,1],[1,1,1],[0,1,1]
-];
-const cubeEdges = [
-[0,1],[1,2],[2,3],[3,0],
-[4,5],[5,6],[6,7],[7,4],
-[0,4],[1,5],[2,6],[3,7]
-];
-ctx.strokeStyle = 'rgba(148, 163, 184, 0.45)';
-ctx.lineWidth = 1;
-ctx.setLineDash([3, 3]);
-cubeEdges.forEach(([i, j]) => {
-const p1 = project3D(cubeCorners[i], cx, cy, scale);
-const p2 = project3D(cubeCorners[j], cx, cy, scale);
-ctx.beginPath();
-ctx.moveTo(p1.x, p1.y);
-ctx.lineTo(p2.x, p2.y);
-ctx.stroke();
-});
-ctx.setLineDash([]);
-const tetraDrawList = [];
-PERMS_S3.forEach((info, idx) => {
-const verts = getTetraVertices(info.perm);
-const centroid = [0, 0, 0];
-verts.forEach(v => {
-centroid[0] += v[0] / 4;
-centroid[1] += v[1] / 4;
-centroid[2] += v[2] / 4;
-});
-const diagProj = (centroid[0] + centroid[1] + centroid[2]) / 3;
-const dir = [
-centroid[0] - diagProj,
-centroid[1] - diagProj,
-centroid[2] - diagProj
-];
-const disp = explode * 0.85;
-const shiftedVerts = verts.map(v => [
-v[0] + dir[0] * disp,
-v[1] + dir[1] * disp,
-v[2] + dir[2] * disp
-]);
-const projVerts = shiftedVerts.map(v => project3D(v, cx, cy, scale));
-const avgDepth = projVerts.reduce((acc, p) => acc + p.depth, 0) / 4;
-tetraDrawList.push({ idx, info, projVerts, avgDepth });
-});
-tetraDrawList.sort((a, b) => b.avgDepth - a.avgDepth);
-const faces = [[0, 1, 2], [0, 1, 3], [0, 2, 3], [1, 2, 3]];
-tetraDrawList.forEach(item => {
-const { idx, info, projVerts } = item;
-const isCanonical = idx === 0;
-const sortedFaces = faces.map(f => ({
-f,
-d: (projVerts[f[0]].depth + projVerts[f[1]].depth + projVerts[f[2]].depth) / 3
-})).sort((a, b) => b.d - a.d);
-sortedFaces.forEach(({ f }) => {
-ctx.beginPath();
-ctx.moveTo(projVerts[f[0]].x, projVerts[f[0]].y);
-ctx.lineTo(projVerts[f[1]].x, projVerts[f[1]].y);
-ctx.lineTo(projVerts[f[2]].x, projVerts[f[2]].y);
-ctx.closePath();
-ctx.fillStyle = info.fill;
-ctx.fill();
-ctx.strokeStyle = isCanonical ? '#970E53' : info.color;
-ctx.lineWidth = isCanonical ? 1.8 : 1.0;
-ctx.stroke();
-});
-const lx = (projVerts[0].x + projVerts[1].x + projVerts[2].x + projVerts[3].x) / 4;
-const ly = (projVerts[0].y + projVerts[1].y + projVerts[2].y + projVerts[3].y) / 4;
-if (explode > 0.22 || isCanonical) {
-ctx.strokeStyle = isCanonical ? '#970E53' : 'rgba(255,255,255,0.85)';
-ctx.lineWidth = 3;
-ctx.font = isCanonical ? 'bold 11px system-ui, sans-serif' : '600 10px system-ui, sans-serif';
-ctx.textAlign = 'center';
-const txt = isCanonical ? 'Δ₃ (t₁≤t₂≤t₃)' : info.short;
-ctx.strokeText(txt, lx, ly);
-ctx.fillStyle = isCanonical ? '#ffffff' : info.color;
-ctx.fillText(txt, lx, ly);
-}
-});
-const pOrigin = project3D([0, 0, 0], cx, cy, scale);
-const pDiag = project3D([1, 1, 1], cx, cy, scale);
-ctx.strokeStyle = '#0f172a';
-ctx.lineWidth = 2.4;
-ctx.beginPath();
-ctx.moveTo(pOrigin.x, pOrigin.y);
-ctx.lineTo(pDiag.x, pDiag.y);
-ctx.stroke();
-ctx.fillStyle = '#0f172a';
-ctx.font = 'bold 11px system-ui, sans-serif';
-ctx.fillText('(0,0,0)', pOrigin.x - 16, pOrigin.y + 14);
-ctx.fillText('(1,1,1)', pDiag.x + 16, pDiag.y - 8);
-const pT1 = project3D([1.08, 0, 0], cx, cy, scale);
-const pT2 = project3D([0, 1.08, 0], cx, cy, scale);
-const pT3 = project3D([0, 0, 1.08], cx, cy, scale);
-ctx.fillStyle = '#475569';
-ctx.font = 'bold 11px system-ui, sans-serif';
-ctx.fillText('t₁', pT1.x, pT1.y);
-ctx.fillText('t₂', pT2.x, pT2.y);
-ctx.fillText('t₃', pT3.x, pT3.y);
-if (isNarrow) {
-drawComparisonPanel(8, panelH + 10, W - 16, H - panelH - 20);
-} else {
-drawComparisonPanel(leftW + 8, 12, W - leftW - 18, H - 24);
-}
-readout.innerHTML = `<b>Pavage du cube $[0,1]^3$ par le groupe symétrique $\mathfrak{S}_3$&nbsp;:</b> les $3! = 6$ tétraèdres partagent tous la grande diagonale $t_1 = t_2 = t_3$ joignant $(0,0,0)$ à $(1,1,1)$. Le simplexe canonique <b style="color:#970E53;">$\Delta_3 = \{0 \le t_1 \le t_2 \le t_3 \le 1\}$</b> (en grenat) est une pyramide de base $\Delta_2$ (aire $\frac{1}{2!}$) et de hauteur $1$, son volume vaut donc $\frac{1}{3}\times\frac{1}{2!} = \frac{1}{3!} = \frac{1}{6}$.`;
-if (window.MathJax && window.MathJax.typesetPromise) {
-window.MathJax.typesetPromise([readout]).catch(() => {});
-}
-}
-function drawMode3(W, H) {
-const isNarrow = W < 640;
-const leftW = isNarrow ? W : Math.floor(W * 0.54);
-const panelH = isNarrow ? 370 : H;
-ctx.fillStyle = '#0f172a';
-ctx.font = 'bold 12.5px system-ui, sans-serif';
-ctx.textAlign = 'center';
-ctx.fillText(`Aire sous l'hyperbole y = 1/x : ${nParam} tranches d'aires égales`, leftW * 0.5, 22, leftW - 16);
-ctx.fillStyle = '#64748b';
-ctx.font = '10.5px system-ui, sans-serif';
-ctx.fillText(`Chaque tranche [(1+1/n)ʲ, (1+1/n)ʲ⁺¹] a la même aire par affinité`, leftW * 0.5, 38, leftW - 16);
-const padL = 40, padR = 16, padT = 58, padB = 42;
-const plotW = leftW - padL - padR;
-const plotH = panelH - padT - padB;
-const xMin = 0.8, xMax = 3.15;
-const yMin = 0, yMax = 1.18;
-const toX = x => padL + ((x - xMin) / (xMax - xMin)) * plotW;
-const toY = y => padT + plotH - ((y - yMin) / (yMax - yMin)) * plotH;
-ctx.strokeStyle = '#64748b';
-ctx.lineWidth = 1.4;
-ctx.beginPath();
-ctx.moveTo(padL, padT);
-ctx.lineTo(padL, padT + plotH);
-ctx.lineTo(padL + plotW, padT + plotH);
-ctx.stroke();
-const c = 1 + 1 / nParam;
-const highlightIdx = Math.min(Math.max(1, selectedSlice), nParam) - 1;
-for (let j = 0; j < nParam; j++) {
-const a = Math.pow(c, j);
-const b = Math.pow(c, j + 1);
-const isHi = j === highlightIdx;
-ctx.beginPath();
-ctx.moveTo(toX(a), toY(0));
-const steps = 20;
-for (let s = 0; s <= steps; s++) {
-const x = a + (b - a) * (s / steps);
-ctx.lineTo(toX(x), toY(1 / x));
-}
-ctx.lineTo(toX(b), toY(0));
-ctx.closePath();
-ctx.fillStyle = isHi ? 'rgba(151, 14, 83, 0.45)' : (j % 2 === 0 ? 'rgba(0, 108, 101, 0.24)' : 'rgba(0, 77, 128, 0.18)');
-ctx.fill();
-ctx.strokeStyle = isHi ? '#970E53' : '#006C65';
-ctx.lineWidth = isHi ? 2 : 1;
-ctx.stroke();
-}
-ctx.strokeStyle = '#004D80';
-ctx.lineWidth = 2.5;
-ctx.beginPath();
-for (let px = 0; px <= plotW; px += 2) {
-const x = xMin + (px / plotW) * (xMax - xMin);
-const y = 1 / x;
-if (px === 0) ctx.moveTo(padL + px, toY(y));
-else ctx.lineTo(padL + px, toY(y));
-}
-ctx.stroke();
-const un = Math.pow(c, nParam);
-const x1Px = toX(1);
-const unPx = toX(un);
-const ePx = toX(E_CONST);
-ctx.strokeStyle = '#dc2626';
-ctx.lineWidth = 2;
-ctx.setLineDash([5, 3]);
-ctx.beginPath();
-ctx.moveTo(ePx, padT + 10);
-ctx.lineTo(ePx, toY(0));
-ctx.stroke();
-ctx.setLineDash([]);
-ctx.fillStyle = '#dc2626';
-ctx.font = 'bold 11px system-ui, sans-serif';
-ctx.textAlign = 'center';
-ctx.fillText('e ≈ 2,718', ePx + 14, padT + 22);
-ctx.fillStyle = '#0f172a';
-ctx.fillText('x = 1', x1Px, toY(0) + 16);
-ctx.fillStyle = '#006C65';
-ctx.fillText(`u${toSub(nParam)} = ${un.toFixed(3)}`, unPx - 10, toY(0) + 30);
-if (isNarrow) {
-drawComparisonPanel(8, panelH + 10, W - 16, H - panelH - 20);
-} else {
-drawComparisonPanel(leftW + 8, 12, W - leftW - 18, H - 24);
-}
-const sliceArea = Math.log(c);
-const totalArea = nParam * sliceArea;
-readout.innerHTML = `<b>Invariance d'échelle sous $y = 1/x$ ($n = ${nParam}$)&nbsp;:</b> chacune des ${nParam} tranches $\left[(1+1/${nParam})^j,\,(1+1/${nParam})^{j+1}\right]$ a exactement la même aire $\mathcal{A}_1 = \ln(1 + 1/${nParam}) \approx ${sliceArea.toFixed(4)}$. L'aire totale sous l'hyperbole sur $[1, u_{${nParam}}]$ vaut $${totalArea.toFixed(4)} \to 1 = \mathcal{A}(1, \mathrm{e})$.`;
-if (window.MathJax && window.MathJax.typesetPromise) {
-window.MathJax.typesetPromise([readout]).catch(() => {});
-}
-}
-function render() {
-const dpr = window.devicePixelRatio || 1;
-const W = canvas.clientWidth || 820;
-let targetH = 435;
-if (mode === 1) {
-if (W < 520) targetH = 880;
-else if (W < 780) targetH = 620;
-else targetH = 435;
-} else {
-if (W < 640) targetH = 670;
-else targetH = 435;
-}
-if (canvas.style.height !== targetH + 'px') {
-canvas.style.height = targetH + 'px';
-}
-const H = targetH;
-if (canvas.width !== Math.round(W * dpr) || canvas.height !== Math.round(H * dpr)) {
-canvas.width = Math.round(W * dpr);
-canvas.height = Math.round(H * dpr);
-}
-ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-ctx.clearRect(0, 0, W, H);
-if (mode === 1) drawMode1(W, H);
-else if (mode === 2) drawMode2(W, H);
-else drawMode3(W, H);
-}
-btn1.addEventListener('click', () => { mode = 1; updateModeUI(); render(); });
-btn2.addEventListener('click', () => { mode = 2; updateModeUI(); render(); });
-btn3.addEventListener('click', () => { mode = 3; updateModeUI(); render(); });
-slider1.addEventListener('input', () => {
-if (mode === 1 || mode === 2) {
-explode = parseFloat(slider1.value) / 100;
-slider1Val.textContent = Math.round(explode * 100) + ' %';
-} else {
-selectedSlice = parseInt(slider1.value, 10);
-slider1Val.textContent = 'Tranche #' + selectedSlice + ' / ' + nParam;
-}
-render();
-});
-nSlider.addEventListener('input', () => {
-nParam = parseInt(nSlider.value, 10);
-updateModeUI();
-render();
-});
-layerBtns.forEach(b => {
-b.addEventListener('click', () => {
-activeLayer = parseInt(b.getAttribute('data-layer'), 10);
-updateModeUI();
-render();
-});
-});
-canvas.addEventListener('mousedown', e => {
-if (mode === 3) return;
-isDragging = true;
-lastX = e.clientX;
-lastY = e.clientY;
-canvas.style.cursor = 'grabbing';
-});
-window.addEventListener('mousemove', e => {
-if (!isDragging) return;
-const dx = e.clientX - lastX;
-const dy = e.clientY - lastY;
-lastX = e.clientX;
-lastY = e.clientY;
-rotYaw += dx * 0.01;
-rotPitch = Math.max(-1.2, Math.min(1.2, rotPitch + dy * 0.01));
-render();
-});
-window.addEventListener('mouseup', () => {
-if (isDragging) {
-isDragging = false;
-if (mode !== 3) canvas.style.cursor = 'grab';
-}
-});
-canvas.addEventListener('touchstart', e => {
-if (mode === 3 || e.touches.length !== 1) return;
-isDragging = true;
-lastX = e.touches[0].clientX;
-lastY = e.touches[0].clientY;
-}, { passive: true });
-window.addEventListener('touchmove', e => {
-if (!isDragging || e.touches.length !== 1) return;
-const dx = e.touches[0].clientX - lastX;
-const dy = e.touches[0].clientY - lastY;
-lastX = e.touches[0].clientX;
-lastY = e.touches[0].clientY;
-rotYaw += dx * 0.01;
-rotPitch = Math.max(-1.2, Math.min(1.2, rotPitch + dy * 0.01));
-render();
-}, { passive: true });
-window.addEventListener('touchend', () => { isDragging = false; });
-window.addEventListener('resize', render);
-updateModeUI();
-render();
-})();
-</script>
+Quand $n \to +\infty$, l'aire $\mathcal{A}(1, u\_n)$ tend donc vers $1 = \mathcal{A}(1, \mathrm{e})$&nbsp;: autrement dit $\ln u\_n \to 1$, et $u\_n \to \mathrm{e}$.
 
 
 ## Flèche du temps : Dyson et Wick
 
-### Généalogie de la croissance continue
+Jusqu'ici, le simplexe $\Delta\_k$ était une figure géométrique. Il apparaît tout aussi naturellement dès qu'un phénomène se construit **par étapes successives dans le temps**&nbsp;: la contrainte «&nbsp;chaque étape a lieu après la précédente&nbsp;» découpe exactement un simplexe dans l'hypercube de tous les instants possibles. C'est ce mécanisme qui fait surgir les $\frac{1}{n!}$ de la **série de Dyson** en mécanique quantique.
 
-Comment la somme des volumes des simplexes $\Delta\_k$ de toutes les dimensions engendre-t-elle $\mathrm{e}$ dans le monde physique&nbsp;?
-Imaginons une tige biologique (ou un capital continu) de longueur initiale $L(0) = 1$ à l'instant $t = 0$, dont chaque portion s'allonge uniformément à un taux de $100\\,\\%$ par unité de temps ($\frac{\mathrm{d}L}{\mathrm{d}t} = L(t)$). **Suivons l'arbre généalogique de la matière créée entre $t = 0$ et $t = 1$** en classant chaque fragment par sa *génération* $k$&nbsp;:
+Nous allons y arriver en quatre temps&nbsp;: une histoire de croissance (l'intuition), le même calcul en équations (l'itération de Picard), sa version quantique (la série de Dyson), et enfin la subtilité propre au quantique (l'ordre des opérateurs).
 
-<ol>
-<li><b>Génération $k = 0$ (la tige ancêtre)&nbsp;:</b> le segment initial présent dès $t = 0$ conserve sa longueur propre égale à <b>$1 = \frac{1}{0!}$</b>.</li>
-<li><b>Génération $k = 1$ (les enfants directs)&nbsp;:</b> à chaque instant $t_1 \in [0, 1]$, la tige ancêtre bourgeonne et crée pendant $\mathrm{d}t_1$ un fragment de génération $1$ de longueur $1 \times \mathrm{d}t_1$. Au bout de l'intervalle $[0, 1]$, la longueur totale de génération $1$ vaut $\displaystyle L_1 = \int_0^1 \mathrm{d}t_1 = \operatorname{Vol}_1(\Delta_1) = \mathbf{1}$.</li>
-<li><b>Génération $k = 2$ (les petits-enfants)&nbsp;:</b> un fragment de génération $1$ né à l'instant $t_1$ ne reste pas inerte&nbsp;! Dès qu'il est né, il se met lui-même à bourgeonner à tout instant <i>ultérieur</i> $t_2 \in [t_1, 1]$ en créant de la matière de génération $2$ de mesure $\mathrm{d}t_1\,\mathrm{d}t_2$. L'ensemble des couples d'instants de naissance $(t_1, t_2)$ possibles obéit donc à la contrainte causale $0 \le t_1 \le t_2 \le 1$&nbsp;: c'est exactement le triangle $\Delta_2$&nbsp;! La longueur totale de génération $2$ vaut ainsi $\displaystyle L_2 = \iint_{0 \le t_1 \le t_2 \le 1} \mathrm{d}t_1\,\mathrm{d}t_2 = \operatorname{Vol}_2(\Delta_2) = \mathbf{\frac{1}{2!}}$.</li>
-<li><b>Génération quelconque $k$&nbsp;:</b> un fragment de génération $k$ est issu d'une cascade causale de $k$ naissances successives aux instants ordonnés $0 \le t_1 \le t_2 \le \dots \le t_k \le 1$. Sa longueur totale à $t = 1$ est le volume du simplexe canonique $\Delta_k$, soit <b>$\operatorname{Vol}_k(\Delta_k) = \frac{1}{k!}$</b>.</li>
-</ol>
+### Une croissance racontée génération par génération
 
-En additionnant toutes les générations présentes à $t = 1$, la longueur totale est la somme des volumes des simplexes de toutes les dimensions&nbsp;: $\displaystyle L(1) = \sum\_{k=0}^{+\infty} \operatorname{Vol}\_k(\Delta\_k) = \sum\_{k=0}^{+\infty} \frac{1}{k!} = \mathrm{e}$.
+Imaginons une population (de bactéries, ou un capital placé à intérêts continus) qui croît au taux de $100\\,\\%$ par unité de temps&nbsp;: chaque unité de matière en produit de la nouvelle au rythme de $1$ par unité de temps, et cette matière nouvelle se met **immédiatement** à produire à son tour. En équation, $L'(t) = L(t)$ avec $L(0) = 1$, et l'on sait que $L(1) = \mathrm{e}$.
 
-### Itération de Picard-Dyson et causalité
+Trions la matière présente à l'instant $t = 1$ selon sa **génération**&nbsp;:
+<ul>
+<li><b>Génération 0</b>&nbsp;: la matière initiale, de quantité $1$.</li>
+<li><b>Génération 1</b>&nbsp;: produite directement par la matière initiale. Entre $s_1$ et $s_1 + \mathrm{d}s_1$, celle-ci en produit $\mathrm{d}s_1$&nbsp;; au total, $\int_0^1 \mathrm{d}s_1 = 1$.</li>
+<li><b>Génération 2</b>&nbsp;: produite par de la matière de génération 1. Un morceau de génération 1 né à l'instant $s_1$ produit à son tour à tout instant <i>ultérieur</i> $s_2 \ge s_1$. Chaque morceau de génération 2 est donc repéré par un couple d'instants $0 \le s_1 \le s_2 \le 1$, c'est-à-dire par un point du triangle $\Delta_2$&nbsp;: la quantité totale est l'aire de $\Delta_2$, soit $\frac{1}{2}$.</li>
+<li><b>Génération $k$</b>&nbsp;: elle est issue d'une lignée de $k$ naissances successives aux instants $0 \le s_1 \le s_2 \le \dots \le s_k \le 1$&nbsp;; sa quantité est le volume de $\Delta_k$, soit $\frac{1}{k!}$.</li>
+</ul>
 
-Cette généalogie met en lumière un principe physique profond&nbsp;: **si l'exponentielle fait surgir des factorielles $\frac{1}{k!}$, c'est à cause de la brisure de symétrie par la flèche du temps** (l'enfant ne peut bourgeonner qu'*après* la naissance de son parent, $t\_1 \le t\_2 \le \dots \le t\_k$).
+<div class="svg-container">
+<svg viewBox="0 0 470 245" role="img" aria-label="Arbre des générations : chaque génération naît après la précédente" style="width:100%;max-width:470px;height:auto;">
+<text x="106.0" y="45.0" text-anchor="end" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >génération 0</text>
+<line x1="120.0" y1="40.0" x2="420.0" y2="40.0" stroke="#bfd2df" stroke-width="7" stroke-linecap="round"/>
+<text x="106.0" y="90.0" text-anchor="end" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >génération 1</text>
+<line x1="186.0" y1="85.0" x2="420.0" y2="85.0" stroke="#8cafc6" stroke-width="7" stroke-linecap="round"/>
+<path d="M186.0,40 C186.0,65 186.0,65 187.0,85" fill="none" stroke="#94a3b8" stroke-width="1.2"/>
+<circle cx="186.0" cy="40" r="4.5" fill="#970E53"/>
+<line x1="186.0" y1="91.0" x2="186.0" y2="205.0" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="186.0" y="226.0" text-anchor="middle" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >s<tspan dy='3' font-size='10'>1</tspan></text>
+<text x="106.0" y="135.0" text-anchor="end" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >génération 2</text>
+<line x1="264.0" y1="130.0" x2="420.0" y2="130.0" stroke="#5286a9" stroke-width="7" stroke-linecap="round"/>
+<path d="M264.0,85 C264.0,110 264.0,110 265.0,130" fill="none" stroke="#94a3b8" stroke-width="1.2"/>
+<circle cx="264.0" cy="85" r="4.5" fill="#970E53"/>
+<line x1="264.0" y1="136.0" x2="264.0" y2="205.0" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="264.0" y="226.0" text-anchor="middle" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >s<tspan dy='3' font-size='10'>2</tspan></text>
+<text x="106.0" y="180.0" text-anchor="end" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >génération 3</text>
+<line x1="333.0" y1="175.0" x2="420.0" y2="175.0" stroke="#0d5686" stroke-width="7" stroke-linecap="round"/>
+<path d="M333.0,130 C333.0,155 333.0,155 334.0,175" fill="none" stroke="#94a3b8" stroke-width="1.2"/>
+<circle cx="333.0" cy="130" r="4.5" fill="#970E53"/>
+<line x1="333.0" y1="181.0" x2="333.0" y2="205.0" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="3 3"/>
+<text x="333.0" y="226.0" text-anchor="middle" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >s<tspan dy='3' font-size='10'>3</tspan></text>
+<line x1="120.0" y1="205.0" x2="420.0" y2="205.0" stroke="#94a3b8" stroke-width="1" />
+<line x1="120.0" y1="201.0" x2="120.0" y2="209.0" stroke="#94a3b8" stroke-width="1" />
+<text x="120.0" y="226.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >0</text>
+<line x1="420.0" y1="201.0" x2="420.0" y2="209.0" stroke="#94a3b8" stroke-width="1" />
+<text x="420.0" y="226.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >1</text>
+<text x="432.0" y="209.0" text-anchor="start" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >temps</text>
+</svg>
+</div>
+<p class="legende">Une lignée de génération 3 est repérée par trois instants de naissance forcément ordonnés, $s_1 \le s_2 \le s_3$&nbsp;: c'est un point de $\Delta_3$.</p>
 
-Ce mécanisme gouverne toute la mécanique quantique et la **théorie quantique des champs (TQC)** via la **série de Dyson** et l'**ordonnancement chronologique de Wick $T$** (voir les notes de lecture [TQC 6](/physique/tqc/gifted_amateur/tqc6/#théorie-des-perturbations-et-équation-de-dyson) et [TQC 7](/physique/tqc/gifted_amateur/tqc7/#la-série-de-dyson)).
+En additionnant toutes les générations&nbsp;: $L(1) = 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \cdots = \mathrm{e}$. Les factorielles ne sortent pas d'un dénombrement artificiel&nbsp;: **$\frac{1}{k!}$ est la part des $k$-uplets d'instants qui respectent l'ordre chronologique**.
 
-Considérons un système quantique dont l'opérateur d'évolution $\hat{U}\_I(t, t')$ (de l'instant $t'$ à l'instant $t \ge t'$) obéit à l'équation de Schrödinger en représentation d'interaction ($\hbar = 1$)&nbsp;:
+### Itération de Picard
+
+Refaisons ce calcul en équations. L'équation $L' = L$ avec $L(0) = 1$ équivaut à
+
+$$
+L(t) = 1 + \int\_0^t L(t\_1)\\,\mathrm{d}t\_1,
+$$
+
+ce qui se lit&nbsp;: «&nbsp;la quantité à l'instant $t$ est la quantité initiale plus tout ce qui a été produit entre $0$ et $t$&nbsp;». On ne connaît pas $L$ sous l'intégrale... alors **remplaçons-la par sa propre expression**, et recommençons&nbsp;:
+
+$$
+L(t) = 1 + \int\_0^t \mathrm{d}t\_1 + \int\_0^t \mathrm{d}t\_1 \int\_0^{t\_1} \mathrm{d}t\_2 + \int\_0^t \mathrm{d}t\_1 \int\_0^{t\_1} \mathrm{d}t\_2 \int\_0^{t\_2} \mathrm{d}t\_3 + \cdots
+$$
+
+Chaque réinjection fait descendre d'une génération. Le terme d'ordre $k$ est une intégrale sur le domaine $\\{t \ge t\_1 \ge t\_2 \ge \dots \ge t\_k \ge 0\\}$&nbsp;: c'est le simplexe $\Delta\_k$ agrandi d'un facteur $t$, de volume $\frac{t^k}{k!}$. On retrouve ainsi
+
+$$
+L(t) = \sum\_{k=0}^{+\infty} \frac{t^k}{k!} = \mathrm{e}^t.
+$$
+
+Remarquez que les instants sont ici numérotés **en remontant le temps**&nbsp;: $t\_1$ est le plus récent, $t\_k$ le plus ancien. C'est la convention des physiciens, que nous garderons. Ce procédé, réinjecter l'équation dans elle-même, s'appelle l'**itération de Picard**&nbsp;; c'est aussi le cœur de la démonstration du théorème de Cauchy-Lipschitz.
+
+### Version quantique : la série de Dyson
+
+En mécanique quantique, l'état d'un système passe de l'instant $t'$ à l'instant $t$ sous l'action d'un **opérateur d'évolution** $\hat U\_I(t, t')$. En représentation d'interaction (et avec $\hbar = 1$), il obéit à
 
 <p style="text-align:center;">
-$\displaystyle \mathrm{i}\,\partial_t \hat U_I(t, t') = \hat H_I(t)\,\hat U_I(t, t'),$ $\displaystyle \qquad \text{avec} \quad \hat U_I(t', t') = \hat{\mathbb{1}}$
+$\displaystyle \mathrm{i}\,\partial_t \hat U_I(t, t') = \hat H_I(t)\,\hat U_I(t, t'),$ $\displaystyle \qquad \text{avec} \quad \hat U_I(t', t') = \hat{\mathbb{1}}.$
 </p>
 
-En intégrant entre $t'$ et $t$, on obtient l'équation intégrale exacte $\displaystyle \hat U\_I(t, t') = \hat{\mathbb{1}} + (-\mathrm{i})\int\_{t'}^{t} \mathrm{d}t\_1 \\, \hat H\_I(t\_1)\\,\hat U\_I(t\_1, t')$. En réinjectant $\hat U\_I(t\_1, t')$ dans le membre de droite et en répétant l'opération indéfiniment, on engendre la **série de Dyson**&nbsp;:
+C'est la même équation que $L' = L$, à deux différences près&nbsp;: un facteur $-\mathrm{i}$, et surtout le fait que $\hat H\_I(t)$ est un **opérateur** (penser à une matrice) qui dépend du temps. On l'écrit sous forme intégrale, $\hat U\_I(t, t') = \hat{\mathbb{1}} - \mathrm{i}\int\_{t'}^{t} \mathrm{d}t\_1 \\, \hat H\_I(t\_1)\\,\hat U\_I(t\_1, t')$, puis on itère exactement comme Picard (voir les notes de lecture [TQC 6](/physique/tqc/gifted_amateur/tqc6/#théorie-des-perturbations-et-équation-de-dyson) et [TQC 7](/physique/tqc/gifted_amateur/tqc7/#la-série-de-dyson))&nbsp;:
 
 <div id="def">
 
-Le développement perturbatif de l'opérateur d'évolution $\hat{U}\_I(t, t')$ en puissances de l'interaction $\hat{H}\_I$ s'écrit&nbsp;:
+La **série de Dyson** est le développement de l'opérateur d'évolution en puissances de l'interaction $\hat{H}\_I$&nbsp;:
 
 <div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0.5em;">
 
@@ -1243,29 +758,52 @@ $$
 
 <br>
 
-**Pourquoi les bornes d'intégration sont-elles emboîtées ($t \ge t\_1 \ge t\_2 \ge \dots \ge t\_n \ge t'$)&nbsp;?**
-C'est l'expression géométrique du **principe de causalité**&nbsp;: pour aller de $t'$ à $t$ via $n$ interactions ponctuelles, la première interaction (en $t\_n$) doit avoir lieu *avant* la deuxième (en $t\_{n-1}$), et ainsi de suite jusqu'à la dernière (en $t\_1$). Parmi les $n!$ simplexes de l'hypercube des temps $[t', t]^n$, la causalité ne retient **qu'un seul simplexe chronologique**&nbsp;!
+Le terme d'ordre $n$ décrit les histoires où le système subit **$n$ interactions** aux instants $t' \le t\_n \le \dots \le t\_2 \le t\_1 \le t$. Le domaine d'intégration est, comme pour Picard, un simplexe&nbsp;: parmi les $n!$ simplexes qui pavent l'hypercube des temps $[t', t]^n$, la causalité n'en retient **qu'un seul**, celui où les interactions se succèdent dans l'ordre chronologique.
 
-### Non-commutativité et opérateur chronologique $T$ de Wick
+Un détail compte désormais&nbsp;: **l'ordre d'écriture des opérateurs**. Dans le produit $\hat H\_I(t\_1)\hat H\_I(t\_2)\cdots\hat H\_I(t\_n)$, le plus récent est à gauche et le plus ancien à droite, car c'est l'opérateur de droite qui agit en premier sur l'état, comme $f$ dans la composée $g \circ f$.
 
-Pourquoi ne peut-on pas écrire naïvement que cette intégrale sur le simplexe vaut $\frac{1}{n!}\left(\int\_{t'}^t \hat H\_I(t\_1)\\,\mathrm{d}t\_1\right)^n$&nbsp;?
-Parce qu'en mécanique quantique, **les hamiltoniens d'interaction à deux instants distincts ne commutent pas en général**&nbsp;:
+<div class="svg-container">
+<svg viewBox="0 0 420 205" role="img" aria-label="Les opérateurs de la série de Dyson sont rangés du plus récent au plus ancien" style="width:100%;max-width:420px;height:auto;">
+<line x1="40.0" y1="60.0" x2="380.0" y2="60.0" stroke="#94a3b8" stroke-width="1.2" />
+<path d="M372,55 L380,60 L372,65" fill="none" stroke="#94a3b8" stroke-width="1.2"/>
+<text x="40.0" y="46.0" text-anchor="middle" font-size="15" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >t′</text>
+<line x1="40.0" y1="55.0" x2="40.0" y2="65.0" stroke="#94a3b8" stroke-width="1.2" />
+<text x="376.0" y="46.0" text-anchor="middle" font-size="15" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >t</text>
+<text x="210.0" y="30.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >temps →</text>
+<circle cx="312.0" cy="60" r="5" fill="#970E53"/>
+<text x="312.0" y="84.0" text-anchor="middle" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >t<tspan dy='3' font-size='10'>1</tspan></text>
+<line x1="312.0" y1="94.0" x2="125.0" y2="136.0" stroke="#dbabc3" stroke-width="1.3" />
+<text x="125.0" y="160.0" text-anchor="middle" font-size="17" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >H(t<tspan dy='3' font-size='10'>1</tspan><tspan dy='-3'>)</tspan></text>
+<circle cx="216.8" cy="60" r="5" fill="#970E53"/>
+<text x="216.8" y="84.0" text-anchor="middle" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >t<tspan dy='3' font-size='10'>2</tspan></text>
+<line x1="216.8" y1="94.0" x2="210.0" y2="136.0" stroke="#dbabc3" stroke-width="1.3" />
+<text x="210.0" y="160.0" text-anchor="middle" font-size="17" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >H(t<tspan dy='3' font-size='10'>2</tspan><tspan dy='-3'>)</tspan></text>
+<circle cx="114.8" cy="60" r="5" fill="#970E53"/>
+<text x="114.8" y="84.0" text-anchor="middle" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >t<tspan dy='3' font-size='10'>3</tspan></text>
+<line x1="114.8" y1="94.0" x2="295.0" y2="136.0" stroke="#dbabc3" stroke-width="1.3" />
+<text x="295.0" y="160.0" text-anchor="middle" font-size="17" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >H(t<tspan dy='3' font-size='10'>3</tspan><tspan dy='-3'>)</tspan></text>
+<text x="210.0" y="190.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >← ordre d'action sur l'état</text>
+</svg>
+</div>
+<p class="legende">Les interactions se succèdent de gauche à droite sur l'axe du temps, mais les opérateurs s'écrivent dans l'ordre inverse&nbsp;: le plus ancien, $\hat H_I(t_3)$, agit en premier.</p>
+
+### Pourquoi l'ordre compte : le produit chronologique $T$
+
+Avec des nombres, tout était simple&nbsp;: l'intégrande $1$ est symétrique, les $n!$ simplexes de l'hypercube donnent la même contribution (c'est l'approche 2&nbsp;!), et l'intégrale sur le simplexe vaut $\frac{1}{n!}$ fois l'intégrale sur l'hypercube. De même, si les $\hat H\_I(t)$ à des instants différents commutaient entre eux, on obtiendrait simplement $\hat U\_I = \exp\left(-\mathrm{i}\int \hat H\_I\right)$.
+
+Mais en général ils **ne commutent pas**&nbsp;:
 
 <p style="text-align:center;">
-$\displaystyle \left[\hat H_I(t_1),\, \hat H_I(t_2)\right] = \hat H_I(t_1)\hat H_I(t_2) - \hat H_I(t_2)\hat H_I(t_1) \neq 0$
+$\displaystyle \left[\hat H_I(t_1),\, \hat H_I(t_2)\right] = \hat H_I(t_1)\hat H_I(t_2) - \hat H_I(t_2)\hat H_I(t_1) \neq 0.$
 </p>
 
-Regardons dès l'ordre $n = 2$ sur le carré des temps $[t', t]^2$ pourquoi cette non-commutativité brise la symétrie entre les deux triangles séparés par la diagonale $t\_1 = t\_2$&nbsp;:
-<ul>
-<li>Dans le triangle supérieur $t' \le t_2 \le t_1 \le t$ (notre simplexe causal $\Delta_2$), l'intégrande de Dyson est $\hat H_I(t_1)\hat H_I(t_2)$, où l'opérateur le plus récent ($t_1$) est bien placé à gauche.</li>
-<li>Si l'on passe au triangle miroir $t' \le t_1 \le t_2 \le t$ en échangeant les noms des variables muettes ($t_1 \leftrightarrow t_2$), l'intégrale de Dyson devient $\iint_{t_1 \le t_2} \mathrm{d}t_1\,\mathrm{d}t_2\,\color{#970E53}{\hat H_I(t_2)\hat H_I(t_1)}$. Comme $t_2$ est maintenant l'instant le plus récent, c'est $\hat H_I(t_2)$ qui doit se trouver à gauche&nbsp;!</li>
-</ul>
+C'est comme pour les rotations d'un livre&nbsp;: tourner d'un quart de tour autour d'un axe vertical puis autour d'un axe horizontal ne donne pas le même résultat que l'inverse. **L'ordre des interactions importe**, et l'on ne peut plus échanger librement les simplexes.
 
-Pour restaurer la symétrie de permutation $\mathfrak{S}\_n$ entre les $n!$ simplexes de l'hypercube $[t', t]^n$, Freeman Dyson (1949) et Gian-Carlo Wick (1950) ont introduit l'**opérateur d'ordonnancement chronologique $T$**, qui range automatiquement les opérateurs du plus récent (à gauche) au plus ancien (à droite)&nbsp;:
+Regardons ce qui se passe à l'ordre $n = 2$, sur le carré des temps $[t', t]^2$. Dyson n'intègre que sur le triangle causal $t\_1 \ge t\_2$, avec l'intégrande $\hat H\_I(t\_1)\hat H\_I(t\_2)$ (le plus récent à gauche). Pour étendre l'intégrale à tout le carré, il faut que l'autre triangle, où $t\_2 > t\_1$, contienne lui aussi le produit **rangé chronologiquement**, soit $\hat H\_I(t\_2)\hat H\_I(t\_1)$. C'est exactement ce que fait l'opérateur d'ordonnancement chronologique introduit par Freeman Dyson (1949) et Gian-Carlo Wick (1950)&nbsp;:
 
 <div id="def">
 
-Pour deux instants $(t\_1, t\_2)$, le <b>produit chronologique $T$</b> est défini par&nbsp;:
+Pour deux instants $t\_1$ et $t\_2$, le <b>produit chronologique $T$</b> est défini par&nbsp;:
 
 <div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0.5em;">
 
@@ -1278,50 +816,36 @@ $$
 
 </div>
 
-Plus généralement, si $\sigma \in \mathfrak{S}\_n$ est la permutation telle que $t\_{\sigma(1)} \ge t\_{\sigma(2)} \ge \dots \ge t\_{\sigma(n)}$, alors $\displaystyle T\big[\hat H\_I(t\_1)\cdots\hat H\_I(t\_n)\big] = \hat H\_I\big(t\_{\sigma(1)}\big)\cdots\hat H\_I\big(t\_{\sigma(n)}\big)$.
+Plus généralement, si $\sigma \in \mathfrak{S}\_n$ est la permutation qui range les instants dans l'ordre décroissant, $t\_{\sigma(1)} \ge t\_{\sigma(2)} \ge \dots \ge t\_{\sigma(n)}$, alors $\displaystyle T\big[\hat H\_I(t\_1)\cdots\hat H\_I(t\_n)\big] = \hat H\_I\big(t\_{\sigma(1)}\big)\cdots\hat H\_I\big(t\_{\sigma(n)}\big)$.
 
 </div>
+
+<br>
 
 <div class="svg-container">
-<svg viewBox="0 0 760 250" style="max-width:760px;width:100%;height:auto;background:#ffffff;border:1px solid #cbd5e1;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.04);font-family:system-ui,-apple-system,sans-serif;">
-<text x="380" y="24" text-anchor="middle" font-size="13.5" font-weight="700" fill="#004D80">La ruse géométrique de Dyson-Wick sur le carré des temps [t', t]² : restaurer la symétrie S₂ grâce à T</text>
-<!-- Left square: Causal simplex only -->
-<rect x="65" y="52" width="165" height="165" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
-<polygon points="65,217 230,217 230,52" fill="rgba(151, 14, 83, 0.24)" stroke="#970E53" stroke-width="2"/>
-<line x1="65" y1="217" x2="230" y2="52" stroke="#970E53" stroke-width="2" stroke-dasharray="4,2"/>
-<text x="175" y="165" text-anchor="middle" font-size="11.5" font-weight="700" fill="#970E53">Simplexe causal</text>
-<text x="175" y="182" text-anchor="middle" font-size="11" font-weight="700" fill="#970E53">t₁ ≥ t₂ : H(t₁)H(t₂)</text>
-<text x="115" y="105" text-anchor="middle" font-size="10.5" fill="#94a3b8">Secteur t₂ &gt; t₁</text>
-<text x="115" y="120" text-anchor="middle" font-size="10.5" fill="#94a3b8">(interdit par</text>
-<text x="115" y="135" text-anchor="middle" font-size="10.5" fill="#94a3b8">la causalité)</text>
-<text x="147" y="236" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">t₁ ∈ [t', t]</text>
-<text x="45" y="135" text-anchor="middle" font-size="11" font-weight="600" fill="#334155" transform="rotate(-90 45 135)">t₂ ∈ [t', t]</text>
-<!-- Arrow in middle -->
-<text x="345" y="112" text-anchor="middle" font-size="12" font-weight="700" fill="#004D80">Symétrisation par T</text>
-<path d="M 265 132 L 425 132" stroke="#004D80" stroke-width="2.5"/>
-<polygon points="425,132 415,126 415,138" fill="#004D80"/>
-<text x="345" y="154" text-anchor="middle" font-size="11" fill="#334155">T[H(t₁)H(t₂)] = T[H(t₂)H(t₁)]</text>
-<text x="345" y="174" text-anchor="middle" font-size="11.5" font-weight="700" fill="#970E53">⇒ Intégrale = (1 / 2!) × Carré</text>
-<!-- Right square: Full symmetric square under T -->
-<rect x="465" y="52" width="165" height="165" fill="#f8fafc" stroke="#004D80" stroke-width="2"/>
-<polygon points="465,217 630,217 630,52" fill="rgba(151, 14, 83, 0.22)" stroke="#970E53" stroke-width="1.5"/>
-<polygon points="465,217 465,52 630,52" fill="rgba(0, 108, 101, 0.22)" stroke="#006C65" stroke-width="1.5"/>
-<line x1="465" y1="217" x2="630" y2="52" stroke="#0f172a" stroke-width="2" stroke-dasharray="4,2"/>
-<text x="575" y="165" text-anchor="middle" font-size="11" font-weight="700" fill="#970E53">t₁ ≥ t₂ :</text>
-<text x="575" y="182" text-anchor="middle" font-size="11" font-weight="700" fill="#970E53">T = H(t₁)H(t₂)</text>
-<text x="518" y="98" text-anchor="middle" font-size="11" font-weight="700" fill="#006C65">t₂ &gt; t₁ :</text>
-<text x="518" y="115" text-anchor="middle" font-size="11" font-weight="700" fill="#006C65">T = H(t₂)H(t₁)</text>
-<text x="547" y="236" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">Variables indépendantes (t₁, t₂) ∈ [t', t]²</text>
-<text x="692" y="125" text-anchor="middle" font-size="11.5" font-weight="700" fill="#004D80">Les 2! triangles</text>
-<text x="692" y="143" text-anchor="middle" font-size="11.5" font-weight="700" fill="#004D80">valent pareil !</text>
+<svg viewBox="0 0 270 245" role="img" aria-label="Le carré des temps : sous T, chaque moitié contient le produit rangé chronologiquement" style="width:100%;max-width:270px;height:auto;">
+<defs><marker id="ft" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
+<polygon points="60.0,200.0 220.0,200.0 220.0,40.0" fill="#eed8e3" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="60.0,200.0 60.0,40.0 220.0,40.0" fill="#e0eaf0" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+<line x1="60.0" y1="200.0" x2="220.0" y2="40.0" stroke="#64748b" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="60.0" y1="200.0" x2="242.0" y2="200.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#ft)"/>
+<line x1="60.0" y1="200.0" x2="60.0" y2="18.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#ft)"/>
+<text x="244.0" y="218.0" text-anchor="end" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >t<tspan dy='3' font-size='11'>1</tspan></text>
+<text x="70.0" y="28.0" text-anchor="start" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >t<tspan dy='3' font-size='11'>2</tspan></text>
+<text x="54.0" y="217.0" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >t′</text>
+<text x="220.0" y="218.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >t</text>
+<text x="52.0" y="45.0" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >t</text>
+<text x="165.6" y="160.0" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >H(t<tspan dy='3' font-size='10'>1</tspan><tspan dy='-3'>) H(t</tspan><tspan dy='3' font-size='10'>2</tspan><tspan dy='-3'>)</tspan></text>
+<text x="114.4" y="76.8" text-anchor="middle" font-size="14" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >H(t<tspan dy='3' font-size='10'>2</tspan><tspan dy='-3'>) H(t</tspan><tspan dy='3' font-size='10'>1</tspan><tspan dy='-3'>)</tspan></text>
 </svg>
 </div>
+<p class="legende">Sous $T$, chaque moitié du carré contient le produit rangé chronologiquement (le plus récent à gauche)&nbsp;: les deux moitiés donnent la même intégrale.</p>
 
-Grâce à l'opérateur $T$, la quantité $T\big[\hat H\_I(t\_1)\cdots\hat H\_I(t\_n)\big]$ devient **totalement symétrique par toute permutation $\pi \in \mathfrak{S}\_n$ de ses arguments**. Les $n!$ simplexes $D\_\sigma$ qui pavent l'hypercube $[t', t]^n$ donnent alors tous exactement la même intégrale, ce qui fait apparaître le volume du simplexe $\mathbf{\frac{1}{n!}}$ devant l'intégrale libre sur $[t', t]^n$&nbsp;:
+Le produit $T[\cdots]$ ne dépend plus de l'ordre dans lequel on écrit ses arguments&nbsp;: il est **symétrique**. La symétrie de l'approche 2 est restaurée, les $n!$ simplexes de l'hypercube $[t', t]^n$ donnent tous la même contribution, et le facteur $\frac{1}{n!}$ réapparaît&nbsp;:
 
 <div id="theo">
 
-<b>Théorème (Exponentielle ordonnée dans le temps de Dyson).</b> Pour tout $n \ge 1$, l'intégrale causale sur le simplexe temporel est égale à $\frac{1}{n!}$ fois l'intégrale sur l'hypercube complet $[t', t]^n$ sous le produit chronologique $T$&nbsp;:
+<b>Théorème (Exponentielle ordonnée dans le temps).</b> Pour tout $n \ge 1$, l'intégrale sur le simplexe causal vaut $\frac{1}{n!}$ fois l'intégrale sur l'hypercube complet $[t', t]^n$ du produit chronologique&nbsp;:
 
 <div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0.5em;">
 
@@ -1331,7 +855,7 @@ $$
 
 </div>
 
-En sommant sur $n \ge 0$, l'opérateur d'évolution et la matrice de diffusion $\hat S = \hat U\_I(+\infty, -\infty)$ s'écrivent&nbsp;:
+En sommant sur $n \ge 0$, l'opérateur d'évolution et la matrice de diffusion $\hat S = \hat U\_I(+\infty, -\infty)$ s'écrivent comme des **exponentielles ordonnées dans le temps**&nbsp;:
 
 <div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0.5em;">
 
@@ -1345,13 +869,26 @@ $$
 
 <br>
 
-### Propriété de Markov et diagrammes de Feynman
+En résumé, la physique quantique suit pas à pas le modèle de la croissance exponentielle, et ne s'en écarte que sur un point&nbsp;:
 
-Terminons par deux conséquences fondamentales de cette géométrie pour les notes de lecture de TQC&nbsp;:
-<ol>
-<li><b>Absence de mémoire (Markov) et découplage des intégrales&nbsp;:</b> Pourquoi le générateur $\hat H_I(t)$ dépend-il d'un seul instant $t$&nbsp;? Parce que l'évolution quantique est locale dans le temps (sans mémoire du passé antérieur, $\hat U_I(t, t') = \hat U_I(t, t_1)\hat U_I(t_1, t')$). Une fois que l'opérateur $T$ a levé l'emboîtement des bornes du simplexe pour intégrer sur l'hypercube $[t', t]^n$ tout entier, les $n$ intégrales se découplent en une mesure produit $\int \mathrm{d}^4x_1 \cdots \int \mathrm{d}^4x_n$. C'est ce découplage qui permet, dans <a href="/physique/tqc/gifted_amateur/tqc7/#le-théorème-de-wick"><b>TQC 7</b></a>, d'appliquer le <b>théorème de Wick</b> pour contracter les champs libres en propagateurs de Feynman $\Delta_F(x_i - x_j)$.</li>
-<li style="margin-top:0.5em;"><b>Élimination du facteur $\frac{1}{n!}$ par la permutation des vertex de Feynman&nbsp;:</b> Dans <a href="/physique/tqc/gifted_amateur/tqc7/#moudre-avec-wick"><b>TQC 7</b></a> et <a href="/physique/tqc/gifted_amateur/tqc12/"><b>TQC 12</b></a>, lorsqu'on développe une amplitude à $n$ vertex $x_1, \dots, x_n$, permuter les $n!$ numérotations des vertex entre eux dans un câblage de Wick engendre $n!$ fois le <b>même diagramme de Feynman</b>. Le facteur géométrique $\frac{1}{n!}$ issu du volume du simplexe de Dyson compense alors exactement cette redondance combinatoire&nbsp;!</li>
-</ol>
+<div class="tableau-large">
+
+| | Croissance (nombres) | Évolution quantique (opérateurs) |
+| :--- | :--- | :--- |
+| Équation | $L' = L$ | $\mathrm{i}\\,\partial\_t \hat U\_I = \hat H\_I(t)\\,\hat U\_I$ |
+| Terme d'ordre $n$ | intégrale sur un simplexe | intégrale sur un simplexe |
+| Ordre des facteurs | indifférent | essentiel (non-commutativité) |
+| Passage à l'hypercube | facteur $\frac{1}{n!}$ directement | facteur $\frac{1}{n!}$ grâce à $T$ |
+| Résultat | $L(t) = \mathrm{e}^t$ | $\hat U\_I = T\exp\left(-\mathrm{i}\int \hat H\_I\right)$ |
+
+</div>
+
+### Les $\frac{1}{n!}$ dans les diagrammes de Feynman
+
+Ce facteur $\frac{1}{n!}$ a une conséquence très concrète en théorie quantique des champs. En développant $\hat S = T\exp\left(-\mathrm{i}\int \hat{\mathcal H}\_I\right)$, le terme d'ordre $n$ est une intégrale sur $n$ points d'espace-temps $x\_1, \dots, x\_n$ du produit $T\big[\hat{\mathcal H}\_I(x\_1)\cdots\hat{\mathcal H}\_I(x\_n)\big]$, précédée de $\frac{1}{n!}$. Le [théorème de Wick](/physique/tqc/gifted_amateur/tqc7/#le-théorème-de-wick) transforme ce produit en une somme de termes, que l'on dessine comme des **diagrammes de Feynman** à $n$ sommets.
+
+Or les étiquettes $x\_1, \dots, x\_n$ des sommets sont des variables d'intégration muettes&nbsp;: **renuméroter les sommets** d'un diagramme (il y a $n!$ façons de le faire) donne un terme de même valeur. Ces $n!$ copies compensent exactement le $\frac{1}{n!}$ venu du volume du simplexe de Dyson, si bien qu'on peut dessiner chaque diagramme une seule fois, sans facteur $\frac{1}{n!}$ (voir [TQC 7](/physique/tqc/gifted_amateur/tqc7/#moudre-avec-wick) et [TQC 12](/physique/tqc/gifted_amateur/tqc12/)). Lorsque le diagramme possède lui-même des symétries, certaines renumérotations ne produisent pas de terme nouveau&nbsp;: la compensation est alors incomplète, et c'est l'une des origines des fameux **facteurs de symétrie**.
+
 
 <hr style="margin:2em 0;border:none;border-top:1px solid #cbd5e1;">
 
