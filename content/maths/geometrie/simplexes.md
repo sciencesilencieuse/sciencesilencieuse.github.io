@@ -79,6 +79,14 @@ details > summary:first-of-type {
 details[open] > summary:first-of-type {
   list-style-type: disclosure-open;
 }
+.legende
+{
+    text-align: center;
+    font-size: 0.9em;
+    color: #64748b;
+    font-style: italic;
+    margin-top: -0.6em;
+}
 </style>
 
 
@@ -120,27 +128,119 @@ Pourquoi le volume $k$-dimensionnel de ce simplexe vaut-il **toujours $\frac{1}{
 
 ### Approche 1 : Empilement de pyramides
 
-On a besoin de deux formules de géométrie élémentaires&nbsp;:
+Tout le monde a appris au collège deux formules un peu mystérieuses&nbsp;:
 <ul>
-<li>L'aire d'un triangle ($k = 2$) vaut $\displaystyle \mathcal{A} = \mathbf{\frac{1}{2}} \times \text{Base} \times \text{Hauteur}$.</li>
-<li>Le volume d'une pyramide ou d'un tétraèdre ($k = 3$) vaut $\displaystyle \mathcal{V} = \mathbf{\frac{1}{3}} \times \text{Aire(Base)} \times \text{Hauteur}$.</li>
+<li>l'aire d'un triangle vaut $\displaystyle \mathbf{\frac{1}{2}} \times \text{base} \times \text{hauteur}$&nbsp;;</li>
+<li>le volume d'une pyramide vaut $\displaystyle \mathbf{\frac{1}{3}} \times \text{aire de la base} \times \text{hauteur}$.</li>
 </ul>
 
-D'où viennent ce facteur $\frac{1}{2}$ en dimension $2$, ce facteur $\frac{1}{3}$ en dimension $3$, et plus généralement le facteur $\mathbf{\frac{1}{k}}$ pour une hyperpyramide de dimension $k$&nbsp;? Et quel est le lien avec la factorielle $k! = 1 \times 2 \times 3 \times \cdots \times k$&nbsp;?
+D'où sortent ce $\frac{1}{2}$ et ce $\frac{1}{3}$&nbsp;? Et si l'on continuait en dimension $4$, $5$, …, $k$, verrait-on apparaître $\frac{1}{4}$, $\frac{1}{5}$, …, $\frac{1}{k}$&nbsp;? La réponse est oui, et c'est exactement de là que vient la factorielle&nbsp;: $\frac{1}{2} \times \frac{1}{3} \times \cdots \times \frac{1}{k} = \frac{1}{k!}$.
 
-Regardons comment le simplexe $\Delta\_k$ est construit **par récurrence d'une dimension sur la suivante**&nbsp;:
-<ul>
-<li><b>En dimension $k = 1$&nbsp;:</b> $\Delta_1 = \{0 \le t_1 \le 1\}$ est simplement le segment $[0, 1]$ de longueur $\operatorname{Vol}_1(\Delta_1) = \mathbf{1}$.</li>
-<li><b>En dimension $k = 2$&nbsp;:</b> $\Delta_2 = \{0 \le t_1 \le t_2 \le 1\}$ est un triangle rectangle dont la base (en $t_2 = 1$) est le segment $0 \le t_1 \le 1$ (c'est-à-dire $\Delta_1$, de longueur $1$) et dont la hauteur le long de l'axe $t_2$ vaut $1$.<br>
-Si l'on coupe ce triangle à une hauteur intermédiaire $t_2 = z \in [0, 1]$, la tranche horizontale est le segment $\{0 \le t_1 \le z\}$, de longueur $z = z^1 \times \operatorname{Vol}_1(\Delta_1)$. En empilant ces tranches de $z = 0$ à $z = 1$, l'aire vaut&nbsp;:<br>
-<span style="display:block;text-align:center;margin:0.3em 0;">$\displaystyle \operatorname{Vol}_2(\Delta_2) = \frac{1}{2} \times \operatorname{Vol}_1(\Delta_1) \times 1 = \frac{1}{2} \times 1 = \mathbf{\frac{1}{1 \times 2}} = \mathbf{\frac{1}{2!}}$</span>
-</li>
-<li><b>En dimension $k = 3$&nbsp;:</b> $\Delta_3 = \{0 \le t_1 \le t_2 \le t_3 \le 1\}$ est une pyramide (un tétraèdre) dont le sommet est à l'origine $(0,0,0)$ et dont la base au plafond $t_3 = 1$ est exactement le triangle $\{0 \le t_1 \le t_2 \le 1\} = \Delta_2$, d'aire $\frac{1}{2!}$&nbsp;!<br>
-Si l'on coupe ce tétraèdre à une hauteur $t_3 = z \in [0, 1]$, la section horizontale est le triangle $\{0 \le t_1 \le t_2 \le z\}$&nbsp;: par le théorème de Thalès (homothétie de rapport $z$ dans les $2$ directions $t_1$ et $t_2$), son aire est multipliée par $z^2$, soit $z^2 \operatorname{Vol}_2(\Delta_2)$. Comme la valeur moyenne de $z^2$ entre $0$ et $1$ est $\int_0^1 z^2\,\mathrm{d}z = \frac{1}{3}$, le volume de la pyramide 3D vaut le tiers de sa base fois sa hauteur&nbsp;:<br>
-<span style="display:block;text-align:center;margin:0.3em 0;">$\displaystyle \operatorname{Vol}_3(\Delta_3) = \frac{1}{3} \times \operatorname{Vol}_2(\Delta_2) \times 1 = \frac{1}{3} \times \frac{1}{2!} = \mathbf{\frac{1}{1 \times 2 \times 3}} = \mathbf{\frac{1}{3!}}$</span>
-</li>
-<li><b>En dimension quelconque $k$&nbsp;:</b> $\Delta_k$ est une hyperpyramide de hauteur $1$ (selon $t_k$) érigée au-dessus de la base $(k-1)$-dimensionnelle $\Delta_{k-1}$ (située en $t_k = 1$). À la hauteur $t_k = z \in [0, 1]$, la tranche $\{0 \le t_1 \le \dots \le t_{k-1} \le z\}$ est une copie de $\Delta_{k-1}$ réduite d'un facteur $z$ dans chacune de ses $k-1$ directions, donc de volume $z^{k-1}\,\operatorname{Vol}_{k-1}(\Delta_{k-1})$. En intégrant de $z = 0$ à $z = 1$ ($\int_0^1 z^{k-1}\,\mathrm{d}z = \frac{1}{k}$), chaque nouvelle dimension apporte un facteur $\frac{1}{k}$ supplémentaire&nbsp;:</li>
-</ul>
+**L'idée : couper en tranches.** Plutôt que de chercher une formule toute faite, découpons le simplexe en fines tranches horizontales, comme une pièce montée, puis additionnons le volume des tranches.
+
+<div id="theo">
+
+<b>Principe de Cavalieri.</b> Pour une partie $A$ de l'hypercube $[0, 1]^k$, notons $A\_z$ sa **tranche à la hauteur** $t\_k = z$ (l'ensemble des points de $A$ dont la dernière coordonnée vaut $z$). Alors
+
+$$
+\operatorname{Vol}\_k(A) = \int\_0^1 \operatorname{Vol}\_{k-1}(A\_z)\\,\mathrm{d}z.
+$$
+
+Le volume est la «&nbsp;somme continue&nbsp;» (l'intégrale) des volumes des tranches, chacune d'épaisseur infinitésimale $\mathrm{d}z$. C'est un cas particulier du théorème de Fubini.
+
+</div>
+
+<br>
+
+**Étape 1 — Du segment au triangle ($k = 2$).** Le simplexe $\Delta\_2 = \\{0 \le t\_1 \le t\_2 \le 1\\}$ est le triangle situé au-dessus de la diagonale du carré unité. Coupons-le à la hauteur $t\_2 = z$&nbsp;: la tranche est formée des $t\_1$ tels que $0 \le t\_1 \le z$, c'est un **segment de longueur $z$**. Tout en bas, les tranches sont minuscules&nbsp;; elles s'allongent régulièrement en montant, jusqu'au plafond $t\_2 = 1$ où l'on retrouve le segment $\Delta\_1 = [0, 1]$ tout entier.
+
+<div class="svg-container">
+<svg viewBox="0 0 280 250" role="img" aria-label="Le triangle Δ₂ découpé en tranches horizontales" style="width:100%;max-width:280px;height:auto;">
+<defs><marker id="fl2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
+<style>.sx2-t{transform:translate(55px,215px) scale(0.62) translate(-55px,-215px)}.sx2-z{transform:translate(0.0px,-105.4px)}@media (prefers-reduced-motion:no-preference){.sx2-t{animation:sx2-a 6s ease-in-out infinite alternate}.sx2-z{animation:sx2-b 6s ease-in-out infinite alternate}}@keyframes sx2-a{from{transform:translate(55px,215px) scale(0.12) translate(-55px,-215px)}to{transform:translate(55px,215px) scale(0.88) translate(-55px,-215px)}}@keyframes sx2-b{from{transform:translate(0.0px,-20.4px)}to{transform:translate(0.0px,-149.6px)}}</style>
+<polygon points="55.0,215.0 225.0,215.0 225.0,45.0 55.0,45.0" fill="none" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<polygon points="55.0,215.0 55.0,45.0 225.0,45.0" fill="#004D80" fill-opacity="0.07" stroke="#004D80" stroke-width="1.5" stroke-linejoin="round"/>
+<line x1="55.0" y1="198.0" x2="72.0" y2="198.0" stroke="#004D80" stroke-opacity="0.22"/>
+<line x1="55.0" y1="181.0" x2="89.0" y2="181.0" stroke="#004D80" stroke-opacity="0.22"/>
+<line x1="55.0" y1="164.0" x2="106.0" y2="164.0" stroke="#004D80" stroke-opacity="0.22"/>
+<line x1="55.0" y1="147.0" x2="123.0" y2="147.0" stroke="#004D80" stroke-opacity="0.22"/>
+<line x1="55.0" y1="130.0" x2="140.0" y2="130.0" stroke="#004D80" stroke-opacity="0.22"/>
+<line x1="55.0" y1="113.0" x2="157.0" y2="113.0" stroke="#004D80" stroke-opacity="0.22"/>
+<line x1="55.0" y1="96.0" x2="174.0" y2="96.0" stroke="#004D80" stroke-opacity="0.22"/>
+<line x1="55.0" y1="79.0" x2="191.0" y2="79.0" stroke="#004D80" stroke-opacity="0.22"/>
+<line x1="55.0" y1="62.0" x2="208.0" y2="62.0" stroke="#004D80" stroke-opacity="0.22"/>
+<line x1="55" y1="45" x2="225" y2="45" stroke="#004D80" stroke-width="3" stroke-linecap="round"/>
+<text x="140.0" y="36" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif">Δ₁</text>
+<line x1="55" y1="215" x2="250" y2="215" stroke="#94a3b8" marker-end="url(#fl2)"/>
+<line x1="55" y1="215" x2="55" y2="15" stroke="#94a3b8" marker-end="url(#fl2)"/>
+<text x="252" y="233" text-anchor="end" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic">t₁</text>
+<text x="45" y="27" text-anchor="end" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic">t₂</text>
+<text x="47" y="231" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif">0</text>
+<text x="225" y="233" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif">1</text>
+<text x="47" y="49" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif">1</text>
+<text x="92" y="110" text-anchor="middle" font-size="17" fill="#004D80" font-family="Georgia,'Times New Roman',serif">Δ₂</text>
+<g class="sx2-t"><line x1="55" y1="45" x2="225" y2="45" stroke="#970E53" stroke-width="3" stroke-linecap="round" vector-effect="non-scaling-stroke"/></g>
+<g class="sx2-z"><line x1="51" y1="215" x2="59" y2="215" stroke="#970E53" stroke-width="2"/><text x="46" y="220" text-anchor="end" font-size="16" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic">z</text></g>
+</svg>
+</div>
+<p class="legende">Le triangle $\Delta_2$ est une pile de segments&nbsp;: à la hauteur $z$, la tranche mesure $z$.</p>
+
+L'aire du triangle est la somme de ces segments&nbsp;:
+
+$$
+\operatorname{Vol}\_2(\Delta\_2) = \int\_0^1 z\\,\mathrm{d}z = \frac{1}{2} = \frac{1}{2!}.
+$$
+
+Le $\frac{1}{2}$ du triangle n'est donc rien d'autre que la **longueur moyenne des tranches**&nbsp;: elles grandissent linéairement de $0$ à $1$, leur moyenne vaut $\frac{1}{2}$.
+
+**Étape 2 — Du triangle au tétraèdre ($k = 3$).** Le simplexe $\Delta\_3 = \\{0 \le t\_1 \le t\_2 \le t\_3 \le 1\\}$ est un tétraèdre&nbsp;: une pyramide renversée, pointe à l'origine, dont la base, collée au plafond $t\_3 = 1$, est le triangle $\\{0 \le t\_1 \le t\_2 \le 1\\}$… c'est-à-dire $\Delta\_2$ lui-même&nbsp;!
+
+À la hauteur $t\_3 = z$, la tranche est le triangle $\\{0 \le t\_1 \le t\_2 \le z\\}$&nbsp;: c'est **la base $\Delta\_2$ réduite d'un facteur $z$** (précisément, son image par l'homothétie de centre l'origine et de rapport $z$, comme dans le théorème de Thalès). Or réduire une figure plane d'un facteur $z$ dans ses deux directions multiplie son aire par $z^2$.
+
+<div class="svg-container">
+<svg viewBox="15 55 320 300" role="img" aria-label="Le tétraèdre Δ₃, pyramide renversée de base Δ₂, découpé en tranches" style="width:100%;max-width:320px;height:auto;">
+<defs><marker id="fl3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
+<style>.sx3-t{transform:translate(60px,300px) scale(0.62) translate(-60px,-300px)}.sx3-z{transform:translate(0.0px,-105.4px)}@media (prefers-reduced-motion:no-preference){.sx3-t{animation:sx3-a 6s ease-in-out infinite alternate}.sx3-z{animation:sx3-b 6s ease-in-out infinite alternate}}@keyframes sx3-a{from{transform:translate(60px,300px) scale(0.12) translate(-60px,-300px)}to{transform:translate(60px,300px) scale(0.88) translate(-60px,-300px)}}@keyframes sx3-b{from{transform:translate(0.0px,-20.4px)}to{transform:translate(0.0px,-149.6px)}}</style>
+<line x1="60.0" y1="300.0" x2="210.0" y2="330.0" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<line x1="60.0" y1="300.0" x2="140.0" y2="245.0" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<line x1="60.0" y1="300.0" x2="60.0" y2="130.0" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<line x1="60.0" y1="130.0" x2="210.0" y2="160.0" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<line x1="60.0" y1="130.0" x2="140.0" y2="75.0" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<line x1="140.0" y1="245.0" x2="290.0" y2="275.0" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<line x1="140.0" y1="245.0" x2="140.0" y2="75.0" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<line x1="140.0" y1="75.0" x2="290.0" y2="105.0" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<line x1="210.0" y1="330.0" x2="290.0" y2="275.0" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<line x1="210.0" y1="330.0" x2="210.0" y2="160.0" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<line x1="210.0" y1="160.0" x2="290.0" y2="105.0" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<line x1="290.0" y1="275.0" x2="290.0" y2="105.0" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<line x1="60" y1="300" x2="243.0" y2="336.6" stroke="#94a3b8" marker-end="url(#fl3)"/>
+<text x="247.0" y="352.6" text-anchor="start" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic">t₁</text>
+<line x1="60" y1="300" x2="164.0" y2="228.5" stroke="#94a3b8" marker-end="url(#fl3)"/>
+<text x="170.0" y="226.5" text-anchor="start" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic">t₂</text>
+<line x1="60" y1="300" x2="60.0" y2="99.4" stroke="#94a3b8" marker-end="url(#fl3)"/>
+<text x="48.0" y="103.4" text-anchor="end" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic">t₃</text>
+<text x="52" y="316" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif">0</text>
+<text x="52" y="135" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif">1</text>
+<line x1="60" y1="300" x2="140.0" y2="75.0" stroke="#004D80" stroke-width="1.2" stroke-dasharray="3 3" stroke-opacity="0.7"/>
+<g class="sx3-t"><polygon points="60.0,130.0 140.0,75.0 290.0,105.0" fill="#970E53" fill-opacity="0.22" stroke="#970E53" stroke-width="2" stroke-linejoin="round" vector-effect="non-scaling-stroke"/></g>
+<polygon points="60.0,300.0 60.0,130.0 290.0,105.0" fill="#004D80" fill-opacity="0.06" stroke="#004D80" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="60.0,130.0 140.0,75.0 290.0,105.0" fill="#004D80" fill-opacity="0.16" stroke="#004D80" stroke-width="2.2" stroke-linejoin="round"/>
+<text x="163" y="73" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif">Δ₂</text>
+<text x="106" y="222" text-anchor="middle" font-size="17" fill="#004D80" font-family="Georgia,'Times New Roman',serif">Δ₃</text>
+<g class="sx3-z"><line x1="56" y1="300" x2="64" y2="300" stroke="#970E53" stroke-width="2"/><text x="51" y="305" text-anchor="end" font-size="16" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic">z</text></g>
+</svg>
+</div>
+<p class="legende">Le tétraèdre $\Delta_3$ est une pile de triangles&nbsp;: à la hauteur $z$, la tranche est une copie de la base $\Delta_2$ réduite d'un facteur $z$, d'aire $z^2 \times \frac{1}{2}$.</p>
+
+En empilant ces tranches&nbsp;:
+
+$$
+\operatorname{Vol}\_3(\Delta\_3) = \int\_0^1 z^2 \times \frac{1}{2}\\,\mathrm{d}z = \frac{1}{3} \times \frac{1}{2} = \frac{1}{3!}.
+$$
+
+Pourquoi $\frac{1}{3}$ cette fois, et plus $\frac{1}{2}$&nbsp;? Parce que les tranches rétrécissent maintenant dans **deux directions à la fois**&nbsp;: à mi-hauteur, la tranche n'a plus que $\left(\frac{1}{2}\right)^2 = \frac{1}{4}$ de l'aire de la base, alors que dans le triangle elle en gardait la moitié. La pyramide est plus «&nbsp;effilée&nbsp;» que le triangle, et l'aire moyenne de ses tranches tombe à $\int\_0^1 z^2\\,\mathrm{d}z = \frac{1}{3}$ de celle de la base.
+
+**Étape $k$ — Et ainsi de suite.** Le même mécanisme se reproduit à chaque nouvelle dimension. $\Delta\_k$ est une hyperpyramide de hauteur $1$, de pointe l'origine, dont la base au plafond $t\_k = 1$ est $\Delta\_{k-1}$. À la hauteur $z$, la tranche $\\{0 \le t\_1 \le \dots \le t\_{k-1} \le z\\}$ est une copie de $\Delta\_{k-1}$ réduite d'un facteur $z$ dans ses $k - 1$ directions&nbsp;; son volume est donc $z^{k-1} \operatorname{Vol}\_{k-1}(\Delta\_{k-1})$ (une homothétie de rapport $z$ multiplie les volumes de dimension $d$ par $z^d$). Comme $\int\_0^1 z^{k-1}\\,\mathrm{d}z = \frac{1}{k}$, chaque nouvelle dimension apporte un facteur $\frac{1}{k}$&nbsp;:
 
 <div id="grosseformule">
 
@@ -150,58 +250,33 @@ $$
 
 </div>
 
-**La factorielle $k!$ n'est donc rien d'autre que le produit des facteurs pyramidaux successifs** : $\frac{1}{2}$ (triangle en 2D) $\times \frac{1}{3}$ (pyramide en 3D) $\times \frac{1}{4}$ (hyperpyramide en 4D) $\times \cdots \times \frac{1}{k}$&nbsp;!
-
 <div class="svg-container">
-<svg viewBox="0 0 780 265" style="max-width:780px;width:100%;height:auto;background:#ffffff;border:1px solid #cbd5e1;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.04);font-family:system-ui,-apple-system,sans-serif;">
-<text x="390" y="23" text-anchor="middle" font-size="13.5" font-weight="700" fill="#004D80">Construction géométrique de Δₖ dimension par dimension : de 1 à 1/2! puis 1/3!</text>
-<!-- Panel 1: 1D -->
-<rect x="16" y="38" width="195" height="212" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
-<text x="113" y="58" text-anchor="middle" font-size="12" font-weight="700" fill="#1e293b">Dimension k = 1 (Segment)</text>
-<line x1="40" y1="135" x2="186" y2="135" stroke="#004D80" stroke-width="6" stroke-linecap="round"/>
-<circle cx="40" cy="135" r="5" fill="#970E53"/>
-<circle cx="186" cy="135" r="5" fill="#970E53"/>
-<text x="40" y="156" text-anchor="middle" font-size="11" font-weight="700" fill="#334155">0</text>
-<text x="186" y="156" text-anchor="middle" font-size="11" font-weight="700" fill="#334155">1</text>
-<text x="113" y="118" text-anchor="middle" font-size="11.5" font-weight="700" fill="#004D80">Δ₁ : 0 ≤ t₁ ≤ 1</text>
-<text x="113" y="195" text-anchor="middle" font-size="11.5" fill="#334155">1 seul ordre possible</text>
-<text x="113" y="222" text-anchor="middle" font-size="12.5" font-weight="700" fill="#970E53">Vol₁(Δ₁) = 1 = 1 / 1!</text>
-<!-- Panel 2: 2D -->
-<rect x="226" y="38" width="245" height="212" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
-<text x="348" y="58" text-anchor="middle" font-size="12" font-weight="700" fill="#1e293b">Dimension k = 2 (Carré coupé en 2!)</text>
-<!-- Square [0,1]^2 -->
-<polygon points="278,180 398,180 398,70" fill="rgba(0, 77, 128, 0.12)" stroke="#004D80" stroke-width="1.5"/>
-<polygon points="278,180 278,70 398,70" fill="rgba(151, 14, 83, 0.25)" stroke="#970E53" stroke-width="2"/>
-<line x1="278" y1="180" x2="398" y2="70" stroke="#970E53" stroke-width="2.2" stroke-dasharray="4,2"/>
-<text x="315" y="108" text-anchor="middle" font-size="11.5" font-weight="700" fill="#970E53">Δ₂ (t₁ ≤ t₂)</text>
-<text x="364" y="154" text-anchor="middle" font-size="11" font-weight="600" fill="#004D80">t₂ ≤ t₁</text>
-<text x="338" y="196" text-anchor="middle" font-size="10.5" fill="#334155">t₁ ∈ [0, 1]</text>
-<text x="262" y="128" text-anchor="middle" font-size="10.5" fill="#334155" transform="rotate(-90 262 128)">t₂ ∈ [0, 1]</text>
-<text x="348" y="216" text-anchor="middle" font-size="11" fill="#334155">Base Δ₁ (1) × Hauteur (1) / 2</text>
-<text x="348" y="236" text-anchor="middle" font-size="12.5" font-weight="700" fill="#970E53">Vol₂(Δ₂) = 1/2 = 1 / 2!</text>
-<!-- Panel 3: 3D -->
-<rect x="486" y="38" width="278" height="212" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
-<text x="625" y="58" text-anchor="middle" font-size="12" font-weight="700" fill="#1e293b">Dimension k = 3 (Pyramide / 6 simplexes)</text>
-<!-- 3D Cube wireframe & Tetrahedron Delta_3 -->
-<!-- V0=(0,0,0) at (545,172), X=(1,0,0) at (635,182), Y=(1,1,0) at (685,152), (0,1,0) at (595,142) -->
-<!-- Top Z=1 shifted up by 76px: (0,0,1)=(545,96), (0,1,1)=(595,66), (1,1,1)=(685,76), (1,0,1)=(635,106) -->
-<polygon points="545,172 635,182 685,152 595,142" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
-<polygon points="545,96 635,106 685,76 595,66" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
-<line x1="545" y1="172" x2="545" y2="96" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
-<line x1="635" y1="182" x2="635" y2="106" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
-<line x1="685" y1="152" x2="685" y2="76" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
-<line x1="595" y1="142" x2="595" y2="66" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3"/>
-<!-- Tetrahedron Delta_3: V0(545,172), V1(0,0,1)=(545,96), V2(0,1,1)=(595,66), V3(1,1,1)=(685,76) -->
-<polygon points="545,96 595,66 685,76" fill="rgba(0, 108, 101, 0.28)" stroke="#006C65" stroke-width="1.8"/>
-<polygon points="545,172 545,96 685,76" fill="rgba(151, 14, 83, 0.26)" stroke="#970E53" stroke-width="1.8"/>
-<polygon points="545,172 595,66 685,76" fill="rgba(151, 14, 83, 0.16)" stroke="#970E53" stroke-width="1.5"/>
-<line x1="545" y1="172" x2="685" y2="76" stroke="#0f172a" stroke-width="2.2"/>
-<text x="612" y="80" text-anchor="middle" font-size="10" font-weight="700" fill="#006C65">Base Δ₂ (1/2!)</text>
-<text x="526" y="138" text-anchor="middle" font-size="10" font-weight="700" fill="#970E53">h=1</text>
-<text x="625" y="216" text-anchor="middle" font-size="11" fill="#334155">Pyramide : (1/3) × Aire(Δ₂) × 1</text>
-<text x="625" y="236" text-anchor="middle" font-size="12.5" font-weight="700" fill="#970E53">Vol₃(Δ₃) = (1/3)·(1/2!) = 1 / 3!</text>
+<svg viewBox="0 0 560 155" role="img" aria-label="Chaîne des volumes : 1, puis 1/2, 1/6, 1/24" style="width:100%;max-width:560px;height:auto;">
+<defs><marker id="flc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
+<line x1="30" y1="82" x2="90" y2="82" stroke="#004D80" stroke-width="3" stroke-linecap="round"/>
+<polygon points="174.0,100.0 174.0,56.0 226.0,56.0" fill="#004D80" fill-opacity="0.1" stroke="#004D80" stroke-width="1.5" stroke-linejoin="round"/>
+<line x1="302.0" y1="104.0" x2="323.6" y2="43.2" stroke="#004D80" stroke-dasharray="2 2" stroke-opacity="0.7"/>
+<polygon points="302.0,104.0 302.0,58.1 364.1,51.3" fill="#004D80" fill-opacity="0.06" stroke="#004D80" stroke-width="1.3" stroke-linejoin="round"/>
+<polygon points="302.0,58.1 323.6,43.2 364.1,51.3" fill="#004D80" fill-opacity="0.16" stroke="#004D80" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="480" y="86" text-anchor="middle" font-size="22" fill="#004D80" fill-opacity="0.6" font-family="Georgia,'Times New Roman',serif">· · ·</text>
+<text x="60" y="126" text-anchor="middle" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif">Δ₁</text>
+<text x="60" y="146" text-anchor="middle" font-size="15" font-weight="bold" fill="#970E53" font-family="Georgia,'Times New Roman',serif">1</text>
+<text x="200" y="126" text-anchor="middle" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif">Δ₂</text>
+<text x="200" y="146" text-anchor="middle" font-size="15" font-weight="bold" fill="#970E53" font-family="Georgia,'Times New Roman',serif">1/2</text>
+<text x="340" y="126" text-anchor="middle" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif">Δ₃</text>
+<text x="340" y="146" text-anchor="middle" font-size="15" font-weight="bold" fill="#970E53" font-family="Georgia,'Times New Roman',serif">1/6</text>
+<text x="480" y="126" text-anchor="middle" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif">Δ₄</text>
+<text x="480" y="146" text-anchor="middle" font-size="15" font-weight="bold" fill="#970E53" font-family="Georgia,'Times New Roman',serif">1/24</text>
+<path d="M102,38 Q130.0,16 158,38" fill="none" stroke="#94a3b8" marker-end="url(#flc)"/>
+<text x="130.0" y="20" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif">× 1/2</text>
+<path d="M242,38 Q270.0,16 298,38" fill="none" stroke="#94a3b8" marker-end="url(#flc)"/>
+<text x="270.0" y="20" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif">× 1/3</text>
+<path d="M382,38 Q410.0,16 438,38" fill="none" stroke="#94a3b8" marker-end="url(#flc)"/>
+<text x="410.0" y="20" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif">× 1/4</text>
 </svg>
 </div>
+
+**La factorielle $k!$ n'est donc rien d'autre que le produit des facteurs pyramidaux successifs**&nbsp;: $\frac{1}{2}$ pour le triangle, $\frac{1}{3}$ pour la pyramide, $\frac{1}{4}$ pour l'hyperpyramide de dimension $4$, et ainsi de suite jusqu'à $\frac{1}{k}$.
 
 ### Approche 2 : Pavage du cube par les $k!$ permutations
 
