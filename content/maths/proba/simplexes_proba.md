@@ -79,6 +79,14 @@ details > summary:first-of-type {
 details[open] > summary:first-of-type {
   list-style-type: disclosure-open;
 }
+.legende
+{
+    text-align: center;
+    font-size: 0.9em;
+    color: #64748b;
+    font-style: italic;
+    margin-top: -0.6em;
+}
 </style>
 
 
@@ -88,7 +96,7 @@ details[open] > summary:first-of-type {
 
 Dans [cette partie géométrique](../../geometrie/simplexes/), nous avons vu que le **simplexe canonique $\Delta\_k$** (l'ensemble des points de l'hypercube unité $[0, 1]^k$ dont les coordonnées sont rangées par ordre croissant $0 \le t\_1 \le t\_2 \le \dots \le t\_k \le 1$) possède un volume exactement égal à $\mathbf{\frac{1}{k!}}$, car les $k!$ permutations de ses axes découpent l'hypercube $[0, 1]^k$ en $k!$ simplexes isométriques.
 
-En probabilités, cette propriété géométrique produit un effet spectaculaire&nbsp;: dès que l'on tire des nombres aléatoires indépendants et uniformes sur $[0, 1]$ ou que l'on permute des objets au hasard, le point aléatoire $(U\_1, \dots, U\_k)$ tombe uniformément dans l'hypercube $[0, 1]^k$. Toute condition qui sélectionne un simplexe a donc une probabilité égale à son volume **$\frac{1}{k!}$**, faisant surgir le nombre [$\mathrm{e} = \sum \frac{1}{k!}$](../../arithmetique/exponentielle/) (ou son inverse $\mathrm{e}^{-1}$) là où rien ne semblait l'annoncer&nbsp;!
+En probabilités, cette propriété produit un effet spectaculaire. Tirons $k$ nombres $U\_1, \dots, U\_k$ indépendants et uniformes sur $[0, 1]$&nbsp;: le point $(U\_1, \dots, U\_k)$ tombe **uniformément dans l'hypercube** $[0, 1]^k$, si bien que la probabilité qu'il tombe dans une région est tout simplement le **volume** de cette région. Toute condition qui revient à imposer un ordre aux tirages a donc pour probabilité le volume d'un simplexe, $\frac{1}{k!}$, et le nombre [$\mathrm{e} = \sum \frac{1}{k!}$](../../arithmetique/exponentielle/) (ou son inverse $\mathrm{e}^{-1}$) surgit là où rien ne semblait l'annoncer. Le même $\frac{1}{k!}$ apparaît aussi, dans un cadre discret, quand on permute des objets au hasard.
 
 Étudions trois problèmes célèbres qui s'illuminent grâce à cette vision géométrique.
 
@@ -107,6 +115,31 @@ Notons $N$ le nombre total de tirages effectués au moment de l'arrêt&nbsp;: $\
 </div>
 
 <br>
+
+<div class="svg-container">
+<svg viewBox="0 -10 390 225" role="img" aria-label="Exemple de partie : trois tirages croissants puis une baisse au quatrième, donc N = 4" style="width:100%;max-width:390px;height:auto;">
+<line x1="50.0" y1="170.0" x2="330.0" y2="170.0" stroke="#94a3b8" stroke-width="1" />
+<line x1="50.0" y1="40.0" x2="330.0" y2="40.0" stroke="#eef2f6" stroke-width="1" />
+<text x="44.0" y="174.0" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >0</text>
+<text x="44.0" y="44.0" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1</text>
+<rect x="60" y="142.7" width="26" height="27.3" rx="3" fill="#739db9"><title>U1 = 0,21</title></rect>
+<text x="73.0" y="188.0" text-anchor="middle" font-size="15" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >U<tspan dy='3' font-size='10'>1</tspan><tspan dy='-3'></tspan></text>
+<text x="73.0" y="135.7" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >0,21</text>
+<rect x="130" y="107.6" width="26" height="62.4" rx="3" fill="#5488aa"><title>U2 = 0,48</title></rect>
+<text x="143.0" y="188.0" text-anchor="middle" font-size="15" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >U<tspan dy='3' font-size='10'>2</tspan><tspan dy='-3'></tspan></text>
+<text x="143.0" y="100.6" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >0,48</text>
+<rect x="200" y="62.1" width="26" height="107.9" rx="3" fill="#36729b"><title>U3 = 0,83</title></rect>
+<text x="213.0" y="188.0" text-anchor="middle" font-size="15" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >U<tspan dy='3' font-size='10'>3</tspan><tspan dy='-3'></tspan></text>
+<text x="213.0" y="55.1" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >0,83</text>
+<rect x="270" y="121.9" width="26" height="48.1" rx="3" fill="#970E53"><title>U4 = 0,37</title></rect>
+<text x="283.0" y="188.0" text-anchor="middle" font-size="15" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >U<tspan dy='3' font-size='10'>4</tspan><tspan dy='-3'></tspan></text>
+<text x="283.0" y="114.9" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >0,37</text>
+<path d="M221.0,38.10000000000001 Q256.0,28.10000000000001 283.0,95.9" fill="none" stroke="#970E53" stroke-width="1.3"/>
+<text x="256.0" y="20.1" text-anchor="middle" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >baisse : arrêt, N = 4</text>
+</svg>
+</div>
+<p class="legende">Une partie typique&nbsp;: trois tirages croissants, puis une baisse au quatrième. Ici $N = 4$.</p>
+
 
 ### 2. Somme des probabilités de survie
 
@@ -186,6 +219,27 @@ Notons $M$ le nombre de tirages nécessaires pour franchir le seuil $1$&nbsp;: $
 
 <br>
 
+<div class="svg-container">
+<svg viewBox="0 0 470 140" role="img" aria-label="Exemple de partie : la somme 0,42 + 0,31 + 0,45 dépasse 1 au troisième tirage, donc M = 3" style="width:100%;max-width:470px;height:auto;">
+<rect x="40.0" y="70" width="103.0" height="26" rx="3" fill="#8cafc6"><title>U1 = 0,42</title></rect>
+<text x="92.5" y="88.0" text-anchor="middle" font-size="13" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-style="italic" >U<tspan dy='3' font-size='10'>1</tspan><tspan dy='-3'></tspan> = 0,42</text>
+<rect x="145.0" y="70" width="75.5" height="26" rx="3" fill="#598bac"><title>U2 = 0,31</title></rect>
+<text x="183.8" y="88.0" text-anchor="middle" font-size="13" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-style="italic" >U<tspan dy='3' font-size='10'>2</tspan><tspan dy='-3'></tspan> = 0,31</text>
+<rect x="222.5" y="70" width="110.5" height="26" rx="3" fill="#970E53"><title>U3 = 0,45</title></rect>
+<text x="278.8" y="88.0" text-anchor="middle" font-size="13" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-style="italic" >U<tspan dy='3' font-size='10'>3</tspan><tspan dy='-3'></tspan> = 0,45</text>
+<line x1="40.0" y1="104.0" x2="352.5" y2="104.0" stroke="#94a3b8" stroke-width="1" />
+<line x1="40.0" y1="100.0" x2="40.0" y2="108.0" stroke="#94a3b8" stroke-width="1" />
+<text x="40.0" y="123.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >0</text>
+<line x1="290.0" y1="100.0" x2="290.0" y2="108.0" stroke="#94a3b8" stroke-width="1" />
+<text x="290.0" y="123.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1</text>
+<line x1="290.0" y1="48.0" x2="290.0" y2="100.0" stroke="#970E53" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="296.0" y="44.0" text-anchor="start" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >seuil 1</text>
+<text x="345.0" y="88.0" text-anchor="start" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >dépassé : M = 3</text>
+</svg>
+</div>
+<p class="legende">Une partie typique&nbsp;: la somme dépasse $1$ au troisième tirage. Ici $M = 3$.</p>
+
+
 À première vue, additionner des nombres jusqu'à dépasser $1$ semble très différent de les comparer l'un à l'autre ($U\_1 \le U\_2 \le \dots \le U\_k$). Et pourtant, un simple cisaillement géométrique montre que **les deux problèmes sont isomorphes**&nbsp;!
 
 ### 2. Preuve géométrique par cisaillement ($\det J = 1$)
@@ -224,39 +278,25 @@ $$
 </div>
 
 <div class="svg-container">
-<svg viewBox="0 0 760 245" style="max-width:760px;width:100%;height:auto;background:#ffffff;border:1px solid #cbd5e1;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.04);font-family:system-ui,-apple-system,sans-serif;">
-<text x="380" y="23" text-anchor="middle" font-size="13.5" font-weight="700" fill="#004D80">Isomorphisme entre Gnedenko et la monotonie : le cisaillement Ψ conserve la base, la hauteur et le volume (det J = 1)</text>
-<!-- Left: Orthogonal simplex Omega_2 -->
-<rect x="65" y="48" width="165" height="165" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
-<polygon points="65,213 230,213 65,48" fill="rgba(0, 108, 101, 0.24)" stroke="#006C65" stroke-width="2.2"/>
-<!-- Horizontal slices to show Cavalieri principle -->
-<line x1="65" y1="172" x2="189" y2="172" stroke="#006C65" stroke-width="1.2" stroke-dasharray="3,2"/>
-<line x1="65" y1="130" x2="147" y2="130" stroke="#006C65" stroke-width="1.2" stroke-dasharray="3,2"/>
-<line x1="65" y1="89" x2="106" y2="89" stroke="#006C65" stroke-width="1.2" stroke-dasharray="3,2"/>
-<text x="118" y="162" text-anchor="middle" font-size="11.5" font-weight="700" fill="#006C65">Coin Ω₂ :</text>
-<text x="118" y="180" text-anchor="middle" font-size="11" font-weight="700" fill="#006C65">u₁ + u₂ ≤ 1</text>
-<text x="147" y="233" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">u₁ ∈ [0, 1]</text>
-<text x="45" y="130" text-anchor="middle" font-size="11" font-weight="600" fill="#334155" transform="rotate(-90 45 130)">u₂ ∈ [0, 1]</text>
-<!-- Center arrow: Shear transformation -->
-<text x="360" y="96" text-anchor="middle" font-size="12" font-weight="700" fill="#004D80">Cisaillement vertical Ψ</text>
-<text x="360" y="116" text-anchor="middle" font-size="11.5" fill="#1e293b">t₁ = u₁ ,   t₂ = u₁ + u₂</text>
-<path d="M 255 130 L 465 130" stroke="#004D80" stroke-width="2.5"/>
-<polygon points="465,130 455,124 455,136" fill="#004D80"/>
-<text x="360" y="152" text-anchor="middle" font-size="11" fill="#334155">Glissement vertical de +u₁</text>
-<text x="360" y="172" text-anchor="middle" font-size="11.5" font-weight="700" fill="#970E53">det(J) = 1 ⇒ Vol(Ω_k) = Vol(Δ_k) = 1/k!</text>
-<!-- Right: Canonical simplex Delta_2 -->
-<rect x="495" y="48" width="165" height="165" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
-<polygon points="495,213 495,48 660,48" fill="rgba(151, 14, 83, 0.24)" stroke="#970E53" stroke-width="2.2"/>
-<!-- Vertical/slanted slices showing preservation -->
-<line x1="536" y1="172" x2="536" y2="48" stroke="#970E53" stroke-width="1.2" stroke-dasharray="3,2"/>
-<line x1="577" y1="130" x2="577" y2="48" stroke="#970E53" stroke-width="1.2" stroke-dasharray="3,2"/>
-<line x1="618" y1="89" x2="618" y2="48" stroke="#970E53" stroke-width="1.2" stroke-dasharray="3,2"/>
-<text x="552" y="102" text-anchor="middle" font-size="11.5" font-weight="700" fill="#970E53">Simplexe Δ₂ :</text>
-<text x="552" y="120" text-anchor="middle" font-size="11" font-weight="700" fill="#970E53">0 ≤ t₁ ≤ t₂ ≤ 1</text>
-<text x="577" y="233" text-anchor="middle" font-size="11" font-weight="600" fill="#334155">t₁ = u₁ ∈ [0, 1]</text>
-<text x="682" y="130" text-anchor="middle" font-size="11" font-weight="600" fill="#334155" transform="rotate(90 682 130)">t₂ = u₁ + u₂ ∈ [0, 1]</text>
+<svg viewBox="0 0 340 250" role="img" aria-label="Le cisaillement fait glisser verticalement chaque tranche du coin Ω₂ pour former le triangle Δ₂, sans changer sa longueur" style="width:100%;max-width:340px;height:auto;">
+<defs><marker id="fc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
+<style>.cis{transform:translate(60px,200px) skewY(-45deg) translate(-60px,-200px)}@keyframes cis-k{0%,18%{transform:translate(60px,200px) skewY(0deg) translate(-60px,-200px)}82%,100%{transform:translate(60px,200px) skewY(-45deg) translate(-60px,-200px)}}@media (prefers-reduced-motion:no-preference){.cis{animation:cis-k 7s ease-in-out infinite alternate}}</style>
+<rect x="60" y="40" width="160" height="160" fill="none" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<polygon points="60.0,200.0 220.0,200.0 60.0,40.0" fill="none" stroke="#004D80" stroke-opacity="0.45" stroke-dasharray="3 3"/>
+<polygon points="60.0,200.0 220.0,40.0 60.0,40.0" fill="none" stroke="#970E53" stroke-opacity="0.55" stroke-dasharray="3 3"/>
+<g class="cis"><rect x="61.0" y="48.0" width="14.0" height="152.0" fill="#d6e2eb" fill-opacity="0.9" vector-effect="non-scaling-stroke"/><rect x="77.0" y="64.0" width="14.0" height="136.0" fill="#cbdbe5" fill-opacity="0.9" vector-effect="non-scaling-stroke"/><rect x="93.0" y="80.0" width="14.0" height="120.0" fill="#c1d3e0" fill-opacity="0.9" vector-effect="non-scaling-stroke"/><rect x="109.0" y="96.0" width="14.0" height="104.0" fill="#b6ccdb" fill-opacity="0.9" vector-effect="non-scaling-stroke"/><rect x="125.0" y="112.0" width="14.0" height="88.0" fill="#abc4d5" fill-opacity="0.9" vector-effect="non-scaling-stroke"/><rect x="141.0" y="128.0" width="14.0" height="72.0" fill="#a0bdd0" fill-opacity="0.9" vector-effect="non-scaling-stroke"/><rect x="157.0" y="144.0" width="14.0" height="56.0" fill="#96b5cb" fill-opacity="0.9" vector-effect="non-scaling-stroke"/><rect x="173.0" y="160.0" width="14.0" height="40.0" fill="#8baec5" fill-opacity="0.9" vector-effect="non-scaling-stroke"/><rect x="189.0" y="176.0" width="14.0" height="24.0" fill="#80a7c0" fill-opacity="0.9" vector-effect="non-scaling-stroke"/><rect x="205.0" y="192.0" width="14.0" height="8.0" fill="#769fbb" fill-opacity="0.9" vector-effect="non-scaling-stroke"/></g>
+<line x1="60.0" y1="200.0" x2="242.0" y2="200.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#fc)"/>
+<line x1="60.0" y1="200.0" x2="60.0" y2="18.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#fc)"/>
+<text x="246.0" y="205.0" text-anchor="start" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >u<tspan dy='3' font-size='10'>1</tspan><tspan dy='-3'></tspan> = t<tspan dy='3' font-size='10'>1</tspan><tspan dy='-3'></tspan></text>
+<text x="70.0" y="22.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >u<tspan dy='3' font-size='10'>2</tspan><tspan dy='-3'></tspan>  puis  t<tspan dy='3' font-size='10'>2</tspan><tspan dy='-3'></tspan> = u<tspan dy='3' font-size='10'>1</tspan><tspan dy='-3'></tspan> + u<tspan dy='3' font-size='10'>2</tspan><tspan dy='-3'></tspan></text>
+<text x="52.0" y="216.0" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >0</text>
+<text x="220.0" y="218.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1</text>
+<text x="52.0" y="45.0" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1</text>
+<text x="230.0" y="180.8" text-anchor="start" font-size="16" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >Ω₂</text>
+<text x="230.0" y="56.0" text-anchor="start" font-size="16" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >Δ₂</text>
 </svg>
 </div>
+<p class="legende">Le cisaillement $t_1 = u_1$, $t_2 = u_1 + u_2$ fait glisser chaque tranche verticale du coin $\Omega_2$ vers le haut, d'autant plus qu'elle est à droite&nbsp;: les tranches gardent leur longueur, et le coin devient le triangle $\Delta_2$.</p>
 
 <div id="preuve">
 
@@ -321,377 +361,60 @@ D'où $m(0) = 1$ et, par dérivation, $m'(x) = m(x)$, ce qui implique $m(x) = \m
 
 <br>
 
-### 4. Laboratoire Monte-Carlo interactif
+**Et au-delà de $1$&nbsp;?** L'argument repose sur le fait que, tant que $x \le 1$, le premier tirage peut tomber n'importe où dans $[0, x]$ avec la même densité&nbsp;: le jeu est alors «&nbsp;sans mémoire&nbsp;», et l'on retrouve l'équation de l'exponentielle. Pour un seuil $x > 1$, ce n'est plus vrai (un tirage ne dépasse jamais $1$), et l'équation devient $m'(x) = m(x) - m(x - 1)$&nbsp;: la valeur en $x$ dépend de ce qui s'est passé une unité plus tôt. La mémoire réapparaît, et l'exponentielle disparaît&nbsp;: on trouve par exemple $m(2) = \mathrm{e}^2 - \mathrm{e} \approx 4,67$, puis $m(x) \approx 2x + \frac{2}{3}$ pour les grands seuils. Ce lien entre $\frac{1}{k!}$ et absence de mémoire est détaillé [dans la partie géométrique](../../geometrie/simplexes/#le-k-signature-de-labsence-de-mémoire).
 
-Le laboratoire interactif ci-dessous vous permet de simuler ces deux problèmes (**Problème 1 : Rupture de monotonie** et **Problème 2 : Somme $> 1$ de Gnedenko**), de visualiser où tombent les couples $(U\_1, U\_2)$ dans le carré unité $[0,1]^2$ ($\Delta\_2$ contre $\Omega\_2$), et de vérifier que les probabilités empiriques de survie épousent les volumes des simplexes $\frac{1}{k!}$.
+### 4. Vérification par simulation
 
-<div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 12px; padding: 18px; margin: 25px auto; max-width: 820px; box-shadow: 0 4px 10px -2px rgba(0,0,0,0.07); font-family: system-ui, -apple-system, sans-serif;">
-<div style="text-align: center; margin-bottom: 12px;">
-<span style="font-size: 1.08em; font-weight: 700; color: #004D80;">Laboratoire Monte-Carlo&nbsp;: Monotonie ($U_1 \le \dots \le U_k$) &amp; Seuil de Gnedenko ($\sum U_i > 1$)</span>
+Simulons $100\,000$ parties de chacun des deux jeux, et comptons dans quelle proportion de parties on a survécu au-delà du $k$-ième tirage&nbsp;:
+
+<div class="svg-container">
+<svg viewBox="0 0 470 260" role="img" aria-label="Fréquences de survie observées sur 100 000 parties, comparées à 1/k!" style="width:100%;max-width:470px;height:auto;">
+<line x1="50.0" y1="130.0" x2="418.0" y2="130.0" stroke="#eef2f6" stroke-width="1" />
+<text x="46.0" y="134.0" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >0,5</text>
+<line x1="50.0" y1="50.0" x2="418.0" y2="50.0" stroke="#eef2f6" stroke-width="1" />
+<text x="46.0" y="54.0" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1,0</text>
+<text x="46.0" y="214.0" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >0</text>
+<rect x="60" y="50.0" width="18" height="160.0" rx="2" fill="#266893"><title>monotonie, k = 0 : 1,0000</title></rect>
+<rect x="80" y="50.0" width="18" height="160.0" rx="2" fill="#99b8cc"><title>Gnedenko, k = 0 : 1,0000</title></rect>
+<line x1="55.0" y1="50.0" x2="103.0" y2="50.0" stroke="#970E53" stroke-width="2.2" stroke-linecap="round"/>
+<text x="79.0" y="228.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >0</text>
+<rect x="122" y="50.0" width="18" height="160.0" rx="2" fill="#266893"><title>monotonie, k = 1 : 1,0000</title></rect>
+<rect x="142" y="50.0" width="18" height="160.0" rx="2" fill="#99b8cc"><title>Gnedenko, k = 1 : 1,0000</title></rect>
+<line x1="117.0" y1="50.0" x2="165.0" y2="50.0" stroke="#970E53" stroke-width="2.2" stroke-linecap="round"/>
+<text x="141.0" y="228.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >1</text>
+<rect x="184" y="130.0" width="18" height="80.0" rx="2" fill="#266893"><title>monotonie, k = 2 : 0,5002</title></rect>
+<rect x="204" y="130.0" width="18" height="80.0" rx="2" fill="#99b8cc"><title>Gnedenko, k = 2 : 0,4999</title></rect>
+<line x1="179.0" y1="130.0" x2="227.0" y2="130.0" stroke="#970E53" stroke-width="2.2" stroke-linecap="round"/>
+<text x="203.0" y="228.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >2</text>
+<text x="203.0" y="122.0" text-anchor="middle" font-size="11.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >1/2!</text>
+<rect x="246" y="183.6" width="18" height="26.4" rx="2" fill="#266893"><title>monotonie, k = 3 : 0,1649</title></rect>
+<rect x="266" y="183.2" width="18" height="26.8" rx="2" fill="#99b8cc"><title>Gnedenko, k = 3 : 0,1677</title></rect>
+<line x1="241.0" y1="183.3" x2="289.0" y2="183.3" stroke="#970E53" stroke-width="2.2" stroke-linecap="round"/>
+<text x="265.0" y="228.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >3</text>
+<text x="265.0" y="175.3" text-anchor="middle" font-size="11.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >1/3!</text>
+<rect x="308" y="203.5" width="18" height="6.5" rx="2" fill="#266893"><title>monotonie, k = 4 : 0,0409</title></rect>
+<rect x="328" y="203.1" width="18" height="6.9" rx="2" fill="#99b8cc"><title>Gnedenko, k = 4 : 0,0434</title></rect>
+<line x1="303.0" y1="203.3" x2="351.0" y2="203.3" stroke="#970E53" stroke-width="2.2" stroke-linecap="round"/>
+<text x="327.0" y="228.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >4</text>
+<text x="327.0" y="195.3" text-anchor="middle" font-size="11.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >1/4!</text>
+<rect x="370" y="208.7" width="18" height="1.3" rx="2" fill="#266893"><title>monotonie, k = 5 : 0,0082</title></rect>
+<rect x="390" y="208.6" width="18" height="1.4" rx="2" fill="#99b8cc"><title>Gnedenko, k = 5 : 0,0088</title></rect>
+<line x1="365.0" y1="208.7" x2="413.0" y2="208.7" stroke="#970E53" stroke-width="2.2" stroke-linecap="round"/>
+<text x="389.0" y="228.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >5</text>
+<text x="389.0" y="200.7" text-anchor="middle" font-size="11.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >1/5!</text>
+<line x1="50.0" y1="210.0" x2="418.0" y2="210.0" stroke="#94a3b8" stroke-width="1" />
+<text x="424.0" y="228.0" text-anchor="start" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >k</text>
+<rect x="214" y="30" width="14" height="14" rx="3" fill="#266893"/>
+<text x="234.0" y="42.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >P(N > k), monotonie</text>
+<rect x="214" y="52" width="14" height="14" rx="3" fill="#99b8cc"/>
+<text x="234.0" y="64.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >P(M > k), Gnedenko</text>
+<line x1="214.0" y1="103.0" x2="228.0" y2="103.0" stroke="#970E53" stroke-width="2.2" stroke-linecap="round"/>
+<text x="234.0" y="108.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >volume 1/k!</text>
+</svg>
 </div>
-<div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center; margin-bottom: 12px; background: #f1f5f9; padding: 10px 14px; border-radius: 8px; border: 1px solid #e2e8f0;">
-<div style="display: flex; gap: 6px; flex-wrap: wrap;">
-<button id="mcModeABtn" style="padding: 7px 12px; border-radius: 7px; border: 2px solid #970E53; background: #970E53; color: #fff; font-weight: 700; cursor: pointer; font-size: 0.85em;">
-Problème 1 : Monotonie ($U_k < U_{k-1}$)
-</button>
-<button id="mcModeBBtn" style="padding: 7px 12px; border-radius: 7px; border: 2px solid #004D80; background: #fff; color: #004D80; font-weight: 600; cursor: pointer; font-size: 0.85em;">
-Problème 2 : Somme $> 1$ (Gnedenko)
-</button>
-</div>
-<div style="display: flex; gap: 6px; flex-wrap: wrap;">
-<button id="mcStep1Btn" style="padding: 7px 12px; border-radius: 7px; border: 1px solid #006C65; background: #006C65; color: #fff; font-weight: 700; cursor: pointer; font-size: 0.84em;">
-+1 Tirage détaillé
-</button>
-<button id="mcBatchBtn" style="padding: 7px 12px; border-radius: 7px; border: 1px solid #004D80; background: #004D80; color: #fff; font-weight: 700; cursor: pointer; font-size: 0.84em;">
-+1 000 Tirages
-</button>
-<button id="mcResetBtn" style="padding: 7px 11px; border-radius: 7px; border: 1px solid #94a3b8; background: #fff; color: #475569; font-weight: 600; cursor: pointer; font-size: 0.84em;">
-Réinitialiser
-</button>
-</div>
-</div>
-<div style="position: relative; width: 100%; background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; overflow: hidden;">
-<canvas id="probSimplexCanvas" style="width: 100%; height: 410px; display: block;"></canvas>
-</div>
-<div id="mcStatsReadout" style="margin-top: 10px; padding: 10px 14px; background: #fff; border-radius: 8px; border-left: 5px solid #006C65; font-size: 0.86em; color: #334155; line-height: 1.5;">
-</div>
-</div>
-<script>
-(function() {
-const canvas = document.getElementById('probSimplexCanvas');
-if (!canvas) return;
-const ctx = canvas.getContext('2d');
-const modeABtn = document.getElementById('mcModeABtn');
-const modeBBtn = document.getElementById('mcModeBBtn');
-const step1Btn = document.getElementById('mcStep1Btn');
-const batchBtn = document.getElementById('mcBatchBtn');
-const resetBtn = document.getElementById('mcResetBtn');
-const statsReadout = document.getElementById('mcStatsReadout');
-let mode = 'A';
-const MAX_K = 8;
-const FACT = [1, 1, 2, 6, 24, 120, 720, 5040, 40320];
-let totalTrials = 0;
-let sumStop = 0;
-let stopCounts = new Array(MAX_K + 2).fill(0);
-let lastSequence = [];
-let recentPoints2D = [];
-function runSingleTrial() {
-const seq = [];
-if (mode === 'A') {
-let prev = -1;
-while (true) {
-const u = Math.random();
-seq.push(u);
-if (seq.length >= 2 && u < prev) break;
-prev = u;
-if (seq.length > 20) break;
-}
-} else {
-let s = 0;
-while (true) {
-const u = Math.random();
-seq.push(u);
-s += u;
-if (s > 1.0) break;
-if (seq.length > 20) break;
-}
-}
-const kStop = seq.length;
-totalTrials++;
-sumStop += kStop;
-const bucket = Math.min(kStop, MAX_K + 1);
-stopCounts[bucket]++;
-lastSequence = seq;
-if (seq.length >= 2) {
-const survived2 = kStop > 2;
-recentPoints2D.push({ u1: seq[0], u2: seq[1], survived2 });
-if (recentPoints2D.length > 240) recentPoints2D.shift();
-}
-}
-function resetSimulation(initialCount = 500) {
-totalTrials = 0;
-sumStop = 0;
-stopCounts.fill(0);
-lastSequence = [];
-recentPoints2D = [];
-for (let i = 0; i < initialCount; i++) runSingleTrial();
-render();
-}
-function updateButtonsUI() {
-if (mode === 'A') {
-modeABtn.style.background = '#970E53';
-modeABtn.style.color = '#ffffff';
-modeBBtn.style.background = '#ffffff';
-modeBBtn.style.color = '#004D80';
-} else {
-modeABtn.style.background = '#ffffff';
-modeABtn.style.color = '#970E53';
-modeBBtn.style.background = '#004D80';
-modeBBtn.style.color = '#ffffff';
-}
-}
-function render() {
-const dpr = window.devicePixelRatio || 1;
-const W = canvas.clientWidth || 780;
-const H = canvas.clientHeight || 410;
-if (canvas.width !== Math.round(W * dpr) || canvas.height !== Math.round(H * dpr)) {
-canvas.width = Math.round(W * dpr);
-canvas.height = Math.round(H * dpr);
-}
-ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-ctx.clearRect(0, 0, W, H);
-const leftW = Math.floor(W * 0.45);
-ctx.save();
-ctx.fillStyle = '#0f172a';
-ctx.font = 'bold 12.5px system-ui, sans-serif';
-ctx.textAlign = 'left';
-ctx.fillText(
-mode === 'A'
-? `Dernier tirage (arrêt à N = ${lastSequence.length} dès que U_k < U_{k-1})`
-: `Dernier tirage (arrêt à M = ${lastSequence.length} dès que Σ U_i > 1)`,
-16, 22
-);
-if (mode === 'A') {
-const gx = 36, gy = 34, gw = leftW - 52, gh = 115;
-ctx.fillStyle = '#f8fafc';
-ctx.strokeStyle = '#cbd5e1';
-ctx.fillRect(gx, gy, gw, gh);
-ctx.strokeRect(gx, gy, gw, gh);
-ctx.fillStyle = '#64748b';
-ctx.font = '10px monospace';
-ctx.textAlign = 'right';
-ctx.fillText('1.0', gx - 5, gy + 9);
-ctx.fillText('0.0', gx - 5, gy + gh);
-const len = lastSequence.length;
-const stepX = gw / Math.max(len, 5);
-ctx.beginPath();
-lastSequence.forEach((u, i) => {
-const px = gx + (i + 0.5) * stepX;
-const py = gy + gh - u * (gh - 12) - 6;
-if (i === 0) ctx.moveTo(px, py);
-else ctx.lineTo(px, py);
-});
-ctx.strokeStyle = '#004D80';
-ctx.lineWidth = 2;
-ctx.stroke();
-lastSequence.forEach((u, i) => {
-const px = gx + (i + 0.5) * stepX;
-const py = gy + gh - u * (gh - 12) - 6;
-const isLast = i === len - 1;
-ctx.beginPath();
-ctx.arc(px, py, isLast ? 5.5 : 4.2, 0, Math.PI * 2);
-ctx.fillStyle = isLast ? '#dc2626' : '#006C65';
-ctx.fill();
-ctx.fillStyle = isLast ? '#dc2626' : '#1e293b';
-ctx.font = 'bold 10px monospace';
-ctx.textAlign = 'center';
-ctx.fillText(u.toFixed(2), px, py - 8);
-ctx.fillStyle = '#475569';
-ctx.fillText(`U${i + 1}`, px, gy + gh + 12);
-});
-} else {
-const gx = 20, gy = 50, gw = leftW - 36, gh = 42;
-const maxScale = 1.65;
-const threshX = gx + (1.0 / maxScale) * gw;
-ctx.fillStyle = '#f1f5f9';
-ctx.strokeStyle = '#cbd5e1';
-ctx.fillRect(gx, gy, gw, gh);
-ctx.strokeRect(gx, gy, gw, gh);
-const segColors = ['#004D80', '#006C65', '#d97706', '#7c3aed', '#2563eb', '#059669'];
-let acc = 0;
-lastSequence.forEach((u, i) => {
-const xStart = gx + (acc / maxScale) * gw;
-const wSeg = (u / maxScale) * gw;
-const isLast = i === lastSequence.length - 1;
-ctx.fillStyle = isLast ? 'rgba(220, 38, 38, 0.82)' : segColors[i % segColors.length];
-ctx.fillRect(xStart, gy, Math.max(wSeg - 1, 1), gh);
-if (wSeg > 28) {
-ctx.fillStyle = '#ffffff';
-ctx.font = 'bold 10px monospace';
-ctx.textAlign = 'center';
-ctx.fillText(`U${i+1}=${u.toFixed(2)}`, xStart + wSeg / 2, gy + gh / 2 + 4);
-}
-acc += u;
-});
-ctx.strokeStyle = '#970E53';
-ctx.lineWidth = 2.5;
-ctx.setLineDash([4, 3]);
-ctx.beginPath();
-ctx.moveTo(threshX, gy - 12);
-ctx.lineTo(threshX, gy + gh + 14);
-ctx.stroke();
-ctx.setLineDash([]);
-ctx.fillStyle = '#970E53';
-ctx.font = 'bold 11px system-ui, sans-serif';
-ctx.textAlign = 'center';
-ctx.fillText('Seuil = 1,00', threshX, gy - 15);
-ctx.fillStyle = '#1e293b';
-ctx.fillText(`Somme finale = ${acc.toFixed(3)} (> 1 en M = ${lastSequence.length} tirages)`, gx + gw / 2, gy + gh + 28);
-}
-const sqSize = 175;
-const sqX = 48;
-const sqY = H - sqSize - 32;
-ctx.fillStyle = '#0f172a';
-ctx.font = 'bold 12px system-ui, sans-serif';
-ctx.textAlign = 'left';
-ctx.fillText(
-mode === 'A'
-? 'Couples (U₁, U₂) dans [0,1]² : survie k=2 ⇔ U₁ ≤ U₂ (Δ₂)'
-: 'Couples (U₁, U₂) dans [0,1]² : survie k=2 ⇔ U₁+U₂ ≤ 1 (Ω₂)',
-16, sqY - 12
-);
-ctx.fillStyle = '#f8fafc';
-ctx.strokeStyle = '#64748b';
-ctx.lineWidth = 1.5;
-ctx.fillRect(sqX, sqY, sqSize, sqSize);
-ctx.strokeRect(sqX, sqY, sqSize, sqSize);
-ctx.beginPath();
-if (mode === 'A') {
-ctx.moveTo(sqX, sqY + sqSize);
-ctx.lineTo(sqX, sqY);
-ctx.lineTo(sqX + sqSize, sqY);
-} else {
-ctx.moveTo(sqX, sqY + sqSize);
-ctx.lineTo(sqX + sqSize, sqY + sqSize);
-ctx.lineTo(sqX, sqY);
-}
-ctx.closePath();
-ctx.fillStyle = 'rgba(0, 108, 101, 0.18)';
-ctx.fill();
-ctx.strokeStyle = '#006C65';
-ctx.lineWidth = 1.8;
-ctx.stroke();
-recentPoints2D.forEach((pt, idx) => {
-const px = sqX + pt.u1 * sqSize;
-const py = sqY + sqSize - pt.u2 * sqSize;
-const isNewest = idx === recentPoints2D.length - 1;
-ctx.beginPath();
-ctx.arc(px, py, isNewest ? 4.5 : 2.3, 0, Math.PI * 2);
-ctx.fillStyle = pt.survived2 ? '#006C65' : 'rgba(220, 38, 38, 0.65)';
-ctx.fill();
-if (isNewest) {
-ctx.strokeStyle = '#0f172a';
-ctx.lineWidth = 1.2;
-ctx.stroke();
-}
-});
-ctx.fillStyle = '#006C65';
-ctx.font = 'bold 11px system-ui, sans-serif';
-ctx.textAlign = 'left';
-ctx.fillText('Aire du triangle = 1/2! = 0,5', sqX + sqSize + 12, sqY + 45);
-ctx.fillStyle = '#dc2626';
-ctx.fillText('Rouge : arrêt dès k = 2', sqX + sqSize + 12, sqY + 68);
-ctx.fillStyle = '#006C65';
-ctx.fillText('Vert : survie (N > 2)', sqX + sqSize + 12, sqY + 88);
-ctx.fillStyle = '#475569';
-ctx.font = '10.5px monospace';
-ctx.textAlign = 'center';
-ctx.fillText('U₁ ∈ [0,1]', sqX + sqSize / 2, sqY + sqSize + 16);
-ctx.save();
-ctx.translate(sqX - 14, sqY + sqSize / 2);
-ctx.rotate(-Math.PI / 2);
-ctx.fillText('U₂ ∈ [0,1]', 0, 0);
-ctx.restore();
-const rx = leftW + 14, ry = 14, rw = W - leftW - 26, rh = H - 28;
-ctx.fillStyle = '#f8fafc';
-ctx.strokeStyle = '#e2e8f0';
-ctx.lineWidth = 1;
-ctx.beginPath();
-ctx.roundRect(rx, ry, rw, rh, 8);
-ctx.fill();
-ctx.stroke();
-ctx.fillStyle = '#0f172a';
-ctx.font = 'bold 13px system-ui, sans-serif';
-ctx.textAlign = 'left';
-ctx.fillText('Probabilités de survie P(Arrêt > k) vs Vol(Δ_k) = 1/k!', rx + 16, ry + 24);
-const survEmp = [];
-let cumStopped = 0;
-for (let k = 0; k <= 6; k++) {
-if (k > 0) cumStopped += stopCounts[k];
-survEmp.push((totalTrials - cumStopped) / Math.max(totalTrials, 1));
-}
-const chartX = rx + 44, chartY = ry + 48, chartW = rw - 62, chartH = 225;
-ctx.strokeStyle = '#94a3b8';
-ctx.lineWidth = 1.2;
-ctx.beginPath();
-ctx.moveTo(chartX, chartY);
-ctx.lineTo(chartX, chartY + chartH);
-ctx.lineTo(chartX + chartW, chartY + chartH);
-ctx.stroke();
-[0, 0.25, 0.5, 0.75, 1.0].forEach(val => {
-const py = chartY + chartH - val * chartH;
-ctx.strokeStyle = 'rgba(148, 163, 184, 0.25)';
-ctx.beginPath();
-ctx.moveTo(chartX, py);
-ctx.lineTo(chartX + chartW, py);
-ctx.stroke();
-ctx.fillStyle = '#64748b';
-ctx.font = '10px monospace';
-ctx.textAlign = 'right';
-ctx.fillText(val.toFixed(2), chartX - 6, py + 3);
-});
-const colW = chartW / 7;
-for (let k = 0; k <= 6; k++) {
-const theo = 1 / FACT[k];
-const emp = survEmp[k];
-const bx = chartX + k * colW + 8;
-const bw = (colW - 18) / 2;
-const hEmp = emp * chartH;
-ctx.fillStyle = '#006C65';
-ctx.fillRect(bx, chartY + chartH - hEmp, bw, hEmp);
-const hTheo = theo * chartH;
-ctx.fillStyle = '#970E53';
-ctx.fillRect(bx + bw + 2, chartY + chartH - hTheo, bw, hTheo);
-ctx.fillStyle = '#1e293b';
-ctx.font = 'bold 11px system-ui, sans-serif';
-ctx.textAlign = 'center';
-ctx.fillText(`k=${k}`, bx + bw, chartY + chartH + 15);
-ctx.fillStyle = '#970E53';
-ctx.font = '10px monospace';
-ctx.fillText(`1/${k}!`, bx + bw, chartY + chartH + 28);
-}
-ctx.fillStyle = '#006C65';
-ctx.fillRect(chartX + 12, chartY + 6, 12, 12);
-ctx.fillStyle = '#1e293b';
-ctx.font = '11px system-ui, sans-serif';
-ctx.textAlign = 'left';
-ctx.fillText('Fréquence empirique P(Arrêt > k)', chartX + 28, chartY + 16);
-ctx.fillStyle = '#970E53';
-ctx.fillRect(chartX + 12, chartY + 24, 12, 12);
-ctx.fillStyle = '#1e293b';
-ctx.fillText('Volume exact du simplexe 1/k!', chartX + 28, chartY + 34);
-const empMean = sumStop / Math.max(totalTrials, 1);
-const boxY = chartY + chartH + 42;
-ctx.fillStyle = '#ffffff';
-ctx.strokeStyle = '#cbd5e1';
-ctx.beginPath();
-ctx.roundRect(rx + 16, boxY, rw - 32, rh - (boxY - ry) - 12, 6);
-ctx.fill();
-ctx.stroke();
-ctx.fillStyle = '#0f172a';
-ctx.font = 'bold 12px system-ui, sans-serif';
-ctx.fillText(`Convergence vers e sur ${totalTrials.toLocaleString('fr-FR')} expériences :`, rx + 28, boxY + 22);
-ctx.font = 'bold 13px monospace';
-ctx.fillStyle = '#006C65';
-ctx.fillText(`Moyenne empirique = ${empMean.toFixed(5)}`, rx + 28, boxY + 44);
-ctx.fillStyle = '#970E53';
-ctx.fillText(`Valeur exacte e   = ${Math.E.toFixed(5)} (écart : ${Math.abs(empMean - Math.E).toFixed(5)})`, rx + 28, boxY + 64);
-ctx.restore();
-statsReadout.innerHTML = `<b>Bilan sur ${totalTrials.toLocaleString('fr-FR')} tirages (${mode === 'A' ? 'Rupture de monotonie $N$' : 'Somme de Gnedenko $M$'})&nbsp;:</b> P(Survie $&gt; 2$) empirique = <b>${survEmp[2].toFixed(4)}</b> (théorique $\\frac{1}{2!} = 0,5000$), P(Survie $&gt; 3$) = <b>${survEmp[3].toFixed(4)}</b> (théorique $\\frac{1}{3!} \\approx 0,1667$), P(Survie $&gt; 4$) = <b>${survEmp[4].toFixed(4)}</b> (théorique $\\frac{1}{4!} \\approx 0,0417$). La somme des colonnes reconstitue $\\mathbb{E} = \\sum_{k=0}^\\infty \\frac{1}{k!} = \\mathrm{e} \\approx 2,71828$.`;
-if (window.MathJax && window.MathJax.typesetPromise) {
-window.MathJax.typesetPromise([statsReadout]).catch(() => {});
-}
-}
-modeABtn.addEventListener('click', () => { mode = 'A'; updateButtonsUI(); resetSimulation(500); });
-modeBBtn.addEventListener('click', () => { mode = 'B'; updateButtonsUI(); resetSimulation(500); });
-step1Btn.addEventListener('click', () => { runSingleTrial(); render(); });
-batchBtn.addEventListener('click', () => { for (let i = 0; i < 1000; i++) runSingleTrial(); render(); });
-resetBtn.addEventListener('click', () => { resetSimulation(1); });
-window.addEventListener('resize', render);
-updateButtonsUI();
-resetSimulation(600);
-})();
-</script>
+<p class="legende">Fréquences de survie observées sur $100\,000$ parties de chaque jeu. Elles collent aux volumes $\frac{1}{k!}$ des simplexes (traits magenta), et sont presque identiques d'un jeu à l'autre&nbsp;: le cisaillement l'avait prédit.</p>
+
+Les nombres moyens de tirages observés valent $2,716$ pour la rupture de monotonie et $2,722$ pour le seuil de Gnedenko, pour une valeur exacte $\mathrm{e} \approx 2,718$. Les écarts, de l'ordre de $0,003$, sont conformes aux fluctuations attendues&nbsp;: l'écart-type de $N$ (ou de $M$) vaut $\sqrt{3\mathrm{e} - \mathrm{e}^2} \approx 0,88$, donc celui d'une moyenne sur $100\,000$ parties est d'environ $\frac{0,88}{\sqrt{100\,000}} \approx 0,003$.
 
 
 ## Dérangements de Montmort ($\mathrm{e}^{-1}$)
@@ -713,7 +436,7 @@ $\displaystyle D_n = \left\{ \sigma \in \mathfrak{S}_n \;\middle|\; \forall i \i
 
 <br>
 
-Quand le nombre de convives $n$ grandit, deux effets opposés s'affrontent&nbsp;: il y a de plus en plus d'individus susceptibles de tomber sur leur propre chapeau, mais chacun n'a plus qu'une chance $\frac{1}{n}$ de tomber sur le sien. Ces deux effets se compensent avec une précision stupéfiante&nbsp;: dès $n = 6$ convives, la probabilité $p\_n$ vaut déjà **$\frac{1}{\mathrm{e}} \approx 36,788\\,\\%$** à moins d'un dix-millième près&nbsp;!
+Quand le nombre de convives $n$ grandit, deux effets opposés s'affrontent&nbsp;: il y a de plus en plus d'individus susceptibles de tomber sur leur propre chapeau, mais chacun n'a plus qu'une chance $\frac{1}{n}$ de tomber sur le sien. Ces deux effets se compensent avec une précision stupéfiante&nbsp;: dès $n = 7$ convives, la probabilité $p\_n$ vaut déjà **$\frac{1}{\mathrm{e}} \approx 36,788\\,\\%$** à moins de trois cent-millièmes près&nbsp;!
 
 ### 2. Crible de Poincaré et simplexe discret
 
@@ -741,35 +464,7 @@ $$
 
 </div>
 
-<div class="svg-container">
-<svg viewBox="0 0 760 205" style="max-width:760px;width:100%;height:auto;background:#ffffff;border:1px solid #cbd5e1;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.04);font-family:system-ui,-apple-system,sans-serif;">
-<text x="380" y="23" text-anchor="middle" font-size="13.5" font-weight="700" fill="#004D80">Pourquoi chaque couche k du crible de Poincaré vaut exactement 1/k! quel que soit le nombre de chapeaux n ≥ k</text>
-<!-- Box 1: Choice of k fixed points -->
-<rect x="22" y="42" width="225" height="145" rx="8" fill="#f8fafc" stroke="#004D80" stroke-width="1.5"/>
-<text x="134" y="64" text-anchor="middle" font-size="12" font-weight="700" fill="#004D80">1. Simplexe discret des k élus</text>
-<text x="134" y="88" text-anchor="middle" font-size="11.5" fill="#1e293b">1 ≤ i₁ &lt; i₂ &lt; … &lt; i_k ≤ n</text>
-<text x="134" y="114" text-anchor="middle" font-size="11" fill="#475569">L'ordre croissant brise la</text>
-<text x="134" y="130" text-anchor="middle" font-size="11" fill="#475569">symétrie S_k des k points fixes :</text>
-<text x="134" y="162" text-anchor="middle" font-size="13" font-weight="700" fill="#004D80">C(n, k) = n! / ( k! · (n−k)! )</text>
-<!-- Multiply sign -->
-<text x="265" y="122" text-anchor="middle" font-size="22" font-weight="700" fill="#334155">×</text>
-<!-- Box 2: Probability of those k fixed points -->
-<rect x="284" y="42" width="225" height="145" rx="8" fill="#f8fafc" stroke="#006C65" stroke-width="1.5"/>
-<text x="396" y="64" text-anchor="middle" font-size="12" font-weight="700" fill="#006C65">2. Probabilité que ces k soient fixes</text>
-<text x="396" y="88" text-anchor="middle" font-size="11" fill="#1e293b">k chapeaux bloqués (1 choix)</text>
-<text x="396" y="108" text-anchor="middle" font-size="11" fill="#1e293b">(n − k) chapeaux libres : (n−k)! choix</text>
-<text x="396" y="130" text-anchor="middle" font-size="11" fill="#475569">sur n! permutations totales :</text>
-<text x="396" y="162" text-anchor="middle" font-size="13" font-weight="700" fill="#006C65">P = (n − k)! / n!</text>
-<!-- Equals sign -->
-<text x="528" y="122" text-anchor="middle" font-size="22" font-weight="700" fill="#334155">=</text>
-<!-- Box 3: Universal result 1/k! -->
-<rect x="548" y="42" width="190" height="145" rx="8" fill="#FBE1DE" stroke="#970E53" stroke-width="2"/>
-<text x="643" y="64" text-anchor="middle" font-size="12" font-weight="700" fill="#970E53">3. Annulation exacte de n</text>
-<text x="643" y="92" text-anchor="middle" font-size="11" fill="#1e293b">n! et (n−k)! se simplifient !</text>
-<text x="643" y="126" text-anchor="middle" font-size="18" font-weight="700" fill="#970E53">1 / k!</text>
-<text x="643" y="158" text-anchor="middle" font-size="11" font-weight="600" fill="#970E53">= Vol_k(Δ_k)</text>
-</svg>
-</div>
+Par exemple, avec $n = 4$ convives et $k = 2$&nbsp;: il y a $\binom{4}{2} = 6$ paires de convives, et chaque paire a une probabilité $\frac{2!}{4!} = \frac{1}{12}$ de récupérer ses deux chapeaux (les deux autres chapeaux se répartissent de $2!$ façons parmi les $4!$ possibles). Au total&nbsp;: $6 \times \frac{1}{12} = \frac{1}{2} = \frac{1}{2!}$. Avec $n = 10$ convives, on aurait $45$ paires de probabilité $\frac{1}{90}$ chacune&nbsp;: toujours $\frac{1}{2}$&nbsp;!
 
 <div id="theo">
 
@@ -803,6 +498,40 @@ La distance entre l'entier $|D\_n|$ et le réel $\frac{n!}{\mathrm{e}}$ étant s
 
 <br>
 
+<div class="svg-container">
+<svg viewBox="0 0 450 240" role="img" aria-label="La probabilité de dérangement p_n oscille autour de 1/e et s'en approche très vite" style="width:100%;max-width:450px;height:auto;">
+<line x1="60.0" y1="86.3" x2="398.0" y2="86.3" stroke="#970E53" stroke-width="1.2" stroke-dasharray="4 4"/>
+<text x="402.0" y="90.3" text-anchor="start" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >1/e</text>
+<polyline points="60.0,200.0 107.1,45.5 154.3,97.0 201.4,84.1 248.6,86.7 295.7,86.2 342.9,86.3 390.0,86.3" fill="none" stroke="#80a6c0" stroke-width="1.5"/>
+<circle cx="60.0" cy="200.0" r="4" fill="#004D80" stroke="#fff" stroke-width="1.2"><title>p1 = 0,00000</title></circle>
+<circle cx="107.1" cy="45.5" r="4" fill="#004D80" stroke="#fff" stroke-width="1.2"><title>p2 = 0,50000</title></circle>
+<circle cx="154.3" cy="97.0" r="4" fill="#004D80" stroke="#fff" stroke-width="1.2"><title>p3 = 0,33333</title></circle>
+<circle cx="201.4" cy="84.1" r="4" fill="#004D80" stroke="#fff" stroke-width="1.2"><title>p4 = 0,37500</title></circle>
+<circle cx="248.6" cy="86.7" r="4" fill="#004D80" stroke="#fff" stroke-width="1.2"><title>p5 = 0,36667</title></circle>
+<circle cx="295.7" cy="86.2" r="4" fill="#004D80" stroke="#fff" stroke-width="1.2"><title>p6 = 0,36806</title></circle>
+<circle cx="342.9" cy="86.3" r="4" fill="#004D80" stroke="#fff" stroke-width="1.2"><title>p7 = 0,36786</title></circle>
+<circle cx="390.0" cy="86.3" r="4" fill="#004D80" stroke="#fff" stroke-width="1.2"><title>p8 = 0,36788</title></circle>
+<text x="107.1" y="35.5" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1/2</text>
+<text x="154.3" y="115.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1/3</text>
+<line x1="50.0" y1="200.0" x2="400.0" y2="200.0" stroke="#94a3b8" stroke-width="1" />
+<text x="60.0" y="218.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1</text>
+<text x="107.1" y="218.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >2</text>
+<text x="154.3" y="218.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >3</text>
+<text x="201.4" y="218.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >4</text>
+<text x="248.6" y="218.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >5</text>
+<text x="295.7" y="218.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >6</text>
+<text x="342.9" y="218.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >7</text>
+<text x="390.0" y="218.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >8</text>
+<text x="406.0" y="218.0" text-anchor="start" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >n</text>
+<text x="46.0" y="126.7" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >0,25</text>
+<line x1="50.0" y1="122.7" x2="54.0" y2="122.7" stroke="#94a3b8" stroke-width="1" />
+<text x="46.0" y="49.5" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >0,50</text>
+<line x1="50.0" y1="45.5" x2="54.0" y2="45.5" stroke="#94a3b8" stroke-width="1" />
+</svg>
+</div>
+<p class="legende">La probabilité $p_n$ qu'aucun convive ne récupère son chapeau oscille autour de $\frac{1}{\mathrm{e}}$ et s'en rapproche très vite&nbsp;: l'écart est inférieur à $\frac{1}{(n+1)!}$.</p>
+
+
 ### 3. Dualité $\mathrm{e} \cdot \mathrm{e}^{-1} = 1$ et loi de Poisson $\mathcal{P}(1)$
 
 On peut également retrouver $\lim p\_n = \frac{1}{\mathrm{e}}$ **sans aucun signe alterné**, en classant les $n!$ permutations de $\mathfrak{S}\_n$ selon leur **nombre exact $k$ de points fixes** ($k \in \\{0, \dots, n\\}$)&nbsp;:
@@ -825,279 +554,57 @@ $$
 
 </div>
 
-En passant à la limite $n \to +\infty$ dans $1 = \sum\_{k=0}^n \frac{1}{k!} p\_{n-k}$, on obtient immédiatement $1 = \mathrm{e} \times p\_\infty$, soit $p\_\infty = \mathrm{e}^{-1}$, et le nombre de points fixes $X\_n$ converge en loi vers la **loi de Poisson $\mathcal{P}(1)$**.
+En passant à la limite $n \to +\infty$ dans $1 = \sum\_{k=0}^n \frac{1}{k!} p\_{n-k}$ (l'échange de la limite et de la somme se justifie par le théorème de Tannery, car $0 \le p\_{n-k} \le 1$), on obtient $1 = \mathrm{e} \times p\_\infty$, soit $p\_\infty = \mathrm{e}^{-1}$, et le nombre de points fixes $X\_n$ converge en loi vers la **loi de Poisson $\mathcal{P}(1)$**.
 
 </div>
 
 <br>
 
-### 4. Explorateur interactif des dérangements
+<div class="svg-container">
+<svg viewBox="0 0 440 240" role="img" aria-label="Loi exacte du nombre de points fixes pour 6 chapeaux, comparée à la loi de Poisson de paramètre 1" style="width:100%;max-width:440px;height:auto;">
+<line x1="50.0" y1="159.5" x2="408.0" y2="159.5" stroke="#eef2f6" stroke-width="1" />
+<text x="46.0" y="163.5" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >0,1</text>
+<line x1="50.0" y1="119.0" x2="408.0" y2="119.0" stroke="#eef2f6" stroke-width="1" />
+<text x="46.0" y="123.0" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >0,2</text>
+<line x1="50.0" y1="78.6" x2="408.0" y2="78.6" stroke="#eef2f6" stroke-width="1" />
+<text x="46.0" y="82.6" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >0,3</text>
+<line x1="50.0" y1="38.1" x2="408.0" y2="38.1" stroke="#eef2f6" stroke-width="1" />
+<text x="46.0" y="42.1" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >0,4</text>
+<rect x="60" y="51.0" width="26" height="149.0" rx="3" fill="#739db9"><title>P(X6 = 0) = 0,3681</title></rect>
+<circle cx="73.0" cy="51.1" r="4.5" fill="#fff" stroke="#970E53" stroke-width="2"><title>Poisson : e⁻¹/0! = 0,3679</title></circle>
+<text x="73.0" y="218.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >0</text>
+<rect x="112" y="51.6" width="26" height="148.4" rx="3" fill="#739db9"><title>P(X6 = 1) = 0,3667</title></rect>
+<circle cx="125.0" cy="51.1" r="4.5" fill="#fff" stroke="#970E53" stroke-width="2"><title>Poisson : e⁻¹/1! = 0,3679</title></circle>
+<text x="125.0" y="218.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >1</text>
+<rect x="164" y="124.1" width="26" height="75.9" rx="3" fill="#739db9"><title>P(X6 = 2) = 0,1875</title></rect>
+<circle cx="177.0" cy="125.5" r="4.5" fill="#fff" stroke="#970E53" stroke-width="2"><title>Poisson : e⁻¹/2! = 0,1839</title></circle>
+<text x="177.0" y="218.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >2</text>
+<rect x="216" y="177.5" width="26" height="22.5" rx="3" fill="#739db9"><title>P(X6 = 3) = 0,0556</title></rect>
+<circle cx="229.0" cy="175.2" r="4.5" fill="#fff" stroke="#970E53" stroke-width="2"><title>Poisson : e⁻¹/3! = 0,0613</title></circle>
+<text x="229.0" y="218.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >3</text>
+<rect x="268" y="191.6" width="26" height="8.4" rx="3" fill="#739db9"><title>P(X6 = 4) = 0,0208</title></rect>
+<circle cx="281.0" cy="193.8" r="4.5" fill="#fff" stroke="#970E53" stroke-width="2"><title>Poisson : e⁻¹/4! = 0,0153</title></circle>
+<text x="281.0" y="218.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >4</text>
+<rect x="320" y="200.0" width="26" height="0.0" rx="3" fill="#739db9"><title>P(X6 = 5) = 0,0000</title></rect>
+<circle cx="333.0" cy="198.8" r="4.5" fill="#fff" stroke="#970E53" stroke-width="2"><title>Poisson : e⁻¹/5! = 0,0031</title></circle>
+<text x="333.0" y="218.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >5</text>
+<rect x="372" y="199.4" width="26" height="0.6" rx="3" fill="#739db9"><title>P(X6 = 6) = 0,0014</title></rect>
+<circle cx="385.0" cy="199.8" r="4.5" fill="#fff" stroke="#970E53" stroke-width="2"><title>Poisson : e⁻¹/6! = 0,0005</title></circle>
+<text x="385.0" y="218.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >6</text>
+<line x1="50.0" y1="200.0" x2="408.0" y2="200.0" stroke="#94a3b8" stroke-width="1" />
+<text x="414.0" y="218.0" text-anchor="start" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >k</text>
+<rect x="226" y="30" width="14" height="14" rx="3" fill="#739db9"/>
+<text x="246.0" y="42.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >loi exacte, n = 6</text>
+<circle cx="233" cy="62" r="4.5" fill="#fff" stroke="#970E53" stroke-width="2"/>
+<text x="246.0" y="66.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >Poisson : e⁻¹/k!</text>
+</svg>
+</div>
+<p class="legende">Pour $n = 6$ chapeaux, la loi exacte du nombre $X_6$ de convives qui récupèrent leur chapeau (barres) est déjà presque indiscernable de la loi de Poisson $\mathcal{P}(1)$ (cercles).</p>
 
-L'explorateur ci-dessous vous permet de faire varier le nombre de chapeaux $n$ pour observer les oscillations du crible de Poincaré autour de $\mathrm{e}^{-1}$ (**Mode 1**) et la superposition de la loi exacte des points fixes $X\_n$ avec la loi de Poisson $\mathcal{P}(1)$ (**Mode 2**).
+La loi de Poisson n'est pas une coïncidence&nbsp;: c'est la loi du nombre d'événements dans un processus sans mémoire, et son $\frac{1}{k!}$ a la même origine géométrique que tous ceux de cette page (voir [la partie géométrique](../../geometrie/simplexes/#le-k-signature-de-labsence-de-mémoire)).
 
-<div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 12px; padding: 18px; margin: 25px auto; max-width: 820px; box-shadow: 0 4px 10px -2px rgba(0,0,0,0.07); font-family: system-ui, -apple-system, sans-serif;">
-<div style="text-align: center; margin-bottom: 12px;">
-<span style="font-size: 1.08em; font-weight: 700; color: #004D80;">Explorateur des Dérangements&nbsp;: Crible d'Inclusion-Exclusion ($\mathrm{e}^{-1}$) &amp; Loi de Poisson $\mathcal{P}(1)$</span>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; margin-bottom: 12px; background: #f1f5f9; padding: 10px 16px; border-radius: 8px; border: 1px solid #e2e8f0;">
-<div style="display: flex; gap: 6px; flex-wrap: wrap;">
-<button id="derMode1Btn" style="padding: 7px 13px; border-radius: 7px; border: 2px solid #970E53; background: #970E53; color: #fff; font-weight: 700; cursor: pointer; font-size: 0.85em;">
-1. Oscillations du crible vers $1/\mathrm{e}$
-</button>
-<button id="derMode2Btn" style="padding: 7px 13px; border-radius: 7px; border: 2px solid #004D80; background: #fff; color: #004D80; font-weight: 600; cursor: pointer; font-size: 0.85em;">
-2. Loi des points fixes $X_n$ vs Poisson $\mathcal{P}(1)$
-</button>
-</div>
-<div style="flex: 1; min-width: 210px; max-width: 300px;">
-<div style="display: flex; justify-content: space-between; font-size: 0.86em; font-weight: 600; color: #1e293b; margin-bottom: 4px;">
-<span>Nombre de chapeaux $n$&nbsp;:</span>
-<span id="derNVal" style="color: #970E53; font-family: monospace;">n = 6</span>
-</div>
-<input type="range" id="derNSlider" min="1" max="10" value="6" step="1" style="width: 100%; accent-color: #970E53; cursor: pointer;">
-</div>
-</div>
-<div id="derMetricsBar" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(165px, 1fr)); gap: 8px; margin-bottom: 12px;">
-</div>
-<div style="position: relative; width: 100%; background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; overflow: hidden;">
-<canvas id="derangementCanvas" style="width: 100%; height: 350px; display: block;"></canvas>
-</div>
-<div id="derReadout" style="margin-top: 10px; padding: 10px 14px; background: #fff; border-radius: 8px; border-left: 5px solid #970E53; font-size: 0.86em; color: #334155; line-height: 1.5;">
-</div>
-</div>
-<script>
-(function() {
-const canvas = document.getElementById('derangementCanvas');
-if (!canvas) return;
-const ctx = canvas.getContext('2d');
-const btn1 = document.getElementById('derMode1Btn');
-const btn2 = document.getElementById('derMode2Btn');
-const nSlider = document.getElementById('derNSlider');
-const nVal = document.getElementById('derNVal');
-const metricsBar = document.getElementById('derMetricsBar');
-const readout = document.getElementById('derReadout');
-let mode = 1;
-let n = 6;
-const INV_E = 1 / Math.E;
-const FACT = [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800];
-const DERANGEMENTS = [1, 0, 1, 2, 9, 44, 265, 1854, 14833, 133496, 1334961];
-function updateUI() {
-btn1.style.background = mode === 1 ? '#970E53' : '#ffffff';
-btn1.style.color = mode === 1 ? '#ffffff' : '#970E53';
-btn2.style.background = mode === 2 ? '#004D80' : '#ffffff';
-btn2.style.color = mode === 2 ? '#ffffff' : '#004D80';
-nVal.textContent = 'n = ' + n;
-const nFact = FACT[n];
-const dn = DERANGEMENTS[n];
-const ratio = dn / nFact;
-const nFactOverE = nFact * INV_E;
-const err = Math.abs(ratio - INV_E);
-metricsBar.innerHTML = `
-<div style="background:#fff;border:1px solid #cbd5e1;border-radius:7px;padding:8px 10px;text-align:center;">
-<div style="font-size:0.76em;color:#64748b;font-weight:600;">Permutations totales $n!$</div>
-<div style="font-size:1.05em;font-weight:700;color:#0f172a;font-family:monospace;">${nFact.toLocaleString('fr-FR')}</div>
-</div>
-<div style="background:#fff;border:1px solid #cbd5e1;border-radius:7px;padding:8px 10px;text-align:center;">
-<div style="font-size:0.76em;color:#64748b;font-weight:600;">Dérangements exacts $|D_${n}|$</div>
-<div style="font-size:1.05em;font-weight:700;color:#970E53;font-family:monospace;">${dn.toLocaleString('fr-FR')}</div>
-</div>
-<div style="background:#fff;border:1px solid #cbd5e1;border-radius:7px;padding:8px 10px;text-align:center;">
-<div style="font-size:0.76em;color:#64748b;font-weight:600;">Valeur réelle $n! / \\mathrm{e}$</div>
-<div style="font-size:1.05em;font-weight:700;color:#004D80;font-family:monospace;">${nFactOverE.toFixed(4)}</div>
-</div>
-<div style="background:#fff;border:1px solid #cbd5e1;border-radius:7px;padding:8px 10px;text-align:center;">
-<div style="font-size:0.76em;color:#64748b;font-weight:600;">Probabilité $p_${n}$ vs $1/\\mathrm{e}$</div>
-<div style="font-size:0.98em;font-weight:700;color:#006C65;font-family:monospace;">${ratio.toFixed(6)} (écart ${err.toExponential(1)})</div>
-</div>
-`;
-if (window.MathJax && window.MathJax.typesetPromise) {
-window.MathJax.typesetPromise([metricsBar]).catch(() => {});
-}
-}
-function drawMode1(W, H) {
-const padL = 56, padR = 30, padT = 44, padB = 50;
-const plotW = W - padL - padR;
-const plotH = H - padT - padB;
-ctx.fillStyle = '#0f172a';
-ctx.font = 'bold 13px system-ui, sans-serif';
-ctx.textAlign = 'center';
-ctx.fillText(`Oscillations de la somme du crible S_m = Σ_{k=0}^m (-1)^k / k! autour de 1/e (pour m = 0 … ${n})`, W / 2, 24);
-const yMin = -0.05, yMax = 1.08;
-const toX = m => padL + (m / Math.max(n, 1)) * plotW;
-const toY = y => padT + plotH - ((y - yMin) / (yMax - yMin)) * plotH;
-ctx.strokeStyle = '#94a3b8';
-ctx.lineWidth = 1.3;
-ctx.beginPath();
-ctx.moveTo(padL, padT);
-ctx.lineTo(padL, padT + plotH);
-ctx.lineTo(padL + plotW, padT + plotH);
-ctx.stroke();
-[0, 0.2, 0.4, 0.6, 0.8, 1.0].forEach(val => {
-const py = toY(val);
-ctx.strokeStyle = 'rgba(148, 163, 184, 0.25)';
-ctx.beginPath();
-ctx.moveTo(padL, py);
-ctx.lineTo(padL + plotW, py);
-ctx.stroke();
-ctx.fillStyle = '#64748b';
-ctx.font = '10.5px monospace';
-ctx.textAlign = 'right';
-ctx.fillText(val.toFixed(1), padL - 8, py + 4);
-});
-const yInvE = toY(INV_E);
-ctx.strokeStyle = '#006C65';
-ctx.lineWidth = 2.2;
-ctx.setLineDash([6, 4]);
-ctx.beginPath();
-ctx.moveTo(padL, yInvE);
-ctx.lineTo(padL + plotW, yInvE);
-ctx.stroke();
-ctx.setLineDash([]);
-ctx.fillStyle = '#006C65';
-ctx.font = 'bold 11.5px system-ui, sans-serif';
-ctx.textAlign = 'right';
-ctx.fillText('Asymptote 1/e ≈ 0,367879', padL + plotW - 6, yInvE - 8);
-const pts = [];
-let s = 0;
-for (let m = 0; m <= n; m++) {
-const term = (m % 2 === 0 ? 1 : -1) / FACT[m];
-s += term;
-pts.push({ m, s, term });
-}
-ctx.strokeStyle = '#970E53';
-ctx.lineWidth = 2.4;
-ctx.beginPath();
-pts.forEach((p, idx) => {
-const px = toX(p.m), py = toY(p.s);
-if (idx === 0) ctx.moveTo(px, py);
-else ctx.lineTo(px, py);
-});
-ctx.stroke();
-pts.forEach(p => {
-const px = toX(p.m), py = toY(p.s);
-ctx.beginPath();
-ctx.arc(px, py, 5.5, 0, Math.PI * 2);
-ctx.fillStyle = p.m % 2 === 0 ? '#970E53' : '#004D80';
-ctx.fill();
-ctx.strokeStyle = '#ffffff';
-ctx.lineWidth = 1.5;
-ctx.stroke();
-ctx.fillStyle = '#1e293b';
-ctx.font = 'bold 10.5px monospace';
-ctx.textAlign = 'center';
-const offsetY = p.m % 2 === 0 ? -11 : 18;
-ctx.fillText(p.s.toFixed(4), px, py + offsetY);
-ctx.fillStyle = '#334155';
-ctx.font = 'bold 11px system-ui, sans-serif';
-ctx.fillText(`k=${p.m}`, px, padT + plotH + 18);
-ctx.font = '10px monospace';
-ctx.fillStyle = p.m % 2 === 0 ? '#970E53' : '#004D80';
-ctx.fillText(p.m === 0 ? '+1' : (p.m % 2 === 0 ? `+1/${p.m}!` : `-1/${p.m}!`), px, padT + plotH + 33);
-});
-readout.innerHTML = `<b>Alternance du crible de Poincaré ($n = ${n}$)&nbsp;:</b> les sommes d'ordre pair ($k$ pair, points grenat) encadrent $\\mathrm{e}^{-1}$ par valeurs <i>supérieures</i>, tandis que les sommes d'ordre impair ($k$ impair, points bleus) l'encadrent par valeurs <i>inférieures</i>. Dès $n = ${n}$, l'écart $|p_{${n}} - \\mathrm{e}^{-1}|$ est inférieur à $\\frac{1}{(${n}+1)!} \\approx ${(1/(FACT[n]*(n+1))).toExponential(2)}$.`;
-if (window.MathJax && window.MathJax.typesetPromise) {
-window.MathJax.typesetPromise([readout]).catch(() => {});
-}
-}
-function drawMode2(W, H) {
-const padL = 56, padR = 30, padT = 44, padB = 48;
-const plotW = W - padL - padR;
-const plotH = H - padT - padB;
-ctx.fillStyle = '#0f172a';
-ctx.font = 'bold 13px system-ui, sans-serif';
-ctx.textAlign = 'center';
-ctx.fillText(`Loi exacte du nombre de points fixes P(X_${n} = k) comparée à la loi de Poisson P(1) = e⁻¹/k!`, W / 2, 24);
-const yMax = 0.55;
-const toY = y => padT + plotH - (y / yMax) * plotH;
-ctx.strokeStyle = '#94a3b8';
-ctx.lineWidth = 1.3;
-ctx.beginPath();
-ctx.moveTo(padL, padT);
-ctx.lineTo(padL, padT + plotH);
-ctx.lineTo(padL + plotW, padT + plotH);
-ctx.stroke();
-[0, 0.1, 0.2, 0.3, 0.4, 0.5].forEach(val => {
-const py = toY(val);
-ctx.strokeStyle = 'rgba(148, 163, 184, 0.25)';
-ctx.beginPath();
-ctx.moveTo(padL, py);
-ctx.lineTo(padL + plotW, py);
-ctx.stroke();
-ctx.fillStyle = '#64748b';
-ctx.font = '10.5px monospace';
-ctx.textAlign = 'right';
-ctx.fillText(val.toFixed(2), padL - 8, py + 4);
-});
-const maxKShow = Math.max(n, 6);
-const colW = plotW / (maxKShow + 1);
-for (let k = 0; k <= maxKShow; k++) {
-const exactP = k <= n ? (DERANGEMENTS[n - k] / (FACT[k] * FACT[n - k])) : 0;
-const poissonP = INV_E / FACT[k];
-const bx = padL + k * colW + 10;
-const bw = Math.min((colW - 22) / 2, 28);
-const hEx = (exactP / yMax) * plotH;
-ctx.fillStyle = '#004D80';
-ctx.fillRect(bx, padT + plotH - hEx, bw, hEx);
-const hPois = (poissonP / yMax) * plotH;
-ctx.fillStyle = '#970E53';
-ctx.fillRect(bx + bw + 3, padT + plotH - hPois, bw, hPois);
-if (k <= 5) {
-ctx.fillStyle = '#004D80';
-ctx.font = 'bold 9.5px monospace';
-ctx.textAlign = 'center';
-ctx.fillText(exactP.toFixed(3), bx + bw / 2, padT + plotH - hEx - 5);
-}
-ctx.fillStyle = '#1e293b';
-ctx.font = 'bold 11px system-ui, sans-serif';
-ctx.textAlign = 'center';
-ctx.fillText(`k = ${k}`, bx + bw, padT + plotH + 18);
-if (k === n - 1) {
-ctx.fillStyle = '#dc2626';
-ctx.font = 'bold 9.5px system-ui, sans-serif';
-ctx.fillText('(impossible : D₁=0)', bx + bw, padT + plotH + 32);
-}
-}
-ctx.fillStyle = '#004D80';
-ctx.fillRect(padL + plotW - 260, padT + 10, 13, 13);
-ctx.fillStyle = '#1e293b';
-ctx.font = '11.5px system-ui, sans-serif';
-ctx.textAlign = 'left';
-ctx.fillText(`Loi exacte P(X_${n} = k) = p_{${n}-k} / k!`, padL + plotW - 242, padT + 21);
-ctx.fillStyle = '#970E53';
-ctx.fillRect(padL + plotW - 260, padT + 30, 13, 13);
-ctx.fillStyle = '#1e293b';
-ctx.fillText('Loi de Poisson P(1) = e⁻¹ / k!', padL + plotW - 242, padT + 41);
-readout.innerHTML = `<b>Convergence vers la loi de Poisson $\\mathcal{P}(1)$ ($n = ${n}$)&nbsp;:</b> remarquez que $\\mathbb{P}(X_${n} = ${n-1}) = 0$ (il est impossible que exactement ${n-1} convives aient leur bon chapeau sans que le dernier ait aussi le sien, $|D_1| = 0$), tandis que pour tous les petits entiers $k$, la loi exacte $\\mathbb{P}(X_${n} = k) = \\frac{1}{k!}p_{${n}-k}$ est déjà quasi indiscernable de la loi de Poisson $\\frac{\\mathrm{e}^{-1}}{k!}$&nbsp;!`;
-if (window.MathJax && window.MathJax.typesetPromise) {
-window.MathJax.typesetPromise([readout]).catch(() => {});
-}
-}
-function render() {
-const dpr = window.devicePixelRatio || 1;
-const W = canvas.clientWidth || 780;
-const H = canvas.clientHeight || 350;
-if (canvas.width !== Math.round(W * dpr) || canvas.height !== Math.round(H * dpr)) {
-canvas.width = Math.round(W * dpr);
-canvas.height = Math.round(H * dpr);
-}
-ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-ctx.clearRect(0, 0, W, H);
-if (mode === 1) drawMode1(W, H);
-else drawMode2(W, H);
-}
-btn1.addEventListener('click', () => { mode = 1; updateUI(); render(); });
-btn2.addEventListener('click', () => { mode = 2; updateUI(); render(); });
-nSlider.addEventListener('input', () => {
-n = parseInt(nSlider.value, 10);
-updateUI();
-render();
-});
-window.addEventListener('resize', render);
-updateUI();
-render();
-})();
-</script>
 
 
 <br>
 
-> Pour retrouver une autre apparition célèbre du seuil $\frac{1}{\mathrm{e}} \approx 36,8\\,\\%$ en probabilités, voir aussi le [problème du secrétaire](../curiosites/#problème-du-secrétaire) dans la page Curiosités&nbsp;!)
+> Pour retrouver une autre apparition célèbre du seuil $\frac{1}{\mathrm{e}} \approx 36,8\\,\\%$ en probabilités, voir aussi le [problème du secrétaire](../curiosites/#problème-du-secrétaire) dans la page Curiosités&nbsp;!
