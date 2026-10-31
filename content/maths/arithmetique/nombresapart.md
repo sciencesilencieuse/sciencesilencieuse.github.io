@@ -52,7 +52,7 @@ weight = 3
 }
 .tableau-large table
 {
-    min-width: 48rem;
+    min-width: 36rem;
 }
 </style>
 
@@ -151,18 +151,20 @@ Un [**autre exemple plus discutable**](https://www.nature.com/articles/s41598-01
 
 <h2><a href="../exponentielle">Nombre $\mathrm{e}$</a></h2>
 
-L'autre grand nombre irrationnel a une origine plus tardive et moins spectaculaire que $\pi$&nbsp;: il apparaît la première fois au 17<sup>e</sup> dans une histoire d'intérêts composés... Baptisé par Euler, $\mathrm{e}$ a néanmoins rapidement débordé son étroit contexte de naissance financier pour surgir dans presque tous les domaines mathématiques.
+L'autre grand nombre irrationnel a une origine plus tardive et moins spectaculaire que $\pi$&nbsp;: il apparaît pour la première fois au 17<sup>e</sup> siècle, dans une histoire d'intérêts composés étudiée par Jacob Bernoulli. Baptisé $\mathrm{e}$ par Euler, il a vite débordé ce contexte financier pour surgir dans presque tous les domaines des mathématiques et de la physique.
 
-Ce talent d'ubiquité vient pour une part de son lien avec la fraction $\mathbf{\frac{1}{k!}}$ qui émerge dans quatre univers mathématiques et physiques par le **même mécanisme géométrique de brisure de symétrie de permutation** ($\operatorname{Card}(\mathfrak{S}\_k) = k!$)&nbsp;:
+Ce talent d'ubiquité vient en bonne partie de son écriture $\mathrm{e} = \sum \frac{1}{k!}$, et d'un fait simple&nbsp;: **parmi les $k!$ façons de ranger $k$ objets, une seule les met dans l'ordre.** Dès qu'un phénomène impose un ordre (chronologique ou croissant) à $k$ éléments, la fraction $\frac{1}{k!}$ apparaît, et $\mathrm{e}$ n'est jamais loin&nbsp;:
 
 <div class="tableau-large">
 
-| Volet & Domaine | Objet global de mesure $1$ | Symétrie brisée ($\mathfrak{S}\_k$) | Domaine résiduel de mesure $\frac{1}{k!}$ | Somme sur $k \ge 0$ |
-| :--- | :--- | :--- | :--- | :--- |
-| **[1. Intérêts composés](../../arithmetique/exponentielle/)** | $k$-uplets de périodes parmi $n$ ($n^k \times \frac{1}{n^k} = 1$) | Filiation chronologique des intérêts $1 \le i_1 < \dots < i_k \le n$ | Gain de $k$-ième génération $\binom{n}{k}\frac{1}{n^k} \to \frac{1}{k!}$ | $\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n = \mathrm{e}$ |
-| **[2. Géométrie euclidienne](../../geometrie/simplexes/)** | Hypercube unité $[0, 1]^k$ | Ordre croissant des coordonnées $t_{\sigma(1)} \le \dots \le t_{\sigma(k)}$ | Simplexe canonique $\Delta_k = \\{0 \le t_1 \le \dots \le t_k \le 1\\}$ | $\sum_{k=0}^\infty \operatorname{Vol}_k(\Delta_k) = \mathrm{e}$ |
-| **[2. Physique quantique (TQC)](../../geometrie/simplexes/#flèche-du-temps--dyson-et-wick)** | Hypercube des temps $[t', t]^k$ sous l'opérateur $T$ | Causalité temporelle ($t \ge t_1 \ge \dots \ge t_k \ge t'$) | Simplexe causal de la [série de Dyson](/physique/tqc/gifted_amateur/tqc7/#la-série-de-dyson) | $\hat U_I = T\exp\left(-\mathrm{i}\int \hat H_I\right)$ |
-| **[3. Probabilités](../../proba/simplexes_proba)** | Tirages uniformes sur $[0, 1]^k$ ou $k$-uplets de points fixes | Monotonie ($U_1 \le \dots \le U_k$), cisaillement ($T_j = \sum_{i=1}^j U_i$) ou crible $\\{i_1 < \dots < i_k\\}$ | Survie $\mathbb{P}(N > k) = \frac{1}{k!}$ ou terme du crible $\frac{(-1)^k}{k!}$ | $\mathbb{E}[N] = \mathbb{E}[M] = \mathrm{e}$ et $\lim p_n = \mathrm{e}^{-1}$ |
+| Domaine | Où se cache le $\frac{1}{k!}$ | Ce que donne la somme |
+| :--- | :--- | :--- |
+| **[Intérêts composés](../exponentielle/)** | les intérêts de $k$-ième génération, nés de $k$ versements successifs | le capital plafonne à $\mathrm{e}$ |
+| **[Géométrie](../../geometrie/simplexes/)** | le volume de la part du cube $[0, 1]^k$ où les coordonnées sont rangées dans l'ordre | $1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \cdots = \mathrm{e}$ |
+| **[Physique quantique](../../geometrie/simplexes/#flèche-du-temps--dyson-et-wick)** | les $k$ interactions d'une histoire ont lieu dans l'ordre chronologique | l'exponentielle ordonnée de la [série de Dyson](/physique/tqc/gifted_amateur/tqc7/#la-série-de-dyson) |
+| **[Probabilités](../../proba/simplexes_proba/)** | $k$ nombres tirés au hasard sont rangés dans l'ordre croissant avec probabilité $\frac{1}{k!}$ | il faut en moyenne $\mathrm{e}$ tirages avant une première baisse, et le problème des chapeaux donne $\frac{1}{\mathrm{e}}$ |
 
 </div>
+
+Pourquoi l'ordre produit-il toujours $\frac{1}{k!}$, et pas autre chose&nbsp;? Parce que, dans tous ces exemples, chaque étape se produit de la même façon, sans dépendre de ce qui s'est passé avant&nbsp;: le $k!$ est [la signature des processus sans mémoire](../../geometrie/simplexes/#le-k-signature-de-labsence-de-mémoire).
 
