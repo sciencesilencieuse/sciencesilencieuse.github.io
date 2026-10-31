@@ -890,6 +890,74 @@ Ce facteur $\frac{1}{n!}$ a une conséquence très concrète en théorie quantiq
 Or les étiquettes $x\_1, \dots, x\_n$ des sommets sont des variables d'intégration muettes&nbsp;: **renuméroter les sommets** d'un diagramme (il y a $n!$ façons de le faire) donne un terme de même valeur. Ces $n!$ copies compensent exactement le $\frac{1}{n!}$ venu du volume du simplexe de Dyson, si bien qu'on peut dessiner chaque diagramme une seule fois, sans facteur $\frac{1}{n!}$ (voir [TQC 7](/physique/tqc/gifted_amateur/tqc7/#moudre-avec-wick) et [TQC 12](/physique/tqc/gifted_amateur/tqc12/)). Lorsque le diagramme possède lui-même des symétries, certaines renumérotations ne produisent pas de terme nouveau&nbsp;: la compensation est alors incomplète, et c'est l'une des origines des fameux **facteurs de symétrie**.
 
 
+## Le $k!$, signature de l'absence de mémoire
+
+Revenons à notre population qui croît génération par génération. Une hypothèse y est passée inaperçue&nbsp;: **chaque morceau de matière produit au même rythme quel que soit son âge**, dès sa naissance. Le processus ne garde aucune trace de son histoire&nbsp;; pour prévoir la suite, il suffit de connaître la quantité présente. On dit qu'il est **sans mémoire**.
+
+<div id="def">
+
+Une croissance $L$ (avec $L(0) = 1$) est **sans mémoire** lorsque, pour tous $s, t \ge 0$,
+
+$$
+L(s + t) = L(s) \times L(t).
+$$
+
+Autrement dit, repartir de l'instant $s$ revient à recommencer depuis le début avec la quantité $L(s)$. Cette relation (une *équation fonctionnelle de Cauchy*) n'a pour solutions continues que les exponentielles $L(t) = \mathrm{e}^{a t}$.
+
+</div>
+
+<br>
+
+**Deux ingrédients, deux rôles.** Dans le calcul de la génération $k$, deux ingrédients bien distincts interviennent&nbsp;:
+<ul>
+<li><b>la causalité</b>&nbsp;: chaque naissance a lieu après celle qui l'a engendrée, ce qui impose l'ordre $s_1 \le s_2 \le \dots \le s_k$&nbsp;; elle fournit le <b>domaine</b>, le simplexe&nbsp;;</li>
+<li><b>l'absence de mémoire</b>&nbsp;: toutes les lignées possibles pèsent pareil, quels que soient les écarts entre leurs naissances&nbsp;; elle fournit un <b>poids uniforme</b> sur ce domaine.</li>
+</ul>
+
+C'est la combinaison des deux qui donne exactement le volume du simplexe, $\frac{1}{k!}$. La causalité seule ne suffit pas&nbsp;: encore faut-il que le simplexe soit «&nbsp;compté&nbsp;» uniformément.
+
+**Ajoutons un peu de mémoire.** Supposons maintenant que chaque nouveau-né doive attendre un **temps de maturation $\tau$** avant de produire à son tour (la matière initiale, elle, est déjà adulte). La production à l'instant $t$ dépend alors de ce qu'était la population à l'instant $t - \tau$&nbsp;: le processus se souvient de l'âge de chacun.
+
+Pour la génération 2, deux naissances successives doivent désormais être espacées d'au moins $\tau$&nbsp;: le triangle $\Delta\_2$ perd la bande où $s\_2 - s\_1 < \tau$.
+
+<div class="svg-container">
+<svg viewBox="0 0 440 235" role="img" aria-label="À gauche le triangle Δ₂ entier ; à droite, avec un temps de maturation τ, seule la partie où les deux naissances sont espacées d'au moins τ compte" style="width:100%;max-width:440px;height:auto;">
+<rect x="45" y="40" width="150" height="150" fill="none" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<polygon points="45.0,190.0 45.0,40.0 195.0,40.0" fill="#c7d8e3" stroke="#004D80" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="120.0" y="228.0" text-anchor="middle" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" >sans mémoire</text>
+<text x="199.0" y="208.0" text-anchor="end" font-size="15" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >s<tspan dy='3' font-size='10'>1</tspan></text>
+<text x="37.0" y="34.0" text-anchor="end" font-size="15" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >s<tspan dy='3' font-size='10'>2</tspan></text>
+<rect x="260" y="40" width="150" height="150" fill="none" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<polygon points="260.0,190.0 260.0,152.5 372.5,40.0 410.0,40.0" fill="#f5e7ee" stroke="none"/>
+<polygon points="260.0,190.0 260.0,40.0 410.0,40.0" fill="none" stroke="#004D80" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="3 3"/>
+<polygon points="260.0,152.5 260.0,40.0 372.5,40.0" fill="#c7d8e3" stroke="#004D80" stroke-width="1.5" stroke-linejoin="round"/>
+<text x="335.0" y="100.2" text-anchor="middle" font-size="11" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" transform="rotate(-45 335.0 96.2)">s<tspan dy='2' font-size='8'>2</tspan><tspan dy='-2'> − s</tspan><tspan dy='2' font-size='8'>1</tspan><tspan dy='-2'> &lt; τ</tspan></text>
+<line x1="244.0" y1="190.0" x2="252.0" y2="190.0" stroke="#970E53" stroke-width="1" />
+<line x1="244.0" y1="152.5" x2="252.0" y2="152.5" stroke="#970E53" stroke-width="1" />
+<line x1="248.0" y1="190.0" x2="248.0" y2="152.5" stroke="#970E53" stroke-width="1" />
+<text x="243.0" y="176.2" text-anchor="end" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >τ</text>
+<text x="335.0" y="228.0" text-anchor="middle" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" >maturation τ</text>
+<text x="414.0" y="208.0" text-anchor="end" font-size="15" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >s<tspan dy='3' font-size='10'>1</tspan></text>
+<text x="264.0" y="34.0" text-anchor="start" font-size="15" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >s<tspan dy='3' font-size='10'>2</tspan></text>
+</svg>
+</div>
+<p class="legende">Avec un temps de maturation $\tau$, les lignées dont les naissances sont trop rapprochées disparaissent&nbsp;: l'aire passe de $\frac{1}{2}$ à $\frac{(1-\tau)^2}{2}$.</p>
+
+Il en va de même en dimension $k$&nbsp;: le simplexe est **rogné** près de ses faces $s\_{j+1} = s\_j$, et son volume tombe de $\frac{1}{k!}$ à $\frac{(1 - (k-1)\tau)^k}{k!}$. Avec $\tau = \frac{1}{4}$, la somme des générations ne vaut plus $\mathrm{e} \approx 2{,}72$ mais environ $2{,}30$, et la croissance cesse d'être exponentielle au sens strict&nbsp;: la relation $L(s+t) = L(s)L(t)$ est perdue, car l'avenir dépend désormais de la pyramide des âges, et pas seulement de la quantité présente.
+
+**La version probabiliste.** Le même lien apparaît, de façon encore plus nette, pour des événements aléatoires. Dans un **processus de Poisson** (des désintégrations radioactives, par exemple), le temps d'attente entre deux événements suit une loi exponentielle, la loi sans mémoire par excellence. On montre alors que, sachant que $k$ événements ont eu lieu entre $0$ et $1$, leurs instants sont **répartis uniformément sur le simplexe $\Delta\_k$**, d'où le $\frac{1}{k!}$ de la loi de Poisson $\mathbb{P}(N = k) = \mathrm{e}^{-\lambda}\frac{\lambda^k}{k!}$. Et réciproquement&nbsp;: parmi les processus dont les attentes successives sont indépendantes et de même loi, le processus de Poisson est le seul à répartir ainsi ses événements uniformément sur le simplexe.
+
+En résumé&nbsp;:
+
+<div id="theo">
+
+**Le $\frac{1}{k!}$ est la signature commune de la causalité et de l'absence de mémoire.** La causalité découpe le simplexe dans l'hypercube des instants&nbsp;; l'absence de mémoire garantit que toutes les histoires y pèsent pareil. Si l'on ajoute de la mémoire, le simplexe est toujours là, mais il n'est plus compté uniformément, et le $\frac{1}{k!}$ se déforme. En mécanique quantique, l'évolution d'un système isolé reste sans mémoire&nbsp;: la seule difficulté supplémentaire est l'ordre des opérateurs, que le produit chronologique $T$ suffit à régler.
+
+</div>
+
+<br>
+
+
 <hr style="margin:2em 0;border:none;border-top:1px solid #cbd5e1;">
 
 <div style="background:#f8fafc;border:1px solid #cbd5e1;border-left:6px solid #970E53;border-radius:10px;padding:14px 18px;font-size:0.95em;">
