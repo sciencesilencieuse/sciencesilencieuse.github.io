@@ -79,13 +79,31 @@ details > summary:first-of-type {
 details[open] > summary:first-of-type {
   list-style-type: disclosure-open;
 }
+.legende
+{
+    text-align: center;
+    font-size: 0.9em;
+    color: #64748b;
+    font-style: italic;
+    margin-top: -0.6em;
+}
+.tableau-large
+{
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.tableau-large table
+{
+    width: auto;
+    margin: 0 auto;
+}
 </style>
 
 
 # Le nombre $\mathrm{e}$
 <p style="font-size:1.15em;color:#475569;margin-top:-0.6em;margin-bottom:1.2em;"><i>Des intérêts composés de Bernoulli à la série des factorielles et à l'irrationalité de Fourier</i></p>
 
-Pourquoi la constante d'Euler $\mathrm{e} \approx 2,7182818\dots$, découverte par Jacob Bernoulli en 1683 en cherchant le plafond d'un placement financier à intérêts composés, $\displaystyle \mathrm{e} = \lim\_{n \to +\infty} \left(1 + \frac{1}{n}\right)^n$, est-elle rigoureusement égale à la somme infinie des inverses de factorielles&nbsp;?
+Pourquoi le nombre $\mathrm{e} \approx 2,718\\,281\\,8\dots$, découvert par Jacob Bernoulli en 1683 en cherchant le plafond d'un placement à intérêts composés, $\displaystyle \mathrm{e} = \lim\_{n \to +\infty} \left(1 + \frac{1}{n}\right)^n$, est-il exactement égal à la somme infinie des inverses des factorielles&nbsp;?
 
 <div id="grosseformule">
 
@@ -95,504 +113,148 @@ $$
 
 </div>
 
-On pourrait simplement invoquer le développement en série de Taylor de la fonction $\exp(x)$ en $x = 1$. Mais ça ne serait pas super satisfaisant...
+On pourrait simplement invoquer le développement en série de Taylor de la fonction $\exp$ en $x = 1$. Mais ça ne serait pas super satisfaisant... Nous allons plutôt suivre le fil de l'histoire&nbsp;: **comprendre** d'où sortent les factorielles en triant l'argent par «&nbsp;générations&nbsp;» d'intérêts, puis le **démontrer** avec des outils élémentaires, et enfin en tirer une pépite&nbsp;: l'**irrationalité** de $\mathrm{e}$.
 
 
 ## L'histoire des intérêts composés
 
 ### Le problème de l'usure
 
-Contrairement à $\pi$, qui est né de la géométrie grecque dès l'Antiquité, le nombre $\mathrm{e}$ est né d'une question financière très concrète posée à Bâle en 1683 par **Jacob Bernoulli** dans son mémoire *Quaestiones nonnullae de usuris* («&nbsp;Quelques questions sur les intérêts&nbsp;»).
+Contrairement à $\pi$, né de la géométrie grecque dès l'Antiquité, le nombre $\mathrm{e}$ est issu d'une question financière très concrète, posée à Bâle en 1683 par **Jacob Bernoulli** dans son mémoire *Quaestiones nonnullae de usuris* («&nbsp;Quelques questions sur les intérêts&nbsp;»).
 
-Imaginons un banquier exceptionnellement généreux qui propose un taux d'intérêt nominal de **$100\\,\\%$ par an**, et que nous déposions un capital initial de **$1$ écu** au $1^{\text{er}}$ janvier&nbsp;:
+Imaginons un banquier exceptionnellement généreux qui propose un taux d'intérêt de **$100\\,\\%$ par an**, et déposons chez lui **$1$ écu** au $1^{\text{er}}$ janvier&nbsp;:
 
 <ul>
-<li><b>Capitalisation annuelle ($n = 1$)&nbsp;:</b> La banque attend la fin de l'année pour verser les intérêts ($100\,\%$ de $1$ écu). Au $31$ décembre, le capital vaut&nbsp;:<br>
-<span style="display:block;text-align:center;margin:0.25em 0;">$\displaystyle u_1 = 1 + 1 = \mathbf{2}\text{ écus.}$</span>
-</li>
-<li><b>Capitalisation semestrielle ($n = 2$)&nbsp;:</b> Au lieu d'attendre un an, on découpe l'année en $2$ semestres, chacun rapportant la moitié du taux annuel, soit $\frac{100\,\%}{2} = 50\,\% = \frac{1}{2}$.<br>
-Au bout de $6$ mois, le capital est devenu $1 + \frac{1}{2} = 1,50$ écu. Mais durant le second semestre, <i>les intérêts du premier semestre produisent eux-mêmes des intérêts</i>&nbsp;: le nouveau capital de $1,50$ écu est à son tour multiplié par $\left(1 + \frac{1}{2}\right)$&nbsp;!<br>
-<span style="display:block;text-align:center;margin:0.25em 0;">$\displaystyle u_2 = \left(1 + \frac{1}{2}\right)^2 = 1 + 2\left(\frac{1}{2}\right) + \frac{1}{4} = \mathbf{2,25}\text{ écus.}$</span>
-</li>
-<li><b>Capitalisation trimestrielle ($n = 4$)&nbsp;:</b> L'année est découpée en $4$ trimestres à $\frac{100\,\%}{4} = 25\,\%$ chacun&nbsp;: $\displaystyle u_4 = \left(1 + \frac{1}{4}\right)^4 = \frac{625}{256} \approx \mathbf{2,4414}\text{ écus}$.</li>
-<li><b>Capitalisation mensuelle ($n = 12$)&nbsp;:</b> Chaque mois rapporte $\frac{1}{12}$ du capital accumulé&nbsp;: $\displaystyle u_{12} = \left(1 + \frac{1}{12}\right)^{12} \approx \mathbf{2,6130}\text{ écus}$.</li>
-<li><b>Capitalisation quotidienne ($n = 365$)&nbsp;:</b> Chaque jour rapporte $\frac{1}{365}$ du capital de la veille&nbsp;: $\displaystyle u_{365} = \left(1 + \frac{1}{365}\right)^{365} \approx \mathbf{2,714567}\text{ écus}$.</li>
-<li><b>Capitalisation à chaque seconde ($n = 31\,536\,000$)&nbsp;:</b> $\displaystyle u_{31\,536\,000} \approx \mathbf{2,71828178}\text{ écus}$.</li>
+<li><b>Capitalisation annuelle ($n = 1$)&nbsp;:</b> la banque verse les intérêts ($100\,\%$ de $1$ écu) à la fin de l'année. Au $31$ décembre, on a $u_1 = 1 + 1 = \mathbf{2}$ écus.</li>
+<li><b>Capitalisation semestrielle ($n = 2$)&nbsp;:</b> chaque semestre rapporte la moitié du taux annuel, soit $50\,\%$. Au bout de six mois, on a $1 + \frac{1}{2} = 1,5$ écu. Mais au second semestre, <i>les intérêts du premier semestre produisent eux-mêmes des intérêts</i>&nbsp;: c'est tout le capital de $1,5$ écu qui est multiplié par $1 + \frac{1}{2}$, d'où $u_2 = \left(1 + \frac{1}{2}\right)^2 = \mathbf{2,25}$ écus.</li>
 </ul>
 
+Et ainsi de suite&nbsp;: en découpant l'année en $n$ périodes, chacune rapportant $\frac{1}{n}$ du capital du moment, on obtient au $31$ décembre $u\_n = \left(1 + \frac{1}{n}\right)^n$ écus.
+
+<div class="tableau-large">
+
+| Capitalisation | $n$ | Capital au $31$ décembre |
+| :--- | ---: | ---: |
+| annuelle | $1$ | $2$ |
+| semestrielle | $2$ | $2{,}25$ |
+| trimestrielle | $4$ | $\approx 2{,}4414$ |
+| mensuelle | $12$ | $\approx 2{,}6130$ |
+| quotidienne | $365$ | $\approx 2{,}714\\,567$ |
+| à chaque seconde | $31\\,536\\,000$ | $\approx 2{,}718\\,281\\,78$ |
+
+</div>
+
 <div class="svg-container">
-<svg viewBox="0 0 760 280" style="max-width:760px;width:100%;height:auto;background:#ffffff;border:1px solid #cbd5e1;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.04);font-family:system-ui,-apple-system,sans-serif;">
-<defs>
-<marker id="arr1" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-<path d="M 0 1 L 10 5 L 0 9 z" fill="#475569"/>
-</marker>
-</defs>
-<text x="380" y="24" text-anchor="middle" font-size="13.5" font-weight="700" fill="#004D80">Mécanisme des intérêts composés sur 1 an : pourquoi diviser le temps multiplie les générations d'intérêts</text>
-<!-- Panel 1: n=1 -->
-<rect x="20" y="40" width="225" height="225" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
-<text x="132" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#1e293b">1. Annuel (n = 1, taux 100 %)</text>
-<line x1="35" y1="69" x2="230" y2="69" stroke="#e2e8f0" stroke-width="1"/>
-<rect x="45" y="182" width="70" height="48" rx="4" fill="#004D80"/>
-<text x="80" y="210" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff">Capital 1</text>
-<rect x="135" y="182" width="70" height="48" rx="4" fill="#004D80"/>
-<rect x="135" y="134" width="70" height="48" rx="4" fill="#006C65"/>
-<text x="170" y="210" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">Capital 1</text>
-<text x="170" y="162" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">+ Intérêt 1</text>
-<path d="M 118 206 L 131 206" stroke="#475569" stroke-width="2" marker-end="url(#arr1)"/>
-<text x="80" y="250" text-anchor="middle" font-size="10.5" fill="#475569">t = 0</text>
-<text x="170" y="250" text-anchor="middle" font-size="10.5" font-weight="700" fill="#006C65">t = 1 an : u₁ = 2,00</text>
-<!-- Panel 2: n=2 -->
-<rect x="267" y="40" width="225" height="225" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
-<text x="380" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#1e293b">2. Semestriel (n = 2, 2 × 50 %)</text>
-<line x1="282" y1="69" x2="477" y2="69" stroke="#e2e8f0" stroke-width="1"/>
-<rect x="284" y="182" width="46" height="48" rx="4" fill="#004D80"/>
-<text x="307" y="210" text-anchor="middle" font-size="10.5" font-weight="700" fill="#ffffff">1</text>
-<rect x="355" y="182" width="46" height="48" rx="4" fill="#004D80"/>
-<rect x="355" y="158" width="46" height="24" rx="3" fill="#006C65"/>
-<text x="378" y="210" text-anchor="middle" font-size="10.5" font-weight="700" fill="#ffffff">1</text>
-<text x="378" y="174" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">+1/2</text>
-<rect x="426" y="182" width="48" height="48" rx="4" fill="#004D80"/>
-<rect x="426" y="134" width="48" height="48" rx="3" fill="#006C65"/>
-<rect x="426" y="122" width="48" height="12" rx="2" fill="#970E53"/>
-<text x="450" y="210" text-anchor="middle" font-size="10.5" font-weight="700" fill="#ffffff">1</text>
-<text x="450" y="162" text-anchor="middle" font-size="9.5" font-weight="700" fill="#ffffff">+2×(1/2)</text>
-<text x="450" y="116" text-anchor="middle" font-size="9.5" font-weight="700" fill="#970E53">+1/4</text>
-<text x="307" y="250" text-anchor="middle" font-size="10" fill="#475569">t = 0</text>
-<text x="378" y="250" text-anchor="middle" font-size="10" fill="#475569">6 mois (1,5)</text>
-<text x="450" y="250" text-anchor="middle" font-size="10.5" font-weight="700" fill="#970E53">u₂ = 2,25</text>
-<!-- Panel 3: Continuous n -> inf -->
-<rect x="515" y="40" width="225" height="225" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
-<text x="627" y="60" text-anchor="middle" font-size="12" font-weight="700" fill="#1e293b">3. Continu (n → ∞ : couches 1/k!)</text>
-<line x1="530" y1="69" x2="725" y2="69" stroke="#e2e8f0" stroke-width="1"/>
-<!-- Stack starting at y=230 going up: k=0 (48px), k=1 (48px), k=2 (24px), k=3 (10px), k>=4 (4px) -> top at y=96 -->
-<rect x="536" y="182" width="142" height="48" rx="3" fill="#004D80"/>
-<text x="607" y="210" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">k = 0 : Capital initial = 1</text>
-<rect x="536" y="134" width="142" height="48" rx="3" fill="#006C65"/>
-<text x="607" y="162" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">k = 1 : Intérêts directs = 1</text>
-<rect x="536" y="110" width="142" height="24" rx="2" fill="#970E53"/>
-<text x="607" y="126" text-anchor="middle" font-size="9.5" font-weight="700" fill="#ffffff">k = 2 : Int. 2nd ordre = 1/2!</text>
-<rect x="536" y="100" width="142" height="10" rx="1.5" fill="#d97706"/>
-<rect x="536" y="95" width="142" height="5" rx="1" fill="#7c3aed"/>
-<!-- Callout for k=3 and k>=4 on the right & above -->
-<line x1="680" y1="105" x2="692" y2="105" stroke="#d97706" stroke-width="1.5"/>
-<text x="695" y="108" text-anchor="start" font-size="9" font-weight="700" fill="#b45309">1/3!</text>
-<text x="607" y="87" text-anchor="middle" font-size="9.5" font-weight="700" fill="#7c3aed">k ≥ 3 : + 1/3! + 1/4! + …</text>
-<text x="627" y="250" text-anchor="middle" font-size="10.5" font-weight="700" fill="#970E53">e = 1 + 1 + 1/2! + 1/3! + … ≈ 2,718</text>
+<svg viewBox="0 0 470 270" role="img" aria-label="Capital au fil de l'année pour une capitalisation annuelle, semestrielle, trimestrielle et continue" style="width:100%;max-width:470px;height:auto;">
+<defs><marker id="fe" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
+<line x1="55.0" y1="224.7" x2="385.0" y2="224.7" stroke="#eef2f6" stroke-width="1" />
+<line x1="55.0" y1="122.2" x2="385.0" y2="122.2" stroke="#eef2f6" stroke-width="1" />
+<line x1="55.0" y1="48.5" x2="385.0" y2="48.5" stroke="#dbabc3" stroke-width="1" stroke-dasharray="3 4"/>
+<polyline points="55.0,224.7 385.0,224.7 385.0,122.2" fill="none" stroke="#99b8cc" stroke-width="2" stroke-linejoin="round"><title>n = 1 : 2,0000 écus au 31 décembre</title></polyline>
+<polyline points="55.0,224.7 220.0,224.7 220.0,173.5 385.0,173.5 385.0,96.5" fill="none" stroke="#598bac" stroke-width="2" stroke-linejoin="round"><title>n = 2 : 2,2500 écus au 31 décembre</title></polyline>
+<polyline points="55.0,224.7 137.5,224.7 137.5,199.1 220.0,199.1 220.0,167.1 302.5,167.1 302.5,127.0 385.0,127.0 385.0,76.9" fill="none" stroke="#004D80" stroke-width="2" stroke-linejoin="round"><title>n = 4 : 2,4414 écus au 31 décembre</title></polyline>
+<polyline points="55.0,224.7 56.6,224.2 58.3,223.7 60.0,223.2 61.6,222.7 63.2,222.1 64.9,221.6 66.5,221.1 68.2,220.6 69.8,220.0 71.5,219.5 73.2,218.9 74.8,218.4 76.5,217.9 78.1,217.3 79.8,216.8 81.4,216.2 83.0,215.6 84.7,215.1 86.3,214.5 88.0,214.0 89.7,213.4 91.3,212.8 93.0,212.2 94.6,211.7 96.2,211.1 97.9,210.5 99.6,209.9 101.2,209.3 102.8,208.7 104.5,208.1 106.2,207.5 107.8,206.9 109.5,206.3 111.1,205.7 112.8,205.1 114.4,204.5 116.0,203.9 117.7,203.3 119.4,202.7 121.0,202.0 122.6,201.4 124.3,200.8 126.0,200.1 127.6,199.5 129.2,198.9 130.9,198.2 132.6,197.6 134.2,196.9 135.8,196.3 137.5,195.6 139.2,195.0 140.8,194.3 142.4,193.6 144.1,193.0 145.8,192.3 147.4,191.6 149.1,190.9 150.7,190.2 152.3,189.6 154.0,188.9 155.6,188.2 157.3,187.5 158.9,186.8 160.6,186.1 162.2,185.4 163.9,184.6 165.6,183.9 167.2,183.2 168.8,182.5 170.5,181.8 172.1,181.0 173.8,180.3 175.4,179.6 177.1,178.8 178.8,178.1 180.4,177.3 182.1,176.6 183.7,175.8 185.3,175.1 187.0,174.3 188.7,173.5 190.3,172.8 191.9,172.0 193.6,171.2 195.2,170.4 196.9,169.6 198.6,168.8 200.2,168.1 201.8,167.3 203.5,166.5 205.2,165.6 206.8,164.8 208.5,164.0 210.1,163.2 211.8,162.4 213.4,161.6 215.0,160.7 216.7,159.9 218.3,159.1 220.0,158.2 221.7,157.4 223.3,156.5 225.0,155.7 226.6,154.8 228.2,153.9 229.9,153.1 231.6,152.2 233.2,151.3 234.9,150.4 236.5,149.5 238.2,148.6 239.8,147.8 241.4,146.9 243.1,145.9 244.7,145.0 246.4,144.1 248.0,143.2 249.7,142.3 251.3,141.4 253.0,140.4 254.7,139.5 256.3,138.5 257.9,137.6 259.6,136.6 261.2,135.7 262.9,134.7 264.6,133.8 266.2,132.8 267.9,131.8 269.5,130.8 271.1,129.9 272.8,128.9 274.5,127.9 276.1,126.9 277.8,125.9 279.4,124.9 281.1,123.8 282.7,122.8 284.4,121.8 286.0,120.8 287.6,119.7 289.3,118.7 290.9,117.6 292.6,116.6 294.2,115.5 295.9,114.5 297.5,113.4 299.2,112.3 300.9,111.3 302.5,110.2 304.1,109.1 305.8,108.0 307.5,106.9 309.1,105.8 310.8,104.7 312.4,103.6 314.1,102.4 315.7,101.3 317.4,100.2 319.0,99.0 320.7,97.9 322.3,96.8 323.9,95.6 325.6,94.4 327.2,93.3 328.9,92.1 330.6,90.9 332.2,89.7 333.8,88.5 335.5,87.3 337.1,86.1 338.8,84.9 340.4,83.7 342.1,82.5 343.8,81.3 345.4,80.0 347.1,78.8 348.7,77.6 350.4,76.3 352.0,75.0 353.7,73.8 355.3,72.5 356.9,71.2 358.6,69.9 360.2,68.7 361.9,67.4 363.6,66.1 365.2,64.7 366.8,63.4 368.5,62.1 370.1,60.8 371.8,59.4 373.4,58.1 375.1,56.7 376.8,55.4 378.4,54.0 380.1,52.7 381.7,51.3 383.4,49.9 385.0,48.5" fill="none" stroke="#970E53" stroke-width="2"><title>Capitalisation continue : e ≈ 2,7183 écus</title></polyline>
+<circle cx="385.0" cy="122.2" r="3" fill="#99b8cc"/>
+<text x="395.0" y="126.2" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >n = 1 : 2,00</text>
+<circle cx="385.0" cy="96.5" r="3" fill="#598bac"/>
+<text x="395.0" y="100.5" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >n = 2 : 2,25</text>
+<circle cx="385.0" cy="76.9" r="3" fill="#004D80"/>
+<text x="395.0" y="80.9" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >n = 4 : 2,44</text>
+<circle cx="385.0" cy="48.5" r="3" fill="#970E53"/>
+<text x="395.0" y="52.5" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >continu : 2,72</text>
+<line x1="55.0" y1="235.0" x2="399.0" y2="235.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#fe)"/>
+<line x1="55.0" y1="235.0" x2="55.0" y2="29.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#fe)"/>
+<line x1="55.0" y1="235.0" x2="55.0" y2="239.0" stroke="#94a3b8" stroke-width="1" />
+<text x="55.0" y="253.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1ᵉʳ janv.</text>
+<line x1="220.0" y1="235.0" x2="220.0" y2="239.0" stroke="#94a3b8" stroke-width="1" />
+<text x="220.0" y="253.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1ᵉʳ juil.</text>
+<line x1="385.0" y1="235.0" x2="385.0" y2="239.0" stroke="#94a3b8" stroke-width="1" />
+<text x="385.0" y="253.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >31 déc.</text>
+<text x="47.0" y="228.7" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1</text>
+<text x="47.0" y="126.2" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >2</text>
+<text x="47.0" y="52.5" text-anchor="end" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >e</text>
+<text x="61.0" y="37.0" text-anchor="start" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >capital (écus)</text>
 </svg>
 </div>
+<p class="legende">Le capital au fil de l'année. Plus on capitalise souvent, plus les marches sont nombreuses et petites&nbsp;: l'escalier se rapproche d'une courbe lisse (l'exponentielle $t \mapsto \mathrm{e}^t$) et le capital final plafonne vers $\mathrm{e}$.</p>
 
 ### Pourquoi ça plafonne&nbsp;?
 
-On pourrait croire naïvement qu'en capitalisant un million de fois par seconde, notre capital va devenir infiniment grand. Jacob Bernoulli découvre en 1683 qu'il n'en est rien&nbsp;: le capital final plafonne inexorablement sous un mur situé entre $2,5$ et $3$ écus (qu'Euler baptisera $\mathrm{e}$ en 1727).
+On pourrait croire qu'en capitalisant un million de fois par seconde, on finirait par devenir infiniment riche. Bernoulli découvre qu'il n'en est rien&nbsp;: le capital final plafonne sous un mur situé entre $2,5$ et $3$ écus, qu'Euler notera $\mathrm{e}$ quelques décennies plus tard.
 
-**Comment expliquer intuitivement ce plafond grâce aux générations d'intérêts&nbsp;?**<br>
-Lorsque l'année est découpée en $n$ sous-périodes, chaque sous-période multiplie le capital par $\left(1 + \frac{1}{n}\right)$. Développer le produit $\left(1 + \frac{1}{n}\right)^n$, c'est classer chaque centime présent au $31$ décembre selon son **degré de filiation $k$**&nbsp;:
+**L'idée&nbsp;: trier l'argent par «&nbsp;générations&nbsp;».** Au $31$ décembre, chaque centime de notre compte a une histoire&nbsp;: soit il était là dès le départ, soit c'est un intérêt, soit un intérêt d'intérêt, etc. Classons-les selon ce **degré de filiation $k$**&nbsp;:
 
-<ol style="margin-top:-1em;">
-<li><b>Génération $k = 0$ (le capital initial)&nbsp;:</b> C'est l'écu déposé au $1^{\text{er}}$ janvier. Il vaut toujours $\mathbf{1}$.</li>
-<li><b>Génération $k = 1$ (les intérêts de premier ordre)&nbsp;:</b> Ce sont les intérêts produits directement par l'écu initial au cours de chacune des $n$ périodes. Il y a $n$ périodes et chacune verse $\frac{1}{n}$ écu&nbsp;: leur somme vaut toujours exactement $\displaystyle n \times \frac{1}{n} = \mathbf{1}$, que l'on capitalise une fois par an ou un milliard de fois par seconde&nbsp;!</li>
-<li><b>Génération $k = 2$ (les intérêts sur les intérêts)&nbsp;:</b> Un intérêt de $\frac{1}{n}$ écu versé à une période $i_1$ produit à son tour, lors d'une période <i>ultérieure</i> $i_2 > i_1$, un intérêt de second ordre égal à $\frac{1}{n} \times \frac{1}{n} = \frac{1}{n^2}$ écu. Combien y a-t-il de tels couples de périodes ordonnées $1 \le i_1 < i_2 \le n$&nbsp;? Exactement $\binom{n}{2} = \frac{n(n-1)}{2!}$ couples&nbsp;! Leur contribution totale vaut donc&nbsp;:<br>
-<span style="display:block;text-align:center;margin:0.3em 0;">$\displaystyle \binom{n}{2}\frac{1}{n^2} = \frac{n(n-1)}{2!\,n^2} = \frac{1}{2!}\left(1 - \frac{1}{n}\right) \xrightarrow[n \to +\infty]{} \mathbf{\frac{1}{2!}} = 0,50\text{ écu.}$</span>
-</li>
-<li><b>Génération quelconque $k$ (les intérêts de $k$-ième génération)&nbsp;:</b> Un centime de génération $k$ est né d'une chaîne chronologique de $k$ versements successifs aux périodes $1 \le i_1 < i_2 < \dots < i_k \le n$. Il y a $\binom{n}{k}$ telles chaînes, chacune rapportant $\frac{1}{n^k}$ écu, soit un gain de génération $k$ plafonné par $\displaystyle \mathbf{\frac{1}{k!}}$&nbsp;!</li>
+<ol>
+<li><b>Génération $k = 0$, le capital initial&nbsp;:</b> l'écu déposé au $1^{\text{er}}$ janvier. Il vaut toujours $\mathbf{1}$.</li>
+<li><b>Génération $k = 1$, les intérêts directs&nbsp;:</b> ceux que l'écu initial produit à chacune des $n$ périodes. Chaque période en verse $\frac{1}{n}$, soit au total $n \times \frac{1}{n} = \mathbf{1}$, quelle que soit la fréquence de capitalisation&nbsp;!</li>
+<li><b>Génération $k = 2$, les intérêts sur les intérêts&nbsp;:</b> un intérêt de $\frac{1}{n}$ versé à une période $i_1$ produit à son tour, à toute période <i>ultérieure</i> $i_2 &gt; i_1$, un intérêt de $\frac{1}{n} \times \frac{1}{n} = \frac{1}{n^2}$. Il y a $\binom{n}{2} = \frac{n(n-1)}{2}$ couples de périodes $i_1 &lt; i_2$, d'où une contribution totale $\displaystyle \binom{n}{2}\frac{1}{n^2} = \frac{1}{2!}\left(1 - \frac{1}{n}\right)$, qui tend vers $\mathbf{\frac{1}{2!}}$.</li>
+<li><b>Génération $k$&nbsp;:</b> un centime de génération $k$ est né d'une chaîne de $k$ versements successifs, aux périodes $i_1 &lt; i_2 &lt; \dots &lt; i_k$. Il y a $\binom{n}{k}$ telles chaînes, chacune rapportant $\frac{1}{n^k}$, et leur total, $\binom{n}{k}\frac{1}{n^k}$, reste toujours inférieur à $\mathbf{\frac{1}{k!}}$ (dont il se rapproche quand $n$ grandit).</li>
 </ol>
 
+<div class="svg-container">
+<svg viewBox="0 0 580 275" role="img" aria-label="Capital au 31 décembre décomposé par génération d'intérêts, pour n = 1, 2, 4, 12 et à la limite" style="width:100%;max-width:580px;height:auto;">
+<text x="83.0" y="70.0" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >n = 1</text>
+<rect x="95.0" y="52" width="148.0" height="26" rx="2" fill="#e0eaf0"><title>n = 1, k = 0 : 1,0000</title></rect>
+<rect x="245.0" y="52" width="148.0" height="26" rx="2" fill="#adc6d6"><title>n = 1, k = 1 : 1,0000</title></rect>
+<text x="403.0" y="70.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >2,000</text>
+<text x="83.0" y="110.0" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >n = 2</text>
+<rect x="95.0" y="92" width="148.0" height="26" rx="2" fill="#e0eaf0"><title>n = 2, k = 0 : 1,0000</title></rect>
+<rect x="245.0" y="92" width="148.0" height="26" rx="2" fill="#adc6d6"><title>n = 2, k = 1 : 1,0000</title></rect>
+<rect x="395.0" y="92" width="35.5" height="26" rx="2" fill="#739db9"><title>n = 2, k = 2 : 0,2500</title></rect>
+<text x="440.5" y="110.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >2,250</text>
+<text x="83.0" y="150.0" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >n = 4</text>
+<rect x="95.0" y="132" width="148.0" height="26" rx="2" fill="#e0eaf0"><title>n = 4, k = 0 : 1,0000</title></rect>
+<rect x="245.0" y="132" width="148.0" height="26" rx="2" fill="#adc6d6"><title>n = 4, k = 1 : 1,0000</title></rect>
+<rect x="395.0" y="132" width="54.2" height="26" rx="2" fill="#739db9"><title>n = 4, k = 2 : 0,3750</title></rect>
+<text x="423.1" y="150.0" text-anchor="middle" font-size="11.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" >0,375</text>
+<rect x="451.2" y="132" width="7.4" height="26" rx="2" fill="#38749c"><title>n = 4, k = 3 : 0,0625</title></rect>
+<rect x="460.6" y="132" width="0.8" height="26" rx="2" fill="#004d80"><title>n = 4, k ≥ 4 : 0,0039</title></rect>
+<text x="469.2" y="150.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >2,441</text>
+<text x="83.0" y="190.0" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >n = 12</text>
+<rect x="95.0" y="172" width="148.0" height="26" rx="2" fill="#e0eaf0"><title>n = 12, k = 0 : 1,0000</title></rect>
+<rect x="245.0" y="172" width="148.0" height="26" rx="2" fill="#adc6d6"><title>n = 12, k = 1 : 1,0000</title></rect>
+<rect x="395.0" y="172" width="66.8" height="26" rx="2" fill="#739db9"><title>n = 12, k = 2 : 0,4583</title></rect>
+<text x="429.4" y="190.0" text-anchor="middle" font-size="11.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" >0,458</text>
+<rect x="463.8" y="172" width="17.1" height="26" rx="2" fill="#38749c"><title>n = 12, k = 3 : 0,1273</title></rect>
+<rect x="482.8" y="172" width="2.1" height="26" rx="2" fill="#004d80"><title>n = 12, k ≥ 4 : 0,0274</title></rect>
+<text x="495.0" y="190.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >2,613</text>
+<text x="83.0" y="230.0" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >n → ∞</text>
+<rect x="95.0" y="212" width="148.0" height="26" rx="2" fill="#e0eaf0"><title>limite, k = 0 : 1,0000</title></rect>
+<rect x="245.0" y="212" width="148.0" height="26" rx="2" fill="#adc6d6"><title>limite, k = 1 : 1,0000</title></rect>
+<rect x="395.0" y="212" width="73.0" height="26" rx="2" fill="#739db9"><title>limite, k = 2 : 0,5000</title></rect>
+<text x="432.5" y="230.0" text-anchor="middle" font-size="11.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" >0,500</text>
+<rect x="470.0" y="212" width="23.0" height="26" rx="2" fill="#38749c"><title>limite, k = 3 : 0,1667</title></rect>
+<rect x="495.0" y="212" width="5.7" height="26" rx="2" fill="#004d80"><title>limite, k ≥ 4 : 0,0516</title></rect>
+<text x="510.7" y="230.0" text-anchor="start" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >e ≈ 2,718</text>
+<line x1="95.0" y1="46.0" x2="95.0" y2="246.0" stroke="#e2e8f0" stroke-width="1" />
+<text x="95.0" y="260.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >0</text>
+<line x1="245.0" y1="46.0" x2="245.0" y2="246.0" stroke="#e2e8f0" stroke-width="1" />
+<text x="245.0" y="260.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1</text>
+<line x1="395.0" y1="46.0" x2="395.0" y2="246.0" stroke="#e2e8f0" stroke-width="1" />
+<text x="395.0" y="260.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >2</text>
+<rect x="95" y="14" width="14" height="14" rx="3" fill="#e0eaf0"/>
+<text x="115.0" y="26.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >k = 0</text>
+<rect x="187" y="14" width="14" height="14" rx="3" fill="#adc6d6"/>
+<text x="207.0" y="26.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >k = 1</text>
+<rect x="279" y="14" width="14" height="14" rx="3" fill="#739db9"/>
+<text x="299.0" y="26.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >k = 2</text>
+<rect x="371" y="14" width="14" height="14" rx="3" fill="#38749c"/>
+<text x="391.0" y="26.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >k = 3</text>
+<rect x="463" y="14" width="14" height="14" rx="3" fill="#004d80"/>
+<text x="483.0" y="26.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >k ≥ 4</text>
+</svg>
+</div>
+<p class="legende">Le capital au $31$ décembre, découpé par générations d'intérêts. Les générations $0$ et $1$ valent toujours $1$&nbsp;; les suivantes grossissent avec $n$ mais restent plafonnées par $\frac{1}{k!}$ (la génération $2$ tend vers $0,5$).</p>
+
+Chaque génération étant plafonnée, le capital ne peut pas dépasser $1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \cdots$&nbsp;: **voilà le mur de Bernoulli, et voilà d'où sortent les factorielles.** Pourquoi exactement $\frac{1}{k!}$&nbsp;? Parce que choisir $k$ périodes rangées dans l'ordre chronologique revient à choisir un point d'un simplexe, dont le volume vaut $\frac{1}{k!}$&nbsp;: c'est l'objet de la page [Simplexes et flèche du temps](../../geometrie/simplexes/).
 
 <div id="preuve">
 
-Remarque&nbsp;: si le taux annuel nominal est $r$ au lieu de $100\\,\\% = 1$, chaque période rapporte $\frac{r}{n}$ et la $k$-ième génération d'intérêts tend vers $\frac{r^k}{k!}$, ce qui donne $\displaystyle \lim\_{n \to +\infty}\left(1 + \frac{r}{n}\right)^n = \sum\_{k=0}^{+\infty} \frac{r^k}{k!} = \mathrm{e}^r$.
+**Remarque.** Si le taux annuel est $r$ au lieu de $100\\,\\% = 1$, chaque période rapporte $\frac{r}{n}$ et la $k$-ième génération d'intérêts tend vers $\frac{r^k}{k!}$, ce qui donne $\displaystyle \lim\_{n \to +\infty}\left(1 + \frac{r}{n}\right)^n = \sum\_{k=0}^{+\infty} \frac{r^k}{k!} = \mathrm{e}^r$.
 
 </div>
 
-L'animation interactive ci-dessous vous permet de faire varier la fréquence de capitalisation $n$ (d'annuelle à continue) pour visualiser les marches d'escalier du capital sur l'année $[0, 1]$, la décomposition par générations d'intérêts $k = 0, 1, 2, 3\dots$ et le pincement de $\mathrm{e}$ entre les suites $u\_n$, $S\_n$ et $v\_n = \left(1+\frac{1}{n}\right)^{n+1}$.
-
-<div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 12px; padding: 16px; margin: 25px auto; max-width: 820px; box-shadow: 0 4px 10px -2px rgba(0,0,0,0.07); font-family: system-ui, -apple-system, sans-serif;">
-<div style="text-align: center; margin-bottom: 12px;">
-<span style="font-size: 1.06em; font-weight: 700; color: #004D80;">Simulateur d'Intérêts Composés de Bernoulli &amp; Convergence vers $\mathrm{e}$</span>
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; margin-bottom: 12px; background: #f1f5f9; padding: 10px 12px; border-radius: 8px; border: 1px solid #e2e8f0;">
-<div style="display: flex; gap: 5px; flex-wrap: wrap;">
-<button class="bernPresetBtn" data-idx="0" style="padding: 5px 9px; border-radius: 6px; border: 1px solid #004D80; background: #fff; color: #004D80; font-weight: 600; cursor: pointer; font-size: 0.8em;">Annuel (n=1)</button>
-<button class="bernPresetBtn" data-idx="1" style="padding: 5px 9px; border-radius: 6px; border: 1px solid #004D80; background: #fff; color: #004D80; font-weight: 600; cursor: pointer; font-size: 0.8em;">Semestriel (n=2)</button>
-<button class="bernPresetBtn" data-idx="3" style="padding: 5px 9px; border-radius: 6px; border: 1px solid #004D80; background: #004D80; color: #fff; font-weight: 700; cursor: pointer; font-size: 0.8em;">Trimestriel (n=4)</button>
-<button class="bernPresetBtn" data-idx="8" style="padding: 5px 9px; border-radius: 6px; border: 1px solid #004D80; background: #fff; color: #004D80; font-weight: 600; cursor: pointer; font-size: 0.8em;">Mensuel (n=12)</button>
-<button class="bernPresetBtn" data-idx="16" style="padding: 5px 9px; border-radius: 6px; border: 1px solid #004D80; background: #fff; color: #004D80; font-weight: 600; cursor: pointer; font-size: 0.8em;">Quotidien (n=365)</button>
-<button class="bernPresetBtn" data-idx="20" style="padding: 5px 9px; border-radius: 6px; border: 1px solid #970E53; background: #fff; color: #970E53; font-weight: 600; cursor: pointer; font-size: 0.8em;">Continu (n→∞)</button>
-</div>
-<div style="flex: 1; min-width: 200px;">
-<div style="display: flex; justify-content: space-between; font-size: 0.84em; font-weight: 600; color: #1e293b; margin-bottom: 4px; gap: 6px; flex-wrap: wrap;">
-<span>Fréquence de capitalisation&nbsp;:</span>
-<span id="bernNLabel" style="color: #970E53; font-family: monospace;">n = 4 (+25,00 % / période)</span>
-</div>
-<input type="range" id="bernNSlider" min="0" max="20" value="3" step="1" style="width: 100%; accent-color: #970E53; cursor: pointer;">
-</div>
-</div>
-<div id="bernMetricsCards" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(155px, 1fr)); gap: 8px; margin-bottom: 12px;">
-</div>
-<div style="position: relative; width: 100%; background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; overflow: hidden;">
-<canvas id="bernoulliInterestCanvas" style="width: 100%; height: 400px; display: block;"></canvas>
-</div>
-<div id="bernReadout" style="margin-top: 10px; padding: 10px 14px; background: #fff; border-radius: 8px; border-left: 5px solid #006C65; font-size: 0.86em; color: #334155; line-height: 1.5;">
-</div>
-</div>
-<script>
-(function() {
-const canvas = document.getElementById('bernoulliInterestCanvas');
-if (!canvas) return;
-const ctx = canvas.getContext('2d');
-const slider = document.getElementById('bernNSlider');
-const nLabel = document.getElementById('bernNLabel');
-const cards = document.getElementById('bernMetricsCards');
-const readout = document.getElementById('bernReadout');
-const presetBtns = document.querySelectorAll('.bernPresetBtn');
-const N_STEPS = [1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 30, 52, 100, 180, 365, 1000, 5000, 10000, Infinity];
-let stepIdx = 3; // n = 4 by default
-const E_VAL = Math.E;
-const SUB_MAP = { '0':'₀','1':'₁','2':'₂','3':'₃','4':'₄','5':'₅','6':'₆','7':'₇','8':'₈','9':'₉','n':'ₙ','k':'ₖ','∞':'∞' };
-const SUP_MAP = { '0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹','n':'ⁿ','j':'ʲ','k':'ᵏ','t':'ᵗ','∞':'∞' };
-function toSub(val) {
-if (!isFinite(val)) return '∞';
-return String(val).split('').map(c => SUB_MAP[c] || c).join('');
-}
-function toSup(val) {
-if (!isFinite(val)) return '∞';
-return String(val).split('').map(c => SUP_MAP[c] || c).join('');
-}
-function fact(k) {
-let r = 1;
-for (let i = 2; i <= k; i++) r *= i;
-return r;
-}
-function computeGenerations(nVal) {
-const gens = [];
-const maxK = isFinite(nVal) ? Math.min(nVal, 8) : 8;
-for (let k = 0; k <= maxK; k++) {
-if (!isFinite(nVal)) {
-gens.push(1 / fact(k));
-} else {
-let prod = 1;
-for (let j = 1; j < k; j++) prod *= (1 - j / nVal);
-gens.push(prod / fact(k));
-}
-}
-return gens;
-}
-function computeSn(nVal) {
-if (!isFinite(nVal)) return E_VAL;
-let s = 0;
-for (let k = 0; k <= Math.min(nVal, 18); k++) s += 1 / fact(k);
-return s;
-}
-function updateUI() {
-const n = N_STEPS[stepIdx];
-const isInf = !isFinite(n);
-if (isInf) {
-nLabel.textContent = 'n → ∞ (capitalisation continue)';
-} else {
-const ratePct = 100 / n;
-const rateStr = ratePct >= 0.1 ? ratePct.toFixed(2) : ratePct.toExponential(2);
-nLabel.textContent = `n = ${n.toLocaleString('fr-FR')} (+${rateStr} % / période)`;
-}
-presetBtns.forEach(btn => {
-const bIdx = parseInt(btn.getAttribute('data-idx'), 10);
-const isContBtn = bIdx === 20;
-const baseCol = isContBtn ? '#970E53' : '#004D80';
-if (bIdx === stepIdx) {
-btn.style.background = baseCol;
-btn.style.color = '#ffffff';
-btn.style.fontWeight = '700';
-} else {
-btn.style.background = '#ffffff';
-btn.style.color = baseCol;
-btn.style.fontWeight = '600';
-}
-});
-const un = isInf ? E_VAL : Math.pow(1 + 1 / n, n);
-const vn = isInf ? E_VAL : Math.pow(1 + 1 / n, n + 1);
-const sn = computeSn(n);
-const nDisp = isInf ? '∞' : n.toLocaleString('fr-FR');
-const np1Disp = isInf ? '∞' : (n + 1).toLocaleString('fr-FR');
-cards.innerHTML = `
-<div style="background:#fff;border:1px solid #cbd5e1;border-radius:7px;padding:8px 10px;text-align:center;">
-<div style="font-size:0.76em;color:#64748b;font-weight:600;">Capital composé <i>u</i><sub>${nDisp}</sub> = (1 + 1/${nDisp})<sup>${nDisp}</sup></div>
-<div style="font-size:1.04em;font-weight:700;color:#004D80;font-family:monospace;margin-top:2px;">${un.toFixed(6)} €</div>
-</div>
-<div style="background:#fff;border:1px solid #cbd5e1;border-radius:7px;padding:8px 10px;text-align:center;">
-<div style="font-size:0.76em;color:#64748b;font-weight:600;">Somme factorielle <i>S</i><sub>${nDisp}</sub> = &Sigma;<sub><i>k</i>=0..${nDisp}</sub> 1/<i>k</i>!</div>
-<div style="font-size:1.04em;font-weight:700;color:#006C65;font-family:monospace;margin-top:2px;">${sn.toFixed(6)} €</div>
-</div>
-<div style="background:#fff;border:1px solid #cbd5e1;border-radius:7px;padding:8px 10px;text-align:center;">
-<div style="font-size:0.76em;color:#64748b;font-weight:600;">Plafond continu e</div>
-<div style="font-size:1.04em;font-weight:700;color:#970E53;font-family:monospace;margin-top:2px;">${E_VAL.toFixed(6)} €</div>
-</div>
-<div style="background:#fff;border:1px solid #cbd5e1;border-radius:7px;padding:8px 10px;text-align:center;">
-<div style="font-size:0.76em;color:#64748b;font-weight:600;">Suite majorante <i>v</i><sub>${nDisp}</sub> = (1 + 1/${nDisp})<sup>${np1Disp}</sup></div>
-<div style="font-size:1.04em;font-weight:700;color:#d97706;font-family:monospace;margin-top:2px;">${vn.toFixed(6)} €</div>
-</div>
-`;
-}
-function drawGrowthChart(x0, y0, w, h, n) {
-const isInf = !isFinite(n);
-const padL = 46, padR = 16, padT = 44, padB = 38;
-const plotW = w - padL - padR;
-const plotH = h - padT - padB;
-const cxTitle = x0 + w / 2;
-ctx.fillStyle = '#0f172a';
-ctx.font = 'bold 12px system-ui, sans-serif';
-ctx.textAlign = 'center';
-const titleTxt = isInf
-? 'Croissance continue du capital sur 1 an (n → ∞)'
-: `Croissance du capital sur 1 an (n = ${n.toLocaleString('fr-FR')})`;
-ctx.fillText(titleTxt, cxTitle, y0 + 20, w - 16);
-ctx.fillStyle = '#64748b';
-ctx.font = '10.5px system-ui, sans-serif';
-ctx.fillText('Escalier bleu : (1 + 1/n)ʲ — Pointillés rouges : exp(t) — Gris : 1 + t', cxTitle, y0 + 36, w - 16);
-const yMin = 0.85, yMax = 2.95;
-const toX = t => x0 + padL + t * plotW;
-const toY = y => y0 + padT + plotH - ((y - yMin) / (yMax - yMin)) * plotH;
-ctx.strokeStyle = '#94a3b8';
-ctx.lineWidth = 1.3;
-ctx.beginPath();
-ctx.moveTo(x0 + padL, y0 + padT);
-ctx.lineTo(x0 + padL, y0 + padT + plotH);
-ctx.lineTo(x0 + padL + plotW, y0 + padT + plotH);
-ctx.stroke();
-[1.0, 1.5, 2.0, 2.5, E_VAL].forEach(val => {
-const py = toY(val);
-const isE = Math.abs(val - E_VAL) < 0.001;
-ctx.strokeStyle = isE ? 'rgba(151, 14, 83, 0.5)' : 'rgba(148, 163, 184, 0.25)';
-ctx.setLineDash(isE ? [5, 3] : []);
-ctx.beginPath();
-ctx.moveTo(x0 + padL, py);
-ctx.lineTo(x0 + padL + plotW, py);
-ctx.stroke();
-ctx.setLineDash([]);
-ctx.fillStyle = isE ? '#970E53' : '#64748b';
-ctx.font = isE ? 'bold 10px monospace' : '9.5px monospace';
-ctx.textAlign = 'right';
-ctx.fillText(isE ? 'e≈2,72' : val.toFixed(2), x0 + padL - 5, py + 3);
-});
-[0, 0.25, 0.5, 0.75, 1.0].forEach(t => {
-const px = toX(t);
-ctx.fillStyle = '#475569';
-ctx.font = '10px monospace';
-ctx.textAlign = 'center';
-ctx.fillText(t === 0 ? 't=0' : t === 1 ? '1 an' : `${t}`, px, y0 + padT + plotH + 15);
-});
-// Simple interest line 1 + t
-ctx.strokeStyle = '#64748b';
-ctx.lineWidth = 1.2;
-ctx.setLineDash([2, 3]);
-ctx.beginPath();
-ctx.moveTo(toX(0), toY(1));
-ctx.lineTo(toX(1), toY(2));
-ctx.stroke();
-ctx.setLineDash([]);
-// Discrete staircase (1 + 1/n)^j or smooth curve when n is large / Infinity
-ctx.strokeStyle = '#004D80';
-ctx.lineWidth = 2.2;
-ctx.beginPath();
-if (isInf || n > 120) {
-const steps = 120;
-for (let i = 0; i <= steps; i++) {
-const t = i / steps;
-const val = isInf ? Math.exp(t) : Math.pow(1 + 1 / n, Math.floor(t * n));
-const px = toX(t), py = toY(val);
-if (i === 0) ctx.moveTo(px, py);
-else ctx.lineTo(px, py);
-}
-} else {
-for (let j = 0; j < n; j++) {
-const t0 = j / n;
-const t1 = (j + 1) / n;
-const cap = Math.pow(1 + 1 / n, j);
-const capNext = Math.pow(1 + 1 / n, j + 1);
-const px0 = toX(t0), px1 = toX(t1);
-const py0 = toY(cap), py1 = toY(capNext);
-if (j === 0) ctx.moveTo(px0, py0);
-ctx.lineTo(px1, py0);
-ctx.lineTo(px1, py1);
-}
-}
-ctx.stroke();
-// Continuous curve y = e^t drawn on top in dashed burgundy
-ctx.strokeStyle = '#970E53';
-ctx.lineWidth = 2.0;
-ctx.setLineDash([5, 3]);
-ctx.beginPath();
-for (let i = 0; i <= 100; i++) {
-const t = i / 100;
-const px = toX(t), py = toY(Math.exp(t));
-if (i === 0) ctx.moveTo(px, py);
-else ctx.lineTo(px, py);
-}
-ctx.stroke();
-ctx.setLineDash([]);
-if (!isInf && n <= 16) {
-for (let j = 0; j <= n; j++) {
-const px = toX(j / n);
-const py = toY(Math.pow(1 + 1 / n, j));
-ctx.beginPath();
-ctx.arc(px, py, 3.5, 0, Math.PI * 2);
-ctx.fillStyle = j === n ? '#006C65' : '#004D80';
-ctx.fill();
-}
-}
-}
-function drawGenerationPanel(rx, ry, rw, rh, n) {
-const isInf = !isFinite(n);
-const nSub = toSub(n);
-const nSup = toSup(n);
-ctx.fillStyle = '#f8fafc';
-ctx.strokeStyle = '#e2e8f0';
-ctx.lineWidth = 1;
-ctx.beginPath();
-ctx.roundRect(rx, ry, rw, rh, 8);
-ctx.fill();
-ctx.stroke();
-const bx = rx + 12, bw = rw - 24;
-ctx.fillStyle = '#0f172a';
-ctx.font = 'bold 12px system-ui, sans-serif';
-ctx.textAlign = 'left';
-ctx.fillText(
-isInf ? 'Décomposition continue par génération (n → ∞)' : `Décomposition par génération d'intérêts (n = ${n.toLocaleString('fr-FR')})`,
-bx, ry + 20, bw
-);
-const gens = computeGenerations(n);
-const colors = ['#004D80', '#006C65', '#970E53', '#d97706', '#7c3aed', '#2563eb'];
-const maxScale = 2.85;
-// Bar 1: u_n
-const y1 = ry + 44;
-const un = isInf ? E_VAL : Math.pow(1 + 1 / n, n);
-ctx.fillStyle = '#334155';
-ctx.font = '600 10.5px system-ui, sans-serif';
-ctx.fillText(`Capital composé u${nSub} = ${un.toFixed(5)} €`, bx, y1 - 5, bw);
-let cx = bx;
-gens.forEach((val, k) => {
-const sw = (val / maxScale) * bw;
-ctx.fillStyle = colors[k % colors.length];
-ctx.fillRect(cx, y1, Math.max(sw - 1, 1), 22);
-if (sw > 24) {
-ctx.fillStyle = '#fff';
-ctx.font = 'bold 9.5px system-ui, sans-serif';
-ctx.textAlign = 'center';
-ctx.fillText(`k=${k}`, cx + sw / 2, y1 + 14);
-}
-cx += sw;
-});
-// Bar 2: S_n
-const y2 = ry + 94;
-const sn = computeSn(n);
-ctx.textAlign = 'left';
-ctx.fillStyle = '#334155';
-ctx.font = '600 10.5px system-ui, sans-serif';
-ctx.fillText(`Plafond factoriel S${nSub} = Σ 1/k! = ${sn.toFixed(5)} €`, bx, y2 - 5, bw);
-cx = bx;
-const maxKBar = isInf ? 7 : Math.min(n, 7);
-for (let k = 0; k <= maxKBar; k++) {
-const val = 1 / fact(k);
-const sw = (val / maxScale) * bw;
-ctx.fillStyle = colors[k % colors.length];
-ctx.globalAlpha = 0.85;
-ctx.fillRect(cx, y2, Math.max(sw - 1, 1), 22);
-ctx.globalAlpha = 1.0;
-if (sw > 26) {
-ctx.fillStyle = '#fff';
-ctx.font = 'bold 9.5px system-ui, sans-serif';
-ctx.textAlign = 'center';
-ctx.fillText(k <= 1 ? '1' : `1/${k}!`, cx + sw / 2, y2 + 14);
-}
-cx += sw;
-}
-// Responsive 3-column table of generations
-const tTop = ry + 142;
-const col2X = bx + Math.floor(bw * 0.42);
-const col3X = bx + Math.floor(bw * 0.72);
-ctx.textAlign = 'left';
-ctx.fillStyle = '#0f172a';
-ctx.font = 'bold 10.5px system-ui, sans-serif';
-ctx.fillText('Génération k', bx, tTop, col2X - bx - 4);
-ctx.fillText(isInf ? 'Gain continu' : 'Gain C(n,k)/nᵏ', col2X, tTop, col3X - col2X - 4);
-ctx.fillText('Plafond 1/k!', col3X, tTop, bx + bw - col3X);
-ctx.strokeStyle = '#cbd5e1';
-ctx.beginPath();
-ctx.moveTo(bx, tTop + 5);
-ctx.lineTo(bx + bw, tTop + 5);
-ctx.stroke();
-const titles = ['k=0 (Capital)', 'k=1 (Int. 1er)', 'k=2 (Int. 2nd)', 'k=3 (Int. 3e)', 'k=4 (Int. 4e)', 'k=5 (Int. 5e)'];
-const maxRowK = isInf ? 5 : Math.min(5, n);
-for (let k = 0; k <= maxRowK; k++) {
-const rowY = tTop + 21 + k * 23;
-const gk = gens[k] || 0;
-const fk = 1 / fact(k);
-ctx.fillStyle = colors[k % colors.length];
-ctx.beginPath();
-ctx.arc(bx + 4, rowY - 3.5, 3.8, 0, Math.PI * 2);
-ctx.fill();
-ctx.fillStyle = '#1e293b';
-ctx.font = '600 10px system-ui, sans-serif';
-ctx.fillText(titles[k], bx + 12, rowY, col2X - bx - 16);
-ctx.font = '600 10px monospace';
-ctx.fillText(gk.toFixed(5) + ' €', col2X, rowY, col3X - col2X - 6);
-ctx.fillStyle = '#970E53';
-ctx.fillText(`${fk.toFixed(4)} (1/${k}!)`, col3X, rowY, bx + bw - col3X);
-}
-}
-function render() {
-const n = N_STEPS[stepIdx];
-const isInf = !isFinite(n);
-const dpr = window.devicePixelRatio || 1;
-const W = canvas.clientWidth || 780;
-const isNarrow = W < 620;
-const desiredH = isNarrow ? 690 : 390;
-if (canvas.style.height !== desiredH + 'px') {
-canvas.style.height = desiredH + 'px';
-}
-const H = desiredH;
-if (canvas.width !== Math.round(W * dpr) || canvas.height !== Math.round(H * dpr)) {
-canvas.width = Math.round(W * dpr);
-canvas.height = Math.round(H * dpr);
-}
-ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-ctx.clearRect(0, 0, W, H);
-if (isNarrow) {
-// Stack vertically on narrow screens so nothing is ever cramped or truncated
-drawGrowthChart(0, 4, W, 315, n);
-drawGenerationPanel(8, 326, W - 16, H - 334, n);
-} else {
-const leftW = Math.floor(W * 0.52);
-drawGrowthChart(0, 0, leftW, H, n);
-drawGenerationPanel(leftW + 8, 12, W - leftW - 18, H - 24, n);
-}
-const g2 = isInf ? 0.5 : (n >= 2 ? (n * (n - 1) / (2 * n * n)) : 0);
-const g3 = isInf ? (1 / 6) : (n >= 3 ? (n * (n - 1) * (n - 2) / (6 * n * n * n)) : 0);
-if (isInf) {
-readout.innerHTML = `<b>Capitalisation continue ($n \\to \\infty$)&nbsp;:</b> l'escalier bleu coïncide désormais avec l'exponentielle continue $\\mathrm{e}^t$, et chaque génération $k$ d'intérêts atteint exactement son plafond factoriel $\\frac{1}{k!}$ ($1$ € pour $k=0$, $1$ € pour $k=1$, $0,50$ € pour $k=2$, $\\frac{1}{6} \\approx 0,1667$ € pour $k=3$, etc.), pour un total égal à $\\mathrm{e} \\approx 2,718282$ €.`;
-} else {
-readout.innerHTML = `<b>Analyse financière pour $n = ${n.toLocaleString('fr-FR')}$ période${n>1?'s':''}&nbsp;:</b> le capital initial ($k=0$) vaut $1$ €, les intérêts directs ($k=1$) rapportent toujours $n \\times \\frac{1}{n} = 1$ €, les intérêts d'intérêts ($k=2$) rapportent $\\binom{${n}}{2}\\frac{1}{${n}^2} = ${g2.toFixed(4)}$ € (plafond $\\frac{1}{2!} = 0,50$ €), et le $3^{\\text{e}}$ ordre ($k=3$) rapporte $\\binom{${n}}{3}\\frac{1}{${n}^3} = ${g3.toFixed(4)}$ € (plafond $\\frac{1}{3!} \\approx 0,1667$ €).`;
-}
-if (window.MathJax && window.MathJax.typesetPromise) {
-window.MathJax.typesetPromise([readout]).catch(() => {});
-}
-}
-slider.addEventListener('input', () => {
-stepIdx = parseInt(slider.value, 10);
-updateUI();
-render();
-});
-presetBtns.forEach(btn => {
-btn.addEventListener('click', () => {
-stepIdx = parseInt(btn.getAttribute('data-idx'), 10);
-slider.value = stepIdx;
-updateUI();
-render();
-});
-});
-window.addEventListener('resize', render);
-updateUI();
-render();
-})();
-</script>
+<br>
 
 
 ## Convergence des deux suites
@@ -627,7 +289,40 @@ Or, dans la factorielle $k! = 1 \times 2 \times 3 \times \cdots \times k$, dès 
 $\displaystyle \underbrace{2 \times 3 \times 4 \times \cdots \times k}_{k-1 \text{ facteurs } \ge\, 2}$ $\displaystyle \ge \underbrace{2 \times 2 \times 2 \times \cdots \times 2}_{k-1 \text{ facteurs}} = 2^{k-1}$
 </p>
 
-En passant aux inverses, le terme général est écrasé par une progression géométrique de raison $1/2$&nbsp;:
+En passant aux inverses, le terme général est écrasé par une progression géométrique de raison $\frac{1}{2}$&nbsp;:
+
+<div class="svg-container">
+<svg viewBox="0 0 440 220" role="img" aria-label="Comparaison des termes 1/k! et 1/2 puissance k-1" style="width:100%;max-width:440px;height:auto;">
+<rect x="50" y="35.0" width="26" height="140.0" rx="2" fill="none" stroke="#004D80" stroke-width="1.2" stroke-dasharray="3 2"><title>1/2^0 = 1,0000</title></rect>
+<rect x="50" y="35.0" width="26" height="140.0" rx="2" fill="#970E53" fill-opacity="0.75"><title>1/1! = 1,0000</title></rect>
+<text x="63.0" y="193.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >1</text>
+<rect x="102" y="105.0" width="26" height="70.0" rx="2" fill="none" stroke="#004D80" stroke-width="1.2" stroke-dasharray="3 2"><title>1/2^1 = 0,5000</title></rect>
+<rect x="102" y="105.0" width="26" height="70.0" rx="2" fill="#970E53" fill-opacity="0.75"><title>1/2! = 0,5000</title></rect>
+<text x="115.0" y="193.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >2</text>
+<rect x="154" y="140.0" width="26" height="35.0" rx="2" fill="none" stroke="#004D80" stroke-width="1.2" stroke-dasharray="3 2"><title>1/2^2 = 0,2500</title></rect>
+<rect x="154" y="151.7" width="26" height="23.3" rx="2" fill="#970E53" fill-opacity="0.75"><title>1/3! = 0,1667</title></rect>
+<text x="167.0" y="193.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >3</text>
+<rect x="206" y="157.5" width="26" height="17.5" rx="2" fill="none" stroke="#004D80" stroke-width="1.2" stroke-dasharray="3 2"><title>1/2^3 = 0,1250</title></rect>
+<rect x="206" y="169.2" width="26" height="5.8" rx="2" fill="#970E53" fill-opacity="0.75"><title>1/4! = 0,0417</title></rect>
+<text x="219.0" y="193.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >4</text>
+<rect x="258" y="166.2" width="26" height="8.8" rx="2" fill="none" stroke="#004D80" stroke-width="1.2" stroke-dasharray="3 2"><title>1/2^4 = 0,0625</title></rect>
+<rect x="258" y="173.8" width="26" height="1.2" rx="2" fill="#970E53" fill-opacity="0.75"><title>1/5! = 0,0083</title></rect>
+<text x="271.0" y="193.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >5</text>
+<rect x="310" y="170.6" width="26" height="4.4" rx="2" fill="none" stroke="#004D80" stroke-width="1.2" stroke-dasharray="3 2"><title>1/2^5 = 0,0312</title></rect>
+<rect x="310" y="174.8" width="26" height="0.2" rx="2" fill="#970E53" fill-opacity="0.75"><title>1/6! = 0,0014</title></rect>
+<text x="323.0" y="193.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >6</text>
+<rect x="362" y="172.8" width="26" height="2.2" rx="2" fill="none" stroke="#004D80" stroke-width="1.2" stroke-dasharray="3 2"><title>1/2^6 = 0,0156</title></rect>
+<rect x="362" y="175.0" width="26" height="0.0" rx="2" fill="#970E53" fill-opacity="0.75"><title>1/7! = 0,0002</title></rect>
+<text x="375.0" y="193.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >7</text>
+<line x1="42.0" y1="175.0" x2="404.0" y2="175.0" stroke="#94a3b8" stroke-width="1" />
+<text x="408.0" y="193.0" text-anchor="start" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >k</text>
+<rect x="212" y="40" width="14" height="14" rx="2" fill="#970E53" fill-opacity="0.75"/>
+<text x="232.0" y="52.0" text-anchor="start" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >1/k!</text>
+<rect x="212" y="66" width="14" height="14" rx="2" fill="none" stroke="#004D80" stroke-dasharray="3 2"/>
+<text x="232.0" y="78.0" text-anchor="start" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >1/2<tspan dy='-6' font-size='10'>k−1</tspan></text>
+</svg>
+</div>
+<p class="legende">Les termes $\frac{1}{k!}$ (en magenta) décroissent bien plus vite que ceux de la suite géométrique $\frac{1}{2^{k-1}}$ (en pointillés), dont la somme vaut $2$.</p>
 
 <div id="preuve">
 
@@ -819,6 +514,75 @@ Par double inégalité ($\mathrm{e} \le L$ et $L \le \mathrm{e}$), on a bien $\m
 
 <br>
 
+**Même limite, mais pas même vitesse.** La série $S\_n$ atteint $\mathrm{e}$ à une vitesse fulgurante&nbsp;: nous verrons plus bas que $0 < \mathrm{e} - S\_n < \frac{1}{n \cdot n!}$, soit déjà moins de $3 \times 10^{-8}$ pour $n = 10$. La suite de Bernoulli, elle, s'en approche paresseusement&nbsp;: l'écart $\mathrm{e} - u\_n$ est de l'ordre de $\frac{\mathrm{e}}{2n}$ (plus précisément, $\mathrm{e} - u\_n \sim \frac{\mathrm{e}}{2n}$ quand $n \to +\infty$), soit encore $0,12$ pour $n = 10$. Quant à la suite jumelle $v\_n = \left(1 + \frac{1}{n}\right)^{n+1}$ de la méthode B, elle descend vers $\mathrm{e}$ par au-dessus.
+
+<div class="svg-container">
+<svg viewBox="0 0 480 280" role="img" aria-label="Les suites u_n et v_n encadrent e et s'en approchent lentement ; la série S_n l'atteint très vite" style="width:100%;max-width:480px;height:auto;">
+<line x1="50.0" y1="161.9" x2="410.0" y2="161.9" stroke="#64748b" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="418.0" y="165.9" text-anchor="start" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >e</text>
+<polyline points="50.0,230.5 82.7,206.6 115.5,195.1 148.2,188.3 180.9,183.8 213.6,180.7 246.4,178.3 279.1,176.4 311.8,175.0 344.5,173.8 377.3,172.8 410.0,171.9" fill="none" stroke="#004D80" stroke-width="2" />
+<circle cx="50.0" cy="230.5" r="3.2" fill="#004D80" stroke="#fff" stroke-width="1"><title>u1 = 2,00000</title></circle>
+<circle cx="82.7" cy="206.6" r="3.2" fill="#004D80" stroke="#fff" stroke-width="1"><title>u2 = 2,25000</title></circle>
+<circle cx="115.5" cy="195.1" r="3.2" fill="#004D80" stroke="#fff" stroke-width="1"><title>u3 = 2,37037</title></circle>
+<circle cx="148.2" cy="188.3" r="3.2" fill="#004D80" stroke="#fff" stroke-width="1"><title>u4 = 2,44141</title></circle>
+<circle cx="180.9" cy="183.8" r="3.2" fill="#004D80" stroke="#fff" stroke-width="1"><title>u5 = 2,48832</title></circle>
+<circle cx="213.6" cy="180.7" r="3.2" fill="#004D80" stroke="#fff" stroke-width="1"><title>u6 = 2,52163</title></circle>
+<circle cx="246.4" cy="178.3" r="3.2" fill="#004D80" stroke="#fff" stroke-width="1"><title>u7 = 2,54650</title></circle>
+<circle cx="279.1" cy="176.4" r="3.2" fill="#004D80" stroke="#fff" stroke-width="1"><title>u8 = 2,56578</title></circle>
+<circle cx="311.8" cy="175.0" r="3.2" fill="#004D80" stroke="#fff" stroke-width="1"><title>u9 = 2,58117</title></circle>
+<circle cx="344.5" cy="173.8" r="3.2" fill="#004D80" stroke="#fff" stroke-width="1"><title>u10 = 2,59374</title></circle>
+<circle cx="377.3" cy="172.8" r="3.2" fill="#004D80" stroke="#fff" stroke-width="1"><title>u11 = 2,60420</title></circle>
+<circle cx="410.0" cy="171.9" r="3.2" fill="#004D80" stroke="#fff" stroke-width="1"><title>u12 = 2,61304</title></circle>
+<polyline points="50.0,39.5 82.7,99.2 115.5,119.7 148.2,130.1 180.9,136.3 213.6,140.5 246.4,143.6 279.1,145.8 311.8,147.6 344.5,149.0 377.3,150.2 410.0,151.2" fill="none" stroke="#739db9" stroke-width="2" stroke-dasharray="5 3"/>
+<circle cx="50.0" cy="39.5" r="3.2" fill="#739db9" stroke="#fff" stroke-width="1"><title>v1 = 4,00000</title></circle>
+<circle cx="82.7" cy="99.2" r="3.2" fill="#739db9" stroke="#fff" stroke-width="1"><title>v2 = 3,37500</title></circle>
+<circle cx="115.5" cy="119.7" r="3.2" fill="#739db9" stroke="#fff" stroke-width="1"><title>v3 = 3,16049</title></circle>
+<circle cx="148.2" cy="130.1" r="3.2" fill="#739db9" stroke="#fff" stroke-width="1"><title>v4 = 3,05176</title></circle>
+<circle cx="180.9" cy="136.3" r="3.2" fill="#739db9" stroke="#fff" stroke-width="1"><title>v5 = 2,98598</title></circle>
+<circle cx="213.6" cy="140.5" r="3.2" fill="#739db9" stroke="#fff" stroke-width="1"><title>v6 = 2,94190</title></circle>
+<circle cx="246.4" cy="143.6" r="3.2" fill="#739db9" stroke="#fff" stroke-width="1"><title>v7 = 2,91029</title></circle>
+<circle cx="279.1" cy="145.8" r="3.2" fill="#739db9" stroke="#fff" stroke-width="1"><title>v8 = 2,88651</title></circle>
+<circle cx="311.8" cy="147.6" r="3.2" fill="#739db9" stroke="#fff" stroke-width="1"><title>v9 = 2,86797</title></circle>
+<circle cx="344.5" cy="149.0" r="3.2" fill="#739db9" stroke="#fff" stroke-width="1"><title>v10 = 2,85312</title></circle>
+<circle cx="377.3" cy="150.2" r="3.2" fill="#739db9" stroke="#fff" stroke-width="1"><title>v11 = 2,84094</title></circle>
+<circle cx="410.0" cy="151.2" r="3.2" fill="#739db9" stroke="#fff" stroke-width="1"><title>v12 = 2,83079</title></circle>
+<polyline points="50.0,230.5 82.7,182.7 115.5,166.8 148.2,162.8 180.9,162.0 213.6,161.9 246.4,161.9 279.1,161.9 311.8,161.9 344.5,161.9 377.3,161.9 410.0,161.9" fill="none" stroke="#970E53" stroke-width="2" />
+<circle cx="50.0" cy="230.5" r="3.2" fill="#970E53" stroke="#fff" stroke-width="1"><title>S1 = 2,00000</title></circle>
+<circle cx="82.7" cy="182.7" r="3.2" fill="#970E53" stroke="#fff" stroke-width="1"><title>S2 = 2,50000</title></circle>
+<circle cx="115.5" cy="166.8" r="3.2" fill="#970E53" stroke="#fff" stroke-width="1"><title>S3 = 2,66667</title></circle>
+<circle cx="148.2" cy="162.8" r="3.2" fill="#970E53" stroke="#fff" stroke-width="1"><title>S4 = 2,70833</title></circle>
+<circle cx="180.9" cy="162.0" r="3.2" fill="#970E53" stroke="#fff" stroke-width="1"><title>S5 = 2,71667</title></circle>
+<circle cx="213.6" cy="161.9" r="3.2" fill="#970E53" stroke="#fff" stroke-width="1"><title>S6 = 2,71806</title></circle>
+<circle cx="246.4" cy="161.9" r="3.2" fill="#970E53" stroke="#fff" stroke-width="1"><title>S7 = 2,71825</title></circle>
+<circle cx="279.1" cy="161.9" r="3.2" fill="#970E53" stroke="#fff" stroke-width="1"><title>S8 = 2,71828</title></circle>
+<circle cx="311.8" cy="161.9" r="3.2" fill="#970E53" stroke="#fff" stroke-width="1"><title>S9 = 2,71828</title></circle>
+<circle cx="344.5" cy="161.9" r="3.2" fill="#970E53" stroke="#fff" stroke-width="1"><title>S10 = 2,71828</title></circle>
+<circle cx="377.3" cy="161.9" r="3.2" fill="#970E53" stroke="#fff" stroke-width="1"><title>S11 = 2,71828</title></circle>
+<circle cx="410.0" cy="161.9" r="3.2" fill="#970E53" stroke="#fff" stroke-width="1"><title>S12 = 2,71828</title></circle>
+<text x="92.7" y="95.2" text-anchor="start" font-size="13" fill="#407aa0" font-family="Georgia,'Times New Roman',serif" font-style="italic" >v<tspan dy='3' font-size='10'>n</tspan><tspan dy='-3'></tspan> = (1 + 1/n)<tspan dy='-6' font-size='10'>n+1</tspan></text>
+<text x="121.5" y="217.1" text-anchor="start" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >u<tspan dy='3' font-size='10'>n</tspan><tspan dy='-3'></tspan> = (1 + 1/n)<tspan dy='-6' font-size='10'>n</tspan></text>
+<text x="74.7" y="180.7" text-anchor="end" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >S<tspan dy='3' font-size='10'>n</tspan><tspan dy='-3'></tspan></text>
+<line x1="40.0" y1="240.0" x2="420.0" y2="240.0" stroke="#94a3b8" stroke-width="1" />
+<line x1="50.0" y1="240.0" x2="50.0" y2="244.0" stroke="#94a3b8" stroke-width="1" />
+<text x="50.0" y="258.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1</text>
+<line x1="148.2" y1="240.0" x2="148.2" y2="244.0" stroke="#94a3b8" stroke-width="1" />
+<text x="148.2" y="258.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >4</text>
+<line x1="279.1" y1="240.0" x2="279.1" y2="244.0" stroke="#94a3b8" stroke-width="1" />
+<text x="279.1" y="258.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >8</text>
+<line x1="410.0" y1="240.0" x2="410.0" y2="244.0" stroke="#94a3b8" stroke-width="1" />
+<text x="410.0" y="258.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >12</text>
+<text x="424.0" y="258.0" text-anchor="start" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >n</text>
+<line x1="36.0" y1="230.5" x2="40.0" y2="230.5" stroke="#94a3b8" stroke-width="1" />
+<text x="32.0" y="234.5" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >2</text>
+<line x1="36.0" y1="135.0" x2="40.0" y2="135.0" stroke="#94a3b8" stroke-width="1" />
+<text x="32.0" y="139.0" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >3</text>
+<line x1="36.0" y1="39.5" x2="40.0" y2="39.5" stroke="#94a3b8" stroke-width="1" />
+<text x="32.0" y="43.5" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >4</text>
+</svg>
+</div>
+<p class="legende">Les suites $u_n = \left(1+\frac{1}{n}\right)^n$ et $v_n = \left(1+\frac{1}{n}\right)^{n+1}$ encadrent $\mathrm{e}$ et s'en approchent lentement&nbsp;; la série $S_n = \sum_{k=0}^{n} \frac{1}{k!}$ l'atteint presque immédiatement.</p>
+
+
 
 ## Irrationalité de $\mathrm{e}$ (Fourier, 1815)
 
@@ -881,36 +645,21 @@ Pourquoi la somme $\sum\_{k=0}^q \frac{q!}{k!}$ est-elle un entier&nbsp;? Parce 
 </div>
 
 <div class="svg-container">
-<svg viewBox="0 0 760 195" style="max-width:760px;width:100%;height:auto;background:#ffffff;border:1px solid #cbd5e1;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.04);font-family:system-ui,-apple-system,sans-serif;">
-<text x="380" y="24" text-anchor="middle" font-size="13.5" font-weight="700" fill="#004D80">La « loupe factorielle » de Joseph Fourier : multiplier par q! fait tomber q!·e dans le désert entre deux entiers</text>
-<!-- Desert zone between M and M+1 (drawn behind the axis, with text in a clean pill ABOVE the axis) -->
-<rect x="144" y="96" width="472" height="24" fill="rgba(220, 38, 38, 0.08)" rx="4"/>
-<!-- Allowed window [M, M + 1/q] -->
-<rect x="140" y="94" width="135" height="28" fill="rgba(0, 108, 101, 0.20)" stroke="#006C65" stroke-width="1.5" stroke-dasharray="4,2" rx="4"/>
-<!-- Number line after multiplying by q! -->
-<line x1="50" y1="108" x2="710" y2="108" stroke="#334155" stroke-width="2.5"/>
-<!-- Red badge above the axis in the desert zone -->
-<rect x="302" y="66" width="296" height="24" rx="5" fill="#fff1f2" stroke="#f43f5e" stroke-width="1.2"/>
-<text x="450" y="82" text-anchor="middle" font-size="10.8" font-weight="700" fill="#dc2626">AUCUN ENTIER DANS L'INTERVALLE ]M , M + 1[</text>
-<!-- Left integer: q! S_q -->
-<line x1="140" y1="92" x2="140" y2="124" stroke="#004D80" stroke-width="3"/>
-<circle cx="140" cy="108" r="6" fill="#004D80"/>
-<text x="125" y="82" text-anchor="middle" font-size="12.5" font-weight="700" fill="#004D80">Entier M = q! · S<tspan dy="3" font-size="9.5">q</tspan><tspan dy="-3"> ∈ ℤ</tspan></text>
-<text x="140" y="145" text-anchor="middle" font-size="11" fill="#475569">(somme d'entiers q! / k!)</text>
-<!-- Right integer: M + 1 -->
-<line x1="620" y1="92" x2="620" y2="124" stroke="#004D80" stroke-width="3"/>
-<circle cx="620" cy="108" r="6" fill="#004D80"/>
-<text x="645" y="82" text-anchor="middle" font-size="12.5" font-weight="700" fill="#004D80">Entier M + 1 ∈ ℤ</text>
-<!-- Right bound of [M, M + 1/q] -->
-<line x1="275" y1="90" x2="275" y2="126" stroke="#006C65" stroke-width="2" stroke-dasharray="3,3"/>
-<text x="275" y="145" text-anchor="middle" font-size="11" font-weight="700" fill="#006C65">M + 1/q ≤ M + 1/2</text>
-<!-- Point q! e -->
-<circle cx="215" cy="108" r="6.5" fill="#970E53" stroke="#ffffff" stroke-width="2"/>
-<text x="215" y="54" text-anchor="middle" font-size="12" font-weight="700" fill="#970E53">q! · e = M + q! · R<tspan dy="3" font-size="9.5">q</tspan></text>
-<path d="M 215 61 L 215 97" stroke="#970E53" stroke-width="2"/>
-<text x="380" y="176" text-anchor="middle" font-size="11.5" fill="#1e293b">Si e = p/q était rationnel, alors q!·e = (q−1)!·p serait un ENTIER tombant dans ]M, M + 1/q[ ⊂ ]M, M+1[ : contradiction !</text>
+<svg viewBox="0 0 460 130" role="img" aria-label="Si e = p/q, le nombre q!·e serait un entier coincé strictement entre M et M + 1/q" style="width:100%;max-width:460px;height:auto;">
+<rect x="60.0" y="59" width="113.3" height="22" rx="3" fill="#f0dde7"/>
+<line x1="32.8" y1="70.0" x2="427.2" y2="70.0" stroke="#94a3b8" stroke-width="1.5" />
+<circle cx="60.0" cy="70" r="5" fill="#004D80"/>
+<text x="60.0" y="100.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >M</text>
+<circle cx="400.0" cy="70" r="5" fill="#004D80"/>
+<text x="400.0" y="100.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >M + 1</text>
+<line x1="173.3" y1="57.0" x2="173.3" y2="83.0" stroke="#970E53" stroke-width="1.4" stroke-dasharray="3 2"/>
+<text x="173.3" y="100.0" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >M + 1/q</text>
+<circle cx="121.2" cy="70" r="5" fill="#fff" stroke="#970E53" stroke-width="2"/>
+<text x="121.2" y="50.0" text-anchor="middle" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >q! · e</text>
+<text x="284.4" y="50.0" text-anchor="middle" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">aucun entier ici</text>
 </svg>
 </div>
+<p class="legende">La «&nbsp;loupe factorielle&nbsp;»&nbsp;: si $\mathrm{e} = \frac{p}{q}$, le nombre $q!\,\mathrm{e} = (q-1)!\,p$ serait un entier&nbsp;; or il tombe strictement entre l'entier $M = q!\,S_q$ et $M + \frac{1}{q}$, où aucun entier ne peut se trouver.</p>
 
 
 <hr style="margin:2em 0;border:none;border-top:1px solid #cbd5e1;">
@@ -919,7 +668,7 @@ Pourquoi la somme $\sum\_{k=0}^q \frac{q!}{k!}$ est-elle un entier&nbsp;? Parce 
 <b>Suite de l'exploration&nbsp;: d'où viennent géométriquement les factorielles $\frac{1}{k!}$&nbsp;?</b><br>
 La preuve algébrique ci-dessus nous a convaincus <i>que</i> $\left(1+\frac{1}{n}\right)^n$ et $\sum \frac{1}{k!}$ convergent vers la même limite, mais que représente géométriquement la fraction $\frac{1}{k!}$ dans un espace de dimension $k$&nbsp;?
 <ul style="margin:0.5em 0 0 0;">
-<li>👉 <b><a href="../../geometrie/simplexes/">Simplexes et flèche du temps</a>&nbsp;:</b> découvrez pourquoi $\frac{1}{k!}$ est le volume du simplexe canonique $\Delta_k$, comment l'hypercube dilaté se découpe en 2D et en 3D, et pourquoi la causalité impose ce même facteur dans la série de Dyson en physique quantique.</li>
+<li>👉 <b><a href="../../geometrie/simplexes/">Simplexes et flèche du temps</a>&nbsp;:</b> découvrez pourquoi $\frac{1}{k!}$ est le volume du simplexe canonique $\Delta_k$, comment l'hypercube dilaté se découpe en 2D et en 3D, pourquoi la causalité impose ce même facteur dans la série de Dyson en physique quantique, et en quoi le $k!$ est la signature des processus sans mémoire.</li>
 <li>👉 <b><a href="../../proba/simplexes_proba/">Simplexes et probabilités</a>&nbsp;:</b> résolvez sans calcul trois problèmes célèbres de probabilités (rupture de monotonie, seuil de Gnedenko et dérangements de Montmort) grâce au volume du simplexe.</li>
 </ul>
 </div>
