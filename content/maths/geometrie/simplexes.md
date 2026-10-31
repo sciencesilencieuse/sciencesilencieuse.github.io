@@ -100,13 +100,19 @@ details[open] > summary:first-of-type {
 
 
 # Simplexes et flèche du temps
-<p style="font-size:1.15em;color:#475569;margin-top:-0.6em;margin-bottom:1.2em;"><i>La géométrie secrète de $\frac{1}{k!}$, des hypercubes dilatés à la série de Dyson</i></p>
+<p style="font-size:1.15em;color:#475569;margin-top:-0.6em;margin-bottom:1.2em;"><i>La géométrie secrète de $\frac{1}{k!}$&nbsp;: des hypercubes dilatés à la série de Dyson, et ce qu'elle révèle sur la mémoire</i></p>
 
 On a vu [**ici**](../../arithmetique/exponentielle/) que la suite des intérêts composés de Bernoulli $\left(1 + \frac{1}{n}\right)^n$ et la série des inverses de factorielles $\sum\_{k=0}^n \frac{1}{k!}$ convergent vers la même limite $\mathrm{e} \approx 2,71828$.
 
-Mais l'algèbre laisse intact un mystère géométrique et physique fascinant&nbsp;: **que viennent faire des factorielles $k!$ (qui comptent les permutations d'objets discrets) au cœur d'un processus de croissance continue&nbsp;?**
+Mais l'algèbre laisse intact un mystère&nbsp;: **que viennent faire des factorielles $k!$, qui comptent les façons de ranger des objets, au cœur d'un processus de croissance continue&nbsp;?**
 
-Nous allons voir que la fraction $\frac{1}{k!}$ possède une incarnation géométrique très simple&nbsp;: c'est le **volume du simplexe canonique $\Delta\_k$** de dimension $k$. Comprendre cet objet géométrique permet de voir pourquoi l'expansion d'un hypercube $\left(1+\frac{1}{n}\right)^n$ tend vers $\sum \frac{1}{k!}$, et pourquoi la **flèche du temps** en mécanique quantique et en théorie quantique des champs fait surgir exactement le même facteur $\frac{1}{n!}$ dans la **série de Dyson** et l'**ordonnancement de Wick**.
+Le fil conducteur de cette page tient en une phrase&nbsp;: **$\frac{1}{k!}$ est le volume du simplexe $\Delta\_k$, c'est-à-dire la part de l'hypercube $[0, 1]^k$ où $k$ nombres sont rangés dans l'ordre croissant.** Nous allons suivre ce fil en quatre étapes&nbsp;:
+<ol>
+<li><a href="#le-volume-dun-simplexe"><b>Le volume d'un simplexe</b></a>&nbsp;: deux façons de voir pourquoi il vaut $\frac{1}{k!}$, en empilant des pyramides ou en découpant le cube selon les $k!$ ordres possibles.</li>
+<li><a href="#lhypercube-dilaté"><b>L'hypercube dilaté</b></a>&nbsp;: $\left(1 + \frac{1}{n}\right)^n$ est le volume d'un cube légèrement agrandi, qui se découpe en couches dont chacune tend vers le volume d'un simplexe.</li>
+<li><a href="#flèche-du-temps--dyson-et-wick"><b>La flèche du temps</b></a>&nbsp;: dès qu'un phénomène se construit par étapes successives, le simplexe réapparaît, jusqu'à la série de Dyson de la mécanique quantique et aux diagrammes de Feynman.</li>
+<li><a href="#le-k-signature-de-labsence-de-mémoire"><b>Le sens profond du $k!$</b></a>&nbsp;: il est la signature commune de la causalité et de l'absence de mémoire, et l'on retrouve cette même structure partout où une évolution obéit à une <a href="#généralisation--la-loi-de-composition">loi de composition</a>.</li>
+</ol>
 
 
 ## Le volume d'un simplexe
