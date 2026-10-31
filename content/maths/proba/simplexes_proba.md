@@ -248,7 +248,7 @@ Examinons l'événement de survie $\\{M > k\\}$ (pour $k \ge 1$). Dire qu'il fau
 
 Dans l'hypercube $[0, 1]^k$, cet événement correspond au domaine appelé *simplexe orthogonal* (ou coin de l'hypercube)&nbsp;:
 
-<p style="text-align:center;">
+<p style="text-align:center;overflow-x:auto;">
 $\displaystyle \Omega_k = \left\{ (u_1, u_2, \dots, u_k) \in \mathbb{R}^k \;\middle|\; u_1 \ge 0,\; \dots,\; u_k \ge 0 \text{ et } u_1 + \dots + u_k \le 1 \right\}$
 </p>
 
@@ -303,7 +303,7 @@ $$
 Analysons cette transformation linéaire $\Psi : (u\_1, \dots, u\_k) \mapsto (t\_1, \dots, t\_k)$&nbsp;:
 <ol>
 <li><b>Image géométrique&nbsp;:</b> Comme chaque incrément est positif ou nul ($u_i = t_i - t_{i-1} \ge 0$), la suite des sommes partielles $(t_i)$ est croissante ($0 \le t_1 \le t_2 \le \dots \le t_k$). Et la condition finale $u_1 + \dots + u_k \le 1$ s'écrit tout simplement $t_k \le 1$. L'application $\Psi$ envoie donc bijectivement le coin de sommation $\Omega_k$ sur le <b>simplexe canonique ordonné $\Delta_k$</b>&nbsp;:<br>
-<span style="display:block;text-align:center;margin:0.3em 0;">$\displaystyle \Psi(\Omega_k) = \left\{ (t_1, \dots, t_k) \in \mathbb{R}^k \;\middle|\; 0 \le t_1 \le t_2 \le \dots \le t_k \le 1 \right\}$ $\displaystyle = \Delta_k$</span>
+<span style="display:block;text-align:center;margin:0.3em 0;overflow-x:auto;">$\displaystyle \Psi(\Omega_k) = \left\{ (t_1, \dots, t_k) \in \mathbb{R}^k \;\middle|\; 0 \le t_1 \le t_2 \le \dots \le t_k \le 1 \right\}$ $\displaystyle = \Delta_k$</span>
 </li>
 <li style="margin-top:0.5em;"><b>Conservation exacte des volumes&nbsp;:</b> La matrice jacobienne $J$ de cette transformation linéaire est une matrice <b>triangulaire inférieure</b> dont tous les coefficients diagonaux valent $1$. Son déterminant vaut donc $\det(J) = 1 \times 1 \times \cdots \times 1 = 1$. Géométriquement, ajouter $u_1$ à $u_2$ est un simple <i>cisaillement</i> (transvection) parallèlement aux axes, qui fait glisser les tranches sans modifier leur longueur (principe de Cavalieri)&nbsp;: <b>$\Psi$ conserve rigoureusement les volumes</b>&nbsp;!
 </li>
