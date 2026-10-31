@@ -958,6 +958,121 @@ En résumé&nbsp;:
 <br>
 
 
+## Généralisation : semi-groupes et processus de Markov
+
+La croissance exponentielle, la série de Dyson, le processus de Poisson... Derrière tous ces exemples se cache une seule et même propriété, dont la causalité et l'absence de mémoire sont les deux faces.
+
+### La loi de composition
+
+Notons $U(t)$ l'opération qui fait évoluer un système pendant une durée $t$&nbsp;: multiplication d'un capital, opérateur d'évolution quantique, probabilités de transition d'un processus aléatoire... Dire que le processus est **sans mémoire** (et que ses règles ne changent pas au cours du temps), c'est dire qu'évoluer pendant $s$, puis pendant $t$, revient à évoluer pendant $s + t$, d'un seul coup&nbsp;:
+
+<div id="def">
+
+Une famille $(U(t))\_{t \ge 0}$ d'opérateurs est un **semi-groupe** lorsque
+
+$$
+U(t + s) = U(t)\\,U(s) \qquad \text{et} \qquad U(0) = \mathrm{Id}.
+$$
+
+Sa «&nbsp;vitesse&nbsp;» au départ, $A = U'(0)$, s'appelle son **générateur infinitésimal**. Lorsque $A$ est une matrice (ou plus généralement un opérateur borné), le semi-groupe est forcément une exponentielle&nbsp;:
+
+$$
+U(t) = \mathrm{e}^{tA} = \sum\_{k=0}^{+\infty} \frac{t^k}{k!}\\,A^k.
+$$
+
+</div>
+
+<br>
+
+On retrouve nos deux ingrédients en itérant l'équation $U' = AU$ à la manière de Picard&nbsp;: le terme d'ordre $k$ est l'intégrale de $A \cdot A \cdots A$ sur le simplexe des instants ordonnés $t \ge t\_1 \ge \dots \ge t\_k \ge 0$.
+<ul>
+<li>La <b>causalité</b> fixe l'ordre dans lequel on compose les $k$ «&nbsp;pas infinitésimaux&nbsp;»&nbsp;: elle fournit le simplexe.</li>
+<li>L'<b>absence de mémoire</b> rend chaque pas identique, quel que soit l'instant&nbsp;: l'intégrande vaut toujours $A^k$, le poids est uniforme, et l'intégrale vaut $A^k \times \frac{t^k}{k!}$.</li>
+</ul>
+
+### Les processus de Markov
+
+L'exemple le plus parlant est celui d'une **chaîne de Markov à temps continu**&nbsp;: un système qui saute aléatoirement entre quelques états $a$, $b$, $c$, ..., en n'ayant aucune mémoire du passé. Elle est décrite par une matrice de **taux de saut** $Q$ (le coefficient $Q\_{ij}$, pour $i \neq j$, est le taux de passage de l'état $i$ à l'état $j$, et chaque ligne de $Q$ est de somme nulle). Les probabilités de transition $P(t)$ vérifient l'équation de **Chapman-Kolmogorov**, $P(t + s) = P(t)\\,P(s)$&nbsp;: c'est exactement un semi-groupe, donc $P(t) = \mathrm{e}^{tQ}$.
+
+On peut même voir les simplexes à l'œil nu. Imaginons une **horloge de Poisson** qui sonne au hasard, au taux $\lambda$ (choisi au moins égal au plus grand taux de sortie d'un état). À chaque sonnerie, la chaîne fait un pas selon la matrice stochastique $K = I + \frac{Q}{\lambda}$&nbsp;: elle change d'état, ou reste sur place. Cette construction, appelée **uniformisation**, donne
+
+$$
+P(t) = \sum\_{k=0}^{+\infty} \mathrm{e}^{-\lambda t}\\,\frac{(\lambda t)^k}{k!}\\;K^k.
+$$
+
+<div class="svg-container">
+<svg viewBox="0 0 490 215" role="img" aria-label="Une horloge de Poisson sonne à des instants aléatoires ordonnés ; à chaque sonnerie la chaîne saute, ou reste sur place" style="width:100%;max-width:490px;height:auto;">
+<line x1="95.0" y1="40.0" x2="425.0" y2="40.0" stroke="#eef2f6" stroke-width="1" />
+<text x="81.0" y="45.0" text-anchor="end" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >état a</text>
+<line x1="95.0" y1="80.0" x2="425.0" y2="80.0" stroke="#eef2f6" stroke-width="1" />
+<text x="81.0" y="85.0" text-anchor="end" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >état b</text>
+<line x1="95.0" y1="120.0" x2="425.0" y2="120.0" stroke="#eef2f6" stroke-width="1" />
+<text x="81.0" y="125.0" text-anchor="end" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >état c</text>
+<line x1="95.0" y1="40.0" x2="154.4" y2="40.0" stroke="#004D80" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="154.4" y1="40.0" x2="154.4" y2="120.0" stroke="#80a6c0" stroke-width="1.4" stroke-dasharray="3 2"/>
+<line x1="154.4" y1="120.0" x2="250.1" y2="120.0" stroke="#004D80" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="250.1" y1="120.0" x2="302.9" y2="120.0" stroke="#004D80" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="302.9" y1="120.0" x2="302.9" y2="80.0" stroke="#80a6c0" stroke-width="1.4" stroke-dasharray="3 2"/>
+<line x1="302.9" y1="80.0" x2="378.8" y2="80.0" stroke="#004D80" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="378.8" y1="80.0" x2="378.8" y2="40.0" stroke="#80a6c0" stroke-width="1.4" stroke-dasharray="3 2"/>
+<line x1="378.8" y1="40.0" x2="425.0" y2="40.0" stroke="#004D80" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="95.0" y1="165.0" x2="425.0" y2="165.0" stroke="#94a3b8" stroke-width="1" />
+<line x1="95.0" y1="161.0" x2="95.0" y2="169.0" stroke="#94a3b8" stroke-width="1" />
+<text x="95.0" y="185.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >0</text>
+<line x1="425.0" y1="161.0" x2="425.0" y2="169.0" stroke="#94a3b8" stroke-width="1" />
+<text x="425.0" y="185.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >t</text>
+<line x1="154.4" y1="28.0" x2="154.4" y2="165.0" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2 3"/>
+<circle cx="154.4" cy="165" r="4.5" fill="#970E53"/>
+<text x="154.4" y="185.0" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >s<tspan dy='3' font-size='10'>1</tspan><tspan dy='-3'></tspan></text>
+<line x1="250.1" y1="28.0" x2="250.1" y2="165.0" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2 3"/>
+<circle cx="250.1" cy="165" r="4.5" fill="#970E53"/>
+<text x="250.1" y="185.0" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >s<tspan dy='3' font-size='10'>2</tspan><tspan dy='-3'></tspan></text>
+<line x1="302.9" y1="28.0" x2="302.9" y2="165.0" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2 3"/>
+<circle cx="302.9" cy="165" r="4.5" fill="#970E53"/>
+<text x="302.9" y="185.0" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >s<tspan dy='3' font-size='10'>3</tspan><tspan dy='-3'></tspan></text>
+<line x1="378.8" y1="28.0" x2="378.8" y2="165.0" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2 3"/>
+<circle cx="378.8" cy="165" r="4.5" fill="#970E53"/>
+<text x="378.8" y="185.0" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >s<tspan dy='3' font-size='10'>4</tspan><tspan dy='-3'></tspan></text>
+<circle cx="250.1" cy="120" r="4" fill="#fff" stroke="#004D80" stroke-width="1.6"/>
+<text x="250.1" y="142.0" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">saut « sur place »</text>
+<text x="433.0" y="169.0" text-anchor="start" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >horloge</text>
+</svg>
+</div>
+<p class="legende">L'horloge sonne aux instants $s_1 \le s_2 \le \dots$&nbsp;; à chaque sonnerie, la chaîne fait un pas, éventuellement «&nbsp;sur place&nbsp;». Sachant qu'il y a eu $k$ sonneries, leurs instants sont répartis uniformément sur le simplexe.</p>
+
+Le $\frac{(\lambda t)^k}{k!}$ est celui de la loi de Poisson, c'est-à-dire, une fois de plus, le volume d'un simplexe d'instants ordonnés, pondéré uniformément parce que les attentes entre sonneries suivent la loi exponentielle, la loi sans mémoire.
+
+Deux variantes confirment le schéma&nbsp;:
+<ul>
+<li><b>Si les taux dépendent du temps</b> ($Q(t)$), on obtient une exponentielle ordonnée $T\exp\left(\int Q\right)$, exactement comme la série de Dyson&nbsp;: les matrices $Q(t)$ à des instants différents ne commutent pas en général, et le produit chronologique $T$ joue le même rôle qu'en physique quantique.</li>
+<li><b>En temps discret</b>, on ne trouve pas de $k!$&nbsp;: choisir $k$ pas parmi $n$ donne $\binom{n}{k}$, le «&nbsp;simplexe discret&nbsp;». Le $\frac{1}{k!}$ n'apparaît qu'à la limite du temps continu, via $\binom{n}{k}\frac{1}{n^k} \to \frac{1}{k!}$&nbsp;: c'est toute l'histoire de <a href="#lhypercube-dilaté">l'hypercube dilaté</a>.</li>
+</ul>
+
+### Un invité surprise : la formule de Taylor
+
+Même les $\frac{1}{k!}$ de la formule de Taylor viennent de là. Écrivons $f(t) = f(0) + \int\_0^t f'(t\_1)\\,\mathrm{d}t\_1$, puis recommençons avec $f'$, puis $f''$, etc.&nbsp;:
+
+$$
+f(t) = \sum\_{k=0}^{n-1} f^{(k)}(0)\\,\frac{t^k}{k!} + \int\_{t \ge t\_1 \ge \dots \ge t\_n \ge 0} f^{(n)}(t\_n)\\,\mathrm{d}t\_n \cdots \mathrm{d}t\_1.
+$$
+
+Les $\frac{t^k}{k!}$ sont des volumes de simplexes, et le reste est une intégrale sur un simplexe. Le semi-groupe sous-jacent est celui des **translations** $f \mapsto f(\cdot + t)$, dont le générateur est la dérivation&nbsp;: la formule de Taylor dit simplement que translater, c'est appliquer $\mathrm{e}^{t\\,\mathrm{d}/\mathrm{d}x}$.
+
+### Deux limites à garder en tête
+
+**L'absence de mémoire dépend de la description.** La causalité est universelle, mais l'absence de mémoire est une propriété de l'*état* que l'on choisit de suivre. La population avec temps de maturation redevient sans mémoire si l'on suit toute la pyramide des âges au lieu de la seule quantité totale. À l'inverse, un système isolé décrit complètement évolue sans mémoire, mais dès que l'on n'en observe qu'une partie, de la mémoire apparaît (c'est le formalisme de Mori-Zwanzig). «&nbsp;Sans mémoire&nbsp;» veut dire&nbsp;: *l'état choisi contient tout ce qui compte pour l'avenir*.
+
+**La série peut cesser de converger.** Pour l'équation de la chaleur (le semi-groupe du mouvement brownien), le générateur est le laplacien $\Delta$, qui n'est pas borné. Le semi-groupe $\mathrm{e}^{t\Delta}$ existe bien, mais la série $\sum \frac{t^k}{k!}\Delta^k f$ diverge en général. Ce qui survit alors, c'est la formule de Bernoulli, sous la forme $\mathrm{e}^{t\Delta} = \lim\_{n \to +\infty}\left(\mathrm{Id} - \frac{t}{n}\Delta\right)^{-n}$&nbsp;: l'image des intérêts composés tient là où celle du simplexe tombe en panne.
+
+<div id="theo">
+
+**En résumé&nbsp;:** la propriété fondamentale est la loi de composition $U(t + s) = U(t)\\,U(s)$. La causalité dit dans quel ordre on compose, l'absence de mémoire dit que chaque pas ne dépend que du présent. Ensemble, elles imposent l'exponentielle, et le $\frac{1}{k!}$ en est la trace géométrique&nbsp;: la part de l'hypercube des instants qui respecte l'ordre chronologique.
+
+</div>
+
+<br>
+
+
 <hr style="margin:2em 0;border:none;border-top:1px solid #cbd5e1;">
 
 <div style="background:#f8fafc;border:1px solid #cbd5e1;border-left:6px solid #970E53;border-radius:10px;padding:14px 18px;font-size:0.95em;">
