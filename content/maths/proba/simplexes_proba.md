@@ -103,7 +103,7 @@ En probabilités, cette propriété produit un effet spectaculaire. Tirons $k$ n
 
 ## Rupture de monotonie ($\mathbb{E}[N] = \mathrm{e}$)
 
-### 1. Le jeu des tirages croissants
+### Le jeu des tirages croissants
 
 <div id="def">
 
@@ -141,7 +141,7 @@ Notons $N$ le nombre total de tirages effectués au moment de l'arrêt&nbsp;: $\
 <p class="legende">Une partie typique&nbsp;: trois tirages croissants, puis une baisse au quatrième. Ici $N = 4$.</p>
 
 
-### 2. Somme des probabilités de survie
+### Somme des probabilités de survie
 
 Avant même de calculer les probabilités liées aux $U\_i$, rappelons une identité très générale et extrêmement commode pour toute variable aléatoire $N$ à valeurs dans les entiers naturels ($\mathbb{N}$)&nbsp;: au lieu de calculer $\mathbb{E}[N] = \sum\_{k=1}^{+\infty} k\\,\mathbb{P}(N = k)$, on peut exprimer l'espérance comme la **somme des probabilités de survie** $\mathbb{P}(N > k)$.
 
@@ -170,7 +170,7 @@ $$
 
 <br>
 
-### 3. Le simplexe $\Delta\_k$ donne la réponse sans calcul
+### Le simplexe $\Delta\_k$ donne la réponse sans calcul
 
 Que signifie l'événement de survie $\\{N > k\\}$ pour un entier $k \ge 1$&nbsp;?
 Dire que l'on ne s'est **pas encore arrêté** à l'issue du $k$-ième tirage signifie exactement que les $k$ premiers nombres tirés n'ont subi aucune baisse, autrement dit qu'ils sont **rangés par ordre croissant**&nbsp;:
@@ -204,7 +204,7 @@ Et la probabilité de s'arrêter exactement au $k$-ième tirage ($k \ge 2$) vaut
 
 ## Seuil de Gnedenko ($\mathbb{E}[M] = \mathrm{e}$)
 
-### 1. Dépasser $1$ en additionnant des tirages
+### Dépasser $1$ en additionnant des tirages
 
 Changeons maintenant complètement la règle d'arrêt, tout en conservant la même suite de tirages uniformes $U\_1, U\_2, \dots \in [0, 1]$.
 
@@ -242,7 +242,7 @@ Notons $M$ le nombre de tirages nécessaires pour franchir le seuil $1$&nbsp;: $
 
 À première vue, additionner des nombres jusqu'à dépasser $1$ semble très différent de les comparer l'un à l'autre ($U\_1 \le U\_2 \le \dots \le U\_k$). Et pourtant, un simple cisaillement géométrique montre que **les deux problèmes sont isomorphes**&nbsp;!
 
-### 2. Preuve géométrique par cisaillement ($\det J = 1$)
+### Preuve géométrique par cisaillement ($\det J = 1$)
 
 Examinons l'événement de survie $\\{M > k\\}$ (pour $k \ge 1$). Dire qu'il faut *strictement plus* de $k$ tirages pour que la somme dépasse $1$ équivaut à dire que la somme des $k$ premiers tirages est restée **inférieure ou égale à $1$**, soit $\displaystyle \\{M > k\\} = \left\\{ U\_1 + U\_2 + \dots + U\_k \le 1 \right\\}$.
 
@@ -317,7 +317,7 @@ D'où à nouveau, par sommation des probabilités de survie&nbsp;: $\displaystyl
 
 <br>
 
-### 3. Preuve analytique par absence de mémoire
+### Preuve analytique par absence de mémoire
 
 Peut-on retrouver $\mathbb{E}[M] = \mathrm{e}$ directement à partir de l'équation différentielle de l'exponentielle ($f' = f$), sans même passer par la série $\sum \frac{1}{k!}$&nbsp;?
 
@@ -363,7 +363,7 @@ D'où $m(0) = 1$ et, par dérivation, $m'(x) = m(x)$, ce qui implique $m(x) = \m
 
 **Et au-delà de $1$&nbsp;?** L'argument repose sur le fait que, tant que $x \le 1$, le premier tirage peut tomber n'importe où dans $[0, x]$ avec la même densité&nbsp;: le jeu est alors «&nbsp;sans mémoire&nbsp;», et l'on retrouve l'équation de l'exponentielle. Pour un seuil $x > 1$, ce n'est plus vrai (un tirage ne dépasse jamais $1$), et l'équation devient $m'(x) = m(x) - m(x - 1)$&nbsp;: la valeur en $x$ dépend de ce qui s'est passé une unité plus tôt. La mémoire réapparaît, et l'exponentielle disparaît&nbsp;: on trouve par exemple $m(2) = \mathrm{e}^2 - \mathrm{e} \approx 4,67$, puis $m(x) \approx 2x + \frac{2}{3}$ pour les grands seuils. Ce lien entre $\frac{1}{k!}$ et absence de mémoire est détaillé [dans la partie géométrique](../../geometrie/simplexes/#le-k-signature-de-labsence-de-mémoire).
 
-### 4. Vérification par simulation
+### Vérification par simulation
 
 Simulons $100\,000$ parties de chacun des deux jeux, et comptons dans quelle proportion de parties on a survécu au-delà du $k$-ième tirage&nbsp;:
 
@@ -419,7 +419,7 @@ Les nombres moyens de tirages observés valent $2,716$ pour la rupture de monoto
 
 ## Dérangements de Montmort ($\mathrm{e}^{-1}$)
 
-### 1. Le problème des chapeaux (1708)
+### Le problème des chapeaux (1708)
 
 <div id="def">
 
@@ -438,7 +438,7 @@ $\displaystyle D_n = \left\{ \sigma \in \mathfrak{S}_n \;\middle|\; \forall i \i
 
 Quand le nombre de convives $n$ grandit, deux effets opposés s'affrontent&nbsp;: il y a de plus en plus d'individus susceptibles de tomber sur leur propre chapeau, mais chacun n'a plus qu'une chance $\frac{1}{n}$ de tomber sur le sien. Ces deux effets se compensent avec une précision stupéfiante&nbsp;: dès $n = 7$ convives, la probabilité $p\_n$ vaut déjà **$\frac{1}{\mathrm{e}} \approx 36,788\\,\\%$** à moins de trois cent-millièmes près&nbsp;!
 
-### 2. Crible de Poincaré et simplexe discret
+### Crible de Poincaré et simplexe discret
 
 Passons par l'événement complémentaire&nbsp;: «&nbsp;**au moins un** convive récupère son propre chapeau&nbsp;», c'est-à-dire la réunion $\bigcup\_{i=1}^n A\_i$, où $A\_i = \\{\sigma \in \mathfrak{S}\_n \mid \sigma(i) = i\\}$.
 
@@ -532,7 +532,7 @@ La distance entre l'entier $|D\_n|$ et le réel $\frac{n!}{\mathrm{e}}$ étant s
 <p class="legende">La probabilité $p_n$ qu'aucun convive ne récupère son chapeau oscille autour de $\frac{1}{\mathrm{e}}$ et s'en rapproche très vite&nbsp;: l'écart est inférieur à $\frac{1}{(n+1)!}$.</p>
 
 
-### 3. Dualité $\mathrm{e} \cdot \mathrm{e}^{-1} = 1$ et loi de Poisson $\mathcal{P}(1)$
+### Dualité $\mathrm{e} \cdot \mathrm{e}^{-1} = 1$ et loi de Poisson $\mathcal{P}(1)$
 
 On peut également retrouver $\lim p\_n = \frac{1}{\mathrm{e}}$ **sans aucun signe alterné**, en classant les $n!$ permutations de $\mathfrak{S}\_n$ selon leur **nombre exact $k$ de points fixes** ($k \in \\{0, \dots, n\\}$)&nbsp;:
 <ul>

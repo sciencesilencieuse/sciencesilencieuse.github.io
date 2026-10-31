@@ -347,7 +347,7 @@ Géométriquement, les trois plans $t\_1 = t\_2$, $t\_2 = t\_3$ et $t\_1 = t\_3$
 
 <b>Théorème (Pavage de l'hypercube en simplexes de permutation).</b> L'hypercube unité $[0, 1]^k$ est partitionné (à des hyperplans diagonaux $t\_i = t\_j$ de volume nul près) en $k!$ simplexes isométriques $D\_\sigma$ indexés par les permutations $\sigma \in \mathfrak{S}\_k$&nbsp;:
 
-<p style="text-align:center;">
+<p style="text-align:center;overflow-x:auto;">
 $\displaystyle D_\sigma = \left\{ (t_1, \dots, t_k) \in [0, 1]^k \;\middle|\; 0 \le t_{\sigma(1)} \le t_{\sigma(2)} \le \dots \le t_{\sigma(k)} \le 1 \right\}$
 </p>
 
@@ -720,9 +720,13 @@ $$
 
 ce qui se lit&nbsp;: «&nbsp;la quantité à l'instant $t$ est la quantité initiale plus tout ce qui a été produit entre $0$ et $t$&nbsp;». On ne connaît pas $L$ sous l'intégrale... alors **remplaçons-la par sa propre expression**, et recommençons&nbsp;:
 
+<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0.5em;">
+
 $$
 L(t) = 1 + \int\_0^t \mathrm{d}t\_1 + \int\_0^t \mathrm{d}t\_1 \int\_0^{t\_1} \mathrm{d}t\_2 + \int\_0^t \mathrm{d}t\_1 \int\_0^{t\_1} \mathrm{d}t\_2 \int\_0^{t\_2} \mathrm{d}t\_3 + \cdots
 $$
+
+</div>
 
 Chaque réinjection fait descendre d'une génération. Le terme d'ordre $k$ est une intégrale sur le domaine $\\{t \ge t\_1 \ge t\_2 \ge \dots \ge t\_k \ge 0\\}$&nbsp;: c'est le simplexe $\Delta\_k$ agrandi d'un facteur $t$, de volume $\frac{t^k}{k!}$. On retrouve ainsi
 
@@ -1001,9 +1005,13 @@ Ce cadre englobe en particulier les **processus de Markov**&nbsp;: un système q
 
 Même les $\frac{1}{k!}$ de la formule de Taylor viennent de là. Écrivons $f(t) = f(0) + \int\_0^t f'(t\_1)\\,\mathrm{d}t\_1$, puis recommençons avec $f'$, puis $f''$, etc.&nbsp;:
 
+<div id="grosseformule" style="margin-top:-0.5em;margin-bottom:-0.5em;">
+
 $$
 f(t) = \sum\_{k=0}^{n-1} f^{(k)}(0)\\,\frac{t^k}{k!} + \int\_{t \ge t\_1 \ge \dots \ge t\_n \ge 0} f^{(n)}(t\_n)\\,\mathrm{d}t\_n \cdots \mathrm{d}t\_1.
 $$
+
+</div>
 
 Les $\frac{t^k}{k!}$ sont des volumes de simplexes, et le reste est une intégrale sur un simplexe. Le semi-groupe sous-jacent est celui des **translations** $f \mapsto f(\cdot + t)$, dont le générateur est la dérivation&nbsp;: la formule de Taylor dit simplement que translater, c'est appliquer $\mathrm{e}^{t\\,\mathrm{d}/\mathrm{d}x}$.
 
