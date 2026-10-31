@@ -45,6 +45,15 @@ weight = 3
     border-radius:10px;
     padding:5px 20px 5px 20px;
 }
+.tableau-large
+{
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.tableau-large table
+{
+    min-width: 48rem;
+}
 </style>
 
 
@@ -146,10 +155,14 @@ L'autre grand nombre irrationnel a une origine plus tardive et moins spectaculai
 
 Ce talent d'ubiquité vient pour une part de son lien avec la fraction $\mathbf{\frac{1}{k!}}$ qui émerge dans quatre univers mathématiques et physiques par le **même mécanisme géométrique de brisure de symétrie de permutation** ($\operatorname{Card}(\mathfrak{S}\_k) = k!$)&nbsp;:
 
+<div class="tableau-large">
+
 | Volet & Domaine | Objet global de mesure $1$ | Symétrie brisée ($\mathfrak{S}\_k$) | Domaine résiduel de mesure $\frac{1}{k!}$ | Somme sur $k \ge 0$ |
 | :--- | :--- | :--- | :--- | :--- |
 | **[1. Intérêts composés](../../arithmetique/exponentielle/)** | $k$-uplets de périodes parmi $n$ ($n^k \times \frac{1}{n^k} = 1$) | Filiation chronologique des intérêts $1 \le i_1 < \dots < i_k \le n$ | Gain de $k$-ième génération $\binom{n}{k}\frac{1}{n^k} \to \frac{1}{k!}$ | $\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n = \mathrm{e}$ |
 | **[2. Géométrie euclidienne](../../geometrie/simplexes/)** | Hypercube unité $[0, 1]^k$ | Ordre croissant des coordonnées $t_{\sigma(1)} \le \dots \le t_{\sigma(k)}$ | Simplexe canonique $\Delta_k = \\{0 \le t_1 \le \dots \le t_k \le 1\\}$ | $\sum_{k=0}^\infty \operatorname{Vol}_k(\Delta_k) = \mathrm{e}$ |
 | **[2. Physique quantique (TQC)](../../geometrie/simplexes/#flèche-du-temps--dyson-et-wick)** | Hypercube des temps $[t', t]^k$ sous l'opérateur $T$ | Causalité temporelle ($t \ge t_1 \ge \dots \ge t_k \ge t'$) | Simplexe causal de la [série de Dyson](/physique/tqc/gifted_amateur/tqc7/#la-série-de-dyson) | $\hat U_I = T\exp\left(-\mathrm{i}\int \hat H_I\right)$ |
 | **[3. Probabilités](../../proba/simplexes_proba)** | Tirages uniformes sur $[0, 1]^k$ ou $k$-uplets de points fixes | Monotonie ($U_1 \le \dots \le U_k$), cisaillement ($T_j = \sum_{i=1}^j U_i$) ou crible $\\{i_1 < \dots < i_k\\}$ | Survie $\mathbb{P}(N > k) = \frac{1}{k!}$ ou terme du crible $\frac{(-1)^k}{k!}$ | $\mathbb{E}[N] = \mathbb{E}[M] = \mathrm{e}$ et $\lim p_n = \mathrm{e}^{-1}$ |
+
+</div>
 
