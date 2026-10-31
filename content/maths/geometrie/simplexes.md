@@ -958,11 +958,9 @@ En résumé&nbsp;:
 <br>
 
 
-## Généralisation : semi-groupes et processus de Markov
+## Généralisation : la loi de composition
 
-La croissance exponentielle, la série de Dyson, le processus de Poisson... Derrière tous ces exemples se cache une seule et même propriété, dont la causalité et l'absence de mémoire sont les deux faces.
-
-### La loi de composition
+La croissance exponentielle, la série de Dyson, le processus de Poisson... Derrière tous ces exemples se cache une seule et même propriété.
 
 Notons $U(t)$ l'opération qui fait évoluer un système pendant une durée $t$&nbsp;: multiplication d'un capital, opérateur d'évolution quantique, probabilités de transition d'un processus aléatoire... Dire que le processus est **sans mémoire** (et que ses règles ne changent pas au cours du temps), c'est dire qu'évoluer pendant $s$, puis pendant $t$, revient à évoluer pendant $s + t$, d'un seul coup&nbsp;:
 
@@ -974,7 +972,7 @@ $$
 U(t + s) = U(t)\\,U(s) \qquad \text{et} \qquad U(0) = \mathrm{Id}.
 $$
 
-Sa «&nbsp;vitesse&nbsp;» au départ, $A = U'(0)$, s'appelle son **générateur infinitésimal**. Lorsque $A$ est une matrice (ou plus généralement un opérateur borné), le semi-groupe est forcément une exponentielle&nbsp;:
+Sa «&nbsp;vitesse&nbsp;» au départ, $A = U'(0)$, s'appelle son **générateur**. Lorsque $A$ est un nombre ou une matrice, le semi-groupe est forcément une exponentielle&nbsp;:
 
 $$
 U(t) = \mathrm{e}^{tA} = \sum\_{k=0}^{+\infty} \frac{t^k}{k!}\\,A^k.
@@ -984,69 +982,20 @@ $$
 
 <br>
 
-On retrouve nos deux ingrédients en itérant l'équation $U' = AU$ à la manière de Picard&nbsp;: le terme d'ordre $k$ est l'intégrale de $A \cdot A \cdots A$ sur le simplexe des instants ordonnés $t \ge t\_1 \ge \dots \ge t\_k \ge 0$.
-<ul>
-<li>La <b>causalité</b> fixe l'ordre dans lequel on compose les $k$ «&nbsp;pas infinitésimaux&nbsp;»&nbsp;: elle fournit le simplexe.</li>
-<li>L'<b>absence de mémoire</b> rend chaque pas identique, quel que soit l'instant&nbsp;: l'intégrande vaut toujours $A^k$, le poids est uniforme, et l'intégrale vaut $A^k \times \frac{t^k}{k!}$.</li>
-</ul>
-
-### Les processus de Markov
-
-L'exemple le plus parlant est celui d'une **chaîne de Markov à temps continu**&nbsp;: un système qui saute aléatoirement entre quelques états $a$, $b$, $c$, ..., en n'ayant aucune mémoire du passé. Elle est décrite par une matrice de **taux de saut** $Q$ (le coefficient $Q\_{ij}$, pour $i \neq j$, est le taux de passage de l'état $i$ à l'état $j$, et chaque ligne de $Q$ est de somme nulle). Les probabilités de transition $P(t)$ vérifient l'équation de **Chapman-Kolmogorov**, $P(t + s) = P(t)\\,P(s)$&nbsp;: c'est exactement un semi-groupe, donc $P(t) = \mathrm{e}^{tQ}$.
-
-On peut même voir les simplexes à l'œil nu. Imaginons une **horloge de Poisson** qui sonne au hasard, au taux $\lambda$ (choisi au moins égal au plus grand taux de sortie d'un état). À chaque sonnerie, la chaîne fait un pas selon la matrice stochastique $K = I + \frac{Q}{\lambda}$&nbsp;: elle change d'état, ou reste sur place. Cette construction, appelée **uniformisation**, donne
+**Où se cachent la causalité et l'absence de mémoire&nbsp;?** Pas dans la formule $\mathrm{e}^{tA}$ elle-même, mais dans la façon dont elle se construit. Itérons l'équation $U' = AU$ à la manière de Picard&nbsp;:
 
 $$
-P(t) = \sum\_{k=0}^{+\infty} \mathrm{e}^{-\lambda t}\\,\frac{(\lambda t)^k}{k!}\\;K^k.
+U(t) = \mathrm{Id} + \int\_0^t A\\,\mathrm{d}t\_1 + \int\_0^t \mathrm{d}t\_1 \int\_0^{t\_1} \mathrm{d}t\_2 \\; A \cdot A + \cdots
 $$
 
-<div class="svg-container">
-<svg viewBox="0 0 490 215" role="img" aria-label="Une horloge de Poisson sonne à des instants aléatoires ordonnés ; à chaque sonnerie la chaîne saute, ou reste sur place" style="width:100%;max-width:490px;height:auto;">
-<line x1="95.0" y1="40.0" x2="425.0" y2="40.0" stroke="#eef2f6" stroke-width="1" />
-<text x="81.0" y="45.0" text-anchor="end" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >état a</text>
-<line x1="95.0" y1="80.0" x2="425.0" y2="80.0" stroke="#eef2f6" stroke-width="1" />
-<text x="81.0" y="85.0" text-anchor="end" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >état b</text>
-<line x1="95.0" y1="120.0" x2="425.0" y2="120.0" stroke="#eef2f6" stroke-width="1" />
-<text x="81.0" y="125.0" text-anchor="end" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >état c</text>
-<line x1="95.0" y1="40.0" x2="154.4" y2="40.0" stroke="#004D80" stroke-width="3.5" stroke-linecap="round"/>
-<line x1="154.4" y1="40.0" x2="154.4" y2="120.0" stroke="#80a6c0" stroke-width="1.4" stroke-dasharray="3 2"/>
-<line x1="154.4" y1="120.0" x2="250.1" y2="120.0" stroke="#004D80" stroke-width="3.5" stroke-linecap="round"/>
-<line x1="250.1" y1="120.0" x2="302.9" y2="120.0" stroke="#004D80" stroke-width="3.5" stroke-linecap="round"/>
-<line x1="302.9" y1="120.0" x2="302.9" y2="80.0" stroke="#80a6c0" stroke-width="1.4" stroke-dasharray="3 2"/>
-<line x1="302.9" y1="80.0" x2="378.8" y2="80.0" stroke="#004D80" stroke-width="3.5" stroke-linecap="round"/>
-<line x1="378.8" y1="80.0" x2="378.8" y2="40.0" stroke="#80a6c0" stroke-width="1.4" stroke-dasharray="3 2"/>
-<line x1="378.8" y1="40.0" x2="425.0" y2="40.0" stroke="#004D80" stroke-width="3.5" stroke-linecap="round"/>
-<line x1="95.0" y1="165.0" x2="425.0" y2="165.0" stroke="#94a3b8" stroke-width="1" />
-<line x1="95.0" y1="161.0" x2="95.0" y2="169.0" stroke="#94a3b8" stroke-width="1" />
-<text x="95.0" y="185.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >0</text>
-<line x1="425.0" y1="161.0" x2="425.0" y2="169.0" stroke="#94a3b8" stroke-width="1" />
-<text x="425.0" y="185.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >t</text>
-<line x1="154.4" y1="28.0" x2="154.4" y2="165.0" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2 3"/>
-<circle cx="154.4" cy="165" r="4.5" fill="#970E53"/>
-<text x="154.4" y="185.0" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >s<tspan dy='3' font-size='10'>1</tspan><tspan dy='-3'></tspan></text>
-<line x1="250.1" y1="28.0" x2="250.1" y2="165.0" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2 3"/>
-<circle cx="250.1" cy="165" r="4.5" fill="#970E53"/>
-<text x="250.1" y="185.0" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >s<tspan dy='3' font-size='10'>2</tspan><tspan dy='-3'></tspan></text>
-<line x1="302.9" y1="28.0" x2="302.9" y2="165.0" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2 3"/>
-<circle cx="302.9" cy="165" r="4.5" fill="#970E53"/>
-<text x="302.9" y="185.0" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >s<tspan dy='3' font-size='10'>3</tspan><tspan dy='-3'></tspan></text>
-<line x1="378.8" y1="28.0" x2="378.8" y2="165.0" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2 3"/>
-<circle cx="378.8" cy="165" r="4.5" fill="#970E53"/>
-<text x="378.8" y="185.0" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >s<tspan dy='3' font-size='10'>4</tspan><tspan dy='-3'></tspan></text>
-<circle cx="250.1" cy="120" r="4" fill="#fff" stroke="#004D80" stroke-width="1.6"/>
-<text x="250.1" y="142.0" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">saut « sur place »</text>
-<text x="433.0" y="169.0" text-anchor="start" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >horloge</text>
-</svg>
-</div>
-<p class="legende">L'horloge sonne aux instants $s_1 \le s_2 \le \dots$&nbsp;; à chaque sonnerie, la chaîne fait un pas, éventuellement «&nbsp;sur place&nbsp;». Sachant qu'il y a eu $k$ sonneries, leurs instants sont répartis uniformément sur le simplexe.</p>
-
-Le $\frac{(\lambda t)^k}{k!}$ est celui de la loi de Poisson, c'est-à-dire, une fois de plus, le volume d'un simplexe d'instants ordonnés, pondéré uniformément parce que les attentes entre sonneries suivent la loi exponentielle, la loi sans mémoire.
-
-Deux variantes confirment le schéma&nbsp;:
 <ul>
-<li><b>Si les taux dépendent du temps</b> ($Q(t)$), on obtient une exponentielle ordonnée $T\exp\left(\int Q\right)$, exactement comme la série de Dyson&nbsp;: les matrices $Q(t)$ à des instants différents ne commutent pas en général, et le produit chronologique $T$ joue le même rôle qu'en physique quantique.</li>
-<li><b>En temps discret</b>, on ne trouve pas de $k!$&nbsp;: choisir $k$ pas parmi $n$ donne $\binom{n}{k}$, le «&nbsp;simplexe discret&nbsp;». Le $\frac{1}{k!}$ n'apparaît qu'à la limite du temps continu, via $\binom{n}{k}\frac{1}{n^k} \to \frac{1}{k!}$&nbsp;: c'est toute l'histoire de <a href="#lhypercube-dilaté">l'hypercube dilaté</a>.</li>
+<li><b>La causalité est dans les bornes.</b> Dans le terme d'ordre $2$, la seconde intégrale s'arrête à $t_1$&nbsp;: les deux «&nbsp;pas&nbsp;» ont lieu à des instants rangés dans l'ordre, $t_2 \le t_1$. On intègre donc sur le triangle $\{0 \le t_2 \le t_1 \le t\}$, et non sur tout le carré $[0, t]^2$. À l'ordre $k$, c'est un simplexe.</li>
+<li><b>L'absence de mémoire est dans l'intégrande.</b> Chaque pas vaut $A$, quel que soit l'instant où il a lieu et quoi qu'il se soit passé avant&nbsp;: l'intégrande vaut $A \cdot A = A^2$ partout. L'intégrale vaut donc simplement $A^2$ fois l'aire du triangle, $\frac{t^2}{2}$, et à l'ordre $k$, $A^k$ fois le volume du simplexe, $\frac{t^k}{k!}$.</li>
 </ul>
+
+Comme tous les pas sont identiques, l'ordre ne change rien à leur produit&nbsp;: la causalité ne «&nbsp;coûte&nbsp;» que le facteur $\frac{1}{k!}$, et disparaît ensuite de la formule finale. Elle ne pèse vraiment que si les pas changent au cours du temps (un générateur $A(t)$ qui dépend de l'instant)&nbsp;: le produit $A(t\_1)A(t\_2)$ dépend alors de l'ordre des facteurs, et il faut le produit chronologique $T$, comme dans la série de Dyson.
+
+Ce cadre englobe en particulier les **processus de Markov**&nbsp;: un système qui saute au hasard entre plusieurs états, sans mémoire du chemin parcouru. Ses probabilités de transition vérifient la même loi de composition (c'est l'équation de Chapman-Kolmogorov), et sont donc données par une exponentielle de matrice $\mathrm{e}^{tQ}$, où la matrice $Q$ rassemble les taux de saut d'un état à l'autre. Les mêmes $\frac{t^k}{k!}$ y apparaissent, pour les mêmes raisons.
 
 ### Un invité surprise : la formule de Taylor
 
@@ -1058,15 +1007,11 @@ $$
 
 Les $\frac{t^k}{k!}$ sont des volumes de simplexes, et le reste est une intégrale sur un simplexe. Le semi-groupe sous-jacent est celui des **translations** $f \mapsto f(\cdot + t)$, dont le générateur est la dérivation&nbsp;: la formule de Taylor dit simplement que translater, c'est appliquer $\mathrm{e}^{t\\,\mathrm{d}/\mathrm{d}x}$.
 
-### Deux limites à garder en tête
-
-**L'absence de mémoire dépend de la description.** La causalité est universelle, mais l'absence de mémoire est une propriété de l'*état* que l'on choisit de suivre. La population avec temps de maturation redevient sans mémoire si l'on suit toute la pyramide des âges au lieu de la seule quantité totale. À l'inverse, un système isolé décrit complètement évolue sans mémoire, mais dès que l'on n'en observe qu'une partie, de la mémoire apparaît (c'est le formalisme de Mori-Zwanzig). «&nbsp;Sans mémoire&nbsp;» veut dire&nbsp;: *l'état choisi contient tout ce qui compte pour l'avenir*.
-
-**La série peut cesser de converger.** Pour l'équation de la chaleur (le semi-groupe du mouvement brownien), le générateur est le laplacien $\Delta$, qui n'est pas borné. Le semi-groupe $\mathrm{e}^{t\Delta}$ existe bien, mais la série $\sum \frac{t^k}{k!}\Delta^k f$ diverge en général. Ce qui survit alors, c'est la formule de Bernoulli, sous la forme $\mathrm{e}^{t\Delta} = \lim\_{n \to +\infty}\left(\mathrm{Id} - \frac{t}{n}\Delta\right)^{-n}$&nbsp;: l'image des intérêts composés tient là où celle du simplexe tombe en panne.
+**Une précision pour finir.** L'absence de mémoire n'est pas une propriété du phénomène seul, mais de la façon dont on le décrit. La population avec temps de maturation n'est pas sans mémoire si l'on ne suit que sa quantité totale&nbsp;; elle le redevient si l'on suit toute sa pyramide des âges, car celle-ci contient tout ce qui compte pour l'avenir.
 
 <div id="theo">
 
-**En résumé&nbsp;:** la propriété fondamentale est la loi de composition $U(t + s) = U(t)\\,U(s)$. La causalité dit dans quel ordre on compose, l'absence de mémoire dit que chaque pas ne dépend que du présent. Ensemble, elles imposent l'exponentielle, et le $\frac{1}{k!}$ en est la trace géométrique&nbsp;: la part de l'hypercube des instants qui respecte l'ordre chronologique.
+**En résumé&nbsp;:** la propriété fondamentale est la loi de composition $U(t + s) = U(t)\\,U(s)$, qui impose l'exponentielle. Quand on la développe, la **causalité** se lit dans les bornes emboîtées des intégrales (les pas se succèdent dans le temps&nbsp;: on intègre sur un simplexe), et l'**absence de mémoire** dans l'intégrande (tous les pas sont identiques&nbsp;: le poids est uniforme). Le $\frac{1}{k!}$ est le volume de ce simplexe&nbsp;: la part de l'hypercube des instants qui respecte l'ordre chronologique.
 
 </div>
 
