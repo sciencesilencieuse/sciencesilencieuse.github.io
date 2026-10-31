@@ -51,6 +51,11 @@ Géométrie et physique sont intimement liées. Le développement de la géomét
     <th style="text-align:center;"><a href="./geo5/" style="color:#FF644E;"> Poursuites </a></th>
     <td style="width:40%;"> <a href="./geo5/"><img src="/prespoursuite.png" style="box-shadow:none;background:none;max-width:100%;margin:auto;max-height:6.5lh; object-fit:contain;"></a></td>
   </tr>
+  <tr>
+    <th style="text-align:center;"><a href="./simplexes/" style="color:#970E53;">Simplexes et flèche du temps</a><br>
+    </th>
+    <td style="width:40%;text-align:center;"><a href="./simplexes/"><img src="/simplices.png" style="box-shadow:none;background:none;max-width:100%;margin:auto;max-height:6.5lh; object-fit:contain;"></a></td>
+  </tr>
 </table>
 </div>
 

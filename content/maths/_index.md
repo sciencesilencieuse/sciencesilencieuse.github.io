@@ -201,6 +201,7 @@ td, th {
   <a href="./arithmetique/nombresapart/#divisibilité-et-nombres-premiers" class="math-btn">Nombres premiers</a>
   <a href="./arithmetique/complexes/#triplets-pythagoriciens" class="math-btn">Triplets pythagoriciens</a>
     <a href="./arithmetique/nombresapart/#nombre-dor" class="math-btn">Nombre d'or</a>
+    <a href="./arithmetique/exponentielle/" class="math-btn">Le nombre e</a>
 </div>
 </div>
 <div class="theme-subgroup">
@@ -242,6 +243,7 @@ td, th {
 <div class="link-list">
   <a href="./geometrie/geo3" class="math-btn">Aires & Volumes</a>
   <a href="./geometrie/geo4" class="math-btn">Dimensions</a>
+  <a href="./geometrie/simplexes/" class="math-btn">Simplexes</a>
   <a href="./geometrie/geo5" class="math-btn">Poursuites</a>
 </div>
 </div>
@@ -266,6 +268,7 @@ td, th {
   <a href="./proba/curiosites/#anniversaires-simultanés" class="math-btn">Anniversaires</a>
   <a href="./proba/curiosites/#paradoxe-des-deux-enfants" class="math-btn">2 Enfants</a>
   <a href="./proba/curiosites/#paradoxe-de-cover" class="math-btn">Cover</a>
+  <a href="./proba/simplexes_proba/" class="math-btn">Simplexes &amp; e</a>
 </div>
 </div>
 </div>

@@ -59,8 +59,18 @@ Les **probabilités** sont des calculs a priori, visant à prédire les issues d
     <li><a href="./curiosites/#paradoxe-de-cover" style="color:#FF644E;">Paradoxe de Cover</a></li>
     </ul>
     </th>
-       <td style="width:40%;"> <a href="./markov/"><img src="/prescuriosites.png" style="box-shadow:none;background:none;max-width:100%;margin:auto;max-height:6.5lh; object-fit:contain;"></a>
+       <td style="width:40%;"> <a href="./curiosites/"><img src="/prescuriosites.png" style="box-shadow:none;background:none;max-width:100%;margin:auto;max-height:6.5lh; object-fit:contain;"></a>
        </td>
+       </tr>
+       <tr>
+    <th style="text-align:center;"><a href="./simplexes_proba/" style="color:#006C65;">Simplexes et probabilités</a><br>
+    <ul style="font-size:1em;color:#006C65;text-align:left;font-weight:normal;display:inline-block;">
+    <li><a href="./simplexes_proba/#rupture-de-monotonie-mathbbeen--mathrme" style="color:#006C65;">Rupture de monotonie ($\mathbb{E}[N]=\mathrm{e}$)</a></li>
+    <li><a href="./simplexes_proba/#seuil-de-gnedenko-mathbbem--mathrme" style="color:#006C65;">Seuil de Gnedenko ($\mathbb{E}[M]=\mathrm{e}$)</a></li>
+    <li><a href="./simplexes_proba/#dérangements-de-montmort-mathrme-1" style="color:#006C65;">Dérangements de Montmort ($\mathrm{e}^{-1}$)</a></li>
+    </ul>
+    </th>
+    <td style="width:40%;text-align:center;"> <a href="./simplexes_proba/" style="text-decoration:none;font-size:2.1em;color:#006C65;font-weight:bold;">$\mathbb{P}(N > k) = \frac{1}{k!}$</a></td>
        </tr>
        </table>
 </div>

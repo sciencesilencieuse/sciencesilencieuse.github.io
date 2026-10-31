@@ -49,6 +49,7 @@ L'arithmétique est la plus ancienne branche des mathématiques avec la géomét
     <li>pgcd (algorithme d'Euclide)</li>
     <li>fractions continues</li>
     <li>nombre d'or</li>
+    <li><a href="./exponentielle/" style="color:#FF42A1;">nombre $\mathrm{e}$</a></li>
     </ul>
     </th>
     <td style="width:40%;"> <a href="./nombresapart/"><img src="/presnb.png" style="box-shadow:none;background:none;max-width100%;margin:auto;max-height:6.5lh; object-fit:contain;"></a></td>
@@ -62,6 +63,7 @@ L'arithmétique est la plus ancienne branche des mathématiques avec la géomét
     </ul>
 </th>
     <td style="width:40%;"> <a href="./complexes/"><img src="/prescompl.png" style="box-shadow:none;background:none;max-width:100%;margin:auto;max-height:6.5lh; object-fit:contain;"></a></td>
+
   </tr>
 </table>
 </div>
