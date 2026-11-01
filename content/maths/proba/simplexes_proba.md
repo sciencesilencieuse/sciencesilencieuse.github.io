@@ -252,6 +252,63 @@ Dans l'hypercube $[0, 1]^k$, cet événement correspond au domaine appelé *simp
 $\displaystyle \Omega_k = \left\{ (u_1, u_2, \dots, u_k) \in \mathbb{R}^k \;\middle|\; u_1 \ge 0,\; \dots,\; u_k \ge 0 \text{ et } u_1 + \dots + u_k \le 1 \right\}$
 </p>
 
+Concrètement, c'est le **coin** de l'hypercube situé sous l'hyperplan $u\_1 + \dots + u\_k = 1$. En dimension $2$, c'est le triangle sous la droite $u\_1 + u\_2 = 1$, la moitié du carré. En dimension $3$, c'est le tétraèdre découpé dans le coin du cube par le plan $u\_1 + u\_2 + u\_3 = 1$, de sommets $(0, 0, 0)$, $(1, 0, 0)$, $(0, 1, 0)$ et $(0, 0, 1)$&nbsp;:
+
+<div class="svg-container">
+<svg viewBox="0 0 290 245" role="img" aria-label="Le simplexe orthogonal en dimension 2 : le triangle sous la droite u1 + u2 = 1" style="width:100%;max-width:290px;height:auto;">
+<defs><marker id="fo2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
+<rect x="55" y="50" width="150" height="150" fill="none" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<polygon points="55.0,200.0 205.0,200.0 55.0,50.0" fill="#ccdbe6" stroke="#004D80" stroke-width="1.6" stroke-linejoin="round"/>
+<line x1="50.5" y1="45.5" x2="209.5" y2="204.5" stroke="#970E53" stroke-width="1.4" stroke-dasharray="5 3"/>
+<text x="148.0" y="117.5" text-anchor="start" font-size="13.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" transform="rotate(-45 148.0 117.5)">u<tspan dy='3' font-size='10'>1</tspan><tspan dy='-3'></tspan> + u<tspan dy='3' font-size='10'>2</tspan><tspan dy='-3'></tspan> = 1</text>
+<text x="97.0" y="155.0" text-anchor="middle" font-size="17" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >Ω₂</text>
+<line x1="55.0" y1="200.0" x2="227.0" y2="200.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#fo2)"/>
+<line x1="55.0" y1="200.0" x2="55.0" y2="28.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#fo2)"/>
+<text x="229.0" y="218.0" text-anchor="end" font-size="15" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >u<tspan dy='3' font-size='10'>1</tspan><tspan dy='-3'></tspan></text>
+<text x="63.0" y="38.0" text-anchor="start" font-size="15" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >u<tspan dy='3' font-size='10'>2</tspan><tspan dy='-3'></tspan></text>
+<text x="47.0" y="216.0" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >0</text>
+<text x="205.0" y="218.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1</text>
+<text x="47.0" y="55.0" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1</text>
+<text x="130.0" y="240.0" text-anchor="middle" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >aire 1/2</text>
+</svg>
+<svg viewBox="0 0 360 290" role="img" aria-label="Le simplexe orthogonal en dimension 3 : le coin du cube découpé par le plan u1 + u2 + u3 = 1" style="width:100%;max-width:360px;height:auto;">
+<defs><marker id="fo3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
+<line x1="165.0" y1="185.0" x2="96.2" y2="237.5" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="165.0" y1="185.0" x2="290.0" y2="185.0" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="165.0" y1="185.0" x2="165.0" y2="60.0" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="165.0" y1="60.0" x2="96.2" y2="112.5" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="165.0" y1="60.0" x2="290.0" y2="60.0" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="290.0" y1="185.0" x2="221.2" y2="237.5" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="290.0" y1="185.0" x2="290.0" y2="60.0" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="290.0" y1="60.0" x2="221.2" y2="112.5" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="96.2" y1="237.5" x2="221.2" y2="237.5" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="96.2" y1="237.5" x2="96.2" y2="112.5" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="96.2" y1="112.5" x2="221.2" y2="112.5" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="221.2" y1="237.5" x2="221.2" y2="112.5" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<polygon points="165.0,185.0 96.2,237.5 290.0,185.0" fill="#ebf1f5" stroke="none"/>
+<polygon points="96.2,237.5 290.0,185.0 165.0,60.0" fill="#c7d8e3" stroke="#004D80" stroke-width="1.6" stroke-linejoin="round"/>
+<line x1="165.0" y1="185.0" x2="96.2" y2="237.5" stroke="#004D80" stroke-width="1.1" stroke-dasharray="3 3" stroke-opacity="0.8"/>
+<line x1="165.0" y1="185.0" x2="290.0" y2="185.0" stroke="#004D80" stroke-width="1.1" stroke-dasharray="3 3" stroke-opacity="0.8"/>
+<line x1="165.0" y1="185.0" x2="165.0" y2="60.0" stroke="#004D80" stroke-width="1.1" stroke-dasharray="3 3" stroke-opacity="0.8"/>
+<line x1="165.0" y1="185.0" x2="75.6" y2="253.2" stroke="#94a3b8" stroke-width="1" marker-end="url(#fo3)"/>
+<text x="69.6" y="265.2" text-anchor="end" font-size="15" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >u<tspan dy='3' font-size='10'>1</tspan><tspan dy='-3'></tspan></text>
+<line x1="165.0" y1="185.0" x2="327.5" y2="185.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#fo3)"/>
+<text x="333.5" y="190.0" text-anchor="start" font-size="15" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >u<tspan dy='3' font-size='10'>2</tspan><tspan dy='-3'></tspan></text>
+<line x1="165.0" y1="185.0" x2="165.0" y2="28.8" stroke="#94a3b8" stroke-width="1" marker-end="url(#fo3)"/>
+<text x="173.0" y="32.8" text-anchor="start" font-size="15" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >u<tspan dy='3' font-size='10'>3</tspan><tspan dy='-3'></tspan></text>
+<text x="86.2" y="243.5" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1</text>
+<text x="292.0" y="203.0" text-anchor="start" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1</text>
+<text x="155.0" y="64.0" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1</text>
+<text x="189.8" y="166.8" text-anchor="middle" font-size="17" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >Ω₃</text>
+<text x="157.0" y="201.0" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >0</text>
+<text x="225.2" y="104.5" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" ></text>
+<text x="180.0" y="280.0" text-anchor="middle" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >volume 1/6</text>
+</svg>
+</div>
+<p class="legende">Le simplexe orthogonal $\Omega_k$&nbsp;: les points de l'hypercube dont la somme des coordonnées ne dépasse pas $1$. La probabilité que trois tirages aient une somme inférieure à $1$ est le volume de ce petit coin du cube&nbsp;: $\frac{1}{6}$.</p>
+
+On pourrait calculer son volume en empilant des tranches, comme pour $\Delta\_k$&nbsp;: à la hauteur $u\_k = z$, la tranche est un $\Omega\_{k-1}$ réduit d'un facteur $1 - z$ (les autres coordonnées doivent avoir une somme au plus égale à $1 - z$). Mais il existe un argument plus élégant.
+
 Pourquoi ce coin $\Omega\_k$ a-t-il exactement le même volume $\frac{1}{k!}$ que notre simplexe ordonné $\Delta\_k = \\{0 \le t\_1 \le t\_2 \le \dots \le t\_k \le 1\\}$&nbsp;?
 Associons à tout $k$-uplet d'incréments $(u\_1, u\_2, \dots, u\_k)$ la suite de ses **sommes cumulées** $(t\_1, t\_2, \dots, t\_k)$&nbsp;:
 
@@ -533,7 +590,7 @@ Le défaut de départ se propage à chaque entier en s'adoucissant d'un cran&nbs
 **D'où vient le $\frac{2}{3}$&nbsp;?** Il se comprend en deux temps.
 <ol>
 <li><b>Compter les tirages par la distance parcourue.</b> Chaque tirage fait avancer de $\frac{1}{2}$ en moyenne, et la décision de s'arrêter ne dépend que des tirages déjà effectués. La somme finale vaut donc, en moyenne, $\frac{1}{2} \times m(x)$ (c'est l'<i>identité de Wald</i>). Or cette somme finale vaut $x$ plus le <b>dépassement</b> $R$, la part du dernier tirage qui dépasse le seuil. Ainsi $\frac{1}{2}\,m(x) = x + \mathbb{E}[R]$, soit $m(x) = 2x + 2\,\mathbb{E}[R]$.</li>
-<li><b>Le dépassement moyen vaut $\frac{1}{3}$, et non $\frac{1}{4}$.</b> On pourrait croire que le tirage qui franchit le seuil est un tirage ordinaire, de longueur moyenne $\frac{1}{2}$, franchi en son milieu, ce qui donnerait un dépassement moyen de $\frac{1}{4}$. Mais un long tirage a plus de chances d'enjamber un point donné qu'un court&nbsp;: c'est le <i>paradoxe de l'inspection</i>. La probabilité d'être «&nbsp;le tirage qui enjambe&nbsp;» est proportionnelle à la longueur $u$ du tirage, si bien que sa longueur moyenne vaut $\frac{\mathbb{E}[U^2]}{\mathbb{E}[U]} = \frac{1/3}{1/2} = \frac{2}{3}$. Le seuil tombant au hasard à l'intérieur de ce tirage, le dépassement en vaut la moitié en moyenne&nbsp;: $\frac{1}{3}$.</li>
+<li><b>Le dépassement moyen vaut $\frac{1}{3}$, et non $\frac{1}{4}$.</b> On pourrait croire que le tirage qui franchit le seuil est un tirage ordinaire, de longueur moyenne $\frac{1}{2}$, franchi en son milieu, d'où un dépassement moyen de $\frac{1}{4}$. Mais les longs tirages enjambent le seuil plus souvent que les courts. Imaginons des segments posés bout à bout, moitié de longueur $0,1$ et moitié de longueur $0,9$&nbsp;: les longs occupent $9$ fois plus de place, et un point pris au hasard tombe $9$ fois sur $10$ dans un long&nbsp;! De même ici, la chance qu'un tirage de longueur $u$ enjambe le seuil est proportionnelle à $u$&nbsp;: la longueur du tirage qui enjambe a pour densité $2u$ sur $[0, 1]$ (au lieu de $1$), et sa moyenne vaut $\int_0^1 u \times 2u\,\mathrm{d}u = \frac{2}{3}$. Le seuil tombant au hasard à l'intérieur de ce tirage, le dépassement en vaut la moitié en moyenne&nbsp;: $\frac{1}{3}$. (C'est le <i>paradoxe de l'inspection</i>.)</li>
 </ol>
 
 D'où, pour les grands seuils, $m(x) \approx 2\left(x + \frac{1}{3}\right) = 2x + \frac{2}{3}$. Une simulation le confirme&nbsp;: dès $x = 3$, le dépassement moyen vaut $0,333$ et le tirage qui franchit le seuil mesure $0,667$ en moyenne. (Pour $x = 1$, le dépassement moyen vaut encore $\frac{\mathrm{e}}{2} - 1 \approx 0,36$.)
