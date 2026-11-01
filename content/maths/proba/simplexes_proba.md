@@ -101,7 +101,7 @@ En probabilités, cette propriété produit un effet spectaculaire. Tirons $k$ n
 Étudions trois problèmes célèbres qui s'illuminent grâce à cette vision géométrique.
 
 
-## Rupture de monotonie ($\mathbb{E}[N] = \mathrm{e}$)
+## Rupture de monotonie
 
 ### Le jeu des tirages croissants
 
@@ -202,7 +202,7 @@ Et la probabilité de s'arrêter exactement au $k$-ième tirage ($k \ge 2$) vaut
 </div>
 
 
-## Seuil de Gnedenko ($\mathbb{E}[M] = \mathrm{e}$)
+## Seuil de Gnedenko
 
 ### Dépasser $1$ en additionnant des tirages
 
@@ -242,7 +242,7 @@ Notons $M$ le nombre de tirages nécessaires pour franchir le seuil $1$&nbsp;: $
 
 À première vue, additionner des nombres jusqu'à dépasser $1$ semble très différent de les comparer l'un à l'autre ($U\_1 \le U\_2 \le \dots \le U\_k$). Et pourtant, un simple cisaillement géométrique montre que **les deux problèmes sont isomorphes**&nbsp;!
 
-### Preuve géométrique par cisaillement ($\det J = 1$)
+### Preuve géométrique par cisaillement
 
 Examinons l'événement de survie $\\{M > k\\}$ (pour $k \ge 1$). Dire qu'il faut *strictement plus* de $k$ tirages pour que la somme dépasse $1$ équivaut à dire que la somme des $k$ premiers tirages est restée **inférieure ou égale à $1$**, soit $\displaystyle \\{M > k\\} = \left\\{ U\_1 + U\_2 + \dots + U\_k \le 1 \right\\}$.
 
@@ -457,7 +457,7 @@ print(M/N)
 
 
 
-## Dérangements de Montmort ($\mathrm{e}^{-1}$)
+## Dérangements de Montmort
 
 ### Le problème des chapeaux (1708)
 
