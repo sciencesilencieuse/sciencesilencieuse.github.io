@@ -186,15 +186,14 @@ Voici le montage, redessiné en schéma électrique. Ferme puis ouvre l'interrup
 <div style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:8px;">
 <button type="button" id="fcSwitch" class="fx-btn fx-on">Fermer l'interrupteur</button>
 <button type="button" class="fx-btn fc-core fx-on" data-e="0">Fer au contact</button>
-<button type="button" class="fx-btn fc-core" data-e="5">Petit-beurre (e ≈ 5 mm)</button>
-<button type="button" class="fx-btn fc-core" data-e="2">20 copies de chaque côté (e ≈ 2 mm)</button>
+<button type="button" class="fx-btn fc-core" data-e="5">Un petit-beurre de chaque côté (e ≈ 5 mm)</button>
 </div>
 <div style="display:flex; flex-wrap:wrap; gap:6px 18px; justify-content:center; margin-top:10px; font-size:0.85em; color:#475569;">
 <span>courant&nbsp;: <span id="fcI" class="fx-num" style="color:#970E53;">0,00 A</span></span>
 <span>énergie dans la bobine&nbsp;: <span id="fcW" class="fx-num" style="color:#b7791f;">0,00 J</span></span>
 <span>énergie reçue par le moteur&nbsp;: <span id="fcE" class="fx-num" style="color:#004D80;">0,00 J</span></span>
 </div>
-<div style="text-align:center; font-size:0.75em; color:#94a3b8; margin-top:6px;">Simulation ralentie vingt fois&nbsp;: bobine de 500 spires (2,4 Ω), alimentation 12 V (I<sub>max</sub> = 5 A), moteur assimilé à une résistance de 7,5 Ω, diode de seuil 0,7 V, masse de 300 g.</div>
+<div style="text-align:center; font-size:0.75em; color:#94a3b8; margin-top:6px;">Simulation ralentie dix fois&nbsp;: bobine de 500 spires (2,5 Ω), alimentation 60 V (I<sub>max</sub> = 24 A), moteur assimilé à une résistance de 5 Ω, diode de seuil 0,7 V, masse de 2 kg.</div>
 </div>
 
 Pendant la charge, la diode est bloquée&nbsp;: sa cathode est reliée au «&nbsp;+&nbsp;» de l'alimentation, aucun courant ne traverse le moteur. À l'ouverture de l'interrupteur, la bobine refuse que son courant s'arrête net&nbsp;: il continue dans le même sens à travers la bobine, et la seule issue est la boucle bobine → moteur → diode, cette fois dans le sens passant. Sans diode, ce courant n'aurait nulle part où aller et la bobine se déchargerait dans une belle étincelle aux bornes de l'interrupteur.
@@ -290,7 +289,7 @@ La perméabilité relative $\mu\_r$ mesure ce gain&nbsp;: dans le fer, $B = \mu\
 
 L'inertie de la bobine devient donc énorme (la variation de flux joue le rôle de la variation de quantité de mouvement), et l'énergie stockée aussi. On a désormais une inductance qui dépend du courant, $\mathrm{d}\Phi/\mathrm{d}I$, comme une masse qui dépendrait de la vitesse.
 
-Mais n'oublions pas qu'un matériau ferromagnétique **sature**&nbsp;! Une fois que tous les moments magnétiques sont alignés, on ne peut pas les aligner davantage, autour de $B\_\text{sat} \approx \pu{1,6 T}$ pour le fer. L'apport du fer cesse alors de croître, et la pente $\mathrm{d}\Phi/\mathrm{d}I$ retombe à peu près à celle de la bobine sans fer&nbsp;: la bille retrouve sa masse d'origine.
+Mais n'oublions pas qu'un matériau ferromagnétique **sature**&nbsp;! Une fois que tous les moments magnétiques sont alignés, on ne peut pas les aligner davantage. Pour les tôles de fer-silicium des transformateurs, le champ marque un coude vers $\pu{1,5 T}$, puis ne gagne plus que lentement jusqu'à $B\_\text{sat} \approx \pu{2 T}$. L'apport du fer cesse alors de croître, et la pente $\mathrm{d}\Phi/\mathrm{d}I$ retombe à peu près à celle de la bobine sans fer&nbsp;: la bille retrouve sa masse d'origine.
 
 Le flux à travers la bobine a ainsi l'allure suivante, et l'énergie stockée $W = \int I\\,\mathrm{d}\Phi$ est l'aire comprise entre la courbe et l'axe des flux&nbsp;: on découpe cet axe en petites tranches $\mathrm{d}\Phi$, chacune «&nbsp;payée&nbsp;» au prix du courant $I$ qui la produit.
 
@@ -332,8 +331,6 @@ Or, en négligeant l'apport de la bobine seule, le flux est contraint verticalem
 
 Il suffit que le fer arrive à saturation pour un courant plus grand. C'est là que le gâteau joue son rôle&nbsp;: en agrandissant l'entrefer, il diminue la perméabilité apparente du circuit vue par la bobine. Le flux grandit moins vite pour un même courant et n'atteint la saturation que pour un courant plus grand, pile-poil ce qu'on souhaite.
 
-À toi de jouer avec l'épaisseur de la cale&nbsp;:
-
 <div id="faroux-gap" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:14px 16px 16px; margin:20px auto; max-width:720px; font-family:system-ui,-apple-system,sans-serif; color:#1e293b;">
 <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center;">
 <svg id="fgCore" viewBox="0 0 190 220" role="img" aria-label="Le circuit magnétique, entrefer exagéré ; la couleur du fer indique le champ atteint" style="flex:0 1 170px; width:170px; max-width:40%; height:auto;"></svg>
@@ -348,7 +345,6 @@ Il suffit que le fer arrive à saturation pour un courant plus grand. C'est là 
 <div style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:6px;">
 <button type="button" class="fx-btn fg-preset" data-e="0">Au contact</button>
 <button type="button" class="fx-btn fg-preset" data-e="opt">Entrefer optimal</button>
-<button type="button" class="fx-btn fg-preset" data-e="2">Copies (e ≈ 2 mm)</button>
 <button type="button" class="fx-btn fg-preset" data-e="5">Un petit-beurre (e ≈ 5 mm)</button>
 </div>
 </div>
@@ -357,13 +353,13 @@ Il suffit que le fer arrive à saturation pour un courant plus grand. C'est là 
 <div style="flex:0 1 220px; font-size:0.86em; color:#475569; line-height:1.7;">
 <div>énergie stockée&nbsp;: <span id="fgWval" class="fx-num" style="color:#b7791f;"></span></div>
 <div>champ atteint&nbsp;: <span id="fgBval" class="fx-num" style="color:#004D80;"></span></div>
-<div>hauteur (300 g, sans pertes)&nbsp;: <span id="fgHval" class="fx-num" style="color:#334155;"></span></div>
+<div>hauteur (2 kg, sans pertes)&nbsp;: <span id="fgHval" class="fx-num" style="color:#334155;"></span></div>
 <div style="margin-top:6px;">où est l'énergie&nbsp;?</div>
 <div style="display:flex; height:14px; border-radius:7px; overflow:hidden; border:1px solid #e2e8f0;"><div id="fgBarFer" style="background:#d4b45a;"></div><div id="fgBarAir" style="background:#80a6c0;"></div></div>
 <div style="display:flex; justify-content:space-between; font-size:0.85em;"><span style="color:#a8892f;">fer <span id="fgFer" class="fx-num"></span></span><span style="color:#4c82a6;">entrefer <span id="fgAir" class="fx-num"></span></span></div>
 </div>
 </div>
-<div style="text-align:center; font-size:0.75em; color:#94a3b8; margin-top:8px;">Modèle&nbsp;: 500 spires, I<sub>max</sub> = 5 A, section 16 cm², 40 cm de fer, μ<sub>r</sub> = 3000, saturation douce vers 1,6 T. L'échelle des épaisseurs est dilatée près de zéro.</div>
+<div style="text-align:center; font-size:0.75em; color:#94a3b8; margin-top:8px;">Modèle&nbsp;: 500 spires, I<sub>max</sub> = 24 A, section 16 cm², 45 cm de tôles fer-silicium (coude vers 1,5 T, puis lente montée vers 2 T). L'échelle des épaisseurs est dilatée près de zéro.</div>
 </div>
 
 On constate qu'il existe un **entrefer optimal**&nbsp;: trop mince, la saturation arrive trop tôt&nbsp;; trop épais, elle n'arrive plus du tout avant $I\_\text{max}$, et l'énergie retombe en $\frac{1}{2}LI\_\text{max}^2$ avec une inductance $L$ de plus en plus faible.
@@ -441,7 +437,7 @@ $$
 
 </div>
 
-Tout se joue dans le dénominateur. Pour $\ell = \pu{40 cm}$ et $\mu\_r = 3000$, on a $\ell/\mu\_r \approx \pu{0,13 mm}$&nbsp;: **un entrefer d'un dixième de millimètre pèse autant que tout le fer du circuit**. Pour un même courant, l'entrefer diminue fortement le champ atteint&nbsp;; la saturation, qui survient quand $B$ atteint $B\_\text{sat}$, recule jusqu'à
+Tout se joue dans le dénominateur. Pour $\ell = \pu{45 cm}$ et $\mu\_r = 3000$, on a $\ell/\mu\_r \approx \pu{0,15 mm}$&nbsp;: **un entrefer d'un dixième de millimètre pèse autant que tout le fer du circuit**. Pour un même courant, l'entrefer diminue fortement le champ atteint&nbsp;; la saturation, qui survient quand $B$ atteint $B\_\text{sat}$, recule jusqu'à
 
 $$
 I\_\text{sat} = \frac{B\_\text{sat}}{\mu\_0 N}\left(\frac{\ell}{\mu\_r} + 2e\right)
@@ -487,7 +483,7 @@ $$
 
 </div>
 
-À champ égal, un centimètre cube d'air stocke **$\mu\_r$ fois plus** d'énergie qu'un centimètre cube de fer. Avec un entrefer, presque toute l'énergie se loge dans ces quelques fractions de millimètre d'air (c'est la répartition affichée sous le graphique interactif).
+À champ égal, un centimètre cube d'air stocke **$\mu\_r$ fois plus** d'énergie qu'un centimètre cube de fer. Avec un entrefer, presque toute l'énergie se loge dans ces quelques millimètres d'air (c'est la répartition affichée sous le graphique interactif).
 
 Le fer, lui, impose le champ&nbsp;: tant qu'il sature à $I\_\text{max}$, $B \approx B\_\text{sat}$ et l'énergie de l'entrefer vaut à peu près $\frac{B\_\text{sat}^2}{2\mu\_0} \times 2es$, proportionnelle à son épaisseur. Plus on l'élargit, mieux c'est... jusqu'au moment où le courant $I\_\text{max}$ ne suffit plus à saturer le fer. L'optimum correspond à $I\_\text{sat} = I\_\text{max}$&nbsp;:
 
@@ -509,21 +505,27 @@ $$
 
 Dans ce modèle simple (fer linéaire puis brutalement saturé), la courbe $\Phi(I)$ optimale est une droite qui atteint $\Phi\_\text{sat}$ exactement en $I\_\text{max}$&nbsp;: l'aire jaune est alors un triangle de base $\Phi\_\text{sat}$ et de hauteur $I\_\text{max}$, le plus grand possible.
 
-**Ordres de grandeur.** On ne connaît pas le matériel exact de la démonstration. Prenons une bobine de 500&nbsp;spires parcourue par $I\_\text{max} = \pu{5 A}$, soit $\pu{2500}$&nbsp;ampères-tours, un noyau de section $\pu{16 cm2}$ et $B\_\text{sat} \approx \pu{1,6 T}$. Le graphique interactif donne&nbsp;:
+**Ordres de grandeur.** La démonstration de J.-P.&nbsp;Faroux utilisait une alimentation de forte puissance. Prenons le transformateur démontable des salles de TP&nbsp;: noyau en U de section $\pu{4 cm} \times \pu{4 cm}$, environ $\pu{45 cm}$ de tôles, et une bobine de 500&nbsp;spires ($\pu{2,5 \Omega}$ environ). Poussons-la à $I\_\text{max} = \pu{24 A}$, soit $\pu{12000}$&nbsp;ampères-tours&nbsp;: il faut $\pu{60 V}$ et $\pu{1,4 kW}$&nbsp;! Le graphique interactif donne alors&nbsp;:
 
-* fer au contact&nbsp;: $W \approx \pu{0,3 J}$&nbsp;;
-* un petit-beurre de chaque côté ($e \approx \pu{5 mm}$)&nbsp;: $W \approx \pu{0,6 J}$, **deux fois plus**, c'est bien ce que constate l'assistance&nbsp;;
-* l'entrefer optimal&nbsp;: $2e\_\text{opt} \approx \pu{1,8 mm}$, soit un peu moins d'un millimètre de chaque côté, et $W\_\text{max} \approx \pu{3 J}$, **dix fois plus** qu'au contact.
+* fer au contact&nbsp;: $W \approx \pu{3 J}$&nbsp;;
+* entrefer optimal&nbsp;: $2e\_\text{opt} \approx \pu{7,5 mm}$ (soit $\mu\_0 N I\_\text{max}/B\_\text{sat}$ avec $B\_\text{sat} \approx \pu{2 T}$), environ $\pu{3,7 mm}$ de chaque côté, et $W\_\text{max} \approx \pu{13,4 J}$&nbsp;;
+* un petit-beurre de chaque côté ($e \approx \pu{5 mm}$)&nbsp;: $W \approx \pu{13 J}$, **plus de quatre fois plus** qu'au contact, pratiquement à l'optimum.
 
-Le petit-beurre fait donc mieux que le contact, mais il est loin d'être l'entrefer idéal&nbsp;: il est trop épais.
+Au contact, l'énergie n'est pas négligeable&nbsp;: le fer ne sature pas brutalement, et sa lente montée de $\pu{1,5}$ à $\pu{2 T}$ se paie sous une excitation $H$ énorme, ce qui représente quelques joules.
+
+Avec une masse de $\pu{2 kg}$, de quoi passer d'une dizaine de centimètres à près d'un demi-mètre (c'est ce que montre la simulation du circuit, plus haut). Et dans la réalité, les frottements du moteur prélèvent une part à peu près fixe de l'énergie, ce qui pénalise surtout le premier cas. Spectaculaire&nbsp;!
 
 <div class="fx-note">
 
-On peut faire beaucoup mieux qu'un biscuit avec un objet plus fin, et tout aussi disponible&nbsp;: les copies de la classe. Une feuille de papier mesure environ un dixième de millimètre. Une vingtaine de copies de chaque côté ($e \approx \pu{2 mm}$) stockent déjà $\pu{1,5 J}$, plus du double du petit-beurre. Avec une dizaine de chaque côté, on frôle l'optimum.
+Douze mille ampères-tours nécessitent une grosse alimentation... et posent des problèmes de sécurité. Une bobine de 500&nbsp;spires est prévue pour quelques ampères en continu&nbsp;: à $\pu{24 A}$, son cuivre chauffe de quelques degrés par seconde, ce qui reste supportable le temps d'une démonstration, à condition de ne pas oublier l'interrupteur fermé. Des dizaines d'ampères circulent dans le circuit, et la bobine emmagasine une douzaine de joules&nbsp;: si la diode est mal branchée ou lâche, rien n'empêche plus le courant de s'interrompre brutalement à l'ouverture, et la bobine impose une surtension considérable aux bornes de l'interrupteur.
 
-Pour qu'un biscuit de $\pu{5 mm}$ soit lui-même optimal, il faudrait $NI\_\text{max} \approx 2eB\_\text{sat}/\mu\_0$, soit plus de dix mille ampères-tours. À l'inverse, en dessous d'environ $\pu{1800}$&nbsp;ampères-tours, le petit-beurre ferait *moins bien* que le contact&nbsp;: le tour de magie dépend aussi de l'alimentation.
+Cette puissance est pourtant indispensable au tour de magie&nbsp;: en dessous d'environ $\pu{3500}$&nbsp;ampères-tours, le petit-beurre ferait *moins bien* que le contact.
 
 </div>
+
+Attention cependant, un trop grand entrefer et la saturation devient inaccessible. Empiler un deuxième petit-beurre de chaque côté ne pourrait alors que diminuer l'énergie stockée (environ $\pu{7 J}$, moitié moins qu'avec un seul), ce qui n'aurait pas l'effet attendu sur l'auditoire...
+
+La situation idéale (du point de vue de l'énergie dans la bobine) correspond à un entrefer permettant tout juste d'atteindre la saturation à $I\_\text{max}$.
 
 ## En conclusion
 
@@ -533,14 +535,16 @@ Si on repense à notre bille, une variation de quantité de mouvement à petite 
 
 <script>
 (function() {
-  // Modèle commun : bobine de N spires sur un circuit de fer doux (saturation douce)
-  // et deux entrefers d'épaisseur totale g = 2e.
-  const mu0 = 4e-7 * Math.PI, N = 500, s = 16e-4, ell = 0.40, mur = 3000, Js = 1.6;
-  const U = 12, r = 2.4, Imax = U / r;
+  // Modèle commun : bobine de N spires sur un circuit en tôles fer-silicium
+  // (coude vers 1,5 T, puis lente montée vers 2 T) et deux entrefers d'épaisseur totale g = 2e.
+  const mu0 = 4e-7 * Math.PI, N = 500, s = 16e-4, ell = 0.45;
+  const J1 = 1.326, H1 = 127, J2 = 0.605, H2 = 8890, Bref = 2;
+  const U = 60, r = 2.5, Imax = U / r;
   const NS = 'http://www.w3.org/2000/svg';
   const fr = (x, d) => x.toFixed(d).replace('.', ',');
-  const Bof = H => mu0 * H + Js * Math.tanh(mu0 * mur * H / Js);
-  const dBdH = H => { const c = Math.cosh(mu0 * mur * H / Js); return mu0 + mu0 * mur / (c * c); };
+  const Bof = H => mu0 * H + J1 * Math.tanh(H / H1) + J2 * Math.tanh(H / H2);
+  const sech2 = x => { const c = Math.cosh(x); return 1 / (c * c); };
+  const dBdH = H => mu0 + J1 / H1 * sech2(H / H1) + J2 / H2 * sech2(H / H2);
   const Iof = (H, g) => (H * ell + g * Bof(H) / mu0) / N;
   function HforI(I, g) {
     let lo = 0, hi = N * I / ell + 1;
@@ -589,7 +593,7 @@ Si on repense à notre bille, une variation de quantité de mouvement à petite 
     const drum = document.getElementById('fcDrum'), mass = document.getElementById('fcMass'), string = document.getElementById('fcString');
     const btn = document.getElementById('fcSwitch'), cores = root.querySelectorAll('.fc-core');
     const outI = document.getElementById('fcI'), outW = document.getElementById('fcW'), outE = document.getElementById('fcE');
-    const Rm = 7.5, Vd = 0.7, m = 0.3, g0 = 9.81, slow = 20, dt = 2e-5;
+    const Rm = 5, Vd = 0.7, m = 2, g0 = 9.81, slow = 10, dt = 2e-5;
     let g = 0, closed = false, H = 0, Wc = 0, Em = 0, hDisp = 0, off1 = 0, off2 = 0, last = null;
 
     function reset() { H = 0; Wc = 0; Em = 0; }
@@ -634,8 +638,8 @@ Si on repense à notre bille, une variation de quantité de mouvement à petite 
       loop2.setAttribute('stroke-dashoffset', off2);
       loop1.setAttribute('opacity', closed && i > 0.002 ? 0.9 : 0);
       loop2.setAttribute('opacity', !closed && i > 0.002 ? 0.9 : 0);
-      gauge.setAttribute('height', Math.min(1, Math.max(0, Wc) / 1.6) * 88);
-      gauge.setAttribute('y', 184 - Math.min(1, Math.max(0, Wc) / 1.6) * 88);
+      gauge.setAttribute('height', Math.min(1, Math.max(0, Wc) / 15) * 88);
+      gauge.setAttribute('y', 184 - Math.min(1, Math.max(0, Wc) / 15) * 88);
       const hcm = 100 * Em / (m * g0);
       hDisp += (hcm - hDisp) * Math.min(1, dtReal * 5);
       const y = Math.max(150, 236 - hDisp * 1.6);
@@ -657,7 +661,7 @@ Si on repense à notre bille, une variation de quantité de mouvement à petite 
     if (!root) return;
     const svgCore = document.getElementById('fgCore'), svgPhi = document.getElementById('fgPhi'), svgW = document.getElementById('fgW');
     const slider = document.getElementById('fgSlider');
-    const EMAX = 5e-3;                              // e maximal (par entrefer), en m
+    const EMAX = 10e-3;                              // e maximal (par entrefer), en m
     const eOfU = u => EMAX * u * u, uOfE = e => Math.sqrt(e / EMAX);
 
     // --- W(e), calculé une fois ---
@@ -671,21 +675,21 @@ Si on repense à notre bille, une variation de quantité de mouvement à petite 
     const uOpt = (a + b) / 2;
 
     // --- Graphique Φ(I) ---
-    const XI = I => 50 + I / 6 * 310, YP = P => 225 - P / 1.4 * 200;
+    const XI = I => 50 + I / 30 * 310, YP = P => 225 - P / 1.7 * 200;
     arrowDefs(svgPhi, 'fgArr1');
     const area = el(svgPhi, 'polygon', { fill: '#fbe7a8', 'fill-opacity': 0.75 });
-    const ref = curve(0, 6, 300);
+    const ref = curve(0, 30, 300);
     el(svgPhi, 'polyline', { points: ref.map(p => XI(p.I).toFixed(1) + ',' + YP(p.P).toFixed(1)).join(' '), fill: 'none', stroke: '#94a3b8', 'stroke-width': 1.3, 'stroke-dasharray': '5 4' });
     const cur = el(svgPhi, 'polyline', { fill: 'none', stroke: '#004D80', 'stroke-width': 2.4 });
     el(svgPhi, 'line', { x1: XI(Imax), y1: YP(0), x2: XI(Imax), y2: 30, stroke: '#64748b', 'stroke-width': 1, 'stroke-dasharray': '3 3' });
-    el(svgPhi, 'text', { x: XI(Imax) + 4, y: 36, 'font-size': 12, fill: '#64748b', 'font-family': serif, 'font-style': 'italic' }, 'I max');
+    el(svgPhi, 'text', { x: XI(Imax) + 4, y: YP(0) - 7, 'font-size': 12, fill: '#64748b', 'font-family': serif, 'font-style': 'italic' }, 'I max');
     el(svgPhi, 'line', { x1: 40, y1: YP(0), x2: 372, y2: YP(0), stroke: '#94a3b8', 'stroke-width': 1, 'marker-end': 'url(#fgArr1)' });
     el(svgPhi, 'line', { x1: XI(0), y1: YP(0) + 8, x2: XI(0), y2: 12, stroke: '#94a3b8', 'stroke-width': 1, 'marker-end': 'url(#fgArr1)' });
-    [1, 2, 3, 4, 5].forEach(I => {
+    [5, 10, 15, 20, 25].forEach(I => {
       el(svgPhi, 'line', { x1: XI(I), y1: YP(0), x2: XI(I), y2: YP(0) + 4, stroke: '#94a3b8' });
       el(svgPhi, 'text', { x: XI(I), y: YP(0) + 16, 'text-anchor': 'middle', 'font-size': 11, fill: '#64748b', 'font-family': serif }, fr(I, I % 1 ? 1 : 0));
     });
-    [0.5, 1].forEach(P => {
+    [0.5, 1, 1.5].forEach(P => {
       el(svgPhi, 'line', { x1: XI(0) - 4, y1: YP(P), x2: XI(0), y2: YP(P), stroke: '#94a3b8' });
       el(svgPhi, 'text', { x: XI(0) - 7, y: YP(P) + 4, 'text-anchor': 'end', 'font-size': 11, fill: '#64748b', 'font-family': serif }, fr(P, P % 1 ? 1 : 0));
     });
@@ -695,16 +699,16 @@ Si on repense à notre bille, une variation de quantité de mouvement à petite 
     el(svgPhi, 'text', { x: 372, y: 22, 'text-anchor': 'end', 'font-size': 11, fill: '#b7791f', 'font-family': serif, 'font-style': 'italic' }, 'aire jaune : énergie stockée');
 
     // --- Graphique W(e) ---
-    const XU = u => 50 + u * 310, YW = W => 170 - W / 3.3 * 150;
+    const XU = u => 50 + u * 310, YW = W => 170 - W / 15 * 150;
     arrowDefs(svgW, 'fgArr2');
     el(svgW, 'line', { x1: 40, y1: YW(0), x2: 372, y2: YW(0), stroke: '#94a3b8', 'stroke-width': 1, 'marker-end': 'url(#fgArr2)' });
     el(svgW, 'line', { x1: XU(0), y1: YW(0) + 8, x2: XU(0), y2: 8, stroke: '#94a3b8', 'stroke-width': 1, 'marker-end': 'url(#fgArr2)' });
-    [[0, '0'], [0.1, '0,1'], [0.5, '0,5'], [1, '1'], [2, '2'], [5, '5']].forEach(t => {
+    [[0, '0'], [0.1, '0,1'], [0.5, '0,5'], [1, '1'], [2, '2'], [5, '5'], [10, '10']].forEach(t => {
       const x = XU(uOfE(t[0] * 1e-3));
       el(svgW, 'line', { x1: x, y1: YW(0), x2: x, y2: YW(0) + 4, stroke: '#94a3b8' });
       el(svgW, 'text', { x: x, y: YW(0) + 16, 'text-anchor': 'middle', 'font-size': 11, fill: '#64748b', 'font-family': serif }, t[1]);
     });
-    [1, 2, 3].forEach(W => {
+    [5, 10, 15].forEach(W => {
       el(svgW, 'line', { x1: XU(0) - 4, y1: YW(W), x2: XU(0), y2: YW(W), stroke: '#94a3b8' });
       el(svgW, 'text', { x: XU(0) - 7, y: YW(W) + 4, 'text-anchor': 'end', 'font-size': 11, fill: '#64748b', 'font-family': serif }, fr(W, 0));
     });
@@ -713,8 +717,8 @@ Si on repense à notre bille, une variation de quantité de mouvement à petite 
     el(svgW, 'polyline', { points: Wtab.map(p => XU(p.u).toFixed(1) + ',' + YW(p.W).toFixed(1)).join(' '), fill: 'none', stroke: '#b7791f', 'stroke-width': 2.2 });
     const vline = el(svgW, 'line', { stroke: '#970E53', 'stroke-width': 1, 'stroke-dasharray': '3 3' });
     const dot = el(svgW, 'circle', { r: 5, fill: '#970E53' });
-    // repères : contact, optimum, copies, petit-beurre
-    [[0, 'contact', 8, 14, 'start'], [eOfU(uOpt) * 1e3, 'optimum', 0, -10, 'middle'], [2, 'copies', 6, -8, 'start'], [5, 'petit-beurre', 2, 18, 'end']].forEach(m => {
+    // repères : contact, optimum, petit-beurre
+    [[0, 'contact', -6, -5, 'end'], [eOfU(uOpt) * 1e3, 'optimum', -7, -7, 'end'], [5, 'petit-beurre', 8, -7, 'start']].forEach(m => {
       const u = uOfE(m[0] * 1e-3), W = energy(2 * m[0] * 1e-3).W;
       el(svgW, 'circle', { cx: XU(u), cy: YW(W), r: 3, fill: '#b7791f' });
       el(svgW, 'text', { x: XU(u) + m[2], y: YW(W) + m[3], 'text-anchor': m[4], 'font-size': 11, fill: '#b7791f', 'font-family': serif, 'font-style': 'italic' }, m[1]);
@@ -740,7 +744,7 @@ Si on repense à notre bille, une variation de quantité de mouvement à petite 
       const u = slider.value / 1000, e = eOfU(u), g = 2 * e;
       const res = energy(g);
       // Φ(I)
-      const pts = curve(g, 6, 300);
+      const pts = curve(g, 30, 300);
       cur.setAttribute('points', pts.map(p => XI(p.I).toFixed(1) + ',' + YP(p.P).toFixed(1)).join(' '));
       const inside = curve(g, Imax, 300), Pend = inside[inside.length - 1].P;
       area.setAttribute('points', inside.map(p => XI(p.I).toFixed(1) + ',' + YP(p.P).toFixed(1)).join(' ') + ' ' + XI(0) + ',' + YP(Pend).toFixed(1));
@@ -752,17 +756,17 @@ Si on repense à notre bille, une variation de quantité de mouvement à petite 
       const gp = e > 0 ? 2 + 24 * u : 0;
       const yb = 85 - gp - 30;
       bar.setAttribute('y', yb);
-      const col = mix('#fbf3dc', '#e0a526', Math.min(1, res.B / Js));
+      const col = mix('#fbf3dc', '#e0a526', Math.min(1, res.B / Bref));
       bar.setAttribute('fill', col); U_.setAttribute('fill', col);
       cales.forEach(c => { c.setAttribute('y', 85 - gp); c.setAttribute('height', gp); c.style.display = gp > 0 ? '' : 'none'; });
       caleTxt.setAttribute('y', 85 - gp / 2 + 4); caleTxt.style.display = gp > 6 ? '' : 'none';
       while (lines.firstChild) lines.removeChild(lines.firstChild);
-      if (gp > 0) [24, 34, 44, 146, 156, 166].forEach(x => el(lines, 'line', { x1: x, y1: 85 - gp, x2: x, y2: 85, opacity: Math.min(1, res.B / Js) }));
+      if (gp > 0) [24, 34, 44, 146, 156, 166].forEach(x => el(lines, 'line', { x1: x, y1: 85 - gp, x2: x, y2: 85, opacity: Math.min(1, res.B / Bref) }));
       // valeurs
       document.getElementById('fgEval').textContent = 'e = ' + (e < 1e-3 ? fr(e * 1e3, 2) : fr(e * 1e3, 1)) + ' mm';
       document.getElementById('fgWval').textContent = fr(res.W, 2) + ' J';
       document.getElementById('fgBval').textContent = fr(res.B, 2) + ' T';
-      document.getElementById('fgHval').textContent = Math.round(100 * res.W / (0.3 * 9.81)) + ' cm';
+      document.getElementById('fgHval').textContent = Math.round(100 * res.W / (2 * 9.81)) + ' cm';
       const pf = Math.max(0, Math.min(1, res.Wf / (res.Wf + res.Wa)));
       document.getElementById('fgBarFer').style.width = (100 * pf) + '%';
       document.getElementById('fgBarAir').style.width = (100 * (1 - pf)) + '%';
