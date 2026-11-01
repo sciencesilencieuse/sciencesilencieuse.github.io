@@ -193,7 +193,7 @@ Voici le montage, redessiné en schéma électrique. Ferme puis ouvre l'interrup
 <span>énergie dans la bobine&nbsp;: <span id="fcW" class="fx-num" style="color:#b7791f;">0,00 J</span></span>
 <span>énergie reçue par le moteur&nbsp;: <span id="fcE" class="fx-num" style="color:#004D80;">0,00 J</span></span>
 </div>
-<div style="text-align:center; font-size:0.75em; color:#94a3b8; margin-top:6px;">Simulation ralentie dix fois&nbsp;: bobine de 500 spires (2,5 Ω), alimentation 60 V (I<sub>max</sub> = 24 A), moteur assimilé à une résistance de 5 Ω, diode de seuil 0,7 V, masse de 2 kg.</div>
+<div style="text-align:center; font-size:0.75em; color:#94a3b8; margin-top:6px;">Simulation ralentie 40&nbsp;fois pendant la charge (quelques centièmes de seconde en réalité) et 150&nbsp;fois pendant la décharge (une dizaine de millisecondes). Bobine de 500 spires (2,5 Ω), alimentation 60 V (I<sub>max</sub> = 24 A), moteur assimilé à une résistance de 5 Ω, diode de seuil 0,7 V, masse de 2 kg.</div>
 </div>
 
 Pendant la charge, la diode est bloquée&nbsp;: sa cathode est reliée au «&nbsp;+&nbsp;» de l'alimentation, aucun courant ne traverse le moteur. À l'ouverture de l'interrupteur, la bobine refuse que son courant s'arrête net&nbsp;: il continue dans le même sens à travers la bobine, et la seule issue est la boucle bobine → moteur → diode, cette fois dans le sens passant. Sans diode, ce courant n'aurait nulle part où aller et la bobine se déchargerait dans une belle étincelle aux bornes de l'interrupteur.
@@ -330,6 +330,8 @@ Avec le petit LU, la masse monte plus haut&nbsp;: une plus grande quantité d'é
 Or, en négligeant l'apport de la bobine seule, le flux est contraint verticalement&nbsp;: le fer sature à un certain flux $\Phi\_\text{sat}$ et ça, le gâteau n'y peut rien. Il ne peut donc jouer que sur l'**allure** de la courbe $\Phi(I)$&nbsp;!
 
 Il suffit que le fer arrive à saturation pour un courant plus grand. C'est là que le gâteau joue son rôle&nbsp;: en agrandissant l'entrefer, il diminue la perméabilité apparente du circuit vue par la bobine. Le flux grandit moins vite pour un même courant et n'atteint la saturation que pour un courant plus grand, pile-poil ce qu'on souhaite.
+
+À toi de jouer avec l'épaisseur de la cale&nbsp;:
 
 <div id="faroux-gap" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:14px 16px 16px; margin:20px auto; max-width:720px; font-family:system-ui,-apple-system,sans-serif; color:#1e293b;">
 <div style="display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center;">
@@ -593,7 +595,10 @@ Si on repense à notre bille, une variation de quantité de mouvement à petite 
     const drum = document.getElementById('fcDrum'), mass = document.getElementById('fcMass'), string = document.getElementById('fcString');
     const btn = document.getElementById('fcSwitch'), cores = root.querySelectorAll('.fc-core');
     const outI = document.getElementById('fcI'), outW = document.getElementById('fcW'), outE = document.getElementById('fcE');
-    const Rm = 5, Vd = 0.7, m = 2, g0 = 9.81, slow = 10, dt = 2e-5;
+    // La charge dure quelques centièmes de seconde, la décharge environ un centième :
+    // on les ralentit différemment, et on n'anime pas la longue traîne à très faible courant.
+    const Rm = 5, Vd = 0.7, m = 2, g0 = 9.81, dt = 2e-5;
+    const slowCharge = 40, slowDischarge = 150, iStop = 0.05 * Imax;
     let g = 0, closed = false, H = 0, Wc = 0, Em = 0, hDisp = 0, off1 = 0, off2 = 0, last = null;
 
     function reset() { H = 0; Wc = 0; Em = 0; }
@@ -613,22 +618,27 @@ Si on repense à notre bille, une variation de quantité de mouvement à petite 
     });
     cores.forEach(b => b.addEventListener('click', () => setCore(2e-3 * parseFloat(b.dataset.e))));
 
+    function step() {
+      const i = Iof(H, g);
+      const dP = closed ? U - r * i : -((r + Rm) * i + Vd);
+      let Hn = H + dP * dt / (N * s * dBdH(H));
+      if (Hn < 0) Hn = 0;
+      Wc += i * N * s * (Bof(Hn) - Bof(H));
+      if (!closed) Em += Rm * i * i * dt;
+      H = Hn;
+    }
     function frame(t) {
-      const dtReal = last === null ? 0 : Math.min(0.05, (t - last) / 1000);
+      // pas de temps réel mesuré : l'animation garde la même vitesse quel que soit le rafraîchissement
+      const dtReal = last === null ? 0 : Math.min(1, (t - last) / 1000);
       last = t;
-      let steps = Math.round(dtReal / slow / dt);
-      while (steps-- > 0) {
-        const i = Iof(H, g);
-        let dP;
-        if (closed) dP = U - r * i;
-        else if (H > 0) dP = -((r + Rm) * i + Vd);
-        else break;
-        let Hn = H + dP * dt / (N * s * dBdH(H));
-        if (Hn < 0) Hn = 0;
-        const Pold = N * s * Bof(H), Pnew = N * s * Bof(Hn);
-        Wc += i * (Pnew - Pold);
-        if (!closed) Em += Rm * i * i * dt;
-        H = Hn;
+      let steps = Math.round(dtReal / (closed ? slowCharge : slowDischarge) / dt);
+      while (steps-- > 0 && (closed || H > 0)) {
+        if (!closed && Iof(H, g) < iStop) {      // traîne : on termine d'un coup
+          for (let k = 0; k < 200000 && H > 0; k++) step();
+          H = 0;
+          break;
+        }
+        step();
       }
       if (H === 0) Wc = 0;
       const i = Iof(H, g);
