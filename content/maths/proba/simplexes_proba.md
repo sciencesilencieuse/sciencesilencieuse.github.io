@@ -365,7 +365,7 @@ D'où $m(0) = 1$ et, par dérivation, $m'(x) = m(x)$, ce qui implique $m(x) = \m
 
 ### Vérification par simulation
 
-Simulons $100\,000$ parties de chacun des deux jeux, et comptons dans quelle proportion de parties on a survécu au-delà du $k$-ième tirage&nbsp;:
+Simulons $100\\,000$ parties de chacun des deux jeux, et comptons dans quelle proportion de parties on a survécu au-delà du $k$-ième tirage&nbsp;:
 
 <div class="svg-container">
 <svg viewBox="0 0 470 260" role="img" aria-label="Fréquences de survie observées sur 100 000 parties, comparées à 1/k!" style="width:100%;max-width:470px;height:auto;">
@@ -414,7 +414,47 @@ Simulons $100\,000$ parties de chacun des deux jeux, et comptons dans quelle pro
 </div>
 <p class="legende">Fréquences de survie observées sur $100\,000$ parties de chaque jeu. Elles collent aux volumes $\frac{1}{k!}$ des simplexes (traits magenta), et sont presque identiques d'un jeu à l'autre&nbsp;: le cisaillement l'avait prédit.</p>
 
-Les nombres moyens de tirages observés valent $2,716$ pour la rupture de monotonie et $2,722$ pour le seuil de Gnedenko, pour une valeur exacte $\mathrm{e} \approx 2,718$. Les écarts, de l'ordre de $0,003$, sont conformes aux fluctuations attendues&nbsp;: l'écart-type de $N$ (ou de $M$) vaut $\sqrt{3\mathrm{e} - \mathrm{e}^2} \approx 0,88$, donc celui d'une moyenne sur $100\,000$ parties est d'environ $\frac{0,88}{\sqrt{100\,000}} \approx 0,003$.
+Les nombres moyens de tirages observés valent $2,716$ pour la rupture de monotonie et $2,722$ pour le seuil de Gnedenko, pour une valeur exacte $\mathrm{e} \approx 2,718$. Les écarts, de l'ordre de $0,003$, sont conformes aux fluctuations attendues&nbsp;: l'écart-type de $N$ (ou de $M$) vaut $\sqrt{3\mathrm{e} - \mathrm{e}^2} \approx 0,88$, donc celui d'une moyenne sur $100\\,000$ parties est d'environ $\frac{0,88}{\sqrt{100\,000}} \approx 0,003$.
+
+
+<i>Programme python rupture de monotonie&nbsp;:</i>
+
+{{< runpython lang="python" mode="toggle" height="auto">}}
+from random import random
+
+N = 100000
+M = 0
+	
+for i in range(N):
+	k = 0
+	Uavant = 0
+	while (Uapres := random()) < Uavant:
+		k += 1
+		Uavant = Uapres
+	M += k
+
+print(M/N)
+{{< /runpython  >}}
+
+<i>Programme python Gnedenko&nbsp;:</i>
+
+{{< runpython lang="python" mode="toggle" height="auto">}}
+from random import random
+
+N = 100000
+M = 0
+	
+for i in range(N):
+	k = 0
+	S = 0
+	while S>1:
+		k += 1
+		S += random()
+	M += k
+
+print(M/N)
+{{< /runpython  >}}
+
 
 
 ## Dérangements de Montmort ($\mathrm{e}^{-1}$)
