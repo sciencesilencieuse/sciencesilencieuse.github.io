@@ -419,16 +419,16 @@ Les nombres moyens de tirages observés valent $2,716$ pour la rupture de monoto
 
 <i>Programme python rupture de monotonie&nbsp;:</i>
 
-{{< runpython lang="python" mode="toggle" height="auto">}}
+{{< runpython lang="pyodide" mode="toggle" height="auto">}}
 from random import random
 
 N = 100000
 M = 0
 	
 for i in range(N):
-	k = 0
+	k = 1
 	Uavant = 0
-	while (Uapres := random()) < Uavant:
+	while (Uapres := random()) > Uavant:
 		k += 1
 		Uavant = Uapres
 	M += k
@@ -447,7 +447,7 @@ M = 0
 for i in range(N):
 	k = 0
 	S = 0
-	while S>1:
+	while S < 1:
 		k += 1
 		S += random()
 	M += k
