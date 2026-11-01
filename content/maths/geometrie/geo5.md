@@ -407,13 +407,6 @@ On peut s'amuser à combiner les poursuites pour faire de jolies figures... Ci-d
 ## Murmurations
 
 <div style="position:relative; width:800px; max-width:100%; margin-left: auto; margin-right: auto;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); ">
-{{<youtube uV54oa0SyMc>}}
-</div>
-
-
-<br>
-
-<div style="position:relative; width:800px; max-width:100%; margin-left: auto; margin-right: auto;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); ">
 {{<youtube Ch7VxxTBe1c>}}
 </div>
 

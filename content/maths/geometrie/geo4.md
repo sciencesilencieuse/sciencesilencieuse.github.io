@@ -7,6 +7,20 @@ hidden = false
 +++
 
 <style>
+h2
+{
+color:#970E53 !important;
+}
+h3
+{
+color:#004D80 !important;
+}
+  #preuve
+{
+    background-color:#EAEAEA;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
  #correc
   {
     color: #006C65;
@@ -39,7 +53,7 @@ details[open] > summary:first-of-type {
 </style>
 
 
-# Curse of dimensionality
+<h1 style="overflow-x:auto;">Curse of dimensionality</h1>
 
 L'expression *Curse of dimensionality* (*Fléau de la dimension* dans sa traduction française) vient de l'américain Richard Bellman alors qu'il considérait des problèmes en programmation dynamique (qu'il inventa en 1953).
 
@@ -87,12 +101,12 @@ Mais regardons maintenant ce que cela signifie.<br>
 Le volume $V_n$ d'une $n$-boule de rayon $R$ peut se déterminer grâce à la formule de récurrence suivante&nbsp;: $\displaystyle V_n(R)=\frac{2\pi R^2}{n} V_{n-2}(R)$<br>
 En prenant $V_0(R) =1$ (à partir de la formule du cube $a^n$) et $V_1(R)=2R$, on peut déterminer le volume en toute dimension.
 
-<br>
-
+<div id="preuve">
 <details>
-<summary id="correcsum">
-<a style="color:#006C65;">Démonstration de la formule de récurrence&nbsp;:</a></summary>
-<blockquote id="correc"> 
+<summary>
+Démonstration de la formule de récurrence&nbsp;:
+</summary>
+
 Le volume de la $n$-boule est par définition $\displaystyle V_n(R) = \underset{x_1^2+x_2^2+\cdots+x_n^2≤R^2}{\int\cdots\int} dx_1 dx_2\cdots dx_n$.<br>
 Séparons l'intégration en deux&nbsp;:
 $\displaystyle V_n(R) = \underset{x_1^2+x_2^2≤R^2}{\iint}\left(\underset{x_3^2+\cdots+x_n^2≤R^2-x_1^2-x_2^2}{\int\cdots\int} dx_3\cdots dx_n\right)dx_1dx_2 = \underset{x_1^2+x_2^2≤R^2}{\iint}V_{n-2}\left(\sqrt{R^2-x_1^2-x_2^2}\right)dx_1dx_2$<br>
@@ -106,12 +120,13 @@ $
 \begin{aligned}
 V_n(R) &= V_{n-2}(R)\int_0^{2\pi}\int_0^R \left(1-\frac{r^2}{R^2}\right)^{\frac{n-2}{2}}rdrd\theta\\\\
 & = 2\pi V_{n-2}(R) \int_0^R \left(1-\frac{r^2}{R^2}\right)^{\frac{n-2}{2}}rdr\\\\
-& =  2\pi V_{n-2}(R) \left[-\frac{R^2}{2}\frac{2}{n}\left(1-\frac{r^2}{R^2}\right)^{\frac{n}{2}}\right]_{r=0}^{r=R}\\\\
+& =  2\pi V_{n-2}(R) \left[-\frac{R^2}{2}\frac{2}{n}\left(1-\frac{r^2}{R^2}\right)^{\frac{n}{2}}\right]\_{r=0}^{r=R}\\\\
 & = \frac{2\pi R^2}{n} V_{n-2}(R)
 \end{aligned}
 $
-</blockquote>
 </details>
+</div>
+
 
 {{%notice type="note" round="true"%}}
 3Blue1Brown a fait [une merveilleuse vidéo](https://youtu.be/fsLh-NYhOoU) sur cette formule à partir d'une conférence filmée.
