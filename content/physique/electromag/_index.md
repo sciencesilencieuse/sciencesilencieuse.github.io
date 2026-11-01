@@ -208,3 +208,8 @@ Où on essaye de retrouver l'ordre de grandeur de la valeur du champ électrique
 
 Retour sur un classique des salles de classes&nbsp;: la déviation d'un filet d'eau par l'approche d'une règle ou d'un ballon de baudruche frottés sur un pull en laine. L'expérience est souvent annoncé comme démontrant le caractère polaire de l'eau bien que la polarité des molécules n'y soit pas pour grand-chose.
 
+
+## [L'expérience de Faroux](./faroux)
+
+Une bobine sur un noyau de fer restitue son énergie à un moteur qui soulève une masse. On glisse un petit-beurre dans l'entrefer, et la masse monte bien plus haut&nbsp;! Où l'on découvre que l'énergie magnétique ne se loge pas dans le fer mais dans l'air de l'entrefer.
+
