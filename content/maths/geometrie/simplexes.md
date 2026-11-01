@@ -1038,5 +1038,5 @@ Les $\frac{t^k}{k!}$ sont des volumes de simplexes, et le reste est une intégra
 <b>Que donne la géométrie du simplexe en probabilités&nbsp;?</b><br>
 Puisque le volume du simplexe canonique $\Delta_k = \{0 \le t_1 \le \dots \le t_k \le 1\}$ vaut $\frac{1}{k!}$, tout événement aléatoire qui revient à imposer un ordre croissant entre $k$ tirages indépendants a automatiquement une probabilité égale à $\frac{1}{k!}$&nbsp;!
 
-👉 <b><a href="../../proba/simplexes_proba/">Simplexes et probabilités</a>&nbsp;:</b> découvrez comment le simplexe $\Delta_k$ résout presque sans calcul la rupture de monotonie ($\mathbb{E}[N] = \mathrm{e}$), le problème du seuil de Gnedenko ($\mathbb{E}[M] = \mathrm{e}$) et le problème des chapeaux de Montmort ($\lim p_n = \mathrm{e}^{-1}$).</li>
+👉 <b><a href="../../proba/simplexes_proba/">Simplexes et probabilités</a>&nbsp;:</b> découvrez comment le simplexe $\Delta_k$ résout presque sans calcul la rupture de monotonie ($\mathbb{E}[N] = \mathrm{e}$) et le problème du seuil de Gnedenko ($\mathbb{E}[M] = \mathrm{e}$).
 </div>

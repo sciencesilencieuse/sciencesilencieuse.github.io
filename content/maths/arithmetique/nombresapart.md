@@ -162,7 +162,7 @@ Ce talent d'ubiquité vient en bonne partie de son écriture $\mathrm{e} = \sum 
 | **[Intérêts composés](../exponentielle/)** | les intérêts de $k$-ième génération, nés de $k$ versements successifs | le capital plafonne à $\mathrm{e}$ |
 | **[Géométrie](../../geometrie/simplexes/)** | le volume de la part du cube $[0, 1]^k$ où les coordonnées sont rangées dans l'ordre | $1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \cdots = \mathrm{e}$ |
 | **[Physique quantique](../../geometrie/simplexes/#flèche-du-temps--dyson-et-wick)** | les $k$ interactions d'une histoire ont lieu dans l'ordre chronologique | l'exponentielle ordonnée de la [série de Dyson](/physique/tqc/gifted_amateur/tqc7/#la-série-de-dyson) |
-| **[Probabilités](../../proba/simplexes_proba/)** | $k$ nombres tirés au hasard sont rangés dans l'ordre croissant avec probabilité $\frac{1}{k!}$ | il faut en moyenne $\mathrm{e}$ tirages avant une première baisse, et le problème des chapeaux donne $\frac{1}{\mathrm{e}}$ |
+| **[Probabilités](../../proba/simplexes_proba/)** | $k$ nombres tirés au hasard sont rangés dans l'ordre croissant avec probabilité $\frac{1}{k!}$ | il faut en moyenne $\mathrm{e}$ tirages avant une première baisse |
 
 </div>
 
