@@ -319,9 +319,9 @@ D'où à nouveau, par sommation des probabilités de survie&nbsp;: $\displaystyl
 
 ### Preuve analytique par absence de mémoire
 
-Peut-on retrouver $\mathbb{E}[M] = \mathrm{e}$ directement à partir de l'équation différentielle de l'exponentielle ($f' = f$), sans même passer par la série $\sum \frac{1}{k!}$&nbsp;?
+On peut retrouver $\mathbb{E}[M] = \mathrm{e}$ directement à partir de l'équation différentielle de l'exponentielle ($f' = f$) (sanspasser par la série $\sum \frac{1}{k!}$) grâce à l'**absence de mémoire** des incréments indépendants.
 
-Oui, grâce à l'**absence de mémoire** des incréments indépendants&nbsp;! Généralisons le problème en notant $m(x)$ le nombre moyen de tirages uniformes sur $[0, 1]$ nécessaires pour que leur somme dépasse un seuil réel quelconque $x \in [0, 1]$&nbsp;:
+Généralisons le problème en notant $m(x)$ le nombre moyen de tirages uniformes sur $[0, 1]$ nécessaires pour que leur somme dépasse un seuil réel quelconque $x \in [0, 1]$&nbsp;:
 
 <p style="text-align:center;">
 $\displaystyle m(x) = \mathbb{E}[M_x], \qquad \text{où}$ $\displaystyle \quad M_x = \min\left\{ k \ge 1 \;\middle|\; U_1 + \dots + U_k > x \right\}$
