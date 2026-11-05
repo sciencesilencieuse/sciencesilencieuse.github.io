@@ -783,11 +783,37 @@ C'est la version «&nbsp;en petits carrés&nbsp;» de l'[approche 2](#approche-2
 
 ### Invariance d'aire sous l'hyperbole
 
-Une troisième figure classique relie la suite de Bernoulli à $\mathrm{e}$&nbsp;: l'aire sous l'hyperbole $y = \frac{1}{x}$. Notons $\mathcal{A}(a, b)$ l'aire sous la courbe entre les abscisses $a$ et $b$ (c'est $\ln b - \ln a$, et $\mathrm{e}$ est précisément le nombre tel que $\mathcal{A}(1, \mathrm{e}) = 1$).
+Une troisième approche, plus analytique, passe par l'aire sous l'hyperbole $y = \frac{1}{x}$. Notons $\mathcal{A}(a, b)$ cette aire entre les abscisses $a$ et $b$&nbsp;: c'est le logarithme, $\mathcal{A}(a, b) = \ln b - \ln a$, et $\mathrm{e}$ est précisément le nombre tel que $\mathcal{A}(1, \mathrm{e}) = 1$. **Pour montrer que $u\_n \to \mathrm{e}$, il suffit donc de montrer que l'aire de $1$ à $u\_n$ tend vers $1$.**
 
-**La propriété clé&nbsp;:** si l'on étire les abscisses d'un facteur $c > 0$ tout en comprimant les ordonnées du même facteur, l'hyperbole ne bouge pas (le point $(x, \frac{1}{x})$ va en $(cx, \frac{1}{cx})$), et les aires sont conservées (elles sont multipliées par $c \times \frac{1}{c} = 1$). Ainsi $\mathcal{A}(ca, cb) = \mathcal{A}(a, b)$&nbsp;: une tranche plus loin mais proportionnellement plus large a la même aire.
+**Une propriété remarquable&nbsp;: multiplier une tranche ne change pas son aire.** Comparons la tranche $[a, b]$ et la tranche $[ca, cb]$, avec $c > 1$. La seconde est $c$ fois plus large, mais la courbe y est $c$ fois plus basse, puisque $\frac{1}{cx} = \frac{1}{c} \times \frac{1}{x}$. Largeur multipliée par $c$, hauteur divisée par $c$&nbsp;: l'aire est la même, $\mathcal{A}(ca, cb) = \mathcal{A}(a, b)$. (Formellement, c'est le changement de variable $x = ct$&nbsp;: $\int\_{ca}^{cb} \frac{\mathrm{d}x}{x} = \int\_a^b \frac{c\\,\mathrm{d}t}{ct} = \int\_a^b \frac{\mathrm{d}t}{t}$.)
 
-En prenant $c = 1 + \frac{1}{n}$, les $n$ tranches successives $\left[c^j, c^{j+1}\right]$ entre $x = 1$ et $x = c^n = u\_n$ ont donc **toutes la même aire** que la première&nbsp;:
+<div class="svg-container">
+<svg viewBox="0 0 360 250" role="img" aria-label="Les tranches [1 ; 1,5] et [2 ; 3] sous l'hyperbole ont la même aire" style="width:100%;max-width:360px;height:auto;">
+<defs><marker id="fm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
+<polygon points="73.7,205.0 73.7,79.1 74.9,80.6 76.1,82.1 77.3,83.6 78.5,85.1 79.7,86.5 80.9,87.9 82.1,89.2 83.3,90.5 84.5,91.8 85.8,93.1 87.0,94.3 88.2,95.5 89.4,96.7 90.6,97.8 91.8,99.0 93.0,100.1 94.2,101.1 95.4,102.2 96.6,103.2 97.8,104.3 99.0,105.3 100.2,106.2 101.5,107.2 102.7,108.1 103.9,109.1 105.1,110.0 106.3,110.8 107.5,111.7 108.7,112.6 109.9,113.4 111.1,114.2 112.3,115.1 113.5,115.8 114.8,116.6 116.0,117.4 117.2,118.2 118.4,118.9 119.6,119.6 120.8,120.3 122.0,121.0 122.0,205.0" fill="#b2cad9"/>
+<polygon points="170.3,205.0 170.3,142.0 172.7,142.8 175.2,143.6 177.6,144.3 180.0,145.0 182.4,145.7 184.8,146.4 187.2,147.1 189.7,147.8 192.1,148.4 194.5,149.0 196.9,149.6 199.3,150.2 201.8,150.8 204.2,151.4 206.6,152.0 209.0,152.5 211.4,153.1 213.8,153.6 216.2,154.1 218.7,154.6 221.1,155.1 223.5,155.6 225.9,156.1 228.3,156.6 230.7,157.0 233.2,157.5 235.6,157.9 238.0,158.4 240.4,158.8 242.8,159.2 245.2,159.6 247.7,160.0 250.1,160.4 252.5,160.8 254.9,161.2 257.3,161.6 259.8,161.9 262.2,162.3 264.6,162.7 267.0,163.0 267.0,205.0" fill="#e0b7cb"/>
+<polyline points="49.5,37.1 50.8,40.1 52.2,43.0 53.5,45.9 54.8,48.6 56.1,51.2 57.5,53.7 58.8,56.2 60.1,58.6 61.5,60.9 62.8,63.1 64.1,65.3 65.5,67.4 66.8,69.4 68.1,71.4 69.4,73.3 70.8,75.2 72.1,77.0 73.4,78.8 74.8,80.5 76.1,82.1 77.4,83.8 78.7,85.4 80.1,86.9 81.4,88.4 82.7,89.9 84.1,91.3 85.4,92.7 86.7,94.1 88.0,95.4 89.4,96.7 90.7,97.9 92.0,99.2 93.4,100.4 94.7,101.6 96.0,102.7 97.4,103.9 98.7,105.0 100.0,106.0 101.3,107.1 102.7,108.1 104.0,109.1 105.3,110.1 106.7,111.1 108.0,112.1 109.3,113.0 110.6,113.9 112.0,114.8 113.3,115.7 114.6,116.6 116.0,117.4 117.3,118.2 118.6,119.0 119.9,119.8 121.3,120.6 122.6,121.4 123.9,122.2 125.3,122.9 126.6,123.6 127.9,124.3 129.2,125.0 130.6,125.7 131.9,126.4 133.2,127.1 134.6,127.7 135.9,128.4 137.2,129.0 138.6,129.7 139.9,130.3 141.2,130.9 142.5,131.5 143.9,132.1 145.2,132.6 146.5,133.2 147.9,133.8 149.2,134.3 150.5,134.8 151.8,135.4 153.2,135.9 154.5,136.4 155.8,136.9 157.2,137.4 158.5,137.9 159.8,138.4 161.2,138.9 162.5,139.4 163.8,139.8 165.1,140.3 166.5,140.8 167.8,141.2 169.1,141.6 170.5,142.1 171.8,142.5 173.1,142.9 174.4,143.3 175.8,143.8 177.1,144.2 178.4,144.6 179.8,145.0 181.1,145.4 182.4,145.7 183.7,146.1 185.1,146.5 186.4,146.9 187.7,147.2 189.1,147.6 190.4,148.0 191.7,148.3 193.1,148.7 194.4,149.0 195.7,149.3 197.0,149.7 198.4,150.0 199.7,150.3 201.0,150.7 202.4,151.0 203.7,151.3 205.0,151.6 206.3,151.9 207.7,152.2 209.0,152.5 210.3,152.8 211.7,153.1 213.0,153.4 214.3,153.7 215.6,154.0 217.0,154.3 218.3,154.6 219.6,154.8 221.0,155.1 222.3,155.4 223.6,155.6 224.9,155.9 226.3,156.2 227.6,156.4 228.9,156.7 230.3,156.9 231.6,157.2 232.9,157.4 234.3,157.7 235.6,157.9 236.9,158.2 238.2,158.4 239.6,158.6 240.9,158.9 242.2,159.1 243.6,159.3 244.9,159.6 246.2,159.8 247.5,160.0 248.9,160.2 250.2,160.4 251.5,160.7 252.9,160.9 254.2,161.1 255.5,161.3 256.9,161.5 258.2,161.7 259.5,161.9 260.8,162.1 262.2,162.3 263.5,162.5 264.8,162.7 266.2,162.9 267.5,163.1 268.8,163.3 270.1,163.5 271.5,163.7 272.8,163.8 274.1,164.0 275.5,164.2 276.8,164.4 278.1,164.6 279.4,164.8 280.8,164.9 282.1,165.1 283.4,165.3 284.8,165.4 286.1,165.6 287.4,165.8 288.8,166.0 290.1,166.1 291.4,166.3 292.7,166.4 294.1,166.6 295.4,166.8 296.7,166.9 298.1,167.1 299.4,167.2 300.7,167.4 302.0,167.5 303.4,167.7 304.7,167.9 306.0,168.0 307.4,168.2 308.7,168.3 310.0,168.4 311.3,168.6 312.7,168.7 314.0,168.9 315.3,169.0" fill="none" stroke="#004D80" stroke-width="2"/>
+<line x1="35.0" y1="205.0" x2="333.0" y2="205.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#fm)"/>
+<line x1="35.0" y1="205.0" x2="35.0" y2="31.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#fm)"/>
+<line x1="73.7" y1="205.0" x2="73.7" y2="209.0" stroke="#94a3b8" stroke-width="1" />
+<text x="73.7" y="222.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1</text>
+<line x1="122.0" y1="205.0" x2="122.0" y2="209.0" stroke="#94a3b8" stroke-width="1" />
+<text x="122.0" y="222.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1,5</text>
+<line x1="170.3" y1="205.0" x2="170.3" y2="209.0" stroke="#94a3b8" stroke-width="1" />
+<text x="170.3" y="222.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >2</text>
+<line x1="267.0" y1="205.0" x2="267.0" y2="209.0" stroke="#94a3b8" stroke-width="1" />
+<text x="267.0" y="222.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >3</text>
+<text x="335.0" y="209.0" text-anchor="start" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >x</text>
+<text x="97.8" y="158.6" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >𝒜</text>
+<text x="218.7" y="183.8" text-anchor="middle" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >𝒜</text>
+<text x="218.7" y="126.9" text-anchor="middle" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >largeur × 2</text>
+<text x="218.7" y="141.9" text-anchor="middle" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >hauteur ÷ 2</text>
+<text x="78.5" y="75.1" text-anchor="start" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >y = 1/x</text>
+</svg>
+</div>
+<p class="legende">La tranche $[2, 3]$ est la tranche $[1\,;\,1,5]$ multipliée par $c = 2$&nbsp;: deux fois plus large, deux fois plus basse, même aire.</p>
+
+**Les tranches de Bernoulli.** Prenons $c = 1 + \frac{1}{n}$, et partons de $x = 1$ en multipliant $n$ fois par $c$&nbsp;: on obtient les abscisses $1, c, c^2, \dots, c^n$. C'est exactement ce que fait le banquier de Bernoulli en capitalisant $n$ fois, et l'on arrive donc à $c^n = \left(1 + \frac{1}{n}\right)^n = u\_n$. Chaque tranche $\left[c^j, c^{j+1}\right]$ est la précédente multipliée par $c$&nbsp;: elles ont **toutes la même aire**, celle de la première.
 
 <div class="svg-container">
 <svg viewBox="0 0 430 265" role="img" aria-label="Aire sous l'hyperbole y = 1/x découpée en tranches d'aires égales" style="width:100%;max-width:430px;height:auto;">
@@ -816,15 +842,47 @@ En prenant $c = 1 + \frac{1}{n}$, les $n$ tranches successives $\left[c^j, c^{j+
 <text x="354.9" y="238.0" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >e</text>
 </svg>
 </div>
-<p class="legende">Pour $n = 4$&nbsp;: les tranches $[c^j, c^{j+1}]$ avec $c = 1 + \frac{1}{4}$ s'élargissent mais gardent toutes la même aire $\mathcal{A}$.</p>
+<p class="legende">Pour $n = 4$&nbsp;: les tranches $[c^j, c^{j+1}]$ avec $c = 1 + \frac{1}{4}$ s'élargissent, mais gardent toutes la même aire $\mathcal{A}$. Elles mènent de $1$ à $u_4 = c^4$.</p>
 
-L'aire totale vaut donc $\mathcal{A}(1, u\_n) = n \times \mathcal{A}\left(1, 1 + \frac{1}{n}\right)$. Or, sur la première tranche, de largeur $\frac{1}{n}$, la courbe reste comprise entre $\frac{n}{n+1}$ et $1$, si bien que $\mathcal{A}\left(1, 1 + \frac{1}{n}\right)$ est comprise entre $\frac{1}{n+1}$ et $\frac{1}{n}$. En multipliant par $n$&nbsp;:
+L'aire de $1$ à $u\_n$ vaut donc $n$ fois l'aire de la première tranche&nbsp;: $\mathcal{A}(1, u\_n) = n \times \mathcal{A}\left(1, 1 + \frac{1}{n}\right)$.
+
+**L'aire de la première tranche.** Cette tranche est étroite (largeur $\frac{1}{n}$), et la courbe y descend à peine, de $1$ à $\frac{1}{1 + 1/n} = \frac{n}{n+1}$. Son aire est donc coincée entre celles de deux rectangles de largeur $\frac{1}{n}$, l'un de hauteur $\frac{n}{n+1}$, l'autre de hauteur $1$&nbsp;:
+
+<div class="svg-container">
+<svg viewBox="0 0 360 265" role="img" aria-label="La première tranche est coincée entre un rectangle de hauteur n/(n+1) et un rectangle de hauteur 1" style="width:100%;max-width:360px;height:auto;">
+<defs><marker id="fz" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
+<rect x="111.8" y="49.3" width="130.7" height="160.7" fill="none" stroke="#970E53" stroke-width="1.4" stroke-dasharray="5 3"/>
+<polygon points="111.8,210.0 111.8,49.3 115.1,50.3 118.4,51.3 121.6,52.2 124.9,53.2 128.2,54.2 131.4,55.1 134.7,56.0 138.0,56.9 141.2,57.8 144.5,58.7 147.8,59.6 151.0,60.5 154.3,61.4 157.6,62.2 160.8,63.1 164.1,63.9 167.4,64.7 170.6,65.5 173.9,66.3 177.2,67.1 180.4,67.9 183.7,68.7 187.0,69.5 190.2,70.2 193.5,71.0 196.8,71.8 200.0,72.5 203.3,73.2 206.6,73.9 209.8,74.7 213.1,75.4 216.4,76.1 219.6,76.8 222.9,77.5 226.2,78.1 229.4,78.8 232.7,79.5 236.0,80.1 239.2,80.8 242.5,81.4 242.5,210.0" fill="#c7d8e3"/>
+<rect x="111.8" y="81.4" width="130.7" height="128.6" fill="none" stroke="#004D80" stroke-width="1.4" stroke-dasharray="5 3"/>
+<polyline points="85.7,40.8 87.7,41.5 89.7,42.2 91.6,42.8 93.6,43.5 95.6,44.1 97.6,44.8 99.6,45.4 101.6,46.1 103.6,46.7 105.5,47.3 107.5,48.0 109.5,48.6 111.5,49.2 113.5,49.8 115.5,50.4 117.5,51.0 119.4,51.6 121.4,52.2 123.4,52.8 125.4,53.4 127.4,53.9 129.4,54.5 131.4,55.1 133.4,55.6 135.3,56.2 137.3,56.8 139.3,57.3 141.3,57.9 143.3,58.4 145.3,59.0 147.3,59.5 149.2,60.0 151.2,60.6 153.2,61.1 155.2,61.6 157.2,62.1 159.2,62.6 161.2,63.1 163.2,63.7 165.1,64.2 167.1,64.7 169.1,65.2 171.1,65.7 173.1,66.1 175.1,66.6 177.1,67.1 179.0,67.6 181.0,68.1 183.0,68.6 185.0,69.0 187.0,69.5 189.0,70.0 191.0,70.4 192.9,70.9 194.9,71.3 196.9,71.8 198.9,72.2 200.9,72.7 202.9,73.1 204.9,73.6 206.8,74.0 208.8,74.4 210.8,74.9 212.8,75.3 214.8,75.7 216.8,76.2 218.8,76.6 220.8,77.0 222.7,77.4 224.7,77.8 226.7,78.2 228.7,78.7 230.7,79.1 232.7,79.5 234.7,79.9 236.6,80.3 238.6,80.7 240.6,81.1 242.6,81.4 244.6,81.8 246.6,82.2 248.6,82.6 250.6,83.0 252.5,83.4 254.5,83.8 256.5,84.1 258.5,84.5 260.5,84.9 262.5,85.2 264.5,85.6 266.4,86.0 268.4,86.3 270.4,86.7 272.4,87.1 274.4,87.4 276.4,87.8 278.4,88.1 280.3,88.5 282.3,88.8 284.3,89.2" fill="none" stroke="#004D80" stroke-width="2"/>
+<line x1="70.0" y1="210.0" x2="308.0" y2="210.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#fz)"/>
+<line x1="70.0" y1="210.0" x2="70.0" y2="26.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#fz)"/>
+<line x1="70.0" y1="49.3" x2="111.8" y2="49.3" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2 3"/>
+<text x="64.0" y="53.3" text-anchor="end" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >1</text>
+<line x1="70.0" y1="81.4" x2="111.8" y2="81.4" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2 3"/>
+<text x="64.0" y="85.4" text-anchor="end" font-size="12.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >n/(n + 1)</text>
+<text x="111.8" y="227.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1</text>
+<text x="242.5" y="227.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic" >1 + 1/n</text>
+<line x1="111.8" y1="236.0" x2="111.8" y2="244.0" stroke="#64748b" stroke-width="1" />
+<line x1="242.5" y1="236.0" x2="242.5" y2="244.0" stroke="#64748b" stroke-width="1" />
+<line x1="111.8" y1="240.0" x2="242.5" y2="240.0" stroke="#64748b" stroke-width="1" />
+<text x="177.2" y="256.0" text-anchor="middle" font-size="12" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >largeur 1/n</text>
+<text x="250.5" y="65.4" text-anchor="start" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >y = 1/x</text>
+</svg>
+</div>
+<p class="legende">La première tranche (ici pour $n = 4$, élargie) est comprise entre le rectangle de hauteur $\frac{n}{n+1}$ et celui de hauteur $1$.</p>
+
+$$
+\frac{1}{n} \times \frac{n}{n+1} \le \mathcal{A}\left(1, 1 + \frac{1}{n}\right) \le \frac{1}{n} \times 1.
+$$
+
+En multipliant par $n$&nbsp;:
 
 $$
 \frac{n}{n+1} \le \mathcal{A}(1, u\_n) \le 1.
 $$
 
-Quand $n \to +\infty$, l'aire $\mathcal{A}(1, u\_n)$ tend donc vers $1 = \mathcal{A}(1, \mathrm{e})$&nbsp;: autrement dit $\ln u\_n \to 1$, et $u\_n \to \mathrm{e}$.
+**Conclusion.** Quand $n \to +\infty$, $\frac{n}{n+1} \to 1$, et l'aire $\mathcal{A}(1, u\_n)$, prise en tenaille, tend vers $1 = \mathcal{A}(1, \mathrm{e})$. Autrement dit, $\ln u\_n \to 1$, et donc $u\_n \to \mathrm{e}$ (par continuité de l'exponentielle).
 
 
 ## Flèche du temps : Dyson et Wick
