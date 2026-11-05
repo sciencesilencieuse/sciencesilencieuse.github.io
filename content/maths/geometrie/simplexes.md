@@ -783,9 +783,67 @@ C'est la version «&nbsp;en petits carrés&nbsp;» de l'[approche 2](#approche-2
 
 ### Invariance d'aire sous l'hyperbole
 
-Une troisième approche passe par l'aire sous l'hyperbole $y = \frac{1}{x}$. Notons $\mathcal{A}(a, b)$ cette aire entre les abscisses $a$ et $b$. Son grand intérêt&nbsp;: **elle transforme les multiplications en additions**. C'est exactement ce qu'il faut pour étudier le capital de Bernoulli, qui est obtenu par multiplications successives.
+Une troisième approche passe par l'aire sous l'hyperbole $y = \frac{1}{x}$. Notons $\mathcal{A}(a, b)$ cette aire entre les abscisses $a$ et $b$. Elle a une propriété étonnante&nbsp;: **elle transforme les multiplications en additions**. C'est exactement ce qu'il faut pour étudier le capital de Bernoulli, obtenu par multiplications successives, et c'est aussi une très jolie façon de *voir* d'où vient la propriété fondamentale du logarithme.
 
-**Multiplier une tranche ne change pas son aire.** Si l'on multiplie les deux bornes d'une tranche par un même nombre $c > 0$, elle devient $c$ fois plus large, mais la courbe y est $c$ fois plus basse&nbsp;: $\mathcal{A}(ca, cb) = \mathcal{A}(a, b)$. (Formellement, c'est le changement de variable $x = ct$ dans l'intégrale $\int\_{ca}^{cb} \frac{\mathrm{d}x}{x}$.)
+**Une observation&nbsp;: décaler une tranche en la multipliant ne change pas son aire.** Multiplions les deux bornes d'une tranche par un même nombre $a > 0$&nbsp;: elle devient $a$ fois plus large, mais la courbe y est $a$ fois plus basse (puisque $\frac{1}{ax} = \frac{1}{a} \times \frac{1}{x}$). Largeur multipliée par $a$, hauteur divisée par $a$&nbsp;: l'aire ne change pas. Ainsi la tranche $[1, b]$ et la tranche décalée $[a, ab]$ ont la même aire&nbsp;: $\mathcal{A}(a, ab) = \mathcal{A}(1, b)$. (Formellement, c'est le changement de variable $x = at$ dans l'intégrale $\int\_a^{ab} \frac{\mathrm{d}x}{x}$.)
+
+<div class="svg-container">
+<svg viewBox="0 0 420 310" role="img" aria-label="L'aire de 1 à ab se coupe en l'aire de 1 à a et l'aire de a à ab ; cette dernière est la tranche de 1 à b décalée en multipliant par a, de même aire" style="width:100%;max-width:420px;height:auto;">
+<defs><marker id="fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#970E53" stroke-width="1.6"/></marker></defs>
+<polygon points="84.0,225.0 84.0,88.0 86.2,90.6 88.4,93.2 90.6,95.7 92.8,98.1 95.0,100.4 97.2,102.6 99.4,104.8 101.6,106.9 103.8,108.9 106.0,110.8 108.2,112.7 110.4,114.5 112.6,116.2 114.8,117.9 117.0,119.6 119.2,121.2 121.4,122.7 123.6,124.2 125.8,125.7 128.0,127.1 130.2,128.5 132.4,129.8 134.6,131.1 136.8,132.4 139.0,133.6 141.2,134.8 143.4,136.0 145.6,137.2 147.8,138.3 150.0,139.4 152.2,140.4 154.4,141.4 156.6,142.4 158.8,143.4 161.0,144.4 163.2,145.3 165.4,146.2 167.6,147.1 169.8,148.0 172.0,148.9 174.2,149.7 176.4,150.5 178.6,151.3 180.8,152.1 183.0,152.9 185.2,153.6 187.4,154.4 189.6,155.1 191.8,155.8 194.0,156.5 194.0,225.0" fill="#b8cddb"/>
+<polygon points="194.0,225.0 194.0,156.5 196.2,157.2 198.4,157.8 200.6,158.5 202.8,159.1 205.0,159.7 207.2,160.4 209.4,161.0 211.6,161.6 213.8,162.1 216.0,162.7 218.2,163.3 220.4,163.8 222.6,164.4 224.8,164.9 227.0,165.4 229.2,165.9 231.4,166.4 233.6,166.9 235.8,167.4 238.0,167.9 240.2,168.4 242.4,168.8 244.6,169.3 246.8,169.7 249.0,170.2 251.2,170.6 253.4,171.0 255.6,171.5 257.8,171.9 260.0,172.3 262.2,172.7 264.4,173.1 266.6,173.5 268.8,173.9 271.0,174.2 273.2,174.6 275.4,175.0 277.6,175.3 279.8,175.7 282.0,176.1 284.2,176.4 286.4,176.7 288.6,177.1 290.8,177.4 293.0,177.7 295.2,178.1 297.4,178.4 299.6,178.7 301.8,179.0 304.0,179.3 304.0,225.0" fill="#deb2c8"/>
+<polygon points="84.0,225.0 84.0,88.0 85.1,89.3 86.2,90.6 87.3,92.0 88.4,93.2 89.5,94.5 90.6,95.7 91.7,96.9 92.8,98.1 93.9,99.3 95.0,100.4 96.1,101.5 97.2,102.6 98.3,103.7 99.4,104.8 100.5,105.8 101.6,106.9 102.7,107.9 103.8,108.9 104.9,109.8 106.0,110.8 107.1,111.7 108.2,112.7 109.3,113.6 110.4,114.5 111.5,115.4 112.6,116.2 113.7,117.1 114.8,117.9 115.9,118.8 117.0,119.6 118.1,120.4 119.2,121.2 120.3,122.0 121.4,122.7 122.5,123.5 123.6,124.2 124.7,125.0 125.8,125.7 126.9,126.4 128.0,127.1 129.1,127.8 130.2,128.5 131.3,129.2 132.4,129.8 133.5,130.5 134.6,131.1 135.7,131.8 136.8,132.4 137.9,133.0 139.0,133.6 139.0,225.0" fill="none" stroke="#970E53" stroke-width="1.6" stroke-dasharray="5 3"/>
+<polyline points="56.5,42.3 58.0,45.6 59.5,48.7 61.0,51.8 62.6,54.8 64.1,57.6 65.6,60.4 67.1,63.1 68.6,65.7 70.1,68.2 71.6,70.6 73.1,72.9 74.7,75.2 76.2,77.5 77.7,79.6 79.2,81.7 80.7,83.7 82.2,85.7 83.7,87.6 85.2,89.5 86.8,91.3 88.3,93.1 89.8,94.8 91.3,96.5 92.8,98.1 94.3,99.7 95.8,101.3 97.3,102.8 98.8,104.3 100.4,105.7 101.9,107.1 103.4,108.5 104.9,109.8 106.4,111.2 107.9,112.4 109.4,113.7 111.0,114.9 112.5,116.1 114.0,117.3 115.5,118.5 117.0,119.6 118.5,120.7 120.0,121.8 121.5,122.8 123.0,123.9 124.6,124.9 126.1,125.9 127.6,126.9 129.1,127.8 130.6,128.7 132.1,129.7 133.6,130.6 135.1,131.5 136.7,132.3 138.2,133.2 139.7,134.0 141.2,134.8 142.7,135.7 144.2,136.4 145.7,137.2 147.2,138.0 148.8,138.7 150.3,139.5 151.8,140.2 153.3,140.9 154.8,141.6 156.3,142.3 157.8,143.0 159.3,143.7 160.9,144.3 162.4,145.0 163.9,145.6 165.4,146.2 166.9,146.9 168.4,147.5 169.9,148.1 171.4,148.7 173.0,149.2 174.5,149.8 176.0,150.4 177.5,150.9 179.0,151.5 180.5,152.0 182.0,152.5 183.6,153.1 185.1,153.6 186.6,154.1 188.1,154.6 189.6,155.1 191.1,155.6 192.6,156.1 194.1,156.5 195.6,157.0 197.2,157.5 198.7,157.9 200.2,158.4 201.7,158.8 203.2,159.2 204.7,159.7 206.2,160.1 207.8,160.5 209.3,160.9 210.8,161.3 212.3,161.7 213.8,162.1 215.3,162.5 216.8,162.9 218.3,163.3 219.9,163.7 221.4,164.1 222.9,164.4 224.4,164.8 225.9,165.2 227.4,165.5 228.9,165.9 230.4,166.2 231.9,166.6 233.5,166.9 235.0,167.2 236.5,167.6 238.0,167.9 239.5,168.2 241.0,168.5 242.5,168.9 244.0,169.2 245.6,169.5 247.1,169.8 248.6,170.1 250.1,170.4 251.6,170.7 253.1,171.0 254.6,171.3 256.1,171.6 257.7,171.9 259.2,172.1 260.7,172.4 262.2,172.7 263.7,173.0 265.2,173.2 266.7,173.5 268.2,173.8 269.8,174.0 271.3,174.3 272.8,174.5 274.3,174.8 275.8,175.1 277.3,175.3 278.8,175.6 280.4,175.8 281.9,176.0 283.4,176.3 284.9,176.5 286.4,176.7 287.9,177.0 289.4,177.2 290.9,177.4 292.5,177.7 294.0,177.9 295.5,178.1 297.0,178.3 298.5,178.5 300.0,178.8 301.5,179.0 303.0,179.2 304.6,179.4 306.1,179.6 307.6,179.8 309.1,180.0 310.6,180.2 312.1,180.4 313.6,180.6 315.1,180.8 316.7,181.0 318.2,181.2 319.7,181.4 321.2,181.6 322.7,181.8 324.2,182.0 325.7,182.1 327.2,182.3 328.8,182.5 330.3,182.7 331.8,182.9 333.3,183.0 334.8,183.2 336.3,183.4 337.8,183.6 339.3,183.7 340.8,183.9 342.4,184.1 343.9,184.2 345.4,184.4 346.9,184.6 348.4,184.7 349.9,184.9 351.4,185.1 352.9,185.2 354.5,185.4 356.0,185.5 357.5,185.7 359.0,185.8" fill="none" stroke="#004D80" stroke-width="2"/>
+<path d="M111.5,107.4 Q180.2,52.4 249.0,160.2" fill="none" stroke="#970E53" stroke-width="1.4" marker-end="url(#fl)"/>
+<text x="186.2" y="73.4" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >× a : même aire</text>
+<text x="111.5" y="194.9" text-anchor="middle" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >𝒜(1, b)</text>
+<line x1="84.0" y1="254.0" x2="84.0" y2="259.0" stroke="#004D80" stroke-width="1.2" />
+<line x1="194.0" y1="254.0" x2="194.0" y2="259.0" stroke="#004D80" stroke-width="1.2" />
+<line x1="84.0" y1="259.0" x2="194.0" y2="259.0" stroke="#004D80" stroke-width="1.2" />
+<text x="139.0" y="275.0" text-anchor="middle" font-size="12.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >𝒜(1, a)</text>
+<line x1="194.0" y1="254.0" x2="194.0" y2="259.0" stroke="#970E53" stroke-width="1.2" />
+<line x1="304.0" y1="254.0" x2="304.0" y2="259.0" stroke="#970E53" stroke-width="1.2" />
+<line x1="194.0" y1="259.0" x2="304.0" y2="259.0" stroke="#970E53" stroke-width="1.2" />
+<text x="249.0" y="275.0" text-anchor="middle" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >𝒜(a, ab)</text>
+<line x1="84.0" y1="284.0" x2="84.0" y2="289.0" stroke="#334155" stroke-width="1.2" />
+<line x1="304.0" y1="284.0" x2="304.0" y2="289.0" stroke="#334155" stroke-width="1.2" />
+<line x1="84.0" y1="289.0" x2="304.0" y2="289.0" stroke="#334155" stroke-width="1.2" />
+<text x="194.0" y="305.0" text-anchor="middle" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >𝒜(1, ab)</text>
+<line x1="40.0" y1="225.0" x2="378.0" y2="225.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#fl)"/>
+<line x1="40.0" y1="225.0" x2="40.0" y2="36.0" stroke="#94a3b8" stroke-width="1" />
+<line x1="84.0" y1="225.0" x2="84.0" y2="229.0" stroke="#94a3b8" stroke-width="1" />
+<text x="84.0" y="243.0" text-anchor="middle" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" >1</text>
+<line x1="139.0" y1="225.0" x2="139.0" y2="229.0" stroke="#94a3b8" stroke-width="1" />
+<text x="139.0" y="243.0" text-anchor="middle" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >b</text>
+<line x1="194.0" y1="225.0" x2="194.0" y2="229.0" stroke="#94a3b8" stroke-width="1" />
+<text x="194.0" y="243.0" text-anchor="middle" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >a</text>
+<line x1="304.0" y1="225.0" x2="304.0" y2="229.0" stroke="#94a3b8" stroke-width="1" />
+<text x="304.0" y="243.0" text-anchor="middle" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >ab</text>
+<text x="380.0" y="229.0" text-anchor="start" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >x</text>
+<text x="68.0" y="57.7" text-anchor="start" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >y = 1/x</text>
+</svg>
+</div>
+<p class="legende">L'aire de $1$ à $ab$ est la somme de l'aire de $1$ à $a$ et de l'aire de $a$ à $ab$. Cette dernière est la tranche $[1, b]$ (en pointillés) décalée en multipliant par $a$&nbsp;: deux fois plus large et deux fois plus basse ici ($a = 2$, $b = 1,5$), donc de même aire.</p>
+
+**Le moment clé&nbsp;: les multiplications deviennent des additions.** Coupons l'aire de $1$ à $ab$ en deux morceaux, en $a$&nbsp;:
+
+$$
+\mathcal{A}(1, ab) = \mathcal{A}(1, a) + \mathcal{A}(a, ab).
+$$
+
+Le second morceau est la tranche $[1, b]$ décalée en multipliant par $a$&nbsp;: il a donc la même aire, $\mathcal{A}(1, b)$. D'où&nbsp;:
+
+<div id="theo">
+
+$$
+\mathcal{A}(1, ab) = \mathcal{A}(1, a) + \mathcal{A}(1, b).
+$$
+
+La fonction $x \mapsto \mathcal{A}(1, x)$ transforme les produits en sommes&nbsp;: c'est le **logarithme**, $\ln x = \mathcal{A}(1, x)$, et l'on vient de *voir* sa propriété fondamentale $\ln(ab) = \ln a + \ln b$.
+
+</div>
+
+C'est d'ailleurs ainsi que le lien entre l'hyperbole et les logarithmes a été découvert, au milieu du XVII<sup>e</sup> siècle&nbsp;: Grégoire de Saint-Vincent remarque que des tranches dont les bornes croissent géométriquement ont des aires égales, et son élève Alphonse Antonio de Sarasa y reconnaît le comportement des logarithmes.
 
 **Les $n$ multiplications de Bernoulli deviennent $n$ additions.** Le capital $u\_n$ s'obtient en partant de $1$ et en multipliant $n$ fois par $c = 1 + \frac{1}{n}$&nbsp;:
 
@@ -793,7 +851,7 @@ $$
 1 \\;\longrightarrow\\; c \\;\longrightarrow\\; c^2 \\;\longrightarrow\\; \cdots \\;\longrightarrow\\; c^n = \left(1 + \frac{1}{n}\right)^n = u\_n.
 $$
 
-Plaçons ces nombres sur l'axe des abscisses&nbsp;: ils découpent l'intervalle $[1, u\_n]$ en $n$ tranches, dont chacune est la précédente multipliée par $c$. Elles ont donc toutes la même aire, et l'aire totale vaut $n$ fois celle de la première&nbsp;:
+Plaçons ces nombres sur l'axe des abscisses&nbsp;: ils découpent l'intervalle $[1, u\_n]$ en $n$ tranches, dont chacune est la précédente décalée en multipliant par $c$. Elles ont donc toutes la même aire&nbsp;: les $n$ multiplications par $c$ deviennent $n$ additions de la même aire, et&nbsp;:
 
 $$
 \mathcal{A}(1, u\_n) = n \times \mathcal{A}\left(1, 1 + \frac{1}{n}\right).
@@ -828,7 +886,7 @@ $$
 </div>
 <p class="legende">Pour $n = 4$&nbsp;: les abscisses $1, c, c^2, c^3, c^4 = u_4$, avec $c = 1 + \frac{1}{4}$, découpent quatre tranches de plus en plus larges, mais de même aire $\mathcal{A}$.</p>
 
-**Où est $\mathrm{e}$&nbsp;?** L'aire $\mathcal{A}(1, x)$ croît avec $x$ (c'est le logarithme $\ln x$), et $\mathrm{e}$ est précisément l'abscisse où elle atteint $1$&nbsp;: $\mathcal{A}(1, \mathrm{e}) = \ln \mathrm{e} = 1$. Comparer $u\_n$ à $\mathrm{e}$ revient donc à comparer l'aire $\mathcal{A}(1, u\_n)$ à $1$&nbsp;: si cette aire tend vers $1$, alors $u\_n$ tend vers $\mathrm{e}$. Il reste à évaluer l'aire de la première tranche.
+**Où est $\mathrm{e}$&nbsp;?** Le logarithme $\ln x = \mathcal{A}(1, x)$ croît avec $x$, et $\mathrm{e}$ est précisément l'abscisse où elle atteint $1$&nbsp;: $\mathcal{A}(1, \mathrm{e}) = \ln \mathrm{e} = 1$. Comparer $u\_n$ à $\mathrm{e}$ revient donc à comparer l'aire $\mathcal{A}(1, u\_n)$ à $1$&nbsp;: si cette aire tend vers $1$, alors $u\_n$ tend vers $\mathrm{e}$. Il reste à évaluer l'aire de la première tranche.
 
 **L'aire de la première tranche.** Cette tranche est étroite (largeur $\frac{1}{n}$), et la courbe y descend à peine, de $1$ à $\frac{1}{1 + 1/n} = \frac{n}{n+1}$. Son aire est donc coincée entre celles de deux rectangles de largeur $\frac{1}{n}$, l'un de hauteur $\frac{n}{n+1}$, l'autre de hauteur $1$&nbsp;:
 
