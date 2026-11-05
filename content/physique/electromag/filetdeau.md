@@ -79,6 +79,14 @@ details > summary:first-of-type {
 details[open] > summary:first-of-type {
   list-style-type: disclosure-open;
 }
+.legende
+{
+    text-align: center;
+    font-size: 0.9em;
+    color: #64748b;
+    font-style: italic;
+    margin-top: -0.6em;
+}
 </style>
 
 
@@ -122,490 +130,47 @@ $$
 
 L'énergie d'alignement électrostatique est près de **dix mille fois plus faible** que l'agitation thermique&nbsp;! Les molécules d'eau sont bousculées en permanence par les chocs thermiques&nbsp;: d'après la statistique de Boltzmann-Langevin, le degré d'alignement moyen d'un dipôle avec le champ vaut $\langle \cos\theta \rangle = \mathcal{L}\left(\frac{p\_0 E}{k\_B T}\right) \approx \frac{p\_0 E}{3 k\_B T} \approx \pu{5e-5}$. Autrement dit, seule une infime fraction statistique (environ une molécule sur vingt mille) présente en moyenne une orientation préférentielle dans le sens du champ.
 
-<div id="thermal-sim" style="background:linear-gradient(145deg, #ffffff 0%, #f8fafc 100%); border-radius:18px; padding:20px; margin-top:20px; margin-bottom:24px; box-shadow: 0 10px 30px -5px rgba(15,23,42,0.08), 0 4px 12px -2px rgba(15,23,42,0.04); border:1px solid #e2e8f0; font-family: system-ui, -apple-system, sans-serif; color:#1e293b;">
-<div style="display:flex; flex-wrap:wrap; gap:20px; align-items:stretch;">
-<div style="flex: 1 1 390px; display:flex; flex-direction:column; align-items:center;">
-<canvas id="dipoleCanvas" width="480" height="320" style="width:100%; max-width:480px; height:auto; aspect-ratio: 480 / 320; background:#ffffff; border-radius:14px; border:1px solid #cbd5e1; box-shadow: inset 0 2px 6px rgba(15,23,42,0.04);"></canvas>
-<div style="display:flex; gap:8px; flex-wrap:wrap; justify-content:center; margin-top:12px;">
-<button type="button" class="temp-preset" data-slider="0" style="background:#eff6ff; color:#1d4ed8; border:1px solid #bfdbfe; border-radius:20px; padding:6px 13px; font-size:0.8em; font-weight:600; cursor:pointer; transition:all 0.15s;">❄️ Manuels ($T \to \pu{0 K}$)</button>
-<button type="button" class="temp-preset" data-slider="43" style="background:#fef3c7; color:#b45309; border:1px solid #fde68a; border-radius:20px; padding:6px 13px; font-size:0.8em; font-weight:600; cursor:pointer; transition:all 0.15s;">🔬 Cryogénique ($T \approx \pu{0,05 K}$)</button>
-<button type="button" class="temp-preset" data-slider="100" style="background:#f0fdf4; color:#15803d; border:1px solid #bbf7d0; border-radius:20px; padding:6px 13px; font-size:0.8em; font-weight:600; cursor:pointer; transition:all 0.15s;">🌡️ Eau ambiante ($T = \pu{293 K}$)</button>
+<div class="svg-container">
+<svg viewBox="0 0 270 215" role="img" aria-label="Molécules d'eau toutes alignées sur le champ, comme dans les manuels" style="width:100%;max-width:270px;height:auto;">
+<defs><marker id="fd0" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#970E53" stroke-width="1.6"/></marker></defs>
+<style></style>
+<text x="135.0" y="18.0" text-anchor="middle" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" >Vision des manuels</text>
+<line x1="40.0" y1="38.0" x2="225.0" y2="38.0" stroke="#970E53" stroke-width="1.4" marker-end="url(#fd0)"/>
+<text x="230.0" y="42.0" text-anchor="start" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >E</text>
+<g transform="translate(48,78)"><g transform="rotate(0)"><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(105,78)"><g transform="rotate(0)"><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(162,78)"><g transform="rotate(0)"><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(219,78)"><g transform="rotate(0)"><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(48,130)"><g transform="rotate(0)"><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(105,130)"><g transform="rotate(0)"><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(162,130)"><g transform="rotate(0)"><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(219,130)"><g transform="rotate(0)"><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(48,182)"><g transform="rotate(0)"><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(105,182)"><g transform="rotate(0)"><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(162,182)"><g transform="rotate(0)"><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(219,182)"><g transform="rotate(0)"><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+</svg>
+<svg viewBox="0 0 270 215" role="img" aria-label="À température ambiante, les molécules d'eau tournent en tous sens" style="width:100%;max-width:270px;height:auto;">
+<defs><marker id="fd1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#970E53" stroke-width="1.6"/></marker></defs>
+<style>.ag00{transform:rotate(-95deg)}@keyframes ag00-k{from{transform:rotate(-95deg)}to{transform:rotate(-259deg)}}@media (prefers-reduced-motion:no-preference){.ag00{animation:ag00-k 1.52s ease-in-out infinite alternate}}.ag01{transform:rotate(-148deg)}@keyframes ag01-k{from{transform:rotate(-148deg)}to{transform:rotate(-270deg)}}@media (prefers-reduced-motion:no-preference){.ag01{animation:ag01-k 2.09s ease-in-out infinite alternate}}.ag02{transform:rotate(108deg)}@keyframes ag02-k{from{transform:rotate(108deg)}to{transform:rotate(9deg)}}@media (prefers-reduced-motion:no-preference){.ag02{animation:ag02-k 1.60s ease-in-out infinite alternate}}.ag03{transform:rotate(-80deg)}@keyframes ag03-k{from{transform:rotate(-80deg)}to{transform:rotate(-258deg)}}@media (prefers-reduced-motion:no-preference){.ag03{animation:ag03-k 1.24s ease-in-out infinite alternate}}.ag10{transform:rotate(159deg)}@keyframes ag10-k{from{transform:rotate(159deg)}to{transform:rotate(-18deg)}}@media (prefers-reduced-motion:no-preference){.ag10{animation:ag10-k 1.95s ease-in-out infinite alternate}}.ag11{transform:rotate(108deg)}@keyframes ag11-k{from{transform:rotate(108deg)}to{transform:rotate(17deg)}}@media (prefers-reduced-motion:no-preference){.ag11{animation:ag11-k 1.28s ease-in-out infinite alternate}}.ag12{transform:rotate(132deg)}@keyframes ag12-k{from{transform:rotate(132deg)}to{transform:rotate(214deg)}}@media (prefers-reduced-motion:no-preference){.ag12{animation:ag12-k 1.69s ease-in-out infinite alternate}}.ag13{transform:rotate(62deg)}@keyframes ag13-k{from{transform:rotate(62deg)}to{transform:rotate(-31deg)}}@media (prefers-reduced-motion:no-preference){.ag13{animation:ag13-k 1.52s ease-in-out infinite alternate}}.ag20{transform:rotate(-148deg)}@keyframes ag20-k{from{transform:rotate(-148deg)}to{transform:rotate(-77deg)}}@media (prefers-reduced-motion:no-preference){.ag20{animation:ag20-k 1.28s ease-in-out infinite alternate}}.ag21{transform:rotate(74deg)}@keyframes ag21-k{from{transform:rotate(74deg)}to{transform:rotate(254deg)}}@media (prefers-reduced-motion:no-preference){.ag21{animation:ag21-k 1.56s ease-in-out infinite alternate}}.ag22{transform:rotate(-31deg)}@keyframes ag22-k{from{transform:rotate(-31deg)}to{transform:rotate(95deg)}}@media (prefers-reduced-motion:no-preference){.ag22{animation:ag22-k 1.11s ease-in-out infinite alternate}}.ag23{transform:rotate(-70deg)}@keyframes ag23-k{from{transform:rotate(-70deg)}to{transform:rotate(-151deg)}}@media (prefers-reduced-motion:no-preference){.ag23{animation:ag23-k 1.50s ease-in-out infinite alternate}}</style>
+<text x="135.0" y="18.0" text-anchor="middle" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" >À température ambiante</text>
+<line x1="40.0" y1="38.0" x2="225.0" y2="38.0" stroke="#970E53" stroke-width="1.4" marker-end="url(#fd1)"/>
+<text x="230.0" y="42.0" text-anchor="start" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >E</text>
+<g transform="translate(48,78)"><g class="ag00" style=""><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(105,78)"><g class="ag01" style=""><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(162,78)"><g class="ag02" style=""><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(219,78)"><g class="ag03" style=""><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(48,130)"><g class="ag10" style=""><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(105,130)"><g class="ag11" style=""><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(162,130)"><g class="ag12" style=""><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(219,130)"><g class="ag13" style=""><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(48,182)"><g class="ag20" style=""><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(105,182)"><g class="ag21" style=""><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(162,182)"><g class="ag22" style=""><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+<g transform="translate(219,182)"><g class="ag23" style=""><line x1="-5" y1="0" x2="7" y2="-9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><line x1="-5" y1="0" x2="7" y2="9" stroke="#94a3b8" stroke-width="2.4" stroke-linecap="round"/><circle cx="-5" cy="0" r="7.5" fill="#004D80"/><circle cx="7" cy="-9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/><circle cx="7" cy="9" r="4.2" fill="#bfd2df" stroke="#004D80" stroke-width="0.8"/></g></g>
+</svg>
 </div>
-</div>
-<div style="flex: 1 1 260px; display:flex; flex-direction:column; justify-content:space-between; gap:12px;">
-<div style="background:#ffffff; padding:14px 16px; border-radius:12px; border:1px solid #cbd5e1; box-shadow:0 2px 6px rgba(15,23,42,0.02);">
-<div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px;">
-<span style="font-weight:700; font-size:0.9em; color:#334155;">Température $T$ :</span>
-<span id="tempReadout" style="font-family:ui-monospace, monospace; font-weight:800; font-size:1.08em; color:#0284c7;">293 K (+20 °C)</span>
-</div>
-<input type="range" id="tempSlider" min="0" max="100" step="0.5" value="100" style="width:100%; accent-color:#0284c7; cursor:pointer;">
-<div style="display:flex; justify-content:space-between; font-size:0.74em; color:#64748b; margin-top:4px;">
-<span>0 K (Ordre figé)</span>
-<span>Échelle log</span>
-<span>293 K (Ambiante)</span>
-</div>
-</div>
-
-<div style="background:#ffffff; color:#1e293b; padding:14px 16px; border-radius:12px; font-size:0.85em; line-height:1.5; border:1px solid #cbd5e1; box-shadow:0 2px 6px rgba(15,23,42,0.02);">
-<div style="font-weight:700; color:#0369a1; margin-bottom:8px; border-bottom:1px solid #e2e8f0; padding-bottom:5px; display:flex; justify-content:space-between; align-items:center;">
-<span>📈 Loi de Langevin $\mathcal{L}(x)$</span>
-<span style="background:#f1f5f9; color:#475569; font-weight:600; font-size:0.85em; padding:2px 7px; border-radius:6px;">$E = \pu{10^5 V/m}$</span>
-</div>
-<div style="display:flex; justify-content:space-between; margin-bottom:4px;">
-<span style="color:#475569;">Paramètre $x = p_0 E / (k_B T)$ :</span>
-<span id="ratioReadout" style="font-family:ui-monospace, monospace; font-weight:700; color:#b45309;">1.53 × 10⁻⁴</span>
-</div>
-<div style="display:flex; justify-content:space-between; margin-bottom:6px;">
-<span style="color:#475569;">Alignement $\langle \cos\theta \rangle$ :</span>
-<span id="polReadout" style="font-family:ui-monospace, monospace; font-weight:700; color:#15803d;">0.0051 %</span>
-</div>
-<canvas id="langevinCurveCanvas" width="280" height="145" style="width:100%; height:145px; display:block; margin:8px 0; background:#f8fafc; border-radius:8px; border:1px solid #e2e8f0;"></canvas>
-<div id="regimeComment" style="font-size:0.82em; color:#b91c1c; font-style:italic; text-align:center; font-weight:600; margin-top:4px;">
-Chaos thermique : seulement ~1 molécule sur 20 000 alignée !
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<script>
-(function() {
-const canvas = document.getElementById('dipoleCanvas');
-if (!canvas) return;
-const ctx = canvas.getContext('2d');
-const curveCanvas = document.getElementById('langevinCurveCanvas');
-const cctx = curveCanvas ? curveCanvas.getContext('2d') : null;
-
-// Support haute résolution Retina / HiDPI
-const dpr = Math.min(window.devicePixelRatio || 1, 3);
-const W = 480, H = 320;
-canvas.width = W * dpr;
-canvas.height = H * dpr;
-ctx.scale(dpr, dpr);
-
-const slider = document.getElementById('tempSlider');
-const tempReadout = document.getElementById('tempReadout');
-const ratioReadout = document.getElementById('ratioReadout');
-const polReadout = document.getElementById('polReadout');
-const regimeComment = document.getElementById('regimeComment');
-const presetBtns = document.querySelectorAll('.temp-preset');
-
-// Grille 4 x 3 de molécules d'eau H2O
-const cols = 4, rows = 3;
-const dipoles = [];
-for (let r = 0; r < rows; r++) {
-for (let c = 0; c < cols; c++) {
-dipoles.push({
-baseX: 88 + c * 102,
-baseY: 78 + r * 68,
-theta: (Math.random() - 0.5) * Math.PI * 2,
-omega: (Math.random() - 0.5) * 0.18,
-vx: 0,
-vy: 0
-});
-}
-}
-
-function sliderToTemp(s) {
-if (s <= 0.5) return 0;
-const minLog = -4.2;
-const maxLog = Math.log10(293);
-const logT = minLog + (s / 100) * (maxLog - minLog);
-return Math.pow(10, logT);
-}
-
-function langevin(x) {
-if (x > 1e5) return 1.0;
-if (x < 0.05) return x / 3.0;
-return (1.0 / Math.tanh(x)) - (1.0 / x);
-}
-
-presetBtns.forEach(btn => {
-btn.addEventListener('click', () => {
-slider.value = btn.getAttribute('data-slider');
-});
-});
-
-function drawWaterMolecule(x, y, angle, thermalNoise) {
-ctx.save();
-ctx.translate(x, y);
-ctx.rotate(angle);
-
-// Halo subtil d'agitation ou d'alignement
-if (thermalNoise > 0.35) {
-ctx.beginPath();
-ctx.arc(0, 0, 26, 0, Math.PI * 2);
-ctx.strokeStyle = `rgba(245, 158, 11, ${0.14 * thermalNoise})`;
-ctx.lineWidth = 1.2;
-ctx.setLineDash([3, 3]);
-ctx.stroke();
-ctx.setLineDash([]);
-}
-
-// Géométrie H2O : dipôle p0 dirigé de O(delta-) à gauche vers le milieu des deux H(delta+) à droite
-const ox = -10, oy = 0;
-const hx1 = 11, hy1 = -11.5;
-const hx2 = 11, hy2 = 11.5;
-
-// Liaisons covalentes O-H
-ctx.strokeStyle = '#94a3b8';
-ctx.lineWidth = 4.5;
-ctx.lineCap = 'round';
-ctx.beginPath();
-ctx.moveTo(ox, oy);
-ctx.lineTo(hx1, hy1);
-ctx.moveTo(ox, oy);
-ctx.lineTo(hx2, hy2);
-ctx.stroke();
-
-ctx.strokeStyle = '#e2e8f0';
-ctx.lineWidth = 2;
-ctx.beginPath();
-ctx.moveTo(ox, oy);
-ctx.lineTo(hx1, hy1);
-ctx.moveTo(ox, oy);
-ctx.lineTo(hx2, hy2);
-ctx.stroke();
-
-// Atome d'Oxygène (pôle négatif delta-, bleu profond)
-const oGrad = ctx.createRadialGradient(ox - 3, oy - 3, 2, ox, oy, 12.5);
-oGrad.addColorStop(0, '#60a5fa');
-oGrad.addColorStop(0.55, '#2563eb');
-oGrad.addColorStop(1, '#1e3a8a');
-ctx.beginPath();
-ctx.arc(ox, oy, 12, 0, Math.PI * 2);
-ctx.fillStyle = oGrad;
-ctx.fill();
-ctx.strokeStyle = '#1e40af';
-ctx.lineWidth = 1;
-ctx.stroke();
-
-ctx.fillStyle = '#ffffff';
-ctx.font = 'bold 9.5px system-ui, sans-serif';
-ctx.textAlign = 'center';
-ctx.textBaseline = 'middle';
-ctx.fillText('δ−', ox, oy + 0.5);
-
-// Atomes d'Hydrogène (pôles positifs delta+, rouge corail)
-[ [hx1, hy1], [hx2, hy2] ].forEach(([hx, hy]) => {
-const hGrad = ctx.createRadialGradient(hx - 2, hy - 2, 1, hx, hy, 7.5);
-hGrad.addColorStop(0, '#fca5a5');
-hGrad.addColorStop(0.5, '#ef4444');
-hGrad.addColorStop(1, '#991b1b');
-ctx.beginPath();
-ctx.arc(hx, hy, 7.2, 0, Math.PI * 2);
-ctx.fillStyle = hGrad;
-ctx.fill();
-ctx.strokeStyle = '#991b1b';
-ctx.lineWidth = 0.8;
-ctx.stroke();
-
-ctx.fillStyle = '#ffffff';
-ctx.font = 'bold 8.5px system-ui, sans-serif';
-ctx.fillText('+', hx, hy + 0.5);
-});
-
-// Vecteur dipolaire p0 au centre de la molécule
-ctx.strokeStyle = 'rgba(15, 23, 42, 0.55)';
-ctx.fillStyle = 'rgba(15, 23, 42, 0.65)';
-ctx.lineWidth = 1.4;
-ctx.beginPath();
-ctx.moveTo(-2, 0);
-ctx.lineTo(14, 0);
-ctx.stroke();
-ctx.beginPath();
-ctx.moveTo(18, 0);
-ctx.lineTo(13, -3);
-ctx.lineTo(13, 3);
-ctx.closePath();
-ctx.fill();
-
-ctx.restore();
-}
-
-function drawLangevinMiniCurve(xParam, Lval) {
-if (!cctx || !curveCanvas) return;
-// Adaptation 1:1 exacte aux dimensions CSS réelles du canvas (zéro déformation d'aspect)
-const w = Math.round(curveCanvas.clientWidth) || 280;
-const h = Math.round(curveCanvas.clientHeight) || 145;
-if (curveCanvas.width !== Math.round(w * dpr) || curveCanvas.height !== Math.round(h * dpr)) {
-curveCanvas.width = Math.round(w * dpr);
-curveCanvas.height = Math.round(h * dpr);
-}
-cctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-cctx.clearRect(0, 0, w, h);
-
-const padL = 34, padR = 16, padT = 16, padB = 34;
-const pw = w - padL - padR, ph = h - padT - padB;
-const xMaxPlot = 12.0;
-
-// Grille horizontale et verticale légère
-cctx.strokeStyle = '#e2e8f0';
-cctx.lineWidth = 1;
-cctx.setLineDash([2, 2]);
-cctx.beginPath();
-cctx.moveTo(padL, padT);
-cctx.lineTo(padL + pw, padT);
-cctx.moveTo(padL, padT + ph * 0.5);
-cctx.lineTo(padL + pw, padT + ph * 0.5);
-[3, 6, 9, 12].forEach(xv => {
-const gx = padL + (xv / xMaxPlot) * pw;
-cctx.moveTo(gx, padT);
-cctx.lineTo(gx, padT + ph);
-});
-cctx.stroke();
-cctx.setLineDash([]);
-
-// Tangente linéaire à l'origine L(x) ≈ x/3 (pour x de 0 à 3)
-cctx.strokeStyle = '#94a3b8';
-cctx.lineWidth = 1.2;
-cctx.setLineDash([4, 3]);
-cctx.beginPath();
-cctx.moveTo(padL, padT + ph);
-cctx.lineTo(padL + (3.0 / xMaxPlot) * pw, padT);
-cctx.stroke();
-cctx.setLineDash([]);
-cctx.fillStyle = '#64748b';
-cctx.font = 'italic 9.5px system-ui, sans-serif';
-cctx.textAlign = 'left';
-cctx.fillText('≈ x/3', padL + (2.35 / xMaxPlot) * pw, padT + 12);
-
-// Remplissage léger sous la courbe L(x)
-const areaGrad = cctx.createLinearGradient(0, padT, 0, padT + ph);
-areaGrad.addColorStop(0, 'rgba(2, 132, 199, 0.16)');
-areaGrad.addColorStop(1, 'rgba(2, 132, 199, 0.01)');
-cctx.fillStyle = areaGrad;
-cctx.beginPath();
-cctx.moveTo(padL, padT + ph);
-for (let i = 0; i <= 100; i++) {
-const xv = (i / 100) * xMaxPlot;
-const lv = langevin(xv);
-const px = padL + (xv / xMaxPlot) * pw;
-const py = padT + ph - lv * ph;
-cctx.lineTo(px, py);
-}
-cctx.lineTo(padL + pw, padT + ph);
-cctx.closePath();
-cctx.fill();
-
-// Axes
-cctx.strokeStyle = '#64748b';
-cctx.lineWidth = 1.3;
-cctx.beginPath();
-cctx.moveTo(padL, padT);
-cctx.lineTo(padL, padT + ph);
-cctx.lineTo(padL + pw, padT + ph);
-cctx.stroke();
-
-// Graduations Y
-cctx.fillStyle = '#475569';
-cctx.font = '600 10px system-ui, sans-serif';
-cctx.textAlign = 'right';
-cctx.textBaseline = 'middle';
-cctx.fillText('1.0', padL - 6, padT);
-cctx.fillText('0.5', padL - 6, padT + ph * 0.5);
-cctx.fillText('0', padL - 6, padT + ph);
-
-// Graduations X et légende de l'axe horizontal
-cctx.textAlign = 'center';
-cctx.textBaseline = 'top';
-[0, 3, 6, 9, 12].forEach(xv => {
-const gx = padL + (xv / xMaxPlot) * pw;
-cctx.fillText(String(xv), gx, padT + ph + 4);
-});
-cctx.fillStyle = '#334155';
-cctx.font = '600 10.5px system-ui, sans-serif';
-cctx.fillText('x = p₀E / (kB·T)', padL + pw / 2, h - 14);
-
-// Courbe L(x) pour x de 0 à 12
-cctx.strokeStyle = '#0284c7';
-cctx.lineWidth = 2.3;
-cctx.beginPath();
-for (let i = 0; i <= 100; i++) {
-const xv = (i / 100) * xMaxPlot;
-const lv = langevin(xv);
-const px = padL + (xv / xMaxPlot) * pw;
-const py = padT + ph - lv * ph;
-if (i === 0) cctx.moveTo(px, py);
-else cctx.lineTo(px, py);
-}
-cctx.stroke();
-
-// Point de fonctionnement actuel (parfaitement circulaire grâce au ratio 1:1)
-const xClamped = Math.min(xMaxPlot, Math.max(0, xParam));
-const lClamped = langevin(xClamped);
-const dotX = padL + (xClamped / xMaxPlot) * pw;
-const dotY = padT + ph - lClamped * ph;
-
-cctx.fillStyle = Lval > 0.1 ? '#16a34a' : '#dc2626';
-cctx.beginPath();
-cctx.arc(dotX, dotY, 5, 0, Math.PI * 2);
-cctx.fill();
-cctx.strokeStyle = '#ffffff';
-cctx.lineWidth = 1.6;
-cctx.stroke();
-}
-
-function animateDipoles() {
-const s = parseFloat(slider.value);
-const T = sliderToTemp(s);
-
-const T_char = 0.0449; // p0*E / k_B en K
-const x = T === 0 ? 1e9 : T_char / T;
-const L = langevin(x);
-
-if (T === 0) {
-tempReadout.textContent = '0 K (−273 °C)';
-ratioReadout.textContent = '∞';
-polReadout.textContent = '100.0 %';
-regimeComment.textContent = 'Vision des manuels : alignement parfait sans agitation thermique.';
-regimeComment.style.color = '#0369a1';
-} else if (T < 0.01) {
-tempReadout.textContent = (T * 1000).toFixed(1) + ' mK';
-ratioReadout.textContent = x.toFixed(1);
-polReadout.textContent = (L * 100).toFixed(1) + ' %';
-regimeComment.textContent = 'Froid cryogénique (mK) : le couple électrique domine enfin k_B T.';
-regimeComment.style.color = '#15803d';
-} else if (T < 2) {
-tempReadout.textContent = T.toFixed(2) + ' K';
-ratioReadout.textContent = x.toFixed(2);
-polReadout.textContent = (L * 100).toFixed(2) + ' %';
-regimeComment.textContent = 'Compétition entre couple électrique et agitation thermique.';
-regimeComment.style.color = '#b45309';
-} else {
-const celsius = Math.round(T - 273.15);
-tempReadout.textContent = Math.round(T) + ' K (' + (celsius >= 0 ? '+' : '') + celsius + ' °C)';
-ratioReadout.textContent = (x * 1e4).toFixed(2) + ' × 10⁻⁴';
-polReadout.textContent = (L * 100).toFixed(4) + ' %';
-regimeComment.textContent = 'Chaos thermique : seulement ~1 molécule sur 20 000 alignée !';
-regimeComment.style.color = '#b91c1c';
-}
-
-drawLangevinMiniCurve(x, L);
-
-ctx.clearRect(0, 0, W, H);
-
-// Fond quadrillé subtil de laboratoire
-ctx.save();
-ctx.strokeStyle = 'rgba(226, 232, 240, 0.55)';
-ctx.lineWidth = 1;
-for (let gx = 40; gx < W; gx += 40) {
-ctx.beginPath(); ctx.moveTo(gx, 0); ctx.lineTo(gx, 255); ctx.stroke();
-}
-for (let gy = 40; gy < 255; gy += 40) {
-ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(W, gy); ctx.stroke();
-}
-ctx.restore();
-
-// Lignes de champ électrique E en arrière-plan
-ctx.save();
-const fieldGrad = ctx.createLinearGradient(20, 0, 460, 0);
-fieldGrad.addColorStop(0, 'rgba(239, 68, 68, 0.22)');
-fieldGrad.addColorStop(1, 'rgba(37, 99, 235, 0.22)');
-ctx.strokeStyle = fieldGrad;
-ctx.fillStyle = 'rgba(220, 38, 38, 0.35)';
-ctx.lineWidth = 1.6;
-for (let yLine = 46; yLine <= 236; yLine += 47.5) {
-ctx.beginPath();
-ctx.moveTo(22, yLine);
-ctx.lineTo(452, yLine);
-ctx.stroke();
-ctx.beginPath();
-ctx.moveTo(458, yLine);
-ctx.lineTo(448, yLine - 4);
-ctx.lineTo(448, yLine + 4);
-ctx.closePath();
-ctx.fill();
-}
-ctx.font = 'bold 11.5px system-ui, sans-serif';
-ctx.fillStyle = '#dc2626';
-ctx.fillText('Champ électrique externe E = 10⁵ V/m  ⟶', 24, 24);
-ctx.restore();
-
-const thermalNoise = 1 - L;
-let sumCos = 0;
-
-dipoles.forEach((d) => {
-// Repliement de l'angle dans [-pi, pi] pour éviter tout moulinet lors du refroidissement à 0 K
-d.theta = Math.atan2(Math.sin(d.theta), Math.cos(d.theta));
-if (T === 0) {
-d.theta *= 0.80;
-d.omega = 0;
-} else {
-// Couple de rappel proportionnel à L(x) et bruit thermique
-const torque = -Math.sin(d.theta) * (0.38 * L);
-const kick = (Math.random() - 0.5) * 0.92 * Math.pow(thermalNoise, 0.6);
-d.omega = 0.74 * d.omega + torque + kick;
-d.theta += d.omega;
-}
-sumCos += Math.cos(d.theta);
-
-const jitterAmp = 3.0 * thermalNoise;
-d.vx = 0.6 * d.vx + (Math.random() - 0.5) * jitterAmp;
-d.vy = 0.6 * d.vy + (Math.random() - 0.5) * jitterAmp;
-
-drawWaterMolecule(d.baseX + d.vx, d.baseY + d.vy, d.theta, thermalNoise);
-});
-
-// Bandeau inférieur : Vecteur Polarisation Moyenne <p> / p0 sans aucun chevauchement
-ctx.save();
-ctx.fillStyle = '#f8fafc';
-ctx.strokeStyle = '#cbd5e1';
-ctx.lineWidth = 1.5;
-ctx.beginPath();
-ctx.roundRect(16, 266, 448, 40, 10);
-ctx.fill();
-ctx.stroke();
-
-ctx.textAlign = 'left';
-ctx.textBaseline = 'middle';
-const labelStr = 'Polarisation ⟨p⟩ / p₀ = ';
-ctx.fillStyle = '#334155';
-ctx.font = 'bold 11.5px system-ui, sans-serif';
-ctx.fillText(labelStr, 26, 286);
-const labelW = ctx.measureText(labelStr).width;
-
-ctx.font = 'bold 11.5px ui-monospace, monospace';
-ctx.fillStyle = L > 0.05 ? '#15803d' : '#b91c1c';
-const lText = L > 0.01 ? (L * 100).toFixed(1) + ' %' : (L * 100).toFixed(4) + ' %';
-ctx.fillText(lText, 26 + labelW + 2, 286);
-
-const vecStartX = 270;
-const vecMaxLen = 172;
-const vecY = 286;
-ctx.strokeStyle = '#e2e8f0';
-ctx.lineWidth = 7;
-ctx.lineCap = 'round';
-ctx.beginPath();
-ctx.moveTo(vecStartX, vecY);
-ctx.lineTo(vecStartX + vecMaxLen, vecY);
-ctx.stroke();
-
-const activeLen = Math.max(2, L * vecMaxLen);
-ctx.strokeStyle = L > 0.05 ? '#16a34a' : '#dc2626';
-ctx.lineWidth = 7;
-ctx.beginPath();
-ctx.moveTo(vecStartX, vecY);
-ctx.lineTo(vecStartX + activeLen, vecY);
-ctx.stroke();
-
-if (L > 0.06) {
-ctx.fillStyle = '#16a34a';
-ctx.beginPath();
-ctx.moveTo(vecStartX + activeLen + 7, vecY);
-ctx.lineTo(vecStartX + activeLen - 4, vecY - 5.5);
-ctx.lineTo(vecStartX + activeLen - 4, vecY + 5.5);
-ctx.closePath();
-ctx.fill();
-}
-ctx.restore();
-
-requestAnimationFrame(animateDipoles);
-}
-
-animateDipoles();
-})();
-</script>
+<p class="legende">Dans les manuels, les molécules d'eau s'alignent sur le champ comme des aiguilles de boussole. À température ambiante, l'agitation thermique les fait tourner en tous sens&nbsp;: en moyenne, une sur vingt mille environ penche dans le sens du champ.</p>
 
 Comment ce très faible alignement statistique individuel se traduit-il à l'échelle macroscopique dans un fluide diélectrique polaire mais **électriquement neutre** placé dans un champ électrique inhomogène $\vec{E}(\vec{r})$&nbsp;?
 
@@ -760,6 +325,37 @@ $$
 
 <br>
 
+<div class="svg-container">
+<svg viewBox="0 0 340 395" role="img" aria-label="Le filet s'incurve dans la zone d'interaction de hauteur h, puis continue de s'écarter pendant la chute libre sur la hauteur D" style="width:100%;max-width:340px;height:auto;">
+<rect x="111" y="12" width="28" height="14" rx="3" fill="#cbd5e1"/>
+<rect x="40" y="85.0" width="260" height="50.0" fill="#f7ecf1"/>
+<rect x="195" y="103.0" width="70" height="14" rx="4" fill="#c67aa0"/>
+<text x="230.0" y="114.0" text-anchor="middle" font-size="11.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" >règle</text>
+<text x="230.0" y="77.0" text-anchor="middle" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >zone d'interaction</text>
+<line x1="125.0" y1="30.0" x2="125.0" y2="335.0" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<polyline points="125.0,30.0 125.0,31.0 125.0,32.0 125.0,33.0 125.0,34.0 125.0,35.0 125.0,36.0 125.0,37.0 125.0,38.0 125.0,39.0 125.0,40.0 125.0,41.0 125.0,42.0 125.0,43.0 125.0,44.0 125.0,45.0 125.0,46.0 125.0,47.0 125.0,48.0 125.0,49.0 125.0,50.0 125.0,51.0 125.0,52.0 125.0,53.0 125.0,54.0 125.0,55.0 125.0,56.0 125.0,57.0 125.0,58.0 125.0,59.0 125.0,60.0 125.0,61.0 125.0,62.0 125.0,63.0 125.0,64.0 125.0,65.0 125.0,66.0 125.0,67.0 125.0,68.0 125.0,69.0 125.0,70.0 125.0,71.0 125.0,72.0 125.0,73.0 125.0,74.0 125.0,75.0 125.0,76.0 125.0,77.0 125.0,78.0 125.0,79.0 125.0,80.0 125.0,81.0 125.0,82.0 125.0,83.0 125.0,84.0 125.0,85.0 125.0,86.0 125.0,87.0 125.0,88.0 125.1,89.0 125.1,90.0 125.2,91.0 125.2,92.0 125.3,93.0 125.3,94.0 125.4,95.0 125.5,96.0 125.6,97.0 125.7,98.0 125.8,99.0 125.9,100.0 126.0,101.0 126.1,102.0 126.2,103.0 126.4,104.0 126.5,105.0 126.7,106.0 126.8,107.0 127.0,108.0 127.1,109.0 127.3,110.0 127.5,111.0 127.6,112.0 127.8,113.0 128.0,114.0 128.2,115.0 128.4,116.0 128.6,117.0 128.8,118.0 129.0,119.0 129.2,120.0 129.4,121.0 129.7,122.0 129.9,123.0 130.1,124.0 130.4,125.0 130.6,126.0 130.8,127.0 131.1,128.0 131.3,129.0 131.6,130.0 131.9,131.0 132.1,132.0 132.4,133.0 132.7,134.0 132.9,135.0 133.2,136.0 133.5,137.0 133.7,138.0 134.0,139.0 134.3,140.0 134.6,141.0 134.8,142.0 135.1,143.0 135.4,144.0 135.6,145.0 135.9,146.0 136.2,147.0 136.4,148.0 136.7,149.0 136.9,150.0 137.2,151.0 137.5,152.0 137.7,153.0 138.0,154.0 138.2,155.0 138.5,156.0 138.7,157.0 139.0,158.0 139.2,159.0 139.5,160.0 139.7,161.0 140.0,162.0 140.2,163.0 140.5,164.0 140.7,165.0 141.0,166.0 141.2,167.0 141.4,168.0 141.7,169.0 141.9,170.0 142.2,171.0 142.4,172.0 142.7,173.0 142.9,174.0 143.1,175.0 143.4,176.0 143.6,177.0 143.8,178.0 144.1,179.0 144.3,180.0 144.5,181.0 144.8,182.0 145.0,183.0 145.2,184.0 145.5,185.0 145.7,186.0 145.9,187.0 146.1,188.0 146.4,189.0 146.6,190.0 146.8,191.0 147.0,192.0 147.3,193.0 147.5,194.0 147.7,195.0 147.9,196.0 148.2,197.0 148.4,198.0 148.6,199.0 148.8,200.0 149.0,201.0 149.3,202.0 149.5,203.0 149.7,204.0 149.9,205.0 150.1,206.0 150.3,207.0 150.6,208.0 150.8,209.0 151.0,210.0 151.2,211.0 151.4,212.0 151.6,213.0 151.8,214.0 152.0,215.0 152.3,216.0 152.5,217.0 152.7,218.0 152.9,219.0 153.1,220.0 153.3,221.0 153.5,222.0 153.7,223.0 153.9,224.0 154.1,225.0 154.3,226.0 154.5,227.0 154.7,228.0 154.9,229.0 155.1,230.0 155.3,231.0 155.6,232.0 155.8,233.0 156.0,234.0 156.2,235.0 156.4,236.0 156.6,237.0 156.8,238.0 157.0,239.0 157.1,240.0 157.3,241.0 157.5,242.0 157.7,243.0 157.9,244.0 158.1,245.0 158.3,246.0 158.5,247.0 158.7,248.0 158.9,249.0 159.1,250.0 159.3,251.0 159.5,252.0 159.7,253.0 159.9,254.0 160.1,255.0 160.3,256.0 160.5,257.0 160.6,258.0 160.8,259.0 161.0,260.0 161.2,261.0 161.4,262.0 161.6,263.0 161.8,264.0 162.0,265.0 162.2,266.0 162.3,267.0 162.5,268.0 162.7,269.0 162.9,270.0 163.1,271.0 163.3,272.0 163.5,273.0 163.6,274.0 163.8,275.0 164.0,276.0 164.2,277.0 164.4,278.0 164.6,279.0 164.7,280.0 164.9,281.0 165.1,282.0 165.3,283.0 165.5,284.0 165.6,285.0 165.8,286.0 166.0,287.0 166.2,288.0 166.4,289.0 166.5,290.0 166.7,291.0 166.9,292.0 167.1,293.0 167.3,294.0 167.4,295.0 167.6,296.0 167.8,297.0 168.0,298.0 168.1,299.0 168.3,300.0 168.5,301.0 168.7,302.0 168.8,303.0 169.0,304.0 169.2,305.0 169.4,306.0 169.5,307.0 169.7,308.0 169.9,309.0 170.0,310.0 170.2,311.0 170.4,312.0 170.6,313.0 170.7,314.0 170.9,315.0 171.1,316.0 171.2,317.0 171.4,318.0 171.6,319.0 171.8,320.0 171.9,321.0 172.1,322.0 172.3,323.0 172.4,324.0 172.6,325.0 172.8,326.0 172.9,327.0 173.1,328.0 173.3,329.0 173.4,330.0 173.6,331.0 173.8,332.0 173.9,333.0 174.1,334.0 174.3,335.0" fill="none" stroke="#004D80" stroke-width="3" stroke-linecap="round"/>
+<line x1="51.0" y1="85.0" x2="59.0" y2="85.0" stroke="#64748b" stroke-width="1" />
+<line x1="51.0" y1="135.0" x2="59.0" y2="135.0" stroke="#64748b" stroke-width="1" />
+<line x1="55.0" y1="85.0" x2="55.0" y2="135.0" stroke="#64748b" stroke-width="1" />
+<text x="47.0" y="115.0" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >h</text>
+<line x1="51.0" y1="135.0" x2="59.0" y2="135.0" stroke="#64748b" stroke-width="1" />
+<line x1="51.0" y1="335.0" x2="59.0" y2="335.0" stroke="#64748b" stroke-width="1" />
+<line x1="55.0" y1="135.0" x2="55.0" y2="335.0" stroke="#64748b" stroke-width="1" />
+<text x="47.0" y="240.0" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >D</text>
+<line x1="125.0" y1="135.0" x2="132.9" y2="135.0" stroke="#970E53" stroke-width="1.4" />
+<line x1="125.0" y1="346.0" x2="125.0" y2="356.0" stroke="#970E53" stroke-width="1" />
+<line x1="132.9" y1="346.0" x2="132.9" y2="356.0" stroke="#970E53" stroke-width="1" />
+<line x1="174.3" y1="346.0" x2="174.3" y2="356.0" stroke="#970E53" stroke-width="1" />
+<line x1="125.0" y1="351.0" x2="174.3" y2="351.0" stroke="#970E53" stroke-width="1.2" />
+<text x="129.9" y="369.0" text-anchor="end" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >Δx<tspan dy='3' font-size='10'>1</tspan><tspan dy='-3'></tspan></text>
+<text x="157.6" y="369.0" text-anchor="middle" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >Δx<tspan dy='3' font-size='10'>2</tspan><tspan dy='-3'></tspan></text>
+<text x="184.3" y="250.0" text-anchor="start" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >chute libre :</text>
+<text x="184.3" y="265.0" text-anchor="start" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >vitesse latérale</text>
+<text x="184.3" y="280.0" text-anchor="start" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >constante</text>
+</svg>
+</div>
+<p class="legende">La déviation en deux temps (échelle horizontale très dilatée). Dans la zone d'interaction, le filet s'incurve de $\Delta x_1$ et acquiert une vitesse latérale. Pendant la chute libre qui suit, cette vitesse latérale reste constante et le filet s'écarte encore de $\Delta x_2$, bien plus grand.</p>
+
 Avec l'accélération surestimée $a\_{\text{dip, naïf}} \approx \pu{0,35 m/s2}$, la déviation vaut à peine $\Delta x\_1 \approx \pu{0,28 mm}$ à la sortie de la zone d'interaction, et n'atteint au bas de la chute que&nbsp;:
 
 <div id="grosseformule">
@@ -791,6 +387,45 @@ $$
 </div>
 
 </div>
+
+<br>
+
+<div class="svg-container">
+<svg viewBox="0 0 380 230" role="img" aria-label="Coupe du filet d'eau : la polarisation fait apparaître des charges sur ses flancs, qui créent à l'intérieur un champ opposé au champ extérieur" style="width:100%;max-width:380px;height:auto;">
+<defs><marker id="fp" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#970E53" stroke-width="1.6"/></marker></defs>
+<defs><marker id="fpb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#004D80" stroke-width="1.6"/></marker></defs>
+<line x1="30.0" y1="32.5" x2="350.0" y2="32.5" stroke="#c67aa0" stroke-width="1.2" marker-end="url(#fp)"/>
+<line x1="30.0" y1="68.5" x2="350.0" y2="68.5" stroke="#c67aa0" stroke-width="1.2" marker-end="url(#fp)"/>
+<line x1="30.0" y1="167.5" x2="350.0" y2="167.5" stroke="#c67aa0" stroke-width="1.2" marker-end="url(#fp)"/>
+<line x1="30.0" y1="203.5" x2="350.0" y2="203.5" stroke="#c67aa0" stroke-width="1.2" marker-end="url(#fp)"/>
+<circle cx="190" cy="118" r="70" fill="#e0eaf0" stroke="#004D80" stroke-width="1.6"/>
+<text x="220.1" y="69.9" text-anchor="middle" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >+</text>
+<text x="159.9" y="69.9" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >−</text>
+<text x="232.6" y="79.4" text-anchor="middle" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >+</text>
+<text x="147.4" y="79.4" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >−</text>
+<text x="242.1" y="91.9" text-anchor="middle" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >+</text>
+<text x="137.9" y="91.9" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >−</text>
+<text x="248.1" y="106.4" text-anchor="middle" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >+</text>
+<text x="131.9" y="106.4" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >−</text>
+<text x="250.2" y="122.0" text-anchor="middle" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >+</text>
+<text x="129.8" y="122.0" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >−</text>
+<text x="248.1" y="137.6" text-anchor="middle" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >+</text>
+<text x="131.9" y="137.6" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >−</text>
+<text x="242.1" y="152.1" text-anchor="middle" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >+</text>
+<text x="137.9" y="152.1" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >−</text>
+<text x="232.6" y="164.6" text-anchor="middle" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >+</text>
+<text x="147.4" y="164.6" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >−</text>
+<text x="220.1" y="174.1" text-anchor="middle" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >+</text>
+<text x="159.9" y="174.1" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >−</text>
+<line x1="218.0" y1="104.0" x2="162.0" y2="104.0" stroke="#004D80" stroke-width="1.8" marker-end="url(#fpb)"/>
+<text x="190.0" y="96.0" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >E<tspan dy='3' font-size='10'>dép</tspan><tspan dy='-3'></tspan></text>
+<line x1="181.0" y1="136.0" x2="199.0" y2="136.0" stroke="#970E53" stroke-width="1.8" marker-end="url(#fp)"/>
+<text x="190.0" y="156.0" text-anchor="middle" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >E<tspan dy='3' font-size='10'>int</tspan><tspan dy='-3'></tspan> ≈ E/40</text>
+<text x="22.0" y="35.5" text-anchor="start" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >E</text>
+<text x="190.0" y="225.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >coupe horizontale du filet d'eau</text>
+</svg>
+</div>
+<p class="legende">Coupe du filet d'eau. La polarisation fait apparaître des charges liées sur ses flancs&nbsp;: négatives du côté d'où vient le champ, positives de l'autre. Elles créent à l'intérieur un champ dépolarisant opposé au champ extérieur, si bien que le champ intérieur n'en vaut plus que le quarantième.</p>
 
 <br>
 
@@ -874,7 +509,7 @@ Quarante micromètres au fond de l'évier (et à peine $\pu{7 \mu m}$ à la sort
 
 
 <div style="text-align: center; margin: 24px auto;">
-  <video src="/filetdeau_boomerang.mp4" autoplay loop muted playsinline style="width: 200px; max-width: 100%; border-radius: 14px; box-shadow: 0 6px 20px rgba(15,23,42,0.12); display: inline-block;"></video>
+  <video src="/filetdeau_boomerang.mp4" autoplay loop muted playsinline style="width: 200px; max-width: 100%; border-radius: 8px; display: inline-block;"></video>
 </div>
 
 D'où vient alors la déviation observée&nbsp;?
@@ -1061,767 +696,79 @@ Cette rupture du jet fournit le test expérimental ultime pour départager les d
 * **Si l'on place la tige chargée en haut (face à la partie continue du jet)**&nbsp;: les ions migrent depuis le robinet, chargent le bas de la colonne continue, et lorsque les gouttes se détachent à la hauteur de rupture, **chaque goutte emporte avec elle une charge électrique nette piégée** ($q\_{\text{goutte}} \neq 0$)&nbsp;! Si l'on recueille l'eau déviée dans un bécher relié à un électromètre (cylindre de Faraday), l'électromètre s'affole et mesure une charge électrique considérable (c'est d'ailleurs le principe exact du [générateur électrostatique à gouttes d'eau](https://fr.wikipedia.org/wiki/Générateur_électrostatique_de_Kelvin) de **Lord Kelvin**).
 * **Si l'on approche la tige uniquement en bas (face aux gouttes déjà formées)**, en prenant soin de blinder la partie haute continue par un tube métallique relié à la terre&nbsp;: chaque gouttelette étant désormais isolée dans l'air, elle ne peut plus échanger d'ions avec le robinet et sa charge nette reste strictement nulle ($q\_{\text{goutte}} = 0$). Or, chaque gouttelette contient toujours autant de molécules d'eau polaires&nbsp;! Si la théorie des manuels scolaires était vraie, les gouttes devraient être tout autant déviées. En pratique, **on n'observe aucune déviation**.
 
-<div id="sim-container" style="background:linear-gradient(145deg, #ffffff 0%, #f8fafc 100%); border-radius:18px; padding:20px; margin-top:18px; margin-bottom:18px; box-shadow: 0 10px 30px -5px rgba(15,23,42,0.08), 0 4px 12px -2px rgba(15,23,42,0.04); border:1px solid #e2e8f0; font-family: system-ui, -apple-system, sans-serif; color:#1e293b;">
-<div style="display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start;">
-<div style="flex: 1 1 390px; text-align:center;">
-<canvas id="waterCanvas" width="460" height="540" style="width:100%; max-width:460px; height:auto; aspect-ratio: 460 / 540; background:#ffffff; border-radius:14px; border:1px solid #cbd5e1; cursor:ns-resize; box-shadow:inset 0 2px 6px rgba(15,23,42,0.04);"></canvas>
-<div style="font-size:0.82em; color:#64748b; margin-top:8px;">💡 <i>Glissez directement la règle verticalement sur le schéma ou utilisez les contrôles.</i></div>
+<div class="svg-container">
+<svg viewBox="0 0 205 410" role="img" aria-label="Selon les manuels, le jet ne serait pratiquement pas dévié" style="width:100%;max-width:205px;height:auto;">
+<style>.gt0{offset-path:path('M0.03,0.00 L0.03,2.25 L0.03,4.50 L0.03,6.75 L0.03,9.00 L0.03,11.25 L0.03,13.50 L0.03,15.75 L0.03,18.00 L0.03,20.25 L0.04,22.50 L0.04,24.75 L0.04,27.00 L0.04,29.25 L0.04,31.50 L0.04,33.75 L0.04,36.00 L0.04,38.25 L0.04,40.50 L0.04,42.75 L0.04,45.00 L0.04,47.25 L0.04,49.50 L0.05,51.75 L0.05,54.00 L0.05,56.25 L0.05,58.50 L0.05,60.75 L0.05,63.00 L0.05,65.25 L0.05,67.50 L0.05,69.75 L0.05,72.00 L0.05,74.25 L0.05,76.50 L0.05,78.75 L0.06,81.00 L0.06,83.25 L0.06,85.50 L0.06,87.75 L0.06,90.00 L0.06,92.25 L0.06,94.50 L0.06,96.75 L0.06,99.00 L0.06,101.25 L0.06,103.50 L0.06,105.75 L0.06,108.00 L0.06,110.25 L0.07,112.50 L0.07,114.75 L0.07,117.00 L0.07,119.25 L0.07,121.50 L0.07,123.75 L0.07,126.00 L0.07,128.25 L0.07,130.50 L0.07,132.75 L0.07,135.00 L0.07,137.25 L0.07,139.50 L0.07,141.75 L0.07,144.00 L0.08,146.25 L0.08,148.50');offset-distance:40%;offset-rotate:0deg}@keyframes gt0-k{from{offset-distance:0%}to{offset-distance:100%}}@media (prefers-reduced-motion:no-preference){.gt0{animation:gt0-k 0.9s cubic-bezier(0.35,0,0.9,0.7) infinite}}</style>
+<text x="102.5" y="18.0" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >Manuels : dipôles seuls</text>
+<rect x="57" y="36" width="26" height="14" rx="3" fill="#cbd5e1"/>
+<polyline points="70.0,52.0 70.0,54.2 70.0,56.5 70.0,58.8 70.0,61.0 70.0,63.2 70.0,65.5 70.0,67.8 70.0,70.0 70.0,72.2 70.0,74.5 70.0,76.8 70.0,79.0 70.0,81.2 70.0,83.5 70.0,85.8 70.0,88.0 70.0,90.2 70.0,92.5 70.0,94.8 70.0,97.0 70.0,99.2 70.0,101.5 70.0,103.8 70.0,106.0 70.0,108.2 70.0,110.5 70.0,112.8 70.0,115.0 70.0,117.2 70.0,119.5 70.0,121.8 70.0,124.0 70.0,126.2 70.0,128.5 70.0,130.8 70.0,133.0 70.0,135.2 70.0,137.5 70.0,139.8 70.0,142.0 70.0,144.2 70.0,146.5 70.0,148.8 70.0,151.0 70.0,153.2 70.0,155.5 70.0,157.8 70.0,160.0 70.0,162.2 70.0,164.5 70.0,166.8 70.0,169.0 70.0,171.2 70.0,173.5 70.0,175.8 70.0,178.0" fill="none" stroke="#004D80" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="70.0" y1="52.0" x2="70.0" y2="326.5" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="94.0" y="118.0" width="62" height="12" rx="4" fill="#c67aa0"/>
+<text x="125.0" y="128.0" text-anchor="middle" font-size="10.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" >− − −</text>
+<rect x="92.0" y="101.5" width="2" height="45.0" fill="none"/>
+<line x1="40.0" y1="178.0" x2="110.0" y2="178.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="2 3"/>
+<g transform="translate(70,178.0)">
+<circle class="gt0" r="3" fill="#004D80" style="animation-delay:0.00s;offset-distance:0%"/>
+<circle class="gt0" r="3" fill="#004D80" style="animation-delay:-0.18s;offset-distance:20%"/>
+<circle class="gt0" r="3" fill="#004D80" style="animation-delay:-0.36s;offset-distance:40%"/>
+<circle class="gt0" r="3" fill="#004D80" style="animation-delay:-0.54s;offset-distance:60%"/>
+<circle class="gt0" r="3" fill="#004D80" style="animation-delay:-0.72s;offset-distance:80%"/>
+</g>
+<path d="M46.075999069801654,330.5 L46.075999069801654,356.5 L94.07599906980165,356.5 L94.07599906980165,330.5" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<text x="70.1" y="376.5" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >charge recueillie : 0</text>
+<text x="102.5" y="396.5" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >Δx ≈ 0,04 mm</text>
+</svg>
+<svg viewBox="0 0 205 410" role="img" aria-label="L'eau réelle est déviée d'environ 1,7 cm et ses gouttes emportent une charge" style="width:100%;max-width:205px;height:auto;">
+<style>.gt1{offset-path:path('M10.16,0.00 L10.52,2.25 L10.88,4.50 L11.23,6.75 L11.58,9.00 L11.93,11.25 L12.27,13.50 L12.62,15.75 L12.96,18.00 L13.29,20.25 L13.63,22.50 L13.96,24.75 L14.29,27.00 L14.62,29.25 L14.95,31.50 L15.27,33.75 L15.59,36.00 L15.91,38.25 L16.23,40.50 L16.54,42.75 L16.86,45.00 L17.17,47.25 L17.48,49.50 L17.78,51.75 L18.09,54.00 L18.39,56.25 L18.69,58.50 L18.99,60.75 L19.29,63.00 L19.59,65.25 L19.88,67.50 L20.17,69.75 L20.46,72.00 L20.75,74.25 L21.04,76.50 L21.33,78.75 L21.61,81.00 L21.90,83.25 L22.18,85.50 L22.46,87.75 L22.74,90.00 L23.02,92.25 L23.29,94.50 L23.57,96.75 L23.84,99.00 L24.11,101.25 L24.39,103.50 L24.66,105.75 L24.92,108.00 L25.19,110.25 L25.46,112.50 L25.72,114.75 L25.98,117.00 L26.25,119.25 L26.51,121.50 L26.77,123.75 L27.03,126.00 L27.28,128.25 L27.54,130.50 L27.80,132.75 L28.05,135.00 L28.30,137.25 L28.56,139.50 L28.81,141.75 L29.06,144.00 L29.31,146.25 L29.56,148.50');offset-distance:40%;offset-rotate:0deg}@keyframes gt1-k{from{offset-distance:0%}to{offset-distance:100%}}@media (prefers-reduced-motion:no-preference){.gt1{animation:gt1-k 0.9s cubic-bezier(0.35,0,0.9,0.7) infinite}}</style>
+<text x="102.5" y="18.0" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >Eau réelle : ions</text>
+<rect x="57" y="36" width="26" height="14" rx="3" fill="#cbd5e1"/>
+<polyline points="70.0,52.0 70.0,54.2 70.0,56.5 70.0,58.8 70.0,61.0 70.0,63.2 70.0,65.5 70.0,67.8 70.0,70.0 70.0,72.2 70.0,74.5 70.0,76.8 70.0,79.0 70.0,81.2 70.0,83.5 70.0,85.8 70.0,88.0 70.0,90.2 70.0,92.5 70.0,94.8 70.0,97.0 70.0,99.2 70.0,101.5 70.0,103.8 70.1,106.0 70.1,108.2 70.2,110.5 70.4,112.8 70.5,115.0 70.7,117.2 70.9,119.5 71.1,121.8 71.4,124.0 71.6,126.2 71.9,128.5 72.2,130.8 72.5,133.0 72.9,135.2 73.2,137.5 73.6,139.8 74.0,142.0 74.3,144.2 74.8,146.5 75.2,148.8 75.6,151.0 76.0,153.2 76.4,155.5 76.8,157.8 77.2,160.0 77.5,162.2 77.9,164.5 78.3,166.8 78.7,169.0 79.1,171.2 79.4,173.5 79.8,175.8 80.2,178.0" fill="none" stroke="#004D80" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="70.0" y1="52.0" x2="70.0" y2="326.5" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="79.1" y="110.0" text-anchor="middle" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >+</text>
+<text x="80.4" y="128.0" text-anchor="middle" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >+</text>
+<text x="83.0" y="146.0" text-anchor="middle" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >+</text>
+<text x="86.2" y="164.0" text-anchor="middle" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >+</text>
+<rect x="94.0" y="118.0" width="62" height="12" rx="4" fill="#c67aa0"/>
+<text x="125.0" y="128.0" text-anchor="middle" font-size="10.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" >− − −</text>
+<rect x="92.0" y="101.5" width="2" height="45.0" fill="none"/>
+<line x1="40.0" y1="178.0" x2="110.0" y2="178.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="2 3"/>
+<g transform="translate(70,178.0)">
+<circle class="gt1" r="3" fill="#970E53" style="animation-delay:0.00s;offset-distance:0%"/>
+<circle class="gt1" r="3" fill="#970E53" style="animation-delay:-0.18s;offset-distance:20%"/>
+<circle class="gt1" r="3" fill="#970E53" style="animation-delay:-0.36s;offset-distance:40%"/>
+<circle class="gt1" r="3" fill="#970E53" style="animation-delay:-0.54s;offset-distance:60%"/>
+<circle class="gt1" r="3" fill="#970E53" style="animation-delay:-0.72s;offset-distance:80%"/>
+</g>
+<path d="M75.55519381175247,330.5 L75.55519381175247,356.5 L123.55519381175247,356.5 L123.55519381175247,330.5" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<text x="99.6" y="376.5" text-anchor="middle" font-size="11.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >charge recueillie : +</text>
+<text x="102.5" y="396.5" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >Δx ≈ 1,7 cm</text>
+</svg>
+<svg viewBox="0 0 205 410" role="img" aria-label="Haut du jet blindé, règle face aux gouttes : aucune déviation" style="width:100%;max-width:205px;height:auto;">
+<style>.gt2{offset-path:path('M0.00,0.00 L0.00,2.25 L0.00,4.50 L0.00,6.75 L0.00,9.00 L0.00,11.25 L0.00,13.50 L0.00,15.75 L0.00,18.00 L0.00,20.25 L0.00,22.50 L0.00,24.75 L0.00,27.00 L0.00,29.25 L0.00,31.50 L0.00,33.75 L0.00,36.00 L0.00,38.25 L0.00,40.50 L0.00,42.75 L0.00,45.00 L0.00,47.25 L0.00,49.50 L0.00,51.75 L0.00,54.00 L0.00,56.25 L0.00,58.50 L0.00,60.75 L0.00,63.00 L0.00,65.25 L0.00,67.50 L0.00,69.75 L0.00,72.00 L0.00,74.25 L0.00,76.50 L0.00,78.75 L0.00,81.00 L0.00,83.25 L0.00,85.50 L0.00,87.75 L0.00,90.00 L0.00,92.25 L0.00,94.50 L0.00,96.75 L0.00,99.00 L0.00,101.25 L0.00,103.50 L0.00,105.75 L0.00,108.00 L0.00,110.25 L0.00,112.50 L0.00,114.75 L0.00,117.00 L0.00,119.25 L0.00,121.50 L0.00,123.75 L0.00,126.00 L0.00,128.25 L0.00,130.50 L0.00,132.75 L0.00,135.00 L0.00,137.25 L0.00,139.50 L0.00,141.75 L0.00,144.00 L0.00,146.25 L0.00,148.50');offset-distance:40%;offset-rotate:0deg}@keyframes gt2-k{from{offset-distance:0%}to{offset-distance:100%}}@media (prefers-reduced-motion:no-preference){.gt2{animation:gt2-k 0.9s cubic-bezier(0.35,0,0.9,0.7) infinite}}</style>
+<text x="102.5" y="18.0" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >Jet blindé, règle en bas</text>
+<rect x="57" y="36" width="26" height="14" rx="3" fill="#cbd5e1"/>
+<polyline points="70.0,52.0 70.0,54.2 70.0,56.5 70.0,58.8 70.0,61.0 70.0,63.2 70.0,65.5 70.0,67.8 70.0,70.0 70.0,72.2 70.0,74.5 70.0,76.8 70.0,79.0 70.0,81.2 70.0,83.5 70.0,85.8 70.0,88.0 70.0,90.2 70.0,92.5 70.0,94.8 70.0,97.0 70.0,99.2 70.0,101.5 70.0,103.8 70.0,106.0 70.0,108.2 70.0,110.5 70.0,112.8 70.0,115.0 70.0,117.2 70.0,119.5 70.0,121.8 70.0,124.0 70.0,126.2 70.0,128.5 70.0,130.8 70.0,133.0 70.0,135.2 70.0,137.5 70.0,139.8 70.0,142.0 70.0,144.2 70.0,146.5 70.0,148.8 70.0,151.0 70.0,153.2 70.0,155.5 70.0,157.8 70.0,160.0 70.0,162.2 70.0,164.5 70.0,166.8 70.0,169.0 70.0,171.2 70.0,173.5 70.0,175.8 70.0,178.0" fill="none" stroke="#004D80" stroke-width="3.2" stroke-linecap="round"/>
+<line x1="70.0" y1="52.0" x2="70.0" y2="326.5" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<rect x="61" y="56.5" width="18" height="112.5" rx="3" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<text x="56.0" y="115.0" text-anchor="end" font-size="11" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >tube relié</text>
+<text x="56.0" y="128.0" text-anchor="end" font-size="11" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >à la terre</text>
+<rect x="94.0" y="244.0" width="62" height="12" rx="4" fill="#c67aa0"/>
+<text x="125.0" y="254.0" text-anchor="middle" font-size="10.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" >− − −</text>
+<rect x="92.0" y="227.5" width="2" height="45.0" fill="none"/>
+<line x1="40.0" y1="178.0" x2="110.0" y2="178.0" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="2 3"/>
+<g transform="translate(70,178.0)">
+<circle class="gt2" r="3" fill="#004D80" style="animation-delay:0.00s;offset-distance:0%"/>
+<circle class="gt2" r="3" fill="#004D80" style="animation-delay:-0.18s;offset-distance:20%"/>
+<circle class="gt2" r="3" fill="#004D80" style="animation-delay:-0.36s;offset-distance:40%"/>
+<circle class="gt2" r="3" fill="#004D80" style="animation-delay:-0.54s;offset-distance:60%"/>
+<circle class="gt2" r="3" fill="#004D80" style="animation-delay:-0.72s;offset-distance:80%"/>
+</g>
+<path d="M46.0,330.5 L46.0,356.5 L94.0,356.5 L94.0,330.5" fill="none" stroke="#94a3b8" stroke-width="2"/>
+<text x="70.0" y="376.5" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >charge recueillie : 0</text>
+<text x="102.5" y="396.5" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >Δx ≈ 0</text>
+</svg>
 </div>
-<div style="flex: 1 1 270px; display:flex; flex-direction:column; gap:13px;">
-<div style="background:#ffffff; padding:13px 15px; border-radius:12px; border:1px solid #cbd5e1; box-shadow:0 2px 6px rgba(15,23,42,0.02);">
-<label style="font-weight:700; font-size:0.88em; color:#334155; display:block; margin-bottom:6px;">Modèle physique / Configuration :</label>
-<select id="modeSelect" style="width:100%; padding:8px 10px; border-radius:8px; border:1px solid #94a3b8; font-size:0.88em; background:#f8fafc; font-weight:600; cursor:pointer; color:#1e293b;">
-<option value="ionic">⚡ Eau réelle (conduction ionique + dipôles)</option>
-<option value="dipole">📘 Mythe des manuels (dipôles H₂O seuls)</option>
-<option value="shielded">🛡️ Jet blindé en haut (tige face aux gouttes)</option>
-</select>
-</div>
-<div style="background:#ffffff; padding:13px 15px; border-radius:12px; border:1px solid #cbd5e1; box-shadow:0 2px 6px rgba(15,23,42,0.02);">
-<div style="display:flex; justify-content:space-between; font-size:0.88em; font-weight:700; color:#334155; margin-bottom:4px;">
-<span>Hauteur de la règle ($z_{\text{tige}}$) :</span>
-<span id="zRodVal" style="color:#0284c7; font-family:ui-monospace, monospace; font-weight:800;">8.0 cm</span>
-</div>
-<input type="range" id="zRodSlider" min="3" max="26" step="0.5" value="8" style="width:100%; accent-color:#0284c7; cursor:pointer;">
-<div style="font-size:0.76em; color:#64748b; margin-top:3px;">Rupture de Plateau-Rayleigh située à $z = \pu{14 cm}$.</div>
-</div>
-<div style="background:#ffffff; padding:13px 15px; border-radius:12px; border:1px solid #cbd5e1; box-shadow:0 2px 6px rgba(15,23,42,0.02);">
-<div style="display:flex; justify-content:space-between; font-size:0.88em; font-weight:700; color:#334155; margin-bottom:4px;">
-<span>Potentiel de la règle ($V_0$) :</span>
-<span id="vRodVal" style="color:#2563eb; font-family:ui-monospace, monospace; font-weight:800;">−10 kV</span>
-</div>
-<input type="range" id="vRodSlider" min="-10" max="10" step="1" value="-10" style="width:100%; accent-color:#2563eb; cursor:pointer;">
-<div style="display:flex; justify-content:space-between; font-size:0.74em; color:#64748b; margin-top:3px;">
-<span>−10 kV (Négative)</span>
-<span>0 V</span>
-<span>+10 kV (Positive)</span>
-</div>
-</div>
-<div style="background:#ffffff; color:#1e293b; padding:14px 16px; border-radius:12px; font-size:0.86em; line-height:1.55; border:1px solid #cbd5e1; box-shadow:0 2px 6px rgba(15,23,42,0.02);">
-<div style="font-weight:700; color:#0369a1; margin-bottom:8px; border-bottom:1px solid #e2e8f0; padding-bottom:5px;">📊 Mesures physiques en direct</div>
-<div style="display:flex; justify-content:space-between;">
-<span style="color:#475569;">Accélération ionique ($a_{\text{ion}}$) :</span>
-<span id="aIonReadout" style="font-family:ui-monospace, monospace; font-weight:700; color:#15803d;">3.50 m/s²</span>
-</div>
-<div style="display:flex; justify-content:space-between;">
-<span style="color:#475569;">Accélération dipolaire ($a_{\text{dip}}$) :</span>
-<span id="aDipReadout" style="font-family:ui-monospace, monospace; font-weight:700; color:#b45309;">0.009 m/s²</span>
-</div>
-<div style="display:flex; justify-content:space-between; margin-top:6px; padding-top:6px; border-top:1px dashed #cbd5e1;">
-<span style="color:#475569;">Sortie zone $h=\pu{5 cm}$ ($\Delta x_1$) :</span>
-<span id="dx1Readout" style="font-family:ui-monospace, monospace; font-weight:700; color:#0369a1;">0.28 cm</span>
-</div>
-<div style="display:flex; justify-content:space-between;">
-<span style="color:#475569;">Déviation dans le bécher ($\Delta x_{\text{tot}}$) :</span>
-<span id="dxReadout" style="font-family:ui-monospace, monospace; font-weight:800; font-size:1.04em; color:#0284c7;">1.72 cm</span>
-</div>
-<div style="display:flex; justify-content:space-between;">
-<span style="color:#475569;">Charge par goutte ($q_{\text{goutte}}$) :</span>
-<span id="qDropReadout" style="font-family:ui-monospace, monospace; font-weight:700; color:#6366f1;">+70 pC</span>
-</div>
-<div style="display:flex; justify-content:space-between;">
-<span style="color:#475569;">Charge accumulée ($Q_{\text{tot}}$) :</span>
-<span id="qReadout" style="font-family:ui-monospace, monospace; font-weight:800; color:#be185d;">+0.00 nC</span>
-</div>
-<div style="margin-top:10px; text-align:right;">
-<button type="button" id="resetChargeBtn" style="background:#f8fafc; color:#334155; border:1px solid #cbd5e1; border-radius:8px; padding:5px 12px; font-size:0.8em; font-weight:600; cursor:pointer;">🔄 Vider le cylindre de Faraday</button>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<script>
-(function() {
-const canvas = document.getElementById('waterCanvas');
-if (!canvas) return;
-const ctx = canvas.getContext('2d');
-
-// Support haute résolution Retina / HiDPI
-const dpr = Math.min(window.devicePixelRatio || 1, 3);
-const W = 460, H = 540;
-canvas.width = W * dpr;
-canvas.height = H * dpr;
-ctx.scale(dpr, dpr);
-
-const modeSelect = document.getElementById('modeSelect');
-const zRodSlider = document.getElementById('zRodSlider');
-const vRodSlider = document.getElementById('vRodSlider');
-const zRodVal = document.getElementById('zRodVal');
-const vRodVal = document.getElementById('vRodVal');
-const aIonReadout = document.getElementById('aIonReadout');
-const aDipReadout = document.getElementById('aDipReadout');
-const dx1Readout = document.getElementById('dx1Readout');
-const dxReadout = document.getElementById('dxReadout');
-const qDropReadout = document.getElementById('qDropReadout');
-const qReadout = document.getElementById('qReadout');
-const resetBtn = document.getElementById('resetChargeBtn');
-
-const zBreakCm = 14.0;  // Hauteur de rupture de Plateau-Rayleigh (cm)
-const topY = 54;        // Ordonnée Y de sortie du bec du robinet (px)
-const pxPerCm = 14.0;   // Échelle verticale (px/cm) : zImpact = 31.5 cm dans le bécher
-const pxPerCmX = 24.0;  // Échelle horizontale de déviation (px/cm)
-const jetStartX = 88;   // Axe initial du jet sous le robinet (px)
-
-// Géométrie du bécher (Cylindre de Faraday) décalé vers la droite pour recueillir toutes les gouttes déviées
-const beakerX = 68;
-const beakerY = 447;
-const beakerW = 212;
-const beakerH = 70;
-
-let accumulatedCharge_nC = 0;
-let displayedCharge_nC = 0;
-let waterLevel = 22;
-let drops = [];
-let ripples = [];
-let frameCount = 0;
-let dragging = false;
-
-function computePhysics() {
-const mode = modeSelect.value;
-let zRod = parseFloat(zRodSlider.value);
-if (mode === 'shielded' && zRod < zBreakCm + 2) {
-zRod = zBreakCm + 4;
-zRodSlider.value = zRod;
-}
-const V_kV = parseFloat(vRodSlider.value);
-zRodVal.textContent = zRod.toFixed(1) + ' cm';
-const signStr = V_kV > 0 ? '+' : (V_kV < 0 ? '−' : '');
-vRodVal.textContent = signStr + Math.abs(V_kV) + ' kV';
-vRodVal.style.color = V_kV < 0 ? '#2563eb' : (V_kV > 0 ? '#dc2626' : '#475569');
-
-const vNorm = V_kV / 10.0;
-const aDip = 0.009 * vNorm * vNorm;
-
-// Facteur d'induction sur la colonne continue (z <= zBreakCm)
-let inductionFactor = 0;
-if (mode === 'ionic') {
-if (zRod <= zBreakCm) {
-inductionFactor = 1.0;
-} else {
-// Si la règle est sous le point de rupture, l'influence sur l'extrémité de la colonne décroît vite avec la distance
-inductionFactor = Math.exp(-(zRod - zBreakCm) / 1.4);
-}
-} else {
-inductionFactor = 0;
-}
-
-const aIon = 3.50 * (vNorm * vNorm) * inductionFactor;
-const aTotal = aIon + aDip;
-
-// Cinématique en deux temps exactement identique au texte (h = 5 cm face à la règle, puis vol libre jusqu'au bécher)
-const zEndZone = Math.min(zBreakCm + 2.5, zRod + 2.5);
-const dx1Cm = evaluateDeflectionCm(zEndZone, zRod, aIon, aDip);
-const zImpactCm = (beakerY + beakerH - waterLevel - topY) / pxPerCm;
-const dxCm = evaluateDeflectionCm(zImpactCm, zRod, aIon, aDip);
-const dxPx = dxCm * pxPerCmX;
-
-aIonReadout.textContent = aIon.toFixed(2) + ' m/s²';
-aDipReadout.textContent = aDip.toFixed(3) + ' m/s²';
-if (dx1Readout) {
-dx1Readout.textContent = (dx1Cm < 0.01 && dx1Cm > 0 ? '< 0.01' : dx1Cm.toFixed(2)) + ' cm';
-}
-dxReadout.textContent = (dxCm < 0.02 && dxCm > 0 ? '< 0.01' : dxCm.toFixed(2)) + ' cm';
-
-const dropChargeSign = V_kV === 0 ? 0 : (V_kV < 0 ? 1 : -1);
-const dropChargeMag = Math.abs(vNorm) * inductionFactor * 0.07; // nC par goutte (70 pC max)
-
-const pC = Math.round(dropChargeMag * 1000);
-const qDropSignStr = pC === 0 ? '' : (dropChargeSign > 0 ? '+' : '−');
-qDropReadout.textContent = qDropSignStr + pC + ' pC';
-
-return { mode, zRod, V_kV, vNorm, aIon, aDip, aTotal, dx1Cm, dxCm, dxPx, inductionFactor, dropChargeSign, dropChargeMag, zImpactCm };
-}
-
-// Temps de chute libre verticale t(z) depuis la sortie du robinet (v_z(z) = sqrt(v_0^2 + 2 g z), avec v_0 = 0.35 m/s)
-function timeAtDepthSec(zCm) {
-const z_m = Math.max(0, zCm) / 100.0;
-const v0 = 0.35; // m/s en sortie de robinet
-const g = 9.81;  // m/s²
-return (Math.sqrt(v0 * v0 + 2.0 * g * z_m) - v0) / g;
-}
-
-// Cinématique exacte en 2 temps avec chute libre verticale sous l'effet de la pesanteur g :
-// 1) Zone d'interaction h = 5 cm [zRod - 2.5, zRod + 2.5] : Δx₁(t) = 1/2 * a * (t(z) - t(zStart))²
-// 2) Chute libre hors du champ (z > zEnd) avec vitesse latérale acquise v_x = a * Δt₁ : Δx(t) = Δx₁ + v_x * (t(z) - t(zEnd))
-function evaluateDeflectionCm(zCm, zRod, aIon, aDip) {
-if (zCm <= 0) return 0;
-const aEff_cm = (aIon + aDip) * 100.0; // accélération en cm/s²
-if (aEff_cm <= 1e-4) return 0;
-
-const halfWin = 2.5; // demi-hauteur d'interaction : h = 2 * 2.5 = 5.0 cm
-const zStart = Math.max(0.2, zRod - halfWin);
-if (zCm <= zStart) return 0;
-
-const zEnd = Math.min(zBreakCm + 2.5, zRod + halfWin);
-const tStart = timeAtDepthSec(zStart);
-const tZ = timeAtDepthSec(zCm);
-
-if (zCm <= zEnd) {
-const dt = Math.max(0, tZ - tStart);
-return 0.5 * aEff_cm * dt * dt;
-} else {
-const tEnd = timeAtDepthSec(zEnd);
-const dt1 = Math.max(0, tEnd - tStart);
-const dt2 = Math.max(0, tZ - tEnd);
-const dx1 = 0.5 * aEff_cm * dt1 * dt1;
-const vx = aEff_cm * dt1;
-return dx1 + vx * dt2;
-}
-}
-
-function evaluateTrajectoryX(zCm, zRod, aIon, aDip) {
-return jetStartX + evaluateDeflectionCm(zCm, zRod, aIon, aDip) * pxPerCmX;
-}
-
-resetBtn.addEventListener('click', () => {
-accumulatedCharge_nC = 0;
-waterLevel = 22;
-});
-
-modeSelect.addEventListener('change', () => {
-accumulatedCharge_nC = 0;
-drops = [];
-if (modeSelect.value === 'shielded' && parseFloat(zRodSlider.value) <= zBreakCm + 2) {
-zRodSlider.value = 19;
-}
-});
-
-function updateRodFromPointer(clientY) {
-const rect = canvas.getBoundingClientRect();
-const scaleY = H / rect.height;
-const yPx = (clientY - rect.top) * scaleY;
-let cm = (yPx - topY) / pxPerCm;
-cm = Math.max(3, Math.min(26, Math.round(cm * 2) / 2));
-zRodSlider.value = cm;
-}
-
-canvas.addEventListener('mousedown', (e) => { dragging = true; updateRodFromPointer(e.clientY); });
-window.addEventListener('mousemove', (e) => { if (dragging) updateRodFromPointer(e.clientY); });
-window.addEventListener('mouseup', () => { dragging = false; });
-canvas.addEventListener('touchstart', (e) => {
-if (e.touches.length > 0) { dragging = true; updateRodFromPointer(e.touches[0].clientY); e.preventDefault(); }
-}, { passive: false });
-window.addEventListener('touchmove', (e) => {
-if (dragging && e.touches.length > 0) { updateRodFromPointer(e.touches[0].clientY); }
-}, { passive: true });
-window.addEventListener('touchend', () => { dragging = false; });
-
-function drawChargeBadge(x, y, sign, radius) {
-ctx.save();
-ctx.beginPath();
-ctx.arc(x, y, radius, 0, Math.PI * 2);
-ctx.fillStyle = sign > 0 ? 'rgba(239, 68, 68, 0.92)' : 'rgba(37, 99, 235, 0.92)';
-ctx.fill();
-ctx.strokeStyle = '#ffffff';
-ctx.lineWidth = 1;
-ctx.stroke();
-ctx.fillStyle = '#ffffff';
-ctx.font = `bold ${Math.round(radius * 1.5)}px ui-monospace, monospace`;
-ctx.textAlign = 'center';
-ctx.textBaseline = 'middle';
-ctx.fillText(sign > 0 ? '+' : '−', x, y + 0.5);
-ctx.restore();
-}
-
-function animate() {
-frameCount++;
-const phys = computePhysics();
-displayedCharge_nC += (accumulatedCharge_nC - displayedCharge_nC) * 0.14;
-
-ctx.clearRect(0, 0, W, H);
-
-const breakY = topY + zBreakCm * pxPerCm;
-const rodY = topY + phys.zRod * pxPerCm;
-const rodX = 252;
-
-// 0. Fond quadrillé subtil de laboratoire + règle verticale graduée à gauche
-ctx.save();
-ctx.strokeStyle = 'rgba(226, 232, 240, 0.5)';
-ctx.lineWidth = 1;
-for (let gx = 45; gx < W; gx += 45) {
-ctx.beginPath(); ctx.moveTo(gx, 0); ctx.lineTo(gx, H); ctx.stroke();
-}
-for (let gy = topY; gy < H; gy += 3 * pxPerCm) {
-ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(W, gy); ctx.stroke();
-}
-
-ctx.strokeStyle = '#94a3b8';
-ctx.fillStyle = '#64748b';
-ctx.font = '10px ui-monospace, monospace';
-ctx.lineWidth = 1.2;
-ctx.beginPath();
-ctx.moveTo(14, topY);
-ctx.lineTo(14, topY + 31.5 * pxPerCm);
-ctx.stroke();
-for (let z = 0; z <= 30; z += 5) {
-const y = topY + z * pxPerCm;
-ctx.beginPath();
-ctx.moveTo(11, y);
-ctx.lineTo(19, y);
-ctx.stroke();
-ctx.fillText(z + ' cm', 22, y + 3);
-}
-ctx.restore();
-
-// 1. Ligne de rupture de Plateau-Rayleigh
-ctx.save();
-ctx.setLineDash([5, 4]);
-ctx.strokeStyle = '#94a3b8';
-ctx.lineWidth = 1.2;
-ctx.beginPath();
-ctx.moveTo(52, breakY);
-ctx.lineTo(435, breakY);
-ctx.stroke();
-ctx.setLineDash([]);
-ctx.fillStyle = '#f1f5f9';
-ctx.strokeStyle = '#cbd5e1';
-ctx.beginPath();
-ctx.roundRect(245, breakY - 19, 195, 16, 4);
-ctx.fill();
-ctx.stroke();
-ctx.fillStyle = '#475569';
-ctx.font = 'bold 10px system-ui, sans-serif';
-ctx.fillText('Rupture Plateau-Rayleigh (z = 14 cm)', 252, breakY - 8);
-ctx.restore();
-
-// 2. Zone d'interaction h = 5 cm [zRod - 2.5 cm, zRod + 2.5 cm] et lignes de champ électrique
-if (Math.abs(phys.V_kV) > 0) {
-ctx.save();
-const alpha = Math.min(0.42, Math.abs(phys.vNorm) * 0.34 + 0.06);
-const colorRGB = phys.V_kV < 0 ? '37, 99, 235' : '220, 38, 38';
-
-// Accolade / repère visuel de la hauteur d'interaction h = 5 cm
-const z1 = Math.max(0.2, phys.zRod - 2.5);
-const z2 = Math.min(26.5, phys.zRod + 2.5);
-const y1 = topY + z1 * pxPerCm;
-const y2 = topY + z2 * pxPerCm;
-ctx.fillStyle = `rgba(${colorRGB}, 0.045)`;
-ctx.fillRect(54, y1, rodX - 54, y2 - y1);
-ctx.strokeStyle = `rgba(${colorRGB}, 0.35)`;
-ctx.lineWidth = 1;
-ctx.beginPath();
-ctx.moveTo(60, y1); ctx.lineTo(54, y1); ctx.lineTo(54, y2); ctx.lineTo(60, y2);
-ctx.stroke();
-ctx.fillStyle = `rgba(${colorRGB}, 0.85)`;
-ctx.font = 'bold 9.5px system-ui, sans-serif';
-ctx.fillText('h = 5 cm', 56, y1 + 11);
-
-ctx.strokeStyle = `rgba(${colorRGB}, ${alpha})`;
-ctx.fillStyle = `rgba(${colorRGB}, ${Math.min(0.65, alpha * 1.4)})`;
-ctx.lineWidth = 1.4;
-ctx.setLineDash([4, 3]);
-
-for (let dy = -35; dy <= 35; dy += 17.5) {
-const zTarget = Math.max(0.6, Math.min(26, phys.zRod + dy / pxPerCm));
-let targetX = evaluateTrajectoryX(Math.min(zTarget, zBreakCm), phys.zRod, phys.aIon, phys.aDip) + 5;
-if (phys.mode === 'shielded' && zTarget <= zBreakCm + 0.5) {
-targetX = jetStartX + 24; // Les lignes de champ s'arrêtent sur le blindage métallique !
-}
-const startX = rodX;
-const startY = rodY + dy * 0.32;
-const targetY = rodY + dy * 0.95;
-const ctrlX = (startX + targetX) * 0.52;
-const ctrlY = rodY + dy * 0.65;
-
-ctx.beginPath();
-ctx.moveTo(startX, startY);
-ctx.quadraticCurveTo(ctrlX, ctrlY, targetX, targetY);
-ctx.stroke();
-
-// Flèche orientée dans le sens de E (de + vers -)
-const t = 0.55;
-const mx = (1 - t) * (1 - t) * startX + 2 * (1 - t) * t * ctrlX + t * t * targetX;
-const my = (1 - t) * (1 - t) * startY + 2 * (1 - t) * t * ctrlY + t * t * targetY;
-const dtx = 2 * (1 - t) * (ctrlX - startX) + 2 * t * (targetX - ctrlX);
-const dty = 2 * (1 - t) * (ctrlY - startY) + 2 * t * (targetY - ctrlY);
-const dirAngle = Math.atan2(dty, dtx) + (phys.V_kV > 0 ? 0 : Math.PI);
-
-ctx.save();
-ctx.setLineDash([]);
-ctx.translate(mx, my);
-ctx.rotate(dirAngle);
-ctx.beginPath();
-ctx.moveTo(4, 0);
-ctx.lineTo(-3, -3);
-ctx.lineTo(-3, 3);
-ctx.closePath();
-ctx.fill();
-ctx.restore();
-}
-ctx.restore();
-}
-
-// 3. Dessin du filet d'eau continu avec instabilité de Plateau-Rayleigh progressive
-ctx.save();
-ctx.beginPath();
-ctx.moveTo(jetStartX - 5.8, topY - 5);
-const phasePR = frameCount * 0.38;
-for (let z = 0; z <= zBreakCm; z += 0.25) {
-const x = evaluateTrajectoryX(z, phys.zRod, phys.aIon, phys.aDip);
-const y = topY + z * pxPerCm;
-const baseR = Math.max(2.5, 5.8 / Math.pow(1 + z * 0.16, 0.28));
-const prAmp = z > 9.5 ? 1.15 * Math.pow((z - 9.5) / (zBreakCm - 9.5), 2.1) : 0;
-const r = Math.max(1.1, baseR + prAmp * Math.sin(z * 3.6 - phasePR));
-ctx.lineTo(x - r, y);
-}
-for (let z = zBreakCm; z >= 0; z -= 0.25) {
-const x = evaluateTrajectoryX(z, phys.zRod, phys.aIon, phys.aDip);
-const y = topY + z * pxPerCm;
-const baseR = Math.max(2.5, 5.8 / Math.pow(1 + z * 0.16, 0.28));
-const prAmp = z > 9.5 ? 1.15 * Math.pow((z - 9.5) / (zBreakCm - 9.5), 2.1) : 0;
-const r = Math.max(1.1, baseR + prAmp * Math.sin(z * 3.6 - phasePR));
-ctx.lineTo(x + r, y);
-}
-ctx.lineTo(jetStartX + 5.8, topY - 5);
-ctx.closePath();
-
-const jetGrad = ctx.createLinearGradient(jetStartX - 8, 0, jetStartX + 55, 0);
-jetGrad.addColorStop(0, '#0369a1');
-jetGrad.addColorStop(0.35, '#38bdf8');
-jetGrad.addColorStop(0.7, '#e0f2fe');
-jetGrad.addColorStop(1, '#0284c7');
-ctx.fillStyle = jetGrad;
-ctx.fill();
-ctx.strokeStyle = '#0284c7';
-ctx.lineWidth = 1;
-ctx.stroke();
-ctx.restore();
-
-// Affichage des charges ioniques induites (ou dipôles neutres) dans la colonne continue
-if (phys.inductionFactor > 0.1 && Math.abs(phys.V_kV) >= 1) {
-for (let k = 0; k < 5; k++) {
-const zAnim = 1.6 + ((k * 2.45 + frameCount * 0.065) % (zBreakCm - 2.0));
-const x = evaluateTrajectoryX(zAnim, phys.zRod, phys.aIon, phys.aDip);
-const y = topY + zAnim * pxPerCm;
-drawChargeBadge(x + 6, y, phys.dropChargeSign, 5.2);
-}
-// Co-ions repoussés vers le robinet (la terre) en haut
-const zUp = 2.8 - ((frameCount * 0.05) % 2.1);
-const xUp = evaluateTrajectoryX(zUp, phys.zRod, phys.aIon, phys.aDip);
-drawChargeBadge(xUp - 6, topY + zUp * pxPerCm, -phys.dropChargeSign, 4.5);
-} else if (phys.mode === 'dipole' && Math.abs(phys.V_kV) >= 1) {
-// Paires dipolaires liées neutres (q_net = 0)
-for (let z = 3.0; z < zBreakCm - 1; z += 3.5) {
-const x = evaluateTrajectoryX(z, phys.zRod, phys.aIon, phys.aDip);
-const y = topY + z * pxPerCm;
-drawChargeBadge(x - 4.5, y, - (phys.V_kV < 0 ? 1 : -1), 3.6);
-drawChargeBadge(x + 4.5, y, + (phys.V_kV < 0 ? 1 : -1), 3.6);
-}
-}
-
-// Blindage cylindrique de Faraday en haut si mode "shielded"
-if (phys.mode === 'shielded') {
-ctx.save();
-const shieldGrad = ctx.createLinearGradient(jetStartX - 24, 0, jetStartX + 24, 0);
-shieldGrad.addColorStop(0, 'rgba(71, 85, 105, 0.32)');
-shieldGrad.addColorStop(0.5, 'rgba(226, 232, 240, 0.38)');
-shieldGrad.addColorStop(1, 'rgba(71, 85, 105, 0.32)');
-ctx.fillStyle = shieldGrad;
-ctx.strokeStyle = '#334155';
-ctx.lineWidth = 2.2;
-ctx.beginPath();
-ctx.roundRect(jetStartX - 24, topY + 2, 48, (zBreakCm + 0.4) * pxPerCm, 6);
-ctx.fill();
-ctx.stroke();
-
-// Maillage cage de Faraday
-ctx.strokeStyle = 'rgba(51, 65, 85, 0.22)';
-ctx.lineWidth = 1;
-for (let sy = topY + 16; sy < breakY; sy += 16) {
-ctx.beginPath();
-ctx.moveTo(jetStartX - 24, sy);
-ctx.lineTo(jetStartX + 24, sy);
-ctx.stroke();
-}
-
-ctx.fillStyle = '#1e293b';
-ctx.font = 'bold 10px system-ui, sans-serif';
-ctx.fillText('Cylindre métallique', jetStartX + 29, topY + 42);
-ctx.fillText('relié à la terre (⏚)', jetStartX + 29, topY + 55);
-ctx.fillStyle = '#0369a1';
-ctx.fillText('Champ écranté (q = 0)', jetStartX + 29, topY + 70);
-ctx.restore();
-}
-
-// 4. Génération et dynamique des gouttes (z > zBreakCm) suivant exactement evaluateTrajectoryX
-if (frameCount % 6 === 0) {
-drops.push({
-zCm: zBreakCm,
-vzCm: 0.32, // vitesse verticale en cm/frame
-qSign: phys.dropChargeSign,
-qMag: phys.dropChargeMag,
-aIonSnap: phys.aIon,
-aDipSnap: phys.aDip,
-zRodSnap: phys.zRod
-});
-}
-
-const waterSurfaceY = beakerY + beakerH - waterLevel;
-
-for (let i = drops.length - 1; i >= 0; i--) {
-const d = drops[i];
-d.zCm += d.vzCm;
-d.vzCm += 0.0045; // accélération gravitationnelle
-
-const dY = topY + d.zCm * pxPerCm;
-const dX = evaluateTrajectoryX(d.zCm, d.zRodSnap, d.aIonSnap, d.aDipSnap);
-
-// Dessin de la gouttelette avec reflet 3D
-ctx.save();
-const dGrad = ctx.createRadialGradient(dX - 1.5, dY - 1.5, 0.8, dX, dY, 4.8);
-dGrad.addColorStop(0, '#bae6fd');
-dGrad.addColorStop(0.5, '#0ea5e9');
-dGrad.addColorStop(1, '#0369a1');
-ctx.beginPath();
-ctx.arc(dX, dY, 4.6, 0, Math.PI * 2);
-ctx.fillStyle = dGrad;
-ctx.fill();
-ctx.strokeStyle = '#0369a1';
-ctx.lineWidth = 0.9;
-ctx.stroke();
-
-if (d.qMag > 0.005 && d.qSign !== 0) {
-drawChargeBadge(dX + 7.5, dY, d.qSign, 4.6);
-}
-ctx.restore();
-
-// Réception dans le bécher
-if (dY >= waterSurfaceY) {
-if (dX >= beakerX && dX <= beakerX + beakerW) {
-accumulatedCharge_nC += d.qSign * d.qMag;
-waterLevel = Math.min(44, waterLevel + 0.07);
-ripples.push({ x: dX, y: waterSurfaceY, r: 2, alpha: 0.85 });
-}
-drops.splice(i, 1);
-}
-}
-
-// Ondulations capillaires à la surface de l'eau du bécher
-for (let i = ripples.length - 1; i >= 0; i--) {
-const rp = ripples[i];
-rp.r += 0.85;
-rp.alpha -= 0.038;
-if (rp.alpha <= 0) {
-ripples.splice(i, 1);
-} else {
-ctx.save();
-ctx.strokeStyle = `rgba(255, 255, 255, ${rp.alpha})`;
-ctx.lineWidth = 1.3;
-ctx.beginPath();
-ctx.ellipse(rp.x, rp.y, rp.r, rp.r * 0.25, 0, 0, Math.PI * 2);
-ctx.stroke();
-ctx.restore();
-}
-}
-
-const qSignStr = accumulatedCharge_nC > 0.005 ? '+' : (accumulatedCharge_nC < -0.005 ? '−' : '');
-qReadout.textContent = qSignStr + Math.abs(accumulatedCharge_nC).toFixed(2) + ' nC';
-
-// 5. Dessin du robinet en laiton/chrome (par-dessus l'origine du filet)
-ctx.save();
-const pipeGrad = ctx.createLinearGradient(0, 14, 0, 36);
-pipeGrad.addColorStop(0, '#334155');
-pipeGrad.addColorStop(0.45, '#94a3b8');
-pipeGrad.addColorStop(1, '#1e293b');
-ctx.fillStyle = pipeGrad;
-ctx.beginPath();
-ctx.roundRect(14, 16, jetStartX - 2, 18, 4);
-ctx.fill();
-ctx.beginPath();
-ctx.roundRect(jetStartX - 11, 16, 22, 35, 4);
-ctx.fill();
-// Bague du brise-jet à y = topY
-ctx.fillStyle = '#0f172a';
-ctx.fillRect(jetStartX - 9, topY - 5, 18, 5);
-// Vanne au-dessus
-ctx.fillStyle = '#334155';
-ctx.fillRect(jetStartX - 4, 8, 8, 8);
-ctx.fillStyle = '#dc2626';
-ctx.beginPath();
-ctx.roundRect(jetStartX - 17, 4, 34, 6, 3);
-ctx.fill();
-
-ctx.fillStyle = '#f8fafc';
-ctx.font = 'bold 10px system-ui, sans-serif';
-ctx.fillText('Terre ⏚ (V = 0)', 20, 29);
-ctx.restore();
-
-// 6. Dessin de la règle électrisée déplaçable
-ctx.save();
-const rodGrad = ctx.createLinearGradient(rodX, rodY - 15, rodX, rodY + 15);
-if (phys.V_kV < 0) {
-rodGrad.addColorStop(0, '#60a5fa');
-rodGrad.addColorStop(0.45, '#2563eb');
-rodGrad.addColorStop(1, '#1e3a8a');
-} else if (phys.V_kV > 0) {
-rodGrad.addColorStop(0, '#f87171');
-rodGrad.addColorStop(0.45, '#dc2626');
-rodGrad.addColorStop(1, '#7f1d1d');
-} else {
-rodGrad.addColorStop(0, '#94a3b8');
-rodGrad.addColorStop(1, '#475569');
-}
-ctx.fillStyle = rodGrad;
-ctx.shadowColor = 'rgba(15, 23, 42, 0.2)';
-ctx.shadowBlur = 10;
-ctx.shadowOffsetY = 3;
-ctx.beginPath();
-ctx.roundRect(rodX, rodY - 15, 190, 30, 15);
-ctx.fill();
-ctx.shadowBlur = 0;
-ctx.shadowOffsetY = 0;
-
-// Reflet spéculaire sur la règle
-ctx.fillStyle = 'rgba(255, 255, 255, 0.22)';
-ctx.beginPath();
-ctx.roundRect(rodX + 10, rodY - 11, 170, 7, 4);
-ctx.fill();
-
-ctx.fillStyle = '#ffffff';
-ctx.font = 'bold 12px system-ui, sans-serif';
-const chargeSymbol = phys.V_kV < 0 ? '− − − − − −' : (phys.V_kV > 0 ? '+ + + + + +' : 'Neutre (0 V)');
-ctx.fillText('Règle : ' + chargeSymbol, rodX + 16, rodY + 4);
-ctx.fillStyle = 'rgba(255,255,255,0.85)';
-ctx.font = 'bold 12px system-ui, sans-serif';
-ctx.fillText('↕', rodX + 170, rodY + 4);
-ctx.restore();
-
-// 7. Échelle horizontale de déviation Δx au-dessus du bécher + Bécher de Faraday + Électromètre
-ctx.save();
-// Règle horizontale Δx (de 0 à 6 cm à partir de jetStartX)
-const scaleY = beakerY - 12;
-ctx.strokeStyle = '#94a3b8';
-ctx.fillStyle = '#64748b';
-ctx.lineWidth = 1;
-ctx.font = '9.5px ui-monospace, monospace';
-ctx.textAlign = 'center';
-ctx.beginPath();
-ctx.moveTo(jetStartX, scaleY);
-ctx.lineTo(jetStartX + 6 * pxPerCmX, scaleY);
-ctx.stroke();
-for (let cx = 0; cx <= 6; cx += 2) {
-const tx = jetStartX + cx * pxPerCmX;
-ctx.beginPath();
-ctx.moveTo(tx, scaleY - 3);
-ctx.lineTo(tx, scaleY + 3);
-ctx.stroke();
-ctx.fillText(cx + 'cm', tx, scaleY - 5);
-}
-// Curseur d'impact Δx
-const impactX = Math.min(beakerX + beakerW - 6, jetStartX + phys.dxPx);
-ctx.fillStyle = '#0284c7';
-ctx.beginPath();
-ctx.moveTo(impactX, scaleY + 6);
-ctx.lineTo(impactX - 4, scaleY + 1);
-ctx.lineTo(impactX + 4, scaleY + 1);
-ctx.closePath();
-ctx.fill();
-
-// Eau dans le bécher
-const waterGrad = ctx.createLinearGradient(0, waterSurfaceY, 0, beakerY + beakerH);
-waterGrad.addColorStop(0, 'rgba(56, 189, 248, 0.5)');
-waterGrad.addColorStop(1, 'rgba(2, 132, 199, 0.72)');
-ctx.fillStyle = waterGrad;
-ctx.fillRect(beakerX + 3, waterSurfaceY, beakerW - 6, waterLevel - 2);
-
-if (Math.abs(accumulatedCharge_nC) > 0.12) {
-const sSign = accumulatedCharge_nC > 0 ? 1 : -1;
-const count = Math.min(8, Math.floor(Math.abs(accumulatedCharge_nC) / 0.35) + 1);
-for (let k = 0; k < count; k++) {
-drawChargeBadge(beakerX + 22 + k * 22, beakerY + beakerH - 11, sSign, 5.0);
-}
-}
-
-// Parois du bécher (Cylindre de Faraday)
-ctx.strokeStyle = '#334155';
-ctx.lineWidth = 2.5;
-ctx.beginPath();
-ctx.moveTo(beakerX - 4, beakerY);
-ctx.lineTo(beakerX, beakerY + 5);
-ctx.lineTo(beakerX, beakerY + beakerH);
-ctx.lineTo(beakerX + beakerW, beakerY + beakerH);
-ctx.lineTo(beakerX + beakerW, beakerY + 5);
-ctx.lineTo(beakerX + beakerW + 4, beakerY);
-ctx.stroke();
-
-ctx.strokeStyle = 'rgba(71, 85, 105, 0.45)';
-ctx.lineWidth = 1;
-for (let gy = beakerY + 18; gy < beakerY + beakerH - 8; gy += 14) {
-ctx.beginPath();
-ctx.moveTo(beakerX + beakerW - 14, gy);
-ctx.lineTo(beakerX + beakerW - 4, gy);
-ctx.stroke();
-}
-
-// Câble coaxial reliant le cylindre de Faraday à l'électromètre
-ctx.strokeStyle = '#475569';
-ctx.lineWidth = 2.5;
-ctx.beginPath();
-ctx.moveTo(beakerX + beakerW, beakerY + 42);
-ctx.lineTo(316, beakerY + 42);
-ctx.stroke();
-
-// Boîtier de l'électromètre
-ctx.fillStyle = '#ffffff';
-ctx.shadowColor = 'rgba(15, 23, 42, 0.08)';
-ctx.shadowBlur = 8;
-ctx.beginPath();
-ctx.roundRect(316, beakerY - 6, 130, 78, 12);
-ctx.fill();
-ctx.shadowBlur = 0;
-ctx.strokeStyle = '#94a3b8';
-ctx.lineWidth = 1.8;
-ctx.stroke();
-
-// Cadran analogique à aiguille amortie
-const dialX = 381, dialY = beakerY + 35, dialR = 22;
-ctx.fillStyle = '#f8fafc';
-ctx.beginPath();
-ctx.arc(dialX, dialY, dialR, Math.PI, 0);
-ctx.fill();
-ctx.strokeStyle = '#cbd5e1';
-ctx.lineWidth = 1.2;
-ctx.stroke();
-
-// Graduations du cadran
-for (let a = -3; a <= 3; a++) {
-const ang = -Math.PI / 2 + (a / 3) * (Math.PI / 2.3);
-ctx.beginPath();
-ctx.moveTo(dialX + Math.sin(ang) * (dialR - 4), dialY - Math.cos(ang) * (dialR - 4));
-ctx.lineTo(dialX + Math.sin(ang) * dialR, dialY - Math.cos(ang) * dialR);
-ctx.stroke();
-}
-
-const maxQ = 6.0;
-const clampedQ = Math.max(-maxQ, Math.min(maxQ, displayedCharge_nC));
-const needleAngle = -Math.PI / 2 + (clampedQ / maxQ) * (Math.PI / 2.3);
-ctx.strokeStyle = '#be185d';
-ctx.lineWidth = 2.2;
-ctx.beginPath();
-ctx.moveTo(dialX, dialY);
-ctx.lineTo(dialX + Math.sin(needleAngle) * (dialR - 3), dialY - Math.cos(needleAngle) * (dialR - 3));
-ctx.stroke();
-ctx.fillStyle = '#be185d';
-ctx.beginPath();
-ctx.arc(dialX, dialY, 2.5, 0, Math.PI * 2);
-ctx.fill();
-
-ctx.fillStyle = '#334155';
-ctx.font = 'bold 9.5px system-ui, sans-serif';
-ctx.textAlign = 'center';
-ctx.fillText('ÉLECTROMÈTRE', dialX, beakerY + 9);
-
-ctx.fillStyle = '#be185d';
-ctx.font = 'bold 13px ui-monospace, monospace';
-ctx.fillText(qSignStr + Math.abs(accumulatedCharge_nC).toFixed(2) + ' nC', dialX, beakerY + 60);
-ctx.restore();
-
-requestAnimationFrame(animate);
-}
-
-animate();
-})();
-</script>
+<p class="legende">Trois expériences (échelle horizontale doublée). Si seuls les dipôles agissaient (à gauche), la déviation serait invisible. Dans l'eau réelle (au centre), la règle attire des ions qui chargent le jet&nbsp;: il s'incurve, et ses gouttes emportent leur charge dans le bécher. Si le haut du jet est blindé et que la règle fait face aux gouttes (à droite), celles-ci restent neutres et ne sont pas déviées.</p>
 
 La présence d'ions dans l'eau étant grandement favorisée par le caractère polaire et dissociant de l'eau (de permittivité $\varepsilon\_r \approx 80$), on peut en partie sauver la face de l'interprétation classique&nbsp;: l'expérience de la règle électrisée ne met pas directement en évidence l'attraction des dipôles $\text{H}\_2\text{O}$ par un gradient de champ, mais elle illustre bel et bien la **conduction électrolytique** de l'eau, qui est l'une des conséquences indirectes de sa polarité&nbsp;!
 
