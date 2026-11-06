@@ -94,11 +94,11 @@ details[open] > summary:first-of-type {
 
 C'est l'une des expériences les plus célèbres des cours de physique-chimie au lycée&nbsp;: on frotte une règle en plastique ou un ballon de baudruche contre un pull en laine, on l'approche d'un mince filet d'eau s'écoulant d'un robinet, et (magie de l'électrostatique) le filet d'eau s'incurve franchement vers la règle, parfois de plusieurs centimètres&nbsp;!
 
-Dans la quasi-totalité des manuels scolaires, cette expérience (réalisée pour la première fois en 1741 par Jean-Théophile Desaguliers) est présentée comme la preuve expérimentale directe du **caractère polaire de la molécule d'eau** ($\text{H}_2\text{O}$). L'histoire racontée est séduisante&nbsp;: les molécules d'eau étant de petits dipôles électriques permanents, elles s'orienteraient dans le champ électrique créé par la tige et seraient attirées vers les zones de champ fort.
+Dans la quasi-totalité des manuels scolaires, cette expérience (réalisée pour la première fois en 1741 par Jean-Théophile Desaguliers) est présentée comme la preuve expérimentale directe du **caractère polaire de la molécule d'eau** ($\text{H}_2\text{O}$). L'histoire racontée est séduisante&nbsp;: les molécules d'eau étant de petits dipôles électriques permanents, elles s'orienteraient dans le champ électrique créé par la règle et seraient attirées vers les zones de champ fort.
 
 Il n'y a qu'un seul problème avec cette explication&nbsp;: **elle est physiquement fausse** (de plus de deux ordres de grandeur)&nbsp;!
 
-Comment le vérifier par un calcul d'ordres de grandeur à partir des lois de l'électrostatique et de la physique statistique, et quel est le véritable mécanisme à l'œuvre&nbsp;?
+Comment le vérifier par un calcul d'ordres de grandeur à partir des lois de l'électrostatique et de la physique statistique, et quel est le véritable mécanisme à l'œuvre&nbsp;? Nous procéderons en trois temps&nbsp;: estimer d'abord l'effet des dipôles (il est minuscule), puis celui des ions dissous dans l'eau (il explique tout), et enfin examiner l'expérience qui permet de trancher&nbsp;: la charge des gouttes.
 
 
 ## Le mythe des dipôles face à l'agitation thermique
@@ -128,7 +128,7 @@ $$
 
 </div>
 
-L'énergie d'alignement électrostatique est près de **dix mille fois plus faible** que l'agitation thermique&nbsp;! Les molécules d'eau sont bousculées en permanence par les chocs thermiques&nbsp;: d'après la statistique de Boltzmann-Langevin, le degré d'alignement moyen d'un dipôle avec le champ vaut $\langle \cos\theta \rangle = \mathcal{L}\left(\frac{p\_0 E}{k\_B T}\right) \approx \frac{p\_0 E}{3 k\_B T} \approx \pu{5e-5}$. Autrement dit, seule une infime fraction statistique (environ une molécule sur vingt mille) présente en moyenne une orientation préférentielle dans le sens du champ.
+L'énergie d'alignement électrostatique est près de **dix mille fois plus faible** que l'agitation thermique&nbsp;! Les molécules d'eau sont bousculées en permanence par les chocs thermiques&nbsp;: d'après la statistique de Boltzmann-Langevin, le degré d'alignement moyen d'un dipôle avec le champ vaut $\langle \cos\theta \rangle = \mathcal{L}\left(\frac{p\_0 E}{k\_B T}\right) \approx \frac{p\_0 E}{3 k\_B T} \approx \pu{5e-5}$. Autrement dit, tout se passe comme si une molécule sur vingt mille environ était alignée sur le champ, toutes les autres restant orientées au hasard.
 
 <div class="svg-container">
 <svg viewBox="0 0 270 215" role="img" aria-label="Molécules d'eau toutes alignées sur le champ, comme dans les manuels" style="width:100%;max-width:270px;height:auto;">
@@ -172,9 +172,9 @@ L'énergie d'alignement électrostatique est près de **dix mille fois plus faib
 </div>
 <p class="legende">Dans les manuels, les molécules d'eau s'alignent sur le champ comme des aiguilles de boussole. À température ambiante, l'agitation thermique les fait tourner en tous sens&nbsp;: en moyenne, une sur vingt mille environ penche dans le sens du champ.</p>
 
-Comment ce très faible alignement statistique individuel se traduit-il à l'échelle macroscopique dans un fluide diélectrique polaire mais **électriquement neutre** placé dans un champ électrique inhomogène $\vec{E}(\vec{r})$&nbsp;?
+Ce faible alignement suffit-il à attirer le filet&nbsp;? Passons à l'échelle macroscopique&nbsp;: l'eau est un liquide polaire mais **électriquement neutre**, placé dans le champ non uniforme $\vec{E}(\vec{r})$ de la règle.
 
-En sommant les moments dipolaires moyens sur les $n \approx \pu{3,3e28 molécules/m3}$ de l'eau liquide (et en tenant compte des fortes corrélations d'orientation entre molécules voisines liées par liaisons hydrogène), le milieu acquiert un moment dipolaire par unité de volume décrit par le **vecteur polarisation macroscopique** $\vec{P}$&nbsp;:
+En sommant les moments dipolaires moyens sur les $n \approx \pu{3,3e28 molécules/m3}$ de l'eau liquide (et en tenant compte des fortes corrélations d'orientation entre molécules voisines liées par liaisons hydrogène), le milieu acquiert un moment dipolaire par unité de volume, le **vecteur polarisation** $\vec{P}$. Toute cette physique microscopique se résume en un seul nombre, la permittivité relative de l'eau&nbsp;:
 
 <div id="def">
 
@@ -272,7 +272,7 @@ En multipliant par $\frac{1}{2}\varepsilon\_0(\varepsilon\_r - 1)$, on obtient b
 
 <br>
 
-En divisant cette force volumique par la masse volumique de l'eau ($\rho = \pu{1000 kg/m3}$), on obtient une première estimation (très généreuse) de l'accélération transversale à $r = \pu{2 cm}$ de la tige&nbsp;:
+En divisant cette force volumique par la masse volumique de l'eau ($\rho = \pu{1000 kg/m3}$), on obtient une première estimation (très généreuse) de l'accélération transversale à $r = \pu{2 cm}$ de la règle&nbsp;:
 
 <div id="theo">
 
@@ -294,13 +294,13 @@ $$
 
 Quelle déviation latérale une telle accélération transversale $a$ produit-elle sur le filet d'eau&nbsp;?
 
-Pour être tout à fait juste physiquement, remarquons que la vitesse verticale $v\_z$ de l'eau **n'est pas constante** le long de la chute&nbsp;: pour obtenir un fin filet laminaire, on ouvre à peine le robinet ($v\_0 \approx \pu{0,3 à 0,4 m/s}$ en $z = 0$), puis l'eau **accélère verticalement en chute libre sous l'effet de la pesanteur** ($g \approx \pu{9,8 m/s2}$) selon la loi de Torricelli&nbsp;:
+Le filet ne tombe pas à vitesse constante. On ouvre à peine le robinet pour obtenir un filet fin et régulier ($v\_0 \approx \pu{0,3 à 0,4 m/s}$ à la sortie, en $z = 0$), puis l'eau accélère en chute libre selon la loi de Torricelli&nbsp;:
 
-$$v\_z(z) = \sqrt{v\_0^2 + 2 g z}$$
+$$v\_z(z) = \sqrt{v\_0^2 + 2 g z}.$$
 
-(c'est d'ailleurs cette accélération verticale qui explique pourquoi le filet d'eau s'affine progressivement en tombant, par conservation du débit volumique $Q = \pi a(z)^2 v\_z(z) = \text{cte}$&nbsp;!).
+(C'est d'ailleurs pourquoi le filet s'affine en tombant&nbsp;: le débit $Q = \pi a(z)^2 v\_z(z)$ se conserve, donc son rayon diminue quand sa vitesse augmente.)
 
-Comme les mouvements horizontal $x(t)$ et vertical $z(t)$ sont découplés dans le temps, l'accélération verticale de la pesanteur $g$ ne change rien aux lois horaires horizontales. Elle fixe simplement les durées $\Delta t\_1$ et $\Delta t\_2$ des **deux étapes successives** de la déviation (analogues à la traversée puis à la sortie des plaques d'un oscillographe)&nbsp;:
+Les mouvements horizontal et vertical étant indépendants, cette accélération verticale ne modifie pas la déviation latérale elle-même&nbsp;: elle fixe seulement la durée des **deux étapes** de la déviation, comme pour un faisceau d'électrons qui traverse puis quitte les plaques déviatrices d'un oscilloscope&nbsp;:
 
 <div id="def">
 <ul style="margin-top:1em; margin-bottom:0em;">
@@ -512,7 +512,7 @@ Quarante micromètres au fond de l'évier (et à peine $\pu{7 \mu m}$ à la sort
   <video src="/filetdeau_boomerang.mp4" autoplay loop muted playsinline style="width: 200px; max-width: 100%; border-radius: 8px; display: inline-block;"></video>
 </div>
 
-D'où vient alors la déviation observée&nbsp;?
+Or, comme le montre la vidéo ci-dessus, la déviation réellement observée atteint facilement le centimètre, soit des centaines de fois plus. D'où vient-elle&nbsp;?
 
 
 ## Le vrai coupable : la conduction ionique
@@ -521,11 +521,11 @@ Ce que l'explication «&nbsp;chimiste&nbsp;» oublie complètement, c'est que l'
 
 Dans l'eau du robinet, on trouve quantité d'ions dissous ($\text{Ca}^{2+}, \text{Mg}^{2+}, \text{Na}^+, \text{Cl}^-, \text{HCO}\_3^-\dots$) qui lui confèrent une conductivité électrique $\sigma \approx \pu{5e-2 S/m}$. Et même dans une eau théoriquement pure à $100\\,\\%$, l'autoprotolyse de l'eau ($\ce{2 H2O <=> H3O+ + HO-}$) maintient en permanence une concentration de $\pu{10^{-7} mol/L}$ d'ions hydronium et hydroxyde, assurant une conductivité minimale $\sigma_{\text{pure}} \approx \pu{5,5e-6 S/m}$ (qui grimpe très vite à $\pu{10^{-4} S/m}$ dès que le dioxyde de carbone de l'air s'y dissout).
 
-Que se passe-t-il lorsqu'on approche une tige chargée (disons négativement, $Q < 0$) d'un conducteur relié à la terre&nbsp;? C'est le phénomène classique d'**électrisation par influence**&nbsp;:
+Que se passe-t-il lorsqu'on approche la règle chargée (disons négativement, $Q < 0$) de ce conducteur relié à la terre&nbsp;? C'est le phénomène classique d'**électrisation par influence**&nbsp;:
 
 <ol style="margin-top:-0.5em; margin-bottom:1em;">
-<li>Tant que le filet d'eau est <b>continu</b> depuis le bec du robinet, le champ électrique de la tige attire les ions positifs (cations) vers la surface du filet d'eau faisant face à la tige, et repousse les ions négatifs (anions) vers le robinet (la terre).</li>
-<li>Le filet d'eau acquiert donc une <b>charge électrique nette non nulle</b> (ici positive, de signe opposé à la tige) par unité de longueur&nbsp;!</li>
+<li>Tant que le filet d'eau est <b>continu</b> depuis le bec du robinet, le champ électrique de la règle attire les ions positifs (cations) vers la surface du filet d'eau qui lui fait face, et repousse les ions négatifs (anions) vers le robinet (la terre).</li>
+<li>Le filet d'eau acquiert donc une <b>charge électrique nette non nulle</b> (ici positive, de signe opposé à celle de la règle) par unité de longueur&nbsp;!</li>
 <li>Au lieu de subir une minuscule force en gradient de champ sur des dipôles neutres, cette portion chargée du filet d'eau subit directement la <b>force de Coulomb</b> $\vec{F} = q\vec{E}$&nbsp;!</li>
 </ol>
 
@@ -683,7 +683,7 @@ $$
 
 </div>
 
-Pour un filet d'eau millimétrique situé à $1$ ou $\pu{2 cm}$ de la tige, la force de Coulomb sur les ions libres induits l'emporte donc systématiquement d'un facteur $100$ à $1000$ (**deux à trois ordres de grandeur**) sur la force dipolaire&nbsp;!
+Pour un filet d'eau millimétrique situé à $1$ ou $\pu{2 cm}$ de la règle, la force de Coulomb sur les ions libres induits l'emporte donc systématiquement d'un facteur $100$ à $1000$ (**deux à trois ordres de grandeur**) sur la force dipolaire&nbsp;!
 
 </div>
 
@@ -710,11 +710,22 @@ $$
 
 <div id="preuve">
 
-**Et si l'on approche la règle à $r = \pu{1 cm}$ du filet&nbsp;?** À potentiel $|V\_0| \approx \pu{6 kV}$ fixé sur la règle, rapprocher celle-ci de $r = \pu{2 cm}$ à $r = \pu{1 cm}$ fait grimper le champ électrique à $E \approx \frac{|V\_0|}{r\ln(r/a)} \approx \frac{\pu{6000 V}}{\pu{0,01 m}\times \ln(10)} \approx \pu{2,6e5 V/m}$. Comme $a\_{\text{ion}} = \frac{2\varepsilon\_0 r E^2}{\rho a^2} \propto \frac{V\_0^2}{r[\ln(r/a)]^2}$, l'accélération ionique triple pour atteindre $a\_{\text{ion}} \approx \pu{12 m/s2}$ (supérieure à $g$&nbsp;!), ce qui produit en bas de la chute une déviation $\Delta x\_{\text{ion}} \approx \pu{5 à 6 cm}$, tandis que la déviation dipolaire reste inférieure au demi-millimètre ($\Delta x\_{\text{dip}} = \frac{\Delta x\_{\text{ion}}}{(r/a)^2} = \frac{\Delta x\_{\text{ion}}}{100} \approx \pu{0,5 mm}$).
+**Et si l'on approche la règle à $r = \pu{1 cm}$ du filet&nbsp;?** À potentiel $|V\_0| \approx \pu{6 kV}$ fixé sur la règle, rapprocher celle-ci de $r = \pu{2 cm}$ à $r = \pu{1 cm}$ fait grimper le champ électrique à $E \approx \frac{|V\_0|}{r\ln(r/a)} \approx \frac{\pu{6000 V}}{\pu{0,01 m}\times \ln(10)} \approx \pu{2,6e5 V/m}$. Comme $a\_{\text{ion}} = \frac{2\varepsilon\_0 r E^2}{\rho a^2} \propto \frac{V\_0^2}{r[\ln(r/a)]^2}$, l'accélération ionique triple pour atteindre $a\_{\text{ion}} \approx \pu{12 m/s2}$ (supérieure à $g$&nbsp;!), ce qui produit en bas de la chute une déviation $\Delta x\_{\text{ion}} \approx \pu{5 à 6 cm}$, tandis que la déviation dipolaire reste de l'ordre du demi-millimètre ($\Delta x\_{\text{dip}} = \frac{\Delta x\_{\text{ion}}}{(r/a)^2} = \frac{\Delta x\_{\text{ion}}}{100} \approx \pu{0,5 mm}$).
 
 </div>
 
 <br>
+
+**Bilan.** Pour la règle placée à $\pu{2 cm}$ du filet&nbsp;:
+
+| Mécanisme | Accélération latérale | Déviation au bas du jet |
+| :--- | :---: | :---: |
+| dipôles, calcul naïf | $\pu{0,35 m/s2}$ | $\pu{1,7 mm}$ |
+| dipôles, avec le champ dépolarisant | $\pu{0,009 m/s2}$ | $\pu{0,04 mm}$ |
+| ions (charge induite) | $\pu{3,5 m/s2}$ | $\pu{1,7 cm}$ |
+
+Seule la conduction ionique rend compte des déviations observées.
+
 
 ## Coup de grâce : la charge des gouttelettes
 
@@ -722,8 +733,8 @@ Lorsqu'un fin filet d'eau s'écoule d'un robinet ou d'une burette, il ne reste p
 
 Cette rupture du jet fournit le test expérimental ultime pour départager les deux théories&nbsp;:
 
-* **Si l'on place la tige chargée en haut (face à la partie continue du jet)**&nbsp;: les ions migrent depuis le robinet, chargent le bas de la colonne continue, et lorsque les gouttes se détachent à la hauteur de rupture, **chaque goutte emporte avec elle une charge électrique nette piégée** ($q\_{\text{goutte}} \neq 0$)&nbsp;! Si l'on recueille l'eau déviée dans un bécher relié à un électromètre (cylindre de Faraday), l'électromètre s'affole et mesure une charge électrique considérable (c'est d'ailleurs le principe exact du [générateur électrostatique à gouttes d'eau](https://fr.wikipedia.org/wiki/Générateur_électrostatique_de_Kelvin) de **Lord Kelvin**).
-* **Si l'on approche la tige uniquement en bas (face aux gouttes déjà formées)**, en prenant soin de blinder la partie haute continue par un tube métallique relié à la terre&nbsp;: chaque gouttelette étant désormais isolée dans l'air, elle ne peut plus échanger d'ions avec le robinet et sa charge nette reste strictement nulle ($q\_{\text{goutte}} = 0$). Or, chaque gouttelette contient toujours autant de molécules d'eau polaires&nbsp;! Si la théorie des manuels scolaires était vraie, les gouttes devraient être tout autant déviées. En pratique, **on n'observe aucune déviation**.
+* **Si l'on place la règle en haut, face à la partie continue du jet**&nbsp;: les ions migrent depuis le robinet, chargent le bas de la colonne continue, et lorsque les gouttes se détachent à la hauteur de rupture, **chaque goutte emporte avec elle une charge électrique nette piégée** ($q\_{\text{goutte}} \neq 0$)&nbsp;! Si l'on recueille l'eau déviée dans un bécher relié à un électromètre (cylindre de Faraday), l'électromètre s'affole et mesure une charge électrique considérable (c'est d'ailleurs le principe exact du [générateur électrostatique à gouttes d'eau](https://fr.wikipedia.org/wiki/Générateur_électrostatique_de_Kelvin) de **Lord Kelvin**).
+* **Si l'on approche la règle uniquement en bas, face aux gouttes déjà formées**, en prenant soin de blinder la partie haute continue par un tube métallique relié à la terre&nbsp;: chaque gouttelette étant désormais isolée dans l'air, elle ne peut plus échanger d'ions avec le robinet et sa charge nette reste strictement nulle ($q\_{\text{goutte}} = 0$). Or ces gouttes sont toujours faites de molécules d'eau polaires&nbsp;: si c'était la polarité des molécules qui déviait le jet, elles devraient être déviées tout autant. En pratique, **on n'observe aucune déviation**.
 
 <div class="svg-container">
 <svg viewBox="0 0 205 410" role="img" aria-label="Selon les manuels, le jet ne serait pratiquement pas dévié" style="width:100%;max-width:205px;height:auto;">
