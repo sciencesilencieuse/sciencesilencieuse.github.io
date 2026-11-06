@@ -727,7 +727,7 @@ $$
      $$C\_\ell = \frac{|\lambda\_q|}{|V\_0|} \approx \frac{2\pi\varepsilon\_0}{\ln(r/a)}$$
    * Enfin, à la distance $\rho \sim r$, le champ propre du filet chargé, $\frac{|\lambda\_q|}{2\pi\varepsilon\_0 r}$, est du même ordre que le champ $E$ de la règle, puisque c'est lui qui le compense&nbsp;; d'où&nbsp;:<br>
      $\displaystyle E \sim \frac{|\lambda\_q|}{2\pi\varepsilon\_0 r} \approx \frac{|V\_0|}{r \ln(r/a)} \quad \Longleftrightarrow \quad |\lambda\_q| \approx 2\pi\varepsilon\_0 E \\, r$<br>
-     (Numériquement, avec $r = \pu{2 cm}$ et $a = \pu{1 mm}$, le facteur logarithmique vaut $\ln(r/a) = \ln(20) \approx 3,0$ : un potentiel $|V\_0| \approx \pu{6 kV}$ permet de retrouver la bonne valeur du champ $E \approx \frac{\pu{6000 V}}{\pu{0,02 m} \times 3} = \pu{1e5 V/m}$).
+     Numériquement, avec $r = \pu{2 cm}$ et $a = \pu{1 mm}$, le facteur logarithmique vaut $\ln(r/a) = \ln(20) \approx 3,0$ : un potentiel $|V\_0| \approx \pu{6 kV}$ permet de retrouver la bonne valeur du champ $E \approx \frac{\pu{6000 V}}{\pu{0,02 m} \times 3} = \pu{1e5 V/m}$.
 
 </div>
 
