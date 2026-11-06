@@ -530,9 +530,50 @@ Que se passe-t-il lorsqu'on approche une tige chargée (disons négativement, $Q
 </ol>
 
 
-<div style="position:relative;margin-left:auto;margin-right:auto;width:600px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
-<img src="/chargesrobinet.png" style="box-shadow:none;background:none;">
+<div class="svg-container">
+<svg viewBox="0 0 460 440" role="img" aria-label="Influence : la règle chargée négativement attire des ions positifs dans le filet relié à la terre et repousse les ions négatifs vers la terre ; le filet chargé est attiré et ses gouttes emportent leur charge" style="width:100%;max-width:460px;height:auto;">
+<defs><marker id="fr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#004D80" stroke-width="1.6"/></marker></defs>
+<path d="M60,40 L190,40 Q210,40 210,60 L210,120 L176,120 L176,74 L60,74 Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.4" stroke-linejoin="round"/>
+<rect x="170" y="120" width="46" height="14" rx="3" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.2"/>
+<line x1="60.0" y1="57.0" x2="30.0" y2="57.0" stroke="#334155" stroke-width="1.4" />
+<line x1="30.0" y1="57.0" x2="30.0" y2="95.0" stroke="#334155" stroke-width="1.4" />
+<line x1="17.0" y1="95.0" x2="43.0" y2="95.0" stroke="#334155" stroke-width="1.4" />
+<line x1="21.5" y1="101.0" x2="38.5" y2="101.0" stroke="#334155" stroke-width="1.4" />
+<line x1="26.0" y1="107.0" x2="34.0" y2="107.0" stroke="#334155" stroke-width="1.4" />
+<text x="30.0" y="132.0" text-anchor="middle" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >terre</text>
+<circle cx="193.0" cy="108.0" r="7.5" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="189.2" y1="108.0" x2="196.8" y2="108.0" stroke="#004D80" stroke-width="1.8" />
+<circle cx="193.0" cy="84.0" r="7.5" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="189.2" y1="84.0" x2="196.8" y2="84.0" stroke="#004D80" stroke-width="1.8" />
+<circle cx="150.0" cy="57.0" r="7.5" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="146.2" y1="57.0" x2="153.8" y2="57.0" stroke="#004D80" stroke-width="1.8" />
+<path d="M193,72 Q188,52 160,50 L118,52" fill="none" stroke="#004D80" stroke-width="1.6" marker-end="url(#fr)"/>
+<text x="100.0" y="26.0" text-anchor="start" font-size="12.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >ions − repoussés vers la terre</text>
+<polyline points="193.0,134.0 193.1,139.5 193.3,144.9 193.5,150.3 193.7,155.6 193.9,160.8 194.2,166.0 194.6,171.1 194.9,176.1 195.3,181.1 195.8,186.0 196.2,190.8 196.7,195.6 197.3,200.3 197.8,204.9 198.4,209.4 199.1,213.9 199.8,218.4 200.5,222.7 201.2,227.0 202.0,231.2 202.8,235.4 203.7,239.5 204.6,243.5 205.5,247.4 206.4,251.3 207.4,255.1 208.5,258.9 209.5,262.6 210.6,266.2 211.8,269.8 212.9,273.2 214.1,276.6 215.4,280.0 216.6,283.3 217.9,286.5 219.3,289.6 220.7,292.7 222.1,295.7 223.5,298.7 225.0,301.6 226.5,304.4 228.1,307.1 229.7,309.8 231.3,312.4 232.9,314.9 234.6,317.4 236.4,319.8 238.1,322.2 239.9,324.4 241.8,326.6 243.6,328.8 245.5,330.8 247.5,332.9 249.4,334.8 251.4,336.7 253.5,338.5 255.6,340.2 257.7,341.9 259.8,343.5 262.0,345.0" fill="none" stroke="#a6c1d3" stroke-width="12" stroke-linecap="round"/>
+<circle cx="212.3" cy="235.8" r="6.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="208.5" y1="235.8" x2="216.1" y2="235.8" stroke="#970E53" stroke-width="1.8" /><line x1="212.3" y1="232.0" x2="212.3" y2="239.6" stroke="#970E53" stroke-width="1.8" />
+<circle cx="219.4" cy="263.5" r="6.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="215.6" y1="263.5" x2="223.2" y2="263.5" stroke="#970E53" stroke-width="1.8" /><line x1="219.4" y1="259.7" x2="219.4" y2="267.3" stroke="#970E53" stroke-width="1.8" />
+<circle cx="228.3" cy="287.6" r="6.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="224.5" y1="287.6" x2="232.1" y2="287.6" stroke="#970E53" stroke-width="1.8" /><line x1="228.3" y1="283.8" x2="228.3" y2="291.4" stroke="#970E53" stroke-width="1.8" />
+<circle cx="239.0" cy="308.3" r="6.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="235.2" y1="308.3" x2="242.8" y2="308.3" stroke="#970E53" stroke-width="1.8" /><line x1="239.0" y1="304.5" x2="239.0" y2="312.1" stroke="#970E53" stroke-width="1.8" />
+<circle cx="251.5" cy="325.5" r="6.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="247.7" y1="325.5" x2="255.3" y2="325.5" stroke="#970E53" stroke-width="1.8" /><line x1="251.5" y1="321.7" x2="251.5" y2="329.3" stroke="#970E53" stroke-width="1.8" />
+<circle cx="281.8" cy="360.5" r="8.5" fill="#a6c1d3"/>
+<circle cx="281.8" cy="360.5" r="5.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="278.0" y1="360.5" x2="285.6" y2="360.5" stroke="#970E53" stroke-width="1.8" /><line x1="281.8" y1="356.7" x2="281.8" y2="364.3" stroke="#970E53" stroke-width="1.8" />
+<circle cx="301.7" cy="380.0" r="8.5" fill="#a6c1d3"/>
+<circle cx="301.7" cy="380.0" r="5.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="297.9" y1="380.0" x2="305.5" y2="380.0" stroke="#970E53" stroke-width="1.8" /><line x1="301.7" y1="376.2" x2="301.7" y2="383.8" stroke="#970E53" stroke-width="1.8" />
+<circle cx="321.5" cy="403.6" r="8.5" fill="#a6c1d3"/>
+<circle cx="321.5" cy="403.6" r="5.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="317.7" y1="403.6" x2="325.3" y2="403.6" stroke="#970E53" stroke-width="1.8" /><line x1="321.5" y1="399.8" x2="321.5" y2="407.4" stroke="#970E53" stroke-width="1.8" />
+<circle cx="341.3" cy="431.1" r="8.5" fill="#a6c1d3"/>
+<circle cx="341.3" cy="431.1" r="5.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="337.5" y1="431.1" x2="345.1" y2="431.1" stroke="#970E53" stroke-width="1.8" /><line x1="341.3" y1="427.3" x2="341.3" y2="434.9" stroke="#970E53" stroke-width="1.8" />
+<rect x="300" y="226" width="140" height="30" rx="8" fill="#e6edf2" stroke="#004D80" stroke-width="1.4"/>
+<circle cx="316.0" cy="241.0" r="6.5" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="312.2" y1="241.0" x2="319.8" y2="241.0" stroke="#004D80" stroke-width="1.8" />
+<circle cx="338.0" cy="241.0" r="6.5" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="334.2" y1="241.0" x2="341.8" y2="241.0" stroke="#004D80" stroke-width="1.8" />
+<circle cx="360.0" cy="241.0" r="6.5" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="356.2" y1="241.0" x2="363.8" y2="241.0" stroke="#004D80" stroke-width="1.8" />
+<circle cx="382.0" cy="241.0" r="6.5" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="378.2" y1="241.0" x2="385.8" y2="241.0" stroke="#004D80" stroke-width="1.8" />
+<circle cx="404.0" cy="241.0" r="6.5" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="400.2" y1="241.0" x2="407.8" y2="241.0" stroke="#004D80" stroke-width="1.8" />
+<circle cx="426.0" cy="241.0" r="6.5" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="422.2" y1="241.0" x2="429.8" y2="241.0" stroke="#004D80" stroke-width="1.8" />
+<text x="370.0" y="214.0" text-anchor="middle" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >règle chargée</text>
+<text x="222.0" y="196.0" text-anchor="start" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >ions + attirés :</text>
+<text x="222.0" y="211.0" text-anchor="start" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >le filet se charge</text>
+<text x="372.0" y="404.0" text-anchor="start" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >gouttes chargées</text>
+</svg>
 </div>
+<p class="legende">Électrisation par influence. La règle, chargée négativement, attire les ions positifs de l'eau sur le flanc du filet qui lui fait face, et repousse les ions négatifs dans la tuyauterie, jusqu'à la terre. Le filet, désormais chargé, est attiré par la règle, et ses gouttes emportent leur charge.</p>
 
 <br>
 
@@ -573,21 +614,9 @@ Dans tous les cas, ce temps de relaxation $\tau\_e$ est **beaucoup plus court qu
 
 ### Calcul de la force de Coulomb sur la charge induite
 
-Modélisons le filet d'eau continu de rayon $a \approx \pu{1 mm}$ comme un cylindre conducteur relié à la terre ($V = 0$), placé à la distance $r \approx \pu{2 cm}$ ($r \gg a$) de la règle électrisée (portée à un potentiel $V\_0$ de quelques kilovolts et créant à la distance $r$ le champ électrique $E$).
+Modélisons le filet d'eau continu, de rayon $a \approx \pu{1 mm}$, comme un cylindre conducteur relié à la terre ($V = 0$), placé à la distance $r \approx \pu{2 cm}$ ($r \gg a$) de la règle électrisée. Celle-ci est portée à un potentiel $V\_0$ de quelques kilovolts et crée, à la distance $r$, le champ électrique $E$.
 
-Attention ici au sens physique de la causalité dans ce phénomène d'électrisation par influence&nbsp;:
-
-<div id="def">
-<ul style="margin-top:1em;margin-bottom:1em;">
-<li> <b>La cause et l'effet</b>&nbsp;: au départ, le filet d'eau est neutre. C'est le champ électrique de la règle qui <b>«&nbsp;fabrique&nbsp;» le cylindre d'eau chargé</b> en attirant des ions depuis le robinet. Mais jusqu'où cette accumulation d'ions se poursuit-elle&nbsp;?</li></li>
-<li><b>La condition d'équilibre du conducteur</b>&nbsp;: les ions s'accumulent à la surface de l'eau jusqu'à ce que la charge linéique induite $\lambda_q$ crée en retour <b>son propre champ électrique capable de contrebalancer celui de la règle</b>, de façon à annuler le champ à l'intérieur de l'eau et à maintenir le filet au potentiel $V = 0$ de la terre malgré le potentiel $V_0$ imposé par la règle à la distance $r$.</li>
-<li> <b>L'astuce du calcul (analogue à la méthode des images électrostatiques)</b>&nbsp;: même si $\lambda_q$ est physiquement la <i>conséquence</i> du champ de la règle, le <b>théorème d'unicité</b> de l'électrostatique garantit qu'il existe une unique distribution de champ extérieur compatible avec les conditions aux limites ($V = 0$ sur le cylindre d'eau de rayon $a$ et potentiel $V_0$ imposé à la distance $r$). Exactement comme lorsqu'on détermine une <b>charge image</b> face à un conducteur relié à la terre, on peut donc trouver l'inconnue $\lambda_q$ «&nbsp;à l'envers&nbsp;», en se demandant <b>quelle charge linéique $\lambda_q$ un cylindre conducteur de rayon $a$ doit porter</b> pour rétablir l'équipotentielle $V = 0$ en $\rho = a$ (c'est-à-dire assurer l'écart de potentiel $|V_0|$ entre $\rho = a$ et $\rho = r$ et produire à la distance $r$ un champ de réaction d'ordre de grandeur $E$).</li>
-</ul>
-</div>
-
-<br>
-
-Ce problème d'influence se ramène ainsi à celui d'un **condensateur cylindrique** de capacité linéique $C\_\ell$&nbsp;:
+**Quelle charge le filet accumule-t-il&nbsp;?** Au départ, le filet est neutre. Les ions affluent depuis le robinet tant qu'il règne un champ électrique dans l'eau, et s'arrêtent dès que le filet est revenu au potentiel de la terre&nbsp;: la charge induite par unité de longueur, $\lambda\_q$, prend juste la valeur qu'il faut pour que son propre champ compense celui de la règle à l'intérieur de l'eau. Le filet et la règle se comportent donc comme les deux armatures d'un **condensateur**&nbsp;: la charge du filet est proportionnelle à la tension $|V\_0|$ entre eux, $|\lambda\_q| = C\_\ell |V\_0|$, où $C\_\ell$ est la capacité par unité de longueur d'un fin cylindre de rayon $a$ vu depuis la distance $r$&nbsp;:
 
 <div id="theo">
 
@@ -616,7 +645,7 @@ $$
 3. **Capacité linéique et charge induite par le champ $E$**&nbsp;:
    * En identifiant $|\lambda\_q| = C\_\ell |V\_0|$ dans la relation précédente, on obtient la capacité linéique du système&nbsp;:
      $$C\_\ell = \frac{|\lambda\_q|}{|V\_0|} \approx \frac{2\pi\varepsilon\_0}{\ln(r/a)}$$
-   * De même, pour que ce cylindre d'eau chargé raccorde son champ propre $E(\rho) = \frac{|\lambda\_q|}{2\pi\varepsilon\_0 \rho}$ à l'ordre de grandeur du champ extérieur $E$ imposé par la règle à l'échelle de distance $\rho \sim r$, la charge linéique $\lambda\_q$ fabriquée par influence doit vérifier&nbsp;:<br>
+   * Enfin, à la distance $\rho \sim r$, le champ propre du filet chargé, $\frac{|\lambda\_q|}{2\pi\varepsilon\_0 r}$, est du même ordre que le champ $E$ de la règle, puisque c'est lui qui le compense&nbsp;; d'où&nbsp;:<br>
      $\displaystyle E \sim \frac{|\lambda\_q|}{2\pi\varepsilon\_0 r} \approx \frac{|V\_0|}{r \ln(r/a)} \quad \Longleftrightarrow \quad |\lambda\_q| \approx 2\pi\varepsilon\_0 E \\, r$<br>
      (Numériquement, avec $r = \pu{2 cm}$ et $a = \pu{1 mm}$, le facteur logarithmique vaut $\ln(r/a) = \ln(20) \approx 3,0$ : un potentiel $|V\_0| \approx \pu{6 kV}$ permet de retrouver la bonne valeur du champ $E \approx \frac{\pu{6000 V}}{\pu{0,02 m} \times 3} = \pu{1e5 V/m}$).
 
@@ -660,7 +689,7 @@ Pour un filet d'eau millimétrique situé à $1$ ou $\pu{2 cm}$ de la tige, la f
 
 <br>
 
-Appliquons maintenant notre cinématique de chute libre en deux temps avec cette accélération $a\_{\text{ion}} \approx \pu{3,5 m/s2}$ (pour la règle placée à $r = \pu{2 cm}$)&nbsp;:
+Appliquons maintenant notre cinématique de chute libre en deux temps (voir le schéma plus haut) avec cette accélération $a\_{\text{ion}} \approx \pu{3,5 m/s2}$ (pour la règle placée à $r = \pu{2 cm}$)&nbsp;:
 
 * **Pendant la traversée de la zone d'interaction** ($h = \pu{5 cm}$, durée $\Delta t\_1 \approx \pu{0,04 s}$ à la vitesse verticale moyenne $v\_{z,1} \approx \pu{1,2 m/s}$)&nbsp;: le filet s'incurve de $\Delta x\_1 = \frac{1}{2} a\_{\text{ion}} (\Delta t\_1)^2 \approx \pu{0,28 cm} \approx \pu{3 mm}$ et acquiert une vitesse latérale $v\_x = a\_{\text{ion}} \\, \Delta t\_1 \approx \pu{14 cm/s}$&nbsp;;
 * **Pendant la poursuite de la chute libre hors de la zone de champ** ($D = \pu{20 cm}$, durée $\Delta t\_2 \approx \pu{0,10 s}$ à la vitesse verticale moyenne $v\_{z,2} \approx \pu{2,0 m/s}$)&nbsp;: l'eau dérive latéralement à la vitesse $v\_x$ de $\Delta x\_2 = v\_x \\, \Delta t\_2 \approx \pu{1,4 cm}$.
