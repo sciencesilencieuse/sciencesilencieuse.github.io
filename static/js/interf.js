@@ -44,8 +44,8 @@
   let last = performance.now();
 
   function addDots(n) {
-    // impacts en blanc
-    ctx.fillStyle = '#ffffff';
+    // impacts bleus, légèrement transparents (style du site)
+    ctx.fillStyle = 'rgba(0, 77, 128, 0.55)';
     for (let i = 0; i < n; i++) {
       const x = sampleX();
       const y = Math.random() * H;
@@ -55,8 +55,8 @@
   }
 
   function resetCanvas() {
-    // fond en #333393
-    ctx.fillStyle = '#333393';
+    // fond blanc, comme la page
+    ctx.fillStyle = '#ffffff';
     ctx.fillRect(0, 0, W, H);
     impactsDrawn = 0;
     last = performance.now();
@@ -64,6 +64,12 @@
 
   // on initialise tout de suite le fond
   resetCanvas();
+
+  // mouvement réduit : on affiche directement la figure complète
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    addDots(maxDots);
+    return;
+  }
 
   function step(now) {
     const dt = (now - last) / 1000;
