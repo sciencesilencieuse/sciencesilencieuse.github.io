@@ -531,46 +531,47 @@ Que se passe-t-il lorsqu'on approche la règle chargée (disons négativement, $
 
 
 <div class="svg-container">
-<svg viewBox="0 0 460 440" role="img" aria-label="Influence : la règle chargée négativement attire des ions positifs dans le filet relié à la terre et repousse les ions négatifs vers la terre ; le filet chargé est attiré et ses gouttes emportent leur charge" style="width:100%;max-width:460px;height:auto;">
+<svg viewBox="0 0 480 470" role="img" aria-label="Influence : la règle chargée négativement attire des ions positifs sur le flanc du filet qui lui fait face et repousse les ions négatifs vers la terre ; le filet chargé est attiré et ses gouttes emportent leur charge" style="width:100%;max-width:480px;height:auto;">
 <defs><marker id="fr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#004D80" stroke-width="1.6"/></marker></defs>
-<path d="M60,40 L190,40 Q210,40 210,60 L210,120 L176,120 L176,74 L60,74 Z" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1.4" stroke-linejoin="round"/>
-<rect x="170" y="120" width="46" height="14" rx="3" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.2"/>
-<line x1="60.0" y1="57.0" x2="30.0" y2="57.0" stroke="#334155" stroke-width="1.4" />
-<line x1="30.0" y1="57.0" x2="30.0" y2="95.0" stroke="#334155" stroke-width="1.4" />
-<line x1="17.0" y1="95.0" x2="43.0" y2="95.0" stroke="#334155" stroke-width="1.4" />
-<line x1="21.5" y1="101.0" x2="38.5" y2="101.0" stroke="#334155" stroke-width="1.4" />
-<line x1="26.0" y1="107.0" x2="34.0" y2="107.0" stroke="#334155" stroke-width="1.4" />
-<text x="30.0" y="132.0" text-anchor="middle" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >terre</text>
-<circle cx="193.0" cy="108.0" r="7.5" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="189.2" y1="108.0" x2="196.8" y2="108.0" stroke="#004D80" stroke-width="1.8" />
-<circle cx="193.0" cy="84.0" r="7.5" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="189.2" y1="84.0" x2="196.8" y2="84.0" stroke="#004D80" stroke-width="1.8" />
-<circle cx="150.0" cy="57.0" r="7.5" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="146.2" y1="57.0" x2="153.8" y2="57.0" stroke="#004D80" stroke-width="1.8" />
-<path d="M193,72 Q188,52 160,50 L118,52" fill="none" stroke="#004D80" stroke-width="1.6" marker-end="url(#fr)"/>
-<text x="100.0" y="26.0" text-anchor="start" font-size="12.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >ions − repoussés vers la terre</text>
-<polyline points="193.0,134.0 193.1,139.5 193.3,144.9 193.5,150.3 193.7,155.6 193.9,160.8 194.2,166.0 194.6,171.1 194.9,176.1 195.3,181.1 195.8,186.0 196.2,190.8 196.7,195.6 197.3,200.3 197.8,204.9 198.4,209.4 199.1,213.9 199.8,218.4 200.5,222.7 201.2,227.0 202.0,231.2 202.8,235.4 203.7,239.5 204.6,243.5 205.5,247.4 206.4,251.3 207.4,255.1 208.5,258.9 209.5,262.6 210.6,266.2 211.8,269.8 212.9,273.2 214.1,276.6 215.4,280.0 216.6,283.3 217.9,286.5 219.3,289.6 220.7,292.7 222.1,295.7 223.5,298.7 225.0,301.6 226.5,304.4 228.1,307.1 229.7,309.8 231.3,312.4 232.9,314.9 234.6,317.4 236.4,319.8 238.1,322.2 239.9,324.4 241.8,326.6 243.6,328.8 245.5,330.8 247.5,332.9 249.4,334.8 251.4,336.7 253.5,338.5 255.6,340.2 257.7,341.9 259.8,343.5 262.0,345.0" fill="none" stroke="#a6c1d3" stroke-width="12" stroke-linecap="round"/>
-<circle cx="212.3" cy="235.8" r="6.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="208.5" y1="235.8" x2="216.1" y2="235.8" stroke="#970E53" stroke-width="1.8" /><line x1="212.3" y1="232.0" x2="212.3" y2="239.6" stroke="#970E53" stroke-width="1.8" />
-<circle cx="219.4" cy="263.5" r="6.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="215.6" y1="263.5" x2="223.2" y2="263.5" stroke="#970E53" stroke-width="1.8" /><line x1="219.4" y1="259.7" x2="219.4" y2="267.3" stroke="#970E53" stroke-width="1.8" />
-<circle cx="228.3" cy="287.6" r="6.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="224.5" y1="287.6" x2="232.1" y2="287.6" stroke="#970E53" stroke-width="1.8" /><line x1="228.3" y1="283.8" x2="228.3" y2="291.4" stroke="#970E53" stroke-width="1.8" />
-<circle cx="239.0" cy="308.3" r="6.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="235.2" y1="308.3" x2="242.8" y2="308.3" stroke="#970E53" stroke-width="1.8" /><line x1="239.0" y1="304.5" x2="239.0" y2="312.1" stroke="#970E53" stroke-width="1.8" />
-<circle cx="251.5" cy="325.5" r="6.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="247.7" y1="325.5" x2="255.3" y2="325.5" stroke="#970E53" stroke-width="1.8" /><line x1="251.5" y1="321.7" x2="251.5" y2="329.3" stroke="#970E53" stroke-width="1.8" />
-<circle cx="281.8" cy="360.5" r="8.5" fill="#a6c1d3"/>
-<circle cx="281.8" cy="360.5" r="5.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="278.0" y1="360.5" x2="285.6" y2="360.5" stroke="#970E53" stroke-width="1.8" /><line x1="281.8" y1="356.7" x2="281.8" y2="364.3" stroke="#970E53" stroke-width="1.8" />
-<circle cx="301.7" cy="380.0" r="8.5" fill="#a6c1d3"/>
-<circle cx="301.7" cy="380.0" r="5.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="297.9" y1="380.0" x2="305.5" y2="380.0" stroke="#970E53" stroke-width="1.8" /><line x1="301.7" y1="376.2" x2="301.7" y2="383.8" stroke="#970E53" stroke-width="1.8" />
-<circle cx="321.5" cy="403.6" r="8.5" fill="#a6c1d3"/>
-<circle cx="321.5" cy="403.6" r="5.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="317.7" y1="403.6" x2="325.3" y2="403.6" stroke="#970E53" stroke-width="1.8" /><line x1="321.5" y1="399.8" x2="321.5" y2="407.4" stroke="#970E53" stroke-width="1.8" />
-<circle cx="341.3" cy="431.1" r="8.5" fill="#a6c1d3"/>
-<circle cx="341.3" cy="431.1" r="5.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="337.5" y1="431.1" x2="345.1" y2="431.1" stroke="#970E53" stroke-width="1.8" /><line x1="341.3" y1="427.3" x2="341.3" y2="434.9" stroke="#970E53" stroke-width="1.8" />
-<rect x="300" y="226" width="140" height="30" rx="8" fill="#e6edf2" stroke="#004D80" stroke-width="1.4"/>
-<circle cx="316.0" cy="241.0" r="6.5" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="312.2" y1="241.0" x2="319.8" y2="241.0" stroke="#004D80" stroke-width="1.8" />
-<circle cx="338.0" cy="241.0" r="6.5" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="334.2" y1="241.0" x2="341.8" y2="241.0" stroke="#004D80" stroke-width="1.8" />
-<circle cx="360.0" cy="241.0" r="6.5" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="356.2" y1="241.0" x2="363.8" y2="241.0" stroke="#004D80" stroke-width="1.8" />
-<circle cx="382.0" cy="241.0" r="6.5" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="378.2" y1="241.0" x2="385.8" y2="241.0" stroke="#004D80" stroke-width="1.8" />
-<circle cx="404.0" cy="241.0" r="6.5" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="400.2" y1="241.0" x2="407.8" y2="241.0" stroke="#004D80" stroke-width="1.8" />
-<circle cx="426.0" cy="241.0" r="6.5" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="422.2" y1="241.0" x2="429.8" y2="241.0" stroke="#004D80" stroke-width="1.8" />
-<text x="370.0" y="214.0" text-anchor="middle" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >règle chargée</text>
-<text x="222.0" y="196.0" text-anchor="start" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >ions + attirés :</text>
-<text x="222.0" y="211.0" text-anchor="start" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >le filet se charge</text>
-<text x="372.0" y="404.0" text-anchor="start" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >gouttes chargées</text>
+<path d="M76,58 L206,58 Q228,58 228,80 L228,140 L196,140 L196,90 L76,90 Z" fill="#e8edf3" stroke="#94a3b8" stroke-width="1.4" stroke-linejoin="round"/>
+<rect x="189" y="140" width="46" height="13" rx="3" fill="#d5dde7" stroke="#94a3b8" stroke-width="1.2"/>
+<line x1="76.0" y1="74.0" x2="42.0" y2="74.0" stroke="#334155" stroke-width="1.4" />
+<line x1="42.0" y1="74.0" x2="42.0" y2="112.0" stroke="#334155" stroke-width="1.4" />
+<line x1="28.0" y1="112.0" x2="56.0" y2="112.0" stroke="#334155" stroke-width="1.5" />
+<line x1="33.0" y1="118.0" x2="51.0" y2="118.0" stroke="#334155" stroke-width="1.5" />
+<line x1="38.0" y1="124.0" x2="46.0" y2="124.0" stroke="#334155" stroke-width="1.5" />
+<text x="42.0" y="148.0" text-anchor="middle" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >terre</text>
+<circle cx="212.0" cy="122.0" r="7" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="208.4" y1="122.0" x2="215.6" y2="122.0" stroke="#004D80" stroke-width="1.8" />
+<circle cx="212.0" cy="98.0" r="7" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="208.4" y1="98.0" x2="215.6" y2="98.0" stroke="#004D80" stroke-width="1.8" />
+<circle cx="170.0" cy="74.0" r="7" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="166.4" y1="74.0" x2="173.6" y2="74.0" stroke="#004D80" stroke-width="1.8" />
+<circle cx="122.0" cy="74.0" r="7" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="118.4" y1="74.0" x2="125.6" y2="74.0" stroke="#004D80" stroke-width="1.8" />
+<path d="M232,46 Q228,34 210,34 L92,34" fill="none" stroke="#004D80" stroke-width="1.6" marker-end="url(#fr)"/>
+<text x="160.0" y="22.0" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >ions − repoussés vers la terre</text>
+<polyline points="212.0,153.0 212.1,157.1 212.1,161.2 212.2,165.2 212.4,169.2 212.5,173.2 212.7,177.1 212.9,180.9 213.1,184.8 213.3,188.6 213.5,192.4 213.8,196.1 214.1,199.8 214.4,203.4 214.7,207.0 215.1,210.6 215.4,214.2 215.8,217.7 216.2,221.1 216.7,224.5 217.1,227.9 217.6,231.3 218.1,234.6 218.6,237.9 219.1,241.1 219.7,244.3 220.3,247.5 220.9,250.6 221.5,253.7 222.1,256.7 222.8,259.7 223.5,262.7 224.2,265.6 224.9,268.5 225.6,271.4 226.4,274.2 227.2,277.0 228.0,279.7 228.8,282.4 229.6,285.1 230.5,287.8 231.4,290.3 232.3,292.9 233.2,295.4 234.2,297.9 235.1,300.3 236.1,302.7 237.1,305.1 238.2,307.4 239.2,309.7 240.3,312.0 241.4,314.2 242.5,316.4 243.6,318.5 244.8,320.6 245.9,322.7 247.1,324.7 248.4,326.7 249.6,328.6 250.8,330.6 252.1,332.4 253.4,334.3 254.7,336.1 256.1,337.8 257.4,339.6 258.8,341.2 260.2,342.9 261.6,344.5 263.1,346.1 264.5,347.6 266.0,349.1 267.5,350.6 269.1,352.0 270.6,353.4 272.2,354.7 273.8,356.0 275.4,357.3 277.0,358.5 278.6,359.7 280.3,360.9 282.0,362.0" fill="none" stroke="#adc6d6" stroke-width="12" stroke-linecap="round"/>
+<rect x="318" y="246" width="146" height="32" rx="9" fill="#ebf1f5" stroke="#004D80" stroke-width="1.4"/>
+<circle cx="336.0" cy="262.0" r="7" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="332.4" y1="262.0" x2="339.6" y2="262.0" stroke="#004D80" stroke-width="1.8" />
+<circle cx="358.0" cy="262.0" r="7" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="354.4" y1="262.0" x2="361.6" y2="262.0" stroke="#004D80" stroke-width="1.8" />
+<circle cx="380.0" cy="262.0" r="7" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="376.4" y1="262.0" x2="383.6" y2="262.0" stroke="#004D80" stroke-width="1.8" />
+<circle cx="402.0" cy="262.0" r="7" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="398.4" y1="262.0" x2="405.6" y2="262.0" stroke="#004D80" stroke-width="1.8" />
+<circle cx="424.0" cy="262.0" r="7" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="420.4" y1="262.0" x2="427.6" y2="262.0" stroke="#004D80" stroke-width="1.8" />
+<circle cx="446.0" cy="262.0" r="7" fill="#fff" stroke="#004D80" stroke-width="1.5"/><line x1="442.4" y1="262.0" x2="449.6" y2="262.0" stroke="#004D80" stroke-width="1.8" />
+<text x="391.0" y="300.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >règle chargée</text>
+<circle cx="227.9" cy="225.9" r="6.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="224.5" y1="225.9" x2="231.2" y2="225.9" stroke="#970E53" stroke-width="1.8" /><line x1="227.9" y1="222.5" x2="227.9" y2="229.3" stroke="#970E53" stroke-width="1.8" />
+<circle cx="231.0" cy="245.9" r="6.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="227.6" y1="245.9" x2="234.4" y2="245.9" stroke="#970E53" stroke-width="1.8" /><line x1="231.0" y1="242.5" x2="231.0" y2="249.3" stroke="#970E53" stroke-width="1.8" />
+<circle cx="235.2" cy="265.9" r="6.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="231.9" y1="265.9" x2="238.6" y2="265.9" stroke="#970E53" stroke-width="1.8" /><line x1="235.2" y1="262.6" x2="235.2" y2="269.3" stroke="#970E53" stroke-width="1.8" />
+<circle cx="240.9" cy="285.9" r="6.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="237.5" y1="285.9" x2="244.3" y2="285.9" stroke="#970E53" stroke-width="1.8" /><line x1="240.9" y1="282.5" x2="240.9" y2="289.3" stroke="#970E53" stroke-width="1.8" />
+<circle cx="248.5" cy="306.0" r="6.5" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="245.2" y1="306.0" x2="251.9" y2="306.0" stroke="#970E53" stroke-width="1.8" /><line x1="248.5" y1="302.7" x2="248.5" y2="309.4" stroke="#970E53" stroke-width="1.8" />
+<text x="256.0" y="196.0" text-anchor="start" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >ions + attirés :</text>
+<text x="256.0" y="212.0" text-anchor="start" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >le filet se charge</text>
+<circle cx="303.0" cy="377.8" r="9.5" fill="#adc6d6"/>
+<circle cx="303.0" cy="377.8" r="5.8" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="300.0" y1="377.8" x2="306.0" y2="377.8" stroke="#970E53" stroke-width="1.8" /><line x1="303.0" y1="374.8" x2="303.0" y2="380.8" stroke="#970E53" stroke-width="1.8" />
+<circle cx="324.0" cy="398.0" r="9.5" fill="#adc6d6"/>
+<circle cx="324.0" cy="398.0" r="5.8" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="321.0" y1="398.0" x2="327.0" y2="398.0" stroke="#970E53" stroke-width="1.8" /><line x1="324.0" y1="394.9" x2="324.0" y2="401.0" stroke="#970E53" stroke-width="1.8" />
+<circle cx="345.0" cy="422.5" r="9.5" fill="#adc6d6"/>
+<circle cx="345.0" cy="422.5" r="5.8" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="342.0" y1="422.5" x2="348.0" y2="422.5" stroke="#970E53" stroke-width="1.8" /><line x1="345.0" y1="419.5" x2="345.0" y2="425.6" stroke="#970E53" stroke-width="1.8" />
+<circle cx="366.0" cy="451.5" r="9.5" fill="#adc6d6"/>
+<circle cx="366.0" cy="451.5" r="5.8" fill="#fff" stroke="#970E53" stroke-width="1.5"/><line x1="362.9" y1="451.5" x2="369.0" y2="451.5" stroke="#970E53" stroke-width="1.8" /><line x1="366.0" y1="448.5" x2="366.0" y2="454.5" stroke="#970E53" stroke-width="1.8" />
+<text x="325.0" y="427.5" text-anchor="end" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >gouttes chargées</text>
 </svg>
 </div>
 <p class="legende">Électrisation par influence. La règle, chargée négativement, attire les ions positifs de l'eau sur le flanc du filet qui lui fait face, et repousse les ions négatifs dans la tuyauterie, jusqu'à la terre. Le filet, désormais chargé, est attiré par la règle, et ses gouttes emportent leur charge.</p>
