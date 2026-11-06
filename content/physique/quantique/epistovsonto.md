@@ -141,7 +141,7 @@ L'analogie classique est éclairante. Une particule classique a, à chaque insta
 
 Parmi les ψ-épistémiques, certains sont d'ailleurs **réalistes**&nbsp;: ils imaginent une réalité cachée derrière l'état quantique, que celui-ci ne décrirait qu'imparfaitement. L'état quantique jouerait alors le rôle de la distribution de probabilité de la figure de droite, et la réalité sous-jacente celui du point de la figure de gauche[^2]. Einstein faisait partie de ces ψ-épistémiques réalistes&nbsp;: il considérait la théorie quantique comme incomplète et cherchait à la compléter par des **variables cachées**, éléments de réalité sous-jacents.
 
-[^2]: Le [**modèle jouet de Spekkens**](./spekkens) illustre très bien ce point de vue.
+[^2]: Le [**modèle jouet de Spekkens**](../spekkens) illustre très bien ce point de vue.
 
 ### La distinction de Harrigan et Spekkens
 
