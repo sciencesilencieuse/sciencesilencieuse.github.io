@@ -111,7 +111,38 @@ Testons l'hypothèse des manuels scolaires. Une molécule d'eau isolée possède
 
 Que font nos molécules d'eau dans ce champ&nbsp;? Dans les schémas des livres de lycée, on voit toutes les molécules d'eau s'aligner bien sagement le long du champ électrique comme des aiguilles de boussole. C'est oublier l'ennemi juré de l'ordre microscopique à température ambiante ($T = \pu{293 K}$)&nbsp;: **l'agitation thermique**&nbsp;!
 
-L'énergie potentielle d'orientation d'un dipôle $\vec{p}\_0$ dans le champ $\vec{E}$ vaut $U = -\vec{p}\_0\cdot\vec{E} = -p\_0 E \cos\theta$, d'amplitude maximale $p\_0 E$. Comparons-la à l'énergie d'agitation thermique $k\_B T$&nbsp;:
+**L'énergie d'orientation.** Un dipôle $\vec{p}\_0$ qui fait l'angle $\theta$ avec le champ $\vec{E}$ possède l'énergie potentielle
+
+$$
+U = -\vec{p}\_0\cdot\vec{E} = -p\_0 E \cos\theta.
+$$
+
+Elle est minimale ($-p\_0 E$) quand le dipôle est aligné sur le champ ($\theta = 0$) et maximale ($+p\_0 E$) quand il lui est opposé&nbsp;: le champ «&nbsp;préfère&nbsp;» les dipôles alignés, et l'énergie en jeu est de l'ordre de $p\_0 E$.
+
+<div class="svg-container">
+<svg viewBox="0 0 340 195" role="img" aria-label="Une molécule d'eau dont le dipôle fait l'angle θ avec le champ E" style="width:100%;max-width:340px;height:auto;">
+<defs><marker id="fta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#970E53" stroke-width="1.6"/></marker></defs>
+<defs><marker id="ftb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#004D80" stroke-width="1.6"/></marker></defs>
+<line x1="20.0" y1="34.0" x2="320.0" y2="34.0" stroke="#cb86a9" stroke-width="1.3" marker-end="url(#fta)"/>
+<line x1="20.0" y1="172.0" x2="320.0" y2="172.0" stroke="#cb86a9" stroke-width="1.3" marker-end="url(#fta)"/>
+<text x="322.0" y="28.0" text-anchor="end" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >E</text>
+<line x1="130.0" y1="110.0" x2="280.0" y2="110.0" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="4 4"/>
+<g transform="translate(130,110) rotate(-38.0)">
+<line x1="-10" y1="0" x2="12" y2="-15" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+<line x1="-10" y1="0" x2="12" y2="15" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+<circle cx="-10" cy="0" r="12" fill="#004D80"/>
+<circle cx="12" cy="-15" r="7" fill="#bfd2df" stroke="#004D80"/>
+<circle cx="12" cy="15" r="7" fill="#bfd2df" stroke="#004D80"/>
+</g>
+<line x1="147.3" y1="96.5" x2="208.8" y2="48.4" stroke="#004D80" stroke-width="2" marker-end="url(#ftb)"/>
+<text x="214.8" y="44.4" text-anchor="start" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >p<tspan dy='3' font-size='10'>0</tspan><tspan dy='-3'></tspan></text>
+<path d="M192.0,110.0 A62,62 0 0 0 178.9,71.8" fill="none" stroke="#334155" stroke-width="1.2"/>
+<text x="200.0" y="90.9" text-anchor="middle" font-size="15" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >θ</text>
+</svg>
+</div>
+<p class="legende">Une molécule d'eau dont le moment dipolaire $\vec{p}_0$ fait l'angle $\theta$ avec le champ $\vec{E}$.</p>
+
+**Face à l'agitation thermique.** Dans l'eau liquide, chaque molécule est bousculée en permanence par ses voisines, qui la font tourner au hasard. L'énergie typique de ces chocs est $k\_B T$. Comparons les deux&nbsp;:
 
 <div id="theo">
 
@@ -119,7 +150,7 @@ L'énergie potentielle d'orientation d'un dipôle $\vec{p}\_0$ dans le champ $\v
 
 $$
 \begin{aligned}
-\frac{p_0 E}{k_B T} &= \frac{\pu{6,2e-30 C.m} \times \pu{1e5 V/m}}{\pu{1,38e-23 J/K} \times \pu{293 K}}\\\\
+x = \frac{p_0 E}{k_B T} &= \frac{\pu{6,2e-30 C.m} \times \pu{1e5 V/m}}{\pu{1,38e-23 J/K} \times \pu{293 K}}\\\\
 &\approx \pu{1,5e-4} \ll 1
 \end{aligned}
 $$
@@ -128,7 +159,55 @@ $$
 
 </div>
 
-L'énergie d'alignement électrostatique est près de **dix mille fois plus faible** que l'agitation thermique&nbsp;! Les molécules d'eau sont bousculées en permanence par les chocs thermiques&nbsp;: d'après la statistique de Boltzmann-Langevin, le degré d'alignement moyen d'un dipôle avec le champ vaut $\langle \cos\theta \rangle = \mathcal{L}\left(\frac{p\_0 E}{k\_B T}\right) \approx \frac{p\_0 E}{3 k\_B T} \approx \pu{5e-5}$. Autrement dit, tout se passe comme si une molécule sur vingt mille environ était alignée sur le champ, toutes les autres restant orientées au hasard.
+L'énergie d'alignement est environ **six mille fois plus faible** que l'agitation thermique&nbsp;! Mais que vaut alors, concrètement, l'alignement moyen des molécules&nbsp;?
+
+**La statistique de Boltzmann.** En physique statistique, à la température $T$, une configuration d'énergie $U$ est d'autant moins probable que son énergie est élevée&nbsp;: sa probabilité est proportionnelle au **facteur de Boltzmann** $\mathrm{e}^{-U/k\_B T}$. Pour notre dipôle, ce facteur vaut
+
+$$
+\mathrm{e}^{-U/k\_B T} = \mathrm{e}^{\\,x \cos\theta}.
+$$
+
+Les orientations dans le sens du champ ($\cos\theta > 0$) sont donc favorisées... mais à peine&nbsp;: une molécule alignée sur le champ est plus probable qu'une molécule perpendiculaire d'un facteur $\mathrm{e}^{x} \approx 1 + x = 1,000\\,15$, c'est-à-dire de $0,015\\,\\%$ seulement.
+
+**L'alignement moyen.** Mesurons l'alignement par la moyenne $\langle \cos\theta \rangle$&nbsp;: elle vaudrait $1$ si toutes les molécules étaient alignées, et vaut $0$ en l'absence de champ, toutes les directions étant alors également probables. Comme $x$ est minuscule, le facteur de Boltzmann se réduit à $\mathrm{e}^{x\cos\theta} \approx 1 + x\cos\theta$&nbsp;: il ajoute au tirage uniforme des orientations un petit «&nbsp;bonus&nbsp;» proportionnel à $\cos\theta$. On obtient alors
+
+$$
+\langle \cos\theta \rangle \approx x \\, \langle \cos^2\theta \rangle\_0,
+$$
+
+où $\langle \cos^2\theta \rangle\_0$ est la moyenne de $\cos^2\theta$ sur toutes les directions de l'espace, prises au hasard. Or cette moyenne vaut exactement $\frac{1}{3}$, par un joli argument de symétrie&nbsp;: les carrés des trois cosinus directeurs d'une direction (avec les axes $Ox$, $Oy$ et $Oz$) ont pour somme $1$, et aucun des trois axes n'est privilégié, si bien que chacun vaut $\frac{1}{3}$ en moyenne. D'où&nbsp;:
+
+<div id="theo">
+
+$$
+\langle \cos\theta \rangle \approx \frac{x}{3} = \frac{p\_0 E}{3 k\_B T} \approx \pu{5e-5}.
+$$
+
+</div>
+
+<br>
+
+<details style="background-color:#F4F4F4;border-radius:8px;padding:8px 15px;margin-bottom:1em;">
+<summary>Pour aller plus loin&nbsp;: la loi de Langevin exacte</summary>
+
+<div style="margin-top:0.5em;">
+
+Sans faire l'approximation $x \ll 1$, la moyenne s'obtient en pondérant chaque direction par son facteur de Boltzmann. Les directions faisant l'angle $\theta$ avec le champ forment un cercle sur la sphère des directions, dont la taille est proportionnelle à $\sin\theta$ (l'élément d'angle solide vaut $2\pi \sin\theta \\, \mathrm{d}\theta$)&nbsp;: il y a beaucoup plus de directions proches de l'«&nbsp;équateur&nbsp;» ($\theta = 90°$) que des «&nbsp;pôles&nbsp;». En posant $u = \cos\theta$ (d'où $\mathrm{d}u = -\sin\theta \\, \mathrm{d}\theta$), il vient&nbsp;:
+
+$$
+\langle \cos\theta \rangle = \frac{\int\_0^\pi \cos\theta \\, \mathrm{e}^{x\cos\theta} \sin\theta \\, \mathrm{d}\theta}{\int\_0^\pi \mathrm{e}^{x\cos\theta} \sin\theta \\, \mathrm{d}\theta} = \frac{\int\_{-1}^{1} u \\, \mathrm{e}^{xu} \\, \mathrm{d}u}{\int\_{-1}^{1} \mathrm{e}^{xu} \\, \mathrm{d}u} = \coth x - \frac{1}{x} = \mathcal{L}(x),
+$$
+
+où $\mathcal{L}$ est la **fonction de Langevin**. Elle a deux régimes&nbsp;:
+<ul>
+<li>pour $x \ll 1$ (agitation thermique dominante), $\mathcal{L}(x) \approx \frac{x}{3}$&nbsp;: c'est le résultat précédent&nbsp;;</li>
+<li>pour $x \gg 1$ (champ dominant), $\mathcal{L}(x) \to 1$&nbsp;: toutes les molécules sont alignées, comme dans les schémas des manuels. Mais avec $E = \pu{1e5 V/m}$, il faudrait pour cela que $k_B T$ devienne plus petit que $p_0 E$, c'est-à-dire refroidir l'eau en dessous de $\frac{p_0 E}{k_B} \approx \pu{0,05 K}$&nbsp;!</li>
+</ul>
+
+</div>
+</details>
+
+Autrement dit, tout se passe comme si une molécule sur vingt mille environ était alignée sur le champ, toutes les autres restant orientées au hasard.
 
 <div class="svg-container">
 <svg viewBox="0 0 270 215" role="img" aria-label="Molécules d'eau toutes alignées sur le champ, comme dans les manuels" style="width:100%;max-width:270px;height:auto;">
