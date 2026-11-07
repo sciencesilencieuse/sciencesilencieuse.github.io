@@ -226,9 +226,8 @@ Plusieurs arguments plaident pour cette vision&nbsp;:
 <li><b>La structure de la théorie.</b> La théorie quantique peut être vue comme une généralisation <i>non commutative</i> de la théorie classique des probabilités, comme l'a montré von Neumann.</li>
 </ul>
 
-Dans la vidéo suivante, l'état quantique est présenté comme une généralisation du vecteur de probabilités, et la mesure comme un gain d'information.
-
 {{< youtube-plus id="reIcNs4Ul-c" ratio="16x9" width="600" shadow="false" rounded="true" >}}
+<p class="legende" style="margin-top:-0.9rem;">Dans cette vidéo, l'état quantique est présenté comme une généralisation du vecteur de probabilités, et la mesure comme un gain d'information.</p>
 
 <ul>
 <li><b>La mise à jour de l'état.</b> Une mesure «&nbsp;reprépare&nbsp;» le système dans un nouvel état, exactement comme un état de connaissance est mis à jour chaque fois que l'observateur obtient une nouvelle information.</li>
