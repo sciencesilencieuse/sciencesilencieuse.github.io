@@ -324,6 +324,8 @@ $$\mathcal{F}(p,q) \\;=\\; \sum_{k=1}^{4}\sqrt{p_k}\\,\sqrt{q_k}.$$
 
 </div>
 
+<br>
+
 <div id="preuve">
 
 Exemple pour les états épistémiques $1\lor 3$ et $1\lor 2$&nbsp;: chacun autorise deux états ontiques et leur attribue la probabilité $\frac12$.
@@ -432,6 +434,8 @@ Une transformation doit envoyer tout état permis sur un état permis. Si elle e
 Les transformations de la théorie-jouet sont les permutations des états ontiques. Elles conservent la fidélité entre états épistémiques, comme les transformations unitaires conservent le produit scalaire.
 
 </div>
+
+<br>
 
 <div id="preuve">
 
@@ -967,6 +971,8 @@ Les matrices de Pauli décrivent aussi les différents types d'erreur sur un qub
 </ul>
 
 </div>
+
+<br>
 
 <div id="def">
 
