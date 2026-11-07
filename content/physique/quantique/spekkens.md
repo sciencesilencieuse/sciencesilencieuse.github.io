@@ -172,7 +172,9 @@ Jusqu'ici, rien de quantique&nbsp;: c'est la description ordinaire d'un dé que 
 
 <div id="axiom">
 
-**On ne peut jamais en savoir plus qu'on n'en ignore.**
+<p style="text-align:center;">
+<b>On ne peut jamais en savoir plus qu'on n'en ignore.</b>
+</p>
 
 </div>
 
