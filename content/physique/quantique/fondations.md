@@ -99,7 +99,7 @@ margin-top:0em;
 <h1 style="overflow-x:auto;">Notions fondamentales en mécanique quantique</h1>
 
 <div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
-<img style="border-radius:10px;" src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F039e8c19-4b94-46c8-9204-5c31902ef50e_1746x956.png" style="box-shadow:none;background:none;">
+<img style="border-radius:10px;" src="solvey.jpg" style="box-shadow:none;background:none;">
 </div>
 
 Le cinquième Conseil international de Solvay, en 1927, avait pour thème «&nbsp;Électrons et Photons&nbsp;» et porta principalement sur la mécanique quantique. 17 des 29 personnalités présentes à ce congrès étaient ou allaient devenir prix Nobel...
@@ -454,7 +454,7 @@ Lorsqu’il faut décrire plusieurs systèmes quantiques simultanément, on a re
 $$
 |\psi\rangle\_{\text{La Rochelle}}\\;\otimes\\;|\phi\rangle\_{\text{Paris}}
 $$
-où $|\psi\rangle$ désigne l’état du premier qubit et $|\phi\rangle$ celui du second. Une fois qu’un ordre conventionnel est adopté, il est d’usage de supprimer les indices géographiques (et même de fusionner les deux kets en un seul)&nbsp;:
+où $|\psi\rangle$ désigne l’état du premier qubit et $|\phi\rangle$ celui du second. Une fois qu’un ordre conventionnel est adopté, il est d’usage de fusionner les deux kets en un seul&nbsp;:
 <div id="gros">
 
 $$
