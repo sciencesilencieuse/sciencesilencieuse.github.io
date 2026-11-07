@@ -1610,7 +1610,64 @@ Le vecteur vitesse $(\dot x, \dot p) = (\partial\_p H, -\partial\_x H)$ s'obtien
 
 On voudrait aller plus loin et dire que le système va d'autant plus vite que la pente est forte, c'est-à-dire que les courbes de niveau sont serrées. Mais il faut se méfier&nbsp;: dans le plan $(x, p)$, où $x$ est en mètres et $p$ en $\mathrm{kg\cdot m\cdot s^{-1}}$, parler de longueur, d'angle droit ou de «&nbsp;pente tournée d'un quart de tour&nbsp;» n'a pas vraiment de sens. Ce qui a un sens, en revanche, ce sont les **aires**&nbsp;: une aire de l'espace des phases se mesure en $\mathrm{kg\cdot m^2\cdot s^{-1}}$, l'unité d'une action.
 
-Mesurons donc le **débit** de l'écoulement à travers un petit segment $(\mathrm{d}x, \mathrm{d}p)$&nbsp;: c'est l'aire balayée par ce segment pendant $\mathrm{d}t$, divisée par $\mathrm{d}t$. Pendant $\mathrm{d}t$, ses points se déplacent de $(\dot x\\,\mathrm{d}t, \dot p\\,\mathrm{d}t)$ et balaient un parallélogramme d'aire $(\dot x\\,\mathrm{d}p - \dot p\\,\mathrm{d}x)\\,\mathrm{d}t$. Le débit vaut donc
+Mesurons donc le **débit** de l'écoulement à travers un petit segment $AB$, qui va de $A$ à $B$ en avançant de $(\mathrm{d}x, \mathrm{d}p)$&nbsp;: c'est l'aire que le fluide fait passer à travers ce segment pendant $\mathrm{d}t$, divisée par $\mathrm{d}t$.
+
+Pendant $\mathrm{d}t$, tous les points du segment se déplacent, à peu de chose près, du même petit vecteur $(\dot x\\,\mathrm{d}t, \dot p\\,\mathrm{d}t)$. Le fluide qui a traversé le segment remplit donc un **parallélogramme** construit sur deux vecteurs&nbsp;: le segment lui-même, $(\mathrm{d}x, \mathrm{d}p)$, et le déplacement, $(\dot x\\,\mathrm{d}t, \dot p\\,\mathrm{d}t)$.
+
+<div class="svg-container">
+<svg viewBox="0 47 600 223" role="img" aria-label="À gauche, le petit segment AB, emporté par l'écoulement pendant dt, balaie un parallélogramme. À droite, l'aire d'un parallélogramme construit sur (a, b) et (c, d) vaut ad − bc : on l'obtient en retirant du rectangle englobant deux paires de triangles et deux rectangles" style="width:100%;max-width:600px;height:auto;">
+<defs><marker id="pv" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker></defs>
+<defs><marker id="ps" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#970E53"/></marker></defs>
+<defs><marker id="pg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#94a3b8"/></marker></defs>
+<polyline points="22.8,272.0 28.7,270.2 34.6,268.4 40.4,266.6 46.3,264.8 52.2,263.1 58.1,261.4 64.0,259.7 69.9,258.0 75.7,256.3 81.6,254.7 87.5,253.1 93.4,251.5 99.3,249.9 105.1,248.4 111.0,246.8 116.9,245.3 122.8,243.9 128.7,242.4 134.6,241.0 140.4,239.6 146.3,238.2 152.2,236.8 158.1,235.5 164.0,234.1 169.9,232.8 175.7,231.6 181.6,230.3 187.5,229.1 193.4,227.9 199.3,226.7 205.1,225.5 211.0,224.4 216.9,223.2 222.8,222.1 228.7,221.1 234.6,220.0 240.4,219.0 246.3,218.0 252.2,217.0" fill="none" stroke="#cbd5e1" stroke-width="1"/>
+<polyline points="22.8,234.8 28.7,233.0 34.6,231.2 40.4,229.4 46.3,227.6 52.2,225.9 58.1,224.2 64.0,222.5 69.9,220.8 75.7,219.1 81.6,217.5 87.5,215.9 93.4,214.3 99.3,212.7 105.1,211.2 111.0,209.6 116.9,208.1 122.8,206.7 128.7,205.2 134.6,203.8 140.4,202.4 146.3,201.0 152.2,199.6 158.1,198.3 164.0,196.9 169.9,195.6 175.7,194.4 181.6,193.1 187.5,191.9 193.4,190.7 199.3,189.5 205.1,188.3 211.0,187.2 216.9,186.0 222.8,184.9 228.7,183.9 234.6,182.8 240.4,181.8 246.3,180.8 252.2,179.8" fill="none" stroke="#cbd5e1" stroke-width="1"/>
+<polyline points="22.8,197.6 28.7,195.8 34.6,194.0 40.4,192.2 46.3,190.4 52.2,188.7 58.1,187.0 64.0,185.3 69.9,183.6 75.7,181.9 81.6,180.3 87.5,178.7 93.4,177.1 99.3,175.5 105.1,174.0 111.0,172.4 116.9,170.9 122.8,169.5 128.7,168.0 134.6,166.6 140.4,165.2 146.3,163.8 152.2,162.4 158.1,161.1 164.0,159.7 169.9,158.4 175.7,157.2 181.6,155.9 187.5,154.7 193.4,153.5 199.3,152.3 205.1,151.1 211.0,150.0 216.9,148.8 222.8,147.7 228.7,146.7 234.6,145.6 240.4,144.6 246.3,143.6 252.2,142.6" fill="none" stroke="#cbd5e1" stroke-width="1"/>
+<polyline points="22.8,160.4 28.7,158.6 34.6,156.8 40.4,155.0 46.3,153.2 52.2,151.5 58.1,149.8 64.0,148.1 69.9,146.4 75.7,144.7 81.6,143.1 87.5,141.5 93.4,139.9 99.3,138.3 105.1,136.8 111.0,135.2 116.9,133.7 122.8,132.3 128.7,130.8 134.6,129.4 140.4,128.0 146.3,126.6 152.2,125.2 158.1,123.9 164.0,122.5 169.9,121.2 175.7,120.0 181.6,118.7 187.5,117.5 193.4,116.3 199.3,115.1 205.1,113.9 211.0,112.8 216.9,111.6 222.8,110.5 228.7,109.5 234.6,108.4 240.4,107.4 246.3,106.4 252.2,105.4" fill="none" stroke="#cbd5e1" stroke-width="1"/>
+<polyline points="22.8,123.2 28.7,121.4 34.6,119.6 40.4,117.8 46.3,116.0 52.2,114.3 58.1,112.6 64.0,110.9 69.9,109.2 75.7,107.5 81.6,105.9 87.5,104.3 93.4,102.7 99.3,101.1 105.1,99.6 111.0,98.0 116.9,96.5 122.8,95.1 128.7,93.6 134.6,92.2 140.4,90.8 146.3,89.4 152.2,88.0 158.1,86.7 164.0,85.3 169.9,84.0 175.7,82.8 181.6,81.5 187.5,80.3 193.4,79.1 199.3,77.9 205.1,76.7 211.0,75.6 216.9,74.4 222.8,73.3 228.7,72.3 234.6,71.2 240.4,70.2 246.3,69.2 252.2,68.2" fill="none" stroke="#cbd5e1" stroke-width="1"/>
+<polygon points="60.0,205.0 156.1,177.1 190.2,68.6 94.1,96.5" fill="#d1dfe8" stroke="none"/>
+<line x1="156.1" y1="177.1" x2="190.2" y2="68.6" stroke="#970E53" stroke-width="1.3" stroke-dasharray="4 3"/>
+<line x1="60.0" y1="205.0" x2="156.1" y2="177.1" stroke="#004D80" stroke-width="1.8" marker-end="url(#pv)"/>
+<line x1="94.1" y1="96.5" x2="190.2" y2="68.6" stroke="#004D80" stroke-width="1.8" marker-end="url(#pv)"/>
+<line x1="60.0" y1="205.0" x2="94.1" y2="96.5" stroke="#970E53" stroke-width="2.2" marker-end="url(#ps)"/>
+<circle cx="60.0" cy="205.0" r="3" fill="#970E53"/>
+<text x="52.0" y="219.0" text-anchor="end" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">A</tspan></text>
+<circle cx="94.1" cy="96.5" r="3" fill="#970E53"/>
+<text x="86.1" y="94.5" text-anchor="end" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">B</tspan></text>
+<text x="67.0" y="154.8" text-anchor="end" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >(d<tspan font-style="italic">x</tspan>, d<tspan font-style="italic">p</tspan>)</text>
+<text x="122.1" y="215.1" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >(<tspan font-style="italic">ẋ</tspan> d<tspan font-style="italic">t</tspan>, <tspan font-style="italic">ṗ</tspan> d<tspan font-style="italic">t</tspan>)</text>
+<text x="131.1" y="141.8" text-anchor="middle" font-size="12.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >aire balayée</text>
+<text x="160.0" y="262.0" text-anchor="middle" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >le segment <tspan font-style="italic">AB</tspan> emporté pendant d<tspan font-style="italic">t</tspan></text>
+<polygon points="355.0,230.0 537.0,230.0 537.0,53.2 355.0,53.2" fill="none" stroke="#94a3b8" stroke-width="1"/>
+<polygon points="355.0,230.0 490.2,230.0 490.2,183.2" fill="#eceef2" stroke="#94a3b8" stroke-width="0.8"/>
+<text x="445.1" y="218.4" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">ab</tspan>/2</text>
+<polygon points="401.8,53.2 537.0,53.2 401.8,100.0" fill="#eceef2" stroke="#94a3b8" stroke-width="0.8"/>
+<text x="446.9" y="72.8" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">ab</tspan>/2</text>
+<polygon points="355.0,230.0 355.0,100.0 401.8,100.0" fill="#eceef2" stroke="#94a3b8" stroke-width="0.8"/>
+<text x="370.6" y="147.3" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">cd</tspan>/2</text>
+<polygon points="537.0,53.2 537.0,183.2 490.2,183.2" fill="#eceef2" stroke="#94a3b8" stroke-width="0.8"/>
+<text x="521.4" y="143.9" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">cd</tspan>/2</text>
+<polygon points="490.2,230.0 537.0,230.0 537.0,183.2 490.2,183.2" fill="#eceef2" stroke="#94a3b8" stroke-width="0.8"/>
+<text x="513.6" y="210.6" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">bc</tspan></text>
+<polygon points="355.0,100.0 401.8,100.0 401.8,53.2 355.0,53.2" fill="#eceef2" stroke="#94a3b8" stroke-width="0.8"/>
+<text x="378.4" y="80.6" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">bc</tspan></text>
+<polygon points="355.0,230.0 490.2,183.2 537.0,53.2 401.8,100.0" fill="#d1dfe8" stroke="none"/>
+<line x1="355.0" y1="230.0" x2="490.2" y2="183.2" stroke="#004D80" stroke-width="1.8" marker-end="url(#pv)"/>
+<line x1="355.0" y1="230.0" x2="401.8" y2="100.0" stroke="#970E53" stroke-width="2.2" marker-end="url(#ps)"/>
+<text x="433.4" y="194.3" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >(<tspan font-style="italic">a</tspan>, <tspan font-style="italic">b</tspan>)</text>
+<text x="388.4" y="169.0" text-anchor="start" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >(<tspan font-style="italic">c</tspan>, <tspan font-style="italic">d</tspan>)</text>
+<text x="453.8" y="136.2" text-anchor="middle" font-size="14" fill="#004D80" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">ad</tspan> − <tspan font-style="italic">bc</tspan></text>
+<text x="446.0" y="262.0" text-anchor="middle" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >rectangle − 2×<tspan font-style="italic">ab</tspan>/2 − 2×<tspan font-style="italic">cd</tspan>/2 − 2×<tspan font-style="italic">bc</tspan></text>
+</svg>
+</div>
+<p class="legende">À gauche, le segment $AB$ emporté par l'écoulement balaie un parallélogramme. À droite, l'aire d'un parallélogramme construit sur deux vecteurs $(a, b)$ et $(c, d)$&nbsp;: on retire du rectangle qui l'englobe deux triangles d'aire $\frac{ab}{2}$, deux triangles d'aire $\frac{cd}{2}$ et deux rectangles d'aire $bc$.</p>
+
+Il reste à calculer l'aire d'un tel parallélogramme. Si on le construit sur deux vecteurs $(a, b)$ et $(c, d)$, la figure de droite montre qu'on peut l'obtenir en partant du rectangle qui l'englobe, de côtés $a + c$ et $b + d$, et en retirant les morceaux qui dépassent&nbsp;:
+
+$$(a + c)(b + d) - 2\times\frac{ab}{2} - 2\times\frac{cd}{2} - 2\\,bc = ad - bc.$$
+
+C'est le **déterminant** des deux vecteurs. On retrouve deux cas simples&nbsp;: si le segment est vertical ($\mathrm{d}x = 0$), l'aire balayée est un parallélogramme de «&nbsp;hauteur&nbsp;» $\mathrm{d}p$ et de «&nbsp;largeur&nbsp;» $\dot x\\,\mathrm{d}t$, soit $\dot x\\,\mathrm{d}t\\,\mathrm{d}p$&nbsp;; si le déplacement est parallèle au segment, rien ne traverse, et le déterminant est nul.
+
+Ici, $(a, b) = (\dot x\\,\mathrm{d}t, \dot p\\,\mathrm{d}t)$ et $(c, d) = (\mathrm{d}x, \mathrm{d}p)$&nbsp;: l'aire balayée vaut $(\dot x\\,\mathrm{d}p - \dot p\\,\mathrm{d}x)\\,\mathrm{d}t$. Elle est comptée positivement quand le fluide traverse le segment de la gauche vers la droite (en regardant de $A$ vers $B$), et négativement dans l'autre sens&nbsp;: c'est un débit algébrique. Le débit vaut donc
 
 $$\dot x\\,\mathrm{d}p - \dot p\\,\mathrm{d}x = \frac{\partial H}{\partial p}\\,\mathrm{d}p + \frac{\partial H}{\partial x}\\,\mathrm{d}x = \mathrm{d}H.$$
 
