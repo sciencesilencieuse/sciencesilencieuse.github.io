@@ -221,11 +221,9 @@ Attention&nbsp;: cette distinction ne concerne que les modèles qui admettent un
 
 Tous les ψ-épistémiques s'accordent sur le statut probabiliste de la fonction d'onde. Ce point de vue permet de démystifier certaines bizarreries quantiques, et c'est une approche de ce type que j'utilise dans la vidéo ci-dessous pour tenter de rendre l'état quantique plus accessible.
 
-<div style="position:relative; width:600px; max-width: 100%; margin-left: auto; margin-right: auto;">
-{{<youtube reIcNs4Ul-c>}}
-</div>
 
-<br>
+{{< youtube-plus id="reIcNs4Ul-c" ratio="16x9" width="600" shadow="false" rounded="true" >}}
+
 
 Plusieurs arguments plaident pour cette vision&nbsp;:
 <ul>
