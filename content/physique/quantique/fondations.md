@@ -55,6 +55,14 @@ hidden = false
     margin-top:-0.5em;
     margin-bottom:-0.5em;
 }
+h2
+{
+color:#970E53 !important;
+}
+h3
+{
+color:#004D80 !important;
+}
 </style>
 
 
