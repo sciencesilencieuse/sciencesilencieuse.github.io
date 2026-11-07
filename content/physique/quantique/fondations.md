@@ -77,6 +77,19 @@ h3
 {
 color:#004D80 !important;
 }
+/* Pour rétablir le comportement de details */
+details > summary:first-of-type {
+  display: list-item;     /* remet le triangle + l’accessibilité */
+  cursor: pointer;        /* optionnel : feedback visuel */
+}
+
+details > summary:first-of-type {
+  list-style: disclosure-closed inside;
+}
+details[open] > summary:first-of-type {
+  list-style-type: disclosure-open;
+}
+
 </style>
 
 
