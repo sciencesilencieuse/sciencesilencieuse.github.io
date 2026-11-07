@@ -80,6 +80,14 @@ hidden = false
     width: min(800px, 100%);
     height: auto;
 }
+h2
+{
+color:#970E53 !important;
+}
+h3
+{
+color:#004D80 !important;
+}
 </style>
 
 
