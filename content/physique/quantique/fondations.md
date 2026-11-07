@@ -511,11 +511,63 @@ Pour obtenir l'état de Bell, il faudrait annuler les termes croisés ($ad = 0$ 
 
 Physiquement, si l'on mesure les deux qubits dans la base de calcul, on obtient $00$ ou $11$, chacun avec la probabilité $\frac12$. Pris isolément, chaque résultat est parfaitement aléatoire, et pourtant les deux sont toujours identiques.
 
-Et l'état d'un seul des deux qubits&nbsp;? Pour décrire ce qu'on peut observer sur le premier qubit seul, il faut «&nbsp;moyenner&nbsp;» sur tout ce qui peut arriver au second (une opération appelée *trace partielle*). Pour l'état de Bell, on trouve
+### L'état d'un seul qubit&nbsp;: la trace partielle
+
+Et l'état d'un seul des deux qubits&nbsp;? Supposons qu'Alice ne dispose que du premier qubit de la paire, le second étant chez Bob. Quelle matrice densité $\rho\_1$ doit-elle attribuer à son qubit&nbsp;? Le critère est simple&nbsp;: $\rho\_1$ doit donner les bonnes probabilités pour **toutes** les mesures qu'Alice peut faire seule.
+
+**Le calcul direct.** Prenons un état quelconque $|e\rangle$ du premier qubit et cherchons la probabilité qu'Alice le trouve en mesurant. Sur la paire, cette mesure correspond au projecteur $|e\rangle\langle e|\otimes\mathbb{I}$&nbsp;: il agit sur le qubit d'Alice et laisse celui de Bob intact. Appliqué à l'état de Bell, il donne
+
+<div id="gros">
+
+$$\bigl(|e\rangle\langle e|\otimes\mathbb{I}\bigr)|\Phi^+\rangle = \frac{1}{\sqrt2}\Bigl(\langle e|0\rangle\\;|e\rangle|0\rangle + \langle e|1\rangle\\;|e\rangle|1\rangle\Bigr).$$
+
+</div>
+
+La probabilité cherchée est le carré de la norme de ce vecteur. Or les deux vecteurs $|e\rangle|0\rangle$ et $|e\rangle|1\rangle$ sont orthogonaux, grâce au qubit de Bob&nbsp;: comme pour Pythagore, les carrés des normes s'additionnent, sans terme croisé&nbsp;:
+
+<div id="gros">
+
+$$
+\begin{aligned}
+p(e) &= \frac12\Bigl(\bigl|\langle e|0\rangle\bigr|^2 + \bigl|\langle e|1\rangle\bigr|^2\Bigr)\\\\
+&= \langle e|\\;\tfrac12\bigl(|0\rangle\langle0| + |1\rangle\langle1|\bigr)\\;|e\rangle.
+\end{aligned}
+$$
+
+</div>
+
+Comparée à la règle de Born pour une matrice densité, $p(e) = \langle e|\rho\_1|e\rangle$, cette formule valable pour tout $|e\rangle$ impose
 
 $$\rho\_1 = \tfrac12\bigl(|0\rangle\langle0| + |1\rangle\langle1|\bigr) = \tfrac{\mathbb{I}}{2}\\,,$$
 
-l'état maximalement mixte, au centre de la sphère de Bloch. La paire est dans un état pur, parfaitement connu, et pourtant chacun de ses membres est dans l'état le plus incertain possible&nbsp;: c'est la seconde origine des états mixtes annoncée plus haut. Pour un état intriqué, le tout est mieux connu que ses parties.
+l'état maximalement mixte, au centre de la sphère de Bloch. Quelle que soit la mesure, Alice obtient un résultat parfaitement aléatoire.
+
+**La recette générale.** Ce calcul se systématise&nbsp;: c'est la **trace partielle** sur le second qubit, notée $\rho\_1 = \mathrm{Tr}\_2\\,\rho$. On part de la matrice densité de la paire, $\rho = |\Phi^+\rangle\langle\Phi^+|$, écrite dans la base $\\{|00\rangle, |01\rangle, |10\rangle, |11\rangle\\}$. On la découpe en quatre blocs $2\times2$, un pour chaque couple d'indices du premier qubit, et l'on remplace chaque bloc par sa trace&nbsp;:
+
+<div id="gros">
+
+$$
+\rho = \frac12\left(\begin{array}{cc|cc}
+1 & 0 & 0 & 1 \\\\
+0 & 0 & 0 & 0 \\\\ \hline
+0 & 0 & 0 & 0 \\\\
+1 & 0 & 0 & 1
+\end{array}\right)
+\quad\longrightarrow\quad
+\rho\_1 = \frac12\begin{pmatrix} 1+0 & 0+0 \\\\ 0+0 & 0+1 \end{pmatrix} = \frac12\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \end{pmatrix}.
+$$
+
+</div>
+
+D'où le nom&nbsp;: on ne prend la trace que sur la partie qui concerne le second qubit. En notation de Dirac, cela revient à la règle
+
+$$\mathrm{Tr}\_2\bigl(|ab\rangle\langle cd|\bigr) = \langle d|b\rangle\\;|a\rangle\langle c|\\,,$$
+
+qu'on applique terme à terme à $\rho = \frac12\bigl(|00\rangle\langle00| + |00\rangle\langle11| + |11\rangle\langle00| + |11\rangle\langle11|\bigr)$. Les deux termes diagonaux donnent $|0\rangle\langle0|$ et $|1\rangle\langle1|$. Les deux termes croisés, qui portaient les cohérences, sont multipliés par $\langle1|0\rangle = 0$ et disparaissent.
+
+**Ce que ça signifie.** Les cohérences du qubit d'Alice ont disparu parce que le qubit de Bob garde la trace de la «&nbsp;branche&nbsp;» dans laquelle on se trouve&nbsp;: $|0\rangle$ dans un terme, $|1\rangle$ dans l'autre. Les deux branches ne peuvent plus interférer. À comparer avec l'état produit $|+\rangle|0\rangle = \frac{1}{\sqrt2}\bigl(|0\rangle|0\rangle + |1\rangle|0\rangle\bigr)$&nbsp;: le second qubit y est le même dans les deux branches, le terme croisé survit ($\langle0|0\rangle = 1$), et l'on retrouve $\rho\_1 = |+\rangle\langle+|$, un état pur.
+
+La paire de Bell est donc dans un état pur, parfaitement connu, et pourtant chacun de ses membres est dans l'état le plus incertain possible&nbsp;: c'est la seconde origine des états mixtes annoncée plus haut. Pour un état intriqué, le tout est mieux connu que ses parties.
 
 Les états intriqués comme celui‑ci jouent un rôle central dans la plupart des protocoles de l’information quantique.
 
