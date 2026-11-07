@@ -357,42 +357,36 @@ Cette base a été construite avec astuce&nbsp;: **chacun de ses vecteurs est or
 Le résultat $\varphi\_1$ signifie donc «&nbsp;ce n'était pas $|00\rangle$&nbsp;», le résultat $\varphi\_2$ «&nbsp;ce n'était pas $|0{+}\rangle$&nbsp;», et ainsi de suite.
 
 <div class="svg-container">
-<svg viewBox="0 0 520 300" role="img" aria-label="Deux préparations indépendantes, chacune réglée sur 0 ou +, envoient leurs systèmes vers une mesure conjointe à quatre résultats ; chaque résultat exclut une des quatre préparations" style="width:100%;max-width:520px;height:auto;">
-<defs><marker id="pa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
-<rect x="20" y="210" width="120" height="62" rx="10" fill="#ebf1f5" stroke="#004D80" stroke-width="1.4"/>
-<text x="80.0" y="232.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >préparation 1</text>
-<circle cx="58" cy="255" r="12" fill="#fff" stroke="#004D80" stroke-width="1.4"/>
-<text x="58.0" y="260.0" text-anchor="middle" font-size="14" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >0</text>
-<circle cx="102" cy="255" r="12" fill="#fff" stroke="#004D80" stroke-width="1.4"/>
-<text x="102.0" y="260.0" text-anchor="middle" font-size="14" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >+</text>
-<rect x="380" y="210" width="120" height="62" rx="10" fill="#ebf1f5" stroke="#004D80" stroke-width="1.4"/>
-<text x="440.0" y="232.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >préparation 2</text>
-<circle cx="418" cy="255" r="12" fill="#fff" stroke="#004D80" stroke-width="1.4"/>
-<text x="418.0" y="260.0" text-anchor="middle" font-size="14" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >0</text>
-<circle cx="462" cy="255" r="12" fill="#fff" stroke="#004D80" stroke-width="1.4"/>
-<text x="462.0" y="260.0" text-anchor="middle" font-size="14" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >+</text>
-<circle cx="150" cy="160" r="16" fill="#d9e4ec" stroke="#004D80" stroke-width="1.3"/>
-<text x="150.0" y="165.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >λ₁</text>
-<circle cx="370" cy="160" r="16" fill="#efdbe5" stroke="#970E53" stroke-width="1.3"/>
-<text x="370.0" y="165.0" text-anchor="middle" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >λ₂</text>
-<line x1="100.0" y1="208.0" x2="138.0" y2="174.0" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#pa)"/>
-<line x1="420.0" y1="208.0" x2="382.0" y2="174.0" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#pa)"/>
-<line x1="162.0" y1="146.0" x2="195.0" y2="122.0" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#pa)"/>
-<line x1="358.0" y1="146.0" x2="325.0" y2="122.0" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#pa)"/>
-<rect x="110" y="10" width="300" height="108" rx="10" fill="#dbe6ed" stroke="#004D80" stroke-width="1.4"/>
-<text x="260.0" y="32.0" text-anchor="middle" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" >mesure conjointe</text>
-<rect x="124" y="44" width="62" height="60" rx="7" fill="#fff" stroke="#004D80" stroke-width="1.2"/>
-<text x="155.0" y="68.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >φ<tspan dy='3' font-size='10'>1</tspan><tspan dy='-3'></tspan></text>
-<text x="155.0" y="92.0" text-anchor="middle" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >non 00</text>
-<rect x="194" y="44" width="62" height="60" rx="7" fill="#fff" stroke="#004D80" stroke-width="1.2"/>
-<text x="225.0" y="68.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >φ<tspan dy='3' font-size='10'>2</tspan><tspan dy='-3'></tspan></text>
-<text x="225.0" y="92.0" text-anchor="middle" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >non 0+</text>
-<rect x="264" y="44" width="62" height="60" rx="7" fill="#fff" stroke="#004D80" stroke-width="1.2"/>
-<text x="295.0" y="68.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >φ<tspan dy='3' font-size='10'>3</tspan><tspan dy='-3'></tspan></text>
-<text x="295.0" y="92.0" text-anchor="middle" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >non +0</text>
-<rect x="334" y="44" width="62" height="60" rx="7" fill="#fff" stroke="#004D80" stroke-width="1.2"/>
-<text x="365.0" y="68.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >φ<tspan dy='3' font-size='10'>4</tspan><tspan dy='-3'></tspan></text>
-<text x="365.0" y="92.0" text-anchor="middle" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >non ++</text>
+<svg viewBox="0 0 560 340" role="img" aria-label="Deux préparations indépendantes, chacune réglée sur 0 ou +, envoient leurs systèmes λ1 et λ2 vers une mesure conjointe à quatre résultats ; chaque résultat exclut l'une des quatre préparations" style="width:100%;max-width:560px;height:auto;">
+<defs><marker id="dpb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker><marker id="dpm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#970E53"/></marker><radialGradient id="glb"><stop offset="0" stop-color="#004D80" stop-opacity="0.35"/><stop offset="1" stop-color="#004D80" stop-opacity="0"/></radialGradient><radialGradient id="glm"><stop offset="0" stop-color="#970E53" stop-opacity="0.35"/><stop offset="1" stop-color="#970E53" stop-opacity="0"/></radialGradient></defs>
+<rect x="120" y="18" width="320" height="132" rx="16" fill="#edf3f6" stroke="#004D80" stroke-width="1.6"/>
+<text x="280.0" y="44.0" text-anchor="middle" font-size="14.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >mesure conjointe</text>
+<circle cx="172" cy="84" r="21" fill="#fff" stroke="#004D80" stroke-width="1.4"/>
+<circle cx="172" cy="84" r="16" fill="#e6edf2"/>
+<text x="172.0" y="89.0" text-anchor="middle" font-size="15.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >φ<tspan dy='3' font-size='10'>1</tspan><tspan dy='-3'></tspan></text>
+<text x="172.0" y="124.0" text-anchor="middle" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >non 00</text>
+<circle cx="244" cy="84" r="21" fill="#fff" stroke="#004D80" stroke-width="1.4"/>
+<circle cx="244" cy="84" r="16" fill="#e6edf2"/>
+<text x="244.0" y="89.0" text-anchor="middle" font-size="15.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >φ<tspan dy='3' font-size='10'>2</tspan><tspan dy='-3'></tspan></text>
+<text x="244.0" y="124.0" text-anchor="middle" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >non 0+</text>
+<circle cx="316" cy="84" r="21" fill="#fff" stroke="#004D80" stroke-width="1.4"/>
+<circle cx="316" cy="84" r="16" fill="#e6edf2"/>
+<text x="316.0" y="89.0" text-anchor="middle" font-size="15.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >φ<tspan dy='3' font-size='10'>3</tspan><tspan dy='-3'></tspan></text>
+<text x="316.0" y="124.0" text-anchor="middle" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >non +0</text>
+<circle cx="388" cy="84" r="21" fill="#fff" stroke="#004D80" stroke-width="1.4"/>
+<circle cx="388" cy="84" r="16" fill="#e6edf2"/>
+<text x="388.0" y="89.0" text-anchor="middle" font-size="15.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >φ<tspan dy='3' font-size='10'>4</tspan><tspan dy='-3'></tspan></text>
+<text x="388.0" y="124.0" text-anchor="middle" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >non ++</text>
+<path d="M103.0,242 C103.0,178 235.0,220 235.0,151" fill="none" stroke="#004D80" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#dpb)"/>
+<circle cx="169.0" cy="198.8" r="26" fill="url(#glb)"/>
+<circle cx="169.0" cy="198.8" r="15" fill="#fff" stroke="#004D80" stroke-width="1.6"/>
+<text x="169.0" y="203.8" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" >λ₁</text>
+<path d="M457.0,242 C457.0,178 325.0,220 325.0,151" fill="none" stroke="#970E53" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#dpm)"/>
+<circle cx="391.0" cy="198.8" r="26" fill="url(#glm)"/>
+<circle cx="391.0" cy="198.8" r="15" fill="#fff" stroke="#970E53" stroke-width="1.6"/>
+<text x="391.0" y="203.8" text-anchor="middle" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" >λ₂</text>
+<rect x="28" y="248" width="150" height="74" rx="14" fill="#edf3f6" stroke="#004D80" stroke-width="1.6"/><text x="103.0" y="272.0" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >préparation 1</text><rect x="63" y="284" width="80" height="26" rx="13" fill="#fff" stroke="#004D80" stroke-width="1.3"/><rect x="65" y="286" width="36.0" height="22" rx="11" fill="#004D80"/><text x="83.0" y="302.0" text-anchor="middle" font-size="15" fill="#fff" font-family="Georgia,'Times New Roman',serif" >0</text><text x="123.0" y="302.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >+</text><circle cx="103.0" cy="248" r="5" fill="#fff" stroke="#004D80" stroke-width="1.4"/>
+<rect x="382" y="248" width="150" height="74" rx="14" fill="#edf3f6" stroke="#004D80" stroke-width="1.6"/><text x="457.0" y="272.0" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >préparation 2</text><rect x="417" y="284" width="80" height="26" rx="13" fill="#fff" stroke="#004D80" stroke-width="1.3"/><rect x="459.0" y="286" width="36.0" height="22" rx="11" fill="#004D80"/><text x="437.0" y="302.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >0</text><text x="477.0" y="302.0" text-anchor="middle" font-size="15" fill="#fff" font-family="Georgia,'Times New Roman',serif" >+</text><circle cx="457.0" cy="248" r="5" fill="#fff" stroke="#004D80" stroke-width="1.4"/>
 </svg>
 </div>
 <p class="legende">Le dispositif de la preuve. Deux préparations indépendantes, chacune réglée sur $|0\rangle$ ou $|+\rangle$, produisent les états physiques $\lambda_1$ et $\lambda_2$. La mesure conjointe a quatre résultats possibles, et chacun exclut l'une des quatre préparations.</p>
