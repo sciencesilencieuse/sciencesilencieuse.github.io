@@ -198,7 +198,9 @@ On peut alors énoncer précisément le principe&nbsp;:
 
 <div id="theo">
 
-<b>Principe d'équilibre de la connaissance.</b> À tout instant et pour tout système, la connaissance ne dépasse jamais l'ignorance&nbsp;: $K \le I$. Dans un <b>état de connaissance maximale</b>, $K = I$.
+<b>Principe d'équilibre de la connaissance&nbsp;:</b> 
+
+À tout instant et pour tout système, la connaissance ne dépasse jamais l'ignorance&nbsp;: $K \le I$. Dans un <b>état de connaissance maximale</b>, $K = I$.
 
 </div>
 
