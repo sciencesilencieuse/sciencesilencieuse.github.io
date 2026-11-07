@@ -133,7 +133,7 @@ L'enjeu est conceptuel. Dans la théorie-jouet, les états que l'on manipule ne 
 
 Mais un jouet reste un jouet. La théorie est locale et ne peut donc pas violer les inégalités de Bell, et le théorème PBR, publié en 2012, montre qu'aucune théorie de ce type ne peut reproduire toute la mécanique quantique. La dernière partie de cette page fait le bilan&nbsp;: ce que le jouet reproduit, ce qu'il ne peut pas reproduire, et pourquoi.
 
-Cette page suit pas à pas la page [Notions fondamentales](../fondations/), construite à partir de la même source (le mémoire de G. Knee)&nbsp;: à chaque notion quantique (état, fidélité, superposition, mesure, intrication, non-clonage) correspond ici son analogue «&nbsp;jouet&nbsp;». Les encadrés marqués ↔ renvoient à la notion quantique correspondante.
+Cette page suit pas à pas la page [Notions fondamentales](../fondations/)&nbsp;: à chaque notion quantique (état, fidélité, superposition, mesure, intrication, non-clonage) correspond ici son analogue «&nbsp;jouet&nbsp;». Les encadrés marqués ↔ renvoient à la notion quantique correspondante.
 
 ## Le système élémentaire
 
