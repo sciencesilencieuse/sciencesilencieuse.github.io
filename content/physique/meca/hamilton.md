@@ -1803,7 +1803,11 @@ Pendant $\mathrm{d}t$, tous les points du segment se déplacent, à peu de chose
 
 Il reste à calculer l'aire d'un tel parallélogramme. Si on le construit sur deux vecteurs $(a, b)$ et $(c, d)$, la figure de droite montre qu'on peut l'obtenir en partant du rectangle qui l'englobe, de côtés $a + c$ et $b + d$, et en retirant les morceaux qui dépassent&nbsp;:
 
+<div id="gros">
+
 $$(a + c)(b + d) - 2\times\frac{ab}{2} - 2\times\frac{cd}{2} - 2\\,bc = ad - bc.$$
+
+</div>
 
 C'est le **déterminant** des deux vecteurs. On retrouve deux cas simples&nbsp;: si le segment est vertical ($\mathrm{d}x = 0$), l'aire balayée est un parallélogramme de «&nbsp;hauteur&nbsp;» $\mathrm{d}p$ et de «&nbsp;largeur&nbsp;» $\dot x\\,\mathrm{d}t$, soit $\dot x\\,\mathrm{d}t\\,\mathrm{d}p$&nbsp;; si le déplacement est parallèle au segment, rien ne traverse, et le déterminant est nul.
 
@@ -1981,11 +1985,21 @@ On reconnaît la **divergence** du champ des vitesses, bien connue en mécanique
 
 ### Le théorème de Liouville
 
-Pour un écoulement hamiltonien, $f = (\partial\_p H, -\partial\_x H)$, et la divergence vaut
+Appliquons ce résultat aux équations de Hamilton. L'espace des phases a deux coordonnées, $x^1 = x$ et $x^2 = p$, et le champ des vitesses $f = (f^1, f^2)$ donne, en chaque point, les vitesses $\dot x$ et $\dot p$ du point qui s'y trouve. Il suffit de les lire dans les équations de Hamilton&nbsp;:
 
-$$\frac{\partial}{\partial x}\left(\frac{\partial H}{\partial p}\right) + \frac{\partial}{\partial p}\left(-\frac{\partial H}{\partial x}\right) = 0,$$
+$$f^1 = \dot x = \frac{\partial H}{\partial p}, \qquad f^2 = \dot p = -\frac{\partial H}{\partial x}.$$
 
-puisque l'ordre des dérivations croisées n'importe pas (théorème de Schwarz). Avec $n$ degrés de liberté, les termes s'annulent de même deux à deux, pour chaque couple $(x\_i, p\_i)$.
+La divergence additionne deux termes, qui ont chacun un sens géométrique simple&nbsp;:
+<ul>
+<li>$\dfrac{\partial f^1}{\partial x} = \dfrac{\partial}{\partial x}\left(\dfrac{\partial H}{\partial p}\right)$ mesure l'étirement de l'écoulement dans la direction $x$&nbsp;: deux points voisins, décalés selon $x$, s'écartent si leurs vitesses $\dot x$ diffèrent&nbsp;;</li>
+<li>$\dfrac{\partial f^2}{\partial p} = \dfrac{\partial}{\partial p}\left(-\dfrac{\partial H}{\partial x}\right)$ mesure de même l'étirement dans la direction $p$.</li>
+</ul>
+
+Ces deux termes sont exactement opposés, puisque l'ordre des dérivations croisées n'importe pas (théorème de Schwarz)&nbsp;:
+
+$$\mathrm{div}\\,f = \frac{\partial^2 H}{\partial x\\,\partial p} - \frac{\partial^2 H}{\partial p\\,\partial x} = 0.$$
+
+Tout étirement selon $x$ est compensé par une compression selon $p$, et inversement&nbsp;: c'est la structure «&nbsp;croisée&nbsp;» des équations de Hamilton, avec leur signe moins, qui le garantit. Avec $n$ degrés de liberté, le champ des vitesses a $2n$ composantes, $\dot x\_i = \partial H/\partial p\_i$ et $\dot p\_i = -\partial H/\partial x\_i$, et les termes de la divergence s'annulent de même deux à deux, pour chaque couple $(x\_i, p\_i)$.
 
 <div id="theo">
 
