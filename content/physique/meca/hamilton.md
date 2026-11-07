@@ -172,7 +172,7 @@ $$\frac{\mathrm{d}H}{\mathrm{d}t} = \frac{\partial H}{\partial x}\\,\dot x + \fr
 $H$ reste constant&nbsp;: les trajectoires sont les **courbes de niveau** de $H$. Si l'on se représente $H$ comme l'altitude d'un relief au-dessus du plan $(x, p)$, le système se promène sur les lignes de niveau de la carte topographique, sans jamais monter ni descendre. Dès qu'on connaît $H$, on connaît le dessin de toutes les trajectoires, sans rien résoudre.
 
 <div class="svg-container">
-<svg data-still="0" viewBox="0 36 600 364" role="img" aria-label="Relief du hamiltonien du pendule au-dessus du plan (x, p) : une vallée centrale bordée de cols ; les trajectoires sont les courbes de niveau tracées sur ce relief" style="width:100%;max-width:600px;height:auto;">
+<svg id="relief3d-svg" viewBox="0 36 600 364" role="img" aria-label="Relief du hamiltonien du pendule au-dessus du plan (x, p) : une vallée centrale bordée de cols ; les trajectoires sont les courbes de niveau tracées sur ce relief" style="width:100%;max-width:600px;height:auto;">
 <defs><marker id="rax" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#94a3b8"/></marker></defs>
 <polygon points="194.2,57.7 200.7,56.1 203.2,44.3 196.7,45.9" fill="#d4e0e8" stroke="#d4e0e8" stroke-width="0.6"/>
 <polygon points="191.7,69.0 198.2,67.5 200.7,56.1 194.2,57.7" fill="#ccdae4" stroke="#ccdae4" stroke-width="0.6"/>
@@ -1594,15 +1594,155 @@ $H$ reste constant&nbsp;: les trajectoires sont les **courbes de niveau** de $H$
 <text x="154.8" y="234.9" text-anchor="start" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">p</tspan></text>
 <line x1="121.5" y1="289.6" x2="121.5" y2="219.6" stroke="#94a3b8" stroke-width="1.1" marker-end="url(#rax)"/>
 <text x="113.5" y="223.6" text-anchor="end" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">H</tspan></text>
-<line x1="429.1" y1="218.0" x2="460.1" y2="267.0" stroke="#970E53" stroke-width="0.9"/>
-<text x="462.1" y="281.0" text-anchor="start" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >col</text>
-<circle cx="310.0" cy="235.5" r="2.5" fill="#004D80"/>
-<line x1="310.0" y1="238.5" x2="320.0" y2="327.5" stroke="#004D80" stroke-width="0.9"/>
-<text x="322.0" y="341.5" text-anchor="start" font-size="12.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >fond de la vallée (équilibre)</text>
 <text x="300.0" y="392.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >oscillations (bleu) · séparatrice passant par les cols (magenta) · rotations (teal)</text>
 </svg>
+<canvas id="relief3d" style="display:none;margin:0 auto;cursor:grab;touch-action:pan-y;" aria-label="Relief du hamiltonien du pendule, que l'on peut faire tourner"></canvas>
 </div>
-<p class="legende">Le relief de $H = \frac{p^2}{2} - \cos x$ pour le pendule, au-dessus du plan $(x, p)$. Les trajectoires sont les courbes de niveau tracées sur ce relief&nbsp;: autour du fond de la vallée, les oscillations&nbsp;; au-delà des cols, les rotations&nbsp;; la séparatrice passe exactement par les cols. Le point animé parcourt une oscillation sans jamais changer d'altitude.</p>
+<script>
+(function () {
+  var box = document.getElementById('relief3d');
+  if (!box || !box.getContext) return;
+  var still = document.getElementById('relief3d-svg');
+  if (still) still.style.display = 'none';
+  box.style.display = 'block';
+  var ctx = box.getContext('2d');
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // --- géométrie ---
+  var KX = 0.62, KZ = 0.42, HC = 0.6;
+  var XR = 1.3 * Math.PI, PR = 2.2, NX = 46, NP = 30;
+  function Hf(x, p) { return p * p / 2 - Math.cos(x); }
+  function W3(x, p, h) { return [KX * x, p, KZ * (h - HC)]; }
+  function hexrgb(h) { return [parseInt(h.substr(1, 2), 16), parseInt(h.substr(3, 2), 16), parseInt(h.substr(5, 2), 16)]; }
+  var LO = hexrgb('#4d84a8'), HI = hexrgb('#e6eef4');
+  var light = [-0.45, -0.35, 0.82], ln = Math.hypot(light[0], light[1], light[2]);
+  light = light.map(function (v) { return v / ln; });
+  var Hmin = -1, Hmax = PR * PR / 2 + 1;
+  var quads = [];
+  for (var i = 0; i < NX; i++) for (var j = 0; j < NP; j++) {
+    var x0 = -XR + 2 * XR * i / NX, x1 = -XR + 2 * XR * (i + 1) / NX;
+    var p0 = -PR + 2 * PR * j / NP, p1 = -PR + 2 * PR * (j + 1) / NP;
+    var cx = (x0 + x1) / 2, cp = (p0 + p1) / 2, h = Hf(cx, cp);
+    var n = [-KZ * Math.sin(cx) / KX, -KZ * cp, 1], nn = Math.hypot(n[0], n[1], n[2]);
+    var sh = 0.75 + 0.25 * Math.max(0, (n[0] * light[0] + n[1] * light[1] + n[2] * light[2]) / nn);
+    var t = (h - Hmin) / (Hmax - Hmin);
+    var c = [0, 1, 2].map(function (k) { return Math.round((LO[k] * (1 - t) + HI[k] * t) * sh); });
+    quads.push({ pts: [W3(x0, p0, Hf(x0, p0)), W3(x1, p0, Hf(x1, p0)), W3(x1, p1, Hf(x1, p1)), W3(x0, p1, Hf(x0, p1))],
+                 c: W3(cx, cp, h), col: 'rgb(' + c.join(',') + ')' });
+  }
+  // --- courbes de niveau, découpées en petits segments ---
+  var segs = [];
+  function addCurve(list, col, w) {
+    for (var k = 0; k + 1 < list.length; k++) {
+      var a = list[k], b = list[k + 1];
+      segs.push({ a: W3(a[0], a[1], a[2] + 0.02), b: W3(b[0], b[1], b[2] + 0.02), col: col, w: w });
+    }
+  }
+  [-0.7, -0.2, 0.4].forEach(function (E) {
+    var xm = Math.acos(-E), L = [];
+    for (var k = 0; k <= 80; k++) { var x = -xm + 2 * xm * k / 80; L.push([x, Math.sqrt(Math.max(0, 2 * (E + Math.cos(x)))), E]); }
+    for (k = 80; k >= 0; k--) { x = -xm + 2 * xm * k / 80; L.push([x, -Math.sqrt(Math.max(0, 2 * (E + Math.cos(x)))), E]); }
+    addCurve(L, '#004D80', 2);
+  });
+  [[1.0, '#970E53', 2.2], [1.6, '#006C65', 2]].forEach(function (q) {
+    [1, -1].forEach(function (sg) {
+      var L = [];
+      for (var k = 0; k <= 160; k++) { var x = -XR + 2 * XR * k / 160; L.push([x, sg * Math.sqrt(Math.max(0, 2 * (q[0] + Math.cos(x)))), q[0]]); }
+      addCurve(L, q[1], q[2]);
+    });
+  });
+  // quelques lignes de maillage
+  for (var gx = 0; gx <= NX; gx += 4) {
+    var L = [], x = -XR + 2 * XR * gx / NX;
+    for (var k = 0; k <= NP; k++) { var p = -PR + 2 * PR * k / NP; L.push([x, p, Hf(x, p)]); }
+    addCurve(L, 'rgba(255,255,255,0.45)', 0.7);
+  }
+  for (var gp = 0; gp <= NP; gp += 3) {
+    L = []; p = -PR + 2 * PR * gp / NP;
+    for (k = 0; k <= NX; k++) { x = -XR + 2 * XR * k / NX; L.push([x, p, Hf(x, p)]); }
+    addCurve(L, 'rgba(255,255,255,0.45)', 0.7);
+  }
+  // --- trajectoire du point animé (oscillation, vitesse réelle) ---
+  function f(z) { return [z[1], -Math.sin(z[0])]; }
+  function step(z, dt) {
+    var k1 = f(z), k2 = f([z[0] + dt / 2 * k1[0], z[1] + dt / 2 * k1[1]]),
+        k3 = f([z[0] + dt / 2 * k2[0], z[1] + dt / 2 * k2[1]]), k4 = f([z[0] + dt * k3[0], z[1] + dt * k3[1]]);
+    return [z[0] + dt / 6 * (k1[0] + 2 * k2[0] + 2 * k3[0] + k4[0]), z[1] + dt / 6 * (k1[1] + 2 * k2[1] + 2 * k3[1] + k4[1])];
+  }
+  var E0 = 0.4, traj = [], z = [0, Math.sqrt(2 * (E0 + 1))], dt = 0.01, prev = z;
+  traj.push(z);
+  for (var s = 0; s < 3000; s++) { z = step(z, dt); traj.push(z); if (prev[0] < 0 && z[0] >= 0 && z[1] > 0 && s > 10) break; prev = z; }
+  var period = traj.length * dt;
+  // --- vue ---
+  var az = -16 * Math.PI / 180, el = 38 * Math.PI / 180, Wd = 600, Ht = 380, S = 62, CX = 300, CY = 200;
+  function resize() {
+    var w = Math.min(600, box.parentNode.clientWidth || 600), dpr = window.devicePixelRatio || 1;
+    Wd = w; Ht = Math.round(w * 0.62);
+    box.style.width = w + 'px'; box.style.height = Ht + 'px';
+    box.width = Math.round(w * dpr); box.height = Math.round(Ht * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    S = w / 9.2; CX = w / 2; CY = Ht * 0.55;
+  }
+  function P(v) {
+    var ca = Math.cos(az), sa = Math.sin(az), ce = Math.cos(el), se = Math.sin(el);
+    var u = v[0] * ca - v[1] * sa, d = v[0] * sa + v[1] * ca;
+    return [CX + S * u, CY - S * (v[2] * ce + d * se), d * ce - v[2] * se];
+  }
+  var t0 = performance.now();
+  function draw(now) {
+    ctx.clearRect(0, 0, Wd, Ht);
+    var items = [];
+    quads.forEach(function (q) { var c = P(q.c); items.push({ d: c[2], q: q }); });
+    segs.forEach(function (sg) { var a = P(sg.a), b = P(sg.b); items.push({ d: (a[2] + b[2]) / 2 - 0.15, s: sg, A: a, B: b }); });
+    var tt = reduce ? 0.6 : ((now - t0) / 1000 / 1.15) % period;
+    var zz = traj[Math.min(traj.length - 1, Math.floor(tt / dt))];
+    var dot = P(W3(zz[0], zz[1], E0 + 0.05));
+    items.push({ d: dot[2] - 0.08, dot: dot });
+    items.sort(function (a, b) { return b.d - a.d; });
+    ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+    items.forEach(function (it) {
+      if (it.q) {
+        ctx.beginPath();
+        it.q.pts.forEach(function (v, k) { var p = P(v); if (k) ctx.lineTo(p[0], p[1]); else ctx.moveTo(p[0], p[1]); });
+        ctx.closePath(); ctx.fillStyle = it.q.col; ctx.strokeStyle = it.q.col; ctx.lineWidth = 0.6; ctx.fill(); ctx.stroke();
+      } else if (it.s) {
+        ctx.beginPath(); ctx.moveTo(it.A[0], it.A[1]); ctx.lineTo(it.B[0], it.B[1]);
+        ctx.strokeStyle = it.s.col; ctx.lineWidth = it.s.w; ctx.stroke();
+      } else {
+        ctx.beginPath(); ctx.arc(it.dot[0], it.dot[1], 4.6, 0, 2 * Math.PI);
+        ctx.fillStyle = '#004D80'; ctx.strokeStyle = '#fff'; ctx.lineWidth = 1.4; ctx.fill(); ctx.stroke();
+      }
+    });
+    // repère (x, p, H) dans le coin
+    var o = [44, Ht - 30], ax = [[1, 0, 0, 'x'], [0, 1, 0, 'p'], [0, 0, 1, 'H']];
+    ctx.font = 'italic 14px Georgia, serif'; ctx.textAlign = 'center';
+    ax.forEach(function (a) {
+      var ca = Math.cos(az), sa = Math.sin(az), ce = Math.cos(el), se = Math.sin(el);
+      var u = a[0] * ca - a[1] * sa, d = a[0] * sa + a[1] * ca, up = a[2] * ce + d * se;
+      var e = [o[0] + 26 * u, o[1] - 26 * up];
+      ctx.beginPath(); ctx.moveTo(o[0], o[1]); ctx.lineTo(e[0], e[1]); ctx.strokeStyle = '#94a3b8'; ctx.lineWidth = 1.2; ctx.stroke();
+      ctx.fillStyle = '#334155'; ctx.fillText(a[3], o[0] + 37 * u, o[1] - 37 * up + 5);
+    });
+  }
+  // --- interaction ---
+  var drag = null;
+  box.addEventListener('pointerdown', function (e) { drag = [e.clientX, e.clientY, az, el]; box.setPointerCapture(e.pointerId); box.style.cursor = 'grabbing'; });
+  box.addEventListener('pointermove', function (e) {
+    if (!drag) return;
+    az = drag[2] - (e.clientX - drag[0]) * 0.01;
+    el = Math.max(0.12, Math.min(1.45, drag[3] + (e.clientY - drag[1]) * 0.01));
+    if (reduce) draw(performance.now());
+  });
+  function stop() { drag = null; box.style.cursor = 'grab'; }
+  box.addEventListener('pointerup', stop); box.addEventListener('pointercancel', stop);
+  var visible = true;
+  if ('IntersectionObserver' in window) new IntersectionObserver(function (en) { visible = en[0].isIntersecting; }).observe(box);
+  function loop(now) { if (visible) draw(now); if (!reduce) requestAnimationFrame(loop); }
+  resize(); window.addEventListener('resize', function () { resize(); draw(performance.now()); });
+  draw(performance.now());
+  if (!reduce) requestAnimationFrame(loop);
+})();
+</script>
+<p class="legende">Le relief de $H = \frac{p^2}{2} - \cos x$ pour le pendule, au-dessus du plan $(x, p)$. Les trajectoires sont les courbes de niveau tracées sur ce relief&nbsp;: autour du fond de la vallée, les oscillations&nbsp;; au-delà des cols, les rotations&nbsp;; la séparatrice passe exactement par les cols. Le point animé parcourt une oscillation sans jamais changer d'altitude. Faites glisser la figure pour faire tourner le relief.</p>
 
 Le vecteur vitesse $(\dot x, \dot p) = (\partial\_p H, -\partial\_x H)$ s'obtient d'ailleurs à partir des pentes du relief, $(\partial\_x H, \partial\_p H)$, en échangeant les deux composantes et en changeant un signe&nbsp;: c'est la pente «&nbsp;tournée d'un quart de tour&nbsp;». Le système ne descend pas la pente, il la longe.
 
@@ -1616,7 +1756,7 @@ Pendant $\mathrm{d}t$, tous les points du segment se déplacent, à peu de chose
 
 <div class="svg-container">
 <svg viewBox="0 47 600 223" role="img" aria-label="À gauche, le petit segment AB, emporté par l'écoulement pendant dt, balaie un parallélogramme. À droite, l'aire d'un parallélogramme construit sur (a, b) et (c, d) vaut ad − bc : on l'obtient en retirant du rectangle englobant deux paires de triangles et deux rectangles" style="width:100%;max-width:600px;height:auto;">
-<defs><marker id="pv" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker></defs>
+<defs><marker id="pv" viewBox="0 47 10 176" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker></defs>
 <defs><marker id="ps" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#970E53"/></marker></defs>
 <defs><marker id="pg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#94a3b8"/></marker></defs>
 <polyline points="22.8,272.0 28.7,270.2 34.6,268.4 40.4,266.6 46.3,264.8 52.2,263.1 58.1,261.4 64.0,259.7 69.9,258.0 75.7,256.3 81.6,254.7 87.5,253.1 93.4,251.5 99.3,249.9 105.1,248.4 111.0,246.8 116.9,245.3 122.8,243.9 128.7,242.4 134.6,241.0 140.4,239.6 146.3,238.2 152.2,236.8 158.1,235.5 164.0,234.1 169.9,232.8 175.7,231.6 181.6,230.3 187.5,229.1 193.4,227.9 199.3,226.7 205.1,225.5 211.0,224.4 216.9,223.2 222.8,222.1 228.7,221.1 234.6,220.0 240.4,219.0 246.3,218.0 252.2,217.0" fill="none" stroke="#cbd5e1" stroke-width="1"/>
@@ -1677,7 +1817,7 @@ Entre deux courbes de niveau $H = E$ et $H = E + \Delta E$, l'écoulement forme 
 
 <div class="svg-container">
 <svg data-still="0" viewBox="0 17 600 327" role="img" aria-label="Entre deux courbes de niveau voisines de H, le débit est le même partout : là où le canal se resserre, l'écoulement accélère" style="width:100%;max-width:600px;height:auto;">
-<defs><marker id="cax" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
+<defs><marker id="cax" viewBox="0 17 10 310" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
 <defs><marker id="cv" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker></defs>
 <polygon points="419.3,188.0 419.3,186.1 419.3,184.2 419.2,182.4 419.2,180.5 419.1,178.6 419.1,176.7 419.0,174.8 418.9,172.9 418.8,171.0 418.7,169.2 418.6,167.3 418.4,165.4 418.3,163.4 418.1,161.5 417.9,159.6 417.7,157.7 417.5,155.8 417.3,153.8 417.1,151.9 416.8,149.9 416.5,148.0 416.3,146.0 416.0,144.1 415.6,142.1 415.3,140.1 414.9,138.1 414.6,136.1 414.2,134.1 413.7,132.1 413.3,130.1 412.8,128.1 412.3,126.1 411.8,124.0 411.3,122.0 410.7,119.9 410.1,117.9 409.5,115.8 408.9,113.8 408.2,111.7 407.5,109.7 406.7,107.6 405.9,105.5 405.1,103.5 404.3,101.4 403.4,99.4 402.4,97.4 401.4,95.3 400.4,93.3 399.3,91.4 398.2,89.4 397.1,87.4 395.8,85.5 394.6,83.6 393.2,81.8 391.9,80.0 390.4,78.2 388.9,76.5 387.4,74.8 385.8,73.2 384.1,71.6 382.4,70.1 380.7,68.7 378.8,67.3 377.0,66.0 375.1,64.8 373.1,63.7 371.1,62.6 369.1,61.6 367.0,60.7 364.9,59.8 362.7,59.1 360.6,58.4 358.4,57.7 356.2,57.2 353.9,56.7 351.7,56.2 349.5,55.8 347.2,55.5 345.0,55.2 342.8,54.9 340.5,54.7 338.3,54.6 336.1,54.4 333.9,54.3 331.7,54.2 329.5,54.1 327.3,54.0 325.1,54.0 322.9,53.9 320.8,53.9 318.6,53.9 316.5,53.9 314.3,53.8 312.2,53.8 310.1,53.8 307.9,53.8 305.8,53.8 303.7,53.8 301.6,53.8 299.5,53.8 297.4,53.8 295.2,53.8 293.1,53.8 291.0,53.8 288.9,53.8 286.8,53.8 284.6,53.9 282.5,53.9 280.3,53.9 278.2,53.9 276.0,53.9 273.8,54.0 271.6,54.1 269.4,54.1 267.2,54.2 265.0,54.3 262.8,54.5 260.6,54.6 258.3,54.8 256.1,55.1 253.9,55.3 251.6,55.7 249.4,56.0 247.2,56.4 244.9,56.9 242.7,57.4 240.5,58.0 238.4,58.7 236.2,59.4 234.1,60.2 232.0,61.1 229.9,62.1 227.9,63.1 225.9,64.2 224.0,65.4 222.1,66.7 220.2,68.0 218.4,69.4 216.7,70.9 215.0,72.4 213.4,74.0 211.8,75.6 210.3,77.3 208.8,79.1 207.4,80.9 206.1,82.7 204.8,84.6 203.5,86.5 202.4,88.4 201.2,90.4 200.1,92.3 199.1,94.3 198.1,96.4 197.1,98.4 196.2,100.4 195.3,102.5 194.5,104.5 193.7,106.6 192.9,108.6 192.2,110.7 191.5,112.7 190.8,114.8 190.2,116.9 189.6,118.9 189.0,121.0 188.4,123.0 187.9,125.0 187.4,127.1 186.9,129.1 186.5,131.1 186.0,133.1 185.6,135.1 185.3,137.1 184.9,139.1 184.5,141.1 184.2,143.1 183.9,145.0 183.6,147.0 183.3,149.0 183.1,150.9 182.8,152.9 182.6,154.8 182.4,156.7 182.2,158.7 182.0,160.6 181.8,162.5 181.6,164.4 181.5,166.3 181.4,168.2 181.2,170.1 181.1,172.0 181.0,173.9 181.0,175.8 180.9,177.7 180.8,179.5 180.8,181.4 180.7,183.3 180.7,185.2 180.7,187.1 180.7,188.9 180.7,190.8 180.7,192.7 180.8,194.6 180.8,196.5 180.9,198.3 181.0,200.2 181.0,202.1 181.1,204.0 181.2,205.9 181.4,207.8 181.5,209.7 181.6,211.6 181.8,213.5 182.0,215.4 182.2,217.3 182.4,219.3 182.6,221.2 182.8,223.1 183.1,225.1 183.3,227.0 183.6,229.0 183.9,231.0 184.2,232.9 184.5,234.9 184.9,236.9 185.3,238.9 185.6,240.9 186.0,242.9 186.5,244.9 186.9,246.9 187.4,248.9 187.9,251.0 188.4,253.0 189.0,255.0 189.6,257.1 190.2,259.1 190.8,261.2 191.5,263.3 192.2,265.3 192.9,267.4 193.7,269.4 194.5,271.5 195.3,273.5 196.2,275.6 197.1,277.6 198.1,279.6 199.1,281.7 200.1,283.7 201.2,285.6 202.4,287.6 203.5,289.5 204.8,291.4 206.1,293.3 207.4,295.1 208.8,296.9 210.3,298.7 211.8,300.4 213.4,302.0 215.0,303.6 216.7,305.1 218.4,306.6 220.2,308.0 222.1,309.3 224.0,310.6 225.9,311.8 227.9,312.9 229.9,313.9 232.0,314.9 234.1,315.8 236.2,316.6 238.4,317.3 240.5,318.0 242.7,318.6 244.9,319.1 247.2,319.6 249.4,320.0 251.6,320.3 253.9,320.7 256.1,320.9 258.3,321.2 260.6,321.4 262.8,321.5 265.0,321.7 267.2,321.8 269.4,321.9 271.6,321.9 273.8,322.0 276.0,322.1 278.2,322.1 280.3,322.1 282.5,322.1 284.6,322.1 286.8,322.2 288.9,322.2 291.0,322.2 293.1,322.2 295.2,322.2 297.4,322.2 299.5,322.2 301.6,322.2 303.7,322.2 305.8,322.2 307.9,322.2 310.1,322.2 312.2,322.2 314.3,322.2 316.5,322.1 318.6,322.1 320.8,322.1 322.9,322.1 325.1,322.0 327.3,322.0 329.5,321.9 331.7,321.8 333.9,321.7 336.1,321.6 338.3,321.4 340.5,321.3 342.8,321.1 345.0,320.8 347.2,320.5 349.5,320.2 351.7,319.8 353.9,319.3 356.2,318.8 358.4,318.3 360.6,317.6 362.7,316.9 364.9,316.2 367.0,315.3 369.1,314.4 371.1,313.4 373.1,312.3 375.1,311.2 377.0,310.0 378.8,308.7 380.7,307.3 382.4,305.9 384.1,304.4 385.8,302.8 387.4,301.2 388.9,299.5 390.4,297.8 391.9,296.0 393.2,294.2 394.6,292.4 395.8,290.5 397.1,288.6 398.2,286.6 399.3,284.6 400.4,282.7 401.4,280.7 402.4,278.6 403.4,276.6 404.3,274.6 405.1,272.5 405.9,270.5 406.7,268.4 407.5,266.3 408.2,264.3 408.9,262.2 409.5,260.2 410.1,258.1 410.7,256.1 411.3,254.0 411.8,252.0 412.3,249.9 412.8,247.9 413.3,245.9 413.7,243.9 414.2,241.9 414.6,239.9 414.9,237.9 415.3,235.9 415.6,233.9 416.0,231.9 416.3,230.0 416.5,228.0 416.8,226.1 417.1,224.1 417.3,222.2 417.5,220.2 417.7,218.3 417.9,216.4 418.1,214.5 418.3,212.6 418.4,210.6 418.6,208.7 418.7,206.8 418.8,205.0 418.9,203.1 419.0,201.2 419.1,199.3 419.1,197.4 419.2,195.5 419.2,193.6 419.3,191.8 419.3,189.9 419.3,188.0 406.1,188.0 406.1,189.7 406.0,191.3 406.0,193.0 406.0,194.7 405.9,196.4 405.8,198.0 405.7,199.7 405.6,201.4 405.5,203.1 405.4,204.7 405.3,206.4 405.1,208.1 404.9,209.8 404.7,211.5 404.5,213.2 404.3,214.9 404.1,216.6 403.8,218.2 403.6,219.9 403.3,221.7 403.0,223.4 402.7,225.1 402.3,226.8 402.0,228.5 401.6,230.2 401.2,231.9 400.8,233.6 400.3,235.3 399.9,237.1 399.4,238.8 398.9,240.5 398.3,242.2 397.8,243.9 397.2,245.6 396.6,247.4 395.9,249.1 395.2,250.8 394.5,252.4 393.8,254.1 393.0,255.8 392.2,257.5 391.4,259.1 390.5,260.7 389.6,262.4 388.6,264.0 387.6,265.5 386.6,267.1 385.5,268.6 384.4,270.1 383.2,271.6 382.0,273.0 380.8,274.4 379.5,275.7 378.2,277.1 376.8,278.3 375.4,279.5 373.9,280.7 372.4,281.8 370.9,282.9 369.3,283.9 367.7,284.9 366.1,285.7 364.4,286.6 362.7,287.4 361.0,288.1 359.2,288.8 357.5,289.4 355.7,290.0 353.9,290.5 352.1,290.9 350.3,291.4 348.5,291.7 346.6,292.1 344.8,292.4 343.0,292.6 341.2,292.9 339.3,293.1 337.5,293.2 335.7,293.4 333.9,293.5 332.1,293.6 330.3,293.7 328.6,293.8 326.8,293.8 325.1,293.9 323.3,293.9 321.6,294.0 319.8,294.0 318.1,294.0 316.4,294.0 314.7,294.0 313.0,294.1 311.3,294.1 309.6,294.1 307.9,294.1 306.3,294.1 304.6,294.1 302.9,294.1 301.3,294.1 299.6,294.1 297.9,294.1 296.2,294.1 294.6,294.1 292.9,294.1 291.2,294.1 289.5,294.1 287.8,294.1 286.1,294.1 284.4,294.0 282.7,294.0 281.0,294.0 279.3,294.0 277.6,294.0 275.8,293.9 274.1,293.9 272.3,293.8 270.5,293.8 268.8,293.7 267.0,293.6 265.2,293.4 263.4,293.3 261.6,293.1 259.8,293.0 257.9,292.7 256.1,292.5 254.3,292.2 252.5,291.9 250.6,291.5 248.8,291.2 247.0,290.7 245.2,290.2 243.4,289.7 241.6,289.1 239.9,288.4 238.1,287.7 236.4,287.0 234.7,286.2 233.1,285.3 231.5,284.4 229.9,283.4 228.3,282.4 226.8,281.3 225.3,280.1 223.9,278.9 222.5,277.7 221.2,276.4 219.8,275.1 218.6,273.7 217.4,272.3 216.2,270.8 215.0,269.4 213.9,267.8 212.9,266.3 211.9,264.7 210.9,263.2 210.0,261.6 209.1,259.9 208.2,258.3 207.4,256.6 206.6,255.0 205.8,253.3 205.1,251.6 204.4,249.9 203.8,248.2 203.1,246.5 202.5,244.8 201.9,243.1 201.4,241.4 200.9,239.6 200.4,237.9 199.9,236.2 199.4,234.5 199.0,232.8 198.6,231.1 198.2,229.3 197.8,227.6 197.5,225.9 197.2,224.2 196.9,222.5 196.6,220.8 196.3,219.1 196.0,217.4 195.8,215.7 195.6,214.0 195.4,212.3 195.2,210.6 195.0,208.9 194.8,207.3 194.7,205.6 194.5,203.9 194.4,202.2 194.3,200.5 194.2,198.9 194.1,197.2 194.1,195.5 194.0,193.8 194.0,192.2 193.9,190.5 193.9,188.8 193.9,187.2 193.9,185.5 194.0,183.8 194.0,182.2 194.1,180.5 194.1,178.8 194.2,177.1 194.3,175.5 194.4,173.8 194.5,172.1 194.7,170.4 194.8,168.7 195.0,167.1 195.2,165.4 195.4,163.7 195.6,162.0 195.8,160.3 196.0,158.6 196.3,156.9 196.6,155.2 196.9,153.5 197.2,151.8 197.5,150.1 197.8,148.4 198.2,146.7 198.6,144.9 199.0,143.2 199.4,141.5 199.9,139.8 200.4,138.1 200.9,136.4 201.4,134.6 201.9,132.9 202.5,131.2 203.1,129.5 203.8,127.8 204.4,126.1 205.1,124.4 205.8,122.7 206.6,121.0 207.4,119.4 208.2,117.7 209.1,116.1 210.0,114.4 210.9,112.8 211.9,111.3 212.9,109.7 213.9,108.2 215.0,106.6 216.2,105.2 217.4,103.7 218.6,102.3 219.8,100.9 221.2,99.6 222.5,98.3 223.9,97.1 225.3,95.9 226.8,94.7 228.3,93.6 229.9,92.6 231.5,91.6 233.1,90.7 234.7,89.8 236.4,89.0 238.1,88.3 239.9,87.6 241.6,86.9 243.4,86.3 245.2,85.8 247.0,85.3 248.8,84.8 250.6,84.5 252.5,84.1 254.3,83.8 256.1,83.5 257.9,83.3 259.8,83.0 261.6,82.9 263.4,82.7 265.2,82.6 267.0,82.4 268.8,82.3 270.5,82.2 272.3,82.2 274.1,82.1 275.8,82.1 277.6,82.0 279.3,82.0 281.0,82.0 282.7,82.0 284.4,82.0 286.1,81.9 287.8,81.9 289.5,81.9 291.2,81.9 292.9,81.9 294.6,81.9 296.2,81.9 297.9,81.9 299.6,81.9 301.3,81.9 302.9,81.9 304.6,81.9 306.3,81.9 307.9,81.9 309.6,81.9 311.3,81.9 313.0,81.9 314.7,82.0 316.4,82.0 318.1,82.0 319.8,82.0 321.6,82.0 323.3,82.1 325.1,82.1 326.8,82.2 328.6,82.2 330.3,82.3 332.1,82.4 333.9,82.5 335.7,82.6 337.5,82.8 339.3,82.9 341.2,83.1 343.0,83.4 344.8,83.6 346.6,83.9 348.5,84.3 350.3,84.6 352.1,85.1 353.9,85.5 355.7,86.0 357.5,86.6 359.2,87.2 361.0,87.9 362.7,88.6 364.4,89.4 366.1,90.3 367.7,91.1 369.3,92.1 370.9,93.1 372.4,94.2 373.9,95.3 375.4,96.5 376.8,97.7 378.2,98.9 379.5,100.3 380.8,101.6 382.0,103.0 383.2,104.4 384.4,105.9 385.5,107.4 386.6,108.9 387.6,110.5 388.6,112.0 389.6,113.6 390.5,115.3 391.4,116.9 392.2,118.5 393.0,120.2 393.8,121.9 394.5,123.6 395.2,125.2 395.9,126.9 396.6,128.6 397.2,130.4 397.8,132.1 398.3,133.8 398.9,135.5 399.4,137.2 399.9,138.9 400.3,140.7 400.8,142.4 401.2,144.1 401.6,145.8 402.0,147.5 402.3,149.2 402.7,150.9 403.0,152.6 403.3,154.3 403.6,156.1 403.8,157.8 404.1,159.4 404.3,161.1 404.5,162.8 404.7,164.5 404.9,166.2 405.1,167.9 405.3,169.6 405.4,171.3 405.5,172.9 405.6,174.6 405.7,176.3 405.8,178.0 405.9,179.6 406.0,181.3 406.0,183.0 406.0,184.7 406.1,186.3 406.1,188.0" fill="#e6edf2" stroke="none"/>
 <line x1="150.0" y1="188.0" x2="458.0" y2="188.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#cax)"/><line x1="300.0" y1="338.0" x2="300.0" y2="30.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#cax)"/><text x="462.0" y="206.0" text-anchor="end" font-size="15" fill="#334155" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">x</tspan></text><text x="292.0" y="36.0" text-anchor="end" font-size="15" fill="#334155" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">p</tspan></text>
@@ -1790,7 +1930,7 @@ Considérons maintenant une application très proche de l'identité, $I + \varep
 
 <div class="svg-container">
 <svg data-still="2.7" viewBox="0 42 600 208" role="img" aria-label="Pendant un court instant, un petit carré se déforme en parallélogramme ; au premier ordre, seule la diagonale de la matrice change son aire" style="width:100%;max-width:600px;height:auto;">
-<defs><marker id="tv" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker></defs>
+<defs><marker id="tv" viewBox="0 42 10 166" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker></defs>
 <polygon points="95.0,205.0 205.0,205.0 205.0,95.0 95.0,95.0" fill="none" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="4 3"/>
 <polygon points="95.0,205.0 243.5,185.2 271.0,88.4 122.5,108.2" fill="#c7d8e3" stroke="#004D80" stroke-width="1.5"><animate attributeName="points" dur="6s" repeatCount="indefinite" values="95.0,205.0 205.0,205.0 205.0,95.0 95.0,95.0;95.0,205.0 214.6,200.1 221.5,93.4 101.9,98.3;95.0,205.0 224.2,195.1 238.0,91.7 108.8,101.6;95.0,205.0 233.9,190.2 254.5,90.1 115.6,104.9;95.0,205.0 243.5,185.2 271.0,88.4 122.5,108.2;95.0,205.0 243.5,185.2 271.0,88.4 122.5,108.2;95.0,205.0 233.9,190.2 254.5,90.1 115.6,104.9;95.0,205.0 224.2,195.1 238.0,91.7 108.8,101.6;95.0,205.0 214.6,200.1 221.5,93.4 101.9,98.3;95.0,205.0 205.0,205.0 205.0,95.0 95.0,95.0;95.0,205.0 205.0,205.0 205.0,95.0 95.0,95.0" keyTimes="0.000;0.100;0.200;0.300;0.400;0.500;0.600;0.700;0.800;0.900;1.000"/></polygon>
 <line x1="95" y1="205" x2="243.5" y2="185.2" stroke="#004D80" stroke-width="1.8" marker-end="url(#tv)"><animate attributeName="x2" dur="6s" repeatCount="indefinite" values="205.0;214.6;224.2;233.9;243.5;243.5;233.9;224.2;214.6;205.0;205.0" keyTimes="0.000;0.100;0.200;0.300;0.400;0.500;0.600;0.700;0.800;0.900;1.000"/><animate attributeName="y2" dur="6s" repeatCount="indefinite" values="205.0;200.1;195.1;190.2;185.2;185.2;190.2;195.1;200.1;205.0;205.0" keyTimes="0.000;0.100;0.200;0.300;0.400;0.500;0.600;0.700;0.800;0.900;1.000"/></line>
@@ -1927,7 +2067,7 @@ $$p\_i = m\\,\vec v\cdot\vec e\_i = m\\,g\_{ij}\\,\dot q^j.$$
 
 <div class="svg-container">
 <svg viewBox="0 28 600 257" role="img" aria-label="En coordonnées polaires, les moments sont les projections de la quantité de mouvement sur les vecteurs de base : e_r, de longueur 1, et e_θ, de longueur r" style="width:100%;max-width:600px;height:auto;">
-<defs><marker id="eb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker></defs>
+<defs><marker id="eb" viewBox="0 28 10 229" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker></defs>
 <defs><marker id="em" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#970E53"/></marker></defs>
 <defs><marker id="et" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#006C65"/></marker></defs>
 <defs><marker id="pax2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
@@ -2081,7 +2221,7 @@ On vérifie que le jacobien vaut $\cos^2 X + \sin^2 X = 1$&nbsp;: la transformat
 
 <div class="svg-container">
 <svg data-still="1.5" viewBox="0 5 600 284" role="img" aria-label="La transformation x = √(2P) sin X, p = √(2P) cos X envoie les cercles du plan (x, p) sur des droites horizontales du plan (X, P) ; un secteur d'anneau devient un rectangle de même aire" style="width:100%;max-width:600px;height:auto;">
-<defs><marker id="aax" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
+<defs><marker id="aax" viewBox="0 5 10 279" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
 <defs><marker id="abig" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#64748b" stroke-width="1.6"/></marker></defs>
 <polygon points="135.0,92.1 137.5,92.2 140.1,92.4 142.6,92.7 145.0,93.1 147.5,93.7 149.9,94.5 152.3,95.3 154.6,96.3 156.9,97.4 159.1,98.6 161.3,99.9 163.4,101.4 165.4,102.9 167.3,104.6 169.1,106.3 170.8,108.2 172.5,110.1 174.0,112.1 175.4,114.2 176.7,116.4 177.9,118.6 179.0,120.9 179.9,123.3 180.7,125.7 181.4,128.1 182.0,130.6 182.4,133.1 182.7,135.6 182.9,138.1 182.9,140.6 182.8,143.2 182.6,145.7 182.2,148.2 181.7,150.7 181.1,153.1 180.3,155.5 179.4,157.9 178.4,160.2 177.3,162.5 176.1,164.7 174.7,166.8 173.2,168.9 171.7,170.9 170.0,172.7 168.2,174.5 166.3,176.3 164.4,177.9 162.3,179.4 160.2,180.7 158.0,182.0 155.8,183.2 153.5,184.2 151.1,185.1 148.7,185.9 146.3,186.6 143.8,187.1 141.3,187.5 138.8,187.8 136.3,187.9 133.7,187.9 131.2,187.8 128.7,187.5 126.2,187.1 123.7,186.6 121.3,185.9 118.9,185.1 116.5,184.2 114.2,183.2 112.0,182.0 109.8,180.7 107.7,179.4 105.6,177.9 103.7,176.3 101.8,174.5 100.0,172.7 98.3,170.9 96.8,168.9 95.3,166.8 93.9,164.7 92.7,162.5 91.6,160.2 90.6,157.9 89.7,155.5 88.9,153.1 88.3,150.7 87.8,148.2 87.4,145.7 87.2,143.2 87.1,140.6 87.1,138.1 87.3,135.6 87.6,133.1 88.0,130.6 88.6,128.1 89.3,125.7 90.1,123.3 91.0,120.9 92.1,118.6 93.3,116.4 94.6,114.2 96.0,112.1 97.5,110.1 99.2,108.2 100.9,106.3 102.7,104.6 104.6,102.9 106.6,101.4 108.7,99.9 110.9,98.6 113.1,97.4 115.4,96.3 117.7,95.3 120.1,94.5 122.5,93.7 125.0,93.1 127.4,92.7 129.9,92.4 132.5,92.2 135.0,92.1" fill="none" stroke="#8cafc6" stroke-width="1"/>
 <line x1="350.2" y1="197.5" x2="563.1" y2="197.5" stroke="#8cafc6" stroke-width="1"/>
@@ -2159,7 +2299,7 @@ Avec $n$ degrés de liberté, la conservation du volume total ne suffit plus. Le
 
 <div class="svg-container">
 <svg viewBox="0 5 600 225" role="img" aria-label="Un carré du plan (x1, p1) est transformé ; ses projections sur les plans (X1, P1) et (X2, P2) ont des aires dont la somme est égale à l'aire de départ" style="width:100%;max-width:600px;height:auto;">
-<defs><marker id="qax" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
+<defs><marker id="qax" viewBox="0 5 10 220" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
 <defs><marker id="qbig" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#64748b" stroke-width="1.6"/></marker></defs>
 <line x1="30.0" y1="146.3" x2="178.0" y2="146.3" stroke="#94a3b8" stroke-width="1" marker-end="url(#qax)"/><line x1="48.7" y1="165.0" x2="48.7" y2="17.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#qax)"/><text x="182.0" y="164.3" text-anchor="end" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">x</tspan>₁</text><text x="40.7" y="23.0" text-anchor="end" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">p</tspan>₁</text>
 <polygon points="48.7,146.3 142.0,146.3 142.0,53.0 48.7,53.0" fill="#b2cad9" stroke="#004D80" stroke-width="1.4"/>
