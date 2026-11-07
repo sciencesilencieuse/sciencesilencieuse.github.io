@@ -128,7 +128,7 @@ Ce premier axiome contient le **principe de superposition**&nbsp;: toute combina
 <div id="axiom">
 
 Axiome 2&nbsp;: <b>Évolution unitaire</b><br>
-Entre deux mesures, l’évolution d’un système quantique <b>isolé</b> est unitaire, c’est-à-dire décrite par un <b>opérateur unitaire</b> $\hat U$ (tel que $\hat U^\dagger = \hat U^{-1}$), parfois appelé «&nbsp;porte&nbsp;», agissant selon $\lvert \psi\rangle \;\longmapsto\;\hat U \lvert \psi\rangle$.<br>
+Entre deux mesures, l’évolution d’un système quantique <b>isolé</b> est unitaire, c’est-à-dire décrite par un <b>opérateur unitaire</b> $\hat U$ (tel que $\hat U^\dagger = \hat U^{-1}$), parfois appelé «&nbsp;porte&nbsp;», agissant selon $\lvert \psi\rangle \\;\longmapsto\\;\hat U \lvert \psi\rangle$.<br>
 En particulier, l’évolution dans le temps obéit à l’<b>équation de Schrödinger</b>
 
 $$\mathrm{i}\\,\hbar\frac{\partial}{\partial t}\lvert \psi\rangle \\;=\\; \hat H \lvert \psi\rangle ,$$
