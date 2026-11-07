@@ -89,7 +89,10 @@ details > summary:first-of-type {
 details[open] > summary:first-of-type {
   list-style-type: disclosure-open;
 }
-
+ul
+{
+margin-top:0em;
+}
 </style>
 
 
@@ -113,31 +116,34 @@ Les lignes qui suivent résument brièvement les axiomes de ce formalisme et en 
 Le formalisme **standard** de la mécanique quantique, celui des manuels, hérité de Dirac et de von Neumann, repose sur un jeu d'axiomes[^1]&nbsp;:
 
 <div id="axiom">
-<ul><li>Axiome 1&nbsp;: <b>État quantique</b><br>
+
+Axiome 1&nbsp;: <b>État quantique</b><br>
 À un instant fixé, l’état d’un système quantique est un <b>vecteur normé</b> $\lvert \psi\rangle$ (c'est-à-dire tel que $\langle\psi\vert\psi\rangle = 1$) d'un <b>espace de Hilbert</b> complexe $\mathcal{H}$. Deux vecteurs qui ne diffèrent que d'un facteur de phase global $\mathrm{e}^{\mathrm{i}\gamma}$ représentent le même état.
-</li></ul>
+
 </div>
 
 Ce premier axiome contient le **principe de superposition**&nbsp;: toute combinaison linéaire (normée) d'états possibles est encore un état possible. Le deuxième fixe la **dynamique**&nbsp;:
 
 
 <div id="axiom">
-<ul><li>Axiome 2&nbsp;: <b>Évolution unitaire</b><br>
+
+Axiome 2&nbsp;: <b>Évolution unitaire</b><br>
 Entre deux mesures, l’évolution d’un système quantique <b>isolé</b> est unitaire, c’est-à-dire décrite par un <b>opérateur unitaire</b> $\hat U$ (tel que $\hat U^\dagger = \hat U^{-1}$), parfois appelé «&nbsp;porte&nbsp;», agissant selon $\lvert \psi\rangle \;\longmapsto\;\hat U \lvert \psi\rangle$.<br>
 En particulier, l’évolution dans le temps obéit à l’<b>équation de Schrödinger</b>
 
 $$\mathrm{i}\\,\hbar\frac{\partial}{\partial t}\lvert \psi\rangle \\;=\\; \hat H \lvert \psi\rangle ,$$
 
 où $\hat H$ est l’opérateur <b>hamiltonien</b>. Pour un hamiltonien indépendant du temps, elle s'intègre en $\hat U(t) = \mathrm{e}^{-\mathrm{i}\hat H t/\hbar}$.
-</li></ul>
+
 </div>
 
 L'axiome suivant décrit les systèmes formés de plusieurs parties. C'est lui qui ouvre la porte aux **états intriqués**, l'aspect le plus déroutant de la théorie. Il est parfois omis, soit parce qu'on le juge naturel, soit parce qu'on peut le déduire des autres axiomes (voir [cet article](https://arxiv.org/pdf/2003.11007) de Carcassi, Maccone et Aidala, 2021).
 
 <div id="axiom">
-<ul><li>Axiome 3&nbsp;: <b>Produit tensoriel</b><br>
+
+Axiome 3&nbsp;: <b>Produit tensoriel</b><br>
 L'état quantique d'un système composé est un vecteur du produit tensoriel des espaces de Hilbert de ses sous-systèmes.
-</li></ul>
+
 </div>
 
 
@@ -145,7 +151,8 @@ Ces trois premiers axiomes contiennent toute la structure mathématique de la th
 
 
 <div id="axiom">
-<ul><li>Axiome 4&nbsp;: <b>Règle de Born</b><br>
+
+Axiome 4&nbsp;: <b>Règle de Born</b><br>
 Une grandeur mesurable est décrite par un opérateur hermitien $\hat A$ (c'est-à-dire tel que $\hat A^\dagger = \hat A$), appelé <b>observable</b>.<br>
 Cette observable possède une décomposition spectrale
 
@@ -154,31 +161,33 @@ $$\hat A \\;=\\; \sum_i \lambda_i \\,\lvert e_i\rangle\langle e_i\rvert$$
 où les valeurs propres $\lambda_i$, réelles, sont les résultats possibles de la mesure, et où les vecteurs propres $\lvert e_i\rangle$ forment une base orthonormée de $\mathcal{H}$ (on suppose ici les valeurs propres distinctes&nbsp;; sinon, on remplace chaque $\lvert e_i\rangle\langle e_i\rvert$ par le projecteur sur le sous-espace propre correspondant).<br>
 Si l’on mesure $\hat A$ sur l’état $\lvert \psi\rangle$, la probabilité d’obtenir le résultat $\lambda_i$ est
 $$p(\lambda_i) \\;=\\; \bigl|\langle e_i \vert \psi\rangle\bigr|^2$$
-</li></ul>
+
 </div>
 
 <br>
 
 <div id="axiom">
-<ul><li>Axiome 5&nbsp;: <b>Postulat de réduction du paquet d'onde</b><br>
+
+Axiome 5&nbsp;: <b>Postulat de réduction du paquet d'onde</b><br>
 Juste après une mesure ayant donné le résultat $\lambda_i$, l’état du système est «&nbsp;réduit&nbsp;» sur le vecteur propre correspondant&nbsp;:
 
 $$\lvert\psi\rangle \\;\longmapsto\\; \frac{\lvert e_i\rangle\langle e_i \vert \psi\rangle}{\sqrt{p(\lambda_i)}},$$
 
 c'est-à-dire $\lvert e_i\rangle$, à une phase près.
-</li></ul>
+
 </div>
 
 <br>
 
 <div id="axiom">
-<ul><li>Axiome 6&nbsp;: <b>Relation de complétude</b><br>
+
+Axiome 6&nbsp;: <b>Relation de complétude</b><br>
 Les <b>projecteurs</b> associés à une mesure satisfont la relation
 
 $$\sum_i \lvert e_i\rangle\langle e_i\rvert \\;=\\; \mathbb{I}$$
 
 où $\mathbb{I}$ est l’opérateur identité sur $\mathcal{H}$.
-</li></ul>
+
 </div>
 
 Ce dernier axiome n'est pas vraiment indépendant des autres&nbsp;: il découle du fait que les vecteurs propres d'une observable forment une base orthonormée (théorème spectral). Son rôle est de garantir que les probabilités de la règle de Born somment à $1$&nbsp;:
