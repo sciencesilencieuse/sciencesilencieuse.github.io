@@ -219,15 +219,18 @@ Attention&nbsp;: cette distinction ne concerne que les modèles qui admettent un
 
 ### Les attraits de la vision ψ-épistémique
 
-Tous les ψ-épistémiques s'accordent sur le statut probabiliste de la fonction d'onde. Ce point de vue permet de démystifier certaines bizarreries quantiques, et c'est une approche de ce type que j'utilise dans la vidéo ci-dessous pour tenter de rendre l'état quantique plus accessible.
-
-
-{{< youtube-plus id="reIcNs4Ul-c" ratio="16x9" width="600" shadow="false" rounded="true" >}}
-
+Tous les ψ-épistémiques s'accordent sur le statut probabiliste de la fonction d'onde. Ce point de vue permet de démystifier certaines bizarreries quantiques.
 
 Plusieurs arguments plaident pour cette vision&nbsp;:
 <ul>
 <li><b>La structure de la théorie.</b> La théorie quantique peut être vue comme une généralisation <i>non commutative</i> de la théorie classique des probabilités, comme l'a montré von Neumann.</li>
+</ul>
+
+Dans la vidéo suivante, l'état quantique est présenté comme une généralisation du vecteur de probabilités, et la mesure comme un gain d'information.
+
+{{< youtube-plus id="reIcNs4Ul-c" ratio="16x9" width="600" shadow="false" rounded="true" >}}
+
+<ul>
 <li><b>La mise à jour de l'état.</b> Une mesure «&nbsp;reprépare&nbsp;» le système dans un nouvel état, exactement comme un état de connaissance est mis à jour chaque fois que l'observateur obtient une nouvelle information.</li>
 <li><b>L'indiscernabilité des états non orthogonaux.</b> Deux états quantiques non orthogonaux ne peuvent jamais être distingués avec certitude par une mesure. Le recouvrement de leurs distributions $\mu_\psi$ l'expliquerait naturellement&nbsp;: si un même état physique peut provenir des deux préparations, aucune mesure ne peut toujours les départager.</li>
 <li><b>La dissolution du problème de la mesure.</b> C'est l'argument le plus fort.</li>
@@ -239,7 +242,9 @@ Rappelons-nous que la tension naît de la double règle d'évolution du formalis
 <img src="/memeschro.jpg" style="box-shadow:none;background:none;border-radius:10px">
 </div>
 
-Le problème ne se pose en fait que si l'état quantique est ontique&nbsp;: c'est seulement alors que le chat est *réellement* dans une superposition de deux états. Pour un ψ-épistémique, la fonction d'onde n'a jamais représenté que l'étendue de nos connaissances&nbsp;: le chat peut très bien être mort *ou* vivant avant qu'on regarde, et la superposition ne traduit que notre ignorance de la possibilité qui s'est réalisée. La «&nbsp;réduction&nbsp;» de l'état lors de la mesure n'est alors qu'une mise à jour de notre information, comme lorsqu'on découvre le résultat d'un tirage au sort.
+Le problème ne se pose en fait que si l'état quantique est ontique&nbsp;: c'est seulement alors que le chat est *réellement* dans une superposition de deux états. Pour un ψ-épistémique, la fonction d'onde n'a jamais représenté que l'étendue de nos connaissances sur l'état physique réel $\lambda$&nbsp;: le chat est dans un état bien défini avant qu'on regarde, et la «&nbsp;réduction&nbsp;» de l'état lors de la mesure n'est qu'une mise à jour de notre information, comme lorsqu'on découvre le résultat d'un tirage au sort.
+
+Attention toutefois à ne pas aller trop vite&nbsp;: cela ne signifie pas que la superposition se réduit à un simple mélange «&nbsp;mort *ou* vivant, à 50&nbsp;%&nbsp;». Superposition et mélange ne donnent pas les mêmes prédictions pour toutes les mesures (pensons aux interférences)&nbsp;: ils correspondent donc à des distributions différentes sur les états $\lambda$. Ce que dit le ψ-épistémique, c'est qu'il existe un état réel sous-jacent et que ψ décrit notre ignorance à son sujet, pas que cet état réel est forcément l'un des termes de la superposition.
 
 
 ## Le théorème PBR
