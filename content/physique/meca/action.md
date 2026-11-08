@@ -461,6 +461,7 @@ Le schéma ci-dessous reprend la construction de Huygens lui-même (*Traité de 
 <div class="svg-container">
 <svg viewBox="0 0 600 400" role="img" aria-label="La construction de Huygens pour la réfraction : pendant que le front incident parcourt CB à la vitesse v1, l'ondelette émise en A parcourt AD à la vitesse v2 dans le second milieu. Le front réfracté BD est tangent à toutes les ondelettes ; les triangles rectangles ACB et ADB, d'hypoténuse commune AB, donnent sin i1 = v1 Δt / AB et sin i2 = v2 Δt / AB." style="width:100%;max-width:600px;height:auto;">
 <defs><marker id="hsa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#006C65"/></marker></defs>
+<defs><marker id="hsm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#970E53"/></marker></defs>
 <defs><clipPath id="hs1"><rect x="0" y="0" width="600" height="205"/></clipPath><clipPath id="hs2"><rect x="0" y="205" width="600" height="195"/></clipPath></defs>
 <rect x="0" y="205" width="600" height="195" fill="#edf3f6"/>
 <line x1="132.5" y1="165.1" x2="256.5" y2="17.4" stroke="#8cafc6" stroke-width="1.6" stroke-linecap="round"/>
@@ -469,21 +470,18 @@ Le schéma ci-dessous reprend la construction de Huygens lui-même (*Traité de 
 <line x1="522.2" y1="276.1" x2="300.5" y2="407.8" stroke="#8cafc6" stroke-width="1.6" stroke-linecap="round"/>
 <polyline points="45.9,92.5 180.0,205.0 256.6,334.0" fill="none" stroke="#006C65" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6 4"/>
 <line x1="110.5" y1="146.7" x2="119.7" y2="154.4" stroke="#006C65" stroke-width="1.5" marker-end="url(#hsa)"/>
-<line x1="235.2" y1="297.9" x2="241.3" y2="308.2" stroke="#006C65" stroke-width="1.5" marker-end="url(#hsa)"/>
 <polyline points="345.9,92.5 480.0,205.0 556.6,334.0" fill="none" stroke="#006C65" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6 4"/>
-<line x1="410.5" y1="146.7" x2="419.7" y2="154.4" stroke="#006C65" stroke-width="1.5" marker-end="url(#hsa)"/>
 <line x1="535.2" y1="297.9" x2="541.3" y2="308.2" stroke="#006C65" stroke-width="1.5" marker-end="url(#hsa)"/>
 <path d="M26.8,205 A153.2,153.2 0 0 0 333.2,205" fill="none" stroke="#970E53" stroke-width="1.3" stroke-opacity="0.8"/>
-<circle cx="180.0" cy="205.0" r="3" fill="#970E53" />
 <path d="M177.9,205 A102.1,102.1 0 0 0 382.1,205" fill="none" stroke="#970E53" stroke-width="1.3" stroke-opacity="0.8"/>
-<circle cx="280.0" cy="205.0" r="3" fill="#970E53" />
 <path d="M328.9,205 A51.1,51.1 0 0 0 431.1,205" fill="none" stroke="#970E53" stroke-width="1.3" stroke-opacity="0.8"/>
-<circle cx="380.0" cy="205.0" r="3" fill="#970E53" />
 <line x1="0.0" y1="205.0" x2="600.0" y2="205.0" stroke="#6694b3" stroke-width="1.5" />
 <line x1="180.0" y1="205.0" x2="304.0" y2="57.3" stroke="#004D80" stroke-width="2.6" stroke-linecap="round"/>
 <line x1="480.0" y1="205.0" x2="258.2" y2="336.7" stroke="#004D80" stroke-width="2.6" stroke-linecap="round"/>
 <line x1="180.0" y1="205.0" x2="258.2" y2="336.7" stroke="#970E53" stroke-width="2.2" />
 <line x1="304.0" y1="57.3" x2="480.0" y2="205.0" stroke="#970E53" stroke-width="2.2" />
+<line x1="235.2" y1="297.9" x2="241.3" y2="308.2" stroke="#970E53" stroke-width="1.5" marker-end="url(#hsm)"/>
+<line x1="410.5" y1="146.7" x2="419.7" y2="154.4" stroke="#970E53" stroke-width="1.5" marker-end="url(#hsm)"/>
 <polyline points="298.2,64.2 305.1,70.0 310.8,63.1" fill="none" stroke="#334155" stroke-width="1"/>
 <polyline points="253.6,329.0 261.4,324.4 266.0,332.1" fill="none" stroke="#334155" stroke-width="1"/>
 <path d="M208.3,171.3 A44,44 0 0 1 224.0,205.0" fill="none" stroke="#006C65" stroke-width="1.5" />
@@ -494,12 +492,14 @@ Le schéma ci-dessous reprend la construction de Huygens lui-même (*Traité de 
 <circle cx="480.0" cy="205.0" r="4" fill="#004D80" />
 <circle cx="304.0" cy="57.3" r="4" fill="#004D80" />
 <circle cx="258.2" cy="336.7" r="4" fill="#004D80" />
-<text x="168.0" y="196.0" font-size="16" fill="#004D80" text-anchor="end" font-family="Georgia,'Times New Roman',serif" >A</text>
+<circle cx="280.0" cy="205.0" r="3.4" fill="#970E53" />
+<circle cx="380.0" cy="205.0" r="3.4" fill="#970E53" />
+<text x="170.0" y="226.0" font-size="16" fill="#004D80" text-anchor="end" font-family="Georgia,'Times New Roman',serif" >A</text>
 <text x="492.0" y="196.0" font-size="16" fill="#004D80" text-anchor="start" font-family="Georgia,'Times New Roman',serif" >B</text>
 <text x="300.0" y="45.3" font-size="16" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >C</text>
-<text x="246.2" y="352.7" font-size="16" fill="#004D80" text-anchor="end" font-family="Georgia,'Times New Roman',serif" >D</text>
+<text x="254.2" y="362.7" font-size="16" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >D</text>
 <text x="406.0" y="127.1" font-size="15" fill="#970E53" text-anchor="start" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">v</tspan><tspan dy="4" font-size="10.5">1</tspan><tspan dy="-4"> </tspan>Δ<tspan font-style="italic">t</tspan></text>
-<text x="207.1" y="274.9" font-size="15" fill="#970E53" text-anchor="end" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">v</tspan><tspan dy="4" font-size="10.5">2</tspan><tspan dy="-4"> </tspan>Δ<tspan font-style="italic">t</tspan></text>
+<text x="230.3" y="268.2" font-size="15" fill="#970E53" text-anchor="start" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">v</tspan><tspan dy="4" font-size="10.5">2</tspan><tspan dy="-4"> </tspan>Δ<tspan font-style="italic">t</tspan></text>
 <text x="586.0" y="26.0" font-size="13.5" fill="#334155" text-anchor="end" font-family="Georgia,'Times New Roman',serif" >milieu 1 : vitesse <tspan font-style="italic">v</tspan><tspan dy="4" font-size="10.5">1</tspan><tspan dy="-4"> </tspan></text>
 <text x="586.0" y="386.0" font-size="13.5" fill="#004D80" text-anchor="end" font-family="Georgia,'Times New Roman',serif" >milieu 2 : vitesse <tspan font-style="italic">v</tspan><tspan dy="4" font-size="10.5">2</tspan><tspan dy="-4"> </tspan>&lt; <tspan font-style="italic">v</tspan><tspan dy="4" font-size="10.5">1</tspan><tspan dy="-4"> </tspan></text>
 <text x="254.2" y="141.4" font-size="13" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" transform="rotate(-50.0 254.2 141.4)">front incident</text>
