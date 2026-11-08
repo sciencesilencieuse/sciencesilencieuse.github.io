@@ -286,42 +286,42 @@ Supposons que chaque électron emporte un «&nbsp;plan&nbsp;» fixant sa déviat
 <div class="svg-container">
 <svg viewBox="0 15 600 329" role="img" aria-label="Le graphe de l'argument GHZ : six nœuds (détecteur 1, 2 ou 3, réglé horizontalement ou verticalement) reliés par quatre lignes, une par configuration de mesure. Chaque nœud appartient à exactement deux lignes." style="width:100%;max-width:600px;height:auto;">
 <defs><marker id="gd" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="4.2" markerHeight="4.2" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 Z" fill="#004D80"/></marker></defs>
-<polyline points="110.0,312.0 205.0,168.0 300.0,52.0" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="110.0,312.0 205.0,168.0 300.0,52.0" fill="none" stroke="#970E53" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.85"/>
-<polyline points="490.0,312.0 395.0,168.0 300.0,52.0" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="490.0,312.0 395.0,168.0 300.0,52.0" fill="none" stroke="#006C65" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.85"/>
-<polyline points="110.0,312.0 300.0,218.0 395.0,168.0" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="110.0,312.0 300.0,218.0 395.0,168.0" fill="none" stroke="#006C65" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.85"/>
-<polyline points="205.0,168.0 300.0,218.0 490.0,312.0" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="205.0,168.0 300.0,218.0 490.0,312.0" fill="none" stroke="#006C65" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.85"/>
+<polyline points="87.0,312.0 205.0,168.0 300.0,52.0" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="87.0,312.0 205.0,168.0 300.0,52.0" fill="none" stroke="#970E53" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.85"/>
+<polyline points="513.0,312.0 395.0,168.0 300.0,52.0" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="513.0,312.0 395.0,168.0 300.0,52.0" fill="none" stroke="#006C65" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.85"/>
+<polyline points="87.0,312.0 300.0,218.0 395.0,168.0" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="87.0,312.0 300.0,218.0 395.0,168.0" fill="none" stroke="#006C65" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.85"/>
+<polyline points="205.0,168.0 300.0,218.0 513.0,312.0" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="205.0,168.0 300.0,218.0 513.0,312.0" fill="none" stroke="#006C65" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.85"/>
 <rect x="130.5" y="99.0" width="100.0" height="22" rx="11" fill="#fff" stroke="#970E53" stroke-width="1.4"/><text x="180.5" y="114.5" text-anchor="middle" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >hhh · impair</text>
 <rect x="370.5" y="99.0" width="86.0" height="22" rx="11" fill="#fff" stroke="#006C65" stroke-width="1.4"/><text x="413.5" y="114.5" text-anchor="middle" font-size="12" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >vvh · pair</text>
-<rect x="146.8" y="261.5" width="86.0" height="22" rx="11" fill="#fff" stroke="#006C65" stroke-width="1.4"/><text x="189.8" y="277.0" text-anchor="middle" font-size="12" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >hvv · pair</text>
-<rect x="367.2" y="261.5" width="86.0" height="22" rx="11" fill="#fff" stroke="#006C65" stroke-width="1.4"/><text x="410.2" y="277.0" text-anchor="middle" font-size="12" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >vhv · pair</text>
+<rect x="133.0" y="293.0" width="86.0" height="22" rx="11" fill="#fff" stroke="#006C65" stroke-width="1.4"/><text x="176.0" y="308.5" text-anchor="middle" font-size="12" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >hvv · pair</text>
+<rect x="381.0" y="293.0" width="86.0" height="22" rx="11" fill="#fff" stroke="#006C65" stroke-width="1.4"/><text x="424.0" y="308.5" text-anchor="middle" font-size="12" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >vhv · pair</text>
 <circle cx="300" cy="52" r="26" fill="#edf3f6" stroke="#004D80" stroke-width="1.8"/>
 <line x1="289" y1="52" x2="311" y2="52" stroke="#004D80" stroke-width="2.4" marker-start="url(#gd)" marker-end="url(#gd)"/>
 <circle cx="279" cy="31" r="10" fill="#004D80"/>
-<text x="279.0" y="35.5" text-anchor="middle" font-size="12.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-weight="bold">3</text>
+<text x="279.0" y="31.5" text-anchor="middle" font-size="12.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-weight="bold" dominant-baseline="central">3</text>
 <circle cx="205" cy="168" r="26" fill="#edf3f6" stroke="#004D80" stroke-width="1.8"/>
 <line x1="194" y1="168" x2="216" y2="168" stroke="#004D80" stroke-width="2.4" marker-start="url(#gd)" marker-end="url(#gd)"/>
 <circle cx="184" cy="147" r="10" fill="#004D80"/>
-<text x="184.0" y="151.5" text-anchor="middle" font-size="12.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-weight="bold">2</text>
+<text x="184.0" y="147.5" text-anchor="middle" font-size="12.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-weight="bold" dominant-baseline="central">2</text>
 <circle cx="395" cy="168" r="26" fill="#edf3f6" stroke="#004D80" stroke-width="1.8"/>
 <line x1="395" y1="157" x2="395" y2="179" stroke="#004D80" stroke-width="2.4" marker-start="url(#gd)" marker-end="url(#gd)"/>
 <circle cx="374" cy="147" r="10" fill="#004D80"/>
-<text x="374.0" y="151.5" text-anchor="middle" font-size="12.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-weight="bold">2</text>
+<text x="374.0" y="147.5" text-anchor="middle" font-size="12.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-weight="bold" dominant-baseline="central">2</text>
 <circle cx="300" cy="218" r="26" fill="#edf3f6" stroke="#004D80" stroke-width="1.8"/>
 <line x1="300" y1="207" x2="300" y2="229" stroke="#004D80" stroke-width="2.4" marker-start="url(#gd)" marker-end="url(#gd)"/>
 <circle cx="279" cy="197" r="10" fill="#004D80"/>
-<text x="279.0" y="201.5" text-anchor="middle" font-size="12.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-weight="bold">3</text>
-<circle cx="110" cy="312" r="26" fill="#edf3f6" stroke="#004D80" stroke-width="1.8"/>
-<line x1="99" y1="312" x2="121" y2="312" stroke="#004D80" stroke-width="2.4" marker-start="url(#gd)" marker-end="url(#gd)"/>
-<circle cx="89" cy="291" r="10" fill="#004D80"/>
-<text x="89.0" y="295.5" text-anchor="middle" font-size="12.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-weight="bold">1</text>
-<circle cx="490" cy="312" r="26" fill="#edf3f6" stroke="#004D80" stroke-width="1.8"/>
-<line x1="490" y1="301" x2="490" y2="323" stroke="#004D80" stroke-width="2.4" marker-start="url(#gd)" marker-end="url(#gd)"/>
-<circle cx="469" cy="291" r="10" fill="#004D80"/>
-<text x="469.0" y="295.5" text-anchor="middle" font-size="12.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-weight="bold">1</text>
+<text x="279.0" y="197.5" text-anchor="middle" font-size="12.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-weight="bold" dominant-baseline="central">3</text>
+<circle cx="87" cy="312" r="26" fill="#edf3f6" stroke="#004D80" stroke-width="1.8"/>
+<line x1="76" y1="312" x2="98" y2="312" stroke="#004D80" stroke-width="2.4" marker-start="url(#gd)" marker-end="url(#gd)"/>
+<circle cx="66" cy="291" r="10" fill="#004D80"/>
+<text x="66.0" y="291.5" text-anchor="middle" font-size="12.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-weight="bold" dominant-baseline="central">1</text>
+<circle cx="513" cy="312" r="26" fill="#edf3f6" stroke="#004D80" stroke-width="1.8"/>
+<line x1="513" y1="301" x2="513" y2="323" stroke="#004D80" stroke-width="2.4" marker-start="url(#gd)" marker-end="url(#gd)"/>
+<circle cx="492" cy="291" r="10" fill="#004D80"/>
+<text x="492.0" y="291.5" text-anchor="middle" font-size="12.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-weight="bold" dominant-baseline="central">1</text>
 </svg>
 </div>
 <p class="legende">Le graphe de la vidéo. Chaque nœud est une réponse à fixer&nbsp;: le numéro du détecteur figure dans la pastille, la flèche indique son orientation. Chaque ligne relie les trois réponses utilisées dans une configuration de mesure&nbsp;: la ligne magenta ($hhh$) doit compter un nombre impair de déviations positives, les trois lignes teal ($hvv$, $vhv$, $vvh$) un nombre pair.</p>
