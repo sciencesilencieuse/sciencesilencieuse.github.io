@@ -687,9 +687,56 @@ Le principe d'équilibre doit être respecté à la fois sur la paire et sur cha
 
 </div>
 
+### L'état produit
+
+Le cas le plus simple est celui où l'on possède une connaissance maximale sur **chacun** des deux systèmes, séparément. Si l'on sait que le système 1 est dans $a\lor b$ et le système 2 dans $c\lor d$, les couples possibles sont ceux qui combinent un état permis du premier et un état permis du second&nbsp;:
+
+<div style="overflow-x:auto;">
+
+$$(a\lor b)\\,\cdot\\,(c\lor d)\\;=\\;
+(a\cdot c)\\;\lor\\;(a\cdot d)\\;\lor\\;(b\cdot c)\\;\lor\\;(b\cdot d).$$
+
+</div>
+
+On «&nbsp;distribue&nbsp;» la disjonction exactement comme on développe $(x+y)(z+t)=xz+xt+yz+yt$. Sur la grille, la connaissance sur le système 1 sélectionne deux lignes, celle sur le système 2 deux colonnes, et l'état de la paire est formé des quatre cases à leur intersection&nbsp;: un «&nbsp;rectangle&nbsp;», éventuellement troué si les lignes ou les colonnes ne sont pas voisines.
+
+<div class="svg-container">
+<svg viewBox="0 0 600 229" role="img" aria-label="L'état produit (1∨2)·(1∨3) : les lignes 1 et 2 (connaissance sur le système 1) croisent les colonnes 1 et 3 (connaissance sur le système 2) ; les quatre cases d'intersection forment l'état de la paire" style="width:100%;max-width:600px;height:auto;">
+<rect x="120.0" y="112.0" width="30.0" height="30.0" fill="#477fa4" stroke="#94a3b8" stroke-width="1"/><rect x="150.0" y="112.0" width="30.0" height="30.0" fill="#d6e7e6" stroke="#94a3b8" stroke-width="1"/><rect x="180.0" y="112.0" width="30.0" height="30.0" fill="#477fa4" stroke="#94a3b8" stroke-width="1"/><rect x="210.0" y="112.0" width="30.0" height="30.0" fill="#d6e7e6" stroke="#94a3b8" stroke-width="1"/><rect x="120.0" y="82.0" width="30.0" height="30.0" fill="#477fa4" stroke="#94a3b8" stroke-width="1"/><rect x="150.0" y="82.0" width="30.0" height="30.0" fill="#d6e7e6" stroke="#94a3b8" stroke-width="1"/><rect x="180.0" y="82.0" width="30.0" height="30.0" fill="#477fa4" stroke="#94a3b8" stroke-width="1"/><rect x="210.0" y="82.0" width="30.0" height="30.0" fill="#d6e7e6" stroke="#94a3b8" stroke-width="1"/><rect x="120.0" y="52.0" width="30.0" height="30.0" fill="#f0dde7" stroke="#94a3b8" stroke-width="1"/><rect x="150.0" y="52.0" width="30.0" height="30.0" fill="#fff" stroke="#94a3b8" stroke-width="1"/><rect x="180.0" y="52.0" width="30.0" height="30.0" fill="#f0dde7" stroke="#94a3b8" stroke-width="1"/><rect x="210.0" y="52.0" width="30.0" height="30.0" fill="#fff" stroke="#94a3b8" stroke-width="1"/><rect x="120.0" y="22.0" width="30.0" height="30.0" fill="#f0dde7" stroke="#94a3b8" stroke-width="1"/><rect x="150.0" y="22.0" width="30.0" height="30.0" fill="#fff" stroke="#94a3b8" stroke-width="1"/><rect x="180.0" y="22.0" width="30.0" height="30.0" fill="#f0dde7" stroke="#94a3b8" stroke-width="1"/><rect x="210.0" y="22.0" width="30.0" height="30.0" fill="#fff" stroke="#94a3b8" stroke-width="1"/><text x="111.0" y="131.0" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1</text><text x="135.0" y="157.0" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >1</text><text x="111.0" y="101.0" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >2</text><text x="165.0" y="157.0" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >2</text><text x="111.0" y="71.0" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >3</text><text x="195.0" y="157.0" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >3</text><text x="111.0" y="41.0" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >4</text><text x="225.0" y="157.0" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >4</text>
+<rect x="76.0" y="112.0" width="22.5" height="30.0" fill="#4c9893" stroke="#94a3b8" stroke-width="1"/>
+<rect x="76.0" y="82.0" width="22.5" height="30.0" fill="#4c9893" stroke="#94a3b8" stroke-width="1"/>
+<rect x="76.0" y="52.0" width="22.5" height="30.0" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
+<rect x="76.0" y="22.0" width="22.5" height="30.0" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
+<rect x="120.0" y="164.0" width="30.0" height="22.5" fill="#bb628f" stroke="#94a3b8" stroke-width="1"/>
+<rect x="150.0" y="164.0" width="30.0" height="22.5" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
+<rect x="180.0" y="164.0" width="30.0" height="22.5" fill="#bb628f" stroke="#94a3b8" stroke-width="1"/>
+<rect x="210.0" y="164.0" width="30.0" height="22.5" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
+<text x="87.1" y="14.0" text-anchor="middle" font-size="11.5" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >sys. 1</text>
+<text x="250.0" y="180.5" text-anchor="start" font-size="11.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >sys. 2</text>
+<text x="330.0" y="48.0" text-anchor="start" font-size="13.5" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >système 1 : 1 ∨ 2  ↔  <tspan font-family="'STIX Two Math','STIX Two Text','Cambria Math','DejaVu Serif','Times New Roman',serif" font-style="normal">|0⟩</tspan></text>
+<text x="330.0" y="74.0" text-anchor="start" font-size="13.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >système 2 : 1 ∨ 3  ↔  <tspan font-family="'STIX Two Math','STIX Two Text','Cambria Math','DejaVu Serif','Times New Roman',serif" font-style="normal">|+⟩</tspan></text>
+<text x="330.0" y="112.0" text-anchor="start" font-size="13.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >paire : (1 ∨ 2)·(1 ∨ 3)  ↔  <tspan font-family="'STIX Two Math','STIX Two Text','Cambria Math','DejaVu Serif','Times New Roman',serif" font-style="normal">|0⟩</tspan><tspan font-family="'STIX Two Math','STIX Two Text','Cambria Math','DejaVu Serif','Times New Roman',serif" font-style="normal">|+⟩</tspan></text>
+<text x="330.0" y="146.0" text-anchor="start" font-size="13.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >= (1·1) ∨ (1·3) ∨ (2·1) ∨ (2·3)</text>
+<text x="330.0" y="184.0" text-anchor="start" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >Les cases colorées sont à la fois</text>
+<text x="330.0" y="202.0" text-anchor="start" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >dans une ligne permise et dans</text>
+<text x="330.0" y="220.0" text-anchor="start" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >une colonne permise.</text>
+</svg>
+</div>
+<p class="legende">L'état produit $(1\lor2)\cdot(1\lor3)$, analogue de l'état produit $\lvert0\rangle\lvert{+}\rangle$. Les marginales, le long des axes, sont exactement les deux états de départ.</p>
+
+<div id="def">
+
+Un <b>état produit</b> est un état de la paire de la forme $(a\lor b)\cdot(c\lor d)$&nbsp;: on possède la connaissance maximale sur chacun des deux systèmes, et aucune information sur une éventuelle relation entre eux.
+
+</div>
+
+Il respecte le principe d'équilibre partout&nbsp;: quatre cases pour la paire (on connaît $2$ réponses sur $4$, une par système), deux cases pour chaque marginale. C'est l'analogue d'un état produit $\lvert\psi\rangle\otimes\lvert\phi\rangle$ en mécanique quantique (voir [Paire de qubits](../fondations/#paire-de-qubits))&nbsp;: chaque système a son propre état, indépendamment de l'autre.
+
 ### Ce qu'une mesure pourrait révéler
 
-Lorsqu'on mesure l'un des deux systèmes, on ne garde que les cases compatibles avec le résultat, le système mesuré est perturbé comme un système seul, et l'état final est le produit des deux marginales ainsi obtenues. Cette règle élimine encore des candidats&nbsp;: certains états, aux marginales pourtant permises, seraient «&nbsp;trahis&nbsp;» par une mesure, qui en apprendrait trop sur l'autre système.
+Lorsqu'on mesure l'un des deux systèmes, on ne garde que les cases compatibles avec le résultat obtenu&nbsp;; le système mesuré est perturbé comme un système seul, et l'état final est l'état produit des deux marginales ainsi obtenues. Sur un état produit, mesurer le premier système ne change rien à ce que l'on sait du second&nbsp;: les deux connaissances sont indépendantes.
+
+Mais cette règle élimine encore des candidats parmi les états à quatre cases&nbsp;: certains états, aux marginales pourtant permises, seraient «&nbsp;trahis&nbsp;» par une mesure, qui en apprendrait trop sur l'autre système.
 
 <div class="svg-container">
 <svg viewBox="0 9 600 221" role="img" aria-label="Un état aux marginales valides est rejeté : mesurer Z sur le système 1 révélerait l'état ontique exact du système 2" style="width:100%;max-width:600px;height:auto;">
@@ -719,22 +766,7 @@ Lorsqu'on mesure l'un des deux systèmes, on ne garde que les cases compatibles 
 </div>
 <p class="legende">Un état rejeté. Ses marginales sont permises, mais une mesure $Z$ sur le système 1 révélerait l'état ontique exact du système 2.</p>
 
-Au bout du compte, ce tri sévère ne laisse que deux familles d'états de connaissance maximale&nbsp;: les **états produits** et les **états corrélés**.
-
-<div id="def">
-
-Un <b>état produit</b> est un état de la paire dans lequel on possède la connaissance maximale sur chacun des deux systèmes. Si le système 1 a pour marginale $a\lor b$ et le système 2 la marginale $c\lor d$, il s’écrit&nbsp;:
-
-<div style="overflow-x:auto;margin-top:-1em;margin-bottom:-1em;">
-
-$$(a\lor b)\\,\cdot\\,(c\lor d)\\;=\\;
-(a\cdot c)\\;\lor\\;(a\cdot d)\\;\lor\\;(b\cdot c)\\;\lor\\;(b\cdot d),$$
-
-</div>
-
-en distribuant la disjonction comme on développe $(x+y)(z+t)=xz+xt+yz+yt$. Sur la grille, c'est un rectangle formé de deux lignes et de deux colonnes.
-
-</div>
+Au bout du compte, ce tri sévère ne laisse que deux familles d'états de connaissance maximale&nbsp;: les **états produits**, que l'on vient de voir, et les **états corrélés**, qui font l'objet de la section suivante.
 
 ## États corrélés&nbsp;: l'analogue de l'intrication
 
@@ -788,11 +820,23 @@ Que dire de l'état suivant&nbsp;?
 </div>
 <p class="legende">Un état à huit cases, formé de deux blocs.</p>
 
-Il respecte le principe d'équilibre (au moins quatre cases pour la paire, au moins deux pour chaque marginale). Mais il compte huit cases au lieu des quatre d'un état de connaissance maximale&nbsp;: c'est un **état mixte**. Ses deux marginales sont l'ignorance totale, mais ce n'est pas pour autant un état corrélé au sens précédent&nbsp;: connaître l'état d'un système ne détermine que la paire de l'autre ($1\lor2$ ou $3\lor4$), pas sa valeur. C'est un mélange classique de deux états produits, $(1\lor 2)\cdot(1\lor 2)$ et $(3\lor 4)\cdot(3\lor 4)$&nbsp;: une simple corrélation statistique, analogue d'un état mixte séparable.
+Il respecte le principe d'équilibre (au moins quatre cases pour la paire, au moins deux pour chaque marginale). Mais il compte huit cases au lieu des quatre d'un état de connaissance maximale&nbsp;: on n'y connaît la réponse qu'à **une** question sur quatre, «&nbsp;les deux systèmes sont-ils dans la même moitié, $\\{1, 2\\}$ ou $\\{3, 4\\}$&nbsp;?&nbsp;». C'est un **état mixte**.
+
+Que sait-on exactement&nbsp;? Ses deux marginales sont l'ignorance totale&nbsp;: pris séparément, chaque système peut être dans n'importe lequel de ses quatre états. Mais les deux systèmes sont toujours dans la même moitié. Comparons avec l'état corrélé $(1\cdot1)\lor(2\cdot2)\lor(3\cdot3)\lor(4\cdot4)$, en supposant qu'on découvre que le système 1 est dans l'état $1$&nbsp;:
+<ul>
+<li>dans l'état corrélé, on en déduit aussitôt que le système 2 est lui aussi dans l'état $1$&nbsp;: la corrélation est parfaite&nbsp;;</li>
+<li>dans l'état par blocs, on en déduit seulement que le système 2 est dans $1\lor2$&nbsp;: il reste deux possibilités. La corrélation ne porte que sur la moitié, pas sur la valeur.</li>
+</ul>
+
+On peut le voir autrement&nbsp;: cet état est la réunion de deux états produits, $(1\lor 2)\cdot(1\lor 2)$ (le bloc du bas) et $(3\lor 4)\cdot(3\lor 4)$ (le bloc du haut). Il décrit la situation où l'on a préparé l'un ou l'autre, à pile ou face, sans savoir lequel. C'est l'analogue du mélange quantique $\frac12\bigl(\lvert00\rangle\langle00\rvert + \lvert11\rangle\langle11\rvert\bigr)$&nbsp;: les deux systèmes donnent toujours le même résultat pour la mesure $Z$, mais des résultats indépendants pour la mesure $X$. C'est une simple corrélation statistique, classique, sans intrication&nbsp;: un état mixte **séparable**.
 
 ## Combien d'états&nbsp;?
 
-Pour $n$ systèmes élémentaires, on a $4^{n}$ états ontiques et $2n$ questions. Une connaissance maximale répond à $n$ questions et laisse donc $2^{n}$ cases colorées. Il y a $\binom{4^n}{2^n}$ façons de les choisir, mais la plupart sont exclues. Pour deux systèmes, il reste&nbsp;:
+Comptons d'abord les états ontiques. Un état ontique de $n$ systèmes élémentaires consiste à choisir l'état de chacun d'eux, indépendamment des autres&nbsp;: $4$ choix pour le premier, $4$ pour le deuxième, et ainsi de suite. Il y en a donc $4\times4\times\dots\times4 = 4^n$, comme il y a $4^n$ nombres de $n$ chiffres en base $4$. Pour deux systèmes, ce sont les $16$ cases de la grille&nbsp;; pour trois, ce serait les $64$ petits cubes d'un cube $4\times4\times4$.
+
+Le compte des questions est cohérent avec celui-ci&nbsp;: il faut deux questions par système, soit $2n$ en tout, et chaque réponse divise par deux le nombre de possibilités, ce qui en fait bien $2^{2n} = 4^n$ au départ. Une connaissance maximale répond à la moitié des questions, soit $n$, et laisse donc $4^n / 2^n = 2^n$ cases colorées&nbsp;: $2$ pour un système, $4$ pour deux, $8$ pour trois.
+
+Il y a $\binom{4^n}{2^n}$ façons de choisir ces cases, soit $1820$ pour deux systèmes, mais la plupart sont exclues par le principe appliqué aux parties ou par les mesures. Pour deux systèmes, il reste&nbsp;:
 <ul>
 <li>les <b>états produits</b>&nbsp;: on choisit deux lignes parmi quatre et deux colonnes parmi quatre, soit $\binom{4}{2}\times\binom{4}{2}=36$ possibilités&nbsp;;</li>
 <li>les <b>états corrélés</b>&nbsp;: on associe à chaque état du système 1 un état du système 2, ce qui revient à choisir une permutation, soit $4!=24$ possibilités.</li>
@@ -891,7 +935,17 @@ $$(e\lor f)\\;\cdot\\;(c\lor d)\\;\longrightarrow\\;(e\lor f)\\;\cdot\\;(e\lor f
 
 </div>
 
-pour tout autre bit-jouet $e\lor f$. La fidélité de deux états produits étant le produit des fidélités de leurs facteurs, la fidélité entre les deux états de départ vaut $\mathcal{F}\times 1 = \mathcal F$, où $\mathcal{F}$ est la fidélité entre $a\lor b$ et $e\lor f$, et celle entre les deux états d'arrivée vaut $\mathcal{F}^2$. Une transformation permise conservant la fidélité, il faudrait $\mathcal{F} = \mathcal{F}^2$, ce qui n'est possible que si $\mathcal F = 1$ (états identiques) ou $\mathcal F = 0$ (états disjoints). C'est le même argument qu'en quantique, avec la fidélité à la place du produit scalaire.
+pour tout autre bit-jouet $e\lor f$. Notons $\mathcal{F}$ la fidélité entre $a\lor b$ et $e\lor f$, et comparons les fidélités avant et après.
+
+Il faut d'abord savoir calculer la fidélité de deux états produits. Dans un état produit, les deux systèmes sont indépendants&nbsp;: la probabilité d'un couple $(i\cdot j)$ est le produit des probabilités, $p\_{ij} = p\_i\\,p^{\prime}\_j$. La racine d'un produit étant le produit des racines, la somme qui définit la fidélité se factorise&nbsp;:
+
+<div id="gros">
+
+$$\sum\_{i,j}\sqrt{p\_i\\,p^{\prime}\_j}\\,\sqrt{q\_i\\,q^{\prime}\_j} = \Bigl(\sum\_i \sqrt{p\_i}\sqrt{q\_i}\Bigr)\Bigl(\sum\_j \sqrt{p^{\prime}\_j}\sqrt{q^{\prime}\_j}\Bigr).$$
+
+</div>
+
+La fidélité de deux états produits est donc le produit des fidélités de leurs facteurs. Avant le clonage, les deux états de départ ont le même second facteur, $c\lor d$, dont la fidélité avec lui-même vaut $1$&nbsp;: leur fidélité vaut $\mathcal{F}\times 1 = \mathcal{F}$. Après le clonage, les deux facteurs sont chacun à la fidélité $\mathcal F$ l'un de l'autre&nbsp;: la fidélité vaut $\mathcal{F}\times\mathcal{F} = \mathcal{F}^2$. Une transformation permise conservant la fidélité, il faudrait $\mathcal{F} = \mathcal{F}^2$, ce qui n'est possible que si $\mathcal F = 1$ (états identiques) ou $\mathcal F = 0$ (états disjoints). C'est le même argument qu'en quantique, avec la fidélité à la place du produit scalaire.
 
 <div id="theo">
 
@@ -963,6 +1017,24 @@ Ce sont exactement les six états qui correspondent aux bits-jouets. À partir d
 On atteint ainsi $60$ états stabilisateurs à deux qubits, autant que d'états de connaissance maximale pour deux systèmes élémentaires. Comme dans le jouet, toute mesure d'une matrice de Pauli sur un état stabilisateur donne un résultat soit certain, soit parfaitement aléatoire (probabilités $\frac12$ et $\frac12$)&nbsp;: aucune probabilité intermédiaire n'apparaît.
 
 Surtout, le **théorème de Gottesman–Knill** affirme que les circuits stabilisateurs se simulent efficacement sur un ordinateur classique&nbsp;: ce fragment n'offre aucun avantage de calcul. Il n'est donc pas si surprenant qu'un modèle classique comme le jouet parvienne à l'imiter.
+
+<details style="background-color:#F4F4F4;border-radius:8px;padding:8px 15px;margin-bottom:1em;">
+<summary>Pour aller plus loin&nbsp;: d'où vient l'avantage d'un ordinateur quantique&nbsp;?</summary>
+
+<div style="margin-top:0.5em;">
+
+**Pourquoi les circuits stabilisateurs sont faciles à simuler.** Décrire un état quelconque de $n$ qubits demande $2^n$ amplitudes complexes&nbsp;: c'est cette explosion qui rend la simulation classique impossible en général. Mais un état stabilisateur est entièrement décrit par son groupe stabilisateur, et ce groupe est engendré par seulement $n$ produits de matrices de Pauli, chacun noté par une chaîne de $n$ lettres ($\mathbb{I}$, $X$, $Y$ ou $Z$) et un signe. Cela fait de l'ordre de $n^2$ bits au lieu de $2^n$ nombres. Les portes $H$, $P$ et CNOT transforment toute chaîne de Pauli en une autre chaîne de Pauli&nbsp;: on suit donc l'évolution en mettant à jour ce tableau, ce qui ne coûte qu'un nombre d'opérations polynomial. C'est exactement la situation du jouet, où un état de connaissance maximale se décrit par les réponses à la moitié des questions.
+
+**Il manque une seule porte.** Il suffit d'ajouter aux portes stabilisatrices la porte $T = \begin{pmatrix}1 & 0\\\\ 0 & \mathrm{e}^{\mathrm{i}\pi/4}\end{pmatrix}$, un huitième de tour autour de l'axe $Z$ de la sphère de Bloch, pour obtenir un ensemble **universel**&nbsp;: toute évolution unitaire peut alors être approchée d'aussi près qu'on veut. Géométriquement, $T$ fait sortir l'état $\lvert+\rangle$ de l'octaèdre&nbsp;: il l'envoie à mi-chemin entre $\lvert+\rangle$ et $\lvert{+\mathrm{i}}\rangle$, en un point qui ne correspond à aucun bit-jouet. Les probabilités ne valent plus seulement $0$, $\frac12$ ou $1$&nbsp;: mesurer $X$ sur $T\lvert+\rangle$ donne $+1$ avec la probabilité $\cos^2\frac{\pi}{8} \approx 85\\,\\%$, le même nombre que dans la borne de Holevo et le principe de causalité informationnelle.
+
+**La «&nbsp;magie&nbsp;» comme ressource.** On peut aussi remplacer la porte $T$ par la fourniture d'**états magiques**, comme $T\lvert+\rangle$, que l'on consomme au cours du calcul. Les meilleures simulations classiques connues voient leur coût croître exponentiellement avec le nombre de portes $T$ (ou d'états magiques), mais seulement polynomialement avec le reste du circuit. Ce qui rend un calcul quantique difficile à simuler est donc, dans ce sens précis, sa part non stabilisatrice, sa «&nbsp;magie&nbsp;».
+
+**Ni l'intrication, ni la superposition ne suffisent.** Les circuits stabilisateurs fabriquent des superpositions et des états maximalement intriqués (états de Bell, états GHZ), et ils restent pourtant faciles à simuler&nbsp;: l'intrication est nécessaire à un avantage quantique, mais elle ne suffit pas. Ce qui manque, ce sont des interférences entre amplitudes de phases quelconques, et non seulement des multiples de $\frac{\pi}{2}$.
+
+**Le lien avec la contextualité.** Pour des systèmes de dimension impaire (des «&nbsp;qutrits&nbsp;», par exemple), on a montré que la **contextualité** est une ressource indispensable&nbsp;: seuls des états magiques contextuels peuvent rendre le calcul universel (Howard, Wallman, Veitch et Emerson, 2014). La boucle est bouclée avec le jouet&nbsp;: ce qu'un modèle non contextuel comme lui parvient à imiter, c'est précisément la partie de la mécanique quantique qui n'apporte aucun avantage de calcul. Pour les qubits, la situation est plus subtile, puisque le formalisme stabilisateur y est déjà contextuel, mais l'idée générale demeure&nbsp;: l'avantage quantique se cache là où aucune description «&nbsp;à connaissance restreinte&nbsp;» d'une réalité classique ne peut suivre.
+
+</div>
+</details>
 
 ### Matrices de Pauli
 

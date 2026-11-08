@@ -1878,7 +1878,7 @@ Un fluide dont le débit se conserve ainsi le long de chaque canal est **incompr
 
 ### Premier exemple&nbsp;: une particule dans un potentiel
 
-Pour une particule de masse $m$ soumise à une force dérivant d'un potentiel, $m\ddot x = -V'(x)$, les variables $(x, y)$ conviennent presque telles quelles&nbsp;: avec $y = \dot x$, on a $\dot x = y$ et $\dot y = -V'(x)/m$, ce qui est bien la forme hamiltonienne avec $H(x, y) = \frac{y^2}{2} + \frac{V(x)}{m}$.
+Pour une particule de masse $m$ soumise à une force dérivant d'un potentiel, $m\ddot x = -V^{\prime}(x)$, les variables $(x, y)$ conviennent presque telles quelles&nbsp;: avec $y = \dot x$, on a $\dot x = y$ et $\dot y = -V^{\prime}(x)/m$, ce qui est bien la forme hamiltonienne avec $H(x, y) = \frac{y^2}{2} + \frac{V(x)}{m}$.
 
 On peut aussi changer d'échelle et poser $p = \alpha\\,\dot x$ avec une constante $\alpha$&nbsp;: on obtient la forme hamiltonienne avec $H = \frac{p^2}{2\alpha} + \frac{\alpha}{m}V(x)$. Le choix habituel $\alpha = m$ donne à $H$ la dimension d'une énergie&nbsp;:
 
@@ -2040,9 +2040,9 @@ Ce théorème a des conséquences profondes. Il fonde le **théorème de récurr
 
 Le théorème de Liouville éclaire enfin le choix des variables. Dans l'exemple précédent, les variables position-vitesse convenaient. Mais considérons une particule dans un plan, attirée par un centre fixe, et décrite en coordonnées polaires $(r, \theta)$. Les équations de Newton s'écrivent (on le justifiera plus bas)
 
-$$m\left(\ddot r - r\dot\theta^2\right) = -V'(r), \qquad 2\dot r\dot\theta + r\ddot\theta = 0.$$
+$$m\left(\ddot r - r\dot\theta^2\right) = -V^{\prime}(r), \qquad 2\dot r\dot\theta + r\ddot\theta = 0.$$
 
-Dans l'espace des variables $(r, \theta, \dot r, \dot\theta)$, l'écoulement a pour composantes $\dot r$, $\dot\theta$, $\ddot r = r\dot\theta^2 - V'(r)/m$ et $\ddot\theta = -2\dot r\dot\theta/r$. Sa divergence vaut
+Dans l'espace des variables $(r, \theta, \dot r, \dot\theta)$, l'écoulement a pour composantes $\dot r$, $\dot\theta$, $\ddot r = r\dot\theta^2 - V^{\prime}(r)/m$ et $\ddot\theta = -2\dot r\dot\theta/r$. Sa divergence vaut
 
 $$\frac{\partial \dot r}{\partial r} + \frac{\partial \dot\theta}{\partial \theta} + \frac{\partial \ddot r}{\partial \dot r} + \frac{\partial \ddot\theta}{\partial \dot\theta} = 0 + 0 + 0 - \frac{2\dot r}{r} \neq 0.$$
 
@@ -2061,7 +2061,7 @@ $$H(r, \theta, p\_r, p\_\theta) = \frac{p\_r^2}{2m} + \frac{p\_\theta^2}{2m r^2}
 Vérifions qu'on obtient bien les équations de Newton&nbsp;:
 <ul>
 <li>$\dot r = \partial H/\partial p_r = p_r/m$ et $\dot\theta = \partial H/\partial p_\theta = p_\theta/(m r^2)$&nbsp;: ce sont les définitions des moments&nbsp;;</li>
-<li>$\dot p_r = -\partial H/\partial r = \frac{p_\theta^2}{m r^3} - V'(r) = m r\dot\theta^2 - V'(r)$&nbsp;: c'est l'équation radiale&nbsp;;</li>
+<li>$\dot p_r = -\partial H/\partial r = \frac{p_\theta^2}{m r^3} - V^{\prime}(r) = m r\dot\theta^2 - V^{\prime}(r)$&nbsp;: c'est l'équation radiale&nbsp;;</li>
 <li>$\dot p_\theta = -\partial H/\partial \theta = 0$&nbsp;: c'est l'équation angulaire, puisque $\frac{\mathrm{d}}{\mathrm{d}t}(m r^2\dot\theta) = m r\,(2\dot r\dot\theta + r\ddot\theta)$.</li>
 </ul>
 
@@ -2295,7 +2295,7 @@ Ce sont deux équations reliant quatre variables&nbsp;: on peut en général les
 
 $$p\\,\mathrm{d}x - P\\,\mathrm{d}X = \mathrm{d}F.$$
 
-Intégrons cette relation le long d'une courbe fermée $\mathcal{C}$ de l'espace des phases et de son image $\mathcal{C}'$&nbsp;: comme $F$ revient à sa valeur de départ, $\oint\_{\mathcal{C}} p\\,\mathrm{d}x = \oint\_{\mathcal{C}'} P\\,\mathrm{d}X$. Or l'intégrale $\oint p\\,\mathrm{d}x$ le long d'une courbe fermée n'est autre que l'aire qu'elle enclôt (au signe près, selon le sens de parcours). La transformation conserve donc l'aire enclose par n'importe quelle courbe fermée&nbsp;: elle est canonique.
+Intégrons cette relation le long d'une courbe fermée $\mathcal{C}$ de l'espace des phases et de son image $\mathcal{C}^{\prime}$&nbsp;: comme $F$ revient à sa valeur de départ, $\oint\_{\mathcal{C}} p\\,\mathrm{d}x = \oint\_{\mathcal{C}^{\prime}} P\\,\mathrm{d}X$. Or l'intégrale $\oint p\\,\mathrm{d}x$ le long d'une courbe fermée n'est autre que l'aire qu'elle enclôt (au signe près, selon le sens de parcours). La transformation conserve donc l'aire enclose par n'importe quelle courbe fermée&nbsp;: elle est canonique.
 
 <div class="svg-container">
 <svg viewBox="0 0 600 270" role="img" aria-label="Une courbe fermée du plan (x, p) et son image par une transformation canonique enclosent la même aire" style="width:100%;max-width:600px;height:auto;">
@@ -2313,7 +2313,7 @@ Intégrons cette relation le long d'une courbe fermée $\mathcal{C}$ de l'espace
 <text x="300.0" y="258.0" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >∮<tspan dy='4' font-size='10'>𝒞</tspan><tspan dy='-4'> </tspan><tspan font-style="italic">p</tspan> d<tspan font-style="italic">x</tspan>  =  ∮<tspan dy='4' font-size='10'>𝒞′</tspan><tspan dy='-4'> </tspan><tspan font-style="italic">P</tspan> d<tspan font-style="italic">X</tspan>   :   même aire enclose</text>
 </svg>
 </div>
-<p class="legende">Une courbe fermée $\mathcal{C}$ et son image $\mathcal{C}'$ par les variables angle-action&nbsp;: la forme change, l'aire enclose reste la même.</p>
+<p class="legende">Une courbe fermée $\mathcal{C}$ et son image $\mathcal{C}^{\prime}$ par les variables angle-action&nbsp;: la forme change, l'aire enclose reste la même.</p>
 
 Par exemple, $F(x, X) = \frac{x^2}{2}\\,\mathrm{cotan}\\,X$ donne $p = x\\,\mathrm{cotan}\\,X$ et $P = \frac{x^2}{2\sin^2 X}$, d'où $x = \sqrt{2P}\\,\sin X$ et $p = \sqrt{2P}\\,\cos X$&nbsp;: ce sont les variables angle-action. On peut aussi mélanger autrement anciennes et nouvelles variables, par exemple avec une fonction $F(p, X)$&nbsp;: il y a ainsi quatre types de fonctions génératrices.
 
