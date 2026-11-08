@@ -301,27 +301,27 @@ Supposons que chaque électron emporte un «&nbsp;plan&nbsp;» fixant sa déviat
 <circle cx="300" cy="52" r="26" fill="#edf3f6" stroke="#004D80" stroke-width="1.8"/>
 <line x1="289" y1="52" x2="311" y2="52" stroke="#004D80" stroke-width="2.4" marker-start="url(#gd)" marker-end="url(#gd)"/>
 <circle cx="279" cy="31" r="10" fill="#004D80"/>
-<text x="279.0" y="31.5" text-anchor="middle" font-size="12.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-weight="bold" dominant-baseline="central">3</text>
+<text x="279" y="35.50" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#fff" font-family="Helvetica, Arial, sans-serif">3</text>
 <circle cx="205" cy="168" r="26" fill="#edf3f6" stroke="#004D80" stroke-width="1.8"/>
 <line x1="194" y1="168" x2="216" y2="168" stroke="#004D80" stroke-width="2.4" marker-start="url(#gd)" marker-end="url(#gd)"/>
 <circle cx="184" cy="147" r="10" fill="#004D80"/>
-<text x="184.0" y="147.5" text-anchor="middle" font-size="12.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-weight="bold" dominant-baseline="central">2</text>
+<text x="184" y="151.50" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#fff" font-family="Helvetica, Arial, sans-serif">2</text>
 <circle cx="395" cy="168" r="26" fill="#edf3f6" stroke="#004D80" stroke-width="1.8"/>
 <line x1="395" y1="157" x2="395" y2="179" stroke="#004D80" stroke-width="2.4" marker-start="url(#gd)" marker-end="url(#gd)"/>
 <circle cx="374" cy="147" r="10" fill="#004D80"/>
-<text x="374.0" y="147.5" text-anchor="middle" font-size="12.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-weight="bold" dominant-baseline="central">2</text>
+<text x="374" y="151.50" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#fff" font-family="Helvetica, Arial, sans-serif">2</text>
 <circle cx="300" cy="218" r="26" fill="#edf3f6" stroke="#004D80" stroke-width="1.8"/>
 <line x1="300" y1="207" x2="300" y2="229" stroke="#004D80" stroke-width="2.4" marker-start="url(#gd)" marker-end="url(#gd)"/>
 <circle cx="279" cy="197" r="10" fill="#004D80"/>
-<text x="279.0" y="197.5" text-anchor="middle" font-size="12.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-weight="bold" dominant-baseline="central">3</text>
+<text x="279" y="201.50" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#fff" font-family="Helvetica, Arial, sans-serif">3</text>
 <circle cx="87" cy="312" r="26" fill="#edf3f6" stroke="#004D80" stroke-width="1.8"/>
 <line x1="76" y1="312" x2="98" y2="312" stroke="#004D80" stroke-width="2.4" marker-start="url(#gd)" marker-end="url(#gd)"/>
 <circle cx="66" cy="291" r="10" fill="#004D80"/>
-<text x="66.0" y="291.5" text-anchor="middle" font-size="12.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-weight="bold" dominant-baseline="central">1</text>
+<text x="66" y="295.50" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#fff" font-family="Helvetica, Arial, sans-serif">1</text>
 <circle cx="513" cy="312" r="26" fill="#edf3f6" stroke="#004D80" stroke-width="1.8"/>
 <line x1="513" y1="301" x2="513" y2="323" stroke="#004D80" stroke-width="2.4" marker-start="url(#gd)" marker-end="url(#gd)"/>
 <circle cx="492" cy="291" r="10" fill="#004D80"/>
-<text x="492.0" y="291.5" text-anchor="middle" font-size="12.5" fill="#fff" font-family="Georgia,'Times New Roman',serif" font-weight="bold" dominant-baseline="central">1</text>
+<text x="492" y="295.50" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#fff" font-family="Helvetica, Arial, sans-serif">1</text>
 </svg>
 </div>
 <p class="legende">Le graphe de la vidéo. Chaque nœud est une réponse à fixer&nbsp;: le numéro du détecteur figure dans la pastille, la flèche indique son orientation. Chaque ligne relie les trois réponses utilisées dans une configuration de mesure&nbsp;: la ligne magenta ($hhh$) doit compter un nombre impair de déviations positives, les trois lignes teal ($hvv$, $vhv$, $vvh$) un nombre pair.</p>
