@@ -428,5 +428,5 @@ Pour qui veut à la fois une réalité sous-jacente et une description fidèle d
 
 {{%notice type="note" round="true"%}}
 Parmi les ψ-ontiques purs et durs ($\lambda \equiv |\psi\rangle$), certains vont plus loin et acceptent de prendre au sérieux l'espace de grande dimension dans lequel évolue la fonction d'onde, pour regagner la localité et la séparabilité des états. En admettant que notre espace à trois dimensions n'est que l'ombre d'un espace multidimensionnel dans lequel évolue la fonction d'onde, on évacue en effet toutes les difficultés (dimensions supplémentaires mises à part), du moins jusqu'à la mesure...<br>
-[**Cette petite page**](./3ndimensions) explique l'attrait de ce compromis.
+[**La page sur l'ontologie à 3N dimensions**](../3ndimensions/) explique l'attrait de ce compromis, et ses limites.
 {{%/notice%}}

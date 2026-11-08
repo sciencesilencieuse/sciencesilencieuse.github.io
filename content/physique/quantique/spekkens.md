@@ -647,7 +647,7 @@ C'est exactement ce qui se passe en quantique avec $\lvert+\rangle$ et $\mathbb{
 
 <p class="renvoi">↔ Pendant quantique&nbsp;: <a href="../fondations/#paire-de-qubits">paire de qubits</a></p>
 
-Tout système se construit à partir de systèmes élémentaires. Pour deux systèmes, les états ontiques sont les **couples** d'états ontiques individuels, notés $(a\cdot b)$&nbsp;: le premier système est dans l'état $a$ et le second dans l'état $b$. Il y en a $4\times4 = 16$, que l'on range sur une grille, comme le produit tensoriel range les états de base $\lvert00\rangle$, $\lvert01\rangle$, etc.
+Tout système se construit à partir de systèmes élémentaires. Pour deux systèmes, les états ontiques sont les **couples** d'états ontiques individuels, notés $(a\cdot b)$&nbsp;: le premier système est dans l'état $a$ et le second dans l'état $b$. Il y en a $4\times4 = 16$, que l'on range sur une grille, comme le produit tensoriel range les états de base $\lvert00\rangle$, $\lvert01\rangle$, etc. Cette grille est l'analogue de l'**espace des configurations** de la paire, dont la page [Une ontologie à 3N dimensions](../3ndimensions/) montre le rôle dans la description de l'intrication.
 
 <div class="svg-container">
 <svg viewBox="0 16 520 160" role="img" aria-label="Les 16 états ontiques d'une paire de systèmes élémentaires, rangés sur une grille : ligne = état du système 1, colonne = état du système 2" style="width:100%;max-width:520px;height:auto;">
