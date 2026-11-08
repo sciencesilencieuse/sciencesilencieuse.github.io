@@ -1626,9 +1626,10 @@ Comme le jeton finit forcément absorbé, $Q^n\to0$. La série $I+Q+Q^2+\dots$ c
 Son coefficient $N\_{ij}$ est le nombre moyen de passages par l'état $j$ en partant de $i$ (chaque terme $(Q^n)\_{ij}$ est la probabilité d'y être au temps $n$). On en tire tout&nbsp;:
 <ul>
 <li>la somme de la ligne $i$ de $N$ est la durée moyenne de la partie en partant de $i$&nbsp;;</li>
-<li>la matrice $B=NR$ donne les probabilités d'absorption&nbsp;: $B\_{ik}$ est la probabilité de finir dans l'état gagnant $k$ en partant de $i$.</li>
+<li>la matrice $B=NR$ donne les probabilités d'absorption&nbsp;: $ B_{ i k } $ est la probabilité de finir dans l'état gagnant $k$ en partant de $i$.</li>
 </ul>
 C'est ainsi qu'est calculé exactement le tableau des 56 duels ci-dessus&nbsp;: une petite matrice à inverser par duel.
+
 </details>
 </div>
 
