@@ -55,6 +55,14 @@ ul
 margin-top:0em;
 margin-bottom:0.5em;
 }
+h2
+{
+color:#970E53 !important;
+}
+h3
+{
+color:#004D80 !important;
+}
 /* Pour rétablir le comportement de details */
 details > summary:first-of-type {
   display: list-item;
