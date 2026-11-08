@@ -122,11 +122,10 @@ margin-top:0em;
 
 # Que faire de la non-localité quantique&nbsp;?
 
-Cette page s'appuie sur deux vidéos de la chaîne. La première présente l'intrication, le paradoxe d'Einstein, Podolsky et Rosen (EPR) et une version très simple des inégalités de Bell&nbsp;; la seconde, l'expérience GHZ, qui aboutit à la même conclusion sans aucune statistique. Le texte reprend leurs arguments dans cet ordre, puis passe en revue les principales manières de vivre avec leur conclusion&nbsp;: aucune théorie qui attribue aux particules des propriétés locales, fixées à l'avance, ne peut reproduire les prédictions de la mécanique quantique.
 
 ## Intrication, EPR et inégalités de Bell
 
-{{< youtube-plus id="QS_bw6PVfsE" ratio="16x9" width="800" shadow="true" rounded="true" >}}
+{{< youtube-plus id="QS_bw6PVfsE" ratio="16x9" width="800" shadow="false" rounded="true" >}}
 
 ### Des corrélations à distance
 
@@ -246,7 +245,7 @@ Les expériences, depuis celles d'Alain Aspect au début des années 1980 jusqu'
 
 Le test de Bell a un point faible pédagogique&nbsp;: il est **statistique**. Pour constater que $\frac14 \lt \frac13$, il faut accumuler des mesures et faire des moyennes, et un plan préétabli peut toujours avoir de la chance sur quelques essais. L'expérience imaginée par Greenberger, Horne et Zeilinger (GHZ) est, elle, **déterministe**&nbsp;: la preuve ne repose plus sur une inégalité, mais sur une contradiction algébrique. En principe, une seule mesure suffit.
 
-{{< youtube-plus id="htd_1lAj2Tg" ratio="16x9" width="800" shadow="true" rounded="true" >}}
+{{< youtube-plus id="htd_1lAj2Tg" ratio="16x9" width="800" shadow="false" rounded="true" >}}
 
 ### Stern-Gerlach et chaussettes
 
