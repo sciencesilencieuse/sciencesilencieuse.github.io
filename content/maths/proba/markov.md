@@ -303,7 +303,7 @@ margin-top:0em;
 
 Une **chaîne de Markov**, c'est un jeton qui saute de case en case au hasard, avec une seule règle&nbsp;: **pour décider où aller, il ne regarde que la case où il se trouve.** Peu importe le chemin qui l'y a mené. Le futur ne dépend du passé que par le présent.
 
-Cette amnésie paraît être une limitation sévère. C'est au contraire ce qui rend ces objets si maniables, et si répandus&nbsp;: la météo du lendemain, une partie de pile ou face, un jeu de cartes qu'on bat, un marcheur égaré, un moteur de recherche, ou les milliards de spins d'un aimant qu'on simule sur ordinateur. Cette page en fait le tour par quelques exemples choisis, en privilégiant l'image et l'intuition. Les démonstrations sont rangées dans des panneaux dépliants.
+Cette amnésie paraît être une limitation sévère. C'est au contraire ce qui rend ces objets si maniables, et si répandus&nbsp;: la météo du lendemain, une partie de pile ou face, un jeu de cartes qu'on bat, un marcheur égaré, un moteur de recherche, ou les milliards de spins d'un aimant qu'on simule sur ordinateur. Autant d'exemples de la polyvalence des chaînes de Markov.
 
 <div class="encadre">
 <div class="encadre-titre">Markov, Pouchkine et les voyelles</div>
@@ -477,7 +477,9 @@ Dans l'animation, l'histogramme se stabilise. Ce n'est pas un hasard&nbsp;: la l
 Le point d'arrivée $\pi$ ne bouge plus quand on le multiplie par $P$&nbsp;: c'est un **point fixe**, la **loi stationnaire** (ou invariante). Ici, $\pi=\left(\frac{24}{61},\frac{22}{61},\frac{15}{61}\right)\approx(0{,}39\\;;\\;0{,}36\\;;\\;0{,}25)$&nbsp;: c'est la hauteur des tirets de l'histogramme. Sur le long terme, il fait beau 39&nbsp;% du temps, quel que soit le temps qu'il faisait au départ.
 
 <div id="theo">
-<p><b>Théorème de convergence.</b> Si la chaîne est <b>irréductible</b> (on peut aller de tout état à tout autre) et <b>apériodique</b> (elle n'est pas condamnée à revenir sur ses pas selon un rythme fixe), alors il existe une unique loi $\pi$ telle que $\pi P=\pi$, et pour toute loi de départ $\mu_0$&nbsp;:</p>
+<p><b>Théorème de convergence</b> 
+
+Si la chaîne est <b>irréductible</b> (on peut aller de tout état à tout autre) et <b>apériodique</b> (elle n'est pas condamnée à revenir sur ses pas selon un rythme fixe), alors il existe une unique loi $\pi$ telle que $\pi P=\pi$, et pour toute loi de départ $\mu_0$&nbsp;:</p>
 <p style="text-align:center;">$\mu_0P^t\xrightarrow[t\to\infty]{}\pi.$</p>
 <p>De plus, la proportion du temps passé dans chaque état $x$ tend vers $\pi(x)$ (loi des grands nombres de Markov).</p>
 </div>
@@ -517,6 +519,7 @@ Les deux hypothèses ne sont pas des détails techniques&nbsp;: chacune exclut u
 <div id="preuve">
 <details>
 <summary>pourquoi ça converge&nbsp;: le cas de la grenouille</summary>
+
 Le livre de Levin et Peres ouvre sur une grenouille qui vit sur deux nénuphars, E et O. Chaque matin, elle lance la pièce posée sur son nénuphar et saute sur l'autre si elle obtient pile&nbsp;: avec probabilité $p$ depuis E, $q$ depuis O. La matrice est $P=\begin{pmatrix}1-p&p\\ q&1-q\end{pmatrix}$ et la loi stationnaire vaut $\pi=\left(\frac{q}{p+q},\frac{p}{p+q}\right)$.
 
 Notons $\Delta\_t=\mu\_t(\text{E})-\frac{q}{p+q}$ l'écart à l'équilibre. Comme $\mu\_{t+1}(\text{E})=(1-p)\mu\_t(\text{E})+q\big(1-\mu\_t(\text{E})\big)$, un calcul d'une ligne donne $\Delta\_{t+1}=(1-p-q)\Delta\_t$, donc&nbsp;:
@@ -1589,6 +1592,7 @@ D'où viennent ces nombres&nbsp;? Une séquence qui « se recouvre » elle-même
 <div id="preuve">
 <details>
 <summary>calculer le temps d'attente avec un casino (l'argument des parieurs)</summary>
+
 Voici un argument d'une élégance rare, présenté dans le livre de Levin et Peres. Installons un casino équitable où l'on parie sur chaque lancer&nbsp;: une mise de $k$ euros sur le bon côté rapporte $2k$, sinon elle est perdue.
 
 Avant chaque lancer, un nouveau parieur arrive avec 1&nbsp;euro et suit la séquence attendue, disons FPF&nbsp;: il mise tout sur F&nbsp;; s'il gagne, il remise ses 2&nbsp;euros sur P&nbsp;; s'il gagne encore, il remise ses 4&nbsp;euros sur F. Au premier échec, il repart les poches vides.
@@ -1601,9 +1605,12 @@ En général, le temps d'attente moyen d'une séquence est la somme des $2^k$ po
 </details>
 </div>
 
+<br>
+
 <div id="preuve">
 <details>
 <summary>la méthode générale&nbsp;: la matrice fondamentale d'une chaîne absorbante</summary>
+
 Rangeons d'abord les états <b>transitoires</b> (départ, F, P, FF…), puis les états <b>absorbants</b> (les deux séquences gagnantes). La matrice de transition prend la forme par blocs
 
 <p style="text-align:center;">$P=\begin{pmatrix}Q & R\\ 0 & I\end{pmatrix},$</p>
@@ -1665,6 +1672,7 @@ C'est le **théorème de Pólya** (1921)&nbsp;: en dimension 1 et 2, le marcheur
 <div id="preuve">
 <details>
 <summary>pourquoi la dimension change tout</summary>
+
 L'idée tient en deux remarques.
 
 D'abord, revenir une infinité de fois ou un nombre fini de fois, c'est la même question qu'un nombre moyen de visites infini ou fini&nbsp;: si chaque départ a une probabilité $r<1$ de revenir, le nombre de retours suit une loi géométrique, de moyenne finie $\frac{r}{1-r}$. Le marcheur est donc récurrent si et seulement si $\sum\_t \mathbb{P}(\text{être à l'origine au temps } t)=+\infty$.
@@ -1883,6 +1891,7 @@ et sinon on reste sur place. Le rapport $\frac{\pi(y)}{\pi(x)}=\mathrm{e}^{-\Del
 <div id="preuve">
 <details>
 <summary>pourquoi la loi stationnaire est bien celle de Boltzmann&nbsp;: l'équilibre détaillé</summary>
+
 Une loi $\pi$ est stationnaire dès que le « trafic » entre deux états est le même dans les deux sens&nbsp;:
 
 <p style="text-align:center;">$\pi(x)\,P(x,y)=\pi(y)\,P(y,x)\quad\text{pour tous } x, y.$</p>
