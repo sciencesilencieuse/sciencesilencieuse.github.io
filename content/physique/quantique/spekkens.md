@@ -832,7 +832,7 @@ On peut le voir autrement&nbsp;: cet état est la réunion de deux états produi
 
 ## Combien d'états&nbsp;?
 
-Comptons d'abord les états ontiques. Un état ontique de $n$ systèmes élémentaires consiste à choisir l'état de chacun d'eux, indépendamment des autres&nbsp;: $4$ choix pour le premier, $4$ pour le deuxième, et ainsi de suite. Il y en a donc $4\times4\times\dots\times4 = 4^n$, comme il y a $4^n$ nombres de $n$ chiffres en base $4$. Pour deux systèmes, ce sont les $16$ cases de la grille&nbsp;; pour trois, ce serait les $64$ petits cubes d'un cube $4\times4\times4$.
+Comptons d'abord les états ontiques. Un état ontique de $n$ systèmes élémentaires consiste à choisir l'état de chacun d'eux, indépendamment des autres. Il y en a donc $4^n$, comme il y a $4^n$ nombres de $n$ chiffres en base $4$. Pour deux systèmes, ce sont les $16$ cases de la grille&nbsp;; pour trois, ce serait les $64$ petits cubes d'un cube $4^3$.
 
 Le compte des questions est cohérent avec celui-ci&nbsp;: il faut deux questions par système, soit $2n$ en tout, et chaque réponse divise par deux le nombre de possibilités, ce qui en fait bien $2^{2n} = 4^n$ au départ. Une connaissance maximale répond à la moitié des questions, soit $n$, et laisse donc $4^n / 2^n = 2^n$ cases colorées&nbsp;: $2$ pour un système, $4$ pour deux, $8$ pour trois.
 
@@ -1116,11 +1116,16 @@ Spekkens montre que la liste est bien plus longue&nbsp;: le jouet possède aussi
 ### Ce que le jouet ne peut pas reproduire
 
 <ul>
-<li><b>La non-localité.</b> Le jouet est un modèle à variables cachées locales&nbsp;: il ne peut pas violer les inégalités de Bell. Dans le jeu CHSH, il plafonne à $S = 2$, là où la mécanique quantique atteint $2\sqrt2$ (voir la page <a href="../nonlocale/">Limites de la non-localité</a>).</li>
-<li><b>La contextualité.</b> Le jouet est non contextuel&nbsp;: le résultat d'une mesure y révèle une propriété (la classe de l'état ontique) qui ne dépend pas des autres mesures effectuées en même temps. Le théorème de Kochen et Specker interdit un tel modèle pour la mécanique quantique.</li>
-<li><b>Le continu.</b> Le jouet n'a que six états purs par système et des probabilités qui valent $0$, $\frac12$ ou $1$. Il ne connaît pas les états intermédiaires, comme ceux qui permettent de «&nbsp;ranger&nbsp;» deux bits dans un qubit avec $85\,\%$ de réussite (voir la borne de Holevo dans <a href="../fondations/#le-qubit">Notions fondamentales</a>).</li>
-<li><b>L'avantage de calcul.</b> Comme le formalisme stabilisateur, le jouet se simule efficacement&nbsp;: il ne permet aucun calcul quantique «&nbsp;difficile&nbsp;».</li>
-<li><b>Les détails des phases et des corrélations.</b> On l'a vu&nbsp;: certaines permutations correspondent à des réflexions impossibles en quantique, la règle de superposition ne marche pas pour toutes les paires, et l'état corrélé est corrélé selon les trois axes.</li>
+<li><b>La non-localité</b><br>
+Le jouet est un modèle à variables cachées locales&nbsp;: il ne peut pas violer les inégalités de Bell. Dans le jeu CHSH, il plafonne à $S = 2$, là où la mécanique quantique atteint $2\sqrt2$ (voir la page <a href="../nonlocale/">Limites de la non-localité</a>).</li>
+<li><b>La contextualité</b><br>
+Le jouet est non contextuel&nbsp;: le résultat d'une mesure y révèle une propriété (la classe de l'état ontique) qui ne dépend pas des autres mesures effectuées en même temps. Le théorème de Kochen et Specker interdit un tel modèle pour la mécanique quantique.</li>
+<li><b>Le continu</b><br>
+Le jouet n'a que six états purs par système et des probabilités qui valent $0$, $\frac12$ ou $1$. Il ne connaît pas les états intermédiaires, comme ceux qui permettent de «&nbsp;ranger&nbsp;» deux bits dans un qubit avec $85\,\%$ de réussite (voir la borne de Holevo dans <a href="../fondations/#le-qubit">Notions fondamentales</a>).</li>
+<li><b>L'avantage de calcul</b><br>
+Comme le formalisme stabilisateur, le jouet se simule efficacement&nbsp;: il ne permet aucun calcul quantique «&nbsp;difficile&nbsp;».</li>
+<li><b>Les détails des phases et des corrélations</b><br>
+On l'a vu&nbsp;: certaines permutations correspondent à des réflexions impossibles en quantique, la règle de superposition ne marche pas pour toutes les paires, et l'état corrélé est corrélé selon les trois axes.</li>
 </ul>
 
 Le dernier point n'est pas anecdotique. Le formalisme stabilisateur, que le jouet imite si bien pour un ou deux systèmes, est lui-même contextuel dès deux qubits (carré de Mermin–Peres) et non local dès trois (paradoxe GHZ, voir la page [EPR](../epr/#ghz)). C'est précisément là que le jouet et la mécanique quantique se séparent.
@@ -1146,8 +1151,10 @@ Le jouet est ψ-épistémique&nbsp;: les états $1\lor2$ (analogue de $\lvert0\r
 <p class="legende">Les quatre préparations de la preuve de PBR, transposées dans le jouet. La case $(1\cdot1)$ est compatible avec les quatre.</p>
 
 <ul>
-<li><b>Étapes 1 et 2.</b> On prépare deux systèmes indépendamment, chacun dans $1\lor2$ ou dans $1\lor3$. Les quatre préparations possibles contiennent toutes la case $(1\cdot 1)$, atteinte avec la probabilité $\frac14$&nbsp;: c'est le $q^2$ de la preuve, avec $q = \frac12$.</li>
-<li><b>Étape 3.</b> La mécanique quantique prévoit une mesure conjointe dont chaque résultat est impossible pour l'une des quatre préparations. Dans le jouet, une telle mesure ne peut pas exister&nbsp;: quand l'état ontique est $(1\cdot 1)$, elle devrait bien donner un résultat, or chacun est censé exclure une préparation qui contient $(1\cdot 1)$.</li>
+<li><b>Étapes 1 et 2&nbsp;:</b><br>
+On prépare deux systèmes indépendamment, chacun dans $1\lor2$ ou dans $1\lor3$. Les quatre préparations possibles contiennent toutes la case $(1\cdot 1)$, atteinte avec la probabilité $\frac14$&nbsp;: c'est le $q^2$ de la preuve, avec $q = \frac12$.</li>
+<li><b>Étape 3&nbsp;:</b><br>
+La mécanique quantique prévoit une mesure conjointe dont chaque résultat est impossible pour l'une des quatre préparations. Dans le jouet, une telle mesure ne peut pas exister&nbsp;: quand l'état ontique est $(1\cdot 1)$, elle devrait bien donner un résultat, or chacun est censé exclure une préparation qui contient $(1\cdot 1)$.</li>
 </ul>
 
 Le jouet n'a donc aucun analogue de la mesure de PBR&nbsp;: c'est une prédiction quantique qu'il ne peut pas reproduire. Détail remarquable&nbsp;: les quatre états de cette mesure sont des états stabilisateurs (ils s'obtiennent à partir d'états de Bell par des portes de Hadamard). La preuve de PBR se déroule donc entièrement à l'intérieur du fragment que le jouet imite le mieux, et pointe exactement l'endroit où l'imitation échoue.

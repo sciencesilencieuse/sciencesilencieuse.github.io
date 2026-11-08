@@ -55,11 +55,8 @@ hidden = false
 
 # Que faire de la non-localité quantique&nbsp;?
 
-<div style="position:relative; width:600px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube QS_bw6PVfsE>}}
-</div>
 
-<br>
+{{< youtube-plus id="QS_bw6PVfsE" ratio="16x9" width="800" shadow="true" rounded="true" >}}
 
 Pour qui souhaitait cacher derrière l'état quantique un élément de réalité $\lambda$, la violation des inégalités de Bell oblige semble-t-il à accepter une "spooky action at a distance" qui contredit violemment la localité relativiste.
 
@@ -167,9 +164,8 @@ Les premières expériences (de pensée, puis réelles) qui ont battu en brèche
 L'expérience GHZ est, elle, déterministe. La preuve ne réside plus dans une inégalité mais dans une contradiction algébrique. Une seule mesure suffit donc en théorie&nbsp;!
 
 
-<div style="position:relative; width:600px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube htd_1lAj2Tg>}}
-</div>
+{{< youtube-plus id="htd_1lAj2Tg" ratio="16x9" width="800" shadow="true" rounded="true" >}}
+
 
 <u>Remarque</u> :
 
