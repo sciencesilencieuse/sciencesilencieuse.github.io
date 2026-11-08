@@ -122,10 +122,11 @@ margin-top:0em;
 
 # Que faire de la non-localité quantique&nbsp;?
 
+Cette page s'appuie sur deux vidéos de la chaîne. La première présente l'intrication, le paradoxe d'Einstein, Podolsky et Rosen (EPR) et une version très simple des inégalités de Bell&nbsp;; la seconde, l'expérience GHZ, qui aboutit à la même conclusion sans aucune statistique. Le texte reprend leurs arguments dans cet ordre, puis passe en revue les principales manières de vivre avec leur conclusion&nbsp;: aucune théorie qui attribue aux particules des propriétés locales, fixées à l'avance, ne peut reproduire les prédictions de la mécanique quantique.
 
 ## Intrication, EPR et inégalités de Bell
 
-{{< youtube-plus id="QS_bw6PVfsE" ratio="16x9" width="800" shadow="false" rounded="true" >}}
+{{< youtube-plus id="QS_bw6PVfsE" ratio="16x9" width="800" shadow="true" rounded="true" >}}
 
 ### Des corrélations à distance
 
@@ -241,7 +242,110 @@ $\frac14 \lt \frac13$&nbsp;: les photons violent l'inégalité de Bell. Leurs r�
 
 Les expériences, depuis celles d'Alain Aspect au début des années 1980 jusqu'aux tests «&nbsp;sans échappatoire&nbsp;» de 2015, ont confirmé la prédiction quantique (prix Nobel 2022 pour Aspect, Clauser et Zeilinger). La page [Limites de la non-localité](../nonlocale/) présente la version quantitative de ce résultat, l'inégalité CHSH, et montre pourquoi la mécanique quantique ne la viole pas davantage. La page sur la [théorie-jouet de Spekkens](../spekkens/#ce-que-le-jouet-ne-peut-pas-reproduire) montre à l'inverse jusqu'où peut aller un modèle local&nbsp;: très loin, mais jamais au-delà de l'inégalité.
 
-La vidéo conclut sur une alternative. Soit les particules ont chacune leur existence propre, et elles s'influencent à distance. Soit on suit le formalisme à la lettre&nbsp;: l'état intriqué n'est pas séparable, les deux jumeaux n'en font qu'un («&nbsp;une fusion&nbsp;»), et ils ne s'individualisent qu'au moment de la mesure. Mais cette fusion n'est pas locale pour autant, puisqu'elle s'étend en deux endroits à la fois. Quant aux variables cachées de Bohm, qui voulaient échapper à cet étalement, l'inégalité de Bell les condamne à être elles-mêmes non locales.
+## Sans statistiques&nbsp;: l'expérience GHZ
+
+Le test de Bell a un point faible pédagogique&nbsp;: il est **statistique**. Pour constater que $\frac14 \lt \frac13$, il faut accumuler des mesures et faire des moyennes, et un plan préétabli peut toujours avoir de la chance sur quelques essais. L'expérience imaginée par Greenberger, Horne et Zeilinger (GHZ) est, elle, **déterministe**&nbsp;: la preuve ne repose plus sur une inégalité, mais sur une contradiction algébrique. En principe, une seule mesure suffit.
+
+{{< youtube-plus id="htd_1lAj2Tg" ratio="16x9" width="800" shadow="true" rounded="true" >}}
+
+### Stern-Gerlach et chaussettes
+
+La vidéo commence par l'appareil de Stern-Gerlach. Un faisceau d'électrons qui le traverse ne donne que deux taches&nbsp;: le spin n'a que deux valeurs possibles, $\lvert\uparrow_i\rangle$ ou $\lvert\downarrow_i\rangle$, selon la direction $i$ de l'appareil. Et si l'on connaît le spin dans une direction, il est complètement indéterminé dans la direction perpendiculaire&nbsp;:
+
+<div id="gros">
+
+$$\lvert\uparrow_h\rangle = \frac{1}{\sqrt2}\bigl(\lvert\uparrow_v\rangle + \lvert\downarrow_v\rangle\bigr), \qquad \lvert\downarrow_h\rangle = \frac{1}{\sqrt2}\bigl(\lvert\uparrow_v\rangle - \lvert\downarrow_v\rangle\bigr).$$
+
+</div>
+
+C'est exactement la situation de la mesure de $\hat X$ sur l'état $\lvert0\rangle$ dans les [Notions fondamentales](../fondations/#le-qubit), ou des mesures successives de la [théorie-jouet de Spekkens](../spekkens/#des-mesures-incompatibles).
+
+Puis viennent les chaussettes de Bertlmann, version imagée des jumeaux et de leur plan&nbsp;: des corrélations à distance ne sont pas mystérieuses en elles-mêmes, tant que les chaussettes ont une couleur bien définie, même quand personne ne les regarde. Ce qui serait bizarre, c'est qu'elles n'aient aucune couleur avant d'être observées, et qu'elles se «&nbsp;décident&nbsp;» ensemble au dernier moment.
+
+### Trois électrons et des règles de parité
+
+L'expérience utilise trois électrons dans l'état intriqué
+
+<div id="gros">
+
+$$\Psi\_{\text{GHZ}} = \frac12\Bigl(\lvert\uparrow_h\uparrow_h\uparrow_h\rangle - \lvert\uparrow_h\downarrow_h\downarrow_h\rangle - \lvert\downarrow_h\uparrow_h\downarrow_h\rangle - \lvert\downarrow_h\downarrow_h\uparrow_h\rangle\Bigr).$$
+
+</div>
+
+Chaque électron traverse un appareil de Stern-Gerlach orienté au hasard, horizontalement ($h$) ou verticalement ($v$). Appelons «&nbsp;positive&nbsp;» une déviation vers le haut ou vers la droite. La vidéo montre, en réécrivant l'état dans les bases adaptées, que les résultats obéissent à des règles de parité strictes&nbsp;:
+<ul>
+<li>si les trois appareils sont horizontaux ($hhh$), le nombre de déviations positives est toujours <b>impair</b> (une ou trois)&nbsp;: c'est visible directement sur $\Psi_{\text{GHZ}}$&nbsp;;</li>
+<li>si un seul appareil est horizontal ($hvv$, $vhv$ ou $vvh$), le nombre de déviations positives est toujours <b>pair</b> (zéro ou deux).</li>
+</ul>
+
+Connaître les déviations de deux électrons suffit donc à prédire celle du troisième. Ces déviations sont-elles fixées à l'avance, comme les couleurs des chaussettes&nbsp;?
+
+### Le graphe de la contradiction
+
+Supposons que chaque électron emporte un «&nbsp;plan&nbsp;» fixant sa déviation pour chacune des deux orientations possibles de son détecteur. Il y a six réponses à fixer&nbsp;: une pour chaque détecteur (1, 2 ou 3) et chaque orientation ($h$ ou $v$). Représentons-les par les six nœuds d'un graphe, et relions par une ligne les trois nœuds qui interviennent dans chacune des quatre configurations de mesure.
+
+<div class="svg-container">
+<svg viewBox="0 11 600 298" role="img" aria-label="Le graphe de l'argument GHZ : six nœuds (détecteur 1, 2 ou 3, réglé horizontalement ou verticalement) reliés par quatre lignes, une par configuration de mesure. Chaque nœud appartient à exactement deux lignes." style="width:100%;max-width:600px;height:auto;">
+<defs><marker id="gd" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L9,5 L0,10 Z" fill="#004D80"/></marker></defs>
+<polyline points="110.0,280.0 200.0,150.0 300.0,40.0" fill="none" stroke="#970E53" stroke-width="4" stroke-linecap="round" stroke-opacity="0.8"/>
+<polyline points="490.0,280.0 400.0,150.0 300.0,40.0" fill="none" stroke="#006C65" stroke-width="3" stroke-linecap="round" stroke-opacity="0.8"/>
+<polyline points="110.0,280.0 300.0,195.0 400.0,150.0" fill="none" stroke="#006C65" stroke-width="3" stroke-linecap="round" stroke-opacity="0.8"/>
+<polyline points="200.0,150.0 300.0,195.0 490.0,280.0" fill="none" stroke="#006C65" stroke-width="3" stroke-linecap="round" stroke-opacity="0.8"/>
+<circle cx="300" cy="40" r="23" fill="#fff" stroke="#004D80" stroke-width="1.6"/>
+<text x="293.0" y="46.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-weight="bold">3</text>
+<line x1="301" y1="40" x2="315" y2="40" stroke="#004D80" stroke-width="1.6" marker-start="url(#gd)" marker-end="url(#gd)"/>
+<circle cx="200" cy="150" r="23" fill="#fff" stroke="#004D80" stroke-width="1.6"/>
+<text x="193.0" y="156.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-weight="bold">2</text>
+<line x1="201" y1="150" x2="215" y2="150" stroke="#004D80" stroke-width="1.6" marker-start="url(#gd)" marker-end="url(#gd)"/>
+<circle cx="400" cy="150" r="23" fill="#fff" stroke="#004D80" stroke-width="1.6"/>
+<text x="393.0" y="156.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-weight="bold">2</text>
+<line x1="408" y1="142" x2="408" y2="158" stroke="#004D80" stroke-width="1.6" marker-start="url(#gd)" marker-end="url(#gd)"/>
+<circle cx="300" cy="195" r="23" fill="#fff" stroke="#004D80" stroke-width="1.6"/>
+<text x="293.0" y="201.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-weight="bold">3</text>
+<line x1="308" y1="187" x2="308" y2="203" stroke="#004D80" stroke-width="1.6" marker-start="url(#gd)" marker-end="url(#gd)"/>
+<circle cx="110" cy="280" r="23" fill="#fff" stroke="#004D80" stroke-width="1.6"/>
+<text x="103.0" y="286.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-weight="bold">1</text>
+<line x1="111" y1="280" x2="125" y2="280" stroke="#004D80" stroke-width="1.6" marker-start="url(#gd)" marker-end="url(#gd)"/>
+<circle cx="490" cy="280" r="23" fill="#fff" stroke="#004D80" stroke-width="1.6"/>
+<text x="483.0" y="286.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-weight="bold">1</text>
+<line x1="498" y1="272" x2="498" y2="288" stroke="#004D80" stroke-width="1.6" marker-start="url(#gd)" marker-end="url(#gd)"/>
+<line x1="430" y1="40" x2="470" y2="40" stroke="#970E53" stroke-width="4" stroke-linecap="round"/>
+<text x="478.0" y="44.0" text-anchor="start" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >hhh : nombre impair</text>
+<line x1="430" y1="64" x2="470" y2="64" stroke="#006C65" stroke-width="3" stroke-linecap="round"/>
+<text x="478.0" y="68.0" text-anchor="start" font-size="12" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >hvv, vhv, vvh : pair</text>
+<text x="478.0" y="84.0" text-anchor="start" font-size="11" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >(déviations positives)</text>
+<text x="40.0" y="44.0" text-anchor="start" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >nœud = détecteur 1, 2 ou 3</text>
+<text x="40.0" y="62.0" text-anchor="start" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >flèche horizontale : h, verticale : v</text>
+</svg>
+</div>
+<p class="legende">Le graphe de la vidéo. Chaque ligne relie les trois réponses utilisées dans une configuration de mesure&nbsp;: la ligne magenta ($hhh$) doit compter un nombre impair de déviations positives, les trois lignes teal ($hvv$, $vhv$, $vvh$) un nombre pair.</p>
+
+Additionnons les nombres de déviations positives sur les quatre lignes&nbsp;: un nombre impair plus trois nombres pairs donne un nombre **impair**. Mais chaque nœud appartient à exactement deux lignes&nbsp;: dans cette somme, chaque réponse est comptée deux fois, et le total est donc **pair**. Contradiction&nbsp;!
+
+On peut dire la même chose avec des signes. Notons $s = +1$ pour une déviation positive et $s = -1$ pour une déviation négative. Un nombre impair de déviations positives parmi trois revient à un produit $s\_1 s\_2 s\_3 = +1$, un nombre pair à un produit $-1$. Les règles de parité s'écrivent alors
+
+<div id="gros">
+
+$$s\_1^h s\_2^h s\_3^h = +1, \qquad s\_1^h s\_2^v s\_3^v = -1, \qquad s\_1^v s\_2^h s\_3^v = -1, \qquad s\_1^v s\_2^v s\_3^h = -1.$$
+
+</div>
+
+En multipliant ces quatre égalités, chaque $s$ apparaît deux fois, donc le membre de gauche vaut $+1$, alors que le membre de droite vaut $(+1)(-1)^3 = -1$.
+
+<div id="theo">
+
+Aucun plan fixé à l'avance ne peut reproduire les quatre règles de parité prédites par la mécanique quantique. Contrairement au test de Bell, la contradiction est certaine, et non statistique.
+
+</div>
+
+L'expérience a été réalisée avec trois photons intriqués par l'équipe d'Anton Zeilinger (2000), et ses résultats confirment les règles de parité quantiques. Comme le conclut la vidéo, il faut alors renoncer à des réponses préétablies.
+
+Remarque&nbsp;: l'état $\Psi_{\text{GHZ}}$ est un état stabilisateur, et l'argument n'utilise que des mesures de type «&nbsp;Pauli&nbsp;». C'est l'un des endroits où le formalisme stabilisateur, que la [théorie-jouet de Spekkens](../spekkens/#ce-que-le-jouet-ne-peut-pas-reproduire) imite si bien pour un ou deux systèmes, se révèle non local. Dans une base adaptée (spins mesurés selon la troisième direction, perpendiculaire à $h$ et à $v$), cet état s'écrit comme une superposition de «&nbsp;tous les spins en haut&nbsp;» et de «&nbsp;tous les spins en bas&nbsp;», à une phase près&nbsp;: c'est la forme sous laquelle on présente habituellement les états GHZ.
+
+### Ce que montrent ces deux expériences
+
+Le test de Bell et l'expérience GHZ aboutissent à la même conclusion&nbsp;: les résultats ne peuvent pas être écrits à l'avance dans un plan emporté par chaque particule. La première vidéo en tire une alternative. Soit les particules ont chacune leur existence propre, et elles s'influencent à distance. Soit on suit le formalisme à la lettre&nbsp;: l'état intriqué n'est pas séparable, les deux jumeaux n'en font qu'un («&nbsp;une fusion&nbsp;»), et ils ne s'individualisent qu'au moment de la mesure. Mais cette fusion n'est pas locale pour autant, puisqu'elle s'étend en deux endroits à la fois. Quant aux variables cachées de Bohm, qui voulaient échapper à cet étalement, l'inégalité de Bell les condamne à être elles-mêmes non locales. Reste à savoir comment concilier ce constat avec la relativité, et quelles hypothèses abandonner&nbsp;: c'est l'objet de la suite de cette page.
+
 
 ## Ce que dit la relativité
 
@@ -305,41 +409,41 @@ Pour sauver la localité, on peut aussi s'attaquer à une autre hypothèse du th
 Bell utilisait l'exemple des chaussettes de son collègue Reinhold Bertlmann, toujours dépareillées&nbsp;: il suffit d'en apercevoir une pour savoir aussitôt que l'autre n'est pas de la même couleur. Rien de mystérieux&nbsp;: la corrélation a une cause commune, le choix fait le matin devant le tiroir. C'est exactement l'explication par un «&nbsp;plan&nbsp;» que le test de Bell met à l'épreuve, en choisissant les questions **au hasard**, une fois les particules séparées. Encore faut-il que ce choix soit réellement indépendant de $\lambda$.
 
 <div class="svg-container">
-<svg viewBox="0 7 600 263" role="img" aria-label="Hypothèse d'indépendance statistique et superdéterminisme : les réglages a et b ne dépendent pas de la variable cachée λ, sauf si une cause commune C, dans le passé, les a corrélés." style="width:100%;max-width:600px;height:auto;">
+<svg viewBox="0 0 600 296" role="img" aria-label="Hypothèse d'indépendance statistique et superdéterminisme : les réglages a et b ne dépendent pas de la variable cachée λ, sauf si une cause commune C, dans le passé, les a corrélés." style="width:100%;max-width:600px;height:auto;">
 <defs><marker id="sa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#94a3b8"/></marker></defs>
 <defs><marker id="sm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#970E53"/></marker></defs>
-<text x="155.0" y="262.0" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >ce que suppose Bell</text>
-<line x1="143.9" y1="132.2" x2="91.7" y2="48.7" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#sa)"/>
-<line x1="166.1" y1="132.2" x2="218.3" y2="48.7" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#sa)"/>
-<line x1="66.2" y1="74.9" x2="73.5" y2="51.0" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#sa)"/>
-<line x1="243.8" y1="74.9" x2="236.5" y2="51.0" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#sa)"/>
-<line x1="136.8" y1="139.5" x2="78.2" y2="105.5" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="3 4"/>
-<text x="107.5" y="127.5" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >✗</text>
-<line x1="173.2" y1="139.5" x2="231.8" y2="105.5" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="3 4"/>
-<text x="202.5" y="127.5" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >✗</text>
-<text x="155.0" y="194.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >λ indépendant de <tspan font-style="italic">a</tspan> et <tspan font-style="italic">b</tspan></text>
-<circle cx="60" cy="95" r="20" fill="#fff" stroke="#006C65" stroke-width="1.6"/><text x="60.0" y="100.0" text-anchor="middle" font-size="15" fill="#006C65" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">a</tspan></text>
-<circle cx="250" cy="95" r="20" fill="#fff" stroke="#006C65" stroke-width="1.6"/><text x="250.0" y="100.0" text-anchor="middle" font-size="15" fill="#006C65" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">b</tspan></text>
-<circle cx="155" cy="150" r="20" fill="#fff" stroke="#004D80" stroke-width="1.6"/><text x="155.0" y="155.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >λ</text>
-<circle cx="80" cy="30" r="17" fill="#fff" stroke="#004D80" stroke-width="1.6"/><text x="80.0" y="35.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">A</tspan></text>
-<circle cx="230" cy="30" r="17" fill="#fff" stroke="#004D80" stroke-width="1.6"/><text x="230.0" y="35.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">B</tspan></text>
-<text x="445.0" y="262.0" text-anchor="middle" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >superdéterminisme</text>
-<line x1="433.9" y1="132.2" x2="381.7" y2="48.7" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#sa)"/>
-<line x1="456.1" y1="132.2" x2="508.3" y2="48.7" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#sa)"/>
-<line x1="356.2" y1="74.9" x2="363.5" y2="51.0" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#sa)"/>
-<line x1="533.8" y1="74.9" x2="526.5" y2="51.0" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#sa)"/>
-<line x1="433.2" y1="217.6" x2="362.4" y2="113.2" stroke="#970E53" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#sm)"/>
-<line x1="456.8" y1="217.6" x2="527.6" y2="113.2" stroke="#970E53" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#sm)"/>
-<line x1="445.0" y1="214.0" x2="445.0" y2="172.0" stroke="#970E53" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#sm)"/>
-<circle cx="445" cy="235" r="20" fill="#fff" stroke="#970E53" stroke-width="1.6"/><text x="445.0" y="240.0" text-anchor="middle" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >C</text>
-<text x="473.0" y="240.0" text-anchor="start" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >cause commune</text>
-<circle cx="350" cy="95" r="20" fill="#fff" stroke="#006C65" stroke-width="1.6"/><text x="350.0" y="100.0" text-anchor="middle" font-size="15" fill="#006C65" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">a</tspan></text>
-<circle cx="540" cy="95" r="20" fill="#fff" stroke="#006C65" stroke-width="1.6"/><text x="540.0" y="100.0" text-anchor="middle" font-size="15" fill="#006C65" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">b</tspan></text>
-<circle cx="445" cy="150" r="20" fill="#fff" stroke="#004D80" stroke-width="1.6"/><text x="445.0" y="155.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >λ</text>
-<circle cx="370" cy="30" r="17" fill="#fff" stroke="#004D80" stroke-width="1.6"/><text x="370.0" y="35.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">A</tspan></text>
-<circle cx="520" cy="30" r="17" fill="#fff" stroke="#004D80" stroke-width="1.6"/><text x="520.0" y="35.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">B</tspan></text>
+<text x="155.0" y="18.0" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >ce que suppose Bell</text>
+<line x1="143.9" y1="162.2" x2="91.7" y2="78.7" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#sa)"/>
+<line x1="166.1" y1="162.2" x2="218.3" y2="78.7" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#sa)"/>
+<line x1="66.2" y1="104.9" x2="73.5" y2="81.0" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#sa)"/>
+<line x1="243.8" y1="104.9" x2="236.5" y2="81.0" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#sa)"/>
+<line x1="136.8" y1="169.5" x2="78.2" y2="135.5" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="3 4"/>
+<text x="107.5" y="157.5" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >✗</text>
+<line x1="173.2" y1="169.5" x2="231.8" y2="135.5" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="3 4"/>
+<text x="202.5" y="157.5" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >✗</text>
+<text x="155.0" y="224.0" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >λ indépendant de <tspan font-style="italic">a</tspan> et <tspan font-style="italic">b</tspan></text>
+<circle cx="60" cy="125" r="20" fill="#fff" stroke="#006C65" stroke-width="1.6"/><text x="60.0" y="130.0" text-anchor="middle" font-size="15" fill="#006C65" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">a</tspan></text>
+<circle cx="250" cy="125" r="20" fill="#fff" stroke="#006C65" stroke-width="1.6"/><text x="250.0" y="130.0" text-anchor="middle" font-size="15" fill="#006C65" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">b</tspan></text>
+<circle cx="155" cy="180" r="20" fill="#fff" stroke="#004D80" stroke-width="1.6"/><text x="155.0" y="185.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >λ</text>
+<circle cx="80" cy="60" r="17" fill="#fff" stroke="#004D80" stroke-width="1.6"/><text x="80.0" y="65.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">A</tspan></text>
+<circle cx="230" cy="60" r="17" fill="#fff" stroke="#004D80" stroke-width="1.6"/><text x="230.0" y="65.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">B</tspan></text>
+<text x="445.0" y="18.0" text-anchor="middle" font-size="13.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >superdéterminisme</text>
+<line x1="433.9" y1="162.2" x2="381.7" y2="78.7" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#sa)"/>
+<line x1="456.1" y1="162.2" x2="508.3" y2="78.7" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#sa)"/>
+<line x1="356.2" y1="104.9" x2="363.5" y2="81.0" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#sa)"/>
+<line x1="533.8" y1="104.9" x2="526.5" y2="81.0" stroke="#94a3b8" stroke-width="1.4" marker-end="url(#sa)"/>
+<line x1="433.2" y1="247.6" x2="362.4" y2="143.2" stroke="#970E53" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#sm)"/>
+<line x1="456.8" y1="247.6" x2="527.6" y2="143.2" stroke="#970E53" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#sm)"/>
+<line x1="445.0" y1="244.0" x2="445.0" y2="202.0" stroke="#970E53" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#sm)"/>
+<circle cx="445" cy="265" r="20" fill="#fff" stroke="#970E53" stroke-width="1.6"/><text x="445.0" y="270.0" text-anchor="middle" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >C</text>
+<text x="473.0" y="270.0" text-anchor="start" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >cause commune</text>
+<circle cx="350" cy="125" r="20" fill="#fff" stroke="#006C65" stroke-width="1.6"/><text x="350.0" y="130.0" text-anchor="middle" font-size="15" fill="#006C65" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">a</tspan></text>
+<circle cx="540" cy="125" r="20" fill="#fff" stroke="#006C65" stroke-width="1.6"/><text x="540.0" y="130.0" text-anchor="middle" font-size="15" fill="#006C65" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">b</tspan></text>
+<circle cx="445" cy="180" r="20" fill="#fff" stroke="#004D80" stroke-width="1.6"/><text x="445.0" y="185.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >λ</text>
+<circle cx="370" cy="60" r="17" fill="#fff" stroke="#004D80" stroke-width="1.6"/><text x="370.0" y="65.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">A</tspan></text>
+<circle cx="520" cy="60" r="17" fill="#fff" stroke="#004D80" stroke-width="1.6"/><text x="520.0" y="65.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">B</tspan></text>
 <text x="20.0" y="100.0" text-anchor="middle" font-size="1" fill="#334155" font-family="Georgia,'Times New Roman',serif" ></text>
-<line x1="300.0" y1="15.0" x2="300.0" y2="245.0" stroke="#cbd5e1" stroke-width="1" />
+<line x1="300.0" y1="5.0" x2="300.0" y2="290.0" stroke="#cbd5e1" stroke-width="1" />
 </svg>
 </div>
 <p class="legende">À gauche, l'hypothèse de Bell&nbsp;: les résultats $A$ et $B$ dépendent de $\lambda$ et des réglages $a$ et $b$, mais les réglages ne dépendent pas de $\lambda$. À droite, le superdéterminisme&nbsp;: une cause commune C, dans le passé, a corrélé $\lambda$ et les réglages.</p>
@@ -424,10 +528,10 @@ La rétrocausalité est une autre façon d'expliquer les corrélations à distan
 <text x="150.0" y="78.0" text-anchor="middle" font-size="14" fill="#006C65" font-family="Georgia,'Times New Roman',serif" font-weight="bold">A</text>
 <circle cx="450" cy="90" r="5" fill="#970E53"/>
 <text x="450.0" y="78.0" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-weight="bold">B</text>
-<text x="150.0" y="175.0" text-anchor="end" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >le choix d'Alice remonte</text>
-<text x="150.0" y="191.0" text-anchor="end" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >le temps jusqu'à la source</text>
-<text x="450.0" y="175.0" text-anchor="start" font-size="12" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >puis l'influence</text>
-<text x="450.0" y="191.0" text-anchor="start" font-size="12" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >redescend vers Bob</text>
+<text x="203.0" y="168.0" text-anchor="end" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >le choix d'Alice remonte</text>
+<text x="203.0" y="184.0" text-anchor="end" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >le temps jusqu'à la source</text>
+<text x="399.0" y="168.0" text-anchor="start" font-size="12" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >puis l'influence</text>
+<text x="399.0" y="184.0" text-anchor="start" font-size="12" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >redescend vers Bob</text>
 </svg>
 </div>
 <p class="legende">L'explication en zigzag&nbsp;: le choix de mesure d'Alice influence la source en remontant le temps le long du trajet de la particule, puis la source influence le résultat de Bob. Chaque étape reste à l'intérieur des cônes de lumière.</p>
@@ -453,103 +557,3 @@ D'autres interprétations, qui ne sont pas détaillées ici, choisissent encore 
 
 > <b>Source</b> (certains passages ne sont qu'une traduction maladroite)&nbsp;:<br>
 Emily Adlam, <i>Foundations of Quantum Mechanics</i>, Cambridge University Press, coll. &laquo;&nbsp;Elements in the Philosophy of Physics&nbsp;&raquo;, 2021
-
-## L'expérience GHZ
-
-Les premières expériences, de pensée puis réelles, qui ont battu en brèche le réalisme local étaient **statistiques**&nbsp;: pour violer une inégalité de Bell, il faut accumuler des mesures et faire des moyennes. L'expérience imaginée par Greenberger, Horne et Zeilinger (GHZ) est, elle, **déterministe**&nbsp;: la preuve ne repose plus sur une inégalité, mais sur une contradiction algébrique. En principe, une seule mesure suffit.
-
-{{< youtube-plus id="htd_1lAj2Tg" ratio="16x9" width="800" shadow="false" rounded="true" >}}
-
-### Stern-Gerlach et chaussettes
-
-La vidéo commence par l'appareil de Stern-Gerlach. Un faisceau d'électrons qui le traverse ne donne que deux taches&nbsp;: le spin n'a que deux valeurs possibles, $\lvert\uparrow_i\rangle$ ou $\lvert\downarrow_i\rangle$, selon la direction $i$ de l'appareil. Et si l'on connaît le spin dans une direction, il est complètement indéterminé dans la direction perpendiculaire&nbsp;:
-
-<div id="gros">
-
-$$\lvert\uparrow_h\rangle = \frac{1}{\sqrt2}\bigl(\lvert\uparrow_v\rangle + \lvert\downarrow_v\rangle\bigr), \qquad \lvert\downarrow_h\rangle = \frac{1}{\sqrt2}\bigl(\lvert\uparrow_v\rangle - \lvert\downarrow_v\rangle\bigr).$$
-
-</div>
-
-C'est exactement la situation de la mesure de $\hat X$ sur l'état $\lvert0\rangle$ dans les [Notions fondamentales](../fondations/#le-qubit), ou des mesures successives de la [théorie-jouet de Spekkens](../spekkens/#des-mesures-incompatibles).
-
-Puis viennent les chaussettes de Bertlmann&nbsp;: des corrélations à distance ne sont pas mystérieuses en elles-mêmes, tant que les chaussettes ont une couleur bien définie, même quand personne ne les regarde. Ce qui serait bizarre, c'est qu'elles n'aient aucune couleur avant d'être observées, et qu'elles se «&nbsp;décident&nbsp;» ensemble au dernier moment.
-
-### Trois électrons et des règles de parité
-
-L'expérience utilise trois électrons dans l'état intriqué
-
-<div id="gros">
-
-$$\Psi\_{\text{GHZ}} = \frac12\Bigl(\lvert\uparrow_h\uparrow_h\uparrow_h\rangle - \lvert\uparrow_h\downarrow_h\downarrow_h\rangle - \lvert\downarrow_h\uparrow_h\downarrow_h\rangle - \lvert\downarrow_h\downarrow_h\uparrow_h\rangle\Bigr).$$
-
-</div>
-
-Chaque électron traverse un appareil de Stern-Gerlach orienté au hasard, horizontalement ($h$) ou verticalement ($v$). Appelons «&nbsp;positive&nbsp;» une déviation vers le haut ou vers la droite. La vidéo montre, en réécrivant l'état dans les bases adaptées, que les résultats obéissent à des règles de parité strictes&nbsp;:
-<ul>
-<li>si les trois appareils sont horizontaux ($hhh$), le nombre de déviations positives est toujours <b>impair</b> (une ou trois)&nbsp;: c'est visible directement sur $\Psi_{\text{GHZ}}$&nbsp;;</li>
-<li>si un seul appareil est horizontal ($hvv$, $vhv$ ou $vvh$), le nombre de déviations positives est toujours <b>pair</b> (zéro ou deux).</li>
-</ul>
-
-Connaître les déviations de deux électrons suffit donc à prédire celle du troisième. Ces déviations sont-elles fixées à l'avance, comme les couleurs des chaussettes&nbsp;?
-
-### Le graphe de la contradiction
-
-Supposons que chaque électron emporte un «&nbsp;plan&nbsp;» fixant sa déviation pour chacune des deux orientations possibles de son détecteur. Il y a six réponses à fixer&nbsp;: une pour chaque détecteur (1, 2 ou 3) et chaque orientation ($h$ ou $v$). Représentons-les par les six nœuds d'un graphe, et relions par une ligne les trois nœuds qui interviennent dans chacune des quatre configurations de mesure.
-
-<div class="svg-container">
-<svg viewBox="0 11 600 298" role="img" aria-label="Le graphe de l'argument GHZ : six nœuds (détecteur 1, 2 ou 3, réglé horizontalement ou verticalement) reliés par quatre lignes, une par configuration de mesure. Chaque nœud appartient à exactement deux lignes." style="width:100%;max-width:600px;height:auto;">
-<defs><marker id="gd" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L9,5 L0,10 Z" fill="#004D80"/></marker></defs>
-<polyline points="110.0,280.0 200.0,150.0 300.0,40.0" fill="none" stroke="#970E53" stroke-width="4" stroke-linecap="round" stroke-opacity="0.8"/>
-<polyline points="490.0,280.0 400.0,150.0 300.0,40.0" fill="none" stroke="#006C65" stroke-width="3" stroke-linecap="round" stroke-opacity="0.8"/>
-<polyline points="110.0,280.0 300.0,195.0 400.0,150.0" fill="none" stroke="#006C65" stroke-width="3" stroke-linecap="round" stroke-opacity="0.8"/>
-<polyline points="200.0,150.0 300.0,195.0 490.0,280.0" fill="none" stroke="#006C65" stroke-width="3" stroke-linecap="round" stroke-opacity="0.8"/>
-<circle cx="300" cy="40" r="23" fill="#fff" stroke="#004D80" stroke-width="1.6"/>
-<text x="293.0" y="46.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-weight="bold">3</text>
-<line x1="301" y1="40" x2="315" y2="40" stroke="#004D80" stroke-width="1.6" marker-start="url(#gd)" marker-end="url(#gd)"/>
-<circle cx="200" cy="150" r="23" fill="#fff" stroke="#004D80" stroke-width="1.6"/>
-<text x="193.0" y="156.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-weight="bold">2</text>
-<line x1="201" y1="150" x2="215" y2="150" stroke="#004D80" stroke-width="1.6" marker-start="url(#gd)" marker-end="url(#gd)"/>
-<circle cx="400" cy="150" r="23" fill="#fff" stroke="#004D80" stroke-width="1.6"/>
-<text x="393.0" y="156.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-weight="bold">2</text>
-<line x1="408" y1="142" x2="408" y2="158" stroke="#004D80" stroke-width="1.6" marker-start="url(#gd)" marker-end="url(#gd)"/>
-<circle cx="300" cy="195" r="23" fill="#fff" stroke="#004D80" stroke-width="1.6"/>
-<text x="293.0" y="201.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-weight="bold">3</text>
-<line x1="308" y1="187" x2="308" y2="203" stroke="#004D80" stroke-width="1.6" marker-start="url(#gd)" marker-end="url(#gd)"/>
-<circle cx="110" cy="280" r="23" fill="#fff" stroke="#004D80" stroke-width="1.6"/>
-<text x="103.0" y="286.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-weight="bold">1</text>
-<line x1="111" y1="280" x2="125" y2="280" stroke="#004D80" stroke-width="1.6" marker-start="url(#gd)" marker-end="url(#gd)"/>
-<circle cx="490" cy="280" r="23" fill="#fff" stroke="#004D80" stroke-width="1.6"/>
-<text x="483.0" y="286.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-weight="bold">1</text>
-<line x1="498" y1="272" x2="498" y2="288" stroke="#004D80" stroke-width="1.6" marker-start="url(#gd)" marker-end="url(#gd)"/>
-<line x1="430" y1="40" x2="470" y2="40" stroke="#970E53" stroke-width="4" stroke-linecap="round"/>
-<text x="478.0" y="44.0" text-anchor="start" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >hhh : nombre impair</text>
-<line x1="430" y1="64" x2="470" y2="64" stroke="#006C65" stroke-width="3" stroke-linecap="round"/>
-<text x="478.0" y="68.0" text-anchor="start" font-size="12" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >hvv, vhv, vvh : pair</text>
-<text x="478.0" y="84.0" text-anchor="start" font-size="11" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >(déviations positives)</text>
-<text x="40.0" y="44.0" text-anchor="start" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >nœud = détecteur 1, 2 ou 3</text>
-<text x="40.0" y="62.0" text-anchor="start" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >flèche horizontale : h, verticale : v</text>
-</svg>
-</div>
-<p class="legende">Le graphe de la vidéo. Chaque ligne relie les trois réponses utilisées dans une configuration de mesure&nbsp;: la ligne magenta ($hhh$) doit compter un nombre impair de déviations positives, les trois lignes teal ($hvv$, $vhv$, $vvh$) un nombre pair.</p>
-
-Additionnons les nombres de déviations positives sur les quatre lignes&nbsp;: un nombre impair plus trois nombres pairs donne un nombre **impair**. Mais chaque nœud appartient à exactement deux lignes&nbsp;: dans cette somme, chaque réponse est comptée deux fois, et le total est donc **pair**. Contradiction&nbsp;!
-
-On peut dire la même chose avec des signes. Notons $s = +1$ pour une déviation positive et $s = -1$ pour une déviation négative. Un nombre impair de déviations positives parmi trois revient à un produit $s\_1 s\_2 s\_3 = +1$, un nombre pair à un produit $-1$. Les règles de parité s'écrivent alors
-
-<div id="gros">
-
-$$s\_1^h s\_2^h s\_3^h = +1, \qquad s\_1^h s\_2^v s\_3^v = -1, \qquad s\_1^v s\_2^h s\_3^v = -1, \qquad s\_1^v s\_2^v s\_3^h = -1.$$
-
-</div>
-
-En multipliant ces quatre égalités, chaque $s$ apparaît deux fois, donc le membre de gauche vaut $+1$, alors que le membre de droite vaut $(+1)(-1)^3 = -1$.
-
-<div id="theo">
-
-Aucun plan fixé à l'avance ne peut reproduire les quatre règles de parité prédites par la mécanique quantique. Contrairement au test de Bell, la contradiction est certaine, et non statistique.
-
-</div>
-
-L'expérience a été réalisée avec trois photons intriqués par l'équipe d'Anton Zeilinger (2000), et ses résultats confirment les règles de parité quantiques. Comme le conclut la vidéo, il faut alors renoncer à des réponses préétablies, et accepter une forme de concertation instantanée à distance, ou l'une des autres options présentées plus haut.
-
-Remarque&nbsp;: l'état $\Psi_{\text{GHZ}}$ est un état stabilisateur, et l'argument n'utilise que des mesures de type «&nbsp;Pauli&nbsp;». C'est l'un des endroits où le formalisme stabilisateur, que la [théorie-jouet de Spekkens](../spekkens/#ce-que-le-jouet-ne-peut-pas-reproduire) imite si bien pour un ou deux systèmes, se révèle non local. Dans une base adaptée (spins mesurés selon la troisième direction, perpendiculaire à $h$ et à $v$), cet état s'écrit comme une superposition de «&nbsp;tous les spins en haut&nbsp;» et de «&nbsp;tous les spins en bas&nbsp;», à une phase près&nbsp;: c'est la forme sous laquelle on présente habituellement les états GHZ.
