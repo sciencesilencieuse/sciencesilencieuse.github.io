@@ -456,12 +456,57 @@ soit $\Phi_{q_0}(t)$ le front d'onde issu du point $q_0$ après un temps $t$. Po
 En fixant un point $q_0$, on appelle fonction caractéristique $S_{q_0}(q)$ la fonction qui associe à tout point $q$ la longueur du chemin optique de $q_0$ à $q$, c'est-à-dire $c$ fois la durée du trajet le plus rapide.<br>
 Les courbes de niveau de la fonction caractéristique ne sont autres que les fronts d'onde. Retenez cette fonction&nbsp;: elle aura un sosie en mécanique.
 
-L'animation ci-dessous montre comment l'enveloppe des ondelettes est naturellement déviée lors d'un changement de milieu si la vitesse de propagation change, expliquant ainsi la réfraction.
+Le schéma ci-dessous reprend la construction de Huygens lui-même (*Traité de la lumière*, chapitre III)&nbsp;: elle montre comment l'enveloppe des ondelettes est naturellement déviée lors d'un changement de milieu si la vitesse de propagation change, expliquant ainsi la réfraction.
 
 <div class="svg-container">
-<canvas id="refract" width="800" height="600" style="display:block;margin:0 auto;width:min(640px,100%);height:auto;border:1px solid #e2e8f0;border-radius:6px;margin-bottom:0.9em;" aria-label="Animation : un front d'onde avance par ondelettes successives ; dans le second milieu, deux fois plus lent, les ondelettes grandissent moins vite et l'enveloppe se plie."></canvas>
+<svg viewBox="0 0 600 400" role="img" aria-label="La construction de Huygens pour la réfraction : pendant que le front incident parcourt CB à la vitesse v1, l'ondelette émise en A parcourt AD à la vitesse v2 dans le second milieu. Le front réfracté BD est tangent à toutes les ondelettes ; les triangles rectangles ACB et ADB, d'hypoténuse commune AB, donnent sin i1 = v1 Δt / AB et sin i2 = v2 Δt / AB." style="width:100%;max-width:600px;height:auto;">
+<defs><marker id="hsa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#006C65"/></marker></defs>
+<defs><clipPath id="hs1"><rect x="0" y="0" width="600" height="205"/></clipPath><clipPath id="hs2"><rect x="0" y="205" width="600" height="195"/></clipPath></defs>
+<rect x="0" y="205" width="600" height="195" fill="#edf3f6"/>
+<line x1="132.5" y1="165.1" x2="256.5" y2="17.4" stroke="#8cafc6" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="501.1" y1="240.5" x2="279.4" y2="372.3" stroke="#8cafc6" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="85.0" y1="125.3" x2="209.0" y2="-22.4" stroke="#8cafc6" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="522.2" y1="276.1" x2="300.5" y2="407.8" stroke="#8cafc6" stroke-width="1.6" stroke-linecap="round"/>
+<polyline points="45.9,92.5 180.0,205.0 256.6,334.0" fill="none" stroke="#006C65" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6 4"/>
+<line x1="110.5" y1="146.7" x2="119.7" y2="154.4" stroke="#006C65" stroke-width="1.5" marker-end="url(#hsa)"/>
+<line x1="235.2" y1="297.9" x2="241.3" y2="308.2" stroke="#006C65" stroke-width="1.5" marker-end="url(#hsa)"/>
+<polyline points="345.9,92.5 480.0,205.0 556.6,334.0" fill="none" stroke="#006C65" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="6 4"/>
+<line x1="410.5" y1="146.7" x2="419.7" y2="154.4" stroke="#006C65" stroke-width="1.5" marker-end="url(#hsa)"/>
+<line x1="535.2" y1="297.9" x2="541.3" y2="308.2" stroke="#006C65" stroke-width="1.5" marker-end="url(#hsa)"/>
+<path d="M26.8,205 A153.2,153.2 0 0 0 333.2,205" fill="none" stroke="#970E53" stroke-width="1.3" stroke-opacity="0.8"/>
+<circle cx="180.0" cy="205.0" r="3" fill="#970E53" />
+<path d="M177.9,205 A102.1,102.1 0 0 0 382.1,205" fill="none" stroke="#970E53" stroke-width="1.3" stroke-opacity="0.8"/>
+<circle cx="280.0" cy="205.0" r="3" fill="#970E53" />
+<path d="M328.9,205 A51.1,51.1 0 0 0 431.1,205" fill="none" stroke="#970E53" stroke-width="1.3" stroke-opacity="0.8"/>
+<circle cx="380.0" cy="205.0" r="3" fill="#970E53" />
+<line x1="0.0" y1="205.0" x2="600.0" y2="205.0" stroke="#6694b3" stroke-width="1.5" />
+<line x1="180.0" y1="205.0" x2="304.0" y2="57.3" stroke="#004D80" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="480.0" y1="205.0" x2="258.2" y2="336.7" stroke="#004D80" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="180.0" y1="205.0" x2="258.2" y2="336.7" stroke="#970E53" stroke-width="2.2" />
+<line x1="304.0" y1="57.3" x2="480.0" y2="205.0" stroke="#970E53" stroke-width="2.2" />
+<polyline points="298.2,64.2 305.1,70.0 310.8,63.1" fill="none" stroke="#334155" stroke-width="1"/>
+<polyline points="253.6,329.0 261.4,324.4 266.0,332.1" fill="none" stroke="#334155" stroke-width="1"/>
+<path d="M208.3,171.3 A44,44 0 0 1 224.0,205.0" fill="none" stroke="#006C65" stroke-width="1.5" />
+<path d="M435.3,231.6 A52,52 0 0 1 428.0,205.0" fill="none" stroke="#006C65" stroke-width="1.5" />
+<text x="232.6" y="185.5" font-size="15" fill="#006C65" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">i</tspan><tspan dy="4" font-size="10.5">1</tspan><tspan dy="-4"> </tspan></text>
+<text x="414.4" y="229.0" font-size="15" fill="#006C65" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">i</tspan><tspan dy="4" font-size="10.5">2</tspan><tspan dy="-4"> </tspan></text>
+<circle cx="180.0" cy="205.0" r="4" fill="#004D80" />
+<circle cx="480.0" cy="205.0" r="4" fill="#004D80" />
+<circle cx="304.0" cy="57.3" r="4" fill="#004D80" />
+<circle cx="258.2" cy="336.7" r="4" fill="#004D80" />
+<text x="168.0" y="196.0" font-size="16" fill="#004D80" text-anchor="end" font-family="Georgia,'Times New Roman',serif" >A</text>
+<text x="492.0" y="196.0" font-size="16" fill="#004D80" text-anchor="start" font-family="Georgia,'Times New Roman',serif" >B</text>
+<text x="300.0" y="45.3" font-size="16" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >C</text>
+<text x="246.2" y="352.7" font-size="16" fill="#004D80" text-anchor="end" font-family="Georgia,'Times New Roman',serif" >D</text>
+<text x="406.0" y="127.1" font-size="15" fill="#970E53" text-anchor="start" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">v</tspan><tspan dy="4" font-size="10.5">1</tspan><tspan dy="-4"> </tspan>Δ<tspan font-style="italic">t</tspan></text>
+<text x="207.1" y="274.9" font-size="15" fill="#970E53" text-anchor="end" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">v</tspan><tspan dy="4" font-size="10.5">2</tspan><tspan dy="-4"> </tspan>Δ<tspan font-style="italic">t</tspan></text>
+<text x="586.0" y="26.0" font-size="13.5" fill="#334155" text-anchor="end" font-family="Georgia,'Times New Roman',serif" >milieu 1 : vitesse <tspan font-style="italic">v</tspan><tspan dy="4" font-size="10.5">1</tspan><tspan dy="-4"> </tspan></text>
+<text x="586.0" y="386.0" font-size="13.5" fill="#004D80" text-anchor="end" font-family="Georgia,'Times New Roman',serif" >milieu 2 : vitesse <tspan font-style="italic">v</tspan><tspan dy="4" font-size="10.5">2</tspan><tspan dy="-4"> </tspan>&lt; <tspan font-style="italic">v</tspan><tspan dy="4" font-size="10.5">1</tspan><tspan dy="-4"> </tspan></text>
+<text x="254.2" y="141.4" font-size="13" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" transform="rotate(-50.0 254.2 141.4)">front incident</text>
+<text x="376.8" y="283.8" font-size="13" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" transform="rotate(-30.7 376.8 283.8)">front réfracté</text>
+</svg>
 </div>
-<p class="legende">Chaque point du front émet une ondelette&nbsp;; leur enveloppe forme le front suivant, qui émet à son tour ses ondelettes. Dans le second milieu, où l'onde va deux fois moins vite, les ondelettes grandissent moins vite&nbsp;: l'enveloppe se plie et le front réfracté avance dans une direction plus proche de la normale, selon la même loi que celle obtenue par Fermat.</p>
+<p class="legende">Le front incident AC atteint la surface en A. Pendant le temps $\Delta t$ qu'il met à parcourir CB, l'ondelette émise en A parcourt seulement $\mathrm{AD}=v_2\Delta t$ dans le second milieu, et chaque point touché entre A et B émet la sienne, de plus en plus tard. Le front réfracté est la tangente commune BD. L'angle entre un front et la surface est égal à l'angle entre le rayon et la normale (l'un est tourné de 90° par rapport à l'autre). Or les triangles ACB et ADB, rectangles en C et en D, ont la même hypoténuse AB&nbsp;: $\sin i_1=v_1\Delta t/\mathrm{AB}$ et $\sin i_2=v_2\Delta t/\mathrm{AB}$. D'où $\frac{\sin i_1}{v_1}=\frac{\sin i_2}{v_2}$, c'est-à-dire $n_1\sin i_1=n_2\sin i_2$&nbsp;: la loi de la réfraction, la même que celle de Fermat.</p>
 
 Même si ses « ondelettes » préfigurent évidemment de véritables ondes, Huygens se contente de modéliser l'optique géométrique avec sa théorie et il s'imagine d'ailleurs les ondelettes s'évanouir partout ailleurs que sur l'enveloppe.
 
@@ -1688,180 +1733,6 @@ En sommant sur les chemins, on constate bien que les contributions les plus impo
     }, { threshold: 0.6 });
     io.observe(svg);
   }
-})();
-(function () {
-// --- Paramètres fixes de la simulation (réfraction) ---
-const baseWidthRefract  = 800;
-const baseHeightRefract = 600;
-const canvasRefract     = document.getElementById("refract");
-const ctxRefract        = canvasRefract.getContext("2d");
-canvasRefract.width = 1600; canvasRefract.height = 1200;   // rendu net sur écrans haute densité
-ctxRefract.setTransform(2, 0, 0, 2, 0, 0);
-// --- Paramètres de simulation (réfraction) ---
-const dtRefract                = 0.08;     // Intervalle de temps (frame)
-const v1Refract                = 8;        // Vitesse milieu 1
-const v2Refract                = 4;        // Vitesse milieu 2
-const fadeRateRefract          = 0.004;    // Disparition ondelettes inactives
-const frontUpdateIntervalRefract = 2;      // Intervalle entre fronts
-// Front initial et normale
-const initialAngleDegRefract = 70;
-const initialAngleRefract    = initialAngleDegRefract * Math.PI/180;
-const normalAngleRefract     = initialAngleRefract - Math.PI/2;
-// Sources initiales
-const nbSourcesRefract  = 10;
-const frontLengthRefract = 400;
-const startXRefract     = 100;
-const startYRefract     = 250;
-// Position de l'interface
-const interfaceXRefract = baseWidthRefract * 3/5;
-class Wavelet {
-constructor(center, propDir) {
-  this.center  = { x:center.x, y:center.y };
-  this.propDir = propDir!==undefined ? propDir : normalAngleRefract;
-  this.opacity = 1;
-  this.isActive= true;
-  this.nParticles = 50;
-  this.particles  = [];
-  for (let i=0; i<this.nParticles; i++){
-    let angle = 2*Math.PI*i/this.nParticles;
-    this.particles.push({ angle, x:center.x, y:center.y });
-  }
-}
-update(dt){
-  for (let p of this.particles){
-    let localSpeed = (p.x >= interfaceXRefract) ? v2Refract : v1Refract;
-    p.x += localSpeed*Math.cos(p.angle)*dt;
-    p.y += localSpeed*Math.sin(p.angle)*dt;
-  }
-  if (!this.isActive){
-    this.opacity = Math.max(0, this.opacity - fadeRateRefract);
-  }
-}
-draw(ctx){
-  if (this.opacity<=0) return;
-  ctx.save();
-  ctx.globalAlpha = this.opacity;
-  ctx.strokeStyle = "#970E53";
-  ctx.lineWidth = 1.3;
-  ctx.beginPath();
-  ctx.moveTo(this.particles[0].x, this.particles[0].y);
-  for (let i=1; i<this.particles.length; i++){
-    ctx.lineTo(this.particles[i].x, this.particles[i].y);
-  }
-  ctx.closePath();
-  ctx.stroke();
-  ctx.restore();
-}
-getFurthestPoint(){
-  let maxProj=-Infinity, chosen=null;
-  const ux = Math.cos(this.propDir), uy = Math.sin(this.propDir);
-  for (let p of this.particles){
-    const proj = (p.x-this.center.x)*ux + (p.y-this.center.y)*uy;
-    if (proj>maxProj){ maxProj=proj; chosen=p; }
-  }
-  return chosen && { x:chosen.x, y:chosen.y };
-}
-}
-function initWaveletsRefract(){
-let arr=[];
-for (let i=0; i<nbSourcesRefract; i++){
-  const t = i/(nbSourcesRefract-1);
-  const x = startXRefract + t*frontLengthRefract*Math.cos(initialAngleRefract);
-  const y = startYRefract + t*frontLengthRefract*Math.sin(initialAngleRefract);
-  arr.push(new Wavelet({x,y}, normalAngleRefract));
-}
-return arr;
-}
-let waveletsRefract = initWaveletsRefract();
-let timeSinceLastFrontRefract = 0;
-function isWaveletVisibleRefract(w){
-return w.particles.some(p=>
-  p.x>=0 && p.x<=baseWidthRefract && p.y>=0 && p.y<=baseHeightRefract
-);
-}
-let visibleRefract = false, rafRefract = null;
-function stepRefract(){
-timeSinceLastFrontRefract += dtRefract;
-waveletsRefract.forEach(w => w.update(dtRefract));
-if (timeSinceLastFrontRefract > frontUpdateIntervalRefract){
-  const active = waveletsRefract.filter(w=>w.isActive);
-  const newPts = active.map(w=>{
-    const pt = w.getFurthestPoint();
-    w.isActive=false;
-    return pt;
-  }).filter(pt=>pt);
-  // Tri selon front initial
-  const fd = { x:Math.cos(initialAngleRefract), y:Math.sin(initialAngleRefract) };
-  newPts.sort((A,B)=>
-    (A.x*fd.x + A.y*fd.y) - (B.x*fd.x + B.y*fd.y)
-  );
-  // Normale locale et nouvelle ondelette
-  const orig = { x:Math.cos(normalAngleRefract), y:Math.sin(normalAngleRefract) };
-  for (let i=0; i<newPts.length; i++){
-    let tx, ty;
-    if (i===0){
-      tx = newPts[1].x - newPts[0].x;
-      ty = newPts[1].y - newPts[0].y;
-    } else if (i===newPts.length-1){
-      const n=newPts.length;
-      tx = newPts[n-1].x - newPts[n-2].x;
-      ty = newPts[n-1].y - newPts[n-2].y;
-    } else {
-      const prev=newPts[i-1], next=newPts[i+1];
-      tx = next.x - prev.x;
-      ty = next.y - prev.y;
-    }
-    const L = Math.hypot(tx,ty)||1;
-    tx/=L; ty/=L;
-    const n1 = { x:-ty, y:tx };
-    const dot = n1.x*orig.x + n1.y*orig.y;
-    const chosen = dot>=0 ? n1 : { x:ty, y:-tx };
-    const newDir = Math.atan2(chosen.y, chosen.x);
-    waveletsRefract.push(new Wavelet({ x:newPts[i].x, y:newPts[i].y }, newDir));
-  }
-  timeSinceLastFrontRefract = 0;
-}
-// Nettoyage & reset
-waveletsRefract = waveletsRefract.filter(w=>w.opacity>0);
-if (!waveletsRefract.some(isWaveletVisibleRefract)){
-  waveletsRefract = initWaveletsRefract();
-  timeSinceLastFrontRefract = 0;
-}
-}
-function drawRefract(){
-ctxRefract.clearRect(0,0,baseWidthRefract,baseHeightRefract);
-ctxRefract.fillStyle = "#FFFFFF";
-ctxRefract.fillRect(0,0,interfaceXRefract,baseHeightRefract);
-ctxRefract.fillStyle = "#EDF3F6";
-ctxRefract.fillRect(interfaceXRefract,0,baseWidthRefract-interfaceXRefract,baseHeightRefract);
-ctxRefract.strokeStyle = "#739DB9";
-ctxRefract.lineWidth = 2;
-ctxRefract.beginPath();
-ctxRefract.moveTo(interfaceXRefract,0);
-ctxRefract.lineTo(interfaceXRefract,baseHeightRefract);
-ctxRefract.stroke();
-waveletsRefract.forEach(w=>w.draw(ctxRefract));
-ctxRefract.font = "20px Georgia, 'Times New Roman', serif";
-ctxRefract.fillStyle = "#334155"; ctxRefract.textAlign = "left";
-ctxRefract.fillText("milieu 1", 18, 34);
-ctxRefract.fillStyle = "#004D80"; ctxRefract.textAlign = "right";
-ctxRefract.fillText("milieu 2 : onde deux fois plus lente", baseWidthRefract - 18, 34);
-}
-function updateRefract(){
-stepRefract();
-drawRefract();
-rafRefract = visibleRefract ? requestAnimationFrame(updateRefract) : null;
-}
-if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  for (let k = 0; k < 140; k++) stepRefract();
-  drawRefract();
-} else if ('IntersectionObserver' in window) {
-  drawRefract();
-  new IntersectionObserver(function (e) {
-    visibleRefract = e[0].isIntersecting;
-    if (visibleRefract && !rafRefract) rafRefract = requestAnimationFrame(updateRefract);
-  }, { threshold: 0.1 }).observe(canvasRefract);
-} else { visibleRefract = true; updateRefract(); }
 })();
 (function () {
   var svg = document.getElementById('br-svg');
