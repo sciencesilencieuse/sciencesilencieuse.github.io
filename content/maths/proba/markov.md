@@ -307,8 +307,8 @@ Cette amnésie paraît être une limitation sévère. C'est au contraire ce qui 
 
 <div class="encadre">
 <div class="encadre-titre">Markov, Pouchkine et les voyelles</div>
-<p>En 1913, Andreï Markov s'attaque à un adversaire inattendu&nbsp;: le roman en vers <em>Eugène Onéguine</em> de Pouchkine. Il en recopie à la main les 20&nbsp;000 premières lettres et compte les voyelles et les consonnes. 43&nbsp;% de voyelles en moyenne, mais le contexte compte énormément&nbsp;: après une voyelle, la lettre suivante n'est une voyelle que dans 13&nbsp;% des cas, contre 66&nbsp;% après une consonne. Les lettres ne sont pas indépendantes, chacune « se souvient » de la précédente.</p>
-<p>L'enjeu n'était pas littéraire. Le mathématicien Pavel Nekrassov soutenait que la loi des grands nombres (les moyennes se stabilisent) exigeait des événements indépendants, et il en tirait même des conclusions théologiques sur le libre arbitre. Markov lui montre, texte à l'appui, que des événements enchaînés obéissent eux aussi à la loi des grands nombres. Les chaînes qui portent son nom sont nées de cette querelle.</p>
+<p>En 1913, Andreï Markov publie la première application de ses chaînes, sur un terrain inattendu&nbsp;: le roman en vers <em>Eugène Onéguine</em> de Pouchkine. Il dispose les 20&nbsp;000 premières lettres du texte (sans espaces ni ponctuation) en tableaux de cent lettres, puis compte les voyelles, les consonnes et les paires de lettres consécutives. Sur les 19&nbsp;999 paires, les voyelles représentent 43&nbsp;% des lettres, mais une voyelle n'est suivie d'une autre voyelle que 1&nbsp;104 fois sur 8&nbsp;638 (13&nbsp;%), alors qu'une consonne est suivie d'une voyelle 7&nbsp;534 fois sur 11&nbsp;361 (66&nbsp;%). Les lettres ne sont pas indépendantes&nbsp;: chacune « se souvient » de la précédente. Markov essaie même une mémoire de deux lettres, qui rend encore mieux compte des fluctuations observées dans le texte.</p>
+<p>La théorie, elle, datait de 1906 et était née d'une querelle. Le mathématicien Pavel Nekrassov soutenait que la loi des grands nombres (les moyennes se stabilisent) exigeait des événements indépendants, et il en tirait même des conclusions théologiques sur le libre arbitre. Markov construisit ses chaînes pour lui démontrer que des événements enchaînés obéissent eux aussi à la loi des grands nombres&nbsp;; <em>Onéguine</em> en fournit, sept ans plus tard, l'illustration concrète.</p>
 </div>
 
 ## Une promenade au hasard sur un graphe
@@ -1948,6 +1948,7 @@ Remarquez aussi combien la simulation **peine** à basse température quand on p
 <b><i>Sources&nbsp;:</i></b>
 
 - Levin, D. A. et Peres, Y. *Markov Chains and Mixing Times*, 2<sup>e</sup> édition, American Mathematical Society (2017). [🌐](https://pages.uoregon.edu/dlevin/MARKOV/mcmt2e.pdf)
+- Petruszewycz, M. « Chaînes de Markov discrètes dans le domaine linguistique : l'article de 1913 de A. A. Markov », *Publications des séminaires de mathématiques et informatique de Rennes*, fascicule 2 (1981). [🌐](https://www.numdam.org/item/PSMIR_1981___2_A3_0.pdf)
 - Hayes, B. « First Links in the Markov Chain », *American Scientist* 101 (2013). [🌐](https://www.americanscientist.org/article/first-links-in-the-markov-chain)
 - Bayer, D. et Diaconis, P. « Trailing the Dovetail Shuffle to its Lair », *The Annals of Applied Probability* 2 (1992).
 - Metropolis, N., Rosenbluth, A. W., Rosenbluth, M. N., Teller, A. H. et Teller, E. « Equation of State Calculations by Fast Computing Machines », *The Journal of Chemical Physics* 21 (1953).
