@@ -478,6 +478,8 @@ Le schéma ci-dessous reprend la construction de Huygens lui-même (*Traité de 
 <line x1="0.0" y1="205.0" x2="600.0" y2="205.0" stroke="#6694b3" stroke-width="1.5" />
 <line x1="180.0" y1="205.0" x2="304.0" y2="57.3" stroke="#004D80" stroke-width="2.6" stroke-linecap="round"/>
 <line x1="480.0" y1="205.0" x2="258.2" y2="336.7" stroke="#004D80" stroke-width="2.6" stroke-linecap="round"/>
+<line x1="280.0" y1="205.0" x2="362.6" y2="106.5" stroke="#6694b3" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="380.0" y1="205.0" x2="421.3" y2="155.8" stroke="#6694b3" stroke-width="1.8" stroke-linecap="round"/>
 <line x1="180.0" y1="205.0" x2="258.2" y2="336.7" stroke="#970E53" stroke-width="2.2" />
 <line x1="304.0" y1="57.3" x2="480.0" y2="205.0" stroke="#970E53" stroke-width="2.2" />
 <line x1="235.2" y1="297.9" x2="241.3" y2="308.2" stroke="#970E53" stroke-width="1.5" marker-end="url(#hsm)"/>
