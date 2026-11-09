@@ -476,6 +476,37 @@ Dans l'animation, l'histogramme se stabilise. Ce n'est pas un hasard&nbsp;: la l
 
 Le point d'arrivée $\pi$ ne bouge plus quand on le multiplie par $P$&nbsp;: c'est un **point fixe**, la **loi stationnaire** (ou invariante). Ici, $\pi=\left(\frac{24}{61},\frac{22}{61},\frac{15}{61}\right)\approx(0{,}39\\;;\\;0{,}36\\;;\\;0{,}25)$&nbsp;: c'est la hauteur des tirets de l'histogramme. Sur le long terme, il fait beau 39&nbsp;% du temps, quel que soit le temps qu'il faisait au départ.
 
+Comment trouver $\pi$ sans attendre la convergence&nbsp;? En écrivant précisément qu'elle ne bouge pas&nbsp;: $\pi=\pi P$. Lue état par état, cette égalité est un **bilan de flux**&nbsp;:
+
+<p style="text-align:center;">
+$\displaystyle \pi(j)=\sum_{i}\pi(i)\,p_{ij}\qquad\text{pour chaque état } j.$
+</p>
+
+La probabilité d'être en $j$ le lendemain est la somme des probabilités d'y arriver depuis chacun des états&nbsp;; à l'équilibre, ce qui entre dans chaque état compense exactement ce qui en sort. Il suffit d'y ajouter la condition $\sum\_j \pi(j)=1$ pour obtenir un système linéaire, que l'on résout comme n'importe quel autre.
+
+<div id="preuve">
+<details>
+<summary>le calcul pour la météo</summary>
+
+Notons $\pi=(\pi\_{\text{s}},\pi\_{\text{n}},\pi\_{\text{p}})$ les probabilités du soleil, des nuages et de la pluie. Chaque équation se lit sur une **colonne** de $P$&nbsp;: pour avoir du soleil demain, il faut du soleil aujourd'hui puis rester (probabilité $0{,}6$), ou des nuages puis une éclaircie ($0{,}3$), ou de la pluie puis une éclaircie ($0{,}2$). D'où le système&nbsp;:
+
+<p style="text-align:center;">$\begin{cases}\pi_{\text{s}}=0{,}6\,\pi_{\text{s}}+0{,}3\,\pi_{\text{n}}+0{,}2\,\pi_{\text{p}}\\ \pi_{\text{n}}=0{,}3\,\pi_{\text{s}}+0{,}4\,\pi_{\text{n}}+0{,}4\,\pi_{\text{p}}\\ \pi_{\text{p}}=0{,}1\,\pi_{\text{s}}+0{,}3\,\pi_{\text{n}}+0{,}4\,\pi_{\text{p}}\\ \pi_{\text{s}}+\pi_{\text{n}}+\pi_{\text{p}}=1\end{cases}$</p>
+
+Les trois premières équations ne sont pas indépendantes&nbsp;: en les additionnant, on obtient une identité, puisque chaque ligne de $P$ a pour somme $1$. Elles ne déterminent $\pi$ qu'à un facteur près, et c'est la quatrième, la normalisation, qui fixe ce facteur. En multipliant par $10$ et en regroupant, les trois premières deviennent&nbsp;:
+
+<p style="text-align:center;">$\begin{cases}4\,\pi_{\text{s}}=3\,\pi_{\text{n}}+2\,\pi_{\text{p}}\\ 6\,\pi_{\text{n}}=3\,\pi_{\text{s}}+4\,\pi_{\text{p}}\\ 6\,\pi_{\text{p}}=\pi_{\text{s}}+3\,\pi_{\text{n}}\end{cases}$</p>
+
+La troisième donne $\pi\_{\text{s}}=6\\,\pi\_{\text{p}}-3\\,\pi\_{\text{n}}$. Reportée dans la première&nbsp;: $24\\,\pi\_{\text{p}}-12\\,\pi\_{\text{n}}=3\\,\pi\_{\text{n}}+2\\,\pi\_{\text{p}}$, soit $\pi\_{\text{n}}=\frac{22}{15}\\,\pi\_{\text{p}}$, puis $\pi\_{\text{s}}=\frac{24}{15}\\,\pi\_{\text{p}}$ (la deuxième équation est alors automatiquement vérifiée). La normalisation donne enfin $\frac{24+22+15}{15}\\,\pi\_{\text{p}}=1$, d'où
+
+<p style="text-align:center;">$\pi=\left(\dfrac{24}{61},\ \dfrac{22}{61},\ \dfrac{15}{61}\right).$</p>
+
+Dans le langage de l'algèbre linéaire, $\pi$ est un **vecteur propre à gauche** de $P$ pour la valeur propre $1$ (autrement dit un vecteur propre de la transposée $P^{\mathsf T}$). Cette valeur propre existe toujours&nbsp;: le vecteur colonne $(1,1,1)$ vérifie $P\\,(1,1,1)^{\mathsf T}=(1,1,1)^{\mathsf T}$, justement parce que chaque ligne a pour somme $1$. Le théorème de Perron-Frobenius garantit de plus que, pour une chaîne irréductible, ce vecteur propre peut être choisi à coefficients strictement positifs, et qu'il est unique une fois normalisé.
+
+Pour une très grande chaîne (des milliards de pages web, par exemple), on ne résout pas le système&nbsp;: on part d'une loi quelconque et on la multiplie par $P$ encore et encore, exactement comme dans le triangle ci-dessus. C'est la **méthode de la puissance**, et le théorème de convergence assure qu'elle aboutit.
+
+</details>
+</div>
+
 <div id="theo">
 <p><b>Théorème de convergence</b> 
 
