@@ -507,6 +507,8 @@ Pour une très grande chaîne (des milliards de pages web, par exemple), on ne r
 </details>
 </div>
 
+<br>
+
 <div id="theo">
 <p><b>Théorème de convergence</b> 
 
