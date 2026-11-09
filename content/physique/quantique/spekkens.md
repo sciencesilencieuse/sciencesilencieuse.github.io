@@ -1119,7 +1119,7 @@ Spekkens montre que la liste est bien plus longue&nbsp;: le jouet possède aussi
 <li><b>La non-localité</b><br>
 Le jouet est un modèle à variables cachées locales&nbsp;: il ne peut pas violer les inégalités de Bell. Dans le jeu CHSH, il plafonne à $S = 2$, là où la mécanique quantique atteint $2\sqrt2$ (voir la page <a href="../nonlocale/">Limites de la non-localité</a>).</li>
 <li><b>La contextualité</b><br>
-Le jouet est non contextuel&nbsp;: le résultat d'une mesure y révèle une propriété (la classe de l'état ontique) qui ne dépend pas des autres mesures effectuées en même temps. Le théorème de Kochen et Specker interdit un tel modèle pour la mécanique quantique.</li>
+Le jouet est non contextuel&nbsp;: le résultat d'une mesure y révèle une propriété (la classe de l'état ontique) qui ne dépend pas des autres mesures effectuées en même temps. Le théorème de Kochen et Specker interdit un tel modèle pour la mécanique quantique (voir la page <a href="../contextualite/">Contextualité</a>).</li>
 <li><b>Le continu</b><br>
 Le jouet n'a que six états purs par système et des probabilités qui valent $0$, $\frac12$ ou $1$. Il ne connaît pas les états intermédiaires, comme ceux qui permettent de «&nbsp;ranger&nbsp;» deux bits dans un qubit avec $85\,\%$ de réussite (voir la borne de Holevo dans <a href="../fondations/#le-qubit">Notions fondamentales</a>).</li>
 <li><b>L'avantage de calcul</b><br>
@@ -1128,7 +1128,7 @@ Comme le formalisme stabilisateur, le jouet se simule efficacement&nbsp;: il ne 
 On l'a vu&nbsp;: certaines permutations correspondent à des réflexions impossibles en quantique, la règle de superposition ne marche pas pour toutes les paires, et l'état corrélé est corrélé selon les trois axes.</li>
 </ul>
 
-Le dernier point n'est pas anecdotique. Le formalisme stabilisateur, que le jouet imite si bien pour un ou deux systèmes, est lui-même contextuel dès deux qubits (carré de Mermin–Peres) et non local dès trois (paradoxe GHZ, voir la page [EPR](../epr/#ghz)). C'est précisément là que le jouet et la mécanique quantique se séparent.
+Le dernier point n'est pas anecdotique. Le formalisme stabilisateur, que le jouet imite si bien pour un ou deux systèmes, est lui-même contextuel dès deux qubits ([carré de Mermin–Peres](../contextualite/#le-carré-magique-de-mermin-et-peres)) et non local dès trois (paradoxe GHZ, voir la page [EPR](../epr/#ghz)). C'est précisément là que le jouet et la mécanique quantique se séparent.
 
 ### La théorie-jouet face au théorème PBR
 
