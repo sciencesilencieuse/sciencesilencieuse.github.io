@@ -99,7 +99,7 @@ margin-top:0em;
 <h1 style="overflow-x:auto;">Notions fondamentales en mécanique quantique</h1>
 
 <div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
-<img style="border-radius:10px;" src="solvey.jpg" style="box-shadow:none;background:none;">
+<img style="border-radius:10px;" src="/solvey.jpg" style="box-shadow:none;background:none;">
 </div>
 
 Le cinquième Conseil international de Solvay, en 1927, avait pour thème «&nbsp;Électrons et Photons&nbsp;» et porta principalement sur la mécanique quantique. 17 des 29 personnalités présentes à ce congrès étaient ou allaient devenir prix Nobel...
