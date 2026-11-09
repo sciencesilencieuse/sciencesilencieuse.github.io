@@ -257,8 +257,7 @@ td, th {
   <a href="./proba/lois/#loi-binomiale" class="math-btn">Binomiale</a>
   <a href="./proba/lois/#loi-normale" class="math-btn">Normale</a>
   <a href="./proba/lois/#densité-de-probabilités" class="math-btn">Densité</a>
-  <a href="./proba/lois/#probabilités-conditionnelles-et-bayes" class="math-btn">Bayes</a>
-  <a href="./proba/lois/#chaînes-de-markov" class="math-btn">Markov</a>
+  <a href="./proba/markov" class="math-btn">Markov</a>
 </div>
 </div>
 <div class="theme-subgroup">
