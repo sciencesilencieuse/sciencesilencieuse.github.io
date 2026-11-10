@@ -562,5 +562,4 @@ D'autres interprétations, qui ne sont pas détaillées ici, choisissent encore 
 <li><b>changer d'espace</b>&nbsp;: pour les réalistes de la fonction d'onde, la non-localité n'est qu'apparente, car la réalité fondamentale est un champ local dans un espace à $3N$ dimensions (voir [Une ontologie à 3N dimensions](../3ndimensions/)).</li>
 </ul>
 
-> <b>Source</b> (certains passages ne sont qu'une traduction maladroite)&nbsp;:<br>
-Emily Adlam, <i>Foundations of Quantum Mechanics</i>, Cambridge University Press, coll. &laquo;&nbsp;Elements in the Philosophy of Physics&nbsp;&raquo;, 2021
+> Emily Adlam, <i>Foundations of Quantum Mechanics</i>, Cambridge University Press, coll. &laquo;&nbsp;Elements in the Philosophy of Physics&nbsp;&raquo;, 2021

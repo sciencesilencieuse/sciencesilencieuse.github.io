@@ -344,9 +344,13 @@ En physique classique, cette situation n'existe pas&nbsp;: toutes les grandeurs 
 Supposons que les résultats de mesure révèlent des valeurs préexistantes (c'est le plan du [test de Bell](../epr/#le-test-de-bell), où chaque jumeau avait en poche une réponse à chaque question). La figure pose alors une question nette&nbsp;: la valeur révélée pour $A$ est-elle **la même** selon qu'on la mesure avec $B$ ou avec $C$&nbsp;? Répondre oui, c'est faire l'hypothèse de non-contextualité. Détaillons les deux étages de cette hypothèse.
 
 <div id="def">
-<p><b>Modèle non contextuel à valeurs définies.</b> C'est un modèle qui attribue à chaque observable $A$ une valeur $v(A)$ telle que&nbsp;:</p>
-<p><b>1. Valeurs définies.</b> $v(A)$ existe avant la mesure, c'est l'une des valeurs propres de $A$, et c'est elle que la mesure révèle.</p>
-<p><b>2. Non-contextualité.</b> $v(A)$ ne dépend que de $A$ (et de l'état caché du système), et pas des autres observables compatibles que l'on choisit de mesurer en même temps.</p>
+
+<b>Modèle non contextuel à valeurs définies</b> 
+
+C'est un modèle qui attribue à chaque observable $A$ une valeur $v(A)$ telle que&nbsp;:
+
+<p><b>1. Valeurs définies</b>&nbsp;: $v(A)$ existe avant la mesure, c'est l'une des valeurs propres de $A$, et c'est elle que la mesure révèle.</p>
+<p><b>2. Non-contextualité</b>&nbsp;: $v(A)$ ne dépend que de $A$ (et de l'état caché du système), et pas des autres observables compatibles que l'on choisit de mesurer en même temps.</p>
 </div>
 
 Ces deux hypothèses ont une conséquence immédiate, qui servira dans toutes les preuves. Si des observables **compatibles** sont liées par une relation, par exemple $C=AB$ ou $A+B+C=2$, la mécanique quantique prédit que les résultats obtenus en les mesurant ensemble vérifient cette relation à coup sûr. Les valeurs révélées doivent donc la vérifier aussi&nbsp;:
@@ -363,10 +367,14 @@ Pourquoi croire à la non-contextualité&nbsp;? Dans le test de Bell, c'est la d
 <li><b>Les probabilités quantiques, elles, sont non contextuelles.</b> La règle de Born donne la probabilité d'un résultat à partir de son seul projecteur&nbsp;: les statistiques de $A$ sont rigoureusement les mêmes, qu'on la mesure avec $B$ ou avec $C$. Si le contexte influençait la valeur de $A$, cette influence serait donc parfaitement invisible dans les fréquences observées.</li>
 </ul>
 
-Le troisième point mérite qu'on s'y arrête, car il prévient un contresens fréquent. **La contextualité ne dit pas que les statistiques d'une mesure dépendent du contexte&nbsp;: elles n'en dépendent pas.** Elle dit qu'il est impossible d'expliquer ces statistiques par des valeurs préexistantes qui n'en dépendraient pas non plus.
+Le troisième point prévient un contresens fréquent. **La contextualité ne dit pas que les statistiques d'une mesure dépendent du contexte&nbsp;: elles n'en dépendent pas.** Elle dit qu'il est impossible d'expliquer ces statistiques par des valeurs préexistantes qui n'en dépendraient pas non plus.
 
 <div id="theo">
-<p><b>Contextualité.</b> Une théorie est contextuelle si ses prédictions ne peuvent être reproduites par aucun modèle non contextuel à valeurs définies. Le théorème de Kochen-Specker affirme que la mécanique quantique est contextuelle, dès que l'espace des états est de dimension au moins $3$.</p>
+
+<b>Contextualité</b> 
+
+Une théorie est contextuelle si ses prédictions ne peuvent être reproduites par aucun modèle non contextuel à valeurs définies. Le théorème de Kochen-Specker affirme que la mécanique quantique est contextuelle, dès que l'espace des états est de dimension au moins $3$.
+
 </div>
 
 Autrement dit, il faut renoncer à l'une des deux hypothèses. Soit les grandeurs n'ont pas de valeur avant d'être mesurées (« les expériences non réalisées n'ont pas de résultat », selon la formule d'Asher Peres). Soit elles en ont une, mais qui dépend de l'ensemble du dispositif de mesure, et qu'on ne peut donc plus regarder comme une propriété du système seul.
@@ -402,78 +410,6 @@ Ils croient avoir mal deviné. Le mal est plus profond&nbsp;: si deux coffrets o
 </svg>
 </div>
 <p class="legende">Chaque paire de coffrets (chaque contexte) obéit à la règle « un plein, un vide ». Si le premier est plein, le deuxième est vide&nbsp;; le troisième devrait alors différer des deux à la fois.</p>
-
-On peut s'en convaincre en passant en revue les huit remplissages possibles.
-
-<div class="svg-container">
-<svg viewBox="0 0 600 282" role="img" aria-label="Les huit façons de remplir trois coffrets. Dans chacune, au moins une paire de coffrets a le même contenu et viole la règle « un plein, un vide » : les trois paires quand les coffrets sont tous pleins ou tous vides, une seule paire dans les six autres cas." style="width:100%;max-width:600px;height:auto;">
-<line x1="75.0" y1="32.0" x2="106.2" y2="86.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
-<line x1="106.2" y1="86.0" x2="43.8" y2="86.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
-<line x1="43.8" y1="86.0" x2="75.0" y2="32.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
-<rect x="64.0" y="23.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
-<rect x="95.2" y="77.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
-<rect x="32.8" y="77.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
-<text x="75.0" y="120.0" font-size="12.5" fill="#970E53" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >0 paire sur 3</text>
-<line x1="225.0" y1="32.0" x2="256.2" y2="86.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
-<line x1="256.2" y1="86.0" x2="193.8" y2="86.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
-<line x1="193.8" y1="86.0" x2="225.0" y2="32.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
-<rect x="214.0" y="23.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
-<rect x="245.2" y="77.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
-<rect x="182.8" y="77.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
-<text x="225.0" y="120.0" font-size="12.5" fill="#970E53" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >0 paire sur 3</text>
-<line x1="375.0" y1="32.0" x2="406.2" y2="86.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
-<line x1="406.2" y1="86.0" x2="343.8" y2="86.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="343.8" y1="86.0" x2="375.0" y2="32.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
-<rect x="364.0" y="23.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
-<rect x="395.2" y="77.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
-<rect x="332.8" y="77.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
-<text x="375.0" y="120.0" font-size="12.5" fill="#334155" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >2 paires sur 3</text>
-<line x1="525.0" y1="32.0" x2="556.2" y2="86.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="556.2" y1="86.0" x2="493.8" y2="86.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="493.8" y1="86.0" x2="525.0" y2="32.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
-<rect x="514.0" y="23.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
-<rect x="545.2" y="77.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
-<rect x="482.8" y="77.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
-<text x="525.0" y="120.0" font-size="12.5" fill="#334155" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >2 paires sur 3</text>
-<line x1="75.0" y1="144.0" x2="106.2" y2="198.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="106.2" y1="198.0" x2="43.8" y2="198.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
-<line x1="43.8" y1="198.0" x2="75.0" y2="144.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
-<rect x="64.0" y="135.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
-<rect x="95.2" y="189.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
-<rect x="32.8" y="189.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
-<text x="75.0" y="232.0" font-size="12.5" fill="#334155" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >2 paires sur 3</text>
-<line x1="225.0" y1="144.0" x2="256.2" y2="198.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="256.2" y1="198.0" x2="193.8" y2="198.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
-<line x1="193.8" y1="198.0" x2="225.0" y2="144.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
-<rect x="214.0" y="135.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
-<rect x="245.2" y="189.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
-<rect x="182.8" y="189.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
-<text x="225.0" y="232.0" font-size="12.5" fill="#334155" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >2 paires sur 3</text>
-<line x1="375.0" y1="144.0" x2="406.2" y2="198.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="406.2" y1="198.0" x2="343.8" y2="198.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="343.8" y1="198.0" x2="375.0" y2="144.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
-<rect x="364.0" y="135.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
-<rect x="395.2" y="189.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
-<rect x="332.8" y="189.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
-<text x="375.0" y="232.0" font-size="12.5" fill="#334155" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >2 paires sur 3</text>
-<line x1="525.0" y1="144.0" x2="556.2" y2="198.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
-<line x1="556.2" y1="198.0" x2="493.8" y2="198.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
-<line x1="493.8" y1="198.0" x2="525.0" y2="144.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
-<rect x="514.0" y="135.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
-<rect x="545.2" y="189.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
-<rect x="482.8" y="189.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
-<text x="525.0" y="232.0" font-size="12.5" fill="#334155" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >2 paires sur 3</text>
-<rect x="20" y="262" width="18" height="12" rx="3" fill="#004D80" stroke="#004D80" stroke-width="1.5"/>
-<text x="44.0" y="273.0" font-size="12.5" fill="#334155" text-anchor="start" font-family="Georgia,'Times New Roman',serif" >plein</text>
-<rect x="96" y="262" width="18" height="12" rx="3" fill="#fff" stroke="#004D80" stroke-width="1.5"/>
-<text x="120.0" y="273.0" font-size="12.5" fill="#334155" text-anchor="start" font-family="Georgia,'Times New Roman',serif" >vide</text>
-<line x1="180.0" y1="268.0" x2="206.0" y2="268.0" stroke="#40918c" stroke-width="1.8" />
-<text x="212.0" y="273.0" font-size="12.5" fill="#334155" text-anchor="start" font-family="Georgia,'Times New Roman',serif" >paire conforme (un plein, un vide)</text>
-<line x1="420.0" y1="268.0" x2="446.0" y2="268.0" stroke="#970E53" stroke-width="3.2" />
-<text x="452.0" y="273.0" font-size="12.5" fill="#970E53" text-anchor="start" font-family="Georgia,'Times New Roman',serif" >paire en défaut</text>
-</svg>
-</div>
-<p class="legende">Les huit remplissages. Chacun met au moins une paire en défaut&nbsp;: un contenu fixé à l'avance respecte la règle pour deux paires sur trois au mieux, alors que les coffrets du devin la respectent pour les trois.</p>
 
 Le conte contient déjà, en miniature, tout ce qui fait la contextualité.
 
@@ -594,7 +530,11 @@ L'expérience a été réalisée en 2009 à Innsbruck sur deux ions calcium pié
 Le résultat général se formule avec les observables les plus élémentaires, les **projecteurs**, qui posent une question à réponse oui ($1$) ou non ($0$)&nbsp;: « le système est-il dans l'état $|e\rangle$&nbsp;? ». Les projecteurs sur les vecteurs d'une même base orthonormée commutent et leur somme est l'identité&nbsp;: mesurés ensemble, exactement un répond oui.
 
 <div id="theo">
-<p><b>Théorème de Kochen-Specker (1967).</b> Dans un espace de Hilbert de dimension au moins $3$, il est impossible d'attribuer à chaque projecteur de rang $1$ une valeur $0$ ou $1$, indépendante de la base dans laquelle on le mesure, de façon que dans chaque base orthonormée exactement un projecteur reçoive la valeur $1$.</p>
+
+<b>Théorème de Kochen-Specker (1967)</b> 
+
+Dans un espace de Hilbert de dimension au moins $3$, il est impossible d'attribuer à chaque projecteur de rang $1$ une valeur $0$ ou $1$, indépendante de la base dans laquelle on le mesure, de façon que dans chaque base orthonormée exactement un projecteur reçoive la valeur $1$.
+
 </div>
 
 Simon Kochen et Ernst Specker l'ont publié en 1967. John Bell l'avait obtenu de son côté dès 1964 (son article, retardé, parut en 1966) à partir d'un théorème d'Andrew Gleason. C'est pourquoi on parle parfois du théorème de Bell-Kochen-Specker.
@@ -937,17 +877,11 @@ C'est aussi cette définition qui éclaire la [théorie-jouet de Spekkens](../sp
 
 <br>
 
-<b><i>Sources&nbsp;:</i></b>
 
-- Adlam, E. *Foundations of Quantum Mechanics*, Cambridge Elements, Cambridge University Press (2021).
-- Mermin, N. D. « Hidden variables and the two theorems of John Bell », *Reviews of Modern Physics* 65 (1993). [🌐](https://arxiv.org/abs/1802.10119)
-- Budroni, C., Cabello, A., Gühne, O., Kleinmann, M. et Larsson, J.-Å. « Kochen-Specker contextuality », *Reviews of Modern Physics* 94 (2022). [🌐](https://arxiv.org/abs/2102.13036)
-- Liang, Y.-C., Spekkens, R. et Wiseman, H. « Specker's parable of the overprotective seer: a road to contextuality, nonlocality and complementarity », *Physics Reports* 506 (2011). [🌐](https://arxiv.org/abs/1010.1273)
-- Kochen, S. et Specker, E. « The problem of hidden variables in quantum mechanics », *Journal of Mathematics and Mechanics* 17 (1967).
-- Cabello, A., Estebaranz, J. et García-Alcaine, G. « Bell-Kochen-Specker theorem: a proof with 18 vectors », *Physics Letters A* 212 (1996). [🌐](https://arxiv.org/abs/quant-ph/9706009)
-- Klyachko, A., Can, M. A., Binicioğlu, S. et Shumovsky, A. « Simple test for hidden variables in spin-1 systems », *Physical Review Letters* 101 (2008). [🌐](https://arxiv.org/abs/0706.0126)
-- Spekkens, R. « Contextuality for preparations, transformations, and unsharp measurements », *Physical Review A* 71 (2005). [🌐](https://arxiv.org/abs/quant-ph/0406166)
-- Howard, M., Wallman, J., Veitch, V. et Emerson, J. « Contextuality supplies the 'magic' for quantum computation », *Nature* 510 (2014). [🌐](https://arxiv.org/abs/1401.4174)
+> Adlam, E. *Foundations of Quantum Mechanics*, Cambridge Elements, Cambridge University Press (2021).<br>
+Mermin, N. D. « Hidden variables and the two theorems of John Bell », *Reviews of Modern Physics* 65 (1993). [🌐](https://arxiv.org/abs/1802.10119)<br>
+Budroni, C., Cabello, A., Gühne, O., Kleinmann, M. et Larsson, J.-Å. « Kochen-Specker contextuality », *Reviews of Modern Physics* 94 (2022). [🌐](https://arxiv.org/abs/2102.13036)
+
 
 <script>
 (function () {
