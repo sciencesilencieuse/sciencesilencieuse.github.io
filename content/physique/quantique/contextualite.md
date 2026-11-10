@@ -320,7 +320,7 @@ Deux observables $A$ et $B$ sont **compatibles** lorsqu'elles commutent&nbsp;: $
 Tout le sujet repose sur une particularité de l'algèbre quantique&nbsp;: **la compatibilité n'est pas transitive.** Une observable $A$ peut être compatible avec $B$ et avec $C$ sans que $B$ et $C$ le soient entre elles. On peut alors mesurer $A$ de deux façons qui s'excluent&nbsp;: avec $B$, ou avec $C$. La même observable appartient à deux contextes.
 
 <div class="svg-container">
-<svg viewBox="0 0 600 250" role="img" aria-label="L'observable A peut être mesurée en même temps que B, ou en même temps que C, mais B et C ne peuvent pas être mesurées ensemble. A appartient donc à deux contextes de mesure différents. La non-contextualité suppose que la valeur révélée pour A est la même dans les deux." style="width:100%;max-width:600px;height:auto;">
+<svg viewBox="0 0 600 268" role="img" aria-label="L'observable A peut être mesurée en même temps que B, ou en même temps que C, mais B et C ne peuvent pas être mesurées ensemble. A appartient donc à deux contextes de mesure différents. La non-contextualité suppose que la valeur révélée pour A est la même dans les deux." style="width:100%;max-width:600px;height:auto;">
 <rect x="74.0" y="74.0" width="272.0" height="92.0" rx="46" fill="#f0f4f7" stroke="#004D80" stroke-width="2" transform="rotate(0.0 210.0 120.0)"/>
 <rect x="260.0" y="80.0" width="260.0" height="80.0" rx="40" fill="#f9f1f5" stroke="#970E53" stroke-width="2" transform="rotate(0.0 390.0 120.0)"/>
 <circle cx="300" cy="120" r="26" fill="#fff" stroke="#334155" stroke-width="1.8"/>
@@ -332,7 +332,7 @@ Tout le sujet repose sur une particularité de l'algèbre quantique&nbsp;: **la 
 <text x="165.0" y="46.0" font-size="14" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >contexte 1 : on mesure <tspan font-style="italic">A</tspan> avec <tspan font-style="italic">B</tspan></text>
 <text x="435.0" y="46.0" font-size="14" fill="#970E53" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >contexte 2 : on mesure <tspan font-style="italic">A</tspan> avec <tspan font-style="italic">C</tspan></text>
 <path d="M120,170 C180,245 420,245 480,170" fill="none" stroke="#64748b" stroke-width="1.4" stroke-dasharray="5 4"/>
-<text x="300.0" y="228.0" font-size="13.5" fill="#64748b" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" paint-order="stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round"><tspan font-style="italic">B</tspan> et <tspan font-style="italic">C</tspan> sont incompatibles : jamais mesurées ensemble</text>
+<text x="300.0" y="250.0" font-size="13.5" fill="#64748b" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" paint-order="stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round"><tspan font-style="italic">B</tspan> et <tspan font-style="italic">C</tspan> sont incompatibles : jamais mesurées ensemble</text>
 </svg>
 </div>
 <p class="legende">Une observable, deux contextes. Aucune expérience ne réalise les deux contextes à la fois, puisque $B$ et $C$ sont incompatibles.</p>
