@@ -62,14 +62,6 @@ L'idée est de partir d'un système classique le plus simple possible et d'y ajo
 - Théorème PBR et nécessité de l'ontologie
 
 
-## [Contextualité](./contextualite)
-
-- Carré magique de Mermin et Peres
-- Théorème de Kochen-Specker
-- Inégalité KCBS et lien avec Bell
-
-
-
 ## [Paradoxe EPR](./epr)
 
 {{< youtube-plus id="QS_bw6PVfsE" ratio="16x9" width="800" shadow=true rounded=true >}}
@@ -83,12 +75,17 @@ La violation des inégalités de Bell met la quantique et la relativité restrei
 - Causalité informationnelle
 
 
+## [Contextualité](./contextualite)
+
+- Carré magique de Mermin et Peres
+- Théorème de Kochen-Specker
+- Inégalité KCBS et lien avec Bell
+
+
 ## [Une ontologie à 3N dimensions](./3ndimensions)
 
 Les réalistes comme Einstein ont du mal à avaler la pilule d'une fonction d'onde non séparable et non locale. Pour certains pourtant, il n'y a rien à avaler puisque la fonction d'onde *est* séparable et locale... mais dans une réalité à 3N dimensions&nbsp;!
 
 ## [ER = EPR](./erepr)
-
-
 
 

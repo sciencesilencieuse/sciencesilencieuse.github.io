@@ -1,7 +1,7 @@
 +++
 title = "EPR"
 date = 2021-03-06T14:20:50+01:00
-weight = 5
+weight = 4
 chapter = false
 hidden = false
 +++
@@ -352,6 +352,7 @@ Remarque&nbsp;: l'état $\Psi_{\text{GHZ}}$ est un état stabilisateur, et l'arg
 
 Le test de Bell et l'expérience GHZ aboutissent à la même conclusion&nbsp;: les résultats ne peuvent pas être écrits à l'avance dans un plan emporté par chaque particule. La première vidéo en tire une alternative. Soit les particules ont chacune leur existence propre, et elles s'influencent à distance. Soit on suit le formalisme à la lettre&nbsp;: l'état intriqué n'est pas séparable, les deux jumeaux n'en font qu'un («&nbsp;une fusion&nbsp;»), et ils ne s'individualisent qu'au moment de la mesure. Mais cette fusion n'est pas locale pour autant, puisqu'elle s'étend en deux endroits à la fois. Quant aux variables cachées de Bohm, qui voulaient échapper à cet étalement, l'inégalité de Bell les condamne à être elles-mêmes non locales. Reste à savoir comment concilier ce constat avec la relativité, et quelles hypothèses abandonner&nbsp;: c'est l'objet de la suite de cette page.
 
+La page [Contextualité](../contextualite/) reprend ces deux arguments dans un cadre plus général, où la distance ne joue plus aucun rôle&nbsp;: le plan impossible y devient un «&nbsp;modèle non contextuel&nbsp;», et le graphe de GHZ un cousin du carré magique de Mermin et Peres.
 
 ## Ce que dit la relativité
 

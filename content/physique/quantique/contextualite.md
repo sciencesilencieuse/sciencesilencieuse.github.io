@@ -1,7 +1,7 @@
 +++
 title = "Contextualité"
 date = 2021-03-06T14:20:50+01:00
-weight = 4
+weight = 6
 +++
 
 <style>
@@ -303,9 +303,9 @@ margin-top:0em;
 
 Quand on pèse une boule de pétanque, la balance affiche une masse que la boule possédait déjà. Et cette masse ne dépend évidemment pas de ce qu'on mesure en même temps&nbsp;: qu'on en profite pour relever son diamètre ou sa température, la balance affichera la même chose. Mesurer, c'est **révéler** une propriété qui était là, indifférente au reste de l'expérience.
 
-La mécanique quantique ne promet rien de tel&nbsp;: elle ne donne que les probabilités des résultats. Mais on peut espérer que ce hasard ne reflète que notre ignorance, et que chaque grandeur possède en réalité une valeur bien définie que la théorie ne sait pas décrire, une **variable cachée**. Le théorème de Bell exclut les variables cachées *locales* (voir la page [EPR](../epr/)). Le théorème de **Kochen et Specker** (1967) vise plus bas encore&nbsp;: sans intrication, sans distance, avec un seul système, il montre que les grandeurs quantiques ne peuvent pas toutes posséder des valeurs qui seraient indépendantes de la façon dont on les mesure. La nature est **contextuelle**.
+La mécanique quantique ne promet rien de tel&nbsp;: elle ne donne que les probabilités des résultats. Mais on peut espérer que ce hasard ne reflète que notre ignorance, et que chaque grandeur possède en réalité une valeur bien définie que la théorie ne sait pas décrire, une **variable cachée**. C'est le « plan » fixé à l'avance de la page [EPR](../epr/#des-corrélations-à-distance), ou les chaussettes de Bertlmann, dont la couleur existe même quand personne ne les regarde. Le [test de Bell](../epr/#le-test-de-bell) et l'[expérience GHZ](../epr/#sans-statistiques-lexpérience-ghz) ont montré qu'un tel plan est impossible s'il doit rester *local*. Le théorème de **Kochen et Specker** (1967) généralise ce résultat en le dépouillant de sa mise en scène&nbsp;: sans intrication, sans distance, avec un seul système, il montre que les grandeurs quantiques ne peuvent pas toutes posséder des valeurs qui seraient indépendantes de la façon dont on les mesure. La nature est **contextuelle**.
 
-Encore faut-il dire précisément ce que cela signifie. C'est l'objet de la première partie&nbsp;; les suivantes en donnent des preuves que l'on peut tenir dans le creux de la main.
+Encore faut-il dire précisément ce que cela signifie. C'est l'objet de la première partie&nbsp;; les suivantes en donnent des preuves que l'on peut tenir dans le creux de la main, avant de revenir à Bell et à GHZ, qui apparaîtront comme des cas particuliers.
 
 ## Qu'est-ce que la contextualité&nbsp;?
 
@@ -341,7 +341,7 @@ En physique classique, cette situation n'existe pas&nbsp;: toutes les grandeurs 
 
 ### L'hypothèse de non-contextualité
 
-Supposons que les résultats de mesure révèlent des valeurs préexistantes. La figure pose alors une question nette&nbsp;: la valeur révélée pour $A$ est-elle **la même** selon qu'on la mesure avec $B$ ou avec $C$&nbsp;? Répondre oui, c'est faire l'hypothèse de non-contextualité. Détaillons les deux étages de cette hypothèse.
+Supposons que les résultats de mesure révèlent des valeurs préexistantes (c'est le plan du [test de Bell](../epr/#le-test-de-bell), où chaque jumeau avait en poche une réponse à chaque question). La figure pose alors une question nette&nbsp;: la valeur révélée pour $A$ est-elle **la même** selon qu'on la mesure avec $B$ ou avec $C$&nbsp;? Répondre oui, c'est faire l'hypothèse de non-contextualité. Détaillons les deux étages de cette hypothèse.
 
 <div id="def">
 <p><b>Modèle non contextuel à valeurs définies.</b> C'est un modèle qui attribue à chaque observable $A$ une valeur $v(A)$ telle que&nbsp;:</p>
@@ -355,7 +355,7 @@ Ces deux hypothèses ont une conséquence immédiate, qui servira dans toutes le
 $\displaystyle C=AB\ \Longrightarrow\ v(C)=v(A)\,v(B),\qquad A+B+C=2\ \Longrightarrow\ v(A)+v(B)+v(C)=2.$
 </p>
 
-Pourquoi croire à la non-contextualité&nbsp;? Trois raisons la rendent presque irrésistible.
+Pourquoi croire à la non-contextualité&nbsp;? Dans le test de Bell, c'est la distance qui la justifiait&nbsp;: la réponse d'un jumeau ne pouvait pas dépendre de la question posée à l'autre. Ici, il n'y a plus de distance, mais trois raisons la rendent presque irrésistible.
 
 <ul>
 <li><b>C'est ainsi que marche le monde classique</b>&nbsp;: la masse de la boule ne dépend pas du thermomètre posé à côté.</li>
@@ -527,7 +527,7 @@ Voici la preuve la plus simple, trouvée en 1990 par David Mermin et Asher Peres
 </div>
 <p class="legende">Cliquez sur une case pour changer son signe. Les pastilles indiquent les contraintes satisfaites&nbsp;: on en obtient facilement cinq, jamais six.</p>
 
-C'est impossible, et la raison tient en deux lignes. Multiplions les trois produits des lignes&nbsp;: on obtient le produit des neuf cases, qui doit valoir $(+1)(+1)(+1)=+1$. Multiplions les trois produits des colonnes&nbsp;: c'est encore le produit des neuf cases, qui doit valoir cette fois $(+1)(+1)(-1)=-1$. Un même nombre ne peut pas valoir à la fois $+1$ et $-1$.
+C'est impossible, et la raison tient en deux lignes. Multiplions les trois produits des lignes&nbsp;: on obtient le produit des neuf cases, qui doit valoir $(+1)(+1)(+1)=+1$. Multiplions les trois produits des colonnes&nbsp;: c'est encore le produit des neuf cases, qui doit valoir cette fois $(+1)(+1)(-1)=-1$. Un même nombre ne peut pas valoir à la fois $+1$ et $-1$. C'est, trait pour trait, l'argument du [graphe de la contradiction](../epr/#le-graphe-de-la-contradiction) de l'expérience GHZ&nbsp;: là aussi, chaque réponse appartenait à deux lignes, dont les parités exigées étaient incompatibles.
 
 Et pourtant, la mécanique quantique remplit la grille. Prenons deux qubits et notons $X\_1$ l'observable de Pauli $X$ du premier qubit, $Y\_2$ l'observable $Y$ du second, et ainsi de suite (les [matrices de Pauli](../spekkens/#matrices-de-pauli) ont toutes pour valeurs propres $+1$ et $-1$).
 
@@ -745,13 +745,13 @@ La preuve la plus courte possible se joue en dimension $4$. En 1996, Adán Cabel
 </div>
 <p class="legende">Cliquez sur les vecteurs auxquels vous attribuez la valeur $1$. Une base devient verte quand elle contient exactement un vecteur choisi, rouge quand elle en contient plusieurs. On peut en verdir huit, jamais neuf.</p>
 
-L'obstacle est le même que pour le carré magique. Chaque vecteur appartient à **exactement deux** bases&nbsp;: en comptant les vecteurs choisis base par base, on compte chacun deux fois, et le total est pair. Mais il faudrait un vecteur choisi dans chacune des $9$ bases, soit un total de $9$, qui est impair. Contradiction.
+L'obstacle est le même que pour le carré magique et pour le graphe de GHZ. Chaque vecteur appartient à **exactement deux** bases&nbsp;: en comptant les vecteurs choisis base par base, on compte chacun deux fois, et le total est pair. Mais il faudrait un vecteur choisi dans chacune des $9$ bases, soit un total de $9$, qui est impair. Contradiction.
 
 Ces $18$ vecteurs ne sortent pas de nulle part&nbsp;: ils font partie des $24$ vecteurs propres communs aux lignes et aux colonnes du carré de Mermin-Peres (deux qubits, c'est bien un espace de dimension $4$). Et l'on a démontré en 2020 qu'on ne peut pas faire plus court&nbsp;: aucune preuve de ce type n'utilise moins de $18$ vecteurs, en quelque dimension que ce soit.
 
 ## Une inégalité pour le laboratoire&nbsp;: le pentagone
 
-Les preuves précédentes sont logiques&nbsp;: elles opposent des certitudes. Aucune expérience n'est parfaite, et pour tester la contextualité il faut une **inégalité**, comme celle de Bell pour la non-localité. La plus simple a été trouvée en 2008 par Alexander Klyachko, Ali Can, Sinem Binicioğlu et Alexander Shumovsky&nbsp;: c'est l'inégalité **KCBS**. Elle ne demande qu'un système à trois états (un qutrit, comme un spin $1$), le plus petit pour lequel la contextualité est possible.
+Les preuves précédentes sont logiques&nbsp;: elles opposent des certitudes. Aucune expérience n'est parfaite, et pour tester la contextualité il faut une **inégalité**, comme [celle de Bell](../epr/#le-test-de-bell) pour la non-localité. La plus simple a été trouvée en 2008 par Alexander Klyachko, Ali Can, Sinem Binicioğlu et Alexander Shumovsky&nbsp;: c'est l'inégalité **KCBS**. Elle ne demande qu'un système à trois états (un qutrit, comme un spin $1$), le plus petit pour lequel la contextualité est possible.
 
 On considère cinq questions à réponse oui ou non, $A\_1,\dots,A\_5$, disposées en pentagone. Deux questions voisines sont compatibles, et **exclusives**&nbsp;: elles ne peuvent pas répondre oui toutes les deux.
 
@@ -827,7 +827,7 @@ L'expérience a été faite à Vienne en 2011 avec des photons uniques (Lapkiewi
 
 ## Bell, un cas particulier
 
-Le pentagone a un grand frère célèbre. Ôtez un sommet&nbsp;: on obtient un carré, quatre mesures dont chacune est compatible avec ses deux voisines. C'est exactement le scénario de Bell dans sa version CHSH&nbsp;: Alice choisit entre $A\_1$ et $A\_2$, Bob entre $B\_1$ et $B\_2$, et les quatre contextes sont les quatre paires (mesure d'Alice, mesure de Bob).
+Relisons maintenant la page [EPR](../epr/) avec ces lunettes. Le pentagone a un grand frère célèbre. Ôtez un sommet&nbsp;: on obtient un carré, quatre mesures dont chacune est compatible avec ses deux voisines. C'est exactement le scénario de Bell dans sa version CHSH&nbsp;: Alice choisit entre $A\_1$ et $A\_2$, Bob entre $B\_1$ et $B\_2$, et les quatre contextes sont les quatre paires (mesure d'Alice, mesure de Bob).
 
 <div class="svg-container">
 <svg viewBox="0 0 600 260" role="img" aria-label="Trois scénarios en forme de cycle. Chaque sommet est une mesure, chaque arête relie deux mesures que l'on peut effectuer ensemble. Le triangle de Specker n'a pas de réalisation quantique ; le carré est le scénario de Bell (CHSH) ; le pentagone est celui de Klyachko, Can, Binicioğlu et Shumovsky." style="width:100%;max-width:600px;height:auto;">
@@ -863,24 +863,24 @@ Le pentagone a un grand frère célèbre. Ôtez un sommet&nbsp;: on obtient un c
 </div>
 <p class="legende">Trois scénarios, une même structure&nbsp;: des mesures (sommets) compatibles deux à deux (arêtes) le long d'un cycle. Le triangle est la parabole de Specker, sans réalisation quantique. Le carré est celui de Bell. Le pentagone est celui de KCBS.</p>
 
-**La non-localité est une contextualité dont les contextes sont séparés dans l'espace.** Supposer que le résultat d'Alice ne dépend pas de la mesure choisie par Bob, c'est supposer qu'il ne dépend pas du contexte. La page [Limites de la non-localité](../nonlocale/#inégalité-chsh) détaille l'inégalité CHSH et sa borne quantique $2\sqrt2$.
+**La non-localité est une contextualité dont les contextes sont séparés dans l'espace.** Supposer que le résultat d'Alice ne dépend pas de la mesure choisie par Bob (le plan *local* du [test de Bell](../epr/#le-test-de-bell)), c'est supposer qu'il ne dépend pas du contexte. La page [Limites de la non-localité](../nonlocale/#inégalité-chsh) détaille l'inégalité CHSH et sa borne quantique $2\sqrt2$.
 
 Le lien fonctionne dans les deux sens.
 
 <ul>
-<li><b>L'argument GHZ est une preuve de Kochen-Specker.</b> Les règles de parité de la page <a href="../epr/#sans-statistiques-lexpérience-ghz">EPR</a> forment un argument du même type que le carré magique, avec des observables de trois qubits au lieu de deux, chacune confiée à un laboratoire différent.</li>
+<li><b>L'argument GHZ est une preuve de Kochen-Specker.</b> Les <a href="../epr/#trois-électrons-et-des-règles-de-parité">règles de parité</a> de la page EPR et leur <a href="../epr/#le-graphe-de-la-contradiction">graphe</a> forment un argument du même type que le carré magique&nbsp;: les six nœuds sont six observables, les quatre lignes sont quatre contextes, et chaque observable appartient à deux contextes. La seule différence est que les trois observables d'un contexte sont confiées à trois laboratoires éloignés.</li>
 <li><b>Le carré magique devient un jeu de télépathie.</b> Alice reçoit une ligne du carré, Bob une colonne&nbsp;; chacun doit remplir ses trois cases en respectant le produit imposé, sans communiquer, et ils doivent tomber d'accord sur la case commune. Des joueurs classiques ne gagnent au mieux que $8$ fois sur $9$. En partageant deux paires intriquées et en mesurant les observables de Mermin-Peres, Alice et Bob gagnent à tous les coups.</li>
 </ul>
 
-La différence entre les deux théorèmes est dans la **justification** de l'hypothèse. Chez Bell, la non-contextualité est garantie par la physique&nbsp;: si les mesures d'Alice et de Bob sont assez éloignées, la relativité interdit que l'une influence l'autre. Pour un système unique, rien d'aussi fort ne l'impose. Bell lui-même jugeait l'hypothèse de Kochen et Specker discutable&nbsp;: le résultat d'une mesure, écrivait-il, peut raisonnablement dépendre non seulement de l'état du système, mais aussi de la disposition complète de l'appareil. C'est en cherchant une situation où cette échappatoire se ferme qu'il a abouti à son théorème sur la localité.
+La différence entre les deux théorèmes est dans la **justification** de l'hypothèse. Chez Bell, la non-contextualité est garantie par la physique&nbsp;: si les mesures d'Alice et de Bob sont assez éloignées, la relativité interdit que l'une influence l'autre (voir [Ce que dit la relativité](../epr/#ce-que-dit-la-relativité)). Pour un système unique, rien d'aussi fort ne l'impose. Bell lui-même jugeait l'hypothèse de Kochen et Specker discutable&nbsp;: le résultat d'une mesure, écrivait-il, peut raisonnablement dépendre non seulement de l'état du système, mais aussi de la disposition complète de l'appareil. C'est en cherchant une situation où cette échappatoire se ferme qu'il a abouti à son théorème sur la localité.
 
 ## Ce que le théorème n'interdit pas
 
-Un théorème d'impossibilité ne vaut que par ses hypothèses. Voici les portes qu'il laisse ouvertes.
+Un théorème d'impossibilité ne vaut que par ses hypothèses. Voici les portes qu'il laisse ouvertes&nbsp;; on y reconnaîtra, dans un cadre plus général, certaines des [façons de s'en sortir](../epr/#les-façons-de-sen-sortir) de la page EPR.
 
 ### Renoncer aux valeurs définies
 
-C'est la lecture la plus courante&nbsp;: les observables n'ont pas de valeur avant la mesure, et le résultat est créé par l'interaction avec l'appareil. Les approches de type Copenhague, relationnelles ou QBistes n'ont alors rien à expliquer&nbsp;: une « valeur » n'existe que relativement à une expérience complète, contexte compris (voir [Épistémique vs. ontique](../epistovsonto/)).
+C'est la lecture la plus courante, celle de l'[anti-réalisme](../epr/#anti-réalisme)&nbsp;: les observables n'ont pas de valeur avant la mesure, et le résultat est créé par l'interaction avec l'appareil. Les approches de type Copenhague, relationnelles ou QBistes n'ont alors rien à expliquer&nbsp;: une « valeur » n'existe que relativement à une expérience complète, contexte compris (voir [Épistémique vs. ontique](../epistovsonto/)).
 
 ### Des variables cachées contextuelles
 
