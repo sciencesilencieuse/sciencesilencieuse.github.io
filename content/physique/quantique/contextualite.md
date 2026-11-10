@@ -373,7 +373,13 @@ Autrement dit, il faut renoncer à l'une des deux hypothèses. Soit les grandeur
 
 ### La parabole des trois coffrets
 
-Ernst Specker a illustré dès 1960 la logique du problème par un conte. Un devin assyrien, peu pressé de marier sa fille, soumet les prétendants à une épreuve&nbsp;: trois coffrets fermés, dont chacun est plein ou vide&nbsp;; le prétendant doit prédire lesquels sont pleins. On vérifie en ouvrant **deux** coffrets, au choix du prétendant. Or, quels que soient les deux coffrets ouverts, on trouve toujours un plein et un vide&nbsp;: la prédiction est toujours fausse.
+Ernst Specker a illustré la logique du problème par un conte dès 1960, sept ans avant le théorème.
+
+À l'école des prophètes d'Arbèles, en Assyrie, enseignait un devin venu de Ninive. Il avait une fille, et aucune envie de la marier. À chaque prétendant, il imposait donc la même épreuve&nbsp;: trois coffrets alignés sur une table, dont chacun contient une gemme ou est vide. Le prétendant doit prédire, pour chacun des trois, s'il est plein ou vide.
+
+Vient la vérification, et c'est là qu'est le piège. Le devin ne fait ouvrir que **deux** coffrets. Or, avec trois coffrets et seulement deux réponses possibles, toute prédiction annonce forcément le même contenu pour au moins deux d'entre eux&nbsp;: ce sont ces deux-là que le devin désigne. Et l'on y trouve à chaque fois une gemme dans l'un et rien dans l'autre, tantôt dans le premier ouvert, tantôt dans le second. La prédiction est toujours fausse, et les prétendants repartent un à un.
+
+Ils croient avoir mal deviné. Le mal est plus profond&nbsp;: si deux coffrets ouverts ensemble montrent toujours un plein et un vide, quelle que soit la paire choisie, alors **aucun contenu fixé à l'avance n'est possible**.
 
 <div class="svg-container">
 <svg viewBox="0 0 600 250" role="img" aria-label="Trois coffrets disposés en triangle. On ne peut en ouvrir que deux à la fois, et l'on trouve alors toujours un coffret plein et un coffret vide. Aucun remplissage fixé à l'avance ne respecte cette règle pour les trois paires : si le premier est plein, le deuxième est vide, donc le troisième devrait être à la fois plein et vide." style="width:100%;max-width:600px;height:auto;">
@@ -395,9 +401,92 @@ Ernst Specker a illustré dès 1960 la logique du problème par un conte. Un dev
 <text x="478.0" y="220.0" font-size="14" fill="#970E53" text-anchor="start" font-family="Georgia,'Times New Roman',serif" >à la fois ?</text>
 </svg>
 </div>
-<p class="legende">Chaque paire de coffrets (chaque contexte) obéit à la règle « un plein, un vide ». Aucun remplissage décidé à l'avance ne la respecte pour les trois paires à la fois.</p>
+<p class="legende">Chaque paire de coffrets (chaque contexte) obéit à la règle « un plein, un vide ». Si le premier est plein, le deuxième est vide&nbsp;; le troisième devrait alors différer des deux à la fois.</p>
 
-Chaque contexte, pris seul, est parfaitement cohérent&nbsp;; c'est leur réunion qui est impossible. Les coffrets ne peuvent pas avoir un contenu défini indépendamment de la paire qu'on ouvre. Le conte reste un conte&nbsp;: la mécanique quantique ne permet pas de fabriquer ces coffrets (quand trois observables sont compatibles deux à deux, elles le sont toutes ensemble, et l'on pourrait ouvrir les trois). Mais avec des structures un peu plus riches, elle réalise exactement ce tour de magie.
+On peut s'en convaincre en passant en revue les huit remplissages possibles.
+
+<div class="svg-container">
+<svg viewBox="0 0 600 282" role="img" aria-label="Les huit façons de remplir trois coffrets. Dans chacune, au moins une paire de coffrets a le même contenu et viole la règle « un plein, un vide » : les trois paires quand les coffrets sont tous pleins ou tous vides, une seule paire dans les six autres cas." style="width:100%;max-width:600px;height:auto;">
+<line x1="75.0" y1="32.0" x2="106.2" y2="86.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
+<line x1="106.2" y1="86.0" x2="43.8" y2="86.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
+<line x1="43.8" y1="86.0" x2="75.0" y2="32.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
+<rect x="64.0" y="23.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
+<rect x="95.2" y="77.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
+<rect x="32.8" y="77.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
+<text x="75.0" y="120.0" font-size="12.5" fill="#970E53" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >0 paire sur 3</text>
+<line x1="225.0" y1="32.0" x2="256.2" y2="86.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
+<line x1="256.2" y1="86.0" x2="193.8" y2="86.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
+<line x1="193.8" y1="86.0" x2="225.0" y2="32.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
+<rect x="214.0" y="23.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
+<rect x="245.2" y="77.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
+<rect x="182.8" y="77.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
+<text x="225.0" y="120.0" font-size="12.5" fill="#970E53" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >0 paire sur 3</text>
+<line x1="375.0" y1="32.0" x2="406.2" y2="86.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
+<line x1="406.2" y1="86.0" x2="343.8" y2="86.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="343.8" y1="86.0" x2="375.0" y2="32.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
+<rect x="364.0" y="23.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
+<rect x="395.2" y="77.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
+<rect x="332.8" y="77.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
+<text x="375.0" y="120.0" font-size="12.5" fill="#334155" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >2 paires sur 3</text>
+<line x1="525.0" y1="32.0" x2="556.2" y2="86.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="556.2" y1="86.0" x2="493.8" y2="86.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="493.8" y1="86.0" x2="525.0" y2="32.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
+<rect x="514.0" y="23.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
+<rect x="545.2" y="77.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
+<rect x="482.8" y="77.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
+<text x="525.0" y="120.0" font-size="12.5" fill="#334155" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >2 paires sur 3</text>
+<line x1="75.0" y1="144.0" x2="106.2" y2="198.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="106.2" y1="198.0" x2="43.8" y2="198.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
+<line x1="43.8" y1="198.0" x2="75.0" y2="144.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
+<rect x="64.0" y="135.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
+<rect x="95.2" y="189.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
+<rect x="32.8" y="189.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
+<text x="75.0" y="232.0" font-size="12.5" fill="#334155" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >2 paires sur 3</text>
+<line x1="225.0" y1="144.0" x2="256.2" y2="198.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="256.2" y1="198.0" x2="193.8" y2="198.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
+<line x1="193.8" y1="198.0" x2="225.0" y2="144.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
+<rect x="214.0" y="135.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
+<rect x="245.2" y="189.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
+<rect x="182.8" y="189.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
+<text x="225.0" y="232.0" font-size="12.5" fill="#334155" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >2 paires sur 3</text>
+<line x1="375.0" y1="144.0" x2="406.2" y2="198.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="406.2" y1="198.0" x2="343.8" y2="198.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="343.8" y1="198.0" x2="375.0" y2="144.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
+<rect x="364.0" y="135.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
+<rect x="395.2" y="189.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
+<rect x="332.8" y="189.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
+<text x="375.0" y="232.0" font-size="12.5" fill="#334155" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >2 paires sur 3</text>
+<line x1="525.0" y1="144.0" x2="556.2" y2="198.0" stroke="#970E53" stroke-width="3.2" stroke-linecap="round" stroke-dasharray="1 0"/>
+<line x1="556.2" y1="198.0" x2="493.8" y2="198.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="493.8" y1="198.0" x2="525.0" y2="144.0" stroke="#40918c" stroke-width="1.8" stroke-linecap="round"/>
+<rect x="514.0" y="135.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
+<rect x="545.2" y="189.0" width="22" height="18" rx="3.5" fill="#fff" stroke="#004D80" stroke-width="1.8"/>
+<rect x="482.8" y="189.0" width="22" height="18" rx="3.5" fill="#004D80" stroke="#004D80" stroke-width="1.8"/>
+<text x="525.0" y="232.0" font-size="12.5" fill="#334155" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >2 paires sur 3</text>
+<rect x="20" y="262" width="18" height="12" rx="3" fill="#004D80" stroke="#004D80" stroke-width="1.5"/>
+<text x="44.0" y="273.0" font-size="12.5" fill="#334155" text-anchor="start" font-family="Georgia,'Times New Roman',serif" >plein</text>
+<rect x="96" y="262" width="18" height="12" rx="3" fill="#fff" stroke="#004D80" stroke-width="1.5"/>
+<text x="120.0" y="273.0" font-size="12.5" fill="#334155" text-anchor="start" font-family="Georgia,'Times New Roman',serif" >vide</text>
+<line x1="180.0" y1="268.0" x2="206.0" y2="268.0" stroke="#40918c" stroke-width="1.8" />
+<text x="212.0" y="273.0" font-size="12.5" fill="#334155" text-anchor="start" font-family="Georgia,'Times New Roman',serif" >paire conforme (un plein, un vide)</text>
+<line x1="420.0" y1="268.0" x2="446.0" y2="268.0" stroke="#970E53" stroke-width="3.2" />
+<text x="452.0" y="273.0" font-size="12.5" fill="#970E53" text-anchor="start" font-family="Georgia,'Times New Roman',serif" >paire en défaut</text>
+</svg>
+</div>
+<p class="legende">Les huit remplissages. Chacun met au moins une paire en défaut&nbsp;: un contenu fixé à l'avance respecte la règle pour deux paires sur trois au mieux, alors que les coffrets du devin la respectent pour les trois.</p>
+
+Le conte contient déjà, en miniature, tout ce qui fait la contextualité.
+
+<ul>
+<li><b>Chaque contexte est irréprochable.</b> Pour une paire donnée, on observe « plein-vide » une fois sur deux et « vide-plein » une fois sur deux&nbsp;: rien d'étrange. Mieux, un coffret donné est plein une fois sur deux, quelle que soit la paire dans laquelle on l'ouvre. Les statistiques d'un coffret ne dépendent pas du contexte, exactement comme en mécanique quantique.</li>
+<li><b>C'est le recollement qui est impossible.</b> Il n'existe aucune façon de tirer au sort le contenu des trois coffrets à la fois qui redonne ces statistiques pour chacune des trois paires. Des descriptions cohérentes de chaque contexte, mais pas de description d'ensemble&nbsp;: c'est la définition même d'une situation contextuelle.</li>
+<li><b>Tout repose sur un interdit.</b> Si l'on pouvait ouvrir les trois coffrets ensemble, on verrait bien deux contenus identiques, et le tour serait éventé. La contextualité a besoin de mesures que l'on ne peut pas toutes faire à la fois.</li>
+<li><b>Les deux issues sont déjà là.</b> Soit les coffrets n'ont pas de contenu tant qu'on ne les ouvre pas. Soit ils en ont un, mais truqué&nbsp;: un mécanisme caché le fait dépendre de l'autre coffret ouvert en même temps. Ce sont exactement les deux façons de sortir du théorème.</li>
+</ul>
+
+Le conte finit bien. La fille du devin, lasse d'attendre, vient en aide au prétendant qu'elle a choisi&nbsp;: elle ouvre elle-même deux coffrets pour lesquels il avait prédit des contenus *différents*, et la prédiction se vérifie. Le père proteste qu'il aurait voulu en voir ouvrir deux autres. On essaie alors d'ouvrir le troisième coffret&nbsp;: impossible. La prédiction n'a pas été réfutée, et le devin doit s'incliner.
+
+Reste que ce n'est qu'un conte&nbsp;: avec des mesures idéales, la mécanique quantique ne permet pas de fabriquer ces trois coffrets. Quand trois observables sont compatibles deux à deux, elles le sont toutes ensemble&nbsp;; on pourrait donc ouvrir les trois coffrets d'un coup, et l'interdit tomberait. Mais il suffit d'enrichir un peu la structure pour que le tour devienne réalisable. Avec cinq coffrets disposés en cercle, dont on ne peut ouvrir que deux voisins, on obtient le [pentagone](#une-inégalité-pour-le-laboratoire-le-pentagone) étudié plus bas. Avec quatre coffrets répartis entre deux personnes éloignées, on obtient le [théorème de Bell](#bell-un-cas-particulier). Le carré magique qui suit en est une autre variante, à neuf cases.
 
 ## Le carré magique de Mermin et Peres
 
@@ -853,6 +942,7 @@ C'est aussi cette définition qui éclaire la [théorie-jouet de Spekkens](../sp
 - Adlam, E. *Foundations of Quantum Mechanics*, Cambridge Elements, Cambridge University Press (2021).
 - Mermin, N. D. « Hidden variables and the two theorems of John Bell », *Reviews of Modern Physics* 65 (1993). [🌐](https://arxiv.org/abs/1802.10119)
 - Budroni, C., Cabello, A., Gühne, O., Kleinmann, M. et Larsson, J.-Å. « Kochen-Specker contextuality », *Reviews of Modern Physics* 94 (2022). [🌐](https://arxiv.org/abs/2102.13036)
+- Liang, Y.-C., Spekkens, R. et Wiseman, H. « Specker's parable of the overprotective seer: a road to contextuality, nonlocality and complementarity », *Physics Reports* 506 (2011). [🌐](https://arxiv.org/abs/1010.1273)
 - Kochen, S. et Specker, E. « The problem of hidden variables in quantum mechanics », *Journal of Mathematics and Mechanics* 17 (1967).
 - Cabello, A., Estebaranz, J. et García-Alcaine, G. « Bell-Kochen-Specker theorem: a proof with 18 vectors », *Physics Letters A* 212 (1996). [🌐](https://arxiv.org/abs/quant-ph/9706009)
 - Klyachko, A., Can, M. A., Binicioğlu, S. et Shumovsky, A. « Simple test for hidden variables in spin-1 systems », *Physical Review Letters* 101 (2008). [🌐](https://arxiv.org/abs/0706.0126)
