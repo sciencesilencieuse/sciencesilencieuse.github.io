@@ -314,7 +314,7 @@ Encore faut-il dire précisément ce que cela signifie. C'est l'objet de la prem
 Deux observables $A$ et $B$ sont **compatibles** lorsqu'elles commutent&nbsp;: $AB=BA$. Elles possèdent alors une base commune de vecteurs propres, si bien qu'on peut les mesurer ensemble, dans une même expérience, et que mesurer l'une ne perturbe pas le résultat de l'autre (les observables et leurs projecteurs sont définis dans les [axiomes](../fondations/#un-jeu-daxiomes) de la page Notions fondamentales).
 
 <div id="def">
-Un <b>contexte de mesure</b> est un ensemble d'observables deux à deux compatibles, que l'on mesure ensemble dans une même expérience.</p>
+<p>Un <b>contexte de mesure</b> est un ensemble d'observables deux à deux compatibles, que l'on mesure ensemble dans une même expérience.</p>
 </div>
 
 Tout le sujet repose sur une particularité de l'algèbre quantique&nbsp;: **la compatibilité n'est pas transitive.** Une observable $A$ peut être compatible avec $B$ et avec $C$ sans que $B$ et $C$ le soient entre elles. On peut alors mesurer $A$ de deux façons qui s'excluent&nbsp;: avec $B$, ou avec $C$. La même observable appartient à deux contextes.
