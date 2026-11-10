@@ -62,6 +62,13 @@ L'idée est de partir d'un système classique le plus simple possible et d'y ajo
 - Théorème PBR et nécessité de l'ontologie
 
 
+## [Contextualité](./contextualite)
+
+- Carré magique de Mermin et Peres
+- Théorème de Kochen-Specker
+- Inégalité KCBS et lien avec Bell
+
+
 
 ## [Paradoxe EPR](./epr)
 
