@@ -1571,45 +1571,45 @@ Essayez de battre l'ordinateur, qui applique la recette de Conway&nbsp;:
 Pour comprendre, suivons la partie comme un jeton sur un graphe. L'état est la fin de la suite des lancers qui peut encore servir à l'un des joueurs. Voici la course FFP contre PFF&nbsp;:
 
 <div class="svg-container">
-<svg viewBox="0 0 600 300" role="img" aria-label="La course entre FFP et PFF comme chaîne de Markov. Chaque flèche a une probabilité 1/2. Dès que P sort, le jeton ne peut plus jamais atteindre FFP : la seule chance de FFP est de commencer par deux F, soit une chance sur quatre." style="width:100%;max-width:600px;height:auto;">
+<svg viewBox="0 0 600 318" role="img" aria-label="La course entre FFP et PFF comme chaîne de Markov. Chaque flèche a une probabilité 1/2. Dès que P sort, le jeton ne peut plus jamais atteindre FFP : la seule chance de FFP est de commencer par deux F, soit une chance sur quatre." style="width:100%;max-width:600px;height:auto;">
 <defs><marker id="pka" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#94a3b8"/></marker></defs>
 <defs><marker id="pkm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#970E53"/></marker></defs>
-<rect x="150" y="170" width="240" height="82" rx="14" fill="#f9f1f5" stroke="#970E53" stroke-width="1.2" stroke-dasharray="5 4"/>
-<path d="M93.6,134.1 Q135.0,115.0 170.9,98.4" fill="none" stroke="#94a3b8" stroke-width="1.7" marker-end="url(#pka)"/>
-<text x="138.7" y="131.5" text-anchor="middle" font-size="13" fill="#94a3b8" font-family="Georgia,'Times New Roman',serif" >F</text>
-<path d="M93.3,156.6 Q135.0,177.5 171.4,195.7" fill="none" stroke="#94a3b8" stroke-width="1.7" marker-end="url(#pka)"/>
-<text x="139.0" y="171.1" text-anchor="middle" font-size="13" fill="#94a3b8" font-family="Georgia,'Times New Roman',serif" >P</text>
-<path d="M226.0,85.0 Q270.0,85.0 308.0,85.0" fill="none" stroke="#94a3b8" stroke-width="1.7" marker-end="url(#pka)"/>
-<text x="268.5" y="102.0" text-anchor="middle" font-size="13" fill="#94a3b8" font-family="Georgia,'Times New Roman',serif" >F</text>
-<path d="M366.0,85.0 Q415.0,85.0 458.0,85.0" fill="none" stroke="#94a3b8" stroke-width="1.7" marker-end="url(#pka)"/>
-<text x="413.5" y="102.0" text-anchor="middle" font-size="13" fill="#94a3b8" font-family="Georgia,'Times New Roman',serif" >P</text>
-<path d="M200.0,111.0 Q200.0,147.5 200.0,178.0" fill="none" stroke="#94a3b8" stroke-width="1.7" marker-end="url(#pka)"/>
-<text x="212.0" y="151.0" text-anchor="middle" font-size="13" fill="#94a3b8" font-family="Georgia,'Times New Roman',serif" >P</text>
-<path d="M226.0,210.0 Q270.0,210.0 308.0,210.0" fill="none" stroke="#94a3b8" stroke-width="1.7" marker-end="url(#pka)"/>
-<text x="268.5" y="227.0" text-anchor="middle" font-size="13" fill="#94a3b8" font-family="Georgia,'Times New Roman',serif" >F</text>
-<path d="M366.0,210.0 Q415.0,210.0 458.0,210.0" fill="none" stroke="#970E53" stroke-width="1.7" marker-end="url(#pkm)"/>
-<text x="413.5" y="227.0" text-anchor="middle" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >F</text>
-<path d="M315.4,218.4 Q270.0,234.0 230.3,220.4" fill="none" stroke="#94a3b8" stroke-width="1.7" marker-end="url(#pka)"/>
-<text x="271.4" y="243.7" text-anchor="middle" font-size="13" fill="#94a3b8" font-family="Georgia,'Times New Roman',serif" >P</text>
-<path d="M188,230 C166,270 234,270 212,230" fill="none" stroke="#94a3b8" stroke-width="1.7" marker-end="url(#pka)"/>
-<text x="230.0" y="263.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >P</text>
-<path d="M328,65 C306,25 374,25 352,65" fill="none" stroke="#94a3b8" stroke-width="1.7" marker-end="url(#pka)"/>
-<text x="370.0" y="42.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >F</text>
-<rect x="35.0" y="125" width="70" height="40" rx="9" fill="#e6edf2" stroke="#004D80" stroke-width="1.6"/>
-<text x="70.0" y="150.0" text-anchor="middle" font-size="14" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >départ</text>
-<rect x="172.0" y="65" width="56" height="40" rx="9" fill="#e6edf2" stroke="#004D80" stroke-width="1.6"/>
-<text x="200.0" y="90.0" text-anchor="middle" font-size="14" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >F</text>
-<rect x="312.0" y="65" width="56" height="40" rx="9" fill="#e6edf2" stroke="#004D80" stroke-width="1.6"/>
-<text x="340.0" y="90.0" text-anchor="middle" font-size="14" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >FF</text>
-<rect x="462.0" y="65" width="56" height="40" rx="9" fill="#bfdad8" stroke="#006C65" stroke-width="1.6"/>
-<text x="490.0" y="90.0" text-anchor="middle" font-size="14" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >FFP</text>
-<rect x="172.0" y="190" width="56" height="40" rx="9" fill="#e6edf2" stroke="#004D80" stroke-width="1.6"/>
-<text x="200.0" y="215.0" text-anchor="middle" font-size="14" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >P</text>
-<rect x="312.0" y="190" width="56" height="40" rx="9" fill="#e6edf2" stroke="#004D80" stroke-width="1.6"/>
-<text x="340.0" y="215.0" text-anchor="middle" font-size="14" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >PF</text>
-<rect x="462.0" y="190" width="56" height="40" rx="9" fill="#e5c3d4" stroke="#970E53" stroke-width="1.6"/>
-<text x="490.0" y="215.0" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >PFF</text>
-<text x="580.0" y="290.0" text-anchor="end" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >le piège : une fois P sorti, FFP ne peut plus gagner</text>
+<rect x="148" y="166" width="246" height="112" rx="14" fill="#f9f1f5" stroke="#970E53" stroke-width="1.2" stroke-dasharray="5 4"/>
+<path d="M93.5,138.8 Q135.0,119.0 171.1,101.8" fill="none" stroke="#94a3b8" stroke-width="1.7" marker-end="url(#pka)"/>
+<text x="128.9" y="114.2" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >F</text>
+<path d="M93.5,161.2 Q135.0,181.0 171.1,198.2" fill="none" stroke="#94a3b8" stroke-width="1.7" marker-end="url(#pka)"/>
+<text x="128.9" y="194.8" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >P</text>
+<path d="M226.0,88.0 Q270.0,88.0 308.0,88.0" fill="none" stroke="#94a3b8" stroke-width="1.7" marker-end="url(#pka)"/>
+<text x="268.5" y="81.5" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >F</text>
+<path d="M366.0,88.0 Q415.0,88.0 458.0,88.0" fill="none" stroke="#94a3b8" stroke-width="1.7" marker-end="url(#pka)"/>
+<text x="413.5" y="81.5" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >P</text>
+<path d="M200.0,114.0 Q200.0,150.0 200.0,180.0" fill="none" stroke="#94a3b8" stroke-width="1.7" marker-end="url(#pka)"/>
+<text x="211.0" y="153.0" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >P</text>
+<path d="M225.1,205.2 Q270.0,193.0 309.1,203.6" fill="none" stroke="#94a3b8" stroke-width="1.7" marker-end="url(#pka)"/>
+<text x="268.6" y="193.2" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >F</text>
+<path d="M314.9,218.8 Q270.0,231.0 230.9,220.4" fill="none" stroke="#94a3b8" stroke-width="1.7" marker-end="url(#pka)"/>
+<text x="271.4" y="240.8" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >P</text>
+<path d="M366.0,212.0 Q415.0,212.0 458.0,212.0" fill="none" stroke="#970E53" stroke-width="1.7" marker-end="url(#pkm)"/>
+<text x="413.5" y="205.5" text-anchor="middle" font-size="13.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >F</text>
+<path d="M187,232 C160,278 240,278 213,232" fill="none" stroke="#94a3b8" stroke-width="1.7" marker-end="url(#pka)"/>
+<text x="200.0" y="253.5" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >P</text>
+<path d="M327,68 C300,22 380,22 353,68" fill="none" stroke="#94a3b8" stroke-width="1.7" marker-end="url(#pka)"/>
+<text x="340.0" y="55.5" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >F</text>
+<rect x="35.0" y="130" width="70" height="40" rx="9" fill="#e6edf2" stroke="#004D80" stroke-width="1.6"/>
+<text x="70.0" y="155.0" text-anchor="middle" font-size="14" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >départ</text>
+<rect x="172.0" y="68" width="56" height="40" rx="9" fill="#e6edf2" stroke="#004D80" stroke-width="1.6"/>
+<text x="200.0" y="93.0" text-anchor="middle" font-size="14" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >F</text>
+<rect x="312.0" y="68" width="56" height="40" rx="9" fill="#e6edf2" stroke="#004D80" stroke-width="1.6"/>
+<text x="340.0" y="93.0" text-anchor="middle" font-size="14" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >FF</text>
+<rect x="462.0" y="68" width="56" height="40" rx="9" fill="#bfdad8" stroke="#006C65" stroke-width="1.6"/>
+<text x="490.0" y="93.0" text-anchor="middle" font-size="14" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >FFP</text>
+<rect x="172.0" y="192" width="56" height="40" rx="9" fill="#e6edf2" stroke="#004D80" stroke-width="1.6"/>
+<text x="200.0" y="217.0" text-anchor="middle" font-size="14" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >P</text>
+<rect x="312.0" y="192" width="56" height="40" rx="9" fill="#e6edf2" stroke="#004D80" stroke-width="1.6"/>
+<text x="340.0" y="217.0" text-anchor="middle" font-size="14" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >PF</text>
+<rect x="462.0" y="192" width="56" height="40" rx="9" fill="#e5c3d4" stroke="#970E53" stroke-width="1.6"/>
+<text x="490.0" y="217.0" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >PFF</text>
+<text x="394.0" y="300.0" text-anchor="end" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >le piège : une fois P sorti, FFP ne peut plus gagner</text>
 </svg>
 </div>
 <p class="legende">Chaque flèche a une probabilité $\frac12$. Les états FFP et PFF sont <b>absorbants</b>&nbsp;: une fois atteints, la partie est finie.</p>
