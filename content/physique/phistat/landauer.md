@@ -555,7 +555,7 @@ En 1929, Leó Szilárd réduit le démon à sa plus simple expression. Le gaz ne
 
 ### À quoi sert de savoir où est la molécule&nbsp;?
 
-C'est le cœur de l'affaire, et il vaut la peine de s'y arrêter. Une fois la cloison en place, la molécule la bombarde d'un seul côté et la pousse **en s'éloignant d'elle-même**&nbsp;: vers la droite si elle est à gauche, vers la gauche si elle est à droite. La poussée existe dans les deux cas, avec la même intensité. Ce que l'on ignore, c'est son **sens**.
+C'est le cœur de l'affaire. Une fois la cloison en place, la molécule la bombarde d'un seul côté et la pousse **en s'éloignant d'elle-même**&nbsp;: vers la droite si elle est à gauche, vers la gauche si elle est à droite. La poussée existe dans les deux cas, avec la même intensité. Ce que l'on ignore, c'est son **sens**.
 
 Or, pour transformer une poussée en travail utile, il faut lui opposer une charge, et une charge se monte dans un sens donné&nbsp;: un poids suspendu à un fil ne peut être soulevé que si l'on tire sur le fil. Le démon doit donc décider de quel côté accrocher le poids **avant** de libérer la cloison. S'il se trompe, la cloison part du mauvais côté, le fil se détend, le poids redescend, et la détente de la molécule est gaspillée.
 
