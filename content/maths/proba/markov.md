@@ -1707,11 +1707,43 @@ C'est le **théorème de Pólya** (1921)&nbsp;: en dimension 1 et 2, le marcheur
 <details>
 <summary>pourquoi la dimension change tout</summary>
 
-L'idée tient en deux remarques.
+L'argument se déroule en quatre temps.
 
-D'abord, revenir une infinité de fois ou un nombre fini de fois, c'est la même question qu'un nombre moyen de visites infini ou fini&nbsp;: si chaque départ a une probabilité $r<1$ de revenir, le nombre de retours suit une loi géométrique, de moyenne finie $\frac{r}{1-r}$. Le marcheur est donc récurrent si et seulement si $\sum\_t \mathbb{P}(\text{être à l'origine au temps } t)=+\infty$.
+**1. Revenir à coup sûr, c'est revenir une infinité de fois.** Notons $r$ la probabilité que le marcheur revienne au moins une fois à son point de départ. S'il y revient, il se retrouve exactement dans la situation initiale, sans mémoire de ce qui précède (c'est la propriété de Markov)&nbsp;: tout recommence, et il reviendra encore avec la même probabilité $r$.
 
-Ensuite, après $t$ pas, le marcheur s'est éloigné d'environ $\sqrt t$ (c'est la diffusion) et s'étale donc sur un domaine d'environ $(\sqrt t)^d$ cases. La probabilité d'être pile à l'origine vaut donc environ $t^{-d/2}$. Or $\sum t^{-1/2}$ et $\sum t^{-1}$ divergent, tandis que $\sum t^{-3/2}$ converge. La frontière passe exactement entre le plan et l'espace&nbsp;: en dimension 2, la série diverge de justesse (comme le logarithme), ce qui explique la lenteur de la courbe bleue.
+<ul>
+<li>Si $r=1$, il revient, puis revient encore, et ainsi de suite&nbsp;: une infinité de visites.</li>
+<li>Si $r<1$, chaque retour est comme un tirage à pile ou face qu'il finit par perdre. La probabilité de revenir au moins $k$ fois vaut $r^k$, et le nombre moyen de retours vaut $r+r^2+r^3+\dots=\frac{r}{1-r}$, qui est fini.</li>
+</ul>
+
+La question « revient-il à coup sûr&nbsp;? » équivaut donc à la question « le nombre moyen de visites à l'origine est-il infini&nbsp;? ».
+
+**2. Ce nombre moyen est une somme.** Notons $p\_t$ la probabilité que le marcheur soit à l'origine après $t$ pas. Le nombre de visites s'obtient en comptant $1$ à chaque instant où il s'y trouve&nbsp;; sa moyenne est donc simplement la somme de ces probabilités&nbsp;:
+
+<p style="text-align:center;">$\displaystyle \text{nombre moyen de visites}=p_1+p_2+p_3+\dots=\sum_{t\geqslant1}p_t .$</p>
+
+Tout se ramène à une question d'analyse&nbsp;: cette série diverge-t-elle&nbsp;?
+
+**3. La probabilité d'être à l'origine décroît comme $t^{-d/2}$.** Après $t$ pas, le marcheur ne s'est éloigné que d'environ $\sqrt t$ (c'est la loi de la diffusion&nbsp;: les pas se compensent en partie). En dimension $d$, il se trouve donc quelque part dans une région de rayon $\sqrt t$, qui contient environ $(\sqrt t)^d=t^{d/2}$ sites, tous à peu près aussi probables. La probabilité d'être sur l'un d'eux en particulier, l'origine, vaut donc environ
+
+<p style="text-align:center;">$\displaystyle p_t\approx\frac{1}{t^{d/2}} .$</p>
+
+**4. Il reste à sommer.** Une série $\sum\frac{1}{t^{\alpha}}$ converge si et seulement si $\alpha>1$ (critère de Riemann). Ici $\alpha=\frac d2$&nbsp;: la frontière tombe exactement sur $d=2$.
+
+<div class="tableau-large">
+
+| dimension | $p\_t$ environ | la somme | verdict |
+|:--|:--|:--|:--|
+| $1$ (droite) | $\frac{1}{\sqrt t}$ | diverge vite | retour certain, et fréquent |
+| $2$ (plan) | $\frac{1}{t}$ | diverge de justesse, comme $\ln t$ | retour certain, mais très tardif |
+| $3$ (espace) | $\frac{1}{t\sqrt t}$ | converge | retour incertain |
+
+</div>
+
+La dimension $2$ est le cas limite&nbsp;: la série harmonique diverge, mais avec une lenteur extrême, ce qui explique que la courbe bleue monte si paresseusement vers $100\\,\\%$.
+
+**L'image à retenir.** En $t$ pas, le marcheur visite au plus $t$ sites, alors que la région où il se promène en contient $t^{d/2}$. Sur une droite, cela fait $\sqrt t$ sites pour $t$ pas&nbsp;: il repasse partout, de nombreuses fois. Dans le plan, $t$ sites pour $t$ pas&nbsp;: c'est tout juste suffisant. Dans l'espace, $t\sqrt t$ sites pour $t$ pas&nbsp;: il y a trop de place, l'essentiel de la région n'est jamais visité, et l'origine a de bonnes chances d'en faire partie.
+
 </details>
 </div>
 
