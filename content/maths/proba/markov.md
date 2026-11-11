@@ -458,75 +458,22 @@ La case $(i,j)$ de $P^t$ est la probabilité d'aller de $i$ à $j$ en exactement
 Dans l'animation, l'histogramme se stabilise. Ce n'est pas un hasard&nbsp;: la loi $\mu\_t$ elle-même converge. Avec trois états, une loi de probabilité $(a,b,c)$ est un point d'un triangle, le **simplexe** (chaque sommet est une certitude, le centre est l'incertitude maximale, voir la page [Simplexes et probabilités](../simplexes_proba/)). Multiplier par $P$ déplace ce point. Itérons depuis différents départs&nbsp;:
 
 <div class="svg-container">
-<svg viewBox="0 0 600 380" role="img" aria-label="Le triangle des lois de probabilité sur trois états. Partant d'un sommet (certitude) ou d'un point quelconque, la loi du temps t avance pas à pas et converge vers le même point, la loi stationnaire." style="width:100%;max-width:600px;height:auto;">
+<svg id="sx-svg" viewBox="0 0 600 380" role="img" aria-label="Le triangle des lois de probabilité sur trois états. Partant d'un sommet (certitude) ou d'un point quelconque, la loi du temps t avance pas à pas et converge vers le même point, la loi stationnaire. On peut cliquer dans le triangle pour choisir un autre départ." style="width:100%;max-width:600px;height:auto;cursor:crosshair;touch-action:manipulation;">
 <defs><marker id="sxa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker></defs>
 <polygon points="300.0,30.0 95.0,345.0 505.0,345.0" fill="#f5f8fa" stroke="#94a3b8" stroke-width="1.4"/>
 <text x="300.0" y="18.0" text-anchor="middle" font-size="13.5" fill="#C2770B" font-family="Georgia,'Times New Roman',serif" >soleil certain</text>
 <text x="95.0" y="367.0" text-anchor="middle" font-size="13.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >nuages</text>
 <text x="505.0" y="367.0" text-anchor="middle" font-size="13.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >pluie</text>
-<polyline points="300.0,30.0 259.0,156.0 269.2,196.9 273.8,212.1 275.5,217.7 276.1,219.8 276.3,220.6 276.4,220.9 276.5,221.0 276.5,221.0 276.5,221.1 276.5,221.1 276.5,221.1" fill="none" stroke="#C2770B" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="0.75"/>
-<circle cx="300.0" cy="30.0" r="4.2" fill="#C2770B" />
-<circle cx="259.0" cy="156.0" r="2.8" fill="#C2770B" />
-<circle cx="269.2" cy="196.9" r="2.8" fill="#C2770B" />
-<circle cx="273.8" cy="212.1" r="2.8" fill="#C2770B" />
-<circle cx="275.5" cy="217.7" r="2.8" fill="#C2770B" />
-<circle cx="276.1" cy="219.8" r="2.8" fill="#C2770B" />
-<circle cx="276.3" cy="220.6" r="2.8" fill="#C2770B" />
-<circle cx="276.4" cy="220.9" r="2.8" fill="#C2770B" />
-<circle cx="276.5" cy="221.0" r="2.8" fill="#C2770B" />
-<circle cx="276.5" cy="221.0" r="2.8" fill="#C2770B" />
-<circle cx="276.5" cy="221.1" r="2.8" fill="#C2770B" />
-<circle cx="276.5" cy="221.1" r="2.8" fill="#C2770B" />
-<circle cx="276.5" cy="221.1" r="2.8" fill="#C2770B" />
-<polyline points="95.0,345.0 279.5,250.5 279.5,231.6 277.7,225.0 276.9,222.5 276.6,221.6 276.5,221.3 276.5,221.1 276.5,221.1 276.5,221.1 276.5,221.1 276.5,221.1 276.5,221.1" fill="none" stroke="#64748b" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="0.75"/>
-<circle cx="95.0" cy="345.0" r="4.2" fill="#64748b" />
-<circle cx="279.5" cy="250.5" r="2.8" fill="#64748b" />
-<circle cx="279.5" cy="231.6" r="2.8" fill="#64748b" />
-<circle cx="277.7" cy="225.0" r="2.8" fill="#64748b" />
-<circle cx="276.9" cy="222.5" r="2.8" fill="#64748b" />
-<circle cx="276.6" cy="221.6" r="2.8" fill="#64748b" />
-<circle cx="276.5" cy="221.3" r="2.8" fill="#64748b" />
-<circle cx="276.5" cy="221.1" r="2.8" fill="#64748b" />
-<circle cx="276.5" cy="221.1" r="2.8" fill="#64748b" />
-<circle cx="276.5" cy="221.1" r="2.8" fill="#64748b" />
-<circle cx="276.5" cy="221.1" r="2.8" fill="#64748b" />
-<circle cx="276.5" cy="221.1" r="2.8" fill="#64748b" />
-<circle cx="276.5" cy="221.1" r="2.8" fill="#64748b" />
-<polyline points="505.0,345.0 300.0,282.0 283.6,244.2 279.1,229.7 277.5,224.3 276.8,222.3 276.6,221.5 276.5,221.2 276.5,221.1 276.5,221.1 276.5,221.1 276.5,221.1 276.5,221.1" fill="none" stroke="#004D80" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="0.75"/>
-<circle cx="505.0" cy="345.0" r="4.2" fill="#004D80" />
-<circle cx="300.0" cy="282.0" r="2.8" fill="#004D80" />
-<circle cx="283.6" cy="244.2" r="2.8" fill="#004D80" />
-<circle cx="279.1" cy="229.7" r="2.8" fill="#004D80" />
-<circle cx="277.5" cy="224.3" r="2.8" fill="#004D80" />
-<circle cx="276.8" cy="222.3" r="2.8" fill="#004D80" />
-<circle cx="276.6" cy="221.5" r="2.8" fill="#004D80" />
-<circle cx="276.5" cy="221.2" r="2.8" fill="#004D80" />
-<circle cx="276.5" cy="221.1" r="2.8" fill="#004D80" />
-<circle cx="276.5" cy="221.1" r="2.8" fill="#004D80" />
-<circle cx="276.5" cy="221.1" r="2.8" fill="#004D80" />
-<circle cx="276.5" cy="221.1" r="2.8" fill="#004D80" />
-<circle cx="276.5" cy="221.1" r="2.8" fill="#004D80" />
-<polyline points="443.5,313.5 293.9,266.2 281.8,238.2 278.4,227.5 277.2,223.5 276.7,222.0 276.6,221.4 276.5,221.2 276.5,221.1 276.5,221.1 276.5,221.1 276.5,221.1 276.5,221.1" fill="none" stroke="#970E53" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="0.75"/>
-<circle cx="443.5" cy="313.5" r="4.2" fill="#970E53" />
-<circle cx="293.9" cy="266.2" r="2.8" fill="#970E53" />
-<circle cx="281.8" cy="238.2" r="2.8" fill="#970E53" />
-<circle cx="278.4" cy="227.5" r="2.8" fill="#970E53" />
-<circle cx="277.2" cy="223.5" r="2.8" fill="#970E53" />
-<circle cx="276.7" cy="222.0" r="2.8" fill="#970E53" />
-<circle cx="276.6" cy="221.4" r="2.8" fill="#970E53" />
-<circle cx="276.5" cy="221.2" r="2.8" fill="#970E53" />
-<circle cx="276.5" cy="221.1" r="2.8" fill="#970E53" />
-<circle cx="276.5" cy="221.1" r="2.8" fill="#970E53" />
-<circle cx="276.5" cy="221.1" r="2.8" fill="#970E53" />
-<circle cx="276.5" cy="221.1" r="2.8" fill="#970E53" />
-<circle cx="276.5" cy="221.1" r="2.8" fill="#970E53" />
+<g id="sx-traj"></g>
 <circle cx="276.5" cy="221.1" r="7" fill="#fff" stroke="#334155" stroke-width="2"/>
 <text x="290.5" y="243.1" text-anchor="start" font-size="18" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >π</text>
 <text x="560.0" y="120.0" text-anchor="end" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >chaque point : la loi</text>
+<text id="sx-t" x="560.0" y="170.0" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif">jour 0</text>
 <text x="560.0" y="136.0" text-anchor="end" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >d'un jour donné</text>
 </svg>
+<div class="fig-commandes"><button type="button" id="sx-go">❚❚ Pause</button> <button type="button" id="sx-step">Jour suivant</button> <button type="button" id="sx-reset">Recommencer</button></div>
 </div>
-<p class="legende">Chaque trajectoire suit la loi du temps qu'il fait, jour après jour, en partant d'une certitude (un sommet) ou d'une loi quelconque (en rouge). Toutes convergent vers le même point $\pi$&nbsp;: la chaîne oublie d'où elle est partie.</p>
+<p class="legende">Chaque trajectoire suit la loi du temps qu'il fait, jour après jour, en partant d'une certitude (un sommet) ou d'une loi quelconque (en rouge). Toutes convergent vers le même point $\pi$&nbsp;: la chaîne oublie d'où elle est partie. Cliquez dans le triangle pour lancer une nouvelle trajectoire depuis le point de votre choix.</p>
 
 Le point d'arrivée $\pi$ ne bouge plus quand on le multiplie par $P$&nbsp;: c'est un **point fixe**, la **loi stationnaire** (ou invariante). Ici, $\pi=\left(\frac{24}{61},\frac{22}{61},\frac{15}{61}\right)\approx(0{,}39\\;;\\;0{,}36\\;;\\;0{,}25)$&nbsp;: c'est la hauteur des tirets de l'histogramme. Sur le long terme, il fait beau 39&nbsp;% du temps, quel que soit le temps qu'il faisait au départ.
 
@@ -2219,6 +2166,95 @@ Le remède, quand il existe, consiste à changer de chaîne tout en gardant la m
 
 
 <script>
+(function () {
+  var svg = document.getElementById('sx-svg');
+  if (!svg) return;
+  var NS = 'http://www.w3.org/2000/svg';
+  var P = [[.6, .3, .1], [.3, .4, .3], [.2, .4, .4]];
+  var V = [[300, 30], [95, 345], [505, 345]];
+  var PI = [24 / 61, 22 / 61, 15 / 61], TMAX = 14, DUR = 700, MAXTR = 10;
+  var COLS = ['#C2770B', '#64748b', '#004D80', '#970E53'], EXTRA = ['#006C65', '#7a4aa8', '#b3541e', '#3f8f2f'];
+  function $(id) { return document.getElementById(id); }
+  var g = $('sx-traj'), tr = [], t = 0, running = false, visible = false, busy = false, nExtra = 0;
+  function xy(m) { return [m[0] * V[0][0] + m[1] * V[1][0] + m[2] * V[2][0], m[0] * V[0][1] + m[1] * V[1][1] + m[2] * V[2][1]]; }
+  function next(m) { var r = [0, 0, 0]; for (var i = 0; i < 3; i++) for (var j = 0; j < 3; j++) r[j] += m[i] * P[i][j]; return r; }
+  function el(tag, at) { var e = document.createElementNS(NS, tag); for (var k in at) e.setAttribute(k, at[k]); g.appendChild(e); return e; }
+  function addTraj(m, col) {
+    var q = xy(m), line = el('polyline', { points: q[0].toFixed(1) + ',' + q[1].toFixed(1), fill: 'none', stroke: col, 'stroke-width': 1.6, 'stroke-linejoin': 'round', 'stroke-linecap': 'round', 'stroke-opacity': 0.75 });
+    el('circle', { cx: q[0].toFixed(1), cy: q[1].toFixed(1), r: 4.2, fill: col });
+    var head = el('circle', { cx: q[0].toFixed(1), cy: q[1].toFixed(1), r: 5.5, fill: col, stroke: '#fff', 'stroke-width': 1.5 });
+    tr.push({ m: m, start: m, col: col, line: line, head: head, pts: [q[0].toFixed(1) + ',' + q[1].toFixed(1)] });
+  }
+  function init() {
+    while (g.firstChild) g.removeChild(g.firstChild);
+    tr = []; t = 0; nExtra = 0; busy = false;
+    addTraj([1, 0, 0], COLS[0]); addTraj([0, 1, 0], COLS[1]); addTraj([0, 0, 1], COLS[2]); addTraj([.1, .1, .8], COLS[3]);
+    label();
+  }
+  function label() { $('sx-t').textContent = 'jour ' + t; }
+  function advance(done) {
+    if (busy) return; busy = true;
+    var t0 = null, from = tr.map(function (o) { return xy(o.m); }), to = tr.map(function (o) { return xy(next(o.m)); });
+    function anim(ts) {
+      if (t0 === null) t0 = ts;
+      var u = Math.min(1, (ts - t0) / DUR), e = u < .5 ? 2 * u * u : 1 - 2 * (1 - u) * (1 - u);
+      tr.forEach(function (o, k) {
+        var x = from[k][0] + (to[k][0] - from[k][0]) * e, y = from[k][1] + (to[k][1] - from[k][1]) * e;
+        o.head.setAttribute('cx', x.toFixed(1)); o.head.setAttribute('cy', y.toFixed(1));
+        o.line.setAttribute('points', o.pts.join(' ') + ' ' + x.toFixed(1) + ',' + y.toFixed(1));
+      });
+      if (u < 1) { requestAnimationFrame(anim); return; }
+      tr.forEach(function (o, k) {
+        o.m = next(o.m); var p = to[k][0].toFixed(1) + ',' + to[k][1].toFixed(1);
+        o.pts.push(p); o.line.setAttribute('points', o.pts.join(' '));
+        var d = el('circle', { cx: to[k][0].toFixed(1), cy: to[k][1].toFixed(1), r: 2.8, fill: o.col });
+        g.insertBefore(d, o.head); g.appendChild(o.head);
+      });
+      t++; label(); busy = false; if (done) done();
+    }
+    requestAnimationFrame(anim);
+  }
+  var timer = null;
+  function loop() {
+    timer = null;
+    if (!running || !visible) return;
+    if (t >= TMAX) { running = false; $('sx-go').textContent = '▶ Rejouer'; return; }
+    advance(function () { timer = setTimeout(loop, 200); });
+  }
+  function start() { if (!timer && !busy && running && visible) timer = setTimeout(loop, 150); }
+  $('sx-go').addEventListener('click', function () {
+    if (!running && t >= TMAX) { init(); }
+    running = !running; this.textContent = running ? '❚❚ Pause' : '▶ Reprendre'; start();
+  });
+  $('sx-step').addEventListener('click', function () {
+    running = false; $('sx-go').textContent = '▶ Reprendre';
+    if (t >= TMAX) return; advance();
+  });
+  $('sx-reset').addEventListener('click', function () { init(); });
+  svg.addEventListener('click', function (ev) {
+    var pt = svg.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
+    var q = pt.matrixTransform(svg.getScreenCTM().inverse());
+    var a = ((V[1][1] - V[2][1]) * (q.x - V[2][0]) + (V[2][0] - V[1][0]) * (q.y - V[2][1])) / ((V[1][1] - V[2][1]) * (V[0][0] - V[2][0]) + (V[2][0] - V[1][0]) * (V[0][1] - V[2][1]));
+    var b = ((V[2][1] - V[0][1]) * (q.x - V[2][0]) + (V[0][0] - V[2][0]) * (q.y - V[2][1])) / ((V[1][1] - V[2][1]) * (V[0][0] - V[2][0]) + (V[2][0] - V[1][0]) * (V[0][1] - V[2][1]));
+    var c = 1 - a - b;
+    if (a < 0 || b < 0 || c < 0 || busy) return;
+    if (nExtra >= MAXTR) return;
+    // la nouvelle trajectoire démarre au jour 0 : on repart de zéro avec toutes les trajectoires
+    var ms = tr.map(function (o) { return o.start; });
+    ms.push([a, b, c]);
+    while (g.firstChild) g.removeChild(g.firstChild);
+    var cols = tr.map(function (o) { return o.col; }); cols.push(EXTRA[nExtra % EXTRA.length]);
+    tr = []; t = 0; nExtra++;
+    ms.forEach(function (m, k) { addTraj(m, cols[k]); });
+    label(); if (!running) { running = true; $('sx-go').textContent = '❚❚ Pause'; } start();
+  });
+  init();
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce) running = true; else $('sx-go').textContent = '▶ Lancer';
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; start(); }, { threshold: 0.3 }).observe(svg);
+  } else { visible = true; start(); }
+})();
 (function () {
   var svg = document.getElementById('mt-svg');
   if (!svg) return;
