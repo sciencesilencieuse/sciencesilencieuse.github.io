@@ -96,7 +96,7 @@ Supposons qu'on dispose d'une fonction Python `K(n)` qui calcule la complexité 
 ```python
 def berry():
     n = 0
-    while K(n) <= 1_000_000_000:
+    while K(n) <= 1000000000:
         n += 1
     return n
 
