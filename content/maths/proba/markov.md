@@ -2212,16 +2212,11 @@ Le remède, quand il existe, consiste à changer de chaîne tout en gardant la m
 
 <br>
 
-<b><i>Sources&nbsp;:</i></b>
 
-- Levin, D. A. et Peres, Y. *Markov Chains and Mixing Times*, 2<sup>e</sup> édition, American Mathematical Society (2017). [🌐](https://pages.uoregon.edu/dlevin/MARKOV/mcmt2e.pdf)
-- Petruszewycz, M. « Chaînes de Markov discrètes dans le domaine linguistique : l'article de 1913 de A. A. Markov », *Publications des séminaires de mathématiques et informatique de Rennes*, fascicule 2 (1981). [🌐](https://www.numdam.org/item/PSMIR_1981___2_A3_0.pdf)
-- Hayes, B. « First Links in the Markov Chain », *American Scientist* 101 (2013). [🌐](https://www.americanscientist.org/article/first-links-in-the-markov-chain)
-- Bayer, D. et Diaconis, P. « Trailing the Dovetail Shuffle to its Lair », *The Annals of Applied Probability* 2 (1992).
-- Metropolis, N., Rosenbluth, A. W., Rosenbluth, M. N., Teller, A. H. et Teller, E. « Equation of State Calculations by Fast Computing Machines », *The Journal of Chemical Physics* 21 (1953).
-- Spirin, V., Krapivsky, P. L. et Redner, S. « Freezing in Ising ferromagnets », *Physical Review E* 65, 016119 (2001). [🌐](https://arxiv.org/abs/cond-mat/0105037)
-- Krauth, W. *Statistical Mechanics: Algorithms and Computations*, Oxford University Press (2006).
-- Powell, V. et Lehe, L. *Markov Chains, explained visually*, Setosa. [🌐](https://setosa.io/ev/markov-chains/)
+> Levin, D. A. et Peres, Y. *Markov Chains and Mixing Times*, 2<sup>e</sup> édition, American Mathematical Society (2017). [🌐](https://pages.uoregon.edu/dlevin/MARKOV/mcmt2e.pdf)
+ Petruszewycz, M. « Chaînes de Markov discrètes dans le domaine linguistique : l'article de 1913 de A. A. Markov », *Publications des séminaires de mathématiques et informatique de Rennes*, fascicule 2 (1981). [🌐](https://www.numdam.org/item/PSMIR_1981___2_A3_0.pdf)
+ Hayes, B. « First Links in the Markov Chain », *American Scientist* 101 (2013). [🌐](https://www.americanscientist.org/article/first-links-in-the-markov-chain)
+
 
 <script>
 (function () {
