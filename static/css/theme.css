@@ -261,7 +261,11 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 #sidebar ul.topics ul ul {
     padding-bottom: 0;
 }
-#sidebar ul.topics li.parent ul, #sidebar ul.topics > li.active ul {
+/* Menu "un niveau à la fois" : on n'ouvre que la liste ENFANT DIRECTE d'une
+   entrée qui est ancêtre de la page courante (.parent) ou la page courante
+   (.active). Le sélecteur descendant d'origine (« li.parent ul ») ouvrait
+   tous les niveaux imbriqués d'un coup. */
+#sidebar ul.topics li.parent > ul, #sidebar ul.topics li.active > ul {
     display: block;
 }
 #sidebar ul.topics > li > a {
