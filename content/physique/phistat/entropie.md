@@ -78,7 +78,7 @@ En théorie de l'information, Claude **Shannon** a appelé entropie la mesure de
 
 </div>
 
-Cherchant une réponse au paradoxe de Maxwell, Leó Szilárd a formulé en 1929 une équivalence entre l'énergie et l'information grâce à une version simplifiée du **démon de Maxwell**. Il en a déduit l'énergie nécessaire au démon pour faire varier l'information d'un bit. **Landauer** en a fait un principe (en 1961) qui stipule que l'énergie dissipée lors de l'effacement d'un bit d'information vaut au minimum $k_BT \ln(2)$.
+Cherchant une réponse au paradoxe de Maxwell, Leó Szilárd a formulé en 1929 une équivalence entre l'énergie et l'information grâce à une version simplifiée du **démon de Maxwell**. Il en a déduit l'énergie nécessaire au démon pour faire varier l'information d'un bit. **Landauer** en a fait un principe (en 1961) qui stipule que l'énergie dissipée lors de l'effacement d'un bit d'information vaut au minimum $k_BT \ln(2)$. Toute cette histoire est racontée en détail, animations à l'appui, sur la page [Démon de Maxwell et principe de Landauer](../landauer/).
 
 {{< youtube-plus id="XY-mbr-aAZE" ratio="16x9" width="800" shadow="true" rounded="true" >}}
 

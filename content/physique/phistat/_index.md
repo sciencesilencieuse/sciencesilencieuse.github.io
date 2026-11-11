@@ -31,6 +31,8 @@ C'est la mission de la <b>physique statistique</b> que de construire le pont ent
 
 - [**Entropie et information**](./entropie)
 
+- [**Démon de Maxwell et principe de Landauer**](./landauer)
+
 - [**Phase et transition**](./chgt)
 
 - [**Effusivité**](./effu)
