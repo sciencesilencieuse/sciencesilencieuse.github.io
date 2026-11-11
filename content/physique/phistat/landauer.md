@@ -438,38 +438,120 @@ Remarquez ce que fait exactement le démon&nbsp;: il **acquiert de l'information
 En 1929, Leó Szilárd réduit le démon à sa plus simple expression. Le gaz ne contient plus qu'**une seule molécule**, dans une boîte en contact avec un thermostat à la température $T$. Le démon glisse une cloison au milieu, regarde de quel côté est la molécule, puis utilise la cloison comme un piston&nbsp;: la molécule, en la bombardant, la repousse et soulève un poids.
 
 <div class="svg-container">
-<svg id="sz-svg" viewBox="0 0 600 300" role="img" aria-label="La machine de Szilard : une boîte contenant une seule molécule, en contact avec un thermostat ; une cloison mobile, la mémoire du démon et une jauge du travail extrait. L'animation enchaîne les six étapes du cycle." style="width:100%;max-width:600px;height:auto;">
+<svg viewBox="0 0 600 745" role="img" aria-label="Le cycle de Szilard en six schémas disposés en boucle : état initial, insertion de la cloison, mesure, détente qui soulève un poids en puisant de la chaleur dans le thermostat, retrait de la cloison, effacement de la mémoire qui rejette de la chaleur." style="width:100%;max-width:600px;height:auto;">
 <defs><marker id="szq" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#006C65"/></marker></defs>
 <defs><marker id="szm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#970E53"/></marker></defs>
-<rect x="30" y="198" width="340" height="34" rx="6" fill="#e0efee" stroke="#006C65" stroke-width="1"/>
-<text x="200" y="220" text-anchor="middle" font-size="13" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >thermostat à la température <tspan font-style="italic">T</tspan></text>
-<rect x="50" y="70" width="300" height="120" fill="#f5f8fa" stroke="#334155" stroke-width="2"/>
-<line id="sz-wall" x1="200" y1="70" x2="200" y2="190" stroke="#C2770B" stroke-width="6" stroke-linecap="butt" opacity="0"/>
-<circle id="sz-p" cx="120" cy="130" r="7" fill="#004D80"/>
-<g id="sz-qin" opacity="0"><path d="M110,214 L110,178" stroke="#006C65" stroke-width="2.2" fill="none" marker-end="url(#szq)"/><path d="M290,214 L290,178" stroke="#006C65" stroke-width="2.2" fill="none" marker-end="url(#szq)"/><rect x="170" y="158" width="60" height="18" rx="4" fill="#fff" fill-opacity="0.85"/><text x="200" y="172" text-anchor="middle" font-size="12.5" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >chaleur</text></g>
-<g id="sz-eye" opacity="0.25"><ellipse cx="200" cy="40" rx="20" ry="11" fill="#fff" stroke="#C2770B" stroke-width="2"/><circle cx="200" cy="40" r="5.5" fill="#C2770B"/></g>
-<text x="200" y="18" text-anchor="middle" font-size="12.5" fill="#C2770B" font-family="Georgia,'Times New Roman',serif" >le démon</text>
-<text x="445" y="60" text-anchor="middle" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >mémoire</text>
-<rect id="sz-membox" x="418" y="70" width="54" height="54" rx="6" fill="#fff" stroke="#94a3b8" stroke-width="2.4"/>
-<text id="sz-mem" x="445" y="107" text-anchor="middle" font-size="28" fill="#334155" font-family="Georgia,'Times New Roman',serif">0</text>
-<g id="sz-qout" opacity="0"><path d="M445,128 L445,196" stroke="#970E53" stroke-width="2.2" fill="none" marker-end="url(#szm)"/><text x="452" y="150" text-anchor="start" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >chaleur</text><text x="452" y="165" text-anchor="start" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >≥ <tspan font-style="italic">k</tspan><tspan font-style="italic">T</tspan> ln 2</text></g>
-<rect x="400" y="198" width="90" height="34" rx="6" fill="#e0efee" stroke="#006C65" stroke-width="1"/>
-<text x="445" y="220" text-anchor="middle" font-size="12.5" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >thermostat</text>
-<text x="545" y="60" text-anchor="middle" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >travail net</text>
-<rect x="530" y="90" width="30" height="100" fill="#fff" stroke="#94a3b8" stroke-width="1.2"/>
-<rect id="sz-wbar" x="530" y="190" width="30" height="0" fill="#004D80" fill-opacity="0.8"/>
-<text x="524" y="94" text-anchor="end" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">k</tspan><tspan font-style="italic">T</tspan> ln 2</text>
-<text x="524" y="194" text-anchor="end" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >0</text>
-<g id="sz-fil" opacity="0"></g>
-<line x1="505" y1="272" x2="590" y2="272" stroke="#94a3b8" stroke-width="1.5"/>
-<g id="sz-poids"><path d="M535,272 L539,252 L551,252 L555,272 Z" fill="#334155"/><circle cx="545" cy="249" r="3.5" fill="none" stroke="#334155" stroke-width="1.5"/></g>
-<text x="500" y="290" text-anchor="start" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >poids soulevé</text>
-<text x="200" y="262" text-anchor="middle" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >cycles effectués : <tspan id="sz-n">0</tspan></text>
+<defs><marker id="szc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#94a3b8"/></marker></defs>
+<defs><marker id="sza" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#C2770B"/></marker></defs>
+<defs><marker id="szb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker></defs>
+<rect x="10" y="10" width="270" height="225" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="24" y="34" text-anchor="start" font-size="13.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-weight="bold">1. État initial</text>
+<rect x="26" y="62" width="170" height="76" fill="#f5f8fa" stroke="#334155" stroke-width="1.8"/>
+<rect x="22" y="142" width="178" height="20" rx="5" fill="#e0efee" stroke="#006C65" stroke-width="0.8"/>
+<text x="111.0" y="156" text-anchor="middle" font-size="11.5" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >thermostat à <tspan font-style="italic">T</tspan></text>
+<text x="237" y="70" text-anchor="middle" font-size="11.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >mémoire</text>
+<rect x="214" y="78" width="46" height="46" rx="6" fill="#fff" stroke="#94a3b8" stroke-width="2.2"/>
+<text x="237" y="110" text-anchor="middle" font-size="24" fill="#334155" font-family="Georgia,'Times New Roman',serif" >0</text>
+<circle cx="78" cy="106" r="6.5" fill="#004D80"/>
+<circle cx="146" cy="86" r="6.5" fill="none" stroke="#004D80" stroke-width="1.4" stroke-dasharray="3 2.5"/>
+<circle cx="118" cy="112" r="6.5" fill="none" stroke="#004D80" stroke-width="1.4" stroke-dasharray="3 2.5"/>
+<circle cx="54" cy="80" r="6.5" fill="none" stroke="#004D80" stroke-width="1.4" stroke-dasharray="3 2.5"/>
+<circle cx="176" cy="112" r="6.5" fill="none" stroke="#004D80" stroke-width="1.4" stroke-dasharray="3 2.5"/>
+<text x="145.0" y="186" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >La molécule est quelque part dans la boîte.</text>
+<text x="145.0" y="201" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >La mémoire du démon est vierge.</text>
+<rect x="320" y="10" width="270" height="225" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="334" y="34" text-anchor="start" font-size="13.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-weight="bold">2. On glisse une cloison</text>
+<rect x="336" y="62" width="170" height="76" fill="#f5f8fa" stroke="#334155" stroke-width="1.8"/>
+<rect x="332" y="142" width="178" height="20" rx="5" fill="#e0efee" stroke="#006C65" stroke-width="0.8"/>
+<text x="421.0" y="156" text-anchor="middle" font-size="11.5" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >thermostat à <tspan font-style="italic">T</tspan></text>
+<text x="547" y="70" text-anchor="middle" font-size="11.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >mémoire</text>
+<rect x="524" y="78" width="46" height="46" rx="6" fill="#fff" stroke="#94a3b8" stroke-width="2.2"/>
+<text x="547" y="110" text-anchor="middle" font-size="24" fill="#334155" font-family="Georgia,'Times New Roman',serif" >0</text>
+<line x1="421.0" y1="62" x2="421.0" y2="138" stroke="#C2770B" stroke-width="5"/>
+<path d="M421.0,46 L421.0,59" stroke="#C2770B" stroke-width="1.8" fill="none" marker-end="url(#sza)"/>
+<circle cx="378" cy="110" r="6.5" fill="none" stroke="#004D80" stroke-width="1.4" stroke-dasharray="3 2.5"/>
+<circle cx="464" cy="110" r="6.5" fill="none" stroke="#004D80" stroke-width="1.4" stroke-dasharray="3 2.5"/>
+<text x="378" y="88" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >?</text>
+<text x="464" y="88" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >?</text>
+<text x="455.0" y="186" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >Gauche ou droite ? On ne le sait pas encore.</text>
+<text x="455.0" y="201" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >Insérer la cloison ne coûte aucun travail.</text>
+<rect x="320" y="260" width="270" height="225" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="334" y="284" text-anchor="start" font-size="13.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-weight="bold">3. Le démon mesure</text>
+<rect x="336" y="312" width="170" height="76" fill="#f5f8fa" stroke="#334155" stroke-width="1.8"/>
+<rect x="332" y="392" width="178" height="20" rx="5" fill="#e0efee" stroke="#006C65" stroke-width="0.8"/>
+<text x="421.0" y="406" text-anchor="middle" font-size="11.5" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >thermostat à <tspan font-style="italic">T</tspan></text>
+<text x="547" y="320" text-anchor="middle" font-size="11.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >mémoire</text>
+<rect x="524" y="328" width="46" height="46" rx="6" fill="#fff" stroke="#C2770B" stroke-width="2.2"/>
+<text x="547" y="360" text-anchor="middle" font-size="24" fill="#334155" font-family="Georgia,'Times New Roman',serif" >G</text>
+<line x1="421.0" y1="312" x2="421.0" y2="388" stroke="#C2770B" stroke-width="5"/>
+<circle cx="378" cy="360" r="6.5" fill="#004D80"/>
+<ellipse cx="378" cy="299" rx="15" ry="8.5" fill="#fff" stroke="#C2770B" stroke-width="1.8"/><circle cx="378" cy="299" r="4" fill="#C2770B"/>
+<path d="M398,299 C468,293 504,318 521,344" stroke="#C2770B" stroke-width="1.4" fill="none" stroke-dasharray="4 3" marker-end="url(#sza)"/>
+<text x="455.0" y="436" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >Il note le côté dans sa mémoire : 1 bit.</text>
+<text x="455.0" y="451" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >Mémoire et molécule sont corrélées.</text>
+<rect x="320" y="510" width="270" height="225" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="334" y="534" text-anchor="start" font-size="13.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-weight="bold">4. Détente : on récolte du travail</text>
+<rect x="336" y="562" width="170" height="76" fill="#f5f8fa" stroke="#334155" stroke-width="1.8"/>
+<rect x="332" y="642" width="178" height="20" rx="5" fill="#e0efee" stroke="#006C65" stroke-width="0.8"/>
+<text x="421.0" y="656" text-anchor="middle" font-size="11.5" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >thermostat à <tspan font-style="italic">T</tspan></text>
+<text x="547" y="570" text-anchor="middle" font-size="11.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >mémoire</text>
+<rect x="524" y="578" width="46" height="46" rx="6" fill="#fff" stroke="#C2770B" stroke-width="2.2"/>
+<text x="547" y="610" text-anchor="middle" font-size="24" fill="#334155" font-family="Georgia,'Times New Roman',serif" >G</text>
+<line x1="421.0" y1="562" x2="421.0" y2="638" stroke="#C2770B" stroke-width="2" stroke-dasharray="4 3" stroke-opacity="0.6"/>
+<line x1="464" y1="562" x2="464" y2="638" stroke="#C2770B" stroke-width="5"/>
+<path d="M470,584 L498,584" stroke="#C2770B" stroke-width="2" fill="none" marker-end="url(#sza)"/>
+<circle cx="406" cy="602" r="6.5" fill="#004D80"/>
+<path d="M414,600 L456,592" stroke="#004D80" stroke-width="1.3" fill="none" stroke-dasharray="3 2.5" marker-end="url(#szb)"/>
+<path d="M356,652 L356,614" stroke="#006C65" stroke-width="2" fill="none" marker-end="url(#szq)"/>
+<text x="366" y="630" text-anchor="start" font-size="12.5" fill="#006C65" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">Q</tspan></text>
+<path d="M531,652 L535,636 L545,636 L549,652 Z" fill="#334155"/>
+<path d="M558,652 L558,634" stroke="#004D80" stroke-width="1.8" fill="none" marker-end="url(#szb)"/>
+<text x="336" y="676" text-anchor="start" font-size="12" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >travail récolté : <tspan font-style="italic">W</tspan> = <tspan font-style="italic">Q</tspan> = <tspan font-style="italic">k</tspan><tspan font-style="italic">T</tspan> ln 2</text>
+<text x="455.0" y="698" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >La molécule repousse la cloison, qui soulève</text>
+<text x="455.0" y="713" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >un poids. La chaleur du thermostat devient travail.</text>
+<rect x="10" y="510" width="270" height="225" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="24" y="534" text-anchor="start" font-size="13.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-weight="bold">5. On retire la cloison</text>
+<rect x="26" y="562" width="170" height="76" fill="#f5f8fa" stroke="#334155" stroke-width="1.8"/>
+<rect x="22" y="642" width="178" height="20" rx="5" fill="#e0efee" stroke="#006C65" stroke-width="0.8"/>
+<text x="111.0" y="656" text-anchor="middle" font-size="11.5" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >thermostat à <tspan font-style="italic">T</tspan></text>
+<text x="237" y="570" text-anchor="middle" font-size="11.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >mémoire</text>
+<rect x="214" y="578" width="46" height="46" rx="6" fill="#fff" stroke="#C2770B" stroke-width="2.2"/>
+<text x="237" y="610" text-anchor="middle" font-size="24" fill="#334155" font-family="Georgia,'Times New Roman',serif" >G</text>
+<circle cx="78" cy="606" r="6.5" fill="#004D80"/>
+<circle cx="146" cy="586" r="6.5" fill="none" stroke="#004D80" stroke-width="1.4" stroke-dasharray="3 2.5"/>
+<circle cx="118" cy="612" r="6.5" fill="none" stroke="#004D80" stroke-width="1.4" stroke-dasharray="3 2.5"/>
+<circle cx="54" cy="580" r="6.5" fill="none" stroke="#004D80" stroke-width="1.4" stroke-dasharray="3 2.5"/>
+<circle cx="176" cy="612" r="6.5" fill="none" stroke="#004D80" stroke-width="1.4" stroke-dasharray="3 2.5"/>
+<text x="145.0" y="686" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >La boîte a retrouvé son état initial…</text>
+<text x="145.0" y="701" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >mais la mémoire contient toujours « G ».</text>
+<rect x="10" y="260" width="270" height="225" rx="10" fill="#fff" stroke="#cbd5e1" stroke-width="1.2"/>
+<text x="24" y="284" text-anchor="start" font-size="13.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-weight="bold">6. On efface la mémoire</text>
+<rect x="26" y="312" width="170" height="76" fill="#f5f8fa" stroke="#334155" stroke-width="1.8"/>
+<rect x="22" y="392" width="178" height="20" rx="5" fill="#e0efee" stroke="#006C65" stroke-width="0.8"/>
+<text x="111.0" y="406" text-anchor="middle" font-size="11.5" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >thermostat à <tspan font-style="italic">T</tspan></text>
+<text x="237" y="320" text-anchor="middle" font-size="11.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >mémoire</text>
+<rect x="214" y="328" width="46" height="46" rx="6" fill="#fff" stroke="#94a3b8" stroke-width="2.2"/>
+<text x="237" y="360" text-anchor="middle" font-size="24" fill="#334155" font-family="Georgia,'Times New Roman',serif" >0</text>
+<path d="M237,378 L237,408" stroke="#970E53" stroke-width="2" fill="none" marker-end="url(#szm)"/>
+<text x="268" y="426" text-anchor="end" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >chaleur rejetée : <tspan font-style="italic">Q</tspan> ≥ <tspan font-style="italic">k</tspan><tspan font-style="italic">T</tspan> ln 2</text>
+<text x="237" y="388" text-anchor="middle" font-size="1" fill="#334155" font-family="Georgia,'Times New Roman',serif" ></text>
+<circle cx="78" cy="356" r="6.5" fill="#004D80"/>
+<circle cx="146" cy="336" r="6.5" fill="none" stroke="#004D80" stroke-width="1.4" stroke-dasharray="3 2.5"/>
+<circle cx="118" cy="362" r="6.5" fill="none" stroke="#004D80" stroke-width="1.4" stroke-dasharray="3 2.5"/>
+<circle cx="54" cy="330" r="6.5" fill="none" stroke="#004D80" stroke-width="1.4" stroke-dasharray="3 2.5"/>
+<circle cx="176" cy="362" r="6.5" fill="none" stroke="#004D80" stroke-width="1.4" stroke-dasharray="3 2.5"/>
+<text x="145.0" y="448" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >Remise à zéro : la chaleur rejetée annule</text>
+<text x="145.0" y="463" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >le gain. Le cycle est bouclé, bilan nul au mieux.</text>
+<path d="M284,122.5 L314,122.5" stroke="#94a3b8" stroke-width="3" fill="none" marker-end="url(#szc)"/>
+<path d="M455.0,238 L455.0,255" stroke="#94a3b8" stroke-width="3" fill="none" marker-end="url(#szc)"/>
+<path d="M455.0,488 L455.0,505" stroke="#94a3b8" stroke-width="3" fill="none" marker-end="url(#szc)"/>
+<path d="M316,622.5 L286,622.5" stroke="#94a3b8" stroke-width="3" fill="none" marker-end="url(#szc)"/>
+<path d="M145.0,507 L145.0,490" stroke="#94a3b8" stroke-width="3" fill="none" marker-end="url(#szc)"/>
+<path d="M145.0,257 L145.0,240" stroke="#94a3b8" stroke-width="3" fill="none" marker-end="url(#szc)"/>
+<text x="300" y="364.5" text-anchor="middle" font-size="1" fill="#334155" font-family="Georgia,'Times New Roman',serif" ></text>
 </svg>
-<p id="sz-txt" class="etape-txt" aria-live="polite"></p>
-<div class="fig-commandes"><button type="button" id="sz-pause">❚❚ Pause</button> <button type="button" id="sz-next">Étape suivante</button></div>
 </div>
-<p class="legende">Le cycle de Szilard, étape par étape. La boîte revient exactement à son état initial après avoir fourni du travail… mais la mémoire du démon, elle, a changé. Le cycle n'est vraiment bouclé qu'une fois la mémoire remise à zéro.</p>
+<p class="legende">Le cycle de Szilard, dans le cas où la molécule est trouvée à gauche (l'autre cas est symétrique). Après l'étape 5, la boîte est revenue exactement à son état initial en ayant fourni du travail… mais pas la mémoire du démon. Le cycle n'est vraiment bouclé qu'une fois la mémoire remise à zéro, à l'étape 6.</p>
 
 Combien de travail récupère-t-on&nbsp;? Un gaz d'une seule molécule obéit encore, en moyenne, à la loi des gaz parfaits&nbsp;: $pV=k\_B T$. Pendant que le volume disponible double, de $\frac V2$ à $V$,
 
@@ -645,7 +727,8 @@ L'animation ci-dessous refait l'expérience numériquement, sur quatre cents bil
 <text x="564.1517866849887" y="266" text-anchor="middle" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >200</text>
 <line x1="564.2" y1="250" x2="564.2" y2="254" stroke="#94a3b8"/>
 <line x1="400" y1="195.1" x2="580" y2="195.1" stroke="#006C65" stroke-width="2"/>
-<text x="580" y="211.125848205671" text-anchor="end" font-size="11.5" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >limite de Landauer : ln 2 ≈ 0,69</text>
+<text x="490.0" y="219.5629241028355" text-anchor="middle" font-size="11.5" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >limite de Landauer :</text>
+<text x="490.0" y="234.5629241028355" text-anchor="middle" font-size="11.5" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >ln 2 ≈ 0,69</text>
 <rect x="401" y="195.1" width="179" height="54.4" fill="#006C65" fill-opacity="0.08"/>
 <text x="495.0" y="284" text-anchor="middle" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >durée du protocole</text>
 <text x="396" y="44" text-anchor="start" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >chaleur dissipée (en <tspan font-style="italic">k</tspan><tspan font-style="italic">T</tspan>)</text>
@@ -746,6 +829,8 @@ c'est-à-dire l'incertitude sur le système avant la mesure, moins celle qui sub
 <text x="404" y="127" text-anchor="middle" font-size="14" fill="#C2770B" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">H</tspan>(<tspan font-style="italic">M</tspan> | <tspan font-style="italic">X</tspan>)</text>
 <text x="404" y="146" text-anchor="middle" font-size="11.5" fill="#C2770B" font-family="Georgia,'Times New Roman',serif" >bruit de</text>
 <text x="404" y="160" text-anchor="middle" font-size="11.5" fill="#C2770B" font-family="Georgia,'Times New Roman',serif" >la mesure</text>
+<path d="M300,61.35 A95,95 0 0,1 300,208.65 A95,95 0 0,1 300,61.35 Z" fill="#fdf6f9"/>
+<circle cx="240" cy="135" r="95" fill="none" stroke="#004D80" stroke-width="2"/><circle cx="360" cy="135" r="95" fill="none" stroke="#C2770B" stroke-width="2"/>
 <text x="300" y="128" text-anchor="middle" font-size="22" fill="#970E53" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">I</tspan></text>
 <text x="300" y="147" text-anchor="middle" font-size="10.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >information</text>
 <text x="300" y="160" text-anchor="middle" font-size="10.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >mutuelle</text>
@@ -990,102 +1075,6 @@ Egan, C. A. et Lineweaver, C. H. « A Larger Estimate of the Entropy of the Univ
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { running = false; $('dm-pause').textContent = '▶ Lancer'; }
   draw();
   if ('IntersectionObserver' in window) new IntersectionObserver(function (e) { visible = e[0].isIntersecting; go(); }, { threshold: 0.2 }).observe(cv);
-  else { visible = true; go(); }
-})();
-(function () {
-  var svg = document.getElementById('sz-svg');
-  if (!svg) return;
-  function $(id) { return document.getElementById(id); }
-  var BX0 = 50, BX1 = 350, BY0 = 70, BY1 = 190, XM = 200, R = 7;
-  var DUR = [1800, 1300, 1800, 4200, 1800, 2600];
-  var TXT = [
-    '1. La molécule est quelque part dans la boîte. La mémoire du démon est vierge (elle affiche 0).',
-    '2. Le démon glisse une cloison au milieu de la boîte. Cela ne coûte aucun travail.',
-    '3. Il regarde de quel côté se trouve la molécule et le note dans sa mémoire : il a acquis un bit.',
-    '4. Il accroche le poids du bon côté et laisse la molécule repousser la cloison. La chaleur puisée dans le thermostat devient du travail.',
-    '5. La cloison est retirée : la boîte a retrouvé son état initial. La mémoire, elle, contient toujours le résultat.',
-    '6. Pour boucler le cycle, il faut effacer la mémoire : au moins kT ln 2 de chaleur part dans le thermostat. Le bilan est nul, au mieux.'
-  ];
-  var ph = 0, t = 0, side = -1, px = 120, py = 130, vx = 1.9, vy = 1.3, xp = XM, cycles = 0;
-  var running = true, visible = false, raf = null, last = null;
-  function lim() {
-    if (ph === 0 || ph === 5 || ph === 4) return [BX0, BX1];
-    if (ph === 1 || ph === 2) return px < XM ? [BX0, XM - 3] : [XM + 3, BX1];
-    return side < 0 ? [BX0, xp - 3] : [xp + 3, BX1];
-  }
-  function ease(u) { return u * u * (3 - 2 * u); }
-  function set(el, a, v) { $(el).setAttribute(a, v); }
-  function render() {
-    var u = Math.min(1, t / DUR[ph]);
-    // cloison
-    var h = 0, x = XM;
-    if (ph === 1) h = ease(u); else if (ph === 2) h = 1; else if (ph === 3) { h = 1; x = xp; } else if (ph === 4) { h = 1 - ease(u); x = xp; }
-    set('sz-wall', 'x1', x.toFixed(1)); set('sz-wall', 'x2', x.toFixed(1)); set('sz-wall', 'y2', (BY0 + h * (BY1 - BY0)).toFixed(1));
-    set('sz-wall', 'opacity', h > 0.01 ? 1 : 0);
-    set('sz-p', 'cx', px.toFixed(1)); set('sz-p', 'cy', py.toFixed(1));
-    // œil
-    set('sz-eye', 'opacity', ph === 2 ? (0.35 + 0.65 * Math.abs(Math.sin(t / 140))) : 0.25);
-    // mémoire
-    var m = '0';
-    if (ph === 2 && u > 0.45) m = side < 0 ? 'G' : 'D';
-    if (ph === 3 || ph === 4) m = side < 0 ? 'G' : 'D';
-    if (ph === 5 && u < 0.4) m = side < 0 ? 'G' : 'D';
-    $('sz-mem').textContent = m;
-    set('sz-membox', 'stroke', m === '0' ? '#94a3b8' : '#C2770B');
-    // travail et poids
-    var w = 0;
-    if (ph === 3) w = Math.log(1 + ease(u)) / Math.LN2; else if (ph === 4) w = 1;
-    else if (ph === 5) w = 1 - ease(Math.min(1, u / 0.6));
-    set('sz-wbar', 'y', (190 - 100 * w).toFixed(1)); set('sz-wbar', 'height', (100 * w).toFixed(1));
-    set('sz-poids', 'transform', 'translate(0,' + (-36 * (ph === 3 ? w : (ph === 4 || ph === 5) ? 1 : 0)).toFixed(1) + ')');
-    // flèches de chaleur
-    set('sz-qin', 'opacity', ph === 3 ? 1 : 0);
-    set('sz-qout', 'opacity', ph === 5 && u > 0.15 ? 1 : 0);
-    set('sz-fil', 'opacity', ph === 3 ? 1 : 0);
-    $('sz-txt').textContent = TXT[ph];
-    $('sz-n').textContent = cycles;
-  }
-  function enter(p) {
-    ph = p; t = 0;
-    if (ph === 0) { xp = XM; }
-    if (ph === 2) side = px < XM ? -1 : 1;
-    if (ph === 3) xp = XM;
-    if (ph === 5) cycles++;
-  }
-  function advance(dt) {
-    t += dt;
-    var n = Math.max(1, Math.round(dt / 8));
-    for (var k = 0; k < n; k++) {
-      if (ph === 3) { var u = Math.min(1, (t - dt + dt * (k + 1) / n) / DUR[3]); xp = XM - side * ease(u) * 144; }
-      var L = lim();
-      px += vx; py += vy;
-      if (px < L[0] + R) { px = L[0] + R; vx = Math.abs(vx); }
-      if (px > L[1] - R) { px = L[1] - R; vx = -Math.abs(vx); }
-      if (py < BY0 + R) { py = BY0 + R; vy = Math.abs(vy); }
-      if (py > BY1 - R) { py = BY1 - R; vy = -Math.abs(vy); }
-    }
-    // évite d'insérer la cloison sur la molécule
-    if (ph === 0 && t >= DUR[0] && Math.abs(px - XM) < R + 6) t = DUR[0] - 1;
-    if (t >= DUR[ph]) enter((ph + 1) % 6);
-  }
-  function frame(ts) {
-    if (last !== null) advance(Math.min(50, ts - last));
-    last = ts; render();
-    raf = (running && visible) ? requestAnimationFrame(frame) : null;
-  }
-  function go() { last = null; if (!raf && running && visible) raf = requestAnimationFrame(frame); }
-  $('sz-pause').addEventListener('click', function () { running = !running; this.textContent = running ? '❚❚ Pause' : '▶ Lecture'; go(); });
-  $('sz-next').addEventListener('click', function () {
-    if (running) { running = false; $('sz-pause').textContent = '▶ Lecture'; }
-    // termine l'étape en cours, puis affiche le début de la suivante
-    var guard = 0;
-    var cur = ph;
-    while (ph === cur && guard++ < 4000) advance(16);
-    render();
-  });
-  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) { running = false; $('sz-pause').textContent = '▶ Lecture'; }
-  render();
-  if ('IntersectionObserver' in window) new IntersectionObserver(function (e) { visible = e[0].isIntersecting; go(); }, { threshold: 0.25 }).observe(svg);
   else { visible = true; go(); }
 })();
 (function () {
