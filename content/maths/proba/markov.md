@@ -391,20 +391,20 @@ Voici un modèle (très) simplifié de la météo&nbsp;: trois états, soleil, n
 <circle id="mt-tok" cx="300" cy="110" r="9" fill="#970E53" stroke="#fff" stroke-width="2"/>
 <line x1="60.0" y1="565.0" x2="560.0" y2="565.0" stroke="#94a3b8" stroke-width="1" />
 <rect id="mt-b0" x="110" y="565" width="80" height="0" fill="#ddb479"/>
-<line x1="102" y1="497.6" x2="198" y2="497.6" stroke="#334155" stroke-width="1.6" stroke-dasharray="5 3"/>
+<line x1="102" y1="508.8" x2="198" y2="508.8" stroke="#334155" stroke-width="1.6" stroke-dasharray="5 3"/>
 <text x="150.0" y="583.0" text-anchor="middle" font-size="13" fill="#C2770B" font-family="Georgia,'Times New Roman',serif" >soleil</text>
 <text id="mt-v0" x="150" y="559" font-size="13" fill="#334155" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" paint-order="stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round"></text>
 <rect id="mt-b1" x="270" y="565" width="80" height="0" fill="#aab3bf"/>
-<line x1="262" y1="503.2" x2="358" y2="503.2" stroke="#334155" stroke-width="1.6" stroke-dasharray="5 3"/>
+<line x1="262" y1="513.5" x2="358" y2="513.5" stroke="#334155" stroke-width="1.6" stroke-dasharray="5 3"/>
 <text x="310.0" y="583.0" text-anchor="middle" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >nuages</text>
 <text id="mt-v1" x="310" y="559" font-size="13" fill="#334155" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" paint-order="stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round"></text>
 <rect id="mt-b2" x="430" y="565" width="80" height="0" fill="#739db9"/>
-<line x1="422" y1="522.8" x2="518" y2="522.8" stroke="#334155" stroke-width="1.6" stroke-dasharray="5 3"/>
+<line x1="422" y1="529.9" x2="518" y2="529.9" stroke="#334155" stroke-width="1.6" stroke-dasharray="5 3"/>
 <text x="470.0" y="583.0" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >pluie</text>
 <text id="mt-v2" x="470" y="559" font-size="13" fill="#334155" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" paint-order="stroke" stroke="#fff" stroke-width="5" stroke-linejoin="round"></text>
-<text id="mt-day" x="560" y="431" font-size="13" fill="#64748b" text-anchor="end" font-family="Georgia,'Times New Roman',serif">jour 0</text>
-<text x="60.0" y="431.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >proportion des jours passés dans chaque état</text>
-<text x="560.0" y="449.0" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >tirets : loi stationnaire</text>
+<text id="mt-day" x="560" y="420" font-size="13" fill="#64748b" text-anchor="end" font-family="Georgia,'Times New Roman',serif">jour 0</text>
+<text x="60.0" y="420.0" text-anchor="start" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >proportion des jours passés dans chaque état</text>
+<text x="560.0" y="437.0" text-anchor="end" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >tirets : loi stationnaire</text>
 </svg>
 <div class="fig-commandes"><button type="button" id="mt-go">❚❚ Pause</button> <button type="button" id="mt-fast">Accélérer ×50</button> <button type="button" id="mt-reset">Remettre à zéro</button></div>
 </div>
@@ -465,8 +465,8 @@ Dans l'animation, l'histogramme se stabilise. Ce n'est pas un hasard&nbsp;: la l
 <text x="95.0" y="367.0" text-anchor="middle" font-size="13.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >nuages</text>
 <text x="505.0" y="367.0" text-anchor="middle" font-size="13.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >pluie</text>
 <g id="sx-traj"></g>
-<circle cx="276.5" cy="221.1" r="7" fill="#fff" stroke="#334155" stroke-width="2"/>
-<text x="290.5" y="243.1" text-anchor="start" font-size="18" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >π</text>
+<circle id="sx-pi" visibility="hidden" cx="276.5" cy="221.1" r="7" fill="#fff" stroke="#334155" stroke-width="2"/>
+<text id="sx-pil" visibility="hidden" x="286.5" y="236.5" text-anchor="start" font-size="18" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >π</text>
 <text x="560.0" y="120.0" text-anchor="end" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >chaque point : la loi</text>
 <text id="sx-t" x="560.0" y="170.0" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif">jour 0</text>
 <text x="560.0" y="136.0" text-anchor="end" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >d'un jour donné</text>
@@ -2191,7 +2191,11 @@ Le remède, quand il existe, consiste à changer de chaîne tout en gardant la m
     addTraj([1, 0, 0], COLS[0]); addTraj([0, 1, 0], COLS[1]); addTraj([0, 0, 1], COLS[2]); addTraj([.1, .1, .8], COLS[3]);
     label();
   }
-  function label() { $('sx-t').textContent = 'jour ' + t; }
+  function label() {
+    $('sx-t').textContent = 'jour ' + t;
+    var v = t >= TMAX ? 'visible' : 'hidden';
+    $('sx-pi').setAttribute('visibility', v); $('sx-pil').setAttribute('visibility', v);
+  }
   function advance(done) {
     if (busy) return; busy = true;
     var t0 = null, from = tr.map(function (o) { return xy(o.m); }), to = tr.map(function (o) { return xy(next(o.m)); });
@@ -2259,7 +2263,7 @@ Le remède, quand il existe, consiste à changer de chaîne tout en gardant la m
   var svg = document.getElementById('mt-svg');
   if (!svg) return;
   var P = [[.6, .3, .1], [.3, .4, .3], [.2, .4, .4]];
-  var pos = [[300, 110], [130, 332], [470, 332]], y0 = 565, h = 120;
+  var pos = [[300, 110], [130, 332], [470, 332]], y0 = 565, h = 100;
   function $(id) { return document.getElementById(id); }
   var tok = $('mt-tok'), cnt = [0, 0, 0], day = 0, cur = 0, speed = 1, running = false, visible = false, timer = null;
   function draw() {
