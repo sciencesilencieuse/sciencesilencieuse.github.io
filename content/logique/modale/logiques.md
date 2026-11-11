@@ -1,8 +1,9 @@
 +++
-title = "Logique modale"
+title = "Logique modale - Différentes logiques modales"
+menuTitle = "Différentes logiques modales"
 date = 2021-03-06T14:20:50+01:00
 weight = 3
-hidden = true
+aliases = ["/logique/logique6/"]
 +++
 
 <style>
@@ -61,9 +62,9 @@ hidden = true
 <div style="overflow-x: auto;">
 <table>
 <tr>
-    <th><a href="../logique4/">Syntaxe et sémantique</a></th>
-    <th><a href="../logique5/">Systèmes logiques</a></th>
-    <tH><a href="../logique6/">Différentes logiques modales</a></th>
+    <th><a href="../syntaxe-semantique/">Syntaxe et sémantique</a></th>
+    <th><a href="../systemes/">Systèmes logiques</a></th>
+    <tH><a href="../logiques/">Différentes logiques modales</a></th>
   </tr>
 </table>
 </div>

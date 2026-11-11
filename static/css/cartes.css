@@ -1,0 +1,266 @@
+/* ==========================================================================
+   Cartes de présentation (pages d'accueil Maths, Logique, etc.)
+   Chargé sur tout le site par layouts/partials/custom-header.html.
+
+   Structure attendue :
+     <div class="math-container"><div class="math-grid">
+       <div class="math-card c-vert">
+         <div class="math-card-head">
+           <span class="math-icon"><svg viewBox="0 0 48 48">…</svg></span>
+           <h3><a href="…">Titre</a></h3>
+         </div>
+         <div class="carte-texte">Phrase de présentation (facultatif)</div>
+         <div class="theme-subgroup">
+           <span class="theme-title">Sous-titre (facultatif)</span>
+           <div class="link-list"><a class="math-btn" href="…">Lien</a></div>
+         </div>
+       </div>
+     </div></div>
+   ========================================================================== */
+
+/* --- CONTENEUR GLOBAL --- */
+.math-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: #2c3e50;
+  line-height: 1.5;
+  max-width: 1200px;
+  margin: 20px auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- GRILLE DE CARTES --- */
+/* Cartes de largeur fixe qui passent à la ligne ; chaque ligne est centrée,
+   y compris la dernière quand elle est incomplète. */
+.math-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 40px;
+}
+
+/* Chaque carte porte sa couleur d'accent --c.
+   Pour changer la couleur d'un domaine, modifier seulement cette valeur. */
+.math-card         { --c: #1864ab; }
+.card-fondements   { --c: #5f3dc4; }
+.card-arithmetique { --c: #c9400c; }
+.card-algebre      { --c: #1864ab; }
+.card-geometrie    { --c: #2b8a3e; }
+.card-proba        { --c: #c2255c; }
+.card-stat         { --c: #0b7285; }
+.card-jeux         { --c: #b35c00; }
+
+.math-card {
+  flex: 0 1 350px;
+  box-sizing: border-box;
+  min-width: 0;
+  background: #ffffff;
+  border: 1px solid #e2e5ea;
+  border-radius: 10px;
+  padding: 28px 22px 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.math-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(16, 24, 40, 0.12);
+  border-color: var(--c);
+}
+
+/* --- EN-TÊTE DE CARTE : pictogramme, titre, trait d'accent --- */
+.math-card-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.math-icon {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--c);
+  color: #ffffff;
+  transition: transform 0.25s ease;
+}
+
+.math-icon svg {
+  width: 36px;
+  height: 36px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.math-icon .plein  { fill: currentColor; stroke: none; }
+.math-icon .teinte { fill: currentColor; fill-opacity: 0.28; }
+.math-icon .leger  { stroke-opacity: 0.6; }
+.math-icon .creux  { fill: var(--c); }
+
+.math-card:hover .math-icon { transform: scale(1.08); }
+
+.math-card h3 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1.45rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.math-card h3::after {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 3px;
+  margin: 12px auto 0;
+  border-radius: 2px;
+  background: var(--c);
+  transition: width 0.25s ease;
+}
+.math-card:hover h3::after { width: 64px; }
+
+.math-card h3 a,
+.math-card h3 a:hover {
+  color: #1f2933 !important;
+  text-decoration: none !important;
+}
+
+/* --- STYLE DES CONTENEURS DE BOUTONS --- */
+.link-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;            /* Gère l'espace horizontal et vertical entre les boutons */
+  margin-bottom: 16px;
+}
+
+/* --- STYLE DES SOUS-TITRES (ex: Nombres & Propriétés) : centrés entre deux filets --- */
+.theme-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 0.72rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  width: 100%;
+}
+.theme-title::before,
+.theme-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #e2e5ea;
+}
+
+/* --- STYLE DES BOUTONS (Centrage mathématique absolu) --- */
+.math-btn {
+  display: inline-block;
+  box-sizing: border-box !important; /* Force le navigateur à inclure la bordure dans le calcul */
+
+  height: 32px !important;           /* Hauteur totale du bouton */
+  line-height: 30px !important;      /* 32px moins les 2px de bordures (haut+bas) */
+  padding: 0 12px !important;        /* Strictement AUCUN padding vertical pour ne rien fausser */
+
+  vertical-align: middle;
+  background: #ffffff;
+  border: 1px solid #d3d8df !important;
+  border-radius: 7px;
+  font-size: 0.88rem;
+  color: #1f2933 !important;
+  text-decoration: none !important;
+  box-shadow: none !important;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease !important;
+  position: relative;
+}
+
+/* Suppression des barres animées des thèmes Hugo (pseudo-éléments) */
+.math-btn::after, .math-btn::before {
+  display: none !important;
+  content: none !important;
+}
+
+.math-btn:hover,
+.math-btn:focus-visible {
+  background: var(--c) !important;
+  border-color: var(--c) !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .math-card, .math-icon, .math-btn, .math-card h3::after { transition: none !important; }
+  .math-card:hover, .math-card:hover .math-icon { transform: none; }
+}
+
+/* --- SOMMAIRE COMPACT --- */
+.math-footer-list {
+  background: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 40px;
+}
+
+.math-footer-list h2 { margin-top: 0; font-size: 1.4rem; color: #7f8c8d; }
+
+.dl-math dt {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-top: 15px;
+  font-size: 1.05rem;
+}
+
+.dl-math dd {
+  margin-left: 0;
+  margin-top: 5px;
+  border-left: 3px solid #3498db;
+  padding-left: 15px;
+  line-height: 1.8;
+}
+
+.dl-math a {
+  color: #34495e;
+  text-decoration: underline;
+  margin-right: 8px;
+  font-size: 0.95rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+  .math-grid { grid-template-columns: 1fr; }
+  .math-container { padding: 10px; }
+}
+
+/* --- COULEURS GÉNÉRIQUES, utilisables sur n'importe quelle carte --- */
+.c-violet { --c: #5f3dc4; }
+.c-orange { --c: #c9400c; }
+.c-bleu   { --c: #1864ab; }
+.c-vert   { --c: #2b8a3e; }
+.c-rose   { --c: #c2255c; }
+.c-canard { --c: #0b7285; }
+.c-ambre  { --c: #b35c00; }
+
+/* --- PHRASE DE PRÉSENTATION DANS UNE CARTE --- */
+.math-card .carte-texte {
+  margin: -6px 0 18px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #52606d;
+  text-align: center;
+}

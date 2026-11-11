@@ -1,8 +1,9 @@
 +++
-title = "Propositions - Preuve"
+title = "Calcul des propositions - Preuve"
+menuTitle = "Preuve"
 date = 2021-03-06T14:20:50+01:00
 weight = 3
-hidden = true
+aliases = ["/logique/logique3/"]
 +++
 
 <style>
@@ -82,9 +83,9 @@ Notes de lecture du livre *La logique pas à pas* de Jacques Duparc que je parap
 <div style="overflow-x: auto;">
 <table>
   <tr>
-    <th><a href="../logique1/">Syntaxe</a></th>
-    <th><a href="../logique2/">Sémantique</a></th>
-    <th><a href="../logique3/">Preuve</a></th>
+    <th><a href="../syntaxe/">Syntaxe</a></th>
+    <th><a href="../semantique/">Sémantique</a></th>
+    <th><a href="../preuve/">Preuve</a></th>
   </tr>
 </table>
 </div>

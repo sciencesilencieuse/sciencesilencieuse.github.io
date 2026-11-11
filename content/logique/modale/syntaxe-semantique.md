@@ -1,8 +1,9 @@
 +++
-title = "Logique modale"
+title = "Logique modale - Syntaxe et sémantique"
+menuTitle = "Syntaxe et sémantique"
 date = 2021-03-06T14:20:50+01:00
-weight = 3
-hidden = false
+weight = 1
+aliases = ["/logique/logique4/"]
 +++
 
 <style>
@@ -72,9 +73,9 @@ Notes de lecture du livre *La logique pas à pas* de Jacques Duparc que je parap
 <div style="overflow-x: auto;">
 <table>
 <tr>
-    <th><a href="../logique4/">Syntaxe et sémantique</a></th>
-    <th><a href="../logique5/">Systèmes logiques</a></th>
-    <tH><a href="../logique6/">Différentes logiques modales</a></th>
+    <th><a href="../syntaxe-semantique/">Syntaxe et sémantique</a></th>
+    <th><a href="../systemes/">Systèmes logiques</a></th>
+    <tH><a href="../logiques/">Différentes logiques modales</a></th>
   </tr>
 </table>
 </div>
@@ -886,5 +887,5 @@ De la sorte, le jeu continue indéfiniment.
 <br><br>
 
 <p style="text-align:center;">
-<a href="../logique5" style="font-size:2em;">Suite : <b>Systèmes logiques</b></a>
+<a href="../systemes/" style="font-size:2em;">Suite : <b>Systèmes logiques</b></a>
 </p>

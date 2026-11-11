@@ -1,8 +1,9 @@
 +++
-title = "Propositions - Sémantique"
+title = "Calcul des propositions - Sémantique"
+menuTitle = "Sémantique"
 date = 2021-03-06T14:20:50+01:00
 weight = 2
-hidden = true
+aliases = ["/logique/logique2/"]
 +++
 
 <style>
@@ -78,9 +79,9 @@ Notes de lecture du livre *La logique pas à pas* de Jacques Duparc que je parap
 <div style="overflow-x: auto;">
 <table>
   <tr>
-    <th><a href="../logique1/">Syntaxe</a></th>
-    <th><a href="../logique2/">Sémantique</a></th>
-    <th><a href="../logique3/">Preuve</a></th>
+    <th><a href="../syntaxe/">Syntaxe</a></th>
+    <th><a href="../semantique/">Sémantique</a></th>
+    <th><a href="../preuve/">Preuve</a></th>
   </tr>
 </table>
 </div>
@@ -167,7 +168,7 @@ Pour évaluer des formules, il faut pouvoir étendre la fonction de distribution
 
 Avec nos petits coloriages, on peut maintenant s'atteler à la valeur de vérité d'une formule complexe dans un modèle donné.<br>
 
-Soit le modèle $\mathcal{M}$ défini par $\mathcal{M}\models P,\neg Q, R$ et la formule $\phi$ qu'on s'est amusé à linéariser [à la fin du chapitre sur la syntaxe](../logique1/#linéarisation-dune-formule). On va partir des feuilles et remonter jusqu'à la racine de l'arbre.
+Soit le modèle $\mathcal{M}$ défini par $\mathcal{M}\models P,\neg Q, R$ et la formule $\phi$ qu'on s'est amusé à linéariser [à la fin du chapitre sur la syntaxe](../syntaxe/#linéarisation-dune-formule). On va partir des feuilles et remonter jusqu'à la racine de l'arbre.
 ![](/gifverite.gif)
 
 Comme la racine est fausse, la formule $\phi$ est fausse dans ce modèle&nbsp;: $\mathcal{M}\not\models\phi$.<br>
@@ -877,5 +878,5 @@ Après la notion de **modèle**, on va maintenant s'intéresser à la notion de 
 
 <br>
 <p style="text-align:center;">
-<a href="../logique3" style="font-size:2em;">Suite : <b>Théorie de la démonstration</b></a>
+<a href="../preuve/" style="font-size:2em;">Suite : <b>Théorie de la démonstration</b></a>
 </p>

@@ -1,8 +1,9 @@
 +++
-title = "Logique modale"
+title = "Logique modale - Systèmes logiques"
+menuTitle = "Systèmes logiques"
 date = 2021-03-06T14:20:50+01:00
-weight = 3
-hidden = true
+weight = 2
+aliases = ["/logique/logique5/"]
 +++
 
 <style>
@@ -71,9 +72,9 @@ Notes de lecture du livre *La logique pas à pas* de Jacques Duparc que je parap
 <div style="overflow-x: auto;">
 <table>
 <tr>
-    <th><a href="../logique4/">Syntaxe et sémantique</a></th>
-    <th><a href="../logique5/">Systèmes logiques</a></th>
-    <tH><a href="../logique6/">Différentes logiques modales</a></th>
+    <th><a href="../syntaxe-semantique/">Syntaxe et sémantique</a></th>
+    <th><a href="../systemes/">Systèmes logiques</a></th>
+    <tH><a href="../logiques/">Différentes logiques modales</a></th>
   </tr>
 </table>
 </div>
@@ -338,7 +339,7 @@ $\text{(D) :}$ $\Box P\rightarrow \Diamond P$
 La formule $\text{(D)}$ dit que si quelque chose est nécessaire, alors cela doit être possible. On peut aussi l'interpréter différemment dans d'autres types de logiques que nous allons entrevoir ensuite&nbsp;: en logique déontique, la formule dit que quelque chose d'obligatoire doit être permis&nbsp;; en logique épistémique, elle dit que si je sais $P$, alors il est faux que je sache $\neg P$&nbsp;; et en logique doxastique, que si je crois que $P$, alors il est faux que je crois que $\neg P$.<br>
 $\text{(D)}$ est parfois appelé axiome de consistance.
 
-[Comme on l'a vu plus tôt](../logique4/#nbd), un système de transition qui valide $\text{(D)}$ n'admet **pas d'impasse**. Autrement dit, les arcs doivent être **non bornés à droite**.
+[Comme on l'a vu plus tôt](../syntaxe-semantique/#nbd), un système de transition qui valide $\text{(D)}$ n'admet **pas d'impasse**. Autrement dit, les arcs doivent être **non bornés à droite**.
 
 <br>
 
@@ -353,7 +354,7 @@ En logique déontique&nbsp;: ce qui est obligatoire est.<br>
 En logique épistémique&nbsp;: si je sais $P$, alors $P$ est avéré.<br>
 En logique doxastique&nbsp;: si je crois que $P$, alors $P$ est également avéré.
 
-Et [nous avons vu](../logique4/#refl) qu'un système de transition valide $\text{(T)}$ si et seulement si ce système est **réflexif**. $\text{(T)}$ est donc aussi l'axiome de réflexivité.
+Et [nous avons vu](../syntaxe-semantique/#refl) qu'un système de transition valide $\text{(T)}$ si et seulement si ce système est **réflexif**. $\text{(T)}$ est donc aussi l'axiome de réflexivité.
 
 <br>
 
@@ -368,7 +369,7 @@ En logique déontique&nbsp;: ce qui est, est obligatoirement permis.<br>
 En logique épistémique&nbsp;: si $P$ est avéré, alors je sais que je ne sais pas $\neg P$.<br>
 En logique doxastique&nbsp;: si $P$ est avéré, alors je crois que je ne crois pas $\neg P$.
 
-Et [nous avons vu](../logique4/#syme) qu'un système de transition valide $\text{(B)}$ si et seulement si ce système est **symétrique**. $\text{(B)}$ est donc aussi l'axiome de symétrie.
+Et [nous avons vu](../syntaxe-semantique/#syme) qu'un système de transition valide $\text{(B)}$ si et seulement si ce système est **symétrique**. $\text{(B)}$ est donc aussi l'axiome de symétrie.
 
 <br>
 
@@ -383,7 +384,7 @@ En logique déontique&nbsp;: si quelque chose est obligatoire, c'est obligatoire
 En logique épistémique&nbsp;: si je sais $P$, alors je sais que je sais $P$. Et transitivement, on sait que l'on sait que l'on sait... Autrement dit, avec la formule (4) nous décrivons des agents parfaitement rationnels.<br>
 On appelle $\text{(4)}$ l'axiome d'introspection positive dans le cadre de la logique épistémique.
 
-Et [nous avons vu](../logique4/#trans) qu'un système de transition valide $\text{(4)}$ si et seulement si ce système est **transitif**. $\text{(4)}$ est donc aussi l'axiome de transitivité.
+Et [nous avons vu](../syntaxe-semantique/#trans) qu'un système de transition valide $\text{(4)}$ si et seulement si ce système est **transitif**. $\text{(4)}$ est donc aussi l'axiome de transitivité.
 
 <br>
 
@@ -399,7 +400,7 @@ En logique épistémique&nbsp;: si je ne sais pas quelque chose, alors je sais q
 En logique doxastique&nbsp;: si je ne crois pas quelque chose, alors je crois que je ne le crois pas. L'interprétation doxastique décrit un agent parfaitement conscient de ce qu'il ne croit pas.<br>
 On appelle $\text{(5)}$ l'axiome d'introspection négative dans le cadre de la logique épistémique.
 
-Et [nous avons vu](../logique4/#eucl) qu'un système de transition valide $\text{(5)}$ si et seulement si ce système est **euclidien**. $\text{(5)}$ est donc aussi l'axiome d'euclidité.
+Et [nous avons vu](../syntaxe-semantique/#eucl) qu'un système de transition valide $\text{(5)}$ si et seulement si ce système est **euclidien**. $\text{(5)}$ est donc aussi l'axiome d'euclidité.
 
 
 <br>
@@ -1020,5 +1021,5 @@ On peut trouver d'ailleurs un peu douloureux que la correspondance de loin la pl
 
 <br>
 <p style="text-align:center;">
-<a href="../logique6" style="font-size:2em;">Suite : <b>Différentes logiques modales</b></a>
+<a href="../logiques/" style="font-size:2em;">Suite : <b>Différentes logiques modales</b></a>
 </p>

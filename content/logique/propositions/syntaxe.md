@@ -1,8 +1,9 @@
 +++
-title = "Calcul des propositions"
+title = "Calcul des propositions - Syntaxe"
+menuTitle = "Syntaxe"
 date = 2021-03-06T14:20:50+01:00
 weight = 1
-hidden = false
+aliases = ["/logique/logique1/"]
 +++
 
 <style>
@@ -72,9 +73,9 @@ Notes de lecture du livre *La logique pas à pas* de Jacques Duparc que je parap
 <div style="overflow-x: auto;">
 <table>
   <tr>
-    <th><a href="../logique1/">Syntaxe</a></th>
-    <th><a href="../logique2/">Sémantique</a></th>
-    <th><a href="../logique3/">Preuve</a></th>
+    <th><a href="../syntaxe/">Syntaxe</a></th>
+    <th><a href="../semantique/">Sémantique</a></th>
+    <th><a href="../preuve/">Preuve</a></th>
   </tr>
 </table>
 </div>
@@ -192,5 +193,5 @@ La **syntaxe**, c'est l'articulation des symboles. La **sémantique**, c'est ce 
 
 <br>
 <p style="text-align:center;">
-<a href="../logique2" style="font-size:2em;">Suite : <b>la sémantique</b></a>
+<a href="../semantique/" style="font-size:2em;">Suite : <b>la sémantique</b></a>
 </p>
