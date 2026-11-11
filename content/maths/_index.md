@@ -43,47 +43,104 @@ td, th {
   .math-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 20px;
+    gap: 22px;
     margin-bottom: 40px;
   }
 
+  /* Chaque carte porte sa couleur : --c (accent) et --t (teinte claire).
+     Pour changer la couleur d'un domaine, modifier seulement ces deux valeurs. */
+  .math-card { --c: #1971c2; --t: #e7f5ff; }
+  .card-fondements   { --c: #7048e8; --t: #f3f0ff; }
+  .card-arithmetique { --c: #d9480f; --t: #fff4e6; }
+  .card-algebre      { --c: #1971c2; --t: #e7f5ff; }
+  .card-geometrie    { --c: #2b8a3e; --t: #ebfbee; }
+  .card-proba        { --c: #c2255c; --t: #fff0f6; }
+  .card-stat         { --c: #0b7285; --t: #e3fafc; }
+  .card-jeux         { --c: #a86400; --t: #fff9db; }
+
   .math-card {
     background: #ffffff;
-    border: 1px solid #e1e4e8;
-    border-radius: 12px;
-    padding: 20px;
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid #e6e8ee;
+    border-top: 4px solid var(--c);
+    border-radius: 14px;
+    padding: 0 0 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    box-shadow: 0 2px 6px rgba(20, 30, 60, 0.06);
     display: flex;
     flex-direction: column;
+    text-align: left;
   }
 
   .math-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    border-color: #3498db;
+    box-shadow: 0 10px 24px rgba(20, 30, 60, 0.12);
+    border-color: var(--c);
   }
 
-  /* --- STYLE DES TITRES (Respecte le thème) --- */
+  /* --- EN-TÊTE DE CARTE : pictogramme + titre --- */
+  .math-card-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+    background: linear-gradient(120deg, var(--t) 0%, #ffffff 90%);
+    border-bottom: 1px solid var(--t);
+  }
+
+  .math-icon {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    background: #ffffff;
+    color: var(--c);
+    box-shadow: 0 1px 4px rgba(20, 30, 60, 0.10);
+    transition: transform 0.25s ease;
+  }
+
+  .math-icon svg {
+    width: 38px;
+    height: 38px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .math-icon .plein  { fill: currentColor; stroke: none; }
+  .math-icon .teinte { fill: currentColor; fill-opacity: 0.16; }
+  .math-icon .leger  { stroke-opacity: 0.4; }
+
+  .math-card:hover .math-icon { transform: scale(1.08) rotate(-4deg); }
+
   .math-card h3 {
-    margin-top: 0;
-    margin-bottom: 18px;
-    font-size: 1.3rem;
-    border-bottom: 2px solid #f0f2f5;
-    padding-bottom: 10px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: left;
   }
 
-  .math-card h3 a {
-    color: inherit;
-    text-decoration: none;
+  .math-card h3 a,
+  .math-card h3 a:hover {
+    color: var(--c) !important;
+    text-decoration: none !important;
   }
 
   /* --- STYLE DES CONTENEURS DE BOUTONS --- */
+  .theme-subgroup { padding: 0 20px; }
+
   .link-list {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;            /* Gère l'espace horizontal et vertical entre les boutons */
-    margin-bottom: 15px;
+    margin-bottom: 14px;
   }
 
   /* --- STYLE DES SOUS-TITRES (ex: Nombres & Propriétés) --- */
@@ -91,10 +148,12 @@ td, th {
     display: block;
     font-size: 0.75rem;
     font-weight: bold;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: #95a5a6;
-    margin-top: 12px;    /* Crée une coupure visuelle propre sous le premier groupe de boutons */
-    margin-bottom: 6px;
+    color: var(--c);
+    opacity: 0.85;
+    margin-top: 2px;
+    margin-bottom: 8px;
     width: 100%;
   }
 
@@ -102,36 +161,40 @@ td, th {
   .math-btn {
     display: inline-block;
     box-sizing: border-box !important; /* Force le navigateur à inclure la bordure dans le calcul */
-    
+
     height: 32px !important;           /* Hauteur totale du bouton */
     line-height: 30px !important;      /* 32px moins les 2px de bordures (haut+bas) */
-    padding: 0 12px !important;        /* Strictement AUCUN padding vertical pour ne rien fausser */
-    
-    vertical-align: middle;      
-    background: #f8f9fa;
-    border: 1px solid #dcdde1;
-    border-radius: 6px;
+    padding: 0 13px !important;        /* Strictement AUCUN padding vertical pour ne rien fausser */
+
+    vertical-align: middle;
+    background: var(--t);
+    border: 1px solid transparent !important;
+    border-radius: 16px;
     font-size: 0.88rem;
-    color: #34495e !important;
+    color: #2c3e50 !important;
     text-decoration: none !important;
-    border-bottom: none !important;   
-    box-shadow: none !important;      
-    transition: all 0.2s ease-in-out !important;
+    box-shadow: none !important;
+    transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease !important;
     position: relative;
   }
-  
-  
+
   /* Suppression des barres animées des thèmes Hugo (pseudo-éléments) */
   .math-btn::after, .math-btn::before {
     display: none !important;
     content: none !important;
   }
 
-  .math-btn:hover {
-    background: #3498db !important;
+  .math-btn:hover,
+  .math-btn:focus-visible {
+    background: var(--c) !important;
     color: #ffffff !important;
-    border-color: #2980b9 !important;
     text-decoration: none !important;
+    transform: translateY(-1px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .math-card, .math-icon, .math-btn { transition: none !important; }
+    .math-card:hover, .math-btn:hover, .math-card:hover .math-icon { transform: none; }
   }
 
   /* --- SOMMAIRE COMPACT --- */
@@ -178,8 +241,11 @@ td, th {
 
 <div class="math-grid">
 
-<div class="math-card">
+<div class="math-card card-fondements">
+<div class="math-card-head">
+<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle class="teinte" cx="18" cy="24" r="12"/><circle class="teinte" cx="30" cy="24" r="12"/></svg></span>
 <h3><a href="./fondements/">Fondements</a></h3>
+</div>
 <div class="theme-subgroup">
 <div class="link-list">
   <a href="./fondements/boole/" class="math-btn">Algèbre de Boole</a>
@@ -190,8 +256,11 @@ td, th {
 </div>
 </div>
 
-<div class="math-card">
+<div class="math-card card-arithmetique">
+<div class="math-card-head">
+<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle class="leger" cx="12" cy="12" r="4.2"/><circle class="plein" cx="24" cy="12" r="4.6"/><circle class="plein" cx="36" cy="12" r="4.6"/><circle class="leger" cx="12" cy="24" r="4.2"/><circle class="plein" cx="24" cy="24" r="4.6"/><circle class="leger" cx="36" cy="24" r="4.2"/><circle class="plein" cx="12" cy="36" r="4.6"/><circle class="leger" cx="24" cy="36" r="4.2"/><circle class="leger" cx="36" cy="36" r="4.2"/></svg></span>
 <h3><a href="./arithmetique/">Arithmétique</a></h3>
+</div>
 <div class="theme-subgroup">
 <span class="theme-title">Nombres & Propriétés</span>
 <div class="link-list">
@@ -213,8 +282,11 @@ td, th {
 </div>
 </div>
 
-<div class="math-card">
+<div class="math-card card-algebre">
+<div class="math-card-head">
+<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M14 8H8v32h6"/><path d="M34 8h6v32h-6"/><circle class="plein" cx="18" cy="18" r="3.2"/><circle class="leger" cx="30" cy="18" r="2.6"/><circle class="leger" cx="18" cy="30" r="2.6"/><circle class="plein" cx="30" cy="30" r="3.2"/></svg></span>
 <h3><a href="./algebre/">Algèbre</a></h3>
+</div>
 <div class="theme-subgroup">
 <div class="link-list">
   <a href="./algebre/equations" class="math-btn">Équations</a>
@@ -226,8 +298,11 @@ td, th {
 </div>
 </div>
 
-<div class="math-card">
+<div class="math-card card-geometrie">
+<div class="math-card-head">
+<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path class="teinte" d="M7 24h34L15.5 9.3z"/></svg></span>
 <h3><a href="./geometrie/">Géométrie</a></h3>
+</div>
 <div class="theme-subgroup">
 <span class="theme-title">Le Triangle & Cercle</span>
 <div class="link-list">
@@ -249,8 +324,11 @@ td, th {
 </div>
 </div>
 
-<div class="math-card">
+<div class="math-card card-proba">
+<div class="math-card-head">
+<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="teinte" stroke="none" d="M5 37c11 0 12-27 19-27s8 27 19 27z"/><path d="M5 37c11 0 12-27 19-27s8 27 19 27"/><path class="leger" d="M4 41h40"/></svg></span>
 <h3><a href="./proba/">Probabilités</a></h3>
+</div>
 <div class="theme-subgroup">
 <span class="theme-title">Lois & Modèles</span>
 <div class="link-list">
@@ -272,8 +350,11 @@ td, th {
 </div>
 </div>
 
-<div class="math-card">
+<div class="math-card card-stat">
+<div class="math-card-head">
+<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect class="teinte" x="7" y="25" width="8" height="15" rx="1.5"/><rect class="teinte" x="20" y="11" width="8" height="29" rx="1.5"/><rect class="teinte" x="33" y="19" width="8" height="21" rx="1.5"/><path class="leger" d="M4 40h40"/></svg></span>
 <h3><a href="./stat/">Statistiques</a></h3>
+</div>
 <div class="theme-subgroup">
 <div class="link-list">
   <a href="./stat/moyennes" class="math-btn">Moyennes</a>
@@ -287,8 +368,11 @@ td, th {
 </div>
 </div>
 
-<div class="math-card">
+<div class="math-card card-jeux">
+<div class="math-card-head">
+<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="leger" d="M24 10L13 24M24 10l11 14M13 24L7 38M13 24l6 14M35 24v14"/><circle class="plein" cx="24" cy="10" r="4.2"/><circle cx="13" cy="24" r="3.8" fill="#fff"/><circle cx="35" cy="24" r="3.8" fill="#fff"/><circle class="plein" cx="7" cy="38" r="3.6"/><circle class="plein" cx="19" cy="38" r="3.6"/><circle class="plein" cx="35" cy="38" r="3.6"/></svg></span>
 <h3><a href="./jeux/">Théorie des jeux</a></h3>
+</div>
 <div class="theme-subgroup">
 <div class="link-list">
   <a href="./jeux/" class="math-btn">Attaque / Défense</a>
