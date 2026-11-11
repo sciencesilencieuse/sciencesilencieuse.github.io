@@ -553,6 +553,61 @@ En 1929, Leó Szilárd réduit le démon à sa plus simple expression. Le gaz ne
 </div>
 <p class="legende">Le cycle de Szilard, dans le cas où la molécule est trouvée à gauche (l'autre cas est symétrique). Après l'étape 5, la boîte est revenue exactement à son état initial en ayant fourni du travail… mais pas la mémoire du démon. Le cycle n'est vraiment bouclé qu'une fois la mémoire remise à zéro, à l'étape 6.</p>
 
+### À quoi sert de savoir où est la molécule&nbsp;?
+
+C'est le cœur de l'affaire, et il vaut la peine de s'y arrêter. Une fois la cloison en place, la molécule la bombarde d'un seul côté et la pousse **en s'éloignant d'elle-même**&nbsp;: vers la droite si elle est à gauche, vers la gauche si elle est à droite. La poussée existe dans les deux cas, avec la même intensité. Ce que l'on ignore, c'est son **sens**.
+
+Or, pour transformer une poussée en travail utile, il faut lui opposer une charge, et une charge se monte dans un sens donné&nbsp;: un poids suspendu à un fil ne peut être soulevé que si l'on tire sur le fil. Le démon doit donc décider de quel côté accrocher le poids **avant** de libérer la cloison. S'il se trompe, la cloison part du mauvais côté, le fil se détend, le poids redescend, et la détente de la molécule est gaspillée.
+
+<div class="svg-container">
+<svg viewBox="0 0 600 240" role="img" aria-label="Le même montage, poids accroché à gauche de la cloison, dans les deux situations possibles. Si la molécule est à gauche, elle repousse la cloison vers la droite et le poids monte. Si elle est à droite, la cloison part vers la gauche et le poids redescend." style="width:100%;max-width:600px;height:auto;">
+<defs><marker id="sva" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#C2770B"/></marker></defs>
+<defs><marker id="svb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker></defs>
+<defs><marker id="svm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#970E53"/></marker></defs>
+<text x="150" y="20" text-anchor="middle" font-size="13.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-weight="bold">la molécule était à gauche</text>
+<rect x="88" y="42" width="184" height="86" fill="#f5f8fa" stroke="#334155" stroke-width="1.8"/>
+<line x1="180.0" y1="59" x2="52" y2="59" stroke="#334155" stroke-width="1.3"/>
+<circle cx="52" cy="68" r="9" fill="#fff" stroke="#334155" stroke-width="1.6"/><circle cx="52" cy="68" r="1.8" fill="#334155"/>
+<line x1="43" y1="68" x2="43" y2="134" stroke="#334155" stroke-width="1.3"/>
+<path d="M33,152 L37,134 L49,134 L53,152 Z" fill="#334155"/>
+<path d="M66,152 L66,122" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#svb)"/>
+<line x1="180.0" y1="42" x2="180.0" y2="128" stroke="#C2770B" stroke-width="5"/>
+<circle cx="136" cy="98" r="6.5" fill="#004D80"/>
+<path d="M187.0,104 L220.0,104" stroke="#C2770B" stroke-width="2.2" fill="none" marker-end="url(#sva)"/>
+<text x="150" y="174" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >la cloison part à droite, le fil se tend :</text>
+<text x="150" y="191" text-anchor="middle" font-size="12.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >le poids monte, on gagne du travail</text>
+<text x="450" y="20" text-anchor="middle" font-size="13.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-weight="bold">la molécule était à droite</text>
+<rect x="388" y="42" width="184" height="86" fill="#f5f8fa" stroke="#334155" stroke-width="1.8"/>
+<line x1="480.0" y1="59" x2="352" y2="59" stroke="#334155" stroke-width="1.3"/>
+<circle cx="352" cy="68" r="9" fill="#fff" stroke="#334155" stroke-width="1.6"/><circle cx="352" cy="68" r="1.8" fill="#334155"/>
+<line x1="343" y1="68" x2="343" y2="134" stroke="#334155" stroke-width="1.3"/>
+<path d="M333,152 L337,134 L349,134 L353,152 Z" fill="#334155"/>
+<path d="M366,122 L366,152" stroke="#970E53" stroke-width="2.2" fill="none" marker-end="url(#svm)"/>
+<line x1="480.0" y1="42" x2="480.0" y2="128" stroke="#C2770B" stroke-width="5"/>
+<circle cx="524" cy="98" r="6.5" fill="#004D80"/>
+<path d="M473.0,104 L440.0,104" stroke="#C2770B" stroke-width="2.2" fill="none" marker-end="url(#sva)"/>
+<text x="450" y="174" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >la cloison part à gauche, le fil se détend :</text>
+<text x="450" y="191" text-anchor="middle" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >le poids redescend, rien n'est gagné</text>
+<line x1="300" y1="30" x2="300" y2="196" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="300" y="228" text-anchor="middle" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >même montage dans les deux cas : poids accroché à gauche de la cloison</text>
+</svg>
+</div>
+<p class="legende">La boîte est la même dans les deux cas, et la molécule y fournit la même poussée. Seul le résultat de la mesure permet de savoir quel montage choisir&nbsp;: celui-ci si la molécule est à gauche, son image dans un miroir si elle est à droite.</p>
+
+Comparons trois démons.
+
+<ul>
+<li><b>Le démon aveugle</b> accroche toujours le poids du même côté (ou tire à pile ou face). Une fois sur deux le poids monte, une fois sur deux il redescend. Aucune astuce ne le sauve&nbsp;: le dépliant ci-dessous montre que la meilleure stratégie possible sans information rapporte, en moyenne, exactement zéro. C'est rassurant, car une machine qui tournerait à l'aveugle en soulevant des poids serait un mouvement perpétuel.</li>
+<li><b>Le démon informé</b> regarde, puis accroche le poids du bon côté. Le poids monte à chaque cycle.</li>
+<li><b>Le démon mal informé</b>, dont la mesure est parfois fausse, gagne quelque chose entre les deux, en proportion exacte de ce qu'il sait (dépliant).</li>
+</ul>
+
+Notez que la mesure n'a rien changé à la boîte&nbsp;: la molécule était déjà d'un côté, et sa poussée déjà là. L'énergie non plus ne vient pas de la mesure, elle vient du thermostat, qui est le même pour les trois démons. **L'information ne fournit pas l'énergie&nbsp;: elle fournit le mode d'emploi pour la récolter.** Elle transforme une agitation dont on sait seulement qu'elle pousse « d'un côté ou de l'autre » (et dont on ne peut donc rien tirer en moyenne) en une poussée de sens connu, que l'on peut atteler à une charge. C'est exactement ce que faisait le démon de Maxwell avec sa porte&nbsp;: l'agitation thermique était là depuis le début, il ne manquait que de savoir quand ouvrir.
+
+Dit autrement&nbsp;: de la chaleur, c'est de l'énergie dont on ignore les détails&nbsp;; du travail, c'est de l'énergie dont on maîtrise la direction. Un bit d'information sur la molécule permet de convertir un peu de la première en la seconde.
+
+### Combien vaut un bit&nbsp;?
+
 Combien de travail récupère-t-on&nbsp;? Un gaz d'une seule molécule obéit encore, en moyenne, à la loi des gaz parfaits&nbsp;: $pV=k\_B T$. Pendant que le volume disponible double, de $\frac V2$ à $V$,
 
 <p style="text-align:center;">
@@ -569,7 +624,7 @@ Connaître un bit sur un système en équilibre à la température $T$ permet d'
 
 </div>
 
-Sans l'information, rien n'est possible&nbsp;: si le démon accroche le poids au hasard, il se trompe une fois sur deux, et la cloison comprime alors le « gaz » au lieu de le détendre. En moyenne, le travail est nul.
+Et sans information, zéro&nbsp;: c'est le cas du démon aveugle.
 
 <div id="preuve">
 <details>
@@ -585,7 +640,7 @@ $\displaystyle W=(1-\varepsilon)\,k_B T\ln\frac{1-\varepsilon}{1/2}+\varepsilon\
 
 où $H(\varepsilon)=-\varepsilon\ln\varepsilon-(1-\varepsilon)\ln(1-\varepsilon)$ est l'entropie de l'erreur (la courbe tracée plus haut, à l'unité près). Le crochet est exactement la quantité d'information que la mesure apporte réellement sur la position&nbsp;: un bit, moins l'incertitude qui subsiste.
 
-Avec $10\\,\\%$ d'erreurs, la mesure ne vaut plus que $0{,}53$ bit, et l'on ne récupère que $0{,}53\\;k\_B T\ln 2$. Avec $50\\,\\%$ d'erreurs, la mesure ne vaut rien, et le travail aussi. **Le travail extractible est proportionnel à l'information acquise, pas au nombre de mesures effectuées.** Nous retrouverons cette quantité sous le nom d'information mutuelle.
+Avec $10\\,\\%$ d'erreurs, la mesure ne vaut plus que $0{,}53$ bit, et l'on ne récupère que $0{,}53\\;k\_B T\ln 2$. Avec $50\\,\\%$ d'erreurs, la mesure ne vaut rien&nbsp;: c'est le démon aveugle, et le mieux qu'il puisse faire (laisser la cloison au milieu) lui rapporte un travail nul. **Le travail extractible est proportionnel à l'information acquise, pas au nombre de mesures effectuées.** Nous retrouverons cette quantité sous le nom d'information mutuelle.
 
 </details>
 </div>
