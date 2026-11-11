@@ -468,12 +468,20 @@ Dans l'animation, l'histogramme se stabilise. Ce n'est pas un hasard&nbsp;: la l
 <circle id="sx-pi" visibility="hidden" cx="276.5" cy="221.1" r="7" fill="#fff" stroke="#334155" stroke-width="2"/>
 <text id="sx-pil" visibility="hidden" x="286.5" y="236.5" text-anchor="start" font-size="18" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >π</text>
 <text x="560.0" y="120.0" text-anchor="end" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >chaque point : la loi</text>
-<text id="sx-t" x="560.0" y="170.0" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif">jour 0</text>
+<text id="sx-t" x="560.0" y="172.0" text-anchor="end" font-size="17" font-weight="bold" fill="#970E53" font-family="Georgia,'Times New Roman',serif">jour 0</text>
+<g id="sx-bar">
+<line x1="420" y1="190" x2="560" y2="190" stroke="#dbe3ea" stroke-width="4" stroke-linecap="round"/>
+<line x1="420.0" y1="185" x2="420.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="430.0" y1="185" x2="430.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="440.0" y1="185" x2="440.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="450.0" y1="185" x2="450.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="460.0" y1="185" x2="460.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="470.0" y1="185" x2="470.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="480.0" y1="185" x2="480.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="490.0" y1="185" x2="490.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="500.0" y1="185" x2="500.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="510.0" y1="185" x2="510.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="520.0" y1="185" x2="520.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="530.0" y1="185" x2="530.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="540.0" y1="185" x2="540.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="550.0" y1="185" x2="550.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="560.0" y1="185" x2="560.0" y2="195" stroke="#94a3b8" stroke-width="1"/>
+<line id="sx-fill" x1="420" y1="190" x2="420" y2="190" stroke="#970E53" stroke-width="4" stroke-linecap="round"/>
+<rect id="sx-hit" x="410" y="174" width="160" height="32" fill="transparent" style="cursor:ew-resize;touch-action:none;"/>
+<circle id="sx-knob" cx="420" cy="190" r="7.5" fill="#970E53" stroke="#fff" stroke-width="2" tabindex="0" role="slider" aria-label="Nombre de jours écoulés" aria-valuemin="0" aria-valuemax="14" aria-valuenow="0" style="cursor:ew-resize;touch-action:none;outline:none;"/>
+<text x="560" y="214" text-anchor="end" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">glissez pour remonter le temps</text>
+</g>
 <text x="560.0" y="136.0" text-anchor="end" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >d'un jour donné</text>
 </svg>
 <div class="fig-commandes"><button type="button" id="sx-go">❚❚ Pause</button> <button type="button" id="sx-step">Jour suivant</button> <button type="button" id="sx-reset">Recommencer</button></div>
 </div>
-<p class="legende">Chaque trajectoire suit la loi du temps qu'il fait, jour après jour, en partant d'une certitude (un sommet) ou d'une loi quelconque (en rouge). Toutes convergent vers le même point $\pi$&nbsp;: la chaîne oublie d'où elle est partie. Cliquez dans le triangle pour lancer une nouvelle trajectoire depuis le point de votre choix.</p>
+<p class="legende">Chaque trajectoire suit la loi du temps qu'il fait, jour après jour, en partant d'une certitude (un sommet) ou d'une loi quelconque (en rouge), tirée au hasard à chaque lancement. Toutes convergent vers le même point $\pi$&nbsp;: la chaîne oublie d'où elle est partie. Cliquez dans le triangle pour lancer une nouvelle trajectoire depuis le point de votre choix.</p>
 
 Le point d'arrivée $\pi$ ne bouge plus quand on le multiplie par $P$&nbsp;: c'est un **point fixe**, la **loi stationnaire** (ou invariante). Ici, $\pi=\left(\frac{24}{61},\frac{22}{61},\frac{15}{61}\right)\approx(0{,}39\\;;\\;0{,}36\\;;\\;0{,}25)$&nbsp;: c'est la hauteur des tirets de l'histogramme. Sur le long terme, il fait beau 39&nbsp;% du temps, quel que soit le temps qu'il faisait au départ.
 
@@ -2172,34 +2180,60 @@ Le remède, quand il existe, consiste à changer de chaîne tout en gardant la m
   var NS = 'http://www.w3.org/2000/svg';
   var P = [[.6, .3, .1], [.3, .4, .3], [.2, .4, .4]];
   var V = [[300, 30], [95, 345], [505, 345]];
-  var PI = [24 / 61, 22 / 61, 15 / 61], TMAX = 14, DUR = 700, MAXTR = 10;
+  var TMAX = 14, DUR = 700, MAXTR = 10, BX0 = 420, BW = 140;
   var COLS = ['#C2770B', '#64748b', '#004D80', '#970E53'], EXTRA = ['#006C65', '#7a4aa8', '#b3541e', '#3f8f2f'];
   function $(id) { return document.getElementById(id); }
-  var g = $('sx-traj'), tr = [], t = 0, running = false, visible = false, busy = false, nExtra = 0;
+  var g = $('sx-traj'), tr = [], starts = [], cols = [], t = 0, gen = 0, running = false, visible = false, busy = false, nExtra = 0, timer = null;
   function xy(m) { return [m[0] * V[0][0] + m[1] * V[1][0] + m[2] * V[2][0], m[0] * V[0][1] + m[1] * V[1][1] + m[2] * V[2][1]]; }
   function next(m) { var r = [0, 0, 0]; for (var i = 0; i < 3; i++) for (var j = 0; j < 3; j++) r[j] += m[i] * P[i][j]; return r; }
-  function el(tag, at) { var e = document.createElementNS(NS, tag); for (var k in at) e.setAttribute(k, at[k]); g.appendChild(e); return e; }
-  function addTraj(m, col) {
-    var q = xy(m), line = el('polyline', { points: q[0].toFixed(1) + ',' + q[1].toFixed(1), fill: 'none', stroke: col, 'stroke-width': 1.6, 'stroke-linejoin': 'round', 'stroke-linecap': 'round', 'stroke-opacity': 0.75 });
-    el('circle', { cx: q[0].toFixed(1), cy: q[1].toFixed(1), r: 4.2, fill: col });
-    var head = el('circle', { cx: q[0].toFixed(1), cy: q[1].toFixed(1), r: 5.5, fill: col, stroke: '#fff', 'stroke-width': 1.5 });
-    tr.push({ m: m, start: m, col: col, line: line, head: head, pts: [q[0].toFixed(1) + ',' + q[1].toFixed(1)] });
+  // loi tirée uniformément au hasard dans le triangle (Dirichlet(1,1,1))
+  function randLaw() {
+    var e = [0, 0, 0].map(function () { return -Math.log(1 - Math.random()); }), z = e[0] + e[1] + e[2];
+    return [e[0] / z, e[1] / z, e[2] / z];
   }
-  function init() {
+  function f1(q) { return q[0].toFixed(1) + ',' + q[1].toFixed(1); }
+  function el(tag, at) { var e = document.createElementNS(NS, tag); for (var k in at) e.setAttribute(k, at[k]); g.appendChild(e); return e; }
+  function dot(q, r, col) { return el('circle', { cx: q[0].toFixed(1), cy: q[1].toFixed(1), r: r, fill: col }); }
+  // reconstruit toutes les trajectoires jusqu'au jour k (le calcul est déterministe)
+  function build(k) {
     while (g.firstChild) g.removeChild(g.firstChild);
-    tr = []; t = 0; nExtra = 0; busy = false;
-    addTraj([1, 0, 0], COLS[0]); addTraj([0, 1, 0], COLS[1]); addTraj([0, 0, 1], COLS[2]); addTraj([.1, .1, .8], COLS[3]);
-    label();
+    tr = [];
+    starts.forEach(function (m0, i) {
+      var col = cols[i], m = m0, q = [xy(m)], s;
+      for (s = 1; s <= k; s++) { m = next(m); q.push(xy(m)); }
+      var line = el('polyline', { points: q.map(f1).join(' '), fill: 'none', stroke: col, 'stroke-width': 1.6, 'stroke-linejoin': 'round', 'stroke-linecap': 'round', 'stroke-opacity': 0.75 });
+      dot(q[0], 4.2, col);
+      for (s = 1; s <= k; s++) dot(q[s], 2.8, col);
+      var head = el('circle', { cx: q[k][0].toFixed(1), cy: q[k][1].toFixed(1), r: 5.5, fill: col, stroke: '#fff', 'stroke-width': 1.5 });
+      tr.push({ m: m, col: col, line: line, head: head, pts: q.map(f1) });
+    });
+  }
+  function setProg(v) {
+    var x = BX0 + BW * v / TMAX;
+    $('sx-fill').setAttribute('x2', x.toFixed(1)); $('sx-knob').setAttribute('cx', x.toFixed(1));
   }
   function label() {
     $('sx-t').textContent = 'jour ' + t;
     var v = t >= TMAX ? 'visible' : 'hidden';
     $('sx-pi').setAttribute('visibility', v); $('sx-pil').setAttribute('visibility', v);
+    $('sx-knob').setAttribute('aria-valuenow', t);
+    setProg(t);
+  }
+  function setBtn() { $('sx-go').textContent = running ? '❚❚ Pause' : (t >= TMAX ? '▶ Rejouer' : '▶ Reprendre'); }
+  function stop() { gen++; busy = false; if (timer) { clearTimeout(timer); timer = null; } }
+  function init() {
+    stop(); starts = [[1, 0, 0], [0, 1, 0], [0, 0, 1], randLaw()]; cols = COLS.slice(); nExtra = 0; t = 0;
+    build(0); label();
+  }
+  function seek(k) {
+    k = Math.max(0, Math.min(TMAX, k));
+    stop(); running = false; t = k; build(k); label(); setBtn();
   }
   function advance(done) {
     if (busy) return; busy = true;
-    var t0 = null, from = tr.map(function (o) { return xy(o.m); }), to = tr.map(function (o) { return xy(next(o.m)); });
+    var my = gen, t0 = null, from = tr.map(function (o) { return xy(o.m); }), to = tr.map(function (o) { return xy(next(o.m)); });
     function anim(ts) {
+      if (my !== gen) return;
       if (t0 === null) t0 = ts;
       var u = Math.min(1, (ts - t0) / DUR), e = u < .5 ? 2 * u * u : 1 - 2 * (1 - u) * (1 - u);
       tr.forEach(function (o, k) {
@@ -2207,50 +2241,57 @@ Le remède, quand il existe, consiste à changer de chaîne tout en gardant la m
         o.head.setAttribute('cx', x.toFixed(1)); o.head.setAttribute('cy', y.toFixed(1));
         o.line.setAttribute('points', o.pts.join(' ') + ' ' + x.toFixed(1) + ',' + y.toFixed(1));
       });
+      setProg(t + e);
       if (u < 1) { requestAnimationFrame(anim); return; }
       tr.forEach(function (o, k) {
-        o.m = next(o.m); var p = to[k][0].toFixed(1) + ',' + to[k][1].toFixed(1);
-        o.pts.push(p); o.line.setAttribute('points', o.pts.join(' '));
-        var d = el('circle', { cx: to[k][0].toFixed(1), cy: to[k][1].toFixed(1), r: 2.8, fill: o.col });
-        g.insertBefore(d, o.head); g.appendChild(o.head);
+        o.m = next(o.m); o.pts.push(f1(to[k])); o.line.setAttribute('points', o.pts.join(' '));
+        g.insertBefore(dot(to[k], 2.8, o.col), o.head); g.appendChild(o.head);
       });
       t++; label(); busy = false; if (done) done();
     }
     requestAnimationFrame(anim);
   }
-  var timer = null;
   function loop() {
     timer = null;
     if (!running || !visible) return;
-    if (t >= TMAX) { running = false; $('sx-go').textContent = '▶ Rejouer'; return; }
-    advance(function () { timer = setTimeout(loop, 200); });
+    if (t >= TMAX) { running = false; setBtn(); return; }
+    advance(function () { if (t >= TMAX) { running = false; setBtn(); } else timer = setTimeout(loop, 200); });
   }
   function start() { if (!timer && !busy && running && visible) timer = setTimeout(loop, 150); }
   $('sx-go').addEventListener('click', function () {
-    if (!running && t >= TMAX) { init(); }
-    running = !running; this.textContent = running ? '❚❚ Pause' : '▶ Reprendre'; start();
+    if (!running && t >= TMAX) { stop(); starts[3] = randLaw(); t = 0; build(0); label(); }
+    running = !running; setBtn(); start();
   });
   $('sx-step').addEventListener('click', function () {
-    running = false; $('sx-go').textContent = '▶ Reprendre';
-    if (t >= TMAX) return; advance();
+    running = false; if (timer) { clearTimeout(timer); timer = null; } setBtn();
+    if (t >= TMAX) return; advance(setBtn);
   });
-  $('sx-reset').addEventListener('click', function () { init(); });
+  $('sx-reset').addEventListener('click', function () { init(); running = true; setBtn(); start(); });
+  // curseur : on fait glisser la barre pour choisir le jour
+  var hit = $('sx-hit'), knob = $('sx-knob'), drag = false;
+  function dayAt(ev) {
+    var pt = svg.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
+    return Math.round((pt.matrixTransform(svg.getScreenCTM().inverse()).x - BX0) / BW * TMAX);
+  }
+  hit.addEventListener('pointerdown', function (ev) { drag = true; try { hit.setPointerCapture(ev.pointerId); } catch (e) {} seek(dayAt(ev)); ev.preventDefault(); });
+  hit.addEventListener('pointermove', function (ev) { if (drag) { var k = dayAt(ev); if (k !== t) seek(k); } });
+  hit.addEventListener('pointerup', function () { drag = false; });
+  hit.addEventListener('pointercancel', function () { drag = false; });
+  knob.addEventListener('keydown', function (ev) {
+    var d = ev.key === 'ArrowRight' || ev.key === 'ArrowUp' ? 1 : ev.key === 'ArrowLeft' || ev.key === 'ArrowDown' ? -1 : 0;
+    if (d) { seek(t + d); ev.preventDefault(); }
+  });
   svg.addEventListener('click', function (ev) {
     var pt = svg.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
     var q = pt.matrixTransform(svg.getScreenCTM().inverse());
-    var a = ((V[1][1] - V[2][1]) * (q.x - V[2][0]) + (V[2][0] - V[1][0]) * (q.y - V[2][1])) / ((V[1][1] - V[2][1]) * (V[0][0] - V[2][0]) + (V[2][0] - V[1][0]) * (V[0][1] - V[2][1]));
-    var b = ((V[2][1] - V[0][1]) * (q.x - V[2][0]) + (V[0][0] - V[2][0]) * (q.y - V[2][1])) / ((V[1][1] - V[2][1]) * (V[0][0] - V[2][0]) + (V[2][0] - V[1][0]) * (V[0][1] - V[2][1]));
+    var den = (V[1][1] - V[2][1]) * (V[0][0] - V[2][0]) + (V[2][0] - V[1][0]) * (V[0][1] - V[2][1]);
+    var a = ((V[1][1] - V[2][1]) * (q.x - V[2][0]) + (V[2][0] - V[1][0]) * (q.y - V[2][1])) / den;
+    var b = ((V[2][1] - V[0][1]) * (q.x - V[2][0]) + (V[0][0] - V[2][0]) * (q.y - V[2][1])) / den;
     var c = 1 - a - b;
-    if (a < 0 || b < 0 || c < 0 || busy) return;
-    if (nExtra >= MAXTR) return;
+    if (a < 0 || b < 0 || c < 0 || nExtra >= MAXTR) return;
     // la nouvelle trajectoire démarre au jour 0 : on repart de zéro avec toutes les trajectoires
-    var ms = tr.map(function (o) { return o.start; });
-    ms.push([a, b, c]);
-    while (g.firstChild) g.removeChild(g.firstChild);
-    var cols = tr.map(function (o) { return o.col; }); cols.push(EXTRA[nExtra % EXTRA.length]);
-    tr = []; t = 0; nExtra++;
-    ms.forEach(function (m, k) { addTraj(m, cols[k]); });
-    label(); if (!running) { running = true; $('sx-go').textContent = '❚❚ Pause'; } start();
+    stop(); starts.push([a, b, c]); cols.push(EXTRA[nExtra % EXTRA.length]); nExtra++;
+    t = 0; build(0); label(); running = true; setBtn(); start();
   });
   init();
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
