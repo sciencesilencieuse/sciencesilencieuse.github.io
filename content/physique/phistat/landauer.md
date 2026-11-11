@@ -1,5 +1,5 @@
 +++
-title = "Démon de Maxwell et principe de Landauer"
+title = "Information"
 date = 2026-11-11T10:00:00+01:00
 weight = 8
 +++
