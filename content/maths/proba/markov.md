@@ -246,6 +246,44 @@ margin-top:0em;
     gap: 10px 24px;
     margin-top: 15px;
 }
+.code-ising pre, .code-ising pre code
+{
+  white-space: pre !important;
+  overflow-x: auto;
+  word-wrap: normal;
+}
+.trempe
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin: 1.2em 0 0.9em;
+}
+.trempe figure
+{
+  margin: 0;
+  width: 176px;
+  text-align: center;
+}
+.trempe img
+{
+  width: 176px;
+  height: 176px;
+  image-rendering: pixelated;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  box-shadow: none !important;
+  margin: 0 !important;
+  display: block;
+}
+.trempe figcaption
+{
+  font-size: 0.82em;
+  color: #475569;
+  line-height: 1.3;
+  margin-top: 4px;
+}
 .ising canvas
 {
     width: min(400px, 100%);
@@ -1838,6 +1876,24 @@ $\displaystyle \pi(x)=\frac{\mathrm{e}^{-E(x)/kT}}{Z},\qquad Z=\sum_y \mathrm{e}
 
 Le numérateur se calcule sans peine, mais la constante $Z$ (la fonction de partition) est une somme sur toutes les configurations&nbsp;: $2^{10\\,000}$ termes pour un petit aimant de $100\times100$ spins. Impossible à calculer, et donc impossible de tirer directement selon $\pi$.
 
+### Ce que l'on cherche vraiment&nbsp;: des moyennes
+
+En pratique, on ne veut pas connaître $\pi$ configuration par configuration (que ferait-on d'une liste de $2^{10\\,000}$ nombres&nbsp;?), mais des **moyennes**&nbsp;: l'énergie moyenne, l'aimantation moyenne, leurs fluctuations. Pour une grandeur $A$,
+
+<p style="text-align:center;">
+$\displaystyle \langle A\rangle=\sum_x A(x)\,\pi(x).$
+</p>
+
+Première idée, le Monte-Carlo naïf&nbsp;: tirer des configurations **au hasard, uniformément**, et faire la moyenne de $A$ en pondérant chacune par son facteur $\mathrm{e}^{-E/kT}$. C'est un échec complet. Presque toutes les configurations tirées ainsi sont du pur désordre, dont le poids de Boltzmann est infime à basse température&nbsp;; les configurations qui comptent (presque ordonnées) sont une proportion si dérisoire de l'ensemble qu'on ne les tirerait jamais, même en un temps égal à l'âge de l'Univers. On passerait son temps à additionner des zéros.
+
+Il faut donc **tirer directement les configurations importantes, avec la fréquence $\pi(x)$** (c'est l'échantillonnage préférentiel). La moyenne devient alors une simple moyenne arithmétique. Et c'est là qu'intervient la chaîne de Markov&nbsp;: si $\pi$ est sa loi stationnaire, le théorème ergodique (la loi des grands nombres des chaînes de Markov, celle-là même que Markov cherchait en 1906) assure que la moyenne **le long d'une seule trajectoire** converge vers la moyenne selon $\pi$&nbsp;:
+
+<p style="text-align:center;">
+$\displaystyle \frac{1}{n}\sum_{t=1}^{n}A(X_t)\;\xrightarrow[n\to\infty]{}\;\langle A\rangle .$
+</p>
+
+La chaîne ne visite qu'une fraction ridicule des configurations, mais elle visite les bonnes, dans les bonnes proportions. Reste à la construire.
+
 ### La règle de Metropolis
 
 L'astuce tient en une règle&nbsp;: depuis la configuration $x$, on **propose** une petite modification $y$ (retourner un spin, déplacer une particule), puis on l'**accepte**
@@ -1848,6 +1904,16 @@ L'astuce tient en une règle&nbsp;: depuis la configuration $x$, on **propose** 
 </ul>
 
 et sinon on reste sur place. Le rapport $\frac{\pi(y)}{\pi(x)}=\mathrm{e}^{-\Delta E/kT}$ ne fait intervenir que la différence d'énergie&nbsp;: **la constante $Z$ a disparu.**
+
+Trois précisions, qui sont autant de pièges classiques.
+
+<ul>
+<li><b>Un refus compte.</b> Si la modification est refusée, la chaîne reste en $x$, et cet état est compté <em>une fois de plus</em> dans les moyennes. C'est précisément ce « surplace » qui donne aux états de basse énergie leur poids supplémentaire. Jeter les refus fausserait tout.</li>
+<li><b>La proposition doit être symétrique</b>&nbsp;: proposer $y$ depuis $x$ aussi souvent que $x$ depuis $y$. (Sinon, il faut corriger la probabilité d'acceptation&nbsp;: c'est la variante de Hastings.)</li>
+<li><b>Les propositions doivent permettre d'aller partout</b> (irréductibilité)&nbsp;: en retournant les spins un par un, on peut relier deux configurations quelconques.</li>
+</ul>
+
+Pourquoi de <em>petites</em> modifications&nbsp;? Parce qu'une grande modification tirée au hasard ferait presque toujours grimper l'énergie de beaucoup, et serait presque toujours refusée. Les petits pas sont acceptés souvent&nbsp;; le prix à payer est que deux configurations successives se ressemblent énormément.
 
 <div class="svg-container">
 <svg viewBox="0 0 600 330" role="img" aria-label="En haut, un paysage d'énergie à deux vallées et la règle de Metropolis : un pas qui descend est toujours accepté, un pas qui monte d'une hauteur ΔE l'est avec la probabilité exp(−ΔE/kT). En bas, l'histogramme des positions visitées par la chaîne coïncide avec la loi de Boltzmann." style="width:100%;max-width:600px;height:auto;">
@@ -1976,6 +2042,15 @@ L'équilibre détaillé est satisfait&nbsp;: la loi de Boltzmann est stationnair
 </details>
 </div>
 
+En pratique, une simulation se déroule en deux temps.
+
+<ul>
+<li><b>La thermalisation.</b> La configuration de départ est arbitraire, donc atypique. On laisse d'abord tourner la chaîne sans rien mesurer, le temps qu'elle « oublie » son point de départ et rejoigne la loi stationnaire. Combien de temps&nbsp;? C'est exactement la question du temps de mélange, celle des sept battements du jeu de cartes.</li>
+<li><b>La mesure.</b> On accumule ensuite les valeurs de $A$. Mais les configurations successives sont très corrélées&nbsp;: mille mesures consécutives ne valent pas mille tirages indépendants. Si la chaîne met $\tau$ pas à se décorréler, $n$ mesures n'en valent qu'environ $\frac{n}{2\tau}$, et l'incertitude sur la moyenne décroît comme $\sqrt{2\tau/n}$ au lieu de $1/\sqrt n$.</li>
+</ul>
+
+Tout l'art du MCMC consiste à garder ces deux durées raisonnables. Nous allons voir sur un exemple qu'elles peuvent exploser.
+
 ### Le modèle d'Ising et sa transition de phase
 
 Le terrain de jeu favori de cet algorithme est le **modèle d'Ising**, le plus simple des aimants. Sur une grille, chaque site porte un spin qui pointe vers le haut ($+1$) ou vers le bas ($-1$). Deux voisins alignés abaissent l'énergie&nbsp;:
@@ -1984,7 +2059,70 @@ Le terrain de jeu favori de cet algorithme est le **modèle d'Ising**, le plus s
 $\displaystyle E=-J\sum_{\text{voisins } i,j}\sigma_i\,\sigma_j .$
 </p>
 
-Deux tendances s'affrontent. L'énergie pousse les spins à s'aligner tous dans le même sens (un aimant)&nbsp;; l'agitation thermique les pousse au désordre. Qui l'emporte&nbsp;? Faites l'expérience&nbsp;: ci-dessous, une grille de $160\times160$ spins évolue selon la règle de Metropolis, en direct.
+Deux tendances s'affrontent. L'énergie pousse les spins à s'aligner tous dans le même sens (un aimant)&nbsp;; l'agitation thermique les pousse au désordre. Qui l'emporte&nbsp;?
+
+Pour appliquer Metropolis, la modification proposée est la plus simple possible&nbsp;: **retourner un seul spin**, choisi au hasard. Tout le charme du modèle est que la variation d'énergie ne dépend que de ses quatre voisins. Les seuls termes de $E$ où figure $\sigma\_i$ sont $-J\sigma\_i\times(\text{somme des quatre voisins})$, et ils changent de signe quand $\sigma\_i$ se retourne&nbsp;:
+
+<p style="text-align:center;">
+$\displaystyle \Delta E=2J\,\sigma_i\,(\sigma_{\text{haut}}+\sigma_{\text{bas}}+\sigma_{\text{gauche}}+\sigma_{\text{droite}}).$
+</p>
+
+Il n'y a que cinq cas possibles, selon le nombre de voisins avec lesquels le spin est d'accord (on prend $J=k=1$)&nbsp;:
+
+<div class="tableau-large">
+
+| voisins alignés avec le spin | $\Delta E$ si on le retourne | probabilité d'acceptation |
+|:--|:--|:--|
+| $0$ ou $1$ (il est en minorité) | $-8$ ou $-4$ | $1$ |
+| $2$ (égalité) | $0$ | $1$ |
+| $3$ | $+4$ | $\mathrm{e}^{-4/T}$ |
+| $4$ (il est en plein accord) | $+8$ | $\mathrm{e}^{-8/T}$ |
+
+</div>
+
+À $T=1{,}5$, ces deux dernières probabilités valent $7\\,\\%$ et $0{,}5\\,\\%$&nbsp;: un spin entouré de ses semblables ne bouge presque jamais. À $T=4$, elles valent $37\\,\\%$ et $14\\,\\%$&nbsp;: tout s'agite.
+
+Le programme qui anime la figure ci-dessous tient alors en une dizaine d'instructions. En voici le cœur (en JavaScript, à peine simplifié)&nbsp;:
+
+<div class="code-ising">
+
+```js
+// s : grille de N×N cases valant +1 ou -1
+// T : température
+function balayage() {
+  // un « balayage » = N² tentatives
+  for (let k = 0; k < N * N; k++) {
+    // 1. un site au hasard
+    const i = hasard(N), j = hasard(N);
+    // 2. somme des 4 voisins
+    //    (le « % N » referme la grille)
+    const voisins = s[(i + 1) % N][j]
+                  + s[(i + N - 1) % N][j]
+                  + s[i][(j + 1) % N]
+                  + s[i][(j + N - 1) % N];
+    // 3. coût du retournement
+    const dE = 2 * s[i][j] * voisins;
+    // 4. règle de Metropolis
+    if (dE <= 0 || Math.random() < Math.exp(-dE / T))
+      s[i][j] = -s[i][j];   // accepté
+    // sinon : refusé, on ne change rien
+  }
+}
+```
+
+</div>
+
+Quelques commentaires sur ce code.
+
+<ul>
+<li><b>Aucune physique n'est « programmée »</b>&nbsp;: ni domaines, ni température critique, ni transition. Il n'y a que la règle locale. Tout ce que l'on voit émerger à l'écran est une conséquence collective de ces quelques lignes.</li>
+<li><b>La grille est refermée sur elle-même</b>&nbsp;: grâce au reste de la division par $N$, le voisin de droite de la dernière colonne est la première colonne, et de même verticalement. La grille est donc un tore, sans bord. Ce détail aura son importance.</li>
+<li><b>L'unité de temps est le balayage</b>&nbsp;: $N^2=25\,600$ tentatives, soit en moyenne une par spin. La figure en effectue deux entre deux images, donc une centaine par seconde.</li>
+<li><b>Le test <code>Math.random() &lt; p</code></b> est la façon standard de réaliser un évènement de probabilité $p$. (Le vrai programme calcule à l'avance $\mathrm{e}^{-4/T}$ et $\mathrm{e}^{-8/T}$, les deux seules valeurs utiles, au lieu d'appeler l'exponentielle des millions de fois par seconde.)</li>
+<li><b>La mesure</b>&nbsp;: à chaque image, on calcule l'aimantation par spin $m=\frac{1}{N^2}\sum_i\sigma_i$, et le point rouge affiche $|m|$, légèrement lissé sur les dernières images.</li>
+</ul>
+
+Faites l'expérience&nbsp;: la grille de $160\times160$ spins ci-dessous évolue selon cette règle, en direct.
 
 <div class="ising">
 <canvas id="is-c" width="160" height="160" aria-label="Simulation du modèle d'Ising : chaque pixel est un spin, bleu vers le haut, clair vers le bas."></canvas>
@@ -2010,12 +2148,45 @@ Deux tendances s'affrontent. L'énergie pousse les spins à s'aligner tous dans 
 </svg>
 </div>
 <div class="fig-commandes"><span>température&nbsp;: <span style="font-style:italic">T</span> = <span id="is-tv">2,00</span></span> <input type="range" id="is-t" min="1" max="4" step="0.01" value="2" aria-label="Température"> <button type="button" id="is-tc">aller à <span style="font-style:italic">T</span><sub>c</sub></button></div>
-<div class="fig-commandes"><button type="button" id="is-rand">Tout désordonner</button> <button type="button" id="is-up">Tout aligner</button> <button type="button" id="is-pause">❚❚ Pause</button></div>
-<p class="legende">Chaque pixel est un spin (bleu vers le haut, clair vers le bas). Le curseur règle la température (avec $J=k=1$). Le point rouge est l'aimantation mesurée, comparée à la valeur exacte. Partez du désordre à basse température&nbsp;: des domaines se forment et grossissent lentement. Placez-vous à $T_c$&nbsp;: des amas de toutes tailles apparaissent. Au-dessus, le désordre l'emporte.</p>
+<div class="fig-commandes"><button type="button" id="is-rand">Tout désordonner</button> <button type="button" id="is-up">Tout aligner</button> <button type="button" id="is-pause">❚❚ Pause</button> <button type="button" id="is-vite" aria-pressed="false">Accélérer ×10</button> <span>balayages&nbsp;: <span id="is-n">0</span></span></div>
+<p class="legende">Chaque pixel est un spin (bleu vers le haut, clair vers le bas). Le curseur règle la température (avec $J=k=1$). Le point rouge est l'aimantation mesurée, comparée à la valeur exacte. Partez du désordre à basse température&nbsp;: des domaines se forment et grossissent lentement (le bouton « Accélérer » fait défiler le temps dix fois plus vite). Placez-vous à $T_c$&nbsp;: des amas de toutes tailles apparaissent. Au-dessus, le désordre l'emporte.</p>
 
 Il y a une **température critique**, $T\_c=\frac{2J}{k\ln(1+\sqrt2)}\approx2{,}27\\,J/k$. En dessous, une **aimantation spontanée** apparaît&nbsp;: une majorité de spins s'alignent d'eux-mêmes, sans champ extérieur. Au-dessus, elle est nulle. C'est une véritable **transition de phase**, celle d'un aimant qui perd son aimantation quand on le chauffe au-delà de son point de Curie (voir la page [Transitions de phase](../../../physique/phistat/chgt/)). Kramers et Wannier avaient localisé $T\_c$ dès 1941 par un argument de symétrie, et Lars Onsager a résolu le modèle exactement en 1944, un tour de force&nbsp;; mais pour presque tous les autres modèles, seule la simulation par MCMC donne accès aux propriétés de la transition.
 
-Remarquez aussi combien la simulation **peine** à basse température quand on part du désordre&nbsp;: les domaines mettent un temps fou à se résorber, puisqu'un spin isolé dans un domaine adverse n'a presque aucune chance de basculer. Près de $T\_c$, c'est pire encore&nbsp;: c'est le **ralentissement critique**. On retrouve la question des sept battements&nbsp;: la loi stationnaire existe, mais la chaîne peut mettre un temps démesuré à l'atteindre. Le temps de mélange est le talon d'Achille du MCMC, et l'objet même du livre de Levin et Peres.
+### Quand l'aimantation reste bloquée&nbsp;: domaines et bandes
+
+Faites l'essai&nbsp;: réglez $T=1{,}5$, bien en dessous de $T\_c$, et cliquez sur « Tout désordonner ». La courbe exacte annonce $|m|\approx0{,}99$. Or, une fois sur trois environ, le point rouge se fige à une valeur quelconque ($0{,}2$, $0{,}4$…) et n'en bouge plus. **Ce n'est pas un défaut du programme&nbsp;: c'est le phénomène le plus instructif de la page.**
+
+Il faut bien distinguer deux choses. La courbe d'Onsager décrit l'**équilibre**, c'est-à-dire la loi stationnaire, la limite $t\to\infty$ de la chaîne. Ce que montre l'écran, c'est la **dynamique**&nbsp;: le chemin que suit la chaîne pour s'y rendre depuis un état de départ très atypique. Et ce chemin passe par deux étapes.
+
+<div class="trempe">
+<figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgAQMAAACxAfVuAAAABlBMVEXz5uwATYClM6zvAAAFCUlEQVR42nWXsY7kxhGGv+4hliP4gCFkAz5AJ3OcKdzwAAdD2KEAw2/gfQHlCmwNDQd2Zr2Bzm9wD2Dg+iBZCnUvYF1bMuANDIk6GFjuLoe/g+puclYwEw6L1cWuv//6qwYnDWxJ11GS5Ik8YoTlBUCraXlQ8oSJhrOrevkVMPDgajWW3+6FbiTBbm3MMRtGgO7/L5ckzSClz1wUo3fF7Q5kv/x5Ln1J4r5Pb1NGwTuoOmBe3AM7SdGd5Y5vgEZnm+xpJQ24HmCbPGklRR4sByhGByA4SDpPc8Z3xcdZuuO3FiX5DdSSNKRE7HqEnZbzFBg2+aX3a0fL9dVqeRCoY4KTNyAddM5FoEoxE5CNj7xcx/yoo47sDeUqe3b8GRp4BrznwY6YjwH4GojeHsNwKKhsLm35pt+FTKlIQBJslNDF/VufyoPgCQlI/OP4GUhzZvUEhpMT8gmSU5XdYbZTYOGZh4kLALZTPi7/gNefmPHuzGjnpPHKPimNmaBotH28loa10f1FkvTdABt9J4lT2LOTpBuFnC8CfpH5D0fpKOZSu3c4nHQj+TdAAOBz29QW/ELDLrMC/zzbXiwJevbFcQVILDWxRik5ddDYEcSE0jQww2AVt0/G6r98BnBl1EppfCOA+ktJURnk0z8AaqMJH1v12B7a1/fzr4P8FdQr5Oe7twMVsCXugWaA/fcNXn4ALKsh3Wf8Y1b69ZQBeMZYHSUppHqNQFvVz98vjlviX4HrpIMKdLC1iqxXdQS3nAC2D2jj+QGX/IN72iHwyyK4+g9UODv7Nns28KNeCctVzKZJmpWOY8LDfvBJTuxe8QY6k8fel+WvSin0S8wAp6uK0WRApQI/vKo1ADsl4wQ00Yzt2gjZc7VPx8QAfL9GSUDTQ3Vny4ffmRZII7ChlaShAfDJuJY15hNcdDDT/kk6Div17YGWgzQk4h7TYW+SsXhG8CfiQveGzJfa4gDslFe5T2Y6uExak0LVH+U8a0k3EQ/c/SznOT3stFBZucci/ufkWaqYx0aSiL9eU6niX/2yYxNman0qBTwMTQdUOAfqAmw9vVX1hO963CnAuFq9UXBCCnvPe8uX9hcCQvRU50xu+itoDhm4H+t+MzW1RvwQzzpmwqgdD7nRSxM7jXj2dbDX70LqZ97qdwP8Cqi45NqMT3g37zWWUFNTWu5wVA/8VJqeliHi1lhZm0Y/SjOIpiLp7g9/P6tSN5s0/FFZ2Duwxq2wKUZ8Q+LNT9LKa1PBnV5ozm1BMWWkUDJkgVyarQMYP/NG5tyjbhO8m3tpopa+TFOBNxLZ9aZfePBOQnd20pSNW0kjO4HTmDgFkgL1DOj5Kpw64PXP6R04AZdIM5WTeg5l5KAvCX2RytkNHBSBrKxpn68A3KtVT3EDtQK4ZRryZaSx3h2A4HnsqUK05t0QwMG2nZvNC0uBt40Q/jd7hvllUu8PJsvHH+dUe0e9pd/TUUe+0bTNXelWCvBb+Sf4MhdcJC30aW7zaTTYwwBpJrk1WdAAB/kE6kXI7WMLHk7X1mhHw3f84XSxicRsXCosLjrfnY3f3kT+b2yL9948Z2YuzDixxIQ7LkvwYrx2oH+WmCOg5pk6Nvs+q+MANG9BKzgq0soHtsBwA9yXLS0K9vXnmYh2hhXAAbB1mIpbmXgOUt/qDJCZaIqdPK297XdSOCob04m2+R9KBmIscz/SzNPyqeLpUl0tO/4fxyEu/zA/vgQAAAAASUVORK5CYII=" width="160" height="160" alt="Grille de spins après 20 balayages"><figcaption>20 balayages&nbsp;: une mosaïque de petits domaines</figcaption></figure><figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgAQMAAACxAfVuAAAABlBMVEXz5uwATYClM6zvAAADNElEQVR42o1XS27bQAx9ooXYQANYN4iP0GV21VV6EqsnaBc9QJc9QleNbhJ3152FIECUQJ7XBefDGY2DzsYahhySj4+cCTgCACAAsL2QJAVe+CX9CeAJaW3pNU8AepW1+jPr7053C3UnEwD88uYH77QzR+KUIvHG4UgVzv57iRbnyYZ0cSQpXfMtCe+l0eBpVO80eJBLJSNzfvQ+pUiABaCe6YCQ/kbNG4ISNTdLArAtz8xT0W8BmkyrTfhXzAHgPheyrtkEzVsvJV0Tz9jH3Juj5hRqmnsfYw1IWugePJ5BeINhH0E2xNlb2pSLtkhNDAkTgD5QZq25oQuacR1uFcdgbkkXzLudJYMvz7SCLlAxfZCcK7TJ1wgA50LzxQMym+Cj+d88yNKR0WxilBej2QfjA0keo6OD8ugYzWegP2Xsi3jeBuRfKHD4CQB4TgikOLXKHiUx6Bjo+jnY7bji0hyo/j697WzIhZ1mlgsnwHnhuDpP+Snqd28Kt4PTxukiIL9Rkha2GsbcCD8O3twV0+ZMiu3s1jsTm62WgwFN34iT0/bl6xx6sm2+hpBMH/mOyZvr5gqeXpgw2gWUhQmGOTBSnlJriAW7pCfrjiasugjyw3IBwFMZpwOmD5iisAcADug26KIwpTBkuzbVaMxmrKqWXPL2tj53RUYLrq3tmQy3QVyfyEfSrQA5AEaYroVJsPb0XXB99dHRhRGlMeO8rA2mGhm6fKtcKjXHGpO8Zl5bZWcxd40waR6ZXSUxI/IaaVusZ60sq2ExQnxe0eDZm08W4t3qcr7z3pe8aidPGymKCUhsVgCHsdJxf2ptKDXhBW/m9hVbjpPfel8cUL9Ek+a764Ek55rmK0TboTfCc61GU837XNRoqL1lyGM2T1OaSw0lwUafMf45hx5A81nHenj0KPKdZMD047pjcKQj6TtujEE2/3UfDWn22bN12jjx42YDoAl9lT/q9FkYB4sFqwnDKiOfHNYRLbU4WzldDb7LnnXhcZ+P7/z5uH2sCcs5f6M1yFAa3kzWqTea7BkTmJDidPXgJbsSAEBkcKkY4QSOpi3jA3Is/r/Ifdqr3FZzdgAw/wPwMR3OTU7jlgAAAABJRU5ErkJggg==" width="160" height="160" alt="Grille de spins après 200 balayages"><figcaption>200 balayages&nbsp;: les domaines ont grossi</figcaption></figure><figure><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgAQMAAACxAfVuAAAABlBMVEXz5uwATYClM6zvAAADD0lEQVR42pWXTW7TUBDHf55YqheVYiEkWCDVR+gJqFeI47BEYoHhBHCD3oQgcYDeoGHHAlFTdREix8Ninp03z6+UPilKPJ7vj/+80NNgp4W1qqoqPdE5MaLMjABvwvcWoAKg6AJnTIzEAXaBWKEAUpeRzprfAMIQkeyDzI/QT3pkepyUHonz2eCZFi5NZ29f0ldeAVvg0ol/sTA3GZ0W+3wSQxZtF/wUgNdRtMHY5EC9ypVjlXO+BBiS2Ad7kyQEgFupvZ8tkOgcxxboZfZ74oVagIGimynF0sY7VdU+sV7ONeqyQq1PXV9Aoc42fJfwI5avVxlNf7z1wCKuwgfQpD+AC1W97qVcqGyuZCpYbF6chykxemqIrNeFVdNnSYNV2R1pfV6n6arEpc9K+0OSEchNB7BjmzQDULERl5Iw+1KkzRp0pnpbURhTtblWTIhNjmhd0TwsHhryckEcxpizBD5BKTFxAE5zFi5sCv/DeXINtl1W85/inQ/cgGXjiQEY/AApwMEH1WZ6NeZ0SQfufC0Ka8/Ew0BM4MJHJACFGFRLGHzXEGU17l0iUuANULfzhsZknAB4ZS3vxU+W4h2Dh+2Yc8yV47aWGJXMx95nxNbmTy9uM/XEE5tc3XM1WhnIqMgCPHNtk1boTEOHZFZUNsyCGD9P3wZqAoDBerSx7h4x2qF4ci9X6zZc1nk/hpUVU52WdRTmeES5ZLIQWNkiH7K5c4baaW4EeDqB6thnarO+UVU9pA12sIGNl5nVuP8sGrVGGZpH2oAdH7nnrEdVVe0E3z+bxT46LyyAKKK2+pY6Dpu5CSbO85hjApZtksYRsKvb/n60oRCepyFosjTeq6ruGo+EqjqmIDAZER48Lw0EWE7s7jGQviTtZvwsjwN/+kLi2xfNFthvxeVZG6BCiO9+f3I74MQ6OYNWI9LFmR6WeYdC9WaxJooRRvkgZYy4YYd7TmvQrxlQ/pWgtc3cdYyUx38Ti8wf0uureXAQN6LRHf+4n55p5u59pnpQVWkSSBRgebeJqjm/uzIJWTj/F5y7oywFReErAAAAAElFTkSuQmCC" width="160" height="160" alt="Grille de spins après 4000 balayages"><figcaption>4000 balayages&nbsp;: deux bandes, et plus rien ne bouge</figcaption></figure>
+</div>
+<p class="legende">Une trempe à $T=1{,}5$ depuis le désordre complet, sur la grille de $160\times160$. Le système a choisi « haut » dans une région et « bas » dans une autre&nbsp;; les deux bandes font le tour de la grille et l'aimantation reste bloquée vers $0{,}4$ au lieu de $0{,}99$.</p>
+
+**Première étape&nbsp;: la croissance des domaines.** Juste après la trempe, chaque spin s'aligne sur ses voisins immédiats. Mais rien ne dit à une région de choisir « haut » plutôt que « bas »&nbsp;: les deux choix sont équivalents, et des régions éloignées choisissent indépendamment. D'où une mosaïque de petits domaines. Ensuite, seules les **parois** entre domaines évoluent, et leur moteur est la **courbure**&nbsp;: un spin situé sur une bosse de la paroi a plus de voisins adverses que de voisins amis, il bascule volontiers, et la bosse se résorbe. Les petits domaines, très courbés, fondent au profit des gros. La taille typique des domaines croît comme la racine carrée du temps, $\ell(t)\propto\sqrt t$ (loi de Lifshitz, Allen et Cahn)&nbsp;: pour doubler la taille des domaines, il faut quatre fois plus de balayages. Pendant toute cette phase, les domaines « haut » et « bas » occupent à peu près la même surface, et $|m|$ reste faible.
+
+**Seconde étape&nbsp;: la loterie finale.** Quand les domaines atteignent la taille de la grille, deux issues sont possibles.
+
+<ul>
+<li>Un domaine finit par englober l'autre, dont il ne reste qu'une île&nbsp;; celle-ci, courbée, rétrécit et disparaît. L'aimantation rejoint la courbe exacte.</li>
+<li>Ou bien un domaine parvient à <b>faire le tour de la grille</b> (rappelez-vous&nbsp;: c'est un tore). On obtient deux bandes, séparées par deux parois <b>droites</b>. Or une paroi droite n'a plus de courbure, donc plus de moteur&nbsp;: chacun de ses spins a trois voisins amis contre un adverse, et le retourner coûte $\Delta E=+4$. Rien ne pousse la paroi dans un sens plutôt que dans l'autre. Le système est piégé, et la valeur de $|m|$ ne reflète que la largeur des bandes, fixée par le hasard de la trempe.</li>
+</ul>
+
+Ce piège est bien connu des physiciens. À température nulle, où l'on n'accepte jamais de hausse d'énergie, les bandes sont figées **pour toujours**, et l'on a montré (Spirin, Krapivsky et Redner, 2001) qu'environ une trempe sur trois finit ainsi sur un tore carré. Cette proportion se calcule même exactement, grâce à un lien inattendu avec la théorie de la percolation. À température non nulle, les bandes ne sont pas éternelles&nbsp;: les parois fluctuent, errent comme des marcheurs ivres, et finissent par se rencontrer et s'annihiler. Mais cette marche au hasard est d'une lenteur désespérante&nbsp;: sur seize essais numériques à $T=1{,}5$, cinq étaient en bandes après $4000$ balayages, et trois l'étaient encore après $20\\,000$, soit près de trois minutes de l'animation en vitesse normale. Pour une grille de côté $L$, le temps de survie des bandes croît comme $L^3$, quand la croissance des domaines n'en demande que $L^2$.
+
+Deux expériences pour s'en convaincre.
+
+<ul>
+<li>À $T=1{,}5$, cliquez sur <b>« Tout aligner »</b>&nbsp;: le point rouge se pose sur la courbe en un instant, et y reste. L'état d'équilibre est bien celui qu'annonce Onsager&nbsp;; c'est seulement le chemin depuis le désordre qui est semé d'embûches.</li>
+<li>Une fois les bandes installées, <b>réchauffez</b> vers $T\approx2$&nbsp;: les parois deviennent rugueuses et mobiles, et les bandes finissent par disparaître bien plus vite. (Remarquez au passage que l'aimantation d'équilibre n'est pas $1$&nbsp;: à $T=2$, elle vaut $0{,}91$, car l'agitation thermique retourne en permanence quelques spins.)</li>
+</ul>
+
+Pour qui utilise le MCMC, la leçon est sévère. Imaginez que vous ne connaissiez pas la solution d'Onsager&nbsp;: une simulation bloquée dans un état en bandes a toutes les apparences d'une simulation qui a convergé. Les mesures sont stables, les fluctuations faibles, et la valeur obtenue est fausse. **Rien, dans une chaîne de Markov, ne signale qu'elle n'a pas encore atteint sa loi stationnaire.** D'où les précautions d'usage&nbsp;: lancer plusieurs chaînes depuis des états de départ très différents (ici, l'ordre et le désordre) et vérifier qu'elles donnent la même chose&nbsp;; refroidir progressivement plutôt que brutalement (c'est l'idée du <em>recuit simulé</em>).
+
+Les mathématiciens ont donné à cette difficulté une forme précise. En dessous de $T\_c$, le temps de mélange de cette dynamique sur une grille de côté $L$ croît **exponentiellement** avec $L$ (pour passer d'une majorité de « haut » à une majorité de « bas », il faut créer une paroi qui traverse toute la grille, ce qui coûte une énergie proportionnelle à $L$). Au-dessus de $T\_c$, il est au contraire très court, de l'ordre de $\ln L$ balayages. Et exactement à $T\_c$, il croît comme une puissance de $L$&nbsp;: c'est le **ralentissement critique**. Les amas de toutes tailles que l'on voit à l'écran évoluent d'autant plus lentement qu'ils sont grands, et le temps de décorrélation $\tau$ croît à peu près comme $L^{2{,}2}$&nbsp;: précisément là où la physique est la plus intéressante, l'algorithme est le plus lent. On retrouve la question des sept battements&nbsp;: la loi stationnaire existe, mais la chaîne peut mettre un temps démesuré à l'atteindre. Le temps de mélange est le talon d'Achille du MCMC, et l'objet même du livre de Levin et Peres.
+
+Le remède, quand il existe, consiste à changer de chaîne tout en gardant la même loi stationnaire. Plutôt que de retourner les spins un par un, les algorithmes **d'amas** (Swendsen et Wang en 1987, Wolff en 1989) retournent d'un coup des paquets entiers de spins alignés, choisis de façon à respecter l'équilibre détaillé&nbsp;: le ralentissement critique disparaît presque complètement. Même loi $\pi$, autre matrice de transition, et un temps de mélange sans commune mesure&nbsp;: toute la théorie de cette page est là.
 
 <div class="encadre">
 <div class="encadre-titre">Los Alamos, 1953</div>
@@ -2031,6 +2202,8 @@ Remarquez aussi combien la simulation **peine** à basse température quand on p
 - Hayes, B. « First Links in the Markov Chain », *American Scientist* 101 (2013). [🌐](https://www.americanscientist.org/article/first-links-in-the-markov-chain)
 - Bayer, D. et Diaconis, P. « Trailing the Dovetail Shuffle to its Lair », *The Annals of Applied Probability* 2 (1992).
 - Metropolis, N., Rosenbluth, A. W., Rosenbluth, M. N., Teller, A. H. et Teller, E. « Equation of State Calculations by Fast Computing Machines », *The Journal of Chemical Physics* 21 (1953).
+- Spirin, V., Krapivsky, P. L. et Redner, S. « Freezing in Ising ferromagnets », *Physical Review E* 65, 016119 (2001). [🌐](https://arxiv.org/abs/cond-mat/0105037)
+- Krauth, W. *Statistical Mechanics: Algorithms and Computations*, Oxford University Press (2006).
 - Powell, V. et Lehe, L. *Markov Chains, explained visually*, Setosa. [🌐](https://setosa.io/ev/markov-chains/)
 
 <script>
@@ -2178,12 +2351,12 @@ Remarquez aussi combien la simulation **peine** à basse température quand on p
   var cv = document.getElementById('is-c');
   if (!cv) return;
   var N = 160, ctx = cv.getContext('2d'), img = ctx.createImageData(N, N), s = new Int8Array(N * N);
-  var T = 2.0, Tc = 2 / Math.log(1 + Math.SQRT2), running = true, visible = false, raf = null, mAvg = 0;
+  var T = 2.0, Tc = 2 / Math.log(1 + Math.SQRT2), running = true, visible = false, raf = null, mAvg = 0, nSweeps = 0, perFrame = 2;
   var UP = [0, 77, 128], DN = [243, 230, 236];
   var X0 = 46, Y0 = 18, w = 236, h = 180;
   function $(id) { return document.getElementById(id); }
-  function randomize() { for (var i = 0; i < N * N; i++) s[i] = Math.random() < 0.5 ? 1 : -1; mAvg = 0; }
-  function align() { for (var i = 0; i < N * N; i++) s[i] = 1; mAvg = 1; }
+  function randomize() { for (var i = 0; i < N * N; i++) s[i] = Math.random() < 0.5 ? 1 : -1; mAvg = 0; nSweeps = 0; }
+  function align() { for (var i = 0; i < N * N; i++) s[i] = 1; mAvg = 1; nSweeps = 0; }
   var a4, a8;
   function setT(v) { T = v; a4 = Math.exp(-4 / T); a8 = Math.exp(-8 / T); $('is-tv').textContent = T.toFixed(2).replace('.', ','); }
   function sweep() {
@@ -2193,6 +2366,7 @@ Remarquez aussi combien la simulation **peine** à basse température quand on p
       var dE = 2 * s[idx] * nb;                       // J = 1, k_B = 1
       if (dE <= 0 || (dE === 4 && Math.random() < a4) || (dE === 8 && Math.random() < a8)) s[idx] = -s[idx];
     }
+    nSweeps++;
   }
   function draw() {
     var d = img.data, m = 0;
@@ -2205,14 +2379,19 @@ Remarquez aussi combien la simulation **peine** à basse température quand on p
     var x = X0 + w * (Math.min(4, Math.max(1, T)) - 1) / 3, y = Y0 + h * (1 - mAvg);
     $('is-dot').setAttribute('cx', x.toFixed(1)); $('is-dot').setAttribute('cy', y.toFixed(1));
     $('is-tl').setAttribute('x1', x.toFixed(1)); $('is-tl').setAttribute('x2', x.toFixed(1));
+    $('is-n').textContent = String(nSweeps).replace(/\B(?=(\d{3})+$)/g, '\u00a0');
   }
-  function frame() { sweep(); sweep(); draw(); raf = (running && visible) ? requestAnimationFrame(frame) : null; }
+  function frame() { for (var q = 0; q < perFrame; q++) sweep(); draw(); raf = (running && visible) ? requestAnimationFrame(frame) : null; }
   function go() { if (!raf && running && visible) raf = requestAnimationFrame(frame); }
   $('is-t').addEventListener('input', function () { setT(parseFloat(this.value)); go(); });
   $('is-tc').addEventListener('click', function () { $('is-t').value = Tc.toFixed(2); setT(Tc); go(); });
   $('is-rand').addEventListener('click', function () { randomize(); draw(); go(); });
   $('is-up').addEventListener('click', function () { align(); draw(); go(); });
   $('is-pause').addEventListener('click', function () { running = !running; this.textContent = running ? '❚❚ Pause' : '▶ Reprendre'; go(); });
+  $('is-vite').addEventListener('click', function () {
+    var fast = perFrame === 2; perFrame = fast ? 20 : 2;
+    this.textContent = fast ? 'Vitesse normale' : 'Accélérer ×10'; this.setAttribute('aria-pressed', fast ? 'true' : 'false');
+  });
   setT(2.0); randomize();
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (reduce) { running = false; $('is-pause').textContent = '▶ Lancer'; for (var k = 0; k < 150; k++) sweep(); }
