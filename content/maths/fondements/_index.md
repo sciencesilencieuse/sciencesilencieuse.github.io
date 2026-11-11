@@ -38,7 +38,7 @@ Où l'on parle du langage de la logique (et des ensembles), des infinis dénombr
     <td style="width:40%;"> <a href="./boole/"><img src="/illlog.png"  style="box-shadow:none;background:none;max-width:100%;margin:auto;max-height:3.5lh; object-fit:contain;"></a></td>
   </tr>
     <tr>
-    <th style="text-align:center;"><a href="./ensembles/" style="color:#00D4D2;">Échafaudage des nombres</a></th>
+    <th style="text-align:center;"><a href="./ensembles/" style="color:#4CA98F;">Échafaudage des nombres</a></th>
     <td style="width:40%;"> <a href="./ensembles/"><img src="/illnomb.png" style="box-shadow:none;background:none;max-width100%;margin:auto;max-height:3.5lh; object-fit:contain;"></a></td>
   </tr>
     <tr>

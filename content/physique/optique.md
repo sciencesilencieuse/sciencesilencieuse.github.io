@@ -34,9 +34,8 @@ weight = 2
 
 La physique de l'arc-en-ciel avec des simulations en VPython.
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube AmoV0LIUjTk>}}
-</div>
+
+{{< youtube-plus id="AmoV0LIUjTk" ratio="16x9" width="800" shadow="true" rounded="true" >}}
 
 
 <br>
@@ -45,10 +44,7 @@ La physique de l'arc-en-ciel avec des simulations en VPython.
 
 Physique et maths des lentilles avec simulations VPython. 
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube kW2AiM-aKDY>}}
-</div>
-
+{{< youtube-plus id="kW2AiM-aKDY" ratio="16x9" width="800" shadow="true" rounded="true" >}}
 
 <br>
 

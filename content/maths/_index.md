@@ -61,7 +61,7 @@ td, th {
   .math-card {
     background: #ffffff;
     border: 1px solid #e6e8ee;
-    border-top: 4px solid var(--c);
+    /*border-top: 4px solid var(--c);*/
     border-radius: 14px;
     padding: 0 0 8px;
     overflow: hidden;
