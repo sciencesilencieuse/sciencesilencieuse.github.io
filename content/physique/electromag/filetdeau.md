@@ -300,15 +300,12 @@ Nous venons de voir que l'alignement moyen de chaque molécule, $\langle\cos\the
 <p><b>Ce que fait la polarisation&nbsp;: elle combat le champ qui l'a créée.</b> Prenons une lame d'eau placée en travers du champ. Au cœur de la lame, la tête positive de chaque dipôle côtoie la queue négative du suivant, et tout se compense. Mais sur les deux faces, il reste une couche de charges sans vis-à-vis&nbsp;: négatives d'un côté, positives de l'autre, à raison de $P$ coulombs par mètre carré (c'est pour cela que $P$ a l'unité d'une charge surfacique). Ces deux couches forment un condensateur miniature, qui crée dans la lame un champ $\frac{P}{\varepsilon_0}$ <em>opposé</em> au champ appliqué.</p>
 <div class="svg-container">
 <svg viewBox="0 0 600 318" role="img" aria-label="Une lame d'eau placée dans un champ électrique appliqué. Les dipôles qui s'orientent font apparaître des charges négatives sur une face et positives sur l'autre ; ces charges créent dans la lame un champ opposé au champ appliqué, si bien que le champ résultant à l'intérieur est beaucoup plus faible." style="width:100%;max-width:600px;height:auto;">
-<defs><marker id="dea" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,1.5 L9.5,5 L0,8.5 Z" fill="#004D80"/></marker></defs>
-<defs><marker id="dem" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,1.5 L9.5,5 L0,8.5 Z" fill="#970E53"/></marker></defs>
-<defs><marker id="det" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,1.5 L9.5,5 L0,8.5 Z" fill="#334155"/></marker></defs>
-<path d="M24,62 L202,62" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
-<path d="M392,62 L574,62" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
-<path d="M24,106 L202,106" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
-<path d="M392,106 L574,106" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
-<path d="M24,150 L202,150" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
-<path d="M392,150 L574,150" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
+<line x1="24" y1="62" x2="192" y2="62" stroke="#004D80" stroke-width="2.2"/><path d="M202,62 L191,57.4 L191,66.6 Z" fill="#004D80"/>
+<line x1="392" y1="62" x2="564" y2="62" stroke="#004D80" stroke-width="2.2"/><path d="M574,62 L563,57.4 L563,66.6 Z" fill="#004D80"/>
+<line x1="24" y1="106" x2="192" y2="106" stroke="#004D80" stroke-width="2.2"/><path d="M202,106 L191,101.4 L191,110.6 Z" fill="#004D80"/>
+<line x1="392" y1="106" x2="564" y2="106" stroke="#004D80" stroke-width="2.2"/><path d="M574,106 L563,101.4 L563,110.6 Z" fill="#004D80"/>
+<line x1="24" y1="150" x2="192" y2="150" stroke="#004D80" stroke-width="2.2"/><path d="M202,150 L191,145.4 L191,154.6 Z" fill="#004D80"/>
+<line x1="392" y1="150" x2="564" y2="150" stroke="#004D80" stroke-width="2.2"/><path d="M574,150 L563,145.4 L563,154.6 Z" fill="#004D80"/>
 <text x="112" y="26" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >champ appliqué <tspan font-style="italic">E</tspan></text>
 <text x="488" y="26" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >champ appliqué <tspan font-style="italic">E</tspan></text>
 <rect x="218" y="34" width="164" height="144" rx="6" fill="#eaf1f6" stroke="#004D80" stroke-width="1.6"/>
@@ -345,11 +342,11 @@ Nous venons de voir que l'alignement moyen de chaque molécule, $\langle\cos\the
 <text x="300" y="197" text-anchor="middle" font-size="12.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >lame d'eau</text>
 <line x1="24" y1="212" x2="576" y2="212" stroke="#cbd5e1" stroke-width="1"/>
 <text x="24" y="240" text-anchor="start" font-size="12.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >champ appliqué</text>
-<path d="M236,236 L566,236" stroke="#004D80" stroke-width="3" fill="none" marker-end="url(#dea)"/>
+<line x1="236" y1="236" x2="556" y2="236" stroke="#004D80" stroke-width="3"/><path d="M566,236 L555,231.4 L555,240.6 Z" fill="#004D80"/>
 <text x="24" y="268" text-anchor="start" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >champ des charges de surface</text>
-<path d="M574,264 L262,264" stroke="#970E53" stroke-width="3" fill="none" marker-end="url(#dem)"/>
+<line x1="574" y1="264" x2="272" y2="264" stroke="#970E53" stroke-width="3"/><path d="M262,264 L273,259.4 L273,268.6 Z" fill="#970E53"/>
 <text x="24" y="296" text-anchor="start" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-weight="bold">champ résultant dans l'eau</text>
-<path d="M236,292 L260,292" stroke="#334155" stroke-width="3" fill="none" marker-end="url(#det)"/>
+<line x1="236" y1="292" x2="250" y2="292" stroke="#334155" stroke-width="3"/><path d="M260,292 L249,287.4 L249,296.6 Z" fill="#334155"/>
 <text x="272" y="296" text-anchor="start" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">E</tspan><tspan dy="3" font-size="9">int</tspan><tspan dy="-3" font-size="1"> </tspan>, soit <tspan font-style="italic">ε</tspan><tspan dy="3" font-size="9">r</tspan><tspan dy="-3"> fois moins que le champ appliqué</tspan></text>
 </svg>
 </div>
