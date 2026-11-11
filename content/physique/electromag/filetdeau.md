@@ -299,66 +299,58 @@ Nous venons de voir que l'alignement moyen de chaque molécule, $\langle\cos\the
 <p>où $\chi$, la <b>susceptibilité électrique</b>, est un nombre sans dimension qui dit combien de fois la réponse du matériau dépasse l'étalon $\varepsilon_0E$. Notre estimation à partir de molécules indépendantes donne $\chi\approx12$. La valeur mesurée est $\chi\approx79$&nbsp;: dans l'eau liquide, les molécules sont liées à leurs voisines par des liaisons hydrogène et basculent par petits groupes solidaires, ce qui amplifie la réponse.</p>
 <p><b>Ce que fait la polarisation&nbsp;: elle combat le champ qui l'a créée.</b> Prenons une lame d'eau placée en travers du champ. Au cœur de la lame, la tête positive de chaque dipôle côtoie la queue négative du suivant, et tout se compense. Mais sur les deux faces, il reste une couche de charges sans vis-à-vis&nbsp;: négatives d'un côté, positives de l'autre, à raison de $P$ coulombs par mètre carré (c'est pour cela que $P$ a l'unité d'une charge surfacique). Ces deux couches forment un condensateur miniature, qui crée dans la lame un champ $\frac{P}{\varepsilon_0}$ <em>opposé</em> au champ appliqué.</p>
 <div class="svg-container">
-<svg viewBox="0 0 600 300" role="img" aria-label="Une lame d'eau placée dans un champ électrique appliqué. Les dipôles qui s'orientent font apparaître des charges négatives sur une face et positives sur l'autre ; ces charges créent dans la lame un champ opposé au champ appliqué, si bien que le champ résultant à l'intérieur est beaucoup plus faible." style="width:100%;max-width:600px;height:auto;">
+<svg viewBox="0 0 600 318" role="img" aria-label="Une lame d'eau placée dans un champ électrique appliqué. Les dipôles qui s'orientent font apparaître des charges négatives sur une face et positives sur l'autre ; ces charges créent dans la lame un champ opposé au champ appliqué, si bien que le champ résultant à l'intérieur est beaucoup plus faible." style="width:100%;max-width:600px;height:auto;">
 <defs><marker id="dea" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker></defs>
 <defs><marker id="dem" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#970E53"/></marker></defs>
 <defs><marker id="det" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#334155"/></marker></defs>
-<rect x="215" y="22" width="170" height="146" fill="#004D80" fill-opacity="0.07" stroke="#004D80" stroke-width="1.5"/>
-<path d="M30,50 L193,50" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
-<path d="M399,50 L570,50" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
-<path d="M30,95 L193,95" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
-<path d="M399,95 L570,95" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
-<path d="M30,140 L193,140" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
-<path d="M399,140 L570,140" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
-<text x="110" y="38" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >champ appliqué <tspan font-style="italic">E</tspan></text>
-<text x="490" y="38" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >champ appliqué <tspan font-style="italic">E</tspan></text>
-<rect x="243" y="43" width="30" height="14" rx="7" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
-<text x="250" y="54" text-anchor="middle" font-size="11" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >−</text>
-<text x="266" y="54" text-anchor="middle" font-size="11" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >+</text>
-<rect x="243" y="88" width="30" height="14" rx="7" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
-<text x="250" y="99" text-anchor="middle" font-size="11" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >−</text>
-<text x="266" y="99" text-anchor="middle" font-size="11" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >+</text>
-<rect x="243" y="133" width="30" height="14" rx="7" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
-<text x="250" y="144" text-anchor="middle" font-size="11" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >−</text>
-<text x="266" y="144" text-anchor="middle" font-size="11" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >+</text>
-<rect x="285" y="43" width="30" height="14" rx="7" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
-<text x="292" y="54" text-anchor="middle" font-size="11" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >−</text>
-<text x="308" y="54" text-anchor="middle" font-size="11" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >+</text>
-<rect x="285" y="88" width="30" height="14" rx="7" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
-<text x="292" y="99" text-anchor="middle" font-size="11" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >−</text>
-<text x="308" y="99" text-anchor="middle" font-size="11" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >+</text>
-<rect x="285" y="133" width="30" height="14" rx="7" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
-<text x="292" y="144" text-anchor="middle" font-size="11" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >−</text>
-<text x="308" y="144" text-anchor="middle" font-size="11" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >+</text>
-<rect x="327" y="43" width="30" height="14" rx="7" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
-<text x="334" y="54" text-anchor="middle" font-size="11" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >−</text>
-<text x="350" y="54" text-anchor="middle" font-size="11" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >+</text>
-<rect x="327" y="88" width="30" height="14" rx="7" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
-<text x="334" y="99" text-anchor="middle" font-size="11" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >−</text>
-<text x="350" y="99" text-anchor="middle" font-size="11" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >+</text>
-<rect x="327" y="133" width="30" height="14" rx="7" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
-<text x="334" y="144" text-anchor="middle" font-size="11" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >−</text>
-<text x="350" y="144" text-anchor="middle" font-size="11" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >+</text>
-<text x="222" y="41" text-anchor="middle" font-size="16" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-weight="bold">−</text>
-<text x="378" y="41" text-anchor="middle" font-size="16" fill="#006C65" font-family="Georgia,'Times New Roman',serif" font-weight="bold">+</text>
-<text x="222" y="69" text-anchor="middle" font-size="16" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-weight="bold">−</text>
-<text x="378" y="69" text-anchor="middle" font-size="16" fill="#006C65" font-family="Georgia,'Times New Roman',serif" font-weight="bold">+</text>
-<text x="222" y="100" text-anchor="middle" font-size="16" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-weight="bold">−</text>
-<text x="378" y="100" text-anchor="middle" font-size="16" fill="#006C65" font-family="Georgia,'Times New Roman',serif" font-weight="bold">+</text>
-<text x="222" y="131" text-anchor="middle" font-size="16" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-weight="bold">−</text>
-<text x="378" y="131" text-anchor="middle" font-size="16" fill="#006C65" font-family="Georgia,'Times New Roman',serif" font-weight="bold">+</text>
-<text x="222" y="159" text-anchor="middle" font-size="16" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-weight="bold">−</text>
-<text x="378" y="159" text-anchor="middle" font-size="16" fill="#006C65" font-family="Georgia,'Times New Roman',serif" font-weight="bold">+</text>
-<text x="211" y="186" text-anchor="end" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >charges de surface −</text>
-<text x="389" y="186" text-anchor="start" font-size="12" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >+ charges de surface</text>
-<text x="300" y="186" text-anchor="middle" font-size="12.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >lame d'eau</text>
-<text x="170" y="219" text-anchor="end" font-size="12.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >champ appliqué</text>
-<path d="M185,215 L505,215" stroke="#004D80" stroke-width="3" fill="none" marker-end="url(#dea)"/>
-<text x="170" y="245" text-anchor="end" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >champ des charges de surface</text>
-<path d="M505,241 L197,241" stroke="#970E53" stroke-width="3" fill="none" marker-end="url(#dem)"/>
-<text x="170" y="271" text-anchor="end" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-weight="bold">champ résultant dans l'eau</text>
-<path d="M185,267 L203,267" stroke="#334155" stroke-width="3" fill="none" marker-end="url(#det)"/>
-<text x="222" y="271" text-anchor="start" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">E</tspan><tspan dy="3" font-size="9">int</tspan><tspan dy="-3" font-size="1"> </tspan> : <tspan font-style="italic">ε</tspan><tspan dy="3" font-size="9">r</tspan><tspan dy="-3"> fois plus faible que le champ appliqué</tspan></text>
+<path d="M24,62 L202,62" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
+<path d="M392,62 L574,62" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
+<path d="M24,106 L202,106" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
+<path d="M392,106 L574,106" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
+<path d="M24,150 L202,150" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
+<path d="M392,150 L574,150" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
+<text x="112" y="26" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >champ appliqué <tspan font-style="italic">E</tspan></text>
+<text x="488" y="26" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >champ appliqué <tspan font-style="italic">E</tspan></text>
+<rect x="218" y="34" width="164" height="144" rx="6" fill="#eaf1f6" stroke="#004D80" stroke-width="1.6"/>
+<line x1="256" y1="62" x2="272" y2="62" stroke="#94a3b8" stroke-width="2"/>
+<circle cx="255" cy="62" r="5" fill="#970E53" fill-opacity="0.35"/><circle cx="273" cy="62" r="5" fill="#006C65" fill-opacity="0.35"/>
+<line x1="256" y1="106" x2="272" y2="106" stroke="#94a3b8" stroke-width="2"/>
+<circle cx="255" cy="106" r="5" fill="#970E53" fill-opacity="0.35"/><circle cx="273" cy="106" r="5" fill="#006C65" fill-opacity="0.35"/>
+<line x1="256" y1="150" x2="272" y2="150" stroke="#94a3b8" stroke-width="2"/>
+<circle cx="255" cy="150" r="5" fill="#970E53" fill-opacity="0.35"/><circle cx="273" cy="150" r="5" fill="#006C65" fill-opacity="0.35"/>
+<line x1="292" y1="62" x2="308" y2="62" stroke="#94a3b8" stroke-width="2"/>
+<circle cx="291" cy="62" r="5" fill="#970E53" fill-opacity="0.35"/><circle cx="309" cy="62" r="5" fill="#006C65" fill-opacity="0.35"/>
+<line x1="292" y1="106" x2="308" y2="106" stroke="#94a3b8" stroke-width="2"/>
+<circle cx="291" cy="106" r="5" fill="#970E53" fill-opacity="0.35"/><circle cx="309" cy="106" r="5" fill="#006C65" fill-opacity="0.35"/>
+<line x1="292" y1="150" x2="308" y2="150" stroke="#94a3b8" stroke-width="2"/>
+<circle cx="291" cy="150" r="5" fill="#970E53" fill-opacity="0.35"/><circle cx="309" cy="150" r="5" fill="#006C65" fill-opacity="0.35"/>
+<line x1="328" y1="62" x2="344" y2="62" stroke="#94a3b8" stroke-width="2"/>
+<circle cx="327" cy="62" r="5" fill="#970E53" fill-opacity="0.35"/><circle cx="345" cy="62" r="5" fill="#006C65" fill-opacity="0.35"/>
+<line x1="328" y1="106" x2="344" y2="106" stroke="#94a3b8" stroke-width="2"/>
+<circle cx="327" cy="106" r="5" fill="#970E53" fill-opacity="0.35"/><circle cx="345" cy="106" r="5" fill="#006C65" fill-opacity="0.35"/>
+<line x1="328" y1="150" x2="344" y2="150" stroke="#94a3b8" stroke-width="2"/>
+<circle cx="327" cy="150" r="5" fill="#970E53" fill-opacity="0.35"/><circle cx="345" cy="150" r="5" fill="#006C65" fill-opacity="0.35"/>
+<circle cx="231" cy="48" r="7.5" fill="#970E53"/><line x1="227.4" y1="48" x2="234.6" y2="48" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="369" cy="48" r="7.5" fill="#006C65"/><line x1="365.4" y1="48" x2="372.6" y2="48" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><line x1="369" y1="44.4" x2="369" y2="51.6" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="231" cy="77" r="7.5" fill="#970E53"/><line x1="227.4" y1="77" x2="234.6" y2="77" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="369" cy="77" r="7.5" fill="#006C65"/><line x1="365.4" y1="77" x2="372.6" y2="77" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><line x1="369" y1="73.4" x2="369" y2="80.6" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="231" cy="106" r="7.5" fill="#970E53"/><line x1="227.4" y1="106" x2="234.6" y2="106" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="369" cy="106" r="7.5" fill="#006C65"/><line x1="365.4" y1="106" x2="372.6" y2="106" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><line x1="369" y1="102.4" x2="369" y2="109.6" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="231" cy="135" r="7.5" fill="#970E53"/><line x1="227.4" y1="135" x2="234.6" y2="135" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="369" cy="135" r="7.5" fill="#006C65"/><line x1="365.4" y1="135" x2="372.6" y2="135" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><line x1="369" y1="131.4" x2="369" y2="138.6" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="231" cy="164" r="7.5" fill="#970E53"/><line x1="227.4" y1="164" x2="234.6" y2="164" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+<circle cx="369" cy="164" r="7.5" fill="#006C65"/><line x1="365.4" y1="164" x2="372.6" y2="164" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><line x1="369" y1="160.4" x2="369" y2="167.6" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+<text x="226" y="197" text-anchor="end" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >face chargée négativement</text>
+<text x="374" y="197" text-anchor="start" font-size="12" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >face chargée positivement</text>
+<text x="300" y="197" text-anchor="middle" font-size="12.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >lame d'eau</text>
+<line x1="24" y1="212" x2="576" y2="212" stroke="#cbd5e1" stroke-width="1"/>
+<text x="24" y="240" text-anchor="start" font-size="12.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >champ appliqué</text>
+<path d="M236,236 L566,236" stroke="#004D80" stroke-width="3" fill="none" marker-end="url(#dea)"/>
+<text x="24" y="268" text-anchor="start" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >champ des charges de surface</text>
+<path d="M574,264 L258,264" stroke="#970E53" stroke-width="3" fill="none" marker-end="url(#dem)"/>
+<text x="24" y="296" text-anchor="start" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-weight="bold">champ résultant dans l'eau</text>
+<path d="M236,292 L248,292" stroke="#334155" stroke-width="3" fill="none" marker-end="url(#det)"/>
+<text x="270" y="296" text-anchor="start" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">E</tspan><tspan dy="3" font-size="9">int</tspan><tspan dy="-3" font-size="1"> </tspan>, soit <tspan font-style="italic">ε</tspan><tspan dy="3" font-size="9">r</tspan><tspan dy="-3"> fois moins que le champ appliqué</tspan></text>
 </svg>
 </div>
 <p class="legende">Les charges qui apparaissent sur les faces de la lame créent un champ opposé au champ appliqué. Dans l'eau, il l'annule presque entièrement.</p>
@@ -405,8 +397,8 @@ $$
 <path d="M20,170 L280,170" stroke="#cbd5e1" stroke-width="1.4" fill="none" marker-end="url(#keg)"/>
 <rect x="116" y="97" width="68" height="26" rx="13" fill="#fff" stroke="#334155" stroke-width="1.6"/>
 <circle cx="129" cy="110" r="9" fill="#970E53"/><circle cx="171" cy="110" r="9" fill="#006C65"/>
-<text x="129" y="115" text-anchor="middle" font-size="14" fill="#fff" font-family="Georgia,'Times New Roman',serif" >−</text>
-<text x="171" y="115" text-anchor="middle" font-size="14" fill="#fff" font-family="Georgia,'Times New Roman',serif" >+</text>
+<line x1="124.8" y1="110" x2="133.2" y2="110" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+<line x1="166.8" y1="110" x2="175.2" y2="110" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="171" y1="105.8" x2="171" y2="114.2" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
 <path d="M116,110 L62,110" stroke="#970E53" stroke-width="3" fill="none" marker-end="url(#kem)"/>
 <path d="M184,110 L238,110" stroke="#006C65" stroke-width="3" fill="none" marker-end="url(#ket)"/>
 <text x="150" y="205" text-anchor="middle" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >deux forces égales et opposées :</text>
@@ -422,8 +414,8 @@ $$
 <path d="M325.1,116.7 L568.5,182.0" stroke="#cbd5e1" stroke-width="1.4" fill="none" marker-end="url(#keg)"/>
 <rect x="421" y="97" width="68" height="26" rx="13" fill="#fff" stroke="#334155" stroke-width="1.6"/>
 <circle cx="434" cy="110" r="9" fill="#970E53"/><circle cx="476" cy="110" r="9" fill="#006C65"/>
-<text x="434" y="115" text-anchor="middle" font-size="14" fill="#fff" font-family="Georgia,'Times New Roman',serif" >−</text>
-<text x="476" y="115" text-anchor="middle" font-size="14" fill="#fff" font-family="Georgia,'Times New Roman',serif" >+</text>
+<line x1="429.8" y1="110" x2="438.2" y2="110" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+<line x1="471.8" y1="110" x2="480.2" y2="110" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="476" y1="105.8" x2="476" y2="114.2" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
 <path d="M421,110 L340,110" stroke="#970E53" stroke-width="3" fill="none" marker-end="url(#kem)"/>
 <path d="M489,110 L525,110" stroke="#006C65" stroke-width="3" fill="none" marker-end="url(#ket)"/>
 <path d="M455,160 L412,160" stroke="#C2770B" stroke-width="4" fill="none" marker-end="url(#kea)"/>
@@ -466,7 +458,7 @@ C'est précisément le premier argument expérimental développé par Ziaei-Moay
 
 Dans le cas d'une règle électrisée, le champ électrique varie avec la distance $r$ à l'axe de la règle (approximativement comme le champ d'un fil chargé, $E(r) \propto 1/r$), ce qui crée un gradient de champ dirigé vers la règle.
 
-Supposons dans un premier temps que le champ électrique à l'intérieur du filet d'eau soit directement égal au champ extérieur créé par la règle&nbsp;: $\vec{E}\_{\text{int}} \approx \vec{E}$. La densité volumique de force dipolaire vaut alors&nbsp;:
+L'encadré sur $\varepsilon\_r$ nous a prévenus&nbsp;: le champ qui règne dans l'eau est plus faible que le champ appliqué, parce que l'eau polarisée riposte. Ignorons-le délibérément dans un premier temps, et faisons comme si le champ à l'intérieur du filet était égal au champ extérieur créé par la règle, $\vec{E}\_{\text{int}} \approx \vec{E}$. C'est le cas le plus favorable aux dipôles&nbsp;: nous obtiendrons ainsi un **majorant** de leur effet. La densité volumique de force dipolaire vaut alors&nbsp;:
 
 <div id="theo">
 
@@ -614,9 +606,9 @@ Mais la réalité est encore **quarante fois pire** pour l'hypothèse des dipôl
 
 ### Prise en compte du champ dépolarisant
 
-Pourquoi l'hypothèse $\vec{E}\_{\text{int}} \approx \vec{E}$ est-elle beaucoup trop optimiste&nbsp;? Parce qu'elle oublie **le champ dépolarisant** créé par le filet d'eau lui-même&nbsp;!
+Il est temps de lever l'hypothèse $\vec{E}\_{\text{int}} \approx \vec{E}$, dont nous savons depuis l'encadré sur $\varepsilon\_r$ qu'elle est fausse. Le mécanisme est celui que nous y avons décrit&nbsp;: en se polarisant, l'eau fait apparaître à sa surface des charges liées sans vis-à-vis, qui créent à l'intérieur un champ opposé au champ appliqué. Ce champ de riposte porte un nom, le **champ dépolarisant** $\vec{E}\_{\text{dép}}$, et le champ réellement ressenti par les molécules est $\vec{E}\_{\text{int}} = \vec{E} + \vec{E}\_{\text{dép}}$.
 
-Dès que les dipôles moléculaires s'orientent légèrement perpendiculairement à l'axe du cylindre d'eau, les charges positives et négatives se compensent au cœur du liquide, mais **des charges liées de polarisation non compensées apparaissent sur les deux flancs opposés du cylindre** (négatives du côté de la règle si celle-ci est positive, et positives sur la face opposée). Ces deux nappes de charges de surface engendrent à l'intérieur de l'eau un champ électrique secondaire $\vec{E}\_{\text{dép}}$ dirigé en sens inverse de $\vec{P}$, qui tend à écranter le champ extérieur $\vec{E}$&nbsp;!
+Pour une lame placée en travers du champ, nous avons trouvé $\vec{E}\_{\text{dép}} = -\frac{\vec{P}}{\varepsilon\_0}$, et donc un champ intérieur divisé par $\varepsilon\_r = 80$. Mais notre filet n'est pas une lame&nbsp;: c'est un **cylindre**, que le champ de la règle attaque de côté. Les charges liées se répartissent alors sur ses deux flancs arrondis (négatives du côté de la règle si celle-ci est positive, positives du côté opposé), et non plus sur deux plans qui se font face. Des charges ainsi étalées sur une surface courbe écrantent moins bien que les deux armatures d'un condensateur&nbsp;: la riposte est exactement deux fois plus faible.
 
 <div id="def">
 
@@ -690,7 +682,7 @@ $$
 
 <br>
 
-En combinant $\vec{E}\_{\text{int}} = \vec{E} - \frac{\vec{P}}{2\varepsilon\_0}$ avec la loi constitutive du diélectrique $\vec{P} = \varepsilon\_0(\varepsilon\_r - 1)\vec{E}\_{\text{int}}$, on élimine $\vec{P}$ en une ligne&nbsp;:
+Le raisonnement est ensuite le même que dans l'encadré, au facteur $\frac{1}{2}$ près. En combinant $\vec{E}\_{\text{int}} = \vec{E} - \frac{\vec{P}}{2\varepsilon\_0}$ avec la loi constitutive du diélectrique $\vec{P} = \varepsilon\_0(\varepsilon\_r - 1)\vec{E}\_{\text{int}}$, on élimine $\vec{P}$ en une ligne&nbsp;:
 
 $$\vec{E}\_{\text{int}} + \frac{\varepsilon\_r - 1}{2}\vec{E}\_{\text{int}} = \vec{E} \quad \Longleftrightarrow \quad \frac{\varepsilon\_r + 1}{2}\vec{E}\_{\text{int}} = \vec{E}$$
 
@@ -710,7 +702,21 @@ $$
 
 <br>
 
-À cause du champ dépolarisant, le champ électrique à l'intérieur du filet d'eau est **quarante fois plus faible** que le champ extérieur dans l'air&nbsp;!
+À cause du champ dépolarisant, le champ électrique à l'intérieur du filet d'eau est **quarante fois plus faible** que le champ extérieur dans l'air&nbsp;! C'est moitié moins que pour la lame de l'encadré (quatre-vingts fois), mais cela reste considérable.
+
+<div id="preuve">
+
+**La forme fixe le facteur.** Lame, cylindre, sphère&nbsp;: dans les trois cas le champ dépolarisant est uniforme et s'écrit $\vec{E}\_{\text{dép}} = -N\frac{\vec{P}}{\varepsilon\_0}$, où $N$ est un nombre purement géométrique. Le même calcul donne alors $E\_{\text{int}} = \frac{E}{1 + N(\varepsilon\_r - 1)}$.
+
+<ul>
+<li>Lame en travers du champ&nbsp;: $N = 1$, le champ est divisé par $\varepsilon_r = 80$.</li>
+<li>Cylindre pris de côté (notre filet)&nbsp;: $N = \frac{1}{2}$, le champ est divisé par $\frac{\varepsilon_r + 1}{2} \approx 40$.</li>
+<li>Sphère (une goutte)&nbsp;: $N = \frac{1}{3}$, le champ est divisé par $\frac{\varepsilon_r + 2}{3} \approx 27$.</li>
+</ul>
+
+Plus la surface qui porte les charges liées est « refermée » autour du volume, moins ces charges se font face, et moins elles écrantent. À l'inverse, un cylindre dont l'axe serait <em>parallèle</em> au champ ne porterait de charges qu'à ses extrémités lointaines&nbsp;: $N = 0$, aucun écrantage.
+
+</div>
 
 Il n'y a même pas besoin de refaire le calcul vectoriel de $(\vec{P}\cdot\vec{\nabla})\vec{E}$&nbsp;: en comparant $\vec{P} = 2\varepsilon\_0\frac{\varepsilon\_r - 1}{\varepsilon\_r + 1}\vec{E}$ à l'expression naïve $\vec{P}\_{\text{naïf}} = \varepsilon\_0(\varepsilon\_r - 1)\vec{E}$, on voit qu'il suffit de diviser la force et l'accélération naïves par $\frac{\varepsilon\_r + 1}{2} = \frac{81}{2} = 40,5$&nbsp;!
 
