@@ -4,13 +4,54 @@ date = 2026-11-11T12:00:00+01:00
 weight = 1
 +++
 
+
+<style>
+#preuve
+{
+    background-color:#EAEAEA;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#def
+{
+    background-color:#DCEFFE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#theo
+{
+    background-color:#FBE1DE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+/* Pour rétablir le comportement de details */
+details > summary:first-of-type {
+  display: list-item;     /* remet le triangle + l’accessibilité */
+  cursor: pointer;        /* optionnel : feedback visuel */
+}
+details > summary:first-of-type {
+  list-style: disclosure-closed inside;
+}
+details[open] > summary:first-of-type {
+  list-style-type: disclosure-open;
+}
+h2
+{
+color:#970E53 !important;
+}
+h3
+{
+color:#004D80 !important;
+}
+</style>
+
 # Paradoxe de Berry
 
 > Le plus petit entier positif non définissable en moins de quinze mots.
 
 Cette phrase a l'air inoffensive. Elle contient pourtant de quoi ruiner l'un des plus beaux rêves de l'informatique théorique&nbsp;: celui d'un algorithme capable de faire de la science à notre place.
 
-<br>
+
 
 ## Le paradoxe
 
@@ -24,15 +65,19 @@ Où est l'entourloupe&nbsp;? Dans le mot «&nbsp;définissable&nbsp;», qui ne v
 
 On pourrait s'arrêter là et ranger Berry parmi les jeux de mots. Mais que se passe-t-il si on remplace le français par un langage qui ne laisse aucune place à l'ambiguïté&nbsp;?
 
-<br>
+
 
 ## Du français à Python
 
 Remplaçons «&nbsp;phrase&nbsp;» par «&nbsp;programme&nbsp;» et «&nbsp;définir un entier&nbsp;» par «&nbsp;l'afficher&nbsp;».
 
-{{< notice type="def" title="Complexité de Kolmogorov" round="true" >}}
+<div id="def">
+
+<b>Complexité de Kolmogorov</b>
+
 La complexité de Kolmogorov $K(x)$ d'un objet $x$ (un entier, un texte, une image...) est la longueur du plus court programme qui affiche $x$ puis s'arrête.
-{{< /notice >}}
+
+</div>
 
 $K(x)$ mesure la quantité d'information réellement contenue dans $x$, une fois toute redondance éliminée&nbsp;:
 
@@ -42,7 +87,7 @@ $K(x)$ mesure la quantité d'information réellement contenue dans $x$, une fois
 
 Et le choix du langage&nbsp;? Il compte peu. Traduire un programme Python en C ne coûte qu'un nombre fixe de caractères (la taille d'un interpréteur Python écrit en C), quel que soit $x$. D'un langage à l'autre, $K(x)$ ne change donc que d'une constante.
 
-<br>
+
 
 ## Berry contre-attaque
 
@@ -66,13 +111,15 @@ Appelons $n$ l'entier affiché. Par construction, $K(n)$ dépasse le milliard. M
 
 Notre programme n'est rien d'autre que la phrase de Berry, «&nbsp;le plus petit entier non affichable par un programme d'au plus un milliard de caractères&nbsp;», écrite en bien moins d'un milliard de caractères. Sauf que cette fois, il n'y a plus d'ambiguïté derrière laquelle se réfugier. Une seule hypothèse a été faite, et c'est elle qui doit tomber&nbsp;:
 
-{{< notice type="theo" title="Théorème" round="true" >}}
+<div id="theo">
+
 La complexité de Kolmogorov n'est pas calculable&nbsp;: aucun programme ne peut, pour tout $x$, renvoyer $K(x)$.
-{{< /notice >}}
+
+</div>
 
 On peut toujours **majorer** $K(x)$&nbsp;: il suffit d'exhiber un programme qui affiche $x$, et c'est ce que fait un logiciel de compression. Mais on ne peut jamais certifier qu'il n'en existe pas de plus court. L'idée naïve, essayer un par un tous les programmes plus courts, échoue&nbsp;: certains ne s'arrêtent jamais, et rien ne permet de savoir lesquels à l'avance. C'est le problème de l'arrêt de Turing, et la même mécanique d'autoréférence que dans [les théorèmes d'incomplétude de Gödel](../../modale/logiques/#logique-de-la-prouvabilité).
 
-<br>
+
 
 ## Le rêve de Solomonoff
 
@@ -97,20 +144,11 @@ Sauf que $M$ n'est pas calculable. La somme est dominée par les programmes les 
 
 Tout n'est pas perdu pour autant. L'idée survit sous des formes approchées et calculables&nbsp;: le principe de longueur de description minimale en statistique, les estimations de complexité par compression et, plus largement, l'intuition très présente en apprentissage automatique qu'**apprendre, c'est compresser**.
 
-<br>
+
 
 ## En vidéo
 
 La chaîne *Up and Atom* raconte toute cette histoire (en anglais)&nbsp;:
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube FDXf1XxCXAk>}}
-</div>
 
-<br>
-
-## Pour aller plus loin
-
-- <a href="https://www.scientificamerican.com/article/the-strange-story-of-the-algorithm-meant-to-solve-life-the-universe-and" target="_blank">*The Strange Story of the Algorithm Meant to Solve Life, the Universe and Everything*</a>, Scientific American.
-- <a href="http://www.scholarpedia.org/article/Algorithmic_probability" target="_blank">*Algorithmic probability*</a>, article de Scholarpedia par Marcus Hutter, Shane Legg et Paul Vitányi.
-- Ming Li et Paul Vitányi, *An Introduction to Kolmogorov Complexity and Its Applications*, Springer.
+{{< youtube-plus id="FDXf1XxCXAk" ratio="16x9" width="800" shadow="true" rounded="true" >}}

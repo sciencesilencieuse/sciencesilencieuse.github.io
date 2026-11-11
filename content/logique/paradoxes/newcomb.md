@@ -4,11 +4,51 @@ date = 2026-11-11T12:00:00+01:00
 weight = 3
 +++
 
+<style>
+#preuve
+{
+    background-color:#EAEAEA;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#def
+{
+    background-color:#DCEFFE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#theo
+{
+    background-color:#FBE1DE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+/* Pour rétablir le comportement de details */
+details > summary:first-of-type {
+  display: list-item;     /* remet le triangle + l’accessibilité */
+  cursor: pointer;        /* optionnel : feedback visuel */
+}
+details > summary:first-of-type {
+  list-style: disclosure-closed inside;
+}
+details[open] > summary:first-of-type {
+  list-style-type: disclosure-open;
+}
+h2
+{
+color:#970E53 !important;
+}
+h3
+{
+color:#004D80 !important;
+}
+</style>
+
+
 # Paradoxe de Newcomb
 
 > Deux boîtes, un devin presque infaillible et une question toute simple&nbsp;: en prenez-vous une ou deux&nbsp;?
 
-<br>
 
 ## Le jeu
 
@@ -45,7 +85,7 @@ Que faites-vous&nbsp;?
 
 Le problème a été imaginé en 1960 par le physicien William Newcomb, puis rendu célèbre par le philosophe Robert Nozick en 1969.
 
-<br>
+
 
 ## Deux raisonnements irréprochables
 
@@ -80,7 +120,7 @@ Dans les deux cas, je gagne 1&nbsp;000&nbsp;€ de plus en prenant tout&nbsp;: i
 
 Nozick remarquait que presque tout le monde trouve la réponse évidente, mais que les gens se partagent à peu près en deux camps, chacun persuadé que l'autre déraisonne. Les philosophes de métier ne font pas mieux&nbsp;: dans l'enquête PhilPapers de 2020, environ quatre sur dix choisissaient les deux boîtes, trois sur dix une seule, et les autres ne tranchaient pas.
 
-<br>
+
 
 ## Deux théories de la décision
 
@@ -97,11 +137,15 @@ contenu de B &nbsp;⟵&nbsp; prédiction &nbsp;⟵&nbsp; <b>ce que je suis</b> &
 
 Le partisan des deux boîtes en conclut&nbsp;: «&nbsp;ce que je suis est déjà joué, autant ramasser les 1&nbsp;000&nbsp;€&nbsp;». Le partisan de la boîte unique lui répond&nbsp;: «&nbsp;justement, sois quelqu'un qui n'en prend qu'une&nbsp;».
 
-{{< notice type="coeur" round="true" >}}
-Les deux camps n'évaluent pas la même chose. Si l'on juge un **acte isolé**, une fois les boîtes remplies, prendre les deux est imbattable. Si l'on juge une **disposition**, une règle de conduite adoptée une fois pour toutes, «&nbsp;ne prendre qu'une boîte&nbsp;» rapporte bien davantage. Le paradoxe se loge exactement dans cet écart&nbsp;: la meilleure règle prescrit un acte qui, pris isolément, n'est pas le meilleur.
-{{< /notice >}}
 
-<br>
+<div id="theo">
+
+Les deux camps n'évaluent pas la même chose. Si l'on juge un **acte isolé**, une fois les boîtes remplies, prendre les deux est imbattable. Si l'on juge une **disposition**, une règle de conduite adoptée une fois pour toutes, «&nbsp;ne prendre qu'une boîte&nbsp;» rapporte bien davantage. Le paradoxe se loge exactement dans cet écart&nbsp;: la meilleure règle prescrit un acte qui, pris isolément, n'est pas le meilleur.
+
+</div>
+
+
+
 
 ## Et si le Prédicteur vous simulait&nbsp;?
 
@@ -115,10 +159,20 @@ Le paradoxe de Newcomb finit ainsi par reposer une vieille question&nbsp;: que r
 Vous jouez au dilemme du prisonnier contre une copie exacte de vous-même. Coopérez-vous&nbsp;? Le philosophe David Lewis a montré que c'est le même problème&nbsp;: votre copie fera ce que vous ferez, sans que vous puissiez agir sur elle.
 {{< /notice >}}
 
-<br>
 
-## Pour aller plus loin
+## En vidéo
 
-- <a href="https://plato.stanford.edu/entries/decision-causal/" target="_blank">*Causal Decision Theory*</a>, Stanford Encyclopedia of Philosophy.
-- Robert Nozick, «&nbsp;Newcomb's Problem and Two Principles of Choice&nbsp;», dans *Essays in Honor of Carl G. Hempel* (1969).
-- David Lewis, «&nbsp;Prisoners' Dilemma Is a Newcomb Problem&nbsp;», *Philosophy & Public Affairs*, 8(3) (1979).
+La super série de Monsieur Phi&nbsp;:
+
+{{< youtube-plus id="3g7cN3Rsi-w" ratio="16x9" width="800" shadow="true" rounded="true" >}}
+
+{{< youtube-plus id="hCUuM8F_0VE" ratio="16x9" width="800" shadow="true" rounded="true" >}}
+
+{{< youtube-plus id="cz9hapGsHuA" ratio="16x9" width="800" shadow="true" rounded="true" >}}
+
+{{< youtube-plus id="P1aHoTiQFxw" ratio="16x9" width="800" shadow="true" rounded="true" >}}
+
+
+
+
+

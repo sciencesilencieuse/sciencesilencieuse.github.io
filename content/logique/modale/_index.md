@@ -73,6 +73,3 @@ Pour leur donner un sens, on ne raisonne plus dans un seul monde mais dans un **
 
 </div>
 
-{{%notice type="info" round="true"%}}
-Les deux premiers chapitres sont des notes de lecture du livre *La logique pas à pas* de Jacques Duparc.
-{{%/notice%}}

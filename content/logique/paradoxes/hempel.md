@@ -4,11 +4,51 @@ date = 2026-11-11T12:00:00+01:00
 weight = 2
 +++
 
+<style>
+#preuve
+{
+    background-color:#EAEAEA;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#def
+{
+    background-color:#DCEFFE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+#theo
+{
+    background-color:#FBE1DE;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
+/* Pour rétablir le comportement de details */
+details > summary:first-of-type {
+  display: list-item;     /* remet le triangle + l’accessibilité */
+  cursor: pointer;        /* optionnel : feedback visuel */
+}
+details > summary:first-of-type {
+  list-style: disclosure-closed inside;
+}
+details[open] > summary:first-of-type {
+  list-style-type: disclosure-open;
+}
+h2
+{
+color:#970E53 !important;
+}
+h3
+{
+color:#004D80 !important;
+}
+</style>
+
 # Paradoxe de Hempel
 
 > Voir une chaussure blanche participe-t-il à prouver que tous les corbeaux sont noirs&nbsp;?
 
-<br>
+
 
 ## Le paradoxe
 
@@ -33,7 +73,7 @@ Une chaussure blanche n'est ni noire, ni un corbeau. Elle confirme donc la contr
 
 Les deux principes paraissent inattaquables, et la conclusion est absurde. Lequel lâcher&nbsp;?
 
-<br>
+
 
 ## La réponse bayésienne
 
@@ -62,13 +102,15 @@ $$\frac{1}{1-10^{-7}}\approx 1{,}0000001$$
 
 Chaque chaussure blanche multiplie bien la cote de $H$ par un nombre plus grand que 1&nbsp;: elle confirme. Mais il en faut environ 46 millions pour obtenir le même effet que 44 corbeaux.
 
-{{< notice type="coeur" round="true" >}}
+<div id="theo">
+
 Le paradoxe n'était pas une erreur de logique. La chaussure blanche confirme réellement que tous les corbeaux sont noirs. Simplement, elle le fait un million de fois moins qu'un corbeau noir. Notre intuition arrondit ce presque rien à zéro, et en pratique elle a bien raison.
-{{< /notice >}}
+
+</div>
 
 Cette résolution a été esquissée dès 1940 par la logicienne polonaise Janina Hosiasson-Lindenbaum.
 
-<br>
+
 
 ## Tout dépend de la façon de chercher
 
@@ -80,20 +122,12 @@ Autre leçon&nbsp;: ce n'est pas l'objet observé qui confirme, c'est la **proc�
 
 [^1]: I. J. Good, «&nbsp;The White Shoe Is a Red Herring&nbsp;», *The British Journal for the Philosophy of Science*, 17(4), 322 (1967). On hésite entre deux mondes. Dans le premier, il y a cent corbeaux, tous noirs, parmi un million d'oiseaux. Dans le second, mille corbeaux noirs, un corbeau blanc et un million d'autres oiseaux. On tire un oiseau au hasard&nbsp;: c'est un corbeau noir. L'événement est dix fois plus probable dans le second monde, et plaide donc pour celui où tous les corbeaux ne sont pas noirs.
 
-<br>
+
 
 ## En vidéo
 
 Le paradoxe raconté en vidéo (en anglais)&nbsp;:
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube Ca_sxDTPo60>}}
-</div>
 
-<br>
+{{< youtube-plus id="Ca_sxDTPo60" ratio="16x9" width="800" shadow="true" rounded="true" >}}
 
-## Pour aller plus loin
-
-- <a href="https://plato.stanford.edu/entries/confirmation/" target="_blank">*Confirmation*</a>, Stanford Encyclopedia of Philosophy.
-- Carl G. Hempel, «&nbsp;Studies in the Logic of Confirmation&nbsp;», *Mind*, 54 (1945).
-- [Inférence bayésienne](../../../maths/stat/bayes/), sur ce site.
