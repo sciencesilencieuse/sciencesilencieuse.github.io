@@ -1043,7 +1043,6 @@ La plupart des physiciens pensent aujourd'hui que l'information ressort, subtile
 <li><b>L'information ne disparaît pas, elle se disperse</b>&nbsp;: dans la chaleur d'un microprocesseur, dans les photons d'un piège à atomes, et peut-être dans le rayonnement d'un trou noir.</li>
 </ul>
 
-<br>
 
 
 > Lutz, E. et Ciliberto, S. « Information: From Maxwell's demon to Landauer's eraser », *Physics Today* 68 (9), 30 (2015). [🌐](https://physicstoday.aip.org/features/information-from-maxwells-demon-to-landauers-eraser)
