@@ -449,7 +449,7 @@ C'est précisément le premier argument expérimental développé par Ziaei-Moay
 
 Dans le cas d'une règle électrisée, le champ électrique varie avec la distance $r$ à l'axe de la règle (approximativement comme le champ d'un fil chargé, $E(r) \propto 1/r$), ce qui crée un gradient de champ dirigé vers la règle.
 
-Supposons dans un premier temps que le champ électrique à l'intérieur du filet d'eau soit directement égal au champ extérieur créé par la règle&nbsp;: $\vec{E}\_{\text{int}} \approx \vec{E}$. La densité volumique de force dipolaire vaut alors&nbsp;:
+L'encadré sur $\varepsilon\_r$ nous a prévenus&nbsp;: le champ qui règne dans l'eau est plus faible que le champ appliqué, parce que l'eau polarisée riposte. Ignorons-le délibérément dans un premier temps, et faisons comme si le champ à l'intérieur du filet était égal au champ extérieur créé par la règle, $\vec{E}\_{\text{int}} \approx \vec{E}$. C'est le cas le plus favorable aux dipôles&nbsp;: nous obtiendrons ainsi un **majorant** de leur effet. La densité volumique de force dipolaire vaut alors&nbsp;:
 
 <div id="theo">
 
@@ -597,9 +597,9 @@ Mais la réalité est encore **quarante fois pire** pour l'hypothèse des dipôl
 
 ### Prise en compte du champ dépolarisant
 
-Pourquoi l'hypothèse $\vec{E}\_{\text{int}} \approx \vec{E}$ est-elle beaucoup trop optimiste&nbsp;? Parce qu'elle oublie **le champ dépolarisant** créé par le filet d'eau lui-même&nbsp;!
+Il est temps de lever l'hypothèse $\vec{E}\_{\text{int}} \approx \vec{E}$, dont nous savons depuis l'encadré sur $\varepsilon\_r$ qu'elle est fausse. Le mécanisme est celui que nous y avons décrit&nbsp;: en se polarisant, l'eau fait apparaître à sa surface des charges liées sans vis-à-vis, qui créent à l'intérieur un champ opposé au champ appliqué. Ce champ de riposte porte un nom, le **champ dépolarisant** $\vec{E}\_{\text{dép}}$, et le champ réellement ressenti par les molécules est $\vec{E}\_{\text{int}} = \vec{E} + \vec{E}\_{\text{dép}}$.
 
-Dès que les dipôles moléculaires s'orientent légèrement perpendiculairement à l'axe du cylindre d'eau, les charges positives et négatives se compensent au cœur du liquide, mais **des charges liées de polarisation non compensées apparaissent sur les deux flancs opposés du cylindre** (négatives du côté de la règle si celle-ci est positive, et positives sur la face opposée). Ces deux nappes de charges de surface engendrent à l'intérieur de l'eau un champ électrique secondaire $\vec{E}\_{\text{dép}}$ dirigé en sens inverse de $\vec{P}$, qui tend à écranter le champ extérieur $\vec{E}$&nbsp;!
+Pour une lame placée en travers du champ, nous avons trouvé $\vec{E}\_{\text{dép}} = -\frac{\vec{P}}{\varepsilon\_0}$, et donc un champ intérieur divisé par $\varepsilon\_r = 80$. Mais notre filet n'est pas une lame&nbsp;: c'est un **cylindre**, que le champ de la règle attaque de côté. Les charges liées se répartissent alors sur ses deux flancs arrondis (négatives du côté de la règle si celle-ci est positive, positives du côté opposé), et non plus sur deux plans qui se font face. Des charges ainsi étalées sur une surface courbe écrantent moins bien que les deux armatures d'un condensateur&nbsp;: la riposte est exactement deux fois plus faible.
 
 <div id="def">
 
@@ -673,7 +673,7 @@ $$
 
 <br>
 
-En combinant $\vec{E}\_{\text{int}} = \vec{E} - \frac{\vec{P}}{2\varepsilon\_0}$ avec la loi constitutive du diélectrique $\vec{P} = \varepsilon\_0(\varepsilon\_r - 1)\vec{E}\_{\text{int}}$, on élimine $\vec{P}$ en une ligne&nbsp;:
+Le raisonnement est ensuite le même que dans l'encadré, au facteur $\frac{1}{2}$ près. En combinant $\vec{E}\_{\text{int}} = \vec{E} - \frac{\vec{P}}{2\varepsilon\_0}$ avec la loi constitutive du diélectrique $\vec{P} = \varepsilon\_0(\varepsilon\_r - 1)\vec{E}\_{\text{int}}$, on élimine $\vec{P}$ en une ligne&nbsp;:
 
 $$\vec{E}\_{\text{int}} + \frac{\varepsilon\_r - 1}{2}\vec{E}\_{\text{int}} = \vec{E} \quad \Longleftrightarrow \quad \frac{\varepsilon\_r + 1}{2}\vec{E}\_{\text{int}} = \vec{E}$$
 
@@ -693,7 +693,21 @@ $$
 
 <br>
 
-À cause du champ dépolarisant, le champ électrique à l'intérieur du filet d'eau est **quarante fois plus faible** que le champ extérieur dans l'air&nbsp;!
+À cause du champ dépolarisant, le champ électrique à l'intérieur du filet d'eau est **quarante fois plus faible** que le champ extérieur dans l'air&nbsp;! C'est moitié moins que pour la lame de l'encadré (quatre-vingts fois), mais cela reste considérable.
+
+<div id="preuve">
+
+**La forme fixe le facteur.** Lame, cylindre, sphère&nbsp;: dans les trois cas le champ dépolarisant est uniforme et s'écrit $\vec{E}\_{\text{dép}} = -N\frac{\vec{P}}{\varepsilon\_0}$, où $N$ est un nombre purement géométrique. Le même calcul donne alors $E\_{\text{int}} = \frac{E}{1 + N(\varepsilon\_r - 1)}$.
+
+<ul>
+<li>Lame en travers du champ&nbsp;: $N = 1$, le champ est divisé par $\varepsilon_r = 80$.</li>
+<li>Cylindre pris de côté (notre filet)&nbsp;: $N = \frac{1}{2}$, le champ est divisé par $\frac{\varepsilon_r + 1}{2} \approx 40$.</li>
+<li>Sphère (une goutte)&nbsp;: $N = \frac{1}{3}$, le champ est divisé par $\frac{\varepsilon_r + 2}{3} \approx 27$.</li>
+</ul>
+
+Plus la surface qui porte les charges liées est « refermée » autour du volume, moins ces charges se font face, et moins elles écrantent. À l'inverse, un cylindre dont l'axe serait <em>parallèle</em> au champ ne porterait de charges qu'à ses extrémités lointaines&nbsp;: $N = 0$, aucun écrantage.
+
+</div>
 
 Il n'y a même pas besoin de refaire le calcul vectoriel de $(\vec{P}\cdot\vec{\nabla})\vec{E}$&nbsp;: en comparant $\vec{P} = 2\varepsilon\_0\frac{\varepsilon\_r - 1}{\varepsilon\_r + 1}\vec{E}$ à l'expression naïve $\vec{P}\_{\text{naïf}} = \varepsilon\_0(\varepsilon\_r - 1)\vec{E}$, on voit qu'il suffit de diviser la force et l'accélération naïves par $\frac{\varepsilon\_r + 1}{2} = \frac{81}{2} = 40,5$&nbsp;!
 
