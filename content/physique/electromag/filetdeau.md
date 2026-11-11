@@ -706,7 +706,7 @@ $$
 
 <div id="preuve">
 
-**La forme fixe le facteur.** Lame, cylindre, sphère&nbsp;: dans les trois cas le champ dépolarisant est uniforme et s'écrit $\vec{E}\_{\text{dép}} = -N\frac{\vec{P}}{\varepsilon\_0}$, où $N$ est un nombre purement géométrique. Le même calcul donne alors $E\_{\text{int}} = \frac{E}{1 + N(\varepsilon\_r - 1)}$.
+**La forme fixe le facteur&nbsp;:** lame, cylindre ou sphère, dans les trois cas le champ dépolarisant est uniforme et s'écrit $\vec{E}\_{\text{dép}} = -N\frac{\vec{P}}{\varepsilon\_0}$, où $N$ est un nombre purement géométrique. Le même calcul donne alors $E\_{\text{int}} = \frac{E}{1 + N(\varepsilon\_r - 1)}$.
 
 <ul>
 <li>Lame en travers du champ&nbsp;: $N = 1$, le champ est divisé par $\varepsilon_r = 80$.</li>
