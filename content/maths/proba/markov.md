@@ -2155,7 +2155,7 @@ Il y a une **température critique**, $T\_c=\frac{2J}{k\ln(1+\sqrt2)}\approx2{,}
 
 ### Quand l'aimantation reste bloquée&nbsp;: domaines et bandes
 
-Faites l'essai&nbsp;: réglez $T=1{,}5$, bien en dessous de $T\_c$, et cliquez sur « Tout désordonner ». La courbe exacte annonce $|m|\approx0{,}99$. Or, une fois sur trois environ, le point rouge se fige à une valeur quelconque ($0{,}2$, $0{,}4$…) et n'en bouge plus. **Ce n'est pas un défaut du programme&nbsp;: c'est le phénomène le plus instructif de la page.**
+Faites l'essai&nbsp;: réglez $T=1{,}5$, bien en dessous de $T\_c$, et cliquez sur « Tout désordonner ». La courbe exacte annonce $|m|\approx0{,}99$. Or, une fois sur trois environ, le point rouge se fige à une valeur quelconque ($0{,}2$, $0{,}4$…) et n'en bouge plus. **Ce n'est pas un bug.**
 
 Il faut bien distinguer deux choses. La courbe d'Onsager décrit l'**équilibre**, c'est-à-dire la loi stationnaire, la limite $t\to\infty$ de la chaîne. Ce que montre l'écran, c'est la **dynamique**&nbsp;: le chemin que suit la chaîne pour s'y rendre depuis un état de départ très atypique. Et ce chemin passe par deux étapes.
 
