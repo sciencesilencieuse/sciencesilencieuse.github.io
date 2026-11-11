@@ -316,9 +316,13 @@ margin-top:0em;
     opacity: 0.5;
     cursor: default;
 }
+h1
+{
+voverflow-x:auto;
+}
 </style>
 
-# Information et thermodynamique&nbsp;: du démon de Maxwell à la gomme de Landauer
+<h1>Information et thermodynamique&nbsp;: du démon de Maxwell à la gomme de Landauer</h1>
 
 Peut-on tirer du travail d'un système simplement parce qu'on **sait** dans quel état il se trouve&nbsp;? Et, à l'inverse, que coûte le fait d'**oublier**&nbsp;? Ces deux questions ont une réponse commune, d'une simplicité déconcertante&nbsp;:
 
@@ -564,13 +568,17 @@ Or la mécanique, classique comme quantique, est réversible au niveau microscop
 
 <div id="theo">
 
-**Principe de Landauer.** L'effacement d'un bit d'information dans un environnement à la température $T$ s'accompagne d'un dégagement de chaleur d'au moins $k\_B T\ln 2$.
+**Principe de Landauer** 
+
+L'effacement d'un bit d'information dans un environnement à la température $T$ s'accompagne d'un dégagement de chaleur d'au moins $k\_B T\ln 2$.
 
 </div>
 
+<br>
+
 <div id="preuve">
 <details>
-<summary>la démonstration, en trois lignes, à partir du second principe</summary>
+<summary>la démonstration rapide à partir du second principe</summary>
 
 Considérons la mémoire (le système) et son environnement (un réservoir à la température $T$). D'après le second principe, l'entropie totale ne peut pas diminuer&nbsp;:
 
