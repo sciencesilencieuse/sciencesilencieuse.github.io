@@ -79,6 +79,25 @@ details > summary:first-of-type {
 details[open] > summary:first-of-type {
   list-style-type: disclosure-open;
 }
+.encadre
+{
+    max-width: 42rem;
+    margin: 1.4em auto;
+    border: 2px solid #006C65;
+    border-radius: 12px;
+    background: #F3F8F7;
+    padding: 0.6em 1.3em 0.4em 1.3em;
+}
+.encadre-titre
+{
+    font-weight: bold;
+    color: #006C65;
+    margin-bottom: 0.3em;
+}
+.encadre .legende
+{
+    margin-top: 0;
+}
 .legende
 {
     text-align: center;
@@ -271,6 +290,83 @@ $$
 
 <br>
 
+<div class="encadre">
+<div class="encadre-titre">D'où vient cette formule, et que mesure $\varepsilon_r$&nbsp;?</div>
+<p><b>Pourquoi $\vec{P}$ est proportionnel au champ.</b> Nous venons de voir que l'alignement moyen de chaque molécule, $\langle\cos\theta\rangle\approx\frac{p_0E}{3k_BT}$, est proportionnel au champ qu'elle subit&nbsp;: champ deux fois plus fort, penchant deux fois plus marqué. La polarisation, somme de tous ces penchants, l'est donc aussi. C'est une réponse <em>linéaire</em>, comme l'allongement d'un ressort que l'on tire à peine.</p>
+<p><b>Un alignement infime, mais de dipôles innombrables.</b> Si toutes les molécules étaient alignées, la polarisation vaudrait $n\,p_0\approx\pu{0,2 C/m2}$, une valeur colossale. Avec une molécule sur vingt mille, il reste $P\approx\pu{1e-5 C/m2}$. Est-ce beaucoup&nbsp;? L'étalon naturel est la grandeur $\varepsilon_0E$, qui s'exprime dans la même unité&nbsp;: c'est la charge par unité de surface qu'il faut déposer sur une plaque pour créer le champ $E$. Elle vaut ici $\pu{9e-7 C/m2}$. La polarisation de l'eau est donc une dizaine de fois <em>supérieure</em> à cet étalon&nbsp;: malgré le désordre thermique, l'eau répond massivement au champ. On écrit</p>
+<p style="text-align:center;">$\vec{P}=\varepsilon_0\,\chi\,\vec{E}_{\text{int}},$</p>
+<p>où $\chi$, la <b>susceptibilité électrique</b>, est un nombre sans dimension qui dit combien de fois la réponse du matériau dépasse l'étalon $\varepsilon_0E$. Notre estimation à partir de molécules indépendantes donne $\chi\approx12$. La valeur mesurée est $\chi\approx79$&nbsp;: dans l'eau liquide, les molécules sont liées à leurs voisines par des liaisons hydrogène et basculent par petits groupes solidaires, ce qui amplifie la réponse.</p>
+<p><b>Ce que fait la polarisation&nbsp;: elle combat le champ qui l'a créée.</b> Prenons une lame d'eau placée en travers du champ. Au cœur de la lame, la tête positive de chaque dipôle côtoie la queue négative du suivant, et tout se compense. Mais sur les deux faces, il reste une couche de charges sans vis-à-vis&nbsp;: négatives d'un côté, positives de l'autre, à raison de $P$ coulombs par mètre carré (c'est pour cela que $P$ a l'unité d'une charge surfacique). Ces deux couches forment un condensateur miniature, qui crée dans la lame un champ $\frac{P}{\varepsilon_0}$ <em>opposé</em> au champ appliqué.</p>
+<div class="svg-container">
+<svg viewBox="0 0 600 300" role="img" aria-label="Une lame d'eau placée dans un champ électrique appliqué. Les dipôles qui s'orientent font apparaître des charges négatives sur une face et positives sur l'autre ; ces charges créent dans la lame un champ opposé au champ appliqué, si bien que le champ résultant à l'intérieur est beaucoup plus faible." style="width:100%;max-width:600px;height:auto;">
+<defs><marker id="dea" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker></defs>
+<defs><marker id="dem" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#970E53"/></marker></defs>
+<defs><marker id="det" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#334155"/></marker></defs>
+<rect x="215" y="22" width="170" height="146" fill="#004D80" fill-opacity="0.07" stroke="#004D80" stroke-width="1.5"/>
+<path d="M30,50 L193,50" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
+<path d="M399,50 L570,50" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
+<path d="M30,95 L193,95" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
+<path d="M399,95 L570,95" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
+<path d="M30,140 L193,140" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
+<path d="M399,140 L570,140" stroke="#004D80" stroke-width="2.2" fill="none" marker-end="url(#dea)"/>
+<text x="110" y="38" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >champ appliqué <tspan font-style="italic">E</tspan></text>
+<text x="490" y="38" text-anchor="middle" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >champ appliqué <tspan font-style="italic">E</tspan></text>
+<rect x="243" y="43" width="30" height="14" rx="7" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
+<text x="250" y="54" text-anchor="middle" font-size="11" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >−</text>
+<text x="266" y="54" text-anchor="middle" font-size="11" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >+</text>
+<rect x="243" y="88" width="30" height="14" rx="7" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
+<text x="250" y="99" text-anchor="middle" font-size="11" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >−</text>
+<text x="266" y="99" text-anchor="middle" font-size="11" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >+</text>
+<rect x="243" y="133" width="30" height="14" rx="7" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
+<text x="250" y="144" text-anchor="middle" font-size="11" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >−</text>
+<text x="266" y="144" text-anchor="middle" font-size="11" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >+</text>
+<rect x="285" y="43" width="30" height="14" rx="7" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
+<text x="292" y="54" text-anchor="middle" font-size="11" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >−</text>
+<text x="308" y="54" text-anchor="middle" font-size="11" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >+</text>
+<rect x="285" y="88" width="30" height="14" rx="7" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
+<text x="292" y="99" text-anchor="middle" font-size="11" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >−</text>
+<text x="308" y="99" text-anchor="middle" font-size="11" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >+</text>
+<rect x="285" y="133" width="30" height="14" rx="7" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
+<text x="292" y="144" text-anchor="middle" font-size="11" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >−</text>
+<text x="308" y="144" text-anchor="middle" font-size="11" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >+</text>
+<rect x="327" y="43" width="30" height="14" rx="7" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
+<text x="334" y="54" text-anchor="middle" font-size="11" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >−</text>
+<text x="350" y="54" text-anchor="middle" font-size="11" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >+</text>
+<rect x="327" y="88" width="30" height="14" rx="7" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
+<text x="334" y="99" text-anchor="middle" font-size="11" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >−</text>
+<text x="350" y="99" text-anchor="middle" font-size="11" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >+</text>
+<rect x="327" y="133" width="30" height="14" rx="7" fill="#fff" stroke="#94a3b8" stroke-width="1"/>
+<text x="334" y="144" text-anchor="middle" font-size="11" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >−</text>
+<text x="350" y="144" text-anchor="middle" font-size="11" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >+</text>
+<text x="222" y="41" text-anchor="middle" font-size="16" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-weight="bold">−</text>
+<text x="378" y="41" text-anchor="middle" font-size="16" fill="#006C65" font-family="Georgia,'Times New Roman',serif" font-weight="bold">+</text>
+<text x="222" y="69" text-anchor="middle" font-size="16" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-weight="bold">−</text>
+<text x="378" y="69" text-anchor="middle" font-size="16" fill="#006C65" font-family="Georgia,'Times New Roman',serif" font-weight="bold">+</text>
+<text x="222" y="100" text-anchor="middle" font-size="16" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-weight="bold">−</text>
+<text x="378" y="100" text-anchor="middle" font-size="16" fill="#006C65" font-family="Georgia,'Times New Roman',serif" font-weight="bold">+</text>
+<text x="222" y="131" text-anchor="middle" font-size="16" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-weight="bold">−</text>
+<text x="378" y="131" text-anchor="middle" font-size="16" fill="#006C65" font-family="Georgia,'Times New Roman',serif" font-weight="bold">+</text>
+<text x="222" y="159" text-anchor="middle" font-size="16" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-weight="bold">−</text>
+<text x="378" y="159" text-anchor="middle" font-size="16" fill="#006C65" font-family="Georgia,'Times New Roman',serif" font-weight="bold">+</text>
+<text x="211" y="186" text-anchor="end" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >charges de surface −</text>
+<text x="389" y="186" text-anchor="start" font-size="12" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >+ charges de surface</text>
+<text x="300" y="186" text-anchor="middle" font-size="12.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >lame d'eau</text>
+<text x="170" y="219" text-anchor="end" font-size="12.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >champ appliqué</text>
+<path d="M185,215 L505,215" stroke="#004D80" stroke-width="3" fill="none" marker-end="url(#dea)"/>
+<text x="170" y="245" text-anchor="end" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >champ des charges de surface</text>
+<path d="M505,241 L197,241" stroke="#970E53" stroke-width="3" fill="none" marker-end="url(#dem)"/>
+<text x="170" y="271" text-anchor="end" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-weight="bold">champ résultant dans l'eau</text>
+<path d="M185,267 L203,267" stroke="#334155" stroke-width="3" fill="none" marker-end="url(#det)"/>
+<text x="222" y="271" text-anchor="start" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">E</tspan><tspan dy="3" font-size="9">int</tspan><tspan dy="-3" font-size="1"> </tspan> : <tspan font-style="italic">ε</tspan><tspan dy="3" font-size="9">r</tspan><tspan dy="-3"> fois plus faible que le champ appliqué</tspan></text>
+</svg>
+</div>
+<p class="legende">Les charges qui apparaissent sur les faces de la lame créent un champ opposé au champ appliqué. Dans l'eau, il l'annule presque entièrement.</p>
+<p>Le champ qui règne réellement dans l'eau est donc $E_{\text{int}}=E-\frac{P}{\varepsilon_0}$. Et comme les molécules ne « voient » que ce champ-là, c'est lui qui fixe la polarisation&nbsp;: $P=\varepsilon_0\chi E_{\text{int}}$. C'est la raison du $\vec{E}_{\text{int}}$ dans la formule. En combinant les deux relations,</p>
+<p style="text-align:center;">$E_{\text{int}}=E-\chi E_{\text{int}}\qquad\Longrightarrow\qquad E_{\text{int}}=\dfrac{E}{1+\chi}=\dfrac{E}{\varepsilon_r}.$</p>
+<p><b>Voilà ce qu'est $\varepsilon_r=1+\chi$&nbsp;: le facteur par lequel le matériau affaiblit le champ électrique qui le traverse.</b> Le « 1 » est le champ appliqué, le « $\chi$ » la riposte du matériau. Dans le vide, $\varepsilon_r=1$&nbsp;: rien ne riposte, et $P=0$. Dans l'eau, $\varepsilon_r\approx80$&nbsp;: le champ est divisé par quatre-vingts. C'est d'ailleurs ainsi qu'on mesure $\varepsilon_r$ (on remplit un condensateur d'eau et l'on constate que la tension à ses bornes est divisée par 80), et c'est pour la même raison que l'eau dissout si bien les sels&nbsp;: l'attraction entre un ion positif et un ion négatif y est quatre-vingts fois plus faible que dans le vide.</p>
+<p>En remplaçant $\chi$ par $\varepsilon_r-1$, on retrouve la formule $\vec{P}=\varepsilon_0(\varepsilon_r-1)\vec{E}_{\text{int}}$. Retenez surtout le mécanisme, car il va resservir&nbsp;: <b>plus un matériau se polarise facilement, plus il écrante le champ, et moins il reste de champ à l'intérieur pour le polariser</b>. Le facteur d'affaiblissement vaut exactement $\varepsilon_r$ pour une lame&nbsp;; pour une autre forme (un cylindre, comme notre filet), il est différent, et nous le calculerons plus loin.</p>
+</div>
+
 Quelle force le champ électrique extérieur $\vec{E}(\vec{r})$ exerce-t-il alors sur cette eau polarisée&nbsp;?
 
 Un dipôle $\vec{p}$ plongé dans un champ électrique uniforme subit un couple qui tend à l'orienter, mais **aucune force résultante** puisque la force exercée sur la charge $+q$ compense exactement celle exercée sur la charge $-q$. Pour attirer un dipôle, il faut impérativement un **gradient de champ électrique**&nbsp;:
@@ -291,9 +387,68 @@ $$
 
 <br>
 
+<div class="encadre">
+<div class="encadre-titre">Pourquoi un gradient&nbsp;? La force de Kelvin sans analyse vectorielle</div>
+<p>Un dipôle, ce sont deux charges opposées $+q$ et $-q$ séparées par une petite distance $d$, avec $p=qd$. Le champ tire la charge positive dans son sens et la charge négative en sens inverse. Tout dépend alors de ce que vaut le champ <em>à chacune des deux extrémités</em>.</p>
+<div class="svg-container">
+<svg viewBox="0 0 600 250" role="img" aria-label="À gauche, un dipôle dans un champ uniforme : les forces sur ses deux charges sont égales et opposées, la résultante est nulle. À droite, un dipôle dans un champ plus intense d'un côté : la charge située dans le champ fort est tirée plus fort que l'autre n'est repoussée, et le dipôle est attiré vers le champ fort." style="width:100%;max-width:600px;height:auto;">
+<defs><marker id="kem" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#970E53"/></marker></defs>
+<defs><marker id="ket" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#006C65"/></marker></defs>
+<defs><marker id="kea" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#C2770B"/></marker></defs>
+<defs><marker id="keg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#cbd5e1"/></marker></defs>
+<text x="150" y="20" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-weight="bold">champ uniforme</text>
+<path d="M20,50 L280,50" stroke="#cbd5e1" stroke-width="1.4" fill="none" marker-end="url(#keg)"/>
+<path d="M20,80 L280,80" stroke="#cbd5e1" stroke-width="1.4" fill="none" marker-end="url(#keg)"/>
+<path d="M20,110 L280,110" stroke="#cbd5e1" stroke-width="1.4" fill="none" marker-end="url(#keg)"/>
+<path d="M20,140 L280,140" stroke="#cbd5e1" stroke-width="1.4" fill="none" marker-end="url(#keg)"/>
+<path d="M20,170 L280,170" stroke="#cbd5e1" stroke-width="1.4" fill="none" marker-end="url(#keg)"/>
+<rect x="116" y="97" width="68" height="26" rx="13" fill="#fff" stroke="#334155" stroke-width="1.6"/>
+<circle cx="129" cy="110" r="9" fill="#970E53"/><circle cx="171" cy="110" r="9" fill="#006C65"/>
+<text x="129" y="115" text-anchor="middle" font-size="14" fill="#fff" font-family="Georgia,'Times New Roman',serif" >−</text>
+<text x="171" y="115" text-anchor="middle" font-size="14" fill="#fff" font-family="Georgia,'Times New Roman',serif" >+</text>
+<path d="M116,110 L62,110" stroke="#970E53" stroke-width="3" fill="none" marker-end="url(#kem)"/>
+<path d="M184,110 L238,110" stroke="#006C65" stroke-width="3" fill="none" marker-end="url(#ket)"/>
+<text x="150" y="205" text-anchor="middle" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >deux forces égales et opposées :</text>
+<text x="150" y="223" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >la résultante est nulle, le dipôle n'avance pas</text>
+<line x1="300" y1="14" x2="300" y2="232" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="4 4"/>
+<text x="450" y="20" text-anchor="middle" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-weight="bold">champ plus intense à gauche</text>
+<path d="M325.1,103.3 L568.5,38.0" stroke="#cbd5e1" stroke-width="1.4" fill="none" marker-end="url(#keg)"/>
+<path d="M325.6,105.5 L573.8,61.7" stroke="#cbd5e1" stroke-width="1.4" fill="none" marker-end="url(#keg)"/>
+<path d="M325.9,107.7 L576.9,85.8" stroke="#cbd5e1" stroke-width="1.4" fill="none" marker-end="url(#keg)"/>
+<path d="M326.0,110.0 L578.0,110.0" stroke="#cbd5e1" stroke-width="1.4" fill="none" marker-end="url(#keg)"/>
+<path d="M325.9,112.3 L576.9,134.2" stroke="#cbd5e1" stroke-width="1.4" fill="none" marker-end="url(#keg)"/>
+<path d="M325.6,114.5 L573.8,158.3" stroke="#cbd5e1" stroke-width="1.4" fill="none" marker-end="url(#keg)"/>
+<path d="M325.1,116.7 L568.5,182.0" stroke="#cbd5e1" stroke-width="1.4" fill="none" marker-end="url(#keg)"/>
+<rect x="421" y="97" width="68" height="26" rx="13" fill="#fff" stroke="#334155" stroke-width="1.6"/>
+<circle cx="434" cy="110" r="9" fill="#970E53"/><circle cx="476" cy="110" r="9" fill="#006C65"/>
+<text x="434" y="115" text-anchor="middle" font-size="14" fill="#fff" font-family="Georgia,'Times New Roman',serif" >−</text>
+<text x="476" y="115" text-anchor="middle" font-size="14" fill="#fff" font-family="Georgia,'Times New Roman',serif" >+</text>
+<path d="M421,110 L340,110" stroke="#970E53" stroke-width="3" fill="none" marker-end="url(#kem)"/>
+<path d="M489,110 L525,110" stroke="#006C65" stroke-width="3" fill="none" marker-end="url(#ket)"/>
+<path d="M455,160 L412,160" stroke="#C2770B" stroke-width="4" fill="none" marker-end="url(#kea)"/>
+<text x="465" y="165" text-anchor="start" font-size="12.5" fill="#C2770B" font-family="Georgia,'Times New Roman',serif" >résultante</text>
+<text x="450" y="205" text-anchor="middle" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >la charge en champ fort est plus tirée que</text>
+<text x="450" y="223" text-anchor="middle" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >l'autre n'est repoussée : le dipôle avance</text>
+</svg>
+</div>
+<p class="legende">Un dipôle est un objet neutre&nbsp;: le champ ne peut le déplacer qu'en tirant inégalement sur ses deux extrémités.</p>
+<p><b>Champ uniforme.</b> Le champ est le même aux deux bouts. Les deux forces, $+qE$ et $-qE$, se compensent exactement. Le dipôle peut pivoter s'il est de travers, mais son centre ne bouge pas. C'est une lutte à la corde entre deux équipes de même force.</p>
+<p><b>Champ non uniforme.</b> Plaçons le dipôle le long d'un axe $x$, la charge $-q$ en $x$ et la charge $+q$ en $x+d$. La résultante vaut</p>
+<p style="text-align:center;">$F=q\,E(x+d)-q\,E(x)=q\,\big[E(x+d)-E(x)\big]\approx q\,d\,\dfrac{\mathrm{d}E}{\mathrm{d}x}=p\,\dfrac{\mathrm{d}E}{\mathrm{d}x}.$</p>
+<p>La force est proportionnelle à la <b>différence</b> de champ entre les deux extrémités, c'est-à-dire, le dipôle étant minuscule, à la <b>dérivée</b> du champ. La valeur du champ lui-même, aussi énorme soit-elle, disparaît de la soustraction. L'expression $(\vec{p}\cdot\vec{\nabla})\vec{E}$ ne dit rien d'autre&nbsp;: elle se lit « $p$ multiplié par le taux de variation de $\vec{E}$ lorsqu'on se déplace le long du dipôle », et se réduit à $p\,\frac{\mathrm{d}E}{\mathrm{d}x}$ quand tout est aligné sur un axe. (En coordonnées, $(\vec{p}\cdot\vec{\nabla})\vec{E}=p_x\frac{\partial\vec{E}}{\partial x}+p_y\frac{\partial\vec{E}}{\partial y}+p_z\frac{\partial\vec{E}}{\partial z}$&nbsp;; on la note aussi $(\vec{p}\cdot\overrightarrow{\text{grad}})\vec{E}$.)</p>
+<p><b>Vers où&nbsp;? Toujours vers le champ fort.</b> Les dipôles de l'eau ne sont pas orientés n'importe comment&nbsp;: leur penchant moyen suit le champ ($\vec{P}$ est parallèle à $\vec{E}$). Si la règle est chargée positivement, ce sont les extrémités négatives qui se tournent vers elle, donc vers la région de champ fort&nbsp;: elles sont plus attirées que les extrémités positives ne sont repoussées. Si la règle est négative, tout s'inverse, les dipôles se retournent, et le résultat est le même. L'eau est attirée dans les deux cas, ce qui se lit sur la formule&nbsp;: en remplaçant $P$ par $\varepsilon_0(\varepsilon_r-1)E$, la force devient proportionnelle à $E\,\frac{\mathrm{d}E}{\mathrm{d}x}=\frac12\frac{\mathrm{d}(E^2)}{\mathrm{d}x}$, insensible au signe du champ. C'est ainsi qu'un peigne frotté attire des bouts de papier neutres.</p>
+<p><b>Du dipôle au liquide.</b> Un mètre cube d'eau contient un moment dipolaire total $P$. Il suffit donc de remplacer $p$ par $P$ pour obtenir la force par unité de volume&nbsp;: $f=P\,\frac{\mathrm{d}E}{\mathrm{d}x}$, ou en général $(\vec{P}\cdot\vec{\nabla})\vec{E}$.</p>
+<p><b>Ce qu'il faut en retenir&nbsp;: un critère de vérité.</b> Si le champ varie sur une distance typique $L$, la force dipolaire vaut à peu près $\frac{PE}{L}$&nbsp;: elle s'évanouit quand $L$ devient très grand, c'est-à-dire quand le champ devient uniforme. Une <b>charge nette</b>, elle, subit la force $qE$, qui ne demande aucun gradient. Les deux mécanismes font donc des prédictions opposées dans un champ uniforme&nbsp;:</p>
+<ul>
+<li>si le filet est dévié parce qu'il est <b>polarisé</b>, il doit traverser un champ uniforme en ligne droite, quelle que soit l'intensité de ce champ&nbsp;;</li>
+<li>si le filet est dévié parce qu'il est <b>chargé</b>, il doit y être dévié, et toujours vers la même plaque.</li>
+</ul>
+<p>Le gradient n'est donc pas un détail technique de la formule&nbsp;: c'est la signature du mécanisme dipolaire, et le moyen de le mettre à l'épreuve.</p>
+</div>
+
 <div id="preuve">
 
-C'est d'ailleurs le premier argument expérimental développé par Ziaei-Moayyed *et al.* dans l'article du *Journal of Chemical Education* référencé en fin de page&nbsp;: en faisant passer le filet d'eau entre les deux plaques parallèles d'un condensateur plan où règne un **champ électrique uniforme** ($\vec{\nabla} E = \vec{0}$), un jet purement dipolaire ne devrait subir strictement aucune force ($\vec{f}\_{\text{dip}} = \vec{0}$). Or l'expérience montre au contraire une déviation spectaculaire vers la plaque de signe opposé&nbsp;!
+C'est précisément le premier argument expérimental développé par Ziaei-Moayyed *et al.* dans l'article du *Journal of Chemical Education* référencé en fin de page&nbsp;: en faisant passer le filet d'eau entre les deux plaques parallèles d'un condensateur plan où règne un **champ électrique uniforme** ($\vec{\nabla} E = \vec{0}$), un jet purement dipolaire ne devrait subir strictement aucune force ($\vec{f}\_{\text{dip}} = \vec{0}$). Or l'expérience montre au contraire une déviation spectaculaire vers la plaque de signe opposé&nbsp;!
 
 </div>
 
