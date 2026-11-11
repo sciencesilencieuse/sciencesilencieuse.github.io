@@ -1045,10 +1045,10 @@ La plupart des physiciens pensent aujourd'hui que l'information ressort, subtile
 
 
 
-> Lutz, E. et Ciliberto, S. « Information: From Maxwell's demon to Landauer's eraser », *Physics Today* 68 (9), 30 (2015). [🌐](https://physicstoday.aip.org/features/information-from-maxwells-demon-to-landauers-eraser)
-Bennett, C. H. « The thermodynamics of computation, a review », *International Journal of Theoretical Physics* 21, 905 (1982).
-Jaynes, E. T. « The Gibbs Paradox », dans *Maximum Entropy and Bayesian Methods*, Kluwer (1992). [🌐](https://bayes.wustl.edu/etj/articles/gibbs.paradox.pdf)
-Bekenstein, J. D. « Black Holes and Entropy », *Physical Review D* 7, 2333 (1973).
+> Lutz, E. et Ciliberto, S. « Information: From Maxwell's demon to Landauer's eraser », *Physics Today* 68 (9), 30 (2015). [🌐](https://physicstoday.aip.org/features/information-from-maxwells-demon-to-landauers-eraser)<br>
+Bennett, C. H. « The thermodynamics of computation, a review », *International Journal of Theoretical Physics* 21, 905 (1982).<br>
+Jaynes, E. T. « The Gibbs Paradox », dans *Maximum Entropy and Bayesian Methods*, Kluwer (1992). [🌐](https://bayes.wustl.edu/etj/articles/gibbs.paradox.pdf)<br>
+Bekenstein, J. D. « Black Holes and Entropy », *Physical Review D* 7, 2333 (1973).<br>Ò
 Egan, C. A. et Lineweaver, C. H. « A Larger Estimate of the Entropy of the Universe », *The Astrophysical Journal* 710, 1825 (2010). [🌐](https://arxiv.org/abs/0909.3983)
 
 <script>
