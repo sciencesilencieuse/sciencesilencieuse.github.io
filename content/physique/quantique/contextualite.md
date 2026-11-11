@@ -696,41 +696,50 @@ Les preuves précédentes sont logiques&nbsp;: elles opposent des certitudes. Au
 On considère cinq questions à réponse oui ou non, $A\_1,\dots,A\_5$, disposées en pentagone. Deux questions voisines sont compatibles, et **exclusives**&nbsp;: elles ne peuvent pas répondre oui toutes les deux.
 
 <div class="svg-container">
-<svg viewBox="0 0 600 310" role="img" aria-label="À gauche, le pentagone des cinq mesures : deux mesures voisines sont compatibles et ne peuvent pas répondre oui toutes les deux, si bien qu'au plus deux mesures sur cinq répondent oui. À droite, cinq directions de l'espace disposées en parapluie autour de l'état du système : chaque direction est perpendiculaire à ses deux voisines du pentagone, qui dessinent une étoile à cinq branches." style="width:100%;max-width:600px;height:auto;">
+<svg id="kc-svg" viewBox="0 0 600 322" role="img" aria-label="À gauche, le pentagone des cinq mesures : deux mesures voisines sont compatibles et ne peuvent pas répondre oui toutes les deux. À droite, une vue en trois dimensions, que l'on peut faire tourner, de cinq directions de l'espace disposées en parapluie autour de l'état du système : chaque direction est perpendiculaire aux deux directions qui correspondent à ses voisines du pentagone." style="width:100%;max-width:600px;height:auto;">
 <defs><marker id="kca" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#970E53"/></marker></defs>
-<polygon points="150.0,48.0 237.5,111.6 204.1,214.4 95.9,214.4 62.5,111.6" fill="#f5f8fa" stroke="#004D80" stroke-width="2"/>
-<circle cx="150.0" cy="48.0" r="19" fill="#004D80" stroke="#004D80" stroke-width="2"/>
-<text x="151.0" y="53.0" font-size="14" fill="#fff" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">A</tspan><tspan dy="4" font-size="9.8">1</tspan><tspan dy="-4" font-size="1"> </tspan></text>
-<circle cx="237.5" cy="111.6" r="19" fill="#fff" stroke="#004D80" stroke-width="2"/>
-<text x="238.5" y="116.6" font-size="14" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">A</tspan><tspan dy="4" font-size="9.8">2</tspan><tspan dy="-4" font-size="1"> </tspan></text>
-<circle cx="204.1" cy="214.4" r="19" fill="#004D80" stroke="#004D80" stroke-width="2"/>
-<text x="205.1" y="219.4" font-size="14" fill="#fff" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">A</tspan><tspan dy="4" font-size="9.8">3</tspan><tspan dy="-4" font-size="1"> </tspan></text>
-<circle cx="95.9" cy="214.4" r="19" fill="#fff" stroke="#004D80" stroke-width="2"/>
-<text x="96.9" y="219.4" font-size="14" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">A</tspan><tspan dy="4" font-size="9.8">4</tspan><tspan dy="-4" font-size="1"> </tspan></text>
-<circle cx="62.5" cy="111.6" r="19" fill="#fff" stroke="#004D80" stroke-width="2"/>
-<text x="63.5" y="116.6" font-size="14" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">A</tspan><tspan dy="4" font-size="9.8">5</tspan><tspan dy="-4" font-size="1"> </tspan></text>
-<text x="150.0" y="268.0" font-size="13" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >au plus deux « oui » (disques pleins)</text>
-<text x="150.0" y="287.0" font-size="13" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >sans voisins : somme ≤ 2</text>
-<polyline points="570.1,123.5 569.7,119.6 568.5,115.8 566.4,112.0 563.6,108.2 560.0,104.6 555.6,101.1 550.5,97.7 544.7,94.5 538.2,91.5 531.1,88.7 523.4,86.1 515.2,83.7 506.5,81.6 497.5,79.8 488.0,78.2 478.2,76.9 468.2,75.9 458.1,75.2 447.8,74.8 437.4,74.8 427.1,75.0 416.8,75.5 406.7,76.4 396.9,77.5 387.2,78.9 378.0,80.7 369.1,82.6 360.6,84.9 352.7,87.4 345.3,90.1 338.5,93.0 332.4,96.1 326.9,99.4 322.1,102.8 318.1,106.4 314.9,110.1 312.5,113.9 310.8,117.7 310.0,121.6 310.0,125.4 310.8,129.3 312.5,133.1 314.9,136.9 318.1,140.6 322.1,144.1 326.9,147.6 332.4,150.9 338.5,154.0 345.3,156.9 352.7,159.6 360.6,162.1 369.1,164.4 378.0,166.3 387.2,168.0 396.9,169.5 406.7,170.6 416.8,171.5 427.1,172.0 437.4,172.2 447.8,172.1 458.1,171.8 468.2,171.1 478.2,170.1 488.0,168.8 497.5,167.2 506.5,165.4 515.2,163.3 523.4,160.9 531.1,158.3 538.2,155.5 544.7,152.5 550.5,149.2 555.6,145.9 560.0,142.4 563.6,138.7 566.4,135.0 568.5,131.2 569.7,127.4 570.1,123.5" fill="none" stroke="#cbd5e1" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="3 4"/>
-<polyline points="566.1,111.4 319.1,105.5 509.6,164.7 448.3,74.9 356.9,161.0 566.1,111.4" fill="none" stroke="#80a6c0" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="5 4"/>
-<line x1="440.0" y1="232.0" x2="448.3" y2="74.9" stroke="#004D80" stroke-width="2.2"/>
-<circle cx="448.3" cy="74.9" r="5" fill="#004D80"/>
-<line x1="440.0" y1="232.0" x2="319.1" y2="105.5" stroke="#004D80" stroke-width="2.2"/>
-<circle cx="319.1" cy="105.5" r="5" fill="#004D80"/>
-<line x1="440.0" y1="232.0" x2="566.1" y2="111.4" stroke="#004D80" stroke-width="2.2"/>
-<circle cx="566.1" cy="111.4" r="5" fill="#004D80"/>
-<line x1="440.0" y1="232.0" x2="356.9" y2="161.0" stroke="#004D80" stroke-width="2.2"/>
-<circle cx="356.9" cy="161.0" r="5" fill="#004D80"/>
-<line x1="440.0" y1="232.0" x2="509.6" y2="164.7" stroke="#004D80" stroke-width="2.2"/>
-<circle cx="509.6" cy="164.7" r="5" fill="#004D80"/>
-<line x1="440.0" y1="232.0" x2="440.0" y2="40.5" stroke="#970E53" stroke-width="2.6" marker-end="url(#kca)"/>
-<text x="450.0" y="46.5" font-size="13" fill="#970E53" text-anchor="start" font-family="Georgia,'Times New Roman',serif" >état du système</text>
-<circle cx="440.0" cy="232.0" r="3.5" fill="#334155" />
-<text x="440.0" y="268.0" font-size="13" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >cinq directions, chacune perpendiculaire</text>
-<text x="440.0" y="287.0" font-size="13" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >aux deux qui lui sont reliées (tirets)</text>
+<polygon points="150.0,48.0 237.5,111.6 204.1,214.4 95.9,214.4 62.5,111.6" fill="#f5f8fa" stroke="none"/>
+<line id="kc-e0" x1="150.0" y1="48.0" x2="237.5" y2="111.6" stroke="#004D80" stroke-width="2"/>
+<line id="kc-e1" x1="237.5" y1="111.6" x2="204.1" y2="214.4" stroke="#004D80" stroke-width="2"/>
+<line id="kc-e2" x1="204.1" y1="214.4" x2="95.9" y2="214.4" stroke="#004D80" stroke-width="2"/>
+<line id="kc-e3" x1="95.9" y1="214.4" x2="62.5" y2="111.6" stroke="#004D80" stroke-width="2"/>
+<line id="kc-e4" x1="62.5" y1="111.6" x2="150.0" y2="48.0" stroke="#004D80" stroke-width="2"/>
+<g id="kc-n0" tabindex="0" role="button" aria-label="Mesure A1" style="cursor:pointer;outline:none"><circle cx="150.0" cy="48.0" r="19" fill="#fff" stroke="#004D80" stroke-width="2"/><text x="151.0" y="53.0" font-size="14" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">A</tspan><tspan dy="4" font-size="9.8">1</tspan><tspan dy="-4" font-size="1"> </tspan></text></g>
+<g id="kc-n1" tabindex="0" role="button" aria-label="Mesure A2" style="cursor:pointer;outline:none"><circle cx="237.5" cy="111.6" r="19" fill="#fff" stroke="#004D80" stroke-width="2"/><text x="238.5" y="116.6" font-size="14" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">A</tspan><tspan dy="4" font-size="9.8">2</tspan><tspan dy="-4" font-size="1"> </tspan></text></g>
+<g id="kc-n2" tabindex="0" role="button" aria-label="Mesure A3" style="cursor:pointer;outline:none"><circle cx="204.1" cy="214.4" r="19" fill="#fff" stroke="#004D80" stroke-width="2"/><text x="205.1" y="219.4" font-size="14" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">A</tspan><tspan dy="4" font-size="9.8">3</tspan><tspan dy="-4" font-size="1"> </tspan></text></g>
+<g id="kc-n3" tabindex="0" role="button" aria-label="Mesure A4" style="cursor:pointer;outline:none"><circle cx="95.9" cy="214.4" r="19" fill="#fff" stroke="#004D80" stroke-width="2"/><text x="96.9" y="219.4" font-size="14" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">A</tspan><tspan dy="4" font-size="9.8">4</tspan><tspan dy="-4" font-size="1"> </tspan></text></g>
+<g id="kc-n4" tabindex="0" role="button" aria-label="Mesure A5" style="cursor:pointer;outline:none"><circle cx="62.5" cy="111.6" r="19" fill="#fff" stroke="#004D80" stroke-width="2"/><text x="63.5" y="116.6" font-size="14" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">A</tspan><tspan dy="4" font-size="9.8">5</tspan><tspan dy="-4" font-size="1"> </tspan></text></g>
+<text x="150.0" y="276.0" font-size="13" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >voisines sur le pentagone :</text>
+<text x="150.0" y="295.0" font-size="13" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >compatibles et jamais « oui » ensemble</text>
+<rect id="kc-pad" x="290" y="6" width="304" height="252" rx="10" fill="#f7fafb" stroke="#cbd5e1" stroke-width="1" style="cursor:grab;touch-action:pan-y"/>
+<g id="kc-3d" style="pointer-events:none">
+<polyline id="kc-ring" points="" fill="none" stroke="#cbd5e1" stroke-width="1.1" stroke-dasharray="3 4"/>
+<line id="kc-s0" x1="0" y1="0" x2="0" y2="0" stroke="#80a6c0" stroke-width="1.4" stroke-dasharray="5 4"/>
+<line id="kc-s1" x1="0" y1="0" x2="0" y2="0" stroke="#80a6c0" stroke-width="1.4" stroke-dasharray="5 4"/>
+<line id="kc-s2" x1="0" y1="0" x2="0" y2="0" stroke="#80a6c0" stroke-width="1.4" stroke-dasharray="5 4"/>
+<line id="kc-s3" x1="0" y1="0" x2="0" y2="0" stroke="#80a6c0" stroke-width="1.4" stroke-dasharray="5 4"/>
+<line id="kc-s4" x1="0" y1="0" x2="0" y2="0" stroke="#80a6c0" stroke-width="1.4" stroke-dasharray="5 4"/>
+<polyline id="kc-q0" points="" fill="none" stroke="#C2770B" stroke-width="1.6"/>
+<polyline id="kc-q1" points="" fill="none" stroke="#C2770B" stroke-width="1.6"/>
+<g id="kc-vecs">
+<g id="kc-v0"><line x1="0" y1="0" x2="0" y2="0" stroke="#004D80" stroke-width="2.2" stroke-linecap="round"/><circle r="5" fill="#004D80"/><text font-size="13" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif"><tspan font-style="italic">A</tspan><tspan dy="4" font-size="9.1">1</tspan><tspan dy="-4" font-size="1"> </tspan></text></g>
+<g id="kc-v1"><line x1="0" y1="0" x2="0" y2="0" stroke="#004D80" stroke-width="2.2" stroke-linecap="round"/><circle r="5" fill="#004D80"/><text font-size="13" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif"><tspan font-style="italic">A</tspan><tspan dy="4" font-size="9.1">2</tspan><tspan dy="-4" font-size="1"> </tspan></text></g>
+<g id="kc-v2"><line x1="0" y1="0" x2="0" y2="0" stroke="#004D80" stroke-width="2.2" stroke-linecap="round"/><circle r="5" fill="#004D80"/><text font-size="13" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif"><tspan font-style="italic">A</tspan><tspan dy="4" font-size="9.1">3</tspan><tspan dy="-4" font-size="1"> </tspan></text></g>
+<g id="kc-v3"><line x1="0" y1="0" x2="0" y2="0" stroke="#004D80" stroke-width="2.2" stroke-linecap="round"/><circle r="5" fill="#004D80"/><text font-size="13" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif"><tspan font-style="italic">A</tspan><tspan dy="4" font-size="9.1">4</tspan><tspan dy="-4" font-size="1"> </tspan></text></g>
+<g id="kc-v4"><line x1="0" y1="0" x2="0" y2="0" stroke="#004D80" stroke-width="2.2" stroke-linecap="round"/><circle r="5" fill="#004D80"/><text font-size="13" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif"><tspan font-style="italic">A</tspan><tspan dy="4" font-size="9.1">5</tspan><tspan dy="-4" font-size="1"> </tspan></text></g>
+<g id="kc-ax"><line x1="0" y1="0" x2="0" y2="0" stroke="#970E53" stroke-width="2.6" marker-end="url(#kca)"/></g>
+</g>
+<circle id="kc-o" r="3.5" fill="#334155"/>
+</g>
+<text x="582.0" y="24.0" font-size="12.5" fill="#970E53" text-anchor="end" font-family="Georgia,'Times New Roman',serif" >état du système</text>
+<line x1="500.0" y1="20.0" x2="488.0" y2="20.0" stroke="#970E53" stroke-width="2.6" />
+<text x="442.0" y="276.0" font-size="13" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >directions reliées par un trait :</text>
+<text x="442.0" y="295.0" font-size="13" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >perpendiculaires</text>
+<text id="kc-hint" x="442" y="250" font-size="12" fill="#64748b" text-anchor="middle" font-family="Georgia,'Times New Roman',serif">faites glisser pour tourner</text>
 </svg>
+<div class="fig-commandes"><button type="button" id="kc-cote">Vue de côté</button> <button type="button" id="kc-dessus">Vue de dessus</button> <button type="button" id="kc-axe">Voir un angle droit de face</button></div>
 </div>
-<p class="legende">À gauche, si les réponses préexistent, deux voisines ne sont jamais « oui » ensemble&nbsp;: il y a au plus deux « oui » parmi les cinq. À droite, la réalisation quantique&nbsp;: cinq directions en parapluie autour de l'état du système&nbsp;; les directions reliées par un trait de l'étoile sont perpendiculaires.</p>
+<p class="legende">À gauche, le pentagone des cinq mesures&nbsp;: si les réponses préexistent, deux voisines ne sont jamais « oui » ensemble, et il y a donc au plus deux « oui » parmi les cinq. À droite, la réalisation quantique, que l'on peut faire tourner&nbsp;: cinq directions en parapluie autour de l'état du système. Cliquez sur une mesure du pentagone&nbsp;: sa direction passe en orange, avec les deux angles droits qu'elle forme avec les directions de ses voisines. Vues de dessus, les directions perpendiculaires dessinent une étoile à cinq branches.</p>
 
 Dans un modèle non contextuel, les cinq réponses existent toutes à la fois. Sur un pentagone, on ne peut pas placer plus de deux « oui » sans que deux d'entre eux soient voisins. En moyenne sur de nombreuses répétitions, la somme des cinq probabilités de « oui » obéit donc à
 
@@ -946,5 +955,100 @@ Budroni, C., Cabello, A., Gühne, O., Kleinmann, M. et Larsson, J.-Å. « Kochen
   })(i);
   $('cb-reset').addEventListener('click', function () { for (var i = 0; i < 18; i++) sel[i] = false; draw(); });
   draw();
+})();
+(function () {
+  var svg = document.getElementById('kc-svg');
+  if (!svg) return;
+  var BLEU = '#004D80', AMBRE = '#C2770B', GRISBLEU = '#80A6C0';
+  function $(id) { return document.getElementById(id); }
+  // cinq directions en parapluie : A_{j+1} est à la position angulaire 2j (les voisines du pentagone sont à 144°)
+  var c2 = Math.cos(Math.PI / 5) / (1 + Math.cos(Math.PI / 5)), ct = Math.sqrt(c2), st = Math.sqrt(1 - c2);
+  var V = [];
+  for (var j = 0; j < 5; j++) { var a = 2 * Math.PI * ((2 * j) % 5) / 5 + 0.25; V.push([st * Math.cos(a), st * Math.sin(a), ct]); }
+  var cx = 442, cy = 134, R = 128, zc = 0.45;
+  var az = 0.5, el = 0.42, sel = 0, auto = true, visible = false, raf = null, last = null;
+  function P(p) {
+    var xr = p[0] * Math.cos(az) + p[1] * Math.sin(az), yr = -p[0] * Math.sin(az) + p[1] * Math.cos(az);
+    return [cx + R * xr, cy - R * ((p[2] - zc) * Math.cos(el) + yr * Math.sin(el)), yr * Math.cos(el) - (p[2] - zc) * Math.sin(el)];
+  }
+  function f(v) { return v.toFixed(1); }
+  function square(u, w) {
+    var s = 0.17, a = P([s * u[0], s * u[1], s * u[2]]), b = P([s * (u[0] + w[0]), s * (u[1] + w[1]), s * (u[2] + w[2])]), c = P([s * w[0], s * w[1], s * w[2]]);
+    return f(a[0]) + ',' + f(a[1]) + ' ' + f(b[0]) + ',' + f(b[1]) + ' ' + f(c[0]) + ',' + f(c[1]);
+  }
+  function draw() {
+    var O = P([0, 0, 0]), T = [], k;
+    for (k = 0; k < 5; k++) T.push(P(V[k]));
+    var ring = [];
+    for (k = 0; k <= 60; k++) { var t = 2 * Math.PI * k / 60, q = P([st * Math.cos(t), st * Math.sin(t), ct]); ring.push(f(q[0]) + ',' + f(q[1])); }
+    $('kc-ring').setAttribute('points', ring.join(' '));
+    var n1 = (sel + 1) % 5, n2 = (sel + 4) % 5;
+    for (k = 0; k < 5; k++) {
+      // trait k : relie A_{k+1} à A_{k+2} (voisines du pentagone, donc perpendiculaires)
+      var e = $('kc-s' + k), a = T[k], b = T[(k + 1) % 5], on = (k === sel || (k + 1) % 5 === sel);
+      e.setAttribute('x1', f(a[0])); e.setAttribute('y1', f(a[1])); e.setAttribute('x2', f(b[0])); e.setAttribute('y2', f(b[1]));
+      e.setAttribute('stroke', on ? AMBRE : GRISBLEU); e.setAttribute('stroke-width', on ? 2 : 1.4); e.setAttribute('stroke-dasharray', on ? '' : '5 4');
+      var pe = $('kc-e' + k); pe.setAttribute('stroke', on ? AMBRE : BLEU); pe.setAttribute('stroke-width', on ? 3.4 : 2);
+      var g = $('kc-v' + k), col = k === sel ? AMBRE : BLEU, ln = g.childNodes[0], dot = g.childNodes[1], tx = g.childNodes[2];
+      ln.setAttribute('x1', f(O[0])); ln.setAttribute('y1', f(O[1])); ln.setAttribute('x2', f(T[k][0])); ln.setAttribute('y2', f(T[k][1]));
+      ln.setAttribute('stroke', col); ln.setAttribute('stroke-width', k === sel ? 3 : 2.2);
+      dot.setAttribute('cx', f(T[k][0])); dot.setAttribute('cy', f(T[k][1])); dot.setAttribute('fill', col);
+      var dx = T[k][0] - O[0], dy = T[k][1] - O[1], n = Math.hypot(dx, dy) || 1;
+      tx.setAttribute('x', f(T[k][0] + 15 * dx / n)); tx.setAttribute('y', f(T[k][1] + 15 * dy / n + 4)); tx.setAttribute('fill', col);
+      var nd = $('kc-n' + k).firstChild; nd.setAttribute('stroke', k === sel ? AMBRE : BLEU); nd.setAttribute('stroke-width', k === sel ? 3.4 : 2);
+    }
+    $('kc-q0').setAttribute('points', square(V[sel], V[n1]));
+    $('kc-q1').setAttribute('points', square(V[sel], V[n2]));
+    var top = P([0, 0, 1.12]), ax = $('kc-ax').firstChild;
+    ax.setAttribute('x1', f(O[0])); ax.setAttribute('y1', f(O[1])); ax.setAttribute('x2', f(top[0])); ax.setAttribute('y2', f(top[1]));
+    $('kc-o').setAttribute('cx', f(O[0])); $('kc-o').setAttribute('cy', f(O[1]));
+    // ordre de tracé : du plus lointain au plus proche
+    var items = [];
+    for (k = 0; k < 5; k++) items.push([T[k][2], $('kc-v' + k)]);
+    items.push([P([0, 0, 0.56])[2], $('kc-ax')]);
+    items.sort(function (p, q) { return q[0] - p[0]; });
+    var box = $('kc-vecs');
+    for (k = 0; k < items.length; k++) box.appendChild(items[k][1]);
+  }
+  function select(k) { sel = k; draw(); }
+  for (var j = 0; j < 5; j++) (function (j) {
+    var nd = $('kc-n' + j);
+    nd.addEventListener('click', function () { select(j); });
+    nd.addEventListener('keydown', function (ev) { if (ev.key === ' ' || ev.key === 'Enter') { select(j); ev.preventDefault(); } });
+  })(j);
+  // rotation à la souris ou au doigt
+  var pad = $('kc-pad'), drag = null;
+  function stopAuto() { auto = false; $('kc-hint').setAttribute('opacity', 0); }
+  pad.addEventListener('pointerdown', function (ev) { drag = [ev.clientX, ev.clientY, az, el]; stopAuto(); pad.setPointerCapture(ev.pointerId); pad.style.cursor = 'grabbing'; });
+  pad.addEventListener('pointermove', function (ev) {
+    if (!drag) return;
+    az = drag[2] - (ev.clientX - drag[0]) * 0.012;
+    el = Math.max(-0.35, Math.min(Math.PI / 2, drag[3] + (ev.clientY - drag[1]) * 0.012));
+    draw();
+  });
+  function up() { drag = null; pad.style.cursor = 'grab'; }
+  pad.addEventListener('pointerup', up); pad.addEventListener('pointercancel', up);
+  function view(a, e) { stopAuto(); az = a; el = e; draw(); }
+  $('kc-cote').addEventListener('click', function () { view(0.5, 0.12); });
+  $('kc-dessus').addEventListener('click', function () { view(0.25 + Math.PI / 2, Math.PI / 2); });
+  var which = 0;
+  $('kc-axe').addEventListener('click', function () {
+    // regard perpendiculaire au plan de la direction choisie et de l'une de ses deux partenaires : l'angle droit apparaît de face
+    var u = V[sel], w = V[(sel + (which ? 4 : 1)) % 5]; which = 1 - which;
+    var n = [u[1] * w[2] - u[2] * w[1], u[2] * w[0] - u[0] * w[2], u[0] * w[1] - u[1] * w[0]];
+    if (n[2] < 0) n = [-n[0], -n[1], -n[2]];
+    view(Math.atan2(n[1], n[0]) + Math.PI / 2, Math.asin(Math.max(-1, Math.min(1, n[2]))));
+  });
+  function frame(ts) {
+    if (last !== null && auto) { az += (ts - last) * 0.00035; draw(); }
+    last = ts;
+    raf = (auto && visible) ? requestAnimationFrame(frame) : null;
+  }
+  draw();
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) auto = false;
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; last = null; if (visible && auto && !raf) raf = requestAnimationFrame(frame); }, { threshold: 0.3 }).observe(svg);
+  } else { visible = true; if (auto) raf = requestAnimationFrame(frame); }
 })();
 </script>
