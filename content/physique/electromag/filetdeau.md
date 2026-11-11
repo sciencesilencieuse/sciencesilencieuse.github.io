@@ -433,18 +433,27 @@ $$
 </svg>
 </div>
 <p class="legende">Un dipôle est un objet neutre&nbsp;: le champ ne peut le déplacer qu'en tirant inégalement sur ses deux extrémités.</p>
-<p><b>Champ uniforme.</b> Le champ est le même aux deux bouts. Les deux forces, $+qE$ et $-qE$, se compensent exactement. Le dipôle peut pivoter s'il est de travers, mais son centre ne bouge pas. C'est une lutte à la corde entre deux équipes de même force.</p>
-<p><b>Champ non uniforme.</b> Plaçons le dipôle le long d'un axe $x$, la charge $-q$ en $x$ et la charge $+q$ en $x+d$. La résultante vaut</p>
+
+<p><b>Champ uniforme&nbsp;:</b><br>
+Le champ est le même aux deux bouts. Les deux forces, $+qE$ et $-qE$, se compensent exactement. Le dipôle peut pivoter s'il est de travers, mais son centre ne bouge pas. C'est une lutte à la corde entre deux équipes de même force.</p>
+
+<p><b>Champ non uniforme&nbsp;:</b><br>
+Plaçons le dipôle le long d'un axe $x$, la charge $-q$ en $x$ et la charge $+q$ en $x+d$. La résultante vaut</p>
+
 <p style="text-align:center;">$F=q\,E(x+d)-q\,E(x)=q\,\big[E(x+d)-E(x)\big]\approx q\,d\,\dfrac{\mathrm{d}E}{\mathrm{d}x}=p\,\dfrac{\mathrm{d}E}{\mathrm{d}x}.$</p>
+
 <p>La force est proportionnelle à la <b>différence</b> de champ entre les deux extrémités, c'est-à-dire, le dipôle étant minuscule, à la <b>dérivée</b> du champ. La valeur du champ lui-même, aussi énorme soit-elle, disparaît de la soustraction. L'expression $(\vec{p}\cdot\vec{\nabla})\vec{E}$ ne dit rien d'autre&nbsp;: elle se lit « $p$ multiplié par le taux de variation de $\vec{E}$ lorsqu'on se déplace le long du dipôle », et se réduit à $p\,\frac{\mathrm{d}E}{\mathrm{d}x}$ quand tout est aligné sur un axe. (En coordonnées, $(\vec{p}\cdot\vec{\nabla})\vec{E}=p_x\frac{\partial\vec{E}}{\partial x}+p_y\frac{\partial\vec{E}}{\partial y}+p_z\frac{\partial\vec{E}}{\partial z}$&nbsp;; on la note aussi $(\vec{p}\cdot\overrightarrow{\text{grad}})\vec{E}$.)</p>
+
 <p><b>Vers où&nbsp;? Toujours vers le champ fort.</b> Les dipôles de l'eau ne sont pas orientés n'importe comment&nbsp;: leur penchant moyen suit le champ ($\vec{P}$ est parallèle à $\vec{E}$). Si la règle est chargée positivement, ce sont les extrémités négatives qui se tournent vers elle, donc vers la région de champ fort&nbsp;: elles sont plus attirées que les extrémités positives ne sont repoussées. Si la règle est négative, tout s'inverse, les dipôles se retournent, et le résultat est le même. L'eau est attirée dans les deux cas, ce qui se lit sur la formule&nbsp;: en remplaçant $P$ par $\varepsilon_0(\varepsilon_r-1)E$, la force devient proportionnelle à $E\,\frac{\mathrm{d}E}{\mathrm{d}x}=\frac12\frac{\mathrm{d}(E^2)}{\mathrm{d}x}$, insensible au signe du champ. C'est ainsi qu'un peigne frotté attire des bouts de papier neutres.</p>
-<p><b>Du dipôle au liquide.</b> Un mètre cube d'eau contient un moment dipolaire total $P$. Il suffit donc de remplacer $p$ par $P$ pour obtenir la force par unité de volume&nbsp;: $f=P\,\frac{\mathrm{d}E}{\mathrm{d}x}$, ou en général $(\vec{P}\cdot\vec{\nabla})\vec{E}$.</p>
-<p><b>Ce qu'il faut en retenir&nbsp;: un critère de vérité.</b> Si le champ varie sur une distance typique $L$, la force dipolaire vaut à peu près $\frac{PE}{L}$&nbsp;: elle s'évanouit quand $L$ devient très grand, c'est-à-dire quand le champ devient uniforme. Une <b>charge nette</b>, elle, subit la force $qE$, qui ne demande aucun gradient. Les deux mécanismes font donc des prédictions opposées dans un champ uniforme&nbsp;:</p>
+
+<p><b>Du dipôle au liquide&nbsp;:</b><br>
+Un mètre cube d'eau contient un moment dipolaire total $P$. Il suffit donc de remplacer $p$ par $P$ pour obtenir la force par unité de volume&nbsp;: $f=P\,\frac{\mathrm{d}E}{\mathrm{d}x}$, ou en général $(\vec{P}\cdot\vec{\nabla})\vec{E}$.</p>
+
+<p>Si le champ varie sur une distance typique $L$, la force dipolaire vaut à peu près $\frac{PE}{L}$&nbsp;: elle s'évanouit quand $L$ devient très grand, c'est-à-dire quand le champ devient uniforme. Une <b>charge nette</b>, elle, subit la force $qE$, qui ne demande aucun gradient. Les deux mécanismes font donc des prédictions opposées dans un champ uniforme&nbsp;:</p>
 <ul>
 <li>si le filet est dévié parce qu'il est <b>polarisé</b>, il doit traverser un champ uniforme en ligne droite, quelle que soit l'intensité de ce champ&nbsp;;</li>
 <li>si le filet est dévié parce qu'il est <b>chargé</b>, il doit y être dévié, et toujours vers la même plaque.</li>
 </ul>
-<p>Le gradient n'est donc pas un détail technique de la formule&nbsp;: c'est la signature du mécanisme dipolaire, et le moyen de le mettre à l'épreuve.</p>
 </div>
 
 <div id="preuve">
