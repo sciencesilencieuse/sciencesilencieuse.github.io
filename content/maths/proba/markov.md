@@ -1750,7 +1750,11 @@ La dimension $2$ est le cas limite&nbsp;: la série harmonique diverge, mais ave
 Revenir est certain sur une droite, mais **combien de temps faut-il attendre&nbsp;?** Pour une chaîne finie, la réponse tient en une formule d'une simplicité désarmante, due à Mark Kac&nbsp;:
 
 <div id="theo">
-<p><b>Temps de retour.</b> Pour une chaîne irréductible de loi stationnaire $\pi$, le temps moyen pour revenir à un état $x$ en partant de $x$ vaut</p>
+
+<b>Temps de retour</b> 
+
+Pour une chaîne irréductible de loi stationnaire $\pi$, le temps moyen pour revenir à un état $x$ en partant de $x$ vaut
+
 <p style="text-align:center;">$\mathbb{E}_x\left(\tau_x^+\right)=\dfrac{1}{\pi(x)}.$</p>
 </div>
 
