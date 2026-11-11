@@ -465,16 +465,17 @@ Dans l'animation, l'histogramme se stabilise. Ce n'est pas un hasard&nbsp;: la l
 <text x="95.0" y="367.0" text-anchor="middle" font-size="13.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >nuages</text>
 <text x="505.0" y="367.0" text-anchor="middle" font-size="13.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >pluie</text>
 <g id="sx-traj"></g>
+<circle id="sx-halo" visibility="hidden" cx="276.5" cy="221.1" r="7" fill="none" stroke="#334155" stroke-width="2"/>
 <circle id="sx-pi" visibility="hidden" cx="276.5" cy="221.1" r="7" fill="#fff" stroke="#334155" stroke-width="2"/>
 <text id="sx-pil" visibility="hidden" x="286.5" y="236.5" text-anchor="start" font-size="18" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >π</text>
 <text x="560.0" y="120.0" text-anchor="end" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >chaque point : la loi</text>
-<text id="sx-t" x="560.0" y="172.0" text-anchor="end" font-size="17" font-weight="bold" fill="#970E53" font-family="Georgia,'Times New Roman',serif">jour 0</text>
-<g id="sx-bar">
+<text id="sx-t" x="560.0" y="46.0" text-anchor="end" font-size="17" font-weight="bold" fill="#970E53" font-family="Georgia,'Times New Roman',serif">jour 0</text>
+<g id="sx-bar" transform="translate(0,-126)" style="-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;">
 <line x1="420" y1="190" x2="560" y2="190" stroke="#dbe3ea" stroke-width="4" stroke-linecap="round"/>
 <line x1="420.0" y1="185" x2="420.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="430.0" y1="185" x2="430.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="440.0" y1="185" x2="440.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="450.0" y1="185" x2="450.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="460.0" y1="185" x2="460.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="470.0" y1="185" x2="470.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="480.0" y1="185" x2="480.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="490.0" y1="185" x2="490.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="500.0" y1="185" x2="500.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="510.0" y1="185" x2="510.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="520.0" y1="185" x2="520.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="530.0" y1="185" x2="530.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="540.0" y1="185" x2="540.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="550.0" y1="185" x2="550.0" y2="195" stroke="#94a3b8" stroke-width="1"/><line x1="560.0" y1="185" x2="560.0" y2="195" stroke="#94a3b8" stroke-width="1"/>
 <line id="sx-fill" x1="420" y1="190" x2="420" y2="190" stroke="#970E53" stroke-width="4" stroke-linecap="round"/>
 <rect id="sx-hit" x="410" y="174" width="160" height="32" fill="transparent" style="cursor:ew-resize;touch-action:none;"/>
-<circle id="sx-knob" cx="420" cy="190" r="7.5" fill="#970E53" stroke="#fff" stroke-width="2" tabindex="0" role="slider" aria-label="Nombre de jours écoulés" aria-valuemin="0" aria-valuemax="14" aria-valuenow="0" style="cursor:ew-resize;touch-action:none;outline:none;"/>
+<circle id="sx-knob" cx="420" cy="190" r="7.5" fill="#970E53" stroke="#fff" stroke-width="2" tabindex="0" role="slider" aria-label="Nombre de jours écoulés" aria-valuemin="0" aria-valuemax="14" aria-valuenow="0" style="cursor:ew-resize;touch-action:none;outline:none;pointer-events:none;"/>
 <text x="560" y="214" text-anchor="end" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">glissez pour remonter le temps</text>
 </g>
 <text x="560.0" y="136.0" text-anchor="end" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >d'un jour donné</text>
@@ -2212,10 +2213,36 @@ Le remède, quand il existe, consiste à changer de chaîne tout en gardant la m
     var x = BX0 + BW * v / TMAX;
     $('sx-fill').setAttribute('x2', x.toFixed(1)); $('sx-knob').setAttribute('cx', x.toFixed(1));
   }
+  // arrivée de π : le rond grandit avec un petit rebond, une onde s'en échappe, puis l'étiquette apparaît
+  var pi = $('sx-pi'), pil = $('sx-pil'), halo = $('sx-halo'), piOn = false, piGen = 0;
+  function hidePi() {
+    piGen++; piOn = false;
+    pi.setAttribute('visibility', 'hidden'); pil.setAttribute('visibility', 'hidden'); halo.setAttribute('visibility', 'hidden');
+  }
+  function showPi() {
+    if (piOn) return; piOn = true;
+    var my = ++piGen, reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    pi.setAttribute('visibility', 'visible'); pil.setAttribute('visibility', 'visible');
+    if (reduce) return;
+    pi.setAttribute('r', 0); pil.setAttribute('opacity', 0); halo.setAttribute('visibility', 'visible');
+    var t0 = null;
+    function back(u) { var c = 2.2; return 1 + (c + 1) * Math.pow(u - 1, 3) + c * Math.pow(u - 1, 2); }
+    function frame(ts) {
+      if (my !== piGen) return;
+      if (t0 === null) t0 = ts;
+      var el = ts - t0, u = Math.min(1, el / 650), w = Math.min(1, el / 900);
+      pi.setAttribute('r', (7 * back(u)).toFixed(2));
+      halo.setAttribute('r', (7 + 30 * w).toFixed(1)); halo.setAttribute('opacity', (0.6 * (1 - w)).toFixed(2));
+      var o = Math.max(0, Math.min(1, (el - 300) / 350));
+      pil.setAttribute('opacity', o.toFixed(2));
+      if (el < 900) requestAnimationFrame(frame);
+      else { pi.setAttribute('r', 7); pil.setAttribute('opacity', 1); halo.setAttribute('visibility', 'hidden'); }
+    }
+    requestAnimationFrame(frame);
+  }
   function label() {
     $('sx-t').textContent = 'jour ' + t;
-    var v = t >= TMAX ? 'visible' : 'hidden';
-    $('sx-pi').setAttribute('visibility', v); $('sx-pil').setAttribute('visibility', v);
+    if (t >= TMAX) showPi(); else hidePi();
     $('sx-knob').setAttribute('aria-valuenow', t);
     setProg(t);
   }
@@ -2268,15 +2295,26 @@ Le remède, quand il existe, consiste à changer de chaîne tout en gardant la m
   });
   $('sx-reset').addEventListener('click', function () { init(); running = true; setBtn(); start(); });
   // curseur : on fait glisser la barre pour choisir le jour
-  var hit = $('sx-hit'), knob = $('sx-knob'), drag = false;
+  var hit = $('sx-hit'), knob = $('sx-knob'), bar = $('sx-bar'), drag = false;
   function dayAt(ev) {
     var pt = svg.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
     return Math.round((pt.matrixTransform(svg.getScreenCTM().inverse()).x - BX0) / BW * TMAX);
   }
-  hit.addEventListener('pointerdown', function (ev) { drag = true; try { hit.setPointerCapture(ev.pointerId); } catch (e) {} seek(dayAt(ev)); ev.preventDefault(); });
-  hit.addEventListener('pointermove', function (ev) { if (drag) { var k = dayAt(ev); if (k !== t) seek(k); } });
-  hit.addEventListener('pointerup', function () { drag = false; });
-  hit.addEventListener('pointercancel', function () { drag = false; });
+  function move(ev) { if (!drag) return; var k = dayAt(ev); if (k !== t) seek(k); ev.preventDefault(); }
+  function release() {
+    drag = false;
+    document.removeEventListener('pointermove', move); document.removeEventListener('pointerup', release); document.removeEventListener('pointercancel', release);
+  }
+  // les écouteurs de suivi sont posés sur le document : le glissement continue même si le pointeur sort de la barre
+  hit.addEventListener('pointerdown', function (ev) {
+    drag = true; seek(dayAt(ev)); knob.focus({ preventScroll: true });
+    document.addEventListener('pointermove', move); document.addEventListener('pointerup', release); document.addEventListener('pointercancel', release);
+    ev.preventDefault();
+  });
+  // Safari : empêche la sélection de texte et le défilement de la page pendant le glissement
+  bar.addEventListener('mousedown', function (ev) { ev.preventDefault(); });
+  bar.addEventListener('touchstart', function (ev) { ev.preventDefault(); }, { passive: false });
+  bar.addEventListener('touchmove', function (ev) { ev.preventDefault(); }, { passive: false });
   knob.addEventListener('keydown', function (ev) {
     var d = ev.key === 'ArrowRight' || ev.key === 'ArrowUp' ? 1 : ev.key === 'ArrowLeft' || ev.key === 'ArrowDown' ? -1 : 0;
     if (d) { seek(t + d); ev.preventDefault(); }
