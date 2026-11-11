@@ -324,6 +324,13 @@ margin-top:0em;
     color: #006C65;
     margin-bottom: 0.3em;
 }
+.tm-note
+{
+    font-size: 0.82em;
+    color: #64748b;
+    text-align: right;
+    margin: 0 0.4em 0.6em;
+}
 .texte-markov
 {
     font-family: Georgia, 'Times New Roman', serif;
@@ -427,14 +434,23 @@ La case $(i,j)$ de $P^t$ est la probabilité d'aller de $i$ à $j$ en exactement
 
 <div class="encadre">
 <div class="encadre-titre">Shannon et les textes de Markov</div>
-<p>En 1948, dans l'article qui fonde la théorie de l'information, Claude Shannon reprend l'idée de Markov pour <em>fabriquer</em> du texte. On choisit chaque lettre au hasard en ne regardant que les $k$ précédentes, avec les fréquences observées dans un vrai texte. C'est une chaîne de Markov dont les états sont les suites de $k$ lettres. Voici ce que donne la recette appliquée à l'ensemble des pages de ce site&nbsp;:</p>
+<p>En 1948, dans l'article qui fonde la théorie de l'information, Claude Shannon reprend l'idée de Markov pour <em>fabriquer</em> du texte. On choisit chaque lettre au hasard en ne regardant que les $k$ précédentes, avec les fréquences observées dans un vrai texte. C'est une chaîne de Markov dont les états sont les suites de $k$ lettres. Voici la recette, appliquée aux pages de ce site.</p>
+<p><b>1. Le texte de référence.</b> On prend les pages du site et l'on n'en garde que la prose&nbsp;: titres, figures, tableaux, programmes et paragraphes contenant des formules sont écartés. Mis bout à bout, les paragraphes restants forment un seul long texte d'environ $390\,000$ caractères ($62\,000$ mots), écrit avec $123$ caractères différents (minuscules, majuscules, lettres accentuées, chiffres, ponctuation, espace).</p>
+<p><b>2. La matrice de transition.</b> L'état de la chaîne est la suite des $k$ derniers caractères écrits. Pour connaître la ligne de la matrice associée à un état, on relève toutes ses apparitions dans le texte et l'on compte le caractère qui le suit. Par exemple, avec $k=2$, l'état « qu » apparaît $4036$ fois&nbsp;; il est suivi de « e » dans $61\,\%$ des cas, de « i » dans $14\,\%$, d'une apostrophe dans $12\,\%$ et de « a » dans $10\,\%$. Ces fréquences sont les probabilités de transition depuis « qu ».</p>
+<p><b>3. Le tirage.</b> On part du début d'une phrase prise au hasard dans le texte. Puis, à chaque pas, on tire le caractère suivant selon la ligne de l'état courant, on l'écrit, et l'état se décale d'un cran (on oublie le caractère le plus ancien). On s'arrête au premier point final après $150$ caractères.</p>
+<p>En pratique, on ne construit jamais la matrice, qui serait énorme et presque vide. Il suffit de remarquer que tirer un caractère « selon les fréquences observées » revient à <b>choisir au hasard l'une des apparitions de l'état dans le texte, et à recopier le caractère qui la suit</b>. Shannon procédait ainsi à la main&nbsp;: il ouvrait un livre au hasard, lisait jusqu'à rencontrer les dernières lettres écrites, et notait la suivante. Le bouton ci-dessous fait exactement cela dans votre navigateur. Pour une mémoire comptée en mots, la recette est la même en remplaçant « caractère » par « mot » (les mots étant simplement les morceaux de texte séparés par des espaces, ponctuation comprise).</p>
 <p><b>Deux lettres de mémoire</b>&nbsp;:</p>
-<p class="texte-markov">Résure du de dant symble le, Jactiqui dans. On damplées s'éque et et de terayonn du prés une de aut le sois possonnen ce.</p>
+<p class="texte-markov" id="tm-2">Loet un touvermen les la mitégé ter l'un grant Want ormit a blendande enté de qu'onsen, parate le ille l'averation. Sarration, ent plus la maitreme ra bay façon.</p>
+<p class="tm-note" id="tm-2n">pas forcés&nbsp;: 1&nbsp;%</p>
 <p><b>Six lettres de mémoire</b>&nbsp;:</p>
-<p class="texte-markov">Soit une vers la formule qui donne à une doubles noms des par exemple précédent choisis aléatoire, il suffit qu'échangent pas connexes Gell-Mann-Low est une phase une hydrodynamique.</p>
+<p class="texte-markov" id="tm-6">L'idée durant plus grand des grandeur de matière optique de la particle science. En juin 1696, il a une symétrique. La rétrocausalité. Le théorie est orthogonality Fléau de mémoire n'est de masse.</p>
+<p class="tm-note" id="tm-6n">pas forcés&nbsp;: 45&nbsp;%</p>
 <p><b>Deux mots de mémoire</b>&nbsp;:</p>
-<p class="texte-markov">La transformée de Legendre permet d'encoder différemment l'information d'une fonction. En particulier, l'évolution dans le cadre de la figure suivante ici dans une boîte, ce qui existe sans qu'on ait affaire à un point alors que la capacité par unité de volume.</p>
-<p>Le français émerge à mesure que la mémoire s'allonge, sans que la machine « comprenne » quoi que ce soit. Les modèles de langage actuels ne sont plus des chaînes de Markov au sens strict, mais ils prolongent cette idée&nbsp;: prédire le mot suivant à partir de ceux qui précèdent.</p>
+<p class="texte-markov" id="tm-m">On va d'abord chercher à mesurer tous les trois propriétés réflexivité, symétrie et transitivité. Mais on se heurte à la syntaxe. Pour le rendre plus scientifique, on peut prouver une formule à droite est une ligne droite infinie.</p>
+<p class="tm-note" id="tm-mn">pas forcés&nbsp;: 50&nbsp;%</p>
+<div class="fig-commandes"><button type="button" id="tm-go">Nouveau tirage</button> <span id="tm-etat" aria-live="polite"></span></div>
+<p>Le français émerge à mesure que la mémoire s'allonge, sans que la machine « comprenne » quoi que ce soit. Mais il y a un revers, que mesure le pourcentage de <b>pas forcés</b> affiché sous chaque texte&nbsp;: la proportion de pas où l'état courant n'avait, dans tout le texte de référence, qu'une seule suite possible. Avec deux lettres, la chaîne invente vraiment&nbsp;: on ne rencontre que $1514$ états différents, et les plus courants ont chacun de nombreuses suites possibles. Avec six lettres, on compte $95\,637$ états différents, dont $77\,\%$ n'ont qu'une suite&nbsp;; avec deux mots, $86\,\%$. La chaîne passe alors une bonne part de son temps à <b>recopier</b> des fragments du site, et ne bifurque que de loin en loin. Allonger encore la mémoire ne donnerait que des copies conformes&nbsp;: le nombre d'états possibles croît exponentiellement avec $k$, et aucun texte n'est assez long pour les faire tous apparaître plusieurs fois.</p>
+<p>Les modèles de langage actuels prolongent cette idée (prédire le mot suivant à partir de ceux qui précèdent) en contournant précisément cet obstacle&nbsp;: au lieu de consulter un tableau de fréquences, ils <em>calculent</em> les probabilités de la suite avec un réseau de neurones, capable de traiter de façon semblable des contextes qui se ressemblent sans avoir jamais été vus tels quels.</p>
 </div>
 
 ## Le point fixe de la danse des probabilités
@@ -2400,5 +2416,65 @@ Le remède, quand il existe, consiste à changer de chaîne tout en gardant la m
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(function (e) { visible = e[0].isIntersecting; go(); }, { threshold: 0.2 }).observe(cv);
   } else { visible = true; go(); }
+})();
+(function () {
+  var btn = document.getElementById('tm-go');
+  if (!btn) return;
+  var T = null, starts = null, etat = document.getElementById('tm-etat');
+  function pick(n) { return (Math.random() * n) | 0; }
+  // choisit au hasard une apparition de ctx dans le texte et renvoie ce qui la suit (un caractère, ou un mot si mot = true)
+  function suite(ctx, mot) {
+    var from = 0, n = 0, choix = null, premier = null, varie = false, i, nx, j;
+    while ((i = T.indexOf(ctx, from)) !== -1) {
+      from = i + 1; j = i + ctx.length;
+      if (j >= T.length) break;
+      if (mot) { var e = T.indexOf(' ', j); nx = T.substring(j, e === -1 ? T.length : e); } else nx = T.charAt(j);
+      n++;
+      if (premier === null) premier = nx; else if (nx !== premier) varie = true;
+      if (pick(n) === 0) choix = nx;
+    }
+    return choix === null ? null : [choix, !varie];
+  }
+  function depart() { return starts[pick(starts.length)]; }
+  function lettres(k) {
+    var p = depart(), out = T.substr(p, k), forces = 0, pas = 0;
+    while (out.length < 330) {
+      var r = suite(out.slice(-k), false);
+      if (!r) break;
+      out += r[0]; pas++; if (r[1]) forces++;
+      if (r[0] === '.' && out.length > 150) break;
+    }
+    return [out, pas ? Math.round(100 * forces / pas) : 0];
+  }
+  function mots() {
+    var p = depart(), e1 = T.indexOf(' ', p), e2 = T.indexOf(' ', e1 + 1);
+    var w = [T.substring(p, e1), T.substring(e1 + 1, e2)], forces = 0, pas = 0;
+    while (w.length < 75) {
+      var r = suite(' ' + w[w.length - 2] + ' ' + w[w.length - 1] + ' ', true);
+      if (!r) break;
+      w.push(r[0]); pas++; if (r[1]) forces++;
+      if (/\.$/.test(r[0]) && w.length > 30) break;
+    }
+    return [w.join(' '), pas ? Math.round(100 * forces / pas) : 0];
+  }
+  function affiche(id, r) {
+    document.getElementById(id).textContent = r[0];
+    document.getElementById(id + 'n').textContent = 'pas forcés : ' + r[1] + ' %';
+  }
+  function tirage() {
+    affiche('tm-2', lettres(2)); affiche('tm-6', lettres(6)); affiche('tm-m', mots());
+    etat.textContent = ''; btn.disabled = false;
+  }
+  btn.addEventListener('click', function () {
+    btn.disabled = true;
+    if (T) { setTimeout(tirage, 10); return; }
+    etat.textContent = 'chargement du texte de référence…';
+    fetch('/markov_corpus.txt').then(function (r) { if (!r.ok) throw 0; return r.text(); }).then(function (t) {
+      T = ' ' + t; starts = [];
+      var re = /[.!?] (?=[A-ZÀÉ])/g, m;
+      while ((m = re.exec(T)) !== null) starts.push(m.index + 2);
+      tirage();
+    }).catch(function () { etat.textContent = 'le texte de référence n\'a pas pu être chargé.'; btn.disabled = false; });
+  });
 })();
 </script>
