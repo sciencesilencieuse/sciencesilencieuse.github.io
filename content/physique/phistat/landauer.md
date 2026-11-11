@@ -887,7 +887,7 @@ Reste une question, la plus difficile. Tout au long de cette page, l'information
 
 La plupart des physiciens pensent aujourd'hui que l'information ressort, subtilement encodée dans les corrélations du rayonnement, comme elle l'est dans la fumée d'un livre qui brûle. Don Page a montré en 1993 à quoi devrait alors ressembler l'entropie du rayonnement au cours du temps (elle croît, puis décroît jusqu'à zéro), et des calculs menés depuis 2019 retrouvent cette courbe à partir de la gravité elle-même. Comment l'information franchit l'horizon reste en revanche mal compris&nbsp;; la question touche à la nature de l'espace-temps, et rejoint les idées présentées sur la page [ER = EPR](../../quantique/erepr/). Elle mériterait une page à elle seule.
 
-## Ce qu'il faut retenir
+## En bref
 
 <ul>
 <li><b>L'entropie thermodynamique est une information manquante</b>&nbsp;: celle qui sépare la description macroscopique d'un système de son micro-état. Le facteur de conversion est $k_B\ln 2$ par bit.</li>
@@ -899,18 +899,12 @@ La plupart des physiciens pensent aujourd'hui que l'information ressort, subtile
 
 <br>
 
-<b><i>Sources&nbsp;:</i></b>
 
-- Lutz, E. et Ciliberto, S. « Information: From Maxwell's demon to Landauer's eraser », *Physics Today* 68 (9), 30 (2015). [🌐](https://physicstoday.aip.org/features/information-from-maxwells-demon-to-landauers-eraser)
-- Landauer, R. « Irreversibility and Heat Generation in the Computing Process », *IBM Journal of Research and Development* 5, 183 (1961).
-- Bennett, C. H. « The thermodynamics of computation, a review », *International Journal of Theoretical Physics* 21, 905 (1982).
-- Jaynes, E. T. « The Gibbs Paradox », dans *Maximum Entropy and Bayesian Methods*, Kluwer (1992). [🌐](https://bayes.wustl.edu/etj/articles/gibbs.paradox.pdf)
-- Toyabe, S. et al. « Experimental demonstration of information-to-energy conversion and validation of the generalized Jarzynski equality », *Nature Physics* 6, 988 (2010).
-- Bérut, A. et al. « Experimental verification of Landauer's principle linking information and thermodynamics », *Nature* 483, 187 (2012).
-- Sagawa, T. et Ueda, M. « Second Law of Thermodynamics with Discrete Quantum Feedback Control », *Physical Review Letters* 100, 080403 (2008)&nbsp;; « Minimal Energy Cost for Thermodynamic Information Processing: Measurement and Information Erasure », *Physical Review Letters* 102, 250602 (2009).
-- Parrondo, J. M. R., Horowitz, J. M. et Sagawa, T. « Thermodynamics of information », *Nature Physics* 11, 131 (2015).
-- Bekenstein, J. D. « Black Holes and Entropy », *Physical Review D* 7, 2333 (1973).
-- Egan, C. A. et Lineweaver, C. H. « A Larger Estimate of the Entropy of the Universe », *The Astrophysical Journal* 710, 1825 (2010). [🌐](https://arxiv.org/abs/0909.3983)
+> Lutz, E. et Ciliberto, S. « Information: From Maxwell's demon to Landauer's eraser », *Physics Today* 68 (9), 30 (2015). [🌐](https://physicstoday.aip.org/features/information-from-maxwells-demon-to-landauers-eraser)
+Bennett, C. H. « The thermodynamics of computation, a review », *International Journal of Theoretical Physics* 21, 905 (1982).
+Jaynes, E. T. « The Gibbs Paradox », dans *Maximum Entropy and Bayesian Methods*, Kluwer (1992). [🌐](https://bayes.wustl.edu/etj/articles/gibbs.paradox.pdf)
+Bekenstein, J. D. « Black Holes and Entropy », *Physical Review D* 7, 2333 (1973).
+Egan, C. A. et Lineweaver, C. H. « A Larger Estimate of the Entropy of the Universe », *The Astrophysical Journal* 710, 1825 (2010). [🌐](https://arxiv.org/abs/0909.3983)
 
 <script>
 (function () {
