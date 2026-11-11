@@ -40,53 +40,55 @@ td, th {
   }
 
   /* --- GRILLE DE CARTES --- */
+  /* Cartes de largeur fixe qui passent à la ligne ; chaque ligne est centrée,
+     y compris la dernière quand elle est incomplète. */
   .math-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 22px;
     margin-bottom: 40px;
   }
 
-  /* Chaque carte porte sa couleur : --c (accent) et --t (teinte claire).
-     Pour changer la couleur d'un domaine, modifier seulement ces deux valeurs. */
-  .math-card { --c: #1971c2; --t: #e7f5ff; }
-  .card-fondements   { --c: #7048e8; --t: #f3f0ff; }
-  .card-arithmetique { --c: #d9480f; --t: #fff4e6; }
-  .card-algebre      { --c: #1971c2; --t: #e7f5ff; }
-  .card-geometrie    { --c: #2b8a3e; --t: #ebfbee; }
-  .card-proba        { --c: #c2255c; --t: #fff0f6; }
-  .card-stat         { --c: #0b7285; --t: #e3fafc; }
-  .card-jeux         { --c: #a86400; --t: #fff9db; }
+  /* Chaque carte porte sa couleur d'accent --c.
+     Pour changer la couleur d'un domaine, modifier seulement cette valeur. */
+  .math-card         { --c: #1864ab; }
+  .card-fondements   { --c: #5f3dc4; }
+  .card-arithmetique { --c: #c9400c; }
+  .card-algebre      { --c: #1864ab; }
+  .card-geometrie    { --c: #2b8a3e; }
+  .card-proba        { --c: #c2255c; }
+  .card-stat         { --c: #0b7285; }
+  .card-jeux         { --c: #b35c00; }
 
   .math-card {
+    flex: 0 1 350px;
+    box-sizing: border-box;
+    min-width: 0;
     background: #ffffff;
-    border: 1px solid #e6e8ee;
-    /*border-top: 4px solid var(--c);*/
-    border-radius: 14px;
-    padding: 0 0 8px;
-    overflow: hidden;
+    border: 1px solid #e2e5ea;
+    border-radius: 10px;
+    padding: 28px 22px 14px;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    box-shadow: 0 2px 6px rgba(20, 30, 60, 0.06);
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
   }
 
   .math-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 24px rgba(20, 30, 60, 0.12);
+    box-shadow: 0 12px 28px rgba(16, 24, 40, 0.12);
     border-color: var(--c);
   }
 
-  /* --- EN-TÊTE DE CARTE : pictogramme + titre --- */
+  /* --- EN-TÊTE DE CARTE : pictogramme, titre, trait d'accent --- */
   .math-card-head {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 14px;
-    padding: 16px 20px;
-    margin-bottom: 16px;
-    background: linear-gradient(120deg, var(--t) 0%, #ffffff 90%);
-    border-bottom: 1px solid var(--t);
+    margin-bottom: 22px;
   }
 
   .math-icon {
@@ -94,18 +96,17 @@ td, th {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 54px;
-    height: 54px;
-    border-radius: 14px;
-    background: #ffffff;
-    color: var(--c);
-    box-shadow: 0 1px 4px rgba(20, 30, 60, 0.10);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--c);
+    color: #ffffff;
     transition: transform 0.25s ease;
   }
 
   .math-icon svg {
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
     fill: none;
     stroke: currentColor;
     stroke-width: 2.4;
@@ -113,48 +114,69 @@ td, th {
     stroke-linejoin: round;
   }
   .math-icon .plein  { fill: currentColor; stroke: none; }
-  .math-icon .teinte { fill: currentColor; fill-opacity: 0.16; }
-  .math-icon .leger  { stroke-opacity: 0.4; }
+  .math-icon .teinte { fill: currentColor; fill-opacity: 0.28; }
+  .math-icon .leger  { stroke-opacity: 0.6; }
+  .math-icon .creux  { fill: var(--c); }
 
-  .math-card:hover .math-icon { transform: scale(1.08) rotate(-4deg); }
+  .math-card:hover .math-icon { transform: scale(1.08); }
 
   .math-card h3 {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 1.4rem;
+    font-size: 1.45rem;
     font-weight: 400;
-    text-align: left;
+    text-align: center;
   }
+
+  .math-card h3::after {
+    content: "";
+    display: block;
+    width: 34px;
+    height: 3px;
+    margin: 12px auto 0;
+    border-radius: 2px;
+    background: var(--c);
+    transition: width 0.25s ease;
+  }
+  .math-card:hover h3::after { width: 64px; }
 
   .math-card h3 a,
   .math-card h3 a:hover {
-    color: var(--c) !important;
+    color: #1f2933 !important;
     text-decoration: none !important;
   }
 
   /* --- STYLE DES CONTENEURS DE BOUTONS --- */
-  .theme-subgroup { padding: 0 20px; }
-
   .link-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 8px;            /* Gère l'espace horizontal et vertical entre les boutons */
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
 
-  /* --- STYLE DES SOUS-TITRES (ex: Nombres & Propriétés) --- */
+  /* --- STYLE DES SOUS-TITRES (ex: Nombres & Propriétés) : centrés entre deux filets --- */
   .theme-title {
-    display: block;
-    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 0.72rem;
     font-weight: bold;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--c);
-    opacity: 0.85;
-    margin-top: 2px;
-    margin-bottom: 8px;
+    color: #6b7280;
+    margin-top: 4px;
+    margin-bottom: 12px;
     width: 100%;
+  }
+  .theme-title::before,
+  .theme-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e2e5ea;
   }
 
   /* --- STYLE DES BOUTONS (Centrage mathématique absolu) --- */
@@ -164,17 +186,17 @@ td, th {
 
     height: 32px !important;           /* Hauteur totale du bouton */
     line-height: 30px !important;      /* 32px moins les 2px de bordures (haut+bas) */
-    padding: 0 13px !important;        /* Strictement AUCUN padding vertical pour ne rien fausser */
+    padding: 0 12px !important;        /* Strictement AUCUN padding vertical pour ne rien fausser */
 
     vertical-align: middle;
-    background: var(--t);
-    border: 1px solid transparent !important;
-    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid #d3d8df !important;
+    border-radius: 7px;
     font-size: 0.88rem;
-    color: #2c3e50 !important;
+    color: #1f2933 !important;
     text-decoration: none !important;
     box-shadow: none !important;
-    transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease !important;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease !important;
     position: relative;
   }
 
@@ -187,14 +209,14 @@ td, th {
   .math-btn:hover,
   .math-btn:focus-visible {
     background: var(--c) !important;
+    border-color: var(--c) !important;
     color: #ffffff !important;
     text-decoration: none !important;
-    transform: translateY(-1px);
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .math-card, .math-icon, .math-btn { transition: none !important; }
-    .math-card:hover, .math-btn:hover, .math-card:hover .math-icon { transform: none; }
+    .math-card, .math-icon, .math-btn, .math-card h3::after { transition: none !important; }
+    .math-card:hover, .math-card:hover .math-icon { transform: none; }
   }
 
   /* --- SOMMAIRE COMPACT --- */
@@ -370,7 +392,7 @@ td, th {
 
 <div class="math-card card-jeux">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="leger" d="M24 10L13 24M24 10l11 14M13 24L7 38M13 24l6 14M35 24v14"/><circle class="plein" cx="24" cy="10" r="4.2"/><circle cx="13" cy="24" r="3.8" fill="#fff"/><circle cx="35" cy="24" r="3.8" fill="#fff"/><circle class="plein" cx="7" cy="38" r="3.6"/><circle class="plein" cx="19" cy="38" r="3.6"/><circle class="plein" cx="35" cy="38" r="3.6"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="leger" d="M24 10L13 24M24 10l11 14M13 24L7 38M13 24l6 14M35 24v14"/><circle class="plein" cx="24" cy="10" r="4.2"/><circle cx="13" cy="24" class="creux" r="3.8"/><circle cx="35" cy="24" class="creux" r="3.8"/><circle class="plein" cx="7" cy="38" r="3.6"/><circle class="plein" cx="19" cy="38" r="3.6"/><circle class="plein" cx="35" cy="38" r="3.6"/></svg></span>
 <h3><a href="./jeux/">Théorie des jeux</a></h3>
 </div>
 <div class="theme-subgroup">
