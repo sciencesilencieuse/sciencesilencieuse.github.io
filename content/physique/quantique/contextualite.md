@@ -731,8 +731,8 @@ On considère cinq questions à réponse oui ou non, $A\_1,\dots,A\_5$, disposé
 </g>
 <circle id="kc-o" r="3.5" fill="#334155"/>
 </g>
-<text x="582.0" y="24.0" font-size="12.5" fill="#970E53" text-anchor="end" font-family="Georgia,'Times New Roman',serif" >état du système</text>
-<line x1="500.0" y1="20.0" x2="488.0" y2="20.0" stroke="#970E53" stroke-width="2.6" />
+<line x1="462.0" y1="20.0" x2="478.0" y2="20.0" stroke="#970E53" stroke-width="2.6" />
+<text x="485.0" y="24.0" font-size="12.5" fill="#970E53" text-anchor="start" font-family="Georgia,'Times New Roman',serif" >état du système</text>
 <text x="442.0" y="276.0" font-size="13" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >directions reliées par un trait :</text>
 <text x="442.0" y="295.0" font-size="13" fill="#004D80" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" >perpendiculaires</text>
 <text id="kc-hint" x="442" y="250" font-size="12" fill="#64748b" text-anchor="middle" font-family="Georgia,'Times New Roman',serif">faites glisser pour tourner</text>
