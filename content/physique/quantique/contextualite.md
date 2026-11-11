@@ -463,7 +463,7 @@ Voici la preuve la plus simple, trouvée en 1990 par David Mermin et Asher Peres
 </div>
 <p class="legende">Cliquez sur une case pour changer son signe. Les pastilles indiquent les contraintes satisfaites&nbsp;: on en obtient facilement cinq, jamais six.</p>
 
-C'est impossible, et la raison tient en deux lignes. Multiplions les trois produits des lignes&nbsp;: on obtient le produit des neuf cases, qui doit valoir $(+1)(+1)(+1)=+1$. Multiplions les trois produits des colonnes&nbsp;: c'est encore le produit des neuf cases, qui doit valoir cette fois $(+1)(+1)(-1)=-1$. Un même nombre ne peut pas valoir à la fois $+1$ et $-1$. C'est, trait pour trait, l'argument du [graphe de la contradiction](../epr/#le-graphe-de-la-contradiction) de l'expérience GHZ&nbsp;: là aussi, chaque réponse appartenait à deux lignes, dont les parités exigées étaient incompatibles.
+C'est impossible&nbsp;! Multiplions les trois produits des lignes&nbsp;: on obtient le produit des neuf cases, qui doit valoir $(+1)(+1)(+1)=+1$. Multiplions les trois produits des colonnes&nbsp;: c'est encore le produit des neuf cases, qui doit valoir cette fois $(+1)(+1)(-1)=-1$. Un même nombre ne peut pas valoir à la fois $+1$ et $-1$. C'est, trait pour trait, l'argument du [graphe de la contradiction](../epr/#le-graphe-de-la-contradiction) de l'expérience GHZ&nbsp;: là aussi, chaque réponse appartenait à deux lignes, dont les parités exigées étaient incompatibles.
 
 Et pourtant, la mécanique quantique remplit la grille. Prenons deux qubits et notons $X\_1$ l'observable de Pauli $X$ du premier qubit, $Y\_2$ l'observable $Y$ du second, et ainsi de suite (les [matrices de Pauli](../spekkens/#matrices-de-pauli) ont toutes pour valeurs propres $+1$ et $-1$).
 
