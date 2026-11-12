@@ -170,7 +170,7 @@ La logique déontique vise à proposer un guide éthique, des normes à suivre, 
 <img src="/pandoross.png" style="border-radius:10px;">
 </div>
 
-Le **dilemme du libre choix** (aussi dû à Ross) est une autre curiosité qui voit une hypothèse d'allure bénigne se transformer en boîte de Pandore.<br>
+Le **dilemme du libre choix** (étudié par von Wright, puis par Kamp) est une autre curiosité qui voit une hypothèse d'allure bénigne se transformer en boîte de Pandore.<br>
 "Tu peux soit dormir sur le sofa soit dans la chambre d'amis" semble impliquer que "tu peux dormir sur le sofa et tu peux dormir dans la chambre d'amis". On imagine ainsi que l'implication $\Diamond(A\lor B)\rightarrow(\Diamond A\land\Diamond B)$ est prouvable dans le système. Mais ce n'est pas le cas (voir ci-dessous). Qu'à cela ne tienne&nbsp;! Ajoutons-la aux hypothèses. Cela serait dommage de se passer d'une implication si naturelle... Mais là, patatras, tout devient possible&nbsp;! Imaginons en effet qu'il existe une quelconque possibilité $\Diamond A$, alors $\Diamond (A\lor B)$ aussi est vraie, et ce quel que soit $B$ (s'il y a un monde accessible où $A$ est vraie, alors dans ce même monde, $A\lor B$ est vraie) et grâce à notre pernicieux nouvel axiome, on déduit la vérité de $\Diamond A\land\Diamond B$ qui se réduit à celle de $\Diamond B$ (puisque par hypothèse $\Diamond A$ est vraie). On a finalement $\Diamond A\rightarrow \Diamond B$ pour tout $B$. La possibilité de $A$ rend tout possible grâce à cet axiome diabolique.
 
 
@@ -217,7 +217,7 @@ La règle de nécessitation et l'axiome $\text{(K)}$ (valables dans tout nœud d
 En logique modale épistémique, la relation binaire entre deux mondes est une relation d'**indistinguabilité**&nbsp;; l'agent ne sait pas dans quel monde il se trouve. Cette relation est nécessairement **symétrique** par la notion même d'indistinguabilité. Et comme un monde ne pourra jamais être distingué de lui-même, il faut ajouter une relation **réflexive** de chaque monde à lui-même. Le dernier ingrédient est la **transitivité**. Si $a$ est indistinguable de $b$ et que $b$ est indistinguable de $c$, alors $a$ est aussi indistinguable de $c$. Une telle relation, symétrique, réflexive et transitive est une **relation d'équivalence**. Et on aurait pu partir de là finalement puisque c'est bien l'équivalence qui se cache derrière la notion d'indistinguabilité.
 
 La classe de systèmes de transition assurant une relation d'équivalence entre les mondes possibles correspond à la logique $\textbf{S5}$.<br>
-Deux jeux d'axiomes équivalents permettent d'obtenir $\textbf{S5}$&nbsp;: $\set{(\text{K}),(\text{T}),(\text{B}),(\text{4})}$ où $\text{(T)}$ apporte la réflexivité, $\text{(B)}$ la symétrie et $\text{(4)}$ la transitivité, ou bien le jeu $\set{(\text{K}),(\text{T}),(\text{5})}$ où $\text{(5)}$ apporte l'euclidanité sachant qu'un système de transition euclidien est à la fois symétrique et transitif.
+Deux jeux d'axiomes équivalents permettent d'obtenir $\textbf{S5}$&nbsp;: $\set{(\text{K}),(\text{T}),(\text{B}),(\text{4})}$ où $\text{(T)}$ apporte la réflexivité, $\text{(B)}$ la symétrie et $\text{(4)}$ la transitivité, ou bien le jeu $\set{(\text{K}),(\text{T}),(\text{5})}$ où $\text{(5)}$ apporte l'euclidanité sachant qu'un système de transition réflexif et euclidien est aussi symétrique et transitif.
 
 Les axiomes doivent être vérifiés dans tous les mondes possibles. Ainsi $\text{(T)}=[i]P\rightarrow P$ signifie que dans un monde quelconque, si l'agent $i$ sait que $P$, alors $P$ est vrai dans ce monde (l'agent ne sait que des choses vraies). Et il faut aussi que soit réalisée $\text{(5)}=\neg[i]P\rightarrow[i]\neg[i]P$, ce qui signifie que si l'agent $i$ ne sait pas quelque chose, alors il sait qu'il ne le sait pas. C'est le principe d'**introspection négative**.
 
@@ -265,148 +265,199 @@ La logique temporelle est très utilisée en vérification formelle, où la tech
 
 ### Logique de la prouvabilité
 
-Souhaitant éprouver la stabilité de l'édifice mathématique, en particulier l'arithmétique (la science des nombres, le cœur des maths), Gödel a imaginé une méthode astucieuse, une sorte de hack qui lui permit de plonger les énoncés logiques dans le champ de l'arithmétique (en particulier sur l'Arithmétique de Peano $\text{PA}$, une théorie - ensemble d'axiomes - en logique du premier ordre dont l'arithmétique des entiers est un modèle). En associant à chaque formule un numéro (le numéro de Gödel ou code de Gödel), noté $\ulcorner\phi\urcorner$, il a permis aux nombres de parler d'eux-mêmes dans une sorte d'épanchement introspectif.
+Voici sans doute l'usage le plus étonnant de la boîte. On lit désormais $\Box\phi$ comme «&nbsp;**$\phi$ est prouvable**&nbsp;» (dans une théorie fixée, par exemple l'arithmétique), et $\Diamond\phi=\neg\Box\neg\phi$ comme «&nbsp;on ne peut pas réfuter $\phi$&nbsp;», c'est-à-dire «&nbsp;$\phi$ est compatible avec la théorie&nbsp;». Avec ce simple changement de lecture, les théorèmes d'incomplétude de Gödel, réputés ardus, tiennent en quelques lignes de logique modale.
 
-Ce qui semblait à l'époque un processus éminemment complexe est devenu trivial à l'ère de l'informatique. Pour associer un nombre unique à une formule, il suffit par exemple de regarder le code binaire du fichier de traitement de texte où la formule est écrite (et d'ajouter éventuellement un "1" au début si ça commence par des "0").
+<div class="encadre prune">
+<div class="encadre-titre">Gödel sur l'île des chevaliers et des filous</div>
 
-On peut même coder sans problème un arbre de preuve complet (tout ce qu'on peut écrire dans un traitement de texte finalement). Dès lors, une formule peut très bien parler du fait qu'une autre formule est démontrable puisqu'il s'agit de dire qu'il existe un entier possédant les propriétés qui le caractérisent comme étant le code d'une preuve de cette formule. C'est ce que fait la formule $\Box\phi$ où l'opérateur de modalité $\Box$ prend alors le sens de "est prouvable" (elle équivaut à la fameuse formule de Gödel $G\leftrightarrow\neg\text{Bew}(\ulcorner G\urcorner)$, $\Box$ correspondant à $\text{Bew}(x)$, "bew" étant le début du mot allemand beweisbar qui signifie prouvable).
+Dans *Forever Undecided* (1987), Raymond Smullyan fait tenir toute l'affaire dans une énigme. Un logicien visite l'île où les chevaliers disent toujours vrai et où les filous mentent toujours. Ce logicien est **fiable**&nbsp;: il ne croit jamais rien de faux. Un habitant lui déclare&nbsp;:
+
+<p style="text-align:center;"><i>«&nbsp;Vous ne croirez jamais que je suis un chevalier.&nbsp;»</i></p>
+
+Si l'habitant était un filou, sa phrase serait fausse&nbsp;: le logicien finirait donc par croire que c'est un chevalier, et croirait une chose fausse, ce qui est exclu. C'est donc un chevalier, sa phrase est vraie… et le logicien ne le croira jamais. Il existe une vérité que ce logicien, pourtant irréprochable, ne peut pas atteindre.
+
+Le plus piquant est que *nous* venons de le démontrer. Pourquoi le logicien ne tiendrait-il pas le même raisonnement&nbsp;? Parce que ce raisonnement s'appuie sur sa propre fiabilité&nbsp;: s'il s'en croyait assuré, il conclurait «&nbsp;c'est un chevalier&nbsp;», et la phrase deviendrait fausse. Un logicien fiable ne peut pas être certain de l'être. Remplacez «&nbsp;croire&nbsp;» par «&nbsp;prouver&nbsp;» et «&nbsp;fiable&nbsp;» par «&nbsp;cohérent&nbsp;»&nbsp;: ce sont les deux théorèmes de Gödel.
+
+</div>
+
+#### Des nombres qui parlent de preuves
+
+Souhaitant éprouver la solidité de l'édifice mathématique, et d'abord de l'arithmétique, Gödel imagine en 1931 une méthode astucieuse, une sorte de hack, pour faire parler l'arithmétique d'elle-même. Le cadre est l'arithmétique de Peano $\text{PA}$&nbsp;: une théorie, c'est-à-dire un ensemble d'axiomes, écrite en logique du premier ordre et dont les entiers naturels sont un modèle. Gödel associe à chaque formule $\phi$ un numéro, son **code de Gödel**, noté $\ulcorner\phi\urcorner$. Un énoncé sur les nombres peut alors, de façon détournée, être un énoncé sur les formules.
+
+Ce qui semblait à l'époque un tour de force est devenu banal à l'ère de l'informatique. Pour associer un nombre unique à une formule, il suffit de regarder le code binaire du fichier où elle est écrite (en ajoutant un «&nbsp;1&nbsp;» au début si ça commence par des «&nbsp;0&nbsp;»).
+
+On peut coder de même un arbre de preuve complet, comme tout ce qu'on peut taper dans un traitement de texte. Dès lors, «&nbsp;$\phi$ est prouvable&nbsp;» devient une affirmation arithmétique&nbsp;: *il existe un entier qui est le code d'une preuve de la formule de code $\ulcorner\phi\urcorner$*. Gödel construit la formule qui dit cela et la baptise $\text{Bew}(x)$, de l'allemand *beweisbar*, «&nbsp;prouvable&nbsp;». Notre boîte n'est qu'une abréviation&nbsp;:
+
+<p style="text-align:center;">$\Box\phi$ désigne la formule arithmétique $\text{Bew}(\ulcorner\phi\urcorner)$.</p>
 
 <div style="position:relative;width:500px;max-width:100%;margin-right:auto;margin-left:auto;border-radius:10px">
 <img src="/godprouve.png" style="border-radius:10px;">
 </div>
 
-Le **premier théorème d'incomplétude de Gödel** s'appuie sur une formule affirmant sa propre non-prouvabilité $\neg\Box\phi\leftrightarrow \phi$. Si on peut démontrer la formule $\neg\Box\phi\leftrightarrow \phi$ dans un système donné, alors on prouve qu'il existe une formule non démontrable et pourtant vraie, ce qui impose l'incomplétude du système.
+Que sait l'arithmétique de sa propre prouvabilité&nbsp;? Trois choses, appelées **conditions de dérivabilité** (elles sont dues à Hilbert, Bernays et Löb), et qui vont nous rappeler des souvenirs&nbsp;:
 
-<div class="theo">
-
-<b>Lemme de diagonalisation</b>&nbsp;:<br>
-Pour toute formule arithmétique $f(x)$, il existe une formule arithmétique $P$ telle que $P\leftrightarrow f(P)$.
-
+<div class="tableau-large">
+<table class="tab-recap">
+<tr><th>Ce que l'arithmétique démontre</th><th>Lecture</th><th>En logique modale</th></tr>
+<tr><td>si $\vdash\phi$, alors $\vdash\Box\phi$</td><td class="g">une preuve de $\phi$ étant un objet fini, on peut vérifier que c'en est une</td><td class="g">règle de nécessitation</td></tr>
+<tr><td>$\vdash\Box(\phi\rightarrow\psi)\rightarrow(\Box\phi\rightarrow\Box\psi)$</td><td class="g">les preuves s'enchaînent par <i>modus ponens</i></td><td class="g">axiome $\text{(K)}$</td></tr>
+<tr><td>$\vdash\Box\phi\rightarrow\Box\Box\phi$</td><td class="g">si $\phi$ est prouvable, on peut prouver qu'elle l'est</td><td class="g">axiome $\text{(4)}$</td></tr>
+</table>
 </div>
 
-C'est l'outil permettant à Gödel de construire des formules autoréférentes comme $\neg\Box\phi\leftrightarrow \phi$.
+Autrement dit, la prouvabilité se comporte comme la boîte de la logique $\textbf{K4}$, et tout ce qu'on démontre dans $\textbf{K4}$ est vrai de $\text{Bew}$. En revanche, on se gardera d'ajouter l'axiome $\text{(T)}=\Box\phi\rightarrow\phi$, «&nbsp;ce qui est prouvable est vrai&nbsp;». Il a l'air inoffensif, il est même *vrai* si la théorie est saine. Mais la théorie ne peut pas le *démontrer*, et c'est tout le sujet de cette section.
+
+#### Le lemme de diagonalisation
+
+Il manque un ingrédient&nbsp;: des formules qui parlent d'elles-mêmes.
+
+<div class="theo">
+<p><b>Lemme de diagonalisation</b>&nbsp;:<br>
+Pour toute formule arithmétique $S(x)$ à une variable libre, il existe un énoncé $\phi$ tel que $\vdash\phi\leftrightarrow S(\ulcorner\phi\urcorner)$.</p>
+</div>
+
+Quelle que soit la propriété $S$, il existe donc une formule qui affirme «&nbsp;j'ai la propriété $S$&nbsp;». Il n'y a aucune magie&nbsp;: le philosophe Quine a montré qu'on peut faire la même chose en français, sans jamais écrire «&nbsp;cette phrase&nbsp;»&nbsp;:
+
+<p style="text-align:center;">«&nbsp;précédé de sa propre citation, donne une phrase qui a la propriété $S$&nbsp;»<br>précédé de sa propre citation, donne une phrase qui a la propriété $S$.</p>
+
+La phrase décrit une recette (prendre un bout de texte et le faire précéder de sa citation), et la recette, appliquée au bout de texte indiqué, redonne la phrase elle-même. Les informaticiens connaissent bien ce tour&nbsp;: c'est celui des *quines*, ces programmes qui affichent leur propre code.
 
 <div class="preuve">
-
-Le lemme dit que pour toute formule $\phi$, il existe une formule $S(\ulcorner\phi\urcorner)$ qui parle de $\phi$ (une formule méta en somme) telle qu'on peut prouver $\phi$ si et seulement si on peut prouver $S(\ulcorner\phi\urcorner)$&nbsp;: $\vdash\phi\leftrightarrow S(\ulcorner\phi\urcorner)$.<br>
-Pour démontrer le lemme, on va supposer que $n$ est le numéro d'une formule de la forme $A(x)$ où $x$ est une variable et on définit $F(n)=\ulcorner A(\ulcorner A(x)\urcorner)\urcorner$ et si $n$ ne correspond pas à une formule sous cette forme, alors $F(n)=0$.<br>
-Notons que $F$ dépend du choix de la variable $x$. Ainsi, $F(\ulcorner y=0 \urcorner)=\ulcorner(\ulcorner y=0 \urcorner) = 0\urcorner$ et $F(\ulcorner x=0 \urcorner)=\ulcorner(\ulcorner x=0 \urcorner) = 0\urcorner$.<br>
-Soit $g(w)\equiv S(F(w))$ et $\phi\equiv g(\ulcorner g(x)\urcorner)$.<br>
-On obtient&nbsp;:
-
+<p>La preuve est la traduction arithmétique de la recette de Quine.</p>
+<p>Si $n$ est le code d'une formule $A(x)$ à une variable libre, on note $d(n)$ le code de la formule obtenue en appliquant $A$ à son propre code&nbsp;: $d(\ulcorner A(x)\urcorner)=\ulcorner A(\ulcorner A(x)\urcorner)\urcorner$. Ainsi $d(\ulcorner x=0 \urcorner)=\ulcorner(\ulcorner x=0 \urcorner = 0)\urcorner$. C'est «&nbsp;faire précéder de sa propre citation&nbsp;». La fonction $d$ se calcule mécaniquement, et l'arithmétique sait donc en parler.</p>
+<p>On pose alors $g(x)= S(d(x))$ («&nbsp;précédé de sa propre citation, donne une phrase qui a la propriété $S$&nbsp;»), puis $\phi= g(\ulcorner g(x)\urcorner)$ (cette même formule, appliquée à son propre code). On obtient&nbsp;:</p>
 $$
 \begin{aligned}
-\phi &= g(\ulcorner g(x)\urcorner)\\\\ 
-&= S(F(\ulcorner g(x)\urcorner) \\\\
-&= S(\ulcorner g(\ulcorner g(x)\urcorner)\urcorner)\\\\
+\phi &= g(\ulcorner g(x)\urcorner)\\
+&= S(d(\ulcorner g(x)\urcorner)) \\
+&\leftrightarrow S(\ulcorner g(\ulcorner g(x)\urcorner)\urcorner)\\
 &= S(\ulcorner\phi\urcorner)
 \end{aligned}
 $$
-
-Très informellement, le lemme de diagonalisation exprime l'échec de l'argument de la diagonale de Cantor pour construire une formule $S(x)$ qui ne ferait pas partie de l'ensemble dénombrable des formules prouvables. La clôture de l'ensemble des formules prouvables par action d'une formule sur les éléments de cet ensemble empêche en effet de "diagonaliser à l'extérieur" du domaine.
-
+<p>Le nom du lemme vient de sa parenté avec l'argument diagonal de Cantor&nbsp;: on range les formules $A_0(x), A_1(x),\ldots$ en lignes, les codes en colonnes, et la fonction $d$ parcourt la diagonale, là où chaque formule est appliquée à elle-même.</p>
 </div>
 
-La formule autoréférente de Gödel est proche du fameux paradoxe du menteur "cette phrase est fausse".<br>
+#### Le premier théorème d'incomplétude
+
+Appliquons le lemme à la propriété «&nbsp;ne pas être prouvable&nbsp;», c'est-à-dire à $S(x)=\neg\text{Bew}(x)$. On obtient la célèbre **formule de Gödel** $G$&nbsp;:
+
+<p style="text-align:center;">$\vdash G\leftrightarrow\neg\Box G$ &nbsp;&nbsp;&nbsp; («&nbsp;je ne suis pas prouvable&nbsp;»)</p>
+
+Elle ressemble au paradoxe du menteur, «&nbsp;cette phrase est fausse&nbsp;», à une nuance près qui change tout. Le menteur parle de *vérité* et mène à une contradiction. $G$ parle de *prouvabilité* et ne mène qu'à une surprise. En effet, si $G$ était prouvable, on aurait $\vdash G$, donc $\vdash\Box G$ par nécessitation&nbsp;; mais $G$ entraîne $\neg\Box G$, et la théorie prouverait une chose et son contraire. Dans une théorie cohérente, $G$ n'est donc pas prouvable. Or c'est exactement ce qu'elle affirme&nbsp;: **$G$ est vraie et non prouvable**.
 
 <div class="theo">
-
-<b>Premier théorème d'incomplétude</b>&nbsp;:<br>
-Dans un système formel consistant (= cohérent = système dans lequel on ne peut pas prouver le faux) suffisamment expressif pour décrire l'arithmétique, on ne peut pas prouver toutes les formules vraies (comme la formule qui affirme sa non-prouvabilité). La prouvabilité est plus faible que la vérité.
+<p><b>Premier théorème d'incomplétude</b>&nbsp;:<br>
+Dans toute théorie cohérente (on ne peut pas y prouver le faux), dont on sait reconnaître mécaniquement les axiomes et assez expressive pour décrire l'arithmétique, il existe un énoncé vrai qui n'est pas prouvable. La prouvabilité est plus faible que la vérité.</p>
 </div>
 
-Montrons dans la logique $\textbf{K4}$ que $\vdash\phi\leftrightarrow\neg\Box\phi$ permet d'arriver à $\vdash\neg\Box\bot\rightarrow\neg\Box\phi$&nbsp;; la formule n'est pas prouvable si aucune contradiction n'est prouvable. On obtient donc bien l'essence du premier théorème d'incomplétude.
+Ajouter $G$ aux axiomes ne répare rien&nbsp;: la nouvelle théorie a sa propre formule de Gödel, et tout recommence.
+
+Le raisonnement ci-dessus se formalise entièrement dans la logique $\textbf{K4}$&nbsp;: à partir de $\vdash G\leftrightarrow\neg\Box G$, on arrive à $\vdash\neg\Box\bot\rightarrow\neg\Box G$, «&nbsp;si aucune contradiction n'est prouvable, alors $G$ n'est pas prouvable&nbsp;».
 
 <div class="preuve">
-
 <ol>
-<li>$\phi\leftrightarrow\neg\Box\phi$</li>
-<li>$\Box\phi\rightarrow\neg\phi$ (à partir de 1.)</li>
-<li>$\Box(\Box\phi\rightarrow\neg\phi)$ (nécessitation)</li>
-<li>$\Box\Box\phi\rightarrow\Box\neg\phi$ (distribution de la boite grâce à $\text{(K)}$)</li>
-<li>$\Box\phi\rightarrow\Box\neg\phi$ (par l'axiome $\text{(4)}= \Box \phi\rightarrow\Box\Box\phi$ et avec l'étape 4., on déduit $\Box\phi\rightarrow\Box\Box\phi\rightarrow\Box\neg\phi$)</li>
-<li>$\Box\phi\rightarrow\Box\phi\land\Box\neg\phi$ (à partir de 5. et $\Box\phi\rightarrow\Box\phi$)</li>
-<li>$\Box\phi\rightarrow\Box(\phi\land \neg\phi)$ </li>
-<li>$\Box\phi\rightarrow\Box\bot$</li>
-<li>$\neg\Box\bot\rightarrow \neg\Box\phi$ (contraposée de 8.)</li>
+<li>$G\leftrightarrow\neg\Box G$</li>
+<li>$\Box G\rightarrow\neg G$ (à partir de 1.)</li>
+<li>$\Box(\Box G\rightarrow\neg G)$ (nécessitation)</li>
+<li>$\Box\Box G\rightarrow\Box\neg G$ (distribution de la boîte grâce à $\text{(K)}$)</li>
+<li>$\Box G\rightarrow\Box\neg G$ (par l'axiome $\text{(4)}= \Box G\rightarrow\Box\Box G$ et avec l'étape 4., on déduit $\Box G\rightarrow\Box\Box G\rightarrow\Box\neg G$)</li>
+<li>$\Box G\rightarrow(\Box G\land\Box\neg G)$ (à partir de 5. et $\Box G\rightarrow\Box G$)</li>
+<li>$\Box G\rightarrow\Box(G\land \neg G)$ (la boîte se distribue sur la conjonction)</li>
+<li>$\Box G\rightarrow\Box\bot$</li>
+<li>$\neg\Box\bot\rightarrow \neg\Box G$ (contraposée de 8.)</li>
 </ol>
 </div>
 
-Le théorème de Löb utilise une autre formule autoréférente, $\Box(\Box\phi\rightarrow\phi)\rightarrow\Box\phi$, s'apparentant plutôt, dans son cas, au paradoxe d'un diseur de vérité "ce que je dis là est vrai" (aucune valeur de vérité ne semble applicable puisqu'un menteur dirait la même chose).<br>
-Et la surprise est que de tels points fixes sont prouvables et par conséquent vrais.
+Ce petit calcul a une conséquence considérable. La formule $\neg\Box\bot$ dit «&nbsp;le faux n'est pas prouvable&nbsp;»&nbsp;: c'est la théorie qui affirme sa propre **cohérence**. Or la ligne 9 et la ligne 1 donnent ensemble $\vdash\neg\Box\bot\rightarrow G$. Si la théorie prouvait sa cohérence, elle prouverait donc $G$, ce qui est impossible. Une théorie cohérente ne peut pas prouver qu'elle l'est&nbsp;! C'est le second théorème d'incomplétude, que l'on va retrouver par un chemin plus général.
+
+<div class="encadre">
+<div class="encadre-titre">Königsberg, septembre 1930</div>
+
+David Hilbert rêvait de mettre les mathématiques à l'abri du doute en démontrant, par des moyens élémentaires et incontestables, que leurs axiomes ne mènent à aucune contradiction. Le 8 septembre 1930, dans sa ville natale de Königsberg, il conclut une allocution restée célèbre par ces mots, aujourd'hui gravés sur sa tombe&nbsp;: «&nbsp;*Wir müssen wissen, wir werden wissen*&nbsp;», nous devons savoir, nous saurons.
+
+La veille, dans la même ville, à la fin d'une table ronde sur les fondements des mathématiques, un jeune homme de vingt-quatre ans avait indiqué en quelques phrases prudentes qu'il existait des énoncés arithmétiques vrais et indémontrables. Presque personne ne releva. John von Neumann, lui, comprit sur-le-champ, et écrivit à Gödel quelques semaines plus tard qu'il en avait tiré une conséquence remarquable&nbsp;: l'impossibilité de prouver la cohérence. Gödel lui répondit, courtoisement, qu'il venait de l'envoyer à l'imprimeur.
+
+</div>
+
+#### Le théorème de Löb
+
+En 1952, le logicien Leon Henkin pose la question miroir. On sait ce que vaut la formule qui dit «&nbsp;je ne suis pas prouvable&nbsp;». Que dire de celle qui affirme «&nbsp;**je suis prouvable**&nbsp;», $\vdash H\leftrightarrow\Box H$&nbsp;? Elle évoque non plus le menteur mais le diseur de vérité, «&nbsp;ce que je dis là est vrai&nbsp;», auquel aucune valeur de vérité ne semble s'imposer puisqu'un menteur dirait la même chose.
+
+La réponse, donnée par Martin Löb en 1955, est une surprise&nbsp;: $H$ est prouvable, et donc vraie. C'est un cas particulier d'un résultat général.
 
 <div class="theo">
-
-Le <b>théorème de Löb</b> stipule que les formules dont on peut prouver que $\Box\phi\rightarrow\phi$ sont les formules prouvables&nbsp;: 
-<div style="position:relative;width:fit-content;margin-right:auto;margin-left:auto;margin-bottom:1em;">
-Si $\vdash\Box\phi\rightarrow\phi$, alors $\vdash \phi$.
-</div>
+<p>Le <b>théorème de Löb</b> stipule que les seules formules $\phi$ pour lesquelles on peut prouver $\Box\phi\rightarrow\phi$ sont les formules prouvables&nbsp;:</p>
+<p style="text-align:center;">Si $\vdash\Box\phi\rightarrow\phi$, alors $\vdash \phi$.</p>
 </div>
 
+Le théorème affirme donc que si on peut prouver une formule en admettant qu'elle est prouvable, alors on peut la prouver tout court. C'est une sorte de méthode Coué logique, une prophétie autoréalisatrice&nbsp;: «&nbsp;si tu crois en toi, ça va le faire&nbsp;». C'est bizarre, mais ça se démontre.
 
-Le théorème affirme donc que si on peut prouver une formule en admettant comme axiome qu'on peut la prouver, alors on peut la prouver sans l'axiome. Le théorème est donc une sorte de méthode Coué logique, une prophétie autoréalisatrice&nbsp;; "si tu crois en toi, ça va le faire". C'est bizarre, mais ça se démontre.
- 
+Lu dans l'autre sens, il est tout aussi troublant. On aimerait que la théorie sache, pour chaque $\phi$, que «&nbsp;si $\phi$ est prouvable, alors $\phi$ est vraie&nbsp;». Löb nous dit qu'elle ne le démontre *que* pour les $\phi$ qu'elle démontre déjà, c'est-à-dire quand cela ne sert plus à rien. Voilà pourquoi $\text{(T)}$ ne peut pas être un axiome de la prouvabilité.
 
 <div class="preuve">
-
-Preuve du théorème de Löb&nbsp;:
-
+<p>Preuve du théorème de Löb&nbsp;:</p>
 <p style="margin-bottom:-1.1em;">
 On suppose $\vdash \Box\phi\rightarrow\phi$.<br>
 Grâce au lemme de diagonalisation, on construit la formule arithmétique autoréférente suivante&nbsp;:<br>
-$\vdash\sigma\leftrightarrow (\Box\sigma\rightarrow\phi)$ ("ma propre prouvabilité implique $\phi$").<br>
+$\vdash\sigma\leftrightarrow (\Box\sigma\rightarrow\phi)$ («&nbsp;si je suis prouvable, alors $\phi$&nbsp;»).<br>
 </p>
 <ol>
-<li>$\vdash\Box(\sigma\rightarrow (\Box\sigma\rightarrow\phi))$ (par nécessitation)</li>
-<li>$\vdash\Box\sigma\rightarrow \Box(\Box\sigma\rightarrow\phi)$ puis $\vdash\Box\sigma\rightarrow (\Box\Box\sigma\rightarrow\Box\phi)$ (distribution de la boite grâce à $\text{(K)}$)</li>
-<li>On a donc $\vdash \Box\sigma\rightarrow\Box\Box\sigma$ et $\vdash \Box\sigma\rightarrow\Box\phi$</li>
+<li>$\vdash\Box(\sigma\rightarrow (\Box\sigma\rightarrow\phi))$ (sens direct de la formule autoréférente, puis nécessitation)</li>
+<li>$\vdash\Box\sigma\rightarrow \Box(\Box\sigma\rightarrow\phi)$ puis $\vdash\Box\sigma\rightarrow (\Box\Box\sigma\rightarrow\Box\phi)$ (distribution de la boîte grâce à $\text{(K)}$, deux fois)</li>
+<li>Comme $\vdash \Box\sigma\rightarrow\Box\Box\sigma$ par $\text{(4)}$, on en tire $\vdash \Box\sigma\rightarrow\Box\phi$</li>
 <li>$\vdash \Box\sigma\rightarrow\phi$ (car $\vdash \Box\sigma\rightarrow\Box\phi\rightarrow\phi$ puisqu'on suppose $\vdash \Box\phi\rightarrow\phi$)</li>
 <li>$\vdash (\Box\sigma\rightarrow\phi)\rightarrow\sigma$ (sens réciproque de la formule autoréférente)</li>
-<li>$\vdash\sigma$ par <i>modus ponens</i> de 4. et 5.
+<li>$\vdash\sigma$ par <i>modus ponens</i> de 4. et 5.</li>
 <li>$\vdash\Box\sigma$ par nécessitation.</li>
 <li>$\vdash \phi$  par <i>modus ponens</i> de 4. et 7.</li>
-
 </ol>
+</div>
+
+<div class="encadre prune">
+<div class="encadre-titre">Le père Noël existe</div>
+
+Smullyan adorait «&nbsp;démontrer&nbsp;» l'existence du père Noël à l'aide de la phrase suivante&nbsp;:
+
+<p style="text-align:center;"><i>«&nbsp;Si cette phrase est vraie, alors le père Noël existe.&nbsp;»</i></p>
+
+Supposons la phrase vraie. Alors ce qu'elle dit a lieu&nbsp;: si elle est vraie, le père Noël existe. Comme on l'a supposée vraie, le père Noël existe. Nous venons de montrer que *si la phrase est vraie, alors le père Noël existe*… or c'est précisément la phrase. Elle est donc vraie, et le père Noël existe.
+
+C'est le paradoxe de Curry, et la preuve de Löb en est la copie conforme, où «&nbsp;vraie&nbsp;» est remplacé par «&nbsp;prouvable&nbsp;»&nbsp;: la formule $\sigma$ dit «&nbsp;si je suis prouvable, alors $\phi$&nbsp;». Avec la vérité, on obtient une absurdité, signe qu'un langage ne peut pas contenir son propre prédicat de vérité (c'est un théorème de Tarski). Avec la prouvabilité, qui s'exprime bel et bien dans l'arithmétique, on obtient un théorème.
 
 </div>
 
+#### Le second théorème d'incomplétude
 
 <div class="theo">
-
-Si un système formel est consistant alors il ne peut pas prouver sa propre consistance. Et donc les seuls systèmes qui peuvent prouver leur consistance sont ceux qui sont inconsistants...<br>
-C'est le <b>second théorème d'incomplétude</b> de Gödel.
-
+<p><b>Second théorème d'incomplétude</b>&nbsp;:<br>
+Une théorie cohérente, dont on sait reconnaître mécaniquement les axiomes et qui contient l'arithmétique, ne peut pas prouver sa propre cohérence. Les seules théories de ce type qui «&nbsp;prouvent&nbsp;» leur cohérence sont celles qui sont incohérentes, et qui prouvent donc n'importe quoi…</p>
 </div>
-
 
 <div class="preuve">
-
-Ce théorème n'est autre que la contraposée du théorème de Löb&nbsp;!
-
-Avec $\phi=\bot$, on obtient&nbsp;:<br>
-si $\vdash\neg\Box\bot$, alors $\vdash\neg\Box(\Box\bot\rightarrow\bot)$ et comme $\Box\bot\rightarrow\bot\equiv\neg\Box\bot\lor\bot\equiv\neg\Box\bot$, on a finalement si $\vdash\neg\Box\bot$, alors $\vdash\neg\Box(\neg\Box\bot)$
-
+<p>Ce théorème n'est autre que le théorème de Löb appliqué à $\phi=\bot$&nbsp;!</p>
+<p>La formule $\Box\bot\rightarrow\bot$ équivaut à $\neg\Box\bot$, l'énoncé de cohérence. Le théorème de Löb devient donc&nbsp;: si $\vdash\neg\Box\bot$, alors $\vdash\bot$. Par contraposition, si la théorie est cohérente ($\nvdash\bot$), alors elle ne prouve pas sa cohérence ($\nvdash\neg\Box\bot$).</p>
 </div>
 
-Par dualité, $\Diamond P = \neg\Box\neg P$. Donc $\Diamond P$ exprime qu'on ne peut pas prouver que $P$ est faux. Autrement dit, $\Diamond P$ affirme que $P$ est consistant (cohérent) dans le système formel.<br>
-$\neg\Box\bot\rightarrow\neg\Box(\neg\Box\bot)$ devient alors $\Diamond\top\rightarrow \neg\Box(\Diamond \top)$ ("si une théorie est consistante, alors on ne peut pas prouver que la théorie est consistante").
+Par dualité, $\Diamond P = \neg\Box\neg P$ exprime qu'on ne peut pas prouver que $P$ est fausse, autrement dit que $P$ est compatible avec la théorie. L'énoncé de cohérence $\neg\Box\bot$ s'écrit alors simplement $\Diamond\top$, et le second théorème prend, à l'intérieur même de la théorie, la forme $\Diamond\top\rightarrow \neg\Box\Diamond \top$&nbsp;: «&nbsp;si la théorie est cohérente, alors elle ne peut pas le prouver&nbsp;».
 
+C'est la fin du programme de Hilbert sous sa forme initiale&nbsp;: pour prouver la cohérence de l'arithmétique, il faut des moyens qui la dépassent. Gerhard Gentzen, l'inventeur de la déduction naturelle et du calcul des séquents, y parviendra en 1936 au prix d'une récurrence sur des ordinaux infinis.
+
+#### La logique GL
+
+Le théorème de Löb peut lui-même être démontré *par* la théorie, ce qui en donne une version internalisée, devenue un axiome.
 
 <div class="def">
-
-La <b>logique de la prouvabilité de Gödel-Löb</b> ($\textbf{GL}$) est formée à partir du système $\textbf{K}$ auquel on ajoute l'axiome de Löb $\text{(L)}=\Box(\Box\phi\rightarrow\phi)\rightarrow\Box\phi$ (c'est la version formalisée du théorème de Löb).
-
+<p>La <b>logique de la prouvabilité de Gödel-Löb</b> ($\textbf{GL}$) est formée à partir du système $\textbf{K}$ auquel on ajoute l'axiome de Löb $\text{(L)}=\Box(\Box\phi\rightarrow\phi)\rightarrow\Box\phi$ (c'est la version formalisée du théorème de Löb).</p>
 </div>
 
+Avec $\phi=\bot$, l'axiome $\text{(L)}$ donne $\Box\neg\Box\bot\rightarrow\Box\bot$, soit, par contraposition et en notation diamant, $\Diamond\top\rightarrow\neg\Box\Diamond\top$&nbsp;: on retrouve en une ligne le second théorème d'incomplétude.
+
+On remarque que l'axiome $\text{(4)}$, dont on s'est tant servi, ne figure pas dans la définition. C'est qu'il est devenu superflu.
 
 <div class="theo">
-
-$\vdash_\textbf{GL}\text{(4)}=\Box\phi\rightarrow\Box\Box \phi$
-
-Et donc $\textbf{K4}≤\textbf{KL}$ ($\textbf{K4}$ se réduit à $\textbf{KL}$).
-
+<p>$\vdash_\textbf{GL}\text{(4)}=\Box\phi\rightarrow\Box\Box \phi$</p>
+<p>Et donc $\textbf{K4}≤\textbf{GL}$ ($\textbf{K4}$ se réduit à $\textbf{GL}$).</p>
 </div>
-
 
 <div class="preuve">
 
@@ -425,13 +476,11 @@ On les imbrique à l'aide de l'axiome de Löb $\text{(L)}$&nbsp;:
 
 </div>
 
-La classe des systèmes de transition qui valide $\textbf{GL}$ est donc **transitive**&nbsp;!
+Tout système de transition qui valide $\textbf{GL}$ valide donc $\text{(4)}$&nbsp;: il est **transitif**&nbsp;!
 
-Montrons de plus que cette classe est **irréflexive** et **asymétrique**.
+À quoi ressemblent les mondes de la prouvabilité&nbsp;? Certainement pas à ceux de la connaissance. Le modèle ci-dessous valide $\color{#1DB100}\text{(L)}$ en chacun de ses nœuds, mais on y voit échouer $\color{#F27200}\text{(T)}=\Box P \rightarrow  P$ au nœud $a$, ainsi que la formule $\color{#FF42A1}\Box P\rightarrow \Diamond\Box P$ aux nœuds $b$ et $c$.
 
 <div class="preuve">
-
-Il suffit de trouver un modèle qui valide $\color{#1DB100}\text{(L)}$ sans valider ni $\color{#FF42A1}\text{(B)}=\Box P\rightarrow \Diamond\Box P$, ni $\color{#F27200}\text{(T)}=\Box P \rightarrow  P$.
 
 <div style="position:relative;width:800px;max-width:100%;margin-left:auto;margin-right:auto">
 <img src="/glnontetb.png">
@@ -439,52 +488,54 @@ Il suffit de trouver un modèle qui valide $\color{#1DB100}\text{(L)}$ sans vali
 
 </div>
 
+Les deux échecs ont un sens. Celui de $\text{(T)}$ confirme que $\textbf{GL}$ ne prouve pas «&nbsp;ce qui est prouvable est vrai&nbsp;». Quant à la formule rose, elle échoue dans les culs-de-sac $b$ et $c$, où tout est nécessaire et rien n'est possible&nbsp;: $\textbf{GL}$ ne prouve donc pas non plus l'axiome $\text{(D)}$, ni même $\Diamond\top$, la cohérence. Les culs-de-sac ne sont pas un accident, ils sont indispensables, comme le montre la caractérisation suivante.
 
-Or un graphe transitif et non réflexif, ni symétrique n'est autre qu'un **arbre**. On va aller un peu plus loin en montrant que ces arbres doivent être en plus finis. Et c'est plutôt génial que cette logique de la prouvabilité s'exprime naturellement sur des arbres finis qui représentent intuitivement la notion de preuve (la racine représentant la formule prouvée, et les feuilles les axiomes). 
+<div class="theo">
+<p>Un système de transition valide $\text{(L)}$ si et seulement s'il est <b>transitif</b> et ne contient <b>aucun chemin infini</b> $a_0\longrightarrow a_1\longrightarrow a_2\longrightarrow\cdots$</p>
+<p>En particulier, un tel système est <b>irréflexif</b> (une boucle $a\longrightarrow a$ est un chemin infini $a\longrightarrow a\longrightarrow a\longrightarrow\cdots$) et <b>asymétrique</b> (un aller-retour $a\longrightarrow b\longrightarrow a$ aussi), et tout chemin finit dans un cul-de-sac.</p>
+</div>
+
+<div class="preuve">
+<p>Montrons le sens qui nous importe&nbsp;: dans un système $\mathcal{T}=(N,A)$ transitif et sans chemin infini, l'axiome de Löb est valide.</p>
+<p>Supposons au contraire qu'il ne soit pas satisfait en un nœud $a$, pour une certaine valuation. On a donc $\langle \mathcal{T},a\rangle \not\models \Box(\Box P\rightarrow P)\rightarrow \Box P$, ce qui implique&nbsp;:</p>
+<ol>
+<li>$\langle \mathcal{T},a\rangle \models \Box(\Box P\rightarrow P)$, et</li>
+<li> $\langle \mathcal{T},a\rangle \not\models  \Box P$.</li>
+</ol>
+<p>La deuxième affirmation entraîne qu'il existe un nœud $a'\in N$ tel que $a\longrightarrow a'$ et $\langle \mathcal{T},a'\rangle \not\models  P$.<br>
+Par contre, la première affirmation nous assure que $\langle \mathcal{T},a'\rangle \models \Box P\rightarrow P$.<br>
+Par conséquent $\langle \mathcal{T},a'\rangle \not\models \Box P$. Cela signifie qu'il existe un nœud $a''\in N$, successeur de $a'$ ($a'\longrightarrow a''$) tel que  $\langle \mathcal{T},a''\rangle \not\models P$.<br>
+Par transitivité, $a \longrightarrow a''$. Or si on retourne à l'affirmation 1., on a aussi $\langle \mathcal{T},a''\rangle \models \Box P\rightarrow P$, et le même raisonnement fournit un successeur $a'''$ de $a''$, puis un autre, et ainsi de suite. On construit de fil en aiguille un chemin infini $a\longrightarrow a'\longrightarrow a''\longrightarrow\cdots$, ce qui est exclu.</p>
+<p>Pour la réciproque, contentons-nous de voir pourquoi une boucle est interdite. Si $a\longrightarrow a$, on choisit la valuation où $P$ est fausse en $a$ et vraie partout ailleurs. Alors $\Box P$ est fausse en $a$, et $\Box P\rightarrow P$ est vraie partout (en $a$ parce que $\Box P$ y est fausse, ailleurs parce que $P$ y est vraie). Le nœud $a$ force donc $\Box(\Box P\rightarrow P)$ sans forcer $\Box P$&nbsp;: l'axiome de Löb y est en défaut.</p>
+</div>
+
+Les exemples les plus simples de tels systèmes sont les **arbres finis**, où une flèche relie chaque nœud à tous ses descendants (c'est la transitivité). Et il se trouve qu'ils suffisent. C'est plutôt génial que cette logique de la prouvabilité s'exprime naturellement sur des arbres finis, qui représentent intuitivement la notion de preuve (la racine représentant la formule prouvée, et les feuilles les axiomes).
 
 ![](/treeax.png?width=500px)
 
-La logique $\textbf{GL}$ est correcte et complète par rapport à la classe $\mathscr{C}_{\text{arbres finis}}$ des modèles de Kripke à la fois transitifs, irréflexifs, asymétriques et bornés à droite (sans suite infinie de mondes).<br>
+Notons $\mathscr{C}\_{\text{arbres finis}}$ la classe de ces arbres finis transitifs.
 
 <div class="theo">
-
-<b>Correction</b>&nbsp;:
-
-Si $ \vdash_\textbf{GL} \phi$, alors $\models_{\mathscr{C}_{\text{arbres finis}}}\phi$.
-
+<p><b>Correction et complétude</b>&nbsp;:</p>
+<p style="text-align:center;">$\vdash_\textbf{GL} \phi$ si et seulement si $\models_{\mathscr{C}_{\text{arbres finis}}}\phi$.</p>
 </div>
 
+La correction découle de ce qui précède&nbsp;: l'axiome $\text{(K)}$ est valide partout, $\text{(L)}$ l'est dans tout arbre fini transitif, et les règles de la logique modale normale conservent la validité. La complétude, due à Krister Segerberg (1971), est plus délicate, car la méthode du modèle canonique du chapitre précédent ne s'applique plus telle quelle. Elle a une conséquence pratique agréable&nbsp;: pour savoir si une formule est un théorème de $\textbf{GL}$, il suffit de chercher un contre-exemple parmi des arbres finis de taille bornée. La logique $\textbf{GL}$ est **décidable**, alors que l'arithmétique, elle, ne l'est pas.
 
-<div class="preuve">
+#### Retour à l'arithmétique&nbsp;: le théorème de Solovay
 
-Comme $\text{(L)}$ est le seul axiome ajouté à $\textbf{K}$, il faut montrer que l'ensemble des systèmes de transition qui valide l'axiome de Löb est restreint aux seuls arbres <b>finis</b> (l'axiome $\text{(K)}$ est valide dans $\mathscr{C}$ et les règles de la logique modale normale conservent la validation).
+Reste la question essentielle. On a justifié les axiomes de $\textbf{GL}$ par des propriétés de la prouvabilité arithmétique. Mais en a-t-on oublié&nbsp;? Existe-t-il d'autres lois générales de la prouvabilité, que $\textbf{GL}$ ne verrait pas&nbsp;?
 
-Supposons que l'axiome ne soit pas satisfait en un nœud $a$ d'un arbre fini $\mathcal{T}=(N,A)$. On a donc $\langle \mathcal{T},a\rangle \not\models \Box(\Box P\rightarrow P)\rightarrow \Box P$.<br>
-Cela implique&nbsp;: 
-<ol>
-<li>$\langle \mathcal{T},a\rangle \models \Box(\Box P\rightarrow P)$, et</li> 
-<li> $\langle \mathcal{T},a\rangle \not\models  \Box P$.</li>
-</ol>
-La deuxième affirmation entraîne qu'il existe un nœud $a'\in N$ tel que $a\longrightarrow a'$ et $\langle \mathcal{T},a'\rangle \not\models  P$<br>
-Par contre, la première affirmation nous assure que $\langle \mathcal{T},a'\rangle \models \Box P\rightarrow P$.<br>
-Par conséquent $\langle \mathcal{T},a'\rangle \not\models \Box P$. Cela signifie qu'il existe un nœud $a''\in N$, successeur de $a'$ ($a'\longrightarrow a''$) tel que  $\langle \mathcal{T},a''\rangle \not\models P$.<br>
-Par transitivité, $a \longrightarrow a''$. Or si on retourne à l'affirmation $1.$, on a aussi $\langle \mathcal{T},a''\rangle \models \Box P\rightarrow P$, ce qui va conduire de fil en aiguille à une séquence infinie de successeurs de $a$, contredisant ainsi que $\mathcal{T}$ soit fini.<br>
-
-On en conclut que l'axiome de Löb et donc $\textbf{KL}$ est valide dans tout arbre fini.
-
-</div>
-
+Pour donner un sens précis à la question, on appelle **traduction arithmétique** d'une formule modale le résultat obtenu en remplaçant chaque variable $P$, $Q$,… par un énoncé arithmétique de son choix, et chaque $\Box$ par $\text{Bew}$.
 
 <div class="theo">
-
-<b>Complétude</b>&nbsp;:
-
-Si $\models_{\mathscr{C}\_{\text{arbres finis}}}\phi$, alors $\vdash_\textbf{GL} \phi$.
-
+<p><b>Théorème de Solovay</b> (1976)&nbsp;:<br>
+Une formule modale est un théorème de $\textbf{GL}$ si et seulement si <i>toutes</i> ses traductions arithmétiques sont prouvables dans $\text{PA}$.</p>
 </div>
 
+Le sens direct est la **correction arithmétique** de $\textbf{GL}$&nbsp;: c'est le travail fait plus haut. La réciproque, sa **complétude arithmétique**, est le tour de force de Robert Solovay&nbsp;: si une formule modale n'est pas un théorème de $\textbf{GL}$, il existe un arbre fini qui la réfute, et Solovay parvient à «&nbsp;plonger&nbsp;» cet arbre dans l'arithmétique pour fabriquer des énoncés qui la réfutent aussi.
 
-Comme entrevu plus haut, l'opérateur de modalité peut s'interpréter comme la formule arithmétique de Gödel $\text{Bew}(x)$. Il s'agit plus précisément d'une formule de l'Arithmétique de Peano $\mathbf{PA}$. Il se trouve qu'on peut traduire toute formule de la logique modale dans $\textbf{PA}$ et on montre alors que tout théorème de $\textbf{GL}$ est prouvable dans $\textbf{PA}$. C'est ce qu'on peut appeler la **correction arithmétique** de $\textbf{GL}$. Et mieux, Solovay a prouvé aussi sa **complétude arithmétique**&nbsp;; toute formule prouvable de l'arithmétique est un théorème de $\textbf{GL}$.
+La boucle est bouclée. Tout ce que l'arithmétique est capable de démontrer, en toute généralité, sur sa propre prouvabilité tient dans un axiome, $\text{(L)}$, et se lit sur de petits arbres finis. Il est rare qu'un sujet aussi vertigineux se laisse résumer aussi simplement.
 
 <nav class="suite-nav" aria-label="Chapitre précédent et suivant">
 <a href="../systemes/" class="precedent"><span>← Précédent</span><b>Systèmes logiques</b></a>
