@@ -39,7 +39,7 @@ weight = 4
 {{% /notice %}} 
 
 
-Comme on l'a vu [ici](../fondements/ensembles), les complexes sont la clôture algébrique des réels, une extension permettant à tout polynôme d'avoir ses racines dans l'ensemble.
+Comme on l'a vu [ici](../../fondements/ensembles/), les complexes sont la clôture algébrique des réels, une extension permettant à tout polynôme d'avoir ses racines dans l'ensemble.
 
 
 Et chez les complexes, ces racines peuvent tracer de jolies figures comme on va le voir dans la suite.

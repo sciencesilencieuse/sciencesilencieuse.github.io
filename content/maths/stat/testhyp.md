@@ -61,7 +61,7 @@ C'est un exemple particulièrement frappant, mais d’une certaine manière Wans
 
 ![](https://imgs.xkcd.com/comics/significant.png)
 
-Dans un [**espace de données à grande dimension**](../geometrie/geo4/#the-average-man), plus on a d'axes (de catégories, d'entrées,...), plus on a de chances d'obtenir un résultat hors norme sur au moins l'un d'eux.<br>
+Dans un [**espace de données à grande dimension**](../../geometrie/geo4/#the-average-man), plus on a d'axes (de catégories, d'entrées,...), plus on a de chances d'obtenir un résultat hors norme sur au moins l'un d'eux.<br>
 Ce [**chouette site**](https://tylervigen.com/spurious-correlations) met le phénomène à profit pour débusquer des corrélations amusantes (avec pour chacune des p-values inférieures à 1%...)&nbsp;:
 
 <a href="https://tylervigen.com/spurious-correlations"><div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:0em;border: solid 5px #438DEC; border-radius:5px;">

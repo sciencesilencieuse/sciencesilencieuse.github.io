@@ -198,7 +198,7 @@ Dans le code ci-dessus, les nombres $a$ et $b$ sont volontairement très éloign
 
 En diminuant $\sigma$, on diminue le pourcentage de succès (on retrouve que l'efficacité de la méthode est d'autant plus grande que $Z$ a de chances d'être entre $a$ et $b$).
 
-Si $a$, $b$ et $Z$ sont tirés uniformément dans $[0,1]$, on obtient une espérance de succès de $\tfrac23$. En effet, on a alors $P_\text { succ }(a,b)=\tfrac12 + \tfrac12|a-b|$. Or comme on l'a vu [plus haut](./#densité-de-probabilités), $\mathbb{E}[|a-b|]=\tfrac13$, donc $\mathbb{E}[P_\text{succ}(a,b)]=\tfrac12+\tfrac12\tfrac13=\tfrac23$.
+Si $a$, $b$ et $Z$ sont tirés uniformément dans $[0,1]$, on obtient une espérance de succès de $\tfrac23$. En effet, on a alors $P_\text { succ }(a,b)=\tfrac12 + \tfrac12|a-b|$. Or comme on l'a vu [plus haut](../lois/#densité-de-probabilités), $\mathbb{E}[|a-b|]=\tfrac13$, donc $\mathbb{E}[P_\text{succ}(a,b)]=\tfrac12+\tfrac12\tfrac13=\tfrac23$.
 
 Cela finit par sérieusement perdre de sa magie... Si la loi d'où est tiré $Z$ est adaptée aux valeurs de $a$ et $b$, tout va pour le mieux, mais dès que ce n'est plus le cas, on se retrouve bêtement autour de 50%... Il suffit par exemple d'un $\mu\gg\sigma$ dans la loi normale du code. La fonction logistique va envoyer tout le monde sur $\approx 1$ et on n'aura quasi jamais $Z>f(a)$. 
 
