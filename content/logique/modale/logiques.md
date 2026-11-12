@@ -4,74 +4,25 @@ menuTitle = "Différentes logiques modales"
 date = 2021-03-06T14:20:50+01:00
 weight = 3
 aliases = ["/logique/logique6/"]
+css = "logique.css"
 +++
 
-<style>
- #correc
-  {
-    color: #006C65;
-    border-left: solid 10px #C7DDDC;
-  }
- #comm
-  {
-    color: #004D80;
-    border-left: solid 10px #B3CAD9;
-  }
- #commsum
-  {
-    color: #004D80;
-  }
- #correcsum
-  {
-    color: #006C65;
-  }
-  #preuve
-{
-    background-color:#EAEAEA;
-    border-radius:10px;
-    padding:5px 20px 5px 20px;
-}
-#def
-{
-    background-color:#DCEFFE;
-    border-radius:10px;
-    padding:5px 20px 5px 20px;
-}
-#theo
-{
-    background-color:#FBE1DE;
-    border-radius:10px;
-    padding:5px 20px 5px 20px;
-}
-  td, th {
-  text-align: center;
-  vertical-align: middle;
-  min-width: 3em;
-}
-#grosseformule 
-{
-    overflow-x: auto; 
-  }
-</style>
-
-
-<br>
-
 # Logique modale
+<p class="chap-sous">Différentes logiques modales&nbsp;: nécessité, devoir, savoir, temps, preuve</p>
 
-<div style="overflow-x: auto;">
-<table>
-<tr>
-    <th><a href="../syntaxe-semantique/">Syntaxe et sémantique</a></th>
-    <th><a href="../systemes/">Systèmes logiques</a></th>
-    <tH><a href="../logiques/">Différentes logiques modales</a></th>
-  </tr>
-</table>
+<nav class="chap-nav" aria-label="Chapitres">
+<a href="../syntaxe-semantique/">Syntaxe et sémantique</a>
+<a href="../systemes/">Systèmes logiques</a>
+<a href="../logiques/" class="actif">Différentes logiques modales</a>
+</nav>
+
+<div class="source-livre">
+<img src="/duparc.png" alt="Couverture du livre La logique pas à pas">
+<p>Notes de lecture de <i>La logique pas à pas</i> de Jacques Duparc, que je paraphrase allégrement en y glissant quelques exemples, histoires et énigmes.</p>
 </div>
 
-<br>
 
-<div id="def">
+<div class="def">
 <i>Petit condensé de logique modale&nbsp;:</i>
 
 En logique modale, un "<b>monde possible</b>" contient les propositions qui sont vraies dans ce monde. Il correspond à un modèle du calcul des propositions (à une ligne d'une table de vérité). Ces mondes possibles sont connectés entre eux par des <b>relations d'accessibilité</b>, et les <b>opérateurs de modalité</b> permettent d'explorer ces relations. Si $P$ est vraie dans tous les mondes accessibles depuis le monde $a$, alors on écrit $a\Vdash \Box P$ et si $P$ est vraie dans au moins un de ces mondes, on utilise $a\Vdash \Diamond P$. Un modèle de la logique modale est alors un <b>graphe orienté</b>, appelé système de transition ou structure de Kripke.
@@ -84,14 +35,12 @@ En ajoutant de nouveaux axiomes modaux au système formel, on ajoute par là mê
 
 </div>
 
-<br>
 
 ## Les différentes logiques modales
 
 
 On cherche maintenant à incarner la logique modale avec des interprétations précises des opérateurs modaux. La **boîte** peut servir à exprimer qu'un agent sait quelque chose et son dual, le **diamant**, exprime alors le fait que cet agent croit seulement possible cette même chose. Ça nous place dans une logique épistémique (logique de la connaissance) et c'est principalement cette version qu'on a utilisée jusqu'ici pour donner corps à la théorie. Mais d'autres emplois sont courants et ne rattachent pas forcément les opérateurs modaux à un agent, comme c'est le cas de la logique aléthique et la logique déontique. On verra aussi qu'en fonction des interprétations, certains axiomes sont plus naturels que d'autres et donc que ces différentes logiques modales s'épanouissent dans des univers aux topologies différentes.
 
-<br>
 
 ### Logique aléthique
 
@@ -143,7 +92,7 @@ Avec l'implication stricte (implication ordinaire renforcée de la nécessité),
 
 ![](/implicationstricte.png?width=450px)
 
-<div id="preuve">
+<div class="preuve">
 
 Le métaphysicien Charles Hartshorne a produit une "preuve" de l'existence de Dieu qui repose sur la logique $\textbf{{KB}}$ et qui nécessite un théorème de la logique modale $\vdash_\textbf{K} \Box(P\rightarrow Q)\rightarrow(\Diamond P\rightarrow\Diamond Q)$, l'axiome d'Anselme $G\rightarrow\Box G$ (si Dieu existe, il est nécessaire que Dieu existe) et l'axiome de Leibniz $\Diamond G$ (il est possible que Dieu existe).
 <div style="position:relative;width:1200px;max-width:100%;margin-left:auto;margin-right:auto">
@@ -153,7 +102,6 @@ Monsieur Phi a <a href="https://youtu.be/zf0KkTpiUzc?si=JO_FOXcC4sd3afuU">une ch
 
 </div>
 
-<br><br>
 
 ### Logique déontique
 
@@ -184,7 +132,7 @@ Le système formel correspondant est donc $\textbf{KD}$ et la classe de système
 Plusieurs paradoxes découlent de cette formalisation de l'obligation et de la permission. Penchons-nous d'abord sur le **paradoxe de Ross** (dû à... Ross).<br>
 L'énoncé "Il est obligatoire de poster la lettre" ($\Box P$ où $P$ correspond à poster la lettre) entraîne "il est obligatoire de poster la lettre ou de la brûler" ($\Box(P\lor B)$ où $B$ correspond à brûler la lettre). En effet $\Box P\rightarrow \Box(P\lor B)$ est prouvable sans hypothèse et est donc vérifiée en tout nœud de tout modèle de Kripke d'une logique modale normale (puisque l'axiome $\text{(D)}$ n'est même pas nécessaire à la preuve).
 
-<div id="preuve">
+<div class="preuve">
 
 On part de la tautologie $P\rightarrow (P\lor Q)$ et de l'axiome $\text{(K)}$&nbsp;:
 <div style="position:relative;width:600px;max-width:100%;margin-left:auto;margin-right:auto">
@@ -195,11 +143,10 @@ On part de la tautologie $P\rightarrow (P\lor Q)$ et de l'axiome $\text{(K)}$&nb
 
 Si l'obligation de poster une lettre implique l'obligation de la poster ou de la brûler, alors on peut satisfaire l'obligation découlant de la première en brûlant la lettre. Certes, la lettre est loin d'être postée et on a d'ailleurs probablement enfreint un interdit, mais on a pourtant bien aussi satisfait une obligation...<br> L'implication a permis une sorte de réduction du poids de l'obligation par affaiblissement de $P$ en $P\lor B$.
 
-<br>
 
 On rencontre un autre problème en affaiblissant une conjonction comme le montre le **paradoxe du Bon Samaritain** (dû à Prior)&nbsp;: l'énoncé "il est obligatoire qu'Alice aide Bob qui a été volé" peut se traduire par $\Box(A\land B)$ où $A$ est "Alice aide Bob" et $B$ est "Bob a été volé". Le problème est que $\Box(A\land B)\rightarrow\Box B$ est prouvable dans le système $\textbf{K}$ ($\text{(D)}$ n'est toujours pas nécessaire à la preuve).
 
-<div id="preuve">
+<div class="preuve">
 
 On part de la tautologie $(A\land B)\rightarrow B$ et de l'axiome $\text{(K)}$&nbsp;:
 <div style="position:relative;width:620px;max-width:100%;margin-left:auto;margin-right:auto">
@@ -227,7 +174,7 @@ Le **dilemme du libre choix** (aussi dû à Ross) est une autre curiosité qui v
 "Tu peux soit dormir sur le sofa soit dans la chambre d'amis" semble impliquer que "tu peux dormir sur le sofa et tu peux dormir dans la chambre d'amis". On imagine ainsi que l'implication $\Diamond(A\lor B)\rightarrow(\Diamond A\land\Diamond B)$ est prouvable dans le système. Mais ce n'est pas le cas (voir ci-dessous). Qu'à cela ne tienne&nbsp;! Ajoutons-la aux hypothèses. Cela serait dommage de se passer d'une implication si naturelle... Mais là, patatras, tout devient possible&nbsp;! Imaginons en effet qu'il existe une quelconque possibilité $\Diamond A$, alors $\Diamond (A\lor B)$ aussi est vraie, et ce quel que soit $B$ (s'il y a un monde accessible où $A$ est vraie, alors dans ce même monde, $A\lor B$ est vraie) et grâce à notre pernicieux nouvel axiome, on déduit la vérité de $\Diamond A\land\Diamond B$ qui se réduit à celle de $\Diamond B$ (puisque par hypothèse $\Diamond A$ est vraie). On a finalement $\Diamond A\rightarrow \Diamond B$ pour tout $B$. La possibilité de $A$ rend tout possible grâce à cet axiome diabolique.
 
 
-<div id="preuve">
+<div class="preuve">
 
 On prouve que $\Diamond(A\lor B)\rightarrow(\Diamond A\land\Diamond B)$ n'est pas prouvable dans le système $\textbf{KD}$ en trouvant un modèle appartenant à $\mathscr{C}_{n.b.d.}$ et tel qu'au moins un de ses nœuds ne satisfait pas la formule.
 <div style="position:relative;width:500px;max-width:100%;margin-left:auto;margin-right:auto">
@@ -235,15 +182,12 @@ On prouve que $\Diamond(A\lor B)\rightarrow(\Diamond A\land\Diamond B)$ n'est pa
 </div>
 </div>
 
-<br>
 
 Un dernier pour la route&nbsp;: le **dilemme de Sartre** (dû à Lemmon). Il décrit l'impossibilité de représenter un conflit d'obligations en logique déontique standard (à cause de l'axiome $\text{(D)}$). La situation dans laquelle se retrouve Jephté dans la Bible en est une illustration parfaite. Jephté promet à Dieu de sacrifier le premier être vivant qu'il croise s'il gagne la guerre. Il gagne la guerre et croise sa fille (c'est ballot). On a bien conflit d'obligations puisque l'obligation de ne pas tuer sa fille doit bien figurer quelque part aussi... On a donc une situation où il est obligatoire de faire une chose $\Box A$ et aussi obligatoire de ne pas la faire $\Box \neg A$. Or $\Box A\rightarrow \Diamond A$ d'après $\text{(D)}$ et par dualité, on obtient $\Box A\rightarrow \neg \Box\neg A$. La situation de départ (la satisfaction de $\Box A$ et $\Box\neg A$), bien qu'envisageable, aboutit à une inconsistance interdisant donc même son existence dans le système formel $\textbf{KD}$ (qui commet sûrement là un péché). 
 
-<br><br>
 
 Malgré ses "petits" défauts, la logique déontique connait différentes applications en informatique. En autorisant l'expression de raisonnements normatifs, elle permet de spécifier la marche à suivre en cas de comportement anormal. De manière plus générale, elle propose un cadre pour gérer les autorisations et politiques d'accès, et on la retrouve dans le secteur de l'automatisation juridique ou encore celui des contraintes sur les bases de données.
 
-<br><br>
 
 ### Logique épistémique
 
@@ -263,7 +207,6 @@ C'est elle qui est au cœur de notre histoire introductive de dragons ou de cett
 - $2$ en déduit $B_1$. Car si $\neg B_1$, alors $[1]\neg B_1$ et donc le monde $B_1\land B_2\land B_3$ où tous veulent picoler n'est plus accessible et elle aurait répondu non. Voulant elle aussi une bière, $2$ hésite encore entre deux mondes $[2]B_1\land[2]B_2\land\langle2\rangle B_3$. 
 - $3$ en déduit $B_2$ et peut maintenant répondre puisque $[3]B_1\land[3]B_2\land[3] B_3$ ($3$ aussi veut une bière bien sûr). Plus qu'un monde possible, celui qui satisfait $B_1\land B_2\land B_3$. C'est un grand "Oui !".
 
-<br>
 
 La règle de nécessitation et l'axiome $\text{(K)}$ (valables dans tout nœud de tout système d'une logique normale) impliquent l'**omniscience logique** de l'agent $i$. En effet, par nécessitation $A\rightarrow B$ devient $\[i](A\rightarrow B)$ et $\text{(K)}=\[i](A\rightarrow B)\rightarrow([i]A\rightarrow [i]B)$. Par conséquent, l'agent connait toutes les conséquences logiques ($[i]B$) de ce qu'il sait ($[i]A$).
 
@@ -285,7 +228,6 @@ On place parfois l'agent dans une logique inférieure, $\textbf{S4}$, qui perd l
 Dans $\textbf{S4}$, l'accessibilité n'est plus nécessairement réciproque entre les mondes. Cela introduit une hiérarchie, un ordre où certains mondes peuvent être considérés comme des extensions ou des raffinements d'autres, des mondes "plus informés". C'est pertinent pour modéliser la communication dans des réseaux où l'information n'est pas toujours réciproquement échangée (dès que les canaux sont asymétriques comme c'est le cas dans la plupart des structures hiérarchiques).<br>
 Couplé à une logique temporelle, cela permet de modéliser un apprentissage progressif où l'acquisition d'information se fait de manière séquentielle ou cumulative. En robotique ou en intelligence artificielle, cela permet dans la même veine de modéliser des processus de planification où chaque décision ou action mène à un nouvel état du monde qui intègre toutes les connaissances et conséquences des actions précédentes.
 
-<br><br>
 
 ### Logique temporelle
 
@@ -320,7 +262,6 @@ Dans une logique temporelle arborescente (CTL), le champ des possibles s'ouvre. 
 
 La logique temporelle est très utilisée en vérification formelle, où la technique de base est essentiellement le model checking.
 
-<br>
 
 ### Logique de la prouvabilité
 
@@ -336,7 +277,7 @@ On peut même coder sans problème un arbre de preuve complet (tout ce qu'on peu
 
 Le **premier théorème d'incomplétude de Gödel** s'appuie sur une formule affirmant sa propre non-prouvabilité $\neg\Box\phi\leftrightarrow \phi$. Si on peut démontrer la formule $\neg\Box\phi\leftrightarrow \phi$ dans un système donné, alors on prouve qu'il existe une formule non démontrable et pourtant vraie, ce qui impose l'incomplétude du système.
 
-<div id="theo">
+<div class="theo">
 
 <b>Lemme de diagonalisation</b>&nbsp;:<br>
 Pour toute formule arithmétique $f(x)$, il existe une formule arithmétique $P$ telle que $P\leftrightarrow f(P)$.
@@ -345,7 +286,7 @@ Pour toute formule arithmétique $f(x)$, il existe une formule arithmétique $P$
 
 C'est l'outil permettant à Gödel de construire des formules autoréférentes comme $\neg\Box\phi\leftrightarrow \phi$.
 
-<div id="preuve">
+<div class="preuve">
 
 Le lemme dit que pour toute formule $\phi$, il existe une formule $S(\ulcorner\phi\urcorner)$ qui parle de $\phi$ (une formule méta en somme) telle qu'on peut prouver $\phi$ si et seulement si on peut prouver $S(\ulcorner\phi\urcorner)$&nbsp;: $\vdash\phi\leftrightarrow S(\ulcorner\phi\urcorner)$.<br>
 Pour démontrer le lemme, on va supposer que $n$ est le numéro d'une formule de la forme $A(x)$ où $x$ est une variable et on définit $F(n)=\ulcorner A(\ulcorner A(x)\urcorner)\urcorner$ et si $n$ ne correspond pas à une formule sous cette forme, alors $F(n)=0$.<br>
@@ -368,7 +309,7 @@ Très informellement, le lemme de diagonalisation exprime l'échec de l'argument
 
 La formule autoréférente de Gödel est proche du fameux paradoxe du menteur "cette phrase est fausse".<br>
 
-<div id="theo">
+<div class="theo">
 
 <b>Premier théorème d'incomplétude</b>&nbsp;:<br>
 Dans un système formel consistant (= cohérent = système dans lequel on ne peut pas prouver le faux) suffisamment expressif pour décrire l'arithmétique, on ne peut pas prouver toutes les formules vraies (comme la formule qui affirme sa non-prouvabilité). La prouvabilité est plus faible que la vérité.
@@ -376,7 +317,7 @@ Dans un système formel consistant (= cohérent = système dans lequel on ne peu
 
 Montrons dans la logique $\textbf{K4}$ que $\vdash\phi\leftrightarrow\neg\Box\phi$ permet d'arriver à $\vdash\neg\Box\bot\rightarrow\neg\Box\phi$&nbsp;; la formule n'est pas prouvable si aucune contradiction n'est prouvable. On obtient donc bien l'essence du premier théorème d'incomplétude.
 
-<div id="preuve">
+<div class="preuve">
 
 <ol>
 <li>$\phi\leftrightarrow\neg\Box\phi$</li>
@@ -394,7 +335,7 @@ Montrons dans la logique $\textbf{K4}$ que $\vdash\phi\leftrightarrow\neg\Box\ph
 Le théorème de Löb utilise une autre formule autoréférente, $\Box(\Box\phi\rightarrow\phi)\rightarrow\Box\phi$, s'apparentant plutôt, dans son cas, au paradoxe d'un diseur de vérité "ce que je dis là est vrai" (aucune valeur de vérité ne semble applicable puisqu'un menteur dirait la même chose).<br>
 Et la surprise est que de tels points fixes sont prouvables et par conséquent vrais.
 
-<div id="theo">
+<div class="theo">
 
 Le <b>théorème de Löb</b> stipule que les formules dont on peut prouver que $\Box\phi\rightarrow\phi$ sont les formules prouvables&nbsp;: 
 <div style="position:relative;width:fit-content;margin-right:auto;margin-left:auto;margin-bottom:1em;">
@@ -406,7 +347,7 @@ Si $\vdash\Box\phi\rightarrow\phi$, alors $\vdash \phi$.
 Le théorème affirme donc que si on peut prouver une formule en admettant comme axiome qu'on peut la prouver, alors on peut la prouver sans l'axiome. Le théorème est donc une sorte de méthode Coué logique, une prophétie autoréalisatrice&nbsp;; "si tu crois en toi, ça va le faire". C'est bizarre, mais ça se démontre.
  
 
-<div id="preuve">
+<div class="preuve">
 
 Preuve du théorème de Löb&nbsp;:
 
@@ -429,18 +370,16 @@ $\vdash\sigma\leftrightarrow (\Box\sigma\rightarrow\phi)$ ("ma propre prouvabili
 
 </div>
 
-<br>
 
-<div id="theo">
+<div class="theo">
 
 Si un système formel est consistant alors il ne peut pas prouver sa propre consistance. Et donc les seuls systèmes qui peuvent prouver leur consistance sont ceux qui sont inconsistants...<br>
 C'est le <b>second théorème d'incomplétude</b> de Gödel.
 
 </div>
 
-<br>
 
-<div id="preuve">
+<div class="preuve">
 
 Ce théorème n'est autre que la contraposée du théorème de Löb&nbsp;!
 
@@ -452,18 +391,15 @@ si $\vdash\neg\Box\bot$, alors $\vdash\neg\Box(\Box\bot\rightarrow\bot)$ et comm
 Par dualité, $\Diamond P = \neg\Box\neg P$. Donc $\Diamond P$ exprime qu'on ne peut pas prouver que $P$ est faux. Autrement dit, $\Diamond P$ affirme que $P$ est consistant (cohérent) dans le système formel.<br>
 $\neg\Box\bot\rightarrow\neg\Box(\neg\Box\bot)$ devient alors $\Diamond\top\rightarrow \neg\Box(\Diamond \top)$ ("si une théorie est consistante, alors on ne peut pas prouver que la théorie est consistante").
 
-<br>
 
-<div id="def">
+<div class="def">
 
 La <b>logique de la prouvabilité de Gödel-Löb</b> ($\textbf{GL}$) est formée à partir du système $\textbf{K}$ auquel on ajoute l'axiome de Löb $\text{(L)}=\Box(\Box\phi\rightarrow\phi)\rightarrow\Box\phi$ (c'est la version formalisée du théorème de Löb).
 
 </div>
 
 
-<br>
-
-<div id="theo">
+<div class="theo">
 
 $\vdash_\textbf{GL}\text{(4)}=\Box\phi\rightarrow\Box\Box \phi$
 
@@ -471,9 +407,8 @@ Et donc $\textbf{K4}≤\textbf{KL}$ ($\textbf{K4}$ se réduit à $\textbf{KL}$).
 
 </div>
 
-<br>
 
-<div id="preuve">
+<div class="preuve">
 
 Obtention d'un premier théorème&nbsp;: $\vdash_\textbf{K}\Box P\rightarrow \Box ((\Box P\land \Box\Box P)\rightarrow(P\land \Box P))$
 <div style="position:relative;width:1100px;max-width:100%;margin-left:auto;margin-right:auto">
@@ -494,7 +429,7 @@ La classe des systèmes de transition qui valide $\textbf{GL}$ est donc **transi
 
 Montrons de plus que cette classe est **irréflexive** et **asymétrique**.
 
-<div id="preuve">
+<div class="preuve">
 
 Il suffit de trouver un modèle qui valide $\color{#1DB100}\text{(L)}$ sans valider ni $\color{#FF42A1}\text{(B)}=\Box P\rightarrow \Diamond\Box P$, ni $\color{#F27200}\text{(T)}=\Box P \rightarrow  P$.
 
@@ -504,8 +439,6 @@ Il suffit de trouver un modèle qui valide $\color{#1DB100}\text{(L)}$ sans vali
 
 </div>
 
-<br>
-
 
 Or un graphe transitif et non réflexif, ni symétrique n'est autre qu'un **arbre**. On va aller un peu plus loin en montrant que ces arbres doivent être en plus finis. Et c'est plutôt génial que cette logique de la prouvabilité s'exprime naturellement sur des arbres finis qui représentent intuitivement la notion de preuve (la racine représentant la formule prouvée, et les feuilles les axiomes). 
 
@@ -513,7 +446,7 @@ Or un graphe transitif et non réflexif, ni symétrique n'est autre qu'un **arbr
 
 La logique $\textbf{GL}$ est correcte et complète par rapport à la classe $\mathscr{C}_{\text{arbres finis}}$ des modèles de Kripke à la fois transitifs, irréflexifs, asymétriques et bornés à droite (sans suite infinie de mondes).<br>
 
-<div id="theo">
+<div class="theo">
 
 <b>Correction</b>&nbsp;:
 
@@ -521,9 +454,8 @@ Si $ \vdash_\textbf{GL} \phi$, alors $\models_{\mathscr{C}_{\text{arbres finis}}
 
 </div>
 
-<br>
 
-<div id="preuve">
+<div class="preuve">
 
 Comme $\text{(L)}$ est le seul axiome ajouté à $\textbf{K}$, il faut montrer que l'ensemble des systèmes de transition qui valide l'axiome de Löb est restreint aux seuls arbres <b>finis</b> (l'axiome $\text{(K)}$ est valide dans $\mathscr{C}$ et les règles de la logique modale normale conservent la validation).
 
@@ -542,9 +474,8 @@ On en conclut que l'axiome de Löb et donc $\textbf{KL}$ est valide dans tout ar
 
 </div>
 
-<br>
 
-<div id="theo">
+<div class="theo">
 
 <b>Complétude</b>&nbsp;:
 
@@ -552,6 +483,9 @@ Si $\models_{\mathscr{C}\_{\text{arbres finis}}}\phi$, alors $\vdash_\textbf{GL}
 
 </div>
 
-<br>
 
 Comme entrevu plus haut, l'opérateur de modalité peut s'interpréter comme la formule arithmétique de Gödel $\text{Bew}(x)$. Il s'agit plus précisément d'une formule de l'Arithmétique de Peano $\mathbf{PA}$. Il se trouve qu'on peut traduire toute formule de la logique modale dans $\textbf{PA}$ et on montre alors que tout théorème de $\textbf{GL}$ est prouvable dans $\textbf{PA}$. C'est ce qu'on peut appeler la **correction arithmétique** de $\textbf{GL}$. Et mieux, Solovay a prouvé aussi sa **complétude arithmétique**&nbsp;; toute formule prouvable de l'arithmétique est un théorème de $\textbf{GL}$.
+
+<nav class="suite-nav" aria-label="Chapitre précédent et suivant">
+<a href="../systemes/" class="precedent"><span>← Précédent</span><b>Systèmes logiques</b></a>
+</nav>

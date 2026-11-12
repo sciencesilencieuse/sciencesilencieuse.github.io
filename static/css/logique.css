@@ -1,0 +1,298 @@
+/* ==========================================================================
+   Pages de logique (calcul des propositions, logique modale)
+   Chargée par les pages qui déclarent  css = "logique.css"  en front matter.
+   Palette : prune #970E53 · bleu #004D80 · sarcelle #006C65 · ardoise #475569
+   ========================================================================== */
+
+/* ---------- Titres ------------------------------------------------------ */
+#body-inner h2
+{
+    color: #970E53 !important;
+    margin-top: 2.2em;
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid #ecd9e2;
+}
+#body-inner h3
+{
+    color: #004D80 !important;
+    margin-top: 1.9em;
+}
+#body-inner h4
+{
+    color: #006C65 !important;
+    font-weight: 600;
+    margin-top: 1.7em;
+}
+.chap-sous
+{
+    text-align: center;
+    font-size: 1.15em;
+    font-style: italic;
+    color: #475569;
+    margin: -0.6em 0 1.2em 0;
+}
+
+/* ---------- Navigation entre chapitres ---------------------------------- */
+.chap-nav
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em;
+    margin: 0 0 1.8em 0;
+}
+.chap-nav a
+{
+    padding: 0.3em 1.1em;
+    border: 1px solid #cbd5e1;
+    border-radius: 999px;
+    color: #004D80 !important;
+    background: #fff;
+    font-size: 0.95em;
+    text-decoration: none !important;
+    transition: background 0.15s, border-color 0.15s;
+}
+.chap-nav a:hover
+{
+    background: #EEF3F7;
+    border-color: #004D80;
+}
+.chap-nav a.actif
+{
+    background: #004D80;
+    border-color: #004D80;
+    color: #fff !important;
+    font-weight: 600;
+}
+.suite-nav
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.8em;
+    margin: 3em 0 1em 0;
+    padding-top: 1.2em;
+    border-top: 1px solid #e2e8f0;
+}
+.suite-nav a
+{
+    display: block;
+    padding: 0.55em 1.1em;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    color: #004D80 !important;
+    text-decoration: none !important;
+    line-height: 1.35;
+    transition: background 0.15s, border-color 0.15s;
+}
+.suite-nav a:hover
+{
+    background: #EEF3F7;
+    border-color: #004D80;
+}
+.suite-nav a span
+{
+    display: block;
+    font-size: 0.8em;
+    color: #64748b;
+}
+.suite-nav a.suivant
+{
+    margin-left: auto;
+    text-align: right;
+}
+
+/* ---------- Source (livre) ---------------------------------------------- */
+.source-livre
+{
+    display: flex;
+    align-items: center;
+    gap: 1.1em;
+    max-width: 40rem;
+    margin: 0 auto 2em auto;
+    padding: 0.7em 1.1em;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #F8FAFC;
+    font-size: 0.92em;
+    color: #475569;
+    line-height: 1.5;
+}
+.source-livre img
+{
+    width: 64px !important;
+    height: auto;
+    flex: none;
+    margin: 0 !important;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18) !important;
+}
+.source-livre p
+{
+    margin: 0;
+}
+
+/* ---------- Blocs : définition, théorème, preuve, exemple --------------- */
+#def, .def, #theo, .theo, #preuve, .preuve, #axiom, .axiom, .exemple
+{
+    margin: 1.2em 0;
+    padding: 0.35em 1.3em 0.35em 1.2em;
+    border-radius: 0 10px 10px 0;
+    border-left: 4px solid;
+}
+#def, .def         { background: #E9F4FE; border-left-color: #5B9BD5; }
+#theo, .theo       { background: #FCEBE8; border-left-color: #D8847A; }
+#preuve, .preuve   { background: #F1F2F4; border-left-color: #A8AFBA; }
+#axiom, .axiom     { background: #EBF5E6; border-left-color: #7FB069; }
+.exemple           { background: #F6F3EC; border-left-color: #C9B27C; }
+
+.def > p:first-child, .theo > p:first-child, .preuve > p:first-child, .exemple > p:first-child { margin-top: 0.5em; }
+.def > p:last-child, .theo > p:last-child, .preuve > p:last-child, .exemple > p:last-child { margin-bottom: 0.5em; }
+.def li, .theo li, .preuve li, .exemple li { margin-bottom: 0.35em; }
+
+/* règles d'inférence : une règle par item, aérée */
+.regles > ul > li
+{
+    margin-bottom: 1.6em;
+}
+.regles > ul > li:last-child
+{
+    margin-bottom: 0.4em;
+}
+
+/* ---------- Encadrés (histoire, exemple concret, sourire) --------------- */
+.encadre
+{
+    max-width: 42rem;
+    margin: 1.6em auto;
+    border: 2px solid #006C65;
+    border-radius: 12px;
+    background: #F3F8F7;
+    padding: 0.6em 1.3em 0.4em 1.3em;
+}
+.encadre-titre
+{
+    font-weight: bold;
+    color: #006C65;
+    margin-bottom: 0.3em;
+}
+.encadre p
+{
+    margin: 0.45em 0 0.6em 0;
+}
+.encadre.prune
+{
+    border-color: #970E53;
+    background: #FBF4F7;
+}
+.encadre.prune .encadre-titre
+{
+    color: #970E53;
+}
+.encadre.bleu
+{
+    border-color: #004D80;
+    background: #F2F6FA;
+}
+.encadre.bleu .encadre-titre
+{
+    color: #004D80;
+}
+.encadre details > summary
+{
+    display: list-item;
+    cursor: pointer;
+    color: #475569;
+    font-style: italic;
+}
+.encadre blockquote
+{
+    margin: 0.5em 0 0.7em 0;
+}
+
+/* ---------- Figures, légendes, formules larges -------------------------- */
+.legende
+{
+    text-align: center;
+    font-size: 0.9em;
+    color: #64748b;
+    font-style: italic;
+    margin-top: -0.4em;
+}
+#grosseformule, .defile
+{
+    overflow-x: auto;
+}
+
+/* ---------- Tableaux ---------------------------------------------------- */
+#body-inner table
+{
+    border-collapse: collapse;
+    border: 0;
+}
+#body-inner td, #body-inner th
+{
+    text-align: center;
+    vertical-align: middle;
+    min-width: 3em;
+}
+.tableau-large
+{
+    overflow-x: auto;
+    margin: 1.2em 0;
+}
+#body-inner .tab-recap
+{
+    width: auto;
+    margin: 0 auto;
+    font-size: 0.95em;
+}
+#body-inner .tab-recap th
+{
+    background: #EEF3F7;
+    color: #004D80;
+    font-weight: 600;
+    border: 0;
+    border-bottom: 2px solid #004D80;
+    padding: 0.45em 0.9em;
+}
+#body-inner .tab-recap td
+{
+    border: 0;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 0.4em 0.9em;
+    background: #fff;
+}
+#body-inner .tab-recap td.g
+{
+    text-align: left;
+}
+#body-inner .tab-lois
+{
+    width: 100%;
+    margin: 0 0 0.9em 0;
+}
+#body-inner .tab-lois th
+{
+    background: #EEF3F7;
+    color: #004D80;
+    font-weight: 600;
+    border: 0;
+    padding: 0.35em 0.8em;
+}
+#body-inner .tab-lois td
+{
+    border: 0;
+    border-bottom: 1px solid #e2e8f0;
+    background: #fff;
+    padding: 0.5em 0.6em;
+}
+#tabcondit td.v0 { background: #F7D9D3; }
+#tabcondit td.v1 { background: #DCF0CF; }
+#tabcondit th, #tabcondit td { border: 1px solid #fff; }
+
+@media (max-width: 480px)
+{
+    .source-livre { flex-direction: column; text-align: center; }
+    .encadre { padding: 0.5em 0.9em 0.3em 0.9em; }
+}

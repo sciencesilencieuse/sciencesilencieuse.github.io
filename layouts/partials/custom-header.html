@@ -27,6 +27,10 @@ window.addEventListener('load', function () {
 });
 </script>
 
+{{ with .Params.css }}
+<link rel="stylesheet" href="{{ printf "css/%s" . | relURL }}{{ if not $.Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}">
+{{ end }}
+
 {{ if .Params.js }}
 <script src="{{ .Params.js }}"></script>
 {{ end }}
