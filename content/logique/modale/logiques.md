@@ -373,32 +373,128 @@ Autrement dit, la prouvabilité se comporte comme la boîte de la logique $\text
 
 #### Le lemme de diagonalisation
 
-Il manque un ingrédient&nbsp;: des formules qui parlent d'elles-mêmes.
+Il manque un ingrédient&nbsp;: des formules qui parlent d'elles-mêmes. À première vue, c'est impossible. Une formule qui contiendrait son propre code serait plus longue que ce code, lequel est au moins aussi long qu'elle… Un programme qui voudrait afficher son propre texte bute sur la même difficulté&nbsp;: `print("print(\"print(...)\")")` ne fait que repousser le problème indéfiniment.
 
-<div class="theo">
-<p><b>Lemme de diagonalisation</b>&nbsp;:<br>
-Pour toute formule arithmétique $S(x)$ à une variable libre, il existe un énoncé $\phi$ tel que $\vdash\phi\leftrightarrow S(\ulcorner\phi\urcorner)$.</p>
-</div>
-
-Quelle que soit la propriété $S$, il existe donc une formule qui affirme «&nbsp;j'ai la propriété $S$&nbsp;». Il n'y a aucune magie&nbsp;: le philosophe Quine a montré qu'on peut faire la même chose en français, sans jamais écrire «&nbsp;cette phrase&nbsp;»&nbsp;:
+L'astuce consiste à ne jamais citer le tout, mais seulement un **gabarit**, accompagné d'une **recette** pour reconstituer le tout à partir du gabarit. Le philosophe Quine en a donné une version en langue naturelle, sans jamais écrire «&nbsp;cette phrase&nbsp;»&nbsp;:
 
 <p style="text-align:center;">«&nbsp;précédé de sa propre citation, donne une phrase qui a la propriété $S$&nbsp;»<br>précédé de sa propre citation, donne une phrase qui a la propriété $S$.</p>
 
-La phrase décrit une recette (prendre un bout de texte et le faire précéder de sa citation), et la recette, appliquée au bout de texte indiqué, redonne la phrase elle-même. Les informaticiens connaissent bien ce tour&nbsp;: c'est celui des *quines*, ces programmes qui affichent leur propre code.
+La phrase a deux morceaux&nbsp;: un gabarit, entre guillemets, et une recette qui dit quoi en faire («&nbsp;le faire précéder de sa propre citation&nbsp;»). Appliquée au gabarit, la recette reconstitue exactement la phrase entière. La phrase parle donc d'elle-même sans jamais se contenir.
+
+<div class="encadre bleu">
+<div class="encadre-titre">Un programme qui s'affiche lui-même</div>
+
+Les informaticiens appellent ***quine***, en hommage au philosophe, un programme qui affiche son propre code. En Python, deux lignes suffisent (lancez-le, puis comparez le résultat au code)&nbsp;:
+
+{{< runpython lang="python" mode="toggle" default="code" height="auto" >}}
+s = 's = %r\nprint(s %% s)'
+print(s % s)
+{{< /runpython >}}
+
+On y retrouve le découpage de Quine&nbsp;:
+- la chaîne `s` est le **gabarit**, avec un trou `%r`&nbsp;;
+- `s % s` est la **recette**&nbsp;: elle remplit le trou avec la citation de `s` (son texte entre guillemets), c'est-à-dire «&nbsp;précédé de sa propre citation&nbsp;»&nbsp;;
+- le résultat est le texte complet du programme, qu'il ne reste qu'à afficher.
+
+Rien n'oblige à se contenter d'afficher son code&nbsp;: le programme peut calculer ce qu'il veut à son sujet. Celui-ci compte les lettres «&nbsp;e&nbsp;» de son propre texte&nbsp;:
+
+{{< runpython lang="python" mode="toggle" default="code" height="auto" >}}
+s = 's = %r\ncode = s %% s\nprint(code.count("e"), "lettres e dans mon propre code")'
+code = s % s
+print(code.count("e"), "lettres e dans mon propre code")
+{{< /runpython >}}
+
+C'est exactement le lemme qui suit&nbsp;: pour n'importe quelle propriété $S$ (ici «&nbsp;compter les e&nbsp;»), on fabrique un objet qui applique $S$ à son propre code.
+
+</div>
+
+<div class="theo">
+<p><b>Lemme de diagonalisation</b>&nbsp;:<br>
+Pour toute formule arithmétique $S(x)$ à une variable libre, il existe un énoncé $\phi$ tel que</p>
+<p style="text-align:center;">$\vdash\phi\leftrightarrow S(\ulcorner\phi\urcorner)$.</p>
+</div>
+
+Quelle que soit la propriété $S$, il existe donc une formule qui affirme «&nbsp;j'ai la propriété $S$&nbsp;». La preuve suit pas à pas la recette de Quine.
 
 <div class="preuve">
-<p>La preuve est la traduction arithmétique de la recette de Quine.</p>
-<p>Si $n$ est le code d'une formule $A(x)$ à une variable libre, on note $d(n)$ le code de la formule obtenue en appliquant $A$ à son propre code&nbsp;: $d(\ulcorner A(x)\urcorner)=\ulcorner A(\ulcorner A(x)\urcorner)\urcorner$. Ainsi $d(\ulcorner x=0 \urcorner)=\ulcorner(\ulcorner x=0 \urcorner = 0)\urcorner$. C'est «&nbsp;faire précéder de sa propre citation&nbsp;». La fonction $d$ se calcule mécaniquement, et l'arithmétique sait donc en parler.</p>
-<p>On pose alors $g(x)= S(d(x))$ («&nbsp;précédé de sa propre citation, donne une phrase qui a la propriété $S$&nbsp;»), puis $\phi= g(\ulcorner g(x)\urcorner)$ (cette même formule, appliquée à son propre code). On obtient&nbsp;:</p>
-$$
-\begin{aligned}
-\phi &= g(\ulcorner g(x)\urcorner)\\
-&= S(d(\ulcorner g(x)\urcorner)) \\
-&\leftrightarrow S(\ulcorner g(\ulcorner g(x)\urcorner)\urcorner)\\
-&= S(\ulcorner\phi\urcorner)
-\end{aligned}
-$$
-<p>Le nom du lemme vient de sa parenté avec l'argument diagonal de Cantor&nbsp;: on range les formules $A_0(x), A_1(x),\ldots$ en lignes, les codes en colonnes, et la fonction $d$ parcourt la diagonale, là où chaque formule est appliquée à elle-même.</p>
+<p><b>Étape 1 : la recette $d$.</b> Si $n$ est le code d'une formule $A(x)$ à une variable libre, on note $d(n)$ le code de la formule obtenue en appliquant $A$ à son propre code&nbsp;:</p>
+<p style="text-align:center;">$d(\ulcorner A(x)\urcorner)=\ulcorner A(\ulcorner A(x)\urcorner)\urcorner$.</p>
+<p>Par exemple $d(\ulcorner x=0 \urcorner)=\ulcorner\,\ulcorner x=0 \urcorner = 0\,\urcorner$&nbsp;: la formule «&nbsp;$x$ est nul&nbsp;», appliquée à son propre code, affirme que son code est nul (ce qui est faux, mais peu importe). C'est le «&nbsp;précédé de sa propre citation&nbsp;» de Quine, ou le <code>s % s</code> du programme. La fonction $d$ se calcule mécaniquement (décoder, substituer, recoder)&nbsp;: l'arithmétique sait donc en parler.</p>
+<p><b>Étape 2 : le gabarit $g$.</b> On pose $g(x)=S(d(x))$, qui affirme «&nbsp;la diagonale de $x$ a la propriété $S$&nbsp;». C'est le gabarit entre guillemets de la phrase de Quine, ou la chaîne <code>s</code> du programme.</p>
+<p><b>Étape 3 : le gabarit appliqué à lui-même.</b> On pose $\phi=g(\ulcorner g(x)\urcorner)$.</p>
+<p><b>Étape 4 : la vérification.</b> Par définition de $g$, l'énoncé $\phi$ affirme $S\big(d(\ulcorner g(x)\urcorner)\big)$. Or, par définition de $d$, $d(\ulcorner g(x)\urcorner)=\ulcorner g(\ulcorner g(x)\urcorner)\urcorner=\ulcorner\phi\urcorner$. L'énoncé $\phi$ affirme donc $S(\ulcorner\phi\urcorner)$&nbsp;: il dit de lui-même qu'il a la propriété $S$. Comme ce calcul de $d$ est mécanique, l'arithmétique sait le refaire, et elle démontre $\phi\leftrightarrow S(\ulcorner\phi\urcorner)$.</p>
+</div>
+
+Le schéma ci-dessous montre pourquoi l'on parle de **diagonalisation**. On range toutes les formules à une variable en lignes et tous les codes $n_0, n_1,\ldots$ en colonnes&nbsp;; la case $A_i(n_j)$ applique la formule $A_i$ au code de $A_j$. La recette $d$ parcourt la diagonale (en rose), où chaque formule est appliquée à son propre code.
+
+<div class="svg-container" style="text-align:center;margin:1em 0 0.4em;">
+<svg viewBox="0 0 560 300" role="img" aria-label="Tableau diagonal : lignes = formules, colonnes = codes ; la ligne de g renvoie à la diagonale et, dans sa propre colonne, à elle-même" style="width:100%;max-width:560px;height:auto;">
+<defs><marker id="dg-fl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#004D80"/></marker><marker id="dg-fp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#970E53"/></marker></defs>
+<text x="144.0" y="32" text-anchor="middle" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic">n<tspan dy="4" font-size="11">0</tspan><tspan dy="-4"></tspan></text>
+<text x="248.0" y="32" text-anchor="middle" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic">n<tspan dy="4" font-size="11">1</tspan><tspan dy="-4"></tspan></text>
+<text x="352.0" y="32" text-anchor="middle" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic">n<tspan dy="4" font-size="11" font-style="italic">g</tspan><tspan dy="-4"></tspan></text>
+<text x="456.0" y="32" text-anchor="middle" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic">n<tspan dy="4" font-size="11">3</tspan><tspan dy="-4"></tspan></text>
+<text x="528" y="32" text-anchor="middle" font-size="16" fill="#94a3b8" font-family="Georgia,'Times New Roman',serif">…</text>
+<text x="78" y="78.0" text-anchor="end" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic">A<tspan dy="4" font-size="11">0</tspan><tspan dy="-4"></tspan></text>
+<rect x="94" y="48" width="100" height="50" rx="6" fill="#FBE9EF" stroke="#e2e8f0" stroke-width="1"/>
+<text x="144.0" y="78.0" text-anchor="middle" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic">A<tspan dy="4" font-size="11">0</tspan><tspan dy="-4">(n<tspan dy="4" font-size="11">0</tspan><tspan dy="-4">)</tspan></tspan></text>
+<rect x="198" y="48" width="100" height="50" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="248.0" y="78.0" text-anchor="middle" font-size="15" fill="#475569" font-family="Georgia,'Times New Roman',serif" font-style="italic">A<tspan dy="4" font-size="11">0</tspan><tspan dy="-4">(n<tspan dy="4" font-size="11">1</tspan><tspan dy="-4">)</tspan></tspan></text>
+<rect x="302" y="48" width="100" height="50" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="352.0" y="78.0" text-anchor="middle" font-size="15" fill="#475569" font-family="Georgia,'Times New Roman',serif" font-style="italic">A<tspan dy="4" font-size="11">0</tspan><tspan dy="-4">(n<tspan dy="4" font-size="11" font-style="italic">g</tspan><tspan dy="-4">)</tspan></tspan></text>
+<rect x="406" y="48" width="100" height="50" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="456.0" y="78.0" text-anchor="middle" font-size="15" fill="#475569" font-family="Georgia,'Times New Roman',serif" font-style="italic">A<tspan dy="4" font-size="11">0</tspan><tspan dy="-4">(n<tspan dy="4" font-size="11">3</tspan><tspan dy="-4">)</tspan></tspan></text>
+<text x="528" y="78.0" text-anchor="middle" font-size="16" fill="#94a3b8" font-family="Georgia,'Times New Roman',serif">…</text>
+<text x="78" y="132.0" text-anchor="end" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic">A<tspan dy="4" font-size="11">1</tspan><tspan dy="-4"></tspan></text>
+<rect x="94" y="102" width="100" height="50" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="144.0" y="132.0" text-anchor="middle" font-size="15" fill="#475569" font-family="Georgia,'Times New Roman',serif" font-style="italic">A<tspan dy="4" font-size="11">1</tspan><tspan dy="-4">(n<tspan dy="4" font-size="11">0</tspan><tspan dy="-4">)</tspan></tspan></text>
+<rect x="198" y="102" width="100" height="50" rx="6" fill="#FBE9EF" stroke="#e2e8f0" stroke-width="1"/>
+<text x="248.0" y="132.0" text-anchor="middle" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic">A<tspan dy="4" font-size="11">1</tspan><tspan dy="-4">(n<tspan dy="4" font-size="11">1</tspan><tspan dy="-4">)</tspan></tspan></text>
+<rect x="302" y="102" width="100" height="50" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="352.0" y="132.0" text-anchor="middle" font-size="15" fill="#475569" font-family="Georgia,'Times New Roman',serif" font-style="italic">A<tspan dy="4" font-size="11">1</tspan><tspan dy="-4">(n<tspan dy="4" font-size="11" font-style="italic">g</tspan><tspan dy="-4">)</tspan></tspan></text>
+<rect x="406" y="102" width="100" height="50" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="456.0" y="132.0" text-anchor="middle" font-size="15" fill="#475569" font-family="Georgia,'Times New Roman',serif" font-style="italic">A<tspan dy="4" font-size="11">1</tspan><tspan dy="-4">(n<tspan dy="4" font-size="11">3</tspan><tspan dy="-4">)</tspan></tspan></text>
+<text x="528" y="132.0" text-anchor="middle" font-size="16" fill="#94a3b8" font-family="Georgia,'Times New Roman',serif">…</text>
+<text x="78" y="186.0" text-anchor="end" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic">g</text>
+<rect x="94" y="156" width="100" height="50" rx="6" fill="#E8F0F7" stroke="#e2e8f0" stroke-width="1"/>
+<text x="136.0" y="186.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic">g(n<tspan dy="4" font-size="11">0</tspan><tspan dy="-4">)</tspan></text>
+<rect x="198" y="156" width="100" height="50" rx="6" fill="#E8F0F7" stroke="#e2e8f0" stroke-width="1"/>
+<text x="240.0" y="186.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic">g(n<tspan dy="4" font-size="11">1</tspan><tspan dy="-4">)</tspan></text>
+<rect x="302" y="156" width="100" height="50" rx="6" fill="#F3E6F0" stroke="#970E53" stroke-width="2"/>
+<text x="352.0" y="186.0" text-anchor="middle" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic">g(n<tspan dy="4" font-size="11" font-style="italic">g</tspan><tspan dy="-4">)</tspan></text>
+<rect x="406" y="156" width="100" height="50" rx="6" fill="#E8F0F7" stroke="#e2e8f0" stroke-width="1"/>
+<text x="448.0" y="186.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic">g(n<tspan dy="4" font-size="11">3</tspan><tspan dy="-4">)</tspan></text>
+<text x="528" y="186.0" text-anchor="middle" font-size="16" fill="#94a3b8" font-family="Georgia,'Times New Roman',serif">…</text>
+<text x="78" y="240.0" text-anchor="end" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic">A<tspan dy="4" font-size="11">3</tspan><tspan dy="-4"></tspan></text>
+<rect x="94" y="210" width="100" height="50" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="144.0" y="240.0" text-anchor="middle" font-size="15" fill="#475569" font-family="Georgia,'Times New Roman',serif" font-style="italic">A<tspan dy="4" font-size="11">3</tspan><tspan dy="-4">(n<tspan dy="4" font-size="11">0</tspan><tspan dy="-4">)</tspan></tspan></text>
+<rect x="198" y="210" width="100" height="50" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="248.0" y="240.0" text-anchor="middle" font-size="15" fill="#475569" font-family="Georgia,'Times New Roman',serif" font-style="italic">A<tspan dy="4" font-size="11">3</tspan><tspan dy="-4">(n<tspan dy="4" font-size="11">1</tspan><tspan dy="-4">)</tspan></tspan></text>
+<rect x="302" y="210" width="100" height="50" rx="6" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+<text x="352.0" y="240.0" text-anchor="middle" font-size="15" fill="#475569" font-family="Georgia,'Times New Roman',serif" font-style="italic">A<tspan dy="4" font-size="11">3</tspan><tspan dy="-4">(n<tspan dy="4" font-size="11" font-style="italic">g</tspan><tspan dy="-4">)</tspan></tspan></text>
+<rect x="406" y="210" width="100" height="50" rx="6" fill="#FBE9EF" stroke="#e2e8f0" stroke-width="1"/>
+<text x="456.0" y="240.0" text-anchor="middle" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic">A<tspan dy="4" font-size="11">3</tspan><tspan dy="-4">(n<tspan dy="4" font-size="11">3</tspan><tspan dy="-4">)</tspan></tspan></text>
+<text x="528" y="240.0" text-anchor="middle" font-size="16" fill="#94a3b8" font-family="Georgia,'Times New Roman',serif">…</text>
+<text x="248.0" y="280" text-anchor="middle" font-size="16" fill="#94a3b8" font-family="Georgia,'Times New Roman',serif">⋮</text>
+<path d="M184.0,167.0 L184.0,87.0" stroke="#004D80" stroke-width="1.6" fill="none" marker-end="url(#dg-fl)"/>
+<path d="M288.0,167.0 L288.0,141.0" stroke="#004D80" stroke-width="1.6" fill="none" marker-end="url(#dg-fl)"/>
+<path d="M496.0,195.0 L496.0,221.0" stroke="#004D80" stroke-width="1.6" fill="none" marker-end="url(#dg-fl)"/>
+<path d="M390.0,169.0 C414.0,151.0 414.0,211.0 390.0,193.0" stroke="#970E53" stroke-width="1.8" fill="none" marker-end="url(#dg-fp)"/>
+<text x="352.0" y="280" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic">φ = g(n<tspan dy="4" font-size="10">g</tspan><tspan dy="-4">)</tspan></text>
+</svg>
+</div>
+<p class="legende">La ligne de $g$ (en bleu) parle de la diagonale&nbsp;: sa case de la colonne $n_j$ affirme que la case diagonale $A_j(n_j)$ a la propriété $S$. Dans la colonne de $g$ elle-même, la case diagonale visée est… la case de départ&nbsp;: $\phi=g(n_g)$ parle d'elle-même.</p>
+
+C'est le même mouvement que l'argument diagonal de Cantor, à une différence près. Cantor modifie la diagonale pour fabriquer un objet qui n'est dans aucune ligne. Ici, la ligne $g$ fait partie du tableau, et elle finit par croiser sa propre diagonale&nbsp;: au lieu d'une contradiction, on obtient un **point fixe**.
+
+<div class="tableau-large">
+<table class="tab-recap">
+<tr><th></th><th>Quine</th><th>Python</th><th>Arithmétique</th></tr>
+<tr><td class="g"><b>gabarit</b></td><td>«&nbsp;précédé de sa propre citation, donne…&nbsp;»</td><td>la chaîne <code>s</code></td><td>$g(x)=S(d(x))$</td></tr>
+<tr><td class="g"><b>recette</b></td><td>précéder de sa citation</td><td><code>s % s</code></td><td>$d$</td></tr>
+<tr><td class="g"><b>résultat</b></td><td>la phrase entière</td><td>le texte du programme</td><td>$\phi=g(\ulcorner g(x)\urcorner)$</td></tr>
+<tr><td class="g"><b>ce qu'il en dit</b></td><td>«&nbsp;a la propriété $S$&nbsp;»</td><td><code>print</code>, <code>count("e")</code></td><td>$S(\ulcorner\phi\urcorner)$</td></tr>
+</table>
 </div>
 
 #### Le premier théorème d'incomplétude
