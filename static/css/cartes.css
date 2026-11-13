@@ -360,3 +360,15 @@
 .math-btn:focus-visible {
   color: var(--c-on) !important;
 }
+
+/* --- PAS DE SOULIGNEMENT DU TITRE AU SURVOL ---
+   Le thème souligne les liens au survol par une image de fond qui s'étend.
+   Le lien du titre couvrant toute la carte, on neutralise ce trait ici seulement. */
+#body .math-card h3 a,
+#body .math-card h3 a:hover,
+#body .math-card h3 a.highlight,
+#body .math-card h3 a.highlight:hover {
+  background-image: none !important;
+  background-size: 0 0 !important;
+  text-decoration: none !important;
+}
