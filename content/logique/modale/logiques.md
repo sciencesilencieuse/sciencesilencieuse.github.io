@@ -414,7 +414,7 @@ Pour toute formule arithmétique $S(x)$ à une variable libre, il existe un éno
 <p style="text-align:center;">$\vdash\phi\leftrightarrow S(\ulcorner\phi\urcorner)$.</p>
 </div>
 
-Quelle que soit la propriété $S$, il existe donc une formule qui affirme «&nbsp;j'ai la propriété $S$&nbsp;». La preuve suit pas à pas la recette de Quine.
+Une formule $S(x)$ à une variable libre exprime une **propriété** des nombres&nbsp;: en remplaçant $x$ par un nombre $n$, on obtient un énoncé $S(n)$ qui dit si $n$ a cette propriété, comme «&nbsp;$x$ est pair&nbsp;» ou «&nbsp;$x$ est le code d'une formule prouvable&nbsp;». Et puisque chaque formule a un code, une propriété des nombres devient du même coup une propriété des formules&nbsp;: $S(\ulcorner\phi\urcorner)$ dit que la formule $\phi$ a la propriété $S$. Le lemme affirme donc que, quelle que soit la propriété $S$, il existe une formule qui dit d'elle-même «&nbsp;j'ai la propriété $S$&nbsp;». La preuve suit pas à pas la recette de Quine.
 
 <div class="preuve">
 <p><b>Étape 1 : la recette $d$.</b> Si $n$ est le code d'une formule $A(x)$ à une variable libre, on note $d(n)$ le code de la formule obtenue en appliquant $A$ à son propre code&nbsp;:</p>
