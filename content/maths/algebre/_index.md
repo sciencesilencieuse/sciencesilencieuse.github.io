@@ -5,86 +5,64 @@ weight = 3
 chapter = true
 +++
 
-<style>
-h2 {
-  text-align: center;
-}
-table {
-  border-collapse: collapse;
-  border: 0;
-}
-td, th {
-  border-collapse: collapse;
-  text-align: center;
-  vertical-align: middle;
-}
- #gris {
-     border: 0;
-  }
-</style>
-
-
-
-<style>
- #correc
-  {
-    color: #006C65;
-    border-left: solid 10px #C7DDDC;
-  }
- #comm
-  {
-    color: #004D80;
-    border-left: solid 10px #B3CAD9;
-  }
- #commsum
-  {
-    color: #004D80;
-  }
- #correcsum
-  {
-    color: #006C65;
-  }
-</style>
-
-
 # Algèbre
 
 L'algèbre (de l'arabe الجبر, al-jabr, signifiant reconstruction ou réunion) est l'étude des relations entre les objets mathématiques.
 
-<div style="overflow-x: auto;font-size:1.2em;">
-<table>
-  <tr>
-    <th style="text-align:center;"><a href="./equations/" style="color:#00A2FF;">Équations</a>
-    </th>
-    <td style="width:40%;"> <a href="./equations/"><img src="/presequations.png"  style="box-shadow:none;background:none;max-width:100%;margin:auto;max-height:6.5lh; object-fit:contain;"></a></td>
-  </tr>
-    <tr>
-    <th style="text-align:center;"><a href="./lineaire/" style="color:#FEAE00;">Algèbre linéaire</a><br>
-    <ul style="font-size:1em;color:#FEAE00;text-align:left;font-weight:normal;display:inline-block;">
- <li>Des systèmes d'équations aux matrices de rotation</li>
-    <li>Codes correcteurs</li>
-    </ul>
-</th>
-    <td style="width:40%;"> <a href="./lineaire/"><img src="/presalglin.png" style="box-shadow:none;background:none;max-width100%;margin:auto;max-height:6.5lh; object-fit:contain;"></a></td>
-  </tr>
-    <tr>
-    <th style="text-align:center;"><a href="./groupes/" style="color:#1DB100;">Théorie des groupes</a></th>
-    <td style="width:40%;"> <a href="./groupes/"><img src="/presgroupes.png" style="box-shadow:none;background:none;max-width:100%;margin:auto;max-height:6.5lh; object-fit:contain;"></a></td>
-  </tr>
-      <tr>
-    <th style="text-align:center;"><a href="./graphes/" style="color:#D41876;">Graphes</a><br>
-        <ul style="font-size:1em;color:#D41876;text-align:left;font-weight:normal;display:inline-block;">
-    <li>Jeu de Nim</li>
-    <li>Formule de Cayley et codage de Prüfer</li>
-    </ul></th>
-    <td style="width:40%;"> <a href="./graphes/"><img src="/presgraphes.png" style="box-shadow:none;background:none;max-width:100%;margin:auto;max-height:6.5lh; object-fit:contain;"></a></td>
-  </tr>
-        <tr>
-    <th style="text-align:center;"><a href="./fft/" style="color:#FF644E;">Multiplication de polynômes et FFT</a></th>
-    <td style="width:40%;"> <a href="./fft/"><img src="/presfft.png" style="box-shadow:none;background:none;max-width:100%;margin:auto;max-height:6.5lh; object-fit:contain;"></a></td>
-  </tr>
-</table>
+<div class="math-container">
+<div class="math-grid">
+
+<div class="math-card c-bleu">
+<div class="math-card-head">
+<span class="math-illus" aria-hidden="true"><img src="/presequations.png" alt=""></span>
+<h3><a href="./equations/">Équations</a></h3>
+</div>
+<div class="carte-texte">Ce que deviennent les équations polynomiales quand on laisse la variable se promener dans les complexes.</div>
 </div>
 
+<div class="math-card c-canard">
+<div class="math-card-head">
+<span class="math-illus" aria-hidden="true"><img src="/presalglin.png" alt=""></span>
+<h3><a href="./lineaire/">Algèbre linéaire</a></h3>
+</div>
+<div class="carte-texte">Des systèmes d'équations aux matrices de rotation, l'outil de base de la physique quantique.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./lineaire/#codes-correcteurs" class="math-btn">Codes correcteurs</a>
+</div>
+</div>
+</div>
 
+<div class="math-card c-vert">
+<div class="math-card-head">
+<span class="math-illus" aria-hidden="true"><img src="/presgroupes.png" alt=""></span>
+<h3><a href="./groupes/">Théorie des groupes</a></h3>
+</div>
+<div class="carte-texte">Miettes de théorie des groupes pour physicien&nbsp;: symétries, rotations et représentations.</div>
+</div>
 
+<div class="math-card c-orange">
+<div class="math-card-head">
+<span class="math-illus" aria-hidden="true"><img src="/presgraphes.png" alt=""></span>
+<h3><a href="./graphes/">Graphes</a></h3>
+</div>
+<div class="carte-texte">Jeux, dénombrements et chemins sur les graphes.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./graphes/#jeu-de-nim" class="math-btn">Jeu de Nim</a>
+  <a href="./graphes/#combinatoire" class="math-btn">Formule de Cayley et codage de Prüfer</a>
+  <a href="./graphes/#chemin-hamiltonien" class="math-btn">Chemin hamiltonien</a>
+</div>
+</div>
+</div>
+
+<div class="math-card c-rouge">
+<div class="math-card-head">
+<span class="math-illus" aria-hidden="true"><img src="/presfft.png" alt=""></span>
+<h3><a href="./fft/">Multiplication de polynômes et FFT</a></h3>
+</div>
+<div class="carte-texte">Comment multiplier efficacement deux polynômes&nbsp;? Les maths cachées derrière l'un des algorithmes les plus importants.</div>
+</div>
+
+</div>
+</div>

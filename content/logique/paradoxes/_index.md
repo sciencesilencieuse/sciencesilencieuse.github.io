@@ -17,7 +17,7 @@ Les trois paradoxes réunis ici ne sont pas de simples curiosités&nbsp;: chacun
 
 <div class="math-grid">
 
-<div class="math-card c-violet">
+<div class="math-card c-magenta">
 <div class="math-card-head">
 <span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 14h30M9 24h20M9 34h10"/></svg></span>
 <h3><a href="./berry/">Paradoxe de Berry</a></h3>
@@ -47,7 +47,7 @@ Les trois paradoxes réunis ici ne sont pas de simples curiosités&nbsp;: chacun
 </div>
 </div>
 
-<div class="math-card c-ambre">
+<div class="math-card c-orange">
 <div class="math-card-head">
 <span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect class="teinte" x="5" y="17" width="16" height="16" rx="1.5"/><rect class="plein" x="27" y="17" width="16" height="16" rx="1.5"/></svg></span>
 <h3><a href="./newcomb/">Paradoxe de Newcomb</a></h3>

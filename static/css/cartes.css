@@ -296,3 +296,67 @@
   outline: 2px solid var(--c);
   outline-offset: 3px;
 }
+
+/* --- ILLUSTRATION À LA PLACE DU PICTOGRAMME (pages des sous-chapitres) --- */
+.math-illus {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  transition: transform 0.25s ease;
+}
+#body-inner .math-illus img {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: contain;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+.math-card:hover .math-illus { transform: scale(1.06); }
+@media (prefers-reduced-motion: reduce) {
+  .math-illus { transition: none !important; }
+  .math-card:hover .math-illus { transform: none; }
+}
+
+/* ==========================================================================
+   PALETTE DES CARTES
+   Six teintes, chacune avec sa variante claire :
+     --c   teinte foncée : trait sous le titre, bord au survol, boutons survolés
+     --c2  teinte claire : fin du trait (dégradé) et ombre au survol
+     --c-on couleur du texte sur --c (foncé quand la teinte est trop claire)
+   Ces règles, placées en fin de fichier, remplacent les couleurs précédentes.
+   ========================================================================== */
+.math-card, .c-bleu                      { --c: #0076BA; --c2: #56C1FF; --c-on: #ffffff; }
+.c-canard                                { --c: #00A89D; --c2: #73FDEA; --c-on: #ffffff; }
+.c-vert                                  { --c: #1DB100; --c2: #88FA4E; --c-on: #ffffff; }
+.c-orange, .c-ambre                      { --c: #FEAE00; --c2: #FFF056; --c-on: #1f2933; }
+.c-rouge                                 { --c: #EE220C; --c2: #FF968D; --c-on: #ffffff; }
+.c-magenta, .c-rose, .c-violet           { --c: #D41876; --c2: #FF95CA; --c-on: #ffffff; }
+/* page d'accueil Maths : une teinte par domaine */
+.card-fondements   { --c: #0076BA; --c2: #56C1FF; --c-on: #ffffff; }
+.card-arithmetique { --c: #EE220C; --c2: #FF968D; --c-on: #ffffff; }
+.card-algebre      { --c: #00A89D; --c2: #73FDEA; --c-on: #ffffff; }
+.card-geometrie    { --c: #1DB100; --c2: #88FA4E; --c-on: #ffffff; }
+.card-proba        { --c: #D41876; --c2: #FF95CA; --c-on: #ffffff; }
+.card-stat         { --c: #FEAE00; --c2: #FFF056; --c-on: #1f2933; }
+.card-jeux         { --c: #0076BA; --c2: #56C1FF; --c-on: #ffffff; }
+
+.math-card h3::after {
+  background: linear-gradient(90deg, var(--c), var(--c2));
+}
+.math-card:hover {
+  box-shadow: 0 12px 28px rgba(16, 24, 40, 0.12);
+  box-shadow: 0 12px 28px color-mix(in srgb, var(--c2) 45%, transparent);
+}
+.math-icon { color: var(--c-on); }
+.math-btn:hover,
+.math-btn:focus-visible {
+  color: var(--c-on) !important;
+}

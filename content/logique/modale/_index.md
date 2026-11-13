@@ -17,7 +17,7 @@ Pour leur donner un sens, on ne raisonne plus dans un seul monde mais dans un **
 
 <div class="math-grid">
 
-<div class="math-card c-violet">
+<div class="math-card c-magenta">
 <div class="math-card-head">
 <span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="leger" d="M10 35L24 12l14 23z"/><circle class="plein" cx="24" cy="12" r="4.4"/><circle class="plein" cx="10" cy="35" r="4.4"/><circle class="plein" cx="38" cy="35" r="4.4"/></svg></span>
 <h3><a href="./syntaxe-semantique/">Syntaxe et sémantique</a></h3>
@@ -52,7 +52,7 @@ Pour leur donner un sens, on ne raisonne plus dans un seul monde mais dans un **
 </div>
 </div>
 
-<div class="math-card c-ambre">
+<div class="math-card c-orange">
 <div class="math-card-head">
 <span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="leger" d="M10 24h10M20 24l15-12M20 24h15M20 24l15 12"/><circle class="plein" cx="10" cy="24" r="4.4"/><circle class="plein" cx="37" cy="12" r="3.8"/><circle class="plein" cx="37" cy="24" r="3.8"/><circle class="plein" cx="37" cy="36" r="3.8"/></svg></span>
 <h3><a href="./logiques/">Différentes logiques modales</a></h3>

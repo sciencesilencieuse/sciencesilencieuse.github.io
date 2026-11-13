@@ -31,7 +31,7 @@ La logique est à l'intersection de l'informatique, des mathématiques et de la 
 </div>
 </div>
 
-<div class="math-card c-violet">
+<div class="math-card c-vert">
 <div class="math-card-head">
 <span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="6" y="16" width="16" height="16" rx="1.5"/><path d="M34 13l9 11-9 11-9-11z"/></svg></span>
 <h3><a href="./modale/">Logique modale</a></h3>
@@ -46,7 +46,7 @@ La logique est à l'intersection de l'informatique, des mathématiques et de la 
 </div>
 </div>
 
-<div class="math-card c-rose">
+<div class="math-card c-magenta">
 <div class="math-card-head">
 <span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><g transform="scale(2)" stroke-width="1.2"><path d="M20 4.5v5h-5"/><path d="M4 19.5v-5h5"/><path d="M5.2 9.5a7.5 7.5 0 0 1 12.4-2.8L20 9.5M4 14.5l2.4 2.8a7.5 7.5 0 0 0 12.4-2.8"/></g></svg></span>
 <h3><a href="./paradoxes/">Paradoxes</a></h3>

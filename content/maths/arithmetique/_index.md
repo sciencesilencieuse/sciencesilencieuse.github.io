@@ -5,66 +5,57 @@ weight = 2
 chapter = true
 +++
 
-<style>
- #correc
-  {
-    color: #006C65;
-    border-left: solid 10px #C7DDDC;
-  }
- #comm
-  {
-    color: #004D80;
-    border-left: solid 10px #B3CAD9;
-  }
- #commsum
-  {
-    color: #004D80;
-  }
- #correcsum
-  {
-    color: #006C65;
-  }
-</style>
-
-
 # Arithmétique
 
 L'arithmétique est la plus ancienne branche des mathématiques avec la géométrie. L'arithmétique (du grec ἀριθμός, nombre) étudie les nombres et leurs relations.
 
-<div style="overflow-x: auto;font-size:1.2em;">
-<table>
-  <tr>
-    <th style="text-align:center;"><a href="./numeration/" style="color:#00AB8E;">Numération et bases</a><br>
-        <ul style="font-size:1em;color:#00AB8E;text-align:left;font-weight:normal;display:inline-block;">
-    <li>différents systèmes</li>
-    <li>la base 3</li>
-    </ul>
-    </th>
-    <td style="width:40%;"> <a href="./numeration/"><img src="/presnum.png"  style="box-shadow:none;background:none;max-width:100%;margin:auto;max-height:6.5lh; object-fit:contain;"></a></td>
-  </tr>
-    <tr>
-    <th style="text-align:center;"><a href="./nombresapart/" style="color:#FF42A1;">Nombres particuliers</a><br>
-    <ul style="font-size:1em;color:#FF42A1;text-align:left;font-weight:normal;display:inline-block;">
-    <li>nombres premiers</li>
-    <li>pgcd (algorithme d'Euclide)</li>
-    <li>fractions continues</li>
-    <li>nombre d'or</li>
-    <li><a href="./exponentielle/" style="color:#FF42A1;">nombre $\mathrm{e}$</a></li>
-    </ul>
-    </th>
-    <td style="width:40%;"> <a href="./nombresapart/"><img src="/presnb.png" style="box-shadow:none;background:none;max-width100%;margin:auto;max-height:6.5lh; object-fit:contain;"></a></td>
-  </tr>
-    <tr>
-    <th style="text-align:center;"><a href="./complexes/" style="color:#377DCE;">Complexes</a><br>
-    <ul style="font-size:1em;color:#377DCE;text-align:left;font-weight:normal;display:inline-block;">
-    <li>nombres algébriques</li>
-    <li>ensemble de Mandelbrot</li>
-    <li>triplets pythagoriciens</li>
-    </ul>
-</th>
-    <td style="width:40%;"> <a href="./complexes/"><img src="/prescompl.png" style="box-shadow:none;background:none;max-width:100%;margin:auto;max-height:6.5lh; object-fit:contain;"></a></td>
+<div class="math-container">
+<div class="math-grid">
 
-  </tr>
-</table>
+<div class="math-card c-bleu">
+<div class="math-card-head">
+<span class="math-illus" aria-hidden="true"><img src="/presnum.png" alt=""></span>
+<h3><a href="./numeration/">Numération et bases</a></h3>
+</div>
+<div class="carte-texte">Compter autrement qu'en base dix&nbsp;: des systèmes anciens à l'informatique.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./numeration/#la-base-3" class="math-btn">La base 3</a>
+</div>
+</div>
 </div>
 
+<div class="math-card c-canard">
+<div class="math-card-head">
+<span class="math-illus" aria-hidden="true"><img src="/presnb.png" alt=""></span>
+<h3><a href="./nombresapart/">Nombres particuliers</a></h3>
+</div>
+<div class="carte-texte">Nombres premiers, pgcd, fractions continues, nombre d'or… et le nombre $\mathrm{e}$.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./nombresapart/#divisibilité-et-nombres-premiers" class="math-btn">Nombres premiers</a>
+  <a href="./nombresapart/#algorithme-deuclide" class="math-btn">Algorithme d'Euclide</a>
+  <a href="./nombresapart/#fractions-continues" class="math-btn">Fractions continues</a>
+  <a href="./nombresapart/#nombre-dor" class="math-btn">Nombre d'or</a>
+  <a href="./exponentielle/" class="math-btn">Le nombre e</a>
+</div>
+</div>
+</div>
+
+<div class="math-card c-vert">
+<div class="math-card-head">
+<span class="math-illus" aria-hidden="true"><img src="/prescompl.png" alt=""></span>
+<h3><a href="./complexes/">Complexes</a></h3>
+</div>
+<div class="carte-texte">Les nombres complexes et quelques-unes de leurs surprises.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./complexes/#entiers-algébriques" class="math-btn">Entiers algébriques</a>
+  <a href="./complexes/#ensemble-de-mandelbrot" class="math-btn">Ensemble de Mandelbrot</a>
+  <a href="./complexes/#triplets-pythagoriciens" class="math-btn">Triplets pythagoriciens</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>

@@ -5,58 +5,108 @@ weight = 2
 chapter = false
 +++
 
-<style>
-h2{
-text-align:center;
-}
-</style>
-
-
 # Géométrie
 
 La géométrie est avec l'arithmétique une des plus vieilles branches des mathématiques (l'arithmétique pour tenir les comptes et la géométrie pour mesurer les terres).
 
 Géométrie et physique sont intimement liées. Le développement de la géométrie a en partie été poussé par les questionnements des astronomes (sur la position des astres, leur mouvement, leur taille, leur distance, etc.) et des ingénieurs (pour construire des trucs qui tiennent debout). Et une explication géométrique des lois fondamentales de l'univers attire toujours certains chercheurs, plus de 2000 ans après Platon.
 
-<div style="overflow-x: auto;font-size:1.2em;">
-<table>
-  <tr>
-    <th style="text-align:center;"><a href="./geo1/" style="color:#00A2FF;">Triangle</a><br>
-<ul style="font-size:1em;color:#00A2FF;text-align:left;font-weight:normal;display:inline-block;">
-    <li>Pythagore</li>
-    <li>Thalès</li>
-    <li>Droite d'Euler</li>
-    </ul>
-    </th>
-    <td style="width:40%;"> <a href="./geo1/"><img src="/prestriangle.png"  style="box-shadow:none;background:none;max-width:100%;margin:auto;max-height:6.5lh; object-fit:contain;"></a></td>
-  </tr>
-    <tr>
-    <th style="text-align:center;"><a href="./geo2/" style="color:#FEAE00;">Cercle et triangle</a><br>
-    <ul style="font-size:1em;color:#FEAE00;text-align:left;font-weight:normal;display:inline-block;">
-    <li>Trigonométrie </li>
-    <li>Angles inscrits</li>
-    <li>Théorème de La Hire</li>
-    </ul></th>
-    <td style="width:40%;"> <a href="./geo2/"><img src="/prescercle.png" style="box-shadow:none;background:none;max-width100%;margin:auto;max-height:6.5lh; object-fit:contain;"></a></td>
-  </tr>
-    <tr>
-    <th style="text-align:center;"><a href="./geo3/" style="color:#1DB100;">Aires et Volumes</a><br></th>
-    <td style="width:40%;"> <a href="./geo3/"><img src="/presaire.png" style="box-shadow:none;background:none;max-width:100%;margin:auto;max-height:6.5lh; object-fit:contain;"></a></td>
-  </tr>
-      <tr>
-    <th style="text-align:center;"><a href="./geo4/" style="color:#D41876;">Curse of dimensionality</a></th>
-    <td style="width:40%;"> <a href="./geo4/"><img src="/presdim.png" style="box-shadow:none;background:none;max-width:100%;margin:auto;max-height:6.5lh; object-fit:contain;"></a></td>
-  </tr>
-        <tr>
-    <th style="text-align:center;"><a href="./geo5/" style="color:#FF644E;"> Poursuites </a></th>
-    <td style="width:40%;"> <a href="./geo5/"><img src="/prespoursuite.png" style="box-shadow:none;background:none;max-width:100%;margin:auto;max-height:6.5lh; object-fit:contain;"></a></td>
-  </tr>
-  <tr>
-    <th style="text-align:center;"><a href="./simplexes/" style="color:#970E53;">Simplexes et flèche du temps</a><br>
-    </th>
-    <td style="width:40%;text-align:center;"><a href="./simplexes/"><img src="/simplices.png" style="box-shadow:none;background:none;max-width:100%;margin:auto;max-height:6.5lh; object-fit:contain;"></a></td>
-  </tr>
-</table>
+<div class="math-container">
+<div class="math-grid">
+
+<div class="math-card c-bleu">
+<div class="math-card-head">
+<span class="math-illus" aria-hidden="true"><img src="/prestriangle.png" alt=""></span>
+<h3><a href="./geo1/">Triangle</a></h3>
+</div>
+<div class="carte-texte">Les grands classiques du triangle.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./geo1/#pythagore" class="math-btn">Pythagore</a>
+  <a href="./geo1/#escargot-de-pythagore" class="math-btn">Escargot de Pythagore</a>
+  <a href="./geo1/#thalès" class="math-btn">Thalès</a>
+  <a href="./geo1/#droite-deuler" class="math-btn">Droite d'Euler</a>
+</div>
+</div>
+</div>
+
+<div class="math-card c-canard">
+<div class="math-card-head">
+<span class="math-illus" aria-hidden="true"><img src="/prescercle.png" alt=""></span>
+<h3><a href="./geo2/">Cercle et triangle</a></h3>
+</div>
+<div class="carte-texte">Trigonométrie, loi des sinus et mesure du méridien, angles inscrits.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./geo2/#trigonométrie" class="math-btn">Trigonométrie</a>
+  <a href="./geo2/#théorème-de-langle-inscrit-et-de-langle-au-centre" class="math-btn">Angle inscrit et angle au centre</a>
+</div>
+</div>
+</div>
+
+<div class="math-card c-vert">
+<div class="math-card-head">
+<span class="math-illus" aria-hidden="true"><img src="/presaire.png" alt=""></span>
+<h3><a href="./geo3/">Aires et volumes</a></h3>
+</div>
+<div class="carte-texte">Calculer des aires et des volumes, jusqu'au triangle tracé sur une sphère.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./geo3/#calculs-daires" class="math-btn">Calculs d'aires</a>
+  <a href="./geo3/#aires-et-identités-remarquables" class="math-btn">Identités remarquables</a>
+  <a href="./geo3/#aire-du-triangle-sphérique" class="math-btn">Triangle sphérique</a>
+  <a href="./geo3/#calculs-de-volumes" class="math-btn">Calculs de volumes</a>
+</div>
+</div>
+</div>
+
+<div class="math-card c-orange">
+<div class="math-card-head">
+<span class="math-illus" aria-hidden="true"><img src="/presdim.png" alt=""></span>
+<h3><a href="./geo4/">Curse of dimensionality</a></h3>
+</div>
+<div class="carte-texte">Le fléau de la dimension&nbsp;: en grande dimension, presque tout le volume se trouve près des bords.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./geo4/#petite-énigme" class="math-btn">Petite énigme</a>
+  <a href="./geo4/#the-average-man" class="math-btn">The «&nbsp;Average man&nbsp;»</a>
+</div>
+</div>
+</div>
+
+<div class="math-card c-rouge">
+<div class="math-card-head">
+<span class="math-illus" aria-hidden="true"><img src="/prespoursuite.png" alt=""></span>
+<h3><a href="./geo5/">Poursuites</a></h3>
+</div>
+<div class="carte-texte">Courbes de poursuite, interceptions et nuées d'oiseaux.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./geo5/#paradoxe-dachille-et-de-la-tortue" class="math-btn">Achille et la tortue</a>
+  <a href="./geo5/#courbe-de-poursuite" class="math-btn">Courbe de poursuite</a>
+  <a href="./geo5/#interception" class="math-btn">Interception</a>
+  <a href="./geo5/#manœuvre-dévitement-de-lenola-gay" class="math-btn">Enola Gay</a>
+  <a href="./geo5/#poursuite-cyclique" class="math-btn">Poursuite cyclique</a>
+  <a href="./geo5/#murmurations" class="math-btn">Murmurations</a>
+</div>
+</div>
+</div>
+
+<div class="math-card c-magenta">
+<div class="math-card-head">
+<span class="math-illus" aria-hidden="true"><img src="/simplices.png" alt=""></span>
+<h3><a href="./simplexes/">Simplexes et flèche du temps</a></h3>
+</div>
+<div class="carte-texte">Le volume d'un simplexe, $\frac{1}{k!}$, et ce qu'il dit de l'irréversibilité.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./simplexes/#le-volume-dun-simplexe" class="math-btn">Volume d'un simplexe</a>
+  <a href="./simplexes/#lhypercube-dilaté" class="math-btn">L'hypercube dilaté</a>
+</div>
+</div>
+</div>
+
+</div>
 </div>
 
 
