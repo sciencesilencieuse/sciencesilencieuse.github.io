@@ -18,7 +18,7 @@ css = "logique.css"
 
 <div class="source-livre">
 <img src="/duparc.png" alt="Couverture du livre La logique pas à pas">
-<p>Notes de lecture de <i>La logique pas à pas</i> de Jacques Duparc, que je paraphrase allégrement en y glissant quelques exemples, histoires et énigmes.</p>
+<p>Notes de lecture du livre <i>La logique pas à pas</i> de Jacques Duparc.</p>
 </div>
 
 
@@ -150,7 +150,7 @@ La <b>satisfaction</b> d'une formule $\phi$ au nœud $a$ (au sein de $\mathcal{S
 
 Les sept premières lignes ne font que recopier le calcul des propositions, monde par monde. Tout le sel est dans les deux dernières&nbsp;: pour évaluer $[i]\phi$ ou $\langle i\rangle\phi$ en $a$, on ne regarde pas $a$ lui-même, on va voir **chez les voisins**, au bout des flèches étiquetées $i$. La boîte exige $\phi$ chez tous les voisins, le diamant se contente d'un seul. Ce sont, en somme, un «&nbsp;pour tout&nbsp;» et un «&nbsp;il existe&nbsp;» à portée limitée.
 
-Le cas d'un nœud sans voisin (un cul-de-sac) mérite qu'on s'y arrête&nbsp;:
+Attention au cas d'un nœud sans voisin (un cul-de-sac)&nbsp;:
 
 - S'il n'existe pas de nœud $b$ tel que $a\xrightarrow{i}b$, alors quelle que soit la formule $\phi$, $a\Vdash\langle i\rangle\phi$ est toujours fausse. Autrement dit, $a\nVdash \langle i\rangle\phi$.
 
@@ -246,373 +246,112 @@ Pour A, croire possible quelque chose revient à ne pas savoir le contraire de c
 
 ### Modèles et classes
 
+Jusqu'ici, on a parlé de vérité **en un nœud**. On peut prendre de la hauteur, par paliers successifs.
 
 <div class="def">
-
-Soient $\phi$ une formule, $I$ un ensemble non vide, $\mathcal{S}=(N,A)$ un système de transition étiqueté par $I$, $a$ un nœud de $\mathcal{S}$ et $\mathcal{V}$ une valuation,
-<ul>
-<li>$\langle\mathcal{S},\mathcal{V}\rangle\Vdash^{\forall a}\phi$ ssi pour tous nœuds $a'$, $\langle\mathcal{S},\mathcal{V},a'\rangle\Vdash\phi$</li>
-<li>$\langle\mathcal{S},a\rangle\Vdash^{\forall \mathcal{V}}\phi$ ssi pour toutes valuations $\mathcal{V'}$, $\langle\mathcal{S},\mathcal{V'},a\rangle\Vdash\phi$</li>
-<li>$\mathcal{S}\Vdash^{\forall  a,\forall \mathcal{V}}\phi$ ssi pour tous nœuds $a'$ et toutes valuations $\mathcal{V'}$, $\langle\mathcal{S},\mathcal{V'},a'\rangle\Vdash\phi$</li>
-</ul>
+<p>Un <b>modèle</b> de la logique modale (modèle de Kripke) est un système de transition équipé d'une valuation&nbsp;: $\mathcal{M}=\langle\mathcal{S},\mathcal{V}\rangle$.</p>
+<div class="tableau-large">
+<table class="tab-recap">
+<tr><th>On dit que $\phi$ est…</th><th>si elle est forcée…</th><th>Notation</th></tr>
+<tr><td class="g">satisfaite au nœud $a$</td><td class="g">en $a$, pour la valuation $\mathcal{V}$</td><td>$\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\phi$</td></tr>
+<tr><td class="g"><b>vraie</b> dans le modèle $\langle\mathcal{S},\mathcal{V}\rangle$</td><td class="g">en tous les nœuds</td><td>$\langle\mathcal{S},\mathcal{V}\rangle\Vdash^{\forall a}\phi$</td></tr>
+<tr><td class="g"><b>valide</b> dans le système $\mathcal{S}$</td><td class="g">en tous les nœuds, pour toutes les valuations</td><td>$\mathcal{S}\Vdash^{\forall a,\forall \mathcal{V}} \phi$</td></tr>
+<tr><td class="g">valide dans la <b>classe</b> $\mathscr{C}$</td><td class="g">dans tous les systèmes de la classe</td><td>$\mathscr{C}\Vdash\phi$</td></tr>
+</table>
+</div>
 </div>
 
-
-<div class="def">
-
-Un <b>modèle</b> de la logique modale (modèle de Kripke) est un système de transition équipé d'une valuation&nbsp;:
-$$\mathcal{M}=\langle\mathcal{S},\mathcal{V}\rangle$$
-Une formule $\phi$ est <b>vraie</b> (ou <b>satisfaite</b>) dans le modèle $\langle\mathcal{S},\mathcal{V}\rangle$ si elle est forcée en chacun des nœuds du système de transition&nbsp;:
-$$\langle\mathcal{S},\mathcal{V}\rangle\Vdash^{\forall a}\phi$$
-
-</div>
-
-La notion de vérité dans un modèle de Kripke est donc une notion de <b>vérité globale</b> puisqu'elle prend en compte l'ensemble des nœuds du système de transition.
-
-Prenons l'exemple du système de transition $\mathcal{S}$ équipé de la valuation $\mathcal{V}$ ci-dessous&nbsp;:
+La vérité dans un modèle est une notion **globale**, ce qui réserve des surprises. Prenons le système de transition $\mathcal{S}$ équipé de la valuation $\mathcal{V}$ ci-dessous&nbsp;:
 
 ![](/explekripke.png?width=500px)
 
-On a bien $\langle\mathcal{S},\mathcal{V}\rangle\Vdash^{\forall a}Q\lor\neg Q$. Par contre, comme $b\Vdash Q$ alors que $a\Vdash\neg Q$, $\langle\mathcal{S},\mathcal{V}\rangle\nVdash^{\forall a}Q$ et $\langle\mathcal{S},\mathcal{V}\rangle\nVdash^{\forall a}\neg Q$.<br>
-On peut donc avoir une formule $\phi\lor\psi$ satisfaite sans que ni $\phi$ ni $\psi$ ne le soient&nbsp;!
+La formule $Q\lor\neg Q$ y est vraie. Mais comme $b\Vdash Q$ alors que $a\Vdash\neg Q$, ni $Q$ ni $\neg Q$ ne sont vraies dans le modèle. On peut donc avoir une formule $\phi\lor\psi$ vraie sans que ni $\phi$ ni $\psi$ ne le soient&nbsp;!
 
+Une formule **valide** dans un système, elle, ne dépend plus du tout de ce que racontent les variables&nbsp;: elle ne tient qu'à la forme du graphe. Deux exemples&nbsp;:
 
-{{%notice type="info" round="true"%}}
-On retrouve les modèles du calcul des propositions en se restreignant aux systèmes de transition contenant un seul nœud. Dit autrement, une formule $\phi$ de <b>profondeur modale</b> nulle est une formule du calcul des propositions.<br>
-Soit $\mathcal{M}$ un modèle du calcul des propositions défini par la distribution de valeur de vérité $\delta_\mathcal{M}$ qui associe aux variables apparaissant dans $\phi$ la valeur 1 lorsqu'elles sont vraies dans $\mathcal{M}$ et 0 sinon ($\delta_\mathcal{M}(P)=1$ ssi $\mathcal{M}\models P$). La formule $\phi$ est vraie dans $\mathcal{M}$ (noté $\mathcal{M}\models\phi$) si et seulement si cette même formule $\phi$ est vraie dans le système de transition $\mathcal{S}\_\mathcal{M}=(N,A)$, où $N=\set{a}$ et $A=\emptyset$, équipé de la valuation $\mathcal{V}\_{\delta_\mathcal{M}}$ définie par&nbsp;: $\mathcal{V}\_{\delta_\mathcal{M}}(P)=\set{a}$ si et seulement si $\delta_\mathcal{M}(P)=1$ et $\mathcal{V}\_{\delta_\mathcal{M}}(P)=\emptyset$ si et seulement si $\delta_\mathcal{M}(P)=0$.<br>
-Cela s'écrit&nbsp;: $\mathcal{M}\models\phi$ ssi $\langle\mathcal{S},\mathcal{V}\_{\delta_\mathcal{M}}\rangle\Vdash^{\forall a}\phi$
-{{%/notice%}}
+- une formule sans opérateur modal est valide dans un système (n'importe lequel) si et seulement si c'est une tautologie du calcul des propositions. Rien d'étonnant&nbsp;: sans boîte ni diamant, on ne quitte jamais le nœud où l'on se trouve, et chaque nœud se comporte comme un modèle du calcul des propositions&nbsp;;
+- la formule $\Box(P\rightarrow Q)\rightarrow(\Box P\rightarrow \Box Q)$ est valide dans **tous** les systèmes de transition. Si tous mes voisins vérifient $P\rightarrow Q$ et que tous vérifient $P$, alors tous vérifient $Q$.
 
-<div class="def">
+### Quand une formule dessine un graphe
 
-Soit $\phi$ une formule de la logique modale et $\mathcal{S}$ un système de transition.<br>
-La formule $\phi$ est <b>valide</b> dans $\mathcal{S}$ si&nbsp;:
-$$\mathcal{S}\Vdash^{\forall a,\forall \mathcal{V}} \phi$$
-
-</div>
-
-**La notion de validité est globale**, elle aussi. Et à nouveau, une formule $\phi\lor\psi$ peut être valide dans un système de transition sans que ni $\phi$, ni $\psi$ ne le soit.
-
-
-<div class="theo">
-
-Soient $\phi$ une formule de profondeur modale nulle et $\mathcal{S}=(N,A)$ un système de transition.<br>
-Les affirmations suivantes sont équivalentes&nbsp;:
-
-<ol>
-<li>$\mathcal{S}\Vdash^{\forall a,\forall\mathcal{V}} \phi$</li>
-<li>Il existe $a\in N$ tel que $\langle\mathcal{S},a\rangle\Vdash^{\forall \mathcal{V}}\phi$</li>
-<li>Pour $\mathcal{T}=(\set{a},\emptyset)$, $\langle\mathcal{T},a\rangle\Vdash^{\forall \mathcal{V}}\phi$</li>
-<li>$\phi$ est une tautologie du calcul des propositions</li>
-</ol>
-
-</div>
-
-
-<div class="preuve">
-
-On va montrer la suite des implications suivante $(1)\rightarrow(2)$, $(2)\rightarrow(3)$, $(3)\rightarrow(4)$ et $(4)\rightarrow(1)$. La circularité nous permettra alors d'obtenir toutes les autres implications. Par exemple, $(2)\rightarrow(1)$ découle de $(2)\rightarrow(3)\rightarrow(4)\rightarrow(1)$.
-<ul>
-<li>$(1)\rightarrow(2)$ et $(2)\rightarrow(3)$ sont immédiates.</li>
-<li>Pour montrer $(3)\rightarrow(4)$, nous allons montrer la contraposée $\neg(4)\rightarrow\neg(3)$.<br>
-Supposons que $\phi$ ne soit pas une tautologie du calcul des propositions. Il existe donc un modèle $\mathcal{M}$ pour lequel la formule est fausse. Équipons alors le système de transition $\mathcal{T}=(\set{a},\emptyset)$ de la valuation où pour chacune des variables propositionnelles $P$ apparaissant dans $\phi$, $a\in\mathcal{V}(P)$ si et seulement si $\mathcal{M}\models P$.<br>
-Par définition de la satisfaction locale d'une formule $\langle \mathcal{T},\mathcal{V},a\rangle\Vdash \phi$ ssi $\mathcal{M}\models\phi$.<br>
-Comme notre hypothèse est que $\mathcal{M}\not\models\phi$, on en déduit que $\langle \mathcal{T},\mathcal{V},a\rangle\nVdash \phi$. On a donc trouvé une valuation qui contredit $(3)$.
-</li>
-<li>Pour montrer $(4)\rightarrow(1)$, on passe également par la contraposée $\neg(1)\rightarrow\neg(4)$.<br>
-On suppose que $\mathcal{S}\Vdash^{\forall a,\forall \mathcal{V}}\phi$ n'est pas satisfaite, et donc qu'il existe une valuation $\mathcal{V}$ et un nœud $a$ tels que $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash\phi$. On définit le modèle du calcul des propositions $\mathcal{M}$ par $\mathcal{M}\models P$ si et seulement si $a\in\mathcal{V}(P)$, et ce pour chaque variable propositionnelle apparaissant dans $\phi$. On a donc $\mathcal{M}\not\models\phi$. Par conséquent, $\phi$ n'est pas une tautologie.
-</li>
-</ul>
-
-</div>
-
-
-<div class="def">
-
-Soit $\phi$ une formule et $\mathscr{C}$ une <b>classe</b> de systèmes de transition.<br>
-$\mathscr{C}\Vdash\phi$ ssi pour tout $\mathcal{S}\in\mathscr{C}, \mathcal{S}\Vdash^{\forall a,\forall\mathcal{V}}\phi$ ($\phi$ est valide dans tout système de la classe $\mathscr{C}$).
-</div>
-
-
-<div class="theo">
-
-Soit $\mathscr{C}$ la classe de tous les systèmes de transition.<br>
-$\mathscr{C}\Vdash\Box(P\rightarrow Q)\rightarrow(\Box P\rightarrow \Box Q)$<br>
-
-</div>
-
-
-<div class="preuve">
-
-Soient $\mathcal{S}$ un système de transition, $a$ un nœud de $\mathcal{S}$ et $\mathcal{V}$ une valuation quelconque.<br>
-Si $\langle \mathcal{S},\mathcal{V}, a\rangle\Vdash\Box(P\rightarrow Q)$, alors pour tout $b$ tel que $a\longrightarrow b$, $\langle \mathcal{S},\mathcal{V}, b\rangle\Vdash P\rightarrow Q$.<br>
-Pour montrer $\langle \mathcal{S},\mathcal{V}, a\rangle\Vdash\Box P\rightarrow \Box Q$, il suffit de supposer $\langle \mathcal{S},\mathcal{V}, a\rangle\Vdash\Box P$ et de montrer $\langle \mathcal{S},\mathcal{V}, a\rangle\Vdash\Box Q$.<br>
-Or, si $\langle \mathcal{S},\mathcal{V}, a\rangle\Vdash\Box P$, alors $\langle \mathcal{S},\mathcal{V}, b\rangle\Vdash P$ pour tout $b$ tel que $a\longrightarrow b$. Et comme par hypothèse $\langle \mathcal{S},\mathcal{V}, b\rangle\Vdash P\rightarrow Q$, on en déduit $\langle \mathcal{S},\mathcal{V}, b\rangle\Vdash Q$.<br>
-Et comme c'est vrai pour tout $b$ successeur de $a$, on en déduit $\langle \mathcal{S},\mathcal{V}, a\rangle\Vdash\Box Q$.
-
-</div>
-
-Voici maintenant le phénomène le plus remarquable de la logique modale&nbsp;: certaines formules «&nbsp;voient&nbsp;» la **forme du graphe**. Peu importe la valuation, peu importe ce que racontent les variables&nbsp;: telle formule est valide exactement quand les flèches sont disposées de telle manière. On a déjà croisé une première propriété dans l'histoire des dragons (chaque monde y est accessible depuis lui-même). Passons-les en revue.
+Voici maintenant le phénomène le plus remarquable de la logique modale&nbsp;: certaines formules «&nbsp;voient&nbsp;» la **forme du graphe**. Peu importe la valuation&nbsp;: telle formule est valide exactement quand les flèches sont disposées de telle manière. Commençons par la réflexivité, croisée dans l'histoire des dragons.
 
 <div id="refl" class="ancre"></div>
-
 <div class="theo">
-
-Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalentes&nbsp;:
-<ol>
-<li>$\mathcal{S}$ est <b>réflexif</b></li>
-<li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\Box\phi\rightarrow\phi)$</li>
-</ol>
+<p>Un système de transition est <b>réflexif</b> si et seulement s'il valide $\Box\phi\rightarrow\phi$ pour toute formule $\phi$.</p>
 </div>
 
 ![](/exrefl.png?width=500px)
 
-
 <div class="preuve">
-
 <ul>
-<li>$(1)\Rightarrow(2)$<br>
-Si un nœud $a$ quelconque, pour une valuation quelconque, vérifie $a\Vdash\Box \phi$, alors par définition, pour tout $b$ tel que $a\longrightarrow b$, $b\Vdash\phi$. Puisque $\mathcal{S}$ est réflexif, $a$ est lui-même un de ces $b$ et donc $a\Vdash\phi$.
-</li>
-<li>$(2)\Rightarrow(1)$<br>
-Supposons que $\mathcal{S}$ ne soit pas réflexif. Il s'ensuit qu'il existe un nœud $a$ tel que $a\,\,\not\!\!\longrightarrow a$. Soit $\phi=P$ une formule de hauteur nulle et $\mathcal{V}$ une valuation telle que $b\in\mathcal{V}(P)$ si et seulement si $a\longrightarrow b$. Par définition de $\mathcal{V}$, on a à la fois $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box P$ et $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash P$, donc $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash (\Box P\rightarrow P)$. Cela prouve ainsi que $\mathcal{S}\nVdash ^{\forall a,\forall\mathcal{V}}(\Box P\rightarrow P)$, ce qui contredit l'hypothèse.
-</li>
+<li><b>Si le système est réflexif.</b> Supposons $a\Vdash\Box \phi$&nbsp;: tous les successeurs de $a$ forcent $\phi$. Or $a$ est l'un de ses propres successeurs, donc $a\Vdash\phi$.</li>
+<li><b>S'il ne l'est pas.</b> Il existe un nœud $a$ sans boucle. On choisit la valuation qui rend $P$ vraie exactement chez les successeurs de $a$. Alors $a\Vdash\Box P$, mais $a\nVdash P$ puisque $a$ n'est pas son propre successeur&nbsp;: la formule $\Box P\rightarrow P$ est en défaut.</li>
 </ul>
-
 </div>
 
-
-<div class="def">
-
-On note $\mathscr{C}_{ref.}$ la classe de tous les systèmes de transition réflexifs.
-</div>
-
-
-<div class="theo">
-
-Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalentes&nbsp;:
-<ol>
-<li>$\mathcal{S}$ est <b>famélique</b></li>
-<li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\phi\rightarrow\Box\phi)$</li>
-</ol>
-</div>
-
-![](/exfame.png?width=400px)
-
-
-<div class="preuve">
-
-<ul>
-<li>$(1)\Rightarrow(2)$<br>
-Un système de transition $\mathcal{S}$ muni de la valuation $\mathcal{V}$ satisfait la formule $\phi\rightarrow\Box\phi$ au nœud $a$ si, $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\phi$ entraîne $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box\phi$. Autrement dit, dès qu'une formule est satisfaite en un nœud, elle doit être satisfaite en chacun des successeurs de ce nœud.<br>
-Si le seul successeur possible d'un nœud est lui-même (système famélique), l'implication tient toujours. 
-</li>
-<li>$(2)\Rightarrow(1)$<br>
-Dans le cas où il existe un nœud $a$ possédant un successeur $b$ différent de lui-même, il suffit de considérer la formule $\phi=P$ et la valuation $\mathcal{V}$ qui vérifie $a\in\mathcal{V}(P)$ et $b\not\in\mathcal{V}(P)$ pour obtenir&nbsp;:<br>
-<ul>
-<li>$\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\phi$</li>
-<li>$\langle\mathcal{S},\mathcal{V},a\rangle\nVdash\Box\phi$</li>
-<li>$\langle\mathcal{S},\mathcal{V},a\rangle\nVdash\phi\rightarrow\Box\phi$</li>
-</ul>
-</li>
-</ul>
-
-</div>
-
+Toutes les correspondances se démontrent sur ce modèle&nbsp;: dans un sens, on suit les flèches&nbsp;; dans l'autre, on fabrique une valuation sur mesure qui fait échouer la formule là où une flèche manque. On se contente donc, pour les suivantes, de l'énoncé et de l'idée.
 
 <div id="trans" class="ancre"></div>
-
 <div class="theo">
-
-Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalentes&nbsp;:
-<ol>
-<li>$\mathcal{S}$ est <b>transitif</b></li>
-<li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\Box\phi\rightarrow \Box\Box\phi )$</li>
-</ol>
-</div>
-
-![](/extrans.png?width=700px)
-
-<div class="preuve">
-
-<ul>
-<li>$(1)\Rightarrow(2)$<br>
-Soient $\mathcal{S}$ un système de transition transitif, $\mathcal{V}$ une valuation et $a$ un nœud.<br>
-Si $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box\phi$ alors pour tout nœud $b$ tel que $a\longrightarrow b$, $\langle\mathcal{S},\mathcal{V},b\rangle\Vdash\phi$.<br>
-Pour montrer $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box\Box\phi$, il suffit de montrer que pour tout $c$ tel qu'il existe $b$ vérifiant $a\longrightarrow b$ et $b\longrightarrow c$, on a $\langle\mathcal{S},\mathcal{V},c\rangle\Vdash\phi$.<br>
-Or puisque $\mathcal{S}$ est transitif, $a\longrightarrow b$ et $b\longrightarrow c$ impliquent $a\longrightarrow c$. D'où $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box\phi$ entraîne $\langle\mathcal{S},\mathcal{V},c\rangle\Vdash\phi$.
-</li>
-<li>$(2)\Rightarrow(1)$<br>
-Soit un système de transition non transitif $\mathcal{S}$ et soient $a$, $b$ et $c$ trois nœuds de $\mathcal{S}$ tels que $a\longrightarrow b$, $b\longrightarrow c$ et $a\not\!\!\longrightarrow c$. Soit $\mathcal{V}$ une valuation qui vérifie $d\in\mathcal{V}(P)$ si et seulement si $a\rightarrow d$.<br>
-Pour $\phi=P$, nous obtenons donc à la fois $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box\phi$ et $\langle\mathcal{S},\mathcal{V},c\rangle\nVdash\phi$ ce qui montre que $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash\Box\Box\phi$.
-</li>
-</ul>
-
-</div>
-
-
-<div class="def">
-
-On note $\mathscr{C}_{tr.}$ la classe de tous les systèmes de transition transitifs.
+<p>Un système de transition est <b>transitif</b> si et seulement s'il valide $\Box\phi\rightarrow \Box\Box\phi$ pour toute formule $\phi$.</p>
+<div style="position:relative;width:700px;max-width:100%;margin:0.6em auto;"><img src="/extrans.png"></div>
+<p>Si $\phi$ est vraie chez tous mes voisins, l'est-elle chez les voisins de mes voisins&nbsp;? Oui, pourvu que ceux-ci soient aussi mes voisins.</p>
 </div>
 
 <div id="syme" class="ancre"></div>
-
 <div class="theo">
-
-Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalentes&nbsp;:
-<ol>
-<li>$\mathcal{S}$ est <b>symétrique</b></li>
-<li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\phi\rightarrow \Box\Diamond\phi)$
-</ol>
-
-</div>
-
-
-On peut traduire $\Box\Diamond\phi$ par "pour tout successeur possible, $\phi$ est vrai dans au moins un successeur".
-
-
-![](/exsyme.png?width=500px)
-
-<div class="preuve">
-
-<ul>
-<li>$(1)\Rightarrow(2)$<br>
-Soient $\mathcal{S}$ un système de transition symétrique, $\mathcal{V}$ une valuation et $a$ un nœud.<br>
-On suppose $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash \phi$. Pour tout nœud $a$, soit $a$ n'a pas de successeur et la formule $\phi\rightarrow \Box\Diamond\phi$ est trivialement vérifiée (toute formule commençant par $\Box$ est vraie en un nœud sans successeur), soit $a$ possède un ou plusieurs successeurs et chacun d'entre eux possède alors $a$ comme successeur par symétrie du graphe. Tous ces nœuds ont    donc au moins un successeur, $a$, où $\phi$ est vraie. Par conséquent, tous les successeurs de $a$ forcent $\Diamond \phi$. Et finalement, on a bien $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash \Box\Diamond\phi$.
-</li>
-<li>$(2)\Rightarrow(1)$<br>
-S'il existe deux nœuds $a$ et $b$ tels que $a\longrightarrow b$ mais $b\,\,\not\!\!\longrightarrow a$, il suffit de considérer une valuation telle que $a\Vdash P$ et $c\Vdash\neg P$ pour tout nœud $c$ tel que $b\longrightarrow c$ pour obtenir $a\nVdash P \rightarrow\Box\Diamond P$.
-</li>
-</ul>
-
-</div>
-
-
-<div class="def">
-
-On note $\mathscr{C}_{sym.}$ la classe de tous les systèmes de transition symétriques.
-</div>
-
-
-<div class="theo">
-
-Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalentes&nbsp;:
-<ol>
-<li>$\mathcal{S}$ est <b>dense</b></li>
-<li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\Box\Box\phi\rightarrow \Box\phi)$
-</ol>
-
-</div>
-
-![](/exdense.png?width=700px)
-
-<div class="preuve">
-
-<ul>
-<li>$(1)\Rightarrow(2)$<br>
-Soient $\mathcal{S}$ un système de transition dense, $\mathcal{V}$ une valuation et $a$ un nœud.<br>
-Supposons que $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box\Box\phi$ est vérifié et montrons que $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box\phi$ l'est également.<br>
-Soit $c$ un nœud vérifiant $a\longrightarrow c$. $\mathcal{S}$ étant dense, il existe $b$ tel que $a\longrightarrow b$ et $b\longrightarrow c$. Par conséquent, l'hypothèse $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box\Box\phi$ entraîne aussitôt $\langle\mathcal{S},\mathcal{V},c\rangle\Vdash \phi$.
-</li>
-<li>$(2)\Rightarrow(1)$<br>
-Soit un système de transition non dense $\mathcal{S}$ qui vérifie $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\Box\Box\phi\rightarrow \Box\phi)$ pour n'importe quelle formule $\phi$.<br>
-Si $\mathcal{S}$ n'est pas dense, il existe deux nœuds $a$ et $c$ tels que $a\longrightarrow c$ sans qu'aucun $b$ ne vérifie à la fois $a\longrightarrow b$ et $b\longrightarrow c$.<br>
-Considérons la valuation $\mathcal{V}$ définie par $d\in\mathcal{V}(P)$ si et seulement si $d\neq c$.<br>
-Comme $c$ est un successeur de $a$ et que $\langle\mathcal{S},\mathcal{V},c\rangle\nVdash P$, on a $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash\Box P$. Et pourtant $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\Box\Box P$&nbsp;: en deux pas depuis $a$, on ne peut jamais arriver sur $c$ (c'est justement le défaut de densité), donc on arrive toujours sur un nœud où $P$ est vraie. D'où $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash\Box\Box P \rightarrow \Box P$.
-</li>
-</ul>
-
+<p>Un système de transition est <b>symétrique</b> si et seulement s'il valide $\phi\rightarrow \Box\Diamond\phi$ pour toute formule $\phi$.</p>
+<div style="position:relative;width:500px;max-width:100%;margin:0.6em auto;"><img src="/exsyme.png"></div>
+<p>Si $\phi$ est vraie ici, alors chacun de mes voisins peut revenir vers moi, et voit donc un monde où $\phi$ est vraie.</p>
 </div>
 
 <div id="nbd" class="ancre"></div>
-
 <div class="theo">
-
-Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalentes&nbsp;:
-<ol>
-<li>$\mathcal{S}$ est <b>non borné à droite</b></li>
-<li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\Box\phi\rightarrow \Diamond\phi)$
-</ol>
-
-</div>
-
-![](/exnbd.png?width=850px)
-
-<div class="preuve">
-
-<ul>
-<li>$(1)\Rightarrow(2)$<br>
-Soient $\mathcal{S}$ un système de transition non borné à droite, $\mathcal{V}$ une valuation et $a$ un nœud.<br>
-On suppose que $a\Vdash\Box P$. La seule possibilité pour que $a\nVdash\Diamond P$, c'est que le nœud $a$ n'ait aucun successeur or l'hypothèse que $\mathcal{S}$ est non borné à droite nous l'interdit, donc nécessairement $a\Vdash\Diamond P$.
-</li>
-<li>$(2)\Rightarrow(1)$<br>
-Si un système de transition n'est pas non borné à droite, il existe un nœud $a$ sans successeur. Quelle que soit la valuation, on a alors $a\Vdash \Box P$ (il n'y a aucun successeur à vérifier) mais aussi $a\nVdash \Diamond P$ (il n'y a aucun successeur où $P$ pourrait être vraie).
-</li>
-</ul>
-
-</div>
-
-
-<div class="def">
-
-On note $\mathscr{C}_{n.b.d.}$ la classe de tous les systèmes de transition non bornés à droite.
+<p>Un système de transition est <b>non borné à droite</b> si et seulement s'il valide $\Box\phi\rightarrow \Diamond\phi$ pour toute formule $\phi$.</p>
+<div style="position:relative;width:850px;max-width:100%;margin:0.6em auto;"><img src="/exnbd.png"></div>
+<p>La formule n'échoue que dans un cul-de-sac, où tout est nécessaire et rien n'est possible. La valider, c'est ne pas avoir de cul-de-sac.</p>
 </div>
 
 <div id="eucl" class="ancre"></div>
+<div class="theo">
+<p>Un système de transition est <b>euclidien</b> si et seulement s'il valide $\Diamond\phi\rightarrow \Box\Diamond\phi$ pour toute formule $\phi$.</p>
+<div style="position:relative;width:700px;max-width:100%;margin:0.6em auto;"><img src="/exeucl.png"></div>
+<p>Si $\phi$ est vraie chez l'un de mes voisins, tous mes voisins doivent pouvoir s'y rendre&nbsp;: deux voisins d'un même nœud sont reliés entre eux.</p>
+</div>
 
 <div class="theo">
-
-Pour tout système de transition $\mathcal{S}$, les affirmations suivantes sont équivalentes&nbsp;:
-<ol>
-<li>$\mathcal{S}$ est <b>euclidien</b></li>
-<li>Pour toute formule $\phi$, $\mathcal{S}\Vdash^{\forall a, \forall \mathcal{V}}(\Diamond\phi\rightarrow \Box\Diamond\phi)$
-</ol>
-
+<p>Un système de transition est <b>dense</b> si et seulement s'il valide $\Box\Box\phi\rightarrow \Box\phi$ pour toute formule $\phi$.</p>
+<div style="position:relative;width:700px;max-width:100%;margin:0.6em auto;"><img src="/exdense.png"></div>
+<p>Ce qui est vrai à deux pas d'ici l'est à un pas, pourvu que tout pas puisse se décomposer en deux.</p>
 </div>
 
-![](/exeucl.png?width=700px)
-
-
-<div class="preuve">
-
-<ul>
-<li>$(1)\Rightarrow(2)$<br>
-Soient $\mathcal{S}$ un système de transition euclidien, $\mathcal{V}$ une valuation et $a$ un nœud.<br>
-S'il existe un nœud $c$ tel que $a\longrightarrow c$ et $\langle\mathcal{S},\mathcal{V},c\rangle\Vdash \phi$, alors pour tout nœud $b$ tel que $a\longrightarrow b$, il existe un nœud $d$, tel que $b\longrightarrow d$ et $\langle\mathcal{S},\mathcal{V},d\rangle\Vdash \phi$. En effet, il suffit de prendre $d=c$ puisque le caractère euclidien du graphe assure que de  $a\longrightarrow b$ et $a\longrightarrow c$, nous obtenons $b\longrightarrow c$.
-</li>
-<li>$(2)\Rightarrow(1)$<br>
-Si un système de transition n'est pas euclidien, il existe des nœuds $a$, $b$, $c$, avec $a\longrightarrow b$ et $a\longrightarrow c$, mais sans arc $b\longrightarrow c$, alors il suffit de considérer une valuation telle que $\langle\mathcal{S},\mathcal{V},c\rangle\Vdash P$ et pour tout nœud $d\neq c$, $\langle\mathcal{S},\mathcal{V},d\rangle\nVdash P$. On obtient ainsi $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash \Diamond P$, mais comme il n'y a pas d'arc de $b$ vers $c$, $\langle\mathcal{S},\mathcal{V},b\rangle\nVdash \Diamond P$ et par conséquent $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash \Box\Diamond P$.
-</li>
-</ul>
-
+<div class="theo">
+<p>Un système de transition est <b>famélique</b> si et seulement s'il valide $\phi\rightarrow\Box\phi$ pour toute formule $\phi$.</p>
+<div style="position:relative;width:400px;max-width:100%;margin:0.6em auto;"><img src="/exfame.png"></div>
+<p>Ce qui est vrai ici ne l'est chez tous mes voisins, quelle que soit la valuation, que si je suis mon seul voisin possible.</p>
 </div>
 
-
-Récapitulons ces correspondances entre la géométrie du graphe et les formules qu'il valide&nbsp;:
+En résumé&nbsp;:
 
 <div class="tableau-large">
 <table class="tab-recap">
 <tr><th>Le système est…</th><th>c'est-à-dire…</th><th>si et seulement s'il valide</th></tr>
 <tr><td class="g">réflexif</td><td class="g">chaque nœud se voit lui-même</td><td>$\Box\phi\rightarrow\phi$</td></tr>
-<tr><td class="g">famélique</td><td class="g">un nœud ne voit, au plus, que lui-même</td><td>$\phi\rightarrow\Box\phi$</td></tr>
 <tr><td class="g">transitif</td><td class="g">tout ce qu'on atteint en deux pas s'atteint en un seul</td><td>$\Box\phi\rightarrow\Box\Box\phi$</td></tr>
 <tr><td class="g">symétrique</td><td class="g">toute flèche a sa flèche retour</td><td>$\phi\rightarrow\Box\Diamond\phi$</td></tr>
-<tr><td class="g">dense</td><td class="g">tout pas peut se décomposer en deux</td><td>$\Box\Box\phi\rightarrow\Box\phi$</td></tr>
 <tr><td class="g">non borné à droite</td><td class="g">aucun cul-de-sac</td><td>$\Box\phi\rightarrow\Diamond\phi$</td></tr>
 <tr><td class="g">euclidien</td><td class="g">deux voisins d'un même nœud se voient l'un l'autre</td><td>$\Diamond\phi\rightarrow\Box\Diamond\phi$</td></tr>
+<tr><td class="g">dense</td><td class="g">tout pas peut se décomposer en deux</td><td>$\Box\Box\phi\rightarrow\Box\phi$</td></tr>
+<tr><td class="g">famélique</td><td class="g">un nœud ne voit, au plus, que lui-même</td><td>$\phi\rightarrow\Box\phi$</td></tr>
 </table>
 </div>
 
 Ces formules deviendront, au chapitre suivant, les **axiomes** des principaux systèmes de logique modale.
 
-Soit $\Gamma$ un ensemble de formules. On écrit&nbsp;:
-- $\mathcal{S}\Vdash^{\forall a, \forall\mathcal{V}} \Gamma$ si et seulement si pour toute formule $\phi\in\Gamma$, $\mathcal{S}\Vdash^{\forall a, \forall\mathcal{V}} \phi$<br>
-$\mathcal{S}$ est un système de transition tel qu'en tout nœud et quelle que soit la valuation considérée, il satisfait tout ce que "raconte" $\Gamma$. C'est donc par sa seule forme que ce système de transition vérifie l'ensemble des formules de $\Gamma$.
-
-- $\mathscr{C} \Vdash\Gamma$ si et seulement si pour toute formule $\phi\in\Gamma$, $\mathscr{C}\Vdash \phi$<br>
-Même affirmation que la précédente mais pour une classe de systèmes de transition tout entière plutôt que pour un seul représentant. En ce sens, la plus grande classe $\mathscr{C}$ qui vérifie $\mathscr{C}\Vdash\Gamma$ octroie une sorte de caractérisation par la seule forme des graphes de ce que raconte $\Gamma$.
-
+<div class="def">
+<p>On note $\mathscr{C}$ la classe de tous les systèmes de transition, et $\mathscr{C}_{ref.}$, $\mathscr{C}_{tr.}$, $\mathscr{C}_{sym.}$, $\mathscr{C}_{n.b.d.}$ les classes des systèmes respectivement réflexifs, transitifs, symétriques et non bornés à droite.</p>
+</div>
 
 ### Conséquences sémantiques
 
@@ -655,70 +394,19 @@ Plus prosaïquement, la conséquence locale dit que partout où il y a $\Gamma$,
 {{%/notice%}}
 
 
-Il existe un lien entre les deux conséquences sémantiques&nbsp;:
-
-<div class="theo">
-
-$\Gamma\models^{\forall a}\_\mathscr{C}\phi$ si et seulement si $\set{\Box^n\psi|n\in\mathbb{N},\psi\in\Gamma}\models\_\mathscr{C}\phi$ (où $\Box^n\psi = \underbrace{\Box\Box\ldots\Box}_{n}\psi$ si $n>0$ et $\psi$ si $n =0$)
-
-</div>
-
-
-$\Box^n$ permet en quelque sorte de généraliser la vérité d'un nœud puisque dire qu'on a $\Box^n\psi$ en $a$ implique que $\psi$ est vraie en tout nœud atteignable depuis $a$.
-
-<div class="preuve">
-
-<ul>
-<li>$\Leftarrow$<br>
-Si on a $\Gamma$ en tout nœud, alors en un nœud $a$ quelconque, on a nécessairement $\Box^n\psi$ vraie pour tout $n$ et tout $\psi$ dans $\Gamma$. Or par hypothèse, cela implique que $\phi$ est vraie en ce nœud. Et comme le raisonnement ne dépend pas du nœud $a$, cela montre que $\phi$ est vraie en tout nœud.
-</li>
-<li>$\Rightarrow$<br>
-Démontrons la contraposée&nbsp;: si $\set{\Box^n\psi|n\in\mathbb{N},\psi\in\Gamma}\not\models_\mathscr{C}\phi$ alors $\Gamma\not\models^{\forall a}_\mathscr{C}\phi$.<br>
-Soient $\mathcal{S}=(N,A)$ un système de transition, $\mathcal{V}$ une valuation et $a\in N$ un nœud, tels que $\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\set{\Box^n\psi|n\in\mathbb{N},\psi\in\Gamma}$ alors que $\langle\mathcal{S},\mathcal{V},a\rangle\nVdash\phi$.<br>
-Fabriquons le système de transition $\mathcal{T}=(N',A')$ qui correspond à la restriction de $\mathcal{S}$ à l'ensemble des nœuds accessibles depuis $a$ en un nombre quelconque de pas ($a$ compris) et munissons-le d'une valuation $\mathcal{V}'$ identique à $\mathcal{V}$ pour ces nœuds.<br>
-Par construction, dans le modèle $\langle\mathcal{T},\mathcal{V}'\rangle$ ainsi formé, $\psi$ est vraie en tout nœud&nbsp;: $\langle\mathcal{T},\mathcal{V}'\rangle\Vdash^{\forall a}\psi$. Cela entraîne que $\langle\mathcal{T},\mathcal{V}'\rangle\Vdash^{\forall a}\Gamma$, et pourtant $\langle\mathcal{T},\mathcal{V}',a\rangle\nVdash\phi$ par hypothèse, ce qui implique $\Gamma\not\models^{\forall a}_\mathscr{C}\phi$.
-</ul>
-
-</div>
-
-
-<p>Dans cette preuve, il faut s'assurer que le système restreint $\mathcal{T}$ appartient encore à la classe $\mathscr{C}$. C'est évident pour la classe de tous les systèmes de transition, et c'est encore vrai pour les classes définies par les propriétés précédentes (réflexivité, symétrie, transitivité…), qui survivent toutes à cette restriction.</p>
-<p>Notons enfin que, pour deux formules, $\phi\models^{\forall a}_\mathscr{C}\psi$ signifie que tout modèle de la classe où $\phi$ est vraie est aussi un modèle où $\psi$ est vraie. Comme en calcul des propositions, la conséquence est une inclusion entre ensembles de modèles.</p>
-
+Dans la suite, c'est la conséquence **locale** qui servira à énoncer les théorèmes de complétude.
 
 ### Théories, équivalence et bisimulation
 
+Quand deux modèles sont-ils «&nbsp;les mêmes&nbsp;» aux yeux de la logique modale&nbsp;? Quand aucune formule ne les départage.
 
 <div class="def">
-
-On appelle <b>théorie du modèle</b> $\langle\mathcal{S},\mathcal{V}\rangle$ l'ensemble de toutes les formules qui sont vraies dans ce modèle&nbsp;:
-$$Th_\mathcal{M}=\set{\phi|\langle\mathcal{S},\mathcal{V}\rangle\Vdash^{\forall a}\phi}$$
-
-</div>
-
-La théorie d'un modèle est composée de toutes les formules décrivant ce modèle.<br>
-Deux modèles sont distinguables par la logique modale s'ils n'ont pas la même théorie.
-
-
-<div class="def">
-
-On appelle <b>théorie locale d'un modèle</b> $\langle\mathcal{S},\mathcal{V}\rangle$ au nœud $a$ l'ensemble de toutes les formules qui sont vraies en ce nœud&nbsp;:
-$$Th_{(\mathcal{M},a)}=\set{\phi|\langle\mathcal{S},\mathcal{V},a\rangle\Vdash\phi}$$
-
-</div>
-
-
-<div class="def">
-
-Soient $\mathcal{M}$ et $\mathcal{N}$ deux modèles de la logique modale.
+<p>La <b>théorie</b> d'un modèle $\mathcal{M}$ est l'ensemble des formules qui y sont vraies. Sa <b>théorie locale</b> au nœud $a$ est l'ensemble des formules satisfaites en $a$.</p>
 <ul>
-<li>$\mathcal{M}$ et $\mathcal{N}$ sont <b>équivalents</b> s'ils ont la même théorie&nbsp;:<br>
-$\mathcal{M} \equiv \mathcal{N}$ si et seulement si $Th_\mathcal{M}=Th_\mathcal{N}$</li>
-<br>
-<li>$\mathcal{M}$ et $\mathcal{N}$ sont <b>localement équivalents</b> s'ils partagent la même théorie locale&nbsp;:<br>
-$(\mathcal{M},a) \equiv (\mathcal{N},b)$ si et seulement si $Th_{(\mathcal{M},a)}=Th_{(\mathcal{N},b)}$</li>
+<li>Deux modèles $\mathcal{M}$ et $\mathcal{N}$ sont <b>équivalents</b>, noté $\mathcal{M} \equiv \mathcal{N}$, s'ils ont la même théorie.</li>
+<li>Ils sont <b>localement équivalents</b> en $a$ et $b$, noté $(\mathcal{M},a) \equiv (\mathcal{N},b)$, si la théorie locale de $\mathcal{M}$ en $a$ est celle de $\mathcal{N}$ en $b$.</li>
+</ul>
 </div>
-
 
 <div class="preuve">
 

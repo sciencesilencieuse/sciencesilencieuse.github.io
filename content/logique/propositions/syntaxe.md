@@ -18,7 +18,7 @@ css = "logique.css"
 
 <div class="source-livre">
 <img src="/duparc.png" alt="Couverture du livre La logique pas à pas">
-<p>Notes de lecture de <i>La logique pas à pas</i> de Jacques Duparc, que je paraphrase allégrement en y glissant quelques exemples, histoires et énigmes.</p>
+<p>Notes de lecture du livre <i>La logique pas à pas</i> de Jacques Duparc.</p>
 </div>
 
 
@@ -102,7 +102,7 @@ Une **sous-formule** d'une formule $\phi$ est un sous-arbre de $\phi$&nbsp;: on 
 ![](/sousformules.png?width=600px)
 
 La formule de hauteur 5 ci-dessus contient&nbsp;:
-- 5 feuilles, sous-formules de hauteur 0 (en vert),
+- 6 feuilles, sous-formules de hauteur 0 (en vert),
 -  3 sous-formules de hauteur 1 (en rouge),
 -  2 sous-formules de hauteur 2 (en bleu),
 - 1 sous-formule de hauteur 3 (en rose),

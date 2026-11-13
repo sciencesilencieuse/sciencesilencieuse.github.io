@@ -18,7 +18,7 @@ css = "logique.css"
 
 <div class="source-livre">
 <img src="/duparc.png" alt="Couverture du livre La logique pas à pas">
-<p>Notes de lecture de <i>La logique pas à pas</i> de Jacques Duparc, que je paraphrase allégrement en y glissant quelques exemples, histoires et énigmes.</p>
+<p>Notes de lecture du livre <i>La logique pas à pas</i> de Jacques Duparc.</p>
 </div>
 
 

@@ -18,7 +18,7 @@ css = "logique.css"
 
 <div class="source-livre">
 <img src="/duparc.png" alt="Couverture du livre La logique pas à pas">
-<p>Notes de lecture de <i>La logique pas à pas</i> de Jacques Duparc, que je paraphrase allégrement en y glissant quelques exemples, histoires et énigmes.</p>
+<p>Notes de lecture du livre <i>La logique pas à pas</i> de Jacques Duparc.</p>
 </div>
 
 
@@ -180,272 +180,31 @@ On va dans la suite considérer le système complet de connecteurs $\set{\neg,\l
 #### Logique minimale
 
 
-Règles de la **logique minimale**&nbsp;:
-
-<div class="def regles">
-<ul>
-<li><b>Axiome</b><br>
-$
-\begin{prooftree}
-\AxiomC{}
-\RightLabel{$\;\scriptsize ax$}
-\UnaryInfC{$\phi\vdash\phi$}
-\end{prooftree}
-$
-<br>
-<br>
-Un séquent dont la conclusion est aussi l'hypothèse est prouvable.
-</li>
-
-
-<li><b>Introduction de la conjonction</b><br>
-<br>
-$
-\begin{prooftree}
-\AxiomC{$\Gamma\vdash\phi$}
-\AxiomC{$\Gamma'\vdash\psi$}
-\RightLabel{$\;\scriptsize \land i$}
-\BinaryInfC{$\Gamma,\Gamma' \vdash\phi\land\psi$}
-\end{prooftree}
-$
-<br>
-<br>
-Si $\phi$ et $\psi$ sont prouvées, alors on prouve $\phi\land\psi$.
-</li>
-
-
-<li><b>Élimination de la conjonction</b><br>
-<br>
-$
-\begin{array}{cc}
-\begin{prooftree}
-\AxiomC{$\Gamma\vdash\phi\land\psi$}
-\RightLabel{$\;\scriptsize \land e_g$}
-\UnaryInfC{$\Gamma \vdash\phi $}
-\end{prooftree}
-&
-\begin{prooftree}
-\AxiomC{$\Gamma\vdash\phi\land\psi$}
-\RightLabel{$\;\scriptsize \land e_d$}
-\UnaryInfC{$\Gamma \vdash\psi $}
-\end{prooftree}
-\end{array}
-$
-<br>
-<br>
-De $\phi\land\psi$, on peut déduire $\phi$ et $\psi$.
-</li>
-
-
-<li><b>Introduction de la disjonction</b><br>
-<br>
-$
-\begin{array}{cc}
-\begin{prooftree}
-\AxiomC{$\Gamma\vdash\phi$}
-\RightLabel{$\;\scriptsize \lor i_g$}
-\UnaryInfC{$\Gamma \vdash \phi\lor\psi $}
-\end{prooftree}
-&
-\begin{prooftree}
-\AxiomC{$\Gamma\vdash\psi$}
-\RightLabel{$\;\scriptsize \lor i_d$}
-\UnaryInfC{$\Gamma \vdash \phi\lor\psi $}
-\end{prooftree}
-\end{array}
-$
-<br>
-<br>
-Si on a prouvé une formule, alors <i>a fortiori</i>, on a prouvé cette formule ou une autre.
-</li>
-
-
-<li><b>Élimination de la disjonction</b><br>
-<br>
-<div class="defile">
-$
-\begin{prooftree}
-\AxiomC{$\Gamma \vdash \phi \lor \psi$}
-\AxiomC{$\Gamma',\phi \vdash \theta$}
-\AxiomC{$\Gamma'',\psi \vdash \theta$}
-\RightLabel{$\;\scriptsize \lor e$}
-\TrinaryInfC{$\Gamma,\Gamma',\Gamma''\vdash \theta$}
-\end{prooftree}
-$
-</div>
-<br>
-Si on a prouvé $\phi\lor\psi$, alors pour prouver $\theta$, il suffit de prouver $\theta$ en supposant $\phi$ <b>et</b> de prouver $\theta$ en supposant $\psi$. C'est le raisonnement par disjonction de cas.
-</li>
-
-
-<li><b>Introduction de l'implication</b><br>
-<br>
-$
-\begin{prooftree}
-\AxiomC{$\Gamma,\phi\vdash\psi$}
-\RightLabel{$\;\scriptsize \rightarrow i$}
-\UnaryInfC{$\Gamma \vdash\phi\rightarrow\psi$}
-\end{prooftree}
-$
-<br>
-<br>
-Pour prouver $\phi\rightarrow \psi$, il suffit de prouver $\psi$ avec $\phi$ ajoutée aux hypothèses.
-</li>
-
-
-<li><b>Élimination de l'implication</b> (<i>modus ponens</i>)<br>
-<br>
-$
-\begin{prooftree}
-\AxiomC{$\Gamma\vdash\phi\rightarrow\psi$}
-\AxiomC{$\Gamma'\vdash\phi$}
-\RightLabel{$\;\scriptsize \rightarrow e$}
-\BinaryInfC{$\Gamma,\Gamma'\vdash\psi$}
-\end{prooftree}
-$
-<br>
-<br>
-Si on a prouvé $\phi$ et $\phi\rightarrow\psi$, alors on a prouvé $\psi$.
-</li>
-
-
-<li><b>Introduction de la négation</b><br>
-<br>
-$
-\begin{prooftree}
-\AxiomC{$\Gamma,\phi \vdash\bot$}
-\RightLabel{$\;\scriptsize \neg i$}
-\UnaryInfC{$\Gamma\vdash\neg\phi$}
-\end{prooftree}
-$
-<br>
-<br>
-Pour montrer $\neg\phi$, il suffit d'aboutir à une contradiction en supposant $\phi$.
-</li>
-
-
-<li><b>Élimination de la négation</b><br>
-<br>
-$
-\begin{prooftree}
-\AxiomC{$\Gamma \vdash \neg\phi$}
-\AxiomC{$\Gamma' \vdash \phi$}
-\RightLabel{$\;\scriptsize \neg e$}
-\BinaryInfC{$\Gamma,\Gamma'\vdash \bot$}
-\end{prooftree}
-$
-<br>
-<br>
-Si on a prouvé à la fois $\phi$ et $\neg\phi$, alors on a prouvé une contradiction.
-</li>
-
-
-<li><b>Affaiblissement</b><br>
-<br>
-$
-\begin{prooftree}
-\AxiomC{$\Gamma \vdash \phi$}
-\RightLabel{$\;\scriptsize aff$}
-\UnaryInfC{$\Gamma,\psi\vdash \phi$}
-\end{prooftree}
-$
-<br>
-<br>
-Si on peut prouver $\phi$ avec les hypothèses $\Gamma$, alors on peut prouver $\phi$ en ajoutant d'autres hypothèses à $\Gamma$ (il peut y avoir des hypothèses qui ne servent pas).
-</li>
-
-
-<li><b>Contraction</b><br>
-<br>
-$
-\begin{prooftree}
-\AxiomC{$\Gamma,\psi,\psi \vdash \phi$}
-\RightLabel{$\;\scriptsize ctr$}
-\UnaryInfC{$\Gamma,\psi\vdash \phi$}
-\end{prooftree}
-$
-<br>
-<br>
-L'ensemble d'hypothèses $\Gamma\cup\set{\psi,\psi}$ est le même que $\Gamma\cup\set{\psi}$.
-</li>
-
-</ul>
-</div>
+La **logique minimale** est le socle commun&nbsp;: un axiome, une règle d'introduction et une règle d'élimination par connecteur, et deux règles structurelles.
 
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 <img src="/resumreglesminim.png" style="border-radius:20px">
 </div>
 
-<p style="margin-bottom:-0.5em;">Chaque règle peut être regardée comme un arbre simple lu de haut en bas et dont la racine est en bas (pour une fois). Le séquent conclusion est donc la racine et les prémisses sont les feuilles.</p>
+Chaque règle se lit de haut en bas&nbsp;: si les séquents du dessus sont prouvés, celui du dessous l'est aussi. Lues à voix haute, elles ne font que consigner des gestes familiers&nbsp;:
 
-- L'axiome n'est qu'une racine. 
-- Les éliminations de la conjonction, les introductions de la disjonction, l'introduction de l'implication, l'introduction de la négation, l'affaiblissement et la contraction sont des arbres à une racine et une feuille.
-- l'introduction de la conjonction, l'élimination de l'implication et l'élimination de la négation sont des arbres à une racine et deux feuilles.
-- l'élimination de la disjonction est un arbre à une racine et trois feuilles.
-
-Pour construire une preuve, on va assembler ces arbres.
+- **axiome**&nbsp;: une hypothèse se prouve elle-même&nbsp;;
+- $\land i$ et $\land e$&nbsp;: prouver «&nbsp;$\phi$ et $\psi$&nbsp;», c'est prouver chacune&nbsp;; et de «&nbsp;$\phi$ et $\psi$&nbsp;», on tire l'une ou l'autre&nbsp;;
+- $\lor i$&nbsp;: qui a prouvé $\phi$ a prouvé *a fortiori* «&nbsp;$\phi$ ou $\psi$&nbsp;»&nbsp;;
+- $\lor e$&nbsp;: c'est le **raisonnement par disjonction de cas**. Sachant «&nbsp;$\phi$ ou $\psi$&nbsp;», on obtient $\theta$ en la prouvant une fois sous l'hypothèse $\phi$, une fois sous l'hypothèse $\psi$&nbsp;;
+- $\rightarrow i$&nbsp;: pour prouver «&nbsp;si $\phi$ alors $\psi$&nbsp;», on **suppose** $\phi$ et on prouve $\psi$. L'hypothèse $\phi$ disparaît alors de la partie gauche du séquent&nbsp;: elle a été absorbée par l'implication&nbsp;;
+- $\rightarrow e$&nbsp;: c'est le *modus ponens*&nbsp;;
+- $\neg i$&nbsp;: pour prouver $\neg\phi$, on suppose $\phi$ et on aboutit à une contradiction&nbsp;;
+- $\neg e$&nbsp;: avoir prouvé à la fois $\phi$ et $\neg\phi$, c'est avoir prouvé l'absurde&nbsp;;
+- l'**affaiblissement** et la **contraction** sont de l'intendance&nbsp;: on a le droit d'ajouter des hypothèses qui ne servent pas et de fusionner celles qui font double emploi. On les passera souvent sous silence.
 
 <div class="def">
-
-Une <b>déduction</b> (en logique minimale) dans le système de la déduction naturelle est un arbre fini dont les nœuds sont des séquents $\left(S_i\right)_{i≤k}$, et tel que pour chaque nœud $S_i$ de la déduction&nbsp;:
-<ul>
-<li>$S_i$ est une feuille si et seulement si $S_i$ est un axiome,</li>
-<br>
-<li> si $S_i$ n'est pas une feuille, alors l'arbre dont $S_i$ est la racine et les enfants de $S_i$ sont les feuilles est une instance de l'une des règles du tableau.</li>
-</ul>
-
-Une formule $\phi$ est déductible des hypothèses $\Gamma$ s'il existe une déduction dont la racine soit le séquent $\Delta\vdash\phi$ pour un ensemble d'hypothèses $\Delta \subseteq \Gamma$. On note alors $\Gamma\vdash_m \phi$.
-
+<p>Une <b>déduction</b> est un arbre fini de séquents dont les feuilles sont des axiomes et dont chaque autre nœud s'obtient à partir de ceux qui le surmontent par l'une des règles.</p>
+<p>On note $\Gamma\vdash_m \phi$ lorsqu'il existe une déduction en logique minimale dont la racine est le séquent $\Delta\vdash\phi$, pour un ensemble d'hypothèses $\Delta \subseteq \Gamma$.</p>
 </div>
 
-
-Exemples de preuves&nbsp;:
-
-<div class="preuve">
-
-Prouver que $(\phi\rightarrow (\psi\rightarrow\theta))\rightarrow ((\phi\rightarrow\psi)\rightarrow(\phi\rightarrow\theta))$ est bien un théorème du calcul des propositions revient à obtenir une déduction du séquent $\vdash_{\\! m} \\;(\phi\rightarrow (\psi\rightarrow\theta))\rightarrow ((\phi\rightarrow\psi)\rightarrow(\phi\rightarrow\theta)$&nbsp;:
-
-<div class="defile">
-$$
-\begin{prooftree}
-\AxiomC{}
-\RightLabel{$\;\scriptsize ax$}
-\UnaryInfC{$\phi\rightarrow(\psi\rightarrow\theta)\vdash\phi\rightarrow(\psi\rightarrow\theta)$}
-\AxiomC{}
-\RightLabel{$\;\scriptsize ax$}
-\UnaryInfC{$\phi\vdash\phi$}
-\RightLabel{$\;\scriptsize \rightarrow e$}
-\BinaryInfC{$\phi\rightarrow(\psi\rightarrow\theta),\phi\vdash\psi\rightarrow\theta$}
-\AxiomC{}
-\RightLabel{$\;\scriptsize ax$}
-\UnaryInfC{$\phi\rightarrow\psi\vdash\phi\rightarrow\psi$}
-\AxiomC{}
-\RightLabel{$\;\scriptsize ax$}
-\UnaryInfC{$\phi\vdash\phi$}
-\RightLabel{$\;\scriptsize \rightarrow e$}
-\BinaryInfC{$\phi\rightarrow\psi,\phi\vdash\psi$}
-\RightLabel{$\;\scriptsize \rightarrow e$}
-\BinaryInfC{$\phi\rightarrow(\psi\rightarrow\theta),\phi\rightarrow\psi,\phi,\phi\vdash\theta$}
-\RightLabel{$\;\scriptsize ctr$}
-\UnaryInfC{$\phi\rightarrow(\psi\rightarrow\theta),\phi\rightarrow\psi,\phi\vdash\theta$}
-\RightLabel{$\;\scriptsize \rightarrow i$}
-\UnaryInfC{$\phi\rightarrow(\psi\rightarrow\theta),\phi\rightarrow\psi\vdash(\phi\rightarrow\theta)$}
-\RightLabel{$\;\scriptsize \rightarrow i$}
-\UnaryInfC{$\phi\rightarrow(\psi\rightarrow\theta)\vdash(\phi\rightarrow\psi)\rightarrow(\phi\rightarrow\theta)$}
-\RightLabel{$\;\scriptsize \rightarrow i$}
-\UnaryInfC{$\vdash (\phi\rightarrow(\psi\rightarrow\theta))\rightarrow((\phi\rightarrow\psi)\rightarrow(\phi\rightarrow\theta))$}
-\end{prooftree}
-\phantom{--------}
-$$
-</div>
-
-</div>
-
-
-<div class="preuve">
-
-Preuve du séquent $\vdash_{\\!m}\\; \phi\rightarrow\neg\neg\phi$&nbsp;:
-
+<div class="exemple">
+<p><b>Exemple.</b> Voici une preuve de $\phi\rightarrow\neg\neg\phi$. Elle se lit de bas en haut comme on la chercherait&nbsp;: pour prouver une implication, je suppose $\phi$&nbsp;; pour prouver une négation, je suppose $\neg\phi$ et je cherche une contradiction&nbsp;; or elle saute aux yeux.</p>
 <div class="defile">
 $$
 \begin{prooftree}
@@ -464,36 +223,16 @@ $$
 \end{prooftree}
 $$
 </div>
-
 </div>
 
-Par contre, on ne peut pas prouver l'implication inverse avec les règles de la logique minimale ($\nvdash_{\\!m} \neg\neg\phi\rightarrow\phi$). On ne peut donc pas éliminer les doubles négations (on verra plus loin qu'il manque la règle de l'absurdité classique pour y parvenir).
+En revanche, l'implication inverse $\neg\neg\phi\rightarrow\phi$ n'est **pas** prouvable avec ces règles&nbsp;: en logique minimale, on ne peut pas éliminer les doubles négations. C'est tout l'enjeu de ce qui suit.
 
-<div class="preuve">
-
-Montrons que $\vdash_{\\!m} \\,\neg\phi\leftrightarrow (\phi\rightarrow\bot)$&nbsp;:
-<div style="position:relative;width:620px;max-width:100%;margin-left:auto;margin-right:auto;">
-<img src="/preuvedeb.png">
-</div>
-</div>
-
-Rq&nbsp;: pour raccourcir les preuves, on va intégrer dorénavant les affaiblissements et contractions aux autres règles.<br>
-
-
-La notion de preuve telle qu'on l'a définie ne s'appuie que sur un enchaînement de règles pour aboutir à la conclusion. Il s'agit donc d'une conséquence **syntaxique** des formules en hypothèse.
-
-De la même manière qu'on a défini l'équivalence sémantique à partir de la notion de conséquence sémantique, on va définir une équivalence au sens syntaxique à partir des séquents.
-
-<div class="def">
-
-Deux formules $\phi$ et $\psi$ sont **équivalentes** pour la logique minimale si on a à la fois $\phi\vdash_{\\!m}\psi$ et $\psi\vdash_{\\!m}\phi$, et on écrit $\phi\equiv_m\psi$
-</div>
-
+Notons enfin que, pour ces règles, $\neg\phi$ se comporte exactement comme $\phi\rightarrow\bot$ («&nbsp;$\phi$ mène à l'absurde&nbsp;»)&nbsp;: chacune des deux formules se déduit de l'autre.
 
 #### Logique intuitionniste
 
 
-Certains raisonnements ne sont pas possibles avec la logique minimale. On va enrichir le pouvoir expressif de notre système déductif grâce à de nouvelles règles. Ces règles concernent la contradiction $\bot$, et plus précisément son élimination.
+Certains raisonnements ne sont pas possibles avec la logique minimale. On l'enrichit d'une règle qui dit quoi faire d'une contradiction $\bot$.
 
 <div class="def">
 
@@ -519,58 +258,9 @@ On raconte que Russell, expliquant lors d'un dîner qu'une proposition fausse im
 </div>
 
 
-On obtient ainsi un nouveau système déductif&nbsp;; celui de la **logique intuitionniste**.
+On obtient ainsi un nouveau système déductif, celui de la **logique intuitionniste**&nbsp;: la logique minimale, plus cette seule règle.
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-<img src="/resumreglesintui.png" style="border-radius:20px">
-</div>
-
-La règle de l'absurdité intuitionniste n'est pas démontrable dans le cadre de la logique minimale. Les déductions qui utilisent cette règle ne sont donc pas possibles en logique minimale. Il existe par conséquent des formules qui sont des théorèmes en logique intuitionniste (des séquents démontrables), mais restent non prouvables en logique minimale.
-
-<div class="def">
-
-Deux formules $\phi$ et $\psi$ sont **équivalentes** pour la logique intuitionniste si on a à la fois $\phi\vdash_{\\!i}\psi$ et $\psi\vdash_{\\!i}\phi$, et on écrit $\phi\equiv_i\psi$.
-</div>
-
-
-<div class="preuve">
-Exemple d'une formule démontrable en logique intuitionniste et non démontrable en logique minimale&nbsp;: $\neg\neg(\neg\neg\phi\rightarrow\phi)$
-<div class="defile">
-$$
-\begin{prooftree}
-\AxiomC{}
-\RightLabel{$\scriptsize\;ax$}
-\UnaryInfC{$\neg\neg\phi\vdash\neg\neg\phi$}
-\AxiomC{}
-\RightLabel{$\scriptsize\;ax+aff$}
-\UnaryInfC{$\phi,\neg\neg\phi\vdash\phi$}
-\RightLabel{$\scriptsize\;\rightarrow i$}
-\UnaryInfC{$\phi\vdash\neg\neg\phi\rightarrow\phi$}
-\AxiomC{}
-\RightLabel{$\scriptsize\;ax$}
-\UnaryInfC{$\neg(\neg\neg\phi\rightarrow\phi)\vdash\neg(\neg\neg\phi\rightarrow\phi)$}
-\RightLabel{$\scriptsize\;\neg e$}
-\BinaryInfC{$\neg(\neg\neg\phi\rightarrow\phi),\phi\vdash\bot$}
-\RightLabel{$\scriptsize\;\neg i$}
-\UnaryInfC{$\neg(\neg\neg\phi\rightarrow\phi)\vdash\neg\phi$}
-\RightLabel{$\scriptsize\;\neg e$}
-\BinaryInfC{$\neg\neg\phi,\neg(\neg\neg\phi\rightarrow\phi)\vdash\bot$}
-\RightLabel{$\scriptsize\;\bot e_i$}
-\UnaryInfC{$\neg\neg\phi,\neg(\neg\neg\phi\rightarrow\phi)\vdash\phi$}
-\RightLabel{$\scriptsize\;\rightarrow i$}
-\UnaryInfC{$\neg(\neg\neg\phi\rightarrow\phi)\vdash\neg\neg\phi\rightarrow\phi$}
-\AxiomC{}
-\RightLabel{$\scriptsize\;ax$}
-\UnaryInfC{$\neg(\neg\neg\phi\rightarrow\phi)\vdash\neg(\neg\neg\phi\rightarrow\phi)$}
-\RightLabel{$\scriptsize\;\neg e + ctr$}
-\BinaryInfC{$\neg(\neg\neg\phi\rightarrow\phi)\vdash\bot$}
-\RightLabel{$\scriptsize\;\neg i$}
-\UnaryInfC{$\vdash \neg\neg(\neg\neg\phi\rightarrow\phi)$}
-\end{prooftree}
-$$
-</div>
-</div>
-
+La règle n'est pas démontrable en logique minimale, et elle apporte réellement quelque chose&nbsp;: la formule $\neg\neg(\neg\neg\phi\rightarrow\phi)$, par exemple, devient prouvable alors qu'elle ne l'était pas. Mais $\neg\neg\phi\rightarrow\phi$ elle-même reste hors d'atteinte.
 
 #### La logique classique
 
@@ -594,8 +284,7 @@ Si une contradiction découle d'un jeu d'hypothèses auquel on ajoute la négati
 
 En ajoutant à la logique minimale non pas la règle de l'absurdité intuitionniste mais cette règle de l'absurdité classique, on obtient la **logique classique**.
 
-L'absurdité classique n'est démontrable ni en logique minimale, ni en logique intuitionniste, alors que l'absurdité intuitionniste n'est qu'un cas particulier de l'absurdité classique.
-<br>
+C'est le **raisonnement par l'absurde** des cours de mathématiques. Il contient l'absurdité intuitionniste comme cas particulier&nbsp;:
 
 <div class="preuve">
 <div class="defile">
@@ -613,13 +302,7 @@ $$
 
 Tout ce que prouve la logique intuitionniste, la logique classique le prouve donc aussi.
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-<img src="/resumreglesclass.png" style="border-radius:20px">
-</div>
-
-
-Des raisonnements comme la loi du tiers exclu ou l'élimination des doubles négations deviennent enfin démontrables (ils ne l'étaient pas en logique intuitionniste et *a fortiori* pas non plus en logique minimale).
-
+Le tiers exclu et l'élimination des doubles négations deviennent enfin démontrables.
 
 <div class="preuve">
 <b>Loi du tiers exclu</b> $\vdash\phi\lor\neg\phi$
@@ -628,7 +311,6 @@ Des raisonnements comme la loi du tiers exclu ou l'élimination des doubles nég
 </div>
 </div>
 
-
 <div class="preuve">
 <b>Élimination des doubles négations</b> $\vdash\neg\neg\phi\rightarrow\phi$
 <div style="position:relative;width:280px;max-width:100%;margin-left:auto;margin-right:auto;">
@@ -636,154 +318,18 @@ Des raisonnements comme la loi du tiers exclu ou l'élimination des doubles nég
 </div>
 </div>
 
-
-<div class="preuve">
-<b>Loi de Peirce</b> $\vdash(\neg\phi\rightarrow\phi)\rightarrow\phi$
-<div style="position:relative;width:440px;max-width:100%;margin-left:auto;margin-right:auto;">
-<img src="/preuvepeirce.png">
-</div>
-</div>
-
-
-<div class="preuve">
-La <b>contraposition</b> $\vdash(\neg\psi\rightarrow\neg\phi)\rightarrow(\phi\rightarrow\psi)$
-<div style="position:relative;width:450px;max-width:100%;margin-left:auto;margin-right:auto;">
-<img src="/preuvecontrap.png">
-</div>
-</div>
-
-
-{{%notice type="note" round="true"%}}
-Sous la forme $(\neg\phi\rightarrow\phi)\rightarrow\phi$, la troisième formule est aussi connue sous le joli nom de *consequentia mirabilis* (ou loi de Clavius)&nbsp;: si une proposition découle de sa propre négation, alors elle est vraie. La loi de Peirce proprement dite s'écrit $((\phi\rightarrow\psi)\rightarrow\phi)\rightarrow\phi$, et on retrouve la version ci-dessus en prenant $\psi=\bot$, puisque $\neg\phi$ équivaut à $\phi\rightarrow\bot$.
-{{%/notice%}}
-
-L'ajout de l'absurdité classique aux règles de la logique minimale n'est pas le seul chemin pour obtenir la logique classique. En utilisant chacun des quatre différents séquents que l'on vient de démontrer comme axiome, on peut augmenter soit la logique minimale, soit la logique intuitionniste en logique classique.
+L'absurdité classique n'est d'ailleurs qu'une porte d'entrée parmi d'autres. Chacun des principes suivants, ajouté comme axiome, redonne exactement la même logique&nbsp;:
 
 <div class="theo">
 <ol>
-<li>logique classique = logique intuitionniste + <b>principe du tiers exclu</b></li>
-<li>logique classique = logique intuitionniste + <b>loi de Peirce</b></li>
-<li>logique classique = logique minimale + <b>élimination des doubles négations</b></li>
-<li>logique classique = logique minimale + <b>contraposition</b></li>
+<li>logique classique = logique intuitionniste + <b>tiers exclu</b> $\phi\lor\neg\phi$</li>
+<li>logique classique = logique intuitionniste + <b><i>consequentia mirabilis</i></b> $(\neg\phi\rightarrow\phi)\rightarrow\phi$</li>
+<li>logique classique = logique minimale + <b>élimination des doubles négations</b> $\neg\neg\phi\rightarrow\phi$</li>
+<li>logique classique = logique minimale + <b>contraposition</b> $(\neg\psi\rightarrow\neg\phi)\rightarrow(\phi\rightarrow\psi)$</li>
 </ol>
 </div>
 
-
-<div class="preuve">
-
-Nous allons montrer que les inclusions sont vérifiées dans les deux sens.
-<ul>
-<li>Pour le sens $\supset$, c'est déjà fait.<br>
-En effet, on a démontré plus haut que chacun des axiomes ajoutés peut se démontrer en logique classique sans hypothèse supplémentaire.</li>
-<br>
-<li> Sens $\subset$&nbsp;: il suffit de vérifier à chaque fois que la règle de l'absurde classique peut être obtenue à partir de la logique considérée à laquelle on a ajouté l'axiome.
-<br>
-<br>
-<ol>
-<li>logique classique $\subset$ logique intuitionniste + <span style="color:#970E53">principe du tiers exclu</span>&nbsp;:<br><br>
-<div class="defile">
-$$
-\begin{prooftree}
-\AxiomC{}
-\RightLabel{$\scriptsize\;ax$}
-\UnaryInfC{$\color{#970E53}\vdash\phi\lor\neg\phi$}
-\AxiomC{}
-\RightLabel{$\scriptsize\;ax$}
-\UnaryInfC{$\phi\vdash\phi$}
-\AxiomC{$\Gamma,\neg\phi\vdash\bot$}
-\RightLabel{$\scriptsize\;\bot e_i$}
-\UnaryInfC{$\Gamma,\neg\phi\vdash\phi$}
-\RightLabel{$\scriptsize\;\lor e$}
-\TrinaryInfC{$\Gamma\vdash\phi$}
-\end{prooftree}
-$$
-</div>
-</li>
-
-
-<li>logique classique $\subset$ logique intuitionniste + <span style="color:#970E53">loi de Peirce</span>&nbsp;:<br><br>
-<div class="defile">
-$$
-\begin{prooftree}
-\AxiomC{}
-\RightLabel{$\scriptsize\;ax$}
-\UnaryInfC{$\color{#970E53}\neg\phi\rightarrow\phi\vdash\phi$}
-\RightLabel{$\scriptsize\;\rightarrow i$}
-\UnaryInfC{$\vdash (\neg\phi\rightarrow\phi)\rightarrow\phi$}
-\AxiomC{$\Gamma,\neg\phi\vdash\bot$}
-\RightLabel{$\scriptsize\;\bot e_i$}
-\UnaryInfC{$\Gamma,\neg\phi\vdash\phi$}
-\RightLabel{$\scriptsize\;\rightarrow i$}
-\UnaryInfC{$\Gamma\vdash \neg\phi\rightarrow\phi$}
-\RightLabel{$\scriptsize\;\rightarrow e$}
-\BinaryInfC{$\Gamma\vdash\phi$}
-\end{prooftree}
-$$
-</div>
-</li>
-
-
-<li>logique classique $\subset$ logique minimale + <span style="color:#970E53">élimination des doubles négations</span>&nbsp;:<br><br>
-<div class="defile">
-$$
-\begin{prooftree}
-\AxiomC{}
-\RightLabel{$\scriptsize\;ax$}
-\UnaryInfC{$\color{#970E53}\vdash\neg\neg\phi\rightarrow\phi$}
-\AxiomC{$\Gamma,\neg\phi\vdash\bot$}
-\RightLabel{$\scriptsize\;\neg i$}
-\UnaryInfC{$\Gamma\vdash\neg\neg\phi$}
-\RightLabel{$\scriptsize\;\rightarrow e$}
-\BinaryInfC{$\Gamma\vdash\phi$}
-\end{prooftree}
-$$
-</div>
-</li>
-
-
-<li>logique classique $\subset$ logique minimale + <span style="color:#970E53">contraposition</span><br>
-On va utiliser une instance de la contraposition où $\psi:=\phi$ et $\phi:=\neg\bot$&nbsp;:<br><br>
-<div class="defile">
-$$
-\begin{prooftree}
-\AxiomC{}
-\RightLabel{$\scriptsize\;ax$}
-\UnaryInfC{$\color{#970E53}\neg\phi\rightarrow\neg\neg\bot\vdash\neg\bot\rightarrow\phi$}
-\RightLabel{$\scriptsize\;\rightarrow i$}
-\UnaryInfC{$\vdash (\neg\phi\rightarrow\neg\neg\bot)\rightarrow(\neg\bot\rightarrow\phi)$}
-\AxiomC{}
-\RightLabel{$\scriptsize\;ax$}
-\UnaryInfC{$\bot\vdash\bot$}
-\AxiomC{}
-\RightLabel{$\scriptsize\;ax$}
-\UnaryInfC{$\neg\bot\vdash\neg\bot$}
-\RightLabel{$\scriptsize\;\neg e$}
-\BinaryInfC{$\bot,\neg\bot\vdash\bot$}
-\RightLabel{$\scriptsize\;\neg i$}
-\UnaryInfC{$\bot\vdash\neg\neg\bot$}
-\RightLabel{$\scriptsize\;\rightarrow i$}
-\UnaryInfC{$\vdash \bot\rightarrow\neg\neg\bot$}
-\AxiomC{$\Gamma,\neg\phi\vdash\bot$}
-\RightLabel{$\scriptsize\;\rightarrow e$}
-\BinaryInfC{$\Gamma,\neg\phi\vdash\neg\neg\bot$}
-\RightLabel{$\scriptsize\;\rightarrow i$}
-\UnaryInfC{$\Gamma\vdash\neg\phi\rightarrow\neg\neg\bot$}
-\RightLabel{$\scriptsize\;\rightarrow e$}
-\BinaryInfC{$\Gamma\vdash\neg\bot\rightarrow\phi$}
-\AxiomC{}
-\RightLabel{$\scriptsize\;ax$}
-\UnaryInfC{$\bot\vdash\bot$}
-\RightLabel{$\scriptsize\;\neg i$}
-\UnaryInfC{$\vdash\neg\bot$}
-\RightLabel{$\scriptsize\;\rightarrow e$}
-\BinaryInfC{$\Gamma\vdash\phi$}
-\end{prooftree}
-$$
-</div>
-</li>
-</ol>
-</ul>
-</div>
+La *consequentia mirabilis* («&nbsp;si une proposition découle de sa propre négation, alors elle est vraie&nbsp;») est un cas particulier de la **loi de Peirce** $((\phi\rightarrow\psi)\rightarrow\phi)\rightarrow\phi$, obtenu en prenant $\psi=\bot$.
 
 {{%notice type="info" round="true"%}}
 La logique intuitionniste, contrairement à la logique classique, vise à obtenir des preuves **constructives**. Montrer qu'une formule ne peut pas être fausse ne suffit pas&nbsp;: il faut en construire la vérité, étape par étape. Or un raisonnement par l'absurde classique ne construit rien, il se contente d'établir que $\neg\phi$ mène à une contradiction. De même, le tiers exclu affirme $\psi\lor\neg\psi$ sans jamais dire laquelle des deux est vraie.<br><br>
@@ -822,39 +368,9 @@ Si $\Gamma\vdash_{\\!c}\phi$ alors $\Gamma\models\phi$
 </div>
 
 
-<div class="preuve">
+L'idée de la preuve est simple&nbsp;: on vérifie, règle par règle, que si les prémisses sont des conséquences sémantiques, la conclusion en est une aussi. Pour le *modus ponens*, par exemple&nbsp;: dans un modèle où $\phi\rightarrow\psi$ et $\phi$ sont vraies, $\psi$ l'est forcément. La vérité se transmet ainsi des feuilles de l'arbre de preuve jusqu'à sa racine.
 
-Une preuve étant un arbre fini de séquents, on va procéder par induction sur la hauteur de cet arbre, qu'on appellera la longueur de la preuve.<br>
-
-<ul>
-<li>Si la preuve a une longueur 1, le séquent ne peut être qu'un axiome de la forme $\phi\vdash\phi$.<br>
-Reste à montrer que $\phi\models\phi$ est vraie. Et c'est bien sûr le cas&nbsp;: par définition, $\phi\models\phi$ est vraie si $\phi$ est vraie dans chaque modèle où $\phi$ est vraie...<br>
-<li>On suppose maintenant la propriété vraie pour toutes les preuves de longueur au plus $n$.<br>
-Une preuve de longueur $n+1$ se termine par l'application d'une règle, dont les prémisses sont elles-mêmes prouvées par des preuves de longueur au plus $n$.<br>
-Il faut montrer que les règles ont été judicieusement choisies pour "conserver" la notion de conséquence sémantique entre les prémisses et la conclusion.<br>
-Ici, les prémisses sont bien des conséquences sémantiques par application de l'hypothèse d'induction.<br>
-On doit maintenant vérifier sur chaque règle que le séquent conclusion est une conséquence sémantique des prémisses.<br>
-Montrons-le pour la règle d'élimination de l'implication
-$
-\begin{prooftree}
-\AxiomC{$\Gamma\vdash\phi\rightarrow\psi$}
-\AxiomC{$\Gamma'\vdash\phi$}
-\RightLabel{$\scriptsize\;\rightarrow e$}
-\BinaryInfC{$\Gamma,\Gamma'\vdash\psi$}
-\end{prooftree}
-$&nbsp;: 
-
-<br>
-Par hypothèse d'induction, on sait que $\Gamma\models\phi\rightarrow\psi$ et $\Gamma'\models\phi$. Donc dans les modèles de $\Gamma \cup \Gamma'$ (ensemble des modèles où les formules de $\Gamma$ et $\Gamma'$ sont vraies simultanément), à la fois $\phi\rightarrow\psi$ et $\phi$ sont vérifiées. Et comme lorsque $\phi$ est vraie, $\phi\rightarrow\psi$ n'est vraie que si $\psi$ est vraie, il en résulte que $\psi$ est vraie dans ces modèles&nbsp;: $\Gamma,\Gamma'\models\psi$.<br>
-On peut montrer de manière équivalente que cela marche pour chaque règle...
-</li>
-</ul>
-</div>
-
-
-Une conséquence de la correction de la logique classique est que pour toute théorie finie $\Gamma$ et pour tout modèle $\mathcal{M}$ de cette théorie, si une formule est démontrable à partir des hypothèses $\Gamma$, alors elle est vraie dans $\mathcal{M}$.<br>
-Tout ce que l'on peut déduire syntaxiquement d'une théorie est vrai dans un modèle quelconque de cette théorie.
-
+Tout ce que l'on peut déduire syntaxiquement d'une théorie est donc vrai dans tous les modèles de cette théorie. La réciproque est plus profonde.
 
 <div class="theo">
 
@@ -865,127 +381,12 @@ Si $\Gamma\models\phi$ alors $\Gamma\vdash_{\\!c}\phi$
 
 </div>
 
+Voici l'idée d'une preuve due au logicien hongrois László Kalmár (1935), dans le cas d'une tautologie $\phi$ dont les variables sont $P$ et $Q$.
 
-<div class="preuve">
+- **Chaque ligne de la table de vérité se convertit en preuve.** Sur la ligne où $P$ est vraie et $Q$ fausse, $\phi$ vaut 1, et l'on peut effectivement prouver le séquent $P,\neg Q\vdash\phi$ (on le montre par induction sur la formule, en suivant le calcul de sa valeur). Comme $\phi$ est une tautologie, on obtient ainsi quatre preuves de $\phi$, une par ligne, sous les hypothèses $\set{P,Q}$, $\set{P,\neg Q}$, $\set{\neg P,Q}$ et $\set{\neg P,\neg Q}$.
+- **Le tiers exclu recolle les lignes.** Des preuves de $P,Q\vdash\phi$ et $P,\neg Q\vdash\phi$, on tire $P\vdash\phi$ par disjonction de cas sur $Q\lor\neg Q$. On fait de même avec $\neg P$, puis on recommence sur $P\lor\neg P$&nbsp;: les hypothèses disparaissent une à une, et il reste $\vdash\phi$.
 
-La preuve qui suit est due au logicien hongrois László Kalmár (1935). Son idée&nbsp;: chaque ligne de la table de vérité d'une formule peut être convertie en une preuve, et le tiers exclu permet ensuite de recoller toutes les lignes.
-
-Soit $\phi$, une formule quelconque du calcul des propositions dont les variables sont parmi $\set{P_1,\ldots,P_n}$, et $\mathcal{M}$, un modèle possible de $\phi$. On note&nbsp;:
-<ul>
-<li> $P_i^\mathcal{M} = P_i$ si $P_i$ est vraie dans $\mathcal{M}$,</li>
-<li> $P_i^\mathcal{M} = \neg P_i$ sinon.</li>
-</ul>
-
-On pose également&nbsp;:
-<ul>
-<li> $\phi^\mathcal{M} = \phi$ si $\mathcal{M}\models\phi$,</li>
-<li> $\phi^\mathcal{M} = \neg\phi$ sinon.</li>
-</ul>
-
-Par induction sur la hauteur de $\phi$ on veut montrer le résultat suivant&nbsp;: $\set{P_1^{\mathcal{M}},\ldots,P_n^{\mathcal{M}}} \vdash_{\\!c}\phi^{\mathcal{M}}$
-<ul>
-
-<li>si $ht(\phi)=0$, $\phi$ est une variable propositionnelle $P_i$ et il est alors immédiat que $\set{P_1^{\mathcal{M}},\ldots,P_n^{\mathcal{M}}} \vdash_{\!c}P_i^{\mathcal{M}}$</li>
-<br>
-<li>si $ht(\phi)=n+1$, alors on a une des possibilités suivantes&nbsp;: $\phi=\neg\psi$, $\phi=\psi_1\rightarrow\psi_2$, $\phi=\psi_1\lor\psi_2$ ou $\phi=\psi_1\land\psi_2$.<br>
-Chaque $\psi$, de hauteur $n$, respecte par hypothèse la propriété et on doit montrer dans chaque cas que cela implique le même respect de la propriété pour $\phi$.
-
-Prenons par exemple le cas $\phi=\psi_1\rightarrow\psi_2$ pour voir le type de raisonnement qu'il faut mener&nbsp;:
-<br>
-<ul>
-<li> Si $\mathcal{M}\not\models\psi_1$, alors $\mathcal{M}\models\phi$ et donc $\phi^\mathcal{M}=\phi$, et $\psi_1^\mathcal{M}=\neg\psi_1$.<br>
-Par hypothèse d'induction, $\set{P_1^{\mathcal{M}},\ldots,P_n^{\mathcal{M}}}  \vdash_{\!c}\neg\psi_1$<br>
-Considérons la règle suivante&nbsp;:<br>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-
-<div style="position:relative;width:400px;max-width:100%;margin-left:auto;margin-right:auto;">
-<img src="/grossepreuveformule1.png">
-</div>
-
-<ul>
-<ul>
-<ul>
-<li style="list-style-type: none;">
-L'utilisation de cette règle et du <i>modus ponens</i> permet d'obtenir&nbsp;:
-$\set{P_1^{\mathcal{M}},\ldots,P_n^{\mathcal{M}}}  \vdash_{\!c}\psi_1\rightarrow\psi_2$, ce qui est bien ce que l'on voulait montrer puisque $\psi_1\rightarrow\psi_2=\phi^\mathcal{M}$</li>
-<br>
-<li>Si $\mathcal{M}\models\psi_1$, alors&nbsp;:
-<ul>
-<br>
-<li>Si $\mathcal{M}\models\psi_2$, alors $\mathcal{M}\models\phi$ et donc $\phi^\mathcal{M}=\phi$, $\psi_1^\mathcal{M}=\psi_1$ et $\psi_2^\mathcal{M}=\psi_2$.<br>
-Par hypothèse d'induction, on a&nbsp;: $\set{P_1^{\mathcal{M}},\ldots,P_n^{\mathcal{M}}}  \vdash_{\!c}\psi_1^\mathcal{M}$ et $\set{P_1^{\mathcal{M}},\ldots,P_n^{\mathcal{M}}}  \vdash_{\!c}\psi_2^\mathcal{M}$<br>
-C'est-à-dire&nbsp;: $\set{P_1^{\mathcal{M}},\ldots,P_n^{\mathcal{M}}}  \vdash_{\!c}\psi_1$ et $\set{P_1^{\mathcal{M}},\ldots,P_n^{\mathcal{M}}}  \vdash_{\!c}\psi_2$<br>
-De $\set{P_1^{\mathcal{M}},\ldots,P_n^{\mathcal{M}}}  \vdash_{\!c}\psi_2$, on déduit par affaiblissement $\set{P_1^{\mathcal{M}},\ldots,P_n^{\mathcal{M}}},\psi_1  \vdash_{\!c}\psi_2$, puis par introduction de l'implication&nbsp;: $\set{P_1^{\mathcal{M}},\ldots,P_n^{\mathcal{M}}} \vdash_{\!c}\psi_1 \rightarrow\psi_2$</li>
-<br>
-<li>Si $\mathcal{M}\not\models\psi_2$, alors $\mathcal{M}\not\models\phi$ et donc $\phi^\mathcal{M}=\neg\phi$, $\psi_1^\mathcal{M}=\psi_1$ et $\psi_2^\mathcal{M}=\neg\psi_2$.<br>
-Par hypothèse d'induction, on a&nbsp;: $\set{P_1^{\mathcal{M}},\ldots,P_n^{\mathcal{M}}}  \vdash_{\!c}\psi_1^\mathcal{M}$ et $\set{P_1^{\mathcal{M}},\ldots,P_n^{\mathcal{M}}}  \vdash_{\!c}\psi_2^\mathcal{M}$<br>
-C'est-à-dire&nbsp;: $\set{P_1^{\mathcal{M}},\ldots,P_n^{\mathcal{M}}}  \vdash_{\!c}\psi_1$ et $\set{P_1^{\mathcal{M}},\ldots,P_n^{\mathcal{M}}}  \vdash_{\!c}\neg\psi_2$<br>
-On en déduit&nbsp;: $\set{P_1^{\mathcal{M}},\ldots,P_n^{\mathcal{M}}}  \vdash_{\!c}\psi_1\land\neg\psi_2$.<br>
-Considérons la règle suivante&nbsp;:
-
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-<div style="position:relative;width:700px;max-width:100%;margin-left:auto;margin-right:auto;">
-<img src="/grossepreuveformule2.png">
-</div>
-
-<ul>
-<ul>
-<ul>
-<ul>
-<li style="list-style-type: none;">
-On applique ensuite la règle du <i>modus ponens</i> pour obtenir $\set{P_1^{\mathcal{M}},\ldots,P_n^{\mathcal{M}}}  \vdash_{\!c}\neg(\psi_1\rightarrow\psi_2)$ qui est bien le résultat recherché.
-</li>
-</ul>
-</ul></li> 
-</ul>
-
-Supposons qu'on ait passé en revue tous les autres cas pour finir de montrer que $\set{P_1^{\mathcal{M}},\ldots,P_n^{\mathcal{M}}} \vdash_{\\!c}\phi^{\mathcal{M}}$.
-
-Nous allons maintenant prouver que pour toute formule $\phi$, si $\phi$ est une tautologie, alors $\phi$ est un théorème de la logique classique.<br>
-Soit $\phi$, une formule quelconque du calcul des propositions dont les variables sont $P_1,\ldots,P_n$. Et soit $\mathcal{M}$ un modèle possible de $\phi$. On a montré que $\set{P_1^{\mathcal{M}},\ldots,P_n^{\mathcal{M}}} \vdash_{\\!c}\phi^{\mathcal{M}}$. Or $\mathcal{M}\models\phi$ est vérifié, donc $\phi^\mathcal{M}=\phi$. D'où $\set{P_1^{\mathcal{M}},\ldots,P_n^{\mathcal{M}}} \vdash_{\\!c}\phi$.<br>
-Si $\phi$ est une tautologie, ce résultat est valable pour n'importe quel modèle. Choisissons les modèles $\mathcal{M}$ et $\mathcal{M'}$ qui distribuent les mêmes valeurs de vérité pour toutes les variables $P_i$ sauf $P_n$. $\mathcal{M}\models P_n$ alors que $\mathcal{M'}\models \neg P_n$.<br>
-On a à la fois $\set{P_1^{\mathcal{M}},\ldots,P_{n-1}^{\mathcal{M}},P_n^{\mathcal{M}}} \vdash_{\\!c}\phi$ et $\set{P_1^{\mathcal{M'}},\ldots,P_{n-1}^{\mathcal{M'}},P_n^{\mathcal{M'}}} \vdash_{\\!c}\phi$.<br>
-D'où $\set{P_1^{\mathcal{M}},\ldots,P_{n-1}^{\mathcal{M}},P_n} \vdash_{\\!c}\phi$ et $\set{P_1^{\mathcal{M}},\ldots,P_{n-1}^{\mathcal{M}},\neg P_n} \vdash_{\\!c}\phi$ qu'on peut aussi écrire $\set{P_1^{\mathcal{M}},\ldots,P_{n-1}^{\mathcal{M}}},P_n \vdash_{\\!c}\phi$ et $\set{P_1^{\mathcal{M}},\ldots,P_{n-1}^{\mathcal{M}}},\neg P_n \vdash_{\\!c}\phi$.<br>
-Construisons la règle suivante en appliquant le tiers exclu&nbsp;:
-<div class="defile">
-$$
-\begin{prooftree}
-\AxiomC{}
-\UnaryInfC{$\vdash \psi\lor\neg\psi$}
-\AxiomC{}
-\UnaryInfC{$\Gamma,\psi\vdash\phi$}
-\AxiomC{}
-\UnaryInfC{$\Gamma,\neg\psi\vdash\phi$}
-\RightLabel{$\scriptsize\;\lor e$}
-\TrinaryInfC{$\Gamma\vdash\phi$}
-\end{prooftree}
-$$
-</div>
-En appliquant cette règle à notre cas, on obtient&nbsp;: $\set{P_1^{\mathcal{M}},\ldots,P_{n-1}^{\mathcal{M}}} \vdash_{\!c}\phi$ et à nouveau, ce résultat ne dépend pas du modèle $\mathcal{M}$. On peut donc recommencer le même raisonnement, ce qui donne successivement&nbsp;: $\set{P_1^{\mathcal{M}},\ldots,P_{n-2}^{\mathcal{M}}} \vdash_{\!c}\phi, \set{P_1^{\mathcal{M}},\ldots,P_{n-3}^{\mathcal{M}}} \vdash_{\!c}\phi, \set{P_1^{\mathcal{M}},\ldots,P_{n-4}^{\mathcal{M}}} \vdash_{\!c}\phi,\ldots $<br>
-Et en dernière étape, on obtient $P_1\vdash_{\!c}\phi$ et $\neg P_1\vdash_{\!c}\phi$. D'où l'on déduit $\vdash_{\!c}\phi$ par application du tiers exclu.<br>
-Nous avons donc bien réussi à prouver que $\models\phi$ implique $\vdash_{\!c}\phi$.
-
-Il ne nous reste plus qu'à montrer que pour toute formule $\phi$ et pour tout ensemble fini d'hypothèses $\Gamma=\set{\psi_1,\ldots,\psi_k}$, $\Gamma\models\phi$ implique $\Gamma\vdash_{\\!c}\phi$.<br>
-Il apparait immédiatement que $\Gamma\models\phi$ si et seulement si $\models(\psi_1\land\psi_2\land\ldots\land\psi_k)\rightarrow\phi $.<br>
-Le résultat précédent sur les tautologies nous permet de déduire que $\vdash_{\\!c}(\psi_1\land\psi_2\land\ldots\land\psi_k)\rightarrow \phi$.<br>
-Il est évident par ailleurs que $\Gamma\vdash_{\\!c}(\psi_1\land\psi_2\land\ldots\land\psi_k)$.<br>
-Par <i>modus ponens</i>, on obtient donc $\Gamma\vdash_{\\!c}\phi$.
-
-</div>
+C'est donc le tiers exclu qui fait le travail, ce qui explique que la sémantique des tables de vérité soit celle de la logique *classique*.
 
 {{%notice type="tip" round="true"%}}
 La complétude du calcul des propositions a été établie par Emil Post dans sa thèse de 1921.<br>
@@ -1000,15 +401,6 @@ Corollaire&nbsp;:<br>
 $\models\phi$ ssi $\vdash_{\\!c}\phi$<br>
 Toute tautologie est démontrable sans utiliser d'hypothèse et à l'inverse, toute formule démontrable sans hypothèse est une tautologie.
 
-</div>
-
-
-<div class="theo">
-
-Corollaire&nbsp;:
-
-Soient $\phi$ et $\psi$ deux formules du calcul des propositions,<br>
-$\phi\equiv\psi$ ssi $\phi\equiv_c\psi$
 </div>
 
 
@@ -1130,31 +522,10 @@ $\Vdash_i\phi$ ssi $\vdash_{\\!i} \phi$
 </div>
 
 
-En abandonnant la condition "pour tout nœud $\alpha$&nbsp;: $\alpha\not\Vdash\bot$" on obtient le modèle de Kripke adapté à la logique minimale.
+En abandonnant la condition $\alpha\not\Vdash\bot$ (on autorise un nœud à forcer l'absurde), on obtient de la même façon des modèles de Kripke adaptés à la logique minimale, avec le même théorème de correction et de complétude. Ils permettent de vérifier que la formule $\neg\neg(\neg\neg P\rightarrow P)$, prouvable en logique intuitionniste, ne l'est pas en logique minimale.
 
-La condition de forcing de la négation devient alors $\alpha\Vdash\neg\phi$ ssi $\alpha\Vdash\phi\rightarrow\bot$ (pour tout nœud $\beta$ de $\mathcal{T}_\mathcal{K}$ tel que $\alpha≤\beta$, si $\beta\Vdash\phi$ alors $\beta\Vdash\bot$).
+Les trois logiques sont donc strictement emboîtées.
 
-On obtient cette fois-ci&nbsp;: 
-
-<div class="theo">
-
-<b>Correction et complétude de la logique minimale</b>&nbsp;:
-
-Soient $\Gamma$ un ensemble fini de formules et $\phi$ une formule du calcul des propositions,<br>
-$\Gamma\Vdash_m\phi$ ssi $\Gamma\vdash_{\\!m} \phi$
-
-D'où découle $\Vdash_m\phi$ ssi $\vdash_{\\!m} \phi$
-</div>
-
-![](/kripke3.png?width=100px)
-Dans ce modèle de Kripke de la logique minimale, $\neg\neg(\neg\neg P\rightarrow P)$ n'est pas réalisée.
-
-En effet, $\beta\not\Vdash P$ par définition, d'où $\beta\Vdash \neg P$. Mais on a également $\beta\Vdash\neg\neg P$ puisque $\beta\Vdash \bot$. Mais alors $\beta\not\Vdash \neg\neg P\rightarrow P$. Par conséquent $\beta\Vdash\neg(\neg\neg P\rightarrow P)$ et toujours à cause du fait que $\beta\Vdash \bot$, on obtient $\beta\Vdash \neg\neg(\neg\neg P\rightarrow P)$.
-
-$\alpha\not\Vdash P$ et $\beta\not\Vdash P$ par définition, d'où $\beta\Vdash \neg P$. Mais $\alpha\not\Vdash \neg\neg P$ puisque $\alpha\not\Vdash\bot$. On a aussi $\alpha\not\Vdash\neg\neg P\rightarrow P$ puisque $\beta\Vdash \neg\neg P$ et $\beta\not\Vdash P$. Par conséquent, $\alpha\Vdash \neg(\neg\neg P\rightarrow P)$ puisqu'à la fois $\alpha\not\Vdash\neg\neg P \rightarrow P$ et $\beta\not\Vdash \neg\neg P\rightarrow P$. D'où $\alpha\not\Vdash\neg\neg(\neg\neg P\rightarrow P)$ puisqu'à la fois $\alpha\Vdash\neg(\neg\neg P \rightarrow P)$ et $\alpha\not\Vdash\bot$.
-
-Il existe donc un nœud du modèle qui ne force pas la formule $\neg\neg(\neg\neg P\rightarrow P)$. Le théorème de complétude de la logique minimale nous dit alors que $\neg\neg(\neg\neg P\rightarrow P)$ n'est pas un théorème de la logique minimale.<br>
-Or on a montré que cette formule était un théorème de la logique intuitionniste. Le séquent $\vdash\neg\neg(\neg\neg P\rightarrow P)$ est donc prouvable en logique intuitionniste mais pas en logique minimale. Cela prouve que la logique minimale forme un sous-ensemble strict de la logique intuitionniste, elle-même strictement incluse dans la logique classique.
 ![](/troislogiques.png?width=600px)
 
 
@@ -1288,27 +659,11 @@ L'idée est d'obliger une preuve à indiquer spécifiquement la conclusion déri
 Et la négation est interprétée comme l'absence de preuve puisque c'est maintenant seulement $\phi\vdash\bot$ qui donne $\vdash\neg\phi$. Cela rend par conséquent l'utilisation de la négation à droite impossible dans la deuxième preuve alors qu'il n'y a pas de problème dans la première.
 
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;border-radius:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-<img src="/reglesequentsint.png" style="border-radius:20px">
-</div>
-
-
 <div class="theo">
 
 La <b>logique minimale</b> est la version du calcul des séquents sans la règle de l'affaiblissement à droite et dont les règles sont restreintes aux séquents avec au plus une formule à droite (la contraction à droite n'est ici pas considérée comme implicite).
 
 </div>
-
-
-<div class="preuve">
-Preuve de $\vdash\neg\neg(\neg\neg\phi\rightarrow\phi)$&nbsp;:
-
-<div style="position:relative;width:450px;max-width:100%;margin-left:auto;margin-right:auto;">
-<img src="/preuvedblenegsequent.png">
-</div>
-</div>
-
-Chaque nœud de l'arbre de preuve ne contient pas plus d'une formule à droite du symbole du séquent, par contre la règle d'affaiblissement à droite est utilisée, ce qui situe cette preuve dans le cadre de la logique intuitionniste mais pas de la logique minimale.
 
 
 La <b>règle de coupure</b> correspond, en déduction naturelle, à l'introduction de l'implication suivie aussitôt de son élimination&nbsp;:

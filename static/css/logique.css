@@ -41,9 +41,12 @@
     gap: 0.5em;
     margin: 0 0 1.8em 0;
 }
-.chap-nav a
+#body-inner .chap-nav a
 {
-    padding: 0.3em 1.1em;
+    display: inline-flex !important;
+    align-items: center;
+    line-height: 1.25;
+    padding: 0.35em 1.1em !important;
     border: 1px solid #cbd5e1;
     border-radius: 999px;
     color: #004D80 !important;
@@ -74,32 +77,37 @@
     padding-top: 1.2em;
     border-top: 1px solid #e2e8f0;
 }
-.suite-nav a
+#body-inner .suite-nav a
 {
-    display: block;
-    padding: 0.55em 1.1em;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.55em;
+    padding: 0.5em 1.1em !important;
     border: 1px solid #cbd5e1;
     border-radius: 10px;
     color: #004D80 !important;
     text-decoration: none !important;
-    line-height: 1.35;
+    line-height: 1.25;
     transition: background 0.15s, border-color 0.15s;
 }
-.suite-nav a:hover
+#body-inner .suite-nav a:hover
 {
     background: #EEF3F7;
     border-color: #004D80;
 }
-.suite-nav a span
+#body-inner .suite-nav a span, #body-inner .suite-nav a b
 {
-    display: block;
-    font-size: 0.8em;
+    padding: 0 !important;
+    line-height: 1.25;
+}
+#body-inner .suite-nav a span
+{
+    font-size: 0.85em;
     color: #64748b;
 }
-.suite-nav a.suivant
+#body-inner .suite-nav a.suivant
 {
     margin-left: auto;
-    text-align: right;
 }
 
 /* ---------- Source (livre) ---------------------------------------------- */
