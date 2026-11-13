@@ -46,6 +46,36 @@ La logique est à l'intersection de l'informatique, des mathématiques et de la 
 </div>
 </div>
 
+<div class="math-card c-orange">
+<div class="math-card-head">
+<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M11 10l13 28 13-28"/><path d="M16 21h16"/></svg></span>
+<h3><a href="./predicats/">Calcul des prédicats</a></h3>
+</div>
+<div class="carte-texte">La logique du premier ordre&nbsp;: des objets, des propriétés, «&nbsp;pour tout&nbsp;» et «&nbsp;il existe&nbsp;».</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./predicats/langage/" class="math-btn">Langage et sens</a>
+  <a href="./predicats/preuve/" class="math-btn">Démontrer au premier ordre</a>
+</div>
+</div>
+</div>
+
+<div class="math-card c-rouge">
+<div class="math-card-head">
+<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="9" y="9" width="30" height="30" rx="2"/><path d="M16 25l6 6 11-13"/></svg></span>
+<h3><a href="./prouvabilite/">Prouvabilité et incomplétude</a></h3>
+</div>
+<div class="carte-texte">Quand l'arithmétique parle de ses propres preuves&nbsp;: Gödel et Löb lus avec une boîte modale.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./prouvabilite/#le-lemme-de-diagonalisation" class="math-btn">Diagonalisation</a>
+  <a href="./prouvabilite/#le-premier-théorème-dincomplétude" class="math-btn">Incomplétude</a>
+  <a href="./prouvabilite/#le-théorème-de-löb" class="math-btn">Théorème de Löb</a>
+  <a href="./prouvabilite/#la-logique-gl" class="math-btn">La logique GL</a>
+</div>
+</div>
+</div>
+
 <div class="math-card c-magenta">
 <div class="math-card-head">
 <span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><g transform="scale(2)" stroke-width="1.2"><path d="M20 4.5v5h-5"/><path d="M4 19.5v-5h5"/><path d="M5.2 9.5a7.5 7.5 0 0 1 12.4-2.8L20 9.5M4 14.5l2.4 2.8a7.5 7.5 0 0 0 12.4-2.8"/></g></svg></span>

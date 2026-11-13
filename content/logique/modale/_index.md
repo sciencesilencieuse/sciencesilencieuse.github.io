@@ -64,7 +64,7 @@ Pour leur donner un sens, on ne raisonne plus dans un seul monde mais dans un **
   <a href="./logiques/#logique-déontique" class="math-btn">Déontique</a>
   <a href="./logiques/#logique-épistémique" class="math-btn">Épistémique</a>
   <a href="./logiques/#logique-temporelle" class="math-btn">Temporelle</a>
-  <a href="./logiques/#logique-de-la-prouvabilité" class="math-btn">Prouvabilité</a>
+  <a href="../prouvabilite/" class="math-btn">Prouvabilité</a>
 </div>
 </div>
 </div>

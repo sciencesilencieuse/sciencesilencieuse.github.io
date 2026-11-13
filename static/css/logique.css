@@ -331,3 +331,33 @@
     color: #64748b;
     margin-top: 0.2em;
 }
+
+/* Renvoi vers une autre page (bouton centré) */
+.renvoi-page
+{
+    text-align: center;
+    margin: 1.2em 0 0.4em 0;
+}
+#body-inner .renvoi-page a
+{
+    display: inline-block;
+    padding: 0.5em 1.2em !important;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    color: #004D80 !important;
+    background: #fff;
+    text-decoration: none !important;
+    background-image: none !important;
+    transition: background 0.15s, border-color 0.15s;
+}
+#body-inner .renvoi-page a:hover
+{
+    background: #EEF3F7;
+    border-color: #004D80;
+}
+
+/* Icônes d'ancre du thème : masquées sur petit écran (elles débordent des titres longs) */
+@media (max-width: 480px)
+{
+    #body-inner .anchor { display: none; }
+}

@@ -1,7 +1,7 @@
 +++
 title = "Paradoxes"
 date = 2026-11-11T12:00:00+01:00
-weight = 3
+weight = 5
 chapter = true
 +++
 
