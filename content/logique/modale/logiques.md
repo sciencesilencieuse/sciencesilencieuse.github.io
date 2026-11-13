@@ -478,7 +478,7 @@ On les imbrique à l'aide de l'axiome de Löb $\text{(L)}$&nbsp;:
 
 Tout système de transition qui valide $\textbf{GL}$ valide donc $\text{(4)}$&nbsp;: il est **transitif**&nbsp;!
 
-À quoi ressemblent les mondes de la prouvabilité&nbsp;? Certainement pas à ceux de la connaissance. Le modèle ci-dessous valide $\color{#1DB100}\text{(L)}$ en chacun de ses nœuds, mais on y voit échouer $\color{#F27200}\text{(T)}=\Box P \rightarrow  P$ au nœud $a$, ainsi que la formule $\color{#FF42A1}\Box P\rightarrow \Diamond\Box P$ aux nœuds $b$ et $c$.
+À quoi ressemblent les mondes de la prouvabilité&nbsp;? Certainement pas à ceux de la connaissance. Le modèle ci-dessous valide $\color{#1DB100}\text{(L)}$ en chacun de ses nœuds, mais on y voit échouer, au nœud $a$, l'axiome $\color{#F27200}\text{(T)}=\Box P \rightarrow  P$ ainsi que $\color{#FF42A1}\neg P\rightarrow \Box\Diamond\neg P$, une instance de l'axiome $\text{(B)}$.
 
 <div class="preuve">
 
@@ -488,7 +488,7 @@ Tout système de transition qui valide $\textbf{GL}$ valide donc $\text{(4)}$&nb
 
 </div>
 
-Les deux échecs ont un sens. Celui de $\text{(T)}$ confirme que $\textbf{GL}$ ne prouve pas «&nbsp;ce qui est prouvable est vrai&nbsp;». Quant à la formule rose, elle échoue dans les culs-de-sac $b$ et $c$, où tout est nécessaire et rien n'est possible&nbsp;: $\textbf{GL}$ ne prouve donc pas non plus l'axiome $\text{(D)}$, ni même $\Diamond\top$, la cohérence. Les culs-de-sac ne sont pas un accident, ils sont indispensables, comme le montre la caractérisation suivante.
+Les deux échecs ont un sens. Celui de $\text{(T)}$ confirme que $\textbf{GL}$ ne prouve pas «&nbsp;ce qui est prouvable est vrai&nbsp;». Celui de $\text{(B)}$ tient à l'absence de retour&nbsp;: $a$ voit $b$, mais $b$, cul-de-sac, ne voit rien du tout, et rien n'y est donc possible, pas même $\neg P$. Dans un cul-de-sac, tout est nécessaire et rien n'est possible&nbsp;: $\textbf{GL}$ ne prouve donc ni l'axiome $\text{(D)}$, ni même $\Diamond\top$, sa propre cohérence. Les culs-de-sac ne sont pas un accident, ils sont indispensables, comme le montre la caractérisation suivante.
 
 <div class="theo">
 <p>Un système de transition valide $\text{(L)}$ si et seulement s'il est <b>transitif</b> et ne contient <b>aucun chemin infini</b> $a_0\longrightarrow a_1\longrightarrow a_2\longrightarrow\cdots$</p>

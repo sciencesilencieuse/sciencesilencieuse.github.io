@@ -55,12 +55,12 @@
     text-decoration: none !important;
     transition: background 0.15s, border-color 0.15s;
 }
-.chap-nav a:hover
+#body-inner .chap-nav a:hover
 {
     background: #EEF3F7;
     border-color: #004D80;
 }
-.chap-nav a.actif
+#body-inner .chap-nav a.actif
 {
     background: #004D80;
     border-color: #004D80;
