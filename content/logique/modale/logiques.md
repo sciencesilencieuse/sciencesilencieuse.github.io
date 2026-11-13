@@ -429,7 +429,7 @@ Le schéma ci-dessous montre pourquoi l'on parle de **diagonalisation**. On rang
 
 <div class="svg-container" style="text-align:center;margin:1em 0 0.4em;">
 <svg viewBox="0 0 560 300" role="img" aria-label="Tableau diagonal : lignes = formules, colonnes = codes ; la ligne de g renvoie à la diagonale et, dans sa propre colonne, à elle-même" style="width:100%;max-width:560px;height:auto;">
-<defs><marker id="dg-fl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#004D80"/></marker><marker id="dg-fp" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#970E53"/></marker></defs>
+<defs><marker id="dg-fl" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#004D80"/></marker></defs>
 <text x="144.0" y="32" text-anchor="middle" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic">n<tspan dy="4" font-size="11">0</tspan><tspan dy="-4"></tspan></text>
 <text x="248.0" y="32" text-anchor="middle" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic">n<tspan dy="4" font-size="11">1</tspan><tspan dy="-4"></tspan></text>
 <text x="352.0" y="32" text-anchor="middle" font-size="16" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic">n<tspan dy="4" font-size="11" font-style="italic">g</tspan><tspan dy="-4"></tspan></text>
@@ -461,7 +461,7 @@ Le schéma ci-dessous montre pourquoi l'on parle de **diagonalisation**. On rang
 <rect x="198" y="156" width="100" height="50" rx="6" fill="#E8F0F7" stroke="#e2e8f0" stroke-width="1"/>
 <text x="240.0" y="186.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic">g(n<tspan dy="4" font-size="11">1</tspan><tspan dy="-4">)</tspan></text>
 <rect x="302" y="156" width="100" height="50" rx="6" fill="#F3E6F0" stroke="#970E53" stroke-width="2"/>
-<text x="352.0" y="186.0" text-anchor="middle" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic">g(n<tspan dy="4" font-size="11" font-style="italic">g</tspan><tspan dy="-4">)</tspan></text>
+<text x="345.0" y="186.0" text-anchor="middle" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic">g(n<tspan dy="4" font-size="11" font-style="italic">g</tspan><tspan dy="-4">)</tspan></text>
 <rect x="406" y="156" width="100" height="50" rx="6" fill="#E8F0F7" stroke="#e2e8f0" stroke-width="1"/>
 <text x="448.0" y="186.0" text-anchor="middle" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic">g(n<tspan dy="4" font-size="11">3</tspan><tspan dy="-4">)</tspan></text>
 <text x="528" y="186.0" text-anchor="middle" font-size="16" fill="#94a3b8" font-family="Georgia,'Times New Roman',serif">…</text>
@@ -479,7 +479,7 @@ Le schéma ci-dessous montre pourquoi l'on parle de **diagonalisation**. On rang
 <path d="M184.0,167.0 L184.0,87.0" stroke="#004D80" stroke-width="1.6" fill="none" marker-end="url(#dg-fl)"/>
 <path d="M288.0,167.0 L288.0,141.0" stroke="#004D80" stroke-width="1.6" fill="none" marker-end="url(#dg-fl)"/>
 <path d="M496.0,195.0 L496.0,221.0" stroke="#004D80" stroke-width="1.6" fill="none" marker-end="url(#dg-fl)"/>
-<path d="M390.0,169.0 C414.0,151.0 414.0,211.0 390.0,193.0" stroke="#970E53" stroke-width="1.8" fill="none" marker-end="url(#dg-fp)"/>
+<path d="M377.37,176.23 A9.0 9.0 0 1 1 377.54,186.03" stroke="#970E53" stroke-width="1.6" fill="none" stroke-linecap="round"/><path d="M376.00,181.00 L381.30,185.62 L374.91,187.95 Z" fill="#970E53"/>
 <text x="352.0" y="280" text-anchor="middle" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic">φ = g(n<tspan dy="4" font-size="10">g</tspan><tspan dy="-4">)</tspan></text>
 </svg>
 </div>
