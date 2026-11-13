@@ -74,5 +74,7 @@ On le parcourt en trois temps&nbsp;: comment on **écrit** une formule, ce qu'el
 </div>
 
 {{%notice type="info" round="true"%}}
-Ces trois chapitres sont des notes de lecture du livre *La logique pas à pas* de Jacques Duparc.
+
+<p style="font-size:1em;">Ces trois chapitres sont des notes de lecture du livre <i>La logique pas à pas</i> de Jacques Duparc.</p>
+
 {{%/notice%}}
