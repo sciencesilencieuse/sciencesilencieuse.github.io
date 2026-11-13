@@ -304,3 +304,30 @@
     .source-livre { flex-direction: column; text-align: center; }
     .encadre { padding: 0.5em 0.9em 0.3em 0.9em; }
 }
+
+/* Arbres de preuve en LaTeX : centrés, défilement horizontal si trop larges */
+.defile.arbre
+{
+    font-size: 0.85em;
+    margin: 0.8em 0;
+    padding-bottom: 0.3em;
+    -webkit-overflow-scrolling: touch;
+}
+.defile.arbre.large
+{
+    font-size: 0.8em;
+}
+.defile.arbre mjx-container[display="true"]
+{
+    display: block;
+    width: max-content !important;
+    min-width: 100%;
+    margin: 0 auto !important;
+    overflow: visible !important;
+}
+.abrev
+{
+    font-size: 0.85em;
+    color: #64748b;
+    margin-top: 0.2em;
+}

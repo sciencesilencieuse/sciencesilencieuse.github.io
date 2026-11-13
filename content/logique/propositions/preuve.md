@@ -306,8 +306,32 @@ Le tiers exclu et l'élimination des doubles négations deviennent enfin démont
 
 <div class="preuve">
 <b>Loi du tiers exclu</b> $\vdash\phi\lor\neg\phi$
-<div style="position:relative;width:620px;max-width:100%;margin-left:auto;margin-right:auto;">
-<img src="/preuvetiersexclu.png">
+<div class="defile arbre">
+$$
+\begin{prooftree}
+\AxiomC{}
+\RightLabel{$\scriptstyle ax$}
+\UnaryInfC{$\neg(\phi\lor\neg\phi)\vdash\neg(\phi\lor\neg\phi)$}
+\AxiomC{}
+\RightLabel{$\scriptstyle ax$}
+\UnaryInfC{$\neg(\phi\lor\neg\phi)\vdash\neg(\phi\lor\neg\phi)$}
+\AxiomC{}
+\RightLabel{$\scriptstyle ax$}
+\UnaryInfC{$\phi\vdash\phi$}
+\RightLabel{$\scriptstyle \lor i_g$}
+\UnaryInfC{$\phi\vdash\phi\lor\neg\phi$}
+\RightLabel{$\scriptstyle \neg e$}
+\BinaryInfC{$\neg(\phi\lor\neg\phi),\phi\vdash\bot$}
+\RightLabel{$\scriptstyle \neg i$}
+\UnaryInfC{$\neg(\phi\lor\neg\phi)\vdash\neg\phi$}
+\RightLabel{$\scriptstyle \lor i_d$}
+\UnaryInfC{$\neg(\phi\lor\neg\phi)\vdash\phi\lor\neg\phi$}
+\RightLabel{$\scriptstyle \neg e\,+\,ctr$}
+\BinaryInfC{$\neg(\phi\lor\neg\phi)\vdash\bot$}
+\RightLabel{$\scriptstyle \bot e_c$}
+\UnaryInfC{$\vdash\phi\lor\neg\phi$}
+\end{prooftree}
+$$
 </div>
 </div>
 

@@ -95,9 +95,73 @@ Avec l'implication stricte (implication ordinaire renforcée de la nécessité),
 <div class="preuve">
 
 Le métaphysicien Charles Hartshorne a produit une "preuve" de l'existence de Dieu qui repose sur la logique $\textbf{{KB}}$ et qui nécessite un théorème de la logique modale $\vdash_\textbf{K} \Box(P\rightarrow Q)\rightarrow(\Diamond P\rightarrow\Diamond Q)$, l'axiome d'Anselme $G\rightarrow\Box G$ (si Dieu existe, il est nécessaire que Dieu existe) et l'axiome de Leibniz $\Diamond G$ (il est possible que Dieu existe).
-<div style="position:relative;width:1200px;max-width:100%;margin-left:auto;margin-right:auto">
-<img src="/preuvehartshorne.png">
+<p><b>Lemme 1</b>&nbsp;: si Dieu est possible, il est possible qu'il soit nécessaire.</p>
+<div class="defile arbre">
+$$
+\begin{prooftree}
+\AxiomC{}
+\RightLabel{$\scriptstyle Anselme$}
+\UnaryInfC{$G\to\Box G$}
+\RightLabel{$\scriptstyle nec.$}
+\UnaryInfC{$\Box(G\to\Box G)$}
+\AxiomC{}
+\RightLabel{$\scriptstyle th.$}
+\UnaryInfC{$\Box(P\to Q)\to(\Diamond P\to\Diamond Q)$}
+\RightLabel{$\scriptstyle sub.$}
+\UnaryInfC{$\Box(G\to Q)\to(\Diamond G\to\Diamond Q)$}
+\RightLabel{$\scriptstyle sub.$}
+\UnaryInfC{$\Box(G\to\Box G)\to(\Diamond G\to\Diamond\Box G)$}
+\RightLabel{$\scriptstyle mod.p.$}
+\BinaryInfC{$\Diamond G\to\Diamond\Box G$}
+\end{prooftree}
+$$
 </div>
+<p><b>Lemme 2</b>&nbsp;: s'il est possible que Dieu soit nécessaire, alors Dieu existe (c'est ici qu'intervient l'axiome $\text{(B)}$).</p>
+<div class="defile arbre">
+$$
+\begin{prooftree}
+\AxiomC{}
+\RightLabel{$\scriptstyle (B)$}
+\UnaryInfC{$P\to\Box\Diamond P$}
+\RightLabel{$\scriptstyle sub.$}
+\UnaryInfC{$\neg P\to\Box\Diamond\neg P$}
+\RightLabel{$\scriptstyle contrap.$}
+\UnaryInfC{$\neg\Box\Diamond\neg P\to\neg\neg P$}
+\RightLabel{$\scriptstyle dual$}
+\UnaryInfC{$\Diamond\Box P\to P$}
+\RightLabel{$\scriptstyle sub.$}
+\UnaryInfC{$\Diamond\Box G\to G$}
+\end{prooftree}
+$$
+</div>
+<p><b>Conclusion</b>&nbsp;: on enchaîne les deux lemmes, puis on applique l'axiome de Leibniz.</p>
+<div class="defile arbre">
+$$
+\begin{prooftree}
+\AxiomC{}
+\RightLabel{$\scriptstyle ax.$}
+\UnaryInfC{$(A\to B)\to((B\to C)\to(A\to C))$}
+\RightLabel{$\scriptstyle sub.$}
+\UnaryInfC{$(\Diamond G\to\Diamond\Box G)\to((\Diamond\Box G\to G)\to(\Diamond G\to G))$}
+\AxiomC{}
+\RightLabel{$\scriptstyle lemme\ 1$}
+\UnaryInfC{$\Diamond G\to\Diamond\Box G$}
+\RightLabel{$\scriptstyle mod.p.$}
+\BinaryInfC{$(\Diamond\Box G\to G)\to(\Diamond G\to G)$}
+\AxiomC{}
+\RightLabel{$\scriptstyle lemme\ 2$}
+\UnaryInfC{$\Diamond\Box G\to G$}
+\RightLabel{$\scriptstyle mod.p.$}
+\BinaryInfC{$\Diamond G\to G$}
+\AxiomC{}
+\RightLabel{$\scriptstyle Leibniz$}
+\UnaryInfC{$\Diamond G$}
+\RightLabel{$\scriptstyle mod.p.$}
+\BinaryInfC{$G$}
+\end{prooftree}
+$$
+</div>
+<p class="abrev">Abréviations&nbsp;: <i>ax.</i> tautologie du calcul des propositions, <i>sub.</i> substitution uniforme, <i>nec.</i> nécessitation, <i>mod.p.</i> <i>modus ponens</i>, <i>th.</i> théorème déjà établi, <i>contrap.</i> contraposition, <i>dual</i> passage d'un opérateur modal à l'autre par $\Diamond\phi\equiv\neg\Box\neg\phi$ (et élimination de la double négation).</p>
 Monsieur Phi a <a href="https://youtu.be/zf0KkTpiUzc?si=JO_FOXcC4sd3afuU">une chouette vidéo</a> sur ce genre d'argument ontologique.
 
 </div>
@@ -469,9 +533,29 @@ Puis d'un deuxième&nbsp;: $\vdash_\textbf{K}\Box (P\land\Box P)\rightarrow \Box
 <div style="position:relative;width:700px;max-width:100%;margin-left:auto;margin-right:auto">
 <img src="/klprouve4b.png">
 </div>
-On les imbrique à l'aide de l'axiome de Löb $\text{(L)}$&nbsp;:
-<div style="position:relative;width:1100px;max-width:100%;margin-left:auto;margin-right:auto">
-<img src="/klprouve4c.png">
+On les imbrique à l'aide de l'axiome de Löb $\text{(L)}$. Deux nouvelles abréviations apparaissent dans l'arbre&nbsp;: <i>rempl.</i> désigne le remplacement d'une sous-formule par une formule équivalente (ici $\Box(P\land\Box P)$ par $\Box P\land\Box\Box P$, grâce au théorème de $\textbf{K}$&nbsp;: $\Box(A\land B)\leftrightarrow(\Box A\land\Box B)$), et <i>syll.</i> le syllogisme&nbsp;: de $X\rightarrow Y$ et $Y\rightarrow Z$, on tire $X\rightarrow Z$.
+<div class="defile arbre large">
+$$
+\begin{prooftree}
+\AxiomC{}
+\RightLabel{$\scriptstyle th.1$}
+\UnaryInfC{$\Box P\to\Box((\Box P\land\Box\Box P)\to(P\land\Box P))$}
+\AxiomC{}
+\RightLabel{$\scriptstyle (L)$}
+\UnaryInfC{$\Box(\Box A\to A)\to\Box A$}
+\RightLabel{$\scriptstyle sub.$}
+\UnaryInfC{$\Box(\Box(P\land\Box P)\to(P\land\Box P))\to\Box(P\land\Box P)$}
+\RightLabel{$\scriptstyle rempl.$}
+\UnaryInfC{$\Box((\Box P\land\Box\Box P)\to(P\land\Box P))\to\Box(P\land\Box P)$}
+\RightLabel{$\scriptstyle syll.$}
+\BinaryInfC{$\Box P\to\Box(P\land\Box P)$}
+\AxiomC{}
+\RightLabel{$\scriptstyle th.2$}
+\UnaryInfC{$\Box(P\land\Box P)\to\Box\Box P$}
+\RightLabel{$\scriptstyle syll.$}
+\BinaryInfC{$\Box P\to\Box\Box P$}
+\end{prooftree}
+$$
 </div>
 
 </div>
