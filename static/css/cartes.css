@@ -264,3 +264,35 @@
   color: #52606d;
   text-align: center;
 }
+
+/* --- CARTE ENTIÈREMENT CLIQUABLE ------------------------------------------
+   Le lien du titre est « étiré » sur toute la carte grâce à un pseudo-élément
+   positionné par rapport à la carte. Les autres liens (boutons, liens dans le
+   texte) sont remontés au-dessus et restent cliquables séparément. */
+.math-card {
+  position: relative;
+  cursor: pointer;
+}
+.math-card h3 a {
+  position: static !important;
+}
+#body .math-card h3 a::before {
+  content: "" !important;
+  display: block !important;
+  position: absolute !important;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: none !important;
+}
+.math-card a:not(h3 a) {
+  position: relative;
+  z-index: 2;
+}
+.math-card h3 a:focus-visible {
+  outline: none;
+}
+.math-card:has(h3 a:focus-visible) {
+  outline: 2px solid var(--c);
+  outline-offset: 3px;
+}
