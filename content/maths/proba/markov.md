@@ -527,7 +527,7 @@ Si la chaîne est <b>irréductible</b> (on peut aller de tout état à tout autr
 <p>De plus, la proportion du temps passé dans chaque état $x$ tend vers $\pi(x)$ (loi des grands nombres de Markov).</p>
 </div>
 
-Les deux hypothèses ne sont pas des détails techniques&nbsp;: chacune exclut une façon de ne pas converger.
+Chacune des deux hypothèses exclut une façon de ne pas converger.
 
 <div class="svg-container">
 <svg viewBox="0 0 600 200" role="img" aria-label="Deux chaînes qui ne convergent pas. À gauche, une chaîne périodique : le jeton alterne à coup sûr entre deux états, sa loi oscille sans fin. À droite, une chaîne réductible : deux groupes d'états qui ne communiquent pas, la limite dépend du point de départ." style="width:100%;max-width:600px;height:auto;">
