@@ -132,6 +132,47 @@ margin-top:0em;
     color: #006C65;
     margin-bottom: 0.3em;
 }
+.fig-btn
+{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    margin: 0;
+    padding: 0.4em 1em;
+    font: inherit;
+    font-size: 0.9em;
+    line-height: 1.2;
+    color: #334155;
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color .15s, border-color .15s, color .15s;
+}
+.fig-btn:hover
+{
+    color: #004D80;
+    background: #f1f5f9;
+    border-color: #94a3b8;
+}
+.fig-btn:active
+{
+    background: #e2e8f0;
+}
+.fig-btn:focus-visible
+{
+    outline: 2px solid #004D80;
+    outline-offset: 2px;
+}
+.fig-btn svg
+{
+    flex: none;
+    fill: currentColor;
+}
+.fig-range
+{
+    accent-color: #004D80;
+}
 mjx-container[display="true"]
 {
     max-width: 100%;
@@ -2167,7 +2208,7 @@ Pour les polaires, $g\_{rr} = 1$, $g\_{r\theta} = 0$ et $g\_{\theta\theta} = |\v
 <text id="bp-t4" x="405" y="222" font-size="14.5" fill="#334155" font-family="Georgia,'Times New Roman',serif"><tspan font-style="italic">g</tspan><tspan dy="4" font-size="10">θθ</tspan><tspan dy="-4"> = </tspan><tspan font-style="italic">r</tspan>² <tspan id="bp-gv">= 0</tspan></text>
 <text x="405" y="300" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">faites glisser le point P</text>
 </svg>
-<div style="margin:2px 0 6px;"><button type="button" id="bp-go">❚❚ Pause</button></div>
+<div style="margin:4px 0 8px;"><button type="button" class="fig-btn" id="bp-go"><svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><rect x="2" y="1.5" width="2.8" height="9" rx="0.8"/><rect x="7.2" y="1.5" width="2.8" height="9" rx="0.8"/></svg><span>Pause</span></button></div>
 </div>
 <script>
 (function () {
@@ -2212,7 +2253,9 @@ Pour les polaires, $g\_{rr} = 1$, $g\_{r\theta} = 0$ et $g\_{\theta\theta} = |\v
     draw(); raf = requestAnimationFrame(frame);
   }
   function start() { if (!raf && auto && visible && !reduce) raf = requestAnimationFrame(frame); }
-  function setAuto(a) { auto = a; t0 = null; $('bp-go').textContent = a ? '❚❚ Pause' : '▶ Animer'; if (a) start(); }
+  var ICO_PAUSE = '<svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><rect x="2" y="1.5" width="2.8" height="9" rx="0.8"/><rect x="7.2" y="1.5" width="2.8" height="9" rx="0.8"/></svg>', ICO_PLAY = '<svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M3 1.6 L10.4 6 L3 10.4 Z"/></svg>';
+  function setBtn(a) { $('bp-go').innerHTML = (a ? ICO_PAUSE + '<span>Pause</span>' : ICO_PLAY + '<span>Animer</span>'); }
+  function setAuto(a) { auto = a; t0 = null; setBtn(a); if (a) start(); }
   function move(ev) { if (dragging) { setFrom(ev); ev.preventDefault(); } }
   function up() { dragging = false; document.removeEventListener('pointermove', move); document.removeEventListener('pointerup', up); document.removeEventListener('pointercancel', up); }
   svg.addEventListener('pointerdown', function (ev) {
@@ -2222,7 +2265,7 @@ Pour les polaires, $g\_{rr} = 1$, $g\_{r\theta} = 0$ et $g\_{\theta\theta} = |\v
   });
   $('bp-go').addEventListener('click', function () { reduce = false; setAuto(!auto); });
   draw();
-  if (reduce) { auto = false; $('bp-go').textContent = '▶ Animer'; }
+  if (reduce) { auto = false; setBtn(false); }
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(function (e) { visible = e[0].isIntersecting; start(); }, { threshold: 0.3 }).observe(svg);
   } else { visible = true; start(); }
@@ -2272,9 +2315,9 @@ Le lien entre les deux est immédiat&nbsp;: $w\_i = \vec w\cdot\vec e\_i = w^j\\
 <text id="cv-note" x="396" y="244" font-size="13.5" font-family="Georgia,'Times New Roman',serif" font-style="italic"></text>
 </svg>
 <div style="display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:center;align-items:center;margin:2px 0 6px;font-size:0.92em;">
-<label style="display:inline-flex;align-items:center;gap:8px;margin:0;font-weight:normal;"><span>angle entre <b>e</b><sub>1</sub> et <b>e</b><sub>2</sub></span> <input type="range" id="cv-a" min="30" max="150" step="1" value="70" style="width:120px;margin:0;"> <span id="cv-av" style="min-width:2.6em;">70°</span></label>
-<label style="display:inline-flex;align-items:center;gap:8px;margin:0;font-weight:normal;"><span>longueur de <b>e</b><sub>1</sub></span> <input type="range" id="cv-l" min="0.5" max="1.8" step="0.05" value="1" style="width:120px;margin:0;"> <span id="cv-lv2" style="min-width:2.6em;">1,00</span></label>
-<button type="button" id="cv-ortho">Base orthonormée</button>
+<label style="display:inline-flex;align-items:center;gap:8px;margin:0;font-weight:normal;"><span>angle entre <b>e</b><sub>1</sub> et <b>e</b><sub>2</sub></span> <input type="range" class="fig-range" id="cv-a" min="30" max="150" step="1" value="70" style="width:120px;margin:0;"> <span id="cv-av" style="min-width:2.6em;">70°</span></label>
+<label style="display:inline-flex;align-items:center;gap:8px;margin:0;font-weight:normal;"><span>longueur de <b>e</b><sub>1</sub></span> <input type="range" class="fig-range" id="cv-l" min="0.5" max="1.8" step="0.05" value="1" style="width:120px;margin:0;"> <span id="cv-lv2" style="min-width:2.6em;">1,00</span></label>
+<button type="button" class="fig-btn" id="cv-ortho">Base orthonormée</button>
 </div>
 </div>
 <script>
