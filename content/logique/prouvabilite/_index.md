@@ -233,7 +233,13 @@ La réponse, donnée par Martin Löb en 1955, est une surprise&nbsp;: $H$ est pr
 
 Le théorème affirme donc que si on peut prouver une formule en admettant qu'elle est prouvable, alors on peut la prouver tout court. C'est une sorte de méthode Coué logique, une prophétie autoréalisatrice&nbsp;: «&nbsp;si tu crois en toi, ça va le faire&nbsp;». C'est bizarre, mais ça se démontre.
 
-Lu dans l'autre sens, il est tout aussi troublant. On aimerait que la théorie sache, pour chaque $\phi$, que «&nbsp;si $\phi$ est prouvable, alors $\phi$ est vraie&nbsp;». Löb nous dit qu'elle ne le démontre *que* pour les $\phi$ qu'elle démontre déjà, c'est-à-dire quand cela ne sert plus à rien. Voilà pourquoi $\text{(T)}$ ne peut pas être un axiome de la prouvabilité.
+Lu dans l'autre sens, il est tout aussi troublant. On aimerait que la théorie sache, pour chaque $\phi$, que «&nbsp;si $\phi$ est prouvable, alors $\phi$ est vraie&nbsp;». Löb nous dit qu'elle ne le démontre *que* pour les $\phi$ qu'elle démontre déjà, c'est-à-dire quand cela ne sert plus à rien.
+
+C'est la raison, annoncée [plus haut](#des-nombres-qui-parlent-de-preuves), pour laquelle on s'interdit l'axiome $\text{(T)}=\Box\phi\rightarrow\phi$. Supposons qu'on l'ajoute&nbsp;: la théorie démontrerait alors $\Box\phi\rightarrow\phi$ pour **toutes** les formules $\phi$, et le théorème de Löb lui ferait démontrer toutes les formules $\phi$, y compris le faux $\bot$. Elle deviendrait contradictoire.
+
+Le cas $\phi=\bot$ suffit d'ailleurs à tout faire s'effondrer. L'instance $\Box\bot\rightarrow\bot$ équivaut à $\neg\Box\bot$, «&nbsp;le faux n'est pas prouvable&nbsp;»&nbsp;: c'est l'énoncé de **cohérence** de la théorie. Accepter $\text{(T)}$, c'est donc demander à la théorie de prouver sa propre cohérence, ce que le [second théorème d'incomplétude](#le-second-théorème-dincomplétude) lui interdit.
+
+Attention&nbsp;: $\text{(T)}$ n'est pas faux pour autant. Si la théorie est saine, tout ce qu'elle prouve est vrai, et chaque instance de $\Box\phi\rightarrow\phi$ est vraie. Mais cette vérité ne se voit que **de l'extérieur**&nbsp;: la théorie ne peut pas la démontrer sans s'effondrer. C'est aussi pourquoi, on le verra, les mondes de la prouvabilité n'ont jamais de boucle $a\longrightarrow a$, alors que $\text{(T)}$ est valide exactement sur les systèmes où chaque monde a la sienne.
 
 <div class="preuve">
 <p>Preuve du théorème de Löb&nbsp;:</p>
