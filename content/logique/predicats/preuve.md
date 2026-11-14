@@ -132,7 +132,7 @@ Le calcul des prédicats a donc ses preuves (le symbole $\vdash$) et sa sémanti
 
 Tout ce qui est vrai dans toutes les structures se démontre, et rien d'autre. La question avait été posée en 1928 par David Hilbert et Wilhelm Ackermann dans leur manuel de logique. Kurt Gödel, 23 ans, y répond l'année suivante dans sa thèse de doctorat à Vienne.
 
-La preuve qu'on enseigne aujourd'hui, due à Leon Henkin (1949), suit la même idée que la [complétude des logiques modales](../../modale/systemes/#pourquoi-cest-complet)&nbsp;: fabriquer une structure à partir de la syntaxe elle-même. Les objets du domaine sont les termes du langage, et, pour que chaque «&nbsp;il existe&nbsp;» ait de quoi se réaliser, on ajoute au langage une nouvelle constante, un témoin, pour chaque formule $\exists x\,\phi(x)$.
+La preuve qu'on enseigne aujourd'hui, due à Leon Henkin (1949), suit la même idée que la [complétude des logiques modales](../../modale/systemes/#pourquoi-cest-complet)&nbsp;: fabriquer une structure à partir de la syntaxe elle-même. Les objets du domaine sont les termes du langage, et, pour que chaque «&nbsp;il existe&nbsp;» ait de quoi se réaliser, on ajoute au langage une nouvelle constante, un témoin, pour chaque formule $\exists x\\,\phi(x)$.
 
 {{% notice type="piege" round="true" %}}
 **Complétude et incomplétude ne se contredisent pas**, malgré les noms et l'auteur commun. Le théorème de complétude (1929) dit que les règles de preuve attrapent toutes les **conséquences logiques** d'un ensemble d'axiomes. Les théorèmes d'incomplétude (1931) disent qu'un ensemble d'axiomes pour l'arithmétique ne **décide** jamais tous les énoncés&nbsp;: il en reste qui ne sont ni démontrables ni réfutables. Les deux se concilient très bien&nbsp;: un tel énoncé est vrai dans certaines structures qui satisfont les axiomes et faux dans d'autres, donc il n'est pas une conséquence logique des axiomes, et la complétude n'oblige pas à le démontrer.
@@ -197,7 +197,7 @@ Une **théorie** est un ensemble d'énoncés qu'on prend pour axiomes. La plus c
 
 La récurrence pose le problème annoncé au début. Faute de pouvoir dire «&nbsp;pour toute propriété&nbsp;», on l'écrit sous forme de **schéma**&nbsp;: un axiome distinct pour chaque formule $\phi(x)$,
 
-$$\big(\phi(0)\land\forall x\,(\phi(x)\rightarrow\phi(x+1))\big)\rightarrow\forall x\,\phi(x).$$
+$$\big(\phi(0)\land\forall x\\,(\phi(x)\rightarrow\phi(x+1))\big)\rightarrow\forall x\\,\phi(x).$$
 
 Les formules sont dénombrables, alors que les propriétés des entiers (les ensembles d'entiers) ne le sont pas. Le schéma laisse donc échapper l'immense majorité des propriétés, et c'est par cette brèche que s'engouffrent les modèles non standard.
 

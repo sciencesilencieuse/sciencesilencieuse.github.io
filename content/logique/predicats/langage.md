@@ -71,9 +71,9 @@ et cette fois, la conclusion découle bien des prémisses&nbsp;: la première af
 <div class="encadre prune">
 <div class="encadre-titre">Deux pièges classiques</div>
 
-«&nbsp;Tous les hommes sont mortels&nbsp;» s'écrit $\forall x\,(\mathit{Homme}(x)\rightarrow \mathit{Mortel}(x))$, et non $\forall x\,(\mathit{Homme}(x)\land \mathit{Mortel}(x))$. Cette dernière formule affirme que **tout** est un homme mortel, y compris les chaises et les nombres premiers.
+«&nbsp;Tous les hommes sont mortels&nbsp;» s'écrit $\forall x\\,(\mathit{Homme}(x)\rightarrow \mathit{Mortel}(x))$, et non $\forall x\\,(\mathit{Homme}(x)\land \mathit{Mortel}(x))$. Cette dernière formule affirme que **tout** est un homme mortel, y compris les chaises et les nombres premiers.
 
-À l'inverse, «&nbsp;un homme au moins est mortel&nbsp;» s'écrit $\exists x\,(\mathit{Homme}(x)\land \mathit{Mortel}(x))$, et non $\exists x\,(\mathit{Homme}(x)\rightarrow \mathit{Mortel}(x))$. Cette dernière est vraie dès qu'il existe un objet qui n'est pas un homme&nbsp;: une chaise suffit, puisqu'une implication dont la prémisse est fausse est vraie.
+À l'inverse, «&nbsp;un homme au moins est mortel&nbsp;» s'écrit $\exists x\\,(\mathit{Homme}(x)\land \mathit{Mortel}(x))$, et non $\exists x\\,(\mathit{Homme}(x)\rightarrow \mathit{Mortel}(x))$. Cette dernière est vraie dès qu'il existe un objet qui n'est pas un homme&nbsp;: une chaise suffit, puisqu'une implication dont la prémisse est fausse est vraie.
 
 Règle pratique&nbsp;: **$\forall$ va avec $\rightarrow$, $\exists$ va avec $\land$**.
 
@@ -102,6 +102,33 @@ Les symboles actuels sont venus après coup&nbsp;: le $\exists$, un E retourné 
 
 </div>
 
+### Le carré d'Aristote
+
+Les quatre phrases types de la syllogistique d'Aristote (celle de l'encadré plus bas) s'organisent depuis l'Antiquité en un **carré des oppositions**. Les logiciens médiévaux les ont baptisées avec les voyelles du latin *AffIrmo* («&nbsp;j'affirme&nbsp;») et *nEgO* («&nbsp;je nie&nbsp;»)&nbsp;: A et I pour les affirmatives, E et O pour les négatives.
+
+![](/carraristote.png?width=800px)
+
+<p class="legende">Dans chaque diagramme, le cercle de gauche contient les objets qui sont P, celui de droite ceux qui sont Q.</p>
+
+Les **diagonales** relient des énoncés **contradictoires**&nbsp;: dans chaque paire, l'un est vrai et l'autre faux. Ce sont exactement les lois de De Morgan qu'on vient de voir&nbsp;: nier «&nbsp;tout P est Q&nbsp;», c'est affirmer qu'au moins un P n'est pas Q.
+
+Les trois autres côtés sont plus délicats&nbsp;:
+
+- A et E sont **contraires**&nbsp;: elles ne peuvent pas être vraies ensemble, mais elles peuvent être fausses ensemble (si certains P sont Q et d'autres non)&nbsp;;
+- I et O sont **sous-contraires**&nbsp;: elles ne peuvent pas être fausses ensemble, mais elles peuvent être vraies ensemble&nbsp;;
+- I est **subalterne** de A&nbsp;: si tout P est Q, alors au moins un P est Q. De même, O est subalterne de E.
+
+<div class="encadre prune">
+<div class="encadre-titre">Le carré et les dragons</div>
+
+Ces trois côtés reposent tous sur l'hypothèse écrite en haut de la figure&nbsp;: il existe au moins un P. Sans elle, ils s'effondrent.
+
+Prenons pour P «&nbsp;être un dragon&nbsp;». Faute de dragons, la prémisse de $\forall x\\,(\mathit{Dragon}(x)\rightarrow \mathit{Feu}(x))$ est toujours fausse, donc l'implication est toujours vraie&nbsp;: «&nbsp;tout dragon crache du feu&nbsp;» est vrai (on dit vrai **par vacuité**). Mais «&nbsp;aucun dragon ne crache du feu&nbsp;» est vrai pour la même raison&nbsp;: A et E sont vraies ensemble. Symétriquement, I et O sont fausses ensemble, puisqu'aucun dragon n'existe pour les rendre vraies. Et A est vraie quand I est fausse.
+
+Seules les diagonales résistent, car les lois de De Morgan ne supposent rien sur l'existence. La logique traditionnelle raisonnait implicitement sur des termes qui désignent quelque chose. La logique moderne, avec Boole, Venn puis Frege, a choisi de ne plus le supposer.
+
+</div>
+
 ### L'ordre compte
 
 Quand plusieurs quantificateurs se suivent, leur ordre change tout le sens de la phrase.
@@ -124,7 +151,7 @@ Les mathématiciens connaissent bien le phénomène. Une fonction est **continue
 
 ## Variables libres, variables liées
 
-Dans $\displaystyle\sum_{i=1}^{n} i$, la lettre $i$ est **muette**&nbsp;: on pourrait l'appeler $k$ sans rien changer, et le résultat ne dépend que de $n$. Les quantificateurs fonctionnent de la même façon. Dans $\forall x\,\mathit{Homme}(x)$, la variable $x$ est **liée** par le quantificateur&nbsp;; une variable qu'aucun quantificateur ne lie est **libre**.
+Dans $\displaystyle\sum_{i=1}^{n} i$, la lettre $i$ est **muette**&nbsp;: on pourrait l'appeler $k$ sans rien changer, et le résultat ne dépend que de $n$. Les quantificateurs fonctionnent de la même façon. Dans $\forall x\\,\mathit{Homme}(x)$, la variable $x$ est **liée** par le quantificateur&nbsp;; une variable qu'aucun quantificateur ne lie est **libre**.
 
 <div class="svg-container" style="text-align:center;margin:1em 0 0.4em;">
 <svg viewBox="0 0 467 150" role="img" aria-label="Arcs reliant chaque quantificateur aux occurrences de la variable qu'il lie ; la variable z, qu'aucun quantificateur ne lie, est libre" style="width:100%;max-width:551px;height:auto;"><text x="22.0" y="98" font-size="19" fill="#004D80" font-family="Georgia,'Times New Roman',serif" textLength="14" lengthAdjust="spacingAndGlyphs">∀</text><text x="38.0" y="98" font-size="19" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" textLength="10" lengthAdjust="spacingAndGlyphs">x</text><text x="55.0" y="98" font-size="19" fill="#334155" font-family="Georgia,'Times New Roman',serif" textLength="7" lengthAdjust="spacingAndGlyphs">(</text><text x="63.0" y="98" font-size="19" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" textLength="58" lengthAdjust="spacingAndGlyphs">Homme</text><text x="123.0" y="98" font-size="19" fill="#334155" font-family="Georgia,'Times New Roman',serif" textLength="7" lengthAdjust="spacingAndGlyphs">(</text><text x="131.0" y="98" font-size="19" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" textLength="10" lengthAdjust="spacingAndGlyphs">x</text><text x="142.0" y="98" font-size="19" fill="#334155" font-family="Georgia,'Times New Roman',serif" textLength="7" lengthAdjust="spacingAndGlyphs">)</text><text x="159.0" y="98" font-size="19" fill="#334155" font-family="Georgia,'Times New Roman',serif" textLength="19" lengthAdjust="spacingAndGlyphs">→</text><text x="188.0" y="98" font-size="19" fill="#00A89D" font-family="Georgia,'Times New Roman',serif" textLength="13" lengthAdjust="spacingAndGlyphs">∃</text><text x="203.0" y="98" font-size="19" fill="#00A89D" font-family="Georgia,'Times New Roman',serif" font-style="italic" textLength="10" lengthAdjust="spacingAndGlyphs">y</text><text x="220.0" y="98" font-size="19" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" textLength="40" lengthAdjust="spacingAndGlyphs">Aime</text><text x="262.0" y="98" font-size="19" fill="#334155" font-family="Georgia,'Times New Roman',serif" textLength="7" lengthAdjust="spacingAndGlyphs">(</text><text x="270.0" y="98" font-size="19" fill="#00A89D" font-family="Georgia,'Times New Roman',serif" font-style="italic" textLength="10" lengthAdjust="spacingAndGlyphs">y</text><text x="281.0" y="98" font-size="19" fill="#334155" font-family="Georgia,'Times New Roman',serif" textLength="5" lengthAdjust="spacingAndGlyphs">,</text><text x="291.0" y="98" font-size="19" fill="#004D80" font-family="Georgia,'Times New Roman',serif" font-style="italic" textLength="10" lengthAdjust="spacingAndGlyphs">x</text><text x="302.0" y="98" font-size="19" fill="#334155" font-family="Georgia,'Times New Roman',serif" textLength="7" lengthAdjust="spacingAndGlyphs">)</text><text x="310.0" y="98" font-size="19" fill="#334155" font-family="Georgia,'Times New Roman',serif" textLength="7" lengthAdjust="spacingAndGlyphs">)</text><text x="328.0" y="98" font-size="19" fill="#334155" font-family="Georgia,'Times New Roman',serif" textLength="15" lengthAdjust="spacingAndGlyphs">∧</text><text x="354.0" y="98" font-size="19" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" textLength="46" lengthAdjust="spacingAndGlyphs">Riche</text><text x="402.0" y="98" font-size="19" fill="#334155" font-family="Georgia,'Times New Roman',serif" textLength="7" lengthAdjust="spacingAndGlyphs">(</text><text x="410.0" y="98" font-size="19" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic" textLength="9" lengthAdjust="spacingAndGlyphs">z</text><text x="420.0" y="98" font-size="19" fill="#334155" font-family="Georgia,'Times New Roman',serif" textLength="7" lengthAdjust="spacingAndGlyphs">)</text><path d="M43.0,79 C43.0,45 136.0,45 136.0,79" stroke="#004D80" stroke-width="1.4" fill="none"/><path d="M43.0,79 C43.0,19 296.0,19 296.0,79" stroke="#004D80" stroke-width="1.4" fill="none"/><path d="M208.0,79 C208.0,53 275.0,53 275.0,79" stroke="#00A89D" stroke-width="1.4" fill="none"/><text x="169.5" y="18" text-anchor="middle" font-size="12.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif" lengthAdjust="spacingAndGlyphs" textLength="104">x est liée par ∀x</text><path d="M275.0,106 L275.0,122" stroke="#00A89D" stroke-width="1.4"/><text x="275.0" y="138" text-anchor="middle" font-size="12.5" fill="#00A89D" font-family="Georgia,'Times New Roman',serif" lengthAdjust="spacingAndGlyphs" textLength="104">y est liée par ∃y</text><path d="M414.5,106 L414.5,122" stroke="#970E53" stroke-width="1.4"/><text x="414.5" y="138" text-anchor="middle" font-size="12.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif" lengthAdjust="spacingAndGlyphs" textLength="66">z est libre</text></svg>
@@ -133,10 +160,10 @@ Dans $\displaystyle\sum_{i=1}^{n} i$, la lettre $i$ est **muette**&nbsp;: on pou
 
 Une formule sans variable libre est un **énoncé** (on dit aussi une formule close)&nbsp;: une fois qu'on sait de quel monde on parle, il est vrai ou faux.
 
-Une formule **avec** une variable libre n'est ni vraie ni fausse tant qu'on n'a pas choisi la valeur de cette variable&nbsp;: elle exprime une **propriété**. Ainsi $\exists y\,(x=y+y)$, où $x$ est libre et $y$ liée, dit «&nbsp;$x$ est pair&nbsp;». Elle est vraie pour $x=6$ et fausse pour $x=7$. C'est exactement en ce sens que, dans le lemme de diagonalisation, une formule $S(x)$ «&nbsp;exprime une propriété $S$&nbsp;».
+Une formule **avec** une variable libre n'est ni vraie ni fausse tant qu'on n'a pas choisi la valeur de cette variable&nbsp;: elle exprime une **propriété**. Ainsi $\exists y\\,(x=y+y)$, où $x$ est libre et $y$ liée, dit «&nbsp;$x$ est pair&nbsp;». Elle est vraie pour $x=6$ et fausse pour $x=7$. C'est exactement en ce sens que, dans le lemme de diagonalisation, une formule $S(x)$ «&nbsp;exprime une propriété $S$&nbsp;».
 
 {{% notice type="piege" round="true" %}}
-On ne remplace pas une variable libre n'importe comment. Dans $\exists y\,(x=y+y)$, remplacer $x$ par $y$ donne $\exists y\,(y=y+y)$, qui ne dit plus «&nbsp;$y$ est pair&nbsp;» mais «&nbsp;zéro existe&nbsp;»&nbsp;: la variable $y$ s'est fait **capturer** par le quantificateur. Il faut d'abord renommer la variable muette, par exemple en $\exists u\,(x=u+u)$, comme on le ferait avec un indice de sommation.
+On ne remplace pas une variable libre n'importe comment. Dans $\exists y\\,(x=y+y)$, remplacer $x$ par $y$ donne $\exists y\\,(y=y+y)$, qui ne dit plus «&nbsp;$y$ est pair&nbsp;» mais «&nbsp;zéro existe&nbsp;»&nbsp;: la variable $y$ s'est fait **capturer** par le quantificateur. Il faut d'abord renommer la variable muette, par exemple en $\exists u\\,(x=u+u)$, comme on le ferait avec un indice de sommation.
 {{% /notice %}}
 
 ## Les mondes du premier ordre&nbsp;: les structures
@@ -146,7 +173,7 @@ En calcul des propositions, un modèle se contentait de dire quelles variables �
 - d'un **domaine**&nbsp;: un ensemble non vide d'objets, ceux sur lesquels portent les quantificateurs&nbsp;;
 - du **sens de chaque symbole**&nbsp;: à chaque constante un objet, à chaque fonction une fonction sur le domaine, et à chaque prédicat les objets (ou les couples, triplets…) qui le vérifient.
 
-On évalue ensuite une formule comme on s'y attend&nbsp;: une formule atomique en regardant si les objets désignés sont dans la relation, les connecteurs comme en calcul des propositions, et $\forall x\,\phi$ en vérifiant $\phi$ pour **chaque** objet du domaine (respectivement **au moins un** pour $\exists x\,\phi$).
+On évalue ensuite une formule comme on s'y attend&nbsp;: une formule atomique en regardant si les objets désignés sont dans la relation, les connecteurs comme en calcul des propositions, et $\forall x\\,\phi$ en vérifiant $\phi$ pour **chaque** objet du domaine (respectivement **au moins un** pour $\exists x\\,\phi$).
 
 Une même formule peut être vraie dans une structure et fausse dans une autre. Voici trois structures pour un langage qui ne contient qu'une relation $R$ (dessinée par des flèches)&nbsp;:
 
@@ -155,9 +182,9 @@ Une même formule peut être vraie dans une structure et fausse dans une autre. 
 </div>
 <p class="legende">L'énoncé $\forall x\,\exists y\,R(x,y)$ est vrai dans les deux premières structures et faux dans la troisième, où la dernière marche n'a pas de successeur.</p>
 
-Ces dessins vous rappellent quelque chose&nbsp;? Un système de transition de la logique modale n'est rien d'autre qu'une structure pour un langage réduit à une relation binaire, l'accessibilité. Et l'énoncé $\forall x\,\exists y\,R(x,y)$ est exactement la propriété «&nbsp;[non borné à droite](../../modale/syntaxe-semantique/#nbd)&nbsp;» qui caractérise l'axiome $\text{(D)}$. La différence est de point de vue&nbsp;: le calcul des prédicats **décrit** le graphe avec des quantificateurs, la logique modale s'y **promène** de monde en monde.
+Ces dessins vous rappellent quelque chose&nbsp;? Un système de transition de la logique modale n'est rien d'autre qu'une structure pour un langage réduit à une relation binaire, l'accessibilité. Et l'énoncé $\forall x\\,\exists y\\,R(x,y)$ est exactement la propriété «&nbsp;[non borné à droite](../../modale/syntaxe-semantique/#nbd)&nbsp;» qui caractérise l'axiome $\text{(D)}$. La différence est de point de vue&nbsp;: le calcul des prédicats **décrit** le graphe avec des quantificateurs, la logique modale s'y **promène** de monde en monde.
 
-On note $\mathcal{M}\models\phi$ quand l'énoncé $\phi$ est vrai dans la structure $\mathcal{M}$. Un énoncé vrai dans **toutes** les structures est dit **universellement valide**&nbsp;: c'est l'analogue des tautologies. Par exemple, $\exists y\,\forall x\,R(x,y)\rightarrow\forall x\,\exists y\,R(x,y)$ est universellement valide, mais pas sa réciproque, comme le montre le panneau de gauche de la figure sur l'ordre des quantificateurs.
+On note $\mathcal{M}\models\phi$ quand l'énoncé $\phi$ est vrai dans la structure $\mathcal{M}$. Un énoncé vrai dans **toutes** les structures est dit **universellement valide**&nbsp;: c'est l'analogue des tautologies. Par exemple, $\exists y\\,\forall x\\,R(x,y)\rightarrow\forall x\\,\exists y\\,R(x,y)$ est universellement valide, mais pas sa réciproque, comme le montre le panneau de gauche de la figure sur l'ordre des quantificateurs.
 
 <div class="encadre">
 <div class="encadre-titre">Aristote, Kant… et les canards de Lewis Carroll</div>
@@ -172,7 +199,7 @@ Que peut-on en conclure&nbsp;? Avec des prédicats, la chaîne se déroule toute
 
 </div>
 
-Le langage dispose presque toujours d'un prédicat spécial, l'**égalité** $=$, qui permet de compter. «&nbsp;Il y a au moins deux objets&nbsp;» s'écrit $\exists x\,\exists y\,\neg(x=y)$, et l'on écrit de même «&nbsp;il y a au moins trois objets&nbsp;», «&nbsp;au moins cent objets&nbsp;», «&nbsp;exactement sept objets&nbsp;». Mais aucune formule ne dit «&nbsp;le domaine est fini&nbsp;». Ce n'est pas un manque d'astuce&nbsp;: c'est un théorème, que l'on rencontrera au chapitre suivant.
+Le langage dispose presque toujours d'un prédicat spécial, l'**égalité** $=$, qui permet de compter. «&nbsp;Il y a au moins deux objets&nbsp;» s'écrit $\exists x\\,\exists y\\,\neg(x=y)$, et l'on écrit de même «&nbsp;il y a au moins trois objets&nbsp;», «&nbsp;au moins cent objets&nbsp;», «&nbsp;exactement sept objets&nbsp;». Mais aucune formule ne dit «&nbsp;le domaine est fini&nbsp;». Ce n'est pas un manque d'astuce&nbsp;: c'est un théorème, que l'on rencontrera au chapitre suivant.
 
 <nav class="suite-nav" aria-label="Chapitre précédent et suivant">
 <a href="../../modale/logiques/" class="precedent"><span>← Précédent</span><b>Logique modale</b></a>

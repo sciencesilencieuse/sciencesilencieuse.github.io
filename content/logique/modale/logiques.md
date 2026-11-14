@@ -50,7 +50,7 @@ La logique modale est dite **aléthique** lorsque les opérateurs modaux traduis
 
 Les trois cellules rectangulaires sont destinées à être conjointement exhaustives et mutuellement exclusives&nbsp;: chaque proposition peut être nécessaire, contingente (possiblement vraie mais aussi possiblement fausse), ou encore impossible, mais jamais plus qu'un de ces trois choix.
 
-On peut en déduire l'hexagone logique suivant, extension du carré des oppositions d'Aristote, dû à Sesmat et Blanché&nbsp;:
+On peut en déduire l'hexagone logique suivant, extension du [carré des oppositions d'Aristote](../../predicats/langage/#le-carré-daristote), dû à Sesmat et Blanché&nbsp;:
 
 ![](/hexalethique.png?width=750px)
 
