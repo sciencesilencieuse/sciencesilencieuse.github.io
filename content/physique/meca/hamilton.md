@@ -2167,8 +2167,8 @@ Pour les polaires, $g\_{rr} = 1$, $g\_{r\theta} = 0$ et $g\_{\theta\theta} = |\v
 (function () {
   var svg = document.getElementById('bp-svg');
   if (!svg) return;
-  var OX = 190, OY = 300, U = 34, RMIN = 1, RMAX = 4.6, TMIN = 8 * Math.PI / 180, TMAX = 82 * Math.PI / 180;
-  var r = 2.8, th = 50 * Math.PI / 180, auto = true, visible = false, raf = null, t0 = null, dragging = false;
+  var OX = 190, OY = 300, U = 34, RMIN = 1, RMAX = 4.6, RC = (RMIN + RMAX) / 2, RA = (RMAX - RMIN) / 2, TMIN = 8 * Math.PI / 180, TMAX = 82 * Math.PI / 180;
+  var r = RC, th = 50 * Math.PI / 180, auto = true, visible = false, raf = null, t0 = null, dragging = false;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function $(id) { return document.getElementById(id); }
   function put(id, o) { var e = $(id); for (var k in o) e.setAttribute(k, typeof o[k] === 'number' ? o[k].toFixed(1) : o[k]); }
@@ -2201,8 +2201,8 @@ Pour les polaires, $g\_{rr} = 1$, $g\_{r\theta} = 0$ et $g\_{\theta\theta} = |\v
   function frame(ts) {
     raf = null;
     if (!auto || !visible || reduce) return;
-    if (t0 === null) t0 = ts - 1000 * Math.asin((r - 2.8) / 1.7);
-    r = 2.8 + 1.7 * Math.sin((ts - t0) / 1000);
+    if (t0 === null) t0 = ts - 1000 * Math.asin(Math.max(-1, Math.min(1, (r - RC) / RA)));
+    r = RC + RA * Math.sin((ts - t0) / 1000);
     draw(); raf = requestAnimationFrame(frame);
   }
   function start() { if (!raf && auto && visible && !reduce) raf = requestAnimationFrame(frame); }
