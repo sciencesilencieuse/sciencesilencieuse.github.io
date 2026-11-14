@@ -1673,14 +1673,32 @@ $H$ reste constant&nbsp;: les trajectoires sont les **courbes de niveau** de $H$
   for (var s = 0; s < 3000; s++) { z = step(z, dt); traj.push(z); if (prev[0] < 0 && z[0] >= 0 && z[1] > 0 && s > 10) break; prev = z; }
   var period = traj.length * dt;
   // --- vue ---
-  var az = -16 * Math.PI / 180, el = 38 * Math.PI / 180, Wd = 600, Ht = 380, S = 62, CX = 300, CY = 200;
+  var az = -16 * Math.PI / 180, el = 38 * Math.PI / 180, Wd = 600, Ht = 380, S0 = 62, S = 62, CX = 300, CY = 200, MARGE = 10;
   function resize() {
     var w = Math.min(600, box.parentNode.clientWidth || 600), dpr = window.devicePixelRatio || 1;
     Wd = w; Ht = Math.round(w * 0.62);
     box.style.width = w + 'px'; box.style.height = Ht + 'px';
     box.width = Math.round(w * dpr); box.height = Math.round(Ht * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    S = w / 9.2; CX = w / 2; CY = Ht * 0.55;
+    S0 = w / 9.2;
+  }
+  // sommets du relief, pour mesurer son emprise à l'écran quelle que soit l'orientation
+  var grille = [];
+  for (var gi = 0; gi <= NX; gi++) for (var gj = 0; gj <= NP; gj++) {
+    var gx0 = -XR + 2 * XR * gi / NX, gp0 = -PR + 2 * PR * gj / NP;
+    grille.push(W3(gx0, gp0, Hf(gx0, gp0)));
+  }
+  // ajuste l'échelle et le centre pour que le relief tienne entièrement dans le cadre
+  function cadrer() {
+    var ca = Math.cos(az), sa = Math.sin(az), ce = Math.cos(el), se = Math.sin(el);
+    var umin = 1e9, umax = -1e9, vmin = 1e9, vmax = -1e9;
+    for (var k = 0; k < grille.length; k++) {
+      var v = grille[k], u = v[0] * ca - v[1] * sa, d = v[0] * sa + v[1] * ca, w = v[2] * ce + d * se;
+      if (u < umin) umin = u; if (u > umax) umax = u; if (w < vmin) vmin = w; if (w > vmax) vmax = w;
+    }
+    S = Math.min(S0, (Wd - 2 * MARGE) / (umax - umin), (Ht - 2 * MARGE) / (vmax - vmin));
+    CX = Wd / 2 - S * (umin + umax) / 2;
+    CY = Ht / 2 + S * (vmin + vmax) / 2;
   }
   function P(v) {
     var ca = Math.cos(az), sa = Math.sin(az), ce = Math.cos(el), se = Math.sin(el);
@@ -1690,6 +1708,7 @@ $H$ reste constant&nbsp;: les trajectoires sont les **courbes de niveau** de $H$
   var t0 = performance.now();
   function draw(now) {
     ctx.clearRect(0, 0, Wd, Ht);
+    cadrer();
     var items = [];
     quads.forEach(function (q) { var c = P(q.c); items.push({ d: c[2], q: q }); });
     segs.forEach(function (sg) { var a = P(sg.a), b = P(sg.b); items.push({ d: (a[2] + b[2]) / 2 - 0.15, s: sg, A: a, B: b }); });
@@ -1713,7 +1732,7 @@ $H$ reste constant&nbsp;: les trajectoires sont les **courbes de niveau** de $H$
       }
     });
     // repère (x, p, H) dans le coin
-    var o = [44, Ht - 30], ax = [[1, 0, 0, 'x'], [0, 1, 0, 'p'], [0, 0, 1, 'H']];
+    var o = [48, Ht - 48], ax = [[1, 0, 0, 'x'], [0, 1, 0, 'p'], [0, 0, 1, 'H']];
     ctx.font = 'italic 14px Georgia, serif'; ctx.textAlign = 'center';
     ax.forEach(function (a) {
       var ca = Math.cos(az), sa = Math.sin(az), ce = Math.cos(el), se = Math.sin(el);
