@@ -50,7 +50,7 @@ Que sait l'arithmétique de sa propre prouvabilité&nbsp;? Trois choses, appelé
 </table>
 </div>
 
-Autrement dit, la prouvabilité se comporte comme la boîte de la logique $\textbf{K4}$, et tout ce qu'on démontre dans $\textbf{K4}$ est vrai de $\text{Bew}$. En revanche, on se gardera d'ajouter l'axiome $\text{(T)}=\Box\phi\rightarrow\phi$, «&nbsp;ce qui est prouvable est vrai&nbsp;». Il a l'air inoffensif, il est même *vrai* si la théorie est saine. Mais la théorie ne peut pas le *démontrer*, et c'est tout le sujet de cette section.
+Autrement dit, la prouvabilité se comporte comme la boîte de la logique $\textbf{K4}$, et tout ce qu'on démontre dans $\textbf{K4}$ est vrai de $\text{Bew}$. En revanche, on se gardera d'ajouter l'axiome $\text{(T)}=\Box\phi\rightarrow\phi$, «&nbsp;ce qui est prouvable est vrai&nbsp;». Il a l'air inoffensif, il est même *vrai* si la théorie est saine. Mais la théorie ne peut pas le *démontrer*&nbsp;: le [théorème de Löb](#le-théorème-de-löb) dira pourquoi.
 
 ## Le lemme de diagonalisation
 
@@ -193,7 +193,11 @@ Dans toute théorie cohérente (on ne peut pas y prouver le faux), dont on sait 
 
 Ajouter $G$ aux axiomes ne répare rien&nbsp;: la nouvelle théorie a sa propre formule de Gödel, et tout recommence.
 
-Le raisonnement ci-dessus se formalise entièrement dans la logique $\textbf{K4}$&nbsp;: à partir de $\vdash G\leftrightarrow\neg\Box G$, on arrive à $\vdash\neg\Box\bot\rightarrow\neg\Box G$, «&nbsp;si aucune contradiction n'est prouvable, alors $G$ n'est pas prouvable&nbsp;».
+## Le second théorème d'incomplétude
+
+Le premier théorème supposait la théorie cohérente. Peut-elle au moins démontrer qu'elle l'est&nbsp;? Sa cohérence s'écrit $\neg\Box\bot$, «&nbsp;le faux n'est pas prouvable&nbsp;».
+
+Pour le savoir, Gödel retourne son argument contre la théorie elle-même. Le raisonnement du premier théorème se formalise en effet entièrement dans la logique $\textbf{K4}$&nbsp;: à partir de $\vdash G\leftrightarrow\neg\Box G$, on arrive à $\vdash\neg\Box\bot\rightarrow\neg\Box G$, «&nbsp;si aucune contradiction n'est prouvable, alors $G$ n'est pas prouvable&nbsp;». C'est le premier théorème, démontré cette fois *par* la théorie.
 
 <div class="preuve">
 <ol>
@@ -209,7 +213,16 @@ Le raisonnement ci-dessus se formalise entièrement dans la logique $\textbf{K4}
 </ol>
 </div>
 
-Ce petit calcul a une conséquence considérable. La formule $\neg\Box\bot$ dit «&nbsp;le faux n'est pas prouvable&nbsp;»&nbsp;: c'est la théorie qui affirme sa propre **cohérence**. Or la ligne 9 et la ligne 1 donnent ensemble $\vdash\neg\Box\bot\rightarrow G$. Si la théorie prouvait sa cohérence, elle prouverait donc $G$, ce qui est impossible. Une théorie cohérente ne peut pas prouver qu'elle l'est&nbsp;! C'est le second théorème d'incomplétude, que l'on va retrouver par un chemin plus général.
+Combinée à la ligne 1, la ligne 9 donne $\vdash\neg\Box\bot\rightarrow G$. Si la théorie prouvait sa cohérence, elle prouverait donc $G$, ce qui est impossible.
+
+<div class="theo">
+<p><b>Second théorème d'incomplétude</b>&nbsp;:<br>
+Une théorie cohérente, dont on sait reconnaître mécaniquement les axiomes et qui contient l'arithmétique, ne peut pas prouver sa propre cohérence. Les seules théories de ce type qui «&nbsp;prouvent&nbsp;» leur cohérence sont celles qui sont incohérentes, et qui prouvent donc n'importe quoi…</p>
+</div>
+
+Par dualité, $\Diamond P = \neg\Box\neg P$ exprime qu'on ne peut pas prouver que $P$ est fausse, autrement dit que $P$ est compatible avec la théorie. L'énoncé de cohérence $\neg\Box\bot$ s'écrit alors simplement $\Diamond\top$, et le second théorème prend, à l'intérieur même de la théorie, la forme $\Diamond\top\rightarrow \neg\Box\Diamond \top$&nbsp;: «&nbsp;si la théorie est cohérente, alors elle ne peut pas le prouver&nbsp;».
+
+C'est la fin du programme de Hilbert sous sa forme initiale&nbsp;: pour prouver la cohérence de l'arithmétique, il faut des moyens qui la dépassent. Gerhard Gentzen, l'inventeur de la déduction naturelle et du calcul des séquents, y parviendra en 1936 au prix d'une récurrence sur des ordinaux infinis.
 
 <div class="encadre">
 <div class="encadre-titre">Königsberg, septembre 1930</div>
@@ -232,14 +245,6 @@ La réponse, donnée par Martin Löb en 1955, est une surprise&nbsp;: $H$ est pr
 </div>
 
 Le théorème affirme donc que si on peut prouver une formule en admettant qu'elle est prouvable, alors on peut la prouver tout court. C'est une sorte de méthode Coué logique, une prophétie autoréalisatrice&nbsp;: «&nbsp;si tu crois en toi, ça va le faire&nbsp;». C'est bizarre, mais ça se démontre.
-
-Lu dans l'autre sens, il est tout aussi troublant. On aimerait que la théorie sache, pour chaque $\phi$, que «&nbsp;si $\phi$ est prouvable, alors $\phi$ est vraie&nbsp;». Löb nous dit qu'elle ne le démontre *que* pour les $\phi$ qu'elle démontre déjà, c'est-à-dire quand cela ne sert plus à rien.
-
-C'est la raison, annoncée [plus haut](#des-nombres-qui-parlent-de-preuves), pour laquelle on s'interdit l'axiome $\text{(T)}=\Box\phi\rightarrow\phi$. Supposons qu'on l'ajoute&nbsp;: la théorie démontrerait alors $\Box\phi\rightarrow\phi$ pour **toutes** les formules $\phi$, et le théorème de Löb lui ferait démontrer toutes les formules $\phi$, y compris le faux $\bot$. Elle deviendrait contradictoire.
-
-Le cas $\phi=\bot$ suffit d'ailleurs à tout faire s'effondrer. L'instance $\Box\bot\rightarrow\bot$ équivaut à $\neg\Box\bot$, «&nbsp;le faux n'est pas prouvable&nbsp;»&nbsp;: c'est l'énoncé de **cohérence** de la théorie. Accepter $\text{(T)}$, c'est donc demander à la théorie de prouver sa propre cohérence, ce que le [second théorème d'incomplétude](#le-second-théorème-dincomplétude) lui interdit.
-
-Attention&nbsp;: $\text{(T)}$ n'est pas faux pour autant. Si la théorie est saine, tout ce qu'elle prouve est vrai, et chaque instance de $\Box\phi\rightarrow\phi$ est vraie. Mais cette vérité ne se voit que **de l'extérieur**&nbsp;: la théorie ne peut pas la démontrer sans s'effondrer. C'est aussi pourquoi, on le verra, les mondes de la prouvabilité n'ont jamais de boucle $a\longrightarrow a$, alors que $\text{(T)}$ est valide exactement sur les systèmes où chaque monde a la sienne.
 
 <div class="preuve">
 <p>Preuve du théorème de Löb&nbsp;:</p>
@@ -273,21 +278,13 @@ C'est le paradoxe de Curry, et la preuve de Löb en est la copie conforme, où �
 
 </div>
 
-## Le second théorème d'incomplétude
+Le théorème de Löb a deux conséquences qui éclairent ce qui précède.
 
-<div class="theo">
-<p><b>Second théorème d'incomplétude</b>&nbsp;:<br>
-Une théorie cohérente, dont on sait reconnaître mécaniquement les axiomes et qui contient l'arithmétique, ne peut pas prouver sa propre cohérence. Les seules théories de ce type qui «&nbsp;prouvent&nbsp;» leur cohérence sont celles qui sont incohérentes, et qui prouvent donc n'importe quoi…</p>
-</div>
+**Le second théorème en devient un cas particulier.** Prenons $\phi=\bot$. La formule $\Box\bot\rightarrow\bot$ équivaut à $\neg\Box\bot$, l'énoncé de cohérence, et le théorème de Löb devient&nbsp;: si $\vdash\neg\Box\bot$, alors $\vdash\bot$. Une théorie qui prouve sa cohérence est donc incohérente&nbsp;: c'est exactement le second théorème d'incomplétude, obtenu ici sans passer par la formule de Gödel.
 
-<div class="preuve">
-<p>Ce théorème n'est autre que le théorème de Löb appliqué à $\phi=\bot$&nbsp;!</p>
-<p>La formule $\Box\bot\rightarrow\bot$ équivaut à $\neg\Box\bot$, l'énoncé de cohérence. Le théorème de Löb devient donc&nbsp;: si $\vdash\neg\Box\bot$, alors $\vdash\bot$. Par contraposition, si la théorie est cohérente ($\nvdash\bot$), alors elle ne prouve pas sa cohérence ($\nvdash\neg\Box\bot$).</p>
-</div>
+**L'axiome $\text{(T)}$ est hors de portée.** On aimerait que la théorie sache, pour chaque $\phi$, que «&nbsp;si $\phi$ est prouvable, alors $\phi$ est vraie&nbsp;»&nbsp;: c'est l'axiome $\text{(T)}=\Box\phi\rightarrow\phi$, écarté [au début](#des-nombres-qui-parlent-de-preuves). Le théorème de Löb dit qu'elle ne le démontre *que* pour les $\phi$ qu'elle démontre déjà, c'est-à-dire quand cela ne sert plus à rien. Et si on l'ajoutait de force comme axiome, Löb ferait démontrer à la théorie toutes les formules, y compris $\bot$&nbsp;: elle deviendrait contradictoire.
 
-Par dualité, $\Diamond P = \neg\Box\neg P$ exprime qu'on ne peut pas prouver que $P$ est fausse, autrement dit que $P$ est compatible avec la théorie. L'énoncé de cohérence $\neg\Box\bot$ s'écrit alors simplement $\Diamond\top$, et le second théorème prend, à l'intérieur même de la théorie, la forme $\Diamond\top\rightarrow \neg\Box\Diamond \top$&nbsp;: «&nbsp;si la théorie est cohérente, alors elle ne peut pas le prouver&nbsp;».
-
-C'est la fin du programme de Hilbert sous sa forme initiale&nbsp;: pour prouver la cohérence de l'arithmétique, il faut des moyens qui la dépassent. Gerhard Gentzen, l'inventeur de la déduction naturelle et du calcul des séquents, y parviendra en 1936 au prix d'une récurrence sur des ordinaux infinis.
+Pourtant, $\text{(T)}$ n'est pas faux. Si la théorie est saine, tout ce qu'elle prouve est vrai, et chaque instance de $\Box\phi\rightarrow\phi$ est vraie. Mais cette vérité ne se voit que **de l'extérieur**&nbsp;: la théorie ne peut pas la démontrer sans s'effondrer. C'est aussi pourquoi, on le verra, les mondes de la prouvabilité n'ont jamais de boucle $a\longrightarrow a$, alors que $\text{(T)}$ est valide exactement sur les systèmes où chaque monde a la sienne.
 
 ## La logique GL
 
@@ -297,7 +294,7 @@ Le théorème de Löb peut lui-même être démontré *par* la théorie, ce qui 
 <p>La <b>logique de la prouvabilité de Gödel-Löb</b> ($\textbf{GL}$) est formée à partir du système $\textbf{K}$ auquel on ajoute l'axiome de Löb $\text{(L)}=\Box(\Box\phi\rightarrow\phi)\rightarrow\Box\phi$ (c'est la version formalisée du théorème de Löb).</p>
 </div>
 
-Avec $\phi=\bot$, l'axiome $\text{(L)}$ donne $\Box\neg\Box\bot\rightarrow\Box\bot$, soit, par contraposition et en notation diamant, $\Diamond\top\rightarrow\neg\Box\Diamond\top$&nbsp;: on retrouve en une ligne le second théorème d'incomplétude.
+Avec $\phi=\bot$, l'axiome $\text{(L)}$ donne $\Box\neg\Box\bot\rightarrow\Box\bot$, soit, par contraposition et en notation diamant, $\Diamond\top\rightarrow\neg\Box\Diamond\top$&nbsp;: la forme interne du second théorème d'incomplétude n'est plus qu'une instance d'un axiome.
 
 On remarque que l'axiome $\text{(4)}$, dont on s'est tant servi, ne figure pas dans la définition. C'est qu'il est devenu superflu.
 
