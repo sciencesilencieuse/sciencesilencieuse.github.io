@@ -282,7 +282,16 @@ Le théorème de Löb a deux conséquences qui éclairent ce qui précède.
 
 **Le second théorème en devient un cas particulier.** Prenons $\phi=\bot$. La formule $\Box\bot\rightarrow\bot$ équivaut à $\neg\Box\bot$, l'énoncé de cohérence, et le théorème de Löb devient&nbsp;: si $\vdash\neg\Box\bot$, alors $\vdash\bot$. Une théorie qui prouve sa cohérence est donc incohérente&nbsp;: c'est exactement le second théorème d'incomplétude, obtenu ici sans passer par la formule de Gödel.
 
-**L'axiome $\text{(T)}$ est hors de portée.** On aimerait que la théorie sache, pour chaque $\phi$, que «&nbsp;si $\phi$ est prouvable, alors $\phi$ est vraie&nbsp;»&nbsp;: c'est l'axiome $\text{(T)}=\Box\phi\rightarrow\phi$, écarté [au début](#des-nombres-qui-parlent-de-preuves). Le théorème de Löb dit qu'elle ne le démontre *que* pour les $\phi$ qu'elle démontre déjà, c'est-à-dire quand cela ne sert plus à rien. Et si on l'ajoutait de force comme axiome, Löb ferait démontrer à la théorie toutes les formules, y compris $\bot$&nbsp;: elle deviendrait contradictoire.
+**L'axiome $\text{(T)}$ est hors de portée.** On aimerait que la théorie sache, pour chaque $\phi$, que «&nbsp;si $\phi$ est prouvable, alors $\phi$ est vraie&nbsp;»&nbsp;: c'est l'axiome $\text{(T)}=\Box\phi\rightarrow\phi$, écarté [au début](#des-nombres-qui-parlent-de-preuves). Pour quelles formules $\phi$ la théorie démontre-t-elle cette instance $\Box\phi\rightarrow\phi$&nbsp;? Le théorème de Löb répond&nbsp;: exactement pour celles qu'elle démontre déjà.
+
+- **Si $\vdash\phi$, l'instance est gratuite.** Une implication dont la conclusion est acquise est démontrée d'office, quelle que soit sa prémisse&nbsp;: de $\phi$ on tire $\Box\phi\rightarrow\phi$.
+- **Si $\nvdash\phi$, elle est hors d'atteinte.** C'est le théorème de Löb lu par contraposition&nbsp;: si la théorie démontrait $\Box\phi\rightarrow\phi$, elle démontrerait $\phi$.
+
+Or une instance de $\text{(T)}$ ne sert qu'à passer de «&nbsp;$\phi$ est prouvable&nbsp;» à «&nbsp;$\phi$&nbsp;», c'est-à-dire à obtenir $\phi$ quand on ne l'a pas encore. La théorie dispose donc de $\text{(T)}$ uniquement dans les cas où elle n'en a pas besoin.
+
+Prenons pour $\phi$ la conjecture de Goldbach, «&nbsp;tout nombre pair supérieur à $2$ est somme de deux nombres premiers&nbsp;», dont personne ne sait si $\text{PA}$ la démontre. L'énoncé «&nbsp;si $\text{PA}$ démontre la conjecture, alors elle est vraie&nbsp;» semble aller de soi, puisque $\text{PA}$ ne démontre que des choses vraies. Pourtant, d'après Löb, $\text{PA}$ ne peut le démontrer que si elle démontre déjà la conjecture elle-même. Et avec $\phi=\bot$, on retrouve le cas vu juste au-dessus&nbsp;: l'instance $\Box\bot\rightarrow\bot$ est l'énoncé de cohérence, que la théorie ne démontre pas.
+
+Si l'on ajoutait malgré tout $\text{(T)}$ comme axiome, pour toutes les formules, Löb ferait démontrer à la théorie toutes les formules, y compris $\bot$&nbsp;: elle deviendrait contradictoire.
 
 Pourtant, $\text{(T)}$ n'est pas faux. Si la théorie est saine, tout ce qu'elle prouve est vrai, et chaque instance de $\Box\phi\rightarrow\phi$ est vraie. Mais cette vérité ne se voit que **de l'extérieur**&nbsp;: la théorie ne peut pas la démontrer sans s'effondrer. C'est aussi pourquoi, on le verra, les mondes de la prouvabilité n'ont jamais de boucle $a\longrightarrow a$, alors que $\text{(T)}$ est valide exactement sur les systèmes où chaque monde a la sienne.
 
