@@ -331,7 +331,7 @@ La logique temporelle est très utilisée en vérification formelle, où la tech
 
 Dernière lecture de la boîte, et sans doute la plus étonnante&nbsp;: $\Box\phi$ se lit «&nbsp;**$\phi$ est prouvable**&nbsp;» (dans l'arithmétique). Avec ce simple changement de lecture, les deux théorèmes d'incomplétude de Gödel tiennent en quelques lignes de logique modale, et la logique obtenue, $\textbf{GL}$, vit sur des arbres finis.
 
-Comme elle s'appuie aussi sur l'arithmétique, et donc sur le calcul des prédicats, cette logique a désormais sa propre rubrique.
+Comme elle s'appuie aussi sur l'arithmétique, et donc sur le calcul des prédicats, cette logique fait l'objet d'une rubrique à part, qui suit celle du calcul des prédicats.
 
 <p class="renvoi-page"><a href="../../prouvabilite/">Lire «&nbsp;Prouvabilité et incomplétude&nbsp;» →</a></p>
 

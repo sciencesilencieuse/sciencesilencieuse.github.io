@@ -1128,7 +1128,7 @@ Comme le formalisme stabilisateur, le jouet se simule efficacement&nbsp;: il ne 
 On l'a vu&nbsp;: certaines permutations correspondent à des réflexions impossibles en quantique, la règle de superposition ne marche pas pour toutes les paires, et l'état corrélé est corrélé selon les trois axes.</li>
 </ul>
 
-Le dernier point n'est pas anecdotique. Le formalisme stabilisateur, que le jouet imite si bien pour un ou deux systèmes, est lui-même contextuel dès deux qubits ([carré de Mermin–Peres](../contextualite/#le-carré-magique-de-mermin-et-peres)) et non local dès trois (paradoxe GHZ, voir la page [EPR](../epr/#ghz)). C'est précisément là que le jouet et la mécanique quantique se séparent.
+Le dernier point n'est pas anecdotique. Le formalisme stabilisateur, que le jouet imite si bien pour un ou deux systèmes, est lui-même contextuel dès deux qubits ([carré de Mermin–Peres](../contextualite/#le-carré-magique-de-mermin-et-peres)) et non local dès trois (paradoxe GHZ, voir la page [EPR](../epr/#sans-statistiques-lexpérience-ghz)). C'est précisément là que le jouet et la mécanique quantique se séparent.
 
 ### La théorie-jouet face au théorème PBR
 

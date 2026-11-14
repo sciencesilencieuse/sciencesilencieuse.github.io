@@ -666,7 +666,7 @@ Pourquoi la somme $\sum\_{k=0}^q \frac{q!}{k!}$ est-elle un entier&nbsp;? Parce 
 
 <div style="background:#f8fafc;border:1px solid #cbd5e1;border-left:6px solid #006C65;border-radius:10px;padding:14px 18px;font-size:0.95em;">
 <b>Suite de l'exploration&nbsp;: d'où viennent géométriquement les factorielles $\frac{1}{k!}$&nbsp;?</b><br>
-La preuve algébrique ci-dessus nous a convaincus <i>que</i> $\left(1+\frac{1}{n}\right)^n$ et $\sum \frac{1}{k!}$ convergent vers la même limite, mais que représente géométriquement la fraction $\frac{1}{k!}$ dans un espace de dimension $k$&nbsp;?
+Les preuves algébriques de la section «&nbsp;<a href="#pourquoi-convergent-elles-vers-la-même-limite">Pourquoi convergent-elles vers la même limite&nbsp;?</a>&nbsp;» nous ont convaincus <i>que</i> $\left(1+\frac{1}{n}\right)^n$ et $\sum \frac{1}{k!}$ convergent vers la même limite, mais que représente géométriquement la fraction $\frac{1}{k!}$ dans un espace de dimension $k$&nbsp;?
 <ul style="margin:0.5em 0 0 0;">
 <li>👉 <b><a href="../../geometrie/simplexes/">Simplexes et flèche du temps</a>&nbsp;:</b> découvrez pourquoi $\frac{1}{k!}$ est le volume du simplexe canonique $\Delta_k$, comment l'hypercube dilaté se découpe en 2D et en 3D, pourquoi la causalité impose ce même facteur dans la série de Dyson en physique quantique, et en quoi le $k!$ est la signature des processus sans mémoire.</li>
 <li>👉 <b><a href="../../proba/simplexes_proba/">Simplexes et probabilités</a>&nbsp;:</b> résolvez sans calcul deux problèmes célèbres de probabilités (rupture de monotonie et seuil de Gnedenko) grâce au volume du simplexe.</li>

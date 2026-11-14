@@ -41,7 +41,7 @@ Le langage s'enrichit de deux sortes d'ingrédients.
 - Les **termes** désignent des objets. Ce sont des **constantes** ($\mathit{socrate}$, $0$), des **variables** ($x$, $y$, $z$…), et les termes fabriqués à l'aide de **fonctions** à partir des précédents&nbsp;: $\mathit{père}(\mathit{socrate})$, $x+1$.
 - Les **prédicats** disent quelque chose des objets. $\mathit{Homme}(x)$ ou $\mathit{Pair}(x)$ portent sur un seul objet, ce sont des **propriétés**&nbsp;; $x\lt y$ ou $\mathit{Aime}(x,y)$ en relient deux, ce sont des **relations**. Le nombre de places d'un prédicat s'appelle son **arité**.
 
-Un prédicat dont on a rempli les places, comme $\mathit{Mortel}(\mathit{socrate})$ ou $2\lt 3$, forme une **formule atomique**. Elle joue exactement le rôle des variables propositionnelles d'autrefois&nbsp;: on la combine avec les mêmes connecteurs $\neg$, $\land$, $\lor$, $\rightarrow$, $\leftrightarrow$, et tout ce que l'on sait du calcul des propositions reste vrai.
+Un prédicat dont on a rempli les places, comme $\mathit{Mortel}(\mathit{socrate})$ ou $2\lt 3$, forme une **formule atomique**. Elle joue exactement le rôle des variables propositionnelles du calcul des propositions&nbsp;: on la combine avec les mêmes connecteurs $\neg$, $\land$, $\lor$, $\rightarrow$, $\leftrightarrow$, et tout ce que l'on sait du calcul des propositions reste vrai.
 
 <div class="tableau-large">
 <table class="tab-recap">
