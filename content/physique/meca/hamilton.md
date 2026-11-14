@@ -2120,7 +2120,9 @@ Ce théorème a des conséquences profondes. Il fonde le **théorème de récurr
 
 ### Pourquoi l'impulsion plutôt que la vitesse&nbsp;?
 
-Le théorème de Liouville éclaire enfin le choix des variables. Dans l'exemple précédent, les variables position-vitesse convenaient. Mais considérons une particule dans un plan, attirée par un centre fixe, et décrite en coordonnées polaires $(r, \theta)$. Les équations de Newton s'écrivent (on le justifiera plus bas)
+Les aires se conservent-elles dans les variables position-vitesse $(x, \dot x)$&nbsp;? Pour la particule dans un potentiel du premier exemple, oui&nbsp;: l'écoulement $(\dot x, -V^{\prime}(x)/m)$ a une divergence nulle, c'est la forme hamiltonienne. Choisir la vitesse $\dot x$ ou l'impulsion $p = m\dot x$ y est sans conséquence, puisque la masse est constante. Il en va autrement dès que l'«&nbsp;inertie&nbsp;» dépend de la position, comme pour la rotation&nbsp;: le moment d'inertie d'une masse $m$ à la distance $r$ d'un axe vaut $m r^2$.
+
+Considérons donc une particule dans un plan, attirée par un centre fixe, et décrite en coordonnées polaires $(r, \theta)$. Les équations de Newton s'écrivent (on le justifiera plus bas)
 
 $$m\left(\ddot r - r\dot\theta^2\right) = -V^{\prime}(r), \qquad 2\dot r\dot\theta + r\ddot\theta = 0.$$
 
@@ -2128,11 +2130,117 @@ Dans l'espace des variables $(r, \theta, \dot r, \dot\theta)$, l'écoulement a p
 
 $$\frac{\partial \dot r}{\partial r} + \frac{\partial \dot\theta}{\partial \theta} + \frac{\partial \ddot r}{\partial \dot r} + \frac{\partial \ddot\theta}{\partial \dot\theta} = 0 + 0 + 0 - \frac{2\dot r}{r} \neq 0.$$
 
-Les volumes ne sont **pas** conservés, alors qu'il n'y a aucun frottement&nbsp;! L'explication est physique. Quand la particule se rapproche du centre, sa vitesse angulaire augmente (c'est la conservation du moment cinétique $m r^2\dot\theta$, celle qui fait accélérer une patineuse qui ramène ses bras). Un petit écart de vitesse angulaire entre deux particules voisines, $\delta\dot\theta = \delta(m r^2\dot\theta)/(m r^2)$, est donc amplifié quand $r$ diminue&nbsp;: le nuage s'étale dans la direction $\dot\theta$ sans se resserrer ailleurs.
+Les volumes ne sont **pas** conservés, alors qu'il n'y a aucun frottement&nbsp;! D'où vient cette variation&nbsp;?
 
-En utilisant le moment cinétique $p\_\theta = m r^2\dot\theta$ comme variable à la place de $\dot\theta$, cet étalement disparaît, et l'écoulement redevient incompressible. Le rôle des **moments** est exactement celui-là&nbsp;: ce sont les variables qui corrigent les gains ou pertes de volume dus à la géométrie des coordonnées. Reste à savoir comment les trouver sans tâtonner.
+La seconde équation de Newton dit que $\frac{\mathrm{d}}{\mathrm{d}t}\left(m r^2\dot\theta\right) = 0$&nbsp;: le moment cinétique $L = m r^2\dot\theta$ de chaque particule est conservé (c'est lui qui fait tourner plus vite la patineuse qui ramène ses bras). La vitesse angulaire vaut donc $\dot\theta = L/(m r^2)$. Prenons deux particules voisines, de moments cinétiques $L$ et $L + \delta L$. Leurs vitesses angulaires diffèrent de $\delta\dot\theta = \delta L/(m r^2)$. L'écart $\delta L$ est constant&nbsp;: l'écart des vitesses angulaires est donc amplifié quand $r$ diminue, et réduit quand $r$ augmente. Un nuage de conditions initiales voisines s'étire dans la direction de $\dot\theta$ quand les particules s'approchent du centre, sans que rien ne le comprime ailleurs.
+
+Pour voir ce mécanisme à l'état pur, imposons la distance au centre&nbsp;: une masse posée sur une table, reliée à une main par un fil qui passe par un trou au centre, et que l'on tire. La tension du fil est dirigée vers le centre, donc elle n'exerce aucun couple&nbsp;: $L$ se conserve, et $\ddot\theta = -2\dot r\dot\theta/r$, comme ci-dessus. L'écoulement dans le plan $(\theta, \dot\theta)$ a pour divergence $\partial\ddot\theta/\partial\dot\theta = -2\dot r/r$, le seul terme non nul de la divergence précédente. L'animation suit un nuage de conditions initiales voisines pendant que la main tire le fil de $r = 2$ à $r = 1$, puis rejoue ce mouvement à l'envers.
+
+<div class="svg-container">
+<svg id="lp-svg" viewBox="0 0 600 340" role="img" aria-label="Un nuage de conditions initiales voisines, suivi pendant que la distance r au centre diminue de 2 à 1. À gauche, dans le plan (θ, vitesse angulaire), l'aire du nuage varie comme l'inverse de r au carré : elle augmente quand r diminue. À droite, dans le plan (θ, moment cinétique), le nuage est seulement cisaillé et son aire reste constante." style="width:100%;max-width:600px;height:auto;">
+<defs><marker id="lpa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
+<text x="165" y="78" text-anchor="middle" font-size="13.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif">variables (<tspan font-style="italic">θ</tspan>, vitesse angulaire)</text>
+<text x="455" y="78" text-anchor="middle" font-size="13.5" fill="#006C65" font-family="Georgia,'Times New Roman',serif">variables (<tspan font-style="italic">θ</tspan>, moment cinétique)</text>
+<line x1="45" y1="250" x2="286" y2="250" stroke="#94a3b8" stroke-width="1" marker-end="url(#lpa)"/>
+<line x1="165" y1="256" x2="165" y2="88" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="50" y1="256" x2="50" y2="86" stroke="#94a3b8" stroke-width="1" marker-end="url(#lpa)"/>
+<line x1="335" y1="250" x2="576" y2="250" stroke="#94a3b8" stroke-width="1" marker-end="url(#lpa)"/>
+<line x1="455" y1="256" x2="455" y2="88" stroke="#e2e8f0" stroke-width="1"/>
+<line x1="340" y1="256" x2="340" y2="86" stroke="#94a3b8" stroke-width="1" marker-end="url(#lpa)"/>
+<g font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" text-anchor="end">
+<text x="44" y="254">0</text><text x="44" y="197">1</text><text x="44" y="140">2</text>
+<text x="334" y="254">0</text><text x="334" y="197">1</text><text x="334" y="140">2</text></g>
+<g stroke="#94a3b8" stroke-width="1"><line x1="47" y1="193" x2="53" y2="193"/><line x1="47" y1="136" x2="53" y2="136"/><line x1="337" y1="193" x2="343" y2="193"/><line x1="337" y1="136" x2="343" y2="136"/></g>
+<text x="284" y="268" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic">θ</text>
+<text x="574" y="268" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic">θ</text>
+<text x="56" y="96" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif">d<tspan font-style="italic">θ</tspan>/d<tspan font-style="italic">t</tspan></text>
+<text x="346" y="96" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif"><tspan font-style="italic">p</tspan><tspan dy="4" font-size="9.5">θ</tspan></text>
+<polygon id="lp-pa" points="0,0" fill="#004D80" fill-opacity="0.14" stroke="#004D80" stroke-width="1.4" stroke-linejoin="round"/>
+<polygon id="lp-pb" points="0,0" fill="#006C65" fill-opacity="0.14" stroke="#006C65" stroke-width="1.4" stroke-linejoin="round"/>
+<path id="lp-da" d="M0,0" fill="none" stroke="#004D80" stroke-width="2.6" stroke-linecap="round" stroke-opacity="0.75"/>
+<path id="lp-db" d="M0,0" fill="none" stroke="#006C65" stroke-width="2.6" stroke-linecap="round" stroke-opacity="0.75"/>
+<text id="lp-ta" x="165" y="292" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#004D80" font-family="Georgia,'Times New Roman',serif"></text>
+<text id="lp-tb" x="455" y="292" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#006C65" font-family="Georgia,'Times New Roman',serif"></text>
+<text x="165" y="310" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">aire du nuage, relative à l'instant 0</text>
+<text x="455" y="310" text-anchor="middle" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">aire du nuage, relative à l'instant 0</text>
+<circle cx="236" cy="34" r="3.2" fill="#334155"/>
+<line x1="236" y1="34" x2="346" y2="34" stroke="#e2e8f0" stroke-width="1"/>
+<line id="lp-fil" x1="236" y1="34" x2="236" y2="34" stroke="#64748b" stroke-width="1.4"/>
+<circle id="lp-m" cx="236" cy="34" r="5.5" fill="#970E53" stroke="#fff" stroke-width="1.4"/>
+<text x="228" y="38" text-anchor="end" font-size="12.5" fill="#334155" font-family="Georgia,'Times New Roman',serif">centre</text>
+<text id="lp-rv" x="362" y="38" font-size="13.5" fill="#970E53" font-family="Georgia,'Times New Roman',serif"></text>
+</svg>
+<div style="display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;align-items:center;margin:4px 0 8px;">
+<button type="button" class="fig-btn" id="lp-go"><svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><rect x="2" y="1.5" width="2.8" height="9" rx="0.8"/><rect x="7.2" y="1.5" width="2.8" height="9" rx="0.8"/></svg><span>Pause</span></button>
+<label style="display:inline-flex;align-items:center;gap:8px;margin:0;font-weight:normal;"><span>temps</span> <input type="range" class="fig-range" id="lp-t" min="0" max="1000" step="1" value="0" style="width:200px;margin:0;"></label>
+</div>
+</div>
+<script>
+(function () {
+  var svg = document.getElementById('lp-svg');
+  if (!svg) return;
+  var TMAX = Math.PI, RC = 1.5, RA = 0.5, LC = 2, N = 240, K = 2000;
+  var CXA = 165, CXB = 455, YB = 250, SX = 60, SY = 57;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function $(id) { return document.getElementById(id); }
+  function rr(t) { return RC + RA * Math.cos(t); }
+  var I = new Float64Array(K + 1);
+  for (var k = 0; k < K; k++) { var a = TMAX * k / K, b = TMAX * (k + 1) / K; I[k + 1] = I[k] + (b - a) * 0.5 * (1 / (rr(a) * rr(a)) + 1 / (rr(b) * rr(b))); }
+  function Iof(t) { var x = Math.max(0, Math.min(TMAX, t)) / TMAX * K, j = Math.min(K - 1, Math.floor(x)), f = x - j; return I[j] * (1 - f) + I[j + 1] * f; }
+  var seed = 12345; function rnd() { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; }
+  var DT = 0.35, DL = 0.4, pts = [], edge = [], i;
+  for (i = 0; i < N; i++) pts.push([-DT + 2 * DT * rnd(), -DL + 2 * DL * rnd()]);
+  var NE = 24;
+  for (i = 0; i < NE; i++) edge.push([-DT + 2 * DT * i / NE, -DL]);
+  for (i = 0; i < NE; i++) edge.push([DT, -DL + 2 * DL * i / NE]);
+  for (i = 0; i < NE; i++) edge.push([DT - 2 * DT * i / NE, DL]);
+  for (i = 0; i < NE; i++) edge.push([-DT, DL - 2 * DL * i / NE]);
+  function st(p, t) { var r = rr(t), L = LC + p[1]; return [p[0] + p[1] * Iof(t), L / (r * r), L]; }
+  function area(poly) { var s = 0, n = poly.length; for (var j = 0; j < n; j++) { var u = poly[j], v = poly[(j + 1) % n]; s += u[0] * v[1] - v[0] * u[1]; } return Math.abs(s) / 2; }
+  function fmt(x) { return x.toFixed(2).replace('.', ','); }
+  function frame(t) {
+    var A = [], B = [], da = '', db = '', j, s, p;
+    for (j = 0; j < edge.length; j++) { s = st(edge[j], t); A.push([s[0], s[1]]); B.push([s[0], s[2]]); }
+    $('lp-pa').setAttribute('points', A.map(function (q) { return (CXA + SX * q[0]).toFixed(1) + ',' + (YB - SY * q[1]).toFixed(1); }).join(' '));
+    $('lp-pb').setAttribute('points', B.map(function (q) { return (CXB + SX * q[0]).toFixed(1) + ',' + (YB - SY * q[1]).toFixed(1); }).join(' '));
+    for (j = 0; j < pts.length; j++) { p = pts[j]; s = st(p, t);
+      da += 'M' + (CXA + SX * s[0]).toFixed(1) + ',' + (YB - SY * s[1]).toFixed(1) + 'h0';
+      db += 'M' + (CXB + SX * s[0]).toFixed(1) + ',' + (YB - SY * s[2]).toFixed(1) + 'h0'; }
+    $('lp-da').setAttribute('d', da); $('lp-db').setAttribute('d', db);
+    $('lp-ta').textContent = '× ' + fmt(area(A) / A0); $('lp-tb').textContent = '× ' + fmt(area(B) / B0);
+    var r = rr(t); $('lp-m').setAttribute('cx', (236 + 50 * r).toFixed(1)); $('lp-fil').setAttribute('x2', (236 + 50 * r).toFixed(1));
+    $('lp-rv').textContent = 'r = ' + fmt(r);
+  }
+  var A0 = 1, B0 = 1;
+  (function () { var A = [], B = []; edge.forEach(function (e) { var s = st(e, 0); A.push([s[0], s[1]]); B.push([s[0], s[2]]); }); A0 = area(A); B0 = area(B); })();
+  var ICO_PAUSE = '<svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><rect x="2" y="1.5" width="2.8" height="9" rx="0.8"/><rect x="7.2" y="1.5" width="2.8" height="9" rx="0.8"/></svg>';
+  var ICO_PLAY = '<svg viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M3 1.6 L10.4 6 L3 10.4 Z"/></svg>';
+  var running = !reduce, visible = false, raf = null, phase = 0, last = null;
+  function setBtn() { $('lp-go').innerHTML = running ? ICO_PAUSE + '<span>Pause</span>' : ICO_PLAY + '<span>Animer</span>'; }
+  function show() { var t = TMAX * (phase <= 1 ? phase : 2 - phase); $('lp-t').value = Math.round(1000 * (phase <= 1 ? phase : 2 - phase)); frame(t); }
+  function loop(ts) {
+    raf = null;
+    if (!running || !visible) { last = null; return; }
+    if (last !== null) phase = (phase + (ts - last) / 7000) % 2;
+    last = ts; show(); raf = requestAnimationFrame(loop);
+  }
+  function start() { if (!raf && running && visible) raf = requestAnimationFrame(loop); }
+  $('lp-go').addEventListener('click', function () { running = !running; last = null; setBtn(); start(); });
+  $('lp-t').addEventListener('input', function () { running = false; setBtn(); phase = this.value / 1000; show(); });
+  setBtn(); show();
+  if ('IntersectionObserver' in window) new IntersectionObserver(function (e) { visible = e[0].isIntersecting; last = null; start(); }, { threshold: 0.3 }).observe(svg);
+  else { visible = true; start(); }
+})();
+</script>
+<p class="legende">Un nuage de conditions initiales voisines (angles et moments cinétiques voisins), pendant que la distance au centre passe de $2$ à $1$ (avec $m = 1$). À gauche, dans le plan $(\theta, \dot\theta)$, l'aire du nuage est multipliée par $(2/r)^2$&nbsp;: elle atteint $4$ pour $r = 1$. À droite, dans le plan $(\theta, p_\theta)$ avec $p_\theta = m r^2\dot\theta$, le nuage est seulement cisaillé&nbsp;: les particules de plus grand moment cinétique tournent plus vite et prennent de l'avance, mais l'aire ne change pas. Les angles sont mesurés à partir de la particule centrale du nuage.</p>
+
+Le facteur $(2/r)^2$ n'est pas fortuit&nbsp;: le taux de variation relatif du volume vaut $\frac{\mathrm{d}}{\mathrm{d}t}\ln\frac{1}{r^2} = -\frac{2\dot r}{r}$, exactement la divergence calculée plus haut. Pour le mouvement dans le champ du centre fixe, le volume de l'espace $(r, \theta, \dot r, \dot\theta)$ est de même multiplié par $(r_0/r)^2$ le long d'une trajectoire.
+
+Le remède se lit sur la figure de droite&nbsp;: prendre le moment cinétique $p\_\theta = m r^2\dot\theta$ comme variable à la place de $\dot\theta$. Sa valeur est constante pour chaque particule, donc la hauteur du nuage dans cette direction ne change plus, et l'étalement disparaît. Dans les variables $(r, \theta, p\_r, p\_\theta)$, avec $p\_r = m\dot r$, l'écoulement est incompressible&nbsp;: c'est ce que l'on vérifiera dans l'exemple suivant. Le rôle des **moments** est exactement celui-là&nbsp;: ce sont les variables qui corrigent les gains ou pertes de volume dus à la géométrie des coordonnées. Reste à savoir les construire pour des coordonnées quelconques.
 
 ## Trouver les moments&nbsp;: la géométrie de l'espace
+
+Il s'agit de construire, pour des coordonnées $q^i$ quelconques, les variables qui jouent le rôle de $p\_\theta$. Le point de départ est la loi de Newton, $m\vec a = -\vec\nabla V$. En coordonnées cartésiennes, c'est déjà un système d'équations sur les coordonnées, $m\ddot x = -\partial V/\partial x$ et $m\ddot y = -\partial V/\partial y$&nbsp;: ce sont les projections de l'équation vectorielle sur les deux axes. Pour des coordonnées quelconques, la marche à suivre est la même&nbsp;: projeter la loi de Newton sur des vecteurs bien choisis, un par coordonnée. Cela demande trois choses&nbsp;: une base de vecteurs liée aux coordonnées, une façon de lire sur cette base les composantes de la vitesse et de la force, puis la projection elle-même. Les moments apparaîtront à la dernière étape. Voyons d'abord ce que cela donne en coordonnées polaires, où l'on connaît déjà la réponse.
 
 ### L'exemple des coordonnées polaires
 
@@ -2147,13 +2255,15 @@ Vérifions qu'on obtient bien les équations de Newton&nbsp;:
 <li>$\dot p_\theta = -\partial H/\partial \theta = 0$&nbsp;: c'est l'équation angulaire, puisque $\frac{\mathrm{d}}{\mathrm{d}t}(m r^2\dot\theta) = m r\,(2\dot r\dot\theta + r\ddot\theta)$.</li>
 </ul>
 
+Ces équations ont la forme de Hamilton&nbsp;: leur divergence est donc nulle (théorème de Liouville), et l'écoulement est incompressible dans les variables $(r, \theta, p\_r, p\_\theta)$, alors qu'il ne l'est pas dans $(r, \theta, \dot r, \dot\theta)$.
+
 On remarque au passage que $H = \frac{m}{2}(\dot r^2 + r^2\dot\theta^2) + V$ est encore l'énergie mécanique, et que l'angle $\theta$ n'apparaît pas dans $H$&nbsp;: son moment $p\_\theta$ est donc conservé. Une symétrie (l'invariance par rotation) se lit directement sur le hamiltonien. On verra [plus loin](#symetries) que c'est un cas particulier d'un énoncé beaucoup plus général.
 
-Les deux moments n'ont pas la même dimension&nbsp;: $p\_r$ est une quantité de mouvement, $p\_\theta$ un moment cinétique. D'où viennent ces expressions, et en particulier ce facteur $r^2$&nbsp;? Ici, on aurait pu le deviner. Mais on voudrait une règle qui marche pour n'importe quelles coordonnées, et qui fasse comprendre pourquoi. Elle se trouve dans la façon dont des coordonnées décrivent un déplacement.
+Les deux moments n'ont pas la même dimension&nbsp;: $p\_r$ est une quantité de mouvement, $p\_\theta$ un moment cinétique. D'où viennent ces expressions, et en particulier ce facteur $r^2$&nbsp;? Ici, on peut le deviner. Pour des coordonnées quelconques, il faut dérouler la marche annoncée, en commençant par la base de vecteurs liée aux coordonnées.
 
 ### Décrire un déplacement&nbsp;: la base attachée aux coordonnées
 
-Pour passer de la loi de Newton à des équations sur les coordonnées $q^i$, il faudra projeter une équation vectorielle sur une base. Laquelle&nbsp;? Regardons d'abord comment on décrit un déplacement.
+Projeter la loi de Newton suppose de savoir sur quels vecteurs la projeter, et comment écrire sur eux la vitesse et la force. En coordonnées cartésiennes, la base est imposée par les axes. Dans les autres, elle se déduit de la façon dont les coordonnées décrivent un déplacement.
 
 En coordonnées cartésiennes, $\vec v = \dot x\\,\vec e\_x + \dot y\\,\vec e\_y$&nbsp;: les composantes sont les $\dot x$ et $\dot y$, sur deux vecteurs unitaires et orthogonaux. En coordonnées polaires, on écrit d'ordinaire
 
