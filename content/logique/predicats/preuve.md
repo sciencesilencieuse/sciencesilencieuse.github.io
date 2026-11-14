@@ -216,13 +216,72 @@ On peut seulement **énumérer** les preuves, l'une après l'autre. Si l'énonc�
 
 ## Vers l'arithmétique
 
-Une **théorie** est un ensemble d'énoncés qu'on prend pour axiomes. La plus célèbre est l'**arithmétique de Peano**, notée $\text{PA}$. Son langage contient la constante $0$, la fonction successeur ($x\mapsto x+1$), l'addition et la multiplication. Ses axiomes disent par exemple que $0$ n'est le successeur de personne, et comment calculer $x+(y+1)$ ou $x\times(y+1)$.
+Une **théorie** est un ensemble d'énoncés qu'on prend pour axiomes&nbsp;; ses théorèmes sont tout ce qu'on peut en déduire. La plus célèbre est l'**arithmétique de Peano**, notée $\text{PA}$, qui décrit les entiers naturels.
 
-La récurrence pose le problème annoncé au début. Faute de pouvoir dire «&nbsp;pour toute propriété&nbsp;», on l'écrit sous forme de **schéma**&nbsp;: un axiome distinct pour chaque formule $\phi(x)$,
+### Le langage
 
-$$\big(\phi(0)\land\forall x\\,(\phi(x)\rightarrow\phi(x+1))\big)\rightarrow\forall x\\,\phi(x).$$
+Il ne contient que quatre symboles, en plus de l'égalité&nbsp;:
 
-Les formules sont dénombrables, alors que les propriétés des entiers (les ensembles d'entiers) ne le sont pas. Le schéma laisse donc échapper l'immense majorité des propriétés, et c'est par cette brèche que s'engouffrent les modèles non standard.
+- la constante $0$&nbsp;;
+- la fonction **successeur** $S$, qui à $x$ associe $x+1$&nbsp;;
+- l'addition $+$ et la multiplication $\times$.
+
+Il n'y a pas de symbole pour $1$, $2$ ou $3$&nbsp;: on les écrit $S0$, $SS0$, $SSS0$, comme des bâtons qu'on empile. Le reste se définit. Par exemple, $x\lt y$ est une abréviation de ${\exists z\\,(x+Sz=y)}$, et «&nbsp;$x$ est pair&nbsp;» de ${\exists y\\,(x=y+y)}$.
+
+### Les axiomes
+
+<div class="tableau-large">
+<table class="tab-recap">
+<tr><th></th><th>Axiome</th><th>Lecture</th></tr>
+<tr><td>(A1)</td><td>$\forall x\,\neg(Sx=0)$</td><td class="g">$0$ n'est le successeur d'aucun nombre</td></tr>
+<tr><td>(A2)</td><td>$\forall x\,\forall y\,(Sx=Sy\rightarrow x=y)$</td><td class="g">deux nombres distincts ont des successeurs distincts</td></tr>
+<tr><td>(A3)</td><td>$\forall x\,(x+0=x)$</td><td class="g" rowspan="2">définition de l'addition par récurrence sur le second terme</td></tr>
+<tr><td>(A4)</td><td>$\forall x\,\forall y\,(x+Sy=S(x+y))$</td></tr>
+<tr><td>(A5)</td><td>$\forall x\,(x\times 0=0)$</td><td class="g" rowspan="2">définition de la multiplication, à partir de l'addition</td></tr>
+<tr><td>(A6)</td><td>$\forall x\,\forall y\,(x\times Sy=x\times y+x)$</td></tr>
+</table>
+</div>
+
+Les deux premiers axiomes empêchent la suite $0, S0, SS0,\ldots$ de boucler ou de se refermer sur elle-même&nbsp;: une horloge, où $11+1$ revient à $0$, viole (A1). Les quatre suivants permettent de **calculer**. Voici par exemple $2+2=4$&nbsp;:
+
+<div class="defile">
+$$SS0+SS0\ \overset{\text{(A4)}}{=}\ S(SS0+S0)\ \overset{\text{(A4)}}{=}\ SS(SS0+0)\ \overset{\text{(A3)}}{=}\ SSSS0.$$
+</div>
+
+<div class="encadre">
+<div class="encadre-titre">Peano, Dedekind… et $1+1=2$</div>
+
+Giuseppe Peano publie ses axiomes en 1889, en latin, dans un opuscule au titre programmatique&nbsp;: *Arithmetices principia, nova methodo exposita* («&nbsp;Les principes de l'arithmétique, exposés selon une méthode nouvelle&nbsp;»). Il reconnaît volontiers sa dette envers Richard Dedekind, qui avait dégagé les mêmes propriétés l'année précédente dans *Was sind und was sollen die Zahlen?* («&nbsp;Que sont et à quoi servent les nombres&nbsp;?&nbsp;»).
+
+Tout le monde n'a pas la sobriété de Peano. Dans les *Principia Mathematica* de Russell et Whitehead, qui reconstruisent l'arithmétique à partir de la seule logique, il faut attendre la proposition ✱54.43, au milieu du premier volume, pour lire que ${1+1=2}$ en découlera «&nbsp;quand l'addition arithmétique aura été définie&nbsp;». La démonstration complète n'arrive qu'au second volume, accompagnée de ce commentaire&nbsp;: «&nbsp;*The above proposition is occasionally useful*&nbsp;» («&nbsp;la proposition ci-dessus est parfois utile&nbsp;»).
+
+</div>
+
+### Le schéma de récurrence
+
+Reste l'axiome qui fait des entiers ce qu'ils sont, la récurrence. Elle pose le problème annoncé [dans la page précédente](../langage/#ouvrir-les-propositions)&nbsp;: faute de pouvoir dire «&nbsp;pour toute propriété&nbsp;», on l'écrit sous forme de **schéma**, c'est-à-dire un axiome distinct pour chaque formule $\phi(x)$&nbsp;:
+
+<div class="defile">
+$$\text{(R)}\qquad\big(\phi(0)\land\forall x\,(\phi(x)\rightarrow\phi(Sx))\big)\rightarrow\forall x\,\phi(x).$$
+</div>
+
+$\text{PA}$ compte donc une infinité d'axiomes&nbsp;: les six premiers, plus une instance de $\text{(R)}$ par formule. On ne peut pas s'en passer, même pour des évidences. Les axiomes (A3) et (A4) disent comment ajouter à droite&nbsp;; pour savoir que $0+x=x$, il faut une récurrence. On prend $\phi(x)$&nbsp;: $0+x=x$.
+
+- $\phi(0)$ s'écrit $0+0=0$, c'est un cas de (A3).
+- Si $0+x=x$, alors $0+Sx=S(0+x)=Sx$ par (A4)&nbsp;: c'est $\phi(Sx)$.
+
+L'instance de $\text{(R)}$ pour cette formule donne $\forall x\\,(0+x=x)$. La commutativité de l'addition, $x+y=y+x$, demande de la même façon deux récurrences emboîtées.
+
+<div class="encadre prune">
+<div class="encadre-titre">Une arithmétique sans récurrence</div>
+
+Retirons le schéma $\text{(R)}$ et gardons seulement (A1) à (A6), plus l'axiome «&nbsp;tout nombre non nul est un successeur&nbsp;», que la récurrence rendait inutile. On obtient l'**arithmétique de Robinson**, notée $\text{Q}$&nbsp;: sept axiomes en tout. Elle calcule parfaitement, $2+2=4$ comme $17\times 23=391$, mais elle est incapable de démontrer $0+x=x$ ou $x+y=y+x$. Il en existe des modèles bizarres, avec des «&nbsp;nombres&nbsp;» qui ne commutent pas.
+
+Et pourtant, cette théorie minuscule suffit déjà au premier théorème d'incomplétude&nbsp;: toute théorie cohérente qui contient $\text{Q}$, et dont on sait reconnaître les axiomes, laisse des énoncés indécidés. Savoir calculer suffit à être incomplet.
+
+</div>
+
+Les formules sont dénombrables, alors que les propriétés des entiers (les ensembles d'entiers) ne le sont pas. Le schéma laisse donc échapper l'immense majorité des propriétés, et c'est par cette brèche que s'engouffrent les [modèles non standard](#la-compacité-les-preuves-sont-finies).
 
 C'est dans ce cadre que se jouent les **théorèmes d'incomplétude** de Gödel&nbsp;: $\text{PA}$, comme toute théorie raisonnable qui la contient, laisse des énoncés vrais sans démonstration. Comme l'arithmétique peut parler de ses propres preuves, on peut lire ces théorèmes avec une boîte de logique modale. C'est l'objet de la rubrique suivante.
 
