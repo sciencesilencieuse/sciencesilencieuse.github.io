@@ -190,7 +190,7 @@ Thoralf Skolem construit de tels modèles non standard de l'arithmétique dès 1
 ## Löwenheim-Skolem&nbsp;: l'infini devient relatif
 
 <div class="theo">
-<p><b>Théorème de Löwenheim-Skolem</b>&nbsp;: un ensemble d'énoncés écrits dans un langage dénombrable qui possède une structure infinie possède aussi une structure **dénombrable**.</p>
+<p><b>Théorème de Löwenheim-Skolem</b>&nbsp;: un ensemble d'énoncés écrits dans un langage dénombrable qui possède une structure infinie possède aussi une structure <b>dénombrable</b>.</p>
 </div>
 
 Or la théorie des ensembles s'écrit au premier ordre, dans un langage qui ne contient qu'un symbole, $\in$. Elle démontre, avec l'argument diagonal de Cantor, qu'il existe des ensembles [non dénombrables](../../../maths/fondements/infinis/), comme l'ensemble des réels. Et pourtant, d'après Löwenheim-Skolem, elle possède un modèle dénombrable&nbsp;! C'est le **paradoxe de Skolem** (1922).
