@@ -2102,71 +2102,254 @@ Vérifions qu'on obtient bien les équations de Newton&nbsp;:
 
 On remarque au passage que $H = \frac{m}{2}(\dot r^2 + r^2\dot\theta^2) + V$ est encore l'énergie mécanique, et que l'angle $\theta$ n'apparaît pas dans $H$&nbsp;: son moment $p\_\theta$ est donc conservé. Une symétrie (l'invariance par rotation) se lit directement sur le hamiltonien. On verra [plus loin](#symetries) que c'est un cas particulier d'un énoncé beaucoup plus général.
 
-Les deux moments n'ont pas la même dimension&nbsp;: $p\_r$ est une quantité de mouvement, $p\_\theta$ un moment cinétique. D'où viennent ces expressions, et en particulier ce facteur $r^2$&nbsp;?
+Les deux moments n'ont pas la même dimension&nbsp;: $p\_r$ est une quantité de mouvement, $p\_\theta$ un moment cinétique. D'où viennent ces expressions, et en particulier ce facteur $r^2$&nbsp;? Ici, on aurait pu le deviner. Mais on voudrait une règle qui marche pour n'importe quelles coordonnées, et qui fasse comprendre pourquoi. Elle se trouve dans la façon dont des coordonnées décrivent un déplacement.
 
-### Les moments sont des projections
+### Décrire un déplacement&nbsp;: la base attachée aux coordonnées
 
-Repérons la position du point par des coordonnées quelconques $q^1, \dots, q^n$, et notons $\vec r(q)$ son vecteur position. Lorsque la seule coordonnée $q^i$ varie, le point se déplace le long du vecteur
+Pour passer de la loi de Newton à des équations sur les coordonnées $q^i$, il faudra projeter une équation vectorielle sur une base. Laquelle&nbsp;? Regardons d'abord comment on décrit un déplacement.
 
-$$\vec e\_i = \frac{\partial \vec r}{\partial q^i}.$$
+En coordonnées cartésiennes, $\vec v = \dot x\\,\vec e\_x + \dot y\\,\vec e\_y$&nbsp;: les composantes sont les $\dot x$ et $\dot y$, sur deux vecteurs unitaires et orthogonaux. En coordonnées polaires, on écrit d'ordinaire
 
-Ces vecteurs forment une base, mais ils ne sont en général ni unitaires ni orthogonaux&nbsp;: en coordonnées polaires, $\vec e\_r$ est de longueur $1$, mais $\vec e\_\theta$ est de longueur $r$, puisque faire varier l'angle de $\mathrm{d}\theta$ déplace le point de $r\\,\mathrm{d}\theta$. Toute la géométrie de ces coordonnées est contenue dans les produits scalaires des vecteurs de base, qui forment le **tenseur métrique**&nbsp;:
+$$\vec v = \dot r\\,\hat e\_r + r\dot\theta\\,\hat e\_\theta,$$
 
-$$g\_{ij} = \vec e\_i\cdot\vec e\_j, \qquad \mathrm{d}s^2 = g\_{ij}\\,\mathrm{d}q^i\\,\mathrm{d}q^j.$$
+avec les vecteurs **unitaires** $\hat e\_r$ (radial) et $\hat e\_\theta$ (orthoradial). Le facteur $r$ devant $\dot\theta$ est la seule nouveauté&nbsp;: un angle n'est pas une longueur, et tourner de $\mathrm{d}\theta$ déplace le point de $r\\,\mathrm{d}\theta$. Ce facteur de conversion entre variations de coordonnées et longueurs, c'est la **métrique** des coordonnées polaires&nbsp;: $\mathrm{d}s^2 = \mathrm{d}r^2 + r^2\\,\mathrm{d}\theta^2$.
 
-Ici et dans toute la suite, on utilise la convention d'Einstein&nbsp;: un indice répété, une fois en haut et une fois en bas, est sommé. Pour les coordonnées polaires, $\mathrm{d}s^2 = \mathrm{d}r^2 + r^2\\,\mathrm{d}\theta^2$, donc $g\_{rr} = 1$, $g\_{\theta\theta} = r^2$ et $g\_{r\theta} = 0$.
+Remarquons que la composante de $\vec v$ sur $\hat e\_\theta$ n'est pas $\dot\theta$, mais $r\dot\theta$. Or ce sont les $\dot q^i$ qui nous intéressent&nbsp;: on cherche des équations pour les coordonnées $q^i(t)$, pas pour des combinaisons de leurs dérivées. Exigeons donc que les composantes de la vitesse soient exactement les $\dot q^i$&nbsp;:
 
-La vitesse se décompose sur cette base&nbsp;: $\vec v = \dot q^i\\,\vec e\_i$. Les $\dot q^i$ sont ses composantes au sens du parallélogramme (on les dit *contravariantes*). Mais il existe une autre façon, tout aussi naturelle, de décrire un vecteur&nbsp;: par ses **projections** sur les vecteurs de base (ses composantes *covariantes*). C'est exactement ce que sont les moments&nbsp;:
+$$\vec v = \dot q^i\\,\vec e\_i.$$
+
+Ici et dans toute la suite, on utilise la convention d'Einstein&nbsp;: un indice répété, une fois en haut et une fois en bas, est sommé. La règle de dérivation en chaîne, $\vec v = \frac{\mathrm{d}\vec r}{\mathrm{d}t} = \frac{\partial \vec r}{\partial q^i}\\,\dot q^i$, dit que c'est possible, et d'une seule façon&nbsp;:
 
 <div id="def">
 
-$$p\_i = m\\,\vec v\cdot\vec e\_i = m\\,g\_{ij}\\,\dot q^j.$$
+$$\vec e\_i = \frac{\partial \vec r}{\partial q^i}.$$
 
 </div>
+
+Le vecteur $\vec e\_i$ est le déplacement du point quand la seule coordonnée $q^i$ augmente d'une unité&nbsp;: c'est la base **attachée aux coordonnées**. En polaires, $\vec e\_r = \hat e\_r$, mais $\vec e\_\theta = r\\,\hat e\_\theta$. Ce n'est donc pas le vecteur unitaire de l'habitude, mais le même vecteur **multiplié par $r$**&nbsp;: même direction, longueur $r$ (c'est le déplacement que produirait une variation de $1$ radian, en prolongeant la tangente). Le facteur $r$ n'a pas disparu&nbsp;: il est passé de la composante ($r\dot\theta$) au vecteur de base, qui le porte désormais.
+
+Et c'est toujours la métrique qui le fixe. Les produits scalaires des vecteurs de base, qui donnent leurs longueurs et leurs angles, forment le **tenseur métrique**&nbsp;:
+
+$$g\_{ij} = \vec e\_i\cdot\vec e\_j, \qquad \mathrm{d}s^2 = g\_{ij}\\,\mathrm{d}q^i\\,\mathrm{d}q^j.$$
+
+Pour les polaires, $g\_{rr} = 1$, $g\_{r\theta} = 0$ et $g\_{\theta\theta} = |\vec e\_\theta|^2 = r^2$&nbsp;: le $r^2$ de la métrique est bien le carré de la longueur de $\vec e\_\theta$, et l'on retrouve $\mathrm{d}s^2 = \mathrm{d}r^2 + r^2\\,\mathrm{d}\theta^2$.
 
 <div class="svg-container">
-<svg viewBox="0 28 600 257" role="img" aria-label="En coordonnées polaires, les moments sont les projections de la quantité de mouvement sur les vecteurs de base : e_r, de longueur 1, et e_θ, de longueur r" style="width:100%;max-width:600px;height:auto;">
-<defs><marker id="eb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker></defs>
-<defs><marker id="em" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#970E53"/></marker></defs>
-<defs><marker id="et" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#006C65"/></marker></defs>
-<defs><marker id="pax2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
-<polyline points="299.3,253.4 299.0,250.3 298.6,247.2 298.2,244.1 297.8,240.9 297.3,237.8 296.7,234.7 296.1,231.6 295.4,228.6 294.7,225.5 294.0,222.4 293.1,219.4 292.3,216.4 291.4,213.4 290.4,210.4 289.4,207.4 288.3,204.4 287.2,201.5 286.1,198.6 284.8,195.6 283.6,192.8 282.3,189.9 280.9,187.0 279.5,184.2 278.1,181.4 276.6,178.7 275.1,175.9 273.5,173.2 271.9,170.5 270.2,167.8 268.5,165.2 266.7,162.6 264.9,160.0 263.1,157.4 261.2,154.9 259.3,152.4 257.3,150.0 255.3,147.5 253.2,145.2 251.1,142.8 249.0,140.5 246.8,138.2 244.6,135.9 242.4,133.7 240.1,131.6 237.8,129.4 235.5,127.3 233.1,125.3 230.7,123.2 228.2,121.3 225.7,119.3 223.2,117.4 220.7,115.6 218.1,113.8 215.5,112.0 212.9,110.3 210.2,108.6 207.5,106.9 204.8,105.4 202.1,103.8 199.3,102.3 196.5,100.8 193.7,99.4 190.9,98.1 188.0,96.8 185.1,95.5 182.2,94.3 179.3,93.1 176.4,92.0 173.4,90.9 170.4,89.9 167.4,88.9 164.4,88.0 161.4,87.1 158.4,86.3 155.3,85.5 152.2,84.8 149.2,84.1 146.1,83.5 143.0,82.9" fill="none" stroke="#cbd5e1" stroke-width="1"/>
-<line x1="110" y1="270" x2="259.7" y2="153.0" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 3"/>
-<line x1="110" y1="270" x2="440" y2="270" stroke="#94a3b8" stroke-width="1"/>
-<circle cx="110" cy="270" r="2.5" fill="#334155"/>
-<text x="102.0" y="275.0" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif" >O</text>
-<circle cx="259.7" cy="153.0" r="3" fill="#334155"/>
-<text x="162.0" y="262.0" text-anchor="middle" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" font-style="italic" >θ</text>
-<text x="174.9" y="205.5" text-anchor="middle" font-size="14" fill="#64748b" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">r</tspan></text>
-<line x1="259.7" y1="153.0" x2="300.7" y2="121.0" stroke="#006C65" stroke-width="1.8" marker-end="url(#et)"/>
-<line x1="259.7" y1="153.0" x2="195.7" y2="71.1" stroke="#006C65" stroke-width="1.8" marker-end="url(#et)"/>
-<text x="306.7" y="135.0" text-anchor="start" font-size="14" fill="#006C65" font-family="Georgia,'Times New Roman',serif" ><tspan font-weight="bold">e</tspan><tspan dy="4" font-size="9.8">r</tspan><tspan dy="-4"> </tspan></text>
-<text x="189.7" y="67.1" text-anchor="end" font-size="14" fill="#006C65" font-family="Georgia,'Times New Roman',serif" ><tspan font-weight="bold">e</tspan><tspan dy="4" font-size="9.8">θ</tspan><tspan dy="-4"> </tspan></text>
-<line x1="259.7" y1="153.0" x2="245.3" y2="49.7" stroke="#004D80" stroke-width="2.2" marker-end="url(#eb)"/>
-<text x="253.3" y="47.7" text-anchor="start" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">m</tspan><tspan font-weight='bold'>v</tspan></text>
-<line x1="245.3" y1="49.7" x2="300.9" y2="120.9" stroke="#970E53" stroke-width="1" stroke-dasharray="3 3"/>
-<circle cx="300.9" cy="120.9" r="2.5" fill="#970E53"/>
-<line x1="245.3" y1="49.7" x2="204.2" y2="81.9" stroke="#970E53" stroke-width="1" stroke-dasharray="3 3"/>
-<circle cx="204.2" cy="81.9" r="2.5" fill="#970E53"/>
-<text x="395.0" y="70.0" text-anchor="start" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif" >Projections de <tspan font-style="italic">m</tspan><tspan font-weight='bold'>v</tspan> :</text>
-<text x="395.0" y="104.0" text-anchor="start" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">m</tspan><tspan font-weight='bold'>v</tspan> · <tspan font-weight='bold'>e</tspan><tspan dy='4' font-size='10'>r</tspan><tspan dy='-4'> = </tspan><tspan font-style="italic">m</tspan> <tspan font-style="italic">ṙ</tspan></text>
-<text x="395.0" y="134.0" text-anchor="start" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">m</tspan><tspan font-weight='bold'>v</tspan> · <tspan font-weight='bold'>e</tspan><tspan dy='4' font-size='10'>θ</tspan><tspan dy='-4'> = </tspan><tspan font-style="italic">m</tspan> <tspan font-style="italic">r</tspan> · <tspan font-style="italic">r</tspan> d<tspan font-style="italic">θ</tspan>/d<tspan font-style="italic">t</tspan></text>
-<text x="395.0" y="172.0" text-anchor="start" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >|<tspan font-weight='bold'>e</tspan><tspan dy='4' font-size='10'>r</tspan><tspan dy='-4'>| = 1, mais |</tspan><tspan font-weight='bold'>e</tspan><tspan dy='4' font-size='10'>θ</tspan><tspan dy='-4'>| = </tspan><tspan font-style="italic">r</tspan> :</text>
-<text x="395.0" y="190.0" text-anchor="start" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >quand θ varie de dθ, le point</text>
-<text x="395.0" y="208.0" text-anchor="start" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >parcourt <tspan font-style="italic">r</tspan> dθ.</text>
+<svg id="bp-svg" viewBox="0 0 600 330" role="img" aria-label="Les vecteurs de base des coordonnées polaires au point P. Le vecteur e_r est unitaire. Le vecteur e_θ a la même direction que le vecteur unitaire orthoradial, mais une longueur r : il s'allonge quand le point s'éloigne de l'origine. On peut faire glisser le point." style="width:100%;max-width:600px;height:auto;cursor:crosshair;touch-action:none;">
+<defs><marker id="bpt" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#006C65"/></marker></defs>
+<defs><marker id="bps" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#334155"/></marker></defs>
+<defs><marker id="bpa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
+<line x1="190" y1="300" x2="372" y2="300" stroke="#94a3b8" stroke-width="1" marker-end="url(#bpa)"/>
+<path id="bp-circ" d="M0,0" fill="none" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line id="bp-ray" x1="190" y1="300" x2="190" y2="300" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 3"/>
+<path id="bp-ang" d="M0,0" fill="none" stroke="#64748b" stroke-width="1.2"/>
+<text id="bp-angt" x="0" y="0" text-anchor="middle" font-size="14" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">θ</text>
+<circle cx="190" cy="300" r="2.5" fill="#334155"/>
+<text x="182" y="318" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif">O</text>
+<line id="bp-et" x1="0" y1="0" x2="0" y2="0" stroke="#006C65" stroke-width="2.4" marker-end="url(#bpt)"/>
+<line id="bp-eh" x1="0" y1="0" x2="0" y2="0" stroke="#334155" stroke-width="3.2" marker-end="url(#bps)"/>
+<line id="bp-er" x1="0" y1="0" x2="0" y2="0" stroke="#006C65" stroke-width="2.4" marker-end="url(#bpt)"/>
+<circle id="bp-P" cx="0" cy="0" r="5.5" fill="#334155" stroke="#fff" stroke-width="1.6"/>
+<text id="bp-ler" x="0" y="0" text-anchor="start" font-size="14" fill="#006C65" font-family="Georgia,'Times New Roman',serif"><tspan font-weight="bold">e</tspan><tspan dy="4" font-size="9.8">r</tspan></text>
+<text id="bp-let" x="0" y="0" text-anchor="end" font-size="14" fill="#006C65" font-family="Georgia,'Times New Roman',serif"><tspan font-weight="bold">e</tspan><tspan dy="4" font-size="9.8">θ</tspan></text>
+<text id="bp-leh" x="0" y="0" text-anchor="start" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif"><tspan font-weight="bold">ê</tspan><tspan dy="4" font-size="9.8">θ</tspan></text>
+<text x="405" y="62" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">vecteur unitaire (sombre) et</text>
+<text x="405" y="79" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">vecteur de base (vert) :</text>
+<text x="405" y="122" font-size="14.5" fill="#006C65" font-family="Georgia,'Times New Roman',serif">|<tspan font-weight="bold">e</tspan><tspan dy="4" font-size="10">r</tspan><tspan dy="-4">| = 1</tspan></text>
+<text id="bp-t2" x="405" y="152" font-size="14.5" fill="#006C65" font-family="Georgia,'Times New Roman',serif">|<tspan font-weight="bold">e</tspan><tspan dy="4" font-size="10">θ</tspan><tspan dy="-4">| = </tspan><tspan font-style="italic">r</tspan><tspan id="bp-rv"> = 0</tspan></text>
+<text x="405" y="182" font-size="14.5" fill="#006C65" font-family="Georgia,'Times New Roman',serif"><tspan font-weight="bold">e</tspan><tspan dy="4" font-size="10">θ</tspan><tspan dy="-4"> = </tspan><tspan font-style="italic">r</tspan> <tspan font-weight="bold">ê</tspan><tspan dy="4" font-size="10">θ</tspan></text>
+<text id="bp-t4" x="405" y="222" font-size="14.5" fill="#334155" font-family="Georgia,'Times New Roman',serif"><tspan font-style="italic">g</tspan><tspan dy="4" font-size="10">θθ</tspan><tspan dy="-4"> = </tspan><tspan font-style="italic">r</tspan>² <tspan id="bp-gv">= 0</tspan></text>
+<text x="405" y="300" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">faites glisser le point P</text>
 </svg>
+<div style="margin:2px 0 6px;"><button type="button" id="bp-go">❚❚ Pause</button></div>
 </div>
-<p class="legende">Le moment $p_\theta$ est la projection de la quantité de mouvement sur $\vec e_\theta$. Comme ce vecteur a pour longueur $r$, on trouve $p_\theta = m\,(r\dot\theta)\times r = m r^2\dot\theta$.</p>
+<script>
+(function () {
+  var svg = document.getElementById('bp-svg');
+  if (!svg) return;
+  var OX = 190, OY = 300, U = 34, RMIN = 1, RMAX = 4.6, TMIN = 8 * Math.PI / 180, TMAX = 82 * Math.PI / 180;
+  var r = 2.8, th = 50 * Math.PI / 180, auto = true, visible = false, raf = null, t0 = null, dragging = false;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function $(id) { return document.getElementById(id); }
+  function put(id, o) { var e = $(id); for (var k in o) e.setAttribute(k, typeof o[k] === 'number' ? o[k].toFixed(1) : o[k]); }
+  function fmt(x) { return x.toFixed(1).replace('.', ','); }
+  function draw() {
+    var c = Math.cos(th), s = Math.sin(th), R = r * U, px = OX + R * c, py = OY - R * s;
+    var er = [c, -s], et = [-s, -c];
+    put('bp-circ', { d: 'M' + (OX + R).toFixed(1) + ',' + OY + ' A' + R.toFixed(1) + ',' + R.toFixed(1) + ' 0 0 0 ' + OX + ',' + (OY - R).toFixed(1) });
+    put('bp-ray', { x2: px, y2: py });
+    put('bp-ang', { d: 'M' + (OX + 28) + ',' + OY + ' A28,28 0 0 0 ' + (OX + 28 * c).toFixed(1) + ',' + (OY - 28 * s).toFixed(1) });
+    put('bp-angt', { x: OX + 44 * Math.cos(th / 2), y: OY - 44 * Math.sin(th / 2) + 5 });
+    put('bp-er', { x1: px, y1: py, x2: px + U * er[0], y2: py + U * er[1] });
+    put('bp-et', { x1: px, y1: py, x2: px + R * et[0], y2: py + R * et[1] });
+    put('bp-eh', { x1: px, y1: py, x2: px + U * et[0], y2: py + U * et[1] });
+    put('bp-P', { cx: px, cy: py });
+    put('bp-ler', { x: px + U * er[0] + 7, y: py + U * er[1] + 2 });
+    put('bp-let', { x: px + R * et[0] - 6, y: py + R * et[1] - 6 });
+    put('bp-leh', { x: px + U * et[0] - 16 * er[0] - 4, y: py + U * et[1] - 16 * er[1] + 12 });
+    $('bp-rv').textContent = ' = ' + fmt(r);
+    $('bp-gv').textContent = '= ' + fmt(r * r);
+  }
+  function setFrom(ev) {
+    var pt = svg.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
+    var q = pt.matrixTransform(svg.getScreenCTM().inverse());
+    var dx = q.x - OX, dy = OY - q.y;
+    r = Math.max(RMIN, Math.min(RMAX, Math.hypot(dx, dy) / U));
+    th = Math.max(TMIN, Math.min(TMAX, Math.atan2(dy, dx)));
+    draw();
+  }
+  function frame(ts) {
+    raf = null;
+    if (!auto || !visible || reduce) return;
+    if (t0 === null) t0 = ts - 1000 * Math.asin((r - 2.8) / 1.7);
+    r = 2.8 + 1.7 * Math.sin((ts - t0) / 1000);
+    draw(); raf = requestAnimationFrame(frame);
+  }
+  function start() { if (!raf && auto && visible && !reduce) raf = requestAnimationFrame(frame); }
+  function setAuto(a) { auto = a; t0 = null; $('bp-go').textContent = a ? '❚❚ Pause' : '▶ Animer'; if (a) start(); }
+  function move(ev) { if (dragging) { setFrom(ev); ev.preventDefault(); } }
+  function up() { dragging = false; document.removeEventListener('pointermove', move); document.removeEventListener('pointerup', up); document.removeEventListener('pointercancel', up); }
+  svg.addEventListener('pointerdown', function (ev) {
+    dragging = true; setAuto(false); setFrom(ev);
+    document.addEventListener('pointermove', move); document.addEventListener('pointerup', up); document.addEventListener('pointercancel', up);
+    ev.preventDefault();
+  });
+  $('bp-go').addEventListener('click', function () { reduce = false; setAuto(!auto); });
+  draw();
+  if (reduce) { auto = false; $('bp-go').textContent = '▶ Animer'; }
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; start(); }, { threshold: 0.3 }).observe(svg);
+  } else { visible = true; start(); }
+})();
+</script>
+<p class="legende">Les vecteurs de base des coordonnées polaires au point $P$. Le vecteur $\vec e_r$ est unitaire. Le vecteur $\vec e_\theta$ a la direction du vecteur unitaire $\hat e_\theta$ (en sombre), mais une longueur $r$&nbsp;: il s'allonge quand le point s'éloigne de $O$, et $g_{\theta\theta} = r^2$ suit. Faites glisser $P$.</p>
 
-En coordonnées cartésiennes, où la base est orthonormée, les deux types de composantes coïncident, et l'on retrouve $p = m\dot x$. Dès que les coordonnées sont courbes, ils diffèrent, et ce sont les projections qui font les bons moments. On note $g^{ij}$ la matrice inverse de $g\_{ij}$, de sorte que $\dot q^i = \frac{1}{m}g^{ij}p\_j$.
+Pourquoi renoncer aux vecteurs unitaires&nbsp;? Parce que cette base est la seule qui rende les composantes de la vitesse égales aux $\dot q^i$ dans des coordonnées quelconques, y compris obliques, où l'on ne peut de toute façon pas imposer à la fois des vecteurs unitaires et orthogonaux. Et elle rendra un second service, tout aussi décisif, au moment de projeter la force.
+
+### Deux façons de décrire un vecteur
+
+Avec une base qui n'est plus orthonormée (ici, $\vec e\_\theta$ est étiré&nbsp;; avec des coordonnées obliques, les axes ne sont même plus orthogonaux), il y a deux façons de définir « la composante d'un vecteur $\vec w$ sur $\vec e\_i$ ». Elles coïncident dans une base orthonormée, ce qui explique qu'on ne les distingue d'ordinaire pas&nbsp;:
+<ul>
+<li><b>Décomposer.</b> On écrit $\vec w = w^i\,\vec e_i$ (c'est la règle du parallélogramme). Ce sont les composantes <i>contravariantes</i>, notées avec un indice en haut. Pour la vitesse, $v^i = \dot q^i$.</li>
+<li><b>Projeter.</b> On calcule le produit scalaire $w_i = \vec w\cdot\vec e_i$. Ce sont les composantes <i>covariantes</i>, notées avec un indice en bas.</li>
+</ul>
+
+Le lien entre les deux est immédiat&nbsp;: $w\_i = \vec w\cdot\vec e\_i = w^j\\,\vec e\_j\cdot\vec e\_i = g\_{ij}\\,w^j$. La métrique est le dictionnaire entre les deux descriptions.
+
+<div class="svg-container">
+<svg id="cv-svg" viewBox="0 0 600 340" role="img" aria-label="Un vecteur v dans une base oblique (e1, e2). On le décrit de deux façons : en le décomposant sur la base (parallélogramme, composantes contravariantes) ou en le projetant orthogonalement sur chaque vecteur de base (produit scalaire, composantes covariantes). Les deux jeux de nombres ne coïncident que si la base est orthonormée. On peut faire glisser la pointe de v et modifier l'angle et la longueur de e1." style="width:100%;max-width:600px;height:auto;touch-action:none;">
+<defs><marker id="cv1" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#006C65"/></marker></defs>
+<defs><marker id="cv2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#970E53"/></marker></defs>
+<defs><marker id="cvv" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker></defs>
+<line id="cv-l1" x1="0" y1="0" x2="0" y2="0" stroke="#006C65" stroke-width="1" stroke-opacity="0.3"/>
+<line id="cv-l2" x1="0" y1="0" x2="0" y2="0" stroke="#970E53" stroke-width="1" stroke-opacity="0.3"/>
+<polygon id="cv-par" points="0,0" fill="#d1dfe8" fill-opacity="0.75" stroke="#004D80" stroke-width="1" stroke-dasharray="4 3" stroke-opacity="0.8"/>
+<line id="cv-p1" x1="0" y1="0" x2="0" y2="0" stroke="#64748b" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line id="cv-p2" x1="0" y1="0" x2="0" y2="0" stroke="#64748b" stroke-width="1.2" stroke-dasharray="2 3"/>
+<circle id="cv-f1" cx="0" cy="0" r="3.4" fill="#fff" stroke="#64748b" stroke-width="1.4"/>
+<circle id="cv-f2" cx="0" cy="0" r="3.4" fill="#fff" stroke="#64748b" stroke-width="1.4"/>
+<line id="cv-e1" x1="0" y1="0" x2="0" y2="0" stroke="#006C65" stroke-width="2.4" marker-end="url(#cv1)"/>
+<line id="cv-e2" x1="0" y1="0" x2="0" y2="0" stroke="#970E53" stroke-width="2.4" marker-end="url(#cv2)"/>
+<line id="cv-v" x1="0" y1="0" x2="0" y2="0" stroke="#004D80" stroke-width="2.6" marker-end="url(#cvv)"/>
+<circle cx="120" cy="250" r="2.8" fill="#334155"/>
+<text id="cv-le1" x="0" y="0" font-size="14" fill="#006C65" font-family="Georgia,'Times New Roman',serif"><tspan font-weight="bold">e</tspan><tspan dy="4" font-size="9.8">1</tspan></text>
+<text id="cv-le2" x="0" y="0" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif"><tspan font-weight="bold">e</tspan><tspan dy="4" font-size="9.8">2</tspan></text>
+<text id="cv-lv" x="0" y="0" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif"><tspan font-weight="bold">v</tspan></text>
+<circle id="cv-hit" cx="0" cy="0" r="9" fill="#004D80" fill-opacity="0.15" style="cursor:grab;"/>
+<text x="210" y="326" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">faites glisser la pointe de v</text>
+<text x="396" y="40" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">décomposer (parallélogramme)</text>
+<text id="cv-up" x="396" y="64" font-size="15" fill="#334155" font-family="Georgia,'Times New Roman',serif"></text>
+<text x="396" y="112" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">projeter (produit scalaire)</text>
+<text id="cv-dn" x="396" y="136" font-size="15" fill="#334155" font-family="Georgia,'Times New Roman',serif"></text>
+<text x="396" y="184" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">la métrique fait le lien</text>
+<text id="cv-g" x="396" y="206" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif"></text>
+<text id="cv-note" x="396" y="244" font-size="13.5" font-family="Georgia,'Times New Roman',serif" font-style="italic"></text>
+</svg>
+<div style="display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:center;align-items:center;margin:2px 0 6px;font-size:0.92em;">
+<label style="display:inline-flex;align-items:center;gap:8px;margin:0;font-weight:normal;"><span>angle entre <b>e</b><sub>1</sub> et <b>e</b><sub>2</sub></span> <input type="range" id="cv-a" min="30" max="150" step="1" value="70" style="width:120px;margin:0;"> <span id="cv-av" style="min-width:2.6em;">70°</span></label>
+<label style="display:inline-flex;align-items:center;gap:8px;margin:0;font-weight:normal;"><span>longueur de <b>e</b><sub>1</sub></span> <input type="range" id="cv-l" min="0.5" max="1.8" step="0.05" value="1" style="width:120px;margin:0;"> <span id="cv-lv2" style="min-width:2.6em;">1,00</span></label>
+<button type="button" id="cv-ortho">Base orthonormée</button>
+</div>
+</div>
+<script>
+(function () {
+  var svg = document.getElementById('cv-svg');
+  if (!svg) return;
+  var OX = 120, OY = 250, U = 64;
+  var al = 70 * Math.PI / 180, L1 = 1, L2 = 1, vx = 1.35, vy = 1.15, dragging = false;
+  function $(id) { return document.getElementById(id); }
+  function X(x) { return OX + U * x; }
+  function Y(y) { return OY - U * y; }
+  function put(id, o) { var e = $(id); for (var k in o) e.setAttribute(k, typeof o[k] === 'number' ? o[k].toFixed(1) : o[k]); }
+  function seg(id, a, b) { put(id, { x1: X(a[0]), y1: Y(a[1]), x2: X(b[0]), y2: Y(b[1]) }); }
+  function f2(x) { return x.toFixed(2).replace('.', ','); }
+  function draw() {
+    var e1 = [L1, 0], e2 = [L2 * Math.cos(al), L2 * Math.sin(al)];
+    var det = e1[0] * e2[1] - e1[1] * e2[0];
+    var a = (vx * e2[1] - vy * e2[0]) / det, b = (e1[0] * vy - e1[1] * vx) / det;
+    var d1 = vx * e1[0] + vy * e1[1], d2 = vx * e2[0] + vy * e2[1];
+    var g11 = L1 * L1, g12 = L1 * L2 * Math.cos(al), g22 = L2 * L2;
+    var u1 = [1, 0], u2 = [Math.cos(al), Math.sin(al)];
+    seg('cv-l1', [-1.6, 0], [4.2, 0]);
+    seg('cv-l2', [-1.6 * u2[0], -1.6 * u2[1]], [4.2 * u2[0], 4.2 * u2[1]]);
+    seg('cv-e1', [0, 0], e1); seg('cv-e2', [0, 0], e2); seg('cv-v', [0, 0], [vx, vy]);
+    $('cv-par').setAttribute('points', [[0, 0], [a * e1[0], a * e1[1]], [vx, vy], [b * e2[0], b * e2[1]]].map(function (p) { return X(p[0]).toFixed(1) + ',' + Y(p[1]).toFixed(1); }).join(' '));
+    var s1 = vx * u1[0] + vy * u1[1], s2 = vx * u2[0] + vy * u2[1];
+    var F1 = [s1 * u1[0], s1 * u1[1]], F2 = [s2 * u2[0], s2 * u2[1]];
+    seg('cv-p1', [vx, vy], F1); seg('cv-p2', [vx, vy], F2);
+    put('cv-f1', { cx: X(F1[0]), cy: Y(F1[1]) }); put('cv-f2', { cx: X(F2[0]), cy: Y(F2[1]) });
+    put('cv-hit', { cx: X(vx), cy: Y(vy) });
+    put('cv-le1', { x: X(e1[0]) + 6, y: Y(e1[1]) + 16 });
+    put('cv-le2', { x: X(e2[0]) - 22, y: Y(e2[1]) - 4 });
+    put('cv-lv', { x: X(vx) + 10, y: Y(vy) - 8 });
+    $('cv-up').innerHTML = '<tspan font-style="italic" fill="#006C65">v</tspan><tspan dy="-5" font-size="10" fill="#006C65">1</tspan><tspan dy="5" fill="#006C65"> = ' + f2(a) + '</tspan>' +
+      '<tspan dx="16" font-style="italic" fill="#970E53">v</tspan><tspan dy="-5" font-size="10" fill="#970E53">2</tspan><tspan dy="5" fill="#970E53"> = ' + f2(b) + '</tspan>';
+    $('cv-dn').innerHTML = '<tspan font-weight="bold" fill="#004D80">v</tspan>·<tspan font-weight="bold" fill="#006C65">e</tspan><tspan dy="4" font-size="10" fill="#006C65">1</tspan><tspan dy="-4"> = ' + f2(d1) + '</tspan>   <tspan font-weight="bold" fill="#004D80">v</tspan>·<tspan font-weight="bold" fill="#970E53">e</tspan><tspan dy="4" font-size="10" fill="#970E53">2</tspan><tspan dy="-4"> = ' + f2(d2) + '</tspan>';
+    $('cv-g').innerHTML = '<tspan font-style="italic">g</tspan><tspan dy="4" font-size="10">11</tspan><tspan dy="-4"> = ' + f2(g11) + '   </tspan><tspan font-style="italic">g</tspan><tspan dy="4" font-size="10">12</tspan><tspan dy="-4"> = ' + f2(g12) + '   </tspan><tspan font-style="italic">g</tspan><tspan dy="4" font-size="10">22</tspan><tspan dy="-4"> = ' + f2(g22) + '</tspan>';
+    var ortho = Math.abs(g12) < 0.006 && Math.abs(g11 - 1) < 0.006 && Math.abs(g22 - 1) < 0.006;
+    var note = $('cv-note');
+    note.innerHTML = ortho ? '<tspan x="396">base orthonormée :</tspan><tspan x="396" dy="18">les deux jeux coïncident</tspan>' : '<tspan x="396">base quelconque :</tspan><tspan x="396" dy="18">les deux jeux diffèrent</tspan>';
+    note.setAttribute('fill', ortho ? '#006C65' : '#970E53');
+    $('cv-av').textContent = Math.round(al * 180 / Math.PI) + '°';
+    $('cv-lv2').textContent = f2(L1);
+  }
+  function setFrom(ev) {
+    var pt = svg.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
+    var q = pt.matrixTransform(svg.getScreenCTM().inverse());
+    vx = Math.max(-1.7, Math.min(3.9, (q.x - OX) / U)); vy = Math.max(-1.2, Math.min(3.5, (OY - q.y) / U));
+    draw();
+  }
+  function move(ev) { if (dragging) { setFrom(ev); ev.preventDefault(); } }
+  function up() { dragging = false; document.removeEventListener('pointermove', move); document.removeEventListener('pointerup', up); document.removeEventListener('pointercancel', up); }
+  svg.addEventListener('pointerdown', function (ev) {
+    var pt = svg.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY;
+    var q = pt.matrixTransform(svg.getScreenCTM().inverse());
+    if (q.x > 385) return;
+    dragging = true; setFrom(ev);
+    document.addEventListener('pointermove', move); document.addEventListener('pointerup', up); document.addEventListener('pointercancel', up);
+    ev.preventDefault();
+  });
+  $('cv-a').addEventListener('input', function () { al = this.value * Math.PI / 180; draw(); });
+  $('cv-l').addEventListener('input', function () { L1 = parseFloat(this.value); draw(); });
+  $('cv-ortho').addEventListener('click', function () { al = Math.PI / 2; L1 = 1; $('cv-a').value = 90; $('cv-l').value = 1; draw(); });
+  draw();
+})();
+</script>
+<p class="legende">Le même vecteur $\vec v$ (en bleu) décrit de deux façons dans une base oblique $(\vec e_1, \vec e_2)$. En <b>décomposant</b> (parallélogramme en pointillés), on obtient les composantes contravariantes $v^1$ et $v^2$. En <b>projetant</b> orthogonalement sur chaque axe (pieds des pointillés gris), on obtient les produits scalaires $\vec v\cdot\vec e_1$ et $\vec v\cdot\vec e_2$ (la longueur de la projection multipliée par la longueur du vecteur de base), c'est-à-dire les composantes covariantes. Faites glisser la pointe de $\vec v$, puis essayez les curseurs.</p>
+
+Les noms viennent de la réaction à un changement de base. Si l'on allonge $\vec e\_i$ d'un facteur $\lambda$ (par exemple en changeant d'unité sur cet axe), la composante $w^i$ est divisée par $\lambda$&nbsp;: elle varie à l'**inverse** de la base, d'où contra-variante. La composante $w\_i$, elle, est multipliée par $\lambda$&nbsp;: elle varie **avec** la base, d'où co-variante. C'est ce que montre le curseur de longueur.
+
+En coordonnées polaires, la vitesse a pour composantes contravariantes $(\dot r, \dot\theta)$ et pour composantes covariantes $(\vec v\cdot\vec e\_r, \vec v\cdot\vec e\_\theta) = (\dot r, r^2\dot\theta)$. Le facteur $r^2$ qui nous manquait est apparu&nbsp;: c'est $g\_{\theta\theta}$.
+
+Laquelle des deux descriptions convient à la mécanique&nbsp;? C'est la loi de Newton qui va trancher.
 
 ### Les équations de Newton en coordonnées quelconques
 
-Pour justifier ce choix, il faut écrire les équations de Newton en coordonnées quelconques. C'est l'étape la plus technique, mais l'idée est simple&nbsp;: **projeter** la deuxième loi de Newton, $m\vec a = -\vec\nabla V$, sur les vecteurs de base $\vec e\_i$.
+Nous avons une base adaptée aux coordonnées, et deux façons d'en lire les composantes. La loi de Newton, $m\vec a = -\vec\nabla V$, est une équation entre vecteurs&nbsp;: elle est vraie si et seulement si toutes ses projections sur une base le sont. **Projetons**-la sur les vecteurs $\vec e\_i$&nbsp;: on obtiendra une équation pour chaque coordonnée $q^i$. C'est l'étape la plus technique, mais chaque morceau se lit sur un fait déjà rencontré.
 
 <ul>
-<li><b>Le membre de droite.</b> D'après la règle de dérivation en chaîne, $\frac{\partial V}{\partial q^i} = \vec\nabla V\cdot\frac{\partial\vec r}{\partial q^i} = \vec\nabla V\cdot\vec e_i$. La projection de la force est donc $-\partial V/\partial q^i$.</li>
-<li><b>Le membre de gauche.</b> On fait apparaître la dérivée d'un produit scalaire&nbsp;: $\vec a\cdot\vec e_i = \frac{\mathrm{d}}{\mathrm{d}t}\left(\vec v\cdot\vec e_i\right) - \vec v\cdot\frac{\mathrm{d}\vec e_i}{\mathrm{d}t}$. Le premier terme fait apparaître le moment&nbsp;: $m\,\vec v\cdot\vec e_i = p_i$.</li>
+<li><b>Le membre de droite.</b> D'après la règle de dérivation en chaîne, $\frac{\partial V}{\partial q^i} = \vec\nabla V\cdot\frac{\partial\vec r}{\partial q^i} = \vec\nabla V\cdot\vec e_i$. La projection de la force est donc $-\partial V/\partial q^i$, sans aucune métrique&nbsp;: c'est le second service de la base attachée aux coordonnées.</li>
+<li><b>Le membre de gauche.</b> On fait apparaître la dérivée d'un produit scalaire&nbsp;: $\vec a\cdot\vec e_i = \frac{\mathrm{d}}{\mathrm{d}t}\left(\vec v\cdot\vec e_i\right) - \vec v\cdot\frac{\mathrm{d}\vec e_i}{\mathrm{d}t}$. Le premier terme est la dérivée de la <b>projection</b> de la quantité de mouvement $m\vec v$ sur $\vec e_i$&nbsp;: $m\,\vec v\cdot\vec e_i$, une composante covariante, et non $m\dot q^i$.</li>
 <li><b>Le terme correctif.</b> Le vecteur de base $\vec e_i$ change au cours du mouvement, parce que le point se déplace&nbsp;: $\frac{\mathrm{d}\vec e_i}{\mathrm{d}t} = \frac{\partial \vec e_i}{\partial q^j}\,\dot q^j = \frac{\partial^2\vec r}{\partial q^j\,\partial q^i}\,\dot q^j$. En échangeant l'ordre des dérivations, c'est aussi $\frac{\partial}{\partial q^i}\left(\dot q^j\,\vec e_j\right) = \frac{\partial\vec v}{\partial q^i}$, la dérivée étant prise à vitesses $\dot q^j$ fixées. Donc $\vec v\cdot\frac{\mathrm{d}\vec e_i}{\mathrm{d}t} = \vec v\cdot\frac{\partial\vec v}{\partial q^i} = \frac12\frac{\partial (\vec v\cdot\vec v)}{\partial q^i} = \frac12\frac{\partial g_{kl}}{\partial q^i}\,\dot q^k\dot q^l$.</li>
 </ul>
 
@@ -2178,9 +2361,58 @@ $$\frac{\mathrm{d}}{\mathrm{d}t}\left(m\\,g\_{ij}\\,\dot q^j\right) - \frac{m}{2
 
 </div>
 
-Le premier terme est la dérivée du moment $p\_i$&nbsp;: c'est ce qui le désigne comme la «&nbsp;bonne&nbsp;» variable. Le second terme est une force apparente, due uniquement à la courbure des coordonnées. En coordonnées polaires, pour $i = r$, il vaut $-\frac{m}{2}\frac{\partial (r^2)}{\partial r}\dot\theta^2 = -m r\dot\theta^2$&nbsp;: c'est le terme centrifuge, et l'on retrouve bien l'équation radiale. Pour $i = \theta$, il est nul, puisque la métrique ne dépend pas de $\theta$.
+Le premier terme est la dérivée de la projection $m\vec v\cdot\vec e\_i = m\\,g\_{ij}\\,\dot q^j$&nbsp;: c'est elle, et non $m\dot q^i$, que le mouvement dérive par rapport au temps. C'est ce qui la désigne comme la «&nbsp;bonne&nbsp;» variable, et nous l'appellerons **moment**. Le second terme est une force apparente, due uniquement à la courbure des coordonnées. En coordonnées polaires, pour $i = r$, il vaut $-\frac{m}{2}\frac{\partial (r^2)}{\partial r}\dot\theta^2 = -m r\dot\theta^2$&nbsp;: c'est le terme centrifuge, et l'on retrouve bien l'équation radiale. Pour $i = \theta$, il est nul, puisque la métrique ne dépend pas de $\theta$.
 
 En l'absence de potentiel, ces équations décrivent les **géodésiques**, les courbes «&nbsp;les plus droites possibles&nbsp;» d'un espace décrit par la métrique $g\_{ij}$. Sur une sphère, par exemple, ce sont les grands cercles. C'est le point de départ de la relativité générale, où la gravitation n'est plus une force mais une modification de la métrique.
+
+### Les moments sont des projections
+
+La définition qui s'impose est donc celle-ci, et elle n'a plus rien d'arbitraire&nbsp;:
+
+<div id="def">
+
+$$p\_i = m\\,\vec v\cdot\vec e\_i = m\\,g\_{ij}\\,\dot q^j.$$
+
+</div>
+
+<div class="svg-container">
+<svg viewBox="0 28 600 257" role="img" aria-label="En coordonnées polaires, les moments sont les projections de la quantité de mouvement sur les vecteurs de base : e_r, de longueur 1, et e_θ, de longueur r, tangent au cercle" style="width:100%;max-width:600px;height:auto;">
+<defs><marker id="eb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker></defs>
+<defs><marker id="em" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#970E53"/></marker></defs>
+<defs><marker id="et" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#006C65"/></marker></defs>
+<defs><marker id="pax2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9" fill="none" stroke="#94a3b8" stroke-width="1.6"/></marker></defs>
+<line x1="70.0" y1="262.0" x2="330.0" y2="262.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#pax2)"/>
+<path d="M192.4,262.0 A122.4,122.4 0 0 0 48.7,141.5" fill="none" stroke="#cbd5e1" stroke-width="1.2" stroke-dasharray="2 3"/>
+<line x1="70.0" y1="262.0" x2="148.7" y2="168.2" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4 3"/>
+<circle cx="70.0" cy="262.0" r="2.5" fill="#334155"/>
+<text x="62.0" y="267.0" text-anchor="end" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif">O</text>
+<path d="M100.0,262.0 A30,30 0 0 0 89.3,239.0" fill="none" stroke="#64748b" stroke-width="1.2"/>
+<text x="109.9" y="248.4" text-anchor="middle" font-size="14" fill="#64748b" font-family="Georgia,'Times New Roman',serif"><tspan font-style="italic">θ</tspan></text>
+<text x="97.3" y="229.1" text-anchor="end" font-size="14" fill="#64748b" font-family="Georgia,'Times New Roman',serif"><tspan font-style="italic">r</tspan></text>
+<circle cx="148.7" cy="168.2" r="3.4" fill="#334155"/>
+<line x1="148.7" y1="168.2" x2="171.8" y2="140.7" stroke="#006C65" stroke-width="2" marker-end="url(#et)"/>
+<line x1="148.7" y1="168.2" x2="54.9" y2="89.6" stroke="#006C65" stroke-width="2" marker-end="url(#et)"/>
+<text x="177.8" y="142.7" text-anchor="start" font-size="14" fill="#006C65" font-family="Georgia,'Times New Roman',serif"><tspan font-weight="bold">e</tspan><tspan dy="4" font-size="10">r</tspan><tspan dy="-4"></tspan></text>
+<text x="48.9" y="85.6" text-anchor="end" font-size="14" fill="#006C65" font-family="Georgia,'Times New Roman',serif"><tspan font-weight="bold">e</tspan><tspan dy="4" font-size="10">θ</tspan><tspan dy="-4"></tspan></text>
+<line x1="148.7" y1="168.2" x2="151.2" y2="109.2" stroke="#004D80" stroke-width="2.4" marker-end="url(#eb)"/>
+<text x="159.2" y="105.2" text-anchor="start" font-size="15" fill="#004D80" font-family="Georgia,'Times New Roman',serif"><tspan font-style="italic">m</tspan><tspan font-weight="bold">v</tspan></text>
+<line x1="151.2" y1="109.2" x2="178.8" y2="132.4" stroke="#970E53" stroke-width="1" stroke-dasharray="3 3"/>
+<line x1="151.2" y1="109.2" x2="121.1" y2="145.1" stroke="#970E53" stroke-width="1" stroke-dasharray="3 3"/>
+<circle cx="178.8" cy="132.4" r="2.5" fill="#970E53"/><circle cx="121.1" cy="145.1" r="2.5" fill="#970E53"/>
+<text x="395.0" y="62.0" text-anchor="start" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif">Projections de <tspan font-style="italic">m</tspan><tspan font-weight="bold">v</tspan> :</text>
+<text x="395.0" y="96.0" text-anchor="start" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif"><tspan font-style="italic">m</tspan><tspan font-weight="bold">v</tspan> · <tspan font-weight="bold">e</tspan><tspan dy="4" font-size="10">r</tspan><tspan dy="-4"></tspan><tspan dy="-4"> = </tspan><tspan font-style="italic">m</tspan> <tspan font-style="italic">ṙ</tspan></text>
+<text x="395.0" y="128.0" text-anchor="start" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif"><tspan font-style="italic">m</tspan><tspan font-weight="bold">v</tspan> · <tspan font-weight="bold">e</tspan><tspan dy="4" font-size="10">θ</tspan><tspan dy="-4"></tspan><tspan dy="-4"> = </tspan><tspan font-style="italic">m</tspan> (<tspan font-style="italic">r</tspan> d<tspan font-style="italic">θ</tspan>/d<tspan font-style="italic">t</tspan>) × <tspan font-style="italic">r</tspan></text>
+<text x="419.0" y="150.0" text-anchor="start" font-size="14" fill="#970E53" font-family="Georgia,'Times New Roman',serif"><tspan dy="0"> = </tspan><tspan font-style="italic">m r</tspan>² d<tspan font-style="italic">θ</tspan>/d<tspan font-style="italic">t</tspan></text>
+<text x="395.0" y="190.0" text-anchor="start" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif">|<tspan font-weight="bold">e</tspan><tspan dy="4" font-size="10">r</tspan><tspan dy="-4"></tspan><tspan dy="-4">| = 1, mais |</tspan><tspan font-weight="bold">e</tspan><tspan dy="4" font-size="10">θ</tspan><tspan dy="-4"></tspan><tspan dy="-4">| = </tspan><tspan font-style="italic">r</tspan> :</text>
+<text x="395.0" y="208.0" text-anchor="start" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif"><tspan font-weight="bold">e</tspan><tspan dy="4" font-size="9.5">θ</tspan><tspan dy="-4"> est le vecteur unitaire</tspan></text>
+<text x="395.0" y="226.0" text-anchor="start" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif">étiré du facteur <tspan font-style="italic">r</tspan> (la métrique).</text>
+</svg>
+</div>
+<p class="legende">Le moment $p_\theta$ est la projection de la quantité de mouvement sur $\vec e_\theta$. Comme ce vecteur a pour longueur $r$, on trouve $p_\theta = m\,(r\dot\theta)\times r = m r^2\dot\theta$.</p>
+
+En coordonnées cartésiennes, où la base est orthonormée, les deux sortes de composantes coïncident, et l'on retrouve $p = m\dot x$. Dès que la base n'est plus orthonormée, elles diffèrent, et ce sont les projections qui font les bons moments. On note $g^{ij}$ la matrice inverse de $g\_{ij}$, de sorte que $\dot q^i = \frac{1}{m}g^{ij}p\_j$&nbsp;: on repasse des composantes covariantes aux contravariantes en inversant le dictionnaire.
+
+Cela répond aussi à la remarque faite sur les coordonnées polaires. Le vecteur $\vec e\_r$ est sans dimension (un déplacement par unité de $r$), alors que $\vec e\_\theta$ est une longueur (un déplacement par radian). Donc $p\_r = m\vec v\cdot\vec e\_r$ est une quantité de mouvement, et $p\_\theta = m\vec v\cdot\vec e\_\theta$ une quantité de mouvement multipliée par une longueur, c'est-à-dire un moment cinétique. Quant au facteur $r^2$, c'est $g\_{\theta\theta}$&nbsp;: le carré de la longueur de $\vec e\_\theta$.
 
 ### Le hamiltonien en général
 
