@@ -132,6 +132,12 @@ margin-top:0em;
     color: #006C65;
     margin-bottom: 0.3em;
 }
+mjx-container[display="true"]
+{
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
 </style>
 
 # De Newton à Hamilton
@@ -2367,7 +2373,7 @@ En l'absence de potentiel, ces équations décrivent les **géodésiques**, les 
 
 ### Les moments sont des projections
 
-La définition qui s'impose est donc celle-ci, et elle n'a plus rien d'arbitraire&nbsp;:
+Les moments sont donc les projections de la quantité de mouvement sur les vecteurs de base&nbsp;:
 
 <div id="def">
 
@@ -2412,7 +2418,7 @@ $$p\_i = m\\,\vec v\cdot\vec e\_i = m\\,g\_{ij}\\,\dot q^j.$$
 
 En coordonnées cartésiennes, où la base est orthonormée, les deux sortes de composantes coïncident, et l'on retrouve $p = m\dot x$. Dès que la base n'est plus orthonormée, elles diffèrent, et ce sont les projections qui font les bons moments. On note $g^{ij}$ la matrice inverse de $g\_{ij}$, de sorte que $\dot q^i = \frac{1}{m}g^{ij}p\_j$&nbsp;: on repasse des composantes covariantes aux contravariantes en inversant le dictionnaire.
 
-Cela répond aussi à la remarque faite sur les coordonnées polaires. Le vecteur $\vec e\_r$ est sans dimension (un déplacement par unité de $r$), alors que $\vec e\_\theta$ est une longueur (un déplacement par radian). Donc $p\_r = m\vec v\cdot\vec e\_r$ est une quantité de mouvement, et $p\_\theta = m\vec v\cdot\vec e\_\theta$ une quantité de mouvement multipliée par une longueur, c'est-à-dire un moment cinétique. Quant au facteur $r^2$, c'est $g\_{\theta\theta}$&nbsp;: le carré de la longueur de $\vec e\_\theta$.
+Cela explique aussi pourquoi les deux moments polaires n'ont pas la même dimension. Le vecteur $\vec e\_r$ est sans dimension (un déplacement par unité de $r$), alors que $\vec e\_\theta$ est une longueur (un déplacement par radian). Donc $p\_r = m\vec v\cdot\vec e\_r$ est une quantité de mouvement, et $p\_\theta = m\vec v\cdot\vec e\_\theta$ une quantité de mouvement multipliée par une longueur, c'est-à-dire un moment cinétique. Quant au facteur $r^2$, c'est $g\_{\theta\theta}$&nbsp;: le carré de la longueur de $\vec e\_\theta$.
 
 ### Le hamiltonien en général
 
@@ -2626,7 +2632,7 @@ $$\frac{\mathrm{d}G}{\mathrm{d}t} = \frac{\partial G}{\partial x}\\,\dot x + \fr
 
 Cette combinaison s'appelle le **crochet de Poisson** de $G$ et $H$. Pour $G = H$, les deux termes se détruisent&nbsp;: c'est la conservation de $H$.
 
-Le crochet a une lecture géométrique immédiate. L'expression est de la forme $ad - bc$, comme l'aire du parallélogramme construit sur $(a, b)$ et $(c, d)$ rencontrée plus haut&nbsp;: c'est l'**aire orientée du parallélogramme construit sur les gradients** $\nabla G = (\partial\_x G, \partial\_p G)$ et $\nabla H = (\partial\_x H, \partial\_p H)$. D'où deux propriétés qu'on lit sur la figure.
+Le crochet a une lecture géométrique immédiate. L'expression est de la forme $ad - bc$, comme l'aire du parallélogramme construit sur $(a, b)$ et $(c, d)$ (voir [Un écoulement incompressible](#un-écoulement-incompressible))&nbsp;: c'est l'**aire orientée du parallélogramme construit sur les gradients** $\nabla G = (\partial\_x G, \partial\_p G)$ et $\nabla H = (\partial\_x H, \partial\_p H)$. D'où deux propriétés qu'on lit sur la figure.
 
 <ul>
 <li><b>L'antisymétrie.</b> Échanger les deux vecteurs change le signe de l'aire&nbsp;: $\{G, H\} = -\{H, G\}$.</li>
@@ -2687,7 +2693,7 @@ Le crochet a une lecture géométrique immédiate. L'expression est de la forme 
 <text x="450.0" y="301.0" text-anchor="middle" font-size="12" fill="#334155" font-family="Georgia,'Times New Roman',serif" ><tspan font-size="12" fill="#64748b"><tspan font-style="italic">G</tspan> reste constante sur la trajectoire</tspan></text>
 </svg>
 </div>
-<p class="legende">Au point d'une trajectoire de $H = \frac{x^2 + p^2}{2}$ (cercles bleus), le crochet est l'aire du parallélogramme construit sur $\nabla G$ et $\nabla H$. À gauche, $G = x$&nbsp;: les gradients ne sont pas alignés, l'aire vaut $\{x, H\} = p$ (ce qu'on savait déjà&nbsp;: $\dot x = p$), et $G$ varie quand le point avance. À droite, $G = H^2$&nbsp;: les lignes de niveau de $G$ sont celles de $H$, les gradients sont parallèles, l'aire est nulle et $G$ ne change pas.</p>
+<p class="legende">Au point d'une trajectoire de $H = \frac{x^2 + p^2}{2}$ (cercles bleus), le crochet est l'aire du parallélogramme construit sur $\nabla G$ et $\nabla H$. À gauche, $G = x$&nbsp;: les gradients ne sont pas alignés, l'aire vaut $\{x, H\} = p$ (c'est bien la vitesse&nbsp;: $\dot x = p$), et $G$ varie quand le point avance. À droite, $G = H^2$&nbsp;: les lignes de niveau de $G$ sont celles de $H$, les gradients sont parallèles, l'aire est nulle et $G$ ne change pas.</p>
 
 Avec $n$ degrés de liberté, on additionne les aires de chaque plan $(x\_i, p\_i)$&nbsp;: $\\{G, H\\} = \sum\_i \left(\frac{\partial G}{\partial x\_i}\frac{\partial H}{\partial p\_i} - \frac{\partial G}{\partial p\_i}\frac{\partial H}{\partial x\_i}\right)$. C'est la même structure que la somme des aires projetées de la section précédente&nbsp;: le crochet est la forme symplectique appliquée aux gradients.
 
