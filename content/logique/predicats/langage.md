@@ -160,7 +160,7 @@ Dans $\displaystyle\sum_{i=1}^{n} i$, la lettre $i$ est **muette**&nbsp;: on pou
 
 Une formule sans variable libre est un **énoncé** (on dit aussi une formule close)&nbsp;: une fois qu'on sait de quel monde on parle, il est vrai ou faux.
 
-Une formule **avec** une variable libre n'est ni vraie ni fausse tant qu'on n'a pas choisi la valeur de cette variable&nbsp;: elle exprime une **propriété**. Ainsi $\exists y\\,(x=y+y)$, où $x$ est libre et $y$ liée, dit «&nbsp;$x$ est pair&nbsp;». Elle est vraie pour $x=6$ et fausse pour $x=7$. C'est exactement en ce sens que, dans le lemme de diagonalisation, une formule $S(x)$ «&nbsp;exprime une propriété $S$&nbsp;».
+Une formule **avec** une variable libre n'est ni vraie ni fausse tant qu'on n'a pas choisi la valeur de cette variable&nbsp;: elle exprime une **propriété**. Ainsi $\exists y\\,(x=y+y)$, où $x$ est libre et $y$ liée, dit «&nbsp;$x$ est pair&nbsp;». Elle est vraie pour $x=6$ et fausse pour $x=7$.
 
 {{% notice type="piege" round="true" %}}
 On ne remplace pas une variable libre n'importe comment. Dans $\exists y\\,(x=y+y)$, remplacer $x$ par $y$ donne $\exists y\\,(y=y+y)$, qui ne dit plus «&nbsp;$y$ est pair&nbsp;» mais «&nbsp;zéro existe&nbsp;»&nbsp;: la variable $y$ s'est fait **capturer** par le quantificateur. Il faut d'abord renommer la variable muette, par exemple en $\exists u\\,(x=u+u)$, comme on le ferait avec un indice de sommation.
