@@ -116,6 +116,22 @@ margin-top:0em;
     color: #004D80 !important;
     text-decoration: underline;
 }
+
+.encadre
+{
+    max-width: 42rem;
+    margin: 1.4em auto;
+    border: 2px solid #006C65;
+    border-radius: 12px;
+    background: #F3F8F7;
+    padding: 0.6em 1.3em 0.4em 1.3em;
+}
+.encadre-titre
+{
+    font-weight: bold;
+    color: #006C65;
+    margin-bottom: 0.3em;
+}
 </style>
 
 # De Newton à Hamilton
@@ -2084,7 +2100,7 @@ Vérifions qu'on obtient bien les équations de Newton&nbsp;:
 <li>$\dot p_\theta = -\partial H/\partial \theta = 0$&nbsp;: c'est l'équation angulaire, puisque $\frac{\mathrm{d}}{\mathrm{d}t}(m r^2\dot\theta) = m r\,(2\dot r\dot\theta + r\ddot\theta)$.</li>
 </ul>
 
-On remarque au passage que $H = \frac{m}{2}(\dot r^2 + r^2\dot\theta^2) + V$ est encore l'énergie mécanique, et que l'angle $\theta$ n'apparaît pas dans $H$&nbsp;: son moment $p\_\theta$ est donc conservé. Une symétrie (l'invariance par rotation) se lit directement sur le hamiltonien.
+On remarque au passage que $H = \frac{m}{2}(\dot r^2 + r^2\dot\theta^2) + V$ est encore l'énergie mécanique, et que l'angle $\theta$ n'apparaît pas dans $H$&nbsp;: son moment $p\_\theta$ est donc conservé. Une symétrie (l'invariance par rotation) se lit directement sur le hamiltonien. On verra [plus loin](#symetries) que c'est un cas particulier d'un énoncé beaucoup plus général.
 
 Les deux moments n'ont pas la même dimension&nbsp;: $p\_r$ est une quantité de mouvement, $p\_\theta$ un moment cinétique. D'où viennent ces expressions, et en particulier ce facteur $r^2$&nbsp;?
 
@@ -2364,12 +2380,123 @@ Autrement dit, l'intégrale $\oint \sum\_i p\_i\\,\mathrm{d}x\_i$ le long d'une 
 
 Cette «&nbsp;aire&nbsp;» est ce que les mathématiciens appellent une **forme symplectique**. La géométrie de l'espace des phases, la **géométrie symplectique**, n'a ni longueurs ni angles, mais des aires&nbsp;: c'est exactement ce que l'on a utilisé tout au long de cette page.
 
+<span id="symetries"></span>
+
+## Symétries et crochet de Poisson
+
+Jusqu'ici, un seul hamiltonien a fait couler le système. Mais on a vu plus haut que **n'importe quelle** fonction de l'espace des phases engendre son propre écoulement, et que celui-ci conserve les aires. Mettons deux de ces écoulements face à face&nbsp;: il en sort le théorème de Noether, et le calcul tient en quelques lignes.
+
+### Le crochet, ou la pente de $G$ le long de l'écoulement
+
+Soit $G(x, p)$ une grandeur quelconque, c'est-à-dire un second relief au-dessus du plan de phase. Quand le système suit l'écoulement de $H$, la valeur de $G$ qu'il rencontre varie. Le calcul est celui qu'on a fait pour $H$ au début de la page&nbsp;:
+
+$$\frac{\mathrm{d}G}{\mathrm{d}t} = \frac{\partial G}{\partial x}\\,\dot x + \frac{\partial G}{\partial p}\\,\dot p = \frac{\partial G}{\partial x}\frac{\partial H}{\partial p} - \frac{\partial G}{\partial p}\frac{\partial H}{\partial x} \\;=:\\; \\{G, H\\}.$$
+
+Cette combinaison s'appelle le **crochet de Poisson** de $G$ et $H$. Pour $G = H$, les deux termes se détruisent&nbsp;: c'est la conservation de $H$.
+
+Le crochet a une lecture géométrique immédiate. L'expression est de la forme $ad - bc$, comme l'aire du parallélogramme construit sur $(a, b)$ et $(c, d)$ rencontrée plus haut&nbsp;: c'est l'**aire orientée du parallélogramme construit sur les gradients** $\nabla G = (\partial\_x G, \partial\_p G)$ et $\nabla H = (\partial\_x H, \partial\_p H)$. D'où deux propriétés qu'on lit sur la figure.
+
+<ul>
+<li><b>L'antisymétrie.</b> Échanger les deux vecteurs change le signe de l'aire&nbsp;: $\{G, H\} = -\{H, G\}$.</li>
+<li><b>L'annulation.</b> $\{G, H\} = 0$ lorsque les gradients sont parallèles, c'est-à-dire lorsque les courbes de niveau de $G$ et de $H$ sont tangentes. $G$ ne varie alors pas le long des courbes de niveau de $H$, qui sont les trajectoires.</li>
+</ul>
+
+<div class="svg-container">
+<svg viewBox="0 0 600 312" role="img" aria-label="Le crochet de Poisson comme aire. Au point d'une trajectoire circulaire de H, on trace les gradients de H et de G. À gauche, pour G = x, les gradients ne sont pas parallèles : le parallélogramme qu'ils engendrent a une aire non nulle et G varie le long de la trajectoire. À droite, pour G = H au carré, les gradients sont parallèles : l'aire est nulle et G reste constante sur la trajectoire." style="width:100%;max-width:600px;height:auto;">
+<defs><marker id="ckax" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#94a3b8"/></marker></defs>
+<defs><marker id="ckh" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker></defs>
+<defs><marker id="ckg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#970E53"/></marker></defs>
+<defs><marker id="ckm" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#64748b"/></marker></defs>
+<line x1="22.0" y1="150.0" x2="278.0" y2="150.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#ckax)"/>
+<line x1="150.0" y1="262.0" x2="150.0" y2="32.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#ckax)"/>
+<text x="278.0" y="167.0" text-anchor="end" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">x</tspan></text>
+<text x="142.0" y="42.0" text-anchor="end" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">p</tspan></text>
+<circle cx="150" cy="150" r="35" fill="none" stroke="#004D80" stroke-width="1.0" stroke-opacity="0.35"/>
+<circle cx="150" cy="150" r="70" fill="none" stroke="#004D80" stroke-width="1.0" stroke-opacity="0.35"/>
+<circle cx="150" cy="150" r="105" fill="none" stroke="#004D80" stroke-width="1.0" stroke-opacity="0.35"/>
+<line x1="45.0" y1="50.0" x2="45.0" y2="250.0" stroke="#970E53" stroke-width="0.9" stroke-opacity="0.3" stroke-dasharray="3 3"/>
+<line x1="80.0" y1="50.0" x2="80.0" y2="250.0" stroke="#970E53" stroke-width="0.9" stroke-opacity="0.3" stroke-dasharray="3 3"/>
+<line x1="115.0" y1="50.0" x2="115.0" y2="250.0" stroke="#970E53" stroke-width="0.9" stroke-opacity="0.3" stroke-dasharray="3 3"/>
+<line x1="150.0" y1="50.0" x2="150.0" y2="250.0" stroke="#970E53" stroke-width="0.9" stroke-opacity="0.3" stroke-dasharray="3 3"/>
+<line x1="185.0" y1="50.0" x2="185.0" y2="250.0" stroke="#970E53" stroke-width="0.9" stroke-opacity="0.3" stroke-dasharray="3 3"/>
+<line x1="220.0" y1="50.0" x2="220.0" y2="250.0" stroke="#970E53" stroke-width="0.9" stroke-opacity="0.3" stroke-dasharray="3 3"/>
+<line x1="255.0" y1="50.0" x2="255.0" y2="250.0" stroke="#970E53" stroke-width="0.9" stroke-opacity="0.3" stroke-dasharray="3 3"/>
+<line x1="195.0" y1="50.0" x2="195.0" y2="250.0" stroke="#970E53" stroke-width="1.4" stroke-opacity="0.8"/>
+<circle cx="150" cy="150" r="70" fill="none" stroke="#004D80" stroke-width="2"/>
+<polygon points="195.0,96.4 237.0,96.4 264.0,64.2 222.0,64.2" fill="#b2d3d1" fill-opacity="0.75" stroke="#006C65" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="232.5" y="84.3" text-anchor="middle" font-size="12.5" fill="#006C65" font-family="Georgia,'Times New Roman',serif" >aire</text>
+<line x1="195.0" y1="96.4" x2="221.0" y2="118.2" stroke="#64748b" stroke-width="1.6" marker-end="url(#ckm)"/>
+<text x="225.0" y="132.2" text-anchor="start" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >mouvement</text>
+<line x1="195.0" y1="96.4" x2="222.0" y2="64.2" stroke="#004D80" stroke-width="2" marker-end="url(#ckh)"/>
+<line x1="195.0" y1="96.4" x2="237.0" y2="96.4" stroke="#970E53" stroke-width="2" marker-end="url(#ckg)"/>
+<circle cx="195.0" cy="96.4" r="3.4" fill="#334155"/>
+<text x="251.0" y="100.4" text-anchor="start" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >∇<tspan font-style="italic">G</tspan></text>
+<text x="216.0" y="58.2" text-anchor="end" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >∇<tspan font-style="italic">H</tspan></text>
+<line x1="322.0" y1="150.0" x2="578.0" y2="150.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#ckax)"/>
+<line x1="450.0" y1="262.0" x2="450.0" y2="32.0" stroke="#94a3b8" stroke-width="1" marker-end="url(#ckax)"/>
+<text x="578.0" y="167.0" text-anchor="end" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">x</tspan></text>
+<text x="442.0" y="42.0" text-anchor="end" font-size="14" fill="#334155" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">p</tspan></text>
+<circle cx="450" cy="150" r="35" fill="none" stroke="#004D80" stroke-width="1.0" stroke-opacity="0.35"/>
+<circle cx="450" cy="150" r="70" fill="none" stroke="#004D80" stroke-width="1.0" stroke-opacity="0.35"/>
+<circle cx="450" cy="150" r="105" fill="none" stroke="#004D80" stroke-width="1.0" stroke-opacity="0.35"/>
+<circle cx="450" cy="150" r="70" fill="none" stroke="#004D80" stroke-width="2"/>
+<line x1="495.0" y1="96.4" x2="521.0" y2="118.2" stroke="#64748b" stroke-width="1.6" marker-end="url(#ckm)"/>
+<text x="525.0" y="132.2" text-anchor="start" font-size="11.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" >mouvement</text>
+<line x1="495.0" y1="96.4" x2="543.6" y2="38.5" stroke="#970E53" stroke-width="2" marker-end="url(#ckg)"/>
+<line x1="495.0" y1="96.4" x2="522.0" y2="64.2" stroke="#004D80" stroke-width="2" marker-end="url(#ckh)"/>
+<circle cx="495.0" cy="96.4" r="3.4" fill="#334155"/>
+<text x="551.6" y="34.5" text-anchor="start" font-size="13" fill="#970E53" font-family="Georgia,'Times New Roman',serif" >∇<tspan font-style="italic">G</tspan></text>
+<text x="514.0" y="62.2" text-anchor="end" font-size="13" fill="#004D80" font-family="Georgia,'Times New Roman',serif" >∇<tspan font-style="italic">H</tspan></text>
+<text x="150.0" y="22.0" text-anchor="middle" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">G</tspan> = <tspan font-style="italic">x</tspan></text>
+<text x="450.0" y="22.0" text-anchor="middle" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif" ><tspan font-style="italic">G</tspan> = <tspan font-style="italic">H</tspan>²</text>
+<text x="150.0" y="284.0" text-anchor="middle" font-size="14" fill="#006C65" font-family="Georgia,'Times New Roman',serif" font-weight="bold">{<tspan font-style="italic">G</tspan>, <tspan font-style="italic">H</tspan>} = <tspan font-style="italic">p</tspan> ≠ 0</text>
+<text x="150.0" y="301.0" text-anchor="middle" font-size="12" fill="#334155" font-family="Georgia,'Times New Roman',serif" ><tspan font-size="12" fill="#64748b"><tspan font-style="italic">G</tspan> varie le long de la trajectoire</tspan></text>
+<text x="450.0" y="284.0" text-anchor="middle" font-size="14" fill="#006C65" font-family="Georgia,'Times New Roman',serif" font-weight="bold">{<tspan font-style="italic">G</tspan>, <tspan font-style="italic">H</tspan>} = 0</text>
+<text x="450.0" y="301.0" text-anchor="middle" font-size="12" fill="#334155" font-family="Georgia,'Times New Roman',serif" ><tspan font-size="12" fill="#64748b"><tspan font-style="italic">G</tspan> reste constante sur la trajectoire</tspan></text>
+</svg>
+</div>
+<p class="legende">Au point d'une trajectoire de $H = \frac{x^2 + p^2}{2}$ (cercles bleus), le crochet est l'aire du parallélogramme construit sur $\nabla G$ et $\nabla H$. À gauche, $G = x$&nbsp;: les gradients ne sont pas alignés, l'aire vaut $\{x, H\} = p$ (ce qu'on savait déjà&nbsp;: $\dot x = p$), et $G$ varie quand le point avance. À droite, $G = H^2$&nbsp;: les lignes de niveau de $G$ sont celles de $H$, les gradients sont parallèles, l'aire est nulle et $G$ ne change pas.</p>
+
+Avec $n$ degrés de liberté, on additionne les aires de chaque plan $(x\_i, p\_i)$&nbsp;: $\\{G, H\\} = \sum\_i \left(\frac{\partial G}{\partial x\_i}\frac{\partial H}{\partial p\_i} - \frac{\partial G}{\partial p\_i}\frac{\partial H}{\partial x\_i}\right)$. C'est la même structure que la somme des aires projetées de la section précédente&nbsp;: le crochet est la forme symplectique appliquée aux gradients.
+
+### Faire couler $G$&nbsp;: la symétrie
+
+Faisons maintenant couler $G$, comme on a fait couler $K$ plus haut&nbsp;:
+
+$$\frac{\mathrm{d}x}{\mathrm{d}s} = \frac{\partial G}{\partial p}, \qquad \frac{\mathrm{d}p}{\mathrm{d}s} = -\frac{\partial G}{\partial x}.$$
+
+C'est une transformation canonique, puisqu'un écoulement de ce type conserve les aires. Pendant ce temps, $H$ varie à la vitesse (même calcul, rôles échangés)&nbsp;:
+
+$$\frac{\mathrm{d}H}{\mathrm{d}s} = \frac{\partial H}{\partial x}\frac{\partial G}{\partial p} - \frac{\partial H}{\partial p}\frac{\partial G}{\partial x} = \\{H, G\\} = -\\{G, H\\}.$$
+
+Le même nombre, au signe près, mesure donc deux choses à la fois&nbsp;: la vitesse à laquelle $G$ varie quand on fait couler $H$, et la vitesse à laquelle $H$ varie quand on fait couler $G$.
+
+<div id="theo">
+<p><b>Théorème de Noether (version hamiltonienne).</b> Pour une fonction $G$ de l'espace des phases, les deux propriétés suivantes sont équivalentes&nbsp;:</p>
+<p style="text-align:center;">(i) $G$ est conservée au cours du mouvement&nbsp;; &nbsp;&nbsp; (ii) $H$ est invariant par l'écoulement engendré par $G$ (c'est une <b>symétrie</b>).</p>
+<p>Elles traduisent la même égalité&nbsp;: $\{G, H\} = 0$.</p>
+</div>
+
+Quelques exemples, qui sont autant de symétries bien connues&nbsp;:
+<ul>
+<li><b>Translation.</b> Avec $G = p$, l'écoulement est $\mathrm{d}x/\mathrm{d}s = 1$, $\mathrm{d}p/\mathrm{d}s = 0$&nbsp;: la translation $x \mapsto x + s$. Comme $\{p, H\} = -\partial H/\partial x$, le moment est conservé si et seulement si $H$ ne dépend pas de $x$. C'est la coordonnée cyclique.</li>
+<li><b>Rotation.</b> Avec $G = p_\theta$, l'écoulement est $\mathrm{d}\theta/\mathrm{d}s = 1$&nbsp;: la rotation d'angle $s$. On retrouve le résultat des coordonnées polaires. En coordonnées cartésiennes, $G = x p_y - y p_x$ n'est plus le moment conjugué d'une coordonnée, mais l'énoncé reste le même&nbsp;: son écoulement fait tourner ensemble les positions et les moments, et $H$ y est invariant si le système est invariant par rotation.</li>
+<li><b>Translation dans le temps.</b> Avec $G = H$, l'écoulement est le mouvement lui-même, et $\{H, H\} = 0$&nbsp;: la conservation de l'énergie est la symétrie par translation dans le temps.</li>
+</ul>
+
+<div class="encadre">
+<div class="encadre-titre">Pourquoi le théorème de Noether est-il d'ordinaire plus difficile&nbsp;?</div>
+<p>Emmy Noether l'a démontré en 1918, dans le cadre lagrangien. Il faut alors faire varier l'action, admettre que l'invariance ne soit vraie qu'à une dérivée totale près, et reconstruire la quantité conservée à partir de la symétrie. Ici, la démonstration tient à l'antisymétrie d'un déterminant.</p>
+<p>Rien n'est gratuit pour autant. Le travail a été fait en amont&nbsp;: toute fonction engendre un écoulement qui conserve les aires, et l'on a choisi des variables où positions et moments sont sur un pied d'égalité. Ce que le formalisme ne fait pas à notre place, c'est de <b>trouver</b> la fonction $G$ qui engendre la symétrie, ou les coordonnées où elle devient une simple translation.</p>
+<p>Cette égalité de traitement donne en revanche accès à des symétries qui ne sont pas des transformations de l'espace seul. Le problème de Kepler, par exemple, possède une grandeur conservée supplémentaire, le <b>vecteur de Runge-Lenz</b>, dont l'écoulement mélange positions et moments. Elle est difficile à deviner depuis l'espace des configurations, mais ici elle n'est qu'une fonction de plus sur l'espace des phases, dont on vérifie que le crochet avec $H$ s'annule. Et la réciproque (toute grandeur conservée engendre une symétrie) vient avec le même calcul.</p>
+</div>
+
 ## Et ensuite&nbsp;?
 
 Une fois les équations de Hamilton établies, plusieurs routes s'ouvrent.
 <ul>
-<li><b>Les quantités conservées.</b> Si une coordonnée n'apparaît pas dans le hamiltonien, son moment est conservé&nbsp;: chercher une transformation canonique qui fasse disparaître le plus de coordonnées possible revient à résoudre le problème. C'est le programme de l'<b>équation de Hamilton-Jacobi</b>, l'une des méthodes les plus puissantes d'intégration exacte (voir <a href="../action/#jacobi">Jacobi</a> dans le panorama du principe de moindre action).</li>
-<li><b>Les crochets de Poisson.</b> L'évolution de toute grandeur $f(x, p)$ s'écrit $\dot f = \frac{\partial f}{\partial x}\frac{\partial H}{\partial p} - \frac{\partial f}{\partial p}\frac{\partial H}{\partial x}$, une combinaison appelée crochet de Poisson, $\{f, H\}$. En mécanique quantique, il deviendra le commutateur&nbsp;: $\{f, H\} \to \frac{1}{\mathrm{i}\hbar}[\hat f, \hat H]$.</li>
+<li><b>Les quantités conservées.</b> Si une coordonnée n'apparaît pas dans le hamiltonien, son moment est conservé (c'est un cas particulier du <a href="#symetries">théorème de Noether</a>)&nbsp;: chercher une transformation canonique qui fasse disparaître le plus de coordonnées possible revient à résoudre le problème. C'est le programme de l'<b>équation de Hamilton-Jacobi</b>, l'une des méthodes les plus puissantes d'intégration exacte (voir <a href="../action/#jacobi">Jacobi</a> dans le panorama du principe de moindre action).</li>
+<li><b>L'algèbre des crochets.</b> Le crochet est bilinéaire, antisymétrique, et vérifie l'identité de Jacobi. Il en découle que, si $F$ et $G$ sont conservées, $\{F, G\}$ l'est aussi&nbsp;: les composantes $L_x$ et $L_y$ du moment cinétique conservées entraînent la conservation de $L_z = \{L_x, L_y\}$. En mécanique quantique, le crochet deviendra le commutateur&nbsp;: $\{f, H\} \to \frac{1}{\mathrm{i}\hbar}[\hat f, \hat H]$, et le théorème de Noether s'énoncera de la même façon, $[\hat G, \hat H] = 0$.</li>
 <li><b>La physique statistique.</b> Le théorème de Liouville garantit que l'on peut raisonner sur des volumes de l'espace des phases, et compter les états en divisant ces volumes par une aire élémentaire, qui s'avérera être la constante de Planck $h$.</li>
 </ul>
 
