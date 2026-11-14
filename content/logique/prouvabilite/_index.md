@@ -297,13 +297,38 @@ Pourtant, $\text{(T)}$ n'est pas faux. Si la théorie est saine, tout ce qu'elle
 
 ## La logique GL
 
-Le théorème de Löb peut lui-même être démontré *par* la théorie, ce qui en donne une version internalisée, devenue un axiome.
+Tel qu'on l'a énoncé, le théorème de Löb est un résultat **sur** la théorie, formulé de l'extérieur&nbsp;: «&nbsp;si la théorie démontre $\Box\phi\rightarrow\phi$, alors elle démontre $\phi$&nbsp;». C'est une **règle**, qui fait passer d'une démonstration à une autre. Mais rien n'empêche de l'écrire **dans** la théorie, en remplaçant le «&nbsp;la théorie démontre&nbsp;» ($\vdash$), qui appartient à notre langage de commentateurs, par la boîte, qui dit la même chose en arithmétique. On obtient une seule formule, $\Box(\Box\phi\rightarrow\phi)\rightarrow\Box\phi$&nbsp;: c'est la version **interne** du théorème.
 
-<div class="def">
-<p>La <b>logique de la prouvabilité de Gödel-Löb</b> ($\textbf{GL}$) est formée à partir du système $\textbf{K}$ auquel on ajoute l'axiome de Löb $\text{(L)}=\Box(\Box\phi\rightarrow\phi)\rightarrow\Box\phi$ (c'est la version formalisée du théorème de Löb).</p>
+On a déjà croisé ce passage de l'externe à l'interne. Le tableau des conditions de dérivabilité en contenait un exemple&nbsp;: l'axiome $\text{(4)}$ n'est autre que la version interne de la règle de nécessitation.
+
+<div class="tableau-large">
+<table class="tab-recap">
+<tr><th>Version externe<br>(un énoncé <i>sur</i> la théorie)</th><th>Version interne<br>(un énoncé <i>de</i> la théorie)</th></tr>
+<tr><td>si $\vdash\phi$, alors $\vdash\Box\phi$&nbsp;&nbsp;(nécessitation)</td><td>$\Box\phi\rightarrow\Box\Box\phi$&nbsp;&nbsp;$\text{(4)}$</td></tr>
+<tr><td>si $\vdash\Box\phi\rightarrow\phi$, alors $\vdash\phi$&nbsp;&nbsp;(Löb)</td><td>$\Box(\Box\phi\rightarrow\phi)\rightarrow\Box\phi$&nbsp;&nbsp;$\text{(L)}$</td></tr>
+</table>
 </div>
 
-Avec $\phi=\bot$, l'axiome $\text{(L)}$ donne $\Box\neg\Box\bot\rightarrow\Box\bot$, soit, par contraposition et en notation diamant, $\Diamond\top\rightarrow\neg\Box\Diamond\top$&nbsp;: la forme interne du second théorème d'incomplétude n'est plus qu'une instance d'un axiome.
+Et la théorie démontre bel et bien cette formule. La preuve de Löb n'utilise que le lemme de diagonalisation et les trois conditions de dérivabilité, que l'arithmétique connaît d'elle-même&nbsp;: elle peut donc refaire toute la preuve «&nbsp;sous la boîte&nbsp;», en raisonnant sur ses propres démonstrations. C'est en ce sens que le théorème est **internalisé**&nbsp;: la théorie le sait d'elle-même. La version interne contient d'ailleurs la version externe&nbsp;: si $\vdash\Box\phi\rightarrow\phi$, la nécessitation donne $\vdash\Box(\Box\phi\rightarrow\phi)$, l'axiome $\text{(L)}$ donne $\vdash\Box\phi$, et l'hypothèse donne enfin $\vdash\phi$.
+
+<div class="encadre bleu">
+<div class="encadre-titre">Un théorème peut-il devenir un axiome&nbsp;?</div>
+
+Un axiome n'est pas un énoncé indémontrable par nature&nbsp;: c'est un **point de départ**, choisi à l'intérieur d'un système donné. Or deux systèmes coexistent ici.
+
+Dans l'arithmétique $\text{PA}$, la formule $\Box(\Box\phi\rightarrow\phi)\rightarrow\Box\phi$ est un **théorème**&nbsp;: on vient de voir qu'elle se démontre à partir des [axiomes de Peano](../predicats/preuve/#les-axiomes). La logique modale $\textbf{GL}$, elle, ne connaît ni les nombres ni les preuves, seulement la boîte. Le lemme de diagonalisation n'y est pas disponible, et l'on ne peut pas y refaire la démonstration. On y prend donc $\text{(L)}$ comme point de départ.
+
+$\textbf{GL}$ est en somme un **résumé** de ce que l'arithmétique sait de sa propre prouvabilité&nbsp;: on y retient quelques-uns de ses théorèmes, choisis pour que tous les autres s'en déduisent par la seule logique modale. Que ce résumé soit fidèle et complet, c'est le [théorème de Solovay](#retour-à-larithmétique-le-théorème-de-solovay), à la fin de cette page.
+
+Il n'y a là rien d'étrange&nbsp;: un même énoncé peut être axiome dans un système et théorème dans un autre. En géométrie, on peut prendre pour axiome le cinquième postulat d'Euclide et en déduire l'axiome de Playfair («&nbsp;par un point passe une unique parallèle à une droite donnée&nbsp;»), ou l'inverse. Et l'on va voir tout de suite que l'axiome $\text{(4)}$ de $\textbf{K4}$ devient un simple théorème de $\textbf{GL}$.
+
+</div>
+
+<div class="def">
+<p>La <b>logique de la prouvabilité de Gödel-Löb</b> ($\textbf{GL}$) est formée à partir du système $\textbf{K}$ auquel on ajoute l'axiome de Löb $\text{(L)}=\Box(\Box\phi\rightarrow\phi)\rightarrow\Box\phi$ (la version interne du théorème de Löb).</p>
+</div>
+
+Avec $\phi=\bot$, l'axiome $\text{(L)}$ donne $\Box\neg\Box\bot\rightarrow\Box\bot$, soit, par contraposition et en notation diamant, ${\Diamond\top\rightarrow\neg\Box\Diamond\top}$&nbsp;: la forme interne du second théorème d'incomplétude n'est plus qu'une instance d'un axiome.
 
 On remarque que l'axiome $\text{(4)}$, dont on s'est tant servi, ne figure pas dans la définition. C'est qu'il est devenu superflu.
 
