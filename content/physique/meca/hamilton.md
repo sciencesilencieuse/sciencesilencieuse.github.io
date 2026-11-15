@@ -132,6 +132,15 @@ margin-top:0em;
     color: #006C65;
     margin-bottom: 0.3em;
 }
+.encadre > details > summary.encadre-titre
+{
+    cursor: pointer;
+    margin-bottom: 0.3em;
+}
+.encadre > details[open] > summary.encadre-titre
+{
+    margin-bottom: 0.6em;
+}
 .fig-btn
 {
     display: inline-flex;
@@ -2642,10 +2651,9 @@ la dérivée étant prise à $p$ fixé. C'est $\dot p\_i = -\partial H/\partial 
 
 Pour un système de $N$ particules, il suffit de répéter le raisonnement pour chacune. Mieux&nbsp;: on peut voir les $N$ particules comme un seul point d'un espace de dimension $3N$, muni d'une métrique où chaque particule compte avec sa masse. Le système entier devient une seule particule, et tout ce qui précède s'applique tel quel.
 
-<details style="background-color:#F4F4F4;border-radius:8px;padding:8px 15px;margin-bottom:1em;">
-<summary>Pour aller plus loin&nbsp;: une liberté de jauge, et le champ magnétique</summary>
-
-<div style="margin-top:0.5em;">
+<div class="encadre">
+<details>
+<summary class="encadre-titre">Pour aller plus loin&nbsp;: une liberté de jauge, et le champ magnétique</summary>
 
 Le choix des moments n'est pas tout à fait unique. On peut ajouter aux deux membres de l'équation de Newton une même quantité $\frac{\mathrm{d}f\_i}{\mathrm{d}t} = \frac{\partial f\_i}{\partial q^j}\dot q^j$, où les $f\_i(q)$ sont des fonctions quelconques de la position, et définir les moments par $p\_i = m\\,g\_{ij}\dot q^j + f\_i(q)$. On obtient encore la forme hamiltonienne, avec
 
@@ -2659,8 +2667,8 @@ $$\vec p = m\vec v + e\vec A, \qquad H = \frac{(\vec p - e\vec A)^2}{2m} + V.$$
 
 Le moment n'est plus la quantité de mouvement $m\vec v$&nbsp;! Et comme $\vec A$ n'est défini qu'à un gradient près, $\vec p$ dépend d'un choix de jauge, sans que la physique en dépende.
 
-</div>
 </details>
+</div>
 
 ## Changer de variables sans tout casser
 
