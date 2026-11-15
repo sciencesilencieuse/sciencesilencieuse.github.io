@@ -2249,7 +2249,7 @@ Le remède se lit sur la figure de droite&nbsp;: prendre le moment cinétique $p
 
 ## Trouver les moments&nbsp;: la géométrie de l'espace
 
-Il s'agit de construire, pour des coordonnées $q^i$ quelconques, les variables qui jouent le rôle de $p\_\theta$. Le point de départ est la loi de Newton, $m\vec a = -\vec\nabla V$. En coordonnées cartésiennes, c'est déjà un système d'équations sur les coordonnées, $m\ddot x = -\partial V/\partial x$ et $m\ddot y = -\partial V/\partial y$&nbsp;: ce sont les projections de l'équation vectorielle sur les deux axes. Pour des coordonnées quelconques, la marche à suivre est la même&nbsp;: projeter la loi de Newton sur des vecteurs bien choisis, un par coordonnée. Cela demande trois choses&nbsp;: une base de vecteurs liée aux coordonnées, une façon de lire sur cette base les composantes de la vitesse et de la force, puis la projection elle-même. Les moments apparaîtront à la dernière étape. Voyons d'abord ce que cela donne en coordonnées polaires, où l'on connaît déjà la réponse.
+Il s'agit de construire, pour des coordonnées $q^i$ quelconques, les variables qui jouent le rôle de $p\_\theta$. Le point de départ est la loi de Newton, $m\vec a = -\vec\nabla V$. En coordonnées cartésiennes, c'est déjà un système d'équations sur les coordonnées, $m\ddot x = -\partial V/\partial x$ et $m\ddot y = -\partial V/\partial y$&nbsp;: ce sont les projections de l'équation vectorielle sur les deux axes. Pour des coordonnées quelconques, la marche à suivre est la même&nbsp;: projeter la loi de Newton sur des vecteurs bien choisis, un par coordonnée. Cela demande trois choses&nbsp;: une base de vecteurs liée aux coordonnées, les deux façons de lire un vecteur sur une telle base, puis la projection elle-même. Les moments apparaîtront à la dernière étape. Voyons d'abord ce que cela donne en coordonnées polaires, où l'on connaît déjà la réponse.
 
 ### L'exemple des coordonnées polaires
 
@@ -2272,19 +2272,25 @@ Les deux moments n'ont pas la même dimension&nbsp;: $p\_r$ est une quantité de
 
 ### Décrire un déplacement&nbsp;: la base attachée aux coordonnées
 
-Projeter la loi de Newton suppose de savoir sur quels vecteurs la projeter, et comment écrire sur eux la vitesse et la force. En coordonnées cartésiennes, la base est imposée par les axes. Dans les autres, elle se déduit de la façon dont les coordonnées décrivent un déplacement.
+Pour projeter la loi de Newton, il faut une base, et savoir écrire dessus la vitesse et la force. En coordonnées cartésiennes, la base est imposée par les axes&nbsp;: $\vec v = \dot x\\,\vec e\_x + \dot y\\,\vec e\_y$ et $\vec\nabla V = \frac{\partial V}{\partial x}\\,\vec e\_x + \frac{\partial V}{\partial y}\\,\vec e\_y$, sur deux vecteurs unitaires et orthogonaux. En coordonnées polaires, on écrit d'ordinaire, avec les vecteurs **unitaires** $\hat e\_r$ (radial) et $\hat e\_\theta$ (orthoradial),
 
-En coordonnées cartésiennes, $\vec v = \dot x\\,\vec e\_x + \dot y\\,\vec e\_y$&nbsp;: les composantes sont les $\dot x$ et $\dot y$, sur deux vecteurs unitaires et orthogonaux. En coordonnées polaires, on écrit d'ordinaire
+$$\vec v = \dot r\\,\hat e\_r + r\dot\theta\\,\hat e\_\theta, \qquad \vec\nabla V = \frac{\partial V}{\partial r}\\,\hat e\_r + \frac{1}{r}\frac{\partial V}{\partial \theta}\\,\hat e\_\theta.$$
 
-$$\vec v = \dot r\\,\hat e\_r + r\dot\theta\\,\hat e\_\theta,$$
+Un facteur $r$ s'est glissé dans les composantes angulaires&nbsp;: un angle n'est pas une longueur, et tourner de $\mathrm{d}\theta$ déplace le point de $r\\,\mathrm{d}\theta$. Ce facteur de conversion entre variations de coordonnées et longueurs est la **métrique** des coordonnées polaires&nbsp;: elle donne la longueur d'un petit déplacement, $\mathrm{d}s^2 = \mathrm{d}r^2 + r^2\\,\mathrm{d}\theta^2$.
 
-avec les vecteurs **unitaires** $\hat e\_r$ (radial) et $\hat e\_\theta$ (orthoradial). Le facteur $r$ devant $\dot\theta$ est la seule nouveauté&nbsp;: un angle n'est pas une longueur, et tourner de $\mathrm{d}\theta$ déplace le point de $r\\,\mathrm{d}\theta$. Ce facteur de conversion entre variations de coordonnées et longueurs, c'est la **métrique** des coordonnées polaires&nbsp;: $\mathrm{d}s^2 = \mathrm{d}r^2 + r^2\\,\mathrm{d}\theta^2$.
+Ces facteurs brouillent les équations qu'on veut écrire. Les inconnues du problème sont les fonctions $q^i(t)$&nbsp;: les équations qui les déterminent ne doivent faire intervenir que ces fonctions, leurs vitesses $\dot q^i$, et la façon dont le potentiel dépend des $q^i$, c'est-à-dire les $\partial V/\partial q^i$. La base unitaire leur substitue des mélanges, $r\dot\theta$ au lieu de $\dot\theta$, $\frac{1}{r}\partial\_\theta V$ au lieu de $\partial\_\theta V$. L'équation de Newton projetée sur $\hat e\_\theta$ en donne un exemple&nbsp;:
 
-Remarquons que la composante de $\vec v$ sur $\hat e\_\theta$ n'est pas $\dot\theta$, mais $r\dot\theta$. Or ce sont les $\dot q^i$ qui nous intéressent&nbsp;: on cherche des équations pour les coordonnées $q^i(t)$, pas pour des combinaisons de leurs dérivées. Exigeons donc que les composantes de la vitesse soient exactement les $\dot q^i$&nbsp;:
+$$m\left(r\ddot\theta + 2\dot r\dot\theta\right) = -\frac{1}{r}\frac{\partial V}{\partial\theta},$$
 
-$$\vec v = \dot q^i\\,\vec e\_i.$$
+où des facteurs $r$ et $1/r$ n'appartiennent ni à la coordonnée ni au potentiel, mais à la base choisie.
 
-Ici et dans toute la suite, on utilise la convention d'Einstein&nbsp;: un indice répété, une fois en haut et une fois en bas, est sommé. La règle de dérivation en chaîne, $\vec v = \frac{\mathrm{d}\vec r}{\mathrm{d}t} = \frac{\partial \vec r}{\partial q^i}\\,\dot q^i$, dit que c'est possible, et d'une seule façon&nbsp;:
+Exigeons donc de la base deux propriétés&nbsp;: les composantes de la vitesse sont exactement les $\dot q^i$, et les projections de la force sur les vecteurs de base exactement les $-\partial V/\partial q^i$. En notant $\vec e\_i$ les vecteurs de base[^einstein], cela s'écrit
+
+$$\vec v = \dot q^i\\,\vec e\_i, \qquad \vec e\_i\cdot\vec\nabla V = \frac{\partial V}{\partial q^i}.$$
+
+[^einstein]: Convention d'Einstein&nbsp;: un indice répété, une fois en haut et une fois en bas, est sommé sur toutes ses valeurs. Ainsi $\dot q^i\\,\vec e\_i$ désigne $\sum\_i \dot q^i\\,\vec e\_i$. Cette convention est utilisée dans tout ce qui suit.
+
+La règle de dérivation en chaîne montre que ces deux propriétés se réalisent avec un même choix. D'une part, $\vec v = \frac{\mathrm{d}\vec r}{\mathrm{d}t} = \frac{\partial \vec r}{\partial q^i}\\,\dot q^i$&nbsp;; d'autre part, $\frac{\partial V}{\partial q^i} = \vec\nabla V\cdot\frac{\partial \vec r}{\partial q^i}$. Il suffit donc de prendre
 
 <div id="def">
 
@@ -2292,13 +2298,17 @@ $$\vec e\_i = \frac{\partial \vec r}{\partial q^i}.$$
 
 </div>
 
-Le vecteur $\vec e\_i$ est le déplacement du point quand la seule coordonnée $q^i$ augmente d'une unité&nbsp;: c'est la base **attachée aux coordonnées**. En polaires, $\vec e\_r = \hat e\_r$, mais $\vec e\_\theta = r\\,\hat e\_\theta$. Ce n'est donc pas le vecteur unitaire de l'habitude, mais le même vecteur **multiplié par $r$**&nbsp;: même direction, longueur $r$ (c'est le déplacement que produirait une variation de $1$ radian, en prolongeant la tangente). Le facteur $r$ n'a pas disparu&nbsp;: il est passé de la composante ($r\dot\theta$) au vecteur de base, qui le porte désormais.
+Le vecteur $\vec e\_i$ est le déplacement du point quand la seule coordonnée $q^i$ augmente d'une unité&nbsp;: c'est la base **attachée aux coordonnées**. En polaires, $\vec e\_r = \hat e\_r$, mais $\vec e\_\theta = r\\,\hat e\_\theta$&nbsp;: le vecteur unitaire, multiplié par $r$ (c'est le déplacement que produirait une variation de $1$ radian, en prolongeant la tangente). Le facteur $r$ est passé des composantes au vecteur de base. Projeter sur $\vec e\_\theta$ plutôt que sur $\hat e\_\theta$ revient à multiplier l'équation précédente par $r$, ce qui donne
 
-Et c'est toujours la métrique qui le fixe. Les produits scalaires des vecteurs de base, qui donnent leurs longueurs et leurs angles, forment le **tenseur métrique**&nbsp;:
+$$\frac{\mathrm{d}}{\mathrm{d}t}\left(m r^2\dot\theta\right) = -\frac{\partial V}{\partial\theta}.$$
+
+Le membre de droite est exactement $-\partial V/\partial\theta$, et celui de gauche est la dérivée d'une seule quantité.
+
+Le facteur qui fait passer de $\hat e\_\theta$ à $\vec e\_\theta$ est fixé par la métrique. Les produits scalaires des vecteurs de base, qui donnent leurs longueurs et leurs angles, forment le **tenseur métrique**&nbsp;:
 
 $$g\_{ij} = \vec e\_i\cdot\vec e\_j, \qquad \mathrm{d}s^2 = g\_{ij}\\,\mathrm{d}q^i\\,\mathrm{d}q^j.$$
 
-Pour les polaires, $g\_{rr} = 1$, $g\_{r\theta} = 0$ et $g\_{\theta\theta} = |\vec e\_\theta|^2 = r^2$&nbsp;: le $r^2$ de la métrique est bien le carré de la longueur de $\vec e\_\theta$, et l'on retrouve $\mathrm{d}s^2 = \mathrm{d}r^2 + r^2\\,\mathrm{d}\theta^2$.
+Pour les polaires, $g\_{rr} = 1$, $g\_{r\theta} = 0$ et $g\_{\theta\theta} = |\vec e\_\theta|^2 = r^2$&nbsp;: le $r^2$ de la métrique est le carré de la longueur de $\vec e\_\theta$.
 
 <div class="svg-container">
 <svg id="bp-svg" viewBox="0 0 600 330" role="img" aria-label="Les vecteurs de base des coordonnées polaires au point P. Le vecteur e_r est unitaire. Le vecteur e_θ a la même direction que le vecteur unitaire orthoradial, mais une longueur r : il s'allonge quand le point s'éloigne de l'origine. On peut faire glisser le point." style="width:100%;max-width:600px;height:auto;cursor:crosshair;touch-action:none;">
@@ -2392,11 +2402,9 @@ Pour les polaires, $g\_{rr} = 1$, $g\_{r\theta} = 0$ et $g\_{\theta\theta} = |\v
 </script>
 <p class="legende">Les vecteurs de base des coordonnées polaires au point $P$. Le vecteur $\vec e_r$ est unitaire. Le vecteur $\vec e_\theta$ a la direction du vecteur unitaire $\hat e_\theta$ (en sombre), mais une longueur $r$&nbsp;: il s'allonge quand le point s'éloigne de $O$, et $g_{\theta\theta} = r^2$ suit. Faites glisser $P$.</p>
 
-Pourquoi renoncer aux vecteurs unitaires&nbsp;? Parce que cette base est la seule qui rende les composantes de la vitesse égales aux $\dot q^i$ dans des coordonnées quelconques, y compris obliques, où l'on ne peut de toute façon pas imposer à la fois des vecteurs unitaires et orthogonaux. Et elle rendra un second service, tout aussi décisif, au moment de projeter la force.
-
 ### Deux façons de décrire un vecteur
 
-Avec une base qui n'est plus orthonormée (ici, $\vec e\_\theta$ est étiré&nbsp;; avec des coordonnées obliques, les axes ne sont même plus orthogonaux), il y a deux façons de définir « la composante d'un vecteur $\vec w$ sur $\vec e\_i$ ». Elles coïncident dans une base orthonormée, ce qui explique qu'on ne les distingue d'ordinaire pas&nbsp;:
+La base attachée aux coordonnées a servi de deux manières&nbsp;: la vitesse s'y décompose, $\vec v = \dot q^i\\,\vec e\_i$, et la force s'y projette, $\vec e\_i\cdot\vec\nabla V$. Ce sont deux façons de définir « la composante d'un vecteur $\vec w$ sur $\vec e\_i$ ». Elles coïncident dans une base orthonormée, ce qui explique qu'on ne les distingue d'ordinaire pas&nbsp;:
 <ul>
 <li><b>Décomposer.</b> On écrit $\vec w = w^i\,\vec e_i$ (c'est la règle du parallélogramme). Ce sont les composantes <i>contravariantes</i>, notées avec un indice en haut. Pour la vitesse, $v^i = \dot q^i$.</li>
 <li><b>Projeter.</b> On calcule le produit scalaire $w_i = \vec w\cdot\vec e_i$. Ce sont les composantes <i>covariantes</i>, notées avec un indice en bas.</li>
@@ -2507,16 +2515,14 @@ Le lien entre les deux est immédiat&nbsp;: $w\_i = \vec w\cdot\vec e\_i = w^j\\
 
 Les noms viennent de la réaction à un changement de base. Si l'on allonge $\vec e\_i$ d'un facteur $\lambda$ (par exemple en changeant d'unité sur cet axe), la composante $w^i$ est divisée par $\lambda$&nbsp;: elle varie à l'**inverse** de la base, d'où contra-variante. La composante $w\_i$, elle, est multipliée par $\lambda$&nbsp;: elle varie **avec** la base, d'où co-variante. C'est ce que montre le curseur de longueur.
 
-En coordonnées polaires, la vitesse a pour composantes contravariantes $(\dot r, \dot\theta)$ et pour composantes covariantes $(\vec v\cdot\vec e\_r, \vec v\cdot\vec e\_\theta) = (\dot r, r^2\dot\theta)$. Le facteur $r^2$ qui nous manquait est apparu&nbsp;: c'est $g\_{\theta\theta}$.
-
-Laquelle des deux descriptions convient à la mécanique&nbsp;? C'est la loi de Newton qui va trancher.
+En coordonnées polaires, la vitesse a pour composantes contravariantes $(\dot r, \dot\theta)$ et pour composantes covariantes $(\vec v\cdot\vec e\_r, \vec v\cdot\vec e\_\theta) = (\dot r, r^2\dot\theta)$&nbsp;: le facteur $r^2$ de $p\_\theta$ y apparaît déjà, c'est $g\_{\theta\theta}$. Quant à la quantité de mouvement $m\vec v$, c'est la projection de la loi de Newton qui dira laquelle des deux lectures est la bonne.
 
 ### Les équations de Newton en coordonnées quelconques
 
-Nous avons une base adaptée aux coordonnées, et deux façons d'en lire les composantes. La loi de Newton, $m\vec a = -\vec\nabla V$, est une équation entre vecteurs&nbsp;: elle est vraie si et seulement si toutes ses projections sur une base le sont. **Projetons**-la sur les vecteurs $\vec e\_i$&nbsp;: on obtiendra une équation pour chaque coordonnée $q^i$. C'est l'étape la plus technique, mais chaque morceau se lit sur un fait déjà rencontré.
+La loi de Newton, $m\vec a = -\vec\nabla V$, est une équation entre vecteurs&nbsp;: elle est vraie si et seulement si toutes ses projections sur une base le sont. **Projetons**-la sur les vecteurs $\vec e\_i$&nbsp;: on obtient une équation pour chaque coordonnée $q^i$. Chaque morceau de la projection se lit sur un fait déjà rencontré.
 
 <ul>
-<li><b>Le membre de droite.</b> D'après la règle de dérivation en chaîne, $\frac{\partial V}{\partial q^i} = \vec\nabla V\cdot\frac{\partial\vec r}{\partial q^i} = \vec\nabla V\cdot\vec e_i$. La projection de la force est donc $-\partial V/\partial q^i$, sans aucune métrique&nbsp;: c'est le second service de la base attachée aux coordonnées.</li>
+<li><b>Le membre de droite.</b> D'après la règle de dérivation en chaîne, $\frac{\partial V}{\partial q^i} = \vec\nabla V\cdot\frac{\partial\vec r}{\partial q^i} = \vec\nabla V\cdot\vec e_i$. La projection de la force est donc $-\partial V/\partial q^i$, sans aucune métrique.</li>
 <li><b>Le membre de gauche.</b> On fait apparaître la dérivée d'un produit scalaire&nbsp;: $\vec a\cdot\vec e_i = \frac{\mathrm{d}}{\mathrm{d}t}\left(\vec v\cdot\vec e_i\right) - \vec v\cdot\frac{\mathrm{d}\vec e_i}{\mathrm{d}t}$. Le premier terme est la dérivée de la <b>projection</b> de la quantité de mouvement $m\vec v$ sur $\vec e_i$&nbsp;: $m\,\vec v\cdot\vec e_i$, une composante covariante, et non $m\dot q^i$.</li>
 <li><b>Le terme correctif.</b> Le vecteur de base $\vec e_i$ change au cours du mouvement, parce que le point se déplace&nbsp;: $\frac{\mathrm{d}\vec e_i}{\mathrm{d}t} = \frac{\partial \vec e_i}{\partial q^j}\,\dot q^j = \frac{\partial^2\vec r}{\partial q^j\,\partial q^i}\,\dot q^j$. En échangeant l'ordre des dérivations, c'est aussi $\frac{\partial}{\partial q^i}\left(\dot q^j\,\vec e_j\right) = \frac{\partial\vec v}{\partial q^i}$, la dérivée étant prise à vitesses $\dot q^j$ fixées. Donc $\vec v\cdot\frac{\mathrm{d}\vec e_i}{\mathrm{d}t} = \vec v\cdot\frac{\partial\vec v}{\partial q^i} = \frac12\frac{\partial (\vec v\cdot\vec v)}{\partial q^i} = \frac12\frac{\partial g_{kl}}{\partial q^i}\,\dot q^k\dot q^l$.</li>
 </ul>
@@ -2578,9 +2584,7 @@ $$p\_i = m\\,\vec v\cdot\vec e\_i = m\\,g\_{ij}\\,\dot q^j.$$
 </div>
 <p class="legende">Le moment $p_\theta$ est la projection de la quantité de mouvement sur $\vec e_\theta$. Comme ce vecteur a pour longueur $r$, on trouve $p_\theta = m\,(r\dot\theta)\times r = m r^2\dot\theta$.</p>
 
-En coordonnées cartésiennes, où la base est orthonormée, les deux sortes de composantes coïncident, et l'on retrouve $p = m\dot x$. Dès que la base n'est plus orthonormée, elles diffèrent, et ce sont les projections qui font les bons moments. On note $g^{ij}$ la matrice inverse de $g\_{ij}$, de sorte que $\dot q^i = \frac{1}{m}g^{ij}p\_j$&nbsp;: on repasse des composantes covariantes aux contravariantes en inversant le dictionnaire.
-
-Cela explique aussi pourquoi les deux moments polaires n'ont pas la même dimension. Le vecteur $\vec e\_r$ est sans dimension (un déplacement par unité de $r$), alors que $\vec e\_\theta$ est une longueur (un déplacement par radian). Donc $p\_r = m\vec v\cdot\vec e\_r$ est une quantité de mouvement, et $p\_\theta = m\vec v\cdot\vec e\_\theta$ une quantité de mouvement multipliée par une longueur, c'est-à-dire un moment cinétique. Quant au facteur $r^2$, c'est $g\_{\theta\theta}$&nbsp;: le carré de la longueur de $\vec e\_\theta$.
+En coordonnées cartésiennes, où la base est orthonormée, on retrouve $p = m\dot x$. Dans les autres, ce sont les projections $m\\,g\_{ij}\dot q^j$, et non les $m\dot q^i$, qui font les bons moments. Cela explique aussi pourquoi les deux moments polaires n'ont pas la même dimension&nbsp;: $\vec e\_r$ est sans dimension (un déplacement par unité de $r$), alors que $\vec e\_\theta$ est une longueur (un déplacement par radian). Donc $p\_r = m\vec v\cdot\vec e\_r$ est une quantité de mouvement, et $p\_\theta = m\vec v\cdot\vec e\_\theta$ une quantité de mouvement multipliée par une longueur, c'est-à-dire un moment cinétique, dont le facteur $r^2$ est $g\_{\theta\theta}$.
 
 ### Le hamiltonien en général
 
@@ -2590,7 +2594,7 @@ $$\dot p\_i = \frac{m}{2}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,\dot q^k\dot
 
 On cherche une fonction $H(q, p)$ telle que $\dot q^j = \partial H/\partial p\_j$ et $\dot p\_i = -\partial H/\partial q^i$, la seconde dérivée étant prise **à moments fixés**.
 
-**La première équation** détermine la dépendance de $H$ en $p$. Notons $g^{ij}$ la matrice inverse de $g\_{ij}$ (elle est symétrique, comme $g\_{ij}$). Inverser la relation $p\_i = m\\,g\_{ij}\dot q^j$ donne $\dot q^j = \frac{1}{m}g^{jk}p\_k$, donc $H$ doit vérifier $\frac{\partial H}{\partial p\_j} = \frac{1}{m}g^{jk}p\_k$. En intégrant par rapport aux $p\_j$,
+**La première équation** détermine la dépendance de $H$ en $p$. Notons $g^{ij}$ la matrice inverse de $g\_{ij}$ (elle est symétrique, comme $g\_{ij}$). Inverser la relation $p\_i = m\\,g\_{ij}\dot q^j$, c'est lire dans l'autre sens le dictionnaire entre composantes covariantes et contravariantes, et cela donne $\dot q^j = \frac{1}{m}g^{jk}p\_k$, donc $H$ doit vérifier $\frac{\partial H}{\partial p\_j} = \frac{1}{m}g^{jk}p\_k$. En intégrant par rapport aux $p\_j$,
 
 $$H(q, p) = \frac{1}{2m}\\,g^{ab}(q)\\,p\_a p\_b + U(q),$$
 
