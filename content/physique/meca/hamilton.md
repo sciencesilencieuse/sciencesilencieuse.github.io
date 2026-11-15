@@ -2602,33 +2602,46 @@ $$\dot p\_i = \frac{m}{2}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,\dot q^k\dot
 
 On cherche une fonction $H(q, p)$ telle que $\dot q^j = \partial H/\partial p\_j$ et $\dot p\_i = -\partial H/\partial q^i$, la seconde dérivée étant prise **à moments fixés**.
 
-**La première équation** détermine la dépendance de $H$ en $p$. Notons $g^{ij}$ la matrice inverse de $g\_{ij}$ (elle est symétrique, comme $g\_{ij}$). Inverser la relation $p\_i = m\\,g\_{ij}\dot q^j$, c'est lire dans l'autre sens le dictionnaire entre composantes covariantes et contravariantes, et cela donne $\dot q^j = \frac{1}{m}g^{jk}p\_k$, donc $H$ doit vérifier $\frac{\partial H}{\partial p\_j} = \frac{1}{m}g^{jk}p\_k$. En intégrant par rapport aux $p\_j$,
+**La première équation** détermine la dépendance de $H$ en $p$. Notons $g^{ij}$ la matrice inverse de $g\_{ij}$ (elle est symétrique, comme $g\_{ij}$). La relation $p\_i = m\\,g\_{ij}\dot q^j$ s'inverse en $\dot q^j = \frac{1}{m}g^{jk}p\_k$, ce qui lit dans l'autre sens le dictionnaire entre composantes covariantes et contravariantes. La condition $\partial H/\partial p\_j = \dot q^j$ s'intègre alors en
 
 $$H(q, p) = \frac{1}{2m}\\,g^{ab}(q)\\,p\_a p\_b + U(q),$$
 
 où $U$ est une fonction de $q$ seul, la «&nbsp;constante d'intégration&nbsp;».
 
+<div id="preuve">
+<details>
+<summary>le calcul&nbsp;: inverser la relation, puis intégrer par rapport aux $p_j$</summary>
+
+**Inverser la relation entre moments et vitesses.** La matrice $(g^{ij})$ est l'inverse de $(g\_{ij})$&nbsp;: $g^{ki}g\_{ij} = \delta^k\_j$. Multiplions $p\_i = m\\,g\_{ij}\dot q^j$ par $g^{ki}$ et sommons sur $i$&nbsp;:
+
+$$g^{ki}p\_i = m\\,g^{ki}g\_{ij}\\,\dot q^j = m\\,\delta^k\_j\\,\dot q^j = m\\,\dot q^k, \qquad\text{soit}\qquad \dot q^k = \frac{1}{m}\\,g^{ki}p\_i.$$
+
+La matrice $(g\_{ij})$ est symétrique, puisque $g\_{ij} = \vec e\_i\cdot\vec e\_j$&nbsp;; son inverse l'est donc aussi, car la transposée d'un inverse est l'inverse de la transposée.
+
+**Intégrer par rapport aux $p\_j$.** On cherche $H$ tel que, pour tout $j$, $\frac{\partial H}{\partial p\_j} = \frac{1}{m}g^{jk}p\_k$. Posons $K(q, p) = \frac{1}{2m}g^{ab}p\_ap\_b$ et dérivons-le. Comme $\frac{\partial p\_a}{\partial p\_j} = \delta^j\_a$,
+
+$$\frac{\partial K}{\partial p\_j} = \frac{1}{2m}\\,g^{ab}\left(\delta^j\_a\\,p\_b + p\_a\\,\delta^j\_b\right) = \frac{1}{2m}\left(g^{jb}p\_b + g^{aj}p\_a\right) = \frac{1}{m}\\,g^{jk}p\_k,$$
+
+la dernière égalité venant de la symétrie $g^{aj} = g^{ja}$. La fonction $K$ convient. Si $H$ convient aussi, la différence $H - K$ a toutes ses dérivées partielles par rapport aux $p\_j$ nulles&nbsp;: elle ne dépend pas de $p$ (l'espace des moments est connexe), seulement de $q$. D'où $H = K + U(q)$.
+
+**$K$ est l'énergie cinétique.** On a $p\_k\dot q^k = m\\,g\_{kl}\dot q^l\dot q^k = 2T$, donc $T = \frac{1}{2}p\_k\dot q^k = \frac{1}{2m}g^{kj}p\_kp\_j = K$.
+
+</details>
+</div>
+
 **La seconde équation** fixe $U$. Elle demande $\dot p\_i = -\frac{1}{2m}\frac{\partial g^{ab}}{\partial q^i}p\_a p\_b - \frac{\partial U}{\partial q^i}$. Pour coïncider avec l'équation de Newton, il faut $U = V$, et il faut surtout que
 
 $$\frac{m}{2}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,\dot q^k\dot q^l = -\frac{1}{2m}\\,\frac{\partial g^{ab}}{\partial q^i}\\,p\_a p\_b.$$
 
-Cette égalité dit que la dérivée de l'énergie cinétique par rapport à la position est **opposée** selon que l'on fixe les vitesses ou les moments. C'est une identité d'algèbre sur la matrice inverse, démontrée dans le bloc ci-dessous. Cette identité acquise, les deux équations de Hamilton sont vérifiées avec
+Cette égalité dit que la dérivée de l'énergie cinétique par rapport à la position change de signe selon que l'on fixe les vitesses ou les moments. En coordonnées polaires, à vitesse angulaire $\dot\theta$ fixée, $T = \frac{m}{2}r^2\dot\theta^2$ augmente avec $r$&nbsp;; à moment cinétique $p\_\theta$ fixé, $T = \frac{p\_\theta^2}{2mr^2}$ diminue avec $r$. C'est pourquoi la force centrifuge apparaît dans un cas comme un terme cinétique, et dans l'autre comme la pente d'un «&nbsp;potentiel centrifuge&nbsp;» $\frac{p\_\theta^2}{2mr^2}$.
 
-<div id="theo">
-
-$$H(q, p) = \frac{1}{2m}\\,g^{ab}(q)\\,p\_a p\_b + V(q).$$
-
-</div>
-
-Le hamiltonien est l'énergie cinétique, exprimée avec les moments, plus l'énergie potentielle. Pour les coordonnées polaires, $g^{rr} = 1$ et $g^{\theta\theta} = 1/r^2$&nbsp;: on retrouve le hamiltonien de l'exemple des coordonnées polaires.
-
-**Pourquoi un signe opposé&nbsp;?** L'énergie cinétique peut s'écrire en fonction des vitesses, $T = \frac{m}{2}g\_{kl}\dot q^k\dot q^l$, ou en fonction des moments, $T = \frac{1}{2m}g^{ab}p\_a p\_b$. Ces deux expressions sont égales, mais leurs dérivées par rapport à la position sont opposées, parce qu'on ne fixe pas la même chose. En coordonnées polaires, à vitesse angulaire $\dot\theta$ fixée, $T = \frac{m}{2}r^2\dot\theta^2$ augmente avec $r$&nbsp;; à moment cinétique $p\_\theta$ fixé, $T = \frac{p\_\theta^2}{2mr^2}$ diminue avec $r$. C'est toute la différence entre les deux descriptions, et c'est pourquoi la force centrifuge apparaît dans un cas comme un terme cinétique et dans l'autre comme la pente d'un «&nbsp;potentiel centrifuge&nbsp;» $\frac{p\_\theta^2}{2mr^2}$.
+C'est une identité d'algèbre sur la matrice inverse, que démontrent les deux blocs suivants.
 
 <div id="preuve">
 <details>
-<summary>le calcul&nbsp;: dérivée de la matrice inverse, puis seconde équation de Hamilton</summary>
+<summary>le calcul&nbsp;: la dérivée de la matrice inverse</summary>
 
-**Étape 1&nbsp;: la dérivée de la matrice inverse.** La matrice $(g^{ab})$ est l'inverse de $(g\_{ab})$&nbsp;: pour tout $q$,
+La matrice $(g^{ab})$ est l'inverse de $(g\_{ab})$&nbsp;: pour tout $q$,
 
 $$g^{ak}(q)\\,g\_{kl}(q) = \delta^a\_l.$$
 
@@ -2640,26 +2653,49 @@ Multiplions par $g^{lb}$ et sommons sur $l$. Comme $g\_{kl}\\,g^{lb} = \delta^b\
 
 $$\frac{\partial g^{ab}}{\partial q^i} = -g^{ak}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,g^{lb}.$$
 
-En notation matricielle, $\partial(G^{-1}) = -G^{-1}\\,(\partial G)\\,G^{-1}$&nbsp;: c'est la version, pour une matrice, de la formule $\mathrm{d}(1/g) = -\mathrm{d}g/g^2$ valable pour un nombre. L'ordre des facteurs compte, puisque des matrices ne commutent pas en général. Vérification en coordonnées polaires, avec $g\_{\theta\theta} = r^2$ et $g^{\theta\theta} = 1/r^2$&nbsp;: la formule donne $\frac{\partial g^{\theta\theta}}{\partial r} = -\frac{1}{r^2}\cdot 2r\cdot\frac{1}{r^2} = -\frac{2}{r^3}$, qui est bien la dérivée de $1/r^2$.
+En notation matricielle, $\partial(G^{-1}) = -G^{-1}\\,(\partial G)\\,G^{-1}$&nbsp;: c'est la version, pour une matrice, de la formule $\mathrm{d}(1/g) = -\mathrm{d}g/g^2$ valable pour un nombre. L'ordre des facteurs compte, puisque des matrices ne commutent pas en général.
 
-**Étape 2&nbsp;: le terme correctif en fonction des moments.** Avec $\dot q^k = \frac{1}{m}g^{ka}p\_a$ et $\dot q^l = \frac{1}{m}g^{lb}p\_b$,
-
-$$\frac{m}{2}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,\dot q^k\dot q^l = \frac{1}{2m}\\,g^{ka}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,g^{lb}\\,p\_a p\_b.$$
-
-La matrice $g^{ab}$ étant symétrique, $g^{ka} = g^{ak}$, et l'étape 1 donne $g^{ak}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,g^{lb} = -\frac{\partial g^{ab}}{\partial q^i}$. D'où
-
-$$\frac{m}{2}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,\dot q^k\dot q^l = -\frac{1}{2m}\\,\frac{\partial g^{ab}}{\partial q^i}\\,p\_a p\_b,$$
-
-c'est l'égalité cherchée.
-
-**Étape 3&nbsp;: la seconde équation de Hamilton.** Avec cette égalité, l'équation de Newton devient
-
-$$\dot p\_i = -\frac{1}{2m}\\,\frac{\partial g^{ab}}{\partial q^i}\\,p\_a p\_b - \frac{\partial V}{\partial q^i} = -\frac{\partial}{\partial q^i}\left(\frac{1}{2m}\\,g^{ab}\\,p\_a p\_b + V\right),$$
-
-la dérivée étant prise à $p$ fixé. C'est $\dot p\_i = -\partial H/\partial q^i$, avec $U = V$.
+*Vérification en coordonnées polaires.* Avec $g\_{\theta\theta} = r^2$ et $g^{\theta\theta} = 1/r^2$, la formule donne $\frac{\partial g^{\theta\theta}}{\partial r} = -\frac{1}{r^2}\cdot 2r\cdot\frac{1}{r^2} = -\frac{2}{r^3}$, qui est bien la dérivée de $1/r^2$.
 
 </details>
 </div>
+
+<div id="preuve">
+<details>
+<summary>le calcul&nbsp;: de l'identité à la seconde équation de Hamilton</summary>
+
+**Le terme correctif en fonction des moments.** Remplaçons $\dot q^k = \frac{1}{m}g^{ka}p\_a$ et $\dot q^l = \frac{1}{m}g^{lb}p\_b$ dans le terme correctif de l'équation de Newton&nbsp;:
+
+$$\frac{m}{2}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,\dot q^k\dot q^l = \frac{m}{2}\cdot\frac{1}{m^2}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,g^{ka}p\_a\\,g^{lb}p\_b = \frac{1}{2m}\\,g^{ka}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,g^{lb}\\,p\_a p\_b.$$
+
+La matrice $g^{ab}$ étant symétrique, $g^{ka} = g^{ak}$. Le bloc précédent donne alors $g^{ak}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,g^{lb} = -\frac{\partial g^{ab}}{\partial q^i}$, d'où
+
+$$\frac{m}{2}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,\dot q^k\dot q^l = -\frac{1}{2m}\\,\frac{\partial g^{ab}}{\partial q^i}\\,p\_a p\_b.$$
+
+C'est l'identité cherchée.
+
+**Dériver $H$ à moments fixés.** Avec $H = \frac{1}{2m}g^{ab}p\_ap\_b + U$, les moments $p\_a$ ne dépendent pas de $q$ quand on les fixe, donc
+
+$$\frac{\partial H}{\partial q^i} = \frac{1}{2m}\\,\frac{\partial g^{ab}}{\partial q^i}\\,p\_a p\_b + \frac{\partial U}{\partial q^i}.$$
+
+**Comparer les deux expressions de $\dot p\_i$.** D'après l'équation de Newton et l'identité,
+
+$$\dot p\_i = \frac{m}{2}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,\dot q^k\dot q^l - \frac{\partial V}{\partial q^i} = -\frac{1}{2m}\\,\frac{\partial g^{ab}}{\partial q^i}\\,p\_a p\_b - \frac{\partial V}{\partial q^i}.$$
+
+La seconde équation de Hamilton, $\dot p\_i = -\frac{\partial H}{\partial q^i}$, donne quant à elle $-\frac{1}{2m}\frac{\partial g^{ab}}{\partial q^i}p\_a p\_b - \frac{\partial U}{\partial q^i}$. Les deux coïncident pour tous $(q, p)$ si et seulement si $\frac{\partial U}{\partial q^i} = \frac{\partial V}{\partial q^i}$, c'est-à-dire $U = V$ à une constante additive près, sans effet sur les équations du mouvement.
+
+</details>
+</div>
+
+Cette identité acquise, les deux équations de Hamilton sont vérifiées avec
+
+<div id="theo">
+
+$$H(q, p) = \frac{1}{2m}\\,g^{ab}(q)\\,p\_a p\_b + V(q).$$
+
+</div>
+
+Le hamiltonien est l'énergie cinétique, exprimée avec les moments, plus l'énergie potentielle. Pour les coordonnées polaires, $g^{rr} = 1$ et $g^{\theta\theta} = 1/r^2$&nbsp;: on retrouve le hamiltonien de l'exemple des coordonnées polaires.
 
 Pour un système de $N$ particules, il suffit de répéter le raisonnement pour chacune. Mieux&nbsp;: on peut voir les $N$ particules comme un seul point d'un espace de dimension $3N$, muni d'une métrique où chaque particule compte avec sa masse. Le système entier devient une seule particule, et tout ce qui précède s'applique tel quel.
 
