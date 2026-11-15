@@ -2278,7 +2278,7 @@ $$\vec v = \dot r\\,\hat e\_r + r\dot\theta\\,\hat e\_\theta, \qquad \vec\nabla 
 
 Un facteur $r$ s'est glissé dans les composantes angulaires&nbsp;: un angle n'est pas une longueur, et tourner de $\mathrm{d}\theta$ déplace le point de $r\\,\mathrm{d}\theta$. Ce facteur de conversion entre variations de coordonnées et longueurs est la **métrique** des coordonnées polaires&nbsp;: elle donne la longueur d'un petit déplacement, $\mathrm{d}s^2 = \mathrm{d}r^2 + r^2\\,\mathrm{d}\theta^2$.
 
-Ces facteurs brouillent les équations qu'on veut écrire. Les inconnues du problème sont les fonctions $q^i(t)$&nbsp;: les équations qui les déterminent ne doivent faire intervenir que ces fonctions, leurs vitesses $\dot q^i$, et la façon dont le potentiel dépend des $q^i$, c'est-à-dire les $\partial V/\partial q^i$. La base unitaire leur substitue des mélanges, $r\dot\theta$ au lieu de $\dot\theta$, $\frac{1}{r}\partial\_\theta V$ au lieu de $\partial\_\theta V$. L'équation de Newton projetée sur $\hat e\_\theta$ en donne un exemple&nbsp;:
+Ces facteurs brouillent les équations qu'on veut écrire. Les inconnues du problème sont les fonctions $q^i(t)$&nbsp;: les équations qui les déterminent ne doivent faire intervenir que ces fonctions, leurs vitesses $\dot q^i$, et la façon dont le potentiel dépend des $q^i$, c'est-à-dire les $\partial V/\partial q^i$. La base unitaire leur substitue des mélanges, $r\dot\theta$ au lieu de $\dot\theta$, $\frac{1}{r}\partial\_\theta V$ au lieu de $\partial\_\theta V$. La loi de Newton projetée sur $\hat e\_\theta$ en donne un exemple. En polaires, l'accélération vaut $\vec a = (\ddot r - r\dot\theta^2)\\,\hat e\_r + (r\ddot\theta + 2\dot r\dot\theta)\\,\hat e\_\theta$ (on l'obtient en dérivant $\vec v = \dot r\\,\hat e\_r + r\dot\theta\\,\hat e\_\theta$, avec $\frac{\mathrm{d}\hat e\_r}{\mathrm{d}t} = \dot\theta\\,\hat e\_\theta$ et $\frac{\mathrm{d}\hat e\_\theta}{\mathrm{d}t} = -\dot\theta\\,\hat e\_r$). Comme $\hat e\_\theta$ est unitaire, la projection de $m\vec a = -\vec\nabla V$ sur $\hat e\_\theta$ s'écrit&nbsp;:
 
 $$m\left(r\ddot\theta + 2\dot r\dot\theta\right) = -\frac{1}{r}\frac{\partial V}{\partial\theta},$$
 
@@ -2298,7 +2298,11 @@ $$\vec e\_i = \frac{\partial \vec r}{\partial q^i}.$$
 
 </div>
 
-Le vecteur $\vec e\_i$ est le déplacement du point quand la seule coordonnée $q^i$ augmente d'une unité&nbsp;: c'est la base **attachée aux coordonnées**. En polaires, $\vec e\_r = \hat e\_r$, mais $\vec e\_\theta = r\\,\hat e\_\theta$&nbsp;: le vecteur unitaire, multiplié par $r$ (c'est le déplacement que produirait une variation de $1$ radian, en prolongeant la tangente). Le facteur $r$ est passé des composantes au vecteur de base. Projeter sur $\vec e\_\theta$ plutôt que sur $\hat e\_\theta$ revient à multiplier l'équation précédente par $r$, ce qui donne
+Le vecteur $\vec e\_i$ est le déplacement du point quand la seule coordonnée $q^i$ augmente d'une unité&nbsp;: c'est la base **attachée aux coordonnées**. En polaires, $\vec e\_r = \hat e\_r$, mais $\vec e\_\theta = r\\,\hat e\_\theta$&nbsp;: le vecteur unitaire, multiplié par $r$ (c'est le déplacement que produirait une variation de $1$ radian, en prolongeant la tangente). Le facteur $r$ est passé des composantes au vecteur de base. Projeter sur $\vec e\_\theta = r\\,\hat e\_\theta$ plutôt que sur $\hat e\_\theta$, c'est prendre le produit scalaire avec $r\\,\hat e\_\theta$, donc multiplier par $r$ chacun des deux membres de l'équation $m\left(r\ddot\theta + 2\dot r\dot\theta\right) = -\frac{1}{r}\frac{\partial V}{\partial\theta}$ obtenue plus haut en projetant sur $\hat e\_\theta$&nbsp;:
+
+$$m\left(r^2\ddot\theta + 2r\dot r\dot\theta\right) = -\frac{\partial V}{\partial\theta}.$$
+
+Le membre de gauche est une dérivée, car $\frac{\mathrm{d}}{\mathrm{d}t}\left(r^2\dot\theta\right) = r^2\ddot\theta + 2r\dot r\dot\theta$. L'équation s'écrit donc
 
 $$\frac{\mathrm{d}}{\mathrm{d}t}\left(m r^2\dot\theta\right) = -\frac{\partial V}{\partial\theta}.$$
 
