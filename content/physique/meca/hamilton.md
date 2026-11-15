@@ -2257,12 +2257,32 @@ Posons $p\_r = m\dot r$, $p\_\theta = m r^2\dot\theta$, et
 
 $$H(r, \theta, p\_r, p\_\theta) = \frac{p\_r^2}{2m} + \frac{p\_\theta^2}{2m r^2} + V(r).$$
 
-Vérifions qu'on obtient bien les équations de Newton&nbsp;:
-<ul>
-<li>$\dot r = \partial H/\partial p_r = p_r/m$ et $\dot\theta = \partial H/\partial p_\theta = p_\theta/(m r^2)$&nbsp;: ce sont les définitions des moments&nbsp;;</li>
-<li>$\dot p_r = -\partial H/\partial r = \frac{p_\theta^2}{m r^3} - V^{\prime}(r) = m r\dot\theta^2 - V^{\prime}(r)$&nbsp;: c'est l'équation radiale&nbsp;;</li>
-<li>$\dot p_\theta = -\partial H/\partial \theta = 0$&nbsp;: c'est l'équation angulaire, puisque $\frac{\mathrm{d}}{\mathrm{d}t}(m r^2\dot\theta) = m r\,(2\dot r\dot\theta + r\ddot\theta)$.</li>
-</ul>
+Les équations de Hamilton redonnent celles de Newton&nbsp;: $\dot r = \partial H/\partial p\_r$ et $\dot\theta = \partial H/\partial p\_\theta$ sont les définitions des moments, $\dot p\_r = -\partial H/\partial r$ est l'équation radiale, et $\dot p\_\theta = -\partial H/\partial\theta = 0$ l'équation angulaire.
+
+<div id="preuve">
+<details>
+<summary>le calcul&nbsp;: les quatre équations de Hamilton en coordonnées polaires</summary>
+
+**Les équations en $\dot r$ et $\dot\theta$.** On dérive $H$ par rapport aux moments&nbsp;:
+
+$$\frac{\partial H}{\partial p\_r} = \frac{p\_r}{m}, \qquad \frac{\partial H}{\partial p\_\theta} = \frac{p\_\theta}{m r^2}.$$
+
+Avec $p\_r = m\dot r$ et $p\_\theta = m r^2\dot\theta$, les équations $\dot r = \partial H/\partial p\_r$ et $\dot\theta = \partial H/\partial p\_\theta$ sont des identités&nbsp;: elles redisent la définition des moments.
+
+**L'équation radiale.** À moments fixés, seuls $\frac{p\_\theta^2}{2mr^2}$ et $V$ dépendent de $r$, et $\frac{\mathrm{d}}{\mathrm{d}r}\frac{1}{r^2} = -\frac{2}{r^3}$&nbsp;:
+
+$$\dot p\_r = -\frac{\partial H}{\partial r} = \frac{p\_\theta^2}{m r^3} - V^{\prime}(r).$$
+
+Comme $p\_\theta = m r^2\dot\theta$, le premier terme vaut $\frac{m^2 r^4\dot\theta^2}{m r^3} = m r\dot\theta^2$, et comme $p\_r = m\dot r$, le membre de gauche vaut $m\ddot r$. On obtient $m\left(\ddot r - r\dot\theta^2\right) = -V^{\prime}(r)$&nbsp;: la composante radiale de la loi de Newton, dont l'accélération radiale vaut $\ddot r - r\dot\theta^2$.
+
+**L'équation angulaire.** Le hamiltonien ne dépend pas de $\theta$, donc $\dot p\_\theta = 0$. D'autre part, en dérivant $p\_\theta = m r^2\dot\theta$,
+
+$$\dot p\_\theta = \frac{\mathrm{d}}{\mathrm{d}t}\left(m r^2\dot\theta\right) = m r\left(2\dot r\dot\theta + r\ddot\theta\right),$$
+
+et $r\ddot\theta + 2\dot r\dot\theta$ est la composante orthoradiale de l'accélération. Le potentiel $V(r)$ n'exerce aucune force orthoradiale&nbsp;: cette composante est nulle, ce qui est l'équation de Newton.
+
+</details>
+</div>
 
 Ces équations ont la forme de Hamilton&nbsp;: leur divergence est donc nulle (théorème de Liouville), et l'écoulement est incompressible dans les variables $(r, \theta, p\_r, p\_\theta)$, alors qu'il ne l'est pas dans $(r, \theta, \dot r, \dot\theta)$.
 
@@ -2278,11 +2298,34 @@ $$\vec v = \dot r\\,\hat e\_r + r\dot\theta\\,\hat e\_\theta, \qquad \vec\nabla 
 
 Un facteur $r$ s'est glissé dans les composantes angulaires&nbsp;: un angle n'est pas une longueur, et tourner de $\mathrm{d}\theta$ déplace le point de $r\\,\mathrm{d}\theta$. Ce facteur de conversion entre variations de coordonnées et longueurs est la **métrique** des coordonnées polaires&nbsp;: elle donne la longueur d'un petit déplacement, $\mathrm{d}s^2 = \mathrm{d}r^2 + r^2\\,\mathrm{d}\theta^2$.
 
-Ces facteurs brouillent les équations qu'on veut écrire. Les inconnues du problème sont les fonctions $q^i(t)$&nbsp;: les équations qui les déterminent ne doivent faire intervenir que ces fonctions, leurs vitesses $\dot q^i$, et la façon dont le potentiel dépend des $q^i$, c'est-à-dire les $\partial V/\partial q^i$. La base unitaire leur substitue des mélanges, $r\dot\theta$ au lieu de $\dot\theta$, $\frac{1}{r}\partial\_\theta V$ au lieu de $\partial\_\theta V$. La loi de Newton projetée sur $\hat e\_\theta$ en donne un exemple. En polaires, l'accélération vaut $\vec a = (\ddot r - r\dot\theta^2)\\,\hat e\_r + (r\ddot\theta + 2\dot r\dot\theta)\\,\hat e\_\theta$ (on l'obtient en dérivant $\vec v = \dot r\\,\hat e\_r + r\dot\theta\\,\hat e\_\theta$, avec $\frac{\mathrm{d}\hat e\_r}{\mathrm{d}t} = \dot\theta\\,\hat e\_\theta$ et $\frac{\mathrm{d}\hat e\_\theta}{\mathrm{d}t} = -\dot\theta\\,\hat e\_r$). Comme $\hat e\_\theta$ est unitaire, la projection de $m\vec a = -\vec\nabla V$ sur $\hat e\_\theta$ s'écrit&nbsp;:
+Ces facteurs brouillent les équations qu'on veut écrire. Les inconnues du problème sont les fonctions $q^i(t)$&nbsp;: les équations qui les déterminent ne doivent faire intervenir que ces fonctions, leurs vitesses $\dot q^i$, et la façon dont le potentiel dépend des $q^i$, c'est-à-dire les $\partial V/\partial q^i$. La base unitaire leur substitue des mélanges, $r\dot\theta$ au lieu de $\dot\theta$, $\frac{1}{r}\partial\_\theta V$ au lieu de $\partial\_\theta V$. La loi de Newton projetée sur $\hat e\_\theta$ en donne un exemple&nbsp;: l'accélération a pour composante orthoradiale $r\ddot\theta + 2\dot r\dot\theta$ (calcul ci-dessous), et comme $\hat e\_\theta$ est unitaire, la projection de $m\vec a = -\vec\nabla V$ s'écrit
 
 $$m\left(r\ddot\theta + 2\dot r\dot\theta\right) = -\frac{1}{r}\frac{\partial V}{\partial\theta},$$
 
 où des facteurs $r$ et $1/r$ n'appartiennent ni à la coordonnée ni au potentiel, mais à la base choisie.
+
+<div id="preuve">
+<details>
+<summary>le calcul&nbsp;: l'accélération en coordonnées polaires, projetée sur $\hat e_\theta$</summary>
+
+Avec $\hat e\_r = (\cos\theta, \sin\theta)$ et $\hat e\_\theta = (-\sin\theta, \cos\theta)$, et $\theta$ dépendant du temps,
+
+$$\frac{\mathrm{d}\hat e\_r}{\mathrm{d}t} = \dot\theta\\,\hat e\_\theta, \qquad \frac{\mathrm{d}\hat e\_\theta}{\mathrm{d}t} = -\dot\theta\\,\hat e\_r.$$
+
+La position est $\vec r = r\\,\hat e\_r$, donc la vitesse est
+
+$$\vec v = \dot r\\,\hat e\_r + r\\,\frac{\mathrm{d}\hat e\_r}{\mathrm{d}t} = \dot r\\,\hat e\_r + r\dot\theta\\,\hat e\_\theta.$$
+
+On dérive de nouveau, terme à terme, avec la règle du produit&nbsp;:
+
+$$\vec a = \ddot r\\,\hat e\_r + \dot r\dot\theta\\,\hat e\_\theta + \left(\dot r\dot\theta + r\ddot\theta\right)\hat e\_\theta - r\dot\theta^2\\,\hat e\_r = \left(\ddot r - r\dot\theta^2\right)\hat e\_r + \left(r\ddot\theta + 2\dot r\dot\theta\right)\hat e\_\theta.$$
+
+La base $(\hat e\_r, \hat e\_\theta)$ étant orthonormée, la composante de $\vec a$ sur $\hat e\_\theta$ est $\vec a\cdot\hat e\_\theta = r\ddot\theta + 2\dot r\dot\theta$.
+
+Pour le gradient, la règle de dérivation en chaîne donne $\frac{\partial V}{\partial\theta} = \vec\nabla V\cdot\frac{\partial\vec r}{\partial\theta}$, et $\frac{\partial\vec r}{\partial\theta} = r\\,\frac{\partial\hat e\_r}{\partial\theta} = r\\,\hat e\_\theta$. Donc $\hat e\_\theta\cdot\vec\nabla V = \frac{1}{r}\frac{\partial V}{\partial\theta}$.
+
+</details>
+</div>
 
 Exigeons donc de la base deux propriétés&nbsp;: les composantes de la vitesse sont exactement les $\dot q^i$, et les projections de la force sur les vecteurs de base exactement les $-\partial V/\partial q^i$. En notant $\vec e\_i$ les vecteurs de base[^einstein], cela s'écrit
 
@@ -2298,15 +2341,28 @@ $$\vec e\_i = \frac{\partial \vec r}{\partial q^i}.$$
 
 </div>
 
-Le vecteur $\vec e\_i$ est le déplacement du point quand la seule coordonnée $q^i$ augmente d'une unité&nbsp;: c'est la base **attachée aux coordonnées**. En polaires, $\vec e\_r = \hat e\_r$, mais $\vec e\_\theta = r\\,\hat e\_\theta$&nbsp;: le vecteur unitaire, multiplié par $r$ (c'est le déplacement que produirait une variation de $1$ radian, en prolongeant la tangente). Le facteur $r$ est passé des composantes au vecteur de base. Projeter sur $\vec e\_\theta = r\\,\hat e\_\theta$ plutôt que sur $\hat e\_\theta$, c'est prendre le produit scalaire avec $r\\,\hat e\_\theta$, donc multiplier par $r$ chacun des deux membres de l'équation $m\left(r\ddot\theta + 2\dot r\dot\theta\right) = -\frac{1}{r}\frac{\partial V}{\partial\theta}$ obtenue plus haut en projetant sur $\hat e\_\theta$&nbsp;:
-
-$$m\left(r^2\ddot\theta + 2r\dot r\dot\theta\right) = -\frac{\partial V}{\partial\theta}.$$
-
-Le membre de gauche est une dérivée, car $\frac{\mathrm{d}}{\mathrm{d}t}\left(r^2\dot\theta\right) = r^2\ddot\theta + 2r\dot r\dot\theta$. L'équation s'écrit donc
+Le vecteur $\vec e\_i$ est le déplacement du point quand la seule coordonnée $q^i$ augmente d'une unité&nbsp;: c'est la base **attachée aux coordonnées**. En polaires, $\vec e\_r = \hat e\_r$, mais $\vec e\_\theta = r\\,\hat e\_\theta$&nbsp;: le vecteur unitaire, multiplié par $r$ (c'est le déplacement que produirait une variation de $1$ radian, en prolongeant la tangente). Le facteur $r$ est passé des composantes au vecteur de base. Projeter sur $\vec e\_\theta = r\\,\hat e\_\theta$ plutôt que sur $\hat e\_\theta$ revient à multiplier par $r$ l'équation orthoradiale $m\left(r\ddot\theta + 2\dot r\dot\theta\right) = -\frac{1}{r}\frac{\partial V}{\partial\theta}$, et donne
 
 $$\frac{\mathrm{d}}{\mathrm{d}t}\left(m r^2\dot\theta\right) = -\frac{\partial V}{\partial\theta}.$$
 
 Le membre de droite est exactement $-\partial V/\partial\theta$, et celui de gauche est la dérivée d'une seule quantité.
+
+<div id="preuve">
+<details>
+<summary>le calcul&nbsp;: de l'équation sur $\hat e_\theta$ à l'équation sur $\vec e_\theta$</summary>
+
+Multiplions par $r$ chacun des deux membres de $m\left(r\ddot\theta + 2\dot r\dot\theta\right) = -\frac{1}{r}\frac{\partial V}{\partial\theta}$&nbsp;:
+
+$$m\left(r^2\ddot\theta + 2r\dot r\dot\theta\right) = -\frac{\partial V}{\partial\theta}.$$
+
+Le membre de gauche est une dérivée, d'après la règle du produit&nbsp;:
+
+$$\frac{\mathrm{d}}{\mathrm{d}t}\left(r^2\dot\theta\right) = r^2\ddot\theta + 2r\dot r\dot\theta.$$
+
+En multipliant par la constante $m$, on obtient l'équation annoncée.
+
+</details>
+</div>
 
 Le facteur qui fait passer de $\hat e\_\theta$ à $\vec e\_\theta$ est fixé par la métrique. Les produits scalaires des vecteurs de base, qui donnent leurs longueurs et leurs angles, forment le **tenseur métrique**&nbsp;:
 
@@ -2525,15 +2581,40 @@ En coordonnées polaires, la vitesse a pour composantes contravariantes $(\dot r
 
 ### Les équations de Newton en coordonnées quelconques
 
-La loi de Newton, $m\vec a = -\vec\nabla V$, est une équation entre vecteurs&nbsp;: elle est vraie si et seulement si toutes ses projections sur une base le sont. **Projetons**-la sur les vecteurs $\vec e\_i$&nbsp;: on obtient une équation pour chaque coordonnée $q^i$. Chaque morceau de la projection se lit sur un fait déjà rencontré.
+La loi de Newton, $m\vec a = -\vec\nabla V$, est une équation entre vecteurs&nbsp;: elle est vraie si et seulement si toutes ses projections sur une base le sont. **Projetons**-la sur les vecteurs $\vec e\_i$&nbsp;: on obtient une équation pour chaque coordonnée $q^i$.
 
-<ul>
-<li><b>Le membre de droite.</b> D'après la règle de dérivation en chaîne, $\frac{\partial V}{\partial q^i} = \vec\nabla V\cdot\frac{\partial\vec r}{\partial q^i} = \vec\nabla V\cdot\vec e_i$. La projection de la force est donc $-\partial V/\partial q^i$, sans aucune métrique.</li>
-<li><b>Le membre de gauche.</b> On fait apparaître la dérivée d'un produit scalaire&nbsp;: $\vec a\cdot\vec e_i = \frac{\mathrm{d}}{\mathrm{d}t}\left(\vec v\cdot\vec e_i\right) - \vec v\cdot\frac{\mathrm{d}\vec e_i}{\mathrm{d}t}$. Le premier terme est la dérivée de la <b>projection</b> de la quantité de mouvement $m\vec v$ sur $\vec e_i$&nbsp;: $m\,\vec v\cdot\vec e_i$, une composante covariante, et non $m\dot q^i$.</li>
-<li><b>Le terme correctif.</b> Le vecteur de base $\vec e_i$ change au cours du mouvement, parce que le point se déplace&nbsp;: $\frac{\mathrm{d}\vec e_i}{\mathrm{d}t} = \frac{\partial \vec e_i}{\partial q^j}\,\dot q^j = \frac{\partial^2\vec r}{\partial q^j\,\partial q^i}\,\dot q^j$. En échangeant l'ordre des dérivations, c'est aussi $\frac{\partial}{\partial q^i}\left(\dot q^j\,\vec e_j\right) = \frac{\partial\vec v}{\partial q^i}$, la dérivée étant prise à vitesses $\dot q^j$ fixées. Donc $\vec v\cdot\frac{\mathrm{d}\vec e_i}{\mathrm{d}t} = \vec v\cdot\frac{\partial\vec v}{\partial q^i} = \frac12\frac{\partial (\vec v\cdot\vec v)}{\partial q^i} = \frac12\frac{\partial g_{kl}}{\partial q^i}\,\dot q^k\dot q^l$.</li>
-</ul>
+Le membre de droite se projette sur $-\partial V/\partial q^i$, sans aucune métrique&nbsp;: c'est la propriété qui définit la base. Pour le membre de gauche, la dérivée d'un produit scalaire donne
 
-En rassemblant les trois morceaux, on obtient les équations de Newton en coordonnées quelconques&nbsp;:
+$$\vec a\cdot\vec e\_i = \frac{\mathrm{d}}{\mathrm{d}t}\left(\vec v\cdot\vec e\_i\right) - \vec v\cdot\frac{\mathrm{d}\vec e\_i}{\mathrm{d}t}.$$
+
+Le premier terme est la dérivée de la **projection** de la vitesse sur $\vec e\_i$, une composante covariante, et non de $\dot q^i$. Le second est un terme correctif&nbsp;: le vecteur de base $\vec e\_i$ change au cours du mouvement, parce que le point se déplace, et ce changement ne fait intervenir que la métrique&nbsp;: $\vec v\cdot\frac{\mathrm{d}\vec e\_i}{\mathrm{d}t} = \frac12\frac{\partial g\_{kl}}{\partial q^i}\dot q^k\dot q^l$.
+
+<div id="preuve">
+<details>
+<summary>le calcul&nbsp;: projeter la loi de Newton sur $\vec e_i$</summary>
+
+**Le membre de droite.** La règle de dérivation en chaîne donne $\frac{\partial V}{\partial q^i} = \vec\nabla V\cdot\frac{\partial\vec r}{\partial q^i} = \vec\nabla V\cdot\vec e\_i$. La projection de la force $-\vec\nabla V$ sur $\vec e\_i$ vaut donc $-\partial V/\partial q^i$.
+
+**Le membre de gauche.** La règle du produit appliquée à $\vec v\cdot\vec e\_i$ donne $\frac{\mathrm{d}}{\mathrm{d}t}\left(\vec v\cdot\vec e\_i\right) = \vec a\cdot\vec e\_i + \vec v\cdot\frac{\mathrm{d}\vec e\_i}{\mathrm{d}t}$, d'où la relation écrite ci-dessus. Comme $\vec v = \dot q^j\\,\vec e\_j$, on a $\vec v\cdot\vec e\_i = g\_{ij}\\,\dot q^j$.
+
+**Le terme correctif.** Le vecteur $\vec e\_i = \partial\vec r/\partial q^i$ dépend du temps par les coordonnées&nbsp;: $\frac{\mathrm{d}\vec e\_i}{\mathrm{d}t} = \frac{\partial\vec e\_i}{\partial q^j}\dot q^j$. Les dérivées secondes de $\vec r$ commutent (théorème de Schwarz)&nbsp;: $\frac{\partial\vec e\_i}{\partial q^j} = \frac{\partial^2\vec r}{\partial q^j\partial q^i} = \frac{\partial\vec e\_j}{\partial q^i}$. Avec $\vec v = \dot q^k\\,\vec e\_k$,
+
+$$\vec v\cdot\frac{\mathrm{d}\vec e\_i}{\mathrm{d}t} = \dot q^k\dot q^j\\,\vec e\_k\cdot\frac{\partial\vec e\_j}{\partial q^i}.$$
+
+D'autre part, $g\_{kj} = \vec e\_k\cdot\vec e\_j$ se dérive par la règle du produit&nbsp;:
+
+$$\frac{\partial g\_{kj}}{\partial q^i} = \frac{\partial\vec e\_k}{\partial q^i}\cdot\vec e\_j + \vec e\_k\cdot\frac{\partial\vec e\_j}{\partial q^i}.$$
+
+Multiplions par $\dot q^k\dot q^j$ et sommons sur $k$ et $j$. Les deux termes du membre de droite se déduisent l'un de l'autre en échangeant les noms $k$ et $j$&nbsp;: leurs sommes sont égales, et valent chacune $\dot q^k\dot q^j\\,\vec e\_k\cdot\frac{\partial\vec e\_j}{\partial q^i}$. Donc
+
+$$\vec v\cdot\frac{\mathrm{d}\vec e\_i}{\mathrm{d}t} = \frac12\frac{\partial g\_{kj}}{\partial q^i}\dot q^k\dot q^j.$$
+
+**Conclusion.** En multipliant par $m$ la relation sur $\vec a\cdot\vec e\_i$, puis en l'égalant à la projection de la force, $-\partial V/\partial q^i$, on obtient l'équation écrite ci-dessous.
+
+</details>
+</div>
+
+On obtient les équations de Newton en coordonnées quelconques&nbsp;:
 
 <div id="theo">
 
@@ -2659,6 +2740,8 @@ En notation matricielle, $\partial(G^{-1}) = -G^{-1}\\,(\partial G)\\,G^{-1}$&nb
 
 </details>
 </div>
+
+<br>
 
 <div id="preuve">
 <details>
