@@ -2519,6 +2519,8 @@ Le lien entre les deux est immédiat&nbsp;: $w\_i = \vec w\cdot\vec e\_i = w^j\\
 
 Les noms viennent de la réaction à un changement de base. Si l'on allonge $\vec e\_i$ d'un facteur $\lambda$ (par exemple en changeant d'unité sur cet axe), la composante $w^i$ est divisée par $\lambda$&nbsp;: elle varie à l'**inverse** de la base, d'où contra-variante. La composante $w\_i$, elle, est multipliée par $\lambda$&nbsp;: elle varie **avec** la base, d'où co-variante. C'est ce que montre le curseur de longueur.
 
+Les formes différentielles donnent à cette distinction un statut géométrique&nbsp;: les composantes contravariantes sont celles d'un vecteur (une flèche), les composantes covariantes celles d'une forme (un mesureur de flèches). Voir la page [Formes différentielles](/maths/geometrie/formes/#composantes).
+
 En coordonnées polaires, la vitesse a pour composantes contravariantes $(\dot r, \dot\theta)$ et pour composantes covariantes $(\vec v\cdot\vec e\_r, \vec v\cdot\vec e\_\theta) = (\dot r, r^2\dot\theta)$&nbsp;: le facteur $r^2$ de $p\_\theta$ y apparaît déjà, c'est $g\_{\theta\theta}$. Quant à la quantité de mouvement $m\vec v$, c'est la projection de la loi de Newton qui dira laquelle des deux lectures est la bonne.
 
 ### Les équations de Newton en coordonnées quelconques
@@ -2589,6 +2591,8 @@ $$p\_i = m\\,\vec v\cdot\vec e\_i = m\\,g\_{ij}\\,\dot q^j.$$
 <p class="legende">Le moment $p_\theta$ est la projection de la quantité de mouvement sur $\vec e_\theta$. Comme ce vecteur a pour longueur $r$, on trouve $p_\theta = m\,(r\dot\theta)\times r = m r^2\dot\theta$.</p>
 
 En coordonnées cartésiennes, où la base est orthonormée, on retrouve $p = m\dot x$. Dans les autres, ce sont les projections $m\\,g\_{ij}\dot q^j$, et non les $m\dot q^i$, qui font les bons moments. Cela explique aussi pourquoi les deux moments polaires n'ont pas la même dimension&nbsp;: $\vec e\_r$ est sans dimension (un déplacement par unité de $r$), alors que $\vec e\_\theta$ est une longueur (un déplacement par radian). Donc $p\_r = m\vec v\cdot\vec e\_r$ est une quantité de mouvement, et $p\_\theta = m\vec v\cdot\vec e\_\theta$ une quantité de mouvement multipliée par une longueur, c'est-à-dire un moment cinétique, dont le facteur $r^2$ est $g\_{\theta\theta}$.
+
+Dans le langage des formes différentielles, le moment est la forme $p = m\\,g(\vec v, \cdot)$, et la force dérivant d'un potentiel est la forme $-\mathrm{d}V$&nbsp;: voir [Formes différentielles, retour sur les moments](/maths/geometrie/formes/#hamilton).
 
 ### Le hamiltonien en général
 
@@ -2824,7 +2828,7 @@ Avec $n$ degrés de liberté, la conservation du volume total ne suffit plus. Le
 
 Autrement dit, l'intégrale $\oint \sum\_i p\_i\\,\mathrm{d}x\_i$ le long d'une courbe fermée est conservée, et c'est elle qui joue le rôle de «&nbsp;l'aire&nbsp;» de l'espace des phases. La conservation des volumes (Liouville) en découle, mais elle est plus faible.
 
-Cette «&nbsp;aire&nbsp;» est ce que les mathématiciens appellent une **forme symplectique**. La géométrie de l'espace des phases, la **géométrie symplectique**, n'a ni longueurs ni angles, mais des aires&nbsp;: c'est exactement ce que l'on a utilisé tout au long de cette page.
+Cette «&nbsp;aire&nbsp;» est ce que les mathématiciens appellent une **forme symplectique** (voir [Formes différentielles](/maths/geometrie/formes/#hamilton)). La géométrie de l'espace des phases, la **géométrie symplectique**, n'a ni longueurs ni angles, mais des aires&nbsp;: c'est exactement ce que l'on a utilisé tout au long de cette page.
 
 <span id="symetries"></span>
 

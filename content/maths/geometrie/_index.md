@@ -106,6 +106,22 @@ Géométrie et physique sont intimement liées. Le développement de la géomét
 </div>
 </div>
 
+<div class="math-card c-bleu">
+<div class="math-card-head">
+<span class="math-illus" aria-hidden="true"><img src="/formes.svg" alt=""></span>
+<h3><a href="./formes/">Formes différentielles</a></h3>
+</div>
+<div class="carte-texte">Des mesureurs de flèches&nbsp;: gradient, aires orientées, théorème de Stokes, et ce qu'ils simplifient en mécanique, en thermodynamique et en électromagnétisme.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./formes/#fleches" class="math-btn">Flèches et mesureurs</a>
+  <a href="./formes/#composantes" class="math-btn">Composantes</a>
+  <a href="./formes/#stokes" class="math-btn">Stokes</a>
+  <a href="./formes/#hamilton" class="math-btn">Hamilton</a>
+</div>
+</div>
+</div>
+
 </div>
 </div>
 

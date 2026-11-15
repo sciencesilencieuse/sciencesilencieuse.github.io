@@ -110,6 +110,7 @@ td, th {
   <a href="./geometrie/geo3" class="math-btn">Aires & Volumes</a>
   <a href="./geometrie/geo4" class="math-btn">Dimensions</a>
   <a href="./geometrie/simplexes/" class="math-btn">Simplexes</a>
+  <a href="./geometrie/formes/" class="math-btn">Formes différentielles</a>
   <a href="./geometrie/geo5" class="math-btn">Poursuites</a>
 </div>
 </div>
