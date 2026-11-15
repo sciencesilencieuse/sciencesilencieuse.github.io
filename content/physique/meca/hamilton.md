@@ -2575,17 +2575,23 @@ Cela explique aussi pourquoi les deux moments polaires n'ont pas la même dimens
 
 ### Le hamiltonien en général
 
-Il reste à écrire ces équations sous forme hamiltonienne, en exprimant le terme correctif en fonction des moments. C'est là que se cache la subtilité principale de la page.
+Avec $p\_i = m\\,g\_{ij}\dot q^j$, l'équation de Newton obtenue ci-dessus s'écrit
 
-Avec $\dot q^k = \frac{1}{m}g^{ka}p\_a$, le terme correctif s'écrit
+$$\dot p\_i = \frac{m}{2}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,\dot q^k\dot q^l - \frac{\partial V}{\partial q^i}.$$
 
-$$\frac{m}{2}\frac{\partial g\_{kl}}{\partial q^i}\\,\dot q^k\dot q^l = \frac{1}{2m}\\,g^{ka}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,g^{lb}\\,p\_a p\_b.$$
+On cherche une fonction $H(q, p)$ telle que $\dot q^j = \partial H/\partial p\_j$ et $\dot p\_i = -\partial H/\partial q^i$, la seconde dérivée étant prise **à moments fixés**.
 
-On utilise alors la dérivée de la matrice inverse&nbsp;: en dérivant $g^{ak}g\_{kl} = \delta^a\_l$, on obtient $\frac{\partial g^{ab}}{\partial q^i} = -g^{ak}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,g^{lb}$. C'est la version matricielle de la formule bien connue $\mathrm{d}(1/g) = -\mathrm{d}g/g^2$. Le terme correctif vaut donc $-\frac{1}{2m}\frac{\partial g^{ab}}{\partial q^i}\\,p\_a p\_b$, et l'équation de Newton devient
+**La première équation** détermine la dépendance de $H$ en $p$. Notons $g^{ij}$ la matrice inverse de $g\_{ij}$ (elle est symétrique, comme $g\_{ij}$). Inverser la relation $p\_i = m\\,g\_{ij}\dot q^j$ donne $\dot q^j = \frac{1}{m}g^{jk}p\_k$, donc $H$ doit vérifier $\frac{\partial H}{\partial p\_j} = \frac{1}{m}g^{jk}p\_k$. En intégrant par rapport aux $p\_j$,
 
-$$\dot p\_i = -\frac{\partial}{\partial q^i}\left(\frac{1}{2m}\\,g^{ab}\\,p\_a p\_b + V\right),$$
+$$H(q, p) = \frac{1}{2m}\\,g^{ab}(q)\\,p\_a p\_b + U(q),$$
 
-la dérivée étant prise **à moments fixés**. On reconnaît la seconde équation de Hamilton, avec
+où $U$ est une fonction de $q$ seul, la «&nbsp;constante d'intégration&nbsp;».
+
+**La seconde équation** fixe $U$. Elle demande $\dot p\_i = -\frac{1}{2m}\frac{\partial g^{ab}}{\partial q^i}p\_a p\_b - \frac{\partial U}{\partial q^i}$. Pour coïncider avec l'équation de Newton, il faut $U = V$, et il faut surtout que
+
+$$\frac{m}{2}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,\dot q^k\dot q^l = -\frac{1}{2m}\\,\frac{\partial g^{ab}}{\partial q^i}\\,p\_a p\_b.$$
+
+Cette égalité dit que la dérivée de l'énergie cinétique par rapport à la position est **opposée** selon que l'on fixe les vitesses ou les moments. C'est une identité d'algèbre sur la matrice inverse, démontrée dans le bloc ci-dessous. Cette identité acquise, les deux équations de Hamilton sont vérifiées avec
 
 <div id="theo">
 
@@ -2593,12 +2599,45 @@ $$H(q, p) = \frac{1}{2m}\\,g^{ab}(q)\\,p\_a p\_b + V(q).$$
 
 </div>
 
-La première équation est automatique&nbsp;: $\frac{\partial H}{\partial p\_j} = \frac{1}{m}g^{ja}p\_a = \dot q^j$. Le hamiltonien est l'énergie cinétique, exprimée avec les moments, plus l'énergie potentielle. Pour les coordonnées polaires, $g^{rr} = 1$ et $g^{\theta\theta} = 1/r^2$&nbsp;: on retrouve le hamiltonien de la section précédente.
+Le hamiltonien est l'énergie cinétique, exprimée avec les moments, plus l'énergie potentielle. Pour les coordonnées polaires, $g^{rr} = 1$ et $g^{\theta\theta} = 1/r^2$&nbsp;: on retrouve le hamiltonien de l'exemple des coordonnées polaires.
+
+**Pourquoi un signe opposé&nbsp;?** L'énergie cinétique peut s'écrire en fonction des vitesses, $T = \frac{m}{2}g\_{kl}\dot q^k\dot q^l$, ou en fonction des moments, $T = \frac{1}{2m}g^{ab}p\_a p\_b$. Ces deux expressions sont égales, mais leurs dérivées par rapport à la position sont opposées, parce qu'on ne fixe pas la même chose. En coordonnées polaires, à vitesse angulaire $\dot\theta$ fixée, $T = \frac{m}{2}r^2\dot\theta^2$ augmente avec $r$&nbsp;; à moment cinétique $p\_\theta$ fixé, $T = \frac{p\_\theta^2}{2mr^2}$ diminue avec $r$. C'est toute la différence entre les deux descriptions, et c'est pourquoi la force centrifuge apparaît dans un cas comme un terme cinétique et dans l'autre comme la pente d'un «&nbsp;potentiel centrifuge&nbsp;» $\frac{p\_\theta^2}{2mr^2}$.
 
 <div id="preuve">
+<details>
+<summary>le calcul&nbsp;: dérivée de la matrice inverse, puis seconde équation de Hamilton</summary>
 
-**Pourquoi le signe change-t-il&nbsp;?** L'énergie cinétique peut s'écrire en fonction des vitesses, $T = \frac{m}{2}g\_{kl}\dot q^k\dot q^l$, ou en fonction des moments, $T = \frac{1}{2m}g^{ab}p\_a p\_b$. Ces deux expressions sont égales, mais leurs dérivées par rapport à la position sont **opposées**, parce qu'on ne fixe pas la même chose. En coordonnées polaires, à vitesse angulaire $\dot\theta$ fixée, $T = \frac{m}{2}r^2\dot\theta^2$ augmente avec $r$&nbsp;; à moment cinétique $p\_\theta$ fixé, $T = \frac{p\_\theta^2}{2mr^2}$ diminue avec $r$. C'est toute la différence entre les deux descriptions, et c'est pourquoi la force centrifuge apparaît dans un cas comme un terme cinétique et dans l'autre comme la pente d'un «&nbsp;potentiel centrifuge&nbsp;» $\frac{p\_\theta^2}{2mr^2}$.
+**Étape 1&nbsp;: la dérivée de la matrice inverse.** La matrice $(g^{ab})$ est l'inverse de $(g\_{ab})$&nbsp;: pour tout $q$,
 
+$$g^{ak}(q)\\,g\_{kl}(q) = \delta^a\_l.$$
+
+Le membre de droite est constant. Dérivons le membre de gauche par rapport à $q^i$, avec la règle du produit&nbsp;:
+
+$$\frac{\partial g^{ak}}{\partial q^i}\\,g\_{kl} + g^{ak}\\,\frac{\partial g\_{kl}}{\partial q^i} = 0.$$
+
+Multiplions par $g^{lb}$ et sommons sur $l$. Comme $g\_{kl}\\,g^{lb} = \delta^b\_k$, le premier terme devient $\frac{\partial g^{ab}}{\partial q^i}$, et l'on obtient
+
+$$\frac{\partial g^{ab}}{\partial q^i} = -g^{ak}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,g^{lb}.$$
+
+En notation matricielle, $\partial(G^{-1}) = -G^{-1}\\,(\partial G)\\,G^{-1}$&nbsp;: c'est la version, pour une matrice, de la formule $\mathrm{d}(1/g) = -\mathrm{d}g/g^2$ valable pour un nombre. L'ordre des facteurs compte, puisque des matrices ne commutent pas en général. Vérification en coordonnées polaires, avec $g\_{\theta\theta} = r^2$ et $g^{\theta\theta} = 1/r^2$&nbsp;: la formule donne $\frac{\partial g^{\theta\theta}}{\partial r} = -\frac{1}{r^2}\cdot 2r\cdot\frac{1}{r^2} = -\frac{2}{r^3}$, qui est bien la dérivée de $1/r^2$.
+
+**Étape 2&nbsp;: le terme correctif en fonction des moments.** Avec $\dot q^k = \frac{1}{m}g^{ka}p\_a$ et $\dot q^l = \frac{1}{m}g^{lb}p\_b$,
+
+$$\frac{m}{2}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,\dot q^k\dot q^l = \frac{1}{2m}\\,g^{ka}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,g^{lb}\\,p\_a p\_b.$$
+
+La matrice $g^{ab}$ étant symétrique, $g^{ka} = g^{ak}$, et l'étape 1 donne $g^{ak}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,g^{lb} = -\frac{\partial g^{ab}}{\partial q^i}$. D'où
+
+$$\frac{m}{2}\\,\frac{\partial g\_{kl}}{\partial q^i}\\,\dot q^k\dot q^l = -\frac{1}{2m}\\,\frac{\partial g^{ab}}{\partial q^i}\\,p\_a p\_b,$$
+
+c'est l'égalité cherchée.
+
+**Étape 3&nbsp;: la seconde équation de Hamilton.** Avec cette égalité, l'équation de Newton devient
+
+$$\dot p\_i = -\frac{1}{2m}\\,\frac{\partial g^{ab}}{\partial q^i}\\,p\_a p\_b - \frac{\partial V}{\partial q^i} = -\frac{\partial}{\partial q^i}\left(\frac{1}{2m}\\,g^{ab}\\,p\_a p\_b + V\right),$$
+
+la dérivée étant prise à $p$ fixé. C'est $\dot p\_i = -\partial H/\partial q^i$, avec $U = V$.
+
+</details>
 </div>
 
 Pour un système de $N$ particules, il suffit de répéter le raisonnement pour chacune. Mieux&nbsp;: on peut voir les $N$ particules comme un seul point d'un espace de dimension $3N$, muni d'une métrique où chaque particule compte avec sa masse. Le système entier devient une seule particule, et tout ce qui précède s'applique tel quel.
