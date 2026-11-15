@@ -264,7 +264,9 @@ Pour la dessiner, traçons les lignes où $V$ vaut $V(P)$, $V(P) + \Delta$, $V(P
 
 <div id="def">
 
-**Définition.** Soit $E$ un espace vectoriel réel (ici, l'espace des vecteurs tangents en un point $P$, noté $T\_PM$). Une **forme linéaire** sur $E$ est une application linéaire $\alpha : E \to \mathbb{R}$. Ces formes constituent l'**espace dual** $E^{\ast}$ (ici, l'**espace cotangent** $T^{\ast}\_PM$). Une **1-forme différentielle** sur $M$ est le choix, en chaque point $P$, d'une forme linéaire $\alpha\_P \in T^{\ast}\_PM$ qui varie de façon régulière avec $P$. On note $\alpha(\vec v)$, ou $\langle\alpha, \vec v\rangle$, le nombre obtenu en l'appliquant à un vecteur $\vec v$.
+**Définition**
+
+Soit $E$ un espace vectoriel réel (ici, l'espace des vecteurs tangents en un point $P$, noté $T\_PM$). Une **forme linéaire** sur $E$ est une application linéaire $\alpha : E \to \mathbb{R}$. Ces formes constituent l'**espace dual** $E^{\ast}$ (ici, l'**espace cotangent** $T^{\ast}\_PM$). Une **1-forme différentielle** sur $M$ est le choix, en chaque point $P$, d'une forme linéaire $\alpha\_P \in T^{\ast}\_PM$ qui varie de façon régulière avec $P$. On note $\alpha(\vec v)$, ou $\langle\alpha, \vec v\rangle$, le nombre obtenu en l'appliquant à un vecteur $\vec v$.
 
 </div>
 
@@ -605,7 +607,9 @@ $$\mathrm{d}\alpha = \mathrm{d}P\wedge\mathrm{d}x + \mathrm{d}Q\wedge\mathrm{d}y
 
 <div id="theo">
 
-**Théorème de Stokes.** Pour une région $D$ de bord $\partial D$ (muni de l'orientation induite) et une forme $\alpha$ de degré adapté,
+**Théorème de Stokes**
+
+Pour une région $D$ de bord $\partial D$ (muni de l'orientation induite) et une forme $\alpha$ de degré adapté,
 
 $$\int\_{\partial D}\alpha = \int\_D \mathrm{d}\alpha.$$
 

@@ -2094,7 +2094,9 @@ Tout étirement selon $x$ est compensé par une compression selon $p$, et invers
 
 <div id="theo">
 
-<b>Théorème de Liouville.</b> L'écoulement engendré par les équations de Hamilton conserve les volumes de l'espace des phases.
+**Théorème de Liouville**
+
+L'écoulement engendré par les équations de Hamilton conserve les volumes de l'espace des phases.
 
 </div>
 
@@ -3041,9 +3043,18 @@ $$\frac{\mathrm{d}H}{\mathrm{d}s} = \frac{\partial H}{\partial x}\frac{\partial 
 Le même nombre, au signe près, mesure donc deux choses à la fois&nbsp;: la vitesse à laquelle $G$ varie quand on fait couler $H$, et la vitesse à laquelle $H$ varie quand on fait couler $G$.
 
 <div id="theo">
-<p><b>Théorème de Noether (version hamiltonienne).</b> Pour une fonction $G$ de l'espace des phases, les deux propriétés suivantes sont équivalentes&nbsp;:</p>
-<p style="text-align:center;">(i) $G$ est conservée au cours du mouvement&nbsp;; &nbsp;&nbsp; (ii) $H$ est invariant par l'écoulement engendré par $G$ (c'est une <b>symétrie</b>).</p>
-<p>Elles traduisent la même égalité&nbsp;: $\{G, H\} = 0$.</p>
+
+**Théorème de Noether (version hamiltonienne)**
+
+Pour une fonction $G$ de l'espace des phases, les deux propriétés suivantes sont équivalentes&nbsp;:
+
+<ul style="margin-bottom:1em;">
+<li style="list-style-type: '(i) ';">$G$ est conservée au cours du mouvement&nbsp;;</li>
+<li style="list-style-type: '(ii) ';">$H$ est invariant par l'écoulement engendré par $G$ (c'est une <b>symétrie</b>).</li>
+</ul>
+
+Elles traduisent la même égalité&nbsp;: $\\{G, H\\} = 0$.
+
 </div>
 
 Quelques exemples, qui sont autant de symétries bien connues&nbsp;:
