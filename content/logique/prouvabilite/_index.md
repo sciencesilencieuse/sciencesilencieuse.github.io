@@ -220,6 +220,38 @@ Combinée à la ligne 1, la ligne 9 donne $\vdash\neg\Box\bot\rightarrow G$. Si 
 Une théorie cohérente, dont on sait reconnaître mécaniquement les axiomes et qui contient l'arithmétique, ne peut pas prouver sa propre cohérence. Les seules théories de ce type qui «&nbsp;prouvent&nbsp;» leur cohérence sont celles qui sont incohérentes, et qui prouvent donc n'importe quoi…</p>
 </div>
 
+<div class="encadre bleu">
+<div class="encadre-titre">Qui raisonne sur quoi&nbsp;?</div>
+
+Le second théorème semble plus «&nbsp;méta&nbsp;» que le premier, puisqu'il parle de la cohérence de la théorie. Pour y voir clair, distinguons trois niveaux&nbsp;:
+
+1. les **faits arithmétiques**&nbsp;: $2+2=4$, la conjecture de Goldbach…
+2. les **énoncés arithmétiques qui, grâce au codage, parlent de la théorie**&nbsp;: $\Box\phi$, $G$, $\neg\Box\bot$. Ils sont écrits dans la théorie, qui peut donc tenter de les démontrer&nbsp;;
+3. **nos théorèmes sur la théorie**&nbsp;: les deux théorèmes d'incomplétude, le théorème de Löb.
+
+Les deux théorèmes d'incomplétude sont au niveau 3, et chacun déclare indémontrable un énoncé du niveau 2. Ces deux énoncés sont d'ailleurs tout aussi réflexifs l'un que l'autre&nbsp;: $G$ dit «&nbsp;je ne suis pas démontrable dans cette théorie&nbsp;». La vraie différence tient à ce que la théorie doit savoir faire&nbsp;:
+
+<div class="tableau-large">
+<table class="tab-recap">
+<tr><th></th><th>Énoncé indémontrable</th><th>Ce que la théorie doit savoir faire</th></tr>
+<tr><td class="g">Premier théorème</td><td>$G$</td><td class="g">parler de ses preuves (coder la prouvabilité, diagonaliser)</td></tr>
+<tr><td class="g">Second théorème</td><td>$\neg\Box\bot$</td><td class="g"><b>raisonner</b> sur ses preuves, au point de refaire elle-même la preuve du premier théorème</td></tr>
+</table>
+</div>
+
+Pour le premier, c'est nous qui raisonnons sur la théorie&nbsp;; la nécessitation nous suffit. Pour le second, c'est la théorie qui mène le raisonnement, grâce à $\text{(K)}$ et $\text{(4)}$&nbsp;: elle fait de la métamathématique sur elle-même. Le second théorème est donc bien le plus réflexif des deux.
+
+Les deux énoncés sont même **démontrablement équivalents**&nbsp;: $\vdash G\leftrightarrow\neg\Box\bot$.
+
+- Dans le sens $\neg\Box\bot\rightarrow G$, c'est ce qu'on vient d'obtenir.
+- Dans l'autre sens, du faux on tire tout, donc $\vdash\bot\rightarrow G$. Par nécessitation et $\text{(K)}$, $\vdash\Box\bot\rightarrow\Box G$, soit par contraposition $\vdash\neg\Box G\rightarrow\neg\Box\bot$. Comme $G$ entraîne $\neg\Box G$ (ligne 1), on obtient $\vdash G\rightarrow\neg\Box\bot$.
+
+La formule autoréférente «&nbsp;je ne suis pas démontrable&nbsp;» n'est donc, à équivalence près, que l'énoncé très naturel «&nbsp;la théorie est cohérente&nbsp;».
+
+Le second théorème redonne-t-il le premier&nbsp;? Pour une théorie **saine** comme $\text{PA}$, qui ne démontre que des énoncés vrais, oui&nbsp;: $\Box\bot$ est faux, donc la théorie ne le démontre pas, et $\neg\Box\bot$ est indécidable. Pour une théorie seulement cohérente, non. Notons $\text{Con}(\text{PA})$ l'énoncé de cohérence de $\text{PA}$. La théorie $\text{PA}+\neg\text{Con}(\text{PA})$ est cohérente (c'est le second théorème appliqué à $\text{PA}$), et pourtant elle démontre sa propre incohérence. Elle reste incomplète, mais il faut pour le voir une variante du premier théorème due à Rosser (1936).
+
+</div>
+
 Par dualité, $\Diamond P = \neg\Box\neg P$ exprime qu'on ne peut pas prouver que $P$ est fausse, autrement dit que $P$ est compatible avec la théorie. L'énoncé de cohérence $\neg\Box\bot$ s'écrit alors simplement $\Diamond\top$, et le second théorème prend, à l'intérieur même de la théorie, la forme $\Diamond\top\rightarrow \neg\Box\Diamond \top$&nbsp;: «&nbsp;si la théorie est cohérente, alors elle ne peut pas le prouver&nbsp;».
 
 C'est la fin du programme de Hilbert sous sa forme initiale&nbsp;: pour prouver la cohérence de l'arithmétique, il faut des moyens qui la dépassent. Gerhard Gentzen, l'inventeur de la déduction naturelle et du calcul des séquents, y parviendra en 1936 au prix d'une récurrence sur des ordinaux infinis.
