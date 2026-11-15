@@ -2169,8 +2169,8 @@ Le remède, quand il existe, consiste à changer de chaîne tout en gardant la m
 <br>
 
 
-> Levin, D. A. et Peres, Y. *Markov Chains and Mixing Times*, 2<sup>e</sup> édition, American Mathematical Society (2017). [🌐](https://pages.uoregon.edu/dlevin/MARKOV/mcmt2e.pdf)
- Petruszewycz, M. « Chaînes de Markov discrètes dans le domaine linguistique : l'article de 1913 de A. A. Markov », *Publications des séminaires de mathématiques et informatique de Rennes*, fascicule 2 (1981). [🌐](https://www.numdam.org/item/PSMIR_1981___2_A3_0.pdf)
+> Levin, D. A. et Peres, Y. *Markov Chains and Mixing Times*, 2<sup>e</sup> édition, American Mathematical Society (2017). [🌐](https://pages.uoregon.edu/dlevin/MARKOV/mcmt2e.pdf)<br><br>
+ Petruszewycz, M. « Chaînes de Markov discrètes dans le domaine linguistique : l'article de 1913 de A. A. Markov », *Publications des séminaires de mathématiques et informatique de Rennes*, fascicule 2 (1981). [🌐](https://www.numdam.org/item/PSMIR_1981___2_A3_0.pdf)<br><br>
  Hayes, B. « First Links in the Markov Chain », *American Scientist* 101 (2013). [🌐](https://www.americanscientist.org/article/first-links-in-the-markov-chain)
 
 

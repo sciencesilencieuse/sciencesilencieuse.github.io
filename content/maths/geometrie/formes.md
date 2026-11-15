@@ -944,15 +944,8 @@ La distinction entre vecteur et pseudovecteur devient celle entre 1-forme et 2-f
 
 Les équations de Maxwell s'écrivent alors sans aucune coordonnée. Avec un potentiel $A$ (une 1-forme), $B = \mathrm{d}A$, donc $\mathrm{d}B = 0$&nbsp;: c'est $\vec\nabla\cdot\vec B = 0$, le flux de $B$ à travers toute surface fermée est nul, les tubes de $B$ ne se terminent nulle part. L'équation de Faraday s'écrit $\mathrm{d}E = -\partial\_t B$. En relativité, $E$ et $B$ se fondent en une seule 2-forme $F$ de l'espace-temps, et les quatre équations de Maxwell se réduisent à deux&nbsp;: $\mathrm{d}F = 0$ (les deux équations sans source) et $\mathrm{d}\star F = J$ (celles avec sources, où $J$ est la 3-forme courant). L'opérateur $\star$ (dualité de Hodge) utilise la métrique, alors que $\mathrm{d}F = 0$ n'en utilise aucune&nbsp;: la moitié des équations de Maxwell est indépendante de la géométrie de l'espace-temps.
 
-## Pour aller plus loin {#suite}
 
-<ul>
-<li>Needham, T., <i>Visual Differential Geometry and Forms</i>, Princeton University Press (2021)&nbsp;: un traitement très visuel, dans l'esprit des figures de cette page.</li>
-<li>Misner, C. W., Thorne, K. S., Wheeler, J. A., <i>Gravitation</i>, W. H. Freeman (1973), chapitres 2 à 4&nbsp;: les 1-formes comme piles de lignes, et l'électromagnétisme en formes.</li>
-<li>Arnold, V. I., <i>Mathematical Methods of Classical Mechanics</i>, Springer, chapitres 7 (formes différentielles) et 8 (variétés symplectiques).</li>
-<li>Dray, T., <i>Differential Forms and the Geometry of General Relativity</i>, CRC Press (2014).</li>
-<li>Hubbard, J. H. et B. B., <i>Vector Calculus, Linear Algebra, and Differential Forms</i>, Matrix Editions&nbsp;: une approche par les formes dès le calcul différentiel.</li>
-<li>Cartan, H., <i>Formes différentielles</i>, Hermann (1967)&nbsp;: la référence française classique.</li>
-<li>Wikipedia, <a href="https://en.wikipedia.org/wiki/Differential_form">Differential form</a>, <a href="https://en.wikipedia.org/wiki/Stokes%27_theorem">Stokes' theorem</a> et <a href="https://en.wikipedia.org/wiki/Symplectic_geometry">Symplectic geometry</a>.</li>
-<li>La page de mécanique&nbsp;: <a href="/physique/meca/hamilton/">De Newton à Hamilton</a>.</li>
-</ul>
+<br>
+
+> Needham, T., <i>Visual Differential Geometry and Forms</i>, Princeton University Press (2021)&nbsp;: un traitement très visuel, dans l'esprit des figures de cette page.<br><br>
+Misner, C. W., Thorne, K. S., Wheeler, J. A., <i>Gravitation</i>, W. H. Freeman (1973), chapitres 2 à 4&nbsp;: les 1-formes comme piles de lignes, et l'électromagnétisme en formes.
