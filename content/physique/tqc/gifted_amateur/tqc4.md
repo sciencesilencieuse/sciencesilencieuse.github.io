@@ -125,6 +125,27 @@ Pour obtenir une théorie quantique des champs à partir d'une théorie des cham
 
 L'étape&nbsp;4 est la seule qui ne soit pas garantie de fonctionner. Décomposer en modes d'impulsion, c'est diagonaliser l'hamiltonien, et cela ne réussit que si celui-ci est <b>quadratique</b> en les champs et leurs dérivées. Les termes de couplage, eux, mélangent les modes et ruinent la diagonalisation.
 
+{{%notice type="info" title="Pourquoi le lagrangien plutôt que le hamiltonien ?" round="true"%}}
+
+**Deux rôles distincts**<br>
+Le hamiltonien est bien l'opérateur qui fait évoluer les états, $\hat U(t) = \mathrm{e}^{-\mathrm{i}\hat H t}$ ([partie 3](../tqc3/#évolution-temporelle)), et ses valeurs propres sont les énergies. C'est pourquoi tout ce qui est quantique dans la recette (commutateurs, modes, ordre normal) se fait avec $\hat{\mathcal H}$. Le lagrangien, lui, ne commande aucune évolution&nbsp;: il sert à **écrire la théorie**, c'est-à-dire à choisir les champs, leurs symétries et leurs couplages. Le hamiltonien s'en déduit par la transformation de Legendre de l'étape&nbsp;2. Le lagrangien dit *quelle* théorie, le hamiltonien dit *comment* elle évolue.
+
+Pour un système non relativiste (les oscillateurs couplés ou le modèle de Hubbard de la [partie 1](../tqc1/)), rien ne s'y oppose&nbsp;: on part directement du hamiltonien. Le lagrangien devient précieux quand la théorie doit être relativiste.
+
+**Ce que le lagrangien apporte**
+
+<ul>
+<li><b>L'invariance de Lorentz se lit à vue.</b> Pour le champ scalaire, $\mathcal L = \frac{1}{2}(\partial_\mu\phi)^2 - \frac{1}{2}m^2\phi^2$ est construit avec un produit scalaire de quadrivecteurs et le carré d'un scalaire&nbsp;: il est invariant, et l'action $S = \int \mathrm{d}^4x\,\mathcal L$ traite le temps et l'espace de la même façon. Le hamiltonien correspondant, $\mathcal H = \frac{1}{2}(\partial_0\phi)^2 + \frac{1}{2}(\nabla\phi)^2 + \frac{1}{2}m^2\phi^2$, sépare le temps de l'espace. Ce n'est pas un défaut de calcul&nbsp;: $H$ est l'énergie, la composante $P^0$ d'un quadrivecteur (tenseur énergie-impulsion, <a href="../tqc3/#théorème-de-noether">partie 3</a>), et elle change quand on change de référentiel. En formulation hamiltonienne avec interaction, le générateur des changements de référentiel contient lui aussi les termes d'interaction, comme $\hat H$, et l'invariance relativiste ne se vérifie plus qu'en contrôlant les relations de commutation entre générateurs.</li>
+<li><b>Les symétries se lisent sur $\mathcal L$.</b> Le <a href="../tqc3/#théorème-de-noether">théorème de Noether</a> part du lagrangien et fournit un courant conservé $J^\mu$, covariant. Le principe de jauge de la <a href="../tqc5/#champs-de-jauge-et-théorie-de-jauge">partie 5</a> consiste à exiger l'invariance de $\mathcal L$, en remplaçant les dérivées par des dérivées covariantes&nbsp;: l'interaction en découle.</li>
+<li><b>Les interactions s'ajoutent terme à terme.</b> Une masse, une source, un terme en $\phi^4$ s'ajoutent à $\mathcal L$, et les symétries trient les termes admissibles. Pour un couplage sans dérivée, le terme correspondant du hamiltonien est simplement l'opposé&nbsp;: $-\frac{\lambda}{4!}\phi^4$ dans $\mathcal L$ devient $+\frac{\lambda}{4!}\phi^4$ dans $\mathcal H$.</li>
+<li><b>L'action est ce qui pèse chaque configuration.</b> La phase $\mathrm{e}^{\mathrm{i}S/\hbar}$ de la <a href="../tqc0/#pourquoi-ça-marche-les-chemins-quantiques">partie 0</a> s'écrit avec le lagrangien. En théorie des champs, la somme de cette phase sur toutes les configurations du champ (intégrale fonctionnelle, parties&nbsp;11 et&nbsp;12) quantifie la théorie sans choisir de temps privilégié.</li>
+</ul>
+
+**Ce que le choix du hamiltonien coûte**<br>
+La quantification canonique impose ses commutateurs <i>à temps égaux</i>&nbsp;: elle choisit un temps. La covariance, évidente au départ, devient cachée au moment de quantifier, et ne réapparaît qu'avec les propagateurs et les règles de Feynman des parties suivantes.
+
+{{%/notice%}}
+
 
 <!-- FIGURE 1 (à redessiner) : schéma de flux de la recette, en cinq boîtes verticales reliées par des flèches vers le bas.
 Boîte 1, étiquetée "classique" : la densité lagrangienne L(phi, d_mu phi).
