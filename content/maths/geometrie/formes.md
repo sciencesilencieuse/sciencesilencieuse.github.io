@@ -93,9 +93,12 @@ mjx-container[display="true"]
     overflow-x: auto;
     overflow-y: hidden;
 }
+h1{
+overflow-x:auto;
+}
 </style>
 
-# Formes différentielles
+<h1>Formes différentielles</h1>
 <p style="font-size:1.15em;color:#475569;margin-top:-0.6em;margin-bottom:1.2em;"><i>Des mesureurs de flèches, adaptés à la géométrie.</i></p>
 
 Un vecteur est une flèche&nbsp;: un déplacement, une vitesse. Mais beaucoup de grandeurs ne sont pas des flèches. La variation d'altitude quand on fait un pas sur une carte, le travail d'une force pendant un déplacement, la variation d'énergie d'un gaz qu'on comprime sont des **mesureurs**, qui à chaque flèche associent un nombre. Les **formes différentielles** sont ces mesureurs, avec le calcul qui va avec.
