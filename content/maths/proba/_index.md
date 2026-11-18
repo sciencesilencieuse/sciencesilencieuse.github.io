@@ -27,7 +27,7 @@ Les **probabilités** sont des calculs a priori, visant à prédire les issues d
 </div>
 </div>
 
-<div class="math-card c-canard">
+<div class="math-card c-orange">
 <div class="math-card-head">
 <span class="math-illus" aria-hidden="true"><img src="/presmarkov.png" alt=""></span>
 <h3><a href="./markov/">Chaînes de Markov</a></h3>
@@ -42,7 +42,7 @@ Les **probabilités** sont des calculs a priori, visant à prédire les issues d
 </div>
 </div>
 
-<div class="math-card c-vert">
+<div class="math-card c-rouge">
 <div class="math-card-head">
 <span class="math-illus" aria-hidden="true"><img src="/prescuriosites.png" alt=""></span>
 <h3><a href="./curiosites/">Curiosités et énigmes</a></h3>
@@ -59,7 +59,7 @@ Les **probabilités** sont des calculs a priori, visant à prédire les issues d
 </div>
 </div>
 
-<div class="math-card c-orange">
+<div class="math-card c-canard">
 <div class="math-card-head">
 <span class="math-illus" aria-hidden="true"><img src="/simplexepres.png" alt=""></span>
 <h3><a href="./simplexes_proba/">Simplexes et probabilités</a></h3>

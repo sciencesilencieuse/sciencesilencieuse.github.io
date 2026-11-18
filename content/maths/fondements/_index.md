@@ -12,7 +12,7 @@ Où l'on parle du langage de la logique (et des ensembles), des infinis dénombr
 <div class="math-container">
 <div class="math-grid">
 
-<div class="math-card c-bleu">
+<div class="math-card c-orange">
 <div class="math-card-head">
 <span class="math-illus" aria-hidden="true"><img src="/illlog.png" alt=""></span>
 <h3><a href="./boole/">Langage logique</a></h3>
@@ -34,7 +34,7 @@ Où l'on parle du langage de la logique (et des ensembles), des infinis dénombr
 </div>
 </div>
 
-<div class="math-card c-vert">
+<div class="math-card c-rouge">
 <div class="math-card-head">
 <span class="math-illus" aria-hidden="true"><img src="/illinf.png" alt=""></span>
 <h3><a href="./infinis/">Les infinis</a></h3>

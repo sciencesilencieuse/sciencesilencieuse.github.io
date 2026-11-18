@@ -12,7 +12,7 @@ L'arithmétique est la plus ancienne branche des mathématiques avec la géomét
 <div class="math-container">
 <div class="math-grid">
 
-<div class="math-card c-bleu">
+<div class="math-card c-canard">
 <div class="math-card-head">
 <span class="math-illus" aria-hidden="true"><img src="/presnum.png" alt=""></span>
 <h3><a href="./numeration/">Numération et bases</a></h3>
@@ -25,7 +25,7 @@ L'arithmétique est la plus ancienne branche des mathématiques avec la géomét
 </div>
 </div>
 
-<div class="math-card c-canard">
+<div class="math-card c-magenta">
 <div class="math-card-head">
 <span class="math-illus" aria-hidden="true"><img src="/presnb.png" alt=""></span>
 <h3><a href="./nombresapart/">Nombres particuliers</a></h3>
@@ -42,7 +42,7 @@ L'arithmétique est la plus ancienne branche des mathématiques avec la géomét
 </div>
 </div>
 
-<div class="math-card c-vert">
+<div class="math-card c-bleu">
 <div class="math-card-head">
 <span class="math-illus" aria-hidden="true"><img src="/prescompl.png" alt=""></span>
 <h3><a href="./complexes/">Complexes</a></h3>

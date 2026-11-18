@@ -20,7 +20,7 @@ L'algèbre (de l'arabe الجبر, al-jabr, signifiant reconstruction ou réunio
 <div class="carte-texte">Ce que deviennent les équations polynomiales quand on laisse la variable se promener dans les complexes.</div>
 </div>
 
-<div class="math-card c-canard">
+<div class="math-card c-orange">
 <div class="math-card-head">
 <span class="math-illus" aria-hidden="true"><img src="/presalglin.png" alt=""></span>
 <h3><a href="./lineaire/">Algèbre linéaire</a></h3>
@@ -41,7 +41,7 @@ L'algèbre (de l'arabe الجبر, al-jabr, signifiant reconstruction ou réunio
 <div class="carte-texte">Miettes de théorie des groupes pour physicien&nbsp;: symétries, rotations et représentations.</div>
 </div>
 
-<div class="math-card c-orange">
+<div class="math-card c-magenta">
 <div class="math-card-head">
 <span class="math-illus" aria-hidden="true"><img src="/presgraphes.png" alt=""></span>
 <h3><a href="./graphes/">Graphes</a></h3>

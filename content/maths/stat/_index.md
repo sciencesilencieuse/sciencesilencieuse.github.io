@@ -27,7 +27,7 @@ Les **statistiques** sont des calculs a posteriori qui analysent les issues d’
 </div>
 </div>
 
-<div class="math-card c-canard">
+<div class="math-card c-rouge">
 <div class="math-card-head">
 <span class="math-illus" aria-hidden="true"><img src="/presmontecarlo.png" alt=""></span>
 <h3><a href="./montecarlo/">Méthode de Monte Carlo</a></h3>
@@ -43,7 +43,7 @@ Les **statistiques** sont des calculs a posteriori qui analysent les issues d’
 <div class="carte-texte">Quand une tendance s'inverse en regroupant les données&nbsp;: l'exemple de la vaccination contre le Covid.</div>
 </div>
 
-<div class="math-card c-orange">
+<div class="math-card c-canard">
 <div class="math-card-head">
 <span class="math-illus" aria-hidden="true"><img src="/prestesthyp.png" alt=""></span>
 <h3><a href="./testhyp/">Test d'hypothèse</a></h3>
@@ -56,7 +56,7 @@ Les **statistiques** sont des calculs a posteriori qui analysent les issues d’
 </div>
 </div>
 
-<div class="math-card c-rouge">
+<div class="math-card c-canard">
 <div class="math-card-head">
 <span class="math-illus" aria-hidden="true"><img src="/presacp.png" alt=""></span>
 <h3><a href="./acp/">Analyse en composantes principales</a></h3>
@@ -69,7 +69,7 @@ Les **statistiques** sont des calculs a posteriori qui analysent les issues d’
 </div>
 </div>
 
-<div class="math-card c-magenta">
+<div class="math-card c-bleu">
 <div class="math-card-head">
 <span class="math-illus" aria-hidden="true"><img src="/presbayes.png" alt=""></span>
 <h3><a href="./bayes/">Inférences bayésiennes</a></h3>
@@ -84,7 +84,7 @@ Les **statistiques** sont des calculs a posteriori qui analysent les issues d’
 </div>
 </div>
 
-<div class="math-card c-bleu">
+<div class="math-card c-magenta">
 <div class="math-card-head">
 <span class="math-illus" aria-hidden="true"><img src="/presecarttype.png" alt=""></span>
 <h3><a href="./ecarttype/">Écart-type expérimental</a></h3>

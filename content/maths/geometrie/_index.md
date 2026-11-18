@@ -30,7 +30,7 @@ Géométrie et physique sont intimement liées. Le développement de la géomét
 </div>
 </div>
 
-<div class="math-card c-canard">
+<div class="math-card c-orange">
 <div class="math-card-head">
 <span class="math-illus" aria-hidden="true"><img src="/prescercle.png" alt=""></span>
 <h3><a href="./geo2/">Cercle et triangle</a></h3>
@@ -60,7 +60,7 @@ Géométrie et physique sont intimement liées. Le développement de la géomét
 </div>
 </div>
 
-<div class="math-card c-orange">
+<div class="math-card c-magenta">
 <div class="math-card-head">
 <span class="math-illus" aria-hidden="true"><img src="/presdim.png" alt=""></span>
 <h3><a href="./geo4/">Curse of dimensionality</a></h3>
@@ -92,7 +92,7 @@ Géométrie et physique sont intimement liées. Le développement de la géomét
 </div>
 </div>
 
-<div class="math-card c-magenta">
+<div class="math-card c-canard">
 <div class="math-card-head">
 <span class="math-illus" aria-hidden="true"><img src="/simplices.png" alt=""></span>
 <h3><a href="./simplexes/">Simplexes et flèche du temps</a></h3>
@@ -106,7 +106,7 @@ Géométrie et physique sont intimement liées. Le développement de la géomét
 </div>
 </div>
 
-<div class="math-card c-bleu">
+<div class="math-card c-magenta">
 <div class="math-card-head">
 <span class="math-illus" aria-hidden="true"><img src="/formes.svg" alt=""></span>
 <h3><a href="./formes/">Formes différentielles</a></h3>
