@@ -15,6 +15,26 @@ Petits exercices de niveau licence/prépa traitant de voyages autour ou à trave
 
 {{< youtube-plus id="QVibTnN4rpY" ratio="16x9" width="800" shadow=true rounded=true >}}
 
+### Trois billes, un même rendez-vous
+
+Dans une Terre de masse volumique uniforme, la pesanteur à l'intérieur est proportionnelle à la distance au centre. Seule la matière plus proche du centre attire (c'est le théorème de Gauss)&nbsp;; sa masse croît comme $r^3$ alors que l'attraction décroît comme $1/r^2$, d'où $g(r)=g\,r/R$.
+
+Le long d'un tunnel rectiligne aux parois lisses, seule compte la composante de la pesanteur parallèle au tunnel. Elle est proportionnelle à la distance au milieu du tunnel, exactement comme la force de rappel d'un ressort. Chaque bille oscille donc d'un bout à l'autre de son tunnel avec la même pulsation $\omega=\sqrt{g/R}$, **quelle que soit l'inclinaison du tunnel**. Un aller dure
+
+$$\frac{T}{2}=\pi\sqrt{\frac{R}{g}}\approx 42\text{ min}.$$
+
+La bille lancée en orbite rasante tourne, elle, à la vitesse $v$ telle que $v^2/R=g$&nbsp;: sa vitesse angulaire est encore $\omega$, et elle a la même période. Mieux&nbsp;: la bille du tunnel central est exactement l'**ombre** de la bille en orbite sur le diamètre, et elle passe au centre de la Terre à la vitesse orbitale, 7,9&nbsp;km/s. Cochez la case «&nbsp;ombre&nbsp;» pour le voir, et changez l'arrivée du tunnel en biais&nbsp;: le rendez-vous a toujours lieu.
+
+<div class="anim" data-anim="tunnels"></div>
+{{< script "js/tunnels.js" >}}
+
+<div class="encadre">
+<div class="encadre-titre">Et dans la vraie Terre&nbsp;?</div>
+
+La Terre n'est pas homogène&nbsp;: son noyau de fer est plus de deux fois plus dense que la moyenne, si bien que la pesanteur augmente même un peu quand on descend dans le manteau. En 2015, Alexander Klotz a refait le calcul avec un modèle réaliste de l'intérieur du globe&nbsp;: la traversée par le centre dure environ 38 minutes au lieu de 42. Les tunnels en biais ne sont plus alors exactement synchrones.
+
+</div>
+
 ## Forces de marée
 
 De manière "amusante", le ratio des contributions de la Lune et du Soleil aux forces de marée sur Terre est donné par le ratio de leurs masses volumiques respectives&nbsp;:
