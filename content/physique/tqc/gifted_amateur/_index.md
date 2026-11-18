@@ -168,7 +168,7 @@ Notes de lecture du livre <i>Quantum field theory for the gifted amateur</i> de 
     <td><a href="./tqc12/">Le ferromagnétisme, un tutoriel de renormalisation</a></td>
     </tr>
     <th rowspan="2"><a href="./tqc13/">Partie&nbsp;13&nbsp;:</a></th>
-    <td style="border-bottom:none;"><a href="./tqc13/#léquation-de-diraci">L'équation de Dirac</a></td>
+    <td style="border-bottom:none;"><a href="./tqc13/#léquation-de-dirac">L'équation de Dirac</a></td>
     </tr>
      <tr>
     <td style="border-top:none;"><a href="./tqc13/#comment-transformer-un-spineur">Comment transformer un spineur</a></td>
