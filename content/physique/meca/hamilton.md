@@ -1,7 +1,7 @@
 +++
 title = "Bypass vers Hamilton"
 date = 2021-03-06T14:20:50+01:00
-weight = 4
+weight = 3
 +++
 
 <style>
@@ -197,6 +197,18 @@ mjx-container[display="true"]
 Dans la plupart des cours, on arrive aux équations de Hamilton par un long détour&nbsp;: on part du principe de moindre action, on en déduit les équations de Lagrange, puis une transformation de Legendre fait apparaître le hamiltonien (c'est le chemin suivi dans le [panorama du principe de moindre action](../action/#hamilton)). La route est élégante, mais les grandeurs qu'on y rencontre, comme les «&nbsp;moments généralisés&nbsp;», y tombent un peu du ciel.
 
 Cette page prend un raccourci, en suivant un article de Bahram Houchmandzadeh&nbsp;: partir directement des équations de Newton, et se laisser guider par la **géométrie**. Le fil conducteur sera une propriété simple à énoncer et à dessiner&nbsp;: dans le bon espace, le mouvement conserve les **aires**, comme l'écoulement d'un fluide incompressible conserve les volumes. On verra que c'est cette propriété qui impose le choix des «&nbsp;bonnes&nbsp;» variables, la forme des équations de Hamilton, et les changements de variables qui les préservent. C'était d'ailleurs le projet même de Hamilton, venu de l'optique géométrique&nbsp;: remettre de la géométrie dans une mécanique que Lagrange s'était flatté d'en avoir débarrassée («&nbsp;On ne trouvera point de figures dans cet ouvrage&nbsp;»).
+
+## Deux nouvelles arènes
+
+Les objets de la mécanique classique dans sa formulation newtonienne sont des vecteurs à 3 dimensions qui évoluent dans le bon vieil espace physique euclidien $\mathbb{R}^3$. 
+
+Mais la fin du 18<sup>e</sup> et la première moitié du 19<sup>e</sup> siècle ont vu naître de nouvelles formulations de la mécanique où l'arène même dans laquelle s'ébattent les objets physiques étudiés est chamboulée. On peut littéralement parler de nouvelles façons de voir.
+
+Souhaitant s'affranchir de la géométrie (quel souhait étrange), **Lagrange** vise une approche purement analytique (il vantait l'absence de tout schéma dans son manuel de mécanique...). Son idée centrale fut de basculer de l'étude de $N$ systèmes comme $N$ vecteurs dans $\mathbb{R}^3$ à un seul système composite, un seul vecteur, évoluant dans $\mathbb{R}^{3N}$. Toute configuration des $N$ systèmes devient un unique point dans l'espace $\mathbb{R}^{3N}$ appelé alors **espace des configurations**. Et l'évolution de l'ensemble des $N$ objets dessine un chemin unique dans l'espace des configurations.
+
+**Hamilton** souhaite, lui, retrouver la source géométrique de la mécanique mais tout en conservant une approche analytique. L'arène d'Hamilton ne doit plus seulement décrire la position du système mais son état physique entier, ce qui nécessite de savoir comment le système bouge. On a besoin pour cela de l'**espace des phases** dont chaque point informe à la fois de la position *et* de la quantité de mouvement de chacun des $N$ objets du système. L'espace des phases est donc de dimension $2\times 3N$&nbsp;!
+
+C'est cet espace des phases, et la géométrie de l'écoulement qui s'y dessine, que la suite de cette page explore.
 
 ## Un mouvement, c'est un écoulement
 

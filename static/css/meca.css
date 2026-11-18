@@ -1,0 +1,187 @@
+/* ==========================================================================
+   Pages de mécanique : animations interactives et petits encadrés
+   Chargée par les pages qui déclarent  css = "meca.css"  en front matter.
+   ========================================================================== */
+
+/* ---------- Animations ---------------------------------------------------- */
+.anim
+{
+    max-width: 780px;
+    margin: 1.5em auto;
+    padding: 0.9em 1em 0.6em 1em;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #F8FAFC;
+}
+.anim canvas
+{
+    display: block;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+.anim-ctrl
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5em 1.1em;
+    margin: 0.7em 0;
+    font-size: 0.92em;
+    color: #334155;
+}
+.anim-ctrl label
+{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+    margin: 0;
+}
+.anim-ctrl input[type="range"]
+{
+    width: 130px;
+    accent-color: #004D80;
+}
+.anim-ctrl input[type="checkbox"]
+{
+    accent-color: #004D80;
+}
+.anim-ctrl output
+{
+    min-width: 2.4em;
+    text-align: right;
+    font-weight: 600;
+    color: #004D80;
+    font-variant-numeric: tabular-nums;
+}
+.anim-ctrl select
+{
+    font: inherit;
+    padding: 0.15em 0.4em;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: #fff;
+}
+.anim button
+{
+    font: inherit;
+    font-size: 0.95em;
+    line-height: 1.3;
+    padding: 0.35em 1.05em;
+    border: 1px solid #004D80;
+    border-radius: 999px;
+    background: #004D80;
+    color: #fff;
+    cursor: pointer;
+}
+.anim button.sec
+{
+    background: #fff;
+    color: #004D80;
+}
+.anim button:hover:not(:disabled)
+{
+    filter: brightness(1.12);
+}
+.anim button:disabled
+{
+    opacity: 0.5;
+    cursor: default;
+}
+.anim-info
+{
+    min-height: 1.5em;
+    margin: 0.3em 0 0.6em 0 !important;
+    font-size: 0.92em;
+    color: #475569;
+}
+.anim-duo
+{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 0.8em;
+    align-items: start;
+}
+.anim-duo figure
+{
+    margin: 0;
+}
+.anim-duo figcaption
+{
+    margin-top: 0.3em;
+    text-align: center;
+    font-size: 0.85em;
+    color: #64748b;
+}
+@media (max-width: 600px)
+{
+    .anim { padding: 0.7em 0.6em 0.4em 0.6em; }
+    .anim-duo { grid-template-columns: 1fr; }
+}
+
+/* ---------- Encadrés et tableaux -------------------------------------------- */
+.encadre
+{
+    max-width: 42rem;
+    margin: 1.6em auto;
+    padding: 0.6em 1.3em 0.4em 1.3em;
+    border: 2px solid #006C65;
+    border-radius: 12px;
+    background: #F3F8F7;
+}
+.encadre-titre
+{
+    margin-bottom: 0.3em;
+    font-weight: bold;
+    color: #006C65;
+}
+.encadre p
+{
+    margin: 0.45em 0 0.6em 0;
+}
+.encadre.prune
+{
+    border-color: #970E53;
+    background: #FBF4F7;
+}
+.encadre.prune .encadre-titre
+{
+    color: #970E53;
+}
+.tableau-large
+{
+    overflow-x: auto;
+    margin: 1em 0;
+}
+#body-inner .tab-recap
+{
+    width: auto;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 0;
+    font-size: 0.95em;
+}
+#body-inner .tab-recap th
+{
+    padding: 0.45em 0.9em;
+    border: 0;
+    border-bottom: 2px solid #004D80;
+    background: #EEF3F7;
+    color: #004D80;
+    font-weight: 600;
+    text-align: center;
+}
+#body-inner .tab-recap td
+{
+    padding: 0.4em 0.9em;
+    border: 0;
+    border-bottom: 1px solid #e2e8f0;
+    background: #fff;
+    text-align: center;
+}
+.sources
+{
+    font-size: 0.88em;
+    color: #475569;
+}
