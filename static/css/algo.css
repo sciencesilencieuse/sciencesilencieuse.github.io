@@ -1,0 +1,123 @@
+/* ==========================================================================
+   Page d'algorithmique : reprend les animations et encadrés de meca.css,
+   et ajoute les encadrés « En bref », le graphe des classes de complexité
+   et les petites questions à réponse dépliable.
+   ========================================================================== */
+@import url("meca.css");
+
+/* ---------- Encadrés supplémentaires ---------------------------------------- */
+.encadre.bleu { border-color: #004D80; background: #F2F6FA; }
+.encadre.bleu .encadre-titre { color: #004D80; }
+.encadre.bref { border-color: #B45309; background: #FFFBEB; }
+.encadre.bref .encadre-titre { color: #B45309; }
+.encadre ul { margin: 0.3em 0 0.5em 0; }
+.encadre li { margin-bottom: 0.25em; }
+
+/* question de réflexion, réponse dépliable */
+.quiz
+{
+    max-width: 42rem;
+    margin: 1.4em auto;
+    padding: 0.5em 1.2em;
+    border-left: 4px solid #5B6CB0;
+    border-radius: 0 10px 10px 0;
+    background: #F4F5FB;
+}
+.quiz > p:first-child { margin-top: 0.4em; }
+.quiz summary { cursor: pointer; color: #5B6CB0; font-weight: 600; margin: 0.4em 0; }
+
+.legende
+{
+    text-align: center;
+    font-size: 0.9em;
+    color: #64748b;
+    font-style: italic;
+    margin-top: 0.3em;
+}
+
+/* ---------- Ce que coûte une classe de complexité --------------------------- */
+.cx-graphe
+{
+    position: relative;
+    padding: 4px 0 20px 0;
+}
+.cx-axe
+{
+    position: relative;
+    height: 18px;
+    margin: 0 120px 4px 64px;
+    font-size: 11px;
+    color: #64748b;
+}
+.cx-axe span
+{
+    position: absolute;
+    transform: translateX(-50%);
+}
+.cx-ligne
+{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 7px 0;
+}
+.cx-nom
+{
+    width: 56px;
+    text-align: right;
+    font-weight: 600;
+    font-size: 0.9em;
+    color: #334155;
+}
+.cx-piste
+{
+    position: relative;
+    flex: 1;
+    height: 16px;
+    border-radius: 8px;
+    background: #eef2f6;
+    overflow: hidden;
+}
+.cx-barre
+{
+    height: 100%;
+    border-radius: 8px;
+    transition: width 0.2s;
+}
+.cx-barre.cx-hors
+{
+    background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.4) 0 6px, transparent 6px 12px) !important;
+}
+.cx-duree
+{
+    width: 112px;
+    font-size: 0.82em;
+    line-height: 1.2;
+    color: #334155;
+}
+.cx-repere
+{
+    position: absolute;
+    top: 24px;
+    bottom: 16px;
+    border-left: 1px dashed #94a3b8;
+    pointer-events: none;
+}
+.cx-repere span
+{
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    transform: translateX(-50%);
+    font-size: 10px;
+    color: #64748b;
+    white-space: nowrap;
+}
+
+/* Icônes d'ancre du thème : masquées sur petit écran (elles débordent des titres longs) */
+@media (max-width: 480px)
+{
+    #body-inner .anchor { display: none; }
+    .cx-axe .cx-impair { display: none; }                   /* une graduation sur deux */
+    .cx-repere span { white-space: normal; width: 46px; text-align: center; line-height: 1.1; }
+}

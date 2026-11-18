@@ -18,13 +18,17 @@ chapter = true
 <span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="15" y="5" width="18" height="8" rx="2"/><path d="M24 13v4"/><path d="M24 17l9 7-9 7-9-7z"/><path d="M24 31v4"/><rect x="15" y="35" width="18" height="8" rx="2"/><path class="leger" d="M33 24h7v15h-7"/></svg></span>
 <h3><a href="./algorithmique/">Algorithmique</a></h3>
 </div>
-<div class="carte-texte">Généralités et quelques détails&nbsp;: complexité, P = NP, programmation dynamique, récursivité.</div>
+<div class="carte-texte">Peut-on faire mieux&nbsp;? Complexité et raffinements successifs, grandes stratégies, structures de données qui guident le code.</div>
 <div class="theme-subgroup">
 <div class="link-list">
-  <a href="./algorithmique/#complexité" class="math-btn">Complexité</a>
+  <a href="./algorithmique/#complexité-peut-on-faire-mieux" class="math-btn">Complexité</a>
+  <a href="./algorithmique/#une-échelle-de-raffinement-la-recherche-du-doublon" class="math-btn">Recherche du doublon</a>
+  <a href="./algorithmique/#quatre-algorithmes-quatre-classes-le-plus-grand-sous-tableau" class="math-btn">Plus grand sous-tableau</a>
   <a href="./algorithmique/#mathrmpstackrelmathrmnp" class="math-btn">P = NP ?</a>
-  <a href="./algorithmique/#programmation-dynamique" class="math-btn">Programmation dynamique</a>
   <a href="./algorithmique/#récursivité" class="math-btn">Récursivité</a>
+  <a href="./algorithmique/#diviser-pour-régner" class="math-btn">Diviser pour régner</a>
+  <a href="./algorithmique/#programmation-dynamique" class="math-btn">Programmation dynamique</a>
+  <a href="./algorithmique/#la-structure-de-données-guide-le-code" class="math-btn">Structures de données</a>
   <a href="./algorithmique/#quelques-algorithmes-remarquables" class="math-btn">Algorithmes remarquables</a>
 </div>
 </div>
