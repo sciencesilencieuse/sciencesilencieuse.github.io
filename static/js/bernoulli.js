@@ -152,7 +152,7 @@
     c.fillStyle = COL.prune; c.beginPath(); c.arc(X(st.p.x), Y(st.p.y), Math.max(5, RB * k), 0, 2 * Math.PI); c.fill();
     // décomposition de la vitesse à l'approche du prochain ressort
     if (st.seg.type === 'vol' && t < geo.T) {
-      const sp = geo.springs[st.seg.k], q = 85 / (k * sp.s), P = { x: X(st.p.x), y: Y(st.p.y) };   // |v| dessiné sur 85 px
+      const sp = geo.springs[st.seg.k], q = Math.max(26, 100 / geo.n) / k, P = { x: X(st.p.x), y: Y(st.p.y) };   // même échelle pendant tout le trajet : une unité de vitesse = max(26, 100/n) px
       const tipV = { x: P.x + k * q * sp.v.x, y: P.y - k * q * sp.v.y };
       const tipU = { x: P.x + k * q * sp.u.x, y: P.y - k * q * sp.u.y };
       const tipP = { x: P.x + k * q * sp.vp.x, y: P.y - k * q * sp.vp.y };
