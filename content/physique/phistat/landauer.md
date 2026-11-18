@@ -324,7 +324,7 @@ overflow-x:auto;
 
 <h1>Information et thermodynamique&nbsp;: du démon de Maxwell à la gomme de Landauer</h1>
 
-Peut-on tirer du travail d'un système simplement parce qu'on **sait** dans quel état il se trouve&nbsp;? Et, à l'inverse, que coûte le fait d'**oublier**&nbsp;? Ces deux questions ont une réponse commune, d'une simplicité déconcertante&nbsp;:
+Peut-on tirer du travail d'un système simplement parce qu'on **sait** dans quel état il se trouve&nbsp;? Et, à l'inverse, que coûte le fait d'**oublier**&nbsp;? Ces deux questions ont la même réponse étonnement simple&nbsp;:
 
 <div id="def">
 
@@ -334,7 +334,6 @@ Peut-on tirer du travail d'un système simplement parce qu'on **sait** dans quel
 
 À température ambiante, cela fait $3\times10^{-21}$ joule&nbsp;: presque rien. Mais ce presque rien est ce qui empêche le second principe de la thermodynamique de s'effondrer, et c'est la clé du lien entre l'entropie des physiciens et l'information des informaticiens. « L'information est physique », répétait Rolf Landauer&nbsp;: elle est inscrite dans des livres, des mémoires, des molécules, et doit donc obéir aux lois de la physique, à commencer par celles de la thermodynamique.
 
-Cette page suit la trame d'un bel article d'Eric Lutz et Sergio Ciliberto paru dans *Physics Today* en 2015 (voir les sources), en l'étoffant là où un calcul ou une image permettent d'y voir plus clair, et en la prolongeant jusqu'aux trous noirs. Elle complète la page [Entropie et information](../entropie/).
 
 ## Deux entropies
 
@@ -384,7 +383,9 @@ Un siècle plus tôt, Rudolf Clausius avait introduit une tout autre entropie. L
 
 <div id="theo">
 
-**Second principe.** L'entropie d'un système isolé ne peut qu'augmenter. Elle ne peut diminuer quelque part que si elle augmente au moins autant ailleurs.
+**Second principe** 
+
+L'entropie d'un système isolé ne peut qu'augmenter. Elle ne peut diminuer quelque part que si elle augmente au moins autant ailleurs.
 
 </div>
 
@@ -414,7 +415,7 @@ $\displaystyle S=k_B\,H\quad(H\text{ en unités naturelles}),\qquad\text{soit}\q
 
 L'entropie thermodynamique d'un système est donc **l'information qui nous manque** pour connaître son micro-état quand on n'en connaît que la description macroscopique. Un litre d'air ambiant cache ainsi environ $10^{24}$ bits. La constante $k\_B$ n'a rien de profond&nbsp;: elle est là parce que l'on mesure les températures en kelvins plutôt qu'en joules.
 
-Simple coïncidence de formules&nbsp;? (La légende veut que von Neumann ait conseillé à Shannon le mot « entropie » au motif que « personne ne sait vraiment ce que c'est ».) Toute la suite montre que non&nbsp;: l'identification a des conséquences mesurables, en joules.
+Simple coïncidence de formules&nbsp;? La légende veut que von Neumann ait conseillé à Shannon le mot « entropie » au motif que « personne ne sait vraiment ce que c'est ». Et pourtant, la suite montre que ça n'a rien d'une coïncidence&nbsp;: l'identification a des conséquences mesurables, en joules.
 
 ## Le démon de Maxwell
 
@@ -792,7 +793,7 @@ L'animation ci-dessous refait l'expérience numériquement, sur quatre cents bil
 <div class="fig-commandes"><span>durée&nbsp;:</span> <button type="button" class="ef-tau" data-tau="5" aria-pressed="false">5 (brutal)</button> <button type="button" class="ef-tau" data-tau="20" aria-pressed="true">20</button> <button type="button" class="ef-tau" data-tau="60" aria-pressed="false">60</button> <button type="button" class="ef-tau" data-tau="200" aria-pressed="false">200 (très lent)</button> <button type="button" id="ef-go">▶ Lancer</button></div>
 <div class="fig-commandes"><span>chaleur dissipée par bit&nbsp;: <b id="ef-q">–</b> <i>kT</i></span> <span style="margin-left:1.2em">bits correctement effacés&nbsp;: <b id="ef-ok">–</b>&nbsp;%</span></div>
 </div>
-<p class="legende">Choisissez la durée du protocole (dans une unité arbitraire&nbsp;: le temps que met une bille à diffuser sur la distance entre les puits). À gauche, le potentiel se déforme et entraîne les billes&nbsp;; à la fin, les deux couleurs sont indiscernablement mêlées dans le puits de droite&nbsp;: l'information sur le puits de départ est perdue. À droite, chaque point reporte la chaleur moyenne dissipée par bit. Un effacement brutal dissipe beaucoup&nbsp;; un effacement lent s'approche de la limite de Landauer sans jamais passer dessous. (Avec quatre cents billes seulement, chaque point fluctue de quelques centièmes.)</p>
+<p class="legende">Choisissez la durée du protocole (dans une unité arbitraire&nbsp;: le temps que met une bille à diffuser sur la distance entre les puits). L'animation est jouée en temps proportionnel à cette durée (dix unités par seconde)&nbsp;: un effacement brutal passe en un éclair, un effacement très lent prend vingt secondes. À gauche, le potentiel se déforme et entraîne les billes&nbsp;; à la fin, les deux couleurs sont indiscernablement mêlées dans le puits de droite&nbsp;: l'information sur le puits de départ est perdue. (Au moment du redressement, quelques rares billes peuvent retomber dans le puits de gauche, poussées par l'agitation thermique&nbsp;: l'effacement n'est jamais sûr à 100&nbsp;%, et le pourcentage affiché en tient compte.) À droite, chaque point reporte la chaleur moyenne dissipée par bit. Un effacement brutal dissipe beaucoup&nbsp;; un effacement lent s'approche de la limite de Landauer sans jamais passer dessous. (Avec quatre cents billes seulement, chaque point fluctue de quelques centièmes.)</p>
 
 C'est exactement ce qu'a trouvé l'équipe lyonnaise&nbsp;: la chaleur dissipée décroît quand on ralentit le protocole, à peu près comme $k\_B T\ln 2+\frac{B}{\tau}$ où $\tau$ est la durée, et tend vers la limite de Landauer sans la franchir. Le terme en $\frac1\tau$ est le prix de la précipitation&nbsp;: c'est du frottement, de l'irréversibilité ordinaire, que l'on peut réduire autant que l'on veut en prenant son temps. Le terme $k\_B T\ln 2$, lui, est incompressible. En 2014, l'équipe de John Bechhoefer a confirmé la limite à quelques pour cent près, et l'on a depuis vérifié le principe sur des bits magnétiques nanométriques et sur des systèmes quantiques (un ion piégé).
 
@@ -826,6 +827,16 @@ Lisez la deuxième ligne&nbsp;: après la mesure, la mémoire est aussi incertai
 <p>L'histoire que l'on raconte d'ordinaire (« Brillouin avait tort, c'est l'effacement qui coûte, pas la mesure ») est un peu trop tranchée. En 2009, Takahiro Sagawa et Masahito Ueda ont montré que le coût peut se répartir différemment entre la mesure et l'effacement selon la façon dont la mémoire est construite. Seule leur <b>somme</b> est contrainte&nbsp;:</p>
 <p style="text-align:center;">$W_{\text{mesure}}+W_{\text{effacement}}\;\geqslant\;k_B T\,I,$</p>
 <p>où $I$ est l'information acquise. Avec une mémoire symétrique (deux états de même énergie), la mesure peut être gratuite et l'effacement coûte $k_B T\ln 2$&nbsp;: c'est le scénario de Bennett. Avec une mémoire dissymétrique, on peut alléger l'effacement et alourdir la mesure. Ce qui est impossible, c'est d'échapper aux deux. Et le démon peut aussi refuser d'effacer&nbsp;: il lui faut alors une mémoire toujours plus grande, qui se remplit de bits aléatoires. Il n'a pas fait disparaître l'entropie du gaz, il l'a stockée.</p>
+</div>
+
+<div class="encadre">
+<div class="encadre-titre">Une mesure réversible en mécanique quantique&nbsp;?</div>
+<p>« Mesurer, c'est copier » semble se heurter à deux piliers de la théorie quantique&nbsp;: l'effondrement de la fonction d'onde, qui rend la mesure notoirement irréversible, et le théorème de non-clonage (Wootters et Zurek, Dieks, 1982), qui interdit de dupliquer un état inconnu. Il n'y a pourtant pas de contradiction, et c'est Wojciech Zurek qui l'a le mieux expliqué.</p>
+<p>Le non-clonage interdit de copier un état <i>quelconque</i> $\alpha|0\rangle+\beta|1\rangle$. Une mesure, elle, copie seulement la <i>valeur</i> dans une base donnée, celle des états que l'appareil $M$ sait distinguer (ses « états pointeurs »). C'est une porte CNOT, qui est <b>unitaire</b>, donc réversible&nbsp;:</p>
+<p style="text-align:center;">$\displaystyle(\alpha|0\rangle+\beta|1\rangle)\,|0\rangle_M\;\longrightarrow\;\alpha\,|0\rangle|0\rangle_M+\beta\,|1\rangle|1\rangle_M .$</p>
+<p>Il suffit de rejouer la porte pour revenir en arrière. L'appareil ne contient pas un clone de l'état&nbsp;: il est <i>intriqué</i> avec lui, comme la mémoire du démon est corrélée à la molécule.</p>
+<p>Ce qui rend la mesure irréversible n'est pas cette première étape, mais la suite. Un appareil réel n'est jamais isolé&nbsp;: l'environnement (air, lumière, agitation thermique) enregistre à son tour la valeur des états pointeurs, en un nombre immense d'exemplaires. C'est la <b>décohérence</b>. Pour défaire la mesure, il faudrait retrouver toutes ces copies, ce qui est impossible en pratique, et ce que l'on appelle l'effondrement est ce que cela donne pour qui n'a accès qu'au système et à l'appareil. On reconnaît le raisonnement de Landauer&nbsp;: l'information n'est pas détruite, elle est dispersée dans l'environnement. Zurek a même remarqué que seules les informations portées par les états pointeurs se copient ainsi en abondance, ce qui explique que plusieurs observateurs s'accordent sur le résultat d'une mesure («&nbsp;darwinisme quantique&nbsp;»).</p>
+<p>Pour le démon, rien ne change&nbsp;: la copie est gratuite en principe, en quantique comme en classique, et seule la remise à zéro de la mémoire coûte $k_B T\ln 2$.</p>
 </div>
 
 ## Les démons au laboratoire
@@ -1195,7 +1206,7 @@ Egan, C. A. et Lineweaver, C. H. « A Larger Estimate of the Entropy of the Univ
   if (!svg) return;
   function $(id) { return document.getElementById(id); }
   var a = 10, C = 20, FM = 6, N = 400, DT = 0.002, NS = 'http://www.w3.org/2000/svg';
-  var X = new Float64Array(N), W = new Float64Array(N), dots = [], busy = false, tau = 20, FRAMES = 420;
+  var X = new Float64Array(N), W = new Float64Array(N), dots = [], busy = false, tau = 20, SPEED = 10;
   var PX0 = 30, PX1 = 330, PY0 = 250, XR = 1.75, UMIN = -9, UMAX = 16, PH = 200;
   var GX0 = 400, GX1 = 580, GY0 = 250, GY1 = 60, QMAX = 2.4;
   function gauss() { var u = 1 - Math.random(), v = Math.random(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(6.2832 * v); }
@@ -1232,9 +1243,12 @@ Egan, C. A. et Lineweaver, C. H. « A Larger Estimate of the Entropy of the Univ
   function run() {
     if (busy) return;
     busy = true; $('ef-go').disabled = true; init();
-    var steps = Math.round(tau / DT), per = Math.ceil(steps / FRAMES), k = 0, cf = proto(0), s = Math.sqrt(2 * DT);
-    function frame() {
-      for (var q = 0; q < per && k < steps; q++, k++) {
+    var steps = Math.round(tau / DT), k = 0, cf = proto(0), s = Math.sqrt(2 * DT), t0 = null;
+    function frame(now) {
+      if (t0 === null) t0 = now;
+      var target = Math.min(steps, Math.round(steps * (now - t0) / 1000 * SPEED / tau));
+      if (target - k > 20000) target = k + 20000;
+      for (; k < target; k++) {
         var n2 = proto((k + 1) / steps), dc = n2[0] - cf[0], df = n2[1] - cf[1];
         for (var i = 0; i < N; i++) {
           var x = X[i];
@@ -1244,12 +1258,13 @@ Egan, C. A. et Lineweaver, C. H. « A Larger Estimate of the Entropy of the Univ
         cf = n2;
       }
       var u = k / steps;
-      draw(cf[0], cf[1], u < 0.3 ? '1. on abaisse la barrière' : u < 0.45 ? '2. on incline vers la droite' : u < 0.75 ? '3. on relève la barrière' : u < 1 ? '4. on redresse' : 'bit effacé : tout le monde est à droite');
+      draw(cf[0], cf[1], u < 0.3 ? '1. on abaisse la barrière' : u < 0.45 ? '2. on incline vers la droite' : u < 0.75 ? '3. on relève la barrière' : u < 1 ? '4. on redresse' : 'fin du protocole');
       if (k < steps) { requestAnimationFrame(frame); return; }
       var w = 0, ok = 0;
       for (var i = 0; i < N; i++) { w += W[i]; if (X[i] > 0) ok++; }
       w /= N;
-      $('ef-q').textContent = fr(w, 2); $('ef-ok').textContent = Math.round(100 * ok / N);
+      $('ef-q').textContent = fr(w, 2); $('ef-ok').textContent = fr(100 * ok / N, 1);
+      $('ef-etape').textContent = ok === N ? 'bit effacé : toutes les billes sont à droite' : 'bit effacé, sauf ' + (N - ok) + (N - ok > 1 ? ' billes retombées' : ' bille retombée') + ' à gauche (sur ' + N + ')';
       var p = document.createElementNS(NS, 'circle');
       p.setAttribute('cx', gx(tau).toFixed(1)); p.setAttribute('cy', gy(w).toFixed(1)); p.setAttribute('r', 4.5); p.setAttribute('fill', '#970E53'); p.setAttribute('fill-opacity', 0.8);
       $('ef-pts').appendChild(p);
