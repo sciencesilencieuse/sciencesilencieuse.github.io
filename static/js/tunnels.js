@@ -26,7 +26,7 @@
 <div class="anim-ctrl">
   <button type="button" data-k="go">Lâcher les billes</button>
   <button type="button" class="sec" data-k="reset">Recommencer</button>
-  <label>Arrivée du tunnel en biais <input type="range" min="30" max="160" step="1" value="90" data-k="a"><output data-o="a">90°</output></label>
+  <label>Arrivée du tunnel en biais <input type="range" min="60" max="160" step="1" value="90" data-k="a"><output data-o="a">90°</output></label>
   <label><input type="checkbox" data-k="ombre"> Ombre de la bille en orbite</label>
 </div>
 <p class="anim-info" aria-live="polite"></p>`;
@@ -91,12 +91,31 @@
       c.beginPath(); c.arc(O.x, O.y, R, -Math.PI / 2 + a0, -Math.PI / 2 + a1); c.stroke();
     }
 
-    // tunnels : galerie claire bordée de gris
-    const tunnel = (p, q) => {
-      c.strokeStyle = '#a9b6c6'; c.lineWidth = 11; c.beginPath(); c.moveTo(X(p), Y(p)); c.lineTo(X(q), Y(q)); c.stroke();
-      c.strokeStyle = '#F8FAFC'; c.lineWidth = 7.5; c.beginPath(); c.moveTo(X(p), Y(p)); c.lineTo(X(q), Y(q)); c.stroke();
+    // tunnels : galeries ouvertes. Les parois s'arrêtent net à la surface, et la galerie
+    // interrompt le contour du globe : les extrémités sont de vraies ouvertures.
+    const HW = 5;                                            // demi-largeur de la galerie, en pixels
+    const surface = (p, d, rho) => {                         // intersections de p + s·d avec le cercle de rayon rho
+      const pd = p.x * d.x + p.y * d.y, disc = Math.sqrt(Math.max(0, pd * pd - (p.x * p.x + p.y * p.y) + rho * rho));
+      return [-pd - disc, -pd + disc].map(s => ({ x: p.x + s * d.x, y: p.y + s * d.y }));
     };
-    tunnel(P.A, { x: 0, y: -1 }); tunnel(P.A, P.B);
+    const galerie = (p, q) => {                              // p, q : extrémités sur le globe (rayon 1)
+      const L = Math.hypot(q.x - p.x, q.y - p.y), d = { x: (q.x - p.x) / L, y: (q.y - p.y) / L }, n = { x: -d.y, y: d.x };
+      const bord = (off, rho) => surface({ x: p.x + n.x * off / R, y: p.y + n.y * off / R }, d, rho);
+      return { bord, poly: (off, rho) => { const [a1, a2] = bord(off, rho), [b1, b2] = bord(-off, rho); return [a1, a2, b2, b1]; } };
+    };
+    const remplir = (pts, col) => {
+      c.fillStyle = col; c.beginPath(); pts.forEach((pt, i) => i ? c.lineTo(X(pt), Y(pt)) : c.moveTo(X(pt), Y(pt))); c.closePath(); c.fill();
+    };
+    const parois = g => {
+      c.strokeStyle = '#9aa8ba'; c.lineWidth = 1.5; c.lineCap = 'butt';
+      [HW, -HW].forEach(off => { const [u, v] = g.bord(off, 1); c.beginPath(); c.moveTo(X(u), Y(u)); c.lineTo(X(v), Y(v)); c.stroke(); });
+      c.lineCap = 'round';
+    };
+    const gal = [galerie(P.A, { x: 0, y: -1 }), galerie(P.A, P.B)];
+    const ext = 1 + 1.5 / R;                                 // un peu au-delà du contour, pour l'effacer
+    gal.forEach(g => remplir(g.poly(HW, ext), '#F8FAFC'));
+    gal.forEach(parois);
+    gal.forEach(g => remplir(g.poly(HW - 1, ext), '#F8FAFC')); // efface les parois de l'autre galerie au croisement
     c.font = '11px sans-serif'; c.fillStyle = COL.ard; c.textAlign = 'center';
     c.fillText('départ', X(P.A), Y(P.A) - RB - 7);
 
