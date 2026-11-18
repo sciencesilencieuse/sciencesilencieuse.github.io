@@ -1,8 +1,9 @@
 /* Trois billes partent ensemble de l'entrée commune de deux tunnels :
    l'une tombe dans le tunnel qui passe par le centre, l'autre glisse dans un
    tunnel en biais, la troisième est lancée en orbite rasante. Dans une Terre
-   homogène, toutes trois ont la même période, 2π√(R/g) ≈ 84 min, et se
-   retrouvent toutes les demi-périodes.
+   homogène, toutes trois ont la même période, 2π√(R/g) ≈ 84 min : elles
+   atteignent au même instant le bout de leur trajet après un aller, et ne se
+   retrouvent toutes les trois qu'au départ, après un aller-retour.
    Conteneur attendu : <div class="anim" data-anim="tunnels"></div>          */
 (function () {
   'use strict';
@@ -22,7 +23,7 @@
   const fr = (x, d = 1) => x.toLocaleString('fr-FR', { minimumFractionDigits: d, maximumFractionDigits: d });
 
   root.innerHTML = `
-<canvas class="anim-scene" role="img" aria-label="Coupe de la Terre : une bille tombe dans un tunnel passant par le centre, une autre glisse dans un tunnel en biais, une troisième fait le tour en orbite rasante ; elles se retrouvent toutes les 42 minutes"></canvas>
+<canvas class="anim-scene" role="img" aria-label="Coupe de la Terre : une bille tombe dans un tunnel passant par le centre, une autre glisse dans un tunnel en biais, une troisième fait le tour en orbite rasante  ; elles atteignent le bout de leur trajet au même instant, et se retrouvent toutes les trois au départ après un aller-retour"></canvas>
 <div class="anim-ctrl">
   <button type="button" data-k="go">Lâcher les billes</button>
   <button type="button" class="sec" data-k="reset">Recommencer</button>
@@ -125,12 +126,13 @@
       c.beginPath(); c.moveTo(X(P.orbite), Y(P.orbite)); c.lineTo(X(P.centre), Y(P.centre)); c.stroke(); c.setLineDash([]);
     }
 
-    // rendez-vous : un halo s'élargit autour des billes à chaque demi-période
+    // un halo s'élargit autour des billes à chaque demi-période : gris quand elles arrivent
+    // au bout de leur trajet (aller), prune quand elles se retrouvent au départ (aller-retour)
     const k = Math.round(t / DEMI), ecart = Math.abs(t - k * DEMI) / DEMI;
     if (k >= 1 && ecart < 0.06) {
-      const f = ecart / 0.06;
+      const f = ecart / 0.06, rgb = k % 2 ? '71,85,105' : '151,14,83';
       [P.centre, P.biais, P.orbite].forEach(p => {
-        c.strokeStyle = `rgba(151,14,83,${0.45 * (1 - f)})`; c.lineWidth = 2;
+        c.strokeStyle = `rgba(${rgb},${0.45 * (1 - f)})`; c.lineWidth = 2;
         c.beginPath(); c.arc(X(p), Y(p), RB + 4 + 14 * f, 0, 2 * Math.PI); c.stroke();
       });
     }
@@ -169,8 +171,9 @@
 
   function message() {
     if (t === 0) info.textContent = `Une période dure 2π√(R/g) ≈ ${ms(Math.round(T))} pour chacune des trois billes, quelle que soit l'inclinaison du tunnel en biais.`;
-    else info.textContent = `Toutes les ${ms(Math.round(DEMI))}, les trois billes se retrouvent : au bout de leur trajet, puis ensemble au départ. ` +
-      `Rendez-vous observés : ${vus}.`;
+    else info.textContent = `Toutes les ${ms(Math.round(DEMI))}, les trois billes atteignent au même instant le bout de leur trajet : ` +
+      `la bille du tunnel central et la bille en orbite s'y rejoignent, aux antipodes, tandis que la troisième arrive au bout de son tunnel. ` +
+      `Les trois ne se retrouvent qu'au départ, après un aller-retour de ${ms(Math.round(T))}. Retrouvailles au départ : ${Math.floor(vus / 2)}.`;
   }
   function loop(now) {
     const dt = Math.min(0.05, (now - tPrev) / 1000); tPrev = now;

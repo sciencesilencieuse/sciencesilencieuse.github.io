@@ -23,7 +23,7 @@ Le long d'un tunnel rectiligne aux parois lisses, seule compte la composante de 
 
 $$\frac{T}{2}=\pi\sqrt{\frac{R}{g}}\approx 42\text{ min}.$$
 
-La bille lancée en orbite rasante tourne, elle, à la vitesse $v$ telle que $v^2/R=g$&nbsp;: sa vitesse angulaire est encore $\omega$, et elle a la même période. Mieux&nbsp;: la bille du tunnel central est exactement l'**ombre** de la bille en orbite sur le diamètre, et elle passe au centre de la Terre à la vitesse orbitale, 7,9&nbsp;km/s. Cochez la case «&nbsp;ombre&nbsp;» pour le voir, et changez l'arrivée du tunnel en biais&nbsp;: le rendez-vous a toujours lieu.
+La bille lancée en orbite rasante tourne, elle, à la vitesse $v$ telle que $v^2/R=g$&nbsp;: sa vitesse angulaire est encore $\omega$, et elle a la même période. Mieux&nbsp;: la bille du tunnel central est exactement l'**ombre** de la bille en orbite sur le diamètre, et elle passe au centre de la Terre à la vitesse orbitale, 7,9&nbsp;km/s. Cochez la case «&nbsp;ombre&nbsp;» pour le voir, et changez l'arrivée du tunnel en biais&nbsp;: au bout d'un aller, les trois billes atteignent toujours au même instant le bout de leur trajet (seules la bille du tunnel central et la bille en orbite s'y rejoignent, aux antipodes), et après un aller-retour elles se retrouvent toujours toutes les trois au départ.
 
 <div class="anim" data-anim="tunnels"></div>
 {{< script "js/tunnels.js" >}}
