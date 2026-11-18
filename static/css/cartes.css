@@ -372,3 +372,15 @@
   background-size: 0 0 !important;
   text-decoration: none !important;
 }
+
+/* Grand titre de page sur téléphone : la police du thème (52 px, capitales) fait
+   déborder les mots longs (« ALGORITHMIQUE », « THERMODYNAMIQUE »…). On la
+   proportionne à la largeur de l'écran. */
+@media (max-width: 480px)
+{
+    #body-inner h1
+    {
+        font-size: min(3.25rem, 9.5vw);
+        overflow-wrap: break-word;
+    }
+}

@@ -58,9 +58,7 @@ Cette page suit quelques fils conducteurs&nbsp;:
 
 ### Mesurer sans chronomètre
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube sNJbVamAQ6A>}}
-</div>
+{{< youtube-plus id="sNJbVamAQ6A" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 
 
 <br>
@@ -109,9 +107,7 @@ Le premier fait $n^2/1000$ opérations «&nbsp;à l'échelle&nbsp;» du second, 
 
 La notion de complexité permet de classer des algorithmes réalisant la même tâche, comme dans la vidéo suivante. C'est finalement une sorte d'échelle de raffinement&nbsp;; descendre d'un barreau la complexité temporelle ou spatiale demande le plus souvent de pousser la réflexion plus loin, voire de repenser entièrement le problème. Et c'est ainsi qu'une recherche de doublons dans une liste se transforme en chasse aux cycles sur un graphe dans l'ultime mouture pour atteindre le Graal ($\mathcal{O}(n)$ en temps et $\mathcal{O}(1)$ en espace sans mutation).
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube -73jokmqmd0>}}
-</div>
+{{< youtube-plus id="-73jokmqmd0" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 
 
 <br>
@@ -415,9 +411,7 @@ La question a été posée formellement en 1971 par Stephen Cook, et indépendam
 
 Un algorithme de programmation dynamique ne se laisse pas approcher facilement, particulièrement dans sa forme non récursive avec sa grosse matrice mystérieuse. Mais c'est plutôt rare que la forme itérative d'un algorithme vole la vedette à sa forme récursive tant la récursivité sait insuffler un air de magie aux algorithmes en permettant à de tout petits codes de réaliser des tâches étonnamment complexes. 
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube lIIXLQvcd4Q>}}
-</div>
+{{< youtube-plus id="lIIXLQvcd4Q" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 
 <br>
 
@@ -498,9 +492,7 @@ Ci-dessous, vous pourrez comparer l'efficacité de différents tris par comparai
 
 #### Quicksort
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube Cubuk-9gzvk>}}
-</div>
+{{< youtube-plus id="Cubuk-9gzvk" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 
 
 Un code Python possible pour la version détaillée dans la vidéo&nbsp;:
@@ -545,9 +537,7 @@ def tri_rapide(L):
 
 La danse hongroise ci-dessous implémente une version de l'algorithme sans hasard&nbsp;:
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube ywWBy6J5gz8>}}
-</div>
+{{< youtube-plus id="ywWBy6J5gz8" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 
 Dans cette version, le premier élément est systématiquement choisi comme pivot (chapeau noir) et la partition marche un peu différemment&nbsp;:<br>
 <ul>
@@ -621,9 +611,7 @@ Le tirage aléatoire du pivot a une conséquence remarquable, que Roughgarden me
 
 Le meilleur algorithme (non quantique) permettant de résoudre de manière exacte le problème du voyageur de commerce, l'algorithme de Held-Karp, utilise la **programmation dynamique** dont la logique est présentée dans la vidéo suivante.
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube F48AbiZGds0>}}
-</div>
+{{< youtube-plus id="F48AbiZGds0" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 
 {{%notice type="note" round="true"%}}
 L'idée fondatrice de la programmation dynamique (DP) tient en une phrase&nbsp;: beaucoup de problèmes qui semblent exiger d'explorer un nombre exponentiel de scénarios ne comportent en réalité qu'un petit nombre de sous-problèmes distincts, chacun rencontré un très grand nombre de fois.<br>
@@ -781,23 +769,17 @@ print(fib_double(300)[0])
 
 Les algorithmes gloutons sont très faciles à comprendre et à implémenter. Si on devait leur trouver un défaut, il est à chercher du côté de leur correction, pas toujours simple à démontrer...
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube yrOj8XvroIE>}}
-</div>
+{{< youtube-plus id="yrOj8XvroIE" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 
 Sont présentés ci-dessous deux algorithmes gloutons très similaires qui permettent de résoudre des problèmes d'optimisation sur des graphes&nbsp;:
 - **Dijkstra** cherche le plus court chemin entre deux nœuds.
 - **Prim** construit l'arbre couvrant de poids minimal.
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube Bku9EfWqQC0>}}
-</div>
+{{< youtube-plus id="Bku9EfWqQC0" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 
 <br>
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube 6ctSw0eQJkw>}}
-</div>
+{{< youtube-plus id="6ctSw0eQJkw" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 
 <br>
 
@@ -812,9 +794,7 @@ Pour inventorier les sommets d'un graphe, deux stratégies sont possibles :
 - le **parcours en largeur (BFS)**,
 - et le **parcours en profondeur (DFS)**.
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube QCj7VijRkiM>}}
-</div>
+{{< youtube-plus id="QCj7VijRkiM" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 
 Le code est identique entre les deux algorithmes à la structure de données utilisée près&nbsp;! On utilise une **file** (queue en anglais) pour le parcours en largeur et une **pile** pour le parcours en profondeur.
 
@@ -904,9 +884,7 @@ On peut voir Dijkstra comme un parcours de graphe où la structure de données n
 
 Pour implémenter une file de priorité, on peut utiliser un tas (heap), arbre binaire presque ordonné dont la racine est l'élément prioritaire.
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube JRzTS8zPwSE>}}
-</div>
+{{< youtube-plus id="JRzTS8zPwSE" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 
 <br>
 
@@ -978,16 +956,12 @@ def Dijkstra(G, depart):
 Un des plus vieux algorithmes ($\approx$-300).
 
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube 70jd0Mthyl8>}}
-</div>
+{{< youtube-plus id="70jd0Mthyl8" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 
 
 La suite de Fibonacci est un peu la tarte à la crème du mathématicien de série télévisée avec ses spirales dans les coquillages... Mais c'est bien elle qui montre le bout de son nez là où on ne l'attendait pas vraiment dans cette vidéo sur la complexité de l'algorithme d'Euclide.
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube X6WnBdmNYiM>}}
-</div>
+{{< youtube-plus id="X6WnBdmNYiM" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 
 On peut utiliser le pulvérisateur (algorithme d'Euclide étendu) ci-dessous. Le code est corrigé par rapport à celui de la vidéo qui présente une erreur dans le cas de base (on doit retourner `b, 0, 1` comme Euclide bien sûr et non `a,0,1`).
 
@@ -1025,9 +999,7 @@ print(frac_ctn(144,89))
 
 Polyominos et Sudoku ont droit à leur algorithme au nom aguicheur&nbsp;: X.
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube NTzoLEB7lO0>}}
-</div>
+{{< youtube-plus id="NTzoLEB7lO0" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 
 
 ## Pour aller plus loin
