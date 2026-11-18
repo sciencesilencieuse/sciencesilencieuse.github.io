@@ -837,6 +837,7 @@ Lisez la deuxième ligne&nbsp;: après la mesure, la mémoire est aussi incertai
 <p>Il suffit de rejouer la porte pour revenir en arrière. L'appareil ne contient pas un clone de l'état&nbsp;: il est <i>intriqué</i> avec lui, comme la mémoire du démon est corrélée à la molécule.</p>
 <p>Ce qui rend la mesure irréversible n'est pas cette première étape, mais la suite. Un appareil réel n'est jamais isolé&nbsp;: l'environnement (air, lumière, agitation thermique) enregistre à son tour la valeur des états pointeurs, en un nombre immense d'exemplaires. C'est la <b>décohérence</b>. Pour défaire la mesure, il faudrait retrouver toutes ces copies, ce qui est impossible en pratique, et ce que l'on appelle l'effondrement est ce que cela donne pour qui n'a accès qu'au système et à l'appareil. On reconnaît le raisonnement de Landauer&nbsp;: l'information n'est pas détruite, elle est dispersée dans l'environnement. Zurek a même remarqué que seules les informations portées par les états pointeurs se copient ainsi en abondance, ce qui explique que plusieurs observateurs s'accordent sur le résultat d'une mesure («&nbsp;darwinisme quantique&nbsp;»).</p>
 <p>Pour le démon, rien ne change&nbsp;: la copie est gratuite en principe, en quantique comme en classique, et seule la remise à zéro de la mémoire coûte $k_B T\ln 2$.</p>
+<p>La page <a href="../../quantique/decoherence/">Décohérence et darwinisme quantique</a> développe ces idées, d'après le livre de Zurek.</p>
 </div>
 
 ## Les démons au laboratoire

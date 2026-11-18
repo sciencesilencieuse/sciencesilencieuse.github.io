@@ -89,3 +89,9 @@ Les réalistes comme Einstein ont du mal à avaler la pilule d'une fonction d'on
 ## [ER = EPR](./erepr)
 
 
+## [Décohérence et darwinisme quantique](./decoherence)
+
+- Répétabilité d'une mesure et orthogonalité des états
+- Décohérence, états pointeurs et einselection
+- Règle de Born et envariance
+- Darwinisme quantique et interprétation existentielle
