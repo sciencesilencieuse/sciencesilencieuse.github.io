@@ -56,7 +56,7 @@ Les **statistiques** sont des calculs a posteriori qui analysent les issues d’
 </div>
 </div>
 
-<div class="math-card c-canard">
+<div class="math-card c-bleu">
 <div class="math-card-head">
 <span class="math-illus" aria-hidden="true"><img src="/presacp.png" alt=""></span>
 <h3><a href="./acp/">Analyse en composantes principales</a></h3>
