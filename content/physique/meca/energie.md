@@ -69,10 +69,10 @@ Sources&nbsp;:
 
 L'argument de Johann Bernoulli repose sur des **ressorts identiques qui se bloquent** une fois comprimés. Un tel ressort, heurté de face par une bille animée d'une unité de vitesse, l'arrête et garde l'énergie qu'il a reçue&nbsp;: prenons-la pour unité d'énergie. Combien de ressorts faut-il pour arrêter une bille de $n$ unités de vitesse&nbsp;?
 
-On pourrait croire qu'il en faut $n$, alignés les uns derrière les autres. Mais un ressort n'absorbe qu'**une** unité de vitesse dans son axe&nbsp;: une bille plus rapide le comprimerait au-delà de sa course. Bernoulli dispose donc ses ressorts en biais. Décomposons la vitesse $v$ de la bille en deux composantes orthogonales&nbsp;:
+On pourrait croire qu'il en faut $n$, alignés les uns derrière les autres. Mais un ressort n'absorbe qu'**une** unité de vitesse dans son axe&nbsp;: une bille plus rapide le comprimerait au-delà de sa course. Bernoulli dispose donc ses ressorts en biais. Chacun, fixé à un support, porte à son extrémité une plaque parfaitement lisse. Décomposons la vitesse $v$ de la bille en deux composantes orthogonales&nbsp;:
 
-- une composante $v\_\parallel=1$ dans l'axe du ressort, que le ressort absorbe avant de se bloquer&nbsp;;
-- une composante $v\_\perp=\sqrt{v^2-1}$ parallèle à sa plaque, que le ressort ne touche pas, et avec laquelle la bille repart.
+- une composante $v\_\parallel=1$ perpendiculaire à la plaque, dans l'axe du ressort&nbsp;: en heurtant la plaque, la bille la fait reculer et comprime le ressort, qui absorbe peu à peu cette composante puis se bloque&nbsp;;
+- une composante $v\_\perp=\sqrt{v^2-1}$ parallèle à la plaque&nbsp;: une surface lisse ne peut pousser que perpendiculairement à elle-même, elle ne touche donc pas à cette composante. La bille longe la plaque pendant la compression, puis la quitte tangentiellement avec cette seule vitesse.
 
 À chaque ressort, le carré de la vitesse diminue donc exactement de $1$&nbsp;: $v^2$ passe de $n^2$ à $n^2-1$, puis $n^2-2$, et ainsi de suite jusqu'à $0$. Il faut $n^2$ ressorts pour arrêter la bille&nbsp;: son énergie vaut $n^2$ unités, elle est proportionnelle au carré de sa vitesse.
 

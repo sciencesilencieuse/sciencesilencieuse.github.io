@@ -11,10 +11,11 @@
 
   const COL = { bleu: '#004D80', prune: '#970E53', sarc: '#006C65', ard: '#475569', ressort: '#94a3b8',
                 plaque: '#334155', grille: '#e2e8f0', texte: '#334155', piste: '#cbd5e1' };
-  const ELL = 1.0;              // longueur du ressort au repos
+  const ELL = 1.15;             // longueur du ressort au repos
   const RB = 0.3;               // rayon de la bille
-  const PLAQUE = 2.4;           // longueur des plaques
-  const TC = 0.35;              // durée de la compression
+  const MARGE = 0.45;           // dépassement de la plaque de part et d'autre de la zone de contact
+  const MUR = 0.32;             // demi-largeur du support fixe
+  const TC = 0.75;              // durée de la compression : la bille longe la plaque pendant ce temps
   const AMP = 2 * TC / Math.PI; // compression finale : la vitesse axiale 1 s'annule en TC
   const RATE = 2;               // unités de temps simulé par seconde
   const fr = (x, d = 2) => x.toLocaleString('fr-FR', { minimumFractionDigits: d, maximumFractionDigits: d });
@@ -49,21 +50,24 @@
       else { thp = th; u = dir(th); }                                               // dernier ressort : de face
       const v = { x: s * Math.cos(th), y: s * Math.sin(th) };
       const vp = { x: s2 * Math.cos(thp), y: s2 * Math.sin(thp) };
-      const approach = k === 0 ? 2.4 : 1.35 + 0.55 * s;
-      const cc = add(pos, dir(th), approach);            // centre de la bille au contact
-      const tip = add(cc, u, RB), base = add(tip, u, ELL);
-      const pd = s2 > 1e-9 ? dir(thp) : dir(th + Math.PI / 2);
-      const p1 = add(base, pd, -PLAQUE / 2), p2 = add(base, pd, PLAQUE / 2);
+      const approach = k === 0 ? 2.4 : 1.2 + 0.45 * s;
+      const cc = add(pos, dir(th), approach);            // centre de la bille au premier contact
+      const cp = add(cc, u, RB);                          // point de contact sur la face avant de la plaque
+      const pd = s2 > 1e-9 ? dir(thp) : dir(th + Math.PI / 2);   // direction de la plaque
+      const glisse = s2 * TC;                             // la bille longe la plaque pendant la compression
+      const p1 = add(cp, pd, -MARGE), p2 = add(cp, pd, glisse + MARGE);
+      const pc = add(cp, pd, glisse / 2);                 // milieu de la plaque, où s'attache le ressort
+      const base = add(pc, u, ELL);                       // support fixe, derrière la plaque
       segs.push({ type: 'vol', t0, dur: approach / s, p0: pos, v, k });
       t0 += approach / s;
       segs.push({ type: 'choc', t0, dur: TC, cc, u, vp, k });
       t0 += TC;
-      springs.push({ tip, base, u, p1, p2, s, s2, th, thp, v, vp, cc, tLock: t0 });
+      springs.push({ pc, base, u, pd, p1, p2, s, s2, th, thp, v, vp, cc, tLock: t0 });
       pos = add(add(cc, vp, TC), u, AMP); th = thp;
     }
     // cadre englobant
     const pts = [{ x: -0.6, y: 0 }];
-    springs.forEach(sp => pts.push(sp.p1, sp.p2, sp.tip));
+    springs.forEach(sp => pts.push(sp.p1, sp.p2, add(sp.p1, sp.u, AMP), add(sp.p2, sp.u, AMP), add(sp.base, sp.pd, MUR), add(sp.base, sp.pd, -MUR), add(sp.base, sp.u, 0.2)));
     const xs = pts.map(p => p.x), ys = pts.map(p => p.y);
     const box = { x0: Math.min(...xs) - 0.9, x1: Math.max(...xs) + 0.9, y0: Math.min(...ys) - 0.9, y1: Math.max(...ys) + 0.9 };
     return { n, N, springs, segs, T: t0, box };
@@ -98,6 +102,8 @@
   }
   function label(c, x, y, txt, col) {
     c.font = '12px sans-serif'; const w = c.measureText(txt).width + 8;
+    const W = c.canvas.clientWidth, H = c.canvas.clientHeight;          // l'étiquette reste dans le cadre
+    x = Math.min(Math.max(x, w / 2 + 3), W - w / 2 - 3); y = Math.min(Math.max(y, 12), H - 11);
     c.fillStyle = 'rgba(255,255,255,0.92)'; c.fillRect(x - w / 2, y - 9, w, 17);
     c.strokeStyle = col; c.lineWidth = 1; c.strokeRect(x - w / 2, y - 9, w, 17);
     c.fillStyle = col; c.textAlign = 'center'; c.fillText(txt, x, y + 4);
@@ -114,22 +120,33 @@
     let first = true;
     for (let tt = 0; tt <= t; tt += 0.03) { const q = state(tt).p; first ? c.moveTo(X(q.x), Y(q.y)) : c.lineTo(X(q.x), Y(q.y)); first = false; }
     c.lineTo(X(st.p.x), Y(st.p.y)); c.stroke(); c.setLineDash([]);
-    // plaques et ressorts
+    // supports, ressorts et plaques : la plaque recule en comprimant le ressort
     geo.springs.forEach((sp, i) => {
       const locked = i < st.locked, actif = st.seg.type === 'choc' && st.seg.k === i;
-      const comp = locked ? AMP : (actif ? st.comp : 0);
-      c.strokeStyle = COL.plaque; c.lineWidth = Math.max(2.5, 0.09 * k);
-      c.beginPath(); c.moveTo(X(sp.p1.x), Y(sp.p1.y)); c.lineTo(X(sp.p2.x), Y(sp.p2.y)); c.stroke();
-      const tip = add(sp.tip, sp.u, comp), L = ELL - comp, nv = { x: -sp.u.y, y: sp.u.x }, tours = 7;
+      const off = locked ? AMP : (actif ? st.comp : 0);
+      const nv = { x: -sp.u.y, y: sp.u.x }, L = ELL - off, tours = 7;
+      // support fixe hachuré
+      const w1 = add(sp.base, sp.pd, -MUR), w2 = add(sp.base, sp.pd, MUR);
+      c.strokeStyle = COL.ard; c.lineWidth = 2;
+      c.beginPath(); c.moveTo(X(w1.x), Y(w1.y)); c.lineTo(X(w2.x), Y(w2.y)); c.stroke();
+      c.lineWidth = 1;
+      for (let j = 0; j <= 4; j++) {
+        const a0 = add(sp.base, sp.pd, -MUR + j * MUR / 2), a1 = add(add(a0, sp.u, 0.17), sp.pd, -0.1);
+        c.beginPath(); c.moveTo(X(a0.x), Y(a0.y)); c.lineTo(X(a1.x), Y(a1.y)); c.stroke();
+      }
+      // ressort, du support au milieu de la plaque
+      const att = add(sp.pc, sp.u, off);
       c.strokeStyle = locked ? COL.sarc : COL.ressort; c.lineWidth = locked ? 1.6 : 1.3;
       c.beginPath(); c.moveTo(X(sp.base.x), Y(sp.base.y));
       for (let j = 1; j < 2 * tours; j++) {
         const a = add(sp.base, sp.u, -L * j / (2 * tours)), q = add(a, nv, (j % 2 ? 1 : -1) * 0.13);
         c.lineTo(X(q.x), Y(q.y));
       }
-      c.lineTo(X(tip.x), Y(tip.y)); c.stroke();
-      const e1 = add(tip, nv, 0.16), e2 = add(tip, nv, -0.16);
-      c.lineWidth = 2.2; c.beginPath(); c.moveTo(X(e1.x), Y(e1.y)); c.lineTo(X(e2.x), Y(e2.y)); c.stroke();
+      c.lineTo(X(att.x), Y(att.y)); c.stroke();
+      // plaque mobile
+      const q1 = add(sp.p1, sp.u, off), q2 = add(sp.p2, sp.u, off);
+      c.strokeStyle = locked ? COL.sarc : COL.plaque; c.lineWidth = Math.max(3, 0.1 * k);
+      c.beginPath(); c.moveTo(X(q1.x), Y(q1.y)); c.lineTo(X(q2.x), Y(q2.y)); c.stroke();
     });
     // bille
     c.fillStyle = COL.prune; c.beginPath(); c.arc(X(st.p.x), Y(st.p.y), Math.max(5, RB * k), 0, 2 * Math.PI); c.fill();

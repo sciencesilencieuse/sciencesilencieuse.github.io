@@ -58,7 +58,12 @@
 .anim-ctrl select
 {
     font: inherit;
-    padding: 0.15em 0.4em;
+    height: auto;
+    margin: 0 !important;
+    line-height: 1.3;
+    vertical-align: middle;
+    align-self: center;
+    padding: 0.2em 0.4em;
     border: 1px solid #cbd5e1;
     border-radius: 6px;
     background: #fff;

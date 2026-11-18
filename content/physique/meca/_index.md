@@ -84,11 +84,12 @@ chapter = false
 <span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="21" cy="27" r="15"/><path class="leger" d="M10 17l22 20"/><circle class="teinte" cx="40" cy="9" r="4.5"/><circle cx="40" cy="9" r="4.5"/></svg></span>
 <h3><a href="./curiosites/">Curiosités en mécanique terrestre</a></h3>
 </div>
-<div class="carte-texte">Traverser la Terre par un tunnel, et pourquoi la Lune pèse plus que le Soleil dans les marées.</div>
+<div class="carte-texte">Traverser la Terre par un tunnel, comparer les marées dues à la Lune et au Soleil, et voir tourner la Terre avec un pendule.</div>
 <div class="theme-subgroup">
 <div class="link-list">
   <a href="./curiosites/#tunnels-traversant-la-terre" class="math-btn">Tunnels à travers la Terre</a>
   <a href="./curiosites/#forces-de-marée" class="math-btn">Forces de marée</a>
+  <a href="./curiosites/#le-pendule-de-foucault" class="math-btn">Pendule de Foucault</a>
 </div>
 </div>
 </div>
