@@ -49,10 +49,10 @@ chapter = false
 <span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><ellipse cx="24" cy="24" rx="17" ry="10"/><ellipse class="leger" cx="24" cy="24" rx="9" ry="5"/><path d="M21 10.5l4 3.5-4 3.5"/></svg></span>
 <h3><a href="./hamilton/">De Newton à Hamilton</a></h3>
 </div>
-<div class="carte-texte">L'espace des phases, ses écoulements qui conservent les aires, et le hamiltonien, sans passer par Lagrange.</div>
+<div class="carte-texte">Newton, Lagrange, Hamilton&nbsp;: trois arènes pour un même mouvement, puis un raccourci géométrique vers l'espace des phases et le hamiltonien.</div>
 <div class="theme-subgroup">
 <div class="link-list">
-  <a href="./hamilton/#deux-nouvelles-arènes" class="math-btn">Deux nouvelles arènes</a>
+  <a href="./hamilton/#trois-arènes-pour-un-même-mouvement" class="math-btn">Trois arènes</a>
   <a href="./hamilton/#un-mouvement-cest-un-écoulement" class="math-btn">Un mouvement, un écoulement</a>
   <a href="./hamilton/#la-forme-hamiltonienne" class="math-btn">La forme hamiltonienne</a>
   <a href="./hamilton/#aires-et-volumes-le-théorème-de-liouville" class="math-btn">Théorème de Liouville</a>

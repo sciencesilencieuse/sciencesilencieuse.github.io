@@ -194,21 +194,57 @@ mjx-container[display="true"]
 
 > Houchmandzadeh, B. « From Newton to Hamilton, bypassing Lagrange and Legendre », prépublication, Université Grenoble Alpes (2021) [🌐](https://hal.science/hal-03259814v2/document)
 
-Dans la plupart des cours, on arrive aux équations de Hamilton par un long détour&nbsp;: on part du principe de moindre action, on en déduit les équations de Lagrange, puis une transformation de Legendre fait apparaître le hamiltonien (c'est le chemin suivi dans le [panorama du principe de moindre action](../action/#hamilton)). La route est élégante, mais les grandeurs qu'on y rencontre, comme les «&nbsp;moments généralisés&nbsp;», y tombent un peu du ciel.
+Mécanique newtonienne, lagrangienne, hamiltonienne&nbsp;: trois formulations de la même physique, qui prédisent les mêmes mouvements mais ne les regardent pas dans le même espace. Cette page va directement de la première à la troisième, en enjambant la deuxième. Voyons d'abord ce que l'on enjambe, et pourquoi on peut s'en passer.
 
-Cette page prend un raccourci, en suivant un article de Bahram Houchmandzadeh&nbsp;: partir directement des équations de Newton, et se laisser guider par la **géométrie**. Le fil conducteur sera une propriété simple à énoncer et à dessiner&nbsp;: dans le bon espace, le mouvement conserve les **aires**, comme l'écoulement d'un fluide incompressible conserve les volumes. On verra que c'est cette propriété qui impose le choix des «&nbsp;bonnes&nbsp;» variables, la forme des équations de Hamilton, et les changements de variables qui les préservent. C'était d'ailleurs le projet même de Hamilton, venu de l'optique géométrique&nbsp;: remettre de la géométrie dans une mécanique que Lagrange s'était flatté d'en avoir débarrassée («&nbsp;On ne trouvera point de figures dans cet ouvrage&nbsp;»).
+## Trois arènes pour un même mouvement
 
-## Deux nouvelles arènes
+### Newton&nbsp;: des vecteurs dans l'espace
 
-Les objets de la mécanique classique dans sa formulation newtonienne sont des vecteurs à 3 dimensions qui évoluent dans le bon vieil espace physique euclidien $\mathbb{R}^3$. 
+Chez Newton, chaque corps est un point de l'espace physique $\mathbb{R}^3$, repéré par un vecteur position, et son mouvement obéit à $m\vec a=\vec F$. Pour $N$ corps, on suit $N$ vecteurs, couplés par les forces qu'ils exercent les uns sur les autres. Tout se passe dans l'espace ordinaire, et l'on raisonne avec des flèches.
 
-Mais la fin du 18<sup>e</sup> et la première moitié du 19<sup>e</sup> siècle ont vu naître de nouvelles formulations de la mécanique où l'arène même dans laquelle s'ébattent les objets physiques étudiés est chamboulée. On peut littéralement parler de nouvelles façons de voir.
+### Lagrange&nbsp;: un point dans l'espace des configurations
 
-Souhaitant s'affranchir de la géométrie (quel souhait étrange), **Lagrange** vise une approche purement analytique (il vantait l'absence de tout schéma dans son manuel de mécanique...). Son idée centrale fut de basculer de l'étude de $N$ systèmes comme $N$ vecteurs dans $\mathbb{R}^3$ à un seul système composite, un seul vecteur, évoluant dans $\mathbb{R}^{3N}$. Toute configuration des $N$ systèmes devient un unique point dans l'espace $\mathbb{R}^{3N}$ appelé alors **espace des configurations**. Et l'évolution de l'ensemble des $N$ objets dessine un chemin unique dans l'espace des configurations.
+À la fin du XVIII<sup>e</sup> siècle, Lagrange change d'arène. Au lieu de $N$ vecteurs de $\mathbb{R}^3$, il considère un seul point, qui donne d'un coup la position de tous les corps&nbsp;: la **configuration** du système. Pour $N$ particules libres, ce point vit dans $\mathbb{R}^{3N}$, l'**espace des configurations**, et toute l'histoire du système devient un chemin unique dans cet espace.
 
-**Hamilton** souhaite, lui, retrouver la source géométrique de la mécanique mais tout en conservant une approche analytique. L'arène d'Hamilton ne doit plus seulement décrire la position du système mais son état physique entier, ce qui nécessite de savoir comment le système bouge. On a besoin pour cela de l'**espace des phases** dont chaque point informe à la fois de la position *et* de la quantité de mouvement de chacun des $N$ objets du système. L'espace des phases est donc de dimension $2\times 3N$&nbsp;!
+Le gain est considérable quand le système est soumis à des liaisons. Un pendule simple, dont la masse reste à la distance $\ell$ de son point d'attache, n'a besoin que d'un angle $\theta$&nbsp;; un double pendule, de deux. On décrit le système par ses seules coordonnées libres, les **coordonnées généralisées** $q^1,\ldots,q^n$, et les forces de liaison, comme la tension du fil, disparaissent des équations. Toute la dynamique tient alors dans une seule fonction, le **lagrangien** $\mathcal{L}=T-V$, différence entre énergie cinétique et énergie potentielle, écrite en fonction des $q^i$ et de leurs dérivées $\dot q^i$. Les équations du mouvement s'en déduisent mécaniquement&nbsp;:
 
-C'est cet espace des phases, et la géométrie de l'écoulement qui s'y dessine, que la suite de cette page explore.
+$$\frac{\mathrm{d}}{\mathrm{d}t}\frac{\partial\mathcal{L}}{\partial\dot q^i}=\frac{\partial\mathcal{L}}{\partial q^i}.$$
+
+Pour le pendule, ${\mathcal{L}=\frac{1}{2}m\ell^2\dot\theta^2+mg\ell\cos\theta}$, et l'équation de Lagrange donne en une ligne ${m\ell^2\ddot\theta=-mg\ell\sin\theta}$, sans jamais parler de la tension du fil. Ces équations traduisent elles-mêmes un principe variationnel, le [principe de moindre action](../action/#lagrange).
+
+Lagrange était fier d'avoir réduit la mécanique au calcul. L'avertissement de sa *Mécanique analytique* (1788) prévient&nbsp;: «&nbsp;On ne trouvera point de figures dans cet ouvrage. Les méthodes que j'y expose ne demandent ni constructions, ni raisonnements géométriques ou mécaniques, mais seulement des opérations algébriques&nbsp;».
+
+Une remarque prépare la suite. Un point de l'espace des configurations ne suffit pas à prédire l'avenir&nbsp;: il faut aussi connaître les vitesses $\dot q^i$. L'**état** du système est donc un point de l'espace des couples $(q,\dot q)$, de dimension $2n$.
+
+### Hamilton&nbsp;: un point dans l'espace des phases
+
+Dans les années 1830, Hamilton, venu de l'optique géométrique, veut remettre de la géométrie dans la mécanique sans renoncer à la puissance analytique de Lagrange. Il garde les positions $q^i$, mais remplace les vitesses $\dot q^i$ par les **moments conjugués**, ou impulsions,
+
+$$p\_i=\frac{\partial\mathcal{L}}{\partial\dot q^i}.$$
+
+Pour une particule repérée en coordonnées cartésiennes, c'est la quantité de mouvement $p=m\dot x$&nbsp;; pour le pendule, $p\_\theta=m\ell^2\dot\theta$, le moment cinétique. L'état du système devient un point $(q,p)$ de l'**espace des phases**, de dimension $2n$, soit $2\times 3N$ pour $N$ particules libres. Une transformation de Legendre, ${H=\sum\_i p\_i\dot q^i-\mathcal{L}}$, fournit le **hamiltonien** $H(q,p)$, le plus souvent égal à l'énergie totale, et les équations du mouvement prennent une forme d'une symétrie remarquable&nbsp;:
+
+$$\dot q^i=\frac{\partial H}{\partial p\_i},\qquad \dot p\_i=-\frac{\partial H}{\partial q^i}.$$
+
+Pourquoi les moments plutôt que les vitesses&nbsp;? Parce que dans les variables $(q,p)$, le mouvement conserve les **aires**&nbsp;: c'est le [théorème de Liouville](#aires-et-volumes-le-théorème-de-liouville). Dans les variables $(q,\dot q)$, ce n'est pas vrai en général, [on le verra](#pourquoi-limpulsion-plutôt-que-la-vitesse) sur un exemple simple.
+
+<div style="overflow-x:auto;">
+
+| | Newton | Lagrange | Hamilton |
+|:--|:--:|:--:|:--:|
+| Arène | espace physique $\mathbb{R}^3$ | espace des configurations | espace des phases |
+| Un point y représente | un corps | la position de tout le système | l'état de tout le système |
+| Dimension pour $N$ particules libres | $3$, pour chaque corps | $3N$ | $2\times 3N$ |
+| Variables | $\vec r$, $\vec v$ | $q^i$, $\dot q^i$ | $q^i$, $p\_i$ |
+| Ce qui gouverne le mouvement | les forces | le lagrangien $\mathcal{L}(q,\dot q)$ | le hamiltonien $H(q,p)$ |
+
+</div>
+
+### Le raccourci de cette page
+
+Dans la plupart des cours, on suit exactement ce chemin&nbsp;: principe de moindre action, équations de Lagrange, puis transformation de Legendre (c'est aussi la route du [panorama du principe de moindre action](../action/#hamilton)). Elle est élégante, mais les moments $p\_i=\partial\mathcal{L}/\partial\dot q^i$ y tombent un peu du ciel&nbsp;: pourquoi cette combinaison plutôt qu'une autre&nbsp;?
+
+Cette page prend un raccourci, en suivant un article de Bahram Houchmandzadeh&nbsp;: partir directement des équations de Newton, sans lagrangien ni transformation de Legendre, et se laisser guider par la **géométrie**. Le fil conducteur sera la propriété annoncée plus haut&nbsp;: dans le bon espace, le mouvement conserve les aires, comme l'écoulement d'un fluide incompressible conserve les volumes. On verra que c'est cette exigence qui impose le choix des bonnes variables, la forme des équations de Hamilton, et les changements de variables qui les préservent. Les moments qu'on obtiendra ainsi, $p\_i=m\\,g\_{ij}\dot q^j$, sont exactement les $\partial\mathcal{L}/\partial\dot q^i$ de Lagrange&nbsp;: on arrive au même endroit, mais en sachant pourquoi. C'est en somme le projet de Hamilton mené jusqu'au bout&nbsp;: la géométrie que Lagrange avait bannie devient le guide.
 
 ## Un mouvement, c'est un écoulement
 
@@ -216,7 +252,7 @@ Partons d'une équation du mouvement à une dimension, du second ordre, de la fo
 
 $$\ddot x + f(\dot x, x) = 0,$$
 
-par exemple $\ddot x = -\omega^2 x$ pour un ressort, ou $\ddot x = -\sin x - \gamma\dot x$ pour un pendule amorti. Pour connaître l'avenir du système, il faut connaître à un instant donné à la fois sa position $x$ et sa vitesse $y = \dot x$. Le couple $(x, y)$ décrit donc complètement l'**état** du système, et l'équation se réécrit comme un système de deux équations du premier ordre&nbsp;:
+par exemple $\ddot x = -\omega^2 x$ pour un ressort, ou $\ddot x = -\sin x - \gamma\dot x$ pour un pendule amorti. Pour connaître l'avenir du système, il faut connaître à un instant donné à la fois sa position $x$ et sa vitesse $y = \dot x$. Le couple $(x, y)$ décrit donc complètement l'**état** du système (c'est, à une dimension, l'espace des états $(q,\dot q)$ rencontré chez Lagrange), et l'équation se réécrit comme un système de deux équations du premier ordre&nbsp;:
 
 $$
 \begin{cases}
