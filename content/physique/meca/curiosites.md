@@ -64,7 +64,7 @@ $$T=\frac{23\text{ h }56}{\sin\lambda}.$$
 Faites varier la latitude&nbsp;: au pôle, la composante verticale est maximale et $T$ vaut un jour sidéral&nbsp;; à l'équateur, la rotation terrestre est entièrement horizontale et le plan ne tourne plus. Dans l'hémisphère sud, $\sin\lambda$ est négatif et le plan tourne dans l'autre sens.
 
 <div class="anim" data-anim="foucault"></div>
-<script src="/js/foucault.js"></script>
+{{< script "js/foucault.js" >}}
 
 On retrouve le même facteur dans la [force de Coriolis](../coriolis/)&nbsp;: c'est sa partie horizontale, proportionnelle à $\Omega\sin\lambda$, qui dévie peu à peu la masse du pendule à chaque oscillation.
 

@@ -43,7 +43,7 @@ Le rapport $d/\sqrt{h}$ est presque constant&nbsp;: la vitesse acquise est propo
 À vous de refaire l'expérience. Lâchez la bille de différentes hauteurs et comparez vos points aux mesures de Galilée. Cochez ensuite «&nbsp;abscisse en $\sqrt{h}$&nbsp;»&nbsp;: les points s'alignent sur une droite. Changez enfin l'inclinaison sans toucher à la hauteur&nbsp;: la descente est plus ou moins longue, mais la bille arrive en bas avec la même vitesse, et tombe au même endroit.
 
 <div class="anim" data-anim="galilee"></div>
-<script src="/js/galilee.js"></script>
+{{< script "js/galilee.js" >}}
 
 <div class="encadre">
 <div class="encadre-titre">Une bille qui roule</div>
@@ -77,7 +77,7 @@ On pourrait croire qu'il en faut $n$, alignés les uns derrière les autres. Mai
 À chaque ressort, le carré de la vitesse diminue donc exactement de $1$&nbsp;: $v^2$ passe de $n^2$ à $n^2-1$, puis $n^2-2$, et ainsi de suite jusqu'à $0$. Il faut $n^2$ ressorts pour arrêter la bille&nbsp;: son énergie vaut $n^2$ unités, elle est proportionnelle au carré de sa vitesse.
 
 <div class="anim" data-anim="bernoulli"></div>
-<script src="/js/bernoulli.js"></script>
+{{< script "js/bernoulli.js" >}}
 
 Les vitesses successives, tracées depuis un même point (à droite), dessinent l'[escargot de Pythagore](../../../maths/geometrie/geo1/#escargot-de-pythagore) parcouru de l'extérieur vers l'intérieur. Chaque triangle rectangle a pour côtés $1$ (en rose, la part absorbée par un ressort) et $\sqrt{m-1}$ (la vitesse qui reste), et pour hypoténuse $\sqrt{m}$, la vitesse avant le choc.
 

@@ -1,0 +1,6 @@
+{{- /* Charge un script de static/ avec un numéro de version qui change à chaque
+       construction du site, comme les feuilles de style de custom-header.html :
+       le navigateur ne réutilise pas une ancienne copie après une mise à jour.
+       Usage : {{< script "js/bernoulli.js" >}} */ -}}
+{{- $src := .Get 0 -}}
+<script src="{{ $src | relURL }}{{ if not site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
