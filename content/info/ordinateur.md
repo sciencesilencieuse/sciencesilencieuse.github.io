@@ -1,7 +1,7 @@
 +++
 title = "Ordinateur"
 date = 2021-03-06T14:20:50+01:00
-weight = 2
+weight = 3
 chapter = false
 +++
 

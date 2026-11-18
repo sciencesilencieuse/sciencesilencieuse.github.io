@@ -114,6 +114,50 @@
     white-space: nowrap;
 }
 
+/* ---------- Navigation entre les deux pages ---------------------------------- */
+.suite-nav
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.8em;
+    margin: 3em 0 1em 0;
+    padding-top: 1.2em;
+    border-top: 1px solid #e2e8f0;
+}
+#body-inner .suite-nav a
+{
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.55em;
+    padding: 0.5em 1.1em !important;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    color: #004D80 !important;
+    text-decoration: none !important;
+    line-height: 1.25;
+    transition: background 0.15s, border-color 0.15s;
+}
+#body-inner .suite-nav a:hover
+{
+    background: #EEF3F7;
+    border-color: #004D80;
+}
+#body-inner .suite-nav a span, #body-inner .suite-nav a b
+{
+    padding: 0 !important;
+    line-height: 1.25;
+}
+#body-inner .suite-nav a span
+{
+    font-size: 0.85em;
+    color: #64748b;
+}
+#body-inner .suite-nav a.suivant
+{
+    margin-left: auto;
+}
+
 /* Icônes d'ancre du thème : masquées sur petit écran (elles débordent des titres longs) */
 @media (max-width: 480px)
 {
