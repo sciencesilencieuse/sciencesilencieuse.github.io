@@ -34,13 +34,24 @@
         return `puiss(${n}) = ${n % 2 ? '2 × ' : ''}${m}²${fin}`;
       },
       base: n => n === 0
+    },
+    rapide: {
+      nom: 'tri_rapide', texte: true, valeurs: ['hanniballecter', 'algorithme', 'quicksort', 'abcdefgh'], defaut: 'hanniballecter',
+      code: 'def tri_rapide(s):\n    if len(s) <= 1:\n        return s\n    p, petits, grands = s[0], "", ""\n    for c in s[1:]:\n        if c <= p:\n            petits += c\n        else:\n            grands += c\n    gauche = tri_rapide(petits)\n    droite = tri_rapide(grands)\n    return gauche + p + droite',
+      enfants: s => s.length <= 1 ? [] : [[...s.slice(1)].filter(c => c <= s[0]).join(''), [...s.slice(1)].filter(c => c > s[0]).join('')],
+      combiner: (s, v) => s.length <= 1 ? s : v[0] + s[0] + v[1],
+      cadre: (s, v) => s.length <= 1 ? `tri_rapide("${s}") = "${s}"`
+        : `tri_rapide("${s}") = ${v.length > 0 ? `"${v[0]}"` : '?'} + "${s[0]}" + ${v.length > 1 ? `"${v[1]}"` : '?'}`,
+      base: s => s.length <= 1,
+      arg: s => `"${s}"`
     }
   };
   function court(x) {                     // grands entiers : on abrège
     const s = x.toString();
     return s.length > 12 ? `${s.slice(0, 4)}…(${s.length} chiffres)` : s;
   }
-  const NOMS = { somme: 'somme(n)', fib: 'fib(n)', puiss: 'puiss(n) = 2ⁿ' };
+  const NOMS = { somme: 'somme(n)', fib: 'fib(n)', puiss: 'puiss(n) = 2ⁿ', rapide: 'tri_rapide(s)' };
+  const arg = (F, n) => F.arg ? F.arg(n) : n;
   document.querySelectorAll('.anim[data-anim="pile-appels"]').forEach(init);
 
   /* data-fonctions="somme" ou "fib,puiss" : les fonctions proposées (la première est affichée) */
@@ -59,7 +70,7 @@
 <p class="pa-stats"></p>
 <div class="anim-ctrl">
   <label${choix.length < 2 ? ' hidden' : ''}>Fonction <select data-k="f">${choix.map(f => `<option value="${f}">${NOMS[f]}</option>`).join('')}</select></label>
-  <label>n <select data-k="n"></select></label>
+  <label><span data-o="arg">n</span> <select data-k="n"></select></label>
   <button type="button" data-k="go">Lancer</button>
   <button type="button" class="sec" data-k="pas">Une étape</button>
   <button type="button" class="sec" data-k="reset">Recommencer</button>
@@ -76,7 +87,8 @@
   // ------------------------------------------------------------------ simulation complète, puis relecture
   function preparer() {
     F = FONCTIONS[selF.value];
-    const n0 = +selN.value;
+    const n0 = F.texte ? selN.value : +selN.value;
+    $('[data-o="arg"]').textContent = F.texte ? 's' : 'n';
     noeuds = []; evenements = [];
     (function appeler(n, parent, prof) {
       const id = noeuds.length, nd = { id, n, parent, prof, enfants: [], valeurs: [], valeur: null, etat: 'cache' };
@@ -88,8 +100,23 @@
       evenements.push({ t: 'retour', id, v });
       return v;
     })(n0, -1, 0);
+    if (F.texte) {                                   // étiquettes de largeurs variables
+      const larg = nd => Math.max(1, nd.n.length) + 1.6, ecart = 0.7;
+      (function etendue(id) {
+        const nd = noeuds[id]; nd.enfants.forEach(etendue);
+        const somme = nd.enfants.reduce((t, e) => t + noeuds[e].span, 0) + ecart * Math.max(0, nd.enfants.length - 1);
+        nd.span = Math.max(larg(nd), somme); nd.larg = larg(nd);
+      })(0);
+      (function placer(id, gauche) {
+        const nd = noeuds[id]; nd.x = gauche + nd.span / 2;
+        const somme = nd.enfants.reduce((t, e) => t + noeuds[e].span, 0) + ecart * Math.max(0, nd.enfants.length - 1);
+        let g = nd.x - somme / 2;
+        for (const e of nd.enfants) { placer(e, g); g += noeuds[e].span + ecart; }
+      })(0, 0);
+    }
     // placement : les feuilles côte à côte, chaque parent au milieu de ses enfants
     let feuille = 0;
+    if (!F.texte)
     (function placer(id) {
       const nd = noeuds[id];
       if (!nd.enfants.length) nd.x = feuille++;
@@ -122,6 +149,14 @@
     if (!noeuds) return;
     const dpr = window.devicePixelRatio || 1, w = cv.clientWidth || 400;
     const niveaux = Math.max(...noeuds.map(n => n.prof)) + 1, feuilles = Math.max(...noeuds.map(n => n.x)) + 1;
+    if (F.texte) {
+      const total = noeuds[0].span, u = Math.min(9.6, (w - 8) / total), fs = Math.min(15, u / 0.62), hh = fs * 1.55;
+      const pas = Math.max(30, hh + 18), h = Math.round(niveaux * pas + 10);
+      cv.style.height = h + 'px'; cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
+      cv.getContext('2d').setTransform(dpr, 0, 0, dpr, 0, 0);
+      dim = { w, h, pas, u, fs, hh, r: hh / 2, ox: (w - total * u) / 2 };
+      dessiner(); return;
+    }
     const pas = Math.min(54, Math.max(34, 380 / niveaux)), h = Math.round(niveaux * pas + 24);
     cv.style.height = h + 'px'; cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
     cv.getContext('2d').setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -129,7 +164,7 @@
     dim = { w, h, pas, r, ox: w / 2 - ((feuilles - 1) / 2) * Math.min((w - 2 * r - 8) / Math.max(1, feuilles - 1), 70), ex: Math.min((w - 2 * r - 8) / Math.max(1, feuilles - 1), 70) };
     dessiner();
   }
-  const pos = nd => [dim.ox + nd.x * dim.ex, 12 + dim.r + nd.prof * dim.pas];
+  const pos = nd => F.texte ? [dim.ox + nd.x * dim.u, 6 + dim.hh / 2 + nd.prof * dim.pas] : [dim.ox + nd.x * dim.ex, 12 + dim.r + nd.prof * dim.pas];
   function dessiner() {
     if (!dim) return;
     const g = cv.getContext('2d'), { w, h, r } = dim;
@@ -148,6 +183,16 @@
       const [x, y] = pos(nd), att = nd.etat === 'attente';
       g.fillStyle = att ? '#FDE7C8' : '#E6EEF5'; g.strokeStyle = att ? '#B45309' : '#004D80';
       g.lineWidth = nd.id === sommet ? 3 : 1.5;
+      if (F.texte) {                                   // étiquette : l'argument, puis le résultat trié
+        const lw = nd.larg * dim.u, fini = nd.etat === 'fini';
+        if (fini) { g.fillStyle = '#DCFCE7'; g.strokeStyle = '#16a34a'; }
+        g.beginPath(); g.roundRect(x - lw / 2, y - dim.hh / 2, lw, dim.hh, 5); g.fill(); g.stroke();
+        g.fillStyle = fini ? '#14532d' : att ? '#7c2d12' : '#004D80';
+        g.font = `${fini ? 600 : 400} ${dim.fs.toFixed(1)}px ui-monospace, Menlo, monospace`;
+        const t = fini ? nd.valeur : nd.n;
+        g.fillText(t.length ? t : '∅', x, y + 0.5);
+        continue;
+      }
       g.beginPath(); g.arc(x, y, r, 0, 2 * Math.PI); g.fill(); g.stroke();
       g.fillStyle = att ? '#7c2d12' : '#004D80';
       const chaine = F.nom !== 'fib';                    // un seul enfant par appel : de la place à droite
@@ -174,14 +219,14 @@
     }).join('') || '<li class="pa-vide">pile vide</li>';
     outS.innerHTML = `appels <b>${appels}</b> / ${noeuds.length} · taille de la pile <b>${pile.length}</b> · maximum atteint <b>${maxPile}</b>`;
     const e = evenements[k - 1];
-    if (!e) { msg.textContent = `Appel initial : ${F.nom}(${noeuds[0].n}).`; return; }
+    if (!e) { msg.textContent = `Appel initial : ${F.nom}(${arg(F, noeuds[0].n)}).`; return; }
     const nd = noeuds[e.id];
     if (e.t === 'appel') {
-      if (nd.parent < 0) msg.textContent = `Appel initial : ${F.nom}(${nd.n}) est placé sur la pile.`;
-      else msg.textContent = `${F.nom}(${noeuds[nd.parent].n}) appelle ${F.nom}(${nd.n}) et se met en attente.` + (F.base(nd.n) ? ` ${F.nom}(${nd.n}) est un cas de base.` : '');
+      if (nd.parent < 0) msg.textContent = `Appel initial : ${F.nom}(${arg(F, nd.n)}) est placé sur la pile.`;
+      else msg.textContent = `${F.nom}(${arg(F, noeuds[nd.parent].n)}) appelle ${F.nom}(${arg(F, nd.n)}) et se met en attente.` + (F.base(nd.n) ? ` ${F.nom}(${arg(F, nd.n)}) est un cas de base.` : '');
     } else {
       const fin = k === evenements.length;
-      msg.textContent = `${F.nom}(${nd.n}) renvoie ${court(e.v)} et quitte la pile.` + (fin ? ` Terminé : ${noeuds.length} appels, jamais plus de ${maxPile} à la fois sur la pile.` : nd.parent >= 0 ? ` On reprend ${F.nom}(${noeuds[nd.parent].n}) là où il s'était arrêté.` : '');
+      msg.textContent = `${F.nom}(${arg(F, nd.n)}) renvoie ${F.texte ? `"${e.v}"` : court(e.v)} et quitte la pile.` + (fin ? ` Terminé : ${noeuds.length} appels, jamais plus de ${maxPile} à la fois sur la pile.` : nd.parent >= 0 ? ` On reprend ${F.nom}(${arg(F, noeuds[nd.parent].n)}) là où il s'était arrêté.` : '');
     }
   }
 
