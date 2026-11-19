@@ -107,6 +107,25 @@ chapter = false
 </div>
 </div>
 
+<div class="math-card c-vert">
+<div class="math-card-head">
+<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect class="leger" x="6" y="8" width="36" height="32" rx="2"/><path class="leger" d="M6 16h36M6 24h36M6 32h36M15 8v32M24 8v32M33 8v32"/><rect class="teinte" x="33" y="32" width="9" height="8"/><path d="M28.5 20l9 16"/><path d="M19.5 28l18 8"/></svg></span>
+<h3><a href="./gloutons-dynamique/">Gloutons et programmation dynamique</a></h3>
+</div>
+<div class="carte-texte">Une seule branche ou toutes les branches une seule fois&nbsp;: rendu de monnaie, Huffman, sac à dos, distance d'édition, voyageur de commerce.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./gloutons-dynamique/#rendre-la-monnaie" class="math-btn">Rendu de monnaie</a>
+  <a href="./gloutons-dynamique/#réserver-une-salle" class="math-btn">Réservations</a>
+  <a href="./gloutons-dynamique/#compresser-le-code-de-huffman" class="math-btn">Huffman</a>
+  <a href="./gloutons-dynamique/#fibonacci-quatre-fois" class="math-btn">Fibonacci</a>
+  <a href="./gloutons-dynamique/#le-sac-à-dos" class="math-btn">Sac à dos</a>
+  <a href="./gloutons-dynamique/#la-distance-dédition" class="math-btn">Distance d'édition</a>
+  <a href="./gloutons-dynamique/#le-voyageur-de-commerce-held-karp" class="math-btn">Held-Karp</a>
+</div>
+</div>
+</div>
+
 <div class="math-card c-magenta">
 <div class="math-card-head">
 <span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="15" y="5" width="18" height="8" rx="2"/><path d="M24 13v4"/><path d="M24 17l9 7-9 7-9-7z"/><path d="M24 31v4"/><rect x="15" y="35" width="18" height="8" rx="2"/><path class="leger" d="M33 24h7v15h-7"/></svg></span>

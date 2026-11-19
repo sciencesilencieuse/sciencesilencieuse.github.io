@@ -26,6 +26,7 @@ chapter = true
   <a href="./algorithmique/recursivite/" class="math-btn">Récursivité</a>
   <a href="./algorithmique/trier/" class="math-btn">Trier</a>
   <a href="./algorithmique/graphes/" class="math-btn">Graphes</a>
+  <a href="./algorithmique/gloutons-dynamique/" class="math-btn">Gloutons et prog. dynamique</a>
   <a href="./algorithmique/strategies/" class="math-btn">Stratégies</a>
 </div>
 </div>
