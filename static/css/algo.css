@@ -651,3 +651,38 @@ ol.mm-meilleurs li { margin: 0 !important; font-variant-numeric: tabular-nums; }
 .gp-item.gp-suivant { border: 2px solid #B45309; }
 .gp-sens { color: #94a3b8; font-size: 0.85em; }
 .anim p.ic-chemin { margin: 0.5em 0 0 0; font-size: 0.86em; color: #334155; min-height: 1.3em; overflow-wrap: anywhere; }
+
+/* ---------- Graphe des acteurs (nombre de Bacon) ------------------------------------ */
+.bc-cadre { position: relative; }
+.anim canvas.bc-toile { background: #0B1020; border: none; border-radius: 10px; touch-action: none; cursor: grab; }
+.bc-zoom { position: absolute; top: 8px; right: 8px; display: flex; flex-direction: column; gap: 4px; }
+.anim .bc-zoom button
+{
+    width: 30px; height: 30px; padding: 0; border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.25); background: rgba(15, 23, 42, 0.75); color: #e2e8f0;
+    font-size: 1.05em; line-height: 1;
+}
+.bc-bulle
+{
+    position: absolute; pointer-events: none; padding: 0.15em 0.5em; border-radius: 4px;
+    background: rgba(15, 23, 42, 0.92); color: #f8fafc; font-size: 0.8em; white-space: nowrap;
+}
+.bc-bulle[hidden], .bc-attente[hidden] { display: none; }
+.anim p.bc-attente[hidden] { display: none; }
+.anim p.bc-attente { position: absolute; inset: 0; margin: 0; pointer-events: none; display: flex; align-items: center; justify-content: center; color: #cbd5e1; font-size: 0.95em; }
+.bc-legende { display: flex; flex-wrap: wrap; gap: 0.3em 0.5em; margin: 0.6em 0 0.2em 0; font-size: 0.82em; color: #334155; }
+.anim .bc-legende button
+{
+    display: inline-flex; align-items: center; gap: 0.35em; padding: 0.1em 0.6em;
+    border: 1px solid #cbd5e1; border-radius: 999px; background: #fff; color: #334155; font-size: 1em;
+}
+.anim .bc-legende button.bc-actif { border-color: #0B1020; background: #0B1020; color: #f8fafc; }
+.bc-legende span { display: inline-flex; align-items: center; gap: 0.35em; }
+.bc-legende i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
+.bc-legende i.bc-film { background: #fff; border: 2px solid #0B1020; width: 9px; height: 9px; }
+.anim p.bc-chemin { min-height: 2.6em; margin: 0.4em 0; font-size: 0.9em; line-height: 1.6; color: #1e293b; }
+.bc-chemin .bc-f { font-style: italic; color: #475569; }
+.bc-chemin .bc-nb { font-size: 1.15em; color: #B45309; }
+.bc-legende .bc-titre { font-weight: 600; }
+.bc-legende small { color: #64748b; }
+.anim .bc-legende button.bc-actif small { color: #cbd5e1; }

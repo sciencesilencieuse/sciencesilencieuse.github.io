@@ -150,6 +150,14 @@ En 1967, le psychologue Stanley Milgram demande à des habitants du Nebraska de 
 
 Les mathématiciens ont leur **nombre d'Erdős**, la distance à Paul Erdős dans le graphe des cosignatures d'articles&nbsp;; les cinéphiles leur **nombre de Bacon**, la distance à l'acteur Kevin Bacon dans le graphe des acteurs ayant tourné ensemble. Dans les deux cas, presque tout le monde est à moins de cinq ou six pas. Pourquoi un monde si petit&nbsp;? Si chacun a $k$ amis, on atteint environ $k^d$ personnes en $d$ pas&nbsp;: la distance typique croît comme le **logarithme** de la population.
 
+Voici un vrai graphe de ce genre&nbsp;: 187 films parmi les plus grands succès du box-office, et les 8&nbsp;264 acteurs de leurs distributions. Chaque point blanc est un film, chaque point coloré un acteur, relié aux films où il a joué&nbsp;; la couleur donne son nombre de Bacon, calculé par un parcours en largeur depuis Kevin Bacon. Les acteurs qui n'ont tourné qu'un film forment des grappes autour de lui, et ce sont les quelques acteurs aux carrières plus fournies qui tissent la trame de l'ensemble. Choisissez un acteur, ou cliquez sur un point&nbsp;: son plus court chemin vers Kevin Bacon s'allume.
+
+<div class="anim" data-anim="bacon"></div>
+{{< script "js/bacon.js" >}}
+<p class="legende">Données IMDb préparées par Robert Sedgewick et Kevin Wayne pour leur cours d'algorithmique à Princeton&nbsp;; disposition calculée par simulation de forces (bibliothèque d3-force).</p>
+
+Sur plus de huit mille acteurs, tous sauf dix sont reliés à Kevin Bacon, et aucun n'est à plus de quatre films de lui&nbsp;: la plupart ont un nombre de Bacon de $2$ ou $3$. Les dix exceptions sont les acteurs du *Projet Blair Witch* (1999), tourné avec un budget minuscule par des comédiens inconnus, dont aucun n'apparaît dans un autre film de la liste&nbsp;: un petit morceau détaché du graphe.
+
 {{< runpython lang="python" mode="toggle" height="auto" width="800" >}}
 from random import randrange
 
