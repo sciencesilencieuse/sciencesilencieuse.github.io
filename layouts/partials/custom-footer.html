@@ -3,3 +3,30 @@
     console.log("running some javascript");
 </script>
 -->
+<script>
+/* Grand titre de page sur écran étroit : la police (capitales larges et très
+   fines) fait déborder les mots longs. On donne à chaque h1 la plus grande taille
+   où son mot le plus long tient sur la ligne, sans dépasser 2,6 rem. */
+(function () {
+  function ajuster() {
+    document.querySelectorAll('#body-inner h1').forEach(function (h) {
+      if (h.closest('#chapter')) return;
+      h.style.fontSize = '';
+      if (window.innerWidth > 600) return;
+      var dispo = h.clientWidth, test = document.createElement('span'), max = 0;
+      test.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;font-size:100px';
+      h.appendChild(test);
+      h.textContent.trim().split(/\s+/).forEach(function (mot) {
+        test.textContent = mot;
+        max = Math.max(max, test.offsetWidth);
+      });
+      h.removeChild(test);
+      var rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+      if (max > 0) h.style.fontSize = Math.min(2.6 * rem, 0.97 * dispo * 100 / max) + 'px';
+    });
+  }
+  ajuster();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(ajuster);
+  window.addEventListener('resize', ajuster);
+})();
+</script>

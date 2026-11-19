@@ -377,9 +377,11 @@
    1. Les navigateurs mobiles qui « gonflent » le texte selon la largeur du bloc
       (font inflation) donnent des tailles différentes à deux titres de même
       niveau : on désactive ce mécanisme, préfixes compris.
-   2. Une seule échelle, proportionnelle à la largeur de l'écran, pour tous les
-      niveaux : h1 > h2 > h3 > h4 sur toutes les pages. Elle rejoint les tailles
-      du thème à 600 px de large. Les titres des cartes gardent leur propre taille. */
+   2. Une seule échelle, proportionnelle à la largeur de l'écran, pour h2, h3 et
+      h4, identique sur toutes les pages. Le h1 (capitales larges et ultra-fines,
+      visuellement légères) prend la plus grande taille où son mot le plus long
+      tient, et reste nettement au-dessus du h2. Les titres des cartes gardent
+      leur propre taille. */
 html
 {
     -webkit-text-size-adjust: 100%;
@@ -388,24 +390,25 @@ html
 }
 @media (max-width: 600px)
 {
-    #body-inner h1
+    #body-inner h1                      /* taille affinée par un script (custom-footer.html) */
     {
-        font-size: clamp(1.9rem, 9vw, 3.25rem);
+        font-size: clamp(1.6rem, 8.2vw, 2.6rem);
         overflow-wrap: break-word;
     }
     #body-inner h2:not(.math-card *)
     {
-        font-size: clamp(1.4rem, 6.4vw, 2.5rem);
+        font-size: clamp(1.25rem, 6vw, 2.5rem);
         overflow-wrap: break-word;
     }
     #body-inner h3:not(.math-card *)
     {
-        font-size: clamp(1.2rem, 5.2vw, 2rem);
+        font-size: clamp(1.15rem, 5vw, 2rem);
         overflow-wrap: break-word;
     }
     #body-inner h4:not(.math-card *)
     {
-        font-size: clamp(1.1rem, 4.5vw, 1.8rem);
+        font-size: clamp(1.08rem, 4.4vw, 1.8rem);
     }
+    #body-inner .anchor { display: none; }       /* icônes d'ancre : elles débordent des titres longs */
 }
 
