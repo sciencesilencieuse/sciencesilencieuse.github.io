@@ -972,3 +972,6 @@ rect.dr-zb { fill: #DBEAFE; stroke: #93C5FD; }
 .dr-z.dr-zi { border-style: dashed; border-color: #94a3b8; }
 .dr-z.dr-zb { background: #DBEAFE; border-color: #93C5FD; }
 .anim p.dr-message { margin: 0 0 0.6em 0 !important; min-height: 3em; padding: 0.4em 0.7em; border-left: 3px solid #004D80; background: #fff; font-size: 0.88em; line-height: 1.5; }
+
+/* ---------- Formules centrées trop larges : défilement horizontal ---------------------- */
+mjx-container[display="true"] { display: block; max-width: 100%; overflow-x: auto; overflow-y: hidden; }

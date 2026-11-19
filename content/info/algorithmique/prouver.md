@@ -84,8 +84,6 @@ Cette boucle s'arrête-t-elle pour tout $n$&nbsp;? Personne ne le sait. La conje
 <div class="anim" data-anim="syracuse"></div>
 {{< script "js/syracuse.js" >}}
 
-{{< youtube-plus id="094y1Z2wpJg" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
-
 ### Le problème de l'arrêt
 
 Faute de savoir le faire à la main, pourrait-on écrire un programme qui décide, pour n'importe quel programme et n'importe quelle entrée, s'il s'arrête&nbsp;? En 1936, Alan Turing démontre que c'est impossible. Supposons qu'une telle fonction `termine(programme, entree)` existe, et écrivons&nbsp;:
