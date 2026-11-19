@@ -318,6 +318,41 @@ Le tri par sélection a fait passer «&nbsp;p&nbsp;» devant «&nbsp;c&nbsp;» e
 
 Que fait `sorted`&nbsp;? En 2002, Tim Peters écrit pour Python un tri hybride, baptisé depuis **Timsort**. Il repère dans la liste les tronçons déjà triés (dans un sens ou dans l'autre), allonge les plus courts par insertion, là où ce tri excelle, puis fusionne les tronçons deux à deux, en suivant des règles soigneusement choisies pour que les fusions restent équilibrées. Il est stable, et il exploite tout l'ordre déjà présent&nbsp;: une liste triée ne lui coûte que $n-1$ comparaisons. Java, Android, le moteur JavaScript de Chrome et bien d'autres l'ont adopté.
 
+Pour voir Timsort exploiter l'ordre déjà présent, il suffit de compter ses comparaisons&nbsp;: on trie des objets dont la méthode `__lt__`, celle qu'appelle l'opérateur `<`, incrémente un compteur. Ce programme s'exécute avec le vrai Python, et donc le vrai Timsort.
+
+{{< runpython lang="pyodide" mode="toggle" height="auto" width="800" >}}
+from random import shuffle, randrange
+from math import log2
+
+class Compte:
+    n = 0                                   # comparaisons faites par sorted
+    def __init__(self, v):
+        self.v = v
+    def __lt__(self, autre):
+        Compte.n += 1
+        return self.v < autre.v
+
+n = 100_000
+hasard = list(range(n)); shuffle(hasard)
+presque = list(range(n))
+for _ in range(100):                        # 100 échanges de voisins au hasard
+    i = randrange(n - 1)
+    presque[i], presque[i + 1] = presque[i + 1], presque[i]
+cas = {"au hasard": hasard,
+       "déjà triée": list(range(n)),
+       "en ordre inverse": list(range(n, 0, -1)),
+       "presque triée": presque,
+       "deux moitiés triées": list(range(0, n, 2)) + list(range(1, n, 2))}
+
+print(f"n = {n:_} ; n log2 n ≈ {round(n * log2(n)):_}".replace("_", " "))
+for nom, L in cas.items():
+    Compte.n = 0
+    sorted(Compte(x) for x in L)
+    print(f"{nom:20} : {Compte.n:>9_} comparaisons".replace("_", " "))
+{{< /runpython >}}
+
+Une liste déjà triée ne coûte que $n-1$ comparaisons&nbsp;: Timsort y voit un seul tronçon. Une liste en ordre inverse aussi&nbsp;: il repère un unique tronçon décroissant, qu'il retourne. Deux moitiés triées l'une après l'autre ne demandent que de repérer deux tronçons puis de les fusionner. Seule la liste au hasard s'approche de la borne $n\log\_2 n$.
+
 <div class="encadre prune">
 <div class="encadre-titre">Une erreur trouvée en tentant une preuve</div>
 
