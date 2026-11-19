@@ -24,6 +24,8 @@ Deux reines sur une même ligne se prendraient&nbsp;: il y en a donc exactement 
 
 Sur l'échiquier ordinaire, il suffit d'essayer $876$ cases pour trouver une première solution, et $15\\,720$ pour les trouver toutes. C'est infime comparé aux $16\\,777\\,216$ façons de poser une reine par ligne. Chaque impasse coupe d'un coup toutes les façons de compléter l'échiquier qu'on aurait pu imaginer à partir de là&nbsp;: on ne les examine jamais.
 
+{{< youtube-plus id="tU1ceGzt0lo" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
+
 {{< runpython lang="python" mode="toggle" height="auto" width="800" >}}
 def reines(n):
     colonnes = []                   # colonnes[l] : colonne de la reine posée sur la ligne l
