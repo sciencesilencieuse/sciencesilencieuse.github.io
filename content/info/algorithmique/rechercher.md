@@ -300,7 +300,9 @@ Quand les réponses sont plus riches qu'un oui ou un non, une seule question peu
 <div class="anim" data-anim="mot-mystere"></div>
 {{< script "js/mot-mystere.js" >}}
 
-Sur les $399$ mots de cette liste, soit $8{,}6$ bits d'incertitude au départ, l'ordinateur qui choisit à chaque fois le coup d'entropie maximale trouve le mot en $3$ essais en moyenne, et jamais en plus de $5$.
+Le mot mystère est tiré parmi les $1\\,500$ mots de cinq lettres les plus courants, soit $10{,}6$ bits d'incertitude au départ, et les essais peuvent être n'importe lequel des $5\\,891$ mots du dictionnaire. L'ordinateur qui joue à chaque fois le coup d'entropie maximale ouvre avec «&nbsp;tarie&nbsp;», qui apporte en moyenne $6{,}2$ bits&nbsp;; il trouve le mot en $3{,}3$ essais en moyenne, et jamais en plus de $5$.
+
+<p class="legende">Mots acceptés&nbsp;: liste <a href="https://github.com/words/an-array-of-french-words">an-array-of-french-words</a> (licence MIT)&nbsp;; mots mystères choisis d'après les fréquences de <a href="https://github.com/rspeer/wordfreq">wordfreq</a>.</p>
 
 {{< youtube-plus id="v68zYyaEmEA" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 
