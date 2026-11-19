@@ -146,6 +146,26 @@ chapter = false
 </div>
 </div>
 
+<div class="math-card c-canard">
+<div class="math-card-head">
+<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="leger" d="M10 8h22l6 6v26H10z"/><path d="M15 17h14M15 23h18M15 29h10"/><path class="teinte" d="M28 33l4 4 8-9"/></svg></span>
+<h3><a href="./prouver/">Prouver un algorithme</a></h3>
+</div>
+<div class="carte-texte">S'arrêter et calculer juste&nbsp;: variant et invariant de boucle, Syracuse, problème de l'arrêt, dichotomie, drapeau hollandais.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./prouver/#dire-ce-quon-attend" class="math-btn">Spécification</a>
+  <a href="./prouver/#le-variant-de-boucle" class="math-btn">Variant</a>
+  <a href="./prouver/#la-suite-de-syracuse" class="math-btn">Syracuse</a>
+  <a href="./prouver/#le-problème-de-larrêt" class="math-btn">Problème de l'arrêt</a>
+  <a href="./prouver/#linvariant-de-boucle" class="math-btn">Invariant</a>
+  <a href="./prouver/#la-dichotomie-enfin-juste" class="math-btn">Dichotomie</a>
+  <a href="./prouver/#écrire-linvariant-dabord-le-drapeau-hollandais" class="math-btn">Drapeau hollandais</a>
+  <a href="./prouver/#faire-vérifier-par-la-machine" class="math-btn">Preuve formelle</a>
+</div>
+</div>
+</div>
+
 <div class="math-card c-magenta">
 <div class="math-card-head">
 <span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="15" y="5" width="18" height="8" rx="2"/><path d="M24 13v4"/><path d="M24 17l9 7-9 7-9-7z"/><path d="M24 31v4"/><rect x="15" y="35" width="18" height="8" rx="2"/><path class="leger" d="M33 24h7v15h-7"/></svg></span>

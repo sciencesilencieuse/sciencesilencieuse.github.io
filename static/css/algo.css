@@ -924,3 +924,51 @@ table.nm-table tr.nm-somme td { border-top: 2px solid #1e293b !important; font-w
 .as-defile, .mm-defile { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .as-defile .as-arbre { min-width: 600px; }
 .mm-defile .mm-arbre { min-width: 540px; }
+
+/* ---------- Variant et invariant de boucle --------------------------------------------- */
+.iv-grille { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr); gap: 1em; align-items: start; margin: 0.6em 0; }
+.anim pre.iv-code { margin: 0; padding: 0.7em 0.9em; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 0.82em; line-height: 1.45; white-space: pre; overflow-x: auto; color: #1e293b; }
+.iv-defile { max-height: 300px; overflow: auto; border: 1px solid #e2e8f0; border-radius: 6px; background: #fff; }
+table.iv-table { border-collapse: collapse; width: 100% !important; margin: 0 !important; font-size: 0.82em; font-variant-numeric: tabular-nums; }
+table.iv-table th, table.iv-table td { padding: 0.25em 0.55em !important; border: none !important; border-bottom: 1px solid #eef2f6 !important; text-align: right; background: none !important; white-space: nowrap; }
+table.iv-table th { position: sticky; top: 0; background: #f1f5f9 !important; color: #475569; font-weight: 600; text-align: right; }
+table.iv-table th.iv-hv, table.iv-table td.iv-hv { color: #B45309; }
+table.iv-table th.iv-hi, table.iv-table td.iv-hi { color: #15803d; }
+table.iv-table td.iv-hv { position: relative; min-width: 5em; }
+.iv-barre { position: absolute; left: 0.3em; bottom: 0.2em; height: 0.28em; width: calc((100% - 0.6em) * var(--w) / 100); background: #F59E0B; opacity: 0.45; border-radius: 2px; }
+.iv-val { position: relative; }
+table.iv-table tr.iv-cur td { background: #FFFBEB !important; font-weight: 700; }
+.iv-ok { color: #16a34a; font-weight: 700; }
+.anim p.iv-message { margin: 0.4em 0 0.6em 0 !important; min-height: 3em; padding: 0.4em 0.7em; border-left: 3px solid #004D80; background: #fff; font-size: 0.88em; line-height: 1.5; }
+@media (max-width: 640px) { .iv-grille { grid-template-columns: 1fr; } }
+
+/* ---------- Syracuse ----------------------------------------------------------------------- */
+.anim canvas.sy-toile { border: none; background: #fff; border-radius: 6px; }
+.anim p.sy-info { margin: 0.5em 0 !important; min-height: 2.8em; font-size: 0.88em; line-height: 1.5; color: #334155; }
+.sy-astuce { font-size: 0.85em; color: #64748b; }
+.anim-ctrl[hidden] { display: none; }
+
+/* ---------- Drapeau hollandais ---------------------------------------------------------------- */
+.dr-defile { overflow-x: auto; }
+.dr-svg { display: block; width: 100%; min-width: 520px; height: auto; }
+.dr-boule { transition: transform 0.45s ease-in-out; }
+.dr-boule circle { stroke: #475569; stroke-width: 1.5; }
+.dr-boule.dr-cur circle { stroke: #1e293b; stroke-width: 4; }
+.dr-R { fill: #DC2626; }
+.dr-W { fill: #ffffff; }
+.dr-B { fill: #1D4ED8; }
+.dr-zones rect { stroke-width: 1.5; }
+rect.dr-zr { fill: #FEE2E2; stroke: #FCA5A5; }
+rect.dr-zw { fill: #F8FAFC; stroke: #CBD5E1; }
+rect.dr-zi { fill: none; stroke: #94a3b8; stroke-dasharray: 5 4; }
+rect.dr-zb { fill: #DBEAFE; stroke: #93C5FD; }
+.dr-lab { font: 13px system-ui, sans-serif; fill: #64748b; text-anchor: middle; }
+.dr-trait { stroke: #1e293b; stroke-width: 2; }
+.dr-nom { font: 700 16px ui-monospace, monospace; fill: #1e293b; text-anchor: middle; }
+.anim p.dr-inv { margin: 0.3em 0 0.5em 0 !important; font-size: 0.8em; color: #475569; display: flex; flex-wrap: wrap; gap: 0.3em 0.8em; }
+.dr-z { padding: 0.05em 0.5em; border-radius: 4px; border: 1.5px solid; font-family: ui-monospace, monospace; }
+.dr-z.dr-zr { background: #FEE2E2; border-color: #FCA5A5; }
+.dr-z.dr-zw { background: #F8FAFC; border-color: #CBD5E1; }
+.dr-z.dr-zi { border-style: dashed; border-color: #94a3b8; }
+.dr-z.dr-zb { background: #DBEAFE; border-color: #93C5FD; }
+.anim p.dr-message { margin: 0 0 0.6em 0 !important; min-height: 3em; padding: 0.4em 0.7em; border-left: 3px solid #004D80; background: #fff; font-size: 0.88em; line-height: 1.5; }
