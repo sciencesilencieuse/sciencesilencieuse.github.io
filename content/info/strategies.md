@@ -783,9 +783,10 @@ Combien de divisions l'algorithme d'Euclide demande-t-il&nbsp;? Le pire cas est 
 
 Polyominos et Sudoku ont droit à leur algorithme au nom aguicheur&nbsp;: X. Il s'agit de recouvrir exactement une grille, chaque case une et une seule fois, avec des pièces choisies dans une liste. L'algorithme X explore récursivement l'arbre des choix possibles&nbsp;: il place une pièce, résout le problème restant, et revient en arrière (on parle de *backtracking*) quand il aboutit à une impasse. Il **élague** aussi l'arbre, en choisissant toujours d'abord la case la plus difficile à couvrir.
 
+{{< youtube-plus id="NTzoLEB7lO0" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
+
 Tout son art tient dans la façon de revenir en arrière à moindre coût. Donald Knuth l'a résolu en 2000 par une structure de données d'une élégance rare, les **liens dansants** (*dancing links*)&nbsp;: dans une liste doublement chaînée, retirer un élément $x$ se fait en deux affectations, `x.gauche.droite = x.droite` et `x.droite.gauche = x.gauche`. Or $x$ garde, lui, la mémoire de ses voisins&nbsp;: pour le remettre en place au moment de revenir en arrière, il suffit de deux autres affectations, `x.gauche.droite = x` et `x.droite.gauche = x`. Les éléments «&nbsp;dansent&nbsp;» hors de la liste puis y reviennent.
 
-{{< youtube-plus id="NTzoLEB7lO0" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 
 Récursivité pour explorer, élagage pour ne pas tout explorer, structure de données pour revenir en arrière sans rien payer&nbsp;: l'algorithme X rassemble à lui seul le fil de cette page.
 
