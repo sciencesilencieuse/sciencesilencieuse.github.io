@@ -86,6 +86,27 @@ chapter = false
 </div>
 </div>
 
+<div class="math-card c-rouge">
+<div class="math-card-head">
+<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="leger" d="M10 12l14 6M10 12l4 22M24 18l14-6M24 18l-10 16M24 18l10 18M38 12l-4 24M14 34h20"/><circle class="plein" cx="10" cy="12" r="3.4"/><circle class="plein" cx="24" cy="18" r="3.4"/><circle class="plein" cx="38" cy="12" r="3.4"/><circle class="plein" cx="14" cy="34" r="3.4"/><circle class="plein" cx="34" cy="36" r="3.4"/></svg></span>
+<h3><a href="./graphes/">Graphes</a></h3>
+</div>
+<div class="carte-texte">Des ponts de Königsberg au jeu icosien de Hamilton&nbsp;: parcourir, trouver le plus court chemin, relier au moindre coût.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./graphes/#les-sept-ponts-de-königsberg" class="math-btn">Königsberg</a>
+  <a href="./graphes/#représenter-un-graphe-en-mémoire" class="math-btn">Représentations</a>
+  <a href="./graphes/#parcourir-un-graphe" class="math-btn">Largeur et profondeur</a>
+  <a href="./graphes/#six-degrés-de-séparation" class="math-btn">Petit monde</a>
+  <a href="./graphes/#plus-courts-chemins" class="math-btn">Dijkstra</a>
+  <a href="./graphes/#le-tas-une-file-de-priorité" class="math-btn">Tas</a>
+  <a href="./graphes/#viser-la-cible-a" class="math-btn">A*</a>
+  <a href="./graphes/#relier-au-moindre-coût-larbre-couvrant-minimal" class="math-btn">Arbre couvrant</a>
+  <a href="./graphes/#euler-facile-hamilton-difficile" class="math-btn">Jeu icosien</a>
+</div>
+</div>
+</div>
+
 <div class="math-card c-magenta">
 <div class="math-card-head">
 <span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="15" y="5" width="18" height="8" rx="2"/><path d="M24 13v4"/><path d="M24 17l9 7-9 7-9-7z"/><path d="M24 31v4"/><rect x="15" y="35" width="18" height="8" rx="2"/><path class="leger" d="M33 24h7v15h-7"/></svg></span>

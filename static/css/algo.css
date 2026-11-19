@@ -619,3 +619,35 @@ ol.mm-meilleurs li { margin: 0 !important; font-variant-numeric: tabular-nums; }
 .tb-carte.tb-trie { background: #DCFCE7; border-color: #16a34a; color: #14532d; }
 .anim p.ts-verdict { margin: 0.4em 0 0 0; font-size: 0.9em; color: #1e293b; min-height: 1.4em; }
 @media (prefers-reduced-motion: reduce) { .tb-carte { transition: none; } }
+
+/* ---------- Graphes : Königsberg, parcours pas à pas, arbre couvrant, jeu icosien ---- */
+.kb-svg, .gp-svg { display: block; width: 100%; height: auto; max-height: 360px; }
+.kb-pont { fill: none; stroke: #94a3b8; stroke-width: 4; stroke-dasharray: 2 6; stroke-linecap: round; }
+.kb-pont.kb-possible { stroke: #004D80; stroke-dasharray: 3 6; stroke-width: 5; }
+.kb-pont.kb-utilise { stroke: #B45309; stroke-dasharray: none; stroke-width: 5; }
+.kb-zone { fill: none; stroke: transparent; stroke-width: 22; cursor: pointer; pointer-events: stroke; }
+.kb-num { fill: #B45309; }
+.kb-numt { fill: #fff; font: 600 11px system-ui, sans-serif; text-anchor: middle; pointer-events: none; }
+.kb-noeud { cursor: pointer; }
+.kb-noeud circle { fill: #E6EEF5; stroke: #004D80; stroke-width: 2; }
+.kb-noeud.kb-impair circle { fill: #FEF3C7; stroke: #B45309; }
+.kb-noeud.kb-ici circle { stroke-width: 4; fill: #FDE7C8; }
+.kb-deg { font: 700 16px system-ui, sans-serif; text-anchor: middle; fill: #1e293b; }
+.kb-nom { font: 13px system-ui, sans-serif; text-anchor: middle; fill: #475569; }
+.gp-arc { stroke: #cbd5e1; stroke-width: 2; }
+.gp-arc.gp-arc-v { stroke: #16a34a; stroke-width: 4; }
+.gp-poids { font: 600 12px system-ui, sans-serif; fill: #64748b; text-anchor: middle; }
+.gp-noeud { fill: #fff; stroke: #94a3b8; stroke-width: 2; }
+.gp-noeud.gp-front { fill: #FDE7C8; stroke: #B45309; }
+.gp-noeud.gp-vu { fill: #E6EEF5; stroke: #004D80; }
+.gp-noeud.gp-chemin { fill: #DCFCE7; stroke: #16a34a; }
+.gp-noeud.gp-courant { stroke-width: 4; }
+.gp-nom { font: 600 11px system-ui, sans-serif; text-anchor: middle; fill: #1e293b; pointer-events: none; }
+.gp-rang { font: 700 11px system-ui, sans-serif; text-anchor: middle; fill: #004D80; }
+.gp-etat p { margin: 0.3em 0 !important; font-size: 0.86em; line-height: 1.9; color: #334155; }
+.gp-lib { display: inline-block; min-width: 8.5em; font-weight: 600; }
+.gp-item { display: inline-block; margin: 0 0.25em 0 0; padding: 0 0.45em; border: 1px solid #cbd5e1; border-radius: 4px; background: #fff; line-height: 1.6; }
+.gp-item small { color: #B45309; font-weight: 600; }
+.gp-item.gp-suivant { border: 2px solid #B45309; }
+.gp-sens { color: #94a3b8; font-size: 0.85em; }
+.anim p.ic-chemin { margin: 0.5em 0 0 0; font-size: 0.86em; color: #334155; min-height: 1.3em; overflow-wrap: anywhere; }
