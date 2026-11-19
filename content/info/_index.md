@@ -24,6 +24,7 @@ chapter = true
   <a href="./algorithmique/rechercher/" class="math-btn">Rechercher</a>
   <a href="./algorithmique/complexite/" class="math-btn">Complexité</a>
   <a href="./algorithmique/recursivite/" class="math-btn">Récursivité</a>
+  <a href="./algorithmique/trier/" class="math-btn">Trier</a>
   <a href="./algorithmique/strategies/" class="math-btn">Stratégies</a>
 </div>
 </div>

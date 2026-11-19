@@ -572,3 +572,50 @@ ol.mm-meilleurs li { margin: 0 !important; font-variant-numeric: tabular-nums; }
 {
     .mm-grille { grid-template-columns: 1fr; }
 }
+
+/* ---------- Trier : course, tri par base, stabilité --------------------------------- */
+.ct-grille
+{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.8em 1em;
+}
+.ct-panneau { margin: 0; }
+.ct-panneau figcaption { font-size: 0.86em; font-weight: 600; margin-bottom: 0.25em; line-height: 1.2; }
+.anim .ct-panneau canvas { border: none; background: transparent; border-bottom: 1px solid #cbd5e1; border-radius: 0; }
+.anim p.ct-stats { margin: 0.2em 0 0 0; font-size: 0.78em; color: #334155; font-variant-numeric: tabular-nums; line-height: 1.35; }
+.ct-rang { color: #16a34a; font-weight: 700; }
+@media (max-width: 600px) { .ct-grille { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.tb-scene { position: relative; overflow: hidden; }
+.tb-casiers
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+.tb-casier { border-left: 1px solid #e2e8f0; text-align: center; background: linear-gradient(#f1f5f9, #f1f5f9) top / 100% 20px no-repeat; }
+.tb-casier:first-child { border-left: none; }
+.tb-casier span { display: block; height: 20px; line-height: 20px; font-size: 0.8em; font-weight: 600; color: #475569; }
+.tb-carte
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #94a3b8;
+    border-radius: 4px;
+    background: #fff;
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 0.82em;
+    color: #64748b;
+    transition: transform 0.8s ease-in-out, background 0.3s;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.12);
+}
+.tb-carte b { color: #B45309; font-weight: 700; }
+.tb-carte.tb-trie { background: #DCFCE7; border-color: #16a34a; color: #14532d; }
+.anim p.ts-verdict { margin: 0.4em 0 0 0; font-size: 0.9em; color: #1e293b; min-height: 1.4em; }
+@media (prefers-reduced-motion: reduce) { .tb-carte { transition: none; } }

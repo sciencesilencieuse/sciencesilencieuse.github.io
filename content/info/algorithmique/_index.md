@@ -66,6 +66,26 @@ chapter = false
 </div>
 </div>
 
+<div class="math-card c-vert">
+<div class="math-card-head">
+<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="leger" d="M6 42h36"/><rect x="8" y="30" width="6" height="12" rx="1"/><rect x="17" y="24" width="6" height="18" rx="1"/><rect x="26" y="16" width="6" height="26" rx="1"/><rect class="teinte" x="35" y="7" width="6" height="35" rx="1"/></svg></span>
+<h3><a href="./trier/">Trier</a></h3>
+</div>
+<div class="carte-texte">Des tris simples aux tris en n log n, la borne qu'on ne peut pas franchir en comparant, et comment la contourner.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./trier/#trois-tris-simples" class="math-btn">Tris simples</a>
+  <a href="./trier/#le-tri-fusion" class="math-btn">Tri fusion</a>
+  <a href="./trier/#quicksort" class="math-btn">Quicksort</a>
+  <a href="./trier/#la-course" class="math-btn">La course</a>
+  <a href="./trier/#peut-on-trier-plus-vite" class="math-btn">Borne n log n</a>
+  <a href="./trier/#trier-sans-comparer" class="math-btn">Sans comparer</a>
+  <a href="./trier/#la-stabilité" class="math-btn">Stabilité</a>
+  <a href="./trier/#le-tri-de-python" class="math-btn">Timsort</a>
+</div>
+</div>
+</div>
+
 <div class="math-card c-magenta">
 <div class="math-card-head">
 <span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="15" y="5" width="18" height="8" rx="2"/><path d="M24 13v4"/><path d="M24 17l9 7-9 7-9-7z"/><path d="M24 31v4"/><rect x="15" y="35" width="18" height="8" rx="2"/><path class="leger" d="M33 24h7v15h-7"/></svg></span>
