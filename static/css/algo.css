@@ -243,3 +243,40 @@
     .cx-axe .cx-impair { display: none; }                   /* une graduation sur deux */
     .cx-repere span { white-space: normal; width: 46px; text-align: center; line-height: 1.1; }
 }
+
+/* ---------- Scènes 3D (three.js) : tris et tours de Hanoï ---------------------- */
+.scene3d
+{
+    position: relative;
+}
+.scene3d canvas
+{
+    touch-action: pan-y;
+}
+.scene3d-etiquette
+{
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    padding: 0.1em 0.7em;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.85);
+    color: #334155;
+    font-size: 0.95em;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    pointer-events: none;
+}
+.scene3d-erreur
+{
+    padding: 2em 1em;
+    text-align: center;
+    color: #64748b;
+}
+.anim-astuce
+{
+    flex-basis: 100%;
+    font-size: 0.82em;
+    color: #94a3b8;
+}

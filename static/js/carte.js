@@ -49,13 +49,23 @@
   function carte() {
     n = (root.clientWidth || 640) < 520 ? 28 : 36;
     for (;;) {
-      const eau = bruit(n, n / 4), terre = bruit(n, n / 6);
-      terrain = eau.map((e, k) => e > 0.68 ? 2 : (e > 0.56 || terre[k] > 0.74) ? 1 : 0);
-      const nm = Math.round(n / 5);                  // quelques murs droits
+      const eau = bruit(n, n / 4), terre = bruit(n, n / 6), rive = bruit(n, n / 7);
+      // un grand lac en travers du chemin à vol d'oiseau, bordé de marécages : la ligne droite
+      // coûte très cher, et seuls les algorithmes qui lisent les pondérations le contournent
+      const cx = (n - 1) / 2, cy = n >> 1, decal = (Math.random() - 0.5) * n * 0.12;
+      terrain = eau.map((e, k) => {
+        const x = k % n, y = (k - x) / n;
+        const dx = (x - cx) / (n * 0.16), dy = (y - cy - decal) / (n * 0.3);
+        const lac = dx * dx + dy * dy + (rive[k] - 0.5) * 0.8;
+        if (lac < 1) return 2;
+        if (lac < 1.5 && terre[k] > 0.35) return 1;
+        return e > 0.76 ? 2 : (e > 0.6 || terre[k] > 0.74) ? 1 : 0;
+      });
+      const nm = Math.round(n / 5);                  // quelques murs droits, hors de l'eau
       for (let k = 0; k < nm; k++) {
         const hor = Math.random() < 0.5, L = 4 + Math.floor(Math.random() * n / 3);
         let x = Math.floor(Math.random() * n), y = Math.floor(Math.random() * n);
-        for (let t = 0; t < L; t++) { if (x >= 0 && y >= 0 && x < n && y < n) terrain[y * n + x] = 3; hor ? x++ : y++; }
+        for (let t = 0; t < L; t++) { if (x >= 0 && y >= 0 && x < n && y < n && terrain[y * n + x] !== 2) terrain[y * n + x] = 3; hor ? x++ : y++; }
       }
       D = (n >> 1) * n + 1; B = (n >> 1) * n + n - 2;
       terrain[D] = terrain[B] = 0;
