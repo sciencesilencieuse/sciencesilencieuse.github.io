@@ -783,6 +783,7 @@ Combien de divisions l'algorithme d'Euclide demande-t-il&nbsp;? Le pire cas est 
 
 Polyominos et Sudoku ont droit à leur algorithme au nom aguicheur&nbsp;: X. Il résout les problèmes de **couverture exacte**&nbsp;: on dispose d'une liste de *contraintes* et d'une liste d'*options*, chaque option satisfaisant certaines contraintes, et l'on doit choisir des options de sorte que chaque contrainte soit satisfaite **une et une seule fois**. Paver une grille avec des pièces, c'est cela&nbsp;: chaque case doit être couverte exactement une fois, et chaque pièce utilisée exactement une fois.
 
+<<<<<<< HEAD
 #### Le Sudoku, un problème de couverture exacte
 
 Une option, c'est un triplet $(l, c, n)$&nbsp;: «&nbsp;mettre le chiffre $n$ dans la case de la ligne $l$ et de la colonne $c$&nbsp;». Il y en a $9 \times 9 \times 9 = 729$. Les contraintes se rangent en quatre familles de $81$, soit $324$ en tout&nbsp;:
@@ -906,8 +907,12 @@ for ligne in sudoku(grille):
 Rien dans `algorithme_x`, `choisir` et `rendre` ne parle de Sudoku&nbsp;: seule la fonction `sudoku` traduit la grille en contraintes et en options. Le même moteur pave un échiquier de pentominos ou place huit reines, pourvu qu'on lui décrive le problème dans sa langue.
 
 Avec des dictionnaires, chaque retrait et chaque remise a un coût. Tout l'art de l'algorithme X tient pourtant dans la façon de revenir en arrière à moindre coût, et Donald Knuth l'a résolu en 2000 par une structure de données d'une élégance rare, les **liens dansants** (*dancing links*)&nbsp;: dans une liste doublement chaînée, retirer un élément $x$ se fait en deux affectations, `x.gauche.droite = x.droite` et `x.droite.gauche = x.gauche`. Or $x$ garde, lui, la mémoire de ses voisins&nbsp;: pour le remettre en place au moment de revenir en arrière, il suffit de deux autres affectations, `x.gauche.droite = x` et `x.droite.gauche = x`. Les éléments «&nbsp;dansent&nbsp;» hors de la liste puis y reviennent.
-
+=======
 {{< youtube-plus id="NTzoLEB7lO0" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
+
+Tout son art tient dans la façon de revenir en arrière à moindre coût. Donald Knuth l'a résolu en 2000 par une structure de données d'une élégance rare, les **liens dansants** (*dancing links*)&nbsp;: dans une liste doublement chaînée, retirer un élément $x$ se fait en deux affectations, `x.gauche.droite = x.droite` et `x.droite.gauche = x.gauche`. Or $x$ garde, lui, la mémoire de ses voisins&nbsp;: pour le remettre en place au moment de revenir en arrière, il suffit de deux autres affectations, `x.gauche.droite = x` et `x.droite.gauche = x`. Les éléments «&nbsp;dansent&nbsp;» hors de la liste puis y reviennent.
+>>>>>>> origin/main
+
 
 Récursivité pour explorer, élagage pour ne pas tout explorer, structure de données pour revenir en arrière sans rien payer&nbsp;: l'algorithme X rassemble à lui seul le fil de cette page.
 
