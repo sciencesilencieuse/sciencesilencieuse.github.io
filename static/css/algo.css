@@ -158,6 +158,84 @@
     margin-left: auto;
 }
 
+/* ---------- Carte pondérée : quatre recherches en parallèle ------------------- */
+.cr-grille
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8em;
+}
+.cr-panneau
+{
+    margin: 0;
+}
+.cr-panneau figcaption
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.3em;
+    font-size: 0.9em;
+    line-height: 1.25;
+}
+.cr-panneau figcaption span
+{
+    font-size: 0.82em;
+    color: #64748b;
+}
+.anim .cr-panneau canvas
+{
+    border-radius: 6px;
+}
+.cr-stats
+{
+    margin: 0.3em 0 0 0 !important;
+    font-size: 0.82em;
+    line-height: 1.35;
+    color: #334155;
+    font-variant-numeric: tabular-nums;
+}
+.cr-stats.cr-optimal b:last-of-type
+{
+    color: #B45309;
+}
+.cr-legende
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3em 1em;
+    margin: 0.7em 0 0.2em 0;
+    font-size: 0.85em;
+    color: #334155;
+}
+.cr-legende span
+{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+}
+.cr-legende i
+{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.cr-legende i.cr-explo
+{
+    background: #fff;
+    border: 2px solid #B45309;
+}
+.cr-legende i.cr-valid
+{
+    background: rgba(0, 77, 128, 0.42);
+}
+@media (max-width: 480px)
+{
+    .cr-grille { gap: 0.5em; }
+    .cr-panneau figcaption span { display: none; }
+}
+
 /* Icônes d'ancre du thème : masquées sur petit écran (elles débordent des titres longs) */
 @media (max-width: 480px)
 {

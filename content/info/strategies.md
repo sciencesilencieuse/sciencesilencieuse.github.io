@@ -691,6 +691,26 @@ def Dijkstra(G, depart):
 </blockquote>
 </details>
 
+### Sur une carte pondérée&nbsp;: quatre recherches en parallèle
+
+Dans le labyrinthe, toutes les cases se valaient. Sur une carte de jeu vidéo, ce n'est plus le cas&nbsp;: l'herbe se traverse facilement (coût 1), le marécage ralentit (coût 3), le lac est très pénalisant (coût 10), et les murs sont infranchissables. Quatre algorithmes partent ensemble ci-dessous, et, à chaque instant, chacun a validé le même nombre de cases.
+
+- Le **parcours en largeur** ignore les pondérations&nbsp;: il trouve le chemin qui traverse le moins de cases, quitte à passer à la nage.
+- **Dijkstra** valide les cases par coût croissant depuis le départ. Son chemin est le moins coûteux, mais il s'étend dans toutes les directions à la fois.
+- **A\*** ajoute à ce coût une estimation optimiste de ce qui reste à parcourir (la distance comptée comme si tout était de l'herbe). Il trouve le même coût optimal, en validant bien moins de cases.
+- Le **meilleur d'abord glouton** ne regarde que l'estimation&nbsp;: il fonce vers le but sans se soucier de ce qu'il a déjà payé. Il arrive souvent le premier, mais rien ne garantit que son chemin soit bon&nbsp;: c'est le défaut des [gloutons](#ne-jamais-revenir-en-arrière-les-algorithmes-gloutons) rencontré plus haut.
+
+<div class="anim" data-anim="carte"></div>
+{{< script "js/carte.js" >}}
+
+<div class="encadre bleu">
+<div class="encadre-titre">Cases explorées, cases validées</div>
+
+Une case est **explorée** quand l'algorithme la découvre&nbsp;: il la range dans sa structure de données avec une estimation provisoire de son coût. Elle est **validée** quand elle en sort. Pour Dijkstra, ce moment est décisif&nbsp;: la case qui sort de la file de priorité est la moins coûteuse de toutes celles qui attendent, et, les coûts étant positifs, aucun détour par une autre case ne pourra plus faire mieux. Son coût est alors définitif. A\* conserve cette garantie tant que son estimation ne surestime jamais le coût réel (on la dit **admissible**)&nbsp;; c'est le cas ici, puisqu'aucune case ne coûte moins que l'herbe.
+
+</div>
+
+
 <br>
 
 
@@ -701,6 +721,7 @@ def Dijkstra(G, depart):
 <tr><td>file</td><td>le premier arrivé</td><td>parcours en largeur (plus courts chemins en nombre d'arêtes)</td></tr>
 <tr><td>file de priorité, clé = distance</td><td>le plus proche du départ</td><td>Dijkstra (plus courts chemins pondérés)</td></tr>
 <tr><td>file de priorité, clé = distance + estimation</td><td>le plus prometteur</td><td>A* (recherche guidée)</td></tr>
+<tr><td>file de priorité, clé = estimation seule</td><td>le plus proche du but, à vue</td><td>meilleur d'abord glouton (rapide, sans garantie)</td></tr>
 </table>
 </div>
 
