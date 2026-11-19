@@ -1,6 +1,8 @@
 {{- /* Charge un script de static/ avec un numéro de version qui change à chaque
        construction du site, comme les feuilles de style de custom-header.html :
        le navigateur ne réutilise pas une ancienne copie après une mise à jour.
-       Usage : {{< script "js/bernoulli.js" >}} */ -}}
+       Usage : {{< script "js/bernoulli.js" >}}
+       Module ES (import/export, par ex. three.js) : {{< script "js/tris3d.js" "module" >}} */ -}}
 {{- $src := .Get 0 -}}
-<script src="{{ $src | relURL }}{{ if not site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+{{- $type := .Get 1 -}}
+<script{{ if eq $type "module" }} type="module"{{ end }} src="{{ $src | relURL }}{{ if not site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>

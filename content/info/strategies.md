@@ -64,7 +64,7 @@ Les tours de Hanoï en sont l'exemple le plus célèbre. Pour déplacer $n$ disq
 {{< youtube-plus id="lIIXLQvcd4Q" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 
 <div class="anim" data-anim="hanoi"></div>
-{{< script "js/hanoi-anim.js" >}}
+{{< script "js/hanoi3d.js" "module" >}}
 
 
 
@@ -170,7 +170,7 @@ Les tris sont omniprésents en informatique et Tim Roughgarden (auteur des géni
 Ci-dessous, vous pourrez comparer l'efficacité de différents tris par comparaison en les voyant se débattre courageusement avec les données.
 
 <div class="anim" data-anim="tris"></div>
-{{< script "js/tris-anim.js" >}}
+{{< script "js/tris3d.js" "module" >}}
 
 ![](https://imgs.xkcd.com/comics/ineffective_sorts.png)
 
@@ -693,7 +693,7 @@ def Dijkstra(G, depart):
 
 ### Sur une carte pondérée&nbsp;: quatre recherches en parallèle
 
-Dans le labyrinthe, toutes les cases se valaient. Sur une carte de jeu vidéo, ce n'est plus le cas&nbsp;: l'herbe se traverse facilement (coût 1), le marécage ralentit (coût 3), le lac est très pénalisant (coût 10), et les murs sont infranchissables. Quatre algorithmes partent ensemble ci-dessous, et, à chaque instant, chacun a validé le même nombre de cases.
+Dans le labyrinthe, toutes les cases se valaient. Sur une carte de jeu vidéo, ce n'est plus le cas&nbsp;: l'herbe se traverse facilement (coût 1), le marécage ralentit (coût 3), le lac est très pénalisant (coût 10), et les murs sont infranchissables. La carte est tirée au hasard, mais un grand lac barre toujours la ligne droite entre le départ et l'arrivée&nbsp;: le chemin à vol d'oiseau est le plus court en nombre de cases, et de loin le plus cher. Quatre algorithmes partent ensemble ci-dessous, et, à chaque instant, chacun a validé le même nombre de cases.
 
 - Le **parcours en largeur** ignore les pondérations&nbsp;: il trouve le chemin qui traverse le moins de cases, quitte à passer à la nage.
 - **Dijkstra** valide les cases par coût croissant depuis le départ. Son chemin est le moins coûteux, mais il s'étend dans toutes les directions à la fois.
