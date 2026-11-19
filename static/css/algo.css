@@ -655,7 +655,8 @@ ol.mm-meilleurs li { margin: 0 !important; font-variant-numeric: tabular-nums; }
 
 /* ---------- Graphe des acteurs (nombre de Bacon) ------------------------------------ */
 .bc-cadre { position: relative; }
-.anim canvas.bc-toile { background: #0B1020; border: none; border-radius: 10px; touch-action: none; cursor: grab; }
+.anim canvas.bc-toile { display: block; width: 100%; background: #0B1020; border: none; border-radius: 10px; }
+.anim canvas.bc-calque { position: absolute; top: 0; left: 0; width: 100%; background: transparent; border: none; border-radius: 10px; touch-action: none; cursor: grab; }
 .bc-zoom { position: absolute; top: 8px; right: 8px; display: flex; flex-direction: column; gap: 4px; }
 .anim .bc-zoom button
 {
