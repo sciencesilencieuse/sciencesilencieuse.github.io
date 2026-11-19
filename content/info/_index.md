@@ -21,6 +21,7 @@ chapter = true
 <div class="carte-texte">Chercher, trier, prouver, parcourir des graphes, explorer des possibles&nbsp;: les grandes idées des algorithmes, et ce qu'elles coûtent.</div>
 <div class="theme-subgroup">
 <div class="link-list">
+  <a href="./algorithmique/rechercher/" class="math-btn">Rechercher</a>
   <a href="./algorithmique/complexite/" class="math-btn">Complexité</a>
   <a href="./algorithmique/recursivite/" class="math-btn">Récursivité</a>
   <a href="./algorithmique/strategies/" class="math-btn">Stratégies</a>

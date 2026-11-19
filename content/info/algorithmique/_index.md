@@ -11,6 +11,25 @@ chapter = false
 
 <div class="math-grid">
 
+<div class="math-card c-orange">
+<div class="math-card-head">
+<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="20" cy="20" r="11"/><path d="M28 28l12 12"/><path class="leger" d="M15 20h10M20 15v10"/></svg></span>
+<h3><a href="./rechercher/">Rechercher</a></h3>
+</div>
+<div class="carte-texte">Parcourir, couper en deux, hacher, poser les bonnes questions&nbsp;: chercher, c'est réduire une incertitude.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./rechercher/#parcourir" class="math-btn">Parcourir</a>
+  <a href="./rechercher/#le-maximum-et-le-second" class="math-btn">Tournoi de Carroll</a>
+  <a href="./rechercher/#chercher-un-mot-dans-un-texte" class="math-btn">Mot dans un texte</a>
+  <a href="./rechercher/#couper-en-deux-la-dichotomie" class="math-btn">Dichotomie</a>
+  <a href="./rechercher/#la-racine-dune-équation" class="math-btn">Racine</a>
+  <a href="./rechercher/#trouver-sans-chercher-le-hachage" class="math-btn">Hachage</a>
+  <a href="./rechercher/#poser-les-bonnes-questions" class="math-btn">Information</a>
+</div>
+</div>
+</div>
+
 <div class="math-card c-bleu">
 <div class="math-card-head">
 <span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="leger" d="M7 41h35M7 41V6"/><path d="M9 39h31"/><path d="M9 39c12-2 22-8 31-16"/><path d="M9 39c8-6 14-18 17-32"/></svg></span>

@@ -483,3 +483,92 @@ ol.eu-divisions li.eu-fin { list-style: none; margin-top: 0.5em !important; marg
     .eu-grille { grid-template-columns: 1fr; }
 }
 .anim-ctrl label[hidden] { display: none; }
+
+/* ---------- Rechercher : duel, motif, dichotomie, hachage, mot mystère -------------- */
+.rd-piste, .mo-piste { margin: 0 0 0.6em 0; }
+.rd-piste figcaption, .mo-piste figcaption { font-size: 0.9em; margin-bottom: 0.3em; color: #334155; }
+.rd-piste figcaption span, .mo-piste figcaption span { color: #64748b; font-size: 0.92em; }
+.anim .rd-piste canvas, .anim .mo-piste canvas { border: none; background: transparent; cursor: pointer; }
+.anim .mo-piste canvas { cursor: default; }
+.anim p.rd-compte { margin: 0.25em 0 0 0; font-size: 0.86em; color: #334155; font-variant-numeric: tabular-nums; }
+.anim p.mo-table { margin: 0.2em 0 0.4em 0; font-size: 0.85em; color: #334155; line-height: 1.7; }
+.anim-ctrl input[type="text"]
+{
+    font: inherit;
+    padding: 0.15em 0.4em;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: ui-monospace, Menlo, monospace;
+}
+.bi-tableau { overflow-x: auto; margin: 0.6em 0 0 0; }
+.bi-tableau table
+{
+    width: 100%;
+    margin: 0 !important;
+    border-collapse: collapse;
+    font-size: 0.8em;
+    font-variant-numeric: tabular-nums;
+}
+.bi-tableau th, .bi-tableau td { padding: 0.15em 0.5em !important; border: none !important; border-bottom: 1px solid #e2e8f0 !important; text-align: right; white-space: nowrap; }
+.bi-tableau th { color: #475569; font-weight: 600; background: transparent !important; }
+.ha-cases
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 4px;
+}
+.ha-case
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3px;
+    min-height: 2em;
+    padding: 3px 5px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background: #fff;
+    font-size: 0.82em;
+}
+.ha-case.ha-vise { border-color: #004D80; box-shadow: 0 0 0 2px rgba(0, 77, 128, 0.25); }
+.ha-idx { min-width: 1.7em; color: #94a3b8; font-variant-numeric: tabular-nums; font-size: 0.9em; }
+.ha-mot { padding: 0 0.4em; border-radius: 999px; background: #E6EEF5; color: #004D80; }
+.ha-mot.ha-trouve { background: #16a34a; color: #fff; }
+.anim p.ha-calcul { min-height: 1.5em; margin: 0.6em 0 0.2em 0; font-size: 0.88em; color: #1e293b; }
+.anim p.ha-stats { margin: 0.2em 0; font-size: 0.82em; color: #475569; line-height: 1.5; }
+.mm-grille
+{
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 1.2em;
+    align-items: start;
+}
+.mm-ligne { display: flex; align-items: center; gap: 4px; margin-bottom: 4px; }
+.mm-case
+{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.1em;
+    height: 2.1em;
+    border: 2px solid #cbd5e1;
+    border-radius: 4px;
+    background: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1e293b;
+}
+.mm-case.mm-v { background: #16a34a; border-color: #16a34a; color: #fff; }
+.mm-case.mm-j { background: #EAB308; border-color: #EAB308; color: #fff; }
+.mm-case.mm-g { background: #94a3b8; border-color: #94a3b8; color: #fff; }
+.mm-gain { margin-left: 0.5em; font-size: 0.8em; color: #475569; white-space: nowrap; }
+.mm-panneau { font-size: 0.88em; color: #334155; }
+.mm-panneau p { margin: 0 0 0.5em 0 !important; }
+.mm-panneau .mm-titre { font-weight: 600; margin-top: 0.8em !important; }
+.mm-panneau .mm-titre span { font-weight: 400; color: #64748b; }
+ol.mm-meilleurs { margin: 0 !important; padding-left: 1.4em !important; }
+ol.mm-meilleurs li { margin: 0 !important; font-variant-numeric: tabular-nums; }
+@media (max-width: 600px)
+{
+    .mm-grille { grid-template-columns: 1fr; }
+}
