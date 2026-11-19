@@ -781,9 +781,131 @@ Combien de divisions l'algorithme d'Euclide demande-t-il&nbsp;? Le pire cas est 
 
 ### Algorithme X
 
-Polyominos et Sudoku ont droit à leur algorithme au nom aguicheur&nbsp;: X. Il s'agit de recouvrir exactement une grille, chaque case une et une seule fois, avec des pièces choisies dans une liste. L'algorithme X explore récursivement l'arbre des choix possibles&nbsp;: il place une pièce, résout le problème restant, et revient en arrière (on parle de *backtracking*) quand il aboutit à une impasse. Il **élague** aussi l'arbre, en choisissant toujours d'abord la case la plus difficile à couvrir.
+Polyominos et Sudoku ont droit à leur algorithme au nom aguicheur&nbsp;: X. Il résout les problèmes de **couverture exacte**&nbsp;: on dispose d'une liste de *contraintes* et d'une liste d'*options*, chaque option satisfaisant certaines contraintes, et l'on doit choisir des options de sorte que chaque contrainte soit satisfaite **une et une seule fois**. Paver une grille avec des pièces, c'est cela&nbsp;: chaque case doit être couverte exactement une fois, et chaque pièce utilisée exactement une fois.
 
-Tout son art tient dans la façon de revenir en arrière à moindre coût. Donald Knuth l'a résolu en 2000 par une structure de données d'une élégance rare, les **liens dansants** (*dancing links*)&nbsp;: dans une liste doublement chaînée, retirer un élément $x$ se fait en deux affectations, `x.gauche.droite = x.droite` et `x.droite.gauche = x.gauche`. Or $x$ garde, lui, la mémoire de ses voisins&nbsp;: pour le remettre en place au moment de revenir en arrière, il suffit de deux autres affectations, `x.gauche.droite = x` et `x.droite.gauche = x`. Les éléments «&nbsp;dansent&nbsp;» hors de la liste puis y reviennent.
+#### Le Sudoku, un problème de couverture exacte
+
+Une option, c'est un triplet $(l, c, n)$&nbsp;: «&nbsp;mettre le chiffre $n$ dans la case de la ligne $l$ et de la colonne $c$&nbsp;». Il y en a $9 \times 9 \times 9 = 729$. Les contraintes se rangent en quatre familles de $81$, soit $324$ en tout&nbsp;:
+
+<div class="tableau-large">
+<table class="tab-recap">
+<tr><th>Famille</th><th>Contrainte (une par couple)</th><th>L'option $(l, c, n)$ satisfait…</th></tr>
+<tr><td>case</td><td>la case $(l, c)$ reçoit un chiffre</td><td>la contrainte $(l, c)$</td></tr>
+<tr><td>ligne × chiffre</td><td>la ligne $l$ contient le chiffre $n$</td><td>la contrainte $(l, n)$</td></tr>
+<tr><td>colonne × chiffre</td><td>la colonne $c$ contient le chiffre $n$</td><td>la contrainte $(c, n)$</td></tr>
+<tr><td>bloc × chiffre</td><td>le bloc $b$ contient le chiffre $n$</td><td>la contrainte $(b, n)$</td></tr>
+</table>
+</div>
+
+Chaque option satisfait exactement quatre contraintes, une par famille. Une grille remplie, ce sont $81$ options qui, ensemble, satisfont chacune des $324$ contraintes une et une seule fois&nbsp;: $81 \times 4 = 324$, le compte est bon. Les chiffres donnés au départ ne sont que des options imposées d'avance.
+
+#### L'algorithme
+
+L'algorithme X est un [retour sur trace](#le-geste-fondateur-la-récursivité) dont chaque étape tient en quelques mots&nbsp;:
+
+1. s'il ne reste aucune contrainte à satisfaire, la grille est résolue&nbsp;;
+2. sinon, on choisit la contrainte qui a **le moins d'options** restantes&nbsp;;
+3. on essaie ses options une à une. Retenir une option, c'est retirer les quatre contraintes qu'elle satisfait **et toutes les options qui touchent ces contraintes**, devenues incompatibles. Puis on recommence sur le problème réduit&nbsp;;
+4. si une contrainte n'a plus aucune option, c'est une impasse&nbsp;: on remet tout en place et l'on passe à l'option suivante du niveau précédent.
+
+Le choix de l'étape 2 est l'**élagage**&nbsp;: plutôt que d'ouvrir l'arbre des possibles là où il est le plus touffu, on va là où il y a le moins de branches. Quand une contrainte n'a plus qu'une option, il n'y a même pas de choix à faire. L'animation ci-dessous suit l'algorithme pas à pas. À gauche, les petits chiffres gris sont les options encore vivantes&nbsp;; à droite, les $324$ contraintes sont dessinées en quatre grilles de $9 \times 9$ (pour «&nbsp;ligne × chiffre&nbsp;», la rangée est la ligne et la colonne est le chiffre), colorées selon leur nombre d'options restantes.
+
+<div class="anim" data-anim="sudoku-x"></div>
+{{< script "js/sudoku-x.js" >}}
+
+<div class="encadre bleu">
+<div class="encadre-titre">Les techniques des joueurs, sans les avoir programmées</div>
+
+Les amateurs de Sudoku connaissent deux réflexes de base. Le **singleton nu**&nbsp;: une case n'a plus qu'un candidat. Le **singleton caché**&nbsp;: dans une ligne, une colonne ou un bloc, un chiffre n'a plus qu'une place possible. Personne ne les a appris à l'algorithme X, et pourtant il les applique&nbsp;: une contrainte «&nbsp;case&nbsp;» à une seule option, c'est un singleton nu&nbsp;; une contrainte «&nbsp;ligne × chiffre&nbsp;», «&nbsp;colonne × chiffre&nbsp;» ou «&nbsp;bloc × chiffre&nbsp;» à une seule option, c'est un singleton caché. Sur la grille «&nbsp;Facile&nbsp;», il ne fait que cela&nbsp;: aucun pari, aucun retour en arrière. Les techniques humaines apparaissent d'elles-mêmes, comme les cas particuliers d'une seule règle&nbsp;: aller au plus contraint.
+
+</div>
+
+<div class="encadre prune">
+<div class="encadre-titre">Une symétrie cachée</div>
+
+Regardons les trois premières familles&nbsp;: elles correspondent aux couples $(l, c)$, $(l, n)$ et $(c, n)$. Les trois coordonnées de l'option $(l, c, n)$ y jouent des rôles parfaitement symétriques&nbsp;: sans les blocs, une grille de Sudoku est un **carré latin**, c'est-à-dire $81$ triplets tels que deux coordonnées quelconques déterminent toujours la troisième. Le joueur, lui, privilégie les cases, parce que c'est là qu'il écrit. Pour l'algorithme, «&nbsp;quel chiffre dans la case $(3, 5)$&nbsp;?&nbsp;» et «&nbsp;où va le $7$ dans la ligne $3$&nbsp;?&nbsp;» sont la même question, posée selon un autre couple de coordonnées. C'est pourquoi il trouve les singletons cachés, réputés plus difficiles à repérer, aussi facilement que les singletons nus. Seuls les blocs brisent la symétrie.
+
+</div>
+
+Difficile pour un humain ne veut d'ailleurs pas dire difficile pour l'algorithme. La grille «&nbsp;AI Escargot&nbsp;», présentée en 2006 par le mathématicien finlandais Arto Inkala comme la plus difficile jamais conçue, ne demande ici que $87$ retours en arrière, et celle qu'Inkala a proposée en 2012 environ $1\\,400$&nbsp;: quelques millisecondes pour un ordinateur. Ces nombres dépendent beaucoup de la façon de départager les contraintes qui ont le même nombre d'options&nbsp;: en changeant seulement cet ordre, l'Escargot peut en demander près de $1\\,500$. La raison profonde est ailleurs&nbsp;: la couverture exacte est un problème **NP-complet** (comme le [voyageur de commerce](#le-voyageur-de-commerce-held-karp)), et l'on ne connaît aucun algorithme efficace dans tous les cas. Pour une grille $9 \times 9$, l'élagage suffit largement&nbsp;; pour des Sudoku géants $n^2 \times n^2$, l'explosion combinatoire finit toujours par gagner.
+
+#### Une implémentation en Python
+
+Ali Assaf a montré qu'avec des dictionnaires d'ensembles, l'algorithme X tient en une trentaine de lignes de Python. La version ci-dessous suit son idée. `X` associe à chaque contrainte l'ensemble des options qui la satisfont, et `Y` à chaque option la liste des contraintes qu'elle satisfait. La fonction `choisir` retire les contraintes satisfaites par une option, et retire les options incompatibles des autres contraintes. Elle renvoie ce qu'elle a retiré, pour que `rendre` puisse le remettre&nbsp;: `rendre` parcourt **les mêmes boucles en sens inverse**, si bien que le problème retrouve exactement son état d'avant. La recherche elle-même ne s'occupe que de choisir, essayer et revenir.
+
+{{< runpython lang="python" mode="toggle" default="code" height="auto" width="800" >}}
+def choisir(X, Y, r):
+    """Retient l'option r : retire ses contraintes et les options incompatibles."""
+    retirees = []
+    for j in Y[r]:                      # chaque contrainte satisfaite par r...
+        for i in X[j]:                  # ...rend incompatibles les autres options i qui la satisfont
+            for k in Y[i]:
+                if k != j:
+                    X[k].remove(i)      # i disparaît de ses autres contraintes
+        retirees.append(X.pop(j))       # la contrainte j est satisfaite : on la retire
+    return retirees
+
+def rendre(X, Y, r, retirees):
+    """Le miroir de choisir : mêmes boucles, en sens inverse."""
+    for j in reversed(Y[r]):
+        X[j] = retirees.pop()
+        for i in X[j]:
+            for k in Y[i]:
+                if k != j:
+                    X[k].add(i)
+
+def algorithme_x(X, Y, solution):
+    if not X:                                   # plus aucune contrainte : gagné
+        return list(solution)
+    c = min(X, key=lambda j: len(X[j]))         # la contrainte la plus difficile à satisfaire
+    for r in sorted(X[c]):                      # si X[c] est vide, la boucle ne fait rien : impasse
+        solution.append(r)
+        retirees = choisir(X, Y, r)
+        resultat = algorithme_x(X, Y, solution)
+        rendre(X, Y, r, retirees)               # on défait exactement ce qu'on a fait
+        solution.pop()
+        if resultat:
+            return resultat
+    return None
+
+def sudoku(grille):
+    Y = {}                                      # option (l, c, n) -> ses 4 contraintes
+    for l in range(9):
+        for c in range(9):
+            b = 3 * (l // 3) + c // 3
+            for n in range(1, 10):
+                Y[(l, c, n)] = [("case", l, c), ("ligne", l, n), ("colonne", c, n), ("bloc", b, n)]
+    X = {}                                      # contrainte -> ensemble des options qui la satisfont
+    for r in Y:
+        for j in Y[r]:
+            if j not in X:
+                X[j] = set()
+            X[j].add(r)
+    for l in range(9):                          # les chiffres donnés sont des options imposées
+        for c in range(9):
+            if grille[l][c]:
+                choisir(X, Y, (l, c, grille[l][c]))
+    for (l, c, n) in algorithme_x(X, Y, []):
+        grille[l][c] = n
+    return grille
+
+texte = """53..7....
+           6..195...
+           .98....6.
+           8...6...3
+           4..8.3..1
+           7...2...6
+           .6....28.
+           ...419..5
+           ....8..79"""
+grille = [[0 if ch == "." else int(ch) for ch in ligne] for ligne in texte.split()]
+for ligne in sudoku(grille):
+    print(" ".join(str(n) for n in ligne))
+{{< /runpython >}}
+
+Rien dans `algorithme_x`, `choisir` et `rendre` ne parle de Sudoku&nbsp;: seule la fonction `sudoku` traduit la grille en contraintes et en options. Le même moteur pave un échiquier de pentominos ou place huit reines, pourvu qu'on lui décrive le problème dans sa langue.
+
+Avec des dictionnaires, chaque retrait et chaque remise a un coût. Tout l'art de l'algorithme X tient pourtant dans la façon de revenir en arrière à moindre coût, et Donald Knuth l'a résolu en 2000 par une structure de données d'une élégance rare, les **liens dansants** (*dancing links*)&nbsp;: dans une liste doublement chaînée, retirer un élément $x$ se fait en deux affectations, `x.gauche.droite = x.droite` et `x.droite.gauche = x.gauche`. Or $x$ garde, lui, la mémoire de ses voisins&nbsp;: pour le remettre en place au moment de revenir en arrière, il suffit de deux autres affectations, `x.gauche.droite = x` et `x.droite.gauche = x`. Les éléments «&nbsp;dansent&nbsp;» hors de la liste puis y reviennent.
 
 {{< youtube-plus id="NTzoLEB7lO0" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 

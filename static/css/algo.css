@@ -280,3 +280,91 @@
     font-size: 0.82em;
     color: #94a3b8;
 }
+
+/* ---------- Sudoku et algorithme X ------------------------------------------- */
+.sx-grille
+{
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: 1em;
+    align-items: start;
+}
+.sx-panneau { margin: 0; }
+.sx-panneau figcaption
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.35em;
+    font-size: 0.9em;
+    font-weight: 600;
+    line-height: 1.25;
+    color: #334155;
+}
+.sx-panneau figcaption span
+{
+    font-size: 0.85em;
+    font-weight: 400;
+    color: #64748b;
+}
+.anim canvas.sx-matrice { border: none; }
+.sx-legende
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2em 0.8em;
+    margin-top: 0.4em;
+    font-size: 0.8em;
+    color: #475569;
+}
+.sx-legende span { display: inline-flex; align-items: center; gap: 0.3em; }
+.sx-legende i
+{
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.anim p.sx-message
+{
+    min-height: 2.7em;
+    margin: 0.8em 0 0.3em 0;
+    padding: 0.35em 0.7em;
+    border-left: 3px solid #004D80;
+    background: #fff;
+    font-size: 0.92em;
+    line-height: 1.4;
+    color: #1e293b;
+}
+.anim p.sx-message.sx-rouge { border-color: #DC2626; background: #FEF2F2; }
+.anim p.sx-message.sx-vert { border-color: #16a34a; background: #F0FDF4; }
+.anim p.sx-paris, .anim p.sx-stats
+{
+    margin: 0.25em 0;
+    font-size: 0.85em;
+    line-height: 1.6;
+    color: #334155;
+    font-variant-numeric: tabular-nums;
+}
+.sx-pari
+{
+    display: inline-block;
+    padding: 0 0.45em;
+    margin: 0.1em 0.1em;
+    border: 1px solid #B45309;
+    border-radius: 999px;
+    color: #B45309;
+    white-space: nowrap;
+}
+.sx-pari small { color: #64748b; }
+@media (max-width: 600px)
+{
+    .sx-grille { grid-template-columns: 1fr; }
+    .sx-grille .sx-panneau:last-child { max-width: 330px; }
+}
+.sx-legende i.sx-sat
+{
+    background: radial-gradient(circle, #cbd5e1 0 1.6px, #fff 2px);
+}
+.anim-ctrl label { max-width: 100%; }
+.anim-ctrl select { max-width: 100%; min-width: 0; }
