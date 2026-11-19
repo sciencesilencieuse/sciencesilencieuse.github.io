@@ -1,8 +1,9 @@
 +++
 title = "Stratégies"
 date = 2026-11-18T10:00:00+01:00
-weight = 2
+weight = 10
 chapter = false
+aliases = ["/info/strategies/"]
 css = "algo.css"
 +++
 

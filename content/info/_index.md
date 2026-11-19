@@ -15,36 +15,15 @@ chapter = true
 
 <div class="math-card c-bleu">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="leger" d="M7 41h35M7 41V6"/><path d="M9 39h31"/><path d="M9 39c12-2 22-8 31-16"/><path d="M9 39c8-6 14-18 17-32"/></svg></span>
-<h3><a href="./complexite/">Complexité</a></h3>
-</div>
-<div class="carte-texte">Peut-on faire mieux&nbsp;? Mesurer un algorithme, puis le raffiner pas à pas&nbsp;: le doublon, le plus grand sous-tableau, P = NP.</div>
-<div class="theme-subgroup">
-<div class="link-list">
-  <a href="./complexite/#mesurer-sans-chronomètre" class="math-btn">Mesurer sans chronomètre</a>
-  <a href="./complexite/#une-échelle-de-raffinement-la-recherche-du-doublon" class="math-btn">Recherche du doublon</a>
-  <a href="./complexite/#barreau-6-changer-de-regard-le-tableau-est-un-graphe" class="math-btn">Lièvre et tortue</a>
-  <a href="./complexite/#quatre-algorithmes-quatre-classes-le-plus-grand-sous-tableau" class="math-btn">Plus grand sous-tableau</a>
-  <a href="./complexite/#mathrmpstackrelmathrmnp" class="math-btn">P = NP ?</a>
-</div>
-</div>
-</div>
-
-<div class="math-card c-canard">
-<div class="math-card-head">
 <span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="15" y="5" width="18" height="8" rx="2"/><path d="M24 13v4"/><path d="M24 17l9 7-9 7-9-7z"/><path d="M24 31v4"/><rect x="15" y="35" width="18" height="8" rx="2"/><path class="leger" d="M33 24h7v15h-7"/></svg></span>
-<h3><a href="./strategies/">Stratégies algorithmiques</a></h3>
+<h3><a href="./algorithmique/">Algorithmique</a></h3>
 </div>
-<div class="carte-texte">Les grandes méthodes de conception, et la structure de données qui guide le code.</div>
+<div class="carte-texte">Chercher, trier, prouver, parcourir des graphes, explorer des possibles&nbsp;: les grandes idées des algorithmes, et ce qu'elles coûtent.</div>
 <div class="theme-subgroup">
 <div class="link-list">
-  <a href="./strategies/#le-geste-fondateur-la-récursivité" class="math-btn">Récursivité</a>
-  <a href="./strategies/#couper-en-morceaux-diviser-pour-régner" class="math-btn">Diviser pour régner</a>
-  <a href="./strategies/#quand-les-sous-problèmes-se-répètent-la-programmation-dynamique" class="math-btn">Programmation dynamique</a>
-  <a href="./strategies/#ne-jamais-revenir-en-arrière-les-algorithmes-gloutons" class="math-btn">Gloutons</a>
-  <a href="./strategies/#la-structure-de-données-guide-le-code" class="math-btn">Structures de données</a>
-  <a href="./strategies/#algorithme-deuclide" class="math-btn">Euclide</a>
-  <a href="./strategies/#algorithme-x" class="math-btn">Algorithme X</a>
+  <a href="./algorithmique/complexite/" class="math-btn">Complexité</a>
+  <a href="./algorithmique/recursivite/" class="math-btn">Récursivité</a>
+  <a href="./algorithmique/strategies/" class="math-btn">Stratégies</a>
 </div>
 </div>
 </div>
