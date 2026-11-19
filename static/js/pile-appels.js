@@ -6,9 +6,6 @@
    Conteneur attendu : <div class="anim" data-anim="pile-appels"></div>          */
 (function () {
   'use strict';
-  const root = document.querySelector('.anim[data-anim="pile-appels"]');
-  if (!root) return;
-
   const FONCTIONS = {
     somme: {
       nom: 'somme', valeurs: [1, 2, 3, 4, 5, 6, 7, 8], defaut: 5,
@@ -43,6 +40,12 @@
     const s = x.toString();
     return s.length > 12 ? `${s.slice(0, 4)}…(${s.length} chiffres)` : s;
   }
+  const NOMS = { somme: 'somme(n)', fib: 'fib(n)', puiss: 'puiss(n) = 2ⁿ' };
+  document.querySelectorAll('.anim[data-anim="pile-appels"]').forEach(init);
+
+  /* data-fonctions="somme" ou "fib,puiss" : les fonctions proposées (la première est affichée) */
+  function init(root) {
+  const choix = (root.dataset.fonctions || 'somme,fib,puiss').split(',');
 
   root.innerHTML = `
 <div class="pa-grille">
@@ -55,7 +58,7 @@
 <p class="pa-message" aria-live="polite"></p>
 <p class="pa-stats"></p>
 <div class="anim-ctrl">
-  <label>Fonction <select data-k="f"><option value="somme">somme(n)</option><option value="fib" selected>fib(n)</option><option value="puiss">puiss(n) = 2ⁿ</option></select></label>
+  <label${choix.length < 2 ? ' hidden' : ''}>Fonction <select data-k="f">${choix.map(f => `<option value="${f}">${NOMS[f]}</option>`).join('')}</select></label>
   <label>n <select data-k="n"></select></label>
   <button type="button" data-k="go">Lancer</button>
   <button type="button" class="sec" data-k="pas">Une étape</button>
@@ -147,11 +150,19 @@
       g.lineWidth = nd.id === sommet ? 3 : 1.5;
       g.beginPath(); g.arc(x, y, r, 0, 2 * Math.PI); g.fill(); g.stroke();
       g.fillStyle = att ? '#7c2d12' : '#004D80';
-      g.font = `600 ${Math.round(r * (String(nd.n).length > 2 ? 0.75 : 0.95))}px system-ui, sans-serif`;
-      g.fillText(nd.n, x, y + 0.5);
-      if (nd.etat === 'fini' && r >= 9 && (dim.ex > 2 * r + 26 || nd.parent < 0 || noeuds[nd.parent].enfants.length < 2 || noeuds[nd.parent].enfants[1] === nd.id) && !(F.nom === 'puiss' && String(nd.valeur).length > 6)) {
-        g.font = `${Math.max(9, Math.round(r * 0.72))}px system-ui, sans-serif`; g.fillStyle = '#16a34a';
-        g.textAlign = 'left'; g.fillText('→' + court(nd.valeur), x + r + 2, y + r * 0.7); g.textAlign = 'center';
+      const chaine = F.nom !== 'fib';                    // un seul enfant par appel : de la place à droite
+      if (nd.etat === 'fini' && !chaine && r >= 11) {      // valeur renvoyée dans le nœud, sous l'argument
+        g.font = `600 ${Math.round(r * 0.78)}px system-ui, sans-serif`;
+        g.fillText(nd.n, x, y - r * 0.3);
+        g.font = `600 ${Math.round(r * 0.62)}px system-ui, sans-serif`; g.fillStyle = '#16a34a';
+        g.fillText('→' + nd.valeur, x, y + r * 0.45);
+      } else {
+        g.font = `600 ${Math.round(r * (String(nd.n).length > 2 ? 0.75 : 0.95))}px system-ui, sans-serif`;
+        g.fillText(nd.n, x, y + 0.5);
+      }
+      if (nd.etat === 'fini' && chaine) {
+        g.font = `${Math.max(10, Math.round(r * 0.8))}px system-ui, sans-serif`; g.fillStyle = '#16a34a';
+        g.textAlign = 'left'; g.fillText('renvoie ' + court(nd.valeur), x + r + 6, y + 0.5); g.textAlign = 'center';
       }
     }
   }
@@ -202,4 +213,5 @@
   selN.addEventListener('change', remettre);
   window.addEventListener('resize', fit);
   remplirN(); preparer(); afficher();
+  }
 })();

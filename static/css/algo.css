@@ -445,6 +445,7 @@ ol.pa-pile li.pa-vide { border-style: dashed; border-color: #cbd5e1; background:
     margin-top: 0.2em;
     padding: 0.1em 0.4em;
     font-size: 0.85em;
+    white-space: normal !important;
     overflow-wrap: anywhere;
     word-break: break-all;
 }
@@ -481,3 +482,4 @@ ol.eu-divisions li.eu-fin { list-style: none; margin-top: 0.5em !important; marg
 {
     .eu-grille { grid-template-columns: 1fr; }
 }
+.anim-ctrl label[hidden] { display: none; }

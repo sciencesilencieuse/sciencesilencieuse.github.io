@@ -27,10 +27,12 @@ Deux ingrédients suffisent&nbsp;: un **cas de base**, assez simple pour être r
 
 Quand `somme(5)` appelle `somme(4)`, son calcul est suspendu&nbsp;: il manque encore la valeur de `somme(4)` pour terminer l'addition. L'ordinateur range les appels interrompus les uns sur les autres, dans une **pile d'exécution** (*call stack*), et les reprend dans l'ordre inverse, le dernier interrompu d'abord. La pile monte jusqu'au cas de base, puis redescend en propageant les valeurs.
 
-<div class="anim" data-anim="pile-appels"></div>
-{{< script "js/pile-appels.js" >}}
+<div class="anim" data-anim="pile-appels" data-fonctions="somme"></div>
 
-La fonction `fib`, qui calcule les termes de la suite de Fibonacci, s'appelle **deux** fois. Son arbre d'appels se ramifie, mais la pile, elle, ne contient jamais qu'une seule branche à la fois&nbsp;: sa hauteur est la profondeur de l'arbre, pas son nombre de nœuds.
+L'arbre des appels de `somme` n'est qu'une chaîne&nbsp;: chaque appel n'en provoque qu'un seul autre. La fonction `fib`, qui calcule les termes de la suite de Fibonacci, s'appelle **deux** fois. Son arbre d'appels se ramifie, mais la pile, elle, ne contient jamais qu'une seule branche à la fois&nbsp;: sa hauteur est la profondeur de l'arbre, pas son nombre de nœuds.
+
+<div class="anim" data-anim="pile-appels" data-fonctions="fib,puiss"></div>
+{{< script "js/pile-appels.js" >}}
 
 <div class="quiz">
 
@@ -221,7 +223,7 @@ La stratégie tient en trois temps&nbsp;: **diviser** le problème en morceaux i
 
 ### L'exponentiation rapide
 
-Calculer $x^n$ en multipliant $x$ par lui-même demande $n-1$ multiplications. Mais $x^{n}=\left(x^{n/2}\right)^2$ quand $n$ est pair, et $x^{n}=x\left(x^{(n-1)/2}\right)^2$ quand il est impair&nbsp;: un seul appel récursif, sur un exposant deux fois plus petit, suivi d'une ou deux multiplications. L'animation de la pile, avec la fonction `puiss`, le montre&nbsp;: au lieu d'une chaîne de $n$ appels, une chaîne d'environ $\log\_2 n$.
+Calculer $x^n$ en multipliant $x$ par lui-même demande $n-1$ multiplications. Mais $x^{n}=\left(x^{n/2}\right)^2$ quand $n$ est pair, et $x^{n}=x\left(x^{(n-1)/2}\right)^2$ quand il est impair&nbsp;: un seul appel récursif, sur un exposant deux fois plus petit, suivi d'une ou deux multiplications. La seconde animation de la pile, avec la fonction `puiss`, le montre&nbsp;: au lieu d'une chaîne de $n$ appels, une chaîne d'environ $\log\_2 n$.
 
 {{< runpython lang="python" mode="toggle" height="auto" width="800" >}}
 multiplications = 0
