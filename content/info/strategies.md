@@ -638,11 +638,7 @@ Polyominos et Sudoku ont droit à leur algorithme au nom aguicheur&nbsp;: X.
 
 {{< youtube-plus id="NTzoLEB7lO0" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 
-## Pour aller plus loin
 
-- Tim Roughgarden, *Algorithms Illuminated*, 4 volumes (Soundlikeyourself Publishing, 2017-2020)&nbsp;: les paradigmes de cette page, un volume après l'autre.
-- Thomas Cormen, Charles Leiserson, Ronald Rivest et Clifford Stein, *Algorithmes* (Dunod, 3<sup>e</sup> éd. française 2010)&nbsp;: la référence encyclopédique.
-- Donald Knuth, *The Art of Computer Programming*, vol. 1 et 3&nbsp;: récursivité, tris et recherche.
 
 <nav class="suite-nav" aria-label="Page précédente">
 <a href="../complexite/" class="precedent"><span>← Précédent</span><b>Complexité</b></a>

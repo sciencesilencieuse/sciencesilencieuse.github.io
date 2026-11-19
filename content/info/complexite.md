@@ -45,11 +45,7 @@ details[open] > summary:first-of-type {
 
 # Complexité
 
-«&nbsp;Peut-on faire mieux&nbsp;?&nbsp;» Toute l'algorithmique tient peut-être dans cette question. Tim Roughgarden, dont les livres *Algorithms Illuminated* inspirent cette page, en fait le mantra du concepteur d'algorithmes, en citant Aho, Hopcroft et Ullman&nbsp;: «&nbsp;*Perhaps the most important principle for the good algorithm designer is to refuse to be content*&nbsp;» (le principe le plus important est sans doute de ne jamais se contenter de ce qu'on a).
-
-Cette page apprend d'abord à **mesurer** l'efficacité d'un algorithme sans chronomètre, grâce à la notion de complexité. Elle montre ensuite, sur deux problèmes très simples, comment on la fait progresser pas à pas&nbsp;: à chaque raffinement, on gagne une classe de complexité, en temps ou en mémoire, quitte à **changer de regard** sur le problème, voire à emprunter une idée à un domaine qui semblait sans rapport. Elle se termine par la plus célèbre des questions ouvertes de l'informatique, $\mathrm{P}\stackrel{?}{=}\mathrm{NP}$.
-
-La page suivante, [Stratégies](../strategies/), passe en revue les grandes méthodes de conception qu'on voit ici à l'œuvre&nbsp;: récursivité, diviser pour régner, programmation dynamique, gloutons, et le rôle des structures de données.
+«&nbsp;Peut-on faire mieux&nbsp;?&nbsp;» Toute l'algorithmique tient peut-être dans cette question. Tim Roughgarden (auteur de la série de livres *Algorithms Illuminated* tirés de ses cours) en fait le mantra du concepteur d'algorithmes.
 
 ## Mesurer sans chronomètre
 
@@ -395,11 +391,11 @@ La grande majorité des chercheurs se rangent dans le camp pessimiste $\mathrm{P
 
 La question a été posée formellement en 1971 par Stephen Cook, et indépendamment par Leonid Levin. Elle fait partie des sept «&nbsp;problèmes du millénaire&nbsp;» pour lesquels l'institut Clay promet, depuis 2000, un million de dollars à qui les résoudra.
 
-## Pour aller plus loin
+<br>
 
-- Tim Roughgarden, *Algorithms Illuminated*, 4 volumes (Soundlikeyourself Publishing, 2017-2020), et ses [cours en ligne](https://www.algorithmsilluminated.org/)&nbsp;: la philosophie de cette page.
-- Jon Bentley, *Programming Pearls* (Addison-Wesley, 2<sup>e</sup> éd. 2000), colonne 8&nbsp;: l'histoire du plus grand sous-tableau.
-- Donald Knuth, *The Art of Computer Programming*, vol. 2, section 3.1&nbsp;: le lièvre et la tortue.
+> Tim Roughgarden, *Algorithms Illuminated*, 4 volumes (Soundlikeyourself Publishing, 2017-2020), et ses [cours en ligne](https://www.algorithmsilluminated.org/).<br>
+Jon Bentley, *Programming Pearls* (Addison-Wesley, 2<sup>e</sup> éd. 2000), colonne 8&nbsp;: l'histoire du plus grand sous-tableau.<br>
+Donald Knuth, *The Art of Computer Programming*, vol. 2, section 3.1&nbsp;: le lièvre et la tortue.
 
 <nav class="suite-nav" aria-label="Page suivante">
 <a href="../strategies/" class="suivant"><span>Suite →</span><b>Stratégies algorithmiques</b></a>
