@@ -53,8 +53,6 @@ Il faut le **démontrer**, et l'argument classique est un **échange**. On part 
 
 </div>
 
-{{< youtube-plus id="yrOj8XvroIE" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
-
 ### Réserver une salle
 
 Une salle reçoit des demandes de réservation pour la journée, chacune avec une heure de début et une heure de fin. On veut en satisfaire le plus grand nombre possible, sans que deux réservations se chevauchent. Plusieurs critères gloutons viennent à l'esprit&nbsp;: accepter d'abord les demandes qui commencent le plus tôt, ou les plus courtes, ou celles qui gênent le moins de monde. Un seul est toujours optimal.
@@ -85,6 +83,8 @@ En 1951, au MIT, Robert Fano laisse à ses étudiants le choix entre un examen f
 
 <div class="anim" data-anim="huffman"></div>
 {{< script "js/huffman.js" >}}
+
+{{< youtube-plus id="yrOj8XvroIE" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 
 Le codage de Huffman est partout&nbsp;: dans les fichiers ZIP, dans les images JPEG, dans la musique MP3, où il intervient à la dernière étape de la compression.
 
@@ -287,9 +287,11 @@ print("circuit :", circuit, " longueur :", round(longueur, 3))
 print(f"{n} villes : {n * n * 2 ** n} opérations, contre {factorial(n - 1) // 2} circuits à essayer")
 {{< /runpython >}}
 
-<video width="500" controls style="display:block;max-width:100%;position:relative;margin-left:auto;margin-right: auto; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-  <source src="/tps_vid.mp4" type="video/mp4">
-</video>
+Ci-dessous, Held-Karp à l'œuvre sur une carte de France, au départ de Paris&nbsp;: chaque étape calcule un état (S,i)$, le plus court chemin qui visite les villes de /tmp/claude-0/-home-user-sciencesilencieuse-github-io/0641f4f8-b77a-5f09-b936-31f76d4a96b7/scratchpad$ et arrive en $, en prolongeant d'une ville des chemins déjà calculés. On peut le comparer à la force brute, qui mesure un à un tous les circuits, et ajouter ou retirer des villes d'un clic pour voir les deux nombres d'étapes s'écarter.
+
+<div class="anim" data-anim="tsp-france"></div>
+{{< script "js/tsp-france.js" >}}
+<p class="legende">Distances à vol d'oiseau. Contour de la France&nbsp;: Admin Express (IGN), Licence ouverte, via le dépôt <a href="https://github.com/gregoiredavid/france-geojson">france-geojson</a>.</p>
 
 ## Une branche, toutes les branches
 

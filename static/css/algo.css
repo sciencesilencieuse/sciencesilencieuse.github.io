@@ -741,3 +741,23 @@ table.pd-table td.pd-chemin { background: #DCFCE7; box-shadow: inset 0 0 0 2px #
 .anim p.pd-formule { min-height: 2.8em; margin: 0.6em 0 0.2em 0; padding: 0.3em 0.7em; border-left: 3px solid #B45309; background: #fff; font-size: 0.88em; line-height: 1.45; }
 .anim p.pd-resultat { font-size: 0.9em; line-height: 1.5; color: #1e293b; }
 .anim pre.pd-align { margin: 0.4em 0 0 0; padding: 0.5em 0.8em; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 1em; line-height: 1.35; overflow-x: auto; }
+
+/* ---------- Voyageur de commerce sur la carte de France ------------------------------ */
+.tf-grille { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 1em; align-items: start; }
+.tf-carte { display: block; width: 100%; height: auto; background: #EAF2F8; border-radius: 8px; }
+.tf-terre { fill: #F4F1E6; stroke: #A8B3A2; stroke-width: 2.5; stroke-linejoin: round; }
+.tf-courant { fill: none; stroke: #1D4ED8; stroke-width: 6; stroke-linejoin: round; stroke-linecap: round; }
+.tf-best { fill: none; stroke: #16a34a; stroke-width: 12; stroke-opacity: 0.35; stroke-linejoin: round; }
+.tf-final { fill: none; stroke: #16a34a; stroke-width: 8; stroke-linejoin: round; }
+.tf-cand { stroke: #B45309; stroke-width: 3; stroke-dasharray: 8 7; }
+.tf-ville { cursor: pointer; }
+.tf-ville circle { fill: #fff; stroke: #94a3b8; stroke-width: 3; }
+.tf-ville text { font: 600 24px system-ui, sans-serif; fill: #94a3b8; paint-order: stroke; stroke: #F4F1E6; stroke-width: 5px; }
+.tf-ville.tf-active circle { fill: #DC2626; stroke: #7f1d1d; }
+.tf-ville.tf-active text { fill: #1e293b; }
+.tf-ville.tf-paris circle { fill: #1e293b; stroke: #DC2626; stroke-width: 4; }
+.tf-ville.tf-fin circle { stroke: #B45309; stroke-width: 6; }
+.tf-panneau p { margin: 0 0 0.6em 0 !important; font-size: 0.88em; line-height: 1.5; color: #334155; }
+.tf-panneau .tf-etat { min-height: 6em; padding: 0.4em 0.7em; border-left: 3px solid #1D4ED8; background: #fff; color: #1e293b; }
+.tf-panneau .tf-meilleur { color: #14532d; }
+@media (max-width: 640px) { .tf-grille { grid-template-columns: 1fr; } }
