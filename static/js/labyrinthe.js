@@ -1,52 +1,70 @@
-/* Un même parcours de grille, trois structures de données pour la frontière :
+/* Un même parcours de labyrinthe, trois structures de données pour la frontière :
    pile (profondeur d'abord), file (largeur d'abord), file de priorité (A*,
    priorité = distance parcourue + distance à vol d'oiseau restante).
+   Le labyrinthe est un arbre couvrant minimal de la grille des cellules
+   (Kruskal sur des poids aléatoires), où l'on perce ensuite quelques murs pour
+   créer des boucles : sans boucle, il n'y aurait qu'un seul chemin possible.
    Conteneur attendu : <div class="anim" data-anim="labyrinthe"></div>          */
 (function () {
   'use strict';
   const root = document.querySelector('.anim[data-anim="labyrinthe"]');
   if (!root) return;
 
-  const C = 29, L = 15;                          // colonnes, lignes
+  let C, L;                                      // colonnes et lignes de la grille (murs compris)
   const COL = { mur: '#334155', vide: '#F8FAFC', vu: [0, 77, 128], front: '#B45309', chemin: '#970E53', depart: '#006C65', but: '#970E53', texte: '#334155' };
   const MODES = {
     pile: ['Pile', 'dernier arrivé, premier servi : on s\'enfonce tant qu\'on peut, et le chemin trouvé n\'a aucune raison d\'être le plus court'],
     file: ['File', 'premier arrivé, premier servi : on explore par cercles de distance croissante, et le chemin trouvé est le plus court'],
-    prio: ['File de priorité (A*)', 'on sert d\'abord la case qui promet le trajet total le plus court : l\'exploration file droit vers l\'arrivée, et le chemin reste le plus court']
+    prio: ['File de priorité (A*)', 'on sert d\'abord la case qui promet le trajet total le plus court : l\'exploration s\'oriente vers l\'arrivée, et le chemin reste le plus court']
   };
 
   root.innerHTML = `
 <div class="anim-ctrl">
   ${Object.entries(MODES).map(([k, [nom]]) => `<button type="button" class="sec" data-m="${k}">${nom}</button>`).join('')}
 </div>
-<canvas class="anim-scene" role="img" aria-label="Une grille avec des murs : l'exploration part de la case verte et cherche la case rose ; les cases explorées se colorent dans l'ordre de leur visite"></canvas>
+<canvas class="anim-scene" role="img" aria-label="Un labyrinthe aux couloirs étroits : l'exploration part de la case verte et cherche la case rose ; les cases explorées se colorent dans l'ordre de leur visite"></canvas>
 <div class="anim-ctrl">
   <button type="button" data-k="go">Explorer</button>
   <button type="button" class="sec" data-k="reset">Recommencer</button>
-  <button type="button" class="sec" data-k="neuf">Nouveau terrain</button>
+  <button type="button" class="sec" data-k="neuf">Nouveau labyrinthe</button>
 </div>
 <p class="anim-info" aria-live="polite"></p>`;
 
   const $ = s => root.querySelector(s);
   const cv = $('canvas'), info = $('.anim-info'), btnGo = $('[data-k="go"]');
-  const D = { x: 1, y: Math.floor(L / 2) }, B = { x: C - 2, y: Math.floor(L / 2) };
+  let D, B;
   let mur, mode = 'file', etat, timer = 0, dim;
-  const id = (x, y) => y * C + x, voisins = i => {
+  const id = (x, y) => y * C + x;
+  const voisins = i => {
     const x = i % C, y = (i - x) / C, v = [];
     [[1, 0], [0, 1], [-1, 0], [0, -1]].forEach(([dx, dy]) => { const X = x + dx, Y = y + dy; if (X >= 0 && Y >= 0 && X < C && Y < L && !mur[id(X, Y)]) v.push(id(X, Y)); });
     return v;
   };
 
-  function terrain() {                            // obstacles aléatoires, jusqu'à ce qu'un chemin existe
-    for (;;) {
-      mur = Array.from({ length: C * L }, () => Math.random() < 0.3);
-      for (let x = 0; x < C; x++) { mur[id(x, 0)] = mur[id(x, L - 1)] = true; }
-      for (let y = 0; y < L; y++) { mur[id(0, y)] = mur[id(C - 1, y)] = true; }
-      mur[id(D.x, D.y)] = mur[id(B.x, B.y)] = false;
-      const vu = new Set([id(D.x, D.y)]), f = [id(D.x, D.y)];
-      while (f.length) { const i = f.shift(); for (const j of voisins(i)) if (!vu.has(j)) { vu.add(j); f.push(j); } }
-      if (vu.has(id(B.x, B.y))) return;
+  function terrain() {
+    const nx = (root.clientWidth || 640) < 520 ? 21 : 37, ny = (root.clientWidth || 640) < 520 ? 13 : 17;   // cellules
+    C = 2 * nx + 1; L = 2 * ny + 1;
+    const ym = 2 * Math.floor(ny / 2) + 1;
+    D = { x: 1, y: ym }; B = { x: C - 2, y: ym };
+    mur = new Array(C * L).fill(true);
+    const cell = (i, j) => id(2 * i + 1, 2 * j + 1);
+    for (let j = 0; j < ny; j++) for (let i = 0; i < nx; i++) mur[cell(i, j)] = false;
+    // Kruskal : les arêtes entre cellules voisines, de poids aléatoire, dans l'ordre croissant
+    const aretes = [];
+    for (let j = 0; j < ny; j++) for (let i = 0; i < nx; i++) {
+      if (i + 1 < nx) aretes.push([Math.random(), i, j, i + 1, j]);
+      if (j + 1 < ny) aretes.push([Math.random(), i, j, i, j + 1]);
     }
+    aretes.sort((p, q) => p[0] - q[0]);
+    const parent = Array.from({ length: nx * ny }, (_, k) => k);
+    const racine = k => { while (parent[k] !== k) { parent[k] = parent[parent[k]]; k = parent[k]; } return k; };
+    const restants = [];
+    for (const [, i, j, i2, j2] of aretes) {
+      const a = racine(j * nx + i), b = racine(j2 * nx + i2), m = id(i + i2 + 1, j + j2 + 1);   // le mur entre les deux cellules
+      if (a !== b) { parent[a] = b; mur[m] = false; }          // pas de cycle : on ouvre le passage
+      else restants.push(m);
+    }
+    for (const m of restants) if (Math.random() < 0.07) mur[m] = false;   // quelques boucles
   }
   const h = i => Math.abs(i % C - B.x) + Math.abs(Math.floor(i / C) - B.y);
   function reinit() {
@@ -117,7 +135,8 @@
     if (timer) { arreter(); return; }
     if (etat.fini) reinit();
     btnGo.textContent = 'Pause';
-    timer = setInterval(() => { pas(); pas(); draw(); if (etat.fini) arreter(); }, 30);
+    const k = Math.max(2, Math.round(mur.filter(m => !m).length / 220));   // vitesse proportionnée à la taille
+    timer = setInterval(() => { for (let n = 0; n < k && !etat.fini; n++) pas(); draw(); if (etat.fini) arreter(); }, 30);
   });
   $('[data-k="reset"]').addEventListener('click', reinit);
   $('[data-k="neuf"]').addEventListener('click', () => { terrain(); reinit(); });

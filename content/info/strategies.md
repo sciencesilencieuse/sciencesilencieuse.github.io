@@ -63,7 +63,8 @@ Les tours de Hanoï en sont l'exemple le plus célèbre. Pour déplacer $n$ disq
 
 {{< youtube-plus id="lIIXLQvcd4Q" ratio="16x9" width="800" shadow=true rounded=true loading="lazy" >}}
 
-{{< runpython lang="vpython" mode="output"  width="600" file="hanoi.py" autorun="true" />}}
+<div class="anim" data-anim="hanoi"></div>
+{{< script "js/hanoi-anim.js" >}}
 
 
 
@@ -168,7 +169,8 @@ Les tris sont omniprésents en informatique et Tim Roughgarden (auteur des géni
 
 Ci-dessous, vous pourrez comparer l'efficacité de différents tris par comparaison en les voyant se débattre courageusement avec les données.
 
-{{< runpython lang="vpython" mode="toggle" default="output" width="800" version="3.1" file="tris.py"  autorun="true"/>}}
+<div class="anim" data-anim="tris"></div>
+{{< script "js/tris-anim.js" >}}
 
 ![](https://imgs.xkcd.com/comics/ineffective_sorts.png)
 
@@ -630,7 +632,7 @@ print("largeur   :", parcours(G, "A", file))
 print("profondeur:", parcours(G, "A", pile))
 {{< /runpython >}}
 
-L'animation ci-dessous rejoue ce parcours sur une grille semée d'obstacles, de la case verte à la case rose. Seule change la structure qui range les cases à explorer&nbsp;: avec une **pile**, l'exploration s'enfonce dans un couloir et trouve un chemin quelconque&nbsp;; avec une **file**, elle progresse par cercles de distance croissante et trouve le plus court&nbsp;; avec une **file de priorité** qui sert d'abord la case la plus prometteuse (distance parcourue plus distance restante à vol d'oiseau), elle file droit vers le but. C'est l'algorithme A*, l'un des plus utilisés dans les jeux vidéo et les GPS.
+L'animation ci-dessous rejoue ce parcours dans un labyrinthe, de la case verte à la case rose. Clin d'œil à la section précédente&nbsp;: ce labyrinthe est lui-même un **arbre couvrant minimal**, construit par l'algorithme glouton de Kruskal sur des murs de poids aléatoires&nbsp;; on y a seulement percé quelques murs de plus pour créer des boucles, sans quoi il n'existerait qu'un seul chemin. Seule change la structure qui range les cases à explorer&nbsp;: avec une **pile**, l'exploration s'enfonce dans un couloir et trouve un chemin quelconque&nbsp;; avec une **file**, elle progresse par cercles de distance croissante et trouve le plus court&nbsp;; avec une **file de priorité** qui sert d'abord la case la plus prometteuse (distance parcourue plus distance restante à vol d'oiseau), elle s'oriente vers le but et trouve, elle aussi, le plus court chemin. C'est l'algorithme A*, l'un des plus utilisés dans les jeux vidéo et les GPS. Dans un labyrinthe, les détours obligés limitent son avance&nbsp;; en terrain dégagé, elle n'explore souvent qu'une petite fraction de ce que visite la file.
 
 <div class="anim" data-anim="labyrinthe"></div>
 {{< script "js/labyrinthe.js" >}}
