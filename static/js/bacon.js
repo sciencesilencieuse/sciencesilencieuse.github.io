@@ -188,29 +188,48 @@
   }
 
   // ---------------------------------------------------------------- interactions
+  // gestes : un doigt (ou la souris) déplace ; deux doigts zooment en gardant sous leur milieu
+  // le point du graphe qui s'y trouvait, ce qui permet aussi de se déplacer en pinçant
   const pointeurs = new Map(); let glisse = false, depart = null, pince = null;
-  cv.addEventListener('pointerdown', e => { try { cv.setPointerCapture(e.pointerId); } catch (_) {} pointeurs.set(e.pointerId, [e.offsetX, e.offsetY]); glisse = false; depart = [e.offsetX, e.offsetY, vue.ox, vue.oy];
-    if (pointeurs.size === 2) { const [a, b] = [...pointeurs.values()]; pince = { d: Math.hypot(a[0] - b[0], a[1] - b[1]), s: vue.s, c: [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2], ox: vue.ox, oy: vue.oy }; } });
+  function nouveauDepart() { const p = [...pointeurs.values()][0]; depart = p ? [p[0], p[1], vue.ox, vue.oy] : null; }
+  function nouvellePince() {
+    const [a, b] = [...pointeurs.values()], cx = (a[0] + b[0]) / 2, cy = (a[1] + b[1]) / 2;
+    pince = { d: Math.hypot(a[0] - b[0], a[1] - b[1]) || 1, s: vue.s, wx: (cx - vue.ox) / vue.s, wy: (cy - vue.oy) / vue.s };
+  }
+  cv.addEventListener('pointerdown', e => {
+    try { cv.setPointerCapture(e.pointerId); } catch (_) {}
+    pointeurs.set(e.pointerId, [e.offsetX, e.offsetY]);
+    cancelAnimationFrame(anim); prog = 1;
+    if (pointeurs.size === 1) { glisse = false; nouveauDepart(); }
+    else if (pointeurs.size === 2) { glisse = true; nouvellePince(); }
+  });
   cv.addEventListener('pointermove', e => {
     if (!D) return;
     if (pointeurs.has(e.pointerId)) {
       pointeurs.set(e.pointerId, [e.offsetX, e.offsetY]);
-      if (pointeurs.size === 2 && pince) {
-        const [a, b] = [...pointeurs.values()], k = Math.hypot(a[0] - b[0], a[1] - b[1]) / pince.d;
-        zoomer(pince.s * k / vue.s, pince.c[0], pince.c[1]); return;
+      if (pointeurs.size >= 2 && pince) {
+        const [a, b] = [...pointeurs.values()], cx = (a[0] + b[0]) / 2, cy = (a[1] + b[1]) / 2;
+        const s = Math.max(0.3, Math.min(60, pince.s * Math.hypot(a[0] - b[0], a[1] - b[1]) / pince.d));
+        vue = { s, ox: cx - pince.wx * s, oy: cy - pince.wy * s }; dessiner(); return;
       }
+      if (!depart) return;
       if (Math.hypot(e.offsetX - depart[0], e.offsetY - depart[1]) > 4) glisse = true;
-      if (glisse) { cancelAnimationFrame(anim); prog = 1; vue.ox = depart[2] + e.offsetX - depart[0]; vue.oy = depart[3] + e.offsetY - depart[1]; dessiner(); }
+      if (glisse) { vue.ox = depart[2] + e.offsetX - depart[0]; vue.oy = depart[3] + e.offsetY - depart[1]; dessiner(); }
       return;
     }
     const i = proche(e.offsetX, e.offsetY);
     if (i >= 0) { bulle.hidden = false; bulle.textContent = i < F ? D.films[i] : `${D.acteurs[i - F]}${dist[i] >= 0 ? ' · ' + dist[i] / 2 : ''}`; bulle.style.left = e.offsetX + 12 + 'px'; bulle.style.top = e.offsetY + 12 + 'px'; cv.style.cursor = 'pointer'; }
     else { bulle.hidden = true; cv.style.cursor = 'grab'; }
   });
-  cv.addEventListener('pointerup', e => {
-    pointeurs.delete(e.pointerId); if (pointeurs.size < 2) pince = null;
-    if (!glisse && D && pointeurs.size === 0) { const i = proche(e.offsetX, e.offsetY); if (i >= 0) { if (i >= F) inA.value = D.acteurs[i - F]; choisir(i); } }
-  });
+  function lacher(e, choisirSiClic) {
+    if (!pointeurs.has(e.pointerId)) return;
+    pointeurs.delete(e.pointerId);
+    if (pointeurs.size >= 2) nouvellePince();
+    else { pince = null; nouveauDepart(); }            // le doigt restant repart d'ici, sans saut
+    if (choisirSiClic && !glisse && D && pointeurs.size === 0) { const i = proche(e.offsetX, e.offsetY); if (i >= 0) { if (i >= F) inA.value = D.acteurs[i - F]; choisir(i); } }
+  }
+  cv.addEventListener('pointerup', e => lacher(e, true));
+  cv.addEventListener('pointercancel', e => lacher(e, false));
   cv.addEventListener('pointerleave', () => { bulle.hidden = true; });
   cv.addEventListener('wheel', e => { if (!(e.ctrlKey || e.metaKey) || !D) return; e.preventDefault(); zoomer(Math.exp(-e.deltaY * 0.0015), e.offsetX, e.offsetY); }, { passive: false });
   function zoomer(k, cx, cy) {
