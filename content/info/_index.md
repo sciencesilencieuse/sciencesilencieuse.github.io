@@ -38,10 +38,10 @@ chapter = true
 <div class="carte-texte">Les grandes méthodes de conception, et la structure de données qui guide le code.</div>
 <div class="theme-subgroup">
 <div class="link-list">
-  <a href="./strategies/#récursivité" class="math-btn">Récursivité</a>
-  <a href="./strategies/#diviser-pour-régner" class="math-btn">Diviser pour régner</a>
-  <a href="./strategies/#programmation-dynamique" class="math-btn">Programmation dynamique</a>
-  <a href="./strategies/#algorithmes-gloutons" class="math-btn">Gloutons</a>
+  <a href="./strategies/#le-geste-fondateur-la-récursivité" class="math-btn">Récursivité</a>
+  <a href="./strategies/#couper-en-morceaux-diviser-pour-régner" class="math-btn">Diviser pour régner</a>
+  <a href="./strategies/#quand-les-sous-problèmes-se-répètent-la-programmation-dynamique" class="math-btn">Programmation dynamique</a>
+  <a href="./strategies/#ne-jamais-revenir-en-arrière-les-algorithmes-gloutons" class="math-btn">Gloutons</a>
   <a href="./strategies/#la-structure-de-données-guide-le-code" class="math-btn">Structures de données</a>
   <a href="./strategies/#algorithme-deuclide" class="math-btn">Euclide</a>
   <a href="./strategies/#algorithme-x" class="math-btn">Algorithme X</a>
