@@ -296,10 +296,14 @@ margin-top:0em;
     padding: 0.5em 0.9em;
     margin: 0.4em 0;
 }
+h1
+{
+overflow-x:auto;
+}
 </style>
 
 
-# La contextualité et le théorème de Kochen-Specker
+<h1>La contextualité et le théorème de Kochen-Specker</h1>
 
 Quand on pèse une boule de pétanque, la balance affiche une masse que la boule possédait déjà. Et cette masse ne dépend évidemment pas de ce qu'on mesure en même temps&nbsp;: qu'on en profite pour relever son diamètre ou sa température, la balance affichera la même chose. Mesurer, c'est **révéler** une propriété qui était là, indifférente au reste de l'expérience.
 

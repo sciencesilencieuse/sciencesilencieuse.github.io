@@ -165,6 +165,3 @@ Une introduction aux [notions fondamentales](./fondations/)&nbsp;:
 
 {{< youtube-plus id="reIcNs4Ul-c" ratio="16x9" width="800" shadow=true rounded=true >}}
 
-Le [paradoxe EPR](./epr/) et les inégalités de Bell&nbsp;:
-
-{{< youtube-plus id="QS_bw6PVfsE" ratio="16x9" width="800" shadow=true rounded=true >}}
