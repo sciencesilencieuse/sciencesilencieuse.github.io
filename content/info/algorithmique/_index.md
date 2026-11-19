@@ -126,6 +126,26 @@ chapter = false
 </div>
 </div>
 
+<div class="math-card c-bleu">
+<div class="math-card-head">
+<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 10L12 24M24 10l12 14M12 24l-5 13M12 24l5 13M36 24l3 9"/><circle class="plein" cx="24" cy="9" r="3.4"/><circle class="creux" cx="12" cy="24" r="3.4"/><circle class="creux" cx="36" cy="24" r="3.4"/><circle class="plein" cx="7" cy="38" r="3"/><circle class="plein" cx="17" cy="38" r="3"/><path class="leger" d="M36 36l7 7M43 36l-7 7"/></svg></span>
+<h3><a href="./explorer/">Explorer et revenir en arrière</a></h3>
+</div>
+<div class="carte-texte">Parcourir l'arbre des possibles en coupant les branches sans avenir, puis jouer contre un adversaire&nbsp;: huit reines, Sudoku, Nim, minimax, dilemme du prisonnier.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./explorer/#les-huit-reines" class="math-btn">Huit reines</a>
+  <a href="./explorer/#élaguer-séparer-et-évaluer" class="math-btn">Séparer et évaluer</a>
+  <a href="./explorer/#le-sudoku-et-lalgorithme-x" class="math-btn">Sudoku</a>
+  <a href="./explorer/#positions-gagnantes-positions-perdantes" class="math-btn">Positions gagnantes</a>
+  <a href="./explorer/#le-jeu-de-nim" class="math-btn">Nim</a>
+  <a href="./explorer/#jeux-sur-un-graphe-lattracteur" class="math-btn">Attracteur</a>
+  <a href="./explorer/#minimax" class="math-btn">Minimax</a>
+  <a href="./explorer/#jouer-longtemps-le-dilemme-du-prisonnier-répété" class="math-btn">Dilemme du prisonnier</a>
+</div>
+</div>
+</div>
+
 <div class="math-card c-magenta">
 <div class="math-card-head">
 <span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="15" y="5" width="18" height="8" rx="2"/><path d="M24 13v4"/><path d="M24 17l9 7-9 7-9-7z"/><path d="M24 31v4"/><rect x="15" y="35" width="18" height="8" rx="2"/><path class="leger" d="M33 24h7v15h-7"/></svg></span>

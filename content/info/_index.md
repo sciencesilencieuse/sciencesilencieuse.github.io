@@ -27,6 +27,7 @@ chapter = true
   <a href="./algorithmique/trier/" class="math-btn">Trier</a>
   <a href="./algorithmique/graphes/" class="math-btn">Graphes</a>
   <a href="./algorithmique/gloutons-dynamique/" class="math-btn">Gloutons et prog. dynamique</a>
+  <a href="./algorithmique/explorer/" class="math-btn">Explorer et revenir en arrière</a>
   <a href="./algorithmique/strategies/" class="math-btn">Stratégies</a>
 </div>
 </div>
@@ -63,23 +64,6 @@ chapter = true
   <a href="./ia/#apprentissage-profond" class="math-btn">Apprentissage profond</a>
   <a href="./ia/#ia-et-éthique" class="math-btn">Éthique</a>
   <a href="./ia/#futur-des-ia-et-danger-existentiel" class="math-btn">Danger existentiel</a>
-</div>
-</div>
-</div>
-
-<div class="math-card c-rouge">
-<div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 11L13 24M24 11l11 13M13 24l-5 12M13 24l5 12M35 24l-5 12M35 24l5 12"/><circle class="plein" cx="24" cy="10" r="3.4"/><circle class="creux" cx="13" cy="24" r="3.4"/><circle class="creux" cx="35" cy="24" r="3.4"/><circle class="plein" cx="8" cy="37" r="3"/><circle class="plein" cx="18" cy="37" r="3"/><circle class="plein" cx="30" cy="37" r="3"/><circle class="plein" cx="40" cy="37" r="3"/></svg></span>
-<h3><a href="./jeux/">Jeux d'accessibilité sur un graphe</a></h3>
-</div>
-<div class="carte-texte">Deux joueurs, une arène, des stratégies gagnantes et l'algorithme minimax&nbsp;; puis le problème du sac à dos.</div>
-<div class="theme-subgroup">
-<div class="link-list">
-  <a href="./jeux/#larène" class="math-btn">L'arène</a>
-  <a href="./jeux/#exemples" class="math-btn">Exemples</a>
-  <a href="./jeux/#stratégie" class="math-btn">Stratégie</a>
-  <a href="./jeux/#arbre-et-minimax" class="math-btn">Arbre et minimax</a>
-  <a href="./jeux/#sac-à-dos-et-heuristique" class="math-btn">Sac à dos</a>
 </div>
 </div>
 </div>
