@@ -287,7 +287,7 @@ print("circuit :", circuit, " longueur :", round(longueur, 3))
 print(f"{n} villes : {n * n * 2 ** n} opérations, contre {factorial(n - 1) // 2} circuits à essayer")
 {{< /runpython >}}
 
-Ci-dessous, Held-Karp à l'œuvre sur une carte de France, au départ de Paris&nbsp;: chaque étape calcule un état (S,i)$, le plus court chemin qui visite les villes de /tmp/claude-0/-home-user-sciencesilencieuse-github-io/0641f4f8-b77a-5f09-b936-31f76d4a96b7/scratchpad$ et arrive en $, en prolongeant d'une ville des chemins déjà calculés. On peut le comparer à la force brute, qui mesure un à un tous les circuits, et ajouter ou retirer des villes d'un clic pour voir les deux nombres d'étapes s'écarter.
+Ci-dessous, Held-Karp à l'œuvre sur une carte de France, au départ de Paris&nbsp;: chaque étape calcule un état $C(S,i)$, le plus court chemin qui visite les villes de $S$ et arrive en $i$, en prolongeant d'une ville des chemins déjà calculés. On peut le comparer à la force brute, qui mesure un à un tous les circuits, et ajouter ou retirer des villes d'un clic pour voir les deux nombres d'étapes s'écarter.
 
 <div class="anim" data-anim="tsp-france"></div>
 {{< script "js/tsp-france.js" >}}
