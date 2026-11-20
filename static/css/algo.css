@@ -1162,10 +1162,13 @@ mjx-container[display="true"] { display: block; max-width: 100%; overflow-x: aut
 .i6-grad { font: 9.5px ui-monospace, monospace; fill: #64748b; }
 .i6-grad.i6-dans { fill: #1e293b; font-weight: 700; text-anchor: middle; paint-order: stroke; stroke: rgba(255,255,255,0.85); stroke-width: 2.5px; }
 .i6-bande { stroke: #fff; stroke-width: 1.5; }
-.i6-flux { opacity: 0.45; }
+.i6-flux { opacity: 0.22; transition: opacity 0.3s; }
+.i6-flux.i6-actif { opacity: 0.75; }
+.i6-trait { stroke-width: 3; stroke-linecap: round; }
 .i6-niveau { stroke: #64748b; stroke-width: 1.2; }
 .i6-nval { font: 700 11.5px ui-monospace, monospace; text-anchor: end; }
-.i6-deb { fill: none; stroke: #DC2626; stroke-width: 2.2; stroke-linejoin: round; }
+.i6-deb { fill: none; stroke: #DC2626; stroke-width: 1.6; stroke-linejoin: round; opacity: 0.55; }
+.i6-deb.i6-actif { stroke-width: 2.6; opacity: 1; }
 .i6-debt { font: 700 9.5px system-ui, sans-serif; fill: #DC2626; text-anchor: end; }
 .i6-fil { fill: none; stroke-width: 1.8; stroke-linecap: round; opacity: 0.9; }
 .i6-tag { font: 700 9px system-ui, sans-serif; fill: #fff; text-anchor: middle; }

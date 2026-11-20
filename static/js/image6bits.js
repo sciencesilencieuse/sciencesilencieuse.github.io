@@ -72,14 +72,16 @@
     const centre = s2 => methode === 'tronquer' ? Y(s2 + 32) : methode === 'milieu' ? Y(s2) : Y(Math.max(18, s2));
     let h = `<defs><marker id="i6-pointe" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#DC2626"/></marker></defs>`;
     h += `<text x="${xa + la / 2}" y="16" class="i6-axe">8 bits</text><text x="${xb + rw / 2}" y="16" class="i6-axe">2 bits</text>`;
+    const k0 = orig ? (px[1] * W + px[0]) * 4 : 0, vals = orig ? [orig.data[k0], orig.data[k0 + 1], orig.data[k0 + 2]] : [];
     const bandes = deb ? [[0, 32, 0], [32, 96, 1], [96, 160, 2], [160, 224, 3], [224, 256, -1]] : [[0, 64, 0], [64, 128, 1], [128, 192, 2], [192, 256, 3]];
     for (const [a1, b1, n] of bandes) {
       const s2 = m.f(a1), yc = centre(s2);
       h += `<rect x="${xa}" y="${Y(b1)}" width="${la}" height="${Y(a1) - Y(b1)}" fill="${n < 0 ? 'url(#i6-hach)' : COUL[n]}" class="i6-bande"/>`;
-      if (n >= 0) h += `<path d="M${xa + la} ${Y(b1)}C${xa + la + 50} ${Y(b1)}, ${xb - 50} ${yc - rh / 2}, ${xb} ${yc - rh / 2}L${xb} ${yc + rh / 2}C${xb - 50} ${yc + rh / 2}, ${xa + la + 50} ${Y(a1)}, ${xa + la} ${Y(a1)}z" fill="${COUL[n]}" class="i6-flux"/>`;
+      const utilise = vals.some(v => v >= a1 && v < b1);
+      if (n >= 0) h += `<path d="M${xa + la} ${Y(b1)}C${xa + la + 50} ${Y(b1)}, ${xb - 50} ${yc - rh / 2}, ${xb} ${yc - rh / 2}L${xb} ${yc + rh / 2}C${xb - 50} ${yc + rh / 2}, ${xa + la + 50} ${Y(a1)}, ${xa + la} ${Y(a1)}z" fill="${COUL[n]}" class="i6-flux${utilise ? ' i6-actif' : ''}"/>`;
     }
     if (deb) h = h.replace('<defs>', `<defs><pattern id="i6-hach" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#FEE2E2"/><rect width="2.5" height="6" fill="#F87171"/></pattern>`);
-    for (const v of deb ? [0, 32, 96, 160, 224, 256] : [0, 64, 128, 192, 256]) h += `<text x="${xa + la / 2}" y="${v === 0 ? Y(v) - 3 : v === 256 ? Y(v) + 10 : Y(v) + 3.5}" class="i6-grad i6-dans">${v}</text>`;
+    for (const v of deb ? [0, 32, 96, 160, 224, 256] : [0, 64, 128, 192, 256]) if (!vals.some(w => Math.abs(Y(w) - (v === 0 ? Y(v) - 6 : v === 256 ? Y(v) + 7 : Y(v))) < 8)) h += `<text x="${xa + la / 2}" y="${v === 0 ? Y(v) - 3 : v === 256 ? Y(v) + 10 : Y(v) + 3.5}" class="i6-grad i6-dans">${v}</text>`;
     // niveaux de sortie : le gris obtenu, sa valeur à droite, les trois canaux à gauche
     [0, 64, 128, 192].forEach(v => {
       const s2 = m.f(v), yc = centre(s2);
@@ -89,7 +91,7 @@
     // dépassement : la bande du haut repart à 0, par un chemin qui contourne les niveaux
     if (deb) {
       const y1 = Y(240), y0 = centre(0), xr = xb + rw + 18;
-      h += `<path d="M${xa + la} ${y1}H${xr - 10}Q${xr} ${y1} ${xr} ${y1 + 10}V${y0 - 10}Q${xr} ${y0} ${xr - 10} ${y0}H${xb + rw + 4}" class="i6-deb" marker-end="url(#i6-pointe)"/>` +
+      h += `<path d="M${xa + la} ${y1}H${xr - 10}Q${xr} ${y1} ${xr} ${y1 + 10}V${y0 - 10}Q${xr} ${y0} ${xr - 10} ${y0}H${xb + rw + 4}" class="i6-deb${vals.some(v => v >= 224) ? ' i6-actif' : ''}" marker-end="url(#i6-pointe)"/>` +
            `<text x="${xr + 4}" y="34" class="i6-debt">v + 32 &gt; 255 : on repart de 0</text>`;
     }
     // le pixel inspecté : une étiquette par canal à gauche, une courbe jusqu'à un point dans le niveau atteint
@@ -101,9 +103,9 @@
       for (let u = 1; u < tri.length; u++) if (tri[u].y - tri[u - 1].y < 15) tri[u].y = tri[u - 1].y + 15;
       for (const x of tri) {
         const yv = Y(x.v), s2 = m.f(x.v), yc = centre(s2), dx = xb + 12 + x.j * 13;
-        h += `<path d="M${xa - 22} ${x.y}L${xa - 8} ${yv}H${xa + la}" class="i6-fil" stroke="${x.c}"/>` +
-             `<rect x="${xa - 54}" y="${x.y - 7.5}" width="32" height="15" rx="7.5" fill="${x.c}"/><text x="${xa - 38}" y="${x.y + 4}" class="i6-tag">${x.nom} ${x.v}</text>` +
-             `<path d="M${xa + la} ${yv}C${xa + la + 60} ${yv}, ${dx - 60} ${yc}, ${dx} ${yc}" class="i6-fil" stroke="${x.c}"/>` +
+        h += `<line x1="${xa - 3}" y1="${yv}" x2="${xa + la + 3}" y2="${yv}" stroke="${x.c}" class="i6-trait"/>` +
+             `<path d="M${xa - 20} ${x.y}H${xa - 12}L${xa - 4} ${yv}" class="i6-fil" stroke="${x.c}"/>` +
+             `<rect x="${xa - 54}" y="${x.y - 7.5}" width="34" height="15" rx="7.5" fill="${x.c}"/><text x="${xa - 37}" y="${x.y + 4}" class="i6-tag">${x.nom} ${x.v}</text>` +
              `<circle cx="${dx}" cy="${yc}" r="5" fill="${x.c}" class="i6-pt"/>`;
       }
     }
