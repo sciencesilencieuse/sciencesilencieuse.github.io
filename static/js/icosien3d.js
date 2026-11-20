@@ -109,9 +109,9 @@ function init(root) {
   function bilan() {
     const der = chemin[chemin.length - 1];
     if (chemin.length === 20) {
-      if (VOIS[der].includes(chemin[0])) { fini = true; info.innerHTML = '<b>Gagné : un cycle hamiltonien !</b> Chaque ville est visitée une fois, et la dernière est voisine de la première. Le dodécaèdre en compte trente.'; }
-      else info.innerHTML = 'Les vingt villes sont visitées, mais la dernière n\'est pas voisine de la première : c\'est un <b>chemin</b> hamiltonien, pas un cycle. Annulez quelques coups pour boucler la boucle.';
-    } else if (!libres(der).length) info.innerHTML = '<b>Bloqué</b> : toutes les villes voisines de ' + der + ' sont déjà visitées. Annulez des coups, ou demandez à l\'ordinateur de compléter s\'il le peut.';
+      if (VOIS[der].includes(chemin[0])) { fini = true; info.innerHTML = '<b>Gagné : un cycle hamiltonien !</b> Chaque ville est visitée une fois, et la dernière est voisine de la première. Le dodécaèdre en compte trente.'; colorer(); window.finPartie && finPartie(root.querySelector('.scene3d'), { type: 'victoire', titre: 'Cycle hamiltonien&nbsp;!', texte: 'Les vingt villes, chacune une seule fois, et retour au départ.' }); }
+      else { info.innerHTML = 'Les vingt villes sont visitées, mais la dernière n\'est pas voisine de la première : c\'est un <b>chemin</b> hamiltonien, pas un cycle. Annulez quelques coups pour boucler la boucle.'; window.finPartie && finPartie(root.querySelector('.scene3d'), { type: 'bloque', titre: 'Presque&nbsp;!', texte: 'Un chemin hamiltonien, mais la dernière ville n\'est pas voisine de la première.', duree: 3500 }); }
+    } else if (!libres(der).length) { info.innerHTML = '<b>Bloqué</b> : toutes les villes voisines de ' + der + ' sont déjà visitées. Annulez des coups, ou demandez à l\'ordinateur de compléter s\'il le peut.'; window.finPartie && finPartie(root.querySelector('.scene3d'), { type: 'defaite', titre: 'Bloqué', texte: `Toutes les voisines de ${der} sont déjà visitées.`, duree: 3500 }); }
     else info.innerHTML = `Prochaine ville : une voisine de <b>${der}</b> encore libre (${libres(der).join(', ')}).`;
   }
   function jouer(l) {
@@ -153,7 +153,7 @@ function init(root) {
     lecture = setInterval(() => { if (!suite.length) { clearInterval(lecture); bilan(); return; } chemin.push(suite.shift()); colorer(); }, 280);
   }
   function defi() {
-    clearInterval(lecture); fini = false;
+    clearInterval(lecture); fini = false; window.finPartie && finPartie.effacer(root);
     chemin = [L[Math.floor(Math.random() * 20)]];               // cinq villes voisines de proche en proche
     while (chemin.length < 5) { const c = libres(chemin[chemin.length - 1]); chemin.push(c[Math.floor(Math.random() * c.length)]); }
     colorer();
@@ -179,8 +179,8 @@ function init(root) {
     Object.values(villes).forEach(m => { m.castShadow = cible === 1; });   // des ombres seulement pour le solide
     btnForme.textContent = cible ? 'Aplatir en plateau' : 'Gonfler en dodécaèdre';
   });
-  $('[data-k="annuler"]').addEventListener('click', () => { clearInterval(lecture); if (fini) fini = false; else chemin.pop(); colorer(); if (chemin.length) bilan(); else info.textContent = 'Cliquez sur une ville pour choisir le départ.'; });
-  $('[data-k="reset"]').addEventListener('click', () => { clearInterval(lecture); chemin = []; fini = false; colorer(); info.textContent = 'Cliquez sur une ville pour choisir le départ.'; });
+  $('[data-k="annuler"]').addEventListener('click', () => { clearInterval(lecture); window.finPartie && finPartie.effacer(root); if (fini) fini = false; else chemin.pop(); colorer(); if (chemin.length) bilan(); else info.textContent = 'Cliquez sur une ville pour choisir le départ.'; });
+  $('[data-k="reset"]').addEventListener('click', () => { clearInterval(lecture); window.finPartie && finPartie.effacer(root); chemin = []; fini = false; colorer(); info.textContent = 'Cliquez sur une ville pour choisir le départ.'; });
   $('[data-k="defi"]').addEventListener('click', defi);
   $('[data-k="aide"]').addEventListener('click', aide);
   colorer(); info.textContent = 'Cliquez sur une ville pour choisir le départ, puis de ville voisine en ville voisine.';

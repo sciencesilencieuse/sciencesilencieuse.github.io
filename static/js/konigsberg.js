@@ -73,21 +73,24 @@
     const impairs = Object.keys(NOEUDS).filter(n => degre(n) % 2).length;
     const restants = ponts.map((p, i) => i).filter(i => !chemin.includes(i));
     const possibles = restants.filter(i => ponts[i][0] === position || ponts[i][1] === position);
-    if (!restants.length) { info.innerHTML = `<b>Réussi :</b> les ${ponts.length} ponts traversés chacun une fois.`; return; }
+    if (!restants.length) { info.innerHTML = `<b>Réussi :</b> les ${ponts.length} ponts traversés chacun une fois.`; window.finPartie && finPartie(svg, { type: 'victoire', titre: 'Réussi&nbsp;!', texte: `Les ${ponts.length} ponts, chacun une seule fois.`, rejouer: reset }); return; }
     if (!possibles.length) {
       info.innerHTML = `<b>Bloqué</b>, avec ${restants.length} pont${restants.length > 1 ? 's' : ''} jamais traversé${restants.length > 1 ? 's' : ''}. ` +
         (impairs > 2 ? `Inutile de chercher plus longtemps : ${impairs} zones ont un nombre impair de ponts (les nombres dans les cercles), et Euler a montré qu'une promenade ne peut exister que s'il y en a 0 ou 2.`
                      : `Ici, une promenade existe : deux zones seulement ont un nombre impair de ponts, et il faut partir de l'une pour finir à l'autre.`);
+      window.finPartie && finPartie(svg, { type: 'defaite', titre: 'Bloqué', texte: `${restants.length} pont${restants.length > 1 ? 's' : ''} jamais traversé${restants.length > 1 ? 's' : ''}.`, rejouer: reset });
       return;
     }
     info.innerHTML = `Vous êtes sur <b>${NOEUDS[position].nom}</b>. Cliquez un pont en pointillés pour le traverser.`;
   }
   function reset() {
+    window.finPartie && finPartie.effacer(root);
     ponts = CONFIGS[selC.value]; chemin = []; position = null; dessiner();
     info.innerHTML = 'Cliquez sur une zone de terre pour choisir le départ. Le nombre dans chaque cercle est le nombre de ponts qui en partent.';
   }
   $('[data-k="reset"]').addEventListener('click', reset);
   $('[data-k="annuler"]').addEventListener('click', () => {
+    window.finPartie && finPartie.effacer(root);
     if (!chemin.length) { position = null; reset(); return; }
     const i = chemin.pop(), p = ponts[i]; position = p[0] === position ? p[1] : p[0];
     dessiner(); bilan();

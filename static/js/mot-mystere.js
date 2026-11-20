@@ -64,6 +64,7 @@
   const bits = x => x.toFixed(2).replace('.', ',');
 
   function nouvelle() {
+    window.finPartie && finPartie.effacer(root);
     secret = SOLUTIONS[Math.floor(Math.random() * SOLUTIONS.length)];
     possibles = SOLUTIONS.slice(); essais = []; fini = false;
     info.textContent = `Un mot courant de cinq lettres a été choisi parmi ${SOLUTIONS.length.toLocaleString('fr-FR')}. Les essais peuvent être n'importe lequel des ${ACCEPTES.length.toLocaleString('fr-FR')} mots du dictionnaire, sans les accents. À vous, ou à l'ordinateur.`;
@@ -77,8 +78,8 @@
     possibles = possibles.filter(s => motif(mot, s) === k);
     const gain = Math.log2(avant / possibles.length);
     essais.push({ mot, k, gain, attendu, reste: possibles.length });
-    if (mot === secret) { fini = true; info.innerHTML = `Trouvé en <b>${essais.length}</b> essai${essais.length > 1 ? 's' : ''}.`; }
-    else if (essais.length >= 6) { fini = true; info.innerHTML = `Perdu : le mot était <b>${secret}</b>.`; }
+    if (mot === secret) { fini = true; info.innerHTML = `Trouvé en <b>${essais.length}</b> essai${essais.length > 1 ? 's' : ''}.`; setTimeout(() => window.finPartie && finPartie(root.querySelector('.mm-plateau'), { type: 'victoire', titre: 'Trouvé&nbsp;!', texte: `« ${secret} » en ${essais.length} essai${essais.length > 1 ? 's' : ''}.`, rejouer: nouvelle }), 200); }
+    else if (essais.length >= 6) { fini = true; info.innerHTML = `Perdu : le mot était <b>${secret}</b>.`; setTimeout(() => window.finPartie && finPartie(root.querySelector('.mm-plateau'), { type: 'defaite', titre: 'Perdu', texte: `Le mot était « ${secret} ».`, rejouer: nouvelle }), 200); }
     else info.innerHTML = `« ${mot} » : <b>${bits(gain)}</b> bits obtenus (${bits(attendu)} attendus en moyenne), il reste ${possibles.length} mot${possibles.length > 1 ? 's' : ''} possible${possibles.length > 1 ? 's' : ''}.`;
     inE.value = ''; afficher();
   }

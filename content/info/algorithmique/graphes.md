@@ -17,6 +17,7 @@ Au XVIII<sup>e</sup> siècle, la ville prussienne de Königsberg est traversée 
 En 1736, Leonhard Euler règle la question, et fonde du même coup la théorie des graphes. Son idée est d'oublier tout ce qui ne compte pas&nbsp;: la forme des rives, la longueur des ponts, le tracé des rues. Il ne reste que quatre zones de terre, les **sommets**, et sept ponts qui les relient, les **arêtes**. Chaque fois qu'on traverse une zone, on y entre par un pont et on en ressort par un autre&nbsp;: les ponts d'une zone traversée vont par deux. Seules la zone de départ et la zone d'arrivée peuvent avoir un nombre impair de ponts. Or à Königsberg, les quatre zones en ont un nombre impair.
 
 <div class="anim" data-anim="konigsberg"></div>
+{{< script "js/fin-partie.js" >}}
 {{< script "js/konigsberg.js" >}}
 
 Le nombre d'arêtes qui partent d'un sommet est son **degré**. Euler a montré qu'une promenade passant une fois par chaque arête, aujourd'hui appelée **chemin eulérien**, existe si et seulement si le graphe est connexe et compte zéro ou deux sommets de degré impair. Le critère se vérifie d'un coup d'œil, quelle que soit la taille du graphe&nbsp;: inutile d'essayer toutes les promenades.

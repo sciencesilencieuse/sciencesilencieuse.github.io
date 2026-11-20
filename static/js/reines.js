@@ -166,6 +166,10 @@
     }
     if (mains.has(k)) mains.delete(k); else mains.add(k);
     dessiner();
+    window.finPartie && finPartie.effacer(root);
+    const R = [...mains].map(x => [Math.floor(x / N), x % N]);
+    if (R.length === N && R.every(([a, b2], u) => R.every(([c2, d2], v) => u === v || !enPrise(a, b2, c2, d2))))
+      window.finPartie && finPartie(svg, { type: 'victoire', titre: 'Bravo&nbsp;!', texte: `${N} reines, aucune en prise.` });
   });
   preparer();
 })();

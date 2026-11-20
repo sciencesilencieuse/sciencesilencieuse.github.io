@@ -195,6 +195,7 @@
     function nouvelle() {
       clearTimeout(attente);
       b = Array(9).fill(''); humain = 'X'; machine = 'O'; trait = 'X'; fini = false; dernier = -1; ligneGagnante = null; cumul = 0;
+      window.finPartie && finPartie.effacer(root);
       btnM.disabled = false;
       msg.innerHTML = `Vous jouez les croix. Cliquez sur une case.`;
       stats.innerHTML = '';
@@ -204,7 +205,13 @@
       const g = gagnant(b);
       if (g) { ligneGagnante = L.find(([i, j, k]) => b[i] === g && b[j] === g && b[k] === g); fini = true; msg.innerHTML = g === humain ? `<b>Vous gagnez&nbsp;!</b>` + (selIA.value === 'mm' || selIA.value === 'ab' ? '' : ` La machine ne voyait pas assez loin.`) : `<b>La machine gagne.</b>`; }
       else if (!libres(b).length) { fini = true; msg.innerHTML = `<b>Match nul.</b>` + (selIA.value === 'mm' || selIA.value === 'ab' ? ` Contre un joueur parfait, c'est le mieux possible&nbsp;: le morpion est un jeu nul.` : ''); }
-      if (fini) btnM.disabled = true;
+      if (fini) {
+        btnM.disabled = true;
+        const g2 = gagnant(b), parfaite = selIA.value === 'mm' || selIA.value === 'ab';
+        setTimeout(() => window.finPartie && finPartie(svg, g2 === humain ? { type: 'victoire', titre: 'Vous avez gagné&nbsp;!', texte: parfaite ? '' : 'La machine ne voyait pas assez loin.', rejouer: nouvelle }
+          : g2 ? { type: 'defaite', titre: 'La machine gagne', texte: 'Trois symboles alignés.', rejouer: nouvelle }
+          : { type: 'nul', titre: 'Match nul', texte: parfaite ? 'Contre un joueur parfait, c\'est le mieux possible.' : '', rejouer: nouvelle }), 380);
+      }
       return fini;
     }
     function coupMachine() {

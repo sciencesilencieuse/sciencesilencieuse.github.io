@@ -43,6 +43,7 @@
     clearTimeout(attente);
     tas = selD.value === 'hasard' ? Array.from({ length: 3 + Math.floor(Math.random() * 2) }, () => 1 + Math.floor(Math.random() * 9)) : [...DEPARTS[selD.value]];
     tour = 'vous'; fini = false; aJoue = false; choix = null; survol = null; part = null;
+    window.finPartie && finPartie.effacer(root);
     btnM.disabled = false;
     msg.innerHTML = `À vous de jouer. ${CONSIGNE} Celui qui prend la dernière allumette gagne.`;
     dessiner();
@@ -67,7 +68,7 @@
       k = tas[r] - (tas[r] ^ X);
     }
     retirer(r, tas[r] - k, 'machine', () => {
-      if (tas.every(t => t === 0)) { fini = true; score.machine++; msg.innerHTML = `La machine prend ${pl(k, 'allumette')} dans la rangée ${r + 1}, la dernière&nbsp;: <b>elle gagne</b>.`; }
+      if (tas.every(t => t === 0)) { fini = true; score.machine++; msg.innerHTML = `La machine prend ${pl(k, 'allumette')} dans la rangée ${r + 1}, la dernière&nbsp;: <b>elle gagne</b>.`; dessiner(); window.finPartie && finPartie($('.nm-plateau'), { type: 'defaite', titre: 'La machine gagne', texte: `Elle a pris la dernière allumette. Score&nbsp;: vous ${score.vous} – ${score.machine} machine.`, rejouer: nouvelle }); return; }
       else { tour = 'vous'; msg.innerHTML = `La machine prend ${pl(k, 'allumette')} dans la rangée ${r + 1}. ` + (X ? `À vous.` : `<i>(Elle était en position perdante&nbsp;: elle a joué au hasard.)</i> À vous.`); }
       dessiner();
     });
@@ -79,7 +80,7 @@
     msg.innerHTML = `Vous prenez ${pl(k, 'allumette')} dans la rangée ${r + 1}.`;
     retirer(r, j, 'vous', () => {
       tour = 'machine';
-      if (tas.every(t => t === 0)) { fini = true; score.vous++; msg.innerHTML = `Vous prenez la dernière allumette&nbsp;: <b>vous gagnez&nbsp;!</b> Rejouez avec le même départ&nbsp;: la machine ne vous laissera pas toujours une position gagnante.`; dessiner(); return; }
+      if (tas.every(t => t === 0)) { fini = true; score.vous++; msg.innerHTML = `Vous prenez la dernière allumette&nbsp;: <b>vous gagnez&nbsp;!</b> Rejouez avec le même départ&nbsp;: la machine ne vous laissera pas toujours une position gagnante.`; dessiner(); window.finPartie && finPartie($('.nm-plateau'), { type: 'victoire', titre: 'Vous avez gagné&nbsp;!', texte: `Vous avez pris la dernière allumette. Score&nbsp;: vous ${score.vous} – ${score.machine} machine.`, rejouer: nouvelle }); return; }
       msg.innerHTML += ` La machine réfléchit…`;
       dessiner();
       attente = setTimeout(coupMachine, 700);

@@ -1130,3 +1130,21 @@ mjx-container[display="true"] { display: block; max-width: 100%; overflow-x: aut
 
 /* ---------- Nombres trop longs dans le texte -------------------------------------------- */
 .nombre-long { font-family: ui-monospace, monospace; font-size: 0.92em; overflow-wrap: anywhere; word-break: break-all; }
+
+/* ---------- Fin de partie : annonce commune à tous les jeux ------------------------------ */
+.fp-annonce { position: absolute; z-index: 20; transform: translate(-50%, -50%); min-width: 13em; max-width: min(22em, 92%); padding: 1em 1.3em 0.9em; border-radius: 16px; text-align: center; background: #fff; box-shadow: 0 18px 40px rgba(15, 23, 42, 0.22), 0 0 0 1px rgba(15, 23, 42, 0.06); animation: fp-entree 0.45s cubic-bezier(.2, 1.4, .4, 1) both; cursor: pointer; }
+.fp-annonce.fp-sort { animation: fp-sortie 0.25s ease-in both; }
+@keyframes fp-entree { from { opacity: 0; transform: translate(-50%, -50%) scale(0.6); } }
+@keyframes fp-sortie { to { opacity: 0; transform: translate(-50%, -50%) scale(0.85); } }
+.fp-icone { width: 2.6em; height: 2.6em; line-height: 2.6em; margin: -2.2em auto 0.35em; border-radius: 50%; font: 800 1.35em system-ui, sans-serif; color: #fff; box-shadow: 0 6px 14px rgba(15, 23, 42, 0.2); }
+.fp-titre { font: 800 1.45em system-ui, sans-serif; letter-spacing: -0.01em; }
+.fp-texte { margin-top: 0.3em; font-size: 0.88em; line-height: 1.45; color: #475569; }
+.fp-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4em; margin-top: 0.75em; }
+.anim .fp-actions button { margin: 0 !important; }
+.fp-victoire { border-top: 6px solid #16a34a; } .fp-victoire .fp-icone { background: linear-gradient(135deg, #FACC15, #F59E0B); } .fp-victoire .fp-titre { color: #15803d; }
+.fp-defaite { border-top: 6px solid #DC2626; } .fp-defaite .fp-icone { background: #DC2626; } .fp-defaite .fp-titre { color: #B91C1C; }
+.fp-nul { border-top: 6px solid #64748b; } .fp-nul .fp-icone { background: #64748b; } .fp-nul .fp-titre { color: #334155; }
+.fp-bloque { border-top: 6px solid #F59E0B; } .fp-bloque .fp-icone { background: #F59E0B; } .fp-bloque .fp-titre { color: #B45309; }
+.fp-confetti { position: absolute; z-index: 19; width: 8px; height: 12px; border-radius: 2px; pointer-events: none; transform: translate(-50%, -50%); }
+.fp-secousse { animation: fp-secousse 0.5s ease-in-out; }
+@keyframes fp-secousse { 0%, 100% { transform: none; } 20% { transform: translateX(-7px); } 40% { transform: translateX(6px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(2px); } }

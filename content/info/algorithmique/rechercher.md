@@ -102,6 +102,7 @@ Il y a $10-3+1=8$ positions, et dans le pire des cas $3$ comparaisons à chacune
 En 1977, Robert Boyer et J Strother Moore renversent le point de vue&nbsp;: comparer le mot **de droite à gauche**. Si la dernière lettre de la fenêtre ne figure nulle part dans le mot, aucune des $m$ positions qui la contiennent ne peut convenir, et l'on peut sauter d'un coup de $m$ positions. Nigel Horspool simplifie la méthode en 1980&nbsp;: une petite table, calculée une fois pour toutes sur le mot, donne pour chaque lettre la longueur du saut. Paradoxe&nbsp;: **plus le mot cherché est long, plus la recherche va vite**, puisque les sauts s'allongent.
 
 <div class="anim" data-anim="motif"></div>
+{{< script "js/fin-partie.js" >}}
 {{< script "js/motif.js" >}}
 
 {{< runpython lang="python" mode="toggle" height="auto" width="800" >}}

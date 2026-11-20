@@ -78,6 +78,7 @@ Graphes et combinatoire
 Petit jeu sur un graphe inventé par Hamilton en 1857, le «&nbsp;jeu icosien&nbsp;». Le but est de trouver un <i>cycle hamiltonien</i>&nbsp;: visiter une seule fois chaque ville avant de revenir à la ville de départ. Les vingt villes sont les sommets d'un dodécaèdre régulier&nbsp;: le plateau de Hamilton n'est autre que ce solide vu en perspective à travers l'une de ses faces, comme le montre le bouton «&nbsp;Gonfler en dodécaèdre&nbsp;». Si le défi n'est pas suffisant, laissez l'ordinateur imposer les cinq premières villes, comme le proposait Hamilton.
 
 <div class="anim" data-anim="icosien"></div>
+{{< script "js/fin-partie.js" >}}
 {{< script "js/icosien3d.js" "module" >}}
 
 Le jeu est repris sur la page [Graphes](/info/algorithmique/graphes/#euler-facile-hamilton-difficile) de la partie algorithmique.

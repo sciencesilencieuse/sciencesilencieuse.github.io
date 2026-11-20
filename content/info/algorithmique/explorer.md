@@ -20,6 +20,7 @@ En 1848, le compositeur de problèmes d'échecs Max Bezzel pose une question dan
 Deux reines sur une même ligne se prendraient&nbsp;: il y en a donc exactement une par ligne. L'algorithme les pose ligne après ligne, de haut en bas. Sur chaque ligne, il essaie les colonnes de gauche à droite et pose la reine sur la première case qui n'est pas en prise, puis passe à la ligne suivante. Si une ligne n'offre aucune case libre, c'est une **impasse**&nbsp;: inutile d'aller plus loin, l'un des choix précédents était mauvais. On revient alors sur la ligne précédente, on retire sa reine et on la décale vers la droite.
 
 <div class="anim" data-anim="reines"></div>
+{{< script "js/fin-partie.js" >}}
 {{< script "js/reines.js" >}}
 
 Sur l'échiquier ordinaire, il suffit d'essayer $876$ cases pour trouver une première solution, et $15\\,720$ pour les trouver toutes. C'est infime comparé aux $16\\,777\\,216$ façons de poser une reine par ligne. Chaque impasse coupe d'un coup toutes les façons de compléter l'échiquier qu'on aurait pu imaginer à partir de là&nbsp;: on ne les examine jamais.
