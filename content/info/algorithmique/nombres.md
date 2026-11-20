@@ -94,6 +94,14 @@ print(compteur, "+ 1 =", compteur + 1)
 
 Python cache le problème&nbsp;: ses entiers s'allongent autant que nécessaire, au prix de calculs plus lents sur les très grands nombres. Mais les bibliothèques de calcul comme numpy, et la plupart des autres langages, utilisent des entiers de taille fixe. C'est aussi un dépassement qui a détruit la fusée [Ariane 501](../prouver/#la-preuve-formelle)&nbsp;: une vitesse convertie en un entier de $16$ bits, qui ne pouvait pas dépasser $32\\,767$.
 
+Une image en donne une illustration très visible. Une photo en couleurs est un tableau de pixels, chacun fait de trois octets, pour le rouge, le vert et le bleu&nbsp;: c'est une image en **24 bits**, qui peut afficher $256^3$ couleurs. Les bibliothèques de traitement d'images la rangent dans un tableau numpy d'entiers `uint8`, sans signe et sur un octet. Réduisons-la à **6 bits**, deux par couleur&nbsp;: chaque valeur de $0$ à $255$ doit être remplacée par l'un de quatre niveaux, un par intervalle de $64$. Encore faut-il choisir lesquels, et faire le calcul sans sortir d'un octet.
+
+<div class="anim" data-anim="image6bits" data-src="/larochelle.jpg"></div>
+{{< script "js/image6bits.js" >}}
+<p class="legende">Le port de La Rochelle. Faire glisser le curseur pour comparer l'image d'origine et l'image convertie, cliquer sur un pixel pour suivre le calcul en binaire.</p>
+
+Le dépassement ne se voit pas dans le code, qui paraît juste, mais il saute aux yeux sur l'image. Pour l'éviter, il suffit ici de choisir un calcul qui reste dans les bornes, ou de convertir d'abord le tableau en entiers de 16 bits, avec `image.astype(np.uint16)`, avant de le ramener à 8 bits une fois le calcul fini.
+
 ## Les nombres à virgule
 
 ### Une écriture finie ou infinie
