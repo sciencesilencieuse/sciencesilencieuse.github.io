@@ -926,20 +926,42 @@ table.nm-table tr.nm-somme td { border-top: 2px solid #1e293b !important; font-w
 .mm-defile .mm-arbre { min-width: 540px; }
 
 /* ---------- Variant et invariant de boucle --------------------------------------------- */
-.iv-grille { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.4fr); gap: 1em; align-items: start; margin: 0.6em 0; }
-.anim pre.iv-code { margin: 0; padding: 0.7em 0.9em; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; font-size: 0.82em; line-height: 1.45; white-space: pre; overflow-x: auto; color: #1e293b; }
-.iv-defile { max-height: 300px; overflow: auto; border: 1px solid #e2e8f0; border-radius: 6px; background: #fff; }
+.iv-grille { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 0.8em; align-items: stretch; margin: 0.6em 0; }
+.iv-carte { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 0.6em 0.8em; min-width: 0; }
+.iv-cote { display: grid; gap: 0.8em; }
+.iv-code { background: #0f172a; border-color: #0f172a; padding: 0.7em 0; font: 0.84em/1.65 ui-monospace, monospace; color: #e2e8f0; overflow-x: auto; }
+.iv-l { display: flex; align-items: center; padding: 0 0.8em 0 0; white-space: pre; border-left: 3px solid transparent; transition: background 0.25s, border-color 0.25s; }
+.iv-num { width: 2.2em; text-align: right; padding-right: 0.9em; color: #475569; flex: none; user-select: none; }
+.iv-l.iv-on { background: rgba(245, 158, 11, 0.16); border-left-color: #F59E0B; }
+.iv-l.iv-sortie { background: rgba(34, 197, 94, 0.18); border-left-color: #22C55E; }
+.iv-kw { color: #C084FC; font-weight: 700; } .iv-nb { color: #FDBA74; } .iv-fn { color: #7DD3FC; }
+.iv-cond { margin-left: 0.8em; font: 700 0.75em system-ui, sans-serif; border-radius: 999px; padding: 0.05em 0.6em; }
+.iv-cond.iv-vrai { background: #F59E0B; color: #1f2937; } .iv-cond.iv-faux { background: #EF4444; color: #fff; }
+.iv-titre { font: 600 0.72em system-ui, sans-serif; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; }
+.iv-titre code { text-transform: none; font-size: 1.15em; letter-spacing: 0; }
+.iv-variant .iv-titre code { color: #B45309; } .iv-invariant .iv-titre code { color: #15803d; }
+.iv-ligne { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.2em 0.7em; margin: 0.15em 0; }
+.iv-gros { font: 800 1.7em system-ui, sans-serif; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.iv-variant .iv-gros { color: #B45309; } .iv-invariant .iv-gros { color: #15803d; }
+.iv-chip { font: 600 0.75em system-ui, sans-serif; border-radius: 999px; padding: 0.1em 0.6em; background: #FFFBEB; color: #B45309; border: 1px solid #FDE68A; }
+.iv-invariant .iv-chip { background: #F0FDF4; color: #15803d; border-color: #BBF7D0; }
+.iv-invariant .iv-chip.iv-ko { background: #FEF2F2; color: #B91C1C; border-color: #FECACA; }
+.iv-graphe { display: block; width: 100%; height: 76px; }
+.iv-base { stroke: #94a3b8; stroke-width: 1; }
+.iv-barre { fill: #FCD9A8; transition: height 0.3s, y 0.3s; }
+.iv-barre.iv-der { fill: #F59E0B; }
+.iv-zero { fill: #22C55E; }
+.iv-invariant.iv-pulse { animation: iv-pulse 0.6s ease-out; }
+@keyframes iv-pulse { 0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.45); } 100% { box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); } }
+.iv-defile { max-height: 210px; overflow: auto; border: 1px solid #e2e8f0; border-radius: 10px; background: #fff; margin-bottom: 0.4em; }
 table.iv-table { border-collapse: collapse; width: 100% !important; margin: 0 !important; font-size: 0.82em; font-variant-numeric: tabular-nums; }
-table.iv-table th, table.iv-table td { padding: 0.25em 0.55em !important; border: none !important; border-bottom: 1px solid #eef2f6 !important; text-align: right; background: none !important; white-space: nowrap; }
-table.iv-table th { position: sticky; top: 0; background: #f1f5f9 !important; color: #475569; font-weight: 600; text-align: right; }
+table.iv-table th, table.iv-table td { padding: 0.28em 0.7em !important; border: none !important; border-bottom: 1px solid #f1f5f9 !important; text-align: right; background: none !important; white-space: nowrap; }
+table.iv-table th { position: sticky; top: 0; background: #f8fafc !important; color: #475569; font-weight: 600; box-shadow: inset 0 -1px 0 #e2e8f0; }
 table.iv-table th.iv-hv, table.iv-table td.iv-hv { color: #B45309; }
 table.iv-table th.iv-hi, table.iv-table td.iv-hi { color: #15803d; }
-table.iv-table td.iv-hv { position: relative; min-width: 5em; }
-.iv-barre { position: absolute; left: 0.3em; bottom: 0.2em; height: 0.28em; width: calc((100% - 0.6em) * var(--w) / 100); background: #F59E0B; opacity: 0.45; border-radius: 2px; }
-.iv-val { position: relative; }
 table.iv-table tr.iv-cur td { background: #FFFBEB !important; font-weight: 700; }
 .iv-ok { color: #16a34a; font-weight: 700; }
-.anim p.iv-message { margin: 0.4em 0 0.6em 0 !important; min-height: 3em; padding: 0.4em 0.7em; border-left: 3px solid #004D80; background: #fff; font-size: 0.88em; line-height: 1.5; }
+.anim p.iv-message { margin: 0 0 0.6em 0 !important; min-height: 3em; padding: 0.5em 0.8em; border-left: 3px solid #004D80; background: #fff; border-radius: 0 6px 6px 0; font-size: 0.88em; line-height: 1.5; }
 @media (max-width: 640px) { .iv-grille { grid-template-columns: 1fr; } }
 
 /* ---------- Syracuse ----------------------------------------------------------------------- */
