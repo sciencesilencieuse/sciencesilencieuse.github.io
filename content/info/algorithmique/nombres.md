@@ -140,7 +140,7 @@ Les exposants extrêmes sont réservés&nbsp;: tous les bits à $0$ pour zéro e
 <div class="anim" data-anim="ieee754"></div>
 {{< script "js/flottants.js" >}}
 
-Le nombre stocké pour `0.1` vaut exactement $0{,}1000000000000000055511151231257827021181583404541015625$. Python l'affiche `0.1`, parce que c'est la plus courte écriture décimale qui redonne ce flottant, mais c'est bien ce nombre-là qui entre dans les calculs.
+Le nombre stocké pour `0.1` vaut exactement <span class="nombre-long">0,1000000000000000055511151231257827021181583404541015625</span>. Python l'affiche `0.1`, parce que c'est la plus courte écriture décimale qui redonne ce flottant, mais c'est bien ce nombre-là qui entre dans les calculs.
 
 ### Les pièges
 

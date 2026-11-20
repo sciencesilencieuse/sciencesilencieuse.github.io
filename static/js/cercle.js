@@ -12,10 +12,10 @@
 
   root.innerHTML = `
 <div class="ce-grille">
-  <svg class="ce-svg" viewBox="-210 -210 420 420" role="img" aria-label="Les mots de n bits disposés en cercle, avec leur valeur en complément à deux"></svg>
+  <svg class="ce-svg" viewBox="-230 -230 460 460" role="img" aria-label="Les mots de n bits disposés en cercle, avec leur valeur en complément à deux"></svg>
   <div class="ce-panneau">
     <p class="ce-message" aria-live="polite"></p>
-    <div class="ce-calcul"></div>
+    <div class="ce-calcul" hidden></div>
   </div>
 </div>
 <div class="anim-ctrl">
@@ -28,77 +28,93 @@
 </div>`;
   const $ = s => root.querySelector(s);
   const svg = $('svg'), msg = $('.ce-message'), calc = $('.ce-calcul'), selN = $('[data-k="n"]'), inA = $('[data-k="a"]'), inB = $('[data-k="b"]'), cbNat = $('[data-k="nat"]');
-  let n = 4, pos = 5, trace = [], timer = 0;
+  let n = 4, pos = 5, depart = 5, avance = 0, anim = 0, franchi = false;
+  const R = 150, LARG = 34, RW = 196, RA = 116;
 
   const M = () => 2 ** n;
   const mot = k => k.toString(2).padStart(n, '0');
   const signe = k => k >= M() / 2 ? k - M() : k;
   const lire = k => cbNat.checked ? k : signe(k);
-  const angle = k => (-90 + 360 * k / M()) * Math.PI / 180;
+  const ang = t => (-90 + 360 * t / M()) * Math.PI / 180;                 // t peut être fractionnaire
+  const P = (t, r) => [Math.cos(ang(t)) * r, Math.sin(ang(t)) * r];
   const borner = x => { const lo = cbNat.checked ? 0 : -M() / 2, hi = cbNat.checked ? M() - 1 : M() / 2 - 1; return Math.max(lo, Math.min(hi, Math.round(+x || 0))); };
+  const moins = v => String(v).replace('-', '−');
 
+  function arc(t1, t2, r) {                         // arc de cercle de t1 à t2 (en crans), au rayon r
+    const [x1, y1] = P(t1, r), [x2, y2] = P(t2, r), grand = Math.abs(t2 - t1) > M() / 2 ? 1 : 0, sens = t2 > t1 ? 1 : 0;
+    return `M${x1.toFixed(2)} ${y1.toFixed(2)}A${r} ${r} 0 ${grand} ${sens} ${x2.toFixed(2)} ${y2.toFixed(2)}`;
+  }
   function dessiner() {
-    const R = 150, r = 112;
-    let h = `<circle r="${R}" class="ce-anneau"/>`;
-    // frontières de dépassement
-    const front = (k, cls) => { const a = (angle(k) + angle(k - 1 < 0 ? M() - 1 : k - 1)) / 2 + (k === 0 ? Math.PI : 0); return `<line x1="${Math.cos(a) * 70}" y1="${Math.sin(a) * 70}" x2="${Math.cos(a) * 200}" y2="${Math.sin(a) * 200}" class="${cls}"/>`; };
-    h += cbNat.checked ? front(0, 'ce-front') : front(M() / 2, 'ce-front');
-    // trace de la dernière addition
-    if (trace.length > 1) {
-      let d = '';
-      trace.forEach((k, i) => { const a = angle(k), rr = 92 - Math.min(30, i * 0.6); d += `${i ? 'L' : 'M'}${Math.cos(a) * rr} ${Math.sin(a) * rr}`; });
-      h += `<path d="${d}" class="ce-trace"/>`;
+    let h = '';
+    // l'anneau : moitié des positifs, moitié des négatifs
+    if (cbNat.checked) h += `<circle r="${R}" class="ce-bande ce-bpos"/>`;
+    else h += `<path d="${arc(-0.5, M() / 2 - 0.5, R)}" class="ce-bande ce-bpos"/><path d="${arc(M() / 2 - 0.5, M() - 0.5, R)}" class="ce-bande ce-bneg"/>`;
+    // frontière du dépassement
+    const f = cbNat.checked ? -0.5 : M() / 2 - 0.5, [fx1, fy1] = P(f, R - LARG / 2 - 6), [fx2, fy2] = P(f, R + LARG / 2 + 6), [lx, ly] = P(f, RW + 24);
+    h += `<line x1="${fx1}" y1="${fy1}" x2="${fx2}" y2="${fy2}" class="ce-front"/><text x="${lx}" y="${ly + 4}" class="ce-front-txt">dépassement</text>`;
+    // chemin de l'addition
+    if (avance) {
+      const t2 = depart + avance, pas = Math.sign(avance), pts = [];
+      for (let t = depart; pas > 0 ? t <= t2 + 1e-9 : t >= t2 - 1e-9; t += pas / 8) { const r = RA - Math.abs(t - depart) / M() * 10; pts.push(P(t, r)); }
+      h += `<polyline points="${pts.map(p => p.map(c => c.toFixed(1)).join(',')).join(' ')}" class="ce-chemin"/>`;
+      const [a1, a2] = pts[pts.length - 1], [b1, b2] = pts[Math.max(0, pts.length - 3)];
+      const th = Math.atan2(a2 - b2, a1 - b1);
+      h += `<path d="M${a1 + 9 * Math.cos(th)} ${a2 + 9 * Math.sin(th)}L${a1 + 7 * Math.cos(th + 2.3)} ${a2 + 7 * Math.sin(th + 2.3)}L${a1 + 7 * Math.cos(th - 2.3)} ${a2 + 7 * Math.sin(th - 2.3)}z" class="ce-fleche"/>`;
     }
+    // les mots
     for (let k = 0; k < M(); k++) {
-      const a = angle(k), x = Math.cos(a), y = Math.sin(a), v = lire(k), neg = !cbNat.checked && v < 0;
-      h += `<g class="ce-pt${k === pos ? ' ce-cur' : ''}${neg ? ' ce-neg' : ''}"><circle cx="${x * R}" cy="${y * R}" r="${n === 5 ? 6 : 8}"/>` +
-           `<text x="${x * (R + (n === 5 ? 30 : 34))}" y="${y * (R + (n === 5 ? 30 : 34)) + 4}" class="ce-mot">${mot(k)}</text>` +
-           `<text x="${x * r}" y="${y * r + 5}" class="ce-val">${v}</text></g>`;
+      const [x, y] = P(k, R), [wx, wy] = P(k, RW), v = lire(k), neg = !cbNat.checked && v < 0, cur = k === pos;
+      h += `<g class="ce-pt${cur ? ' ce-cur' : ''}${neg ? ' ce-neg' : ''}" data-k="${k}">` +
+           (cur ? `<circle cx="${x}" cy="${y}" r="${n === 5 ? 15 : 19}" class="ce-pastille"/>` : '') +
+           `<text x="${x}" y="${y + 5}" class="ce-val${n === 5 ? ' ce-petit' : ''}">${moins(v)}</text>` +
+           `<text x="${wx}" y="${wy + 4}" class="ce-mot${n === 5 ? ' ce-petit' : ''}">${mot(k)}</text></g>`;
     }
-    const a = angle(pos);
-    h += `<line x1="0" y1="0" x2="${Math.cos(a) * 128}" y2="${Math.sin(a) * 128}" class="ce-aiguille"/><circle r="5" class="ce-centre"/>`;
+    // le centre : le mot courant et sa valeur
+    const v = lire(pos);
+    h += `<text y="-14" class="ce-c-mot">${mot(pos).split('').map((c, i) => `<tspan class="${i === 0 && !cbNat.checked ? (c === '1' ? 'ce-sg1' : 'ce-sg0') : ''}">${c}</tspan>`).join('')}</text>` +
+         `<text y="34" class="ce-c-val${!cbNat.checked && v < 0 ? ' ce-neg' : ''}">${moins(v)}</text>` +
+         `<text y="58" class="ce-c-leg">${cbNat.checked ? 'entier naturel' : 'complément à deux'}</text>`;
     svg.innerHTML = h;
   }
   function etatInitial() {
-    clearInterval(timer); timer = 0;
-    n = +selN.value; inA.value = borner(inA.value); inB.value = borner(inB.value);
-    pos = ((+inA.value % M()) + M()) % M(); trace = [];
+    cancelAnimationFrame(anim);
+    n = +selN.value; inA.value = borner(inA.value); inB.value = Math.max(-M(), Math.min(M(), Math.round(+inB.value || 0)));
+    pos = ((+inA.value % M()) + M()) % M(); depart = pos; avance = 0;
     msg.innerHTML = `Sur ${n} bits, il y a ${M()} mots, rangés en cercle&nbsp;: ajouter 1, c'est avancer d'un cran dans le sens des aiguilles d'une montre. ` +
-      (cbNat.checked ? `Lus comme des entiers naturels, ils vont de 0 à ${M() - 1}.` : `En complément à deux, les mots qui commencent par 1 représentent les négatifs&nbsp;: de ${-M() / 2} à ${M() / 2 - 1}.`) +
-      ` Le trait rouge marque le passage où le résultat cesse d'être juste.`;
-    calc.innerHTML = '';
+      (cbNat.checked ? `Lus comme des entiers naturels, ils vont de 0 à ${M() - 1}.` : `En complément à deux, les mots qui commencent par 1 (en rouge) représentent les négatifs, de ${moins(-M() / 2)} à −1.`) +
+      ` Cliquer sur un mot le choisit comme valeur de a.`;
+    calc.hidden = true;
     dessiner();
   }
   function additionner() {
-    clearInterval(timer);
-    const a = borner(inA.value), b = Math.round(+inB.value || 0);
-    inA.value = a;
-    pos = ((a % M()) + M()) % M(); trace = [pos];
-    const pasN = Math.abs(b), sens = Math.sign(b);
-    let k = 0, franchi = false;
-    const frontiere = cbNat.checked ? 0 : M() / 2;
-    timer = setInterval(() => {
-      if (k >= pasN) {
-        clearInterval(timer); timer = 0;
-        const res = lire(pos), vrai = a + b;
-        msg.innerHTML = `${a} + ${b} = <b>${res}</b>` + (res === vrai ? `&nbsp;: c'est juste.` : `&nbsp;! Le vrai résultat, ${vrai}, ne tient pas sur ${n} bits&nbsp;: en franchissant le trait rouge, on est passé de l'autre côté du cercle. C'est un <b>dépassement de capacité</b>, et le processeur ne le signale pas.`);
-        calc.innerHTML = `<pre class="ce-pose">  ${mot(((a % M()) + M()) % M())}   (${a})\n+ ${mot(((b % M()) + M()) % M())}   (${b})\n= ${mot(pos)}   (${res})</pre>`;
-        dessiner(); return;
-      }
-      const avant = pos;
-      pos = ((pos + sens) % M() + M()) % M(); trace.push(pos); k++;
-      if ((sens > 0 && pos === frontiere) || (sens < 0 && avant === frontiere)) franchi = true;
-      msg.innerHTML = `${a} + ${b}&nbsp;: ${k} cran${k > 1 ? 's' : ''} sur ${pasN}…` + (franchi ? ' <b>On a franchi le trait rouge.</b>' : '');
+    cancelAnimationFrame(anim);
+    const a = borner(inA.value), b = Math.max(-M(), Math.min(M(), Math.round(+inB.value || 0)));
+    inA.value = a; inB.value = b;
+    depart = ((a % M()) + M()) % M(); pos = depart; avance = 0; franchi = false; calc.hidden = true;
+    const f = cbNat.checked ? 0 : M() / 2, duree = Math.max(500, Math.min(2200, 180 * Math.abs(b))), t0 = performance.now();
+    (function etape(t) {
+      const x = Math.max(0, Math.min(1, (t - t0) / duree)), lisse = x < 0.5 ? 2 * x * x : 1 - 2 * (1 - x) ** 2;
+      avance = b * lisse;
+      const crans = Math.trunc(avance + Math.sign(b) * 1e-9);
+      pos = ((depart + crans) % M() + M()) % M();
+      for (let i = 1; i <= Math.abs(crans); i++) { const k = ((depart + Math.sign(b) * i) % M() + M()) % M(), avant = ((k - Math.sign(b)) % M() + M()) % M(); if ((b > 0 && k === f) || (b < 0 && avant === f)) franchi = true; }
+      msg.innerHTML = `${moins(a)} + ${moins(b)}&nbsp;: ${Math.abs(crans)} cran${Math.abs(crans) > 1 ? 's' : ''} sur ${Math.abs(b)}…` + (franchi ? ' <b>On a franchi la frontière du dépassement.</b>' : '');
       dessiner();
-    }, Math.max(60, Math.min(260, 2400 / Math.max(1, pasN))));
+      if (x < 1) { anim = requestAnimationFrame(etape); return; }
+      const res = lire(pos), vrai = a + b;
+      msg.innerHTML = `${moins(a)} + ${moins(b)} = <b>${moins(res)}</b>` + (res === vrai ? `&nbsp;: c'est juste.` : `&nbsp;! Le vrai résultat, ${moins(vrai)}, ne tient pas sur ${n} bits&nbsp;: en franchissant la frontière, on est passé de l'autre côté du cercle. C'est un <b>dépassement de capacité</b>, et le processeur ne le signale pas.`);
+      calc.innerHTML = `<pre class="ce-pose">  ${mot(depart)}   (${moins(a)})\n+ ${mot(((b % M()) + M()) % M())}   (${moins(b)})\n= ${mot(pos)}   (${moins(res)})</pre>`;
+      calc.hidden = false;
+    })(t0);
   }
   function oppose() {
-    clearInterval(timer); timer = 0; cbNat.checked = false;
+    cancelAnimationFrame(anim); cbNat.checked = false;
     const a = borner(inA.value), k = ((a % M()) + M()) % M(), inv = (~k) & (M() - 1), res = (inv + 1) % M();
-    pos = res; trace = [];
-    calc.innerHTML = `<pre class="ce-pose">  ${mot(k)}   (${a})\n  ${mot(inv)}   on inverse chaque bit (${signe(inv)})\n+ ${mot(1)}\n= ${mot(res)}   (${signe(res)})</pre>`;
+    pos = res; depart = res; avance = 0;
+    calc.innerHTML = `<pre class="ce-pose">  ${mot(k)}   (${moins(a)})\n  ${mot(inv)}   on inverse chaque bit (${moins(signe(inv))})\n+ ${mot(1)}\n= ${mot(res)}   (${moins(signe(res))})</pre>`;
+    calc.hidden = false;
     msg.innerHTML = `Pour obtenir −a, on inverse tous les bits puis on ajoute 1. En effet, a plus son inverse donne ${'1'.repeat(n)}, c'est-à-dire −1&nbsp;: l'inverse de a vaut donc −a − 1, et il suffit d'ajouter 1.` +
-      (a === -M() / 2 ? ` Exception&nbsp;: ${a} n'a pas d'opposé sur ${n} bits, car ${-a} ne tient pas&nbsp;; le calcul redonne ${a}.` : '');
+      (a === -M() / 2 ? ` Exception&nbsp;: ${moins(a)} n'a pas d'opposé sur ${n} bits, car ${-a} ne tient pas&nbsp;; le calcul redonne ${moins(a)}.` : '');
     dessiner();
   }
   $('[data-k="add"]').addEventListener('click', additionner);
@@ -109,6 +125,7 @@
   svg.addEventListener('click', e => {
     const pt = svg.createSVGPoint(); pt.x = e.clientX; pt.y = e.clientY;
     const q = pt.matrixTransform(svg.getScreenCTM().inverse());
+    if (Math.hypot(q.x, q.y) < 80) return;
     let a = Math.atan2(q.y, q.x) * 180 / Math.PI + 90; if (a < 0) a += 360;
     const k = Math.round(a / 360 * M()) % M();
     inA.value = lire(k); etatInitial();
