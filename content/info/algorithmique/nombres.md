@@ -300,7 +300,7 @@ La norme **IEEE 754**, adoptée en 1985 sous l'impulsion de William Kahan, fixe 
 - <span class="nb-fe">l'exposant</span>, stocké avec un **biais**&nbsp;: on lui ajoute $1023$ pour n'avoir à stocker que des entiers positifs&nbsp;;
 - <span class="nb-fm">la mantisse</span>&nbsp;: seuls les $52$ chiffres après la virgule sont stockés. Le $1$ avant la virgule, toujours présent, est le **bit caché**&nbsp;: il donne $53$ chiffres binaires significatifs, soit environ $16$ chiffres décimaux.
 
-Prenons $13\\,256{,}625$. En binaire, il s'écrit $11001111001000{,}101$, c'est-à-dire $\color{#2563EB}{1{,}1001111001000101} \times 2^{\color{#DB2777}{13}}$. L'exposant stocké est $13 + 1023 = 1036 = (10000001100)\_2$, la mantisse est faite des $16$ chiffres après la virgule, suivis de $36$ zéros&nbsp;:
+Prenons $13\\,256{,}625$. En binaire, il s'écrit <span class="nb-ch">11001111001000,101</span>, c'est-à-dire <span class="nb-ch bl">1,1001111001000101</span>&nbsp;×&nbsp;2<sup class="nb-fe">13</sup>. L'exposant stocké est $13 + 1023 = 1036$, qui s'écrit <span class="nb-ch" style="color:#DB2777">10000001100</span> en binaire. La mantisse est faite des $16$ chiffres après la virgule, suivis de $36$ zéros&nbsp;:
 
 <div class="nb-fig" style="font:0.88em/1.5 ui-monospace, monospace; text-align:center; overflow-wrap:anywhere">
 <span class="nb-fs">0</span> <span class="nb-fe">10000001100</span> <span class="nb-fm">1001111001000101</span><span style="color:#94a3b8">000000000000000000000000000000000000</span>
