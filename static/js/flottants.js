@@ -10,89 +10,85 @@
   const fmt = x => x.toLocaleString('fr-FR', { maximumFractionDigits: 6 });
 
   // ------------------------------------------------------------ format jouet
+  // Chaque intervalle [2^e ; 2^(e+1)[ est dessiné comme une règle de même longueur,
+  // portant les 2^t nombres 1,f × 2^e ; en dessous, la vraie droite des réels, où
+  // les mêmes règles se tassent vers 0 et s'étirent vers les grands nombres.
   document.querySelectorAll('.anim[data-anim="droite-flottants"]').forEach(root => {
     root.innerHTML = `
-<canvas class="anim-scene df-toile" role="img" aria-label="Les nombres d'un petit format flottant placés sur une droite"></canvas>
-<p class="df-info" aria-live="polite"></p>
+<div class="df-cadre"><svg class="df-svg" role="img" aria-label="Les nombres d'un petit format flottant : chaque intervalle entre deux puissances de 2 en contient autant"></svg></div>
+<div class="df-lecture" aria-live="polite"></div>
 <div class="anim-ctrl">
-  <label>Chiffres après la virgule <select data-k="t"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option></select></label>
-  <label>Exposants de −2 à <select data-k="e"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option></select></label>
+  <label>Chiffres après la virgule <select data-k="t"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option></select></label>
   <label>Placer x = <input type="number" data-k="x" value="2.7" step="0.1" min="0"></label>
-  <label><input type="checkbox" data-k="log"> échelle logarithmique</label>
 </div>`;
     const $ = s => root.querySelector(s);
-    const cv = $('canvas'), info = $('.df-info');
-    let dim;
-    const EMIN = -2;
-    function nombres() {
-      const t = +$('[data-k="t"]').value, emax = +$('[data-k="e"]').value, L = [];
-      for (let e = EMIN; e <= emax; e++) for (let f = 0; f < 2 ** t; f++) L.push({ v: (1 + f / 2 ** t) * 2 ** e, e, f });
-      L.push({ v: 2 ** (emax + 1), e: emax + 1, f: 0, horsFormat: true });
-      return { L, t, emax };
-    }
-    function fit() {
-      const dpr = window.devicePixelRatio || 1, w = cv.clientWidth || 600, h = 190;
-      cv.style.height = h + 'px'; cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
-      cv.getContext('2d').setTransform(dpr, 0, 0, dpr, 0, 0); dim = { w, h }; dessiner();
-    }
-    const COUL = ['#2563EB', '#DB2777', '#0D9488', '#D97706', '#7C3AED', '#0891B2'];
-    const FOND = ['#EFF6FF', '#FDF2F8', '#F0FDFA', '#FFFBEB', '#F5F3FF', '#ECFEFF'];
-    function bulle(g, x, y, w, h, r) { g.beginPath(); g.moveTo(x + r, y); g.arcTo(x + w, y, x + w, y + h, r); g.arcTo(x + w, y + h, x, y + h, r); g.arcTo(x, y + h, x, y, r); g.arcTo(x, y, x + w, y, r); g.closePath(); }
+    const svg = $('svg'), lect = $('.df-lecture');
+    const COUL = ['#2563EB', '#DB2777', '#0D9488', '#D97706', '#7C3AED'], FOND = ['#EFF6FF', '#FDF2F8', '#F0FDFA', '#FFFBEB', '#F5F3FF'];
+    const EMIN = -2, EMAX = 2;
+    let choix = null;
+    const supe = e => String(e).replace('-', '−');
+    const binF = (f, t) => f.toString(2).padStart(t, '0');
     function dessiner() {
-      if (!dim) return;
-      const { L, t, emax } = nombres(), log = $('[data-k="log"]').checked, g = cv.getContext('2d'), { w, h } = dim;
-      const vmin = 2 ** EMIN, vmax = 2 ** (emax + 1), G = 18, D = 18, Y = 92;
-      const X = log ? v => G + (w - G - D) * (Math.log2(v) - Math.log2(vmin)) / (Math.log2(vmax) - Math.log2(vmin)) : v => G + (w - G - D) * v / vmax;
-      g.clearRect(0, 0, w, h);
-      g.font = '12px system-ui, sans-serif'; g.textAlign = 'center'; g.textBaseline = 'alphabetic';
-      // bandes [2^e, 2^(e+1)[ : fond, intitulé, écart entre voisins
-      for (let e = EMIN; e <= emax; e++) {
-        const x1 = X(2 ** e), x2 = X(2 ** (e + 1)), c = COUL[(e - EMIN) % COUL.length];
-        g.fillStyle = FOND[(e - EMIN) % FOND.length]; bulle(g, x1 + 1, Y - 30, x2 - x1 - 2, 60, 8); g.fill();
-        g.fillStyle = c; g.font = '600 12px system-ui, sans-serif';
-        if (x2 - x1 > 34) g.fillText(`[${fmt(2 ** e)} ; ${fmt(2 ** (e + 1))}[`, (x1 + x2) / 2, Y - 40);
-        // accolade de l'écart entre deux voisins
-        const pas = 2 ** (e - t), a1 = X(2 ** e), a2 = X(2 ** e + pas);
-        if (a2 - a1 > 14) {
-          g.strokeStyle = c; g.lineWidth = 1.2; g.beginPath(); g.moveTo(a1, Y + 22); g.lineTo(a1, Y + 26); g.lineTo(a2, Y + 26); g.lineTo(a2, Y + 22); g.stroke();
-          if (a2 - a1 > 26) { g.font = '11px system-ui, sans-serif'; g.fillText(fmt(pas), (a1 + a2) / 2, Y + 39); }
+      const t = +$('[data-k="t"]').value, W = Math.max(340, Math.min(720, root.clientWidth || 640)), petit = W < 480;
+      const G = petit ? 98 : 108, D = petit ? 10 : 74, L = W - G - D, RH = 26, GAP = 22, Y0 = 34;
+      const nR = EMAX - EMIN + 1, yLigne = Y0 + nR * (RH + GAP) + 64, H = yLigne + 46;
+      svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+      const vmax = 2 ** (EMAX + 1), Xr = v => G + L * v / vmax;
+      let h = `<text x="${G}" y="14" class="df-titre">chaque intervalle, agrandi</text>`;
+      const tous = [];
+      // l'intervalle actif : celui du point choisi ou du nombre x
+      const xv = Math.max(0, +$('[data-k="x"]').value || 0);
+      const eActif = choix ? choix.e : xv > 0 ? Math.max(EMIN, Math.min(EMAX, Math.floor(Math.log2(xv)))) : null;
+      for (let e = EMIN; e <= EMAX; e++) {
+        const r = e - EMIN, y = Y0 + r * (RH + GAP), c = COUL[r], pas = 2 ** (e - t);
+        // projection de la règle sur la vraie droite
+        if (e === eActif) h += `<polygon points="${G},${y + RH} ${G + L},${y + RH} ${Xr(2 ** (e + 1))},${yLigne - 6} ${Xr(2 ** e)},${yLigne - 6}" fill="${c}" stroke="${c}" class="df-proj"/>`;
+        h += `<rect x="${G}" y="${y}" width="${L}" height="${RH}" rx="7" fill="${FOND[r]}" stroke="${c}" class="df-regle"/>`;
+        h += `<text x="${G - 8}" y="${y + RH / 2 + 4}" class="df-int${petit ? ' df-petit' : ''}" fill="${c}">[${fmt(2 ** e)} ; ${fmt(2 ** (e + 1))}[</text>`;
+        if (!petit) h += `<text x="${G + L + 8}" y="${y + RH / 2 + 4}" class="df-pas">écart ${fmt(pas)}</text>`;
+        for (let f = 0; f < 2 ** t; f++) {
+          const v = (1 + f / 2 ** t) * 2 ** e, x = G + L * f / 2 ** t, sel = choix && choix.e === e && choix.f === f;
+          tous.push({ v, e, f, x, y });
+          h += `<g class="df-pt${sel ? ' df-sel' : ''}" data-e="${e}" data-f="${f}"><circle cx="${x + (f === 0 ? 7 : 0)}" cy="${y + RH / 2}" r="${f === 0 ? 6 : 4.5}" fill="${f === 0 ? c : '#fff'}" stroke="${c}"/>` +
+               `<text x="${x + (f === 0 ? 7 : 0)}" y="${y - 3}" class="df-val">${fmt(v)}</text></g>`;
         }
       }
-      // l'axe
-      g.strokeStyle = '#94a3b8'; g.lineWidth = 1.5; g.beginPath(); g.moveTo(G - 8, Y); g.lineTo(w - D + 8, Y); g.stroke();
-      if (!log) { g.fillStyle = '#64748b'; g.font = '12px system-ui, sans-serif'; if (X(vmin) - X(0) > 22) g.fillText('0', X(0), Y + 58); g.beginPath(); g.moveTo(X(0), Y - 6); g.lineTo(X(0), Y + 6); g.stroke(); }
-      // les flottants : des points, plus gros pour les puissances de 2
-      for (const p of L) {
-        const x = X(p.v), c = p.horsFormat ? '#cbd5e1' : COUL[(p.e - EMIN) % COUL.length];
-        g.fillStyle = '#fff'; g.strokeStyle = c; g.lineWidth = 2;
-        g.beginPath(); g.arc(x, Y, p.f === 0 ? 5.5 : 3.6, 0, 7); g.fill(); g.stroke();
-        if (p.f === 0) { g.fillStyle = c; g.beginPath(); g.arc(x, Y, 2.5, 0, 7); g.fill(); }
-        if (p.f === 0 && !p.horsFormat && (x - X(p.v / 2) > 30 || (p.e === EMIN && X(2 * p.v) - x > 30))) { g.fillStyle = '#334155'; g.font = '12px system-ui, sans-serif'; g.fillText(fmt(p.v), x, Y + 58); }
-      }
-      // le nombre placé et son flottant le plus proche
+      // la vraie droite
+      h += `<text x="${G}" y="${yLigne - 46 + 12}" class="df-titre">la vraie droite des réels</text>`;
+      h += `<line x1="${G - 6}" y1="${yLigne}" x2="${G + L + 6}" y2="${yLigne}" class="df-axe"/>`;
+      for (const p of tous) { const r = p.e - EMIN; h += `<circle cx="${Xr(p.v)}" cy="${yLigne}" r="${p.f === 0 ? 4 : 2.6}" fill="${COUL[r]}"/>`; }
+      for (const v of [0, 1, 2, 4, 8]) if (v <= vmax) h += `<line x1="${Xr(v)}" y1="${yLigne + 4}" x2="${Xr(v)}" y2="${yLigne + 10}" class="df-axe"/><text x="${Xr(v)}" y="${yLigne + 24}" class="df-grad">${fmt(v)}</text>`;
+      // le nombre x et son arrondi
       const x = Math.max(0, +$('[data-k="x"]').value || 0);
-      const vals = L.filter(p => !p.horsFormat).map(p => p.v);
-      let msgX = '';
+      let lecture = '';
       if (x > 0 && x < vmax) {
-        let best = vals[0]; for (const v of vals) if (Math.abs(v - x) < Math.abs(best - x)) best = v;
-        if (x < vmin) best = vmin;
-        const xx = X(x), xb = X(best);
-        g.strokeStyle = '#D97706'; g.lineWidth = 1.5; g.setLineDash([4, 3]); g.beginPath(); g.moveTo(xx, Y - 62); g.lineTo(xx, Y - 8); g.stroke(); g.setLineDash([]);
-        g.fillStyle = '#D97706'; bulle(g, xx - 22, Y - 80, 44, 18, 9); g.fill();
-        g.fillStyle = '#fff'; g.font = '600 11px system-ui, sans-serif'; g.fillText('x = ' + fmt(x), xx, Y - 67);
-        g.strokeStyle = '#D97706'; g.lineWidth = 3; g.beginPath(); g.arc(xb, Y, 9, 0, 7); g.stroke();
-        if (Math.abs(xb - xx) > 3) { g.lineWidth = 2; g.beginPath(); g.moveTo(xx, Y - 8); g.quadraticCurveTo((xx + xb) / 2, Y - 22, xb, Y - 10); g.stroke(); }
-        const p = L.find(q => q.v === best), mant = '1,' + p.f.toString(2).padStart(t, '0');
-        msgX = ` Le nombre ${fmt(x)} n'existe pas dans ce format&nbsp;: il est arrondi au plus proche, <b>${fmt(best)}</b> = ${mant} × 2${sup(p.e)} (en binaire), avec une erreur de ${fmt(Math.abs(best - x))}.`;
-        if (best === x) msgX = ` Le nombre ${fmt(x)} = ${mant} × 2${sup(p.e)} est exactement représentable.`;
-      } else if (x >= vmax) msgX = ` Le nombre ${fmt(x)} dépasse le plus grand nombre du format&nbsp;: c'est un dépassement de capacité.`;
-      const nb = vals.length;
-      info.innerHTML = `${nb} nombres positifs, de la forme 1,${'f'.repeat(t)} × 2<sup>e</sup>. Chaque intervalle [2<sup>e</sup>&nbsp;; 2<sup>e+1</sup>[ en contient ${2 ** t}, régulièrement espacés de 2<sup>e−${t}</sup> (l'accolade sous chaque intervalle)&nbsp;: l'écart double d'un intervalle au suivant. L'<b>erreur relative</b> d'arrondi reste donc à peu près la même partout.` + msgX;
+        let best = tous[0]; for (const p of tous) if (Math.abs(p.v - x) < Math.abs(best.v - x)) best = p;
+        if (Math.abs(vmax - x) < Math.abs(best.v - x)) best = null;              // le plus proche serait 2^(EMAX+1), hors format
+        const xx = Xr(x);
+        h += `<path d="M${xx} ${yLigne - 9}l-6 -10h12z" class="df-x"/><text x="${xx}" y="${yLigne - 23}" class="df-xt">x</text>`;
+        if (best) {
+          const r = best.e - EMIN, yb = Y0 + r * (RH + GAP) + RH / 2, xs = best.x + (best.f === 0 ? 7 : 0);
+          h += `<circle cx="${xs}" cy="${yb}" r="10" class="df-arr"/><circle cx="${Xr(best.v)}" cy="${yLigne}" r="8" class="df-arr"/>`;
+          // x placé sur sa règle
+          const e = Math.floor(Math.log2(x));
+          if (e >= EMIN && e <= EMAX) { const rr = e - EMIN, xr = G + L * (x / 2 ** e - 1), yr = Y0 + rr * (RH + GAP); h += `<path d="M${xr} ${yr + RH + 1}l-5 9h10z" class="df-x"/>`; }
+          const err = Math.abs(best.v - x);
+          lecture = `<span class="df-q">x = ${fmt(x)}</span> n'est pas dans le format&nbsp;: il est arrondi au plus proche, ` + carte(best, t) + (err ? ` <span class="df-err">erreur ${fmt(err)}, soit ${fmt(Math.round(err / x * 1000) / 10)}&nbsp;% de x</span>` : ' <span class="df-ok">exactement représentable</span>');
+        }
+      } else if (x >= vmax) lecture = `<span class="df-q">x = ${fmt(x)}</span> dépasse le plus grand nombre du format&nbsp;: c'est un dépassement de capacité.`;
+      if (choix && !lecture) lecture = carte(choix, t);
+      svg.innerHTML = h;
+      lect.innerHTML = (lecture || `Cliquer sur un point pour lire son écriture.`) +
+        `<p class="df-note">${(EMAX - EMIN + 1) * 2 ** t} nombres positifs, ${2 ** t} par intervalle. D'un intervalle au suivant, l'écart entre voisins double, mais l'<b>écart relatif</b> reste du même ordre&nbsp;: au plus 2<sup>−${t}</sup>, soit ${fmt(100 / 2 ** t)}&nbsp;%.</p>`;
     }
-    const sup = e => String.fromCharCode(...String(e).split('').map(c => c === '-' ? 0x207B : [0x2070, 0xB9, 0xB2, 0xB3, 0x2074, 0x2075, 0x2076, 0x2077, 0x2078, 0x2079][+c]));
-    root.querySelectorAll('select, input').forEach(x => x.addEventListener(x.type === 'number' ? 'input' : 'change', dessiner));
-    window.addEventListener('resize', fit);
-    fit();
+    function carte(p, t) {
+      return `<span class="df-carte"><span class="df-m">1,${binF(p.f, t)}</span><sub>2</sub> × 2<sup class="df-e">${supe(p.e)}</sup> = <b>${fmt(p.v)}</b></span>`;
+    }
+    svg.addEventListener('click', e => { const g = e.target.closest('.df-pt'); if (!g) return; choix = { e: +g.dataset.e, f: +g.dataset.f }; choix.v = (1 + choix.f / 2 ** +$('[data-k="t"]').value) * 2 ** choix.e; $('[data-k="x"]').value = ''; dessiner(); });
+    $('[data-k="t"]').addEventListener('change', () => { choix = null; dessiner(); });
+    $('[data-k="x"]').addEventListener('input', () => { choix = null; dessiner(); });
+    let larg = 0; window.addEventListener('resize', () => { if (Math.abs(root.clientWidth - larg) > 8) { larg = root.clientWidth; dessiner(); } });
+    dessiner();
   });
 
   // ------------------------------------------------------------ IEEE 754
