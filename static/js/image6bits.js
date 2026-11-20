@@ -28,7 +28,7 @@
     <div class="i6-curseur" role="slider" aria-label="Séparation avant / après" tabindex="0"><span></span></div>
   </div>
   <div class="i6-cote">
-    <svg class="i6-schema" viewBox="0 0 250 322" role="img" aria-label="Correspondance entre les 256 valeurs d'un octet et les 4 niveaux conservés"></svg>
+    <svg class="i6-schema" viewBox="0 0 290 326" role="img" aria-label="Correspondance entre les 256 valeurs d'un octet et les 4 niveaux conservés"></svg>
   </div>
 </div>
 <div class="i6-pixel"></div>
@@ -65,33 +65,47 @@
   }
   // ---------------------------------------------------------------- le schéma des niveaux
   function schemaDessiner() {
-    const m = METHODES[methode], Y = v => 306 - v / 256 * 262, Yn = v => Y(Math.max(8, Math.min(248, v))), xa = 46, xb = 186, la = 26;
+    const m = METHODES[methode], deb = methode === 'arrondir';
+    const Y = v => 318 - v / 256 * 270, xa = 74, la = 30, xb = 176, rw = 74, rh = 26;
     const COUL = ['#DBEAFE', '#93C5FD', '#60A5FA', '#2563EB'];
-    let h = `<text x="${xa + la / 2}" y="12" class="i6-axe">8 bits</text><text x="${xb + la / 2}" y="12" class="i6-axe">2 bits</text>`;
-    // intervalles d'entrée qui mènent au même niveau
-    const bandes = methode === 'arrondir' ? [[0, 32, 0], [32, 96, 1], [96, 160, 2], [160, 224, 3], [224, 256, -1]] : [[0, 64, 0], [64, 128, 1], [128, 192, 2], [192, 256, 3]];
-    for (const [a, b, n] of bandes) {
-      const s2 = m.f(a);
-      h += `<rect x="${xa}" y="${Y(b)}" width="${la}" height="${Y(a) - Y(b)}" fill="${n < 0 ? '#FCA5A5' : COUL[n]}" class="i6-bande"/>`;
-      if (n >= 0) h += `<polygon points="${xa + la},${Y(b) + 1} ${xa + la},${Y(a) - 1} ${xb},${Yn(s2) + 6} ${xb},${Yn(s2) - 6}" class="i6-flux" fill="${COUL[n]}"/>`;
+    // centre vertical du rectangle de chaque niveau : au milieu de l'intervalle qui y mène
+    const centre = s2 => methode === 'tronquer' ? Y(s2 + 32) : methode === 'milieu' ? Y(s2) : Y(Math.max(18, s2));
+    let h = `<defs><marker id="i6-pointe" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#DC2626"/></marker></defs>`;
+    h += `<text x="${xa + la / 2}" y="16" class="i6-axe">8 bits</text><text x="${xb + rw / 2}" y="16" class="i6-axe">2 bits</text>`;
+    const bandes = deb ? [[0, 32, 0], [32, 96, 1], [96, 160, 2], [160, 224, 3], [224, 256, -1]] : [[0, 64, 0], [64, 128, 1], [128, 192, 2], [192, 256, 3]];
+    for (const [a1, b1, n] of bandes) {
+      const s2 = m.f(a1), yc = centre(s2);
+      h += `<rect x="${xa}" y="${Y(b1)}" width="${la}" height="${Y(a1) - Y(b1)}" fill="${n < 0 ? 'url(#i6-hach)' : COUL[n]}" class="i6-bande"/>`;
+      if (n >= 0) h += `<path d="M${xa + la} ${Y(b1)}C${xa + la + 50} ${Y(b1)}, ${xb - 50} ${yc - rh / 2}, ${xb} ${yc - rh / 2}L${xb} ${yc + rh / 2}C${xb - 50} ${yc + rh / 2}, ${xa + la + 50} ${Y(a1)}, ${xa + la} ${Y(a1)}z" fill="${COUL[n]}" class="i6-flux"/>`;
     }
-    for (const v of methode === 'arrondir' ? [0, 32, 96, 160, 224, 256] : [0, 64, 128, 192, 256]) h += `<text x="${xa - 6}" y="${Y(v) + 4}" class="i6-grad">${v}</text>`;
-    if (methode === 'arrondir') {
-      const ya = Y(240), yz = Yn(0);
-      h += `<path d="M${xa + la} ${ya}C${xa + 120} ${ya - 40}, ${xb + 70} ${ya - 30}, ${xb + 56} ${(ya + yz) / 2}S${xb + 44} ${yz}, ${xb + la + 8} ${yz}" class="i6-deb"/><path d="M${xb + la + 4} ${yz}l10 -5v10z" class="i6-debf"/>` +
-           `<text x="${(xa + xb) / 2 + 14}" y="30" class="i6-debt">v + 32 &gt; 255 : dépassement</text>`;
+    if (deb) h = h.replace('<defs>', `<defs><pattern id="i6-hach" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#FEE2E2"/><rect width="2.5" height="6" fill="#F87171"/></pattern>`);
+    for (const v of deb ? [0, 32, 96, 160, 224, 256] : [0, 64, 128, 192, 256]) h += `<text x="${xa + la / 2}" y="${v === 0 ? Y(v) - 3 : v === 256 ? Y(v) + 10 : Y(v) + 3.5}" class="i6-grad i6-dans">${v}</text>`;
+    // niveaux de sortie : le gris obtenu, sa valeur à droite, les trois canaux à gauche
+    [0, 64, 128, 192].forEach(v => {
+      const s2 = m.f(v), yc = centre(s2);
+      h += `<rect x="${xb}" y="${yc - rh / 2}" width="${rw}" height="${rh}" rx="6" fill="rgb(${s2},${s2},${s2})" class="i6-niveau"/>` +
+           `<text x="${xb + rw - 8}" y="${yc + 4.5}" class="i6-nval" fill="${s2 < 128 ? '#fff' : '#0f172a'}">${s2}</text>`;
+    });
+    // dépassement : la bande du haut repart à 0, par un chemin qui contourne les niveaux
+    if (deb) {
+      const y1 = Y(240), y0 = centre(0), xr = xb + rw + 18;
+      h += `<path d="M${xa + la} ${y1}H${xr - 10}Q${xr} ${y1} ${xr} ${y1 + 10}V${y0 - 10}Q${xr} ${y0} ${xr - 10} ${y0}H${xb + rw + 4}" class="i6-deb" marker-end="url(#i6-pointe)"/>` +
+           `<text x="${xr + 4}" y="34" class="i6-debt">v + 32 &gt; 255 : on repart de 0</text>`;
     }
-    // niveaux de sortie
-    [0, 64, 128, 192].forEach((v, n) => { const s2 = m.f(v); h += `<rect x="${xb}" y="${Yn(s2) - 7}" width="${la}" height="14" rx="3" fill="rgb(${s2},${s2},${s2})" class="i6-niveau"/><text x="${xb + la + 6}" y="${Yn(s2) + 4}" class="i6-grad i6-gd">${s2}</text>`; });
-    // le pixel inspecté : ses trois canaux
+    // le pixel inspecté : une étiquette par canal à gauche, une courbe jusqu'à un point dans le niveau atteint
     if (orig) {
       const k = (px[1] * W + px[0]) * 4, d = orig.data;
-      [['#DC2626', 0], ['#16a34a', 1], ['#2563EB', 2]].forEach(([c, i], j) => {
-        const v = d[k + i], s2 = m.f(v), y1 = Y(v), y2 = Yn(s2), dx = j * 7;
-        h += `<line x1="${xa - 3}" y1="${y1}" x2="${xa + la + 3}" y2="${y1}" stroke="${c}" stroke-width="2.5"/>` +
-             `<line x1="${xa + la + 3}" y1="${y1}" x2="${xb - 3 - dx}" y2="${y2}" stroke="${c}" stroke-width="1.6" stroke-dasharray="4 3"/>` +
-             `<circle cx="${xb - 3 - dx}" cy="${y2}" r="3.4" fill="${c}" stroke="#fff" stroke-width="1"/>`;
-      });
+      const can = [['R', '#DC2626', 0], ['V', '#16a34a', 1], ['B', '#2563EB', 2]].map(([nom, c, i]) => ({ nom, c, v: d[k + i] }));
+      // étiquettes : par ordre de hauteur, sans chevauchement
+      const tri = can.map((x, j) => ({ ...x, j, y: Y(x.v) })).sort((p, q) => p.y - q.y);
+      for (let u = 1; u < tri.length; u++) if (tri[u].y - tri[u - 1].y < 15) tri[u].y = tri[u - 1].y + 15;
+      for (const x of tri) {
+        const yv = Y(x.v), s2 = m.f(x.v), yc = centre(s2), dx = xb + 12 + x.j * 13;
+        h += `<path d="M${xa - 22} ${x.y}L${xa - 8} ${yv}H${xa + la}" class="i6-fil" stroke="${x.c}"/>` +
+             `<rect x="${xa - 54}" y="${x.y - 7.5}" width="32" height="15" rx="7.5" fill="${x.c}"/><text x="${xa - 38}" y="${x.y + 4}" class="i6-tag">${x.nom} ${x.v}</text>` +
+             `<path d="M${xa + la} ${yv}C${xa + la + 60} ${yv}, ${dx - 60} ${yc}, ${dx} ${yc}" class="i6-fil" stroke="${x.c}"/>` +
+             `<circle cx="${dx}" cy="${yc}" r="5" fill="${x.c}" class="i6-pt"/>`;
+      }
     }
     schema.innerHTML = h;
   }

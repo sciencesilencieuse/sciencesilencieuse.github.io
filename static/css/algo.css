@@ -1157,16 +1157,19 @@ mjx-container[display="true"] { display: block; max-width: 100%; overflow-x: aut
 .i6-curseur::before { content: ""; position: absolute; left: 16px; top: 0; bottom: 0; width: 2px; background: #fff; box-shadow: 0 0 4px rgba(0, 0, 0, 0.5); }
 .i6-curseur span { position: absolute; left: 50%; top: 50%; width: 30px; height: 30px; margin: -15px 0 0 -15px; border-radius: 50%; background: #fff; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35); }
 .i6-curseur span::before { content: "‹ ›"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font: 700 15px system-ui, sans-serif; color: #334155; letter-spacing: 2px; }
-.i6-schema { display: block; width: 100%; max-width: 300px; height: auto; margin: 0 auto; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; }
-.i6-axe { font: 600 11px system-ui, sans-serif; fill: #64748b; text-anchor: middle; }
-.i6-grad { font: 10.5px ui-monospace, monospace; fill: #64748b; text-anchor: end; }
-.i6-grad.i6-gd { text-anchor: start; }
-.i6-bande { stroke: #fff; stroke-width: 1; }
-.i6-flux { opacity: 0.55; }
-.i6-niveau { stroke: #94a3b8; stroke-width: 1; }
-.i6-deb { fill: none; stroke: #DC2626; stroke-width: 2.5; }
-.i6-debf { fill: #DC2626; }
-.i6-debt { font: 700 9.5px system-ui, sans-serif; fill: #DC2626; text-anchor: middle; }
+.i6-schema { display: block; width: 100%; max-width: 330px; height: auto; margin: 0 auto; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; }
+.i6-axe { font: 700 11px system-ui, sans-serif; fill: #475569; text-anchor: middle; text-transform: uppercase; letter-spacing: 0.04em; }
+.i6-grad { font: 9.5px ui-monospace, monospace; fill: #64748b; }
+.i6-grad.i6-dans { fill: #1e293b; font-weight: 700; text-anchor: middle; paint-order: stroke; stroke: rgba(255,255,255,0.85); stroke-width: 2.5px; }
+.i6-bande { stroke: #fff; stroke-width: 1.5; }
+.i6-flux { opacity: 0.45; }
+.i6-niveau { stroke: #64748b; stroke-width: 1.2; }
+.i6-nval { font: 700 11.5px ui-monospace, monospace; text-anchor: end; }
+.i6-deb { fill: none; stroke: #DC2626; stroke-width: 2.2; stroke-linejoin: round; }
+.i6-debt { font: 700 9.5px system-ui, sans-serif; fill: #DC2626; text-anchor: end; }
+.i6-fil { fill: none; stroke-width: 1.8; stroke-linecap: round; opacity: 0.9; }
+.i6-tag { font: 700 9px system-ui, sans-serif; fill: #fff; text-anchor: middle; }
+.i6-pt { stroke: #fff; stroke-width: 1.5; }
 .i6-pixel { margin-top: 0.8em; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 0.55em 0.8em; }
 .i6-pastilles { display: flex; align-items: center; gap: 0.5em; margin-bottom: 0.3em; }
 .i6-pastilles span:not(.i6-fl):not(.i6-pos) { width: 1.8em; height: 1.8em; border-radius: 6px; box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.15); }
