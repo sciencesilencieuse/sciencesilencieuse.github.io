@@ -292,7 +292,7 @@ print(max_quadratique([31, -41, 59, 26, -53, 58, 97, -93, -23, 84]))
 
 ### $\mathcal{O}(n\log n)$&nbsp;: diviser pour régner
 
-Coupons le tableau en deux moitiés. La meilleure tranche est soit entièrement à gauche, soit entièrement à droite (deux problèmes deux fois plus petits, résolus récursivement&nbsp;: c'est le principe de la stratégie [diviser pour régner](../strategies/#couper-en-morceaux-diviser-pour-régner)), soit à cheval sur le milieu. Ce dernier cas se règle en temps linéaire&nbsp;: c'est la meilleure tranche qui **finit** au milieu côté gauche, accolée à la meilleure qui **commence** au milieu côté droit. Le coût vérifie $T(n)=2T(n/2)+\mathcal{O}(n)$, d'où $T(n)=\mathcal{O}(n\log n)$, comme pour le tri fusion.
+Coupons le tableau en deux moitiés. La meilleure tranche est soit entièrement à gauche, soit entièrement à droite (deux problèmes deux fois plus petits, résolus récursivement&nbsp;: c'est le principe de la stratégie [diviser pour régner](../recursivite/#diviser-pour-régner)), soit à cheval sur le milieu. Ce dernier cas se règle en temps linéaire&nbsp;: c'est la meilleure tranche qui **finit** au milieu côté gauche, accolée à la meilleure qui **commence** au milieu côté droit. Le coût vérifie $T(n)=2T(n/2)+\mathcal{O}(n)$, d'où $T(n)=\mathcal{O}(n\log n)$, comme pour le tri fusion.
 
 {{< runpython lang="python" mode="toggle" height="auto" >}}
 def max_diviser(t, g=0, d=None):
@@ -316,7 +316,7 @@ print(max_diviser([31, -41, 59, 26, -53, 58, 97, -93, -23, 84]))
 
 ### $\mathcal{O}(n)$&nbsp;: un seul passage (Kadane)
 
-Changeons de question&nbsp;: au lieu de chercher la meilleure tranche partout, demandons-nous quelle est la meilleure tranche qui **se termine** à la case courante. Si l'on connaît la réponse pour la case précédente, la nouvelle s'en déduit aussitôt&nbsp;: on prolonge, ou l'on repart de zéro si la somme est devenue négative (un début de somme négatif ne peut que nuire à la suite). C'est de la [programmation dynamique](../strategies/#quand-les-sous-problèmes-se-répètent-la-programmation-dynamique) réduite à deux variables.
+Changeons de question&nbsp;: au lieu de chercher la meilleure tranche partout, demandons-nous quelle est la meilleure tranche qui **se termine** à la case courante. Si l'on connaît la réponse pour la case précédente, la nouvelle s'en déduit aussitôt&nbsp;: on prolonge, ou l'on repart de zéro si la somme est devenue négative (un début de somme négatif ne peut que nuire à la suite). C'est de la [programmation dynamique](../gloutons-dynamique/#quand-les-sous-problèmes-se-répètent-la-programmation-dynamique) réduite à deux variables.
 
 <div class="anim" data-anim="kadane"></div>
 {{< script "js/kadane.js" >}}
@@ -368,8 +368,8 @@ Si un algorithme fait environ $c\\,n^k$ opérations, alors $\log(c\\,n^k)=\log c
 <div class="encadre-titre">En bref</div>
 
 - $n^3\to n^2$&nbsp;: réutiliser un calcul au lieu de le refaire.
-- $n^2\to n\log n$&nbsp;: [diviser pour régner](../strategies/#couper-en-morceaux-diviser-pour-régner).
-- $n\log n\to n$&nbsp;: changer de question, pour qu'un seul passage suffise ([programmation dynamique](../strategies/#quand-les-sous-problèmes-se-répètent-la-programmation-dynamique)).
+- $n^2\to n\log n$&nbsp;: [diviser pour régner](../recursivite/#diviser-pour-régner).
+- $n\log n\to n$&nbsp;: changer de question, pour qu'un seul passage suffise ([programmation dynamique](../gloutons-dynamique/#quand-les-sous-problèmes-se-répètent-la-programmation-dynamique)).
 - On ne peut pas descendre plus bas&nbsp;: il faut au moins lire chaque case une fois.
 
 </div>
@@ -385,7 +385,7 @@ Le problème (dans sa version décisionnelle) demande s'il existe un trajet de l
 Par contre, aucun algorithme connu à ce jour ne sait aboutir à la solution en un temps mieux qu'exponentiel...<br>
 Or si $\mathrm{P=NP}$, cela voudrait dire qu'un algorithme polynomial existe bel et bien. 
 
-Le meilleur algorithme exact connu, celui de Held et Karp (présenté avec la [programmation dynamique](../strategies/#le-voyageur-de-commerce-held-karp)), reste en $\mathcal{O}(n^2 2^n)$.
+Le meilleur algorithme exact connu, celui de Held et Karp (présenté avec la [programmation dynamique](../gloutons-dynamique/#le-voyageur-de-commerce-held-karp)), reste en $\mathcal{O}(n^2 2^n)$.
 
 La grande majorité des chercheurs se rangent dans le camp pessimiste $\mathrm{P≠NP}$.
 
@@ -398,5 +398,5 @@ Jon Bentley, *Programming Pearls* (Addison-Wesley, 2<sup>e</sup> éd. 2000), col
 Donald Knuth, *The Art of Computer Programming*, vol. 2, section 3.1&nbsp;: le lièvre et la tortue.
 
 <nav class="suite-nav" aria-label="Page suivante">
-<a href="../strategies/" class="suivant"><span>Suite →</span><b>Stratégies algorithmiques</b></a>
+<a href="../recursivite/" class="suivant"><span>Suite →</span><b>Récursivité</b></a>
 </nav>

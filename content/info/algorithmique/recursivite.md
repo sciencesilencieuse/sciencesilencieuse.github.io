@@ -215,7 +215,7 @@ def fib(n):
 print(fib(100))
 {{< /runpython >}}
 
-La récursivité, à elle seule, ne rend donc pas un algorithme rapide&nbsp;: tout dépend de la forme de l'arbre des appels. Quand les mêmes sous-problèmes reviennent sans cesse, on les mémorise, et c'est le point de départ de la [programmation dynamique](../strategies/#quand-les-sous-problèmes-se-répètent-la-programmation-dynamique). Quand ils sont indépendants et rapetissent vite, on peut diviser pour régner.
+La récursivité, à elle seule, ne rend donc pas un algorithme rapide&nbsp;: tout dépend de la forme de l'arbre des appels. Quand les mêmes sous-problèmes reviennent sans cesse, on les mémorise, et c'est le point de départ de la [programmation dynamique](../gloutons-dynamique/#quand-les-sous-problèmes-se-répètent-la-programmation-dynamique). Quand ils sont indépendants et rapetissent vite, on peut diviser pour régner.
 
 ## Diviser pour régner
 

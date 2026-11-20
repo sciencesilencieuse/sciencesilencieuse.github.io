@@ -3,6 +3,7 @@ title = "Algorithmique"
 date = 2026-11-19T10:00:00+01:00
 weight = 1
 chapter = false
+aliases = ["/info/strategies/", "/info/algorithmique/strategies/"]
 +++
 
 # Algorithmique
@@ -180,22 +181,6 @@ chapter = false
   <a href="./nombres/#la-virgule-flottante" class="math-btn">Virgule flottante</a>
   <a href="./nombres/#les-pièges" class="math-btn">Pièges</a>
   <a href="./nombres/#quand-les-erreurs-saccumulent" class="math-btn">Patriot</a>
-</div>
-</div>
-</div>
-
-<div class="math-card c-magenta">
-<div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="15" y="5" width="18" height="8" rx="2"/><path d="M24 13v4"/><path d="M24 17l9 7-9 7-9-7z"/><path d="M24 31v4"/><rect x="15" y="35" width="18" height="8" rx="2"/><path class="leger" d="M33 24h7v15h-7"/></svg></span>
-<h3><a href="./strategies/">Stratégies algorithmiques</a></h3>
-</div>
-<div class="carte-texte">Programmation dynamique, gloutons, structures de données, algorithme X.</div>
-<div class="theme-subgroup">
-<div class="link-list">
-  <a href="./strategies/#quand-les-sous-problèmes-se-répètent-la-programmation-dynamique" class="math-btn">Programmation dynamique</a>
-  <a href="./strategies/#ne-jamais-revenir-en-arrière-les-algorithmes-gloutons" class="math-btn">Gloutons</a>
-  <a href="./strategies/#la-structure-de-données-guide-le-code" class="math-btn">Structures de données</a>
-  <a href="./strategies/#algorithme-x" class="math-btn">Algorithme X</a>
 </div>
 </div>
 </div>
