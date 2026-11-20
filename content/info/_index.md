@@ -29,6 +29,7 @@ chapter = true
   <a href="./algorithmique/gloutons-dynamique/" class="math-btn">Gloutons et prog. dynamique</a>
   <a href="./algorithmique/explorer/" class="math-btn">Explorer et revenir en arrière</a>
   <a href="./algorithmique/prouver/" class="math-btn">Prouver un algorithme</a>
+  <a href="./algorithmique/nombres/" class="math-btn">Les nombres en machine</a>
   <a href="./algorithmique/strategies/" class="math-btn">Stratégies</a>
 </div>
 </div>

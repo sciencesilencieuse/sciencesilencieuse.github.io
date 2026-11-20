@@ -166,6 +166,24 @@ chapter = false
 </div>
 </div>
 
+<div class="math-card c-orange">
+<div class="math-card-head">
+<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect class="leger" x="6" y="12" width="36" height="24" rx="3"/><path d="M12 20v8M18 20h4v8h-4zM27 20v8M32 20h4v8h-4z"/></svg></span>
+<h3><a href="./nombres/">Les nombres en machine</a></h3>
+</div>
+<div class="carte-texte">Base 2 et hexadécimal, complément à deux et dépassements de capacité, virgule flottante et pièges des arrondis.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./nombres/#compter-en-base-2" class="math-btn">Base 2</a>
+  <a href="./nombres/#entiers-relatifs-le-complément-à-deux" class="math-btn">Complément à deux</a>
+  <a href="./nombres/#quand-le-compteur-fait-le-tour" class="math-btn">Dépassements</a>
+  <a href="./nombres/#la-virgule-flottante" class="math-btn">Virgule flottante</a>
+  <a href="./nombres/#les-pièges" class="math-btn">Pièges</a>
+  <a href="./nombres/#quand-les-erreurs-saccumulent" class="math-btn">Patriot</a>
+</div>
+</div>
+</div>
+
 <div class="math-card c-magenta">
 <div class="math-card-head">
 <span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="15" y="5" width="18" height="8" rx="2"/><path d="M24 13v4"/><path d="M24 17l9 7-9 7-9-7z"/><path d="M24 31v4"/><rect x="15" y="35" width="18" height="8" rx="2"/><path class="leger" d="M33 24h7v15h-7"/></svg></span>
