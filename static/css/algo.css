@@ -1434,7 +1434,7 @@ table.nb-tab td:first-child { text-align: left; font-weight: 700; }
 [data-teinte="3"] { --t-f: #92400E; --t: #D97706; --t-c: #FEF3C7; }
 [data-teinte="4"] { --t-f: #5B21B6; --t: #7C3AED; --t-c: #EDE9FE; }
 #body-inner h2[data-teinte] { color: var(--t-f) !important; padding-bottom: 0.25em; margin-top: 1.8em !important;
-  background: linear-gradient(90deg, var(--t) 0, var(--t) 3.5em, var(--t-c) 3.5em, rgba(255,255,255,0) 85%) left bottom / 100% 3px no-repeat; }
+  background: linear-gradient(90deg, var(--t) 0%, color-mix(in srgb, var(--t) 55%, transparent) 25%, color-mix(in srgb, var(--t) 18%, transparent) 55%, transparent 90%) left bottom / 100% 3px no-repeat; }
 #body-inner h3[data-teinte] { color: var(--t) !important; padding-left: 0.55em; border-left: 4px solid var(--t); line-height: 1.25; }
 #body-inner h4[data-teinte] { color: var(--t-f) !important; }
 
@@ -1477,3 +1477,16 @@ table.nb-tab td:first-child { text-align: left; font-weight: 700; }
 .rc-l2 { background: #EFF6FF; border-color: #3B82F6 !important; color: #1D4ED8; }
 .rc-l3 { background: #FFFBEB; border-color: #F59E0B !important; color: #B45309; }
 @media (max-width: 560px) { .rc-anat { grid-template-columns: 1fr; } }
+
+/* ---------- Arbre couvrant (Kruskal, Prim) ------------------------------------------ */
+.ac-cadre { border: 1px solid #e2e8f0; border-radius: 12px; background: linear-gradient(180deg, #ffffff, #f8fafc); padding: 6px; }
+.anim canvas.ac-scene { display: block; width: 100%; border: none; background: transparent; }
+.ac-compteurs { display: flex; flex-wrap: wrap; gap: 0.4em 0.6em; margin: 0.6em 0 0.2em; font-size: 0.82em; color: #475569; }
+.ac-compteurs span:empty { display: none; }
+.ac-compteurs span { display: inline-flex; align-items: center; gap: 0.35em; padding: 0.1em 0.65em; border: 1px solid #e2e8f0; border-radius: 999px; background: #fff; }
+.ac-compteurs b { color: #0f172a; font-variant-numeric: tabular-nums; }
+.ac-compteurs i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; }
+.ac-compteurs i.ac-g { background: linear-gradient(90deg, #2563EB, #EA580C, #16A34A); }
+.ac-compteurs i.ac-r { background: rgba(220, 38, 38, 0.45); }
+.anim p.ac-info { margin: 0.4em 0 !important; min-height: 2.9em; padding: 0.5em 0.8em; border-left: 3px solid #004D80; background: #fff; border-radius: 0 6px 6px 0; font-size: 0.88em; line-height: 1.5; }
+.ac-info .ac-rej { color: #DC2626; } .ac-info .ac-gar { color: #15803d; }
