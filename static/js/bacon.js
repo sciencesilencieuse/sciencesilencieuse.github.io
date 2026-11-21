@@ -66,7 +66,7 @@ function init(root) {
     xs.sort((a, b) => a - b); ys.sort((a, b) => a - b);
     const q = (t, p) => t[Math.floor(p * (t.length - 1))];
     ens = [q(xs, 0.005), q(ys, 0.005), q(xs, 0.995), q(ys, 0.995)];
-    const ETOILE = new THREE.Color('#DCE6FF'), LIEN = new THREE.Color('#5574D6');
+    const ETOILE = new THREE.Color('#DCE6FF'), LIEN = new THREE.Color('#3A5ACC');
     const coul = i => i < F ? new THREE.Color('#BEC8DC') : ETOILE.clone().lerp(new THREE.Color(dist[i] < 0 ? HORS : COUL[Math.min(dist[i] / 2, COUL.length - 1)]), 0.25);
     const grp = d.groupe || [];
 
@@ -89,7 +89,7 @@ function init(root) {
         varying vec4 vC;
         void main() {
           float f = uFiltre < -0.5 ? 1.0 : (abs(niveau - uFiltre) < 0.6 ? 1.0 : 0.08);
-          vC = vec4(couleur, uAlpha * f * uVoile * (inter > 0.5 ? 0.7 : 1.0));
+          vC = vec4(couleur, uAlpha * f * uVoile * (inter > 0.5 ? 0.9 : 1.0));
           gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
         }`,
       fragmentShader: `varying vec4 vC; void main() { gl_FragColor = vec4(vC.rgb * vC.a, vC.a); }`,
@@ -103,7 +103,7 @@ function init(root) {
       pp[3 * i] = X[i]; pp[3 * i + 1] = Y[i]; pp[3 * i + 2] = i < F ? 0.5 : 1;
       const c = coul(i); pc[3 * i] = c.r; pc[3 * i + 1] = c.g; pc[3 * i + 2] = c.b;
       const dg = voisins[i].length;
-      pt[i] = i < F ? 3.2 : 3.6 + Math.min(5, Math.sqrt(dg) * 0.55);    // les acteurs prolifiques brillent davantage
+      pt[i] = i < F ? 2.2 : 2.5 + Math.min(3, Math.sqrt(dg) * 0.3);     // de fines poussières ; les acteurs prolifiques un peu plus gros
       pn[i] = niveau[i];
     }
     const gp = new THREE.BufferGeometry();
@@ -117,7 +117,7 @@ function init(root) {
         void main() {
           float f = uFiltre < -0.5 ? 1.0 : (abs(niveau - uFiltre) < 0.01 ? 1.3 : (fract(niveau) > 0.25 && fract(niveau) < 0.75 ? 0.18 : 0.05));
           vC = couleur;
-          vA = f * (0.55 + 0.45 * uVoile) * (position.z < 0.75 ? 0.55 : 0.85);
+          vA = f * (0.55 + 0.45 * uVoile) * (position.z < 0.75 ? 0.45 : 0.75);
           gl_PointSize = taille * uZoom * uDpr;
           gl_Position = projectionMatrix * modelViewMatrix * vec4(position.xy, 0.0, 1.0);
         }`,
@@ -217,8 +217,8 @@ function init(root) {
     camera.left = -ox / s; camera.right = (w - ox) / s; camera.top = -oy / s; camera.bottom = (h - oy) / s;   // y vers le bas, comme à l'écran
     camera.updateProjectionMatrix();
     const z = s * E / Math.min(w, h);                                  // grossissement par rapport à la vue d'ensemble
-    uni.uZoom.value = Math.min(3.2, 0.75 + 0.16 * z);
-    liens.material.uniforms.uAlpha.value = Math.min(0.22, 0.12 + 0.005 * z) * (filtre === -1 ? 1 : 0.7);
+    uni.uZoom.value = Math.min(3.4, 0.6 + 0.2 * z);
+    liens.material.uniforms.uAlpha.value = Math.min(0.28, 0.18 + 0.004 * z) * (filtre === -1 ? 1 : 0.7);
     renderer.render(scene, camera);
   }
 
