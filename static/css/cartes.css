@@ -333,20 +333,22 @@
      --c-on couleur du texte sur --c (foncé quand la teinte est trop claire)
    Ces règles, placées en fin de fichier, remplacent les couleurs précédentes.
    ========================================================================== */
-.math-card, .c-bleu                      { --c: #0076BA; --c2: #56C1FF; --c-on: #ffffff; }
-.c-canard                                { --c: #00A89D; --c2: #73FDEA; --c-on: #ffffff; }
-.c-vert                                  { --c: #1DB100; --c2: #88FA4E; --c-on: #ffffff; }
-.c-orange, .c-ambre                      { --c: #FEAE00; --c2: #FFF056; --c-on: #1f2933; }
-.c-rouge                                 { --c: #EE220C; --c2: #FF968D; --c-on: #ffffff; }
-.c-magenta, .c-rose, .c-violet           { --c: #D41876; --c2: #FF95CA; --c-on: #ffffff; }
+/* Palette sombre et feutrée : encre, sarcelle, sauge, ocre, bordeaux, prune.
+   --c2 est une version claire et désaturée de la même teinte (voile, dégradés). */
+.math-card, .c-bleu                      { --c: #1F4E79; --c2: #8DB0D4; --c-on: #ffffff; }
+.c-canard                                { --c: #0F5F5C; --c2: #86C3BC; --c-on: #ffffff; }
+.c-vert                                  { --c: #3C6B3A; --c2: #A3C79E; --c-on: #ffffff; }
+.c-orange, .c-ambre                      { --c: #95601A; --c2: #E3C48E; --c-on: #ffffff; }
+.c-rouge                                 { --c: #8E2A2E; --c2: #DDA19B; --c-on: #ffffff; }
+.c-magenta, .c-rose, .c-violet           { --c: #6E2F5E; --c2: #C9A0BF; --c-on: #ffffff; }
 /* page d'accueil Maths : une teinte par domaine */
-.card-fondements   { --c: #0076BA; --c2: #56C1FF; --c-on: #ffffff; }
-.card-arithmetique { --c: #EE220C; --c2: #FF968D; --c-on: #ffffff; }
-.card-algebre      { --c: #00A89D; --c2: #73FDEA; --c-on: #ffffff; }
-.card-geometrie    { --c: #1DB100; --c2: #88FA4E; --c-on: #ffffff; }
-.card-proba        { --c: #D41876; --c2: #FF95CA; --c-on: #ffffff; }
-.card-stat         { --c: #FEAE00; --c2: #FFF056; --c-on: #1f2933; }
-.card-jeux         { --c: #0076BA; --c2: #56C1FF; --c-on: #ffffff; }
+.card-fondements   { --c: #1F4E79; --c2: #8DB0D4; --c-on: #ffffff; }
+.card-arithmetique { --c: #8E2A2E; --c2: #DDA19B; --c-on: #ffffff; }
+.card-algebre      { --c: #0F5F5C; --c2: #86C3BC; --c-on: #ffffff; }
+.card-geometrie    { --c: #3C6B3A; --c2: #A3C79E; --c-on: #ffffff; }
+.card-proba        { --c: #6E2F5E; --c2: #C9A0BF; --c-on: #ffffff; }
+.card-stat         { --c: #95601A; --c2: #E3C48E; --c-on: #ffffff; }
+.card-jeux         { --c: #1F4E79; --c2: #8DB0D4; --c-on: #ffffff; }
 
 .math-card h3::after {
   background: linear-gradient(90deg, var(--c), var(--c2));
@@ -424,7 +426,7 @@ html
   border-radius: 16px;
   border-color: #e7eaef;
   background:
-    linear-gradient(180deg, color-mix(in srgb, var(--c2) 30%, transparent) 0%, color-mix(in srgb, var(--c2) 10%, transparent) 45%, transparent 85%),
+    linear-gradient(180deg, color-mix(in srgb, var(--c2) 34%, transparent) 0%, color-mix(in srgb, var(--c2) 12%, transparent) 45%, transparent 85%),
     #ffffff;
   box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 1px rgba(16, 24, 40, 0.02);
   transition: transform 0.25s cubic-bezier(.2, .8, .2, 1), box-shadow 0.25s ease, border-color 0.25s ease;
@@ -438,10 +440,9 @@ html
    (assombrie pour les teintes claires). Les cercles « creux » prennent la
    teinte du voile pour paraître évidés. */
 .math-card {
-  --voile: color-mix(in srgb, var(--c2) 30%, #ffffff);
-  --ic: color-mix(in srgb, var(--c) 86%, #1f2933);
+  --voile: color-mix(in srgb, var(--c2) 34%, #ffffff);
+  --ic: var(--c);
 }
-.c-orange, .c-ambre, .card-stat { --ic: color-mix(in srgb, var(--c) 55%, #5c3a00); }
 .math-icon {
   width: 64px;
   height: 64px;
