@@ -102,13 +102,13 @@
     const pos = new Map(), entree = chemin[mu];
     if (petit) {                                         // écran étroit : la queue descend vers le haut de la boucle
       R = Math.min(92, 34 + lambda * 7); pasQ = 40; cx = W / 2;
-      cy = top + 14 + mu * pasQ + R; H = cy + R + 48;
+      cy = top + 14 + mu * pasQ + R; H = cy + R + 66;
       for (let k = 0; k < lambda; k++) { const a = Math.PI / 2 + 2 * Math.PI * k / lambda; pos.set(chemin[mu + k], { x: cx + R * Math.cos(a), y: cy - R * Math.sin(a) }); }
       const E0 = pos.get(entree);
       for (let k = 0; k < mu; k++) pos.set(chemin[k], { x: E0.x, y: E0.y - (mu - k) * pasQ });
     } else {
-      R = Math.min(100, 30 + lambda * 10); cy = top + R + 26; H = cy + R + 40;
-      pasQ = Math.min(64, (W - 2 * R - 60) / Math.max(1, mu)); cx = W / 2 + mu * pasQ / 2;
+      R = Math.min(100, 30 + lambda * 10); cy = top + R + 46; H = cy + R + 62;
+      pasQ = Math.min(64, (W - 2 * R - 130) / Math.max(1, mu)); cx = W / 2 + mu * pasQ / 2;
       for (let k = 0; k < lambda; k++) { const a = Math.PI + 2 * Math.PI * k / lambda; pos.set(chemin[mu + k], { x: cx + R * Math.cos(a), y: cy - R * Math.sin(a) }); }
       const E0 = pos.get(entree);
       for (let k = 0; k < mu; k++) pos.set(chemin[k], { x: E0.x - (mu - k) * pasQ, y: cy });
@@ -119,7 +119,7 @@
     // fond : l'anneau de la boucle et la queue
     const D = pos.get(chemin[0]);
     h += `<circle cx="${cx}" cy="${cy}" r="${R}" class="fl-anneau"/><line x1="${D.x}" y1="${D.y}" x2="${E.x}" y2="${E.y}" class="fl-qfond"/>`;
-    h += (petit ? `<text x="${D.x - rn - 6}" y="${D.y + 4}" class="fl-lab" text-anchor="end" style="text-anchor:end">départ</text>` : `<text x="${D.x}" y="${D.y + rn + 18}" class="fl-lab">départ</text>`) + `<text x="${cx}" y="${cy + 5}" class="fl-rho">boucle de ${lambda}</text>`;
+    h += (petit ? `<text x="${D.x - rn - 6}" y="${D.y + 4}" class="fl-lab" text-anchor="end" style="text-anchor:end">départ</text>` : `<text x="${D.x}" y="${D.y - rn - 8}" class="fl-lab">départ</text>`) + `<text x="${petit ? cx : cx + R * 0.15}" y="${petit ? cy + R * 0.3 : cy + R * 0.45}" class="fl-rho">boucle de ${lambda}</text>`;
     // arêtes i -> t[i], suivant l'anneau pour la boucle
     const arete = (i, cls, mk) => {
       const j = t[i], p = pos.get(i), q = pos.get(j);
@@ -140,11 +140,24 @@
       const e = i === entree;
       h += `<circle cx="${p.x}" cy="${p.y}" r="${rn}" class="fl-noeud${e ? ' fl-entree' : ''}${e && st.fini ? ' fl-trouve' : ''}"/><text x="${p.x}" y="${p.y + rn * 0.36}" class="fl-n" style="font-size:${Math.round(rn * 1.0)}px">${i}</text>`;
     }
-    h += petit ? `<text x="${E.x + rn + 6}" y="${E.y - 4}" class="fl-lab fl-lent" style="text-anchor:start">entrée</text>` : `<text x="${E.x - rn - 4}" y="${E.y - rn + 2}" class="fl-lab fl-lent" style="text-anchor:end">entrée</text>`;
-    // les deux coureurs, au-dessus de leur nœud
-    const pion = (i, e, dx) => { const p = pos.get(i); if (!p) return ''; const dq = petit && chemin.indexOf(i) < mu; return `<g class="fl-pion" style="transform:translate(${dq ? p.x + rn + 16 + dx * 2 : p.x + dx}px, ${dq ? p.y : p.y + rn + 16}px)"><circle r="12" class="${e === '🐢' ? 'fl-pt' : 'fl-pl'}"/><text y="5" class="fl-em">${e}</text></g>`; };
+    // direction « vers l'extérieur » d'un nœud : radiale pour la boucle, perpendiculaire à la queue sinon ;
+    // à l'entrée, la queue arrive par l'extérieur : on tourne d'un huitième de tour pour l'éviter
+    const dirNoeud = (i, tourne) => {
+      if (chemin.indexOf(i) < mu) return petit ? [1, 0] : [0, 1];
+      const p = pos.get(i), a = Math.atan2(cy - p.y, p.x - cx) + (i === entree ? tourne : 0);
+      return [Math.cos(a), -Math.sin(a)];
+    };
+    const [lx, ly] = dirNoeud(entree, Math.PI / 4), dl = rn + 14;
+    h += `<text x="${E.x + lx * dl}" y="${E.y + ly * dl + 4}" class="fl-lab fl-lent" style="text-anchor:${lx < -0.3 ? 'end' : lx > 0.3 ? 'start' : 'middle'}">entrée</text>`;
+    // les deux coureurs, à l'extérieur de leur nœud ; côte à côte s'ils sont sur le même
+    const pion = (i, e, cote) => {
+      const p = pos.get(i); if (!p) return '';
+      // à l'entrée, flèches et étiquette occupent l'extérieur : les jetons se placent à l'intérieur de l'anneau
+      const [ux, uy] = dirNoeud(i, 0), [vx, vy] = i === entree ? [-ux, -uy] : [ux, uy], d = rn + 15, x = p.x + vx * d - vy * 13 * cote, y = p.y + vy * d + vx * 13 * cote;
+      return `<g class="fl-pion" style="transform:translate(${x}px, ${y}px)"><circle r="12" class="${e === '🐢' ? 'fl-pt' : 'fl-pl'}"/><text y="5" class="fl-em">${e}</text></g>`;
+    };
     const meme = st.tortue === st.lievre;
-    h += pion(st.tortue, '🐢', meme ? -13 : 0) + pion(st.lievre, '🐇', meme ? 13 : 0);
+    h += pion(st.tortue, '🐢', meme ? -1 : 0) + pion(st.lievre, '🐇', meme ? 1 : 0);
     if (st.fini) h += `<text x="${W - 10}" y="${H - 8}" class="fl-badge" style="text-anchor:end">doublon : ${st.tortue}</text>`;
     h += `<text x="10" y="${H - 8}" class="fl-bas">${petit ? `queue ${mu} · boucle ${lambda}` : `queue : ${mu} cases · boucle : ${lambda} cases · ${st.phase === 1 ? `pas ${st.pas}` : `phase 2, pas ${st.pas2 || 0}`}`}</text>`;
     svg.innerHTML = h;
