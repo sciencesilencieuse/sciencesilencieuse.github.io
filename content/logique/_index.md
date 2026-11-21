@@ -78,7 +78,7 @@ La logique est à l'intersection de l'informatique, des mathématiques et de la 
 
 <div class="math-card c-magenta">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M9 20a15 15 0 0 1 26-8" style="fill:none;stroke:var(--acc);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round"/><path d="M31 5l9 7-11 3z" style="fill:var(--acc)"/><path d="M39 28a15 15 0 0 1-26 8" style="fill:none;stroke:#9AA3AE;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round"/><path d="M17 43l-9-7 11-3z" style="fill:#9AA3AE"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M10.43 32.48A16 16 0 0 1 33.61 11.37" style="fill:none;stroke:var(--acc);stroke-width:2.6;stroke-linecap:butt;stroke-linejoin:round"/><path d="M38.13 16.49L29.91 13.83L36.51 8.01z" style="fill:var(--acc)"/><path d="M39.84 21.77A16 16 0 0 1 14.39 36.63" style="fill:none;stroke:#9AA3AE;stroke-width:2.6;stroke-linecap:butt;stroke-linejoin:round"/><path d="M9.87 31.51L18.09 34.17L11.49 39.99z" style="fill:#9AA3AE"/></svg></span>
 <h3><a href="./paradoxes/">Paradoxes</a></h3>
 </div>
 <div class="carte-texte">Quand un raisonnement impeccable mène droit dans le mur.</div>

@@ -71,7 +71,19 @@ I[('logique', 'Calcul des propositions')] = svg(L('M6 36l8-24 8 24', A, 3), L('M
 I[('logique', 'Logique modale')] = svg(R(4, 15, 18, 18, 2, G2), P('M35 10l11 14-11 14-11-14z', A))
 I[('logique', 'Calcul des prédicats')] = svg(L('M12 5l12 26 12-26M16.6 15h14.8', A, 3), *[C(x, 41, 2.4, G2) for x in (12, 20, 28, 36)])
 I[('logique', 'Prouvabilité et incomplétude')] = svg(R(6, 6, 36, 36, 6, G1, G3, 1.2), L('M14 25l7 7 13-15', A, 3.2))
-I[('logique', 'Paradoxes')] = svg(L('M9 20a15 15 0 0 1 26-8', A, 2.6), P('M31 5l9 7-11 3z', A), L('M39 28a15 15 0 0 1-26 8', G3, 2.6), P('M17 43l-9-7 11-3z', G3))
+def arc_fleche(cx, cy, r, a0, a1, col, w=2.6, h=7.5, l=4.4):
+    """arc de cercle de l'angle a0 à a1 (degrés, sens trigonométrique), terminé par une
+    pointe dont l'axe suit la corde de la fin de l'arc : elle prolonge exactement le trait."""
+    Pt = lambda a: (cx + r * math.cos(math.radians(a)), cy - r * math.sin(math.radians(a)))
+    sg = 1 if a1 > a0 else -1
+    ab = a1 - sg * math.degrees(h / r)                       # base de la pointe, sur le cercle
+    (x0, y0), (xb, yb), (xt, yt) = Pt(a0), Pt(ab), Pt(a1)
+    ux, uy = xt - xb, yt - yb; n = math.hypot(ux, uy); ux, uy = ux / n, uy / n
+    grand = 1 if abs(ab - a0) > 180 else 0
+    arc = L(f'M{x0:.2f} {y0:.2f}A{r} {r} 0 {grand} {0 if sg > 0 else 1} {xb + ux * 0.6:.2f} {yb + uy * 0.6:.2f}', col, w).replace('stroke-linecap:round', 'stroke-linecap:butt')
+    pointe = P(f'M{xt:.2f} {yt:.2f}L{xb - uy * l:.2f} {yb + ux * l:.2f}L{xb + uy * l:.2f} {yb - ux * l:.2f}z', col)
+    return arc + pointe
+I[('logique', 'Paradoxes')] = svg(arc_fleche(24, 24, 16, 212, 28, A), arc_fleche(24, 24, 16, 8, -152, G3))
 I[('logique', 'Bayésianisme')] = svg(P('M3 41c9 0 11-13 16-13s9 13 26 13z', G1, G3, 1.2), P('M16 41c6 0 8-32 13-32s7 32 13 32z', B, A, 1.6, None), L('M3 41h42', G3, 1.2))
 # logique modale
 I[('logique/modale', 'Syntaxe et sémantique')] = svg(fl(24, 10, 12, 30, G3, 1.4), fl(24, 10, 36, 30, G3, 1.4), fl(13, 35, 34, 35, G3, 1.4), C(24, 8, 5, A), C(9, 35, 5, G1, G3, 1.2), C(39, 35, 5, B))
