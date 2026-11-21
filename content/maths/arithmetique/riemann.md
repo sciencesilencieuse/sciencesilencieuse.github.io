@@ -373,19 +373,53 @@ Le second terme est la somme des termes d'indice pair&nbsp;: ils disparaissent, 
 <details>
 <summary>le calcul&nbsp;: pourquoi la somme sur les entiers est un produit sur les premiers</summary>
 
-Soit $s$ complexe de partie réelle $\sigma > 1$, et $P \ge 2$ un entier. Pour chaque nombre premier $p$, la série géométrique de raison $p^{-s}$ (de module $p^{-\sigma} < 1$) donne
+On part d'un exemple avec deux nombres premiers seulement, puis on passe à tous. Soit $s$ un nombre complexe de partie réelle $\sigma > 1$.
 
-$$\frac{1}{1 - p^{-s}} = \sum\_{k=0}^{+\infty} p^{-ks}.$$
+**Étape 1&nbsp;: un facteur par nombre premier.** Pour un nombre premier $p$, le nombre $p^{-s}$ est de module $p^{-\sigma} < 1$. La série géométrique de raison $p^{-s}$ converge donc, et
 
-Multiplions ces séries pour tous les premiers $p \le P$. Elles sont absolument convergentes&nbsp;: on peut développer le produit terme à terme. On obtient la somme de tous les termes $p\_1^{-k\_1 s} \cdots p\_r^{-k\_r s} = \bigl(p\_1^{k\_1} \cdots p\_r^{k\_r}\bigr)^{-s}$, où $p\_1, \dots, p\_r$ sont les premiers $\le P$ et les exposants $k\_i \ge 0$ sont arbitraires. D'après l'**unicité de la décomposition en facteurs premiers**, chaque entier $n$ dont *tous* les facteurs premiers sont $\le P$ s'écrit d'une seule façon sous cette forme. Il apparaît donc exactement une fois, sous la forme $n^{-s}$&nbsp;:
+$$\frac{1}{1 - p^{-s}} = 1 + p^{-s} + p^{-2s} + p^{-3s} + \cdots = \sum\_{k=0}^{+\infty} \bigl(p^k\bigr)^{-s}.$$
+
+Ce facteur contient les termes $n^{-s}$ de *toutes les puissances de $p$* ($n = 1, p, p^2, p^3, \dots$), et de rien d'autre.
+
+**Étape 2&nbsp;: multiplier deux facteurs.** Prenons $p = 2$ et $p = 3$. En développant le produit des deux séries, chaque terme de la première est multiplié par chaque terme de la seconde&nbsp;:
+
+$$\frac{1}{1 - 2^{-s}} \cdot \frac{1}{1 - 3^{-s}} = \Bigl(\sum\_{a \ge 0} \bigl(2^a\bigr)^{-s}\Bigr)\Bigl(\sum\_{b \ge 0} \bigl(3^b\bigr)^{-s}\Bigr) = \sum\_{a \ge 0}\sum\_{b \ge 0} \bigl(2^a 3^b\bigr)^{-s},$$
+
+car $\bigl(2^a\bigr)^{-s}\bigl(3^b\bigr)^{-s} = \bigl(2^a 3^b\bigr)^{-s}$. Les termes obtenus sont donc les $n^{-s}$ pour les entiers $n = 2^a 3^b$, rangés ci-dessous dans un tableau (une ligne par $a$, une colonne par $b$)&nbsp;:
+
+<div style="overflow-x:auto;">
+<table style="margin:0.8em auto;border-collapse:collapse;text-align:center;">
+<tr><th style="padding:4px 14px;"></th><th style="padding:4px 14px;">$b = 0$</th><th style="padding:4px 14px;">$b = 1$</th><th style="padding:4px 14px;">$b = 2$</th><th style="padding:4px 14px;">$b = 3$</th></tr>
+<tr><th style="padding:4px 14px;">$a = 0$</th><td style="padding:4px 14px;border:1px solid #cbd5e1;">$1$</td><td style="padding:4px 14px;border:1px solid #cbd5e1;">$3$</td><td style="padding:4px 14px;border:1px solid #cbd5e1;">$9$</td><td style="padding:4px 14px;border:1px solid #cbd5e1;">$27$</td></tr>
+<tr><th style="padding:4px 14px;">$a = 1$</th><td style="padding:4px 14px;border:1px solid #cbd5e1;">$2$</td><td style="padding:4px 14px;border:1px solid #cbd5e1;">$6$</td><td style="padding:4px 14px;border:1px solid #cbd5e1;">$18$</td><td style="padding:4px 14px;border:1px solid #cbd5e1;">$54$</td></tr>
+<tr><th style="padding:4px 14px;">$a = 2$</th><td style="padding:4px 14px;border:1px solid #cbd5e1;">$4$</td><td style="padding:4px 14px;border:1px solid #cbd5e1;background:#fde68a;">$12$</td><td style="padding:4px 14px;border:1px solid #cbd5e1;">$36$</td><td style="padding:4px 14px;border:1px solid #cbd5e1;">$108$</td></tr>
+<tr><th style="padding:4px 14px;">$a = 3$</th><td style="padding:4px 14px;border:1px solid #cbd5e1;">$8$</td><td style="padding:4px 14px;border:1px solid #cbd5e1;">$24$</td><td style="padding:4px 14px;border:1px solid #cbd5e1;">$72$</td><td style="padding:4px 14px;border:1px solid #cbd5e1;">$216$</td></tr>
+</table>
+</div>
+
+Chaque case contient un entier $n = 2^a 3^b$, c'est-à-dire un entier dont les seuls facteurs premiers sont $2$ et $3$&nbsp;; le terme correspondant de la somme est $n^{-s}$. Le développement «&nbsp;terme à terme&nbsp;» est permis parce que les deux séries sont absolument convergentes&nbsp;: on peut alors les multiplier et regrouper les termes dans n'importe quel ordre.
+
+**Étape 3&nbsp;: chaque entier apparaît une fois, et une seule.** Regardons l'entier $12 = 2^2 \cdot 3$ (case colorée). Il n'a qu'une seule écriture sous la forme $2^a 3^b$, avec $a = 2$ et $b = 1$&nbsp;: il figure donc dans une seule case. C'est l'**unicité de la décomposition en facteurs premiers**, et c'est elle qui garantit que la somme obtenue est exactement la somme des $n^{-s}$, avec un coefficient $1$ devant chaque terme&nbsp;:
+
+$$\frac{1}{1 - 2^{-s}} \cdot \frac{1}{1 - 3^{-s}} = \sum\_{n\ :\ \text{les facteurs premiers de } n \text{ sont } 2 \text{ ou } 3} n^{-s}.$$
+
+Si un entier pouvait s'écrire de deux façons, il apparaîtrait deux fois et la formule serait fausse. (Il existe des systèmes de nombres où la décomposition n'est pas unique, par exemple $6 = 2 \cdot 3 = (1 + \sqrt{-5})(1 - \sqrt{-5})$ dans les entiers de $\mathbb{Q}(\sqrt{-5})$&nbsp;: le produit d'Euler y prend une autre forme.)
+
+*Vérification pour $s = 2$.* Le produit vaut $\frac{1}{1 - 1/4} \cdot \frac{1}{1 - 1/9} = \frac{4}{3} \cdot \frac{9}{8} = \frac{3}{2}$. La somme des cases du tableau est $1 + \frac{1}{4} + \frac{1}{9} + \frac{1}{16} + \frac{1}{36} + \frac{1}{64} + \frac{1}{81} + \cdots$, dont les sept termes écrits valent déjà $1{,}48$ environ, et qui tend bien vers $1{,}5$.
+
+**Étape 4&nbsp;: tous les nombres premiers jusqu'à $P$.** Le même raisonnement s'applique à un nombre quelconque de facteurs. Pour les nombres premiers $p \le P$,
 
 $$\prod\_{p \le P} \frac{1}{1 - p^{-s}} = \sum\_{n\ :\ \text{tous les facteurs premiers de } n \text{ sont} \le P} n^{-s}.$$
 
-Cette somme contient tous les entiers $n \le P$, puisque les facteurs premiers d'un entier $n$ sont $\le n$. La différence avec $\zeta(s)$ est donc une somme sur des entiers $n > P$, et
+Cette somme porte sur *presque* tous les entiers. Elle contient tous les $n \le P$, car les facteurs premiers de $n$ sont eux-mêmes $\le n \le P$. Il lui manque seulement certains entiers $n > P$&nbsp;: ceux qui ont au moins un facteur premier supérieur à $P$ (par exemple $2 \cdot 3 \cdot 101$ si $P = 100$).
 
-$$\left| \zeta(s) - \prod\_{p \le P} \frac{1}{1 - p^{-s}} \right| \le \sum\_{n > P} n^{-\sigma} \xrightarrow[P \to +\infty]{} 0,$$
+**Étape 5&nbsp;: faire tendre $P$ vers l'infini.** La somme complète $\zeta(s)$ contient les mêmes termes plus les termes manquants, qui sont tous d'indice $n > P$. Leur total est donc petit&nbsp;: en prenant les modules, $|n^{-s}| = n^{-\sigma}$, et
 
-car $\sum n^{-\sigma}$ converge. Le produit infini converge donc vers $\zeta(s)$.
+$$\left| \zeta(s) - \prod\_{p \le P} \frac{1}{1 - p^{-s}} \right| \le \sum\_{n > P} n^{-\sigma}.$$
+
+Le membre de droite est le reste d'une série convergente (car $\sigma > 1$)&nbsp;: il tend vers $0$ quand $P$ tend vers l'infini. Pour $s = 2$ et $P = 3$, par exemple, il vaut $\sum\_{n > 3} \frac{1}{n^2} \approx 0{,}28$, et l'écart réel est $\zeta(2) - \frac{3}{2} \approx 0{,}14$, bien inférieur. Les produits partiels, calculés pour $P = 2, 3, 5, 7, \dots$, convergent donc vers $\zeta(s)$&nbsp;: c'est la définition d'un produit infini.
+
+*Où sert l'hypothèse $\sigma > 1$&nbsp;?* À deux endroits&nbsp;: les séries géométriques de l'étape 1 convergent parce que $p^{-\sigma} < 1$, et le reste de l'étape 5 tend vers $0$ parce que la série $\sum n^{-\sigma}$ converge. Pour $\sigma \le 1$, ce dernier point est faux (série harmonique), et la formule n'a plus de sens.
 
 </details>
 </div>
