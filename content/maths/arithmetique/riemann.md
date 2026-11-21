@@ -1118,6 +1118,8 @@ où l'on a développé $\frac{p^{-s}}{1 - p^{-s}} = \sum\_{k \ge 1} p^{-ks}$ (s�
 <li>en les zéros triviaux, qui donnent un terme de plus petite taille.</li>
 </ul>
 
+### La formule explicite
+
 On obtient la formule suivante, due à von Mangoldt (1895) à partir des idées de Riemann.
 
 <div id="theo">
@@ -1134,65 +1136,10 @@ où la somme porte sur les zéros non triviaux $\rho$ de $\zeta$ (comptés avec 
 
 Le terme principal $x$ est le théorème des nombres premiers. Tous les écarts à cette tendance sont dus aux zéros. Pour un zéro $\rho = \frac{1}{2} + \mathrm{i}\gamma$ sur la droite critique, on a $x^\rho = \sqrt{x}\\,\mathrm{e}^{\mathrm{i}\gamma\ln x}$&nbsp;: une **onde** d'amplitude $\sqrt{x}$ qui oscille en fonction de $\ln x$, avec la fréquence $\gamma$. Chaque zéro apporte sa fréquence. Reconstruire l'escalier des nombres premiers est une synthèse de Fourier dont les fréquences sont les ordonnées des zéros.
 
-<div class="svg-container" id="rz7">
-<div class="rz-ctl">
-<label><span>zéros utilisés <i>K</i></span> <input type="range" class="fig-range" id="rz7-k" min="0" max="79" step="1" value="0" style="width:170px;margin:0;"> <span id="rz7-kv" style="min-width:1.8em;">0</span></label>
-<button type="button" class="fig-btn" id="rz7-go"></button>
-</div>
-<div class="rz-out" id="rz7-out"></div>
-</div>
-<script>
-(function () {
-  var R = window.RZ, box = R.$('rz7'); if (!box) return;
-  var W = 600, H = 360, XMIN = 1.4, XMAX = 40, X0 = 38, X1 = 588, Y0 = 248, Y1 = 34, YM = 44;
-  var svg = R.fig('rz7', W, H, "La formule explicite de von Mangoldt. La fonction en escalier ψ(x), qui augmente de ln p à chaque puissance d'un nombre premier p, est reconstruite en ajoutant une à une les oscillations associées aux zéros de la fonction ζ. Avec zéro zéro, on obtient la courbe lisse x − ln 2π ; avec de plus en plus de zéros, les marches apparaissent.");
-  function X(x) { return X0 + (x - XMIN) / (XMAX - XMIN) * (X1 - X0); } function Y(y) { return Y0 - y / YM * (Y0 - Y1); }
-  var a, gd = ''; for (a = 0; a <= 40; a += 10) gd += 'M' + X(Math.max(a, XMIN)) + ',' + Y0 + 'V' + Y1; for (a = 0; a <= 40; a += 10) gd += 'M' + X0 + ',' + Y(a) + 'H' + X1;
-  R.el('path', { d: gd, stroke: '#eef2f6', fill: 'none' }, svg);
-  R.el('line', { x1: X0, y1: Y0, x2: X1 + 4, y2: Y0, stroke: '#94a3b8' }, svg); R.el('line', { x1: X0, y1: Y0, x2: X0, y2: Y1 - 8, stroke: '#94a3b8' }, svg);
-  for (a = 10; a <= 40; a += 10) R.txt(svg, X(a), Y0 + 14, String(a), { size: 11, anchor: 'middle', fill: '#64748b' });
-  for (a = 0; a <= 40; a += 10) R.txt(svg, X0 - 6, Y(a) + 4, String(a), { size: 11, anchor: 'end', fill: '#64748b' });
-  R.txt(svg, X1 + 12, Y0 + 4, "<tspan font-style='italic'>x</tspan>", { size: 12, anchor: 'end', fill: '#64748b' });
-  R.txt(svg, 14, 20, "ψ(<tspan font-style='italic'>x</tspan>) : somme des ln <tspan font-style='italic'>p</tspan> pour les puissances de premiers <tspan font-style='italic'>p</tspan>ᵏ ≤ <tspan font-style='italic'>x</tspan>", { size: 12.5, fill: '#64748b', italic: true });
-  // ψ exact : escalier
-  var pp = [], p, k, q; var P = R.sieve(40); P.forEach(function (p) { for (q = p; q <= 40; q *= p) pp.push([q, Math.log(p)]); }); pp.sort(function (u, v) { return u[0] - v[0]; });
-  var d = 'M' + X(XMIN) + ',' + Y(0), acc = 0; pp.forEach(function (e) { d += 'L' + X(e[0]).toFixed(1) + ',' + Y(acc).toFixed(1); acc += e[1]; d += 'L' + X(e[0]).toFixed(1) + ',' + Y(acc).toFixed(1); }); d += 'L' + X(XMAX) + ',' + Y(acc);
-  R.el('path', { d: d, fill: 'none', stroke: '#1e293b', 'stroke-width': 1.8 }, svg);
-  var apx = R.el('path', { fill: 'none', stroke: '#C2770B', 'stroke-width': 2.2, 'stroke-linejoin': 'round' }, svg);
-  R.txt(svg, X0 + 14, Y1 + 24, "── ψ(<tspan font-style='italic'>x</tspan>) exacte", { size: 12.5, fill: '#1e293b' });
-  R.txt(svg, X0 + 14, Y1 + 42, "── approximation avec <tspan font-style='italic'>K</tspan> zéros", { size: 12.5, fill: '#C2770B' });
-  // onde du dernier zéro
-  var WY0 = 336, WH = 38;
-  R.el('line', { x1: X0, y1: WY0, x2: X1, y2: WY0, stroke: '#cbd5e1' }, svg);
-  var wave = R.el('path', { fill: 'none', stroke: '#006C65', 'stroke-width': 1.5 }, svg), wl = R.txt(svg, X0, 281, '', { size: 12, fill: '#006C65', italic: true });
-  var xs = [], i, x; for (x = XMIN; x <= XMAX; x += 0.04) xs.push(x);
-  var lnx = xs.map(Math.log), sq = xs.map(Math.sqrt), base = xs.map(function (x) { return x - Math.log(2 * Math.PI) - 0.5 * Math.log(1 - 1 / (x * x)); });
-  var cum = new Float64Array(xs.length), Kc = 0, K = 0;
-  function term(j, i) { var g = R.ZEROS[j], ph = g * lnx[i], den = 0.25 + g * g; return 2 * sq[i] * ((0.5 * Math.cos(ph) + g * Math.sin(ph)) / den); }   // 2√x Re(x^{iγ}/(1/2+iγ))
-  function sync() {
-    while (Kc < K) { for (i = 0; i < xs.length; i++) cum[i] += term(Kc, i); Kc++; }
-    while (Kc > K) { Kc--; for (i = 0; i < xs.length; i++) cum[i] -= term(Kc, i); }
-    var dd = '', e = 0, em = 0, cnt = 0; for (i = 0; i < xs.length; i++) { var v = base[i] - cum[i]; dd += (i ? 'L' : 'M') + X(xs[i]).toFixed(1) + ',' + Y(Math.max(-2, Math.min(YM, v))).toFixed(1); }
-    apx.setAttribute('d', dd);
-    if (K > 0) {
-      var wd = '', j = K - 1, mx = 0; for (i = 0; i < xs.length; i++) mx = Math.max(mx, Math.abs(term(j, i)));
-      for (i = 0; i < xs.length; i++) wd += (i ? 'L' : 'M') + X(xs[i]).toFixed(1) + ',' + (WY0 - term(j, i) / mx * WH * 0.5).toFixed(1);
-      wave.setAttribute('d', wd); wave.setAttribute('visibility', 'visible'); wl.innerHTML = "onde ajoutée par le zéro n°" + K + " (<tspan font-style='italic'>γ</tspan> = " + R.fmt(R.ZEROS[j], 3) + ") : amplitude ~ √<tspan font-style='italic'>x</tspan>, oscillation en ln <tspan font-style='italic'>x</tspan>";
-    } else { wave.setAttribute('visibility', 'hidden'); wl.innerHTML = "avec 0 zéro : la courbe lisse <tspan font-style='italic'>x</tspan> − ln 2π"; }
-    R.$('rz7-kv').textContent = K; R.$('rz7-k').value = K;
-    // erreur moyenne sur [3,40]
-    var s2 = 0, nn = 0; for (i = 0; i < xs.length; i++) if (xs[i] >= 3) { var tr = 0; pp.forEach(function (q2) { if (q2[0] <= xs[i]) tr += q2[1]; }); var df = base[i] - cum[i] - tr; s2 += df * df; nn++; }
-    R.$('rz7-out').innerHTML = K === 0 ? "Sans les zéros, on obtient la tendance moyenne : ψ(<i>x</i>) ≈ <i>x</i>." : "avec <b>" + K + "</b> zéro" + (K > 1 ? 's' : '') + " (plus grande ordonnée γ = " + R.fmt(R.ZEROS[K - 1], 1) + ") : écart quadratique moyen avec ψ(<i>x</i>) sur [3 ; 40] = <b>" + R.fmt(Math.sqrt(s2 / nn), 2) + "</b>";
-  }
-  R.$('rz7-k').addEventListener('input', function () { K = parseInt(this.value, 10); pl.stop(); sync(); });
-  var acc2 = 0, hold = 0;
-  var pl = R.player(R.$('rz7-go'), box, function (dt) { if (K >= 79) { hold += dt; if (hold > 2) { K = 0; hold = 0; sync(); } return; } acc2 += dt; if (acc2 > 0.22) { acc2 = 0; K++; sync(); } }, false);
-  sync();
-})();
-</script>
-<p class="legende">La formule explicite en action. L'escalier noir est $\psi(x)$. La courbe orange est $x - \ln 2\pi - \frac{1}{2}\ln(1 - x^{-2})$ moins la somme des contributions des $K$ premiers zéros (chaque zéro $\frac{1}{2} \pm \mathrm{i}\gamma$ apporte $2\sqrt{x}\operatorname{Re}\frac{x^{\mathrm{i}\gamma}}{1/2 + \mathrm{i}\gamma}$). Avec $K = 0$, on a la tendance lisse. En ajoutant des zéros, les marches se dessinent, de plus en plus nettes, aux puissances de nombres premiers ($2, 3, 4, 5, 7, 8, 9, \dots$). La courbe verte montre la dernière onde ajoutée.</p>
+La reconstruction de cet escalier, zéro après zéro, est animée [plus bas](#reconstruction).
 
-### La fonction de comptage elle-même
+
+### La même formule pour $\pi(x)$
 
 La fonction qu'on cherche vraiment à reconstruire est $\pi(x)$, le nombre de premiers inférieurs ou égaux à $x$. Riemann a donné une formule directe pour elle. Il compte chaque puissance $p^k$ d'un nombre premier avec le poids $\frac{1}{k}$, ce qui définit $J(x) = \sum\_{k \ge 1} \frac{1}{k}\\,\pi\bigl(x^{1/k}\bigr)$, et il obtient
 
@@ -1202,11 +1149,13 @@ La fonction qu'on cherche vraiment à reconstruire est $\pi(x)$, le nombre de pr
 
 Pour $x > 1$,
 
-$$J(x) = \mathrm{li}(x) - \sum\_{\rho} \mathrm{li}\bigl(x^{\rho}\bigr) - \ln 2 + \int\_x^{+\infty} \frac{\mathrm{d}t}{t\,(t^2 - 1)\ln t},$$
+$$J(x) = \mathrm{li}(x) - \sum\_{\rho} \mathrm{li}\bigl(x^{\rho}\bigr) - \ln 2 + \int\_x^{+\infty} \frac{\mathrm{d}t}{t\\,(t^2 - 1)\ln t},$$
 
 où $\mathrm{li}(x^\rho)$ désigne la fonction exponentielle intégrale $\mathrm{Ei}(\rho\ln x)$, et l'on retrouve $\pi$ par $\pi(x) = \sum\_{n \ge 1} \frac{\mu(n)}{n}\\,J\bigl(x^{1/n}\bigr)$ ($\mu$ est la fonction de Möbius).
 
 </div>
+
+<br>
 
 <div id="preuve">
 <details>
@@ -1225,35 +1174,28 @@ où l'on a posé $m = nk$. Seuls les entiers $n \le \log\_2 x$ comptent, puisque
 
 Si l'on garde le seul terme $\mathrm{li}$, l'inversion donne la **fonction $R$ de Riemann**, $R(x) = \sum\_n \frac{\mu(n)}{n}\mathrm{li}\bigl(x^{1/n}\bigr)$, qui suit déjà l'escalier $\pi(x)$ de très près&nbsp;: c'est le meilleur point de départ sans les zéros. Chaque paire de zéros $\rho, \bar{\rho}$ ajoute ensuite une correction $-2\operatorname{Re} R(x^\rho)$, qui est une petite onde.
 
-<div class="svg-container" id="rz9">
+### Reconstruire l'escalier, zéro après zéro {#reconstruction}
+
+La figure suivante montre les deux formules à l'œuvre. Le bouton $\pi(x)$ ou $\psi(x)$ choisit la fonction reconstruite&nbsp;; le curseur (ou le bouton d'animation) ajoute les zéros un à un, par ordre croissant d'ordonnée.
+
+<div class="svg-container" id="rz7">
 <div class="rz-ctl">
-<label><span>zéros utilisés <i>K</i></span> <input type="range" class="fig-range" id="rz9-k" min="0" max="79" step="1" value="0" style="width:170px;margin:0;"> <span id="rz9-kv" style="min-width:1.8em;">0</span></label>
-<button type="button" class="fig-btn" id="rz9-go"></button>
+<span role="group" aria-label="Fonction à reconstruire" style="display:inline-flex;gap:6px;align-items:center;"><span style="font-size:0.95em;">reconstruire</span>
+<button type="button" class="fig-btn" id="rz7-bpi" aria-pressed="true"><span>π(<i>x</i>)</span></button>
+<button type="button" class="fig-btn" id="rz7-bps" aria-pressed="false"><span>ψ(<i>x</i>)</span></button></span>
+<label><span>zéros utilisés <i>K</i></span> <input type="range" class="fig-range" id="rz7-k" min="0" max="79" step="1" value="0" style="width:160px;margin:0;"> <span id="rz7-kv" style="min-width:1.8em;">0</span></label>
+<button type="button" class="fig-btn" id="rz7-go"></button>
 </div>
-<div class="rz-out" id="rz9-out"></div>
+<div class="rz-out" id="rz7-out"></div>
 </div>
 <script>
 (function () {
-  var R = window.RZ, box = R.$('rz9'); if (!box) return;
-  var W = 600, H = 360, XMIN = 2, XMAX = 50, X0 = 38, X1 = 588, Y0 = 248, Y1 = 34, YM = 19;
-  var svg = R.fig('rz9', W, H, "La formule de Riemann pour la fonction de comptage π(x) des nombres premiers. Avec zéro zéro, on obtient la fonction R de Riemann, qui suit déjà de près l'escalier π(x). En ajoutant un à un les zéros de la fonction zêta, la courbe se rapproche de plus en plus de l'escalier et ses marches apparaissent.");
-  function X(x) { return X0 + (x - XMIN) / (XMAX - XMIN) * (X1 - X0); } function Y(y) { return Y0 - y / YM * (Y0 - Y1); }
-  var a, gd = ''; for (a = 10; a <= 50; a += 10) gd += 'M' + X(a) + ',' + Y0 + 'V' + Y1; for (a = 0; a <= 15; a += 5) gd += 'M' + X0 + ',' + Y(a) + 'H' + X1;
-  R.el('path', { d: gd, stroke: '#eef2f6', fill: 'none' }, svg);
-  R.el('line', { x1: X0, y1: Y0, x2: X1 + 4, y2: Y0, stroke: '#94a3b8' }, svg); R.el('line', { x1: X0, y1: Y0, x2: X0, y2: Y1 - 8, stroke: '#94a3b8' }, svg);
-  for (a = 10; a <= 50; a += 10) R.txt(svg, X(a), Y0 + 14, String(a), { size: 11, anchor: 'middle', fill: '#64748b' });
-  for (a = 0; a <= 15; a += 5) R.txt(svg, X0 - 6, Y(a) + 4, String(a), { size: 11, anchor: 'end', fill: '#64748b' });
-  R.txt(svg, X1 + 12, Y0 + 4, "<tspan font-style='italic'>x</tspan>", { size: 12, anchor: 'end', fill: '#64748b' });
-  R.txt(svg, 14, 20, "π(<tspan font-style='italic'>x</tspan>) : nombre de nombres premiers ≤ <tspan font-style='italic'>x</tspan>", { size: 12.5, fill: '#64748b', italic: true });
-  // escalier exact
-  var P = R.sieve(50), d = 'M' + X(XMIN) + ',' + Y(1), c = 1;
-  P.forEach(function (p) { if (p > 2) { d += 'L' + X(p).toFixed(1) + ',' + Y(c).toFixed(1); c++; d += 'L' + X(p).toFixed(1) + ',' + Y(c).toFixed(1); } }); d += 'L' + X(XMAX) + ',' + Y(c);
-  R.el('path', { d: d, fill: 'none', stroke: '#1e293b', 'stroke-width': 1.8 }, svg);
-  function truePi(x) { var n = 0; P.forEach(function (p) { if (p <= x) n++; }); return n; }
-  // fonctions spéciales
-  var EG = 0.5772156649015329;
+  var R = window.RZ, box = R.$('rz7'); if (!box) return;
+  var W = 600, H = 360, X0 = 38, X1 = 588, Y0 = 248, Y1 = 34, WY0 = 336, WH = 38;
+  var svg = R.fig('rz7', W, H, "Reconstruction d'un escalier de nombres premiers à partir des zéros de la fonction zêta. L'escalier est soit π(x), le nombre de nombres premiers inférieurs ou égaux à x, soit ψ(x), qui augmente de ln p à chaque puissance d'un nombre premier p. Avec zéro zéro, on obtient la courbe lisse de la tendance moyenne ; en ajoutant un à un les zéros, les marches apparaissent.");
+  var EG = 0.5772156649015329, P = R.sieve(50), i;
   function li(y) { var L = Math.log(y), s = 0, t = 1, k; for (k = 1; k < 120; k++) { t *= L / k; s += t / k; } return EG + Math.log(L) + s; }
-  function ei(zr, zi) { // Im z > 0
+  function ei(zr, zi) { // exponentielle intégrale, Im z > 0
     var a = Math.hypot(zr, zi), sr, si, tr, ti, k, nr;
     if (a < 28) {
       sr = 0; si = 0; tr = 1; ti = 0;
@@ -1261,52 +1203,96 @@ Si l'on garde le seul terme $\mathrm{li}$, l'inversion donne la **fonction $R$ d
       return [EG + Math.log(a) + sr, Math.atan2(zi, zr) + si];
     }
     sr = 1; si = 0; tr = 1; ti = 0;
-    var d2 = zr * zr + zi * zi, ir = zr / d2, ii = -zi / d2;                    // 1/z
+    var d2 = zr * zr + zi * zi, ir = zr / d2, ii = -zi / d2;
     for (k = 1; k <= a; k++) { var ur = (tr * ir - ti * ii) * k, ui = (tr * ii + ti * ir) * k; if (Math.hypot(ur, ui) > Math.hypot(tr, ti)) break; tr = ur; ti = ui; sr += tr; si += ti; }
-    var e = Math.exp(zr), er = e * Math.cos(zi), ei_ = e * Math.sin(zi);        // e^z
-    var pr = er * sr - ei_ * si, pi = er * si + ei_ * sr;                        // e^z * s
-    return [(pr * ir - pi * ii), (pr * ii + pi * ir) + Math.PI];                 // /z, + iπ
+    var e = Math.exp(zr), er = e * Math.cos(zi), ei_ = e * Math.sin(zi), pr = er * sr - ei_ * si, pi = er * si + ei_ * sr;
+    return [(pr * ir - pi * ii), (pr * ii + pi * ir) + Math.PI];
   }
   var MU = { 1: 1, 2: -1, 3: -1, 5: -1 };
-  var xs = [], x; for (x = XMIN + 0.001; x <= XMAX; x += 0.08) xs.push(x);
-  var N = xs.length, base = new Float64Array(N), cum = new Float64Array(N), lis = new Float64Array(N), i;
   function tail(y) { var a0 = Math.log(y), h = 12 / 300, s = 0, j, u; for (j = 0; j < 300; j++) { u = a0 + (j + 0.5) * h; s += h / (u * (Math.exp(2 * u) - 1)); } return s; }
-  for (i = 0; i < N; i++) {
-    var tot = 0, n; for (n = 1; n <= 5; n++) { if (!MU[n]) continue; var y = Math.pow(xs[i], 1 / n); if (y < 2) continue; tot += MU[n] / n * (li(y) - Math.LN2 + tail(y)); }
-    base[i] = tot; lis[i] = li(xs[i]);
+  function grid(xmin, xmax, step) { var xs = [], x; for (x = xmin + 0.001; x <= xmax; x += step) xs.push(x); return xs; }
+  // ---- deux modes : π(x) et ψ(x) ----
+  var modes = {};
+  function psiSteps() { var pp = []; R.sieve(40).forEach(function (p) { for (var q = p; q <= 40; q *= p) pp.push([q, Math.log(p)]); }); pp.sort(function (u, v) { return u[0] - v[0]; }); return pp; }
+  function makePsi() {
+    var o = { key: 'psi', XMIN: 1.4, XMAX: 40, YM: 44, yt: [0, 10, 20, 30, 40], xt: [10, 20, 30, 40], steps: psiSteps() };
+    o.xs = grid(o.XMIN, o.XMAX, 0.04); var N = o.xs.length;
+    o.lnx = o.xs.map(Math.log); o.sq = o.xs.map(Math.sqrt);
+    o.base = o.xs.map(function (x) { return x - Math.log(2 * Math.PI) - 0.5 * Math.log(1 - 1 / (x * x)); });
+    o.ref = o.xs.map(function (x) { return x; });
+    o.truth = function (x) { var s = 0; o.steps.forEach(function (q) { if (q[0] <= x) s += q[1]; }); return s; };
+    o.corr = function (j, i) { var g = R.ZEROS[j], ph = g * o.lnx[i]; return -2 * o.sq[i] * ((0.5 * Math.cos(ph) + g * Math.sin(ph)) / (0.25 + g * g)); };
+    o.title = "ψ(<tspan font-style='italic'>x</tspan>) : somme des ln <tspan font-style='italic'>p</tspan> pour les puissances de premiers <tspan font-style='italic'>p</tspan>ᵏ ≤ <tspan font-style='italic'>x</tspan>";
+    o.refLab = "- - <tspan font-style='italic'>x</tspan> (théorème des nombres premiers)"; o.refName = "<i>x</i>"; o.exLab = "── ψ(<tspan font-style='italic'>x</tspan>) exacte";
+    o.w0 = "avec 0 zéro : la courbe lisse <tspan font-style='italic'>x</tspan> − ln 2π";
+    o.wk = function (K) { return "onde ajoutée par le zéro n°" + K + " (<tspan font-style='italic'>γ</tspan> = " + R.fmt(R.ZEROS[K - 1], 3) + ") : amplitude ~ √<tspan font-style='italic'>x</tspan>, oscillation en ln <tspan font-style='italic'>x</tspan>"; };
+    o.staircase = function (X, Y) { var d = 'M' + X(o.XMIN) + ',' + Y(0), acc = 0; o.steps.forEach(function (e) { d += 'L' + X(e[0]).toFixed(1) + ',' + Y(acc).toFixed(1); acc += e[1]; d += 'L' + X(e[0]).toFixed(1) + ',' + Y(acc).toFixed(1); }); return d + 'L' + X(o.XMAX) + ',' + Y(acc); };
+    return o;
   }
-  function term(j, i) { var tot = 0, n, g = R.ZEROS[j]; for (n = 1; n <= 5; n++) { if (!MU[n]) continue; if (Math.pow(xs[i], 1 / n) < 2) continue; var L = Math.log(xs[i]) / n, v = ei(0.5 * L, g * L); tot += MU[n] / n * 2 * v[0]; } return -tot; }
-  var apx = R.el('path', { fill: 'none', stroke: '#C2770B', 'stroke-width': 2.2, 'stroke-linejoin': 'round' }, svg);
-  var lip = R.el('path', { fill: 'none', stroke: '#94a3b8', 'stroke-width': 1.6, 'stroke-dasharray': '5 4' }, svg);
-  var dl = ''; for (i = 0; i < N; i++) dl += (i ? 'L' : 'M') + X(xs[i]).toFixed(1) + ',' + Y(lis[i]).toFixed(1); lip.setAttribute('d', dl);
-  R.txt(svg, X0 + 14, Y1 + 24, "── π(<tspan font-style='italic'>x</tspan>) exact", { size: 12.5, fill: '#1e293b' });
-  R.txt(svg, X0 + 14, Y1 + 42, "── formule de Riemann avec <tspan font-style='italic'>K</tspan> zéros", { size: 12.5, fill: '#C2770B' });
-  R.txt(svg, X0 + 14, Y1 + 60, "- - li(<tspan font-style='italic'>x</tspan>)", { size: 12.5, fill: '#94a3b8' });
-  var WY0 = 336, WH = 38;
-  R.el('line', { x1: X0, y1: WY0, x2: X1, y2: WY0, stroke: '#cbd5e1' }, svg);
-  var wave = R.el('path', { fill: 'none', stroke: '#006C65', 'stroke-width': 1.5 }, svg), wl = R.txt(svg, X0, 281, '', { size: 12, fill: '#006C65', italic: true });
-  var K = 0, Kc = 0, rcache = [];
+  function makePi() {
+    var o = { key: 'pi', XMIN: 2, XMAX: 50, YM: 19, yt: [0, 5, 10, 15], xt: [10, 20, 30, 40, 50] };
+    o.xs = grid(o.XMIN, o.XMAX, 0.08); var N = o.xs.length, k;
+    o.base = new Float64Array(N); o.ref = new Float64Array(N);
+    for (k = 0; k < N; k++) { var tot = 0, n; for (n = 1; n <= 5; n++) { if (!MU[n]) continue; var y = Math.pow(o.xs[k], 1 / n); if (y < 2) continue; tot += MU[n] / n * (li(y) - Math.LN2 + tail(y)); } o.base[k] = tot; o.ref[k] = li(o.xs[k]); }
+    o.truth = function (x) { var c = 0; P.forEach(function (p) { if (p <= x) c++; }); return c; };
+    o.corr = function (j, i) { var tot = 0, n, g = R.ZEROS[j]; for (n = 1; n <= 5; n++) { if (!MU[n]) continue; if (Math.pow(o.xs[i], 1 / n) < 2) continue; var L = Math.log(o.xs[i]) / n, v = ei(0.5 * L, g * L); tot += MU[n] / n * 2 * v[0]; } return -tot; };
+    o.title = "π(<tspan font-style='italic'>x</tspan>) : nombre de nombres premiers ≤ <tspan font-style='italic'>x</tspan>";
+    o.refLab = "- - li(<tspan font-style='italic'>x</tspan>)"; o.refName = "li(<i>x</i>)"; o.exLab = "── π(<tspan font-style='italic'>x</tspan>) exact";
+    o.w0 = "sans zéro : la fonction <tspan font-style='italic'>R</tspan> de Riemann, déjà très proche de l'escalier";
+    o.wk = function (K) { return "correction apportée par le zéro n°" + K + " (<tspan font-style='italic'>γ</tspan> = " + R.fmt(R.ZEROS[K - 1], 3) + ")"; };
+    o.staircase = function (X, Y) { var d = 'M' + X(o.XMIN) + ',' + Y(1), c = 1; P.forEach(function (p) { if (p > 2) { d += 'L' + X(p).toFixed(1) + ',' + Y(c).toFixed(1); c++; d += 'L' + X(p).toFixed(1) + ',' + Y(c).toFixed(1); } }); return d + 'L' + X(o.XMAX) + ',' + Y(c); };
+    return o;
+  }
+  function init(o) { o.cum = new Float64Array(o.xs.length); o.Kc = 0; o.cache = []; return o; }
+  var cur, K = 0, S = null, apx, wave, wl;
+  function build(o) {
+    cur = o; if (S) svg.removeChild(S); S = R.el('g', {}, svg);
+    function X(x) { return X0 + (x - o.XMIN) / (o.XMAX - o.XMIN) * (X1 - X0); } function Y(y) { return Y0 - y / o.YM * (Y0 - Y1); }
+    o.X = X; o.Y = Y; var gd = '';
+    o.xt.forEach(function (a) { gd += 'M' + X(a) + ',' + Y0 + 'V' + Y1; }); o.yt.forEach(function (a) { gd += 'M' + X0 + ',' + Y(a) + 'H' + X1; });
+    R.el('path', { d: gd, stroke: '#eef2f6', fill: 'none' }, S);
+    R.el('line', { x1: X0, y1: Y0, x2: X1 + 4, y2: Y0, stroke: '#94a3b8' }, S); R.el('line', { x1: X0, y1: Y0, x2: X0, y2: Y1 - 8, stroke: '#94a3b8' }, S);
+    o.xt.forEach(function (a) { R.txt(S, X(a), Y0 + 14, String(a), { size: 11, anchor: 'middle', fill: '#64748b' }); });
+    o.yt.forEach(function (a) { R.txt(S, X0 - 6, Y(a) + 4, String(a), { size: 11, anchor: 'end', fill: '#64748b' }); });
+    R.txt(S, X1 + 12, Y0 + 4, "<tspan font-style='italic'>x</tspan>", { size: 12, anchor: 'end', fill: '#64748b' });
+    R.txt(S, 14, 20, o.title, { size: 12.5, fill: '#64748b', italic: true });
+    var dr = ''; for (var i = 0; i < o.xs.length; i++) dr += (i ? 'L' : 'M') + X(o.xs[i]).toFixed(1) + ',' + Y(o.ref[i]).toFixed(1);
+    R.el('path', { d: dr, fill: 'none', stroke: '#94a3b8', 'stroke-width': 1.6, 'stroke-dasharray': '5 4' }, S);
+    R.el('path', { d: o.staircase(X, Y), fill: 'none', stroke: '#1e293b', 'stroke-width': 1.8 }, S);
+    apx = R.el('path', { fill: 'none', stroke: '#C2770B', 'stroke-width': 2.2, 'stroke-linejoin': 'round' }, S);
+    R.txt(S, X0 + 14, Y1 + 24, o.exLab, { size: 12.5, fill: '#1e293b' });
+    R.txt(S, X0 + 14, Y1 + 42, "── approximation avec <tspan font-style='italic'>K</tspan> zéros", { size: 12.5, fill: '#C2770B' });
+    R.txt(S, X0 + 14, Y1 + 60, o.refLab, { size: 12.5, fill: '#94a3b8' });
+    R.el('line', { x1: X0, y1: WY0, x2: X1, y2: WY0, stroke: '#cbd5e1' }, S);
+    wave = R.el('path', { fill: 'none', stroke: '#006C65', 'stroke-width': 1.5 }, S); wl = R.txt(S, X0, 281, '', { size: 12, fill: '#006C65', italic: true });
+    R.$('rz7-bpi').setAttribute('aria-pressed', o.key === 'pi'); R.$('rz7-bps').setAttribute('aria-pressed', o.key === 'psi');
+    [['rz7-bpi', 'pi'], ['rz7-bps', 'psi']].forEach(function (q) { var b = R.$(q[0]), on = o.key === q[1]; b.style.background = on ? '#e0ecf5' : '#fff'; b.style.borderColor = on ? '#004D80' : '#cbd5e1'; b.style.color = on ? '#004D80' : '#334155'; });
+  }
   function sync() {
-    while (Kc < K) { rcache[Kc] = []; for (i = 0; i < N; i++) { var t = term(Kc, i); rcache[Kc][i] = t; cum[i] += t; } Kc++; }
-    while (Kc > K) { Kc--; for (i = 0; i < N; i++) cum[i] -= rcache[Kc][i]; }
-    var dd = '', s2 = 0, nn = 0, s1 = 0;
-    for (i = 0; i < N; i++) { var v = base[i] + cum[i]; dd += (i ? 'L' : 'M') + X(xs[i]).toFixed(1) + ',' + Y(Math.max(-1, Math.min(YM, v))).toFixed(1); if (xs[i] >= 3) { var tr = truePi(xs[i]); s2 += (v - tr) * (v - tr); s1 += (lis[i] - tr) * (lis[i] - tr); nn++; } }
+    var o = cur, N = o.xs.length, i;
+    while (o.Kc < K) { o.cache[o.Kc] = []; for (i = 0; i < N; i++) { var t = o.corr(o.Kc, i); o.cache[o.Kc][i] = t; o.cum[i] += t; } o.Kc++; }
+    while (o.Kc > K) { o.Kc--; for (i = 0; i < N; i++) o.cum[i] -= o.cache[o.Kc][i]; }
+    var dd = '', s2 = 0, s1 = 0, nn = 0;
+    for (i = 0; i < N; i++) { var v = o.base[i] + o.cum[i]; dd += (i ? 'L' : 'M') + o.X(o.xs[i]).toFixed(1) + ',' + o.Y(Math.max(-1, Math.min(o.YM, v))).toFixed(1); if (o.xs[i] >= 3) { var tr = o.truth(o.xs[i]); s2 += (v - tr) * (v - tr); s1 += (o.ref[i] - tr) * (o.ref[i] - tr); nn++; } }
     apx.setAttribute('d', dd);
     if (K > 0) {
-      var wd = '', mx = 0, rc = rcache[K - 1]; for (i = 0; i < N; i++) mx = Math.max(mx, Math.abs(rc[i]));
-      for (i = 0; i < N; i++) wd += (i ? 'L' : 'M') + X(xs[i]).toFixed(1) + ',' + (WY0 - rc[i] / mx * WH * 0.5).toFixed(1);
-      wave.setAttribute('d', wd); wave.setAttribute('visibility', 'visible'); wl.innerHTML = "correction apportée par le zéro n°" + K + " (<tspan font-style='italic'>γ</tspan> = " + R.fmt(R.ZEROS[K - 1], 3) + ")";
-    } else { wave.setAttribute('visibility', 'hidden'); wl.innerHTML = "sans zéro : la fonction <tspan font-style='italic'>R</tspan> de Riemann, déjà très proche de l'escalier"; }
-    R.$('rz9-kv').textContent = K; R.$('rz9-k').value = K;
-    R.$('rz9-out').innerHTML = "écart quadratique moyen avec π(<i>x</i>) sur [3 ; 50] : li(<i>x</i>) → <b>" + R.fmt(Math.sqrt(s1 / nn), 2) + "</b> ; formule de Riemann avec <b>" + K + "</b> zéro" + (K > 1 ? 's' : '') + " → <b>" + R.fmt(Math.sqrt(s2 / nn), 2) + "</b>";
+      var rc = o.cache[K - 1], mx = 0, wd = ''; for (i = 0; i < N; i++) mx = Math.max(mx, Math.abs(rc[i]));
+      for (i = 0; i < N; i++) wd += (i ? 'L' : 'M') + o.X(o.xs[i]).toFixed(1) + ',' + (WY0 - rc[i] / mx * WH * 0.5).toFixed(1);
+      wave.setAttribute('d', wd); wave.setAttribute('visibility', 'visible'); wl.innerHTML = o.wk(K);
+    } else { wave.setAttribute('visibility', 'hidden'); wl.innerHTML = o.w0; }
+    R.$('rz7-kv').textContent = K; R.$('rz7-k').value = K;
+    R.$('rz7-out').innerHTML = "écart quadratique moyen avec " + (o.key === 'pi' ? 'π' : 'ψ') + "(<i>x</i>) sur [3 ; " + o.XMAX + "] : " + o.refName + " → <b>" + R.fmt(Math.sqrt(s1 / nn), 2) + "</b> ; avec <b>" + K + "</b> zéro" + (K > 1 ? 's' : '') + " → <b>" + R.fmt(Math.sqrt(s2 / nn), 2) + "</b>";
   }
-  R.$('rz9-k').addEventListener('input', function () { K = parseInt(this.value, 10); pl.stop(); sync(); });
+  function show(key) { if (!modes[key]) modes[key] = init(key === 'pi' ? makePi() : makePsi()); build(modes[key]); sync(); }
+  R.$('rz7-bpi').addEventListener('click', function () { show('pi'); });
+  R.$('rz7-bps').addEventListener('click', function () { show('psi'); });
+  R.$('rz7-k').addEventListener('input', function () { K = parseInt(this.value, 10); pl.stop(); sync(); });
   var acc = 0, hold = 0;
-  var pl = R.player(R.$('rz9-go'), box, function (dt) { if (K >= 79) { hold += dt; if (hold > 2) { K = 0; hold = 0; sync(); } return; } acc += dt; if (acc > 0.22) { acc = 0; K++; sync(); } }, false);
-  sync();
+  var pl = R.player(R.$('rz7-go'), box, function (dt) { if (K >= 79) { hold += dt; if (hold > 2) { K = 0; hold = 0; sync(); } return; } acc += dt; if (acc > 0.22) { acc = 0; K++; sync(); } }, false);
+  show('pi');
 })();
 </script>
-<p class="legende">La formule de Riemann pour $\pi(x)$. L'escalier noir est $\pi(x)$&nbsp;; la courbe grise en pointillés est $\mathrm{li}(x)$. Avec $K = 0$, la courbe orange est la fonction $R$ de Riemann (plus petits termes), qui est déjà plus proche de l'escalier que $\mathrm{li}$. Chaque zéro ajouté (curseur ou bouton) apporte une correction oscillante (en vert, en bas)&nbsp;: les marches se dessinent peu à peu aux nombres premiers, et la courbe orange tend vers l'escalier.</p>
+<p class="legende">Reconstruction de l'escalier des nombres premiers à partir des zéros de $\zeta$. L'escalier noir est $\pi(x)$ (formule de Riemann) ou $\psi(x)$ (formule explicite). Avec $K = 0$, la courbe orange est la tendance lisse&nbsp;: la fonction $R$ de Riemann pour $\pi$ (déjà plus proche de l'escalier que la courbe grise $\mathrm{li}(x)$), la courbe $x - \ln 2\pi - \frac{1}{2}\ln(1 - x^{-2})$ pour $\psi$. Chaque zéro ajouté apporte une onde (en vert, en bas)&nbsp;: les marches se dessinent de plus en plus nettement aux nombres premiers (pour $\pi$) ou à leurs puissances $2, 3, 4, 5, 7, 8, 9, \dots$ (pour $\psi$), et la courbe orange tend vers l'escalier.</p>
 
 ### Ce que dit l'hypothèse sur les nombres premiers
 
