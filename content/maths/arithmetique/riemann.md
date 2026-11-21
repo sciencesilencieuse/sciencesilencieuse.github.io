@@ -182,7 +182,6 @@ Le chemin qui mène à l'énoncé passe par trois idées&nbsp;:
 <li><a href="#zeros"><b>Les zéros</b></a> et <a href="#formule"><b>la formule qui les relie aux nombres premiers</b></a>&nbsp;: chaque zéro est une oscillation dans la répartition des premiers.</li>
 </ol>
 
-Les figures sont interactives&nbsp;: curseurs, points à déplacer, boutons d'animation.
 
 <script>
 window.RZ = (function () {
@@ -1339,22 +1338,4 @@ La taille $\sqrt{x}$ est celle des fluctuations d'une marche aléatoire de $x$ p
 
 Les annonces précédentes d'une démonstration, par exemple celles d'Atiyah en 2018 ou de de Branges en 2004, n'ont pas été confirmées. Les spécialistes réagissent ici avec un mélange d'enthousiasme et de prudence. Pour le prix du millénaire, le règlement de l'Institut Clay exige en outre une publication dans une revue à comité de lecture, puis un délai de deux ans pendant lequel la solution doit être largement acceptée.
 
-**Sources.** Ces informations proviennent des articles suivants, en date du 20 au 21 novembre 2026, que nous invitons à consulter pour la suite&nbsp;:
-<ul>
-<li>Anthropic, <a href="https://www.anthropic.com/research/riemann-zeta">billet du 10 août 2026</a> (la proportion de zéros sur la droite critique)&nbsp;;</li>
-<li>Nature, <a href="https://www.nature.com/articles/d41586-026-03812-7">«&nbsp;Mathematician says he and AI solved Riemann hypothesis&nbsp;»</a>&nbsp;;</li>
-<li>Scientific American, <a href="https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/">«&nbsp;Anthropic mathematician claims to prove Riemann hypothesis&nbsp;»</a> et <a href="https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/">«&nbsp;The AI Riemann hypothesis proof is almost certainly true, independent mathematicians attest&nbsp;»</a>&nbsp;;</li>
-<li>Al Jazeera, <a href="https://www.aljazeera.com/news/2026/11/21/riemann-hypothesis-has-the-worlds-most-famous-maths-problem-been-cracked">«&nbsp;Riemann hypothesis: has the world's most famous maths problem been cracked?&nbsp;»</a>&nbsp;;</li>
-<li><a href="https://phys.org/news/2026-11-anthropic-claude-math-greatest-riddle.html">Phys.org</a> et <a href="https://thenextweb.com/news/anthropic-alpoge-claude-riemann-hypothesis-proof-lean">The Next Web</a>.</li>
-</ul>
 
-<div class="encadre">
-<div class="encadre-titre">Pour aller plus loin</div>
-<ul>
-<li>3Blue1Brown, <a href="https://www.youtube.com/watch?v=sD0NjbwqlYw">«&nbsp;But what is the Riemann zeta function? Visualizing analytic continuation&nbsp;»</a> (vidéo)&nbsp;: le prolongement analytique en images.</li>
-<li>H. M. Edwards, <i>Riemann's Zeta Function</i> (Dover, 1974)&nbsp;: le mémoire de Riemann commenté, la formule explicite et ses preuves.</li>
-<li>E. Bombieri, <a href="https://www.claymath.org/millennium/riemann-hypothesis/">«&nbsp;The Riemann Hypothesis&nbsp;»</a>, description officielle du problème pour l'Institut Clay.</li>
-<li>B. Conrey, <a href="https://www.ams.org/notices/200303/fea-conrey-web.pdf">«&nbsp;The Riemann Hypothesis&nbsp;»</a>, <i>Notices of the AMS</i> (2003)&nbsp;: un panorama.</li>
-<li>Marcus du Sautoy, <i>The Music of the Primes</i> (2003)&nbsp;: une histoire de l'hypothèse pour le grand public.</li>
-</ul>
-</div>
