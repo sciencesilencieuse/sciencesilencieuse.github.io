@@ -83,18 +83,22 @@
     cv.style.height = h + 'px'; cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
     cv.getContext('2d').setTransform(dpr, 0, 0, dpr, 0, 0); dim = { w, h }; dessiner();
   }
-  const SUP = '⁰¹²³⁴⁵⁶⁷⁸⁹';
-  const exposant = n => String(n).split('').map(c => SUP[+c]).join('');
-  function graduations(x0, x1, w) {
-    const cible = Math.max(3, Math.floor((w - 60) / 75)), brut = (x1 - x0) / cible;
-    const e = Math.floor(Math.log10(brut)), m = brut / 10 ** e, pas = (m < 1.5 ? 1 : m < 3.5 ? 2 : 5) * 10 ** e;
-    const dec = Math.max(0, -Math.floor(Math.log10(pas) + 1e-9)), ticks = [];
-    for (let k = Math.ceil(x0 / pas); k * pas <= x1; k++) ticks.push({ x: k * pas, s: (k * pas).toFixed(dec).replace('.', ',') });
-    // préfixe commun à toutes les étiquettes : ce sont les chiffres déjà acquis
-    let p = ticks.length ? ticks[0].s : '';
-    ticks.forEach(t => { let i = 0; while (i < p.length && p[i] === t.s[i]) i++; p = p.slice(0, i); });
-    if (!p.includes(',') || ticks.some(t => t.s.length - p.length < 1)) p = '';
-    return { ticks, prefixe: p };
+  // Graduations 1-2-5 ; on espace davantage tant que les étiquettes se chevauchent.
+  function graduations(g, x0, x1, w) {
+    const utile = w - 42;
+    let cible = Math.max(3, Math.floor(utile / 75)), res;
+    for (let essai = 0; essai < 6; essai++) {
+      const brut = (x1 - x0) / cible, e = Math.floor(Math.log10(brut)), m = brut / 10 ** e;
+      const pas = (m < 1.5 ? 1 : m < 3.5 ? 2 : 5) * 10 ** e, dec = Math.max(0, -Math.floor(Math.log10(pas) + 1e-9)), ticks = [];
+      for (let k = Math.ceil(x0 / pas); k * pas <= x1; k++) ticks.push({ x: k * pas, s: (k * pas).toFixed(dec).replace('.', ',') });
+      let p = ticks.length ? ticks[0].s : '';
+      ticks.forEach(t => { let i = 0; while (i < p.length && p[i] === t.s[i]) i++; p = p.slice(0, i); });
+      res = { ticks, commun: p.length };
+      const larg = Math.max(0, ...ticks.map(t => g.measureText(t.s).width));
+      if (larg + 20 < utile * pas / (x1 - x0) || cible <= 2) break;
+      cible--;
+    }
+    return res;
   }
   function dessiner() {
     if (!dim) return;
@@ -114,14 +118,23 @@
     g.stroke();
     g.restore();
     // règle graduée sous le graphe
-    const { ticks, prefixe } = graduations(x0, x1, w);
+    g.font = '11px system-ui, sans-serif';
+    const { ticks, commun } = graduations(g, x0, x1, w);
     g.strokeStyle = '#cbd5e1'; g.lineWidth = 1; g.beginPath(); g.moveTo(30, bas + 0.5); g.lineTo(w - 12, bas + 0.5); g.stroke();
     g.font = '11px system-ui, sans-serif'; g.textAlign = 'center';
+    let finPrec = -Infinity;
     ticks.forEach(t => {
       const xt = X(t.x); if (xt < 30 || xt > w - 12) return;
       g.strokeStyle = '#94a3b8'; g.beginPath(); g.moveTo(xt, bas); g.lineTo(xt, bas + 5); g.stroke();
       g.strokeStyle = 'rgba(148,163,184,0.25)'; g.beginPath(); g.moveTo(xt, haut); g.lineTo(xt, bas); g.stroke();
-      g.fillStyle = '#475569'; g.fillText(prefixe ? '…' + t.s.slice(prefixe.length) : t.s, xt, bas + 17);
+      // chiffres communs à toutes les graduations en gris clair, ceux qui varient en foncé
+      const s1 = t.s.slice(0, commun), s2 = t.s.slice(commun), l1 = g.measureText(s1).width, l2 = g.measureText(s2).width;
+      const xg = Math.max(2, Math.min(w - 2 - l1 - l2, xt - (l1 + l2) / 2));
+      if (xg < finPrec + 10) return;                 // pas d'étiquettes qui se touchent
+      finPrec = xg + l1 + l2;
+      g.textAlign = 'left';
+      g.fillStyle = '#94a3b8'; g.fillText(s1, xg, bas + 17);
+      g.fillStyle = '#1e293b'; g.fillText(s2, xg + l1, bas + 17);
     });
     [[a, 'a'], [b, 'b']].forEach(([v, nom]) => {
       const xv = X(v);
@@ -132,16 +145,6 @@
     let xa = X(a), xb = X(b); if (xb - xa < 18) { const c = (xa + xb) / 2; xa = c - 9; xb = c + 9; }
     g.fillStyle = '#B45309'; g.font = '600 12px system-ui, sans-serif'; g.textAlign = 'center';
     g.fillText('a', xa, h - 7); g.fillText('b', xb, h - 7);
-    // pastille : niveau de zoom et chiffres communs à toutes les graduations
-    const z = Math.round(Math.log10(largeur(initiale()) / largeur(vue)));
-    const l1 = z > 0 ? `zoom ×10${exposant(z)}` : 'zoom ×1', l2 = prefixe ? `graduations : ${prefixe}…` : '';
-    g.font = '600 12px system-ui, sans-serif'; const w1 = g.measureText(l1).width;
-    g.font = '11px system-ui, sans-serif'; const w2 = l2 ? g.measureText(l2).width : 0;
-    const bw = Math.max(w1, w2) + 14, bh = l2 ? 36 : 21;
-    g.fillStyle = 'rgba(255,255,255,0.88)'; g.strokeStyle = '#bfdbfe'; g.lineWidth = 1;
-    g.beginPath(); g.roundRect ? g.roundRect(36.5, haut + 4.5, bw, bh, 7) : g.rect(36.5, haut + 4.5, bw, bh); g.fill(); g.stroke();
-    g.textAlign = 'left'; g.fillStyle = '#004D80'; g.font = '600 12px system-ui, sans-serif'; g.fillText(l1, 43, haut + 19);
-    if (l2) { g.fillStyle = '#475569'; g.font = '11px system-ui, sans-serif'; g.fillText(l2, 43, haut + 34); }
   }
   function stop() { clearInterval(timer); timer = 0; btnAuto.textContent = 'Enchaîner'; }
   $('[data-k="pas"]').addEventListener('click', () => { stop(); couper(); });
