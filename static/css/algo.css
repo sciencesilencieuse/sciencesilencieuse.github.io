@@ -656,10 +656,6 @@ ol.mm-meilleurs li { margin: 0 !important; font-variant-numeric: tabular-nums; }
 /* ---------- Graphe des acteurs (nombre de Bacon) ------------------------------------ */
 .bc-cadre { position: relative; }
 .anim canvas.bc-toile { display: block; width: 100%; background: radial-gradient(ellipse at 50% 45%, #111a36 0%, #070B18 70%); border: none; border-radius: 12px; box-shadow: 0 10px 30px rgba(7, 11, 24, 0.25); }
-.bc-hud { position: absolute; top: 10px; left: 10px; display: flex; align-items: center; gap: 0.55em; padding: 0.45em 0.8em; border-radius: 10px; background: rgba(7, 11, 24, 0.72); border: 1px solid rgba(255, 255, 255, 0.12); color: #e2e8f0; font: 0.8em/1.35 system-ui, sans-serif; pointer-events: none; opacity: 0; transform: translateY(-4px); transition: opacity 0.5s ease, transform 0.5s ease; backdrop-filter: blur(4px); }
-.bc-hud.bc-hud-vu { opacity: 1; transform: none; }
-.bc-hud b { color: #fff; font-variant-numeric: tabular-nums; }
-.bc-hud-d { font: 800 2em/1 system-ui, sans-serif; text-shadow: 0 0 12px currentColor; min-width: 0.7em; text-align: center; }
 .anim canvas.bc-calque { position: absolute; top: 0; left: 0; width: 100%; background: transparent; border: none; border-radius: 12px; touch-action: none; cursor: grab; }
 .bc-zoom { position: absolute; top: 8px; right: 8px; display: flex; flex-direction: column; gap: 4px; }
 .anim .bc-zoom button

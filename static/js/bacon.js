@@ -4,8 +4,6 @@
    Disposition calculée d'avance (outils/bacon_disposition.py) : les communautés du
    graphe forment des grappes, reliées par des filaments. Rendu WebGL (three.js) en
    mélange additif ; chemin, noms et halo dessinés sur un calque 2D.
-   - à l'arrivée, une onde part de Kevin Bacon et allume le graphe distance par
-     distance (le parcours en largeur, rendu visible) ;
    - choisir un acteur trace son plus court chemin vers Kevin Bacon ;
    - tous les changements de vue sont animés : vols « dézoom puis zoom » (van Wijk
      et Nuij) pour les grands déplacements, zoom lissé à la molette et aux boutons.
@@ -23,7 +21,6 @@ function init(root) {
 <div class="bc-cadre">
   <canvas class="bc-toile" aria-hidden="true"></canvas>
   <canvas class="bc-calque" role="img" aria-label="Graphe de dizaines de milliers d'acteurs et de films ; un acteur choisi est relié à Kevin Bacon par son plus court chemin"></canvas>
-  <div class="bc-hud" aria-live="polite"></div>
   <div class="bc-zoom"><button type="button" data-k="plus" aria-label="Zoomer">+</button><button type="button" data-k="moins" aria-label="Dézoomer">−</button><button type="button" data-k="tout" aria-label="Vue d'ensemble">⤢</button></div>
   <div class="bc-bulle" hidden></div>
   <p class="bc-attente">Chargement du graphe…</p>
@@ -35,11 +32,10 @@ function init(root) {
   <datalist id="bc-noms"></datalist>
   <button type="button" data-k="go">Chemin vers Kevin Bacon</button>
   <button type="button" class="sec" data-k="hasard">Acteur au hasard</button>
-  <button type="button" class="sec" data-k="onde">Propagation</button>
   <span class="anim-astuce">Glisser pour se déplacer ; Ctrl + molette, pincement ou boutons pour zoomer ; cliquer un point pour le choisir.</span>
 </div>`;
   const $ = s => root.querySelector(s);
-  const toile = $('.bc-toile'), cv = $('.bc-calque'), bulle = $('.bc-bulle'), attente = $('.bc-attente'), leg = $('.bc-legende'), outC = $('.bc-chemin'), hud = $('.bc-hud');
+  const toile = $('.bc-toile'), cv = $('.bc-calque'), bulle = $('.bc-bulle'), attente = $('.bc-attente'), leg = $('.bc-legende'), outC = $('.bc-chemin');
   const inA = $('[data-k="acteur"]');
 
   let renderer;
@@ -49,8 +45,8 @@ function init(root) {
   const scene = new THREE.Scene(), camera = new THREE.OrthographicCamera(0, 1, 0, 1, -10, 10);
   let D, F, A, N, X, Y, voisins, dist, pred, niveau, points, liens, dim, E = 4000;
   let vue = { s: 1, ox: 0, oy: 0 }, chemin = [], prog = 1, filtre = -1, sale = true, visible = false, interagi = false;
-  let vol = null, lisse = null, onde = null, voile = { v: 1, cible: 1 }, ens = [0, 0, 4000, 4000];
-  const parNiveau = [], uni = { uZoom: { value: 1 }, uDpr: { value: 1 }, uOnde: { value: 99 }, uFiltre: { value: -1 }, uVoile: { value: 1 } };
+  let vol = null, lisse = null, voile = { v: 1, cible: 1 }, ens = [0, 0, 4000, 4000];
+  const parNiveau = [], uni = { uZoom: { value: 1 }, uDpr: { value: 1 }, uFiltre: { value: -1 }, uVoile: { value: 1 } };
 
   // ================================================================ données et géométrie
   function preparer(d) {
@@ -70,16 +66,17 @@ function init(root) {
     xs.sort((a, b) => a - b); ys.sort((a, b) => a - b);
     const q = (t, p) => t[Math.floor(p * (t.length - 1))];
     ens = [q(xs, 0.005), q(ys, 0.005), q(xs, 0.995), q(ys, 0.995)];
-    const coul = i => new THREE.Color(i < F ? '#C7D2FE' : dist[i] < 0 ? HORS : COUL[Math.min(dist[i] / 2, COUL.length - 1)]);
+    const ETOILE = new THREE.Color('#DCE6FF'), LIEN = new THREE.Color('#5574D6');
+    const coul = i => i < F ? new THREE.Color('#BEC8DC') : ETOILE.clone().lerp(new THREE.Color(dist[i] < 0 ? HORS : COUL[Math.min(dist[i] / 2, COUL.length - 1)]), 0.25);
     const grp = d.groupe || [];
 
-    // liens : un segment par couple (film, acteur), teinté par le nombre de Bacon de l'acteur ;
-    // les liens entre deux grappes (filaments) sont plus discrets que les liens internes
+    // liens : un segment bleu par couple (film, acteur) ; les liens entre deux grappes
+    // (filaments) sont plus discrets que les liens internes
     let nl = 0; d.casting.forEach(c => { nl += c.length; });
     const lp = new Float32Array(nl * 6), lc = new Float32Array(nl * 6), ln = new Float32Array(nl * 2), li = new Float32Array(nl * 2);
     let k = 0;
     d.casting.forEach((c, f) => c.forEach(a => {
-      const j = F + a, col = coul(j), nv = Math.max(niveau[f], niveau[j]), inter = grp[f] !== grp[j] ? 1 : 0;
+      const j = F + a, col = LIEN, nv = Math.max(niveau[f], niveau[j]), inter = grp[f] !== grp[j] ? 1 : 0;
       lp.set([X[f], Y[f], 0, X[j], Y[j], 0], 6 * k); lc.set([col.r, col.g, col.b, col.r, col.g, col.b], 6 * k);
       ln[2 * k] = ln[2 * k + 1] = nv; li[2 * k] = li[2 * k + 1] = inter; k++;
     }));
@@ -88,12 +85,11 @@ function init(root) {
     gl.setAttribute('niveau', new THREE.BufferAttribute(ln, 1)); gl.setAttribute('inter', new THREE.BufferAttribute(li, 1));
     liens = new THREE.LineSegments(gl, new THREE.ShaderMaterial({
       uniforms: { ...uni, uAlpha: { value: 0.05 } },
-      vertexShader: `attribute vec3 couleur; attribute float niveau; attribute float inter; uniform float uOnde; uniform float uFiltre; uniform float uVoile; uniform float uAlpha;
+      vertexShader: `attribute vec3 couleur; attribute float niveau; attribute float inter; uniform float uFiltre; uniform float uVoile; uniform float uAlpha;
         varying vec4 vC;
         void main() {
-          float vu = smoothstep(niveau, niveau + 0.35, uOnde);
           float f = uFiltre < -0.5 ? 1.0 : (abs(niveau - uFiltre) < 0.6 ? 1.0 : 0.08);
-          vC = vec4(couleur, uAlpha * vu * f * uVoile * (inter > 0.5 ? 0.55 : 1.0));
+          vC = vec4(couleur, uAlpha * f * uVoile * (inter > 0.5 ? 0.7 : 1.0));
           gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
         }`,
       fragmentShader: `varying vec4 vC; void main() { gl_FragColor = vec4(vC.rgb * vC.a, vC.a); }`,
@@ -101,7 +97,7 @@ function init(root) {
     }));
     scene.add(liens);
 
-    // points : halos lumineux ; l'onde les fait éclore (et briller un instant) à leur passage
+    // points : petites étoiles, plus grosses pour les acteurs prolifiques
     const pp = new Float32Array(N * 3), pc = new Float32Array(N * 3), pt = new Float32Array(N), pn = new Float32Array(N);
     for (let i = 0; i < N; i++) {
       pp[3 * i] = X[i]; pp[3 * i + 1] = Y[i]; pp[3 * i + 2] = i < F ? 0.5 : 1;
@@ -116,15 +112,13 @@ function init(root) {
     points = new THREE.Points(gp, new THREE.ShaderMaterial({
       uniforms: uni,
       vertexShader: `attribute vec3 couleur; attribute float taille; attribute float niveau;
-        uniform float uZoom; uniform float uDpr; uniform float uOnde; uniform float uFiltre; uniform float uVoile;
+        uniform float uZoom; uniform float uDpr; uniform float uFiltre; uniform float uVoile;
         varying vec3 vC; varying float vA;
         void main() {
-          float k = uOnde - niveau;
-          float vu = smoothstep(0.0, 0.25, k), eclat = exp(-k * k * 10.0) * step(0.0, k);
           float f = uFiltre < -0.5 ? 1.0 : (abs(niveau - uFiltre) < 0.01 ? 1.3 : (fract(niveau) > 0.25 && fract(niveau) < 0.75 ? 0.18 : 0.05));
-          vC = mix(couleur, vec3(1.0), 0.6 * eclat);
-          vA = vu * f * (0.55 + 0.45 * uVoile) * (position.z < 0.75 ? 0.55 : 0.9) * (1.0 + 1.5 * eclat);
-          gl_PointSize = taille * uZoom * uDpr * (1.0 + 2.2 * eclat);
+          vC = couleur;
+          vA = f * (0.55 + 0.45 * uVoile) * (position.z < 0.75 ? 0.55 : 0.85);
+          gl_PointSize = taille * uZoom * uDpr;
           gl_Position = projectionMatrix * modelViewMatrix * vec4(position.xy, 0.0, 1.0);
         }`,
       fragmentShader: `varying vec3 vC; varying float vA;
@@ -150,35 +144,8 @@ function init(root) {
       .map(n => `<option value="${n.replace(/&/g, '&amp;').replace(/"/g, '&quot;')}">`).join('');
     attente.hidden = true;
     fit();
-    lancerOnde(() => {                                               // puis un premier chemin, si personne n'a encore touché à rien
-      const th = D.acteurs.indexOf('Tom Hanks');
-      if (th >= 0 && !interagi) { inA.value = 'Tom Hanks'; choisir(F + th); }
-    });
-  }
-
-  // ================================================================ onde de propagation (parcours en largeur)
-  function lancerOnde(ensuite) {
-    if (!D) return;
-    chemin = []; outC.textContent = ''; voile.cible = 1;
-    const fin = 7.4, t0 = performance.now(), duree = 6200;
-    vol = null; vue = ensemble();
-    onde = { t0, ensuite, fin };
-    hud.classList.add('bc-hud-vu');
-    onde.pas = t => {
-      const u = Math.min(1, (t - t0) / duree), w = -0.4 + (fin + 0.4) * u;
-      uni.uOnde.value = w; sale = true;
-      const n = Math.max(0, Math.min(6, Math.floor(w)));
-      let cumul = 0; for (let k = 0; k <= n; k++) cumul += parNiveau[k] || 0;
-      const tot = A, pc = Math.round(100 * cumul / tot);
-      hud.innerHTML = w < 0 ? '<b>Kevin Bacon</b>' :
-        `<span class="bc-hud-d" style="color:${COUL[n]}">${n}</span><span>pas de Kevin Bacon<br><b>${cumul.toLocaleString('fr-FR')}</b> acteurs atteints · ${pc}&nbsp;%</span>`;
-      if (u >= 1) {
-        uni.uOnde.value = 99; onde = null;
-        hud.innerHTML = `<span>${(A - (parNiveau.x || 0)).toLocaleString('fr-FR')} acteurs reliés à Kevin Bacon<br>${(parNiveau.x || 0).toLocaleString('fr-FR')} hors d'atteinte</span>`;
-        setTimeout(() => { if (!onde) hud.classList.remove('bc-hud-vu'); }, 2600);
-        if (ensuite) setTimeout(ensuite, 700);
-      }
-    };
+    const th = D.acteurs.indexOf('Tom Hanks');                       // le graphe entier, puis un premier chemin
+    if (th >= 0) setTimeout(() => { if (!interagi) { inA.value = 'Tom Hanks'; choisir(F + th); } }, 1800);
   }
 
   // ================================================================ vue et animations de caméra
@@ -231,7 +198,6 @@ function init(root) {
     requestAnimationFrame(boucle);
     const t = performance.now();                                     // même horloge que les départs d'animation
     if (!D || !dim || !visible) return;
-    if (onde) onde.pas(t);
     if (vol) {
       const u = Math.min(1, (t - vol.t0) / vol.duree), e = u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2;
       vue = deP(vol.f(e)); sale = true;
@@ -252,7 +218,7 @@ function init(root) {
     camera.updateProjectionMatrix();
     const z = s * E / Math.min(w, h);                                  // grossissement par rapport à la vue d'ensemble
     uni.uZoom.value = Math.min(3.2, 0.75 + 0.16 * z);
-    liens.material.uniforms.uAlpha.value = Math.min(0.28, 0.075 + 0.01 * z) * (filtre === -1 ? 1 : 0.7);
+    liens.material.uniforms.uAlpha.value = Math.min(0.22, 0.12 + 0.005 * z) * (filtre === -1 ? 1 : 0.7);
     renderer.render(scene, camera);
   }
 
@@ -263,7 +229,7 @@ function init(root) {
     const sx = i => ox + s * X[i], sy = i => oy + s * Y[i];
     const z = s * E / Math.min(w, h);
     // noms des grandes grappes, en vue d'ensemble
-    if (D.grappes && z < 3.2 && !onde && !chemin.length) {
+    if (D.grappes && z < 3.2 && !chemin.length) {
       const a = Math.min(1, (3.2 - z) / 1.2);
       g.textAlign = 'center';
       D.grappes.forEach((q, k) => {
@@ -286,17 +252,12 @@ function init(root) {
       }
       g.globalAlpha = 1;
     }
-    // Kevin Bacon : un soleil qui pulse
-    const b = F + D.bacon, bx = sx(b), by = sy(b), p = 0.5 + 0.5 * Math.sin(t / 420);
-    const rg = g.createRadialGradient(bx, by, 0, bx, by, 26 + 8 * p);
-    rg.addColorStop(0, 'rgba(253,224,71,0.95)'); rg.addColorStop(0.25, 'rgba(253,224,71,0.55)'); rg.addColorStop(1, 'rgba(253,224,71,0)');
-    g.fillStyle = rg; g.beginPath(); g.arc(bx, by, 26 + 8 * p, 0, 2 * Math.PI); g.fill();
+    // Kevin Bacon : un halo doré
+    const b = F + D.bacon, bx = sx(b), by = sy(b);
+    const rg = g.createRadialGradient(bx, by, 0, bx, by, 28);
+    rg.addColorStop(0, 'rgba(253,224,71,0.9)'); rg.addColorStop(0.25, 'rgba(253,224,71,0.45)'); rg.addColorStop(1, 'rgba(253,224,71,0)');
+    g.fillStyle = rg; g.beginPath(); g.arc(bx, by, 28, 0, 2 * Math.PI); g.fill();
     g.fillStyle = '#FFFBEB'; g.beginPath(); g.arc(bx, by, 4.5, 0, 2 * Math.PI); g.fill();
-    if (onde && uni.uOnde.value > 0 && uni.uOnde.value < 7) {          // front de l'onde autour de Kevin Bacon
-      const u = (t / 900) % 1;
-      g.strokeStyle = `rgba(253,224,71,${0.5 * (1 - u)})`; g.lineWidth = 2;
-      g.beginPath(); g.arc(bx, by, 8 + 60 * u, 0, 2 * Math.PI); g.stroke();
-    }
     const boites = [];                                               // étiquettes déjà posées, pour éviter les chevauchements
     boites.push(pastille(g, 'Kevin Bacon', bx, by - 22, COUL[0], true, chemin.length > 1 ? [] : null));
     if (chemin.length > 1) {
@@ -312,13 +273,6 @@ function init(root) {
         g.stroke(); g.shadowBlur = 0;
       };
       trace(9, 'rgba(253,224,71,0.25)', 24); trace(3, '#FDE047', 12); trace(1.2, '#FFFBEB', 0);
-      // comète qui parcourt le chemin une fois tracé
-      if (prog >= 1) {
-        const u = ((t / 1600) % 1) * n, k = Math.min(n - 1, Math.floor(u)), r = u - k, a = chemin[k], c = chemin[k + 1];
-        const cx = sx(a) + (sx(c) - sx(a)) * r, cy = sy(a) + (sy(c) - sy(a)) * r;
-        const cg = g.createRadialGradient(cx, cy, 0, cx, cy, 10); cg.addColorStop(0, 'rgba(255,255,255,0.95)'); cg.addColorStop(1, 'rgba(253,224,71,0)');
-        g.fillStyle = cg; g.beginPath(); g.arc(cx, cy, 10, 0, 2 * Math.PI); g.fill();
-      }
     }
     chemin.forEach((i, k) => {
       if (chemin.length > 1 && k > prog * (chemin.length - 1) + 0.001) return;
@@ -352,7 +306,6 @@ function init(root) {
   // ================================================================ choisir un acteur
   function choisir(i) {
     if (i === undefined || i < 0 || !D) return;
-    if (onde) { onde = null; uni.uOnde.value = 99; hud.classList.remove('bc-hud-vu'); sale = true; }
     chemin = [];
     const nomDe = k => k < F ? D.films[k] : D.acteurs[k - F];
     if (dist[i] < 0) {
@@ -444,7 +397,6 @@ function init(root) {
   $('[data-k="moins"]').addEventListener('click', () => zoomer(1 / 1.8, dim.w / 2, dim.h / 2));
   $('[data-k="tout"]').addEventListener('click', toutVoir);
   $('[data-k="go"]').addEventListener('click', chercher);
-  $('[data-k="onde"]').addEventListener('click', () => { interagi = true; lancerOnde(); });
   inA.addEventListener('keydown', e => { if (e.key === 'Enter') chercher(); });
   inA.addEventListener('change', chercher);
   $('[data-k="hasard"]').addEventListener('click', () => {

@@ -110,11 +110,8 @@ ilots = {}
 for i in range(N):
     if comp[i] != geante: ilots.setdefault(comp[i], []).append(i)
 for c, membres in ilots.items():
-    ix = {v: k for k, v in enumerate(membres)}
-    sg = ig.Graph(n=len(membres), edges=[(ix[u], ix[v]) for u in membres for v in voisins[u] if u < v])
-    Q = np.array(sg.layout_fruchterman_reingold(niter=200).coords) if len(membres) > 1 else np.zeros((1, 2))
-    Q -= Q.mean(0); e = np.abs(Q).max() or 1
-    Q *= echelle_feuille * 0.5 * math.sqrt(len(membres)) / e
+    # petit nuage flou (une disposition par forces y dessinerait de petits anneaux)
+    Q = np.random.normal(0, 1, (len(membres), 2)) * echelle_feuille * 0.35 * math.sqrt(len(membres))
     a = rng.uniform(0, 2 * math.pi); r = Rg * (1.06 + abs(rng.gauss(0, 1)) * 0.12)
     for k, v in enumerate(membres): pos[v] = cx + r * np.array([math.cos(a), math.sin(a)]) + Q[k]; place[v] = True
 print('non placés', int((~place).sum()))
