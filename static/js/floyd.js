@@ -8,22 +8,24 @@
   const root = document.querySelector('.anim[data-anim="floyd"]');
   if (!root) return;
 
-  const COL = { tortue: '#006C65', lievre: '#970E53', bleu: '#004D80', ard: '#475569', clair: '#cbd5e1',
-                fond: '#F1F5F9', texte: '#334155', or: '#B45309' };
   const N = 11;                                   // valeurs de 1 à N, tableau de N+1 cases
 
   root.innerHTML = `
-<canvas class="anim-scene" role="img" aria-label="Le tableau, puis le chemin 0, t[0], t[t[0]]… dessiné comme un graphe en forme de lettre grecque rhô ; la tortue avance d'un pas, le lièvre de deux"></canvas>
+<div class="fl-tete">
+  <div class="fl-phases"><span data-ph="1">Phase 1 : le lièvre rattrape la tortue</span><span data-ph="2">Phase 2 : même allure, rendez-vous</span></div>
+  <div class="fl-leg"><span class="fl-jt">🐢 tortue : 1 pas</span><span class="fl-jl">🐇 lièvre : <b data-o="vit">2 pas</b></span></div>
+</div>
+<div class="fl-cadre"><svg class="fl-svg" role="img" aria-label="Le tableau, puis le chemin 0, t[0], t[t[0]]… dessiné comme un graphe en forme de lettre grecque rhô ; la tortue avance d'un pas, le lièvre de deux"></svg></div>
+<p class="fl-info" aria-live="polite"></p>
 <div class="anim-ctrl">
   <button type="button" data-k="pas">Pas suivant</button>
   <button type="button" class="sec" data-k="auto">Lecture</button>
   <button type="button" class="sec" data-k="neuf">Nouveau tableau</button>
-</div>
-<p class="anim-info" aria-live="polite"></p>`;
+</div>`;
 
   const $ = s => root.querySelector(s);
-  const cv = $('canvas'), info = $('.anim-info'), btnPas = $('[data-k="pas"]'), btnAuto = $('[data-k="auto"]'), btnNeuf = $('[data-k="neuf"]');
-  let t, chemin, mu, lambda, st, dim, timer = 0;
+  const svg = $('svg'), info = $('.fl-info'), btnPas = $('[data-k="pas"]'), btnAuto = $('[data-k="auto"]'), btnNeuf = $('[data-k="neuf"]');
+  let t, chemin, mu, lambda, st, timer = 0;
 
   // ---------------------------------------------------------------- tableau aléatoire au ρ bien visible
   function tirage() {
@@ -40,19 +42,22 @@
   }
   function nouveau() {
     const r = tirage(); t = r.tab; chemin = r.ch; mu = r.m; lambda = r.l;
-    st = { phase: 1, tortue: 0, lievre: 0, pas: 0, fini: false, trace: [] };
+    st = { phase: 1, tortue: 0, lievre: 0, pas: 0, fini: false, traceT: [], traceL: [] };
     message(); draw();
   }
 
   // ---------------------------------------------------------------- un pas de l'algorithme
   function pas() {
     if (st.fini) return;
+    st.traceT = []; st.traceL = [];
     if (st.phase === 1) {
+      st.traceT = [st.tortue]; st.traceL = [st.lievre, t[st.lievre]];
       st.tortue = t[st.tortue]; st.lievre = t[t[st.lievre]]; st.pas++;
       if (st.tortue === st.lievre) { st.phase = 1.5; st.rencontre = st.tortue; }
     } else if (st.phase === 1.5) {
       st.phase = 2; st.tortue = 0; st.pas2 = 0;
     } else {
+      st.traceT = [st.tortue]; st.traceL = [st.lievre];
       st.tortue = t[st.tortue]; st.lievre = t[st.lievre]; st.pas2++;
       if (st.tortue === st.lievre) { st.fini = true; arreter(); }
     }
@@ -60,85 +65,89 @@
   }
   function message() {
     if (st.phase === 1 && st.pas === 0)
-      info.innerHTML = `Phase 1 : la <b style="color:${COL.tortue}">tortue</b> avance d'un pas (i → t[i]), le <b style="color:${COL.lievre}">lièvre</b> de deux. Tous deux partent de la case 0.`;
+      info.innerHTML = `Phase 1 : la <b class="fl-ct">tortue</b> avance d'un pas (i → t[i]), le <b class="fl-cl">lièvre</b> de deux. Tous deux partent de la case 0.`;
     else if (st.phase === 1)
-      info.innerHTML = `Phase 1, pas ${st.pas} : tortue en ${st.tortue}, lièvre en ${st.lievre}. Une fois dans la boucle, le lièvre rattrape la tortue d'une case à chaque pas.`;
+      info.innerHTML = `Phase 1, pas ${st.pas}&nbsp;: <b class="fl-ct">tortue en ${st.tortue}</b>, <b class="fl-cl">lièvre en ${st.lievre}</b>. Une fois dans la boucle, le lièvre rattrape la tortue d'une case à chaque pas.`;
     else if (st.phase === 1.5)
-      info.innerHTML = `Rencontre en ${st.rencontre}, dans la boucle, après ${st.pas} pas. Phase 2 : on renvoie la tortue au départ, et chacun avance désormais d'un seul pas.`;
+      info.innerHTML = `<b>Rencontre en ${st.rencontre}</b>, dans la boucle, après ${st.pas} pas. Phase 2 : on renvoie la tortue au départ, et chacun avance désormais d'un seul pas.`;
     else if (!st.fini)
-      info.innerHTML = `Phase 2, pas ${st.pas2} : tortue en ${st.tortue}, lièvre en ${st.lievre}. Ils se retrouveront exactement à l'entrée de la boucle.`;
+      info.innerHTML = `Phase 2, pas ${st.pas2}&nbsp;: <b class="fl-ct">tortue en ${st.tortue}</b>, <b class="fl-cl">lièvre en ${st.lievre}</b>. Ils se retrouveront exactement à l'entrée de la boucle.`;
     else
-      info.innerHTML = `Ils se retrouvent en <b>${st.tortue}</b> : c'est l'entrée de la boucle, donc une valeur que deux cases du tableau désignent. Le doublon est <b>${st.tortue}</b>, trouvé sans modifier le tableau ni mémoriser autre chose que deux indices.`;
+      info.innerHTML = `Ils se retrouvent en <b class="fl-co">${st.tortue}</b>&nbsp;: c'est l'entrée de la boucle, donc une valeur que deux cases du tableau désignent. Le doublon est <b class="fl-co">${st.tortue}</b>, trouvé sans modifier le tableau ni mémoriser autre chose que deux indices.`;
   }
 
   // ---------------------------------------------------------------- dessin
-  function fit() {
-    const dpr = window.devicePixelRatio || 1, w = cv.clientWidth || 640, h = Math.round(Math.max(330, Math.min(440, w * 0.62)));
-    cv.style.height = h + 'px'; cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
-    cv.getContext('2d').setTransform(dpr, 0, 0, dpr, 0, 0); dim = { w, h }; draw();
-  }
-  function fleche(c, x0, y0, x1, y1, col, r0, r1, courbe = 0) {
-    const a = Math.atan2(y1 - y0, x1 - x0), L = Math.hypot(x1 - x0, y1 - y0);
-    const sx = x0 + r0 * Math.cos(a), sy = y0 + r0 * Math.sin(a), ex = x1 - r1 * Math.cos(a), ey = y1 - r1 * Math.sin(a);
-    const mx = (sx + ex) / 2 - courbe * Math.sin(a) * L, my = (sy + ey) / 2 + courbe * Math.cos(a) * L;
-    c.strokeStyle = col; c.fillStyle = col; c.lineWidth = 1.6;
-    c.beginPath(); c.moveTo(sx, sy); c.quadraticCurveTo(mx, my, ex, ey); c.stroke();
-    const b = Math.atan2(ey - my, ex - mx);
-    c.beginPath(); c.moveTo(ex, ey); c.lineTo(ex - 8 * Math.cos(b - 0.4), ey - 8 * Math.sin(b - 0.4)); c.lineTo(ex - 8 * Math.cos(b + 0.4), ey - 8 * Math.sin(b + 0.4)); c.closePath(); c.fill();
-  }
   function draw() {
-    if (!dim) return;
-    const c = cv.getContext('2d'), { w, h } = dim;
-    c.clearRect(0, 0, w, h); c.lineCap = 'round';
+    root.querySelectorAll('[data-ph]').forEach(x => x.classList.toggle('fl-on', st.phase === 1 ? x.dataset.ph === '1' : x.dataset.ph === '2'));
+    $('[data-o="vit"]').textContent = st.phase === 1 ? '2 pas' : '1 pas';
+    const W = Math.max(340, Math.min(760, root.clientWidth || 640)), petit = W < 520;
     // --- le tableau
-    const cw = Math.min(46, (w - 24) / (N + 1)), x0 = (w - cw * (N + 1)) / 2, y0 = 30;
-    c.font = '11px sans-serif'; c.textAlign = 'center'; c.fillStyle = COL.ard;
-    if (x0 > 44) c.fillText('indice', x0 - 22, y0 - 4);   // seulement s'il y a la place
+    const cw = Math.min(48, (W - 24) / (N + 1)), ch = cw * 0.82, x0 = (W - cw * (N + 1)) / 2, y0 = 22;
+    const fin = st.fini ? st.tortue : null;
+    let h = `<defs><marker id="fl-fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker>` +
+            `<marker id="fl-flt" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0D9488"/></marker>` +
+            `<marker id="fl-fll" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#DB2777"/></marker></defs>`;
     for (let i = 0; i <= N; i++) {
-      const x = x0 + i * cw, surChemin = chemin.includes(i), entree = st.fini && i === st.tortue;
-      c.fillStyle = entree ? '#FEF3C7' : surChemin ? '#EEF3F7' : '#fff';
-      c.strokeStyle = '#cbd5e1'; c.lineWidth = 1;
-      c.fillRect(x, y0, cw, cw * 0.8); c.strokeRect(x, y0, cw, cw * 0.8);
-      c.fillStyle = COL.ard; c.font = '10px sans-serif'; c.fillText(i, x + cw / 2, y0 - 5);
-      c.fillStyle = COL.texte; c.font = `${Math.round(cw * 0.36)}px sans-serif`; c.fillText(t[i], x + cw / 2, y0 + cw * 0.52);
-      if (st.fini && t[i] === st.tortue) { c.strokeStyle = COL.or; c.lineWidth = 2.5; c.strokeRect(x + 1.5, y0 + 1.5, cw - 3, cw * 0.8 - 3); }
+      const x = x0 + i * cw, sur = chemin.includes(i), dbl = fin !== null && t[i] === fin;
+      h += `<text x="${x + cw / 2}" y="${y0 - 6}" class="fl-idx">${i}</text>` +
+           `<rect x="${x + 1}" y="${y0}" width="${cw - 2}" height="${ch}" rx="6" class="fl-case${sur ? ' fl-sur' : ''}${dbl ? ' fl-dbl' : ''}"/>` +
+           `<text x="${x + cw / 2}" y="${y0 + ch * 0.66}" class="fl-val" style="font-size:${Math.round(cw * 0.38)}px">${t[i]}</text>`;
     }
-    const marque = (i, col, dy) => { const x = x0 + i * cw + cw / 2; c.fillStyle = col; c.beginPath(); c.moveTo(x, y0 + cw * 0.8 + dy); c.lineTo(x - 6, y0 + cw * 0.8 + dy + 9); c.lineTo(x + 6, y0 + cw * 0.8 + dy + 9); c.closePath(); c.fill(); };
-    marque(st.tortue, COL.tortue, 4); marque(st.lievre, COL.lievre, 15);
+    const jeton = (i, e, dy) => `<text x="${x0 + i * cw + cw / 2}" y="${y0 + ch + dy}" class="fl-jeton">${e}</text>`;
+    h += jeton(st.tortue, '🐢', 19) + jeton(st.lievre, '🐇', st.lievre === st.tortue ? 37 : 19);
+    if (fin !== null) h += `<text x="${W / 2}" y="${y0 + ch + 58}" class="fl-note">les deux cases encadrées contiennent ${fin}&nbsp;: c'est le doublon</text>`;
     // --- le ρ : la queue sur une ligne, la boucle sur un cercle
-    const top = y0 + cw * 0.8 + 38, bas = h - 14, R = Math.min((bas - top) / 2 - 16, w * (w < 520 ? 0.15 : 0.17)), cy = (top + bas) / 2;
-    const pasQ = Math.min(62, (w - 2 * R - 70) / Math.max(1, mu));
-    const cx = w / 2 + mu * pasQ / 2;                    // le ρ entier (queue + boucle) centré
-    const pos = new Map();
-    const entreeIdx = chemin[mu];
-    for (let k = 0; k < lambda; k++) {                  // cycle, entrée à gauche, sens horaire
-      const a = Math.PI + 2 * Math.PI * k / lambda;
-      pos.set(chemin[mu + k], { x: cx + R * Math.cos(a), y: cy - R * Math.sin(a) });
+    const top = y0 + ch + (fin !== null ? 76 : 56);
+    let R, cy, cx, pasQ, H;
+    const pos = new Map(), entree = chemin[mu];
+    if (petit) {                                         // écran étroit : la queue descend vers le haut de la boucle
+      R = Math.min(92, 34 + lambda * 7); pasQ = 40; cx = W / 2;
+      cy = top + 14 + mu * pasQ + R; H = cy + R + 48;
+      for (let k = 0; k < lambda; k++) { const a = Math.PI / 2 + 2 * Math.PI * k / lambda; pos.set(chemin[mu + k], { x: cx + R * Math.cos(a), y: cy - R * Math.sin(a) }); }
+      const E0 = pos.get(entree);
+      for (let k = 0; k < mu; k++) pos.set(chemin[k], { x: E0.x, y: E0.y - (mu - k) * pasQ });
+    } else {
+      R = Math.min(100, 30 + lambda * 10); cy = top + R + 26; H = cy + R + 40;
+      pasQ = Math.min(64, (W - 2 * R - 60) / Math.max(1, mu)); cx = W / 2 + mu * pasQ / 2;
+      for (let k = 0; k < lambda; k++) { const a = Math.PI + 2 * Math.PI * k / lambda; pos.set(chemin[mu + k], { x: cx + R * Math.cos(a), y: cy - R * Math.sin(a) }); }
+      const E0 = pos.get(entree);
+      for (let k = 0; k < mu; k++) pos.set(chemin[k], { x: E0.x - (mu - k) * pasQ, y: cy });
     }
-    const E = pos.get(entreeIdx);
-    for (let k = 0; k < mu; k++) pos.set(chemin[k], { x: E.x - (mu - k) * pasQ, y: cy });
-    const rn = Math.max(8, Math.min(14, pasQ * 0.45, R * Math.sin(Math.PI / lambda) * 0.8));   // nœuds jamais jointifs
-    for (let k = 0; k < chemin.length; k++) {           // arêtes i -> t[i]
-      const i = chemin[k], j = t[i], p = pos.get(i), q = pos.get(j);
-      fleche(c, p.x, p.y, q.x, q.y, COL.clair, rn, rn, k >= mu ? 0.12 : 0);
-    }
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    const E = pos.get(entree);
+    const rn = Math.max(10, Math.min(16, pasQ * 0.38, R * Math.sin(Math.PI / lambda) * 0.75));
+    // fond : l'anneau de la boucle et la queue
+    const D = pos.get(chemin[0]);
+    h += `<circle cx="${cx}" cy="${cy}" r="${R}" class="fl-anneau"/><line x1="${D.x}" y1="${D.y}" x2="${E.x}" y2="${E.y}" class="fl-qfond"/>`;
+    h += (petit ? `<text x="${D.x - rn - 6}" y="${D.y + 4}" class="fl-lab" text-anchor="end" style="text-anchor:end">départ</text>` : `<text x="${D.x}" y="${D.y + rn + 18}" class="fl-lab">départ</text>`) + `<text x="${cx}" y="${cy + 5}" class="fl-rho">boucle de ${lambda}</text>`;
+    // arêtes i -> t[i], suivant l'anneau pour la boucle
+    const arete = (i, cls, mk) => {
+      const j = t[i], p = pos.get(i), q = pos.get(j);
+      const ki = chemin.indexOf(i);
+      if (ki >= mu) {                                    // arc de cercle entre deux nœuds de la boucle
+        const a1 = Math.atan2(cy - p.y, p.x - cx), a2 = Math.atan2(cy - q.y, q.x - cx), d = rn / R;
+        const b1 = a1 + d, b2 = a2 - d;
+        const P1 = [cx + R * Math.cos(b1), cy - R * Math.sin(b1)], P2 = [cx + R * Math.cos(b2), cy - R * Math.sin(b2)];
+        return `<path d="M${P1[0]} ${P1[1]}A${R} ${R} 0 0 0 ${P2[0]} ${P2[1]}" class="${cls}" marker-end="url(#${mk})"/>`;
+      }
+      const a = Math.atan2(q.y - p.y, q.x - p.x);
+      return `<line x1="${p.x + rn * Math.cos(a)}" y1="${p.y + rn * Math.sin(a)}" x2="${q.x - (rn + 1) * Math.cos(a)}" y2="${q.y - (rn + 1) * Math.sin(a)}" class="${cls}" marker-end="url(#${mk})"/>`;
+    };
+    for (const i of chemin) h += arete(i, 'fl-arete', 'fl-fl');
+    for (const i of st.traceT || []) h += arete(i, 'fl-arete fl-at', 'fl-flt');
+    for (const i of st.traceL || []) h += arete(i, 'fl-arete fl-al', 'fl-fll');
     for (const [i, p] of pos) {
-      const e = i === entreeIdx, fin = st.fini && e;
-      c.fillStyle = fin ? '#FEF3C7' : '#fff'; c.strokeStyle = e ? COL.or : COL.bleu; c.lineWidth = e ? 2.4 : 1.6;
-      c.beginPath(); c.arc(p.x, p.y, rn, 0, 2 * Math.PI); c.fill(); c.stroke();
-      c.fillStyle = COL.texte; c.font = `${Math.round(rn * 0.9)}px sans-serif`; c.textAlign = 'center'; c.fillText(i, p.x, p.y + rn * 0.32);
+      const e = i === entree;
+      h += `<circle cx="${p.x}" cy="${p.y}" r="${rn}" class="fl-noeud${e ? ' fl-entree' : ''}${e && st.fini ? ' fl-trouve' : ''}"/><text x="${p.x}" y="${p.y + rn * 0.36}" class="fl-n" style="font-size:${Math.round(rn * 1.0)}px">${i}</text>`;
     }
-    // tortue et lièvre sur le graphe
-    const pion = (i, col, dx) => { const p = pos.get(i); if (!p) return; c.fillStyle = col; c.beginPath(); c.arc(p.x + dx, p.y - rn - 8, 6.5, 0, 2 * Math.PI); c.fill(); c.strokeStyle = '#fff'; c.lineWidth = 1.5; c.stroke(); };
-    pion(st.tortue, COL.tortue, -7); pion(st.lievre, COL.lievre, 7);
-    // légende
-    c.textAlign = 'left'; c.font = '12px sans-serif';
-    [[COL.tortue, 'tortue (1 pas)'], [COL.lievre, 'lièvre (2 pas)'], [COL.or, 'entrée de la boucle']].forEach(([col, s], i) => {
-      const y = top + 4 + i * 18; c.fillStyle = col; c.beginPath(); c.arc(16, y - 4, 5.5, 0, 2 * Math.PI); c.fill();
-      c.fillStyle = COL.texte; c.fillText(s, 27, y);
-    });
-    c.fillStyle = COL.ard; c.font = '11px sans-serif'; c.textAlign = 'left';
-    c.fillText(`queue : ${mu} cases, boucle : ${lambda} cases`, 10, h - 8);
+    h += petit ? `<text x="${E.x + rn + 6}" y="${E.y - 4}" class="fl-lab fl-lent" style="text-anchor:start">entrée</text>` : `<text x="${E.x - rn - 4}" y="${E.y - rn + 2}" class="fl-lab fl-lent" style="text-anchor:end">entrée</text>`;
+    // les deux coureurs, au-dessus de leur nœud
+    const pion = (i, e, dx) => { const p = pos.get(i); if (!p) return ''; const dq = petit && chemin.indexOf(i) < mu; return `<g class="fl-pion" style="transform:translate(${dq ? p.x + rn + 16 + dx * 2 : p.x + dx}px, ${dq ? p.y : p.y + rn + 16}px)"><circle r="12" class="${e === '🐢' ? 'fl-pt' : 'fl-pl'}"/><text y="5" class="fl-em">${e}</text></g>`; };
+    const meme = st.tortue === st.lievre;
+    h += pion(st.tortue, '🐢', meme ? -13 : 0) + pion(st.lievre, '🐇', meme ? 13 : 0);
+    if (st.fini) h += `<text x="${W - 10}" y="${H - 8}" class="fl-badge" style="text-anchor:end">doublon : ${st.tortue}</text>`;
+    h += `<text x="10" y="${H - 8}" class="fl-bas">${petit ? `queue ${mu} · boucle ${lambda}` : `queue : ${mu} cases · boucle : ${lambda} cases · ${st.phase === 1 ? `pas ${st.pas}` : `phase 2, pas ${st.pas2 || 0}`}`}</text>`;
+    svg.innerHTML = h;
   }
 
   function arreter() { clearInterval(timer); timer = 0; btnAuto.textContent = 'Lecture'; }
@@ -149,6 +158,6 @@
     btnAuto.textContent = 'Pause'; timer = setInterval(pas, 900);
   });
   btnNeuf.addEventListener('click', () => { arreter(); nouveau(); });
-  window.addEventListener('resize', fit);
-  nouveau(); fit();
+  let larg = 0; window.addEventListener('resize', () => { if (Math.abs(root.clientWidth - larg) > 8) { larg = root.clientWidth; draw(); } });
+  nouveau();
 })();

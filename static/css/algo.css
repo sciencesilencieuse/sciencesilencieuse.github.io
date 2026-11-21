@@ -1389,3 +1389,40 @@ table.nb-tab td:first-child { text-align: left; font-weight: 700; }
 .kd-lbestl { fill: none; stroke: #F59E0B; stroke-width: 2; stroke-dasharray: 5 4; }
 .kd-pc { fill: #0D9488; stroke: #fff; stroke-width: 1.2; } .kd-pr { fill: #DC2626; stroke: #fff; stroke-width: 1.2; }
 .anim p.kd-info { margin: 0.6em 0 !important; min-height: 3em; padding: 0.5em 0.8em; border-left: 3px solid #004D80; background: #fff; border-radius: 0 6px 6px 0; font-size: 0.88em; line-height: 1.5; }
+
+/* ---------- Lièvre et tortue (Floyd) ------------------------------------------------------------ */
+.fl-tete { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.5em; margin-bottom: 0.6em; }
+.fl-phases { display: inline-flex; flex-wrap: wrap; gap: 3px; padding: 3px; background: #f1f5f9; border-radius: 999px; }
+.fl-phases span { padding: 0.25em 0.8em; border-radius: 999px; font: 600 0.78em system-ui, sans-serif; color: #94a3b8; transition: background 0.3s, color 0.3s; }
+.fl-phases span.fl-on { background: #004D80; color: #fff; }
+.fl-leg { display: flex; gap: 0.5em; font-size: 0.82em; }
+.fl-leg span { padding: 0.15em 0.6em; border-radius: 999px; }
+.fl-jt { background: #CCFBF1; color: #0F766E; } .fl-jl { background: #FCE7F3; color: #BE185D; }
+.fl-cadre { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 0.3em 0; }
+.fl-svg { display: block; width: 100%; height: auto; }
+.fl-idx { font: 10px ui-monospace, monospace; fill: #94a3b8; text-anchor: middle; }
+.fl-case { fill: #fff; stroke: #e2e8f0; stroke-width: 1.2; }
+.fl-case.fl-sur { fill: #EFF6FF; stroke: #BFDBFE; }
+.fl-case.fl-dbl { fill: #FEF3C7; stroke: #F59E0B; stroke-width: 2.5; }
+.fl-val { font-family: system-ui, sans-serif; font-weight: 700; fill: #1e293b; text-anchor: middle; }
+.fl-jeton { font-size: 16px; text-anchor: middle; }
+.fl-note { font: 600 11.5px system-ui, sans-serif; fill: #B45309; text-anchor: middle; }
+.fl-anneau { fill: #F8FAFC; stroke: #EEF2F7; stroke-width: 26; }
+.fl-qfond { stroke: #F1F5F9; stroke-width: 26; stroke-linecap: round; }
+.fl-rho { font: 600 12px system-ui, sans-serif; fill: #cbd5e1; text-anchor: middle; }
+.fl-lab { font: 11px system-ui, sans-serif; fill: #94a3b8; text-anchor: middle; }
+.fl-lab.fl-lent { fill: #B45309; font-weight: 700; }
+.fl-arete { fill: none; stroke: #94a3b8; stroke-width: 1.6; }
+.fl-arete.fl-at { stroke: #0D9488; stroke-width: 4; opacity: 0.85; }
+.fl-arete.fl-al { stroke: #DB2777; stroke-width: 4; opacity: 0.75; }
+.fl-noeud { fill: #fff; stroke: #2563EB; stroke-width: 2; }
+.fl-noeud.fl-entree { stroke: #D97706; stroke-width: 3; }
+.fl-noeud.fl-trouve { fill: #FEF3C7; stroke-width: 4; filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.8)); }
+.fl-n { font-family: system-ui, sans-serif; font-weight: 700; fill: #1e293b; text-anchor: middle; }
+.fl-pion { transition: transform 0.45s ease-in-out; }
+.fl-pt { fill: #CCFBF1; stroke: #0D9488; stroke-width: 2; } .fl-pl { fill: #FCE7F3; stroke: #DB2777; stroke-width: 2; }
+.fl-em { font-size: 14px; text-anchor: middle; }
+.fl-badge { font: 800 13px system-ui, sans-serif; fill: #B45309; text-anchor: middle; }
+.fl-bas { font: 11px system-ui, sans-serif; fill: #64748b; }
+.fl-ct { color: #0D9488; } .fl-cl { color: #DB2777; } .fl-co { color: #B45309; }
+.anim p.fl-info { margin: 0.6em 0 !important; min-height: 3em; padding: 0.5em 0.8em; border-left: 3px solid #004D80; background: #fff; border-radius: 0 6px 6px 0; font-size: 0.88em; line-height: 1.5; }
