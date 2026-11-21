@@ -296,3 +296,17 @@ Ci-dessous, Held-Karp à l'œuvre sur une carte de France, au départ de Paris&n
 ## Une branche, toutes les branches
 
 Les deux stratégies répondent à la même question, posée face à l'arbre de tous les choix possibles. Le glouton n'en suit qu'une branche&nbsp;: c'est rapide, mais il faut prouver que c'est la bonne, et il arrive qu'elle ne le soit pas. La programmation dynamique les explore toutes, mais chacune une seule fois, en reconnaissant les situations déjà rencontrées&nbsp;: c'est sûr, et souvent étonnamment rapide, à condition que ces situations ne soient pas trop nombreuses. Quand elles le sont, il reste à [explorer l'arbre lui-même](../explorer/), en élaguant le plus tôt possible les branches sans avenir.
+
+<div class="pv-grille2" style="margin:1.2em 0">
+<div class="pv-cas" style="background:#FFFBEB;border-color:#FCD34D"><b style="color:#B45309">Glouton</b>Une seule branche de l'arbre des choix, celle qui semble la meilleure à chaque étape. Très rapide, mais il faut <strong>prouver</strong> qu'elle mène à l'optimum, souvent par un argument d'échange.</div>
+<div class="pv-cas" style="background:#EFF6FF;border-color:#93C5FD"><b style="color:#1D4ED8">Programmation dynamique</b>Toutes les branches, mais chaque sous-problème n'est résolu <strong>qu'une fois</strong> et rangé dans une table. Toujours exacte, rapide tant que les sous-problèmes ne sont pas trop nombreux.</div>
+</div>
+
+<div class="encadre retenir">
+<div class="encadre-titre">À retenir</div>
+
+- Un algorithme **glouton** fait à chaque étape le choix localement le meilleur, sans jamais revenir en arrière. Il est optimal pour le rendu de monnaie en euros, les réservations, le code de Huffman, mais pas pour le sac à dos.
+- La **programmation dynamique** exprime la solution à partir de solutions de sous-problèmes, et mémorise chacune d'elles.
+- Elle résout le sac à dos en $\mathcal{O}(nC)$ pour $n$ objets et une capacité $C$, la distance d'édition en $\mathcal{O}(mn)$, le voyageur de commerce en $\mathcal{O}(n^2 2^n)$ au lieu de $n!$.
+
+</div>

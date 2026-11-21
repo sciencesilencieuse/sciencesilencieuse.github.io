@@ -358,7 +358,7 @@ L'algorithme était juste. C'est l'hypothèse implicite sur les nombres qui éta
 
 </div>
 
-<div class="encadre bleu">
+<div class="encadre retenir">
 <div class="encadre-titre">À retenir</div>
 
 - On prouve un algorithme par rapport à une **spécification**&nbsp;: des préconditions sur les entrées, des postconditions sur la sortie.

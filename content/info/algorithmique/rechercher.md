@@ -292,6 +292,17 @@ Le hachage est imaginé en 1953 par Hans Peter Luhn, ingénieur chez IBM, à qui
 
 </div>
 
+Pour un million d'éléments, l'écart entre ces méthodes donne le vertige&nbsp;:
+
+<div class="nb-fig">
+<div class="rc-barres">
+<div class="rc-l"><span class="rc-n">parcourir</span><span class="rc-b"><span style="--w:100%;--c:#DB2777"></span></span><span class="rc-v">jusqu'à <b>1 000 000</b></span></div>
+<div class="rc-l"><span class="rc-n">dichotomie</span><span class="rc-b"><span style="--w:22%;--c:#2563EB"></span></span><span class="rc-v"><b>20</b> au plus</span></div>
+<div class="rc-l"><span class="rc-n">hachage</span><span class="rc-b"><span style="--w:4%;--c:#0D9488"></span></span><span class="rc-v"><b>1</b> en moyenne</span></div>
+</div>
+<p class="nb-leg">Nombre de comparaisons pour trouver un élément parmi un million, sur une échelle logarithmique&nbsp;: chaque graduation multiplie par dix.</p>
+</div>
+
 ## Poser les bonnes questions
 
 Au jeu des vingt questions, il faut deviner un objet en posant des questions auxquelles on répond par oui ou par non. La meilleure question coupe l'ensemble des possibilités en deux parts égales&nbsp;: c'est la dichotomie, et $20$ questions départagent $2^{20}$, soit un million de possibilités. En 1948, Claude Shannon fait de cette idée une mesure&nbsp;: l'**information** apportée par une réponse se compte en **bits**, et une réponse qui divise les possibilités par deux en apporte exactement un.
@@ -341,3 +352,13 @@ for e in classement[:5]:
 {{< /runpython >}}
 
 Chercher, au fond, c'est toujours réduire une incertitude. La recherche séquentielle n'élimine qu'un candidat par question&nbsp;; la dichotomie en élimine la moitié, et ne peut pas faire mieux avec des réponses binaires&nbsp;; le hachage pose une question dont la réponse, l'adresse de la case, contient d'un coup presque toute l'information.
+
+<div class="encadre retenir">
+<div class="encadre-titre">À retenir</div>
+
+- **Parcourir** fonctionne sur n'importe quelles données, au prix de $n$ comparaisons dans le pire cas.
+- Sur des données **triées**, la **dichotomie** en demande environ $\log\_2 n$, et aucun algorithme fondé sur des comparaisons ne fait mieux dans le pire cas.
+- La même idée, couper en deux, trouve une racine d'une fonction continue qui change de signe.
+- Le **hachage** donne un accès en temps constant en moyenne, en échange de mémoire et d'une gestion des collisions.
+
+</div>

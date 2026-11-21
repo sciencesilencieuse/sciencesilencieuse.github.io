@@ -415,7 +415,7 @@ print(Decimal("0.1") + Decimal("0.2"))
 print(Fraction(0.1))                    # la fraction exacte que représente le flottant 0.1
 {{< /runpython >}}
 
-<div class="encadre bleu">
+<div class="encadre retenir">
 <div class="encadre-titre">À retenir</div>
 
 - Sur $n$ bits, on écrit $2^n$ valeurs, pas une de plus&nbsp;: les entiers de $0$ à $2^n - 1$, ou de $-2^{n-1}$ à $2^{n-1} - 1$ en complément à deux.

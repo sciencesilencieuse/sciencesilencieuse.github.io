@@ -21,6 +21,16 @@ def somme(n):
 print(somme(5), somme(100))
 {{< /runpython >}}
 
+<div class="nb-fig">
+<div class="rc-anat">
+<div class="rc-code"><span class="k">def</span> somme(n):
+<span class="rc-base">    <span class="k">if</span> n &lt; 1:
+        <span class="k">return</span> 0</span>
+<span class="rc-rec">    <span class="k">return</span> <span class="rc-comb">n +</span> <span class="rc-appel">somme(n - 1)</span></span></div>
+<div class="rc-legende"><span class="rc-l1">cas de base&nbsp;: résolu sans appel</span><span class="rc-l2">appel sur un problème plus petit</span><span class="rc-l3">combinaison avec le résultat</span></div>
+</div>
+</div>
+
 Deux ingrédients suffisent&nbsp;: un **cas de base**, assez simple pour être résolu sans appel, et la garantie que chaque appel s'en rapproche. Pour le reste, on écrit la fonction en *supposant* qu'elle marche déjà sur les problèmes plus petits. C'est exactement le raisonnement par récurrence&nbsp;: si $P(0)$ est vraie et si $P(n-1)$ entraîne $P(n)$, alors $P(n)$ est vraie pour tout $n$.
 
 ### La pile d'exécution
@@ -342,3 +352,13 @@ print(hanoi_sans_recursivite(4))
 {{< /runpython >}}
 
 La suite des disques déplacés, $1, 2, 1, 3, 1, 2, 1, 4, 1, 2, 1, 3\ldots$, est la «&nbsp;suite de la règle&nbsp;»&nbsp;: elle donne la hauteur des graduations d'une règle, plus longues aux centimètres, moyennes aux demi-centimètres, courtes aux millimètres. Le grand disque ne bouge qu'une fois, au milieu&nbsp;; les deux moitiés de la suite, de part et d'autre, sont deux copies de la solution pour $n-1$ disques. La récursivité était là depuis le début, dessinée dans la règle.
+
+<div class="encadre retenir">
+<div class="encadre-titre">À retenir</div>
+
+- Une fonction récursive a deux ingrédients&nbsp;: un **cas de base**, résolu directement, et des **appels sur des problèmes plus petits**, qui s'en rapprochent.
+- Chaque appel en attente occupe une place dans la **pile d'exécution**&nbsp;; trop d'appels emboîtés la font déborder.
+- Quand les mêmes sous-problèmes reviennent, comme pour Fibonacci, l'arbre des appels explose&nbsp;: il faut **mémoriser** les résultats.
+- **Diviser pour régner**, c'est découper en sous-problèmes indépendants et nettement plus petits&nbsp;; le coût total se lit sur l'arbre des appels.
+
+</div>

@@ -335,3 +335,14 @@ En 1857, l'astronome et mathématicien irlandais William Rowan Hamilton invente 
 {{< script "js/icosien3d.js" "module" >}}
 
 Le dodécaèdre compte trente cycles hamiltoniens. Pour les trouver, l'ordinateur n'a pas mieux qu'une exploration systématique&nbsp;: prolonger le chemin tant que c'est possible, et revenir en arrière dans les impasses. On ne connaît aucun critère simple, comparable à celui d'Euler, pour décider si un graphe possède un cycle hamiltonien&nbsp;: le problème est **NP-complet**. Chercher le plus court d'entre eux, quand les arêtes ont des longueurs, c'est le célèbre [problème du voyageur de commerce](../gloutons-dynamique/#le-voyageur-de-commerce-held-karp).
+
+<div class="encadre retenir">
+<div class="encadre-titre">À retenir</div>
+
+- Un graphe, ce sont des **sommets** reliés par des **arêtes**&nbsp;; on le range le plus souvent en **liste d'adjacence**.
+- Le **parcours en largeur**, avec une file, donne les distances en nombre d'arêtes&nbsp;; le **parcours en profondeur** utilise une pile.
+- Avec des longueurs positives, **Dijkstra** et son tas trouvent les plus courts chemins&nbsp;; **A\*** guide la recherche vers la cible.
+- L'**arbre couvrant minimal** s'obtient par des algorithmes gloutons, Prim ou Kruskal.
+- Le chemin d'**Euler** se décide par un simple compte des degrés&nbsp;; le cycle de **Hamilton** est un problème NP-complet.
+
+</div>

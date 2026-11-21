@@ -576,3 +576,13 @@ for s1 in strategies:
 for nom in sorted(scores, key=scores.get, reverse=True):
     print(f"{nom:16} {scores[nom]:6}")
 {{< /runpython >}}
+
+<div class="encadre retenir">
+<div class="encadre-titre">À retenir</div>
+
+- Le **retour sur trace** construit une solution pas à pas, abandonne une branche dès qu'elle viole une contrainte, et revient au dernier choix.
+- **Séparer et évaluer**, c'est couper aussi les branches dont une estimation optimiste ne bat pas la meilleure solution connue.
+- Dans un jeu à deux, une position est **gagnante** si un coup mène à une position perdante, **perdante** si tous mènent à une position gagnante. Au Nim, les positions perdantes sont celles de somme de Nim nulle.
+- Le **minimax**, accéléré par l'élagage **alpha-bêta**, explore l'arbre d'une partie&nbsp;; quand il est trop grand, on s'arrête à une profondeur fixée et l'on évalue les positions par une heuristique.
+
+</div>

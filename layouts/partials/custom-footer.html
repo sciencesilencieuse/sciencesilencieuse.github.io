@@ -30,3 +30,18 @@
   window.addEventListener('resize', ajuster);
 })();
 </script>
+{{ if eq .Params.css "algo.css" }}
+<script>
+/* Titres de section en couleur : chaque h2 reçoit une teinte de la palette des
+   animations (bleu, rose, sarcelle, ambre, violet, à tour de rôle), et les h3 et h4
+   qui le suivent reprennent la même teinte. */
+(function () {
+  var n = -1;
+  document.querySelectorAll('#body-inner h2, #body-inner h3, #body-inner h4').forEach(function (h) {
+    if (h.closest('.math-card, .anim, .encadre, .nb-piege, .bug')) return;
+    if (h.tagName === 'H2') n++;
+    if (n >= 0) h.setAttribute('data-teinte', n % 5);
+  });
+})();
+</script>
+{{ end }}

@@ -367,3 +367,13 @@ par_note = sorted(par_nom, key=lambda e: e[1], reverse=True)   # stable : l'ordr
 for nom, note in par_note:
     print(f"{note}  {nom}")
 {{< /runpython >}}
+
+<div class="encadre retenir">
+<div class="encadre-titre">À retenir</div>
+
+- Les tris simples (sélection, insertion, bulles) coûtent $\mathcal{O}(n^2)$&nbsp;; le tri par insertion excelle sur des données presque triées.
+- Le **tri fusion** coûte toujours $\mathcal{O}(n \log n)$, avec une mémoire auxiliaire&nbsp;; le **Quicksort** aussi en moyenne, mais $\mathcal{O}(n^2)$ dans le pire cas.
+- Aucun tri par comparaisons ne fait mieux que $n \log\_2 n$ comparaisons dans le pire cas. Sans comparer, le tri par base descend au temps linéaire quand les clés sont bornées.
+- Un tri **stable** préserve l'ordre des éléments égaux. Celui de Python, Timsort, est stable et tire parti de l'ordre déjà présent.
+
+</div>

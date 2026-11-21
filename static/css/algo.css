@@ -1426,3 +1426,54 @@ table.nb-tab td:first-child { text-align: left; font-weight: 700; }
 .fl-bas { font: 11px system-ui, sans-serif; fill: #64748b; }
 .fl-ct { color: #0D9488; } .fl-cl { color: #DB2777; } .fl-co { color: #B45309; }
 .anim p.fl-info { margin: 0.6em 0 !important; min-height: 3em; padding: 0.5em 0.8em; border-left: 3px solid #004D80; background: #fff; border-radius: 0 6px 6px 0; font-size: 0.88em; line-height: 1.5; }
+
+/* ---------- Titres colorés (teinte posée par custom-footer.html) ---------------------------- */
+[data-teinte="0"] { --t-f: #1E40AF; --t: #2563EB; --t-c: #DBEAFE; }
+[data-teinte="1"] { --t-f: #9D174D; --t: #DB2777; --t-c: #FCE7F3; }
+[data-teinte="2"] { --t-f: #115E59; --t: #0D9488; --t-c: #CCFBF1; }
+[data-teinte="3"] { --t-f: #92400E; --t: #D97706; --t-c: #FEF3C7; }
+[data-teinte="4"] { --t-f: #5B21B6; --t: #7C3AED; --t-c: #EDE9FE; }
+#body-inner h2[data-teinte] { color: var(--t-f) !important; padding-bottom: 0.25em; margin-top: 1.8em !important;
+  background: linear-gradient(90deg, var(--t) 0, var(--t) 3.5em, var(--t-c) 3.5em, rgba(255,255,255,0) 85%) left bottom / 100% 3px no-repeat; }
+#body-inner h3[data-teinte] { color: var(--t) !important; padding-left: 0.55em; border-left: 4px solid var(--t); line-height: 1.25; }
+#body-inner h4[data-teinte] { color: var(--t-f) !important; }
+
+/* ---------- Encadrés : une icône et une couleur par usage --------------------------------- */
+.encadre { box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06); border-width: 1px; border-left-width: 6px; }
+.encadre .encadre-titre::before { margin-right: 0.35em; }
+.encadre:not(.prune):not(.bleu):not(.bref):not(.bug-long):not(.retenir) .encadre-titre::before { content: "💡"; }
+.encadre.bleu .encadre-titre::before { content: "🔎"; }
+.encadre.prune .encadre-titre::before { content: "📜"; }
+.encadre.bref .encadre-titre::before { content: "📌"; }
+.encadre.retenir { border-color: #16a34a; background: linear-gradient(135deg, #F0FDF4, #ECFEFF); }
+.encadre.retenir .encadre-titre { color: #15803d; }
+.encadre.retenir .encadre-titre::before { content: "✅"; }
+.encadre.retenir li::marker { color: #16a34a; }
+
+/* ---------- Tableaux récapitulatifs ---------------------------------------------------------- */
+#body-inner .tab-recap { border-collapse: separate; border-spacing: 0; border-radius: 10px; overflow: hidden; box-shadow: 0 0 0 1px #e2e8f0; }
+#body-inner .tab-recap th { background: linear-gradient(135deg, #1E40AF, #2563EB) !important; color: #fff !important; border: 0 !important; }
+#body-inner .tab-recap tr:nth-child(even) td { background: #F8FAFC; }
+#body-inner .tab-recap td:first-child { font-weight: 600; color: #1e293b; }
+
+/* ---------- Rechercher : barres logarithmiques ; Récursivité : anatomie d'une fonction -------- */
+.rc-barres { display: grid; gap: 0.55em; }
+.rc-l { display: grid; grid-template-columns: 6.5em minmax(0, 1fr) 9.5em; gap: 0.6em; align-items: center; font-size: 0.9em; }
+.rc-n { font-weight: 700; color: #334155; text-align: right; }
+.rc-b { height: 1.3em; background: #f1f5f9 repeating-linear-gradient(90deg, transparent 0 calc(100% / 6 - 1px), #cbd5e1 calc(100% / 6 - 1px) calc(100% / 6)); border-radius: 999px; overflow: hidden; }
+.rc-b span { display: block; height: 100%; width: var(--w); min-width: 0.8em; background: var(--c); border-radius: 999px; }
+.rc-v { color: #475569; font-variant-numeric: tabular-nums; }
+.rc-v b { color: #0f172a; }
+@media (max-width: 560px) { .rc-l { grid-template-columns: 1fr; gap: 0.15em; } .rc-n { text-align: left; } }
+.rc-anat { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 0.8em; align-items: center; }
+.rc-code { white-space: pre; overflow-x: auto; background: #0f172a; color: #e2e8f0; border-radius: 10px; padding: 0.8em 1em; font: 0.95em/1.7 ui-monospace, monospace; }
+.rc-code .k { color: #C084FC; font-weight: 700; }
+.rc-base { background: rgba(34, 197, 94, 0.22); border-radius: 4px; }
+.rc-appel { background: rgba(59, 130, 246, 0.35); border-radius: 4px; padding: 0 0.15em; }
+.rc-comb { background: rgba(245, 158, 11, 0.35); border-radius: 4px; padding: 0 0.15em; }
+.rc-legende { display: grid; gap: 0.4em; font-size: 0.86em; }
+.rc-legende span { padding: 0.35em 0.7em; border-radius: 8px; border-left: 5px solid; }
+.rc-l1 { background: #F0FDF4; border-color: #22C55E !important; color: #15803d; }
+.rc-l2 { background: #EFF6FF; border-color: #3B82F6 !important; color: #1D4ED8; }
+.rc-l3 { background: #FFFBEB; border-color: #F59E0B !important; color: #B45309; }
+@media (max-width: 560px) { .rc-anat { grid-template-columns: 1fr; } }
