@@ -15,7 +15,7 @@ chapter = false
 
 <div class="math-card c-bleu">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16"/><ellipse class="leger" cx="24" cy="24" rx="16" ry="5"/><path d="M24 24l8-11"/><circle class="plein" cx="32" cy="13" r="2.6"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv58" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><ellipse cx="24" cy="24" rx="21" ry="6.5" fill="none" stroke="#000" stroke-width="2"/><path d="M24 24l9-13" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="33" cy="11" r="3.6" fill="#000"/></mask></defs><g mask="url(#pv58)"><circle cx="24" cy="24" r="21"/></g></svg></span>
 <h3><a href="./fondations/">Notions fondamentales</a></h3>
 </div>
 <div class="carte-texte">Les postulats, le qubit, et ce qu'on peut en faire ou non&nbsp;: cloner, téléporter.</div>
@@ -33,7 +33,7 @@ chapter = false
 
 <div class="math-card c-canard">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="9" y="9" width="30" height="30" rx="2"/><path d="M24 9v30M9 24h30"/><rect class="teinte" x="9" y="9" width="15" height="15"/><rect class="teinte" x="24" y="24" width="15" height="15"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv59" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M29 8h11v11H29zM8 29h11v11H8z" fill="#000"/></mask></defs><g mask="url(#pv59)"><rect x="4" y="4" width="19" height="19" rx="3"/><rect x="25" y="25" width="19" height="19" rx="3"/><rect x="25" y="4" width="19" height="19" rx="3"/><rect x="4" y="25" width="19" height="19" rx="3"/></g></svg></span>
 <h3><a href="./spekkens/">Théorie-jouet de Spekkens</a></h3>
 </div>
 <div class="carte-texte">Un système classique minimal, une seule contrainte sur ce qu'on peut savoir&nbsp;: combien de bizarreries quantiques en sortent&nbsp;?</div>
@@ -50,7 +50,7 @@ chapter = false
 
 <div class="math-card c-vert">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M6 37h36"/><path d="M6 37c8 0 8-22 14-22s6 22 14 22"/><path class="leger" d="M14 37c8 0 8-17 14-17s6 17 14 17"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv60" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M12 42c9 0 10-22 17-22s8 22 17 22" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv60)"><path d="M2 42c9 0 10-28 17-28s8 28 17 28z"/><rect x="2" y="42" width="44" height="3" rx="1.5"/></g></svg></span>
 <h3><a href="./epistovsonto/">Épistémique vs ontique</a></h3>
 </div>
 <div class="carte-texte">La fonction d'onde décrit-elle la réalité ou ce que l'on en sait&nbsp;? Le théorème PBR tranche.</div>
@@ -66,7 +66,7 @@ chapter = false
 
 <div class="math-card c-orange">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle class="plein" cx="24" cy="24" r="3"/><path d="M19 24H7M11 20l-4 4 4 4"/><path d="M29 24h12M37 20l4 4-4 4"/><path class="leger" d="M7 14v-4M41 34v4"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv61" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="24" cy="24" r="7.6" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="24" cy="24" r="2.4" fill="#000"/></mask></defs><g mask="url(#pv61)"><circle cx="24" cy="24" r="6"/><path d="M3 24l9-7v4.5h5v5h-5V31zM45 24l-9-7v4.5h-5v5h5V31z"/></g><path d="M7 12V6M41 36v6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
 <h3><a href="./epr/">Paradoxe EPR</a></h3>
 </div>
 <div class="carte-texte">Intrication, inégalités de Bell et tension avec la relativité&nbsp;: comment s'en sortir&nbsp;?</div>
@@ -82,7 +82,7 @@ chapter = false
 
 <div class="math-card c-rouge">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="12" y="15" width="24" height="18" rx="2.5"/><path d="M18 6v9M30 6v9M18 33v9M30 33v9"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv62" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M9 24h30" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.5 13v-1M30.5 13v-1" fill="none" stroke="#000" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv62)"><rect x="9" y="13" width="30" height="22" rx="5"/><rect x="15.5" y="3" width="4" height="12" rx="2"/><rect x="28.5" y="3" width="4" height="12" rx="2"/><rect x="15.5" y="33" width="4" height="12" rx="2"/><rect x="28.5" y="33" width="4" height="12" rx="2"/></g></svg></span>
 <h3><a href="./nonlocale/">Limites de la non-localité</a></h3>
 </div>
 <div class="carte-texte">Pourquoi la nature n'est-elle pas plus non locale qu'elle ne l'est&nbsp;?</div>
@@ -98,7 +98,7 @@ chapter = false
 
 <div class="math-card c-magenta">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="9" y="9" width="30" height="30" rx="2"/><path d="M19 9v30M29 9v30M9 19h30M9 29h30"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv63" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M8 8h4v4h-4z" fill="#000"/><path d="M22 22h4v4h-4z" fill="#000"/><path d="M36 36h4v4h-4z" fill="#000"/><path d="M36 8h4v4h-4zM8 36h4v4H8z" fill="#000"/></mask></defs><g mask="url(#pv63)"><rect x="4" y="4" width="12" height="12" rx="2.5"/><rect x="4" y="18" width="12" height="12" rx="2.5"/><rect x="4" y="32" width="12" height="12" rx="2.5"/><rect x="18" y="4" width="12" height="12" rx="2.5"/><rect x="18" y="18" width="12" height="12" rx="2.5"/><rect x="18" y="32" width="12" height="12" rx="2.5"/><rect x="32" y="4" width="12" height="12" rx="2.5"/><rect x="32" y="18" width="12" height="12" rx="2.5"/><rect x="32" y="32" width="12" height="12" rx="2.5"/></g></svg></span>
 <h3><a href="./contextualite/">Contextualité</a></h3>
 </div>
 <div class="carte-texte">Le résultat d'une mesure peut dépendre de ce que l'on mesure en même temps.</div>
@@ -115,7 +115,7 @@ chapter = false
 
 <div class="math-card c-bleu">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M17 31V6M17 31h25M17 31L6 42"/><path class="leger" d="M13 10l4-4 4 4M38 27l4 4-4 4"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><path d="M16 14l14-8 14 8-14 8z" opacity=".4"/><path d="M16 14v18l14 8V22z"/><path d="M44 14v18l-14 8V22z" opacity=".4"/><path d="M4 44l10-10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 46l2.5-8 5.5 5.5z"/></svg></span>
 <h3><a href="./3ndimensions/">Une ontologie à 3N dimensions</a></h3>
 </div>
 <div class="carte-texte">Une fonction d'onde locale et séparable… à condition de vivre dans un espace à 3N dimensions.</div>
@@ -132,7 +132,7 @@ chapter = false
 
 <div class="math-card c-canard">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 7c11 9 11 25 0 34M40 7c-11 9-11 25 0 34"/><path class="leger" d="M15 17h18M16 24h16M15 31h18"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv64" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M10 4c-4 8-4 32 0 40M38 4c4 8 4 32 0 40" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv64)"><path d="M3 4h14c-5 8-5 32 0 40H3zM45 4H31c5 8 5 32 0 40h14z"/></g><path d="M17 17h14M16 24h16M17 31h14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity=".4"/></svg></span>
 <h3><a href="./erepr/">ER = EPR</a></h3>
 </div>
 <div class="carte-texte">Des particules intriquées reliées par des trous de ver&nbsp;: et si l'intrication tissait l'espace-temps&nbsp;?</div>
@@ -140,7 +140,7 @@ chapter = false
 
 <div class="math-card c-vert">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 43V26M24 26L11 10M24 26L37 10M24 26V8"/><circle class="plein" cx="11" cy="10" r="2.6"/><circle class="plein" cx="37" cy="10" r="2.6"/><circle class="plein" cx="24" cy="8" r="2.6"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv65" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="10" cy="10" r="6.4" fill="none" stroke="#000" stroke-width="2"/><circle cx="38" cy="10" r="6.4" fill="none" stroke="#000" stroke-width="2"/><circle cx="24" cy="7" r="6.4" fill="none" stroke="#000" stroke-width="2"/><circle cx="24" cy="7" r="2.2" fill="#000"/></mask></defs><g mask="url(#pv65)"><path d="M24 45V27M24 27L10 11M24 27L38 11M24 27V8" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="10" r="5"/><circle cx="38" cy="10" r="5"/><circle cx="24" cy="7" r="5"/></g></svg></span>
 <h3><a href="./decoherence/">Décohérence et darwinisme quantique</a></h3>
 </div>
 <div class="carte-texte">Comment un monde classique et objectif émerge-t-il du quantique&nbsp;?</div>

@@ -453,6 +453,9 @@ html
   transition: transform 0.3s cubic-bezier(.2, .8, .2, 1);
 }
 .math-icon svg { width: 52px; height: 52px; stroke-width: 2.3; }
+/* Pictogrammes « plein-vide » (outils/icones_cartes.py) : formes pleines, détails découpés */
+.math-icon:has(svg.pv) { width: 76px; height: 76px; }
+.math-icon svg.pv { width: 64px; height: 64px; fill: currentColor; stroke: none; }
 .math-icon .creux { fill: var(--voile); }
 .math-icon .teinte { fill-opacity: 0.25; }
 .math-card:hover .math-icon { transform: scale(1.08); }

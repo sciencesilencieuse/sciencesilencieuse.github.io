@@ -22,7 +22,7 @@ C'est la mission de la <b>physique statistique</b> que de construire le pont ent
 
 <div class="math-card c-bleu">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="7" y="7" width="34" height="34" rx="3"/><circle class="plein" cx="15" cy="16" r="2.4"/><circle class="plein" cx="30" cy="13" r="2.4"/><circle class="plein" cx="22" cy="26" r="2.4"/><circle class="plein" cx="34" cy="31" r="2.4"/><circle class="plein" cx="14" cy="34" r="2.4"/><path class="leger" d="M22 26l5 3M15 16l-3-3"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv53" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="13" cy="13" r="3" fill="#000"/><circle cx="30" cy="11" r="3" fill="#000"/><circle cx="22" cy="23" r="3" fill="#000"/><circle cx="36" cy="30" r="3" fill="#000"/><circle cx="12" cy="34" r="3" fill="#000"/><circle cx="25" cy="37" r="3" fill="#000"/><circle cx="37" cy="19" r="3" fill="#000"/><path d="M22 23l6 3M13 13l-3-3" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv53)"><rect x="4" y="4" width="40" height="40" rx="6"/></g></svg></span>
 <h3><a href="./phistat/">Physique statistique</a></h3>
 </div>
 <div class="carte-texte">Une série de vidéos, de la température à l'entropie, en passant par le facteur de Boltzmann et la loi de Planck.</div>
@@ -30,7 +30,7 @@ C'est la mission de la <b>physique statistique</b> que de construire le pont ent
 
 <div class="math-card c-canard">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M7 41h34"/><path d="M11 41V30M19 41V19M27 41V11M35 41V23" stroke-width="4.5"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv54" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M27.5 13v4" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv54)"><rect x="4" y="30" width="7" height="13" rx="1.5"/><rect x="14" y="18" width="7" height="25" rx="1.5"/><rect x="24" y="8" width="7" height="35" rx="1.5"/><rect x="34" y="22" width="7" height="21" rx="1.5"/><rect x="2" y="44" width="44" height="3" rx="1.5"/></g></svg></span>
 <h3><a href="./entropie/">Entropie et information</a></h3>
 </div>
 <div class="carte-texte">Qu'est-ce que l'entropie&nbsp;? De Shannon à Szilárd, une notion qui se ramifie partout.</div>
@@ -43,7 +43,7 @@ C'est la mission de la <b>physique statistique</b> que de construire le pont ent
 
 <div class="math-card c-vert">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="6" y="11" width="36" height="26" rx="2"/><path d="M24 11v8M24 29v8"/><circle class="plein" cx="13" cy="19" r="2.2"/><circle class="plein" cx="16" cy="30" r="2.2"/><circle class="plein" cx="32" cy="22" r="2.2"/><circle class="plein" cx="36" cy="31" r="2.2"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv55" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M24 9v9M24 30v9" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="17" r="2.4" fill="#000"/><circle cx="13" cy="30" r="2.4" fill="#000"/><circle cx="18" cy="22" r="2.4" fill="#000"/><circle cx="31" cy="16" r="3.4" fill="#000"/><circle cx="38" cy="28" r="3.4" fill="#000"/><circle cx="33" cy="32" r="3.4" fill="#000"/></mask></defs><g mask="url(#pv55)"><rect x="2" y="9" width="44" height="30" rx="5"/></g></svg></span>
 <h3><a href="./landauer/">Démon de Maxwell et principe de Landauer</a></h3>
 </div>
 <div class="carte-texte">Un démon qui trie les molécules, une machine à un bit, et le prix à payer pour oublier.</div>
@@ -61,7 +61,7 @@ C'est la mission de la <b>physique statistique</b> que de construire le pont ent
 
 <div class="math-card c-orange">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="leger" d="M7 41h35M7 41V6"/><path d="M11 39c6-3 10-7 13-12M24 27l11-14M24 27l-2-19"/><circle class="plein" cx="35" cy="13" r="2.6"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv56" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M9 39C16 37 21 33 24 28" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 28C23 22 22 16 21 9" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 28C29 25 34 21 38 15" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="28" r="3" fill="#000"/><circle cx="38" cy="15" r="2.4" fill="#000"/></mask></defs><g mask="url(#pv56)"><rect x="4" y="4" width="40" height="40" rx="11"/></g></svg></span>
 <h3><a href="./chgt/">Phase et transition</a></h3>
 </div>
 <div class="carte-texte">Fluide supercritique et transitions de phase&nbsp;: quand la frontière entre liquide et gaz disparaît.</div>
@@ -75,7 +75,7 @@ C'est la mission de la <b>physique statistique</b> que de construire le pont ent
 
 <div class="math-card c-rouge">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M20 30V10a4 4 0 0 1 8 0v20"/><circle cx="24" cy="35" r="7"/><path d="M24 31V17"/><path class="leger" d="M33 14h5M33 20h5M33 26h5"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv57" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M22 34V12" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="22" cy="36.5" r="4.4" fill="#000"/></mask></defs><g mask="url(#pv57)"><path d="M16 30V9a6 6 0 0 1 12 0v21a10 10 0 1 1-12 0z"/><rect x="33" y="10" width="10" height="3" rx="1.5"/><rect x="33" y="17" width="10" height="3" rx="1.5"/><rect x="33" y="24" width="10" height="3" rx="1.5"/></g><circle cx="22" cy="36.5" r="2.6"/><rect x="21" y="14" width="2" height="22" rx="0"/></svg></span>
 <h3><a href="./effu/">Effusivité</a></h3>
 </div>
 <div class="carte-texte">Pourquoi le carrelage paraît-il plus froid que la moquette, à la même température&nbsp;?</div>

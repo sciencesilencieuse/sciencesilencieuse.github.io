@@ -19,7 +19,7 @@ Pour leur donner un sens, on ne raisonne plus dans un seul monde mais dans un **
 
 <div class="math-card c-magenta">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="leger" d="M10 35L24 12l14 23z"/><circle class="plein" cx="24" cy="12" r="4.4"/><circle class="plein" cx="10" cy="35" r="4.4"/><circle class="plein" cx="38" cy="35" r="4.4"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv18" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="24" cy="9" r="6.3999999999999995" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="9" cy="37" r="6.3999999999999995" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="39" cy="37" r="6.3999999999999995" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="9" cy="37" r="2.7" fill="#000"/></mask></defs><g mask="url(#pv18)"><path d="M24 9L9 37" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 9L39 37" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 37L39 37" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="9" r="5"/><circle cx="9" cy="37" r="5"/><circle cx="39" cy="37" r="5"/></g></svg></span>
 <h3><a href="./syntaxe-semantique/">Syntaxe et sémantique</a></h3>
 </div>
 <div class="carte-texte">Formules modales, mondes possibles et modèles de Kripke.</div>
@@ -38,7 +38,7 @@ Pour leur donner un sens, on ne raisonne plus dans un seul monde mais dans un **
 
 <div class="math-card c-bleu">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 12v24M8 24h11"/><rect x="26" y="16" width="16" height="16" rx="1.5"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv19" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="36" cy="24" r="3" fill="#000"/></mask></defs><g mask="url(#pv19)"><path d="M5 9h4v30H5zM9 22.2h12v3.6H9z"/><rect x="26" y="14" width="20" height="20" rx="3"/></g></svg></span>
 <h3><a href="./systemes/">Systèmes logiques</a></h3>
 </div>
 <div class="carte-texte">Axiomes et règles&nbsp;: du système K jusqu'à S5.</div>
@@ -54,7 +54,7 @@ Pour leur donner un sens, on ne raisonne plus dans un seul monde mais dans un **
 
 <div class="math-card c-orange">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="leger" d="M10 24h10M20 24l15-12M20 24h15M20 24l15 12"/><circle class="plein" cx="10" cy="24" r="4.4"/><circle class="plein" cx="37" cy="12" r="3.8"/><circle class="plein" cx="37" cy="24" r="3.8"/><circle class="plein" cx="37" cy="36" r="3.8"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv20" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="9" cy="24" r="6.8999999999999995" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="38" cy="9" r="5.8" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="38" cy="24" r="5.8" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="38" cy="39" r="5.8" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="9" cy="24" r="3.2" fill="#000"/></mask></defs><g mask="url(#pv20)"><path d="M9 24L38 9" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 24L38 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 24L38 39" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="24" r="5.5"/><circle cx="38" cy="9" r="4.4"/><circle cx="38" cy="24" r="4.4"/><circle cx="38" cy="39" r="4.4"/></g></svg></span>
 <h3><a href="./logiques/">Différentes logiques modales</a></h3>
 </div>
 <div class="carte-texte">Une même machinerie, cinq lectures de la boîte.</div>

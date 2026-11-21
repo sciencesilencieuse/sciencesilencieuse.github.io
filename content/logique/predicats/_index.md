@@ -17,7 +17,7 @@ Le calcul des propositions traite chaque affirmation comme un bloc. Le **calcul 
 
 <div class="math-card c-orange">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M11 10l13 28 13-28"/><path d="M16 21h16"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv24" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M13 12l11 24 11-24M17.2 21h13.6" fill="none" stroke="#000" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv24)"><rect x="4" y="4" width="40" height="40" rx="11"/></g></svg></span>
 <h3><a href="./langage/">Langage et sens</a></h3>
 </div>
 <div class="carte-texte">Des objets, des propriétés, $\forall$ et $\exists$&nbsp;: le vocabulaire du premier ordre et les mondes où il prend sens.</div>
@@ -34,7 +34,7 @@ Le calcul des propositions traite chaque affirmation comme un bloc. Le **calcul 
 
 <div class="math-card c-rouge">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M14 10v28M14 24h22"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv25" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M16 12v24M16 24h17" fill="none" stroke="#000" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv25)"><circle cx="24" cy="24" r="21"/></g></svg></span>
 <h3><a href="./preuve/">Démontrer au premier ordre</a></h3>
 </div>
 <div class="carte-texte">Quatre règles de plus, la complétude de Gödel et quelques vertiges&nbsp;: compacité, Skolem, indécidabilité.</div>

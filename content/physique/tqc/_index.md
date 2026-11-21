@@ -58,7 +58,7 @@ La théorie quantique des champs (TQC) est considérée à ce jour comme la meil
 
 <div class="math-card c-bleu">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 7c2 21 8 31 15 31s13-10 15-31"/><path class="leger" d="M15 31h18M12 23h24M10 15h28"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv66" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M17 35h14M12 27h24M9 19h30M7 11h34" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv66)"><path d="M5 4c2 24 9 38 19 38S41 28 43 4z"/></g></svg></span>
 <h3><a href="./oh/">Oscillateur harmonique</a></h3>
 </div>
 <div class="carte-texte">L'objet central de la théorie&nbsp;: quantification, opérateurs d'échelle, et l'intuition d'une rotation dans l'espace des phases.</div>
@@ -77,7 +77,7 @@ La théorie quantique des champs (TQC) est considérée à ce jour comme la meil
 
 <div class="math-card c-canard">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M7 11c6-2 12-1 17 3 5-4 11-5 17-3v26c-6-2-12-1-17 3-5-4-11-5-17-3z"/><path d="M24 14v26"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv67" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M24 12v31" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 17c4-1 8-1 11 1M8 24c4-1 8-1 11 1M29 18c3-2 7-2 11-1M29 25c3-2 7-2 11-1" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv67)"><path d="M3 9c7-3 14-2 21 3 7-5 14-6 21-3v31c-7-3-14-2-21 3-7-5-14-6-21-3z"/></g></svg></span>
 <h3><a href="./gifted_amateur/">Notes de lecture</a></h3>
 </div>
 <div class="carte-texte">Le livre de Lancaster et Blundell, <i>Quantum Field Theory for the Gifted Amateur</i>, parcouru partie par partie.</div>
@@ -97,7 +97,7 @@ La théorie quantique des champs (TQC) est considérée à ce jour comme la meil
 
 <div class="math-card c-vert">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M6 9l11 15-11 15M42 9L31 24l11 15"/><path d="M17 24q2-5 3.5 0t3.5 0 3.5 0 3.5 0"/><circle class="plein" cx="17" cy="24" r="2.2"/><circle class="plein" cx="31" cy="24" r="2.2"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv68" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="16" cy="24" r="5.6" fill="none" stroke="#000" stroke-width="2"/><circle cx="32" cy="24" r="5.6" fill="none" stroke="#000" stroke-width="2"/></mask></defs><g mask="url(#pv68)"><path d="M4 8l12 16L4 40M44 8L32 24l12 16" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.5 11.5l1.2 6-5.6-2.4zM39.5 11.5l-1.2 6 5.6-2.4z"/><path d="M16 24q2-5.5 4 0t4 0 4 0 4 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="24" r="4.2"/><circle cx="32" cy="24" r="4.2"/></g></svg></span>
 <h3><a href="./qed-light/">La lumière selon Feynman</a></h3>
 </div>
 <div class="carte-texte">D'après son petit livre <i>QED</i>&nbsp;: l'électrodynamique quantique racontée avec des flèches qui tournent.</div>

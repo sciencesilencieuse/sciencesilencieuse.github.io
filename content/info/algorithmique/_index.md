@@ -14,7 +14,7 @@ aliases = ["/info/strategies/", "/info/algorithmique/strategies/"]
 
 <div class="math-card c-orange">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="20" cy="20" r="11"/><path d="M28 28l12 12"/><path class="leger" d="M15 20h10M20 15v10"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv5" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="20" cy="20" r="11.3" fill="none" stroke="#000" stroke-width="2.4"/><path d="M14 20h12M20 14v12" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv5)"><circle cx="20" cy="20" r="15"/><path d="M31 31l11 11" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></g></svg></span>
 <h3><a href="./rechercher/">Rechercher</a></h3>
 </div>
 <div class="carte-texte">Parcourir, couper en deux, hacher, poser les bonnes questions&nbsp;: chercher, c'est réduire une incertitude.</div>
@@ -33,7 +33,7 @@ aliases = ["/info/strategies/", "/info/algorithmique/strategies/"]
 
 <div class="math-card c-bleu">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="leger" d="M7 41h35M7 41V6"/><path d="M9 39h31"/><path d="M9 39c12-2 22-8 31-16"/><path d="M9 39c8-6 14-18 17-32"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv6" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M10 11v27h28" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 35L36 30" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 35C22 33 30 27 36 20" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 35C21 31 27 22 30 11" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv6)"><rect x="4" y="4" width="40" height="40" rx="11"/></g></svg></span>
 <h3><a href="./complexite/">Complexité</a></h3>
 </div>
 <div class="carte-texte">Peut-on faire mieux&nbsp;? Mesurer un algorithme, puis le raffiner pas à pas&nbsp;: le doublon, le plus grand sous-tableau, P = NP.</div>
@@ -50,7 +50,7 @@ aliases = ["/info/strategies/", "/info/algorithmique/strategies/"]
 
 <div class="math-card c-canard">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 6L42 38H6z"/><path class="leger" d="M15 22h18M24 38L15 22M24 38l9-16"/><path class="leger" d="M19.5 30h9M28.5 30l-4.5-8M19.5 30l4.5-8"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv7" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M34.5 22.0L24.0 41.0L13.5 22.0z" fill="#000"/><path d="M29.25 12.5L24.0 22.0L18.75 12.5z" fill="#000"/><path d="M18.75 31.5L13.5 41.0L8.25 31.5z" fill="#000"/><path d="M39.75 31.5L34.5 41.0L29.25 31.5z" fill="#000"/></mask></defs><g mask="url(#pv7)"><path d="M24 3L45 41L3 41z"/></g></svg></span>
 <h3><a href="./recursivite/">Récursivité</a></h3>
 </div>
 <div class="carte-texte">Résoudre un problème en le supposant déjà résolu en plus petit&nbsp;: pile d'appels, Hanoï, fractales, Euclide, diviser pour régner.</div>
@@ -69,7 +69,7 @@ aliases = ["/info/strategies/", "/info/algorithmique/strategies/"]
 
 <div class="math-card c-vert">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="leger" d="M6 42h36"/><rect x="8" y="30" width="6" height="12" rx="1"/><rect x="17" y="24" width="6" height="18" rx="1"/><rect x="26" y="16" width="6" height="26" rx="1"/><rect class="teinte" x="35" y="7" width="6" height="35" rx="1"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv8" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M38 9v5" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv8)"><rect x="4" y="31" width="8" height="13" rx="2" opacity=".4"/><rect x="14" y="24" width="8" height="20" rx="2"/><rect x="24" y="15" width="8" height="29" rx="2"/><rect x="34" y="5" width="8" height="39" rx="2"/></g></svg></span>
 <h3><a href="./trier/">Trier</a></h3>
 </div>
 <div class="carte-texte">Des tris simples aux tris en n log n, la borne qu'on ne peut pas franchir en comparant, et comment la contourner.</div>
@@ -89,7 +89,7 @@ aliases = ["/info/strategies/", "/info/algorithmique/strategies/"]
 
 <div class="math-card c-rouge">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="leger" d="M10 12l14 6M10 12l4 22M24 18l14-6M24 18l-10 16M24 18l10 18M38 12l-4 24M14 34h20"/><circle class="plein" cx="10" cy="12" r="3.4"/><circle class="plein" cx="24" cy="18" r="3.4"/><circle class="plein" cx="38" cy="12" r="3.4"/><circle class="plein" cx="14" cy="34" r="3.4"/><circle class="plein" cx="34" cy="36" r="3.4"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv9" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="8" cy="10" r="5.3999999999999995" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="24" cy="17" r="5.999999999999999" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="40" cy="9" r="5.3999999999999995" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="12" cy="37" r="5.3999999999999995" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="36" cy="38" r="5.3999999999999995" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="24" cy="17" r="2.3" fill="#000"/></mask></defs><g mask="url(#pv9)"><path d="M8 10L24 17" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 10L12 37" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 17L40 9" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 17L12 37" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 17L36 38" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M40 9L36 38" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 37L36 38" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="10" r="4"/><circle cx="24" cy="17" r="4.6"/><circle cx="40" cy="9" r="4"/><circle cx="12" cy="37" r="4"/><circle cx="36" cy="38" r="4"/></g></svg></span>
 <h3><a href="./graphes/">Graphes</a></h3>
 </div>
 <div class="carte-texte">Des ponts de Königsberg au jeu icosien de Hamilton&nbsp;: parcourir, trouver le plus court chemin, relier au moindre coût.</div>
@@ -110,7 +110,7 @@ aliases = ["/info/strategies/", "/info/algorithmique/strategies/"]
 
 <div class="math-card c-vert">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect class="leger" x="6" y="8" width="36" height="32" rx="2"/><path class="leger" d="M6 16h36M6 24h36M6 32h36M15 8v32M24 8v32M33 8v32"/><rect class="teinte" x="33" y="32" width="9" height="8"/><path d="M28.5 20l9 16"/><path d="M19.5 28l18 8"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><rect x="5" y="15" width="8.4" height="7.4" rx="1.6"/><rect x="5" y="24" width="8.4" height="7.4" rx="1.6"/><rect x="5" y="33" width="8.4" height="7.4" rx="1.6"/><rect x="15" y="6" width="8.4" height="7.4" rx="1.6"/><rect x="15" y="24" width="8.4" height="7.4" rx="1.6"/><rect x="15" y="33" width="8.4" height="7.4" rx="1.6"/><rect x="25" y="6" width="8.4" height="7.4" rx="1.6"/><rect x="25" y="15" width="8.4" height="7.4" rx="1.6"/><rect x="25" y="33" width="8.4" height="7.4" rx="1.6"/><rect x="35" y="6" width="8.4" height="7.4" rx="1.6"/><rect x="35" y="15" width="8.4" height="7.4" rx="1.6"/><rect x="35" y="24" width="8.4" height="7.4" rx="1.6"/><rect x="5" y="6" width="8.4" height="7.4" rx="1.6" opacity=".4"/><rect x="15" y="15" width="8.4" height="7.4" rx="1.6" opacity=".4"/><rect x="25" y="24" width="8.4" height="7.4" rx="1.6" opacity=".4"/><rect x="35" y="33" width="8.4" height="7.4" rx="1.6" opacity=".4"/><path d="M9.2 9.7L39.2 36.7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
 <h3><a href="./gloutons-dynamique/">Gloutons et programmation dynamique</a></h3>
 </div>
 <div class="carte-texte">Une seule branche ou toutes les branches une seule fois&nbsp;: rendu de monnaie, Huffman, sac à dos, distance d'édition, voyageur de commerce.</div>
@@ -129,7 +129,7 @@ aliases = ["/info/strategies/", "/info/algorithmique/strategies/"]
 
 <div class="math-card c-bleu">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 10L12 24M24 10l12 14M12 24l-5 13M12 24l5 13M36 24l3 9"/><circle class="plein" cx="24" cy="9" r="3.4"/><circle class="creux" cx="12" cy="24" r="3.4"/><circle class="creux" cx="36" cy="24" r="3.4"/><circle class="plein" cx="7" cy="38" r="3"/><circle class="plein" cx="17" cy="38" r="3"/><path class="leger" d="M36 36l7 7M43 36l-7 7"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv10" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="20" cy="7" r="5.8" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="9" cy="22" r="5.3999999999999995" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="31" cy="22" r="5.3999999999999995" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="4.5" cy="39" r="5.0" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="15" cy="39" r="5.0" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="31" cy="39" r="5.0" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="9" cy="22" r="1.7000000000000002" fill="#000"/><circle cx="31" cy="22" r="1.7000000000000002" fill="#000"/></mask></defs><g mask="url(#pv10)"><path d="M20 7L9 22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 7L31 22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 22L4.5 39" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 22L15 39" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M31 22L31 39" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="20" cy="7" r="4.4"/><circle cx="9" cy="22" r="4"/><circle cx="31" cy="22" r="4"/><circle cx="4.5" cy="39" r="3.6"/><circle cx="15" cy="39" r="3.6"/><circle cx="31" cy="39" r="3.6"/></g><path d="M38 35l7 7M45 35l-7 7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
 <h3><a href="./explorer/">Explorer et revenir en arrière</a></h3>
 </div>
 <div class="carte-texte">Parcourir l'arbre des possibles en coupant les branches sans avenir, puis jouer contre un adversaire&nbsp;: huit reines, Sudoku, Nim, minimax, dilemme du prisonnier.</div>
@@ -149,7 +149,7 @@ aliases = ["/info/strategies/", "/info/algorithmique/strategies/"]
 
 <div class="math-card c-canard">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="leger" d="M10 8h22l6 6v26H10z"/><path d="M15 17h14M15 23h18M15 29h10"/><path class="teinte" d="M28 33l4 4 8-9"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv11" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M30 4v10h10z" fill="#000"/><path d="M30 4v10h10" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 16h11M14 22h16M14 28h9" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 36l4 4 8-9" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv11)"><path d="M8 4h22l10 10v30H8z"/></g></svg></span>
 <h3><a href="./prouver/">Prouver un algorithme</a></h3>
 </div>
 <div class="carte-texte">S'arrêter et calculer juste&nbsp;: variant et invariant de boucle, Syracuse, problème de l'arrêt, dichotomie, drapeau hollandais.</div>
@@ -169,7 +169,7 @@ aliases = ["/info/strategies/", "/info/algorithmique/strategies/"]
 
 <div class="math-card c-orange">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect class="leger" x="6" y="12" width="36" height="24" rx="3"/><path d="M12 20v8M18 20h4v8h-4zM27 20v8M32 20h4v8h-4z"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv12" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M11 18v12M20 18h4v12h-4zM31 18v12M38 18v12" fill="none" stroke="#000" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv12)"><rect x="3" y="10" width="42" height="28" rx="6"/></g></svg></span>
 <h3><a href="./nombres/">Les nombres en machine</a></h3>
 </div>
 <div class="carte-texte">Base 2 et hexadécimal, complément à deux et dépassements de capacité, virgule flottante et pièges des arrondis.</div>

@@ -19,7 +19,7 @@ On le parcourt en trois temps&nbsp;: comment on **écrit** une formule, ce qu'el
 
 <div class="math-card c-bleu">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path class="leger" d="M24 10L14 24M24 10l10 14M14 24L8 38M14 24l6 14"/><circle class="plein" cx="24" cy="10" r="4"/><circle class="plein" cx="14" cy="24" r="4"/><circle class="plein" cx="34" cy="24" r="3.6"/><circle class="plein" cx="8" cy="38" r="3.6"/><circle class="plein" cx="20" cy="38" r="3.6"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv26" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="24" cy="7" r="5.999999999999999" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="13" cy="22" r="5.6000000000000005" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="35" cy="22" r="5.6000000000000005" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="7" cy="39" r="5.2" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="19" cy="39" r="5.2" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="24" cy="7" r="2.3" fill="#000"/><circle cx="13" cy="22" r="1.9000000000000004" fill="#000"/></mask></defs><g mask="url(#pv26)"><path d="M24 7L13 22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 7L35 22" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 22L7 39" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 22L19 39" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="7" r="4.6"/><circle cx="13" cy="22" r="4.2"/><circle cx="35" cy="22" r="4.2"/><circle cx="7" cy="39" r="3.8"/><circle cx="19" cy="39" r="3.8"/></g></svg></span>
 <h3><a href="./syntaxe/">Syntaxe</a></h3>
 </div>
 <div class="carte-texte">L'alphabet et la grammaire&nbsp;: quels assemblages de symboles forment une formule&nbsp;?</div>
@@ -34,7 +34,7 @@ On le parcourt en trois temps&nbsp;: comment on **écrit** une formule, ce qu'el
 
 <div class="math-card c-vert">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M14 10v28M14 19h22M14 29h22"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv27" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M16 12v24M16 20h17M16 28h17" fill="none" stroke="#000" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv27)"><rect x="4" y="4" width="40" height="40" rx="11"/></g></svg></span>
 <h3><a href="./semantique/">Sémantique</a></h3>
 </div>
 <div class="carte-texte">Le sens&nbsp;: dans quels modèles une formule est-elle vraie&nbsp;?</div>
@@ -55,7 +55,7 @@ On le parcourt en trois temps&nbsp;: comment on **écrit** une formule, ce qu'el
 
 <div class="math-card c-orange">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M14 10v28M14 24h22"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv28" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M16 12v24M16 24h17" fill="none" stroke="#000" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv28)"><rect x="4" y="4" width="40" height="40" rx="11"/></g></svg></span>
 <h3><a href="./preuve/">Preuve</a></h3>
 </div>
 <div class="carte-texte">Le calcul&nbsp;: démontrer en appliquant des règles, en logique classique, intuitionniste ou minimale.</div>
