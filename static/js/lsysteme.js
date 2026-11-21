@@ -71,7 +71,11 @@
   function dessiner(n) {                                    // n segments tracés
     const g = cv.getContext('2d'), { w, h } = dim;
     g.clearRect(0, 0, w, h);
-    if (!segments.length) return;
+    if (!segments.length) {                                 // niveau 0 sans « A » : rien à tracer
+      g.fillStyle = '#64748b'; g.font = '14px system-ui, sans-serif'; g.textAlign = 'center';
+      g.fillText('Aucun segment : la chaîne ne contient encore aucun A.', w / 2, h / 2);
+      return;
+    }
     let x0 = Infinity, x1 = -Infinity, y0 = Infinity, y1 = -Infinity;
     for (const [a, b, c, d] of segments) { x0 = Math.min(x0, a, c); x1 = Math.max(x1, a, c); y0 = Math.min(y0, b, d); y1 = Math.max(y1, b, d); }
     const m = 16, s = Math.min((w - 2 * m) / Math.max(1e-9, x1 - x0), (h - 2 * m) / Math.max(1e-9, y1 - y0));
@@ -79,11 +83,12 @@
     const N = segments.length, plante = memMax > 0;
     g.lineCap = 'round';
     g.lineWidth = Math.max(0.6, Math.min(2.2, s * 0.35));
-    const paquets = 60;                                     // dégradé le long du tracé, par paquets
+    const paquets = Math.min(60, N);                        // dégradé le long du tracé, par paquets
     for (let p = 0; p < paquets; p++) {
       const a = Math.floor(p * N / paquets), b = Math.min(n, Math.floor((p + 1) * N / paquets));
-      if (a >= b) break;
-      const t = p / (paquets - 1);
+      if (a >= n) break;                                    // au-delà de ce qui est déjà tracé
+      if (a >= b) continue;
+      const t = paquets > 1 ? p / (paquets - 1) : 0;
       g.strokeStyle = plante ? `hsl(${120 - 70 * t}, 45%, ${30 + 12 * t}%)` : `hsl(${205 - 175 * t}, 70%, ${32 + 10 * t}%)`;
       g.beginPath();
       for (let i = a; i < b; i++) { const [xa, ya, xb, yb] = segments[i]; g.moveTo(ox + s * xa, oy - s * ya); g.lineTo(ox + s * xb, oy - s * yb); }
