@@ -238,7 +238,7 @@ window.RZ = (function () {
   // ---- ζ de Riemann par Euler-Maclaurin (valable pour tout s ≠ 1) ----
   var BN = [1 / 6, -1 / 30, 1 / 42, -1 / 30, 5 / 66, -691 / 2730, 7 / 6, -3617 / 510, 43867 / 798, -174611 / 330];
   var FACT = [1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880, 3628800, 39916800, 479001600, 6227020800, 87178291200, 1307674368000, 20922789888000, 355687428096000, 6402373705728000, 121645100408832000, 2432902008176640000];
-  function zeta(sr, si) {
+  function zetaEM(sr, si) {
     var N = Math.max(14, Math.ceil(Math.abs(si) / 2 + 12 + Math.abs(Math.min(0, sr)) / 2)), re = 0, im = 0, n, l, a, c, sn;
     for (n = 1; n < N; n++) { l = Math.log(n); a = Math.exp(-sr * l); c = Math.cos(si * l); sn = Math.sin(si * l); re += a * c; im -= a * sn; }
     var lN = Math.log(N), aN = Math.exp(-sr * lN), cN = Math.cos(si * lN), sN = Math.sin(si * lN);   // N^{-s} = aN (cN - i sN)
@@ -255,6 +255,25 @@ window.RZ = (function () {
       re += f * (tr * pr - ti * pi_); im += f * (tr * pi_ + ti * pr);
     }
     return [re, im];
+  }
+  // Γ complexe (Lanczos), pour Re z >= 0,5
+  function cgamma(zr, zi) {
+    zr -= 1; var xr = GC[0], xi = 0, i, d, tr = zr + 7.5;
+    for (i = 1; i < 9; i++) { d = (zr + i) * (zr + i) + zi * zi; xr += GC[i] * (zr + i) / d; xi -= GC[i] * zi / d; }
+    var lr = Math.log(Math.hypot(tr, zi)), li = Math.atan2(zi, tr);                 // ln t
+    var er = (zr + 0.5) * lr - zi * li - tr, ei = (zr + 0.5) * li + zi * lr - zi;     // (z+1/2) ln t - t
+    var m = Math.sqrt(2 * Math.PI) * Math.exp(er), cr = m * Math.cos(ei), ci = m * Math.sin(ei);
+    return [cr * xr - ci * xi, cr * xi + ci * xr];
+  }
+  // ζ(s) pour tout s ≠ 1 : Euler-Maclaurin à droite, équation fonctionnelle pour Re s < −0,5
+  function zeta(sr, si) {
+    if (sr >= -0.5) return zetaEM(sr, si);
+    var z1 = zetaEM(1 - sr, -si), g = cgamma(1 - sr, -si);
+    var m = Math.exp(sr * Math.LN2 + (sr - 1) * Math.log(Math.PI)), ph = si * (Math.LN2 + Math.log(Math.PI)), fr = m * Math.cos(ph), fi = m * Math.sin(ph);
+    var a = Math.PI * sr / 2, b = Math.PI * si / 2, sr_ = Math.sin(a) * Math.cosh(b), si_ = Math.cos(a) * Math.sinh(b);
+    var pr = fr * sr_ - fi * si_, pi = fr * si_ + fi * sr_;
+    var qr = pr * g[0] - pi * g[1], qi = pr * g[1] + pi * g[0];
+    return [qr * z1[0] - qi * z1[1], qr * z1[1] + qi * z1[0]];
   }
   function zr(x) { return zeta(x, 0)[0]; }
   // Γ réel (Lanczos)
@@ -802,22 +821,24 @@ Tous les zéros non triviaux de la fonction $\zeta$ ont pour partie réelle $\fr
 On connaît les premiers zéros avec précision&nbsp;: $\frac{1}{2} \pm 14{,}1347\mathrm{i}$, $\frac{1}{2} \pm 21{,}0220\mathrm{i}$, $\frac{1}{2} \pm 25{,}0109\mathrm{i}$, $\frac{1}{2} \pm 30{,}4249\mathrm{i}$, … Voyons-les sur la carte de $\zeta$.
 
 <div class="svg-container" id="rz5">
-<canvas id="rz5-cv" width="600" height="330" role="img" aria-label="Coloriage de la fonction ζ dans le plan complexe : la couleur donne l'argument de ζ(s), la luminosité son module. Les zéros apparaissent en noir, le pôle en s = 1 en blanc. Les zéros non triviaux sont alignés sur la droite Re(s) = 1/2." style="width:100%;max-width:600px;height:auto;border:1px solid #cbd5e1;border-radius:6px;touch-action:manipulation;"></canvas>
+<canvas id="rz5-cv" width="600" height="330" role="img" aria-label="Coloriage de la fonction ζ dans le plan complexe : la couleur donne l'argument de ζ(s), la luminosité son module. Les zéros apparaissent en noir, le pôle en s = 1 en blanc. Les zéros non triviaux sont alignés sur la droite Re(s) = 1/2." style="width:100%;max-width:600px;height:auto;border:1px solid #cbd5e1;border-radius:6px;touch-action:manipulation;cursor:crosshair;"></canvas>
 <div class="rz-ctl">
 <button type="button" class="fig-btn" id="rz5-ov">Vue d'ensemble</button>
 <label><span>hauteur <i>t</i> de la fenêtre</span> <input type="range" class="fig-range" id="rz5-t" min="0" max="60" step="0.05" value="14.13" style="width:150px;margin:0;"> <span id="rz5-tv" style="min-width:3.4em;">14,13</span></label>
-<button type="button" class="fig-btn" id="rz5-nx">Zéro suivant</button>
+<button type="button" class="fig-btn" id="rz5-nx">Zoom sur un zéro</button>
 <button type="button" class="fig-btn" id="rz5-go"></button>
 </div>
-<div class="rz-out" id="rz5-out">Passez le pointeur sur l'image pour lire la valeur de ζ(<i>s</i>).</div>
+<div class="rz-out" id="rz5-out">Passez le pointeur sur l'image pour lire la valeur de ζ(<i>s</i>). À droite, la règle donne la hauteur <i>t</i> de la fenêtre&nbsp;: cliquez dessus pour y aller.</div>
 </div>
 <script>
 (function () {
   var R = window.RZ, box = R.$('rz5'); if (!box) return;
-  var cv = R.$('rz5-cv'), ctx = cv.getContext('2d'), W = 600, H = 330, RS = 2, w = W / RS, h = H / RS;
+  var cv = R.$('rz5-cv'), ctx = cv.getContext('2d'), W = 600, H = 330, RS = 2, w = W / RS, h = H / RS, TMAXR = 60;
   var off = document.createElement('canvas'); off.width = w; off.height = h; var octx = off.getContext('2d'), img = octx.createImageData(w, h);
-  var view = { cx: -1, cy: 0, sc: 40 }, mode = 'ov', t = 14.13, zi = -1;
-  function hsl(hh, s, l) { // h en [0,1)
+  var VOV = { cx: -1, cy: 0, sc: 40 };
+  function VT(t) { return { cx: 0.5, cy: t, sc: 105 }; }
+  var view = { cx: VOV.cx, cy: VOV.cy, sc: VOV.sc }, mode = 'ov', t = 14.13, zi = -1, tr = null;
+  function hsl(hh, s, l) {
     var a = s * Math.min(l, 1 - l);
     function f(n) { var k = (n + hh * 12) % 12; return l - a * Math.max(-1, Math.min(k - 3, 9 - k, 1)); }
     return [f(0) * 255, f(8) * 255, f(4) * 255];
@@ -836,39 +857,90 @@ On connaît les premiers zéros avec précision&nbsp;: $\frac{1}{2} \pm 14{,}134
     overlay();
   }
   function px(x) { return W / 2 + (x - view.cx) * view.sc; } function py(y) { return H / 2 - (y - view.cy) * view.sc; }
-  function label(s, x, y, col, al) { ctx.font = "13px Georgia,'Times New Roman',serif"; ctx.textAlign = al || 'left'; ctx.lineWidth = 3.5; ctx.strokeStyle = 'rgba(255,255,255,0.9)'; ctx.strokeText(s, x, y); ctx.fillStyle = col || '#0f172a'; ctx.fillText(s, x, y); }
+  function label(s, x, y, col, al, sz) { ctx.font = (sz || 13) + "px Georgia,'Times New Roman',serif"; ctx.textAlign = al || 'left'; ctx.lineWidth = 3.5; ctx.strokeStyle = 'rgba(255,255,255,0.9)'; ctx.strokeText(s, x, y); ctx.fillStyle = col || '#0f172a'; ctx.fillText(s, x, y); }
+  function dot(x, y, r) { ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(x, y, r, 0, 7); ctx.fill(); ctx.strokeStyle = '#0f172a'; ctx.lineWidth = 1.2; ctx.stroke(); }
+  // règle des hauteurs (à droite) : position de la fenêtre le long de l'axe imaginaire
+  var RX = W - 22, RY0 = H - 18, RY1 = 22;
+  function ry(tt) { return RY0 - tt * (RY0 - RY1) / TMAXR; }
+  function ruler() {
+    ctx.save();
+    ctx.fillStyle = 'rgba(255,255,255,0.82)'; ctx.beginPath(); ctx.moveTo(W - 46, 6); ctx.lineTo(W - 4, 6); ctx.lineTo(W - 4, H - 6); ctx.lineTo(W - 46, H - 6); ctx.closePath(); ctx.fill();
+    ctx.strokeStyle = '#475569'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(RX, RY0); ctx.lineTo(RX, RY1); ctx.stroke();
+    ctx.font = "11px Georgia,serif"; ctx.textAlign = 'right'; ctx.fillStyle = '#334155';
+    [0, 20, 40, 60].forEach(function (tt) { ctx.beginPath(); ctx.moveTo(RX - 4, ry(tt)); ctx.lineTo(RX + 4, ry(tt)); ctx.stroke(); ctx.fillText(String(tt), RX - 7, ry(tt) + 4); });
+    ctx.fillStyle = '#970E53'; R.ZEROS.forEach(function (g) { if (g <= TMAXR) { ctx.fillRect(RX + 2, ry(g) - 0.6, 6, 1.4); } });
+    var half = H / (2 * view.sc), y1 = ry(Math.min(TMAXR, view.cy + half)), y2 = ry(Math.max(0, view.cy - half)), hh = Math.max(4, y2 - y1);
+    ctx.fillStyle = 'rgba(0,77,128,0.28)'; ctx.strokeStyle = '#004D80'; ctx.lineWidth = 1.3; ctx.fillRect(RX - 12, y1, 24, hh); ctx.strokeRect(RX - 12, y1, 24, hh);
+    ctx.textAlign = 'center'; ctx.fillStyle = '#334155'; ctx.font = "italic 11px Georgia,serif"; ctx.fillText('t', RX, 16);
+    ctx.restore();
+  }
   function overlay() {
+    var sc = view.sc, i;
     ctx.save(); ctx.lineWidth = 1.3;
-    // bande critique et droite critique
-    [[0, [2, 4], 'rgba(255,255,255,0.75)'], [1, [2, 4], 'rgba(255,255,255,0.75)']].forEach(function (L) { ctx.setLineDash(L[1]); ctx.strokeStyle = L[2]; ctx.beginPath(); ctx.moveTo(px(L[0]), 0); ctx.lineTo(px(L[0]), H); ctx.stroke(); });
+    [0, 1].forEach(function (L) { ctx.setLineDash([2, 4]); ctx.strokeStyle = 'rgba(255,255,255,0.75)'; ctx.beginPath(); ctx.moveTo(px(L), 0); ctx.lineTo(px(L), H); ctx.stroke(); });
     ctx.setLineDash([7, 4]); ctx.lineWidth = 1.8; ctx.strokeStyle = '#ffffff'; ctx.beginPath(); ctx.moveTo(px(0.5), 0); ctx.lineTo(px(0.5), H); ctx.stroke();
     ctx.setLineDash([]); ctx.strokeStyle = 'rgba(15,23,42,0.55)'; ctx.lineWidth = 0.8; ctx.beginPath(); ctx.moveTo(0, py(0)); ctx.lineTo(W, py(0)); ctx.stroke();
-    if (mode === 'ov') {
-      label('bande critique', px(0.5), 18, '#0f172a', 'center'); label('Re s = 1/2', px(0.5), 34, '#0f172a', 'center');
-      label('pôle', px(1) + 6, py(0) - 12, '#0f172a'); [-2, -4, -6].forEach(function (a) { ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(px(a), py(0), 3.5, 0, 7); ctx.fill(); ctx.strokeStyle = '#0f172a'; ctx.lineWidth = 1.2; ctx.stroke(); label(String(a).replace('-', '−'), px(a), py(0) + 20, '#0f172a', 'center'); });
+    var ytop = view.cy + H / (2 * sc), ybot = view.cy - H / (2 * sc);
+    if (sc >= 25 && ybot < 0 && ytop > 0) {
+      label('pôle', px(1) + 6, py(0) - 12, '#0f172a');
+      [-2, -4, -6].forEach(function (a) { dot(px(a), py(0), 3.5); label(String(a).replace('-', '−'), px(a), py(0) + 20, '#0f172a', 'center'); });
       label('zéros « triviaux »', px(-4), py(0) - 20, '#0f172a', 'center');
-    } else {
-      R.ZEROS.forEach(function (g) { var yy = py(g); if (yy > -5 && yy < H + 5) { ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(px(0.5), yy, 3.6, 0, 7); ctx.fill(); ctx.strokeStyle = '#0f172a'; ctx.lineWidth = 1.3; ctx.stroke(); label('½ + ' + R.fmt(g, 3).replace(',', ',') + ' i', px(0.5) + 12, yy + 4, '#0f172a'); } });
-      label('t = ' + R.fmt(view.cy, 1), 8, 18, '#0f172a');
+      label('bande critique', px(0.5), 18, '#0f172a', 'center'); label('Re s = 1/2', px(0.5), 34, '#0f172a', 'center');
     }
-    ctx.restore();
+    if (sc >= 12) {
+      R.ZEROS.forEach(function (g) { var yy = py(g); if (yy > -5 && yy < H + 5) { dot(px(0.5), yy, Math.max(1.6, Math.min(3.6, sc / 30))); if (sc >= 80) label('½ + ' + R.fmt(g, 3) + ' i', px(0.5) + 12, yy + 4, '#0f172a'); } });
+    }
+    if (ytop < R.ZEROS[0] && sc >= 25) { label('▲ premier zéro non trivial en t = ' + R.fmt(R.ZEROS[0], 2), px(0.5) + 10, 54, '#970E53', 'left', 12); }
+    if (sc >= 80) label('t = ' + R.fmt(view.cy, 1), 8, 18, '#0f172a');
+    ctx.restore(); ruler();
   }
   var pend = false;
   function ask() { if (pend) return; pend = true; requestAnimationFrame(function () { pend = false; render(); }); }
-  function setT(v) { t = v; view = { cx: 0.5, cy: t, sc: 105 }; mode = 'tm'; R.$('rz5-t').value = t; R.$('rz5-tv').textContent = R.fmt(t, 2); ask(); }
-  R.$('rz5-ov').addEventListener('click', function () { pl.stop(); mode = 'ov'; view = { cx: -1, cy: 0, sc: 40 }; ask(); });
+  function syncSlider() { R.$('rz5-t').value = t; R.$('rz5-tv').textContent = R.fmt(t, 2); }
+  function setT(v) { tr = null; t = Math.max(0, Math.min(TMAXR, v)); view = VT(t); mode = 'tm'; syncSlider(); ask(); }
+  // zoom continu d'une vue à l'autre : on dézoome pendant le déplacement, puis on zoome
+  function go(target, dur) {
+    var f = { cx: view.cx, cy: view.cy, sc: view.sc };
+    tr = { from: f, to: target, t0: null, dur: dur || 1.8 }; mode = 'tr';
+    requestAnimationFrame(stepTr);
+  }
+  function stepTr(ts) {
+    if (!tr) return;
+    if (tr.t0 === null) tr.t0 = ts;
+    var u = Math.min(1, (ts - tr.t0) / 1000 / tr.dur), e = u < 0.5 ? 2 * u * u : 1 - Math.pow(-2 * u + 2, 2) / 2;
+    var f = tr.from, g = tr.to, dy = Math.abs(g.cy - f.cy), dx = Math.abs(g.cx - f.cx);
+    var lmid = (Math.log(f.sc) + Math.log(g.sc)) / 2, need = H / (1.35 * Math.max(dy, dx * H / W, 0.4)), bump = Math.max(0, lmid - Math.log(Math.min(f.sc, g.sc, need)));
+    var ls = Math.log(f.sc) + (Math.log(g.sc) - Math.log(f.sc)) * e - bump * Math.sin(Math.PI * e);
+    view = { cx: f.cx + (g.cx - f.cx) * e, cy: f.cy + (g.cy - f.cy) * e, sc: Math.exp(ls) };
+    render();
+    if (u < 1) requestAnimationFrame(stepTr);
+    else { view = { cx: g.cx, cy: g.cy, sc: g.sc }; if (g.sc === VOV.sc && g.cy === 0) { mode = 'ov'; } else { mode = 'tm'; t = g.cy; syncSlider(); } tr = null; render(); }
+  }
+  R.$('rz5-ov').addEventListener('click', function () { pl.stop(); go(VOV, 1.8); });
   R.$('rz5-t').addEventListener('input', function () { pl.stop(); setT(parseFloat(this.value)); });
-  R.$('rz5-nx').addEventListener('click', function () { pl.stop(); zi = (zi + 1) % 12; setT(R.ZEROS[zi]); });
-  var pl = R.player(R.$('rz5-go'), box, function (dt) { var nt = t + 3.2 * dt; if (nt > 58) nt = 0.8; setT(nt); }, false);
+  R.$('rz5-nx').addEventListener('click', function () { pl.stop(); zi = (mode === 'ov' || zi < 0) ? 0 : (zi + 1) % 12; go(VT(R.ZEROS[zi]), mode === 'ov' ? 2.2 : 1.3); });
+  var pl = R.player(R.$('rz5-go'), box, function (dt) {
+    if (tr) return;
+    if (mode === 'ov') { go(VT(Math.max(t, 0.8)), 2.2); return; }
+    var nt = t + 3.2 * dt; if (nt > 58) nt = 0.8; setT(nt);
+  }, false);
+  function pos(ev) { var r = cv.getBoundingClientRect(); return [(ev.clientX - r.left) / r.width * W, (ev.clientY - r.top) / r.height * H]; }
+  cv.addEventListener('pointerdown', function (ev) {
+    var p = pos(ev); if (p[0] < W - 48) return;
+    pl.stop(); var tt = Math.max(0, Math.min(TMAXR, (RY0 - p[1]) * TMAXR / (RY0 - RY1)));
+    go(VT(tt), 1.5);
+  });
   cv.addEventListener('pointermove', function (ev) {
-    var r = cv.getBoundingClientRect(), x = (ev.clientX - r.left) / r.width * W, y = (ev.clientY - r.top) / r.height * H;
+    var p = pos(ev), x = p[0], y = p[1];
+    cv.style.cursor = x >= W - 48 ? 'pointer' : 'crosshair';
+    if (x >= W - 48) return;
     var sr = view.cx + (x - W / 2) / view.sc, si = view.cy - (y - H / 2) / view.sc, z = R.zeta(sr, Math.abs(si)); if (si < 0) z[1] = -z[1];
     R.$('rz5-out').innerHTML = "<i>s</i> = " + R.cfmt(sr, si, 2) + " : ζ(<i>s</i>) = " + R.cfmt(z[0], z[1], 3) + ", |ζ| = " + R.fmt(Math.hypot(z[0], z[1]), 3);
   });
   render();
 })();
 </script>
-<p class="legende">La fonction $\zeta$ dans le plan complexe. La teinte donne l'argument de $\zeta(s)$, la luminosité son module&nbsp;: autour d'un zéro (zone sombre), toutes les couleurs se rencontrent&nbsp;; près du pôle en $s = 1$, $\zeta$ devient très grande (zone claire). En « vue d'ensemble », on voit le pôle et les zéros triviaux sur l'axe réel. Le curseur et le bouton font monter la fenêtre le long de la droite critique (pointillés blancs)&nbsp;: les zéros non triviaux y sont alignés.</p>
+<p class="legende">La fonction $\zeta$ dans le plan complexe. La teinte donne l'argument de $\zeta(s)$, la luminosité son module&nbsp;: autour d'un zéro (zone sombre), toutes les couleurs se rencontrent&nbsp;; près du pôle en $s = 1$, $\zeta$ devient très grande (zone claire). En « vue d'ensemble », on voit le pôle et les zéros triviaux sur l'axe réel. Le bouton «&nbsp;Zoom sur un zéro&nbsp;» zoome de façon continue depuis la vue d'ensemble jusqu'au premier zéro non trivial, puis fait glisser la fenêtre d'un zéro au suivant le long de la droite critique (pointillés blancs), où ils sont alignés. La règle à droite situe la fenêtre sur l'axe des ordonnées $t$&nbsp;; on peut cliquer dessus, ou utiliser le curseur.</p>
 
 Une autre façon de voir les zéros&nbsp;: suivre la courbe décrite par $\zeta\\!\left(\frac{1}{2} + \mathrm{i}t\right)$ quand $t$ augmente.
 
