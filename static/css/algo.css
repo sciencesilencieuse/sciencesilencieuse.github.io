@@ -1490,3 +1490,16 @@ table.nb-tab td:first-child { text-align: left; font-weight: 700; }
 .ac-compteurs i.ac-r { background: rgba(220, 38, 38, 0.45); }
 .anim p.ac-info { margin: 0.4em 0 !important; min-height: 2.9em; padding: 0.5em 0.8em; border-left: 3px solid #004D80; background: #fff; border-radius: 0 6px 6px 0; font-size: 0.88em; line-height: 1.5; }
 .ac-info .ac-rej { color: #DC2626; } .ac-info .ac-gar { color: #15803d; }
+
+/* ---------- Horspool : explication du saut et table en cases ------------------------ */
+.anim p.mo-expl { margin: 0.4em 0 !important; min-height: 3.1em; padding: 0.5em 0.8em; border-left: 3px solid #004D80; background: #fff; border-radius: 0 6px 6px 0; font-size: 0.88em; line-height: 1.55; }
+.mo-expl code { background: #f1f5f9; padding: 0 0.25em; border-radius: 3px; }
+.mo-expl .mo-ok { color: #15803d; } .mo-expl .mo-ko { color: #DC2626; }
+.mo-sauts { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin: 0.3em 0; font-size: 0.85em; color: #334155; }
+.mo-sauts-t { margin-right: 0.3em; }
+.mo-s { display: inline-flex; flex-direction: column; align-items: center; min-width: 2.1em; border: 1px solid #cbd5e1; border-radius: 6px; overflow: hidden; background: #fff; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.mo-s b { display: block; width: 100%; text-align: center; padding: 0.05em 0.35em; background: #004D80; color: #fff; font: 600 0.95em ui-monospace, Menlo, monospace; }
+.mo-s i { font-style: normal; padding: 0.05em 0.35em; font-variant-numeric: tabular-nums; }
+.mo-s-autre b { background: #64748b; font-family: system-ui, sans-serif; font-weight: 500; font-size: 0.85em; }
+.mo-s.mo-s-on { border-color: #F59E0B; box-shadow: 0 0 0 2px #F59E0B; transform: translateY(-2px); }
+.mo-s.mo-s-on i { background: #FEF3C7; color: #92400E; font-weight: 700; }
