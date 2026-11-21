@@ -412,3 +412,73 @@ html
     #body-inner .anchor { display: none; }       /* icônes d'ancre : elles débordent des titres longs */
 }
 
+
+/* ==========================================================================
+   PEAUFINAGE DES CARTES : sobriété et élégance
+   - pastille de l'icône qui se fond dans la carte vers son bord ;
+   - léger voile de la teinte en haut de la carte ;
+   - boutons en pilules teintées ;
+   - survol plus doux.
+   ========================================================================== */
+.math-card {
+  border-radius: 16px;
+  border-color: #e7eaef;
+  background:
+    radial-gradient(120% 60% at 50% 0%, color-mix(in srgb, var(--c2) 13%, transparent) 0%, transparent 70%),
+    #ffffff;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 1px rgba(16, 24, 40, 0.02);
+  transition: transform 0.25s cubic-bezier(.2, .8, .2, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.math-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--c) 55%, #e7eaef);
+}
+
+/* La pastille : couleur pleine au centre, qui s'estompe vers le fond de la carte. */
+.math-icon {
+  width: 84px;
+  height: 84px;
+  margin: -12px 0 -10px;             /* même encombrement qu'avant, malgré le halo */
+  background: radial-gradient(circle closest-side,
+              var(--c) 0 50%,
+              color-mix(in srgb, var(--c) 55%, transparent) 64%,
+              color-mix(in srgb, var(--c) 18%, transparent) 82%,
+              transparent 100%);
+  transition: transform 0.3s cubic-bezier(.2, .8, .2, 1), filter 0.3s ease;
+}
+.math-icon svg { width: 34px; height: 34px; }
+.math-card:hover .math-icon { transform: scale(1.06); filter: saturate(1.15); }
+
+/* Titre et trait d'accent */
+.math-card h3 { letter-spacing: 0.005em; }
+.math-card h3::after { height: 3px; width: 30px; border-radius: 3px; }
+.math-card:hover h3::after { width: 58px; }
+
+/* Texte de présentation un peu plus discret */
+.math-card .carte-texte { color: #5b6672; font-size: 0.93rem; }
+
+/* Boutons : pilules légèrement teintées de la couleur de la carte */
+.math-btn {
+  border-radius: 999px;
+  padding: 0 13px !important;
+  background: color-mix(in srgb, var(--c2) 9%, #ffffff);
+  border-color: color-mix(in srgb, var(--c) 22%, #dfe3e8) !important;
+  color: #27313b !important;
+  font-size: 0.86rem;
+}
+.math-btn:hover,
+.math-btn:focus-visible {
+  background: var(--c) !important;
+  border-color: var(--c) !important;
+  color: var(--c-on) !important;
+  box-shadow: 0 2px 6px color-mix(in srgb, var(--c) 35%, transparent) !important;
+}
+
+/* Sous-titres entre filets : filets en dégradé, plus légers */
+.theme-title { color: #7b8794; }
+.theme-title::before { background: linear-gradient(90deg, transparent, #e2e5ea); }
+.theme-title::after  { background: linear-gradient(90deg, #e2e5ea, transparent); }
+
+@media (prefers-reduced-motion: reduce) {
+  .math-card:hover .math-icon { transform: none; }
+}
