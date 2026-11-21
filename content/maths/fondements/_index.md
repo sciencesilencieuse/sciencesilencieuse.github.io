@@ -14,7 +14,7 @@ Où l'on parle du langage de la logique (et des ensembles), des infinis dénombr
 
 <div class="math-card c-orange">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/illlog.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/illlog.svg" alt=""></span>
 <h3><a href="./boole/">Langage logique</a></h3>
 </div>
 <div class="carte-texte">L'algèbre de Boole, brique élémentaire de la pensée mathématique&nbsp;: le «&nbsp;et&nbsp;» et le «&nbsp;ou&nbsp;» de la logique sont l'intersection et l'union des ensembles.</div>
@@ -22,7 +22,7 @@ Où l'on parle du langage de la logique (et des ensembles), des infinis dénombr
 
 <div class="math-card c-canard">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/illnomb.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/illnomb.svg" alt=""></span>
 <h3><a href="./ensembles/">Échafaudage des nombres</a></h3>
 </div>
 <div class="carte-texte">Des entiers aux complexes&nbsp;: chaque nouvel ensemble de nombres comble un manque du précédent.</div>
@@ -36,7 +36,7 @@ Où l'on parle du langage de la logique (et des ensembles), des infinis dénombr
 
 <div class="math-card c-rouge">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/illinf.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/illinf.svg" alt=""></span>
 <h3><a href="./infinis/">Les infinis</a></h3>
 </div>
 <div class="carte-texte">Cantor et la hiérarchie des infinis&nbsp;: autant d'entiers que de rationnels, mais strictement plus de réels.</div>

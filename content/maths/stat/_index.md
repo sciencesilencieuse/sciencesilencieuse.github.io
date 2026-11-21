@@ -15,7 +15,7 @@ Les **statistiques** sont des calculs a posteriori qui analysent les issues d’
 
 <div class="math-card c-bleu">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/presmoy.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/presmoy.svg" alt=""></span>
 <h3><a href="./moyennes/">Différentes moyennes</a></h3>
 </div>
 <div class="carte-texte">Arithmétique, géométrique, harmonique, quadratique&nbsp;: une même famille de moyennes.</div>
@@ -29,7 +29,7 @@ Les **statistiques** sont des calculs a posteriori qui analysent les issues d’
 
 <div class="math-card c-rouge">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/presmontecarlo.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/presmontecarlo.svg" alt=""></span>
 <h3><a href="./montecarlo/">Méthode de Monte Carlo</a></h3>
 </div>
 <div class="carte-texte">Calculer grâce au hasard&nbsp;: intégrales, espérances et incertitudes-types.</div>
@@ -37,7 +37,7 @@ Les **statistiques** sont des calculs a posteriori qui analysent les issues d’
 
 <div class="math-card c-vert">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/pressimpson.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/pressimpson.svg" alt=""></span>
 <h3><a href="./simpson/">Paradoxe de Simpson</a></h3>
 </div>
 <div class="carte-texte">Quand une tendance s'inverse en regroupant les données&nbsp;: l'exemple de la vaccination contre le Covid.</div>
@@ -45,7 +45,7 @@ Les **statistiques** sont des calculs a posteriori qui analysent les issues d’
 
 <div class="math-card c-canard">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/prestesthyp.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/prestesthyp.svg" alt=""></span>
 <h3><a href="./testhyp/">Test d'hypothèse</a></h3>
 </div>
 <div class="carte-texte">Les statistiques au service de la décision scientifique, et leurs dérives.</div>
@@ -58,7 +58,7 @@ Les **statistiques** sont des calculs a posteriori qui analysent les issues d’
 
 <div class="math-card c-bleu">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/presacp.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/presacp.svg" alt=""></span>
 <h3><a href="./acp/">Analyse en composantes principales</a></h3>
 </div>
 <div class="carte-texte">Faire parler un jeu de données, de son secret le plus important au plus anodin.</div>
@@ -71,7 +71,7 @@ Les **statistiques** sont des calculs a posteriori qui analysent les issues d’
 
 <div class="math-card c-bleu">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/presbayes.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/presbayes.svg" alt=""></span>
 <h3><a href="./bayes/">Inférences bayésiennes</a></h3>
 </div>
 <div class="carte-texte">Raisonner à partir d'indices&nbsp;: la logique du théorème de Bayes.</div>
@@ -86,7 +86,7 @@ Les **statistiques** sont des calculs a posteriori qui analysent les issues d’
 
 <div class="math-card c-magenta">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/presecarttype.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/presecarttype.svg" alt=""></span>
 <h3><a href="./ecarttype/">Écart-type expérimental</a></h3>
 </div>
 <div class="carte-texte">Pourquoi divise-t-on par $n-1$ et non par $n$&nbsp;?</div>

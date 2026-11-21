@@ -415,8 +415,8 @@ html
 
 /* ==========================================================================
    PEAUFINAGE DES CARTES : sobriété et élégance
-   - pastille de l'icône qui se fond dans la carte vers son bord ;
-   - léger voile de la teinte en haut de la carte ;
+   - pictogramme seul, sans pastille, dans la couleur de la carte ;
+   - voile de la teinte qui s'estompe du haut vers le bas de la carte ;
    - boutons en pilules teintées ;
    - survol plus doux.
    ========================================================================== */
@@ -424,7 +424,7 @@ html
   border-radius: 16px;
   border-color: #e7eaef;
   background:
-    radial-gradient(120% 60% at 50% 0%, color-mix(in srgb, var(--c2) 13%, transparent) 0%, transparent 70%),
+    linear-gradient(180deg, color-mix(in srgb, var(--c2) 30%, transparent) 0%, color-mix(in srgb, var(--c2) 10%, transparent) 45%, transparent 85%),
     #ffffff;
   box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 1px rgba(16, 24, 40, 0.02);
   transition: transform 0.25s cubic-bezier(.2, .8, .2, 1), box-shadow 0.25s ease, border-color 0.25s ease;
@@ -434,10 +434,11 @@ html
   border-color: color-mix(in srgb, var(--c) 55%, #e7eaef);
 }
 
-/* La pastille : un disque pâle de la teinte, cerclé d'un filet, avec le pictogramme
-   dessiné dans la couleur de la carte (assombrie pour les teintes claires). */
+/* Le pictogramme seul, sans pastille, dessiné dans la couleur de la carte
+   (assombrie pour les teintes claires). Les cercles « creux » prennent la
+   teinte du voile pour paraître évidés. */
 .math-card {
-  --disque: color-mix(in srgb, var(--c2) 22%, #ffffff);
+  --voile: color-mix(in srgb, var(--c2) 30%, #ffffff);
   --ic: color-mix(in srgb, var(--c) 86%, #1f2933);
 }
 .c-orange, .c-ambre, .card-stat { --ic: color-mix(in srgb, var(--c) 55%, #5c3a00); }
@@ -446,19 +447,15 @@ html
   height: 64px;
   margin: 0;
   color: var(--ic);
-  background: radial-gradient(circle at 35% 28%, #ffffff 0%, var(--disque) 62%);
-  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--c) 30%, transparent),
-              0 2px 6px color-mix(in srgb, var(--c) 14%, transparent);
-  transition: transform 0.3s cubic-bezier(.2, .8, .2, 1), box-shadow 0.3s ease;
+  background: none !important;
+  box-shadow: none !important;
+  border-radius: 0;
+  transition: transform 0.3s cubic-bezier(.2, .8, .2, 1);
 }
-.math-icon svg { width: 36px; height: 36px; stroke-width: 2.4; }
-.math-icon .creux { fill: var(--disque); }
-.math-icon .teinte { fill-opacity: 0.22; }
-.math-card:hover .math-icon {
-  transform: scale(1.06);
-  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--c) 55%, transparent),
-              0 4px 12px color-mix(in srgb, var(--c) 22%, transparent);
-}
+.math-icon svg { width: 52px; height: 52px; stroke-width: 2.3; }
+.math-icon .creux { fill: var(--voile); }
+.math-icon .teinte { fill-opacity: 0.25; }
+.math-card:hover .math-icon { transform: scale(1.08); }
 
 /* Titre et trait d'accent */
 .math-card h3 { letter-spacing: 0.005em; }
@@ -492,4 +489,15 @@ html
 
 @media (prefers-reduced-motion: reduce) {
   .math-card:hover .math-icon { transform: none; }
+}
+
+/* Carte seule sur sa ligne (écrans ou colonnes étroites) : elle prend toute la largeur.
+   Deux cartes de 350 px et leur écart tiennent dans 722 px : en deçà, chaque carte
+   est seule sur sa ligne. */
+.math-container { container-type: inline-size; width: 100%; box-sizing: border-box; }
+/* Pages « chapitre » : le thème place leur contenu dans une boîte flexible (en ligne) qui
+   l'ajuste à son contenu ; on laisse le bloc des cartes occuper la largeur. */
+#chapter #body-inner:has(> .math-container) { flex: 1 1 auto; }
+@container (max-width: 721px) {
+  .math-card { flex-basis: 100%; }
 }

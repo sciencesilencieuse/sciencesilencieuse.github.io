@@ -14,7 +14,7 @@ Les **probabilités** sont des calculs a priori, visant à prédire les issues d
 
 <div class="math-card c-bleu">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/preslois.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/preslois.svg" alt=""></span>
 <h3><a href="./lois/">Variables et lois</a></h3>
 </div>
 <div class="carte-texte">Les lois de probabilité usuelles, du discret au continu.</div>
@@ -29,7 +29,7 @@ Les **probabilités** sont des calculs a priori, visant à prédire les issues d
 
 <div class="math-card c-orange">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/presmarkov.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/presmarkov.svg" alt=""></span>
 <h3><a href="./markov/">Chaînes de Markov</a></h3>
 </div>
 <div class="carte-texte">Un jeton qui saute de case en case sans se souvenir d'où il vient.</div>
@@ -44,7 +44,7 @@ Les **probabilités** sont des calculs a priori, visant à prédire les issues d
 
 <div class="math-card c-rouge">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/prescuriosites.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/prescuriosites.svg" alt=""></span>
 <h3><a href="./curiosites/">Curiosités et énigmes</a></h3>
 </div>
 <div class="carte-texte">Des problèmes de probabilités qui défient l'intuition.</div>
@@ -61,7 +61,7 @@ Les **probabilités** sont des calculs a priori, visant à prédire les issues d
 
 <div class="math-card c-canard">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/simplexepres.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/simplexepres.svg" alt=""></span>
 <h3><a href="./simplexes_proba/">Simplexes et probabilités</a></h3>
 </div>
 <div class="carte-texte">Deux problèmes où le nombre $\mathrm{e}$ surgit d'un volume de simplexe.</div>

@@ -14,7 +14,7 @@ L'arithmétique est la plus ancienne branche des mathématiques avec la géomét
 
 <div class="math-card c-canard">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/presnum.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/presnum.svg" alt=""></span>
 <h3><a href="./numeration/">Numération et bases</a></h3>
 </div>
 <div class="carte-texte">Compter autrement qu'en base dix&nbsp;: des systèmes anciens à l'informatique.</div>
@@ -27,7 +27,7 @@ L'arithmétique est la plus ancienne branche des mathématiques avec la géomét
 
 <div class="math-card c-magenta">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/presnb.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/presnb.svg" alt=""></span>
 <h3><a href="./nombresapart/">Nombres particuliers</a></h3>
 </div>
 <div class="carte-texte">Nombres premiers, pgcd, fractions continues, nombre d'or… et le nombre $\mathrm{e}$.</div>
@@ -44,7 +44,7 @@ L'arithmétique est la plus ancienne branche des mathématiques avec la géomét
 
 <div class="math-card c-bleu">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/prescompl.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/prescompl.svg" alt=""></span>
 <h3><a href="./complexes/">Complexes</a></h3>
 </div>
 <div class="carte-texte">Les nombres complexes et quelques-unes de leurs surprises.</div>

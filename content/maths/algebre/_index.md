@@ -14,7 +14,7 @@ L'algèbre (de l'arabe الجبر, al-jabr, signifiant reconstruction ou réunio
 
 <div class="math-card c-bleu">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/presequations.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/presequations.svg" alt=""></span>
 <h3><a href="./equations/">Équations</a></h3>
 </div>
 <div class="carte-texte">Ce que deviennent les équations polynomiales quand on laisse la variable se promener dans les complexes.</div>
@@ -22,7 +22,7 @@ L'algèbre (de l'arabe الجبر, al-jabr, signifiant reconstruction ou réunio
 
 <div class="math-card c-orange">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/presalglin.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/presalglin.svg" alt=""></span>
 <h3><a href="./lineaire/">Algèbre linéaire</a></h3>
 </div>
 <div class="carte-texte">Des systèmes d'équations aux matrices de rotation, l'outil de base de la physique quantique.</div>
@@ -35,7 +35,7 @@ L'algèbre (de l'arabe الجبر, al-jabr, signifiant reconstruction ou réunio
 
 <div class="math-card c-vert">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/presgroupes.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/presgroupes.svg" alt=""></span>
 <h3><a href="./groupes/">Théorie des groupes</a></h3>
 </div>
 <div class="carte-texte">Miettes de théorie des groupes pour physicien&nbsp;: symétries, rotations et représentations.</div>
@@ -43,7 +43,7 @@ L'algèbre (de l'arabe الجبر, al-jabr, signifiant reconstruction ou réunio
 
 <div class="math-card c-magenta">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/presgraphes.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/presgraphes.svg" alt=""></span>
 <h3><a href="./graphes/">Graphes</a></h3>
 </div>
 <div class="carte-texte">Jeux, dénombrements et chemins sur les graphes.</div>
@@ -58,7 +58,7 @@ L'algèbre (de l'arabe الجبر, al-jabr, signifiant reconstruction ou réunio
 
 <div class="math-card c-rouge">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/presfft.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/presfft.svg" alt=""></span>
 <h3><a href="./fft/">Multiplication de polynômes et FFT</a></h3>
 </div>
 <div class="carte-texte">Comment multiplier efficacement deux polynômes&nbsp;? Les maths cachées derrière l'un des algorithmes les plus importants.</div>

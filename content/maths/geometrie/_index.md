@@ -16,7 +16,7 @@ Géométrie et physique sont intimement liées. Le développement de la géomét
 
 <div class="math-card c-bleu">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/prestriangle.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/prestriangle.svg" alt=""></span>
 <h3><a href="./geo1/">Triangle</a></h3>
 </div>
 <div class="carte-texte">Les grands classiques du triangle.</div>
@@ -32,7 +32,7 @@ Géométrie et physique sont intimement liées. Le développement de la géomét
 
 <div class="math-card c-orange">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/prescercle.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/prescercle.svg" alt=""></span>
 <h3><a href="./geo2/">Cercle et triangle</a></h3>
 </div>
 <div class="carte-texte">Trigonométrie, loi des sinus et mesure du méridien, angles inscrits.</div>
@@ -46,7 +46,7 @@ Géométrie et physique sont intimement liées. Le développement de la géomét
 
 <div class="math-card c-vert">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/presaire.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/presaire.svg" alt=""></span>
 <h3><a href="./geo3/">Aires et volumes</a></h3>
 </div>
 <div class="carte-texte">Calculer des aires et des volumes, jusqu'au triangle tracé sur une sphère.</div>
@@ -62,7 +62,7 @@ Géométrie et physique sont intimement liées. Le développement de la géomét
 
 <div class="math-card c-magenta">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/presdim.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/presdim.svg" alt=""></span>
 <h3><a href="./geo4/">Curse of dimensionality</a></h3>
 </div>
 <div class="carte-texte">Le fléau de la dimension&nbsp;: en grande dimension, presque tout le volume se trouve près des bords.</div>
@@ -76,7 +76,7 @@ Géométrie et physique sont intimement liées. Le développement de la géomét
 
 <div class="math-card c-rouge">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/prespoursuite.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/prespoursuite.svg" alt=""></span>
 <h3><a href="./geo5/">Poursuites</a></h3>
 </div>
 <div class="carte-texte">Courbes de poursuite, interceptions et nuées d'oiseaux.</div>
@@ -94,7 +94,7 @@ Géométrie et physique sont intimement liées. Le développement de la géomét
 
 <div class="math-card c-canard">
 <div class="math-card-head">
-<span class="math-illus" aria-hidden="true"><img src="/simplices.png" alt=""></span>
+<span class="math-illus" aria-hidden="true"><img src="/illus/simplices.svg" alt=""></span>
 <h3><a href="./simplexes/">Simplexes et flèche du temps</a></h3>
 </div>
 <div class="carte-texte">Le volume d'un simplexe, $\frac{1}{k!}$, et ce qu'il dit de l'irréversibilité.</div>
