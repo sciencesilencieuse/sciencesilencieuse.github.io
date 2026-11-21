@@ -83,7 +83,7 @@ def arc_fleche(cx, cy, r, a0, a1, col, w=2.6, h=7.5, l=4.4):
     arc = L(f'M{x0:.2f} {y0:.2f}A{r} {r} 0 {grand} {0 if sg > 0 else 1} {xb + ux * 0.6:.2f} {yb + uy * 0.6:.2f}', col, w).replace('stroke-linecap:round', 'stroke-linecap:butt')
     pointe = P(f'M{xt:.2f} {yt:.2f}L{xb - uy * l:.2f} {yb + ux * l:.2f}L{xb + uy * l:.2f} {yb - ux * l:.2f}z', col)
     return arc + pointe
-I[('logique', 'Paradoxes')] = svg(arc_fleche(24, 24, 16, 212, 28, A), arc_fleche(24, 24, 16, 8, -152, G3))
+I[('logique', 'Paradoxes')] = svg(arc_fleche(24, 24, 16, 188, 28, A), arc_fleche(24, 24, 16, 8, -152, G3))
 I[('logique', 'Bayésianisme')] = svg(P('M3 41c9 0 11-13 16-13s9 13 26 13z', G1, G3, 1.2), P('M16 41c6 0 8-32 13-32s7 32 13 32z', B, A, 1.6, None), L('M3 41h42', G3, 1.2))
 # logique modale
 I[('logique/modale', 'Syntaxe et sémantique')] = svg(fl(24, 10, 12, 30, G3, 1.4), fl(24, 10, 36, 30, G3, 1.4), fl(13, 35, 34, 35, G3, 1.4), C(24, 8, 5, A), C(9, 35, 5, G1, G3, 1.2), C(39, 35, 5, B))
