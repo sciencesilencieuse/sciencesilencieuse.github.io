@@ -1078,6 +1078,122 @@ Le terme principal $x$ est le théorème des nombres premiers. Tous les écarts 
 </script>
 <p class="legende">La formule explicite en action. L'escalier noir est $\psi(x)$. La courbe orange est $x - \ln 2\pi - \frac{1}{2}\ln(1 - x^{-2})$ moins la somme des contributions des $K$ premiers zéros (chaque zéro $\frac{1}{2} \pm \mathrm{i}\gamma$ apporte $2\sqrt{x}\operatorname{Re}\frac{x^{\mathrm{i}\gamma}}{1/2 + \mathrm{i}\gamma}$). Avec $K = 0$, on a la tendance lisse. En ajoutant des zéros, les marches se dessinent, de plus en plus nettes, aux puissances de nombres premiers ($2, 3, 4, 5, 7, 8, 9, \dots$). La courbe verte montre la dernière onde ajoutée.</p>
 
+### La fonction de comptage elle-même
+
+La fonction qu'on cherche vraiment à reconstruire est $\pi(x)$, le nombre de premiers inférieurs ou égaux à $x$. Riemann a donné une formule directe pour elle. Il compte chaque puissance $p^k$ d'un nombre premier avec le poids $\frac{1}{k}$, ce qui définit $J(x) = \sum\_{k \ge 1} \frac{1}{k}\\,\pi\bigl(x^{1/k}\bigr)$, et il obtient
+
+<div id="theo">
+
+**Formule de Riemann**
+
+Pour $x > 1$,
+
+$$J(x) = \mathrm{li}(x) - \sum\_{\rho} \mathrm{li}\bigl(x^{\rho}\bigr) - \ln 2 + \int\_x^{+\infty} \frac{\mathrm{d}t}{t\,(t^2 - 1)\ln t},$$
+
+où $\mathrm{li}(x^\rho)$ désigne la fonction exponentielle intégrale $\mathrm{Ei}(\rho\ln x)$, et l'on retrouve $\pi$ par $\pi(x) = \sum\_{n \ge 1} \frac{\mu(n)}{n}\\,J\bigl(x^{1/n}\bigr)$ ($\mu$ est la fonction de Möbius).
+
+</div>
+
+<div id="preuve">
+<details>
+<summary>le calcul&nbsp;: retrouver $\pi$ à partir de $J$ (inversion de Möbius)</summary>
+
+La fonction de Möbius vérifie $\sum\_{n \mid m} \mu(n) = 1$ si $m = 1$ et $0$ sinon. En reportant la définition de $J$ dans $\sum\_{n \ge 1} \frac{\mu(n)}{n} J\bigl(x^{1/n}\bigr)$, on obtient la somme double
+
+$$\sum\_{n \ge 1}\sum\_{k \ge 1} \frac{\mu(n)}{n k}\\,\pi\bigl(x^{1/(nk)}\bigr) = \sum\_{m \ge 1} \frac{1}{m}\\,\pi\bigl(x^{1/m}\bigr) \sum\_{n \mid m} \mu(n) = \pi(x),$$
+
+où l'on a posé $m = nk$. Seuls les entiers $n \le \log\_2 x$ comptent, puisque $J(y) = 0$ pour $y < 2$.
+
+</details>
+</div>
+
+<br>
+
+Si l'on garde le seul terme $\mathrm{li}$, l'inversion donne la **fonction $R$ de Riemann**, $R(x) = \sum\_n \frac{\mu(n)}{n}\mathrm{li}\bigl(x^{1/n}\bigr)$, qui suit déjà l'escalier $\pi(x)$ de très près&nbsp;: c'est le meilleur point de départ sans les zéros. Chaque paire de zéros $\rho, \bar{\rho}$ ajoute ensuite une correction $-2\operatorname{Re} R(x^\rho)$, qui est une petite onde.
+
+<div class="svg-container" id="rz9">
+<div class="rz-ctl">
+<label><span>zéros utilisés <i>K</i></span> <input type="range" class="fig-range" id="rz9-k" min="0" max="79" step="1" value="0" style="width:170px;margin:0;"> <span id="rz9-kv" style="min-width:1.8em;">0</span></label>
+<button type="button" class="fig-btn" id="rz9-go"></button>
+</div>
+<div class="rz-out" id="rz9-out"></div>
+</div>
+<script>
+(function () {
+  var R = window.RZ, box = R.$('rz9'); if (!box) return;
+  var W = 600, H = 360, XMIN = 2, XMAX = 50, X0 = 38, X1 = 588, Y0 = 248, Y1 = 34, YM = 19;
+  var svg = R.fig('rz9', W, H, "La formule de Riemann pour la fonction de comptage π(x) des nombres premiers. Avec zéro zéro, on obtient la fonction R de Riemann, qui suit déjà de près l'escalier π(x). En ajoutant un à un les zéros de la fonction zêta, la courbe se rapproche de plus en plus de l'escalier et ses marches apparaissent.");
+  function X(x) { return X0 + (x - XMIN) / (XMAX - XMIN) * (X1 - X0); } function Y(y) { return Y0 - y / YM * (Y0 - Y1); }
+  var a, gd = ''; for (a = 10; a <= 50; a += 10) gd += 'M' + X(a) + ',' + Y0 + 'V' + Y1; for (a = 0; a <= 15; a += 5) gd += 'M' + X0 + ',' + Y(a) + 'H' + X1;
+  R.el('path', { d: gd, stroke: '#eef2f6', fill: 'none' }, svg);
+  R.el('line', { x1: X0, y1: Y0, x2: X1 + 4, y2: Y0, stroke: '#94a3b8' }, svg); R.el('line', { x1: X0, y1: Y0, x2: X0, y2: Y1 - 8, stroke: '#94a3b8' }, svg);
+  for (a = 10; a <= 50; a += 10) R.txt(svg, X(a), Y0 + 14, String(a), { size: 11, anchor: 'middle', fill: '#64748b' });
+  for (a = 0; a <= 15; a += 5) R.txt(svg, X0 - 6, Y(a) + 4, String(a), { size: 11, anchor: 'end', fill: '#64748b' });
+  R.txt(svg, X1 + 12, Y0 + 4, "<tspan font-style='italic'>x</tspan>", { size: 12, anchor: 'end', fill: '#64748b' });
+  R.txt(svg, 14, 20, "π(<tspan font-style='italic'>x</tspan>) : nombre de nombres premiers ≤ <tspan font-style='italic'>x</tspan>", { size: 12.5, fill: '#64748b', italic: true });
+  // escalier exact
+  var P = R.sieve(50), d = 'M' + X(XMIN) + ',' + Y(1), c = 1;
+  P.forEach(function (p) { if (p > 2) { d += 'L' + X(p).toFixed(1) + ',' + Y(c).toFixed(1); c++; d += 'L' + X(p).toFixed(1) + ',' + Y(c).toFixed(1); } }); d += 'L' + X(XMAX) + ',' + Y(c);
+  R.el('path', { d: d, fill: 'none', stroke: '#1e293b', 'stroke-width': 1.8 }, svg);
+  function truePi(x) { var n = 0; P.forEach(function (p) { if (p <= x) n++; }); return n; }
+  // fonctions spéciales
+  var EG = 0.5772156649015329;
+  function li(y) { var L = Math.log(y), s = 0, t = 1, k; for (k = 1; k < 120; k++) { t *= L / k; s += t / k; } return EG + Math.log(L) + s; }
+  function ei(zr, zi) { // Im z > 0
+    var a = Math.hypot(zr, zi), sr, si, tr, ti, k, nr;
+    if (a < 28) {
+      sr = 0; si = 0; tr = 1; ti = 0;
+      for (k = 1; k < 140; k++) { nr = (tr * zr - ti * zi) / k; ti = (tr * zi + ti * zr) / k; tr = nr; sr += tr / k; si += ti / k; if (k > a && Math.hypot(tr, ti) / k < 1e-16) break; }
+      return [EG + Math.log(a) + sr, Math.atan2(zi, zr) + si];
+    }
+    sr = 1; si = 0; tr = 1; ti = 0;
+    var d2 = zr * zr + zi * zi, ir = zr / d2, ii = -zi / d2;                    // 1/z
+    for (k = 1; k <= a; k++) { var ur = (tr * ir - ti * ii) * k, ui = (tr * ii + ti * ir) * k; if (Math.hypot(ur, ui) > Math.hypot(tr, ti)) break; tr = ur; ti = ui; sr += tr; si += ti; }
+    var e = Math.exp(zr), er = e * Math.cos(zi), ei_ = e * Math.sin(zi);        // e^z
+    var pr = er * sr - ei_ * si, pi = er * si + ei_ * sr;                        // e^z * s
+    return [(pr * ir - pi * ii), (pr * ii + pi * ir) + Math.PI];                 // /z, + iπ
+  }
+  var MU = { 1: 1, 2: -1, 3: -1, 5: -1 };
+  var xs = [], x; for (x = XMIN + 0.001; x <= XMAX; x += 0.08) xs.push(x);
+  var N = xs.length, base = new Float64Array(N), cum = new Float64Array(N), lis = new Float64Array(N), i;
+  function tail(y) { var a0 = Math.log(y), h = 12 / 300, s = 0, j, u; for (j = 0; j < 300; j++) { u = a0 + (j + 0.5) * h; s += h / (u * (Math.exp(2 * u) - 1)); } return s; }
+  for (i = 0; i < N; i++) {
+    var tot = 0, n; for (n = 1; n <= 5; n++) { if (!MU[n]) continue; var y = Math.pow(xs[i], 1 / n); if (y < 2) continue; tot += MU[n] / n * (li(y) - Math.LN2 + tail(y)); }
+    base[i] = tot; lis[i] = li(xs[i]);
+  }
+  function term(j, i) { var tot = 0, n, g = R.ZEROS[j]; for (n = 1; n <= 5; n++) { if (!MU[n]) continue; if (Math.pow(xs[i], 1 / n) < 2) continue; var L = Math.log(xs[i]) / n, v = ei(0.5 * L, g * L); tot += MU[n] / n * 2 * v[0]; } return -tot; }
+  var apx = R.el('path', { fill: 'none', stroke: '#C2770B', 'stroke-width': 2.2, 'stroke-linejoin': 'round' }, svg);
+  var lip = R.el('path', { fill: 'none', stroke: '#94a3b8', 'stroke-width': 1.6, 'stroke-dasharray': '5 4' }, svg);
+  var dl = ''; for (i = 0; i < N; i++) dl += (i ? 'L' : 'M') + X(xs[i]).toFixed(1) + ',' + Y(lis[i]).toFixed(1); lip.setAttribute('d', dl);
+  R.txt(svg, X0 + 14, Y1 + 24, "── π(<tspan font-style='italic'>x</tspan>) exact", { size: 12.5, fill: '#1e293b' });
+  R.txt(svg, X0 + 14, Y1 + 42, "── formule de Riemann avec <tspan font-style='italic'>K</tspan> zéros", { size: 12.5, fill: '#C2770B' });
+  R.txt(svg, X0 + 14, Y1 + 60, "- - li(<tspan font-style='italic'>x</tspan>)", { size: 12.5, fill: '#94a3b8' });
+  var WY0 = 336, WH = 38;
+  R.el('line', { x1: X0, y1: WY0, x2: X1, y2: WY0, stroke: '#cbd5e1' }, svg);
+  var wave = R.el('path', { fill: 'none', stroke: '#006C65', 'stroke-width': 1.5 }, svg), wl = R.txt(svg, X0, 281, '', { size: 12, fill: '#006C65', italic: true });
+  var K = 0, Kc = 0, rcache = [];
+  function sync() {
+    while (Kc < K) { rcache[Kc] = []; for (i = 0; i < N; i++) { var t = term(Kc, i); rcache[Kc][i] = t; cum[i] += t; } Kc++; }
+    while (Kc > K) { Kc--; for (i = 0; i < N; i++) cum[i] -= rcache[Kc][i]; }
+    var dd = '', s2 = 0, nn = 0, s1 = 0;
+    for (i = 0; i < N; i++) { var v = base[i] + cum[i]; dd += (i ? 'L' : 'M') + X(xs[i]).toFixed(1) + ',' + Y(Math.max(-1, Math.min(YM, v))).toFixed(1); if (xs[i] >= 3) { var tr = truePi(xs[i]); s2 += (v - tr) * (v - tr); s1 += (lis[i] - tr) * (lis[i] - tr); nn++; } }
+    apx.setAttribute('d', dd);
+    if (K > 0) {
+      var wd = '', mx = 0, rc = rcache[K - 1]; for (i = 0; i < N; i++) mx = Math.max(mx, Math.abs(rc[i]));
+      for (i = 0; i < N; i++) wd += (i ? 'L' : 'M') + X(xs[i]).toFixed(1) + ',' + (WY0 - rc[i] / mx * WH * 0.5).toFixed(1);
+      wave.setAttribute('d', wd); wave.setAttribute('visibility', 'visible'); wl.innerHTML = "correction apportée par le zéro n°" + K + " (<tspan font-style='italic'>γ</tspan> = " + R.fmt(R.ZEROS[K - 1], 3) + ")";
+    } else { wave.setAttribute('visibility', 'hidden'); wl.innerHTML = "sans zéro : la fonction <tspan font-style='italic'>R</tspan> de Riemann, déjà très proche de l'escalier"; }
+    R.$('rz9-kv').textContent = K; R.$('rz9-k').value = K;
+    R.$('rz9-out').innerHTML = "écart quadratique moyen avec π(<i>x</i>) sur [3 ; 50] : li(<i>x</i>) → <b>" + R.fmt(Math.sqrt(s1 / nn), 2) + "</b> ; formule de Riemann avec <b>" + K + "</b> zéro" + (K > 1 ? 's' : '') + " → <b>" + R.fmt(Math.sqrt(s2 / nn), 2) + "</b>";
+  }
+  R.$('rz9-k').addEventListener('input', function () { K = parseInt(this.value, 10); pl.stop(); sync(); });
+  var acc = 0, hold = 0;
+  var pl = R.player(R.$('rz9-go'), box, function (dt) { if (K >= 79) { hold += dt; if (hold > 2) { K = 0; hold = 0; sync(); } return; } acc += dt; if (acc > 0.22) { acc = 0; K++; sync(); } }, false);
+  sync();
+})();
+</script>
+<p class="legende">La formule de Riemann pour $\pi(x)$. L'escalier noir est $\pi(x)$&nbsp;; la courbe grise en pointillés est $\mathrm{li}(x)$. Avec $K = 0$, la courbe orange est la fonction $R$ de Riemann (plus petits termes), qui est déjà plus proche de l'escalier que $\mathrm{li}$. Chaque zéro ajouté (curseur ou bouton) apporte une correction oscillante (en vert, en bas)&nbsp;: les marches se dessinent peu à peu aux nombres premiers, et la courbe orange tend vers l'escalier.</p>
+
 ### Ce que dit l'hypothèse sur les nombres premiers
 
 Si un zéro avait une partie réelle $\beta > \frac{1}{2}$, le terme $x^\rho$ aurait pour amplitude $x^\beta$, plus grande que $\sqrt{x}$&nbsp;: les nombres premiers s'écarteraient de leur répartition moyenne de plus que $\sqrt{x}$. L'hypothèse de Riemann dit que ce n'arrive jamais&nbsp;: les oscillations sont partout de taille $\sqrt{x}$. Précisément&nbsp;:
