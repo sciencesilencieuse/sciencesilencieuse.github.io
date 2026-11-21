@@ -53,6 +53,7 @@ L'arithmétique est la plus ancienne branche des mathématiques avec la géomét
   <a href="./complexes/#entiers-algébriques" class="math-btn">Entiers algébriques</a>
   <a href="./complexes/#ensemble-de-mandelbrot" class="math-btn">Ensemble de Mandelbrot</a>
   <a href="./complexes/#triplets-pythagoriciens" class="math-btn">Triplets pythagoriciens</a>
+  <a href="./riemann/" class="math-btn">Hypothèse de Riemann</a>
 </div>
 </div>
 </div>

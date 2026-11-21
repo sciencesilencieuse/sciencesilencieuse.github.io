@@ -269,5 +269,10 @@ Les nombres complexes vont nous aider à mettre la main sur tous les triplets py
 
 {{< youtube-plus id="cQ2N0CX7a-4" ratio="16x9" width="800px" rounded=true shadow=true >}}
 
+<br>
 
+## L'hypothèse de Riemann
 
+Les nombres complexes servent aussi à comprendre comment les nombres premiers se répartissent. La série $\sum n^{-s}$, qui n'a de sens que pour $\operatorname{Re}(s) > 1$, se prolonge au plan complexe tout entier (privé de $s = 1$)&nbsp;: c'est la fonction $\zeta$ de Riemann. Elle s'écrit aussi comme un produit sur les nombres premiers, et ses zéros commandent les écarts entre le nombre de premiers et sa valeur moyenne. L'hypothèse de Riemann affirme que tous ses zéros non triviaux sont alignés sur la droite $\operatorname{Re}(s) = \frac{1}{2}$.
+
+Une page entière lui est consacrée, avec des figures interactives sur le crible d'Euler, le prolongement analytique, les zéros et la formule explicite&nbsp;: [L'hypothèse de Riemann](../riemann/).

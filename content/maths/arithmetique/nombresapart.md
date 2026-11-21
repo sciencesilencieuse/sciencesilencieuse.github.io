@@ -79,6 +79,10 @@ $n$ est-il premier&nbsp;?<br>
 
 <br>
 
+Euler a donné une autre démonstration, qui relie la divergence de la série harmonique à l'infinité des nombres premiers et conduit à la fonction $\zeta$ de Riemann&nbsp;: voir [Une série, un produit](../riemann/#fonction).
+
+<br>
+
 L'énigme suivante joue sur la décomposition en facteurs premiers d'un entier.
 
 {{< youtube-plus id="bpvzvnsjjDE" ratio="16x9" width="800px" rounded=true shadow=true >}}
