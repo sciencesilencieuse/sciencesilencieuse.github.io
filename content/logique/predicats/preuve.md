@@ -134,9 +134,12 @@ Tout ce qui est vrai dans toutes les structures se démontre, et rien d'autre. L
 
 La preuve qu'on enseigne aujourd'hui, due à Leon Henkin (1949), suit la même idée que la [complétude des logiques modales](../../modale/systemes/#pourquoi-cest-complet)&nbsp;: fabriquer une structure à partir de la syntaxe elle-même. Les objets du domaine sont les termes du langage, et, pour que chaque «&nbsp;il existe&nbsp;» ait de quoi se réaliser, on ajoute au langage une nouvelle constante, un témoin, pour chaque formule $\exists x\\,\phi(x)$.
 
-{{% notice type="piege" round="true" %}}
-**Complétude et incomplétude ne se contredisent pas**, malgré les noms et l'auteur commun. Le théorème de complétude (1929) dit que les règles de preuve attrapent toutes les **conséquences logiques** d'un ensemble d'axiomes. Les théorèmes d'incomplétude (1931) disent qu'un ensemble d'axiomes pour l'arithmétique ne **décide** jamais tous les énoncés&nbsp;: il en reste qui ne sont ni démontrables ni réfutables. Les deux se concilient très bien&nbsp;: un tel énoncé est vrai dans certaines structures qui satisfont les axiomes et faux dans d'autres, donc il n'est pas une conséquence logique des axiomes, et la complétude n'oblige pas à le démontrer.
-{{% /notice %}}
+<div class="encadre prune">
+<div class="encadre-titre">Complétude et incomplétude ne se contredisent pas</div>
+
+Malgré les noms et l'auteur commun, les deux énoncés ne portent pas sur la même chose. Le théorème de complétude (1929) dit que les règles de preuve attrapent toutes les **conséquences logiques** d'un ensemble d'axiomes. Les théorèmes d'incomplétude (1931) disent qu'un ensemble d'axiomes pour l'arithmétique ne **décide** jamais tous les énoncés&nbsp;: il en reste qui ne sont ni démontrables ni réfutables. Les deux se concilient très bien&nbsp;: un tel énoncé est vrai dans certaines structures qui satisfont les axiomes et faux dans d'autres, donc il n'est pas une conséquence logique des axiomes, et la complétude n'oblige pas à le démontrer.
+
+</div>
 
 ## La compacité&nbsp;: les preuves sont finies
 
