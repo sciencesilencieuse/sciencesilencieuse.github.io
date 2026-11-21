@@ -227,8 +227,9 @@ function init(root) {
   }
 
   // ================================================================ boucle d'animation
-  function boucle(t) {
+  function boucle() {
     requestAnimationFrame(boucle);
+    const t = performance.now();                                     // même horloge que les départs d'animation
     if (!D || !dim || !visible) return;
     if (onde) onde.pas(t);
     if (vol) {
