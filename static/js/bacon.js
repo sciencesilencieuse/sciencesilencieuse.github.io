@@ -1,10 +1,14 @@
 /* Le graphe des acteurs et des films américains de 1980 à 2023 (listes de films
    de Wikipédia, compilées dans le dépôt wikipedia-movie-data) : chaque acteur est
-   relié aux films dont il fait partie de la distribution principale. Disposition
-   calculée d'avance par simulation de forces (d3-force) ; rendu WebGL (three.js)
-   pour les dizaines de milliers de points et de liens, chemin et noms dessinés
-   sur un calque 2D. Choisir un acteur trace son plus court chemin vers Kevin
-   Bacon, trouvé par un parcours en largeur.
+   relié aux films dont il fait partie de la distribution principale.
+   Disposition calculée d'avance (outils/bacon_disposition.py) : les communautés du
+   graphe forment des grappes, reliées par des filaments. Rendu WebGL (three.js) en
+   mélange additif ; chemin, noms et halo dessinés sur un calque 2D.
+   - à l'arrivée, une onde part de Kevin Bacon et allume le graphe distance par
+     distance (le parcours en largeur, rendu visible) ;
+   - choisir un acteur trace son plus court chemin vers Kevin Bacon ;
+   - tous les changements de vue sont animés : vols « dézoom puis zoom » (van Wijk
+     et Nuij) pour les grands déplacements, zoom lissé à la molette et aux boutons.
    Conteneur attendu : <div class="anim" data-anim="bacon"></div>                    */
 import * as THREE from './vendor/three.module.min.js';
 
@@ -13,12 +17,13 @@ if (root) init(root);
 
 function init(root) {
   const BASE = new URL('../', import.meta.url).href;
-  const COUL = ['#FDE047', '#FB923C', '#F472B6', '#A78BFA', '#60A5FA', '#22D3EE', '#34D399', '#94A3B8'];   // nombre de Bacon 0, 1, 2…
-  const HORS = '#3B4660', FOND = 0x0B1020;
+  const COUL = ['#FDE047', '#FB923C', '#F472B6', '#22D3EE', '#34D399', '#A78BFA', '#E2E8F0'];   // nombre de Bacon 0, 1, 2…
+  const HORS = '#5B6B8C', FOND = 0x070B18, NIV_HORS = 7.5;
   root.innerHTML = `
 <div class="bc-cadre">
   <canvas class="bc-toile" aria-hidden="true"></canvas>
   <canvas class="bc-calque" role="img" aria-label="Graphe de dizaines de milliers d'acteurs et de films ; un acteur choisi est relié à Kevin Bacon par son plus court chemin"></canvas>
+  <div class="bc-hud" aria-live="polite"></div>
   <div class="bc-zoom"><button type="button" data-k="plus" aria-label="Zoomer">+</button><button type="button" data-k="moins" aria-label="Dézoomer">−</button><button type="button" data-k="tout" aria-label="Vue d'ensemble">⤢</button></div>
   <div class="bc-bulle" hidden></div>
   <p class="bc-attente">Chargement du graphe…</p>
@@ -30,22 +35,26 @@ function init(root) {
   <datalist id="bc-noms"></datalist>
   <button type="button" data-k="go">Chemin vers Kevin Bacon</button>
   <button type="button" class="sec" data-k="hasard">Acteur au hasard</button>
+  <button type="button" class="sec" data-k="onde">Propagation</button>
   <span class="anim-astuce">Glisser pour se déplacer ; Ctrl + molette, pincement ou boutons pour zoomer ; cliquer un point pour le choisir.</span>
 </div>`;
   const $ = s => root.querySelector(s);
-  const toile = $('.bc-toile'), cv = $('.bc-calque'), bulle = $('.bc-bulle'), attente = $('.bc-attente'), leg = $('.bc-legende'), outC = $('.bc-chemin');
+  const toile = $('.bc-toile'), cv = $('.bc-calque'), bulle = $('.bc-bulle'), attente = $('.bc-attente'), leg = $('.bc-legende'), outC = $('.bc-chemin'), hud = $('.bc-hud');
   const inA = $('[data-k="acteur"]');
 
   let renderer;
-  try { renderer = new THREE.WebGLRenderer({ canvas: toile, antialias: true }); }
+  try { renderer = new THREE.WebGLRenderer({ canvas: toile, antialias: true, powerPreference: 'high-performance' }); }
   catch (e) { attente.textContent = 'Votre navigateur ne peut pas afficher ce graphe (WebGL indisponible).'; return; }
   renderer.setClearColor(FOND, 1);
   const scene = new THREE.Scene(), camera = new THREE.OrthographicCamera(0, 1, 0, 1, -10, 10);
-  let D, F, A, N, X, Y, voisins, dist, pred, points, liens, chemin = [], anim = 0, prog = 1, filtre = -1, dim, vue = { s: 1, ox: 0, oy: 0 }, E = 4000;
+  let D, F, A, N, X, Y, voisins, dist, pred, niveau, points, liens, dim, E = 4000;
+  let vue = { s: 1, ox: 0, oy: 0 }, chemin = [], prog = 1, filtre = -1, sale = true, visible = false, interagi = false;
+  let vol = null, lisse = null, onde = null, voile = { v: 1, cible: 1 }, ens = [0, 0, 4000, 4000];
+  const parNiveau = [], uni = { uZoom: { value: 1 }, uDpr: { value: 1 }, uOnde: { value: 99 }, uFiltre: { value: -1 }, uVoile: { value: 1 } };
 
-  // ---------------------------------------------------------------- données et géométrie
+  // ================================================================ données et géométrie
   function preparer(d) {
-    D = d; F = d.films.length; A = d.acteurs.length; N = F + A; E = d.echelle || 1000;
+    D = d; F = d.films.length; A = d.acteurs.length; N = F + A; E = d.echelle || 4000;
     X = new Float32Array(N); Y = new Float32Array(N);
     for (let i = 0; i < N; i++) { X[i] = d.pos[2 * i]; Y[i] = d.pos[2 * i + 1]; }
     voisins = Array.from({ length: N }, () => []);
@@ -53,147 +62,302 @@ function init(root) {
     const b = F + d.bacon; dist = new Int16Array(N).fill(-1); pred = new Int32Array(N).fill(-1);
     dist[b] = 0; const file = [b];
     for (let t = 0; t < file.length; t++) { const s = file[t]; for (const v of voisins[s]) if (dist[v] < 0) { dist[v] = dist[s] + 1; pred[v] = s; file.push(v); } }
+    niveau = new Float32Array(N);                                     // nombre de Bacon (demi-entier pour un film)
+    for (let i = 0; i < N; i++) niveau[i] = dist[i] < 0 ? NIV_HORS : dist[i] / 2;
+    for (let j = 0; j < A; j++) { const k = dist[F + j] < 0 ? 'x' : dist[F + j] / 2; parNiveau[k] = (parNiveau[k] || 0) + 1; }
+    // cadre de la vue d'ensemble : la composante géante, à 0,5 % près de chaque côté
+    const xs = [], ys = []; for (let i = 0; i < N; i++) if (dist[i] >= 0) { xs.push(X[i]); ys.push(Y[i]); }
+    xs.sort((a, b) => a - b); ys.sort((a, b) => a - b);
+    const q = (t, p) => t[Math.floor(p * (t.length - 1))];
+    ens = [q(xs, 0.005), q(ys, 0.005), q(xs, 0.995), q(ys, 0.995)];
+    const coul = i => new THREE.Color(i < F ? '#C7D2FE' : dist[i] < 0 ? HORS : COUL[Math.min(dist[i] / 2, COUL.length - 1)]);
+    const grp = d.groupe || [];
 
-    // liens : un segment par couple (film, acteur), lumière additive
+    // liens : un segment par couple (film, acteur), teinté par le nombre de Bacon de l'acteur ;
+    // les liens entre deux grappes (filaments) sont plus discrets que les liens internes
     let nl = 0; d.casting.forEach(c => { nl += c.length; });
-    const pl = new Float32Array(nl * 6); let k = 0;
-    d.casting.forEach((c, f) => c.forEach(a => { pl[k++] = X[f]; pl[k++] = Y[f]; pl[k++] = 0; pl[k++] = X[F + a]; pl[k++] = Y[F + a]; pl[k++] = 0; }));
-    const gl = new THREE.BufferGeometry(); gl.setAttribute('position', new THREE.BufferAttribute(pl, 3));
-    liens = new THREE.LineSegments(gl, new THREE.LineBasicMaterial({ color: 0x4F68C8, transparent: true, opacity: 0.05, depthWrite: false }));
+    const lp = new Float32Array(nl * 6), lc = new Float32Array(nl * 6), ln = new Float32Array(nl * 2), li = new Float32Array(nl * 2);
+    let k = 0;
+    d.casting.forEach((c, f) => c.forEach(a => {
+      const j = F + a, col = coul(j), nv = Math.max(niveau[f], niveau[j]), inter = grp[f] !== grp[j] ? 1 : 0;
+      lp.set([X[f], Y[f], 0, X[j], Y[j], 0], 6 * k); lc.set([col.r, col.g, col.b, col.r, col.g, col.b], 6 * k);
+      ln[2 * k] = ln[2 * k + 1] = nv; li[2 * k] = li[2 * k + 1] = inter; k++;
+    }));
+    const gl = new THREE.BufferGeometry();
+    gl.setAttribute('position', new THREE.BufferAttribute(lp, 3)); gl.setAttribute('couleur', new THREE.BufferAttribute(lc, 3));
+    gl.setAttribute('niveau', new THREE.BufferAttribute(ln, 1)); gl.setAttribute('inter', new THREE.BufferAttribute(li, 1));
+    liens = new THREE.LineSegments(gl, new THREE.ShaderMaterial({
+      uniforms: { ...uni, uAlpha: { value: 0.05 } },
+      vertexShader: `attribute vec3 couleur; attribute float niveau; attribute float inter; uniform float uOnde; uniform float uFiltre; uniform float uVoile; uniform float uAlpha;
+        varying vec4 vC;
+        void main() {
+          float vu = smoothstep(niveau, niveau + 0.35, uOnde);
+          float f = uFiltre < -0.5 ? 1.0 : (abs(niveau - uFiltre) < 0.6 ? 1.0 : 0.08);
+          vC = vec4(couleur, uAlpha * vu * f * uVoile * (inter > 0.5 ? 0.55 : 1.0));
+          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }`,
+      fragmentShader: `varying vec4 vC; void main() { gl_FragColor = vec4(vC.rgb * vC.a, vC.a); }`,
+      transparent: true, depthWrite: false, depthTest: false, blending: THREE.AdditiveBlending
+    }));
     scene.add(liens);
-    // points : disques lumineux, films plus gros
-    const pp = new Float32Array(N * 3), pc = new Float32Array(N * 3), pt = new Float32Array(N), pa = new Float32Array(N), c = new THREE.Color();
+
+    // points : halos lumineux ; l'onde les fait éclore (et briller un instant) à leur passage
+    const pp = new Float32Array(N * 3), pc = new Float32Array(N * 3), pt = new Float32Array(N), pn = new Float32Array(N);
     for (let i = 0; i < N; i++) {
-      pp[3 * i] = X[i]; pp[3 * i + 1] = Y[i]; pp[3 * i + 2] = i < F ? 1 : 0.5;
-      c.set(i < F ? '#B8C4D9' : dist[i] < 0 ? HORS : COUL[Math.min(dist[i] / 2, COUL.length - 1)]);
-      pc[3 * i] = c.r; pc[3 * i + 1] = c.g; pc[3 * i + 2] = c.b;
-      pt[i] = i < F ? 2.4 : 2.1; pa[i] = i < F ? 0.75 : 0.95;
+      pp[3 * i] = X[i]; pp[3 * i + 1] = Y[i]; pp[3 * i + 2] = i < F ? 0.5 : 1;
+      const c = coul(i); pc[3 * i] = c.r; pc[3 * i + 1] = c.g; pc[3 * i + 2] = c.b;
+      const dg = voisins[i].length;
+      pt[i] = i < F ? 3.2 : 3.6 + Math.min(5, Math.sqrt(dg) * 0.55);    // les acteurs prolifiques brillent davantage
+      pn[i] = niveau[i];
     }
     const gp = new THREE.BufferGeometry();
     gp.setAttribute('position', new THREE.BufferAttribute(pp, 3)); gp.setAttribute('couleur', new THREE.BufferAttribute(pc, 3));
-    gp.setAttribute('taille', new THREE.BufferAttribute(pt, 1)); gp.setAttribute('alpha', new THREE.BufferAttribute(pa, 1));
+    gp.setAttribute('taille', new THREE.BufferAttribute(pt, 1)); gp.setAttribute('niveau', new THREE.BufferAttribute(pn, 1));
     points = new THREE.Points(gp, new THREE.ShaderMaterial({
-      uniforms: { uZoom: { value: 1 }, uDpr: { value: 1 } },
-      vertexShader: `attribute vec3 couleur; attribute float taille; attribute float alpha; uniform float uZoom; uniform float uDpr;
+      uniforms: uni,
+      vertexShader: `attribute vec3 couleur; attribute float taille; attribute float niveau;
+        uniform float uZoom; uniform float uDpr; uniform float uOnde; uniform float uFiltre; uniform float uVoile;
         varying vec3 vC; varying float vA;
-        void main() { vC = couleur; vA = alpha; gl_PointSize = taille * uZoom * uDpr; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`,
+        void main() {
+          float k = uOnde - niveau;
+          float vu = smoothstep(0.0, 0.25, k), eclat = exp(-k * k * 10.0) * step(0.0, k);
+          float f = uFiltre < -0.5 ? 1.0 : (abs(niveau - uFiltre) < 0.01 ? 1.3 : (fract(niveau) > 0.25 && fract(niveau) < 0.75 ? 0.18 : 0.05));
+          vC = mix(couleur, vec3(1.0), 0.6 * eclat);
+          vA = vu * f * (0.55 + 0.45 * uVoile) * (position.z < 0.75 ? 0.55 : 0.9) * (1.0 + 1.5 * eclat);
+          gl_PointSize = taille * uZoom * uDpr * (1.0 + 2.2 * eclat);
+          gl_Position = projectionMatrix * modelViewMatrix * vec4(position.xy, 0.0, 1.0);
+        }`,
       fragmentShader: `varying vec3 vC; varying float vA;
-        void main() { float d = length(gl_PointCoord - 0.5); if (d > 0.5) discard; gl_FragColor = vec4(vC, vA * smoothstep(0.5, 0.25, d)); }`,
-      transparent: true, depthWrite: false
+        void main() {
+          float d = length(gl_PointCoord - 0.5) * 2.0; if (d > 1.0) discard;
+          float a = vA * (exp(-d * d * 5.0) * 0.75 + smoothstep(0.38, 0.18, d) * 0.6);
+          gl_FragColor = vec4(vC * a, a);
+        }`,
+      transparent: true, depthWrite: false, depthTest: false, blending: THREE.AdditiveBlending
     }));
     scene.add(points);
 
-    const compte = {};
-    for (let j = 0; j < A; j++) { const kk = dist[F + j] < 0 ? 'x' : dist[F + j] / 2; compte[kk] = (compte[kk] || 0) + 1; }
-    leg.innerHTML = '<span class="bc-titre">Nombre de Bacon&nbsp;:</span>' + Object.keys(compte).sort().map(kk => `<button type="button" data-n="${kk}" title="Isoler ces acteurs"><i style="background:${kk === 'x' ? HORS : COUL[kk]}"></i>${kk === 'x' ? 'hors d\'atteinte' : kk} <small>(${compte[kk].toLocaleString('fr-FR')})</small></button>`).join('') +
+    leg.innerHTML = '<span class="bc-titre">Nombre de Bacon&nbsp;:</span>' + Object.keys(parNiveau).filter(kk => parNiveau[kk]).sort().map(kk => `<button type="button" data-n="${kk}" title="Isoler ces acteurs"><i style="background:${kk === 'x' ? HORS : COUL[kk]}"></i>${kk === 'x' ? 'hors d\'atteinte' : kk} <small>(${parNiveau[kk].toLocaleString('fr-FR')})</small></button>`).join('') +
       `<span><i class="bc-film"></i>film</span>`;
     leg.querySelectorAll('button').forEach(bt => bt.addEventListener('click', () => {
-      const kk = bt.dataset.n === 'x' ? -2 : +bt.dataset.n;
-      filtre = filtre === kk ? -1 : kk; leg.querySelectorAll('button').forEach(x => x.classList.toggle('bc-actif', x === bt && filtre !== -1));
-      const al = points.geometry.attributes.alpha;
-      for (let i = 0; i < N; i++) al.array[i] = i < F ? (filtre === -1 ? 0.75 : 0.25) : filtre === -1 ? 0.95 : (filtre === -2 ? dist[i] < 0 : dist[i] === 2 * filtre) ? 1 : 0.05;
-      al.needsUpdate = true; rendre();
+      const kk = bt.dataset.n === 'x' ? NIV_HORS : +bt.dataset.n;
+      filtre = filtre === kk ? -1 : kk; uni.uFiltre.value = filtre;
+      leg.querySelectorAll('button').forEach(x => x.classList.toggle('bc-actif', x === bt && filtre !== -1));
+      sale = true;
     }));
     // suggestions : les acteurs d'au moins deux films (la recherche, elle, couvre tout le monde)
     $('#bc-noms').innerHTML = D.acteurs.map((n, j) => [n, voisins[F + j].length]).filter(x => x[1] >= 2).map(x => x[0]).sort((a, b) => a.localeCompare(b))
       .map(n => `<option value="${n.replace(/&/g, '&amp;').replace(/"/g, '&quot;')}">`).join('');
     attente.hidden = true;
     fit();
-    const th = D.acteurs.indexOf('Tom Hanks');                       // le graphe entier, puis un premier chemin
-    if (th >= 0) setTimeout(() => { if (!chemin.length && !pointeurs.size) { inA.value = 'Tom Hanks'; choisir(F + th); } }, 1400);
+    lancerOnde(() => {                                               // puis un premier chemin, si personne n'a encore touché à rien
+      const th = D.acteurs.indexOf('Tom Hanks');
+      if (th >= 0 && !interagi) { inA.value = 'Tom Hanks'; choisir(F + th); }
+    });
   }
 
-  // ---------------------------------------------------------------- vue
+  // ================================================================ onde de propagation (parcours en largeur)
+  function lancerOnde(ensuite) {
+    if (!D) return;
+    chemin = []; outC.textContent = ''; voile.cible = 1;
+    const fin = 7.4, t0 = performance.now(), duree = 6200;
+    vol = null; vue = ensemble();
+    onde = { t0, ensuite, fin };
+    hud.classList.add('bc-hud-vu');
+    onde.pas = t => {
+      const u = Math.min(1, (t - t0) / duree), w = -0.4 + (fin + 0.4) * u;
+      uni.uOnde.value = w; sale = true;
+      const n = Math.max(0, Math.min(6, Math.floor(w)));
+      let cumul = 0; for (let k = 0; k <= n; k++) cumul += parNiveau[k] || 0;
+      const tot = A, pc = Math.round(100 * cumul / tot);
+      hud.innerHTML = w < 0 ? '<b>Kevin Bacon</b>' :
+        `<span class="bc-hud-d" style="color:${COUL[n]}">${n}</span><span>pas de Kevin Bacon<br><b>${cumul.toLocaleString('fr-FR')}</b> acteurs atteints · ${pc}&nbsp;%</span>`;
+      if (u >= 1) {
+        uni.uOnde.value = 99; onde = null;
+        hud.innerHTML = `<span>${(A - (parNiveau.x || 0)).toLocaleString('fr-FR')} acteurs reliés à Kevin Bacon<br>${(parNiveau.x || 0).toLocaleString('fr-FR')} hors d'atteinte</span>`;
+        setTimeout(() => { if (!onde) hud.classList.remove('bc-hud-vu'); }, 2600);
+        if (ensuite) setTimeout(ensuite, 700);
+      }
+    };
+  }
+
+  // ================================================================ vue et animations de caméra
   function fit() {
-    const dpr = Math.min(window.devicePixelRatio || 1, 2), w = cv.clientWidth || 700, h = Math.round(Math.min(w * 0.8, 680));
+    const dpr = Math.min(window.devicePixelRatio || 1, 2), w = cv.clientWidth || 700;
+    const h = Math.round(w < 560 ? Math.min(w * 1.15, 560) : Math.min(w * 0.75, 680));
     [toile, cv].forEach(c => { c.style.height = h + 'px'; });
     cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); cv.getContext('2d').setTransform(dpr, 0, 0, dpr, 0, 0);
-    renderer.setPixelRatio(dpr); renderer.setSize(w, h, false); dim = { w, h, dpr };
-    if (D) { points.material.uniforms.uDpr.value = dpr; vue = cadrage(0, 0, E, E); rendre(); }
+    renderer.setPixelRatio(dpr); renderer.setSize(w, h, false);
+    const ancien = dim; dim = { w, h, dpr }; uni.uDpr.value = dpr;
+    if (D) { if (!ancien || !chemin.length) vue = ensemble(); sale = true; }
   }
-  function cadrage(x0, y0, x1, y1, marge = 0.04) {
+  function cadrage(x0, y0, x1, y1, marge = 0.03) {
     const s = Math.min(dim.w / ((x1 - x0) * (1 + 2 * marge) || 1), dim.h / ((y1 - y0) * (1 + 2 * marge) || 1));
     return { s, ox: dim.w / 2 - s * (x0 + x1) / 2, oy: dim.h / 2 - s * (y0 + y1) / 2 };
   }
-  function allerA(cible, ensuite) {
-    cancelAnimationFrame(anim);
-    const v0 = { ...vue }, t0 = performance.now();
-    const f = t => {
-      const u = Math.min(1, (t - t0) / 1000), e = u * u * (3 - 2 * u), s = v0.s * Math.pow(cible.s / v0.s, e);
-      const cx0 = (dim.w / 2 - v0.ox) / v0.s, cy0 = (dim.h / 2 - v0.oy) / v0.s, cx1 = (dim.w / 2 - cible.ox) / cible.s, cy1 = (dim.h / 2 - cible.oy) / cible.s;
-      const cx = cx0 + (cx1 - cx0) * e, cy = cy0 + (cy1 - cy0) * e;
-      vue = { s, ox: dim.w / 2 - s * cx, oy: dim.h / 2 - s * cy }; rendre();
-      if (u < 1) anim = requestAnimationFrame(f); else if (ensuite) ensuite();
-    };
-    anim = requestAnimationFrame(f);
+  const ensemble = () => cadrage(...ens, 0.02);
+  const versP = v => [(dim.w / 2 - v.ox) / v.s, (dim.h / 2 - v.oy) / v.s, dim.w / v.s];       // centre et largeur visibles
+  const deP = p => { const s = dim.w / p[2]; return { s, ox: dim.w / 2 - s * p[0], oy: dim.h / 2 - s * p[1] }; };
+  // interpolation « dézoom puis zoom » de van Wijk et Nuij (Smooth and efficient zooming and panning, 2003)
+  function interpZoom(p0, p1) {
+    const rho = Math.SQRT2, r2 = 2, r4 = 4, [x0, y0, w0] = p0, [x1, y1, w1] = p1, dx = x1 - x0, dy = y1 - y0, d2 = dx * dx + dy * dy;
+    let S, f;
+    if (d2 < 1e-9) { S = Math.log(w1 / w0) / rho; f = t => [x0 + t * dx, y0 + t * dy, w0 * Math.exp(rho * t * S)]; }
+    else {
+      const d1 = Math.sqrt(d2), b0 = (w1 * w1 - w0 * w0 + r4 * d2) / (2 * w0 * r2 * d1), b1 = (w1 * w1 - w0 * w0 - r4 * d2) / (2 * w1 * r2 * d1);
+      const q0 = Math.log(Math.sqrt(b0 * b0 + 1) - b0), q1 = Math.log(Math.sqrt(b1 * b1 + 1) - b1);
+      S = (q1 - q0) / rho;
+      f = t => { const s = t * S, ch = Math.cosh(q0), u = w0 / (r2 * d1) * (ch * Math.tanh(rho * s + q0) - Math.sinh(q0)); return [x0 + u * dx, y0 + u * dy, w0 * ch / Math.cosh(rho * s + q0)]; };
+    }
+    f.duree = Math.abs(S) * 1000;
+    return f;
+  }
+  function allerA(cible, ensuite, dureeMin = 600) {
+    lisse = null;
+    const f = interpZoom(versP(vue), versP(cible));
+    vol = { f, t0: performance.now(), duree: Math.max(dureeMin, Math.min(2600, f.duree * 1.1)), ensuite };
+  }
+  const limiteS = s => Math.max(0.5 * Math.min(dim.w, dim.h) / E, Math.min(70 * Math.min(dim.w, dim.h) / E, s));
+  // zoom lissé autour d'un point de l'écran : la cible se déplace, la vue la rejoint en douceur
+  function zoomer(k, cx, cy) {
+    vol = null; interagi = true;
+    const base = lisse ? lisse.s : vue.s, s = limiteS(base * k);
+    const wx = (cx - vue.ox) / vue.s, wy = (cy - vue.oy) / vue.s;
+    lisse = { s, cx, cy, wx: lisse && lisse.cx === cx && lisse.cy === cy ? lisse.wx : wx, wy: lisse && lisse.cx === cx && lisse.cy === cy ? lisse.wy : wy };
   }
 
-  // ---------------------------------------------------------------- rendu
-  function rendre() {
-    if (!D || !dim) return;
+  // ================================================================ boucle d'animation
+  function boucle(t) {
+    requestAnimationFrame(boucle);
+    if (!D || !dim || !visible) return;
+    if (onde) onde.pas(t);
+    if (vol) {
+      const u = Math.min(1, (t - vol.t0) / vol.duree), e = u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2;
+      vue = deP(vol.f(e)); sale = true;
+      if (u >= 1) { const fin = vol.ensuite; vol = null; if (fin) fin(); }
+    }
+    if (lisse) {
+      const s = vue.s * Math.pow(lisse.s / vue.s, 0.2);
+      vue = { s, ox: lisse.cx - lisse.wx * s, oy: lisse.cy - lisse.wy * s }; sale = true;
+      if (Math.abs(Math.log(lisse.s / s)) < 0.002) { vue = { s: lisse.s, ox: lisse.cx - lisse.wx * lisse.s, oy: lisse.cy - lisse.wy * lisse.s }; lisse = null; }
+    }
+    if (Math.abs(voile.v - voile.cible) > 0.002) { voile.v += (voile.cible - voile.v) * 0.08; uni.uVoile.value = voile.v; sale = true; }
+    if (sale) { rendreGL(); sale = false; }
+    calque(t);
+  }
+  function rendreGL() {
     const { s, ox, oy } = vue, { w, h } = dim;
     camera.left = -ox / s; camera.right = (w - ox) / s; camera.top = -oy / s; camera.bottom = (h - oy) / s;   // y vers le bas, comme à l'écran
     camera.updateProjectionMatrix();
     const z = s * E / Math.min(w, h);                                  // grossissement par rapport à la vue d'ensemble
-    points.material.uniforms.uZoom.value = Math.min(2.8, 0.8 + 0.1 * z);
-    liens.material.opacity = (filtre === -1 ? 1 : 0.4) * Math.min(0.16, 0.035 + 0.006 * z);
+    uni.uZoom.value = Math.min(3.2, 0.75 + 0.16 * z);
+    liens.material.uniforms.uAlpha.value = Math.min(0.28, 0.075 + 0.01 * z) * (filtre === -1 ? 1 : 0.7);
     renderer.render(scene, camera);
-    calque();
   }
-  function calque() {
+
+  // ================================================================ calque 2D : Kevin Bacon, grappes, chemin, noms
+  function calque(t) {
     const g = cv.getContext('2d'), { w, h } = dim, { s, ox, oy } = vue;
     g.clearRect(0, 0, w, h);
     const sx = i => ox + s * X[i], sy = i => oy + s * Y[i];
     const z = s * E / Math.min(w, h);
-    if (z > 12) {                                                      // titres des films, de près, sans chevauchement
-      g.font = '600 11px system-ui, sans-serif'; g.textAlign = 'center'; g.fillStyle = 'rgba(203,213,225,0.85)';
+    // noms des grandes grappes, en vue d'ensemble
+    if (D.grappes && z < 3.2 && !onde && !chemin.length) {
+      const a = Math.min(1, (3.2 - z) / 1.2);
+      g.textAlign = 'center';
+      D.grappes.forEach((q, k) => {
+        if (k > (w < 560 ? 5 : 9)) return;
+        const x = ox + s * q.x, y = oy + s * q.y;
+        g.font = `600 ${k < 4 ? 12 : 11}px system-ui, sans-serif`;
+        g.globalAlpha = a * (k < 4 ? 0.85 : 0.6);
+        contour(g, D.acteurs[q.star], x, y, '#E0E7FF');
+      });
+      g.globalAlpha = 1;
+    }
+    if (z > 14) {                                                      // titres des films, de près, sans chevauchement
+      g.font = '600 11px system-ui, sans-serif'; g.textAlign = 'center';
       const pris = [];
-      for (let f = 0; f < F && pris.length < 70; f++) {
+      for (let f = 0; f < F && pris.length < 60; f++) {
         const x = sx(f), y = sy(f) - 9; if (x < 0 || x > w || y < 10 || y > h) continue;
         const lw = g.measureText(D.films[f]).width / 2 + 3;
         if (pris.some(r => Math.abs(r[0] - x) < r[2] + lw && Math.abs(r[1] - y) < 14)) continue;
-        pris.push([x, y, lw]); g.fillText(D.films[f], x, y);
+        pris.push([x, y, lw]); g.globalAlpha = 0.8; contour(g, D.films[f], x, y, '#CBD5E1');
       }
+      g.globalAlpha = 1;
     }
-    const b = F + D.bacon;
-    g.fillStyle = COUL[0]; g.shadowColor = COUL[0]; g.shadowBlur = 18;
-    g.beginPath(); g.arc(sx(b), sy(b), 7, 0, 2 * Math.PI); g.fill(); g.shadowBlur = 0;
-    etiquette(g, 'Kevin Bacon', sx(b), sy(b) - 13, COUL[0]);
+    // Kevin Bacon : un soleil qui pulse
+    const b = F + D.bacon, bx = sx(b), by = sy(b), p = 0.5 + 0.5 * Math.sin(t / 420);
+    const rg = g.createRadialGradient(bx, by, 0, bx, by, 26 + 8 * p);
+    rg.addColorStop(0, 'rgba(253,224,71,0.95)'); rg.addColorStop(0.25, 'rgba(253,224,71,0.55)'); rg.addColorStop(1, 'rgba(253,224,71,0)');
+    g.fillStyle = rg; g.beginPath(); g.arc(bx, by, 26 + 8 * p, 0, 2 * Math.PI); g.fill();
+    g.fillStyle = '#FFFBEB'; g.beginPath(); g.arc(bx, by, 4.5, 0, 2 * Math.PI); g.fill();
+    if (onde && uni.uOnde.value > 0 && uni.uOnde.value < 7) {          // front de l'onde autour de Kevin Bacon
+      const u = (t / 900) % 1;
+      g.strokeStyle = `rgba(253,224,71,${0.5 * (1 - u)})`; g.lineWidth = 2;
+      g.beginPath(); g.arc(bx, by, 8 + 60 * u, 0, 2 * Math.PI); g.stroke();
+    }
+    const boites = [];                                               // étiquettes déjà posées, pour éviter les chevauchements
+    boites.push(pastille(g, 'Kevin Bacon', bx, by - 22, COUL[0], true, chemin.length > 1 ? [] : null));
     if (chemin.length > 1) {
       const n = chemin.length - 1, fait = prog * n;
-      g.lineWidth = 3.5; g.strokeStyle = '#FDE047'; g.shadowColor = '#FDE047'; g.shadowBlur = 14; g.lineCap = 'round'; g.lineJoin = 'round';
-      g.beginPath(); g.moveTo(sx(chemin[0]), sy(chemin[0]));
-      for (let k = 1; k <= n; k++) {
-        const a = chemin[k - 1], c = chemin[k], u = Math.max(0, Math.min(1, fait - (k - 1)));
-        if (u <= 0) break;
-        g.lineTo(sx(a) + (sx(c) - sx(a)) * u, sy(a) + (sy(c) - sy(a)) * u);
+      const trace = (lw, col, flou) => {
+        g.lineWidth = lw; g.strokeStyle = col; g.shadowColor = col; g.shadowBlur = flou; g.lineCap = 'round'; g.lineJoin = 'round';
+        g.beginPath(); g.moveTo(sx(chemin[0]), sy(chemin[0]));
+        for (let k = 1; k <= n; k++) {
+          const a = chemin[k - 1], c = chemin[k], u = Math.max(0, Math.min(1, fait - (k - 1)));
+          if (u <= 0) break;
+          g.lineTo(sx(a) + (sx(c) - sx(a)) * u, sy(a) + (sy(c) - sy(a)) * u);
+        }
+        g.stroke(); g.shadowBlur = 0;
+      };
+      trace(9, 'rgba(253,224,71,0.25)', 24); trace(3, '#FDE047', 12); trace(1.2, '#FFFBEB', 0);
+      // comète qui parcourt le chemin une fois tracé
+      if (prog >= 1) {
+        const u = ((t / 1600) % 1) * n, k = Math.min(n - 1, Math.floor(u)), r = u - k, a = chemin[k], c = chemin[k + 1];
+        const cx = sx(a) + (sx(c) - sx(a)) * r, cy = sy(a) + (sy(c) - sy(a)) * r;
+        const cg = g.createRadialGradient(cx, cy, 0, cx, cy, 10); cg.addColorStop(0, 'rgba(255,255,255,0.95)'); cg.addColorStop(1, 'rgba(253,224,71,0)');
+        g.fillStyle = cg; g.beginPath(); g.arc(cx, cy, 10, 0, 2 * Math.PI); g.fill();
       }
-      g.stroke(); g.shadowBlur = 0;
     }
     chemin.forEach((i, k) => {
       if (chemin.length > 1 && k > prog * (chemin.length - 1) + 0.001) return;
-      const film = i < F;
-      g.fillStyle = film ? '#F8FAFC' : (dist[i] >= 0 ? COUL[dist[i] / 2] : HORS);
-      g.beginPath(); g.arc(sx(i), sy(i), film ? 6 : 5.5, 0, 2 * Math.PI); g.fill();
-      g.strokeStyle = '#0B1020'; g.lineWidth = 1.5; g.stroke();
-      etiquette(g, film ? D.films[i] : D.acteurs[i - F], sx(i), sy(i) + (k % 2 ? 21 : -12), film ? '#E2E8F0' : '#FDE68A');
+      const film = i < F, col = film ? '#F8FAFC' : (dist[i] >= 0 ? COUL[dist[i] / 2] : HORS);
+      g.fillStyle = col; g.shadowColor = col; g.shadowBlur = 12;
+      g.beginPath(); film ? g.rect(sx(i) - 5, sy(i) - 5, 10, 10) : g.arc(sx(i), sy(i), 6, 0, 2 * Math.PI); g.fill(); g.shadowBlur = 0;
+      g.strokeStyle = '#070B18'; g.lineWidth = 1.5; g.stroke();
+      if (i !== F + D.bacon) boites.push(pastille(g, film ? D.films[i] : D.acteurs[i - F], sx(i), sy(i), col, !film, boites));
     });
   }
-  function etiquette(g, t, x, y, c) {
-    g.font = '600 12.5px system-ui, sans-serif'; g.textAlign = 'center';
-    const L = g.measureText(t).width / 2 + 4, xx = Math.min(Math.max(x, L), dim.w - L);
-    g.lineWidth = 4; g.strokeStyle = 'rgba(11,16,32,0.92)'; g.lineJoin = 'round'; g.strokeText(t, xx, y);
-    g.fillStyle = c; g.fillText(t, xx, y);
+  function contour(g, txt, x, y, c) {
+    g.lineWidth = 3.5; g.strokeStyle = 'rgba(7,11,24,0.9)'; g.lineJoin = 'round'; g.strokeText(txt, x, y);
+    g.fillStyle = c; g.fillText(txt, x, y);
+  }
+  // pastille de nom ; avec une liste de boîtes, cherche une place libre autour du point (x, y)
+  function pastille(g, txt, x, y, c, gras, boites) {
+    g.font = `${gras ? 700 : 500} ${gras ? 12.5 : 12}px system-ui, sans-serif`; g.textAlign = 'center'; g.textBaseline = 'middle';
+    const L = g.measureText(txt).width / 2 + 9;
+    const essais = boites ? [[0, -20], [0, 22], [L + 12, 0], [-L - 12, 0], [0, -44], [0, 46], [L + 12, -24], [-L - 12, 24]] : [[0, 0]];
+    let xx, yy;
+    for (const [dx, dy] of essais) {
+      xx = Math.min(Math.max(x + dx, L + 4), dim.w - L - 4); yy = Math.min(Math.max(y + dy, 14), dim.h - 14);
+      if (!boites || !boites.some(b => b && Math.abs(b[0] - xx) < b[2] + L + 3 && Math.abs(b[1] - yy) < 24)) break;
+    }
+    g.fillStyle = 'rgba(7,11,24,0.82)'; g.strokeStyle = c; g.lineWidth = 1.2;
+    g.beginPath(); g.roundRect ? g.roundRect(xx - L, yy - 11, 2 * L, 22, 11) : g.rect(xx - L, yy - 11, 2 * L, 22); g.fill(); g.stroke();
+    g.fillStyle = gras ? c : '#E2E8F0'; g.fillText(txt, xx, yy + 0.5); g.textBaseline = 'alphabetic';
+    return [xx, yy, L];
   }
 
-  // ---------------------------------------------------------------- choisir un acteur
-  function choisir(i, animer = true) {
-    if (i === undefined || i < 0) return;
+  // ================================================================ choisir un acteur
+  function choisir(i) {
+    if (i === undefined || i < 0 || !D) return;
+    if (onde) { onde = null; uni.uOnde.value = 99; hud.classList.remove('bc-hud-vu'); sale = true; }
     chemin = [];
     const nomDe = k => k < F ? D.films[k] : D.acteurs[k - F];
     if (dist[i] < 0) {
       outC.innerHTML = `<b>${nomDe(i)}</b> n'est relié à Kevin Bacon par aucun chemin : il appartient à un autre morceau du graphe.`;
-      chemin = [i]; prog = 1; rendre(); return;
+      chemin = [i]; prog = 1; voile.cible = 0.6;
+      const m = E * 0.05; allerA(cadrage(X[i] - m, Y[i] - m, X[i] + m, Y[i] + m)); return;
     }
     for (let k = i; k >= 0; k = pred[k]) chemin.push(k);
     const noms = chemin.map(k => k < F ? `<span class="bc-f">${D.films[k]}</span>` : `<b>${D.acteurs[k - F]}</b>`);
@@ -201,25 +365,28 @@ function init(root) {
     outC.innerHTML = (i < F ? `Film à distance ${dist[i]} de Kevin Bacon : ` : `Nombre de Bacon de ${D.acteurs[i - F]} : <b class="bc-nb">${nb}</b>${nb ? ' — ' : ''}`) + (chemin.length > 1 ? noms.join(' → ') : '');
     let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
     for (const k of chemin) { x0 = Math.min(x0, X[k]); x1 = Math.max(x1, X[k]); y0 = Math.min(y0, Y[k]); y1 = Math.max(y1, Y[k]); }
-    const m = Math.max(E * 0.04, (x1 - x0) * 0.15, (y1 - y0) * 0.15);
-    const cible = cadrage(x0 - m, y0 - m, x1 + m, y1 + m, 0.05);
-    if (!animer) { prog = 1; rendre(); return; }
-    prog = 0;
-    allerA(cible, () => {
-      const t0 = performance.now(), duree = 500 * (chemin.length - 1);
-      const f = t => { prog = Math.min(1, (t - t0) / duree); rendre(); if (prog < 1) anim = requestAnimationFrame(f); };
-      anim = requestAnimationFrame(f);
-    });
+    const m = Math.max(E * 0.05, (x1 - x0) * 0.18, (y1 - y0) * 0.18);
+    prog = 0; voile.cible = 0.45;
+    allerA(cadrage(x0 - m, y0 - m, x1 + m, y1 + m, 0.06), () => {
+      const t0 = performance.now(), duree = 550 * (chemin.length - 1);
+      const f = t => { prog = Math.min(1, (t - t0) / duree); if (prog < 1 && chemin.length) requestAnimationFrame(f); };
+      requestAnimationFrame(f);
+    }, 900);
   }
   function chercher() {
     const q = inA.value.trim().toLowerCase(); if (!q || !D) return;
+    interagi = true;
     let j = D.acteurs.findIndex(n => n.toLowerCase() === q);
     if (j < 0) j = D.acteurs.findIndex(n => n.toLowerCase().includes(q));
     if (j < 0) { outC.textContent = `Aucun acteur ne correspond à « ${inA.value} » dans ces ${F.toLocaleString('fr-FR')} films.`; return; }
     inA.value = D.acteurs[j]; choisir(F + j);
   }
+  function toutVoir() {
+    interagi = true; chemin = []; prog = 1; outC.textContent = ''; voile.cible = 1;
+    allerA(ensemble(), null, 700);
+  }
 
-  // ---------------------------------------------------------------- gestes
+  // ================================================================ gestes
   // un doigt (ou la souris) déplace ; deux doigts zooment en gardant sous leur milieu
   // le point du graphe qui s'y trouvait, ce qui permet aussi de se déplacer en pinçant
   const pointeurs = new Map(); let glisse = false, depart = null, pince = null;
@@ -228,11 +395,10 @@ function init(root) {
     const [a, b] = [...pointeurs.values()], cx = (a[0] + b[0]) / 2, cy = (a[1] + b[1]) / 2;
     pince = { d: Math.hypot(a[0] - b[0], a[1] - b[1]) || 1, s: vue.s, wx: (cx - vue.ox) / vue.s, wy: (cy - vue.oy) / vue.s };
   }
-  const limiteS = s => Math.max(0.4 * Math.min(dim.w, dim.h) / E, Math.min(60 * Math.min(dim.w, dim.h) / E, s));
   cv.addEventListener('pointerdown', e => {
     try { cv.setPointerCapture(e.pointerId); } catch (_) {}
     pointeurs.set(e.pointerId, [e.offsetX, e.offsetY]);
-    cancelAnimationFrame(anim); prog = 1;
+    vol = null; lisse = null; prog = 1; interagi = true;
     if (pointeurs.size === 1) { glisse = false; nouveauDepart(); }
     else if (pointeurs.size === 2) { glisse = true; nouvellePince(); }
   });
@@ -243,16 +409,18 @@ function init(root) {
       if (pointeurs.size >= 2 && pince) {
         const [a, b] = [...pointeurs.values()], cx = (a[0] + b[0]) / 2, cy = (a[1] + b[1]) / 2;
         const s = limiteS(pince.s * Math.hypot(a[0] - b[0], a[1] - b[1]) / pince.d);
-        vue = { s, ox: cx - pince.wx * s, oy: cy - pince.wy * s }; rendre(); return;
+        vue = { s, ox: cx - pince.wx * s, oy: cy - pince.wy * s }; sale = true; return;
       }
       if (!depart) return;
       if (Math.hypot(e.offsetX - depart[0], e.offsetY - depart[1]) > 4) glisse = true;
-      if (glisse) { vue.ox = depart[2] + e.offsetX - depart[0]; vue.oy = depart[3] + e.offsetY - depart[1]; rendre(); }
+      if (glisse) { vue = { s: vue.s, ox: depart[2] + e.offsetX - depart[0], oy: depart[3] + e.offsetY - depart[1] }; sale = true; }
       return;
     }
     const i = proche(e.offsetX, e.offsetY);
-    if (i >= 0) { bulle.hidden = false; bulle.textContent = i < F ? D.films[i] : `${D.acteurs[i - F]}${dist[i] >= 0 ? ' · ' + dist[i] / 2 : ''}`; bulle.style.left = e.offsetX + 12 + 'px'; bulle.style.top = e.offsetY + 12 + 'px'; cv.style.cursor = 'pointer'; }
-    else { bulle.hidden = true; cv.style.cursor = 'grab'; }
+    if (i >= 0) {
+      bulle.hidden = false; bulle.textContent = i < F ? D.films[i] : `${D.acteurs[i - F]}${dist[i] >= 0 ? ' · ' + dist[i] / 2 : ''}`;
+      bulle.style.left = Math.min(e.offsetX + 12, dim.w - bulle.offsetWidth - 4) + 'px'; bulle.style.top = e.offsetY + 14 + 'px'; cv.style.cursor = 'pointer';
+    } else { bulle.hidden = true; cv.style.cursor = 'grab'; }
   });
   function lacher(e, choisirSiClic) {
     if (!pointeurs.has(e.pointerId)) return;
@@ -264,34 +432,35 @@ function init(root) {
   cv.addEventListener('pointerup', e => lacher(e, true));
   cv.addEventListener('pointercancel', e => lacher(e, false));
   cv.addEventListener('pointerleave', () => { bulle.hidden = true; });
-  cv.addEventListener('wheel', e => { if (!(e.ctrlKey || e.metaKey) || !D) return; e.preventDefault(); zoomer(Math.exp(-e.deltaY * 0.0015), e.offsetX, e.offsetY); }, { passive: false });
-  function zoomer(k, cx, cy) {
-    const s = limiteS(vue.s * k); k = s / vue.s;
-    vue = { s, ox: cx - (cx - vue.ox) * k, oy: cy - (cy - vue.oy) * k }; prog = 1; cancelAnimationFrame(anim); rendre();
-  }
+  cv.addEventListener('wheel', e => { if (!(e.ctrlKey || e.metaKey) || !D) return; e.preventDefault(); zoomer(Math.exp(-e.deltaY * 0.0025), e.offsetX, e.offsetY); }, { passive: false });
+  cv.addEventListener('dblclick', e => { if (D) zoomer(2.2, e.offsetX, e.offsetY); });
   function proche(x, y) {
     let best = -1, bd = 10 * 10;
     for (let i = 0; i < N; i++) { const dx = vue.ox + vue.s * X[i] - x, dy = vue.oy + vue.s * Y[i] - y, d = dx * dx + dy * dy; if (d < bd) { bd = d; best = i; } }
     return best;
   }
-  $('[data-k="plus"]').addEventListener('click', () => zoomer(1.6, dim.w / 2, dim.h / 2));
-  $('[data-k="moins"]').addEventListener('click', () => zoomer(1 / 1.6, dim.w / 2, dim.h / 2));
-  $('[data-k="tout"]').addEventListener('click', () => allerA(cadrage(0, 0, E, E)));
+  $('[data-k="plus"]').addEventListener('click', () => zoomer(1.8, dim.w / 2, dim.h / 2));
+  $('[data-k="moins"]').addEventListener('click', () => zoomer(1 / 1.8, dim.w / 2, dim.h / 2));
+  $('[data-k="tout"]').addEventListener('click', toutVoir);
   $('[data-k="go"]').addEventListener('click', chercher);
+  $('[data-k="onde"]').addEventListener('click', () => { interagi = true; lancerOnde(); });
   inA.addEventListener('keydown', e => { if (e.key === 'Enter') chercher(); });
   inA.addEventListener('change', chercher);
   $('[data-k="hasard"]').addEventListener('click', () => {
-    if (!D) return; let j;
+    if (!D) return; interagi = true; let j;
     do { j = Math.floor(Math.random() * A); } while (dist[F + j] < 4 || voisins[F + j].length < 2);
     inA.value = D.acteurs[j]; choisir(F + j);
   });
-  window.addEventListener('resize', fit);
+  let largeur = 0;
+  window.addEventListener('resize', () => { if (Math.abs((cv.clientWidth || 0) - largeur) > 4) { largeur = cv.clientWidth; fit(); } });
 
-  // ---------------------------------------------------------------- chargement à l'approche
+  // ================================================================ chargement à l'approche ; rendu seulement à l'écran
   fit();
+  new IntersectionObserver(es => { visible = es[0].isIntersecting; if (visible) sale = true; }).observe(root);
+  requestAnimationFrame(boucle);
   const io = new IntersectionObserver(es => {
     if (!es[0].isIntersecting) return; io.disconnect();
-    fetch(BASE + 'data/bacon.json').then(r => r.json()).then(preparer).catch(() => { attente.textContent = 'Le graphe n\'a pas pu être chargé.'; });
+    fetch(BASE + 'data/bacon.json').then(r => r.json()).then(preparer).catch(e => { console.error(e); attente.textContent = 'Le graphe n\'a pas pu être chargé.'; });
   }, { rootMargin: '400px' });
   io.observe(root);
 }
