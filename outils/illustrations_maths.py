@@ -1,5 +1,5 @@
 # Génère des illustrations SVG sans fond (120×120) pour les cartes des chapitres de maths.
-# Usage : python3 static/illus/generer.py static/illus
+# Usage : python3 outils/illustrations_maths.py static/illus
 import math, random, os, sys
 OUT = sys.argv[1]
 G1, G2, G3, G4 = '#dde1e6', '#c4cad2', '#98a1ac', '#4b5563'
