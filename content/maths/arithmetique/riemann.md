@@ -955,34 +955,42 @@ Une autre façon de voir les zéros&nbsp;: suivre la courbe décrite par $\zeta\
 <script>
 (function () {
   var R = window.RZ, box = R.$('rz6'); if (!box) return;
-  var host = R.$('rz6-svgs'), TM = 52, SC = 44, CX = 150, CY = 150;
+  var host = R.$('rz6-svgs'), TM = 52, SC = 44, CX = 150, CY = 150, DT = 0.03, pts = [], mods = [], i, n = Math.round(TM / DT), mx = 0;
+  for (i = 0; i <= n; i++) { var z = R.zeta(0.5, i * DT); pts.push(z); mods.push(Math.hypot(z[0], z[1])); }
+  var cmax = [], run = 0; for (i = 0; i <= n; i++) { run = Math.max(run, mods[i]); cmax.push(run); } mx = run;
   function mk(w, hh, label) { var s = R.el('svg', { viewBox: '0 0 ' + w + ' ' + hh, role: 'img', 'aria-label': label }); s.style.cssText = 'width:100%;max-width:' + w + 'px;height:auto;flex:1 1 ' + (w - 40) + 'px;'; host.appendChild(s); return s; }
   var A = mk(300, 300, "La courbe décrite par ζ(1/2 + it) dans le plan complexe quand t augmente. Chaque passage par l'origine correspond à un zéro de ζ sur la droite critique.");
   var B = mk(300, 300, "Le module de ζ(1/2 + it) en fonction de t. Il s'annule aux zéros.");
   R.el('rect', { x: 1, y: 1, width: 298, height: 298, fill: '#f8fafc', stroke: '#e2e8f0' }, A);
-  var a, gd = ''; for (a = -3; a <= 3; a++) { gd += 'M' + (CX + SC * a) + ',2V298M2,' + (CY - SC * a) + 'H298'; }
-  R.el('path', { d: gd, stroke: '#e8edf2', fill: 'none' }, A);
+  var gridG = R.el('g', {}, A);
   R.el('line', { x1: 2, y1: CY, x2: 298, y2: CY, stroke: '#94a3b8' }, A); R.el('line', { x1: CX, y1: 2, x2: CX, y2: 298, stroke: '#94a3b8' }, A);
   R.txt(A, 12, 20, "ζ(½ + <tspan font-style='italic'>it</tspan>) dans le plan complexe", { size: 12, fill: '#64748b', italic: true });
-  R.el('circle', { cx: CX, cy: CY, r: 3.2, fill: '#970E53' }, A); R.txt(A, CX + 6, CY + 15, '0', { size: 11, fill: '#970E53' });
+  var origin = R.el('circle', { cx: CX, cy: CY, r: 3.2, fill: '#970E53' }, A); R.txt(A, CX + 6, CY + 15, '0', { size: 11, fill: '#970E53' });
   var trail = R.el('path', { fill: 'none', stroke: '#004D80', 'stroke-width': 1.5, 'stroke-linejoin': 'round' }, A), head = R.el('circle', { r: 5.2, fill: '#004D80', stroke: '#fff', 'stroke-width': 1.5 }, A);
-  var PX0 = 34, PX1 = 290, PY0 = 270, PY1 = 40, MM = 3.7;
+  var PX0 = 34, PX1 = 290, PY0 = 270, PY1 = 40, MM = Math.ceil(mx * 1.08 * 2) / 2;
   function tx(t) { return PX0 + t * (PX1 - PX0) / TM; } function ty(m) { return PY0 - m * (PY0 - PY1) / MM; }
   R.el('rect', { x: 1, y: 1, width: 298, height: 298, fill: '#f8fafc', stroke: '#e2e8f0' }, B);
   R.el('line', { x1: PX0, y1: PY0, x2: PX1 + 4, y2: PY0, stroke: '#94a3b8' }, B); R.el('line', { x1: PX0, y1: PY0, x2: PX0, y2: PY1 - 8, stroke: '#94a3b8' }, B);
   R.txt(B, 12, 20, "|ζ(½ + <tspan font-style='italic'>it</tspan>)| en fonction de <tspan font-style='italic'>t</tspan>", { size: 12, fill: '#64748b', italic: true });
   [0, 10, 20, 30, 40, 50].forEach(function (t) { R.el('line', { x1: tx(t), y1: PY0, x2: tx(t), y2: PY0 + 4, stroke: '#94a3b8' }, B); R.txt(B, tx(t), PY0 + 16, String(t), { size: 10.5, anchor: 'middle', fill: '#64748b' }); });
-  [1, 2, 3].forEach(function (m) { R.txt(B, PX0 - 5, ty(m) + 4, String(m), { size: 10.5, anchor: 'end', fill: '#64748b' }); R.el('line', { x1: PX0, y1: ty(m), x2: PX1, y2: ty(m), stroke: '#e8edf2' }, B); });
+  for (var m = 1; m < MM; m++) (function (m) { R.txt(B, PX0 - 5, ty(m) + 4, String(m), { size: 10.5, anchor: 'end', fill: '#64748b' }); R.el('line', { x1: PX0, y1: ty(m), x2: PX1, y2: ty(m), stroke: '#e8edf2' }, B); })(m);
   R.ZEROS.forEach(function (g) { if (g < TM) R.el('line', { x1: tx(g), y1: PY0, x2: tx(g), y2: PY0 - 9, stroke: '#970E53', 'stroke-width': 2 }, B); });
-  var DT = 0.03, pts = [], mods = [], i, n = Math.round(TM / DT);
-  for (i = 0; i <= n; i++) { var z = R.zeta(0.5, i * DT); pts.push(z); mods.push(Math.hypot(z[0], z[1])); }
   var dm = ''; for (i = 0; i <= n; i++) dm += (i ? 'L' : 'M') + tx(i * DT).toFixed(1) + ',' + ty(Math.min(mods[i], MM)).toFixed(1);
   R.el('path', { d: dm, fill: 'none', stroke: '#94a3b8', 'stroke-width': 1.2 }, B);
   var dm2 = R.el('path', { fill: 'none', stroke: '#004D80', 'stroke-width': 2 }, B), cur = R.el('circle', { r: 4.6, fill: '#004D80', stroke: '#fff', 'stroke-width': 1.4 }, B);
   R.txt(B, PX1, PY1 - 14, "traits magenta : zéros connus", { size: 10.5, anchor: 'end', fill: '#970E53', italic: true });
+  var scl = R.txt(A, 12, 290, '', { size: 11, fill: '#64748b', italic: true });
   var t = 0;
+  function grid() {
+    var step = [0.25, 0.5, 1, 2].filter(function (q) { return q * SC >= 26; })[0] || 2, a, gd = '';
+    gridG.innerHTML = '';
+    for (a = -Math.floor(150 / SC / step); a <= Math.floor(150 / SC / step); a++) { gd += 'M' + (CX + SC * step * a).toFixed(1) + ',2V298M2,' + (CY - SC * step * a).toFixed(1) + 'H298'; }
+    R.el('path', { d: gd, stroke: '#e8edf2', fill: 'none' }, gridG);
+    scl.innerHTML = 'un carreau = ' + R.fmt(step, step < 1 ? 2 : 0);
+  }
   function draw() {
     var k = Math.round(t / DT), d = '', d2 = '', j;
+    SC = 135 / Math.max(1.5, cmax[k] * 1.04); grid(); R.put(origin, { cx: CX, cy: CY });
     for (j = 0; j <= k; j++) { d += (j ? 'L' : 'M') + (CX + SC * pts[j][0]).toFixed(1) + ',' + (CY - SC * pts[j][1]).toFixed(1); d2 += (j ? 'L' : 'M') + tx(j * DT).toFixed(1) + ',' + ty(Math.min(mods[j], MM)).toFixed(1); }
     trail.setAttribute('d', d); dm2.setAttribute('d', d2);
     R.put(head, { cx: CX + SC * pts[k][0], cy: CY - SC * pts[k][1] }); R.put(cur, { cx: tx(t), cy: ty(Math.min(mods[k], MM)) });
