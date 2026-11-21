@@ -454,9 +454,17 @@ html
   transition: transform 0.3s cubic-bezier(.2, .8, .2, 1);
 }
 .math-icon svg { width: 52px; height: 52px; stroke-width: 2.3; }
-/* Pictogrammes « plein-vide » (outils/icones_cartes.py) : formes pleines, détails découpés */
-.math-icon:has(svg.pv) { width: 76px; height: 76px; }
-.math-icon svg.pv { width: 64px; height: 64px; fill: currentColor; stroke: none; }
+/* ACCENTS des pictogrammes (outils/icones_cartes.py) : l'ancienne gamme vive,
+   une couleur par classe de carte, et sa variante claire. */
+.math-card, .c-bleu, .card-fondements, .card-jeux { --acc: #0076BA; --acc2: #7CCBF7; }
+.c-canard, .card-algebre                          { --acc: #00A89D; --acc2: #7FE3D6; }
+.c-vert, .card-geometrie                          { --acc: #1DB100; --acc2: #9BE07A; }
+.c-orange, .c-ambre, .card-stat                   { --acc: #F59E0B; --acc2: #FBD46D; }
+.c-rouge, .card-arithmetique                      { --acc: #EE220C; --acc2: #FF9C91; }
+.c-magenta, .c-rose, .c-violet, .card-proba       { --acc: #D41876; --acc2: #F49AC8; }
+/* FIN ACCENTS */
+.math-icon:has(svg.il) { width: 76px; height: 76px; }
+.math-icon svg.il { width: 64px; height: 64px; fill: none; stroke: none; }
 .math-icon .creux { fill: var(--voile); }
 .math-icon .teinte { fill-opacity: 0.25; }
 .math-card:hover .math-icon { transform: scale(1.08); }

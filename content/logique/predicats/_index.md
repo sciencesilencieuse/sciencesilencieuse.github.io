@@ -17,7 +17,7 @@ Le calcul des propositions traite chaque affirmation comme un bloc. Le **calcul 
 
 <div class="math-card c-orange">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv24" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M13 12l11 24 11-24M17.2 21h13.6" fill="none" stroke="#000" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv24)"><rect x="4" y="4" width="40" height="40" rx="11"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M12 5l12 26 12-26M16.6 15h14.8" style="fill:none;stroke:var(--acc);stroke-width:3;stroke-linecap:round;stroke-linejoin:round"/><circle cx="12" cy="41" r="2.4" style="fill:var(--acc2)"/><circle cx="20" cy="41" r="2.4" style="fill:#C9CFD7"/><circle cx="28" cy="41" r="2.4" style="fill:var(--acc2)"/><circle cx="36" cy="41" r="2.4" style="fill:#C9CFD7"/></svg></span>
 <h3><a href="./langage/">Langage et sens</a></h3>
 </div>
 <div class="carte-texte">Des objets, des propriétés, $\forall$ et $\exists$&nbsp;: le vocabulaire du premier ordre et les mondes où il prend sens.</div>
@@ -34,7 +34,7 @@ Le calcul des propositions traite chaque affirmation comme un bloc. Le **calcul 
 
 <div class="math-card c-rouge">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv25" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M16 12v24M16 24h17" fill="none" stroke="#000" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv25)"><circle cx="24" cy="24" r="21"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M6 13h16M26 13h16" style="fill:none;stroke:#4B5563;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round"/><path d="M10 26h28" style="fill:none;stroke:#4B5563;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round"/><path d="M14 39h20" style="fill:none;stroke:var(--acc);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round"/><path d="M8 8h12" style="fill:none;stroke:#9AA3AE;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/><path d="M28 8h12" style="fill:none;stroke:#9AA3AE;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/><path d="M15 21h18" style="fill:none;stroke:#9AA3AE;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/><path d="M18 34h12" style="fill:none;stroke:#9AA3AE;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/></svg></span>
 <h3><a href="./preuve/">Démontrer au premier ordre</a></h3>
 </div>
 <div class="carte-texte">Quatre règles de plus, la complétude de Gödel et quelques vertiges&nbsp;: compacité, Skolem, indécidabilité.</div>

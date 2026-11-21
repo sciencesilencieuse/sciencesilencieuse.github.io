@@ -19,7 +19,7 @@ Les trois paradoxes réunis ici ne sont pas de simples curiosités&nbsp;: chacun
 
 <div class="math-card c-magenta">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv21" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M11 13h26M11 20h18M11 27h9" fill="none" stroke="#000" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv21)"><path d="M4 9a5 5 0 0 1 5-5h30a5 5 0 0 1 5 5v22a5 5 0 0 1-5 5H18l-9 8v-8a5 5 0 0 1-5-5z"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M4 9a5 5 0 0 1 5-5h30a5 5 0 0 1 5 5v22a5 5 0 0 1-5 5H18l-9 8v-8a5 5 0 0 1-5-5z" style="fill:#E3E7EC;stroke:#9AA3AE;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><path d="M11 13h26M11 20h18" style="fill:none;stroke:#9AA3AE;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"/><path d="M11 27h9" style="fill:none;stroke:var(--acc);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"/></svg></span>
 <h3><a href="./berry/">Paradoxe de Berry</a></h3>
 </div>
 <div class="carte-texte">« Le plus petit entier positif non définissable en moins de quinze mots » vient d'être défini en douze. De ce jeu de mots découle l'impossibilité d'un algorithme universel de la science.</div>
@@ -34,7 +34,7 @@ Les trois paradoxes réunis ici ne sont pas de simples curiosités&nbsp;: chacun
 
 <div class="math-card c-vert">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv22" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="33" cy="19.5" r="2" fill="#000"/><path d="M17 30c5 2 10 1 14-3" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv22)"><path d="M3 33l10-5c2-10 9-15 17-15 5 0 8 2 9 6l7 2-7 3c-1 10-9 17-19 17H9l4-6z"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M2 31l10-5c2-10 9-15 16-15 5 0 8 2 9 6l7 2-7 3c-1 10-9 16-18 16H8l4-6z" style="fill:#4B5563"/><circle cx="31.5" cy="17.5" r="1.4" style="fill:#fff"/><circle cx="39" cy="37" r="6" style="fill:var(--acc)"/><path d="M39 31c0-3 1-5 3-6" style="fill:none;stroke:#4B5563;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/><path d="M40 28c2-2 5-2 6 0-2 1-4 1-6 0z" style="fill:#1DB100"/></svg></span>
 <h3><a href="./hempel/">Paradoxe de Hempel</a></h3>
 </div>
 <div class="carte-texte">Voir une chaussure blanche participe-t-il à prouver que tous les corbeaux sont noirs&nbsp;? La logique répond oui. Bayes précise&nbsp;: oui, mais à peine.</div>
@@ -49,7 +49,7 @@ Les trois paradoxes réunis ici ne sont pas de simples curiosités&nbsp;: chacun
 
 <div class="math-card c-orange">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv23" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M6 18h12v12H6z" fill="#000"/><path d="M32.5 20.5a3.5 3.5 0 1 1 4.5 3.4c-1 .4-1 1.1-1 2.1" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="36" cy="29.5" r="1.5" fill="#000"/></mask></defs><g mask="url(#pv23)"><rect x="2" y="14" width="20" height="20" rx="3"/><rect x="26" y="14" width="20" height="20" rx="3"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><rect x="2" y="14" width="20" height="20" rx="2.5" style="fill:#E3E7EC;stroke:#9AA3AE;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><circle cx="9" cy="27" r="3" style="fill:var(--acc2)"/><circle cx="15" cy="27" r="3" style="fill:var(--acc2)"/><circle cx="12" cy="22" r="3" style="fill:var(--acc2)"/><rect x="26" y="14" width="20" height="20" rx="2.5" style="fill:var(--acc)"/><path d="M32.5 20.5a3.5 3.5 0 1 1 4.5 3.4c-1 .4-1 1.1-1 2.1" style="fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"/><circle cx="36" cy="29.5" r="1.3" style="fill:#fff"/></svg></span>
 <h3><a href="./newcomb/">Paradoxe de Newcomb</a></h3>
 </div>
 <div class="carte-texte">Deux boîtes, un devin presque infaillible et deux raisonnements irréprochables qui recommandent des choix opposés.</div>

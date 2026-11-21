@@ -18,7 +18,7 @@ La logique est à l'intersection de l'informatique, des mathématiques et de la 
 
 <div class="math-card c-bleu">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv13" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M10 32l6.5-17 6.5 17M25 15l6.5 17 6.5-17" fill="none" stroke="#000" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv13)"><rect x="4" y="4" width="40" height="40" rx="11"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M6 36l8-24 8 24" style="fill:none;stroke:var(--acc);stroke-width:3;stroke-linecap:round;stroke-linejoin:round"/><path d="M26 12l8 24 8-24" style="fill:none;stroke:#4B5563;stroke-width:3;stroke-linecap:round;stroke-linejoin:round"/></svg></span>
 <h3><a href="./propositions/">Calcul des propositions</a></h3>
 </div>
 <div class="carte-texte">Le socle&nbsp;: des formules, leur sens et leurs preuves.</div>
@@ -33,7 +33,7 @@ La logique est à l'intersection de l'informatique, des mathématiques et de la 
 
 <div class="math-card c-vert">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv14" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M35 18.5l5.4 5.5-5.4 5.5-5.4-5.5z" fill="#000"/></mask></defs><g mask="url(#pv14)"><rect x="3" y="14" width="20" height="20" rx="3"/><path d="M35 11l11 13-11 13-11-13z"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><rect x="4" y="15" width="18" height="18" rx="2" style="fill:#C9CFD7"/><path d="M35 10l11 14-11 14-11-14z" style="fill:var(--acc)"/></svg></span>
 <h3><a href="./modale/">Logique modale</a></h3>
 </div>
 <div class="carte-texte">Le nécessaire, le possible, et des dragons aux yeux bleus.</div>
@@ -48,7 +48,7 @@ La logique est à l'intersection de l'informatique, des mathématiques et de la 
 
 <div class="math-card c-orange">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv15" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M13 12l11 24 11-24M17.2 21h13.6" fill="none" stroke="#000" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv15)"><circle cx="24" cy="24" r="21"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M12 5l12 26 12-26M16.6 15h14.8" style="fill:none;stroke:var(--acc);stroke-width:3;stroke-linecap:round;stroke-linejoin:round"/><circle cx="12" cy="41" r="2.4" style="fill:#C9CFD7"/><circle cx="20" cy="41" r="2.4" style="fill:#C9CFD7"/><circle cx="28" cy="41" r="2.4" style="fill:#C9CFD7"/><circle cx="36" cy="41" r="2.4" style="fill:#C9CFD7"/></svg></span>
 <h3><a href="./predicats/">Calcul des prédicats</a></h3>
 </div>
 <div class="carte-texte">La logique du premier ordre&nbsp;: des objets, des propriétés, «&nbsp;pour tout&nbsp;» et «&nbsp;il existe&nbsp;».</div>
@@ -62,7 +62,7 @@ La logique est à l'intersection de l'informatique, des mathématiques et de la 
 
 <div class="math-card c-rouge">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv16" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M14 25l7 7 13-15" fill="none" stroke="#000" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv16)"><rect x="5" y="5" width="38" height="38" rx="9"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><rect x="6" y="6" width="36" height="36" rx="6" style="fill:#E3E7EC;stroke:#9AA3AE;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><path d="M14 25l7 7 13-15" style="fill:none;stroke:var(--acc);stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round"/></svg></span>
 <h3><a href="./prouvabilite/">Prouvabilité et incomplétude</a></h3>
 </div>
 <div class="carte-texte">Quand l'arithmétique parle de ses propres preuves&nbsp;: Gödel et Löb lus avec une boîte modale.</div>
@@ -78,7 +78,7 @@ La logique est à l'intersection de l'informatique, des mathématiques et de la 
 
 <div class="math-card c-magenta">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><path d="M10 19a15 15 0 0 1 25-7" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 4l11 8-12 5z"/><path d="M38 29a15 15 0 0 1-25 7" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 44L7 36l12-5z"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M9 20a15 15 0 0 1 26-8" style="fill:none;stroke:var(--acc);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round"/><path d="M31 5l9 7-11 3z" style="fill:var(--acc)"/><path d="M39 28a15 15 0 0 1-26 8" style="fill:none;stroke:#9AA3AE;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round"/><path d="M17 43l-9-7 11-3z" style="fill:#9AA3AE"/></svg></span>
 <h3><a href="./paradoxes/">Paradoxes</a></h3>
 </div>
 <div class="carte-texte">Quand un raisonnement impeccable mène droit dans le mur.</div>
@@ -93,7 +93,7 @@ La logique est à l'intersection de l'informatique, des mathématiques et de la 
 
 <div class="math-card c-canard">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv17" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M3 41h42" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M29 13v26" fill="none" stroke="#000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv17)"><path d="M3 41c9 0 11-12 16-12s8 12 26 12z" opacity=".4"/><path d="M17 41c6 0 7-32 12-32s6 32 12 32z"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M3 41c9 0 11-13 16-13s9 13 26 13z" style="fill:#E3E7EC;stroke:#9AA3AE;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><path d="M16 41c6 0 8-32 13-32s7 32 13 32z" style="fill:var(--acc2);stroke:var(--acc);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round"/><path d="M3 41h42" style="fill:none;stroke:#9AA3AE;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/></svg></span>
 <h3><a href="../maths/stat/bayes/">Bayésianisme</a></h3>
 </div>
 <div class="carte-texte">Raisonner dans l'incertain&nbsp;: la logique de l'induction.</div>

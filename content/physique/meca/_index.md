@@ -13,7 +13,7 @@ chapter = false
 
 <div class="math-card c-bleu">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv47" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="17" cy="11" r="8.0" fill="none" stroke="#000" stroke-width="2.6"/><path d="M14 8.5a4 4 0 0 1 4-1" fill="none" stroke="#000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv47)"><path d="M3 15l42 29H3z"/><circle cx="17" cy="11" r="6.5"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M3 42h42L3 14z" style="fill:#E3E7EC;stroke:#9AA3AE;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><rect x="13" y="13" width="10" height="10" rx="1.5" style="fill:var(--acc)" transform="rotate(33.7 18 18)"/><path d="M21 25L32.7 32.8" style="fill:none;stroke:#4B5563;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round"/><path d="M36 35L31.5 34.6L33.9 31.0z" style="fill:#4B5563"/></svg></span>
 <h3><a href="./energie/">Énergie cinétique et travail</a></h3>
 </div>
 <div class="carte-texte">La naissance de l'énergie cinétique, de Galilée à Leibniz, et pourquoi elle croît comme le carré de la vitesse. Avec deux animations.</div>
@@ -29,7 +29,7 @@ chapter = false
 
 <div class="math-card c-canard">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv48" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="7" cy="37" r="6" fill="none" stroke="#000" stroke-width="2"/><circle cx="41" cy="37" r="6" fill="none" stroke="#000" stroke-width="2"/></mask></defs><g mask="url(#pv48)"><path d="M7 37c9-10 25-10 34 0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity=".4"/><path d="M7 37c6-18 28-18 34 0" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity=".4"/><path d="M7 37C13 8 35 8 41 37" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="37" r="4.6"/><circle cx="41" cy="37" r="4.6"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M7 37c9-10 25-10 34 0" style="fill:none;stroke:#C9CFD7;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round"/><path d="M7 37c6-18 28-18 34 0" style="fill:none;stroke:#C9CFD7;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round"/><path d="M7 37C13 6 35 6 41 37" style="fill:none;stroke:var(--acc);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round"/><circle cx="7" cy="37" r="3.4" style="fill:#4B5563"/><circle cx="41" cy="37" r="3.4" style="fill:#4B5563"/></svg></span>
 <h3><a href="./action/">Principe de moindre action</a></h3>
 </div>
 <div class="carte-texte">De Fermat à Feynman, un même principe pour la lumière et pour la matière&nbsp;: un panorama.</div>
@@ -46,7 +46,7 @@ chapter = false
 
 <div class="math-card c-vert">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv49" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><ellipse cx="24" cy="24" rx="16" ry="9.5" fill="#000"/></mask></defs><g mask="url(#pv49)"><ellipse cx="24" cy="24" rx="21" ry="14"/></g><ellipse cx="24" cy="24" rx="10" ry="5"/><path d="M19 7l9 3-9 4z"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><ellipse cx="24" cy="24" rx="20" ry="13" style="fill:none;stroke:#9AA3AE;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><ellipse cx="24" cy="24" rx="14" ry="8.5" style="fill:none;stroke:var(--acc);stroke-width:2;stroke-linecap:round;stroke-linejoin:round"/><ellipse cx="24" cy="24" rx="7" ry="4" style="fill:none;stroke:#9AA3AE;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><path d="M22 13l5 2.5-5 2.5z" style="fill:var(--acc)"/><circle cx="38" cy="24" r="2.6" style="fill:var(--acc)"/></svg></span>
 <h3><a href="./hamilton/">De Newton à Hamilton</a></h3>
 </div>
 <div class="carte-texte">Newton, Lagrange, Hamilton&nbsp;: trois arènes pour un même mouvement, puis un raccourci géométrique vers l'espace des phases et le hamiltonien.</div>
@@ -65,7 +65,7 @@ chapter = false
 
 <div class="math-card c-orange">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv50" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="9.5" cy="29.5" r="5.4" fill="none" stroke="#000" stroke-width="1.8"/><circle cx="24" cy="18" r="5.4" fill="none" stroke="#000" stroke-width="1.8"/><circle cx="38.5" cy="29.5" r="5.4" fill="none" stroke="#000" stroke-width="1.8"/></mask></defs><g mask="url(#pv50)"><rect x="2" y="42" width="44" height="4" rx="2"/><path d="M5 41Q24-5 43 41" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity=".4"/><circle cx="9.5" cy="29.5" r="4"/><circle cx="24" cy="18" r="4"/><circle cx="38.5" cy="29.5" r="4"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M3 43h42" style="fill:none;stroke:#9AA3AE;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/><path d="M6 40Q14 4 26 40" style="fill:none;stroke:#C9CFD7;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/><path d="M6 40Q22 -2 42 40" style="fill:none;stroke:var(--acc);stroke-width:2;stroke-linecap:round;stroke-linejoin:round"/><path d="M6 40Q28 22 46 40" style="fill:none;stroke:var(--acc2);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/><circle cx="6" cy="40" r="2.6" style="fill:#4B5563"/></svg></span>
 <h3><a href="./paraboles/">Chute libre et paraboles</a></h3>
 </div>
 <div class="carte-texte">Étudier la chute libre, c'est jouer avec des paraboles.</div>
@@ -73,7 +73,7 @@ chapter = false
 
 <div class="math-card c-rouge">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv51" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M22 26c5-1 10-5 12-12" fill="none" stroke="#000" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="22" cy="26" r="3" fill="#000"/></mask></defs><g mask="url(#pv51)"><circle cx="22" cy="26" r="19"/><path d="M33 4.5a21 21 0 0 1 12 12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M46 11l0 8-7-4z"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><circle cx="22" cy="26" r="19" style="fill:#E3E7EC;stroke:#9AA3AE;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><path d="M22 26c5-1 10-5 12-12" style="fill:none;stroke:var(--acc);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:3 2.5"/><circle cx="34" cy="14" r="2.6" style="fill:var(--acc)"/><circle cx="22" cy="26" r="2" style="fill:#4B5563"/><path d="M33 4.5a21 21 0 0 1 12 12" style="fill:none;stroke:#9AA3AE;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/><path d="M46 11v7l-6-4z" style="fill:#9AA3AE"/></svg></span>
 <h3><a href="./coriolis/">Force de Coriolis</a></h3>
 </div>
 <div class="carte-texte">Une force qui n'en est pas une&nbsp;: la galère d'aller droit dans un référentiel tournant. Cyclones, anticyclones et troyens de Jupiter.</div>
@@ -81,7 +81,7 @@ chapter = false
 
 <div class="math-card c-magenta">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv52" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M3 28h34M20 11c-7 6-7 28 0 34M20 11c7 6 7 28 0 34" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="40" cy="9" r="7" fill="none" stroke="#000" stroke-width="2.4"/></mask></defs><g mask="url(#pv52)"><circle cx="20" cy="28" r="17"/><circle cx="40" cy="9" r="5.5"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><circle cx="20" cy="28" r="17" style="fill:#E3E7EC;stroke:#9AA3AE;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><path d="M3 28h34M20 11c-7 6-7 28 0 34M20 11c7 6 7 28 0 34" style="fill:none;stroke:#9AA3AE;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"/><circle cx="40" cy="9" r="5" style="fill:var(--acc)"/><path d="M26 22L31.2 16.8" style="fill:none;stroke:#4B5563;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/><path d="M34 14L32.7 18.4L29.6 15.3z" style="fill:#4B5563"/></svg></span>
 <h3><a href="./curiosites/">Curiosités en mécanique terrestre</a></h3>
 </div>
 <div class="carte-texte">Traverser la Terre par un tunnel, comparer les marées dues à la Lune et au Soleil, et voir tourner la Terre avec un pendule.</div>

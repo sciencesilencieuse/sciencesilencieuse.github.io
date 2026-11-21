@@ -34,7 +34,7 @@ td, th {
 
 <div class="math-card card-fondements">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv29" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="31" cy="24" r="14" fill="none" stroke="#000" stroke-width="2.6"/><circle cx="17" cy="24" r="14" fill="none" stroke="#000" stroke-width="2.6"/></mask><mask id="pv30" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="17" cy="24" r="14" fill="none" stroke="#000" stroke-width="2.6"/><circle cx="31" cy="24" r="14" fill="none" stroke="#000" stroke-width="2.6"/></mask></defs><g mask="url(#pv29)"><circle cx="17" cy="24" r="14"/><circle cx="31" cy="24" r="14"/></g><g mask="url(#pv30)"><path d="M24 12.1a14 14 0 0 1 0 23.8a14 14 0 0 1 0-23.8z"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><clipPath id="pvF31"><circle cx="17" cy="24" r="13"/></clipPath><circle cx="17" cy="24" r="13" style="fill:#E3E7EC"/><circle cx="31" cy="24" r="13" style="fill:#E3E7EC"/><circle cx="31" cy="24" r="13" style="fill:var(--acc)" clip-path="url(#pvF31)"/><circle cx="17" cy="24" r="13" style="fill:none;stroke:#9AA3AE;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><circle cx="31" cy="24" r="13" style="fill:none;stroke:#9AA3AE;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/></svg></span>
 <h3><a href="./fondements/">Fondements</a></h3>
 </div>
 <div class="theme-subgroup">
@@ -49,7 +49,7 @@ td, th {
 
 <div class="math-card card-arithmetique">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv31" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="9" cy="9" r="3.6" fill="#000"/><circle cx="9" cy="24" r="3.6" fill="#000"/><circle cx="39" cy="24" r="3.6" fill="#000"/><circle cx="24" cy="39" r="3.6" fill="#000"/><circle cx="39" cy="39" r="3.6" fill="#000"/></mask></defs><g mask="url(#pv31)"><circle cx="9" cy="9" r="6"/><circle cx="24" cy="9" r="6"/><circle cx="39" cy="9" r="6"/><circle cx="9" cy="24" r="6"/><circle cx="24" cy="24" r="6"/><circle cx="39" cy="24" r="6"/><circle cx="9" cy="39" r="6"/><circle cx="24" cy="39" r="6"/><circle cx="39" cy="39" r="6"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><circle cx="9" cy="9" r="5.4" style="fill:#C9CFD7"/><circle cx="24" cy="9" r="5.4" style="fill:var(--acc)"/><circle cx="39" cy="9" r="5.4" style="fill:var(--acc)"/><circle cx="9" cy="24" r="5.4" style="fill:#C9CFD7"/><circle cx="24" cy="24" r="5.4" style="fill:var(--acc)"/><circle cx="39" cy="24" r="5.4" style="fill:#C9CFD7"/><circle cx="9" cy="39" r="5.4" style="fill:var(--acc)"/><circle cx="24" cy="39" r="5.4" style="fill:#C9CFD7"/><circle cx="39" cy="39" r="5.4" style="fill:#C9CFD7"/></svg></span>
 <h3><a href="./arithmetique/">Arithmétique</a></h3>
 </div>
 <div class="theme-subgroup">
@@ -76,7 +76,7 @@ td, th {
 
 <div class="math-card card-algebre">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv32" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="30" cy="17" r="2.2" fill="#000"/><circle cx="18" cy="31" r="2.2" fill="#000"/></mask></defs><g mask="url(#pv32)"><path d="M4 5h10v4H8.5v30H14v4H4zM44 5H34v4h5.5v30H34v4h10z"/><circle cx="18" cy="17" r="4.4"/><circle cx="30" cy="17" r="4.4"/><circle cx="18" cy="31" r="4.4"/><circle cx="30" cy="31" r="4.4"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M13 6H8v36h5M35 6h5v36h-5" style="fill:none;stroke:#4B5563;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"/><circle cx="18" cy="17" r="4" style="fill:var(--acc)"/><circle cx="30" cy="17" r="4" style="fill:#C9CFD7"/><circle cx="18" cy="31" r="4" style="fill:#C9CFD7"/><circle cx="30" cy="31" r="4" style="fill:var(--acc)"/></svg></span>
 <h3><a href="./algebre/">Algèbre</a></h3>
 </div>
 <div class="theme-subgroup">
@@ -92,7 +92,7 @@ td, th {
 
 <div class="math-card card-geometrie">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv33" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M3.8 24h40.4L14 6z" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="2.4" fill="#000"/></mask></defs><g mask="url(#pv33)"><circle cx="24" cy="24" r="21"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><circle cx="24" cy="24" r="19" style="fill:#E3E7EC;stroke:#9AA3AE;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><path d="M7.887086173027903 34.06846602043089L32.919959692931926 7.22399573568039L42.58480441394231 27.950322125537426z" style="fill:var(--acc2)"/><path d="M24 24L32.919959692931926 7.22399573568039L42.58480441394231 27.950322125537426z" style="fill:var(--acc)"/><circle cx="24" cy="24" r="1.8" style="fill:#4B5563"/><circle cx="7.9" cy="34.1" r="1.8" style="fill:#4B5563"/><circle cx="32.9" cy="7.2" r="1.8" style="fill:#4B5563"/><circle cx="42.6" cy="28.0" r="1.8" style="fill:#4B5563"/></svg></span>
 <h3><a href="./geometrie/">Géométrie</a></h3>
 </div>
 <div class="theme-subgroup">
@@ -119,7 +119,7 @@ td, th {
 
 <div class="math-card card-proba">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv34" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M24 10v32" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.5 27v15M32.5 27v15" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv34)"><path d="M2 42c11 0 13-34 22-34s11 34 22 34z"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M3 41c11 0 13-32 21-32s10 32 21 32z" style="fill:var(--acc2);stroke:var(--acc);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"/><path d="M24 9v32" style="fill:none;stroke:var(--acc);stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><path d="M2 41h44" style="fill:none;stroke:#9AA3AE;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/></svg></span>
 <h3><a href="./proba/">Probabilités</a></h3>
 </div>
 <div class="theme-subgroup">
@@ -145,7 +145,7 @@ td, th {
 
 <div class="math-card card-stat">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv35" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M2 32L46 14" fill="none" stroke="#000" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv35)"><rect x="4" y="26" width="10" height="18" rx="2"/><rect x="19" y="12" width="10" height="32" rx="2"/><rect x="34" y="20" width="10" height="24" rx="2"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><rect x="5" y="26" width="9" height="18" rx="1.5" style="fill:#C9CFD7"/><rect x="19" y="12" width="9" height="32" rx="1.5" style="fill:var(--acc2)"/><rect x="33" y="20" width="9" height="24" rx="1.5" style="fill:#C9CFD7"/><path d="M3 44h42" style="fill:none;stroke:#9AA3AE;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><path d="M4 31L44 15" style="fill:none;stroke:var(--acc);stroke-width:2;stroke-linecap:round;stroke-linejoin:round"/><circle cx="9.5" cy="29" r="2.2" style="fill:var(--acc)"/><circle cx="23.5" cy="23.5" r="2.2" style="fill:var(--acc)"/><circle cx="37.5" cy="18" r="2.2" style="fill:var(--acc)"/></svg></span>
 <h3><a href="./stat/">Statistiques</a></h3>
 </div>
 <div class="theme-subgroup">
@@ -163,7 +163,7 @@ td, th {
 
 <div class="math-card card-jeux">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv36" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="24" cy="7" r="6.2" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="12" cy="23" r="5.8" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="36" cy="23" r="5.8" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="6" cy="40" r="5.3999999999999995" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="18" cy="40" r="5.3999999999999995" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="36" cy="40" r="5.3999999999999995" fill="none" stroke="#000" stroke-width="2.2"/><circle cx="12" cy="23" r="2.1000000000000005" fill="#000"/><circle cx="36" cy="23" r="2.1000000000000005" fill="#000"/></mask></defs><g mask="url(#pv36)"><path d="M24 7L12 23" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 7L36 23" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 23L6 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 23L18 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M36 23L36 40" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="7" r="4.8"/><circle cx="12" cy="23" r="4.4"/><circle cx="36" cy="23" r="4.4"/><circle cx="6" cy="40" r="4"/><circle cx="18" cy="40" r="4"/><circle cx="36" cy="40" r="4"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M24 7L12 23" style="fill:none;stroke:var(--acc);stroke-width:2.0;stroke-linecap:round;stroke-linejoin:round"/><path d="M24 7L36 23" style="fill:none;stroke:#9AA3AE;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/><path d="M12 23L6 40" style="fill:none;stroke:#9AA3AE;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/><path d="M12 23L18 40" style="fill:none;stroke:var(--acc);stroke-width:2.0;stroke-linecap:round;stroke-linejoin:round"/><path d="M36 23L36 40" style="fill:none;stroke:#9AA3AE;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/><circle cx="24" cy="7" r="4.4" style="fill:var(--acc);stroke:#fff;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><circle cx="12" cy="23" r="4" style="fill:var(--acc2);stroke:#fff;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><circle cx="36" cy="23" r="4" style="fill:var(--acc2);stroke:#fff;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><circle cx="6" cy="40" r="3.6" style="fill:#C9CFD7;stroke:#fff;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><circle cx="18" cy="40" r="3.6" style="fill:#C9CFD7;stroke:#fff;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><circle cx="36" cy="40" r="3.6" style="fill:#C9CFD7;stroke:#fff;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/></svg></span>
 <h3><a href="./jeux/">Théorie des jeux</a></h3>
 </div>
 <div class="theme-subgroup">

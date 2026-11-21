@@ -15,7 +15,7 @@ chapter = true
 
 <div class="math-card c-bleu">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv37" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M31 14a4 4 0 0 1 4-1" fill="none" stroke="#000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv37)"><rect x="2" y="42" width="44" height="4" rx="2"/><circle cx="6.5" cy="38.921487603305785" r="1.6"/><circle cx="12" cy="28.694214876033058" r="2.1"/><circle cx="18" cy="20.958677685950413" r="2.6"/><circle cx="24.5" cy="16.607438016528924" r="3.1"/><circle cx="34" cy="16.5" r="6.5"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M3 43h42" style="fill:none;stroke:#9AA3AE;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/><path d="M5 40Q26 -12 47 40" style="fill:none;stroke:#C9CFD7;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:2 3"/><circle cx="15" cy="21.1" r="5" style="fill:var(--acc)"/><path d="M15 21.133786848072564L21.6 17.2" style="fill:none;stroke:#4B5563;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/><path d="M25 15.133786848072564L22.7 19.1L20.4 15.3z" style="fill:#4B5563"/></svg></span>
 <h3><a href="./meca/">Mécanique</a></h3>
 </div>
 <div class="carte-texte">De l'énergie cinétique au principe de moindre action&nbsp;: Galilée, Hamilton, les paraboles et la force de Coriolis.</div>
@@ -33,7 +33,7 @@ chapter = true
 
 <div class="math-card c-orange">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv38" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M25.5 9.5L16 22" fill="none" stroke="#000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv38)"><path d="M29 2L9 27h12l-4 19 22-27H27z"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M6 10c8 6 8 22 0 28M42 10c-8 6-8 22 0 28" style="fill:none;stroke:#C9CFD7;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/><path d="M28 3L12 26h10l-3 19 17-25H26z" style="fill:var(--acc)"/></svg></span>
 <h3><a href="./electromag/">Électromagnétisme</a></h3>
 </div>
 <div class="carte-texte">Le rayonnement d'une charge accélérée, des arcs électriques, un filet d'eau dévié et l'expérience de Faroux.</div>
@@ -49,7 +49,7 @@ chapter = true
 
 <div class="math-card c-magenta">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv39" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M24 9v30" fill="none" stroke="#000" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><path d="M2 14h22l22 10M2 34h22l22-10" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><g mask="url(#pv39)"><path d="M24 4c6 6 6 34 0 40c-6-6-6-34 0-40z"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M3 14h21l20 10M3 34h21l20-10" style="fill:none;stroke:#9AA3AE;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round"/><path d="M3 24h41" style="fill:none;stroke:#C9CFD7;stroke-width:1;stroke-linecap:round;stroke-linejoin:round"/><path d="M24 5c6 6 6 32 0 38c-6-6-6-32 0-38z" style="fill:var(--acc2);stroke:var(--acc);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round"/><circle cx="44" cy="24" r="2" style="fill:var(--acc)"/></svg></span>
 <h3><a href="./optique/">Optique</a></h3>
 </div>
 <div class="carte-texte">La lumière qui se courbe, se disperse et vibre&nbsp;: arcs-en-ciel, lentilles et polarisation.</div>
@@ -64,7 +64,7 @@ chapter = true
 
 <div class="math-card c-canard">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv40" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M7 4.5c0 3 34 3 34 0" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 43.5c0-3 34-3 34 0" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="24" cy="24" r="5" fill="none" stroke="#000" stroke-width="2.4"/></mask></defs><g mask="url(#pv40)"><path d="M7 3h34L24 24zM7 45h34L24 24z"/></g><circle cx="24" cy="24" r="3"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M8 4h32L24 24zM8 44h32L24 24z" style="fill:#E3E7EC"/><ellipse cx="24" cy="5" rx="16" ry="3" style="fill:none;stroke:#9AA3AE;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><ellipse cx="24" cy="43" rx="16" ry="3" style="fill:none;stroke:#9AA3AE;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><path d="M8 4L40 44M40 4L8 44" style="fill:none;stroke:#9AA3AE;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><path d="M20 44C21 34 27 30 26 4" style="fill:none;stroke:var(--acc);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"/></svg></span>
 <h3><a href="./relatres/">Relativité restreinte</a></h3>
 </div>
 <div class="carte-texte">L'espace-temps vu par la géométrie&nbsp;: cônes de lumière, paradoxe des jumeaux, masse du photon, champ magnétique.</div>
@@ -80,7 +80,7 @@ chapter = true
 
 <div class="math-card c-vert">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv41" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="24" cy="23" r="6" fill="none" stroke="#000" stroke-width="0.01"/></mask></defs><path d="M2 16c11 0 14 26 22 26s11-26 22-26v-4H2z" opacity=".4"/><path d="M2 22c10 0 13 22 22 22s12-22 22-22v-6c-11 0-14 26-22 26S13 16 2 16z"/><g mask="url(#pv41)"><circle cx="24" cy="23" r="6"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M2 12c10 0 13 12 22 12s12-12 22-12" style="fill:none;stroke:#C9CFD7;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round"/><path d="M2 19c10 0 13 9 22 9s12-9 22-9" style="fill:none;stroke:#9AA3AE;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round"/><path d="M2 26c10 0 13 6 22 6s12-6 22-6" style="fill:none;stroke:#9AA3AE;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round"/><path d="M2 33c10 0 13 3 22 3s12-3 22-3" style="fill:none;stroke:#9AA3AE;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round"/><circle cx="24" cy="25" r="5.5" style="fill:var(--acc)"/></svg></span>
 <h3><a href="./relatge/">Relativité générale</a></h3>
 </div>
 <div class="carte-texte">La gravitation comme géométrie de l'espace-temps, à la manière de Wheeler&nbsp;: le bord d'un bord est vide.</div>
@@ -88,7 +88,7 @@ chapter = true
 
 <div class="math-card c-rouge">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv42" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="24" cy="24" r="7" fill="none" stroke="#000" stroke-width="2.4"/></mask></defs><g mask="url(#pv42)"><ellipse cx="24" cy="24" rx="21" ry="7.5" transform="rotate(0 24 24)" fill="none" stroke="currentColor" stroke-width="2.8"/><ellipse cx="24" cy="24" rx="21" ry="7.5" transform="rotate(60 24 24)" fill="none" stroke="currentColor" stroke-width="2.8"/><ellipse cx="24" cy="24" rx="21" ry="7.5" transform="rotate(-60 24 24)" fill="none" stroke="currentColor" stroke-width="2.8"/><circle cx="24" cy="24" r="5"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><ellipse cx="24" cy="24" rx="20" ry="7" style="fill:none;stroke:#9AA3AE;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round"/><ellipse cx="24" cy="24" rx="20" ry="7" transform="rotate(60 24 24)" style="fill:none;stroke:#9AA3AE;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round"/><ellipse cx="24" cy="24" rx="20" ry="7" transform="rotate(-60 24 24)" style="fill:none;stroke:#9AA3AE;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round"/><circle cx="24" cy="24" r="4.5" style="fill:var(--acc)"/><circle cx="40.5" cy="13.5" r="2.4" style="fill:var(--acc2)"/></svg></span>
 <h3><a href="./quantique/">Mécanique quantique</a></h3>
 </div>
 <div class="carte-texte">Ses fondements et ses énigmes&nbsp;: la théorie-jouet de Spekkens, EPR et la non-localité, la contextualité, la décohérence.</div>
@@ -109,7 +109,7 @@ chapter = true
 
 <div class="math-card c-bleu">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv43" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="17" cy="24" r="5.6" fill="none" stroke="#000" stroke-width="2"/><circle cx="31" cy="24" r="5.6" fill="none" stroke="#000" stroke-width="2"/><circle cx="17" cy="24" r="1.8" fill="#000"/><circle cx="31" cy="24" r="1.8" fill="#000"/></mask></defs><g mask="url(#pv43)"><path d="M4 6l13 18L4 42M44 6L31 24l13 18" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 24c1.5-4.5 3-4.5 3.5 0s2 4.5 3.5 0 2-4.5 3.5 0 2 4.5 3.5 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17" cy="24" r="4.2"/><circle cx="31" cy="24" r="4.2"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M4 6L9.1 12.8" style="fill:none;stroke:#4B5563;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round"/><path d="M11.5 16L7.3 14.1L10.9 11.5z" style="fill:#4B5563"/><path d="M11.5 16L17 24L4 42" style="fill:none;stroke:#4B5563;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round"/><path d="M44 6L38.9 12.8" style="fill:none;stroke:#4B5563;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round"/><path d="M36.5 16L37.1 11.5L40.7 14.1z" style="fill:#4B5563"/><path d="M36.5 16L31 24l13 18" style="fill:none;stroke:#4B5563;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round"/><path d="M17 24c1.5-4.5 3-4.5 3.5 0s2 4.5 3.5 0 2-4.5 3.5 0 2 4.5 3.5 0" style="fill:none;stroke:var(--acc);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"/><circle cx="17" cy="24" r="2.6" style="fill:var(--acc)"/><circle cx="31" cy="24" r="2.6" style="fill:var(--acc)"/></svg></span>
 <h3><a href="./tqc/">Théorie quantique des champs</a></h3>
 </div>
 <div class="carte-texte">La théorie testée avec la plus grande précision, de l'oscillateur harmonique à l'électrodynamique quantique.</div>
@@ -125,7 +125,7 @@ chapter = true
 
 <div class="math-card c-orange">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv44" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><circle cx="14" cy="15" r="3.6" fill="#000"/><circle cx="32" cy="11" r="3.6" fill="#000"/><circle cx="24" cy="26" r="3.6" fill="#000"/><circle cx="12" cy="35" r="3.6" fill="#000"/><circle cx="35" cy="34" r="3.6" fill="#000"/><path d="M14 15l-5-4M32 11l6 3M24 26l5 6M12 35l-3 4M35 34l4-5" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv44)"><rect x="3" y="3" width="42" height="42" rx="9"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><rect x="4" y="4" width="40" height="40" rx="6" style="fill:#E3E7EC;stroke:#9AA3AE;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/><circle cx="14" cy="15" r="3" style="fill:var(--acc2)"/><circle cx="32" cy="11" r="3" style="fill:var(--acc)"/><circle cx="24" cy="26" r="3" style="fill:var(--acc2)"/><circle cx="12" cy="35" r="3" style="fill:var(--acc)"/><circle cx="35" cy="34" r="3" style="fill:var(--acc2)"/><path d="M14 15l-5-4M32 11l6 3M24 26l5 6M12 35l-3 4M35 34l4-5" style="fill:none;stroke:#9AA3AE;stroke-width:1.2;stroke-linecap:round;stroke-linejoin:round"/></svg></span>
 <h3><a href="./phistat/">Thermodynamique et physique statistique</a></h3>
 </div>
 <div class="carte-texte">Du désordre des molécules aux lois macroscopiques&nbsp;: entropie, information, transitions de phase.</div>
@@ -142,7 +142,7 @@ chapter = true
 
 <div class="math-card c-magenta">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv45" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M20.5 18.5l3 5.5" fill="none" stroke="#000" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv45)"><path d="M24 24c-5-10-19-13-20-3s13 10 20 3c7-7 19-10 20 1s-14 11-20-1" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g><path d="M21 17.8l3 6.2" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><path d="M24 24c-5-10-19-13-20-3s13 10 20 3" style="fill:none;stroke:var(--acc);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round"/><path d="M24 24c7-7 19-10 20 1s-14 11-20-1" style="fill:none;stroke:var(--acc2);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round"/><path d="M24 24c-4-8-14-10-15-3s10 8 15 3c6-6 15-8 15 1s-11 9-15-1" style="fill:none;stroke:var(--acc);stroke-width:1;stroke-linecap:round;stroke-linejoin:round;opacity:0.6"/></svg></span>
 <h3><a href="./chaos/">Chaos</a></h3>
 </div>
 <div class="carte-texte">Attracteur de Lorenz, fractales et sensibilité aux conditions initiales&nbsp;: un désordre très organisé.</div>
@@ -150,7 +150,7 @@ chapter = true
 
 <div class="math-card c-canard">
 <div class="math-card-head">
-<span class="math-icon" aria-hidden="true"><svg class="pv" viewBox="0 0 48 48"><defs><mask id="pv46" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M10.5 23.5c4 3 23 3 27 0" fill="none" stroke="#000" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.5 29c3 2.4 18 2.4 21 0" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></mask></defs><g mask="url(#pv46)"><path d="M24 45L9 21a15 7 0 0 1 30 0z"/><rect x="22" y="2" width="4" height="12" rx="2"/></g></svg></span>
+<span class="math-icon" aria-hidden="true"><svg class="il" viewBox="0 0 48 48"><ellipse cx="24" cy="44" rx="10" ry="2" style="fill:#E3E7EC"/><path d="M24 42L10 21a14 6.5 0 0 1 28 0z" style="fill:var(--acc2)"/><path d="M11.5 23.5c4 3.5 21 3.5 25 0l-2.4 3.6c-4 2.6-16 2.6-20.2 0z" style="fill:var(--acc)"/><rect x="22.5" y="3" width="3" height="13" rx="1.5" style="fill:#4B5563"/></svg></span>
 <h3><a href="./jeux/">Curiosités</a></h3>
 </div>
 <div class="carte-texte">Des jouets qui défient l'intuition&nbsp;: la toupie tippe-top, l'anagyre, l'oiseau buveur.</div>
