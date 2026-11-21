@@ -434,20 +434,31 @@ html
   border-color: color-mix(in srgb, var(--c) 55%, #e7eaef);
 }
 
-/* La pastille : couleur pleine au centre, qui s'estompe vers le fond de la carte. */
-.math-icon {
-  width: 84px;
-  height: 84px;
-  margin: -12px 0 -10px;             /* même encombrement qu'avant, malgré le halo */
-  background: radial-gradient(circle closest-side,
-              var(--c) 0 50%,
-              color-mix(in srgb, var(--c) 55%, transparent) 64%,
-              color-mix(in srgb, var(--c) 18%, transparent) 82%,
-              transparent 100%);
-  transition: transform 0.3s cubic-bezier(.2, .8, .2, 1), filter 0.3s ease;
+/* La pastille : un disque pâle de la teinte, cerclé d'un filet, avec le pictogramme
+   dessiné dans la couleur de la carte (assombrie pour les teintes claires). */
+.math-card {
+  --disque: color-mix(in srgb, var(--c2) 22%, #ffffff);
+  --ic: color-mix(in srgb, var(--c) 86%, #1f2933);
 }
-.math-icon svg { width: 34px; height: 34px; }
-.math-card:hover .math-icon { transform: scale(1.06); filter: saturate(1.15); }
+.c-orange, .c-ambre, .card-stat { --ic: color-mix(in srgb, var(--c) 55%, #5c3a00); }
+.math-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0;
+  color: var(--ic);
+  background: radial-gradient(circle at 35% 28%, #ffffff 0%, var(--disque) 62%);
+  box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--c) 30%, transparent),
+              0 2px 6px color-mix(in srgb, var(--c) 14%, transparent);
+  transition: transform 0.3s cubic-bezier(.2, .8, .2, 1), box-shadow 0.3s ease;
+}
+.math-icon svg { width: 36px; height: 36px; stroke-width: 2.4; }
+.math-icon .creux { fill: var(--disque); }
+.math-icon .teinte { fill-opacity: 0.22; }
+.math-card:hover .math-icon {
+  transform: scale(1.06);
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--c) 55%, transparent),
+              0 4px 12px color-mix(in srgb, var(--c) 22%, transparent);
+}
 
 /* Titre et trait d'accent */
 .math-card h3 { letter-spacing: 0.005em; }
