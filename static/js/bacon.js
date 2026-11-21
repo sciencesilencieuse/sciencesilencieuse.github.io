@@ -321,11 +321,7 @@ function init(root) {
     for (const k of chemin) { x0 = Math.min(x0, X[k]); x1 = Math.max(x1, X[k]); y0 = Math.min(y0, Y[k]); y1 = Math.max(y1, Y[k]); }
     const m = Math.max(E * 0.05, (x1 - x0) * 0.18, (y1 - y0) * 0.18);
     prog = 0; voile.cible = 0.45;
-    allerA(cadrage(x0 - m, y0 - m, x1 + m, y1 + m, 0.06), () => {
-      const t0 = performance.now(), duree = 550 * (chemin.length - 1);
-      const f = t => { prog = Math.min(1, (t - t0) / duree); if (prog < 1 && chemin.length) requestAnimationFrame(f); };
-      requestAnimationFrame(f);
-    }, 900);
+    allerA(cadrage(x0 - m, y0 - m, x1 + m, y1 + m, 0.06), () => { prog = 1; }, 900);   // le chemin apparaît d'un bloc, à l'arrivée
   }
   function chercher() {
     const q = inA.value.trim().toLowerCase(); if (!q || !D) return;
