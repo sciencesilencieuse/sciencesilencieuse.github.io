@@ -1134,7 +1134,7 @@ mjx-container[display="true"] { display: block; max-width: 100%; overflow-x: aut
 .fp-annonce.fp-sort { animation: fp-sortie 0.25s ease-in both; }
 @keyframes fp-entree { from { opacity: 0; transform: translate(-50%, -50%) scale(0.6); } }
 @keyframes fp-sortie { to { opacity: 0; transform: translate(-50%, -50%) scale(0.85); } }
-.fp-icone { width: 2.6em; height: 2.6em; line-height: 2.6em; margin: -2.2em auto 0.35em; border-radius: 50%; font: 800 1.35em system-ui, sans-serif; color: #fff; box-shadow: 0 6px 14px rgba(15, 23, 42, 0.2); }
+.fp-icone { display: flex; align-items: center; justify-content: center; width: 2.6em; height: 2.6em; line-height: 1 !important; padding: 0 !important; margin: -2.2em auto 0.35em; border-radius: 50%; font: 800 1.35em system-ui, sans-serif; color: #fff; box-shadow: 0 6px 14px rgba(15, 23, 42, 0.2); }
 .fp-titre { font: 800 1.45em system-ui, sans-serif; letter-spacing: -0.01em; }
 .fp-texte { margin-top: 0.3em; font-size: 0.88em; line-height: 1.45; color: #475569; }
 .fp-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4em; margin-top: 0.75em; }
