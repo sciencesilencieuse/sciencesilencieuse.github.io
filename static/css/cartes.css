@@ -513,3 +513,16 @@ html
 @container (max-width: 721px) {
   .math-card { flex-basis: 100%; }
 }
+
+/* Menu : l'icône maison grossit un peu au survol du lien d'accueil */
+#homelinks .fa-home {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(.2, .8, .2, 1.4);
+}
+#homelinks a:hover .fa-home,
+#homelinks a:focus-visible .fa-home {
+  transform: scale(1.35);
+}
+@media (prefers-reduced-motion: reduce) {
+  #homelinks .fa-home { transition: none; }
+}
