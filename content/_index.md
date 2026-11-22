@@ -15,10 +15,13 @@ body {
 /* Les quatre entrées du site : boutons noirs au halo bleu (le bleu des liens),
    qui s'enfoncent légèrement au survol, et davantage à l'appui. */
 .accueil-nav {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 16px;
     margin: 1.6em 0;
+    }
+@media (min-width: 1200px) {          /* écrans larges : grille de deux sur deux */
+    .accueil-nav { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px 20px; }
     }
 #body .accueil-nav a.accueil-btn {
     display: block !important;
