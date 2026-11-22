@@ -27,12 +27,12 @@ body {
     display: block !important;
     box-sizing: border-box;
     width: 100%;
-    padding: 0.75em 1em;
+    padding: 0.62em 1em;
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 14px;
-    background: linear-gradient(180deg, #1a1a1a, #0b0b0b) !important;
+    background: #161616 !important;
     color: rgba(255, 255, 255, 0.9) !important;
-    font-size: 1.35em;
+    font-size: 1.05em;
     font-weight: 400;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -54,7 +54,7 @@ body {
     border-color: rgba(28, 144, 243, 0.35);
     transform: translateY(5px);
     box-shadow: 0 0 5px rgba(28, 144, 243, 0.25), 0 0 0 #000, inset 0 3px 10px rgba(0, 0, 0, 0.8);
-    background: linear-gradient(180deg, #0b0b0b, #141414) !important;
+    background: #161616 !important;
     }
 #body .accueil-nav a.accueil-btn:focus-visible {
     outline: 2px solid #1C90F3;
