@@ -12,7 +12,9 @@ css = "algo.css"
 
 Au XVIII<sup>e</sup> siècle, la ville prussienne de Königsberg est traversée par la Pregel, qui enserre deux îles. Sept ponts relient les îles et les rives, et les habitants se demandent s'il est possible de se promener en traversant chaque pont **une et une seule fois**. Personne n'y parvient, mais personne ne sait prouver que c'est impossible.
 
-![Königsberg, ses deux îles et ses sept ponts](/konigsberg.png)
+<div style="position:relative;margin-left:auto;margin-right:auto;width:700px;max-width:100%;margin-bottom:-1em;margin-top:-1em;">
+<img src="/konigsberg.png" style="box-shadow:none;background:none;border-radius:10px;">
+</div>
 
 En 1736, Leonhard Euler règle la question, et fonde du même coup la théorie des graphes. Son idée est d'oublier tout ce qui ne compte pas&nbsp;: la forme des rives, la longueur des ponts, le tracé des rues. Il ne reste que quatre zones de terre, les **sommets**, et sept ponts qui les relient, les **arêtes**. Chaque fois qu'on traverse une zone, on y entre par un pont et on en ressort par un autre&nbsp;: les ponts d'une zone traversée vont par deux. Seules la zone de départ et la zone d'arrivée peuvent avoir un nombre impair de ponts. Or à Königsberg, les quatre zones en ont un nombre impair.
 
