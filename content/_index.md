@@ -33,18 +33,18 @@ body {
     font-weight: bold;
     text-align: center;
     text-decoration: none !important;
-    box-shadow: 0 0 18px rgba(28, 144, 243, 0.45), 0 5px 0 #000, inset 0 1px 0 rgba(255, 255, 255, 0.07);
+    box-shadow: 0 0 7px rgba(28, 144, 243, 0.28), 0 5px 0 #000, inset 0 1px 0 rgba(255, 255, 255, 0.07);
     transform: translateY(0);
     transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
     }
 #body .accueil-nav a.accueil-btn:hover {
     color: var(--MAIN-LINK-color, #1C90F3);
     transform: translateY(3px);
-    box-shadow: 0 0 22px rgba(28, 144, 243, 0.55), 0 2px 0 #000, inset 0 2px 6px rgba(0, 0, 0, 0.55);
+    box-shadow: 0 0 9px rgba(28, 144, 243, 0.34), 0 2px 0 #000, inset 0 2px 6px rgba(0, 0, 0, 0.55);
     }
 #body .accueil-nav a.accueil-btn:active {
     transform: translateY(5px);
-    box-shadow: 0 0 12px rgba(28, 144, 243, 0.45), 0 0 0 #000, inset 0 3px 10px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 5px rgba(28, 144, 243, 0.25), 0 0 0 #000, inset 0 3px 10px rgba(0, 0, 0, 0.8);
     background: linear-gradient(180deg, #0b0b0b, #141414) !important;
     }
 #body .accueil-nav a.accueil-btn:focus-visible {
