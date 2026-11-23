@@ -273,11 +273,99 @@ Soit $E$ un espace vectoriel réel (ici, l'espace des vecteurs tangents en un po
 
 </div>
 
-Pour une fonction $f$ et un vecteur $\vec v$ en $P$, la **différentielle** $\mathrm{d}f$ est la 1-forme définie par
+Pour une fonction $f$, le mesureur $\mathrm{d}f$ s'obtient en suivant $f$ le long d'un mouvement. Soit $\gamma$ une trajectoire qui passe en $P$ à l'instant $t = 0$ avec la vitesse $\vec v$&nbsp;: la flèche $\vec v$ est la vitesse du point mobile. Pendant le mouvement, $f$ prend les valeurs $f\big(\gamma(t)\big)$, qui varient avec $t$. La **différentielle** de $f$ en $P$ est la 1-forme qui associe à la flèche $\vec v$ le taux de variation de $f$ à l'instant $0$&nbsp;:
 
-$$\mathrm{d}f\_P(\vec v) = \frac{\mathrm{d}}{\mathrm{d}t}f\big(\gamma(t)\big)\Big|\_{t=0},$$
+$$\mathrm{d}f\_P(\vec v) = \frac{\mathrm{d}}{\mathrm{d}t}f\big(\gamma(t)\big)\Big|\_{t=0}.$$
 
-où $\gamma$ est une courbe quelconque de vitesse $\vec v$ en $P$&nbsp;: c'est la vitesse de variation de $f$ le long de la flèche. Toutes les 1-formes ne sont pas de cette forme (le travail d'une force de frottement n'est la différentielle d'aucune fonction), mais celles-là sont les plus familières.
+Sur la carte, c'est le nombre de lignes de niveau franchies par unité de temps. Sur le graphe de $t \mapsto f\big(\gamma(t)\big)$, c'est la pente de la tangente en $t = 0$.
+
+<div class="svg-container" style="display:flex;flex-wrap:wrap;gap:6px 10px;justify-content:center;align-items:flex-start;">
+<svg id="fc-map" viewBox="0 0 360 340" role="img" aria-label="Carte de courbes de niveau de l'altitude f. Une trajectoire courbe gamma passe au point P à l'instant 0 ; la flèche v est sa vitesse en P. Un point mobile parcourt la trajectoire. On peut déplacer P, la pointe de la flèche, et régler la courbure de la trajectoire." style="flex:1 1 280px;max-width:360px;height:auto;touch-action:none;">
+<defs><marker id="fca" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker>
+<marker id="fcb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#C2770B"/></marker>
+<clipPath id="fc-mclip"><rect x="10" y="34" width="340" height="280"/></clipPath></defs>
+<rect x="10" y="34" width="340" height="280" fill="#f5f8fa" stroke="#cbd5e1" stroke-width="1"/>
+<path id="fc-cont" d="M0,0" fill="none" stroke="#94a3b8" stroke-width="1" clip-path="url(#fc-mclip)"/>
+<g clip-path="url(#fc-mclip)"><path id="fc-gam" d="M0,0" fill="none" stroke="#C2770B" stroke-width="2.4" marker-end="url(#fcb)"/></g>
+<line id="fc-v" x1="0" y1="0" x2="0" y2="0" stroke="#004D80" stroke-width="2.8" marker-end="url(#fca)"/>
+<circle id="fc-hp" cx="0" cy="0" r="15" fill="#334155" fill-opacity="0.001"/>
+<circle id="fc-p" cx="0" cy="0" r="5.5" fill="#334155" stroke="#fff" stroke-width="1.6" pointer-events="none"/>
+<circle id="fc-m" cx="0" cy="0" r="5" fill="#C2770B" stroke="#fff" stroke-width="1.6" pointer-events="none"/>
+<circle id="fc-ht" cx="0" cy="0" r="15" fill="#004D80" fill-opacity="0.001"/>
+<text id="fc-lp" x="0" y="0" font-size="14" font-style="italic" fill="#334155" font-family="Georgia,'Times New Roman',serif">P</text>
+<text id="fc-lv" x="0" y="0" font-size="15" font-weight="bold" fill="#004D80" font-family="Georgia,'Times New Roman',serif">v</text>
+<text id="fc-lg" x="0" y="0" font-size="14" font-style="italic" fill="#C2770B" font-family="Georgia,'Times New Roman',serif">γ</text>
+<text x="10" y="26" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">carte : courbes de niveau de <tspan font-style="italic">f</tspan></text>
+<text x="10" y="332" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">glissez <tspan font-style="italic">P</tspan> et la pointe de la flèche</text>
+</svg>
+<svg id="fc-gr" viewBox="0 0 360 340" role="img" aria-label="Graphe de la valeur de f le long de la trajectoire en fonction du temps t, entre -1 et 1. Des lignes horizontales marquent les niveaux de la carte. La droite bleue est la tangente à la courbe en t = 0 ; sa pente est la valeur de la différentielle de f sur la flèche v. La courbe change avec la courbure de la trajectoire, pas la tangente." style="flex:1 1 280px;max-width:360px;height:auto;">
+<defs><clipPath id="fc-gclip"><rect x="40" y="40" width="310" height="230"/></clipPath></defs>
+<rect x="40" y="40" width="310" height="230" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+<g clip-path="url(#fc-gclip)">
+<path id="fc-grid" d="M0,0" fill="none" stroke="#94a3b8" stroke-width="1"/>
+<line x1="195" y1="40" x2="195" y2="270" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 3"/>
+<line id="fc-tan" x1="0" y1="0" x2="0" y2="0" stroke="#004D80" stroke-width="2.4"/>
+<path id="fc-cur" d="M0,0" fill="none" stroke="#C2770B" stroke-width="2.4"/></g>
+<circle id="fc-g0" cx="195" cy="155" r="5" fill="#334155" stroke="#fff" stroke-width="1.6"/>
+<circle id="fc-gm" cx="0" cy="0" r="5" fill="#C2770B" stroke="#fff" stroke-width="1.6"/>
+<text x="40" y="26" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">valeur de <tspan font-style="italic">f</tspan> le long de la trajectoire</text>
+<text x="40" y="288" font-size="12" text-anchor="middle" fill="#64748b" font-family="Georgia,'Times New Roman',serif">−1</text>
+<text x="195" y="288" font-size="12" text-anchor="middle" fill="#64748b" font-family="Georgia,'Times New Roman',serif">0</text>
+<text x="350" y="288" font-size="12" text-anchor="middle" fill="#64748b" font-family="Georgia,'Times New Roman',serif">1</text>
+<text x="200" y="288" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" dx="60" font-style="italic">temps <tspan font-style="italic">t</tspan></text>
+<text id="fc-r1" x="40" y="312" font-size="13.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif"></text>
+<text id="fc-r2" x="40" y="331" font-size="12.5" fill="#475569" font-family="Georgia,'Times New Roman',serif"></text>
+</svg>
+<div style="flex:1 1 100%;display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:center;align-items:center;margin:2px 0 6px;font-size:0.92em;">
+<label style="display:inline-flex;align-items:center;gap:8px;margin:0;font-weight:normal;"><span>courbure de la trajectoire</span> <input type="range" class="fig-range" id="fc-c" min="-2" max="2" step="0.05" value="0.9" style="width:120px;margin:0;"></label>
+<label style="display:inline-flex;align-items:center;gap:8px;margin:0;font-weight:normal;"><span>instant <i>t</i></span> <input type="range" class="fig-range" id="fc-t" min="-1" max="1" step="0.02" value="0.5" style="width:120px;margin:0;"> <span id="fc-tv" style="min-width:2.6em;">0,50</span></label>
+</div>
+</div>
+<script>
+(function () {
+  var F = window.FG, svg = F.$('fc-map'); if (!svg) return;
+  var S = 34, OX = 10, OY = 314, DV = 0.4, H = 2.4, K = 115 / H, VMAX = 1.5;
+  function X(x) { return OX + S * x; } function Y(y) { return OY - S * y; }
+  function TX(t) { return 195 + 155 * t; }
+  var HL = [[4.2, 3.2, 3.9, 5.5, 3.2], [3.4, 7.0, 3.3, 4.5, 3.8]];
+  function V(x, y) { var s = 0; HL.forEach(function (h) { s += h[0] * Math.exp(-((x - h[1]) * (x - h[1]) / h[3] + (y - h[2]) * (y - h[2]) / h[4])); }); return s; }
+  function G(x, y) { var gx = 0, gy = 0; HL.forEach(function (h) { var e = h[0] * Math.exp(-((x - h[1]) * (x - h[1]) / h[3] + (y - h[2]) * (y - h[2]) / h[4])); gx += e * (-2 * (x - h[1]) / h[3]); gy += e * (-2 * (y - h[2]) / h[4]); }); return [gx, gy]; }
+  var lev = []; for (var l = 0.4; l < 4.3; l += 0.4) lev.push(l);
+  F.$('fc-cont').setAttribute('d', F.contours(V, 0, 10, 0, 8.2, 110, 90, lev, X, Y));
+  var p = [5.2, 2.0], v = [0.6, 1.0], c = 0.9, tt = 0.5;
+  function gam(t) { var a = [-c * v[1], c * v[0]]; return [p[0] + t * v[0] + t * t / 2 * a[0], p[1] + t * v[1] + t * t / 2 * a[1]]; }
+  function draw() {
+    var f0 = V(p[0], p[1]), g = G(p[0], p[1]), s = g[0] * v[0] + g[1] * v[1], i, t, q, d = '', dc = '', dg = '';
+    for (i = 0; i <= 40; i++) { t = -1 + i * 0.05; q = gam(t); d += (i ? 'L' : 'M') + X(q[0]).toFixed(1) + ',' + Y(q[1]).toFixed(1); }
+    F.$('fc-gam').setAttribute('d', d);
+    for (i = 0; i <= 80; i++) { t = -1 + i * 0.025; q = gam(t); dc += (i ? 'L' : 'M') + TX(t).toFixed(1) + ',' + (155 - (V(q[0], q[1]) - f0) * K).toFixed(1); }
+    F.$('fc-cur').setAttribute('d', dc);
+    for (i = 1; i <= 10; i++) { var yy = 155 - (DV * i - f0) * K; if (yy > 36 && yy < 274) dg += 'M40,' + yy.toFixed(1) + 'L350,' + yy.toFixed(1); }
+    F.$('fc-grid').setAttribute('d', dg);
+    F.put(F.$('fc-tan'), { x1: TX(-1), y1: 155 + s * K, x2: TX(1), y2: 155 - s * K });
+    F.put(F.$('fc-v'), { x1: X(p[0]), y1: Y(p[1]), x2: X(p[0] + v[0]), y2: Y(p[1] + v[1]) });
+    F.put(F.$('fc-p'), { cx: X(p[0]), cy: Y(p[1]) }); F.put(F.$('fc-hp'), { cx: X(p[0]), cy: Y(p[1]) });
+    F.put(F.$('fc-ht'), { cx: X(p[0] + v[0]), cy: Y(p[1] + v[1]) });
+    F.put(F.$('fc-lp'), { x: X(p[0]) - 16, y: Y(p[1]) + 17 }); F.put(F.$('fc-lv'), { x: X(p[0] + v[0]) + 8, y: Y(p[1] + v[1]) - 8 });
+    q = gam(1); F.put(F.$('fc-lg'), { x: X(q[0]) + 8, y: Y(q[1]) + 4 });
+    q = gam(tt); F.put(F.$('fc-m'), { cx: X(q[0]), cy: Y(q[1]) });
+    F.put(F.$('fc-gm'), { cx: TX(tt), cy: 155 - (V(q[0], q[1]) - f0) * K });
+    F.$('fc-tv').textContent = F.fmt(tt);
+    F.$('fc-r1').innerHTML = F.T([['pente en 0 : d'], ['f', 'i'], ['(', ''], ['v', 'b'], [') = ' + (s >= 0 ? '+' : '') + F.fmt(s)]]);
+    F.$('fc-r2').textContent = (s >= 0 ? '+' : '') + F.fmt(s / DV, 1) + ' lignes de niveau franchies par unité de temps';
+  }
+  F.drag(svg, F.$('fc-hp'), function (q) { p = [F.clamp((q.x - OX) / S, 0.5, 9.5), F.clamp((OY - q.y) / S, 0.5, 7.7)]; draw(); });
+  F.drag(svg, F.$('fc-ht'), function (q) { var dx = (q.x - X(p[0])) / S, dy = (Y(p[1]) - q.y) / S, n = Math.hypot(dx, dy); if (n > VMAX) { dx *= VMAX / n; dy *= VMAX / n; } v = [dx, dy]; draw(); });
+  F.$('fc-c').addEventListener('input', function () { c = parseFloat(this.value); draw(); });
+  F.$('fc-t').addEventListener('input', function () { tt = parseFloat(this.value); draw(); });
+  draw();
+})();
+</script>
+<p class="legende">À gauche, une trajectoire $\gamma$ (orange) qui passe en $P$ avec la vitesse $\vec v$ (bleu), parcourue de $t = -1$ à $t = 1$. À droite, la valeur de $f$ le long de cette trajectoire&nbsp;: les lignes grises horizontales sont les niveaux de la carte, que le point mobile franchit aux mêmes instants. La droite bleue est la tangente en $t = 0$, de pente $\mathrm{d}f_P(\vec v)$. En faisant varier la courbure, la trajectoire et la courbe orange changent, mais la tangente reste la même.</p>
+
+Le résultat ne dépend que de $\vec v$, pas de la trajectoire choisie&nbsp;: deux trajectoires qui passent en $P$ avec la même vitesse, mais se courbent différemment, ont des graphes différents et la même tangente en $t = 0$. La règle de dérivation en chaîne, que la [section sur les coordonnées polaires](#polaires) énonce, en donne la raison&nbsp;: la pente ne fait intervenir que les composantes de $\vec v$.
+
+Toutes les 1-formes ne sont pas de cette forme (le travail d'une force de frottement n'est la différentielle d'aucune fonction), mais celles-là sont les plus familières.
 
 ## Deux sortes de composantes, sans dictionnaire {#composantes}
 
