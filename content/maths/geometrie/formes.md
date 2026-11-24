@@ -110,7 +110,7 @@ Ce formalisme apporte trois choses&nbsp;:
 <li>Un seul théorème, celui de Stokes, contient le théorème fondamental de l'analyse, la formule de Green et celle de la divergence.</li>
 </ol>
 
-Les calculs se font toujours dans un système de coordonnées mais grace aux formes, les formules gardent la même tête d'un système à l'autre.
+Les calculs se font toujours dans un système de coordonnées, mais grâce aux formes, les formules gardent la même tête d'un système à l'autre.
 
 <script>
 window.FG = (function () {
@@ -185,9 +185,9 @@ window.FG = (function () {
 
 ## Des flèches et des mesureurs {#fleches}
 
-Sur une carte, la position est un point. Un petit déplacement à partir de ce point est un **vecteur** (plus précisément un *vecteur tangent*)&nbsp;: une flèche. L'altitude $V$ est une fonction du point. Si l'on se déplace de la flèche $\vec v$, l'altitude varie, et cette variation est proportionnelle à $\vec v$ et additive quand on ajoute des flèches&nbsp;: elle dépend **linéairement** de $\vec v$. L'application linéaire qui à une flèche associe la variation d'altitude, c'est la **différentielle** $\mathrm{d}V$ de la fonction, au point considéré.
+Sur une carte, la position est un point. Un petit déplacement à partir de ce point est un **vecteur** (plus précisément un *vecteur tangent*)&nbsp;: une flèche. L'altitude $V$ est une fonction du point, et la question est simple&nbsp;: si l'on fait le pas $\vec v$ à partir de $P$, de combien l'altitude varie-t-elle&nbsp;? À petite échelle, doubler le pas double la variation, et deux pas mis bout à bout additionnent leurs variations&nbsp;: la variation d'altitude dépend **linéairement** de $\vec v$. L'application linéaire qui à une flèche associe la variation d'altitude est la **différentielle** $\mathrm{d}V$ de la fonction, au point considéré. Ce n'est pas une flèche, mais une machine qui prend une flèche et rend un nombre&nbsp;: un mesureur.
 
-Pour la dessiner, traçons les lignes où $V$ vaut $V(P)$, $V(P) + \Delta$, $V(P) + 2\Delta$, et ainsi de suite. De très près, ces courbes de niveau se redressent en droites parallèles et équidistantes. Une flèche partant de $P$ franchit un certain nombre de ces lignes&nbsp;: c'est la valeur de $\mathrm{d}V$ sur la flèche, en unités de $\Delta$ (comptée négativement quand on descend). Une application linéaire des flèches vers les nombres se dessine donc comme **une pile de lignes**.
+Comment dessiner un mesureur&nbsp;? Traçons les lignes où $V$ vaut $V(P)$, $V(P) + \Delta$, $V(P) + 2\Delta$, et ainsi de suite. De très près, ces courbes de niveau se redressent en droites parallèles et équidistantes. Une flèche partant de $P$ franchit un certain nombre de ces lignes&nbsp;: c'est la valeur de $\mathrm{d}V$ sur la flèche, en unités de $\Delta$ (comptée négativement quand on descend). Une application linéaire des flèches vers les nombres se dessine donc comme **une pile de lignes**.
 
 <div class="svg-container">
 <svg id="f1-svg" viewBox="0 0 600 345" role="img" aria-label="Carte de courbes de niveau d'une colline à deux sommets. En un point P, la différentielle de l'altitude est dessinée comme une pile de lignes parallèles et équidistantes. Une flèche partant de P franchit un certain nombre de ces lignes : c'est la valeur de la différentielle sur cette flèche. On peut déplacer P et la pointe de la flèche." style="width:100%;max-width:600px;height:auto;touch-action:none;">
@@ -263,11 +263,11 @@ Soit $E$ un espace vectoriel réel (ici, l'espace des vecteurs tangents en un po
 
 </div>
 
-Pour une fonction $f$, le mesureur $\mathrm{d}f$ s'obtient en suivant $f$ le long d'un mouvement. Soit $\gamma$ une trajectoire qui passe en $P$ à l'instant $t = 0$ avec la vitesse $\vec v$&nbsp;: la flèche $\vec v$ est la vitesse du point mobile. Pendant le mouvement, $f$ prend les valeurs $f\big(\gamma(t)\big)$, qui varient avec $t$. La **différentielle** de $f$ en $P$ est la 1-forme qui associe à la flèche $\vec v$ le taux de variation de $f$ à l'instant $0$&nbsp;:
+La carte donne une image de $\mathrm{d}f$. Comment la calculer quand $f$ est donnée par une formule&nbsp;? Imaginons un randonneur qui passe en $P$ à l'instant $t = 0$ avec la vitesse $\vec v$ (c'est la trajectoire $\gamma$), et qui lit son altimètre. Pendant le mouvement, la fonction prend les valeurs $f\big(\gamma(t)\big)$, qui varient avec $t$. La valeur de $\mathrm{d}f$ en $P$ sur la flèche $\vec v$ est le taux de variation de $f$ à l'instant $0$&nbsp;:
 
 $$\mathrm{d}f\_P(\vec v) = \frac{\mathrm{d}}{\mathrm{d}t}f\big(\gamma(t)\big)\Big|\_{t=0}.$$
 
-Sur le graphe de $t \mapsto f\big(\gamma(t)\big)$, c'est la pente de la tangente en $t = 0$&nbsp;; sur la carte, c'est le nombre de lignes de niveau franchies (en unités de l'écart $\Delta$ entre lignes) par unité de temps.
+La figure suit un tel randonneur, sur la carte à gauche et sur son altimètre à droite.
 
 <div class="svg-container" style="display:flex;flex-wrap:wrap;gap:6px 10px;justify-content:center;align-items:flex-start;">
 <svg id="fc-map" viewBox="0 0 360 350" role="img" aria-label="Carte de courbes de niveau de l'altitude f, et pile de lignes de la différentielle de f en P. Une trajectoire courbe gamma passe au point P à l'instant 0 ; la flèche v est sa vitesse en P. Un point mobile parcourt la trajectoire. La pile de lignes magenta représente la différentielle de f en P. On peut déplacer P, la pointe de la flèche, et régler la courbure de la trajectoire." style="flex:1 1 280px;max-width:360px;height:auto;touch-action:none;">
@@ -361,11 +361,13 @@ Sur le graphe de $t \mapsto f\big(\gamma(t)\big)$, c'est la pente de la tangente
 </script>
 <p class="legende">À gauche, une trajectoire $\gamma$ (orange) qui passe en $P$ avec la vitesse $\vec v$ (bleu), parcourue de $t = -1$ à $t = 1$, et la pile de lignes magenta qui représente $\mathrm{d}f_P$ (comme dans la figure précédente, avec $\Delta = 0{,}4$ entre deux lignes). À droite, la valeur de $f$ le long de cette trajectoire&nbsp;: les lignes grises horizontales sont les niveaux de la carte, que le point mobile franchit aux mêmes instants. La droite bleue est la tangente en $t = 0$. En faisant varier la courbure, la trajectoire et la courbe orange changent, mais la tangente reste la même.</p>
 
-**Pente ou nombre de lignes&nbsp;?** C'est le même nombre, exprimé dans deux unités. La pente de la droite bleue est $\mathrm{d}f\_P(\vec v)$, en unités de $f$ par unité de temps. En une unité de temps, la flèche $\vec v$ est le déplacement parcouru au premier ordre&nbsp;: elle franchit autant de lignes qu'il y a d'écarts $\Delta$ dans cette variation, soit $\mathrm{d}f\_P(\vec v)/\Delta$ lignes. Par exemple, avec $\Delta = 0{,}4$, une pente de $1{,}73$ correspond à $4{,}3$ lignes franchies.
+**Pente ou nombre de lignes&nbsp;?** C'est le même nombre, exprimé dans deux unités. La pente de la droite bleue est $\mathrm{d}f\_P(\vec v)$, en unités de $f$ par unité de temps. En une unité de temps, la flèche $\vec v$ est (au premier ordre) le déplacement parcouru, et elle franchit autant de lignes qu'il y a d'écarts $\Delta$ dans cette variation, soit $\mathrm{d}f\_P(\vec v)/\Delta$ lignes. Par exemple, avec $\Delta = 0{,}4$, une pente de $1{,}73$ correspond à $4{,}3$ lignes franchies.
 
-La **forme** $\mathrm{d}f\_P$, elle, n'est ni la pente ni le nombre de lignes&nbsp;: c'est l'application $\vec v \mapsto \mathrm{d}f\_P(\vec v)$ tout entière, que la pile de lignes magenta représente. Pente et nombre de lignes sont sa valeur sur une flèche donnée. Avec une autre flèche en $P$ (par exemple le double de $\vec v$, ou une flèche qui longe une ligne magenta), on obtient une autre valeur&nbsp;; la pile de lignes ne change pas.
+La **forme** $\mathrm{d}f\_P$, elle, n'est ni l'un ni l'autre&nbsp;: c'est l'application $\vec v \mapsto \mathrm{d}f\_P(\vec v)$ tout entière, que la pile de lignes magenta représente. Pente et nombre de lignes sont ses valeurs sur la flèche choisie&nbsp;: une autre flèche en $P$ donne une autre valeur, et la pile de lignes reste la même.
 
-Toutes les 1-formes ne sont pas de cette forme (le travail d'une force de frottement n'est la différentielle d'aucune fonction), mais celles-là sont les plus familières.
+Le résultat ne dépend que de $\vec v$ et non de la trajectoire&nbsp;: à petite échelle, la trajectoire se confond avec le déplacement $\vec v\\,\mathrm{d}t$, et sa courbure n'intervient qu'au second ordre.
+
+Les 1-formes ne sont pas toutes des différentielles de fonctions (le travail d'une force de frottement n'en est pas une, voir [Intégrer une 1-forme](#integrer)), mais ce sont les plus familières.
 
 ## Deux sortes de composantes, sans dictionnaire {#composantes}
 
@@ -551,15 +553,15 @@ La figure suivante dessine ces objets pour un système de coordonnées curvilign
 </script>
 <p class="legende">Un système de coordonnées $(q^1, q^2)$ défini par $q^1 = x$ et $q^2 = y - x^2/6$&nbsp;: les courbes $q^1 = \text{cste}$ (vertes) sont des droites, les courbes $q^2 = \text{cste}$ (orange) des paraboles. Ce sont les lignes de $\mathrm{d}q^1$ et de $\mathrm{d}q^2$, avec un écart de $1$. En $P$, le vecteur $\partial_1 = \partial/\partial q^1$ est tangent à la parabole orange et franchit une ligne verte&nbsp;; $\partial_2 = \partial/\partial q^2$ est tangent à la droite verte et franchit une ligne orange. Les $\mathrm{d}q^i$ ne sont donc pas «&nbsp;perpendiculaires&nbsp;» aux $\partial_j$&nbsp;: la dualité ne demande aucun angle. La flèche bleue se décompose en $v^1\partial_1 + v^2\partial_2$ (parallélogramme en tirets), avec $v^i = \mathrm{d}q^i(\vec v)$.</p>
 
-**Les composantes de $\mathrm{d}f$.** Pour une fonction $f$, la valeur de $\mathrm{d}f$ sur $\partial/\partial q^i$ est le taux de variation de $f$ le long de la $i$-ième courbe coordonnée, c'est-à-dire la dérivée partielle $\partial f/\partial q^i$. C'est la pente le long de l'axe $i$ de l'exemple du début&nbsp;: les composantes de $\mathrm{d}f$ sur la base duale sont les dérivées partielles.
-
-## La différentielle et les coordonnées polaires {#polaires}
-
-Les composantes de $\mathrm{d}f$ sur la base duale étant les dérivées partielles $\partial f/\partial q^i$, on a, dans tout système de coordonnées $(q^i)$,
+**Les composantes de $\mathrm{d}f$.** Pour une fonction $f$, la valeur de $\mathrm{d}f$ sur $\partial/\partial q^i$ est le taux de variation de $f$ le long de la $i$-ième courbe coordonnée, c'est-à-dire la dérivée partielle $\partial f/\partial q^i$&nbsp;: c'est la pente le long de l'axe $i$ de l'exemple du début. Comme $\alpha = \alpha\_i\\,\varepsilon^i$, on obtient, dans tout système de coordonnées $(q^i)$,
 
 $$\mathrm{d}f = \frac{\partial f}{\partial q^i}\\,\mathrm{d}q^i.$$
 
-En coordonnées polaires, $\mathrm{d}f = \frac{\partial f}{\partial r}\\,\mathrm{d}r + \frac{\partial f}{\partial\theta}\\,\mathrm{d}\theta$. Aucun facteur $1/r$&nbsp;: la formule est exactement celle des coordonnées cartésiennes. Où est passé le $1/r$ des manuels&nbsp;? Dans le dessin.
+C'est la règle de dérivation en chaîne, et elle garde la même forme d'un système de coordonnées à l'autre.
+
+## La différentielle et les coordonnées polaires {#polaires}
+
+Appliquons cette formule aux coordonnées polaires $(r, \theta)$&nbsp;: $\mathrm{d}f = \frac{\partial f}{\partial r}\\,\mathrm{d}r + \frac{\partial f}{\partial\theta}\\,\mathrm{d}\theta$. Aucun facteur $1/r$&nbsp;: la formule est exactement celle des coordonnées cartésiennes. Où est passé le $1/r$ des manuels&nbsp;? Dans le dessin.
 
 <div class="svg-container">
 <svg id="f3-svg" viewBox="0 0 600 345" role="img" aria-label="Le plan en coordonnées polaires. Les cercles r = constante sont les lignes de niveau de la forme dr, les rayons theta = constante sont celles de la forme d theta. Une flèche partant du point P franchit un certain nombre de cercles et de rayons : ce sont les valeurs de dr et de d theta sur cette flèche. Les rayons s'écartent quand on s'éloigne de l'origine. On peut déplacer P et la pointe de la flèche." style="width:100%;max-width:600px;height:auto;touch-action:none;">
@@ -624,28 +626,26 @@ En coordonnées polaires, $\mathrm{d}f = \frac{\partial f}{\partial r}\\,\mathrm
 
 Le facteur $1/r$ est donc dans l'objet $\mathrm{d}\theta$ lui-même&nbsp;: les rayons divergent. C'est une propriété géométrique, que le dessin montre, et la formule de $\mathrm{d}f$ n'a pas besoin de la répéter.
 
-**Le gradient**, lui, est autre chose&nbsp;: c'est une flèche, alors que $\mathrm{d}f$ est un mesureur. Pour passer de l'un à l'autre, il faut une **métrique** $g$, c'est-à-dire une façon de mesurer longueurs et angles, qui associe à chaque flèche $\vec u$ la 1-forme $g(\vec u, \cdot)$. Le gradient est la flèche $\vec\nabla f$ telle que $g(\vec\nabla f, \cdot) = \mathrm{d}f$, c'est-à-dire
+**Et le gradient&nbsp;?** Le $1/r$ des manuels apparaît dans $\vec\nabla f = \frac{\partial f}{\partial r}\\,\hat e\_r + \frac{1}{r}\frac{\partial f}{\partial\theta}\\,\hat e\_\theta$, car le gradient est une flèche (la direction de plus forte pente), alors que $\mathrm{d}f$ est un mesureur. Pour passer de l'un à l'autre, il faut savoir mesurer longueurs et angles, c'est-à-dire disposer d'une **métrique** $g$, qui associe à chaque flèche $\vec u$ la 1-forme $g(\vec u, \cdot)$ (avec le produit scalaire usuel, c'est $\vec u\cdot(\ \cdot\ )$). Le gradient est la flèche $\vec\nabla f$ telle que $g(\vec\nabla f, \cdot) = \mathrm{d}f$, c'est-à-dire
 
 $$g\big(\vec\nabla f, \vec u\big) = \mathrm{d}f(\vec u)\quad\text{pour toute flèche }\vec u.$$
 
-Quand $g$ est le produit scalaire usuel, cela s'écrit $\vec\nabla f\cdot\vec u = \mathrm{d}f(\vec u)$&nbsp;: la composante de $\vec\nabla f$ dans une direction est le taux de variation de $f$ quand on avance dans cette direction à vitesse $1$.
+Avec le produit scalaire usuel, $\vec\nabla f\cdot\vec u = \mathrm{d}f(\vec u)$&nbsp;: la composante de $\vec\nabla f$ dans une direction est la pente dans cette direction.
 
-Pour trouver $\vec\nabla f$ en coordonnées polaires, on le décompose sur les vecteurs unitaires $\hat e\_r$ et $\hat e\_\theta$, qui sont orthogonaux et de longueur $1$&nbsp;: la composante de $\vec\nabla f$ sur chacun d'eux est son produit scalaire avec celui-ci, c'est-à-dire la valeur de $\mathrm{d}f$ sur celui-ci,
+Pour trouver $\vec\nabla f$ en coordonnées polaires, décomposons-le sur les vecteurs unitaires $\hat e\_r$ et $\hat e\_\theta$, qui sont orthogonaux et de longueur $1$. La composante de $\vec\nabla f$ sur chacun d'eux est son produit scalaire avec celui-ci, c'est-à-dire la valeur de $\mathrm{d}f$ sur celui-ci&nbsp;:
 
 $$\vec\nabla f = \mathrm{d}f(\hat e\_r)\\,\hat e\_r + \mathrm{d}f(\hat e\_\theta)\\,\hat e\_\theta.$$
 
-Il reste à exprimer ces deux vecteurs avec les vecteurs coordonnés&nbsp;:
-<ul>
-<li>$\partial/\partial r$ est la vitesse d'un point qui s'éloigne de l'origine à la vitesse $1$, à $\theta$ fixé. C'est $\hat e_r$, et $\mathrm{d}f(\hat e_r) = \partial f/\partial r$&nbsp;;</li>
-<li>$\partial/\partial\theta$ est la vitesse d'un point qui tourne à la vitesse angulaire $1$, à $r$ fixé. Il parcourt un cercle de rayon $r$ à la vitesse $r$&nbsp;: $\partial/\partial\theta$ est de longueur $r$, et $\hat e_\theta = \frac{1}{r}\,\partial/\partial\theta$. Par linéarité de $\mathrm{d}f$, $\mathrm{d}f(\hat e_\theta) = \frac{1}{r}\,\mathrm{d}f(\partial/\partial\theta) = \frac{1}{r}\,\partial f/\partial\theta$.</li>
-</ul>
-On obtient
+Il reste à exprimer ces deux vecteurs avec les vecteurs coordonnés.
+
+- $\partial/\partial r$ est la vitesse d'un point qui s'éloigne de l'origine à la vitesse $1$, à $\theta$ fixé. C'est $\hat e\_r$, et $\mathrm{d}f(\hat e\_r) = \partial f/\partial r$.
+- $\partial/\partial\theta$ est la vitesse d'un point qui tourne à la vitesse angulaire $1$, à $r$ fixé. Il parcourt un cercle de rayon $r$ à la vitesse $r$&nbsp;: $\partial/\partial\theta$ est de longueur $r$, et $\hat e\_\theta = \frac{1}{r}\\,\partial/\partial\theta$. Par linéarité de $\mathrm{d}f$, $\mathrm{d}f(\hat e\_\theta) = \frac{1}{r}\\,\mathrm{d}f(\partial/\partial\theta) = \frac{1}{r}\\,\partial f/\partial\theta$.
+
+On obtient la formule des manuels&nbsp;:
 
 $$\vec\nabla f = \frac{\partial f}{\partial r}\\,\hat e\_r + \frac{1}{r}\frac{\partial f}{\partial\theta}\\,\hat e\_\theta.$$
 
-C'est la métrique $g = \mathrm{d}r^2 + r^2\\,\mathrm{d}\theta^2$ qui dit que $\partial/\partial\theta$ est de longueur $r$ ($g(\partial\_\theta, \partial\_\theta) = r^2$). Le même calcul, sans passer par les vecteurs unitaires, donne dans un système de coordonnées quelconque les composantes $(\vec\nabla f)^i = g^{ij}\\,\partial f/\partial q^j$, où $(g^{ij})$ est la matrice inverse de la matrice $(g\_{ij})$ de la métrique. Ici $(g\_{ij}) = \mathrm{diag}(1, r^2)$, donc $\vec\nabla f = \frac{\partial f}{\partial r}\\,\frac{\partial}{\partial r} + \frac{1}{r^2}\frac{\partial f}{\partial\theta}\\,\frac{\partial}{\partial\theta}$, qui est la formule précédente, puisque $\partial/\partial\theta = r\\,\hat e\_\theta$.
-
-Le $1/r$ de la formule du gradient vient de la métrique, source de tous les facteurs des coordonnées curvilignes. Quand une grandeur est naturellement un mesureur (une variation, une force dérivant d'un potentiel, un travail), on n'a pas besoin d'elle.
+Le $1/r$ vient de la métrique $g = \mathrm{d}r^2 + r^2\\,\mathrm{d}\theta^2$, qui dit que $\partial/\partial\theta$ est de longueur $r$ ($g(\partial\_\theta, \partial\_\theta) = r^2$). Sans passer par les vecteurs unitaires, le même calcul donne dans un système de coordonnées quelconque les composantes $(\vec\nabla f)^i = g^{ij}\\,\partial f/\partial q^j$, où $(g^{ij})$ est la matrice inverse de la matrice $(g\_{ij})$ de la métrique. Ici $(g\_{ij}) = \mathrm{diag}(1, r^2)$, d'où $\vec\nabla f = \frac{\partial f}{\partial r}\\,\frac{\partial}{\partial r} + \frac{1}{r^2}\frac{\partial f}{\partial\theta}\\,\frac{\partial}{\partial\theta}$, qui est la formule précédente puisque $\partial/\partial\theta = r\\,\hat e\_\theta$. La métrique est donc la source de tous les facteurs des coordonnées curvilignes&nbsp;; quand une grandeur est naturellement un mesureur (une variation, une force dérivant d'un potentiel, un travail), on n'a pas besoin d'elle.
 
 ## Intégrer une 1-forme {#integrer}
 
@@ -657,7 +657,11 @@ par linéarité de $\alpha\_{\gamma(t\_k)}$. La somme de ces nombres tend, quand
 
 $$\int\_\gamma \alpha = \int\_a^b \alpha\_{\gamma(t)}\big(\dot\gamma(t)\big)\\,\mathrm{d}t.$$
 
-La quantité $\alpha\_{\gamma(t)}\big(\dot\gamma(t)\big)$ est un nombre qui dépend de $t$&nbsp;: c'est le nombre de lignes de $\alpha$ franchies par unité de temps à l'instant $t$ (comme $\mathrm{d}f(\vec v)$ dans la section précédente). L'intégrale est l'aire sous son graphe, que la figure construit avec des rectangles.
+Le nombre $\alpha\_{\gamma(t)}\big(\dot\gamma(t)\big)$ dépend de $t$&nbsp;: c'est le nombre de lignes de $\alpha$ franchies par unité de temps à l'instant $t$ (comme $\mathrm{d}f(\vec v)$ dans la première section), et l'intégrale est l'aire sous son graphe. Pour le voir sur un exemple, prenons la 1-forme la plus concrète de la physique, **le travail d'une force**. Une force $\vec F$ qui s'exerce sur un point matériel lui fournit, pendant un petit déplacement $\vec u$, le travail $\vec F\cdot\vec u$. Cette quantité est linéaire en $\vec u$&nbsp;: c'est une 1-forme, $\omega\_F = \vec F\cdot(\ \cdot\ )$. Sur un chemin, $\omega\_F(\dot\gamma) = \vec F\cdot\dot\gamma$ est la puissance de la force, et le travail est
+
+$$W = \int\_\gamma \omega\_F = \int\_a^b \vec F\big(\gamma(t)\big)\cdot\dot\gamma(t)\\,\mathrm{d}t.$$
+
+La figure construit cette intégrale avec des rectangles.
 
 <div class="svg-container" style="display:flex;flex-wrap:wrap;gap:6px 10px;justify-content:center;align-items:flex-start;">
 <svg id="fw-map" viewBox="0 0 360 350" role="img" aria-label="Carte d'un champ de force F, dessiné par des flèches grises, et d'un chemin gamma qui va du point A au point B en passant par M. Le chemin est découpé en pas de même durée ; chaque pas est coloré en vert quand la force pousse dans le sens du mouvement et en orange quand elle s'y oppose. On peut déplacer A, M et B." style="flex:1 1 280px;max-width:360px;height:auto;touch-action:none;">
@@ -749,31 +753,29 @@ La quantité $\alpha\_{\gamma(t)}\big(\dot\gamma(t)\big)$ est un nombre qui dép
 </script>
 <p class="legende">Le champ de force $\vec F$ (flèches grises) et un chemin $\gamma$ de $A$ à $B$, découpé en $N$ pas de même durée. À droite, le graphe de $t \mapsto \alpha\big(\dot\gamma(t)\big) = \vec F\cdot\dot\gamma$ (la puissance de la force). Chaque rectangle a pour largeur $\Delta t = 1/N$ et pour hauteur la valeur au début du pas, donc pour aire $\alpha(\dot\gamma(t_k))\Delta t$&nbsp;; vert quand la force pousse dans le sens du mouvement, orange quand elle s'y oppose. La somme des aires se rapproche de l'intégrale quand $N$ augmente.</p>
 
-En coordonnées, $\alpha = \alpha\_i\\,\mathrm{d}q^i$ donne $\alpha(\dot\gamma) = \alpha\_i\\,\mathrm{d}q^i/\mathrm{d}t$, et l'on retrouve l'intégrale curviligne usuelle&nbsp;: $\int\_\gamma (P\\,\mathrm{d}x + Q\\,\mathrm{d}y) = \int\_a^b \big(P\\,\dot x + Q\\,\dot y\big)\\,\mathrm{d}t$.
+Le travail est positif sur les portions où la force pousse dans le sens du mouvement (en vert), négatif sur celles où elle s'y oppose (en orange), et nul sur celles où elle est perpendiculaire à la trajectoire (comme la force magnétique sur une charge).
+
+**En coordonnées.** Si $\alpha = \alpha\_i\\,\mathrm{d}q^i$, alors $\alpha(\dot\gamma) = \alpha\_i\\,\mathrm{d}q^i/\mathrm{d}t$, et l'on retrouve l'intégrale curviligne usuelle&nbsp;: $\int\_\gamma (P\\,\mathrm{d}x + Q\\,\mathrm{d}y) = \int\_a^b \big(P\\,\dot x + Q\\,\dot y\big)\\,\mathrm{d}t$. Pour le travail, les composantes sont les valeurs de $\omega\_F$ sur les vecteurs de base&nbsp;: $\omega\_F = F\_x\\,\mathrm{d}x + F\_y\\,\mathrm{d}y + F\_z\\,\mathrm{d}z$ en coordonnées cartésiennes&nbsp;; en polaires, $\omega\_F(\partial/\partial r) = F\_r$ et $\omega\_F(\partial/\partial\theta) = \vec F\cdot r\hat e\_\theta = rF\_\theta$, donc $\omega\_F = F\_r\\,\mathrm{d}r + rF\_\theta\\,\mathrm{d}\theta$.
 
 L'intégrale ne dépend pas du système de coordonnées&nbsp;: le nombre $\alpha(\dot\gamma)\\,\mathrm{d}t$ est défini sans lui. Elle ne dépend pas non plus de la façon de parcourir le chemin. Si l'on reparamètre $\tilde\gamma(s) = \gamma\big(\varphi(s)\big)$ avec $\varphi$ croissante, la vitesse est multipliée par $\varphi'(s)$, et le changement de variable $t = \varphi(s)$ donne $\int \alpha\big(\dot{\tilde\gamma}(s)\big)\\,\mathrm{d}s = \int \alpha\big(\dot\gamma(t)\big)\\,\mathrm{d}t$&nbsp;: un chemin parcouru deux fois plus vite franchit les mêmes lignes. En revanche, parcourir le chemin en sens inverse change le signe.
 
-**Travail d'une force.** Une force $\vec F$ qui s'exerce sur un point matériel lui fournit, pendant un petit déplacement $\vec u$, le travail $\vec F\cdot\vec u$. Cette quantité est linéaire en $\vec u$&nbsp;: c'est une 1-forme $\omega\_F = \vec F\cdot(\ \cdot\ )$, la **1-forme travail**. Ses composantes sont les valeurs sur les vecteurs de base. En coordonnées cartésiennes, $\omega\_F = F\_x\\,\mathrm{d}x + F\_y\\,\mathrm{d}y + F\_z\\,\mathrm{d}z$&nbsp;; en polaires, $\omega\_F(\partial/\partial r) = F\_r$ et $\omega\_F(\partial/\partial\theta) = \vec F\cdot r\hat e\_\theta = rF\_\theta$, donc $\omega\_F = F\_r\\,\mathrm{d}r + rF\_\theta\\,\mathrm{d}\theta$. Le long d'une trajectoire $\gamma$,
+**Quand la 1-forme est une différentielle.** Pour $\alpha = \mathrm{d}f$, le nombre $\alpha(\dot\gamma)\\,\mathrm{d}t$ est la variation de $f$ pendant $\mathrm{d}t$&nbsp;: compter les lignes de niveau franchies revient à lire la différence d'altitude entre l'arrivée et le départ,
 
-$$W = \int\_\gamma \omega\_F = \int\_a^b \vec F\big(\gamma(t)\big)\cdot\dot\gamma(t)\\,\mathrm{d}t.$$
+$$\int\_\gamma \mathrm{d}f = f(B) - f(A).$$
 
-Le nombre $\vec F\cdot\dot\gamma$ est la puissance de la force, ce que montre le graphe de la figure&nbsp;: le travail est l'intégrale de la puissance. Il est positif sur les portions où la force pousse dans le sens du mouvement, négatif sur celles où elle s'y oppose, et nul sur celles où elle est perpendiculaire à la trajectoire (comme la force magnétique sur une charge).
+Le résultat ne dépend que des extrémités $A$ et $B$ du chemin&nbsp;: c'est le théorème fondamental de l'analyse. Une 1-forme qui est la différentielle d'une fonction est dite **exacte**. Le travail d'une force dérivant d'un potentiel, $\omega\_F = -\mathrm{d}V$, est exact&nbsp;: $W = V(A) - V(B)$, et la force est conservative. Celui d'une force de frottement fluide $\vec F = -\lambda\dot\gamma$ vaut $-\lambda\int\|\dot\gamma\|^2\mathrm{d}t$ et dépend du chemin&nbsp;: il n'est pas exact. C'est aussi le cas de la force de la figure&nbsp;: en déplaçant le point $M$, l'intégrale change alors que $A$ et $B$ restent fixes.
 
 **Circulation d'un fluide.** Soit $\vec u(\vec r)$ le champ des vitesses d'un fluide, c'est-à-dire la vitesse du fluide en chaque point. La 1-forme associée est $\vec u\cdot(\ \cdot\ ) = u\_x\\,\mathrm{d}x + u\_y\\,\mathrm{d}y + u\_z\\,\mathrm{d}z$, qui à un petit déplacement $\vec w$ associe $\vec u\cdot\vec w$. Sur un chemin fermé $\gamma$, son intégrale est la **circulation**
 
 $$\Gamma = \oint\_\gamma \vec u\cdot\mathrm{d}\vec r = \int\_a^b \vec u\big(\gamma(t)\big)\cdot\dot\gamma(t)\\,\mathrm{d}t.$$
 
-Elle mesure combien le fluide tourne le long de la boucle&nbsp;: c'est la composante de la vitesse du fluide le long de la boucle, additionnée sur toute sa longueur. Pour un fluide en rotation d'ensemble à la vitesse angulaire $\Omega$, $\vec u = \Omega(-y, x)$, soit la 1-forme $\Omega(-y\\,\mathrm{d}x + x\\,\mathrm{d}y) = \Omega r^2\\,\mathrm{d}\theta$. Sur le cercle $\gamma(t) = R(\cos t, \sin t)$, $t \in [0, 2\pi]$, la vitesse est $\dot\gamma = R(-\sin t, \cos t)$ et $\vec u\cdot\dot\gamma = \Omega R^2$, donc $\Gamma = 2\pi\Omega R^2$&nbsp;: le double du produit de $\Omega$ par l'aire du disque. Un écoulement dont la vitesse dérive d'un potentiel, $\vec u = \vec\nabla\varphi$, a au contraire une circulation nulle sur toute boucle, puisque sa 1-forme est $\mathrm{d}\varphi$ (voir ci-dessous). Le lien général entre circulation et rotation du champ est le théorème de Stokes, de la [section sur la différentielle extérieure](#stokes).
-
-Pour $\alpha = \mathrm{d}f$, compter les lignes de niveau franchies revient à lire la différence d'altitude entre l'arrivée et le départ&nbsp;:
-
-$$\int\_\gamma \mathrm{d}f = f(B) - f(A).$$
-
-Le résultat ne dépend que des extrémités $A$ et $B$ du chemin&nbsp;: c'est le théorème fondamental de l'analyse. Une 1-forme qui est la différentielle d'une fonction est dite **exacte**. Le travail d'une force dérivant d'un potentiel est exact (la force est conservative)&nbsp;; celui d'une force de frottement fluide $\vec F = -\lambda\dot\gamma$, qui vaut $-\lambda\int\|\dot\gamma\|^2\mathrm{d}t$ et dépend du chemin, ne l'est pas.
+Elle mesure combien le fluide tourne le long de la boucle&nbsp;: c'est la composante de la vitesse du fluide le long de la boucle, additionnée sur toute sa longueur. Pour un fluide en rotation d'ensemble à la vitesse angulaire $\Omega$, $\vec u = \Omega(-y, x)$, soit la 1-forme $\Omega(-y\\,\mathrm{d}x + x\\,\mathrm{d}y) = \Omega r^2\\,\mathrm{d}\theta$. Sur le cercle $\gamma(t) = R(\cos t, \sin t)$, $t \in [0, 2\pi]$, la vitesse est $\dot\gamma = R(-\sin t, \cos t)$ et $\vec u\cdot\dot\gamma = \Omega R^2$, donc $\Gamma = 2\pi\Omega R^2$&nbsp;: le double du produit de $\Omega$ par l'aire du disque. Un écoulement dont la vitesse dérive d'un potentiel, $\vec u = \vec\nabla\varphi$, a au contraire une circulation nulle sur toute boucle, puisque sa 1-forme est $\mathrm{d}\varphi$, exacte. Le lien général entre circulation et rotation du champ est le théorème de Stokes, de la [section sur la différentielle extérieure](#stokes).
 
 ## Aires orientées&nbsp;: les 2-formes {#aires}
 
-Un mesureur à une flèche est une 1-forme. Un mesureur à **deux** flèches, qui à deux vecteurs associe un nombre, linéaire en chacun et **antisymétrique** (échanger les deux flèches change le signe), est une **2-forme**. On en fabrique à partir de deux 1-formes $\alpha$ et $\beta$&nbsp;: leur **produit extérieur** est la 2-forme
+Un mesureur à une flèche est une 1-forme. Pour une surface, la brique élémentaire est un petit parallélogramme construit sur deux petits déplacements $\vec u$ et $\vec v$, et l'on cherche un mesureur qui lui associe un nombre, par exemple son aire. Que doit-il vérifier&nbsp;? Doubler $\vec u$ double l'aire, et accoler deux parallélogrammes de même côté $\vec v$ additionne leurs aires&nbsp;: le mesureur est **linéaire** en chacune des deux flèches. Échanger $\vec u$ et $\vec v$ retourne l'orientation&nbsp;: il est **antisymétrique** (et deux flèches parallèles engendrent un parallélogramme plat, d'aire nulle). Un mesureur à **deux** flèches, linéaire en chacune et antisymétrique, est une **2-forme**.
+
+On en fabrique à partir de deux 1-formes $\alpha$ et $\beta$&nbsp;: leur **produit extérieur** est la 2-forme
 
 $$(\alpha\wedge\beta)(\vec u, \vec v) = \alpha(\vec u)\\,\beta(\vec v) - \alpha(\vec v)\\,\beta(\vec u).$$
 
@@ -844,7 +846,7 @@ C'est le déterminant des deux vecteurs, l'aire orientée du parallélogramme qu
 </script>
 <p class="legende">Le quadrillage représente $\mathrm{d}x\wedge\mathrm{d}y$. Le parallélogramme construit sur $\vec u$ et $\vec v$ balaie un certain nombre de carreaux, positif si l'on tourne de $\vec u$ vers $\vec v$ dans le sens direct, négatif sinon. Échanger les deux flèches change le signe.</p>
 
-**Changer de variables.** Écrivons $\mathrm{d}x$ et $\mathrm{d}y$ avec $\mathrm{d}r$ et $\mathrm{d}\theta$. Les fonctions $x = r\cos\theta$ et $y = r\sin\theta$ dépendent de $(r, \theta)$, et la différentielle d'une fonction se développe sur les différentielles des coordonnées (section [La différentielle et les coordonnées polaires](#polaires))&nbsp;:
+**Changer de variables.** Que devient $\mathrm{d}x\wedge\mathrm{d}y$ en coordonnées polaires&nbsp;? Écrivons d'abord $\mathrm{d}x$ et $\mathrm{d}y$ avec $\mathrm{d}r$ et $\mathrm{d}\theta$. Les fonctions $x = r\cos\theta$ et $y = r\sin\theta$ dépendent de $(r, \theta)$, et la formule $\mathrm{d}f = \frac{\partial f}{\partial q^i}\\,\mathrm{d}q^i$ de la section [Deux sortes de composantes](#composantes) donne
 
 $$\mathrm{d}x = \frac{\partial x}{\partial r}\\,\mathrm{d}r + \frac{\partial x}{\partial\theta}\\,\mathrm{d}\theta = \cos\theta\\,\mathrm{d}r - r\sin\theta\\,\mathrm{d}\theta,\qquad \mathrm{d}y = \sin\theta\\,\mathrm{d}r + r\cos\theta\\,\mathrm{d}\theta.$$
 
@@ -920,15 +922,19 @@ Le jacobien de la transformation, ici le facteur $r$, apparaît sans qu'on calcu
 </script>
 <p class="legende">À gauche, une petite case $\Delta r\times\Delta\theta$ dans le plan des coordonnées $(r, \theta)$. À droite, la même case dans le plan réel&nbsp;: elle est étirée d'un facteur voisin de $r$ (exactement $r + \Delta r/2$). C'est le facteur de $\mathrm{d}x\wedge\mathrm{d}y = r\,\mathrm{d}r\wedge\mathrm{d}\theta$.</p>
 
+**Intégrer une 2-forme.** Comme pour une 1-forme le long d'un chemin, on découpe une surface $D$ en petits parallélogrammes, construits sur des couples de petits déplacements $(\vec u\_k, \vec v\_k)$, et l'on additionne les nombres $\omega(\vec u\_k, \vec v\_k)$&nbsp;: c'est $\int\_D\omega$. Pour $\omega = h\\,\mathrm{d}x\wedge\mathrm{d}y$, on retrouve l'intégrale double usuelle $\iint h\\,\mathrm{d}x\\,\mathrm{d}y$&nbsp;; en polaires, $\omega = h\\,r\\,\mathrm{d}r\wedge\mathrm{d}\theta$ donne $\iint h\\,r\\,\mathrm{d}r\\,\mathrm{d}\theta$, avec le facteur $r$ de la figure.
+
 En dimension $3$, une 2-forme mesure des petites surfaces orientées&nbsp;: on la dessine comme un champ de **tubes**, et sa valeur sur une surface est le nombre de tubes qu'elle traverse. C'est la notion de **flux**.
 
 ## La différentielle extérieure et le théorème de Stokes {#stokes}
 
-On sait différentier une fonction&nbsp;: $f \mapsto \mathrm{d}f$. La **différentielle extérieure** $\mathrm{d}$ prolonge cette opération aux formes de tout degré. Sur une 1-forme $\alpha = P\\,\mathrm{d}x + Q\\,\mathrm{d}y$, elle vaut
+Le théorème fondamental de l'analyse dit que l'intégrale de $\mathrm{d}f$ le long d'un chemin ne dépend que de son bord, ses deux extrémités&nbsp;: $\int\_\gamma\mathrm{d}f = f(B) - f(A)$. Existe-t-il un énoncé analogue pour une surface, dont le bord est une courbe fermée&nbsp;? Pour le formuler, il faut une opération qui prolonge $f \mapsto \mathrm{d}f$ aux formes de tout degré&nbsp;: la **différentielle extérieure** $\mathrm{d}$, qui consiste à différentier les coefficients. Sur une 1-forme $\alpha = P\\,\mathrm{d}x + Q\\,\mathrm{d}y$, elle vaut
 
 $$\mathrm{d}\alpha = \mathrm{d}P\wedge\mathrm{d}x + \mathrm{d}Q\wedge\mathrm{d}y = \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)\mathrm{d}x\wedge\mathrm{d}y.$$
 
 (Les termes en $\mathrm{d}x\wedge\mathrm{d}x$ et $\mathrm{d}y\wedge\mathrm{d}y$ s'annulent par antisymétrie.) On la lit comme la circulation de $\alpha$ par unité d'aire&nbsp;: c'est le rotationnel. Appliquée deux fois à une fonction, elle donne zéro, $\mathrm{d}(\mathrm{d}f) = 0$&nbsp;: avec $P = \partial f/\partial x$ et $Q = \partial f/\partial y$, le coefficient de $\mathrm{d}x\wedge\mathrm{d}y$ est $\frac{\partial^2f}{\partial x\\,\partial y} - \frac{\partial^2f}{\partial y\\,\partial x} = 0$ (théorème de Schwarz). Plus généralement, $\mathrm{d}\circ\mathrm{d} = 0$.
+
+L'énoncé cherché est le suivant.
 
 <div id="theo">
 
@@ -996,12 +1002,12 @@ Pourquoi est-ce vrai&nbsp;? On découpe $D$ en petites cases. La circulation de 
 </script>
 <p class="legende">La 1-forme $\alpha = x\,\mathrm{d}y$ a pour différentielle extérieure $\mathrm{d}\alpha = \mathrm{d}x\wedge\mathrm{d}y$, dont l'intégrale sur le rectangle est son aire, $6$. Plus le découpage est fin, plus les arêtes intérieures (grises) se compensent par paires, et la somme sur les cases coïncide avec la circulation sur le bord (bleu).</p>
 
-Ce seul énoncé contient des résultats qu'on apprend séparément&nbsp;: en dimension $1$, c'est le théorème fondamental de l'analyse, $\int\_a^b\mathrm{d}f = f(b) - f(a)$&nbsp;; en dimension $2$, la formule de Green&nbsp;; en dimension $3$, le théorème du rotationnel (Stokes-Kelvin) et celui de la divergence (Ostrogradski). Le dictionnaire avec le calcul vectoriel est&nbsp;:
-<ul>
-<li>$\mathrm{d}$ sur une fonction&nbsp;: le gradient&nbsp;;</li>
-<li>$\mathrm{d}$ sur une 1-forme&nbsp;: le rotationnel&nbsp;;</li>
-<li>$\mathrm{d}$ sur une 2-forme (en dimension $3$)&nbsp;: la divergence.</li>
-</ul>
+Ce seul énoncé contient des résultats qu'on apprend séparément&nbsp;: en dimension $1$, c'est le théorème fondamental de l'analyse, $\int\_a^b\mathrm{d}f = f(b) - f(a)$, rappelé plus haut&nbsp;; en dimension $2$, la formule de Green&nbsp;; en dimension $3$, le théorème du rotationnel (Stokes-Kelvin) et celui de la divergence (Ostrogradski). Le dictionnaire avec le calcul vectoriel est&nbsp;:
+
+- $\mathrm{d}$ sur une fonction&nbsp;: le gradient&nbsp;;
+- $\mathrm{d}$ sur une 1-forme&nbsp;: le rotationnel&nbsp;;
+- $\mathrm{d}$ sur une 2-forme (en dimension $3$)&nbsp;: la divergence.
+
 Et $\mathrm{d}\circ\mathrm{d} = 0$ résume à elle seule deux identités, $\vec\nabla\times(\vec\nabla f) = \vec 0$ et $\vec\nabla\cdot(\vec\nabla\times\vec A) = 0$.
 
 ### Le rotationnel en coordonnées polaires
@@ -1018,7 +1024,7 @@ Le $1/r$ est celui de l'élément d'aire, et le $r$ dans la dérivée vient de $
 
 ### Fermée ne veut pas dire exacte
 
-Une forme $\alpha$ est **fermée** si $\mathrm{d}\alpha = 0$. Toute forme exacte est fermée, puisque $\mathrm{d}\circ\mathrm{d} = 0$. La réciproque est vraie localement (c'est le lemme de Poincaré), mais pas toujours globalement. Le contre-exemple standard est la 1-forme $\mathrm{d}\theta = \dfrac{x\\,\mathrm{d}y - y\\,\mathrm{d}x}{x^2 + y^2}$ sur le plan privé de l'origine&nbsp;: un calcul direct donne $\mathrm{d}(\mathrm{d}\theta) = 0$, et pourtant sa circulation sur un cercle autour de l'origine vaut $2\pi$. Elle n'est pas la différentielle d'une fonction définie sur tout le plan privé de l'origine, car l'angle $\theta$ saute de $2\pi$ au bout d'un tour.
+Une forme $\alpha$ est **fermée** si $\mathrm{d}\alpha = 0$. Toute forme exacte (différentielle d'une fonction) est fermée, puisque $\mathrm{d}\circ\mathrm{d} = 0$. La réciproque est vraie localement (c'est le lemme de Poincaré), mais pas toujours globalement. Le contre-exemple standard est la 1-forme $\mathrm{d}\theta = \dfrac{x\\,\mathrm{d}y - y\\,\mathrm{d}x}{x^2 + y^2}$ sur le plan privé de l'origine&nbsp;: un calcul direct donne $\mathrm{d}(\mathrm{d}\theta) = 0$, et pourtant sa circulation sur un cercle autour de l'origine vaut $2\pi$. Elle n'est pas la différentielle d'une fonction définie sur tout le plan privé de l'origine, car l'angle $\theta$ saute de $2\pi$ au bout d'un tour.
 
 <div class="svg-container">
 <svg id="f4-svg" viewBox="0 0 600 300" role="img" aria-label="Le plan privé de l'origine, avec les rayons qui sont les lignes de niveau de la forme d theta. Une boucle circulaire, qu'on peut déplacer, est parcourue dans le sens direct. Si elle entoure l'origine, elle franchit tous les rayons dans le même sens et la somme vaut 2 pi ; sinon elle les franchit autant de fois dans un sens que dans l'autre et la somme est nulle." style="width:100%;max-width:600px;height:auto;touch-action:none;">
@@ -1079,7 +1085,7 @@ Dans des coordonnées $(q^i)$ quelconques, la vitesse est un **vecteur** $\vec v
 
 ### Le moment est une 1-forme
 
-La masse, ou plus généralement la métrique $g$ de l'espace des configurations, transforme une flèche en mesureur&nbsp;: $\vec v \mapsto m\\,g(\vec v, \cdot)$. C'est l'**isomorphisme musical** qui «&nbsp;abaisse un indice&nbsp;», noté $\flat$. Le moment est le résultat&nbsp;:
+La masse, ou plus généralement la métrique $g$ de l'espace des configurations, transforme une flèche en mesureur&nbsp;: $\vec v \mapsto m\\,g(\vec v, \cdot)$. C'est l'**isomorphisme musical** qui «&nbsp;abaisse un indice&nbsp;», noté $\flat$, le passage du gradient pris dans l'autre sens (de la flèche vers le mesureur). Le moment est le résultat&nbsp;:
 
 $$p = m\\,g(\vec v, \cdot) = m\\,g\_{ij}\\,\dot q^j\\,\mathrm{d}q^i, \qquad p\_i = m\\,g\_{ij}\\,\dot q^j.$$
 
@@ -1182,7 +1188,7 @@ Les propriétés fondamentales se lisent alors sans calcul&nbsp;:
 
 ### Ce que les formes ne font pas disparaître
 
-La métrique reste présente&nbsp;: le passage de $\dot q$ à $p$ la fait intervenir, et sa dépendance en la position est à l'origine de la force centrifuge, c'est-à-dire du terme $\frac{m}{2}\frac{\partial g\_{kl}}{\partial q^i}\dot q^k\dot q^l$ de la page de mécanique. Les formes ne l'effacent pas&nbsp;; elles montrent où il se range, dans $H = \frac{1}{2m}g^{ab}p\_ap\_b + V$, où $g^{ab}$ est la métrique sur les 1-formes. Et les calculs se font toujours en coordonnées&nbsp;: ce qui change, c'est que les énoncés gardent la même forme quand on change de coordonnées.
+La métrique reste présente&nbsp;: le passage de $\dot q$ à $p$ la fait intervenir, et sa dépendance en la position est à l'origine de la force centrifuge, c'est-à-dire du terme $\frac{m}{2}\frac{\partial g\_{kl}}{\partial q^i}\dot q^k\dot q^l$ de la page de mécanique. Les formes ne l'effacent pas&nbsp;; elles montrent où il se range, dans $H = \frac{1}{2m}g^{ab}p\_ap\_b + V$, où $g^{ab}$ est la métrique sur les 1-formes.
 
 ## Application&nbsp;: la thermodynamique {#thermo}
 
