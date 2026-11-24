@@ -768,11 +768,17 @@ Le résultat ne dépend que des extrémités $A$ et $B$ du chemin&nbsp;: c'est l
 
 ## Aires orientées&nbsp;: les 2-formes {#aires}
 
-Un mesureur à une flèche est une 1-forme. Un mesureur à **deux** flèches, qui à deux vecteurs associe un nombre, linéaire en chacun et **antisymétrique** (échanger les deux flèches change le signe), est une **2-forme**. Le modèle de base est l'aire orientée&nbsp;: le produit extérieur $\mathrm{d}x\wedge\mathrm{d}y$ associe à $(\vec u, \vec v)$ l'aire orientée du parallélogramme qu'ils engendrent,
+Un mesureur à une flèche est une 1-forme. Un mesureur à **deux** flèches, qui à deux vecteurs associe un nombre, linéaire en chacun et **antisymétrique** (échanger les deux flèches change le signe), est une **2-forme**. On en fabrique à partir de deux 1-formes $\alpha$ et $\beta$&nbsp;: leur **produit extérieur** est la 2-forme
+
+$$(\alpha\wedge\beta)(\vec u, \vec v) = \alpha(\vec u)\\,\beta(\vec v) - \alpha(\vec v)\\,\beta(\vec u).$$
+
+Elle est bien linéaire en chaque flèche, et antisymétrique&nbsp;: échanger $\vec u$ et $\vec v$ change le signe, de même qu'échanger $\alpha$ et $\beta$. Donc $\beta\wedge\alpha = -\alpha\wedge\beta$, et $\alpha\wedge\alpha = 0$.
+
+Prenons $\alpha = \mathrm{d}x$ et $\beta = \mathrm{d}y$. La valeur de $\mathrm{d}x$ sur une flèche est sa composante selon $x$ ($\mathrm{d}x(\vec u) = u\_x$, voir la section [Deux sortes de composantes](#composantes)), donc
 
 $$\mathrm{d}x\wedge\mathrm{d}y\\,(\vec u, \vec v) = u\_x v\_y - u\_y v\_x.$$
 
-On reconnaît le déterminant des deux vecteurs. On le dessine comme un quadrillage de carreaux, vus «&nbsp;de face&nbsp;»&nbsp;: la 2-forme est le nombre algébrique de carreaux balayés par le parallélogramme.
+C'est le déterminant des deux vecteurs, l'aire orientée du parallélogramme qu'ils engendrent. On dessine $\mathrm{d}x\wedge\mathrm{d}y$ comme un quadrillage de carreaux, vus «&nbsp;de face&nbsp;»&nbsp;: sa valeur sur $(\vec u, \vec v)$ est le nombre algébrique de carreaux balayés par le parallélogramme.
 
 <div class="svg-container">
 <svg id="f5-svg" viewBox="0 0 600 330" role="img" aria-label="Le plan quadrillé en carreaux unité, qui représentent la forme dx wedge dy. Deux flèches u et v partent de l'origine et délimitent un parallélogramme. La valeur de dx wedge dy sur le couple (u, v) est l'aire orientée de ce parallélogramme, comptée en carreaux ; elle change de signe quand on échange u et v. On peut déplacer les pointes des deux flèches." style="width:100%;max-width:600px;height:auto;touch-action:none;">
@@ -833,9 +839,15 @@ On reconnaît le déterminant des deux vecteurs. On le dessine comme un quadrill
 </script>
 <p class="legende">Le quadrillage représente $\mathrm{d}x\wedge\mathrm{d}y$. Le parallélogramme construit sur $\vec u$ et $\vec v$ balaie un certain nombre de carreaux, positif si l'on tourne de $\vec u$ vers $\vec v$ dans le sens direct, négatif sinon. Échanger les deux flèches change le signe.</p>
 
-De façon générale, le **produit extérieur** de deux 1-formes est $(\alpha\wedge\beta)(\vec u, \vec v) = \alpha(\vec u)\\,\beta(\vec v) - \alpha(\vec v)\\,\beta(\vec u)$. Il est antisymétrique, $\beta\wedge\alpha = -\alpha\wedge\beta$, donc $\alpha\wedge\alpha = 0$.
+**Changer de variables.** Écrivons $\mathrm{d}x$ et $\mathrm{d}y$ avec $\mathrm{d}r$ et $\mathrm{d}\theta$. Les fonctions $x = r\cos\theta$ et $y = r\sin\theta$ dépendent de $(r, \theta)$, et la différentielle d'une fonction se développe sur les différentielles des coordonnées (section [La différentielle et les coordonnées polaires](#polaires))&nbsp;:
 
-**Changer de variables.** Les 1-formes se transforment par les règles du calcul différentiel&nbsp;: $\mathrm{d}x = \cos\theta\\,\mathrm{d}r - r\sin\theta\\,\mathrm{d}\theta$ et $\mathrm{d}y = \sin\theta\\,\mathrm{d}r + r\cos\theta\\,\mathrm{d}\theta$. Le produit extérieur donne alors, en développant et en utilisant $\mathrm{d}r\wedge\mathrm{d}r = \mathrm{d}\theta\wedge\mathrm{d}\theta = 0$ et $\mathrm{d}\theta\wedge\mathrm{d}r = -\mathrm{d}r\wedge\mathrm{d}\theta$,
+$$\mathrm{d}x = \frac{\partial x}{\partial r}\\,\mathrm{d}r + \frac{\partial x}{\partial\theta}\\,\mathrm{d}\theta = \cos\theta\\,\mathrm{d}r - r\sin\theta\\,\mathrm{d}\theta,\qquad \mathrm{d}y = \sin\theta\\,\mathrm{d}r + r\cos\theta\\,\mathrm{d}\theta.$$
+
+Concrètement, une flèche de composantes polaires $(u\_r, u\_\theta) = \big(\mathrm{d}r(\vec u), \mathrm{d}\theta(\vec u)\big)$ a pour composantes cartésiennes $u\_x = \cos\theta\\,u\_r - r\sin\theta\\,u\_\theta$ et $u\_y = \sin\theta\\,u\_r + r\cos\theta\\,u\_\theta$. Le produit extérieur se développe par bilinéarité&nbsp;:
+
+$$\mathrm{d}x\wedge\mathrm{d}y = \cos\theta\sin\theta\\,\mathrm{d}r\wedge\mathrm{d}r + r\cos^2\theta\\,\mathrm{d}r\wedge\mathrm{d}\theta - r\sin^2\theta\\,\mathrm{d}\theta\wedge\mathrm{d}r - r^2\sin\theta\cos\theta\\,\mathrm{d}\theta\wedge\mathrm{d}\theta.$$
+
+Les termes $\mathrm{d}r\wedge\mathrm{d}r$ et $\mathrm{d}\theta\wedge\mathrm{d}\theta$ sont nuls, et $\mathrm{d}\theta\wedge\mathrm{d}r = -\mathrm{d}r\wedge\mathrm{d}\theta$, d'où
 
 $$\mathrm{d}x\wedge\mathrm{d}y = r\left(\cos^2\theta + \sin^2\theta\right)\mathrm{d}r\wedge\mathrm{d}\theta = r\\,\mathrm{d}r\wedge\mathrm{d}\theta.$$
 
