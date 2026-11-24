@@ -103,24 +103,14 @@ overflow-x:auto;
 
 Un vecteur est une flèche&nbsp;: un déplacement, une vitesse. Mais beaucoup de grandeurs ne sont pas des flèches. La variation d'altitude quand on fait un pas sur une carte, le travail d'une force pendant un déplacement, la variation d'énergie d'un gaz qu'on comprime sont des **mesureurs**, qui à chaque flèche associent un nombre. Les **formes différentielles** sont ces mesureurs, avec le calcul qui va avec.
 
-Ce formalisme apporte trois choses, que cette page illustre&nbsp;:
+Ce formalisme apporte trois choses&nbsp;:
 <ol>
 <li>Il distingue dès le départ les flèches et les mesureurs. L'histoire des indices en haut et en bas (composantes contravariantes et covariantes) devient une simple différence de nature entre deux objets.</li>
 <li>Il s'écrit de la même façon dans tous les systèmes de coordonnées. Les facteurs parasites des coordonnées polaires ou sphériques disparaissent des formules, et se retrouvent dans les dessins, où l'on sait les lire.</li>
 <li>Un seul théorème, celui de Stokes, contient le théorème fondamental de l'analyse, la formule de Green et celle de la divergence.</li>
 </ol>
 
-Les calculs se font toujours dans un système de coordonnées&nbsp;; ce que les formes changent, c'est que les formules gardent la même forme d'un système à l'autre. Le parcours&nbsp;:
-<ol>
-<li><a href="#fleches"><b>Des flèches et des mesureurs</b></a>&nbsp;: la différentielle d'une fonction, dessinée comme une pile de lignes.</li>
-<li><a href="#composantes"><b>Deux sortes de composantes</b></a>&nbsp;: indices hauts et bas, sans dictionnaire.</li>
-<li><a href="#polaires"><b>La différentielle et les coordonnées polaires</b></a>&nbsp;: où est passé le $1/r$&nbsp;?</li>
-<li><a href="#integrer"><b>Intégrer une 1-forme</b></a>&nbsp;: travail, circulation, lignes franchies.</li>
-<li><a href="#aires"><b>Aires orientées&nbsp;: les 2-formes</b></a>&nbsp;: le jacobien sans déterminant.</li>
-<li><a href="#stokes"><b>La différentielle extérieure et le théorème de Stokes</b></a>&nbsp;: un énoncé pour tout.</li>
-<li><a href="#hamilton"><b>Application&nbsp;: retour sur les moments</b></a>&nbsp;: la mécanique hamiltonienne en quelques lignes.</li>
-<li><a href="#thermo"><b>Application&nbsp;: la thermodynamique</b></a> et <a href="#maxwell"><b>l'électromagnétisme</b></a>.</li>
-</ol>
+Les calculs se font toujours dans un système de coordonnées mais grace aux formes, les formules gardent la même tête d'un système à l'autre.
 
 <script>
 window.FG = (function () {
