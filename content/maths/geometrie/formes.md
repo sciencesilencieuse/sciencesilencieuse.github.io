@@ -110,7 +110,7 @@ Ce formalisme apporte trois choses&nbsp;:
 <li>Un seul théorème, celui de Stokes, contient le théorème fondamental de l'analyse, la formule de Green et celle de la divergence.</li>
 </ol>
 
-Les calculs se font toujours dans un système de coordonnées, mais grâce aux formes, les formules gardent la même tête d'un système à l'autre.
+Les calculs se font toujours dans un système de coordonnées, mais grâce aux formes, les formules gardent la même tête d'un système à l'autre. On part d'un objet familier&nbsp;: le gradient.
 
 <script>
 window.FG = (function () {
@@ -183,9 +183,107 @@ window.FG = (function () {
 })();
 </script>
 
+## Le gradient, et ce qu'il ne dit pas {#gradient}
+
+Tout physicien connaît le gradient. Sur une colline d'altitude $V(x, y)$, ou dans une pièce de température $T$, c'est la flèche qui pointe vers la plus forte montée, et dont la longueur est la pente. La recette est familière&nbsp;: dans des axes orthonormés, ses composantes sont les dérivées partielles, $\vec\nabla V = (\partial V/\partial x,\ \partial V/\partial y)$, et elle sert à prévoir ce que lit un instrument. Pour un petit déplacement $\Delta\vec r$, l'altitude varie de
+
+$$\Delta V = \vec\nabla V\cdot\Delta\vec r = \frac{\partial V}{\partial x}\\,\Delta x + \frac{\partial V}{\partial y}\\,\Delta y.$$
+
+Cette recette ne dépend-elle que de la colline&nbsp;? Deux arpenteurs étudient la même colline, au même point $P$. L'arpenteur A mesure les deux axes en mètres. Il trouve $\partial V/\partial x = 0{,}3$ et $\partial V/\partial y = 0{,}4$ (des mètres de dénivelé par mètre), et en déduit un gradient de composantes $(0{,}3\,;\,0{,}4)$, de pente $0{,}5$. L'arpenteur B mesure l'axe $x$ en kilomètres et l'axe $y$ en mètres. Il trouve $\partial V/\partial x' = 300$ (des mètres par kilomètre) et $\partial V/\partial y = 0{,}4$, applique la même recette et obtient $(300\,;\,0{,}4)$&nbsp;: une flèche qui pointe presque plein est. Même colline, même point, deux directions de plus forte montée. La recette n'est donc pas indépendante de la graduation des axes&nbsp;: elle n'est correcte que dans des axes orthonormés, c'est-à-dire perpendiculaires et gradués avec la même unité. En coordonnées polaires, on bute sur le même obstacle&nbsp;: la recette $(\partial V/\partial r,\ \partial V/\partial\theta)$ est fausse, et les manuels la corrigent à la main par un facteur $1/r$.
+
+Pourtant, A et B s'accordent sur une chose. Un pas de $10$ m vers l'est et de $10$ m vers le nord s'écrit $(\Delta x, \Delta y) = (10\ \mathrm{m},\ 10\ \mathrm{m})$ pour A, et $(\Delta x', \Delta y) = (0{,}01\ \mathrm{km},\ 10\ \mathrm{m})$ pour B. L'altimètre indique
+
+$$\Delta V = 0{,}3\times 10 + 0{,}4\times 10 = 7\ \mathrm{m}\quad\text{(A)},\qquad \Delta V = 300\times 0{,}01 + 0{,}4\times 10 = 7\ \mathrm{m}\quad\text{(B)}.$$
+
+Les composantes du pas et celles de la «&nbsp;pente&nbsp;» changent d'un arpenteur à l'autre, en sens opposés (le pas est divisé par $1000$, la pente multipliée par $1000$), mais la somme des produits ne change pas&nbsp;: c'est une lecture sur l'instrument. La figure rejoue cette scène sur une colline quelconque.
+
+<div class="svg-container">
+<svg id="fg-svg" viewBox="0 0 600 345" role="img" aria-label="Une colline représentée par ses courbes de niveau, un point P et un petit pas, flèche bleue. Deux arpenteurs appliquent la même recette, le gradient est le couple des dérivées partielles, dans leurs propres unités : A mesure les deux axes en mètres, B mesure l'axe x par graduations de lambda mètres. Les directions qu'ils trouvent, flèche grise pour A et flèche orange pour B, diffèrent dès que lambda n'est pas égal à 1. En revanche, la variation d'altitude pour le pas bleu est la même pour les deux. On peut déplacer P et la pointe du pas, et régler lambda." style="width:100%;max-width:600px;height:auto;touch-action:none;">
+<defs><marker id="fga" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker>
+<marker id="fgb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#334155"/></marker>
+<marker id="fgc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#C2770B"/></marker>
+<clipPath id="fg-map"><rect x="15" y="40" width="365" height="282"/></clipPath></defs>
+<rect x="15" y="40" width="365" height="282" fill="#f5f8fa" stroke="#cbd5e1" stroke-width="1"/>
+<path id="fg-cont" d="M0,0" fill="none" stroke="#94a3b8" stroke-width="1" clip-path="url(#fg-map)"/>
+<line id="fg-ga" x1="0" y1="0" x2="0" y2="0" stroke="#334155" stroke-width="3" marker-end="url(#fgb)"/>
+<line id="fg-gb" x1="0" y1="0" x2="0" y2="0" stroke="#C2770B" stroke-width="3" marker-end="url(#fgc)"/>
+<line id="fg-u" x1="0" y1="0" x2="0" y2="0" stroke="#004D80" stroke-width="2.8" marker-end="url(#fga)"/>
+<circle id="fg-hp" cx="0" cy="0" r="15" fill="#334155" fill-opacity="0.001"/>
+<circle id="fg-p" cx="0" cy="0" r="5.5" fill="#334155" stroke="#fff" stroke-width="1.6" pointer-events="none"/>
+<circle id="fg-ht" cx="0" cy="0" r="15" fill="#004D80" fill-opacity="0.001"/>
+<text id="fg-lp" x="0" y="0" font-size="14" font-style="italic" fill="#334155" font-family="Georgia,'Times New Roman',serif">P</text>
+<text id="fg-la" x="0" y="0" font-size="14" font-weight="bold" fill="#334155" font-family="Georgia,'Times New Roman',serif">A</text>
+<text id="fg-lb" x="0" y="0" font-size="14" font-weight="bold" fill="#C2770B" font-family="Georgia,'Times New Roman',serif">B</text>
+<text id="fg-lu" x="0" y="0" font-size="14" font-style="italic" fill="#004D80" font-family="Georgia,'Times New Roman',serif">pas</text>
+<text x="15" y="28" font-size="13" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">carte d'une colline (courbes de niveau de <tspan font-style="italic">V</tspan>)</text>
+<text x="400" y="58" font-size="13.5" font-weight="bold" fill="#334155" font-family="Georgia,'Times New Roman',serif">A : les deux axes en mètres</text>
+<text id="fg-a1" x="400" y="78" font-size="12.5" fill="#475569" font-family="Georgia,'Times New Roman',serif"></text>
+<text id="fg-a2" x="400" y="96" font-size="12.5" fill="#475569" font-family="Georgia,'Times New Roman',serif"></text>
+<text id="fg-a3" x="400" y="116" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif"></text>
+<text id="fg-bh" x="400" y="150" font-size="13.5" font-weight="bold" fill="#C2770B" font-family="Georgia,'Times New Roman',serif"></text>
+<text id="fg-b1" x="400" y="170" font-size="12.5" fill="#475569" font-family="Georgia,'Times New Roman',serif"></text>
+<text id="fg-b2" x="400" y="188" font-size="12.5" fill="#475569" font-family="Georgia,'Times New Roman',serif"></text>
+<text id="fg-b3" x="400" y="208" font-size="13.5" fill="#C2770B" font-family="Georgia,'Times New Roman',serif"></text>
+<text id="fg-ok" x="400" y="242" font-size="14" font-weight="bold" fill="#970E53" font-family="Georgia,'Times New Roman',serif"></text>
+<text x="400" y="266" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">flèches grise et orange : « gradient =</text>
+<text x="400" y="281" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">(∂V/∂x, ∂V/∂y) » appliqué par A et par B</text>
+<text x="400" y="322" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">glissez <tspan font-style="italic">P</tspan> et la pointe du pas</text>
+</svg>
+<div style="display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:center;align-items:center;margin:2px 0 6px;font-size:0.92em;">
+<label style="display:inline-flex;align-items:center;gap:8px;margin:0;font-weight:normal;"><span>unité de B sur l'axe <i>x</i> (en mètres)</span> <input type="range" class="fig-range" id="fg-l" min="0.25" max="4" step="0.05" value="3" style="width:120px;margin:0;"> <span id="fg-lv" style="min-width:2.6em;">3,00</span></label>
+<button type="button" class="fig-btn" id="fg-r">Mêmes unités</button>
+</div>
+</div>
+<script>
+(function () {
+  var F = window.FG, svg = F.$('fg-svg'); if (!svg) return;
+  var S = 36.5, OX = 15, OY = 322, LEN = 56;                // 1 unité de la carte = 10 m ; altitude en mètres = 3 V
+  function X(x) { return OX + S * x; } function Y(y) { return OY - S * y; }
+  var HL = [[4.2, 3.2, 3.9, 5.5, 3.2], [3.4, 7.0, 3.3, 4.5, 3.8]];
+  function V(x, y) { var s = 0; HL.forEach(function (h) { s += h[0] * Math.exp(-((x - h[1]) * (x - h[1]) / h[3] + (y - h[2]) * (y - h[2]) / h[4])); }); return s; }
+  function G(x, y) { var gx = 0, gy = 0; HL.forEach(function (h) { var e = h[0] * Math.exp(-((x - h[1]) * (x - h[1]) / h[3] + (y - h[2]) * (y - h[2]) / h[4])); gx += e * (-2 * (x - h[1]) / h[3]); gy += e * (-2 * (y - h[2]) / h[4]); }); return [gx, gy]; }
+  var lev = []; for (var l = 0.4; l < 4.3; l += 0.4) lev.push(l);
+  F.$('fg-cont').setAttribute('d', F.contours(V, 0, 10, 0, 7.8, 110, 86, lev, X, Y));
+  var p = [1.8, 2.4], u = [1.2, -0.25], lam = 3;
+  function sg(x, d) { return (x >= 0 ? '+' : '') + F.fmt(x, d); }
+  function draw() {
+    var g = G(p[0], p[1]), sx = 0.3 * g[0], sy = 0.3 * g[1];   // pentes en m par m
+    var dxm = 10 * u[0], dym = 10 * u[1], t1 = sx * dxm, t2 = sy * dym, dV = t1 + t2;
+    var P = [X(p[0]), Y(p[1])], T = [X(p[0] + u[0]), Y(p[1] + u[1])];
+    function dir(ax, ay) { var n = Math.hypot(ax, ay) || 1e-9; return [P[0] + LEN * ax / n, P[1] - LEN * ay / n]; }
+    var A = dir(sx, sy), B = dir(lam * sx, sy);
+    F.put(F.$('fg-u'), { x1: P[0], y1: P[1], x2: T[0], y2: T[1] });
+    F.put(F.$('fg-ga'), { x1: P[0], y1: P[1], x2: A[0], y2: A[1] });
+    F.put(F.$('fg-gb'), { x1: P[0], y1: P[1], x2: B[0], y2: B[1] });
+    ['fg-p', 'fg-hp'].forEach(function (id) { F.put(F.$(id), { cx: P[0], cy: P[1] }); }); F.put(F.$('fg-ht'), { cx: T[0], cy: T[1] });
+    F.put(F.$('fg-lp'), { x: P[0] - 18, y: P[1] + 17 }); F.put(F.$('fg-lu'), { x: T[0] + 8, y: T[1] + 14 });
+    F.put(F.$('fg-la'), { x: A[0] + 8, y: A[1] - 8 }); F.put(F.$('fg-lb'), { x: B[0] + 8, y: B[1] + 14 });
+    F.$('fg-a1').textContent = 'pas : Δx = ' + F.fmt(dxm, 1) + ' m ; Δy = ' + F.fmt(dym, 1) + ' m';
+    F.$('fg-a2').textContent = 'pentes : ∂V/∂x = ' + F.fmt(sx, 2) + ' ; ∂V/∂y = ' + F.fmt(sy, 2);
+    F.$('fg-a3').textContent = 'ΔV = ' + F.fmt(t1, 2) + ' ' + sg(t2, 2) + ' = ' + sg(dV, 2) + ' m';
+    F.$('fg-bh').textContent = 'B : axe x en unités de ' + F.fmt(lam, 2) + ' m';
+    F.$('fg-b1').textContent = 'pas : Δx′ = ' + F.fmt(dxm / lam, 2) + ' ; Δy = ' + F.fmt(dym, 1) + ' m';
+    F.$('fg-b2').textContent = 'pentes : ∂V/∂x′ = ' + F.fmt(lam * sx, 2) + ' ; ∂V/∂y = ' + F.fmt(sy, 2);
+    F.$('fg-b3').textContent = 'ΔV = ' + F.fmt(lam * sx * dxm / lam, 2) + ' ' + sg(t2, 2) + ' = ' + sg(dV, 2) + ' m';
+    F.$('fg-ok').textContent = 'même ΔV : ' + sg(dV, 2) + ' m';
+    F.$('fg-lv').textContent = F.fmt(lam, 2);
+    svg.setAttribute('data-vals', [sx, sy, dV, lam * sx].map(function (x) { return x.toFixed(4); }).join(','));
+  }
+  F.drag(svg, F.$('fg-hp'), function (q) { p = [F.clamp((q.x - OX) / S, 0.3, 9.7), F.clamp((OY - q.y) / S, 0.3, 7.5)]; draw(); });
+  F.drag(svg, F.$('fg-ht'), function (q) { var dx = (q.x - X(p[0])) / S, dy = (Y(p[1]) - q.y) / S, n = Math.hypot(dx, dy); if (n > 1.4) { dx *= 1.4 / n; dy *= 1.4 / n; } u = [dx, dy]; draw(); });
+  F.$('fg-l').addEventListener('input', function () { lam = parseFloat(this.value); draw(); });
+  F.$('fg-r').addEventListener('click', function () { lam = 1; F.$('fg-l').value = 1; draw(); });
+  draw();
+  F.responsive(svg, 400);
+})();
+</script>
+<p class="legende">Une même colline, un même point $P$, un même pas (flèche bleue). L'arpenteur A mesure les deux axes en mètres&nbsp;; B mesure l'axe $x$ par graduations de $\lambda$ mètres. Chacun applique la recette «&nbsp;gradient = (∂V/∂x, ∂V/∂y)&nbsp;» dans ses propres unités et obtient la flèche grise (A) ou orange (B), ramenées ici à la même longueur&nbsp;: leurs directions diffèrent dès que $\lambda \neq 1$. En revanche, la variation d'altitude $\Delta V$ pour le pas bleu est la même pour les deux.</p>
+
+**Ce qui ne dépend pas de la graduation.** C'est le nombre $\Delta V$, la variation d'altitude pour un pas donné. La machine qui, à un petit pas, associe cette variation est **linéaire**&nbsp;: à petite échelle, doubler le pas double la variation, et deux pas mis bout à bout additionnent leurs variations. On l'appelle la **différentielle** $\mathrm{d}V$. Ce n'est pas une flèche, mais un **mesureur**, qui prend une flèche (le pas) et rend un nombre. A et B décrivent le même mesureur&nbsp;; seuls diffèrent les nombres qu'ils écrivent pour le décrire. Le gradient-flèche se déduit de $\mathrm{d}V$ avec le produit scalaire, c'est-à-dire en sachant mesurer longueurs et angles&nbsp;: c'est cet ingrédient supplémentaire que la recette cachait. La suite construit le calcul sur $\mathrm{d}V$ lui-même, et ne revient au gradient qu'à la fin de la section sur les coordonnées polaires.
+
 ## Des flèches et des mesureurs {#fleches}
 
-Sur une carte, la position est un point. Un petit déplacement à partir de ce point est un **vecteur** (plus précisément un *vecteur tangent*)&nbsp;: une flèche. L'altitude $V$ est une fonction du point, et on souhaite répondre à la question suivante&nbsp;: si l'on fait le pas $\vec v$ à partir de $P$, de combien l'altitude varie-t-elle&nbsp;? À petite échelle, doubler le pas double la variation, et deux pas mis bout à bout additionnent leurs variations&nbsp;: la variation d'altitude dépend **linéairement** de $\vec v$. L'application linéaire qui à une flèche associe la variation d'altitude est la **différentielle** $\mathrm{d}V$ de la fonction, au point considéré. Ce n'est pas une flèche, mais une machine qui prend une flèche et rend un nombre&nbsp;: un mesureur.
+Précisons cet objet. Un petit déplacement à partir d'un point $P$ est un **vecteur** (plus précisément un *vecteur tangent*)&nbsp;: une flèche. L'application linéaire qui à une flèche $\vec v$ associe la variation d'altitude correspondante est la différentielle $\mathrm{d}V$ de la fonction au point $P$, et l'on note $\mathrm{d}V(\vec v)$ ce nombre.
 
 Comment dessiner un mesureur&nbsp;? Traçons les lignes où $V$ vaut $V(P)$, $V(P) + \Delta$, $V(P) + 2\Delta$, et ainsi de suite. De très près, ces courbes de niveau se redressent en droites parallèles et équidistantes. Une flèche partant de $P$ franchit un certain nombre de ces lignes&nbsp;: c'est la valeur de $\mathrm{d}V$ sur la flèche, en unités de $\Delta$ (comptée négativement quand on descend). Une application linéaire des flèches vers les nombres se dessine donc comme **une pile de lignes**.
 
@@ -373,7 +471,7 @@ Les 1-formes ne sont pas toutes des différentielles de fonctions (le travail d'
 
 ## Deux sortes de composantes, sans dictionnaire {#composantes}
 
-Pour calculer, il faut des nombres. Une flèche et un mesureur existent indépendamment de nos conventions, mais, pour les mettre dans une formule ou dans un ordinateur, on les décrit par des nombres, et ces nombres dépendent de la façon dont on a gradué l'espace&nbsp;: choix des axes, unité de longueur sur chaque axe. On se demande donc comment les nombres d'une flèche, et ceux d'un mesureur, changent quand on change cette graduation.
+A et B n'ont pas choisi les mêmes flèches de référence&nbsp;: A prend un mètre sur chaque axe, B un kilomètre sur l'axe $x$. Comment les nombres d'une flèche, et ceux d'un mesureur, changent-ils pour un choix quelconque&nbsp;?
 
 **Décrire une flèche.** On choisit deux flèches de référence $(\vec e\_1, \vec e\_2)$, par exemple les axes d'un système de coordonnées (elles ne sont pas forcément perpendiculaires, ni de même longueur). Toute flèche s'obtient en combinant ces deux-là, par la règle du parallélogramme&nbsp;: $\vec v = v^1\vec e\_1 + v^2\vec e\_2$[^einstein]. Les $v^i$ sont les **coefficients** de la décomposition&nbsp;: combien de $\vec e\_1$, combien de $\vec e\_2$.
 
@@ -383,12 +481,7 @@ $$\alpha(\vec v) = \alpha\_1 v^1 + \alpha\_2 v^2 = \alpha\_i\\, v^i.$$
 
 [^einstein]: Convention d'Einstein&nbsp;: un indice répété, une fois en haut et une fois en bas, est sommé sur toutes ses valeurs. Ainsi $v^i\\,\vec e\_i$ désigne $\sum\_i v^i\\,\vec e\_i$ et $\alpha\_i\\, v^i$ désigne $\sum\_i \alpha\_i\\, v^i$.
 
-**Changeons d'unité.** Sur le premier axe, prenons le kilomètre au lieu du mètre&nbsp;: $\vec e\_1$ est multiplié par $\lambda = 1000$.
-
-- Pour la flèche, un déplacement de 3000&nbsp;m vers l'est avait pour coefficient $v^1 = 3000$&nbsp;; il a maintenant $v^1 = 3$. Il faut $\lambda$ fois moins de $\vec e\_1$ pour faire le même déplacement&nbsp;: $v^1$ est divisé par $\lambda$.
-- Pour le mesureur, une pente de $0{,}05$&nbsp;m de dénivelé par mètre devient $50$&nbsp;m par kilomètre. Un pas $\lambda$ fois plus long franchit $\lambda$ fois plus de lignes&nbsp;: $\alpha\_1$ est multiplié par $\lambda$.
-
-Les deux jeux de nombres varient en sens contraires, et leur produit ne varie pas&nbsp;: $\alpha\_1 v^1 = 0{,}05 \times 3000 = 50 \times 3 = 150$&nbsp;m, le même dénivelé. C'est le principe de l'analyse dimensionnelle&nbsp;: $v^1$ compte des $\vec e\_1$ (des «&nbsp;kilomètres&nbsp;»), $\alpha\_1$ est une quantité «&nbsp;par $\vec e\_1$&nbsp;» (des «&nbsp;mètres par kilomètre&nbsp;»), et l'unité se simplifie dans le produit. La figure fait de même avec des changements de base quelconques (angle, longueur).
+**Changer de référence.** Allonger $\vec e\_1$ d'un facteur $\lambda$ (B le fait, avec $\lambda = 1000$) divise le coefficient $v^1$ par $\lambda$, puisqu'il faut moins de $\vec e\_1$ pour faire le même déplacement&nbsp;: $\Delta x$ passe de $10$ m à $0{,}01$ km. Il multiplie $\alpha\_1$ par $\lambda$, puisqu'un pas plus long franchit plus de lignes&nbsp;: $\partial V/\partial x$ passe de $0{,}3$ à $300$. Les deux jeux de nombres varient en sens contraires, et leur produit ne varie pas&nbsp;: $\alpha\_1 v^1 = 0{,}3 \times 10 = 300 \times 0{,}01 = 3$&nbsp;m. C'est le principe de l'analyse dimensionnelle&nbsp;: $v^1$ compte des $\vec e\_1$ (des «&nbsp;kilomètres&nbsp;»), $\alpha\_1$ est une quantité «&nbsp;par $\vec e\_1$&nbsp;» (des «&nbsp;mètres par kilomètre&nbsp;»), et l'unité se simplifie dans le produit. La figure fait de même avec des changements de base quelconques (angle, longueur).
 
 <div class="svg-container">
 <svg id="f2-svg" viewBox="0 0 600 345" role="img" aria-label="Un vecteur v et une forme alpha, dessinée comme une pile de lignes, exprimés dans une base oblique (e1, e2). Les composantes du vecteur sont les coefficients de sa décomposition ; celles de la forme sont les nombres de lignes franchies par chaque vecteur de base. En changeant la base, les deux jeux de composantes varient en sens contraire, mais le nombre de lignes franchies par v ne change pas." style="width:100%;max-width:600px;height:auto;touch-action:none;">
@@ -463,7 +556,7 @@ Les deux jeux de nombres varient en sens contraires, et leur produit ne varie pa
   F.responsive(svg, 398);
 })();
 </script>
-<p class="legende">Une même flèche $\vec v$ (bleu) et une même 1-forme $\alpha$ (lignes magenta), exprimées dans une base $(\vec e_1, \vec e_2)$ que l'on peut déformer. Les coefficients $v^i$ de la décomposition (parallélogramme) et les nombres de lignes $\alpha_i$ franchies par les vecteurs de base varient en sens contraires quand on change la longueur ou l'angle des vecteurs de base (le curseur de longueur reproduit le changement d'unité ci-dessus), mais le nombre de lignes franchies par $\vec v$ ne change pas. Les points sur les flèches marquent les lignes franchies.</p>
+<p class="legende">Une même flèche $\vec v$ (bleu) et une même 1-forme $\alpha$ (lignes magenta), exprimées dans une base $(\vec e_1, \vec e_2)$ que l'on peut déformer. Les coefficients $v^i$ de la décomposition (parallélogramme) et les nombres de lignes $\alpha_i$ franchies par les vecteurs de base varient en sens contraires quand on change la longueur ou l'angle des vecteurs de base (le curseur de longueur reproduit le changement d'unité de l'arpenteur B), mais le nombre de lignes franchies par $\vec v$ ne change pas. Les points sur les flèches marquent les lignes franchies.</p>
 
 Ce que fait la figure est général. Les composantes d'une flèche, qui disent «&nbsp;combien de&nbsp;» vecteurs de base, varient à l'inverse de la base&nbsp;: on les appelle **contravariantes**, et leur indice est en haut. Celles d'un mesureur, qui disent «&nbsp;combien par&nbsp;» vecteur de base, varient comme la base&nbsp;: elles sont **covariantes**, avec l'indice en bas. Ce sont les composantes de deux objets de nature différente, une flèche et un mesureur de flèches, dont la rencontre donne un nombre indépendant de la base. Aucun «&nbsp;dictionnaire&nbsp;» entre indices hauts et bas n'est nécessaire&nbsp;: l'indice dit de quel objet il s'agit. Un dictionnaire n'apparaît que si l'on veut transformer une flèche en mesureur, ce qui demande une métrique (voir plus bas, à propos du gradient).
 
@@ -563,7 +656,7 @@ C'est la règle de dérivation en chaîne, et elle garde la même forme d'un sys
 
 ## La différentielle et les coordonnées polaires {#polaires}
 
-Appliquons cette formule aux coordonnées polaires $(r, \theta)$&nbsp;: $\mathrm{d}f = \frac{\partial f}{\partial r}\\,\mathrm{d}r + \frac{\partial f}{\partial\theta}\\,\mathrm{d}\theta$. Aucun facteur $1/r$&nbsp;: la formule est exactement celle des coordonnées cartésiennes. Où est passé le $1/r$ des manuels&nbsp;? Dans le dessin.
+Appliquons cette formule aux coordonnées polaires $(r, \theta)$&nbsp;: $\mathrm{d}f = \frac{\partial f}{\partial r}\\,\mathrm{d}r + \frac{\partial f}{\partial\theta}\\,\mathrm{d}\theta$. Aucun facteur $1/r$&nbsp;: la formule est exactement celle des coordonnées cartésiennes. Où est passé le $1/r$ des manuels, celui de la première section&nbsp;? Dans le dessin.
 
 <div class="svg-container">
 <svg id="f3-svg" viewBox="0 0 600 345" role="img" aria-label="Le plan en coordonnées polaires. Les cercles r = constante sont les lignes de niveau de la forme dr, les rayons theta = constante sont celles de la forme d theta. Une flèche partant du point P franchit un certain nombre de cercles et de rayons : ce sont les valeurs de dr et de d theta sur cette flèche. Les rayons s'écartent quand on s'éloigne de l'origine. On peut déplacer P et la pointe de la flèche." style="width:100%;max-width:600px;height:auto;touch-action:none;">
@@ -647,7 +740,9 @@ On obtient la formule des manuels&nbsp;:
 
 $$\vec\nabla f = \frac{\partial f}{\partial r}\\,\hat e\_r + \frac{1}{r}\frac{\partial f}{\partial\theta}\\,\hat e\_\theta.$$
 
-Le $1/r$ vient de la métrique $g = \mathrm{d}r^2 + r^2\\,\mathrm{d}\theta^2$, qui dit que $\partial/\partial\theta$ est de longueur $r$ ($g(\partial\_\theta, \partial\_\theta) = r^2$). Sans passer par les vecteurs unitaires, le même calcul donne dans un système de coordonnées quelconque les composantes $(\vec\nabla f)^i = g^{ij}\\,\partial f/\partial q^j$, où $(g^{ij})$ est la matrice inverse de la matrice $(g\_{ij})$ de la métrique. Ici $(g\_{ij}) = \mathrm{diag}(1, r^2)$, d'où $\vec\nabla f = \frac{\partial f}{\partial r}\\,\frac{\partial}{\partial r} + \frac{1}{r^2}\frac{\partial f}{\partial\theta}\\,\frac{\partial}{\partial\theta}$, qui est la formule précédente puisque $\partial/\partial\theta = r\\,\hat e\_\theta$. La métrique est donc la source de tous les facteurs des coordonnées curvilignes&nbsp;; quand une grandeur est naturellement un mesureur (une variation, une force dérivant d'un potentiel, un travail), on n'a pas besoin d'elle.
+Le $1/r$ vient de la métrique $g = \mathrm{d}r^2 + r^2\\,\mathrm{d}\theta^2$, qui dit que $\partial/\partial\theta$ est de longueur $r$ ($g(\partial\_\theta, \partial\_\theta) = r^2$). Sans passer par les vecteurs unitaires, le même calcul donne dans un système de coordonnées quelconque les composantes $(\vec\nabla f)^i = g^{ij}\\,\partial f/\partial q^j$, où $(g^{ij})$ est la matrice inverse de la matrice $(g\_{ij})$ de la métrique. Ici $(g\_{ij}) = \mathrm{diag}(1, r^2)$, d'où $\vec\nabla f = \frac{\partial f}{\partial r}\\,\frac{\partial}{\partial r} + \frac{1}{r^2}\frac{\partial f}{\partial\theta}\\,\frac{\partial}{\partial\theta}$, qui est la formule précédente puisque $\partial/\partial\theta = r\\,\hat e\_\theta$.
+
+**Retour aux deux arpenteurs.** La recette «&nbsp;gradient = dérivées partielles&nbsp;» est le cas $g^{ij} = \delta^{ij}$ de la formule $(\vec\nabla f)^i = g^{ij}\\,\partial f/\partial q^j$&nbsp;: celui des axes orthonormés. Pour B, la flèche de référence $\vec e\_1'$ mesure $1000$ m, donc $(g\_{ij}) = \mathrm{diag}(10^6, 1)$ (en m²) et $(g^{ij}) = \mathrm{diag}(10^{-6}, 1)$. Avec $\partial V/\partial x' = 300$ et $\partial V/\partial y = 0{,}4$, on obtient $(\vec\nabla V)^1 = 10^{-6}\times 300 = 3\times 10^{-4}$ et $(\vec\nabla V)^2 = 0{,}4$. Ce sont les composantes $(0{,}3\,;\,0{,}4)$ de la flèche de A, converties dans les graduations de B (la première est divisée par $1000$)&nbsp;: A et B décrivent bien la même flèche, dès que B tient compte de sa métrique. La métrique est la source de tous les facteurs des coordonnées curvilignes&nbsp;; quand une grandeur est naturellement un mesureur (une variation, une force dérivant d'un potentiel, un travail), on n'a pas besoin d'elle.
 
 ## Intégrer une 1-forme {#integrer}
 
@@ -1278,4 +1373,5 @@ Les équations de Maxwell s'écrivent alors sans aucune coordonnée. Avec un pot
 <br>
 
 > Needham, T., <i>Visual Differential Geometry and Forms</i>, Princeton University Press (2021)&nbsp;: un traitement très visuel, dans l'esprit des figures de cette page.<br><br>
-Misner, C. W., Thorne, K. S., Wheeler, J. A., <i>Gravitation</i>, W. H. Freeman (1973), chapitres 2 à 4&nbsp;: les 1-formes comme piles de lignes, et l'électromagnétisme en formes.
+Misner, C. W., Thorne, K. S., Wheeler, J. A., <i>Gravitation</i>, W. H. Freeman (1973), chapitres 2 à 4&nbsp;: les 1-formes comme piles de lignes, et l'électromagnétisme en formes.<br><br>
+Dray, T., Manogue, C. A., <i>The Geometry of Vector Calculus</i>, Oregon State University (en ligne)&nbsp;: le calcul vectoriel des physiciens reconstruit à partir des différentielles.
