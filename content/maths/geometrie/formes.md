@@ -277,16 +277,19 @@ Pour une fonction $f$, le mesureur $\mathrm{d}f$ s'obtient en suivant $f$ le lon
 
 $$\mathrm{d}f\_P(\vec v) = \frac{\mathrm{d}}{\mathrm{d}t}f\big(\gamma(t)\big)\Big|\_{t=0}.$$
 
-Sur la carte, c'est le nombre de lignes de niveau franchies par unité de temps. Sur le graphe de $t \mapsto f\big(\gamma(t)\big)$, c'est la pente de la tangente en $t = 0$.
+Sur le graphe de $t \mapsto f\big(\gamma(t)\big)$, c'est la pente de la tangente en $t = 0$&nbsp;; sur la carte, c'est le nombre de lignes de niveau franchies (en unités de l'écart $\Delta$ entre lignes) par unité de temps.
 
 <div class="svg-container" style="display:flex;flex-wrap:wrap;gap:6px 10px;justify-content:center;align-items:flex-start;">
-<svg id="fc-map" viewBox="0 0 360 340" role="img" aria-label="Carte de courbes de niveau de l'altitude f. Une trajectoire courbe gamma passe au point P à l'instant 0 ; la flèche v est sa vitesse en P. Un point mobile parcourt la trajectoire. On peut déplacer P, la pointe de la flèche, et régler la courbure de la trajectoire." style="flex:1 1 280px;max-width:360px;height:auto;touch-action:none;">
+<svg id="fc-map" viewBox="0 0 360 350" role="img" aria-label="Carte de courbes de niveau de l'altitude f, et pile de lignes de la différentielle de f en P. Une trajectoire courbe gamma passe au point P à l'instant 0 ; la flèche v est sa vitesse en P. Un point mobile parcourt la trajectoire. La pile de lignes magenta représente la différentielle de f en P. On peut déplacer P, la pointe de la flèche, et régler la courbure de la trajectoire." style="flex:1 1 280px;max-width:360px;height:auto;touch-action:none;">
 <defs><marker id="fca" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker>
 <marker id="fcb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#C2770B"/></marker>
-<clipPath id="fc-mclip"><rect x="10" y="34" width="340" height="280"/></clipPath></defs>
+<clipPath id="fc-mclip"><rect x="10" y="34" width="340" height="280"/></clipPath>
+<clipPath id="fc-lclip"><circle id="fc-lcc" cx="0" cy="0" r="60"/></clipPath></defs>
 <rect x="10" y="34" width="340" height="280" fill="#f5f8fa" stroke="#cbd5e1" stroke-width="1"/>
 <path id="fc-cont" d="M0,0" fill="none" stroke="#94a3b8" stroke-width="1" clip-path="url(#fc-mclip)"/>
-<g clip-path="url(#fc-mclip)"><path id="fc-gam" d="M0,0" fill="none" stroke="#C2770B" stroke-width="2.4" marker-end="url(#fcb)"/></g>
+<g clip-path="url(#fc-mclip)"><circle id="fc-ring" cx="0" cy="0" r="60" fill="#fff" fill-opacity="0.55" stroke="#970E53" stroke-width="1" stroke-opacity="0.35" stroke-dasharray="3 3"/>
+<g clip-path="url(#fc-lclip)"><path id="fc-loc" d="M0,0" fill="none" stroke="#970E53" stroke-width="1.1" stroke-opacity="0.75"/></g>
+<path id="fc-gam" d="M0,0" fill="none" stroke="#C2770B" stroke-width="2.4" marker-end="url(#fcb)"/></g>
 <line id="fc-v" x1="0" y1="0" x2="0" y2="0" stroke="#004D80" stroke-width="2.8" marker-end="url(#fca)"/>
 <circle id="fc-hp" cx="0" cy="0" r="15" fill="#334155" fill-opacity="0.001"/>
 <circle id="fc-p" cx="0" cy="0" r="5.5" fill="#334155" stroke="#fff" stroke-width="1.6" pointer-events="none"/>
@@ -296,9 +299,10 @@ Sur la carte, c'est le nombre de lignes de niveau franchies par unité de temps.
 <text id="fc-lv" x="0" y="0" font-size="15" font-weight="bold" fill="#004D80" font-family="Georgia,'Times New Roman',serif">v</text>
 <text id="fc-lg" x="0" y="0" font-size="14" font-style="italic" fill="#C2770B" font-family="Georgia,'Times New Roman',serif">γ</text>
 <text x="10" y="26" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">carte : courbes de niveau de <tspan font-style="italic">f</tspan></text>
-<text x="10" y="332" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">glissez <tspan font-style="italic">P</tspan> et la pointe de la flèche</text>
+<text x="10" y="332" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic">magenta : la forme d<tspan font-style="italic">f</tspan> en <tspan font-style="italic">P</tspan> (pile de lignes)</text>
+<text x="10" y="347" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">glissez <tspan font-style="italic">P</tspan> et la pointe de la flèche</text>
 </svg>
-<svg id="fc-gr" viewBox="0 0 360 340" role="img" aria-label="Graphe de la valeur de f le long de la trajectoire en fonction du temps t, entre -1 et 1. Des lignes horizontales marquent les niveaux de la carte. La droite bleue est la tangente à la courbe en t = 0 ; sa pente est la valeur de la différentielle de f sur la flèche v. La courbe change avec la courbure de la trajectoire, pas la tangente." style="flex:1 1 280px;max-width:360px;height:auto;">
+<svg id="fc-gr" viewBox="0 0 360 350" role="img" aria-label="Graphe de la valeur de f le long de la trajectoire en fonction du temps t, entre -1 et 1. Des lignes horizontales marquent les niveaux de la carte. La droite bleue est la tangente à la courbe en t = 0 ; sa pente est la valeur de la différentielle de f sur la flèche v. La courbe change avec la courbure de la trajectoire, pas la tangente." style="flex:1 1 280px;max-width:360px;height:auto;">
 <defs><clipPath id="fc-gclip"><rect x="40" y="40" width="310" height="230"/></clipPath></defs>
 <rect x="40" y="40" width="310" height="230" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
 <g clip-path="url(#fc-gclip)">
@@ -324,7 +328,7 @@ Sur la carte, c'est le nombre de lignes de niveau franchies par unité de temps.
 <script>
 (function () {
   var F = window.FG, svg = F.$('fc-map'); if (!svg) return;
-  var S = 34, OX = 10, OY = 314, DV = 0.4, H = 2.4, K = 115 / H, VMAX = 1.5;
+  var S = 34, OX = 10, OY = 314, DV = 0.4, H = 2.4, K = 115 / H, VMAX = 1.5, RL = 60;
   function X(x) { return OX + S * x; } function Y(y) { return OY - S * y; }
   function TX(t) { return 195 + 155 * t; }
   var HL = [[4.2, 3.2, 3.9, 5.5, 3.2], [3.4, 7.0, 3.3, 4.5, 3.8]];
@@ -338,6 +342,10 @@ Sur la carte, c'est le nombre de lignes de niveau franchies par unité de temps.
     var f0 = V(p[0], p[1]), g = G(p[0], p[1]), s = g[0] * v[0] + g[1] * v[1], i, t, q, d = '', dc = '', dg = '';
     for (i = 0; i <= 40; i++) { t = -1 + i * 0.05; q = gam(t); d += (i ? 'L' : 'M') + X(q[0]).toFixed(1) + ',' + Y(q[1]).toFixed(1); }
     F.$('fc-gam').setAttribute('d', d);
+    var gn = Math.hypot(g[0], g[1]) || 1e-9, nx = g[0] / gn, ny = -g[1] / gn, sp = DV / gn * S, dl = '';
+    for (var k = -Math.ceil((RL + 12) / sp); k <= Math.ceil((RL + 12) / sp); k++) { var cx = X(p[0]) + k * sp * nx, cy = Y(p[1]) + k * sp * ny; dl += 'M' + (cx + (RL + 14) * ny).toFixed(1) + ',' + (cy - (RL + 14) * nx).toFixed(1) + 'L' + (cx - (RL + 14) * ny).toFixed(1) + ',' + (cy + (RL + 14) * nx).toFixed(1); }
+    F.$('fc-loc').setAttribute('d', dl);
+    ['fc-lcc', 'fc-ring'].forEach(function (id) { F.put(F.$(id), { cx: X(p[0]), cy: Y(p[1]) }); });
     for (i = 0; i <= 80; i++) { t = -1 + i * 0.025; q = gam(t); dc += (i ? 'L' : 'M') + TX(t).toFixed(1) + ',' + (155 - (V(q[0], q[1]) - f0) * K).toFixed(1); }
     F.$('fc-cur').setAttribute('d', dc);
     for (i = 1; i <= 10; i++) { var yy = 155 - (DV * i - f0) * K; if (yy > 36 && yy < 274) dg += 'M40,' + yy.toFixed(1) + 'L350,' + yy.toFixed(1); }
@@ -351,8 +359,8 @@ Sur la carte, c'est le nombre de lignes de niveau franchies par unité de temps.
     q = gam(tt); F.put(F.$('fc-m'), { cx: X(q[0]), cy: Y(q[1]) });
     F.put(F.$('fc-gm'), { cx: TX(tt), cy: 155 - (V(q[0], q[1]) - f0) * K });
     F.$('fc-tv').textContent = F.fmt(tt);
-    F.$('fc-r1').innerHTML = F.T([['pente en 0 : d'], ['f', 'i'], ['(', ''], ['v', 'b'], [') = ' + (s >= 0 ? '+' : '') + F.fmt(s)]]);
-    F.$('fc-r2').textContent = (s >= 0 ? '+' : '') + F.fmt(s / DV, 1) + ' lignes de niveau franchies par unité de temps';
+    F.$('fc-r1').innerHTML = F.T([['pente de la droite bleue : d'], ['f', 'i'], ['(', ''], ['v', 'b'], [') = ' + (s >= 0 ? '+' : '') + F.fmt(s)]]);
+    F.$('fc-r2').textContent = 'soit ' + (s >= 0 ? '+' : '') + F.fmt(s / DV, 1) + ' lignes franchies par v (Δ = 0,4)';
   }
   F.drag(svg, F.$('fc-hp'), function (q) { p = [F.clamp((q.x - OX) / S, 0.5, 9.5), F.clamp((OY - q.y) / S, 0.5, 7.7)]; draw(); });
   F.drag(svg, F.$('fc-ht'), function (q) { var dx = (q.x - X(p[0])) / S, dy = (Y(p[1]) - q.y) / S, n = Math.hypot(dx, dy); if (n > VMAX) { dx *= VMAX / n; dy *= VMAX / n; } v = [dx, dy]; draw(); });
@@ -361,9 +369,11 @@ Sur la carte, c'est le nombre de lignes de niveau franchies par unité de temps.
   draw();
 })();
 </script>
-<p class="legende">À gauche, une trajectoire $\gamma$ (orange) qui passe en $P$ avec la vitesse $\vec v$ (bleu), parcourue de $t = -1$ à $t = 1$. À droite, la valeur de $f$ le long de cette trajectoire&nbsp;: les lignes grises horizontales sont les niveaux de la carte, que le point mobile franchit aux mêmes instants. La droite bleue est la tangente en $t = 0$, de pente $\mathrm{d}f_P(\vec v)$. En faisant varier la courbure, la trajectoire et la courbe orange changent, mais la tangente reste la même.</p>
+<p class="legende">À gauche, une trajectoire $\gamma$ (orange) qui passe en $P$ avec la vitesse $\vec v$ (bleu), parcourue de $t = -1$ à $t = 1$, et la pile de lignes magenta qui représente $\mathrm{d}f_P$ (comme dans la figure précédente, avec $\Delta = 0{,}4$ entre deux lignes). À droite, la valeur de $f$ le long de cette trajectoire&nbsp;: les lignes grises horizontales sont les niveaux de la carte, que le point mobile franchit aux mêmes instants. La droite bleue est la tangente en $t = 0$. En faisant varier la courbure, la trajectoire et la courbe orange changent, mais la tangente reste la même.</p>
 
-Le résultat ne dépend que de $\vec v$, pas de la trajectoire choisie&nbsp;: deux trajectoires qui passent en $P$ avec la même vitesse, mais se courbent différemment, ont des graphes différents et la même tangente en $t = 0$. La règle de dérivation en chaîne, que la [section sur les coordonnées polaires](#polaires) énonce, en donne la raison&nbsp;: la pente ne fait intervenir que les composantes de $\vec v$.
+**Pente ou nombre de lignes&nbsp;?** C'est le même nombre, exprimé dans deux unités. La pente de la droite bleue est $\mathrm{d}f\_P(\vec v)$, en unités de $f$ par unité de temps. En une unité de temps, la flèche $\vec v$ est le déplacement parcouru au premier ordre&nbsp;: elle franchit autant de lignes qu'il y a d'écarts $\Delta$ dans cette variation, soit $\mathrm{d}f\_P(\vec v)/\Delta$ lignes. Par exemple, avec $\Delta = 0{,}4$, une pente de $1{,}73$ correspond à $4{,}3$ lignes franchies.
+
+La **forme** $\mathrm{d}f\_P$, elle, n'est ni la pente ni le nombre de lignes&nbsp;: c'est l'application $\vec v \mapsto \mathrm{d}f\_P(\vec v)$ tout entière, que la pile de lignes magenta représente. Pente et nombre de lignes sont sa valeur sur une flèche donnée. Avec une autre flèche en $P$ (par exemple le double de $\vec v$, ou une flèche qui longe une ligne magenta), on obtient une autre valeur&nbsp;; la pile de lignes ne change pas.
 
 Toutes les 1-formes ne sont pas de cette forme (le travail d'une force de frottement n'est la différentielle d'aucune fonction), mais celles-là sont les plus familières.
 
@@ -456,11 +466,101 @@ Changer de base modifie les deux jeux de nombres, mais en sens contraire. Si l'o
 
 C'est tout le contenu de la distinction entre composantes **contravariantes** (les $v^i$, qui varient à l'inverse de la base) et **covariantes** (les $\alpha\_i$, qui varient avec elle). Ce sont les composantes de deux objets de nature différente, une flèche et un mesureur de flèches, dont la rencontre donne un nombre. Aucun «&nbsp;dictionnaire&nbsp;» entre indices hauts et bas n'est nécessaire&nbsp;: l'indice dit de quel objet il s'agit. Un dictionnaire n'apparaît que si l'on veut transformer une flèche en mesureur, ce qui demande une métrique (voir la section suivante).
 
-Les 1-formes $\varepsilon^1, \varepsilon^2$ telles que $\varepsilon^i(\vec e\_j) = \delta^i\_j$ forment la **base duale**. Elles lisent les coefficients d'un vecteur, $\varepsilon^i(\vec v) = v^i$, et toute 1-forme s'écrit $\alpha = \alpha\_i\\,\varepsilon^i$. Pour un système de coordonnées $(q^i)$, les vecteurs de base sont les $\partial/\partial q^i$ (les $\vec e\_i = \partial\vec r/\partial q^i$ de la page [De Newton à Hamilton](/physique/meca/hamilton/)) et la base duale est formée des **différentielles des coordonnées** $\mathrm{d}q^i$&nbsp;: $\mathrm{d}q^i(\vec v)$ est la $i$-ième composante de la vitesse $\vec v$.
+Les 1-formes $\varepsilon^1, \varepsilon^2$ telles que $\varepsilon^i(\vec e\_j) = \delta^i\_j$ forment la **base duale** (le symbole de Kronecker $\delta^i\_j$ vaut $1$ si $i = j$ et $0$ sinon). Elles lisent les coefficients d'un vecteur, car $\varepsilon^i(\vec v) = v^j\\,\varepsilon^i(\vec e\_j) = v^i$. Et toute 1-forme s'écrit $\alpha = \alpha\_i\\,\varepsilon^i$, car les deux membres prennent la même valeur $\alpha\_j$ sur chaque $\vec e\_j$.
+
+**Les vecteurs de base d'un système de coordonnées.** Soit $(q^1, q^2)$ un système de coordonnées. En $P$, faisons varier $q^1$ seule, les autres coordonnées restant fixes&nbsp;: le point décrit une **courbe coordonnée**, et sa vitesse quand $q^1$ augmente de $1$ par unité de temps est un vecteur, noté $\partial/\partial q^1$ (c'est le $\vec e\_1 = \partial\vec r/\partial q^1$ de la page [De Newton à Hamilton](/physique/meca/hamilton/)). On définit de même $\partial/\partial q^2$ avec la seconde courbe coordonnée. Ces vecteurs forment une vraie base de l'espace tangent en $P$&nbsp;:
+<ul>
+<li>ils <b>engendrent</b> l'espace tangent. Un petit déplacement de $P$ change les coordonnées de $\mathrm{d}q^1$ et $\mathrm{d}q^2$, et s'obtient, au premier ordre, en avançant de $\mathrm{d}q^1$ le long de la première courbe coordonnée, puis de $\mathrm{d}q^2$ le long de la seconde. Une flèche $\vec v$ se décompose donc sous la forme $\vec v = v^i\,\partial/\partial q^i$, où $v^i$ est la vitesse de variation de la $i$-ième coordonnée&nbsp;;</li>
+<li>ils sont <b>indépendants</b>. Dans un système de coordonnées admissible, les courbes coordonnées ont des directions différentes en $P$ (le jacobien du changement de coordonnées n'est pas nul). Sinon, faire varier les coordonnées ne permettrait pas d'atteindre tous les petits déplacements.</li>
+</ul>
+
+**La dualité avec les $\mathrm{d}q^i$.** La différentielle de coordonnée $\mathrm{d}q^j$ est la différentielle de la fonction $q^j$. Calculons sa valeur sur $\partial/\partial q^i$ avec la définition de la section précédente (le taux de variation de la fonction le long d'une trajectoire). Le long de la $i$-ième courbe coordonnée, parcourue à vitesse $\partial/\partial q^i$, la coordonnée $q^i$ augmente de $1$ par unité de temps et les autres restent constantes. Donc
+
+$$\mathrm{d}q^j\Big(\frac{\partial}{\partial q^i}\Big) = \delta^j\_i.$$
+
+C'est la relation de dualité&nbsp;: les $\mathrm{d}q^j$ forment la base duale de la base $\partial/\partial q^i$, et $\mathrm{d}q^i(\vec v) = v^i$ est la $i$-ième composante de la vitesse $\vec v$. La figure suivante la dessine. Les lignes de $\mathrm{d}q^j$ sont les courbes coordonnées $q^j = \text{cste}$, avec un écart de $1$ entre deux lignes. Le vecteur $\partial/\partial q^i$ longe les courbes $q^j = \text{cste}$ avec $j \neq i$, donc n'en franchit aucune, et il franchit une ligne de $\mathrm{d}q^i$.
+
+<div class="svg-container">
+<svg id="fd-svg" viewBox="0 0 600 345" role="img" aria-label="Un système de coordonnées curvilignes (q1, q2) : les courbes q1 = constante sont des droites verticales vertes, les courbes q2 = constante sont des paraboles orange. En un point P, le vecteur vert d/dq1 est tangent à la parabole orange qui passe par P et franchit une ligne verte ; le vecteur orange d/dq2 est tangent à la droite verte qui passe par P et franchit une ligne orange. Une flèche bleue v se décompose en v1 d/dq1 + v2 d/dq2, où v1 et v2 sont les valeurs de dq1 et dq2 sur v. On peut déplacer P et la pointe de la flèche v." style="width:100%;max-width:600px;height:auto;touch-action:none;">
+<defs><marker id="fda" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#004D80"/></marker>
+<marker id="fdb" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#006C65"/></marker>
+<marker id="fdc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#C2770B"/></marker>
+<clipPath id="fd-clip"><rect x="10" y="34" width="372" height="300"/></clipPath></defs>
+<rect x="10" y="34" width="372" height="300" fill="#f8fafc" stroke="#e2e8f0"/>
+<g clip-path="url(#fd-clip)"><path id="fd-gv" d="M0,0" fill="none" stroke="#006C65" stroke-width="1.3" stroke-opacity="0.55"/>
+<path id="fd-gp" d="M0,0" fill="none" stroke="#C2770B" stroke-width="1.3" stroke-opacity="0.6"/>
+<polygon id="fd-par" points="0,0" fill="#d1dfe8" fill-opacity="0.6" stroke="#004D80" stroke-width="1" stroke-dasharray="4 3" stroke-opacity="0.7"/></g>
+<line id="fd-e1" x1="0" y1="0" x2="0" y2="0" stroke="#006C65" stroke-width="2.8" marker-end="url(#fdb)"/>
+<line id="fd-e2" x1="0" y1="0" x2="0" y2="0" stroke="#C2770B" stroke-width="2.8" marker-end="url(#fdc)"/>
+<line id="fd-v" x1="0" y1="0" x2="0" y2="0" stroke="#004D80" stroke-width="2.8" marker-end="url(#fda)"/>
+<circle id="fd-hp" cx="0" cy="0" r="15" fill="#334155" fill-opacity="0.001"/>
+<circle id="fd-p" cx="0" cy="0" r="5.5" fill="#334155" stroke="#fff" stroke-width="1.6" pointer-events="none"/>
+<circle id="fd-ht" cx="0" cy="0" r="15" fill="#004D80" fill-opacity="0.001"/>
+<text id="fd-lp" x="0" y="0" font-size="14" font-style="italic" fill="#334155" font-family="Georgia,'Times New Roman',serif">P</text>
+<text id="fd-l1" x="0" y="0" font-size="14" fill="#006C65" font-family="Georgia,'Times New Roman',serif"></text>
+<text id="fd-l2" x="0" y="0" font-size="14" fill="#C2770B" font-family="Georgia,'Times New Roman',serif"></text>
+<text id="fd-lv" x="0" y="0" font-size="15" font-weight="bold" fill="#004D80" font-family="Georgia,'Times New Roman',serif">v</text>
+<text id="fd-tt" x="20" y="28" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic"></text>
+<text x="398" y="50" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">valeurs des d<tspan font-style="italic">q</tspan><tspan dy="-5" font-size="9">i</tspan><tspan dy="5"> sur les vecteurs de base</tspan></text>
+<text id="fd-a11" x="398" y="76" font-size="14.5" fill="#334155" font-family="Georgia,'Times New Roman',serif"></text>
+<text id="fd-a21" x="398" y="98" font-size="14.5" fill="#334155" font-family="Georgia,'Times New Roman',serif"></text>
+<text id="fd-a12" x="398" y="122" font-size="14.5" fill="#334155" font-family="Georgia,'Times New Roman',serif"></text>
+<text id="fd-a22" x="398" y="144" font-size="14.5" fill="#334155" font-family="Georgia,'Times New Roman',serif"></text>
+<text x="398" y="182" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">décomposer la flèche bleue</text>
+<text id="fd-b1" x="398" y="206" font-size="14.5" fill="#334155" font-family="Georgia,'Times New Roman',serif"></text>
+<text id="fd-b2" x="398" y="228" font-size="14.5" fill="#334155" font-family="Georgia,'Times New Roman',serif"></text>
+<text id="fd-b3" x="398" y="256" font-size="14.5" fill="#334155" font-family="Georgia,'Times New Roman',serif"></text>
+<text x="398" y="322" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">glissez <tspan font-style="italic">P</tspan> et la pointe de v</text>
+</svg>
+</div>
+<script>
+(function () {
+  var F = window.FG, svg = F.$('fd-svg'); if (!svg) return;
+  var OX = 195, OY = 250, U = 50, KK = 1 / 6, B = 2 * KK;   // coordonnées : q1 = x, q2 = y - x²/6
+  function X(x) { return OX + U * x; } function Y(y) { return OY - U * y; }
+  var G = '#006C65', O = '#C2770B', i, d = '', x;
+  for (i = -3; i <= 3; i++) d += 'M' + X(i).toFixed(1) + ',30L' + X(i).toFixed(1) + ',338';
+  F.$('fd-gv').setAttribute('d', d); d = '';
+  for (i = -2; i <= 5; i++) { for (x = -3.5; x <= 3.51; x += 0.25) d += (x < -3.4 ? 'M' : 'L') + X(x).toFixed(1) + ',' + Y(i + KK * x * x).toFixed(1); }
+  F.$('fd-gp').setAttribute('d', d);
+  F.$('fd-tt').innerHTML = F.T([['courbes ', '', '#64748b'], ['q', 'i', G], ['1', 'sup', G], [' = cste', '', G], ['  ·  courbes ', '', '#64748b'], ['q', 'i', O], ['2', 'sup', O], [' = cste', '', O]]);
+  var p = [0.6, 0.9], v = [1.1, 1.2];
+  function z(a) { a = Math.round(a * 1e6) / 1e6 + 0; return F.fmt(a, 0) === '-0' ? '0' : F.fmt(a, a === Math.round(a) ? 0 : 2); }
+  function dq(w, j) { return j === 1 ? w[0] : w[1] - B * p[0] * w[0]; }
+  function Q(j) { var c = j === 1 ? G : O; return [['d', '', c], ['q', 'i', c], [String(j), 'sup', c]]; }
+  function D(j) { var c = j === 1 ? G : O; return [['∂', '', c], [String(j), 'sub', c]]; }
+  function draw() {
+    var e1 = [1, B * p[0]], e2 = [0, 1], v1 = dq(v, 1), v2 = dq(v, 2), q;
+    F.put(F.$('fd-e1'), { x1: X(p[0]), y1: Y(p[1]), x2: X(p[0] + e1[0]), y2: Y(p[1] + e1[1]) });
+    F.put(F.$('fd-e2'), { x1: X(p[0]), y1: Y(p[1]), x2: X(p[0] + e2[0]), y2: Y(p[1] + e2[1]) });
+    F.put(F.$('fd-v'), { x1: X(p[0]), y1: Y(p[1]), x2: X(p[0] + v[0]), y2: Y(p[1] + v[1]) });
+    F.$('fd-par').setAttribute('points', [[0, 0], [v1 * e1[0], v1 * e1[1]], v, [v2 * e2[0], v2 * e2[1]]].map(function (r) { return X(p[0] + r[0]).toFixed(1) + ',' + Y(p[1] + r[1]).toFixed(1); }).join(' '));
+    ['fd-p', 'fd-hp'].forEach(function (id) { F.put(F.$(id), { cx: X(p[0]), cy: Y(p[1]) }); }); F.put(F.$('fd-ht'), { cx: X(p[0] + v[0]), cy: Y(p[1] + v[1]) });
+    F.put(F.$('fd-lp'), { x: X(p[0]) - 18, y: Y(p[1]) + 17 });
+    F.put(F.$('fd-l1'), { x: X(p[0] + e1[0]) + 4, y: Y(p[1] + e1[1]) + 17 }); F.put(F.$('fd-l2'), { x: X(p[0]) - 26, y: Y(p[1] + 1) + 8 });
+    F.put(F.$('fd-lv'), { x: X(p[0] + v[0]) + 9, y: Y(p[1] + v[1]) - 9 });
+    F.$('fd-l1').innerHTML = F.T(D(1)); F.$('fd-l2').innerHTML = F.T(D(2));
+    [[1, 1], [2, 1], [1, 2], [2, 2]].forEach(function (ij) {
+      var w = ij[1] === 1 ? e1 : e2;
+      F.$('fd-a' + ij[0] + ij[1]).innerHTML = F.T(Q(ij[0]).concat([['('], ], D(ij[1]), [[') = ' + z(dq(w, ij[0]))]]));
+    });
+    F.$('fd-b1').innerHTML = F.T([['v', 'i', G], ['1', 'sup', G], [' = '], ].concat(Q(1), [['('], ['v', 'b'], [') = ' + z(v1)]]));
+    F.$('fd-b2').innerHTML = F.T([['v', 'i', O], ['2', 'sup', O], [' = '], ].concat(Q(2), [['('], ['v', 'b'], [') = ' + z(v2)]]));
+    F.$('fd-b3').innerHTML = F.T([['v', 'b', '#004D80'], [' = '], ['v', 'i', G], ['1', 'sup', G]].concat(D(1), [[' + '], ['v', 'i', O], ['2', 'sup', O]], D(2)));
+  }
+  F.drag(svg, F.$('fd-hp'), function (r) { p = [F.clamp((r.x - OX) / U, -3, 2.2), F.clamp((OY - r.y) / U, -1.2, 3.4)]; draw(); });
+  F.drag(svg, F.$('fd-ht'), function (r) { var dx = (r.x - X(p[0])) / U, dy = (Y(p[1]) - r.y) / U, n = Math.hypot(dx, dy); if (n > 2) { dx *= 2 / n; dy *= 2 / n; } v = [dx, dy]; draw(); });
+  draw();
+  F.responsive(svg, 398);
+})();
+</script>
+<p class="legende">Un système de coordonnées $(q^1, q^2)$ défini par $q^1 = x$ et $q^2 = y - x^2/6$&nbsp;: les courbes $q^1 = \text{cste}$ (vertes) sont des droites, les courbes $q^2 = \text{cste}$ (orange) des paraboles. Ce sont les lignes de $\mathrm{d}q^1$ et de $\mathrm{d}q^2$, avec un écart de $1$. En $P$, le vecteur $\partial_1 = \partial/\partial q^1$ est tangent à la parabole orange et franchit une ligne verte&nbsp;; $\partial_2 = \partial/\partial q^2$ est tangent à la droite verte et franchit une ligne orange. Les $\mathrm{d}q^i$ ne sont donc pas «&nbsp;perpendiculaires&nbsp;» aux $\partial_j$&nbsp;: la dualité ne demande aucun angle. La flèche bleue se décompose en $v^1\partial_1 + v^2\partial_2$ (parallélogramme en tirets), avec $v^i = \mathrm{d}q^i(\vec v)$.</p>
+
+Enfin, la valeur de $\mathrm{d}f$ sur $\partial/\partial q^i$ est le taux de variation de $f$ le long de la $i$-ième courbe coordonnée, c'est-à-dire la dérivée partielle $\partial f/\partial q^i$. Les composantes de $\mathrm{d}f$ sur la base duale sont donc les dérivées partielles, comme on l'utilise ci-dessous.
 
 ## La différentielle et les coordonnées polaires {#polaires}
 
-Pour une fonction $f$, la règle de dérivation en chaîne donne, dans tout système de coordonnées $(q^i)$,
+Les composantes d'une 1-forme sur la base duale sont ses valeurs sur les vecteurs de base. Pour $\mathrm{d}f$, ce sont les dérivées partielles $\mathrm{d}f(\partial/\partial q^i) = \partial f/\partial q^i$&nbsp;; on a donc, dans tout système de coordonnées $(q^i)$,
 
 $$\mathrm{d}f = \frac{\partial f}{\partial q^i}\\,\mathrm{d}q^i.$$
 
@@ -529,25 +629,152 @@ En coordonnées polaires, $\mathrm{d}f = \frac{\partial f}{\partial r}\\,\mathrm
 
 Le facteur $1/r$ est donc dans l'objet $\mathrm{d}\theta$ lui-même&nbsp;: les rayons divergent. C'est une propriété géométrique, que le dessin montre, et la formule de $\mathrm{d}f$ n'a pas besoin de la répéter.
 
-**Le gradient**, lui, est autre chose&nbsp;: c'est une flèche, alors que $\mathrm{d}f$ est un mesureur. Pour passer de l'un à l'autre, il faut une **métrique** $g$, c'est-à-dire une façon de mesurer longueurs et angles, qui associe à chaque flèche $\vec u$ la 1-forme $g(\vec u, \cdot)$. Le gradient est la flèche $\vec\nabla f$ telle que $g(\vec\nabla f, \cdot) = \mathrm{d}f$. En coordonnées polaires, la métrique est $g = \mathrm{d}r^2 + r^2\\,\mathrm{d}\theta^2$, et l'on obtient
+**Le gradient**, lui, est autre chose&nbsp;: c'est une flèche, alors que $\mathrm{d}f$ est un mesureur. Pour passer de l'un à l'autre, il faut une **métrique** $g$, c'est-à-dire une façon de mesurer longueurs et angles, qui associe à chaque flèche $\vec u$ la 1-forme $g(\vec u, \cdot)$. Le gradient est la flèche $\vec\nabla f$ telle que $g(\vec\nabla f, \cdot) = \mathrm{d}f$, c'est-à-dire
+
+$$g\big(\vec\nabla f, \vec u\big) = \mathrm{d}f(\vec u)\quad\text{pour toute flèche }\vec u.$$
+
+Quand $g$ est le produit scalaire usuel, cela s'écrit $\vec\nabla f\cdot\vec u = \mathrm{d}f(\vec u)$&nbsp;: la composante de $\vec\nabla f$ dans une direction est le taux de variation de $f$ quand on avance dans cette direction à vitesse $1$.
+
+Pour trouver $\vec\nabla f$ en coordonnées polaires, on le décompose sur les vecteurs unitaires $\hat e\_r$ et $\hat e\_\theta$, qui sont orthogonaux et de longueur $1$&nbsp;: la composante de $\vec\nabla f$ sur chacun d'eux est son produit scalaire avec celui-ci, c'est-à-dire la valeur de $\mathrm{d}f$ sur celui-ci,
+
+$$\vec\nabla f = \mathrm{d}f(\hat e\_r)\\,\hat e\_r + \mathrm{d}f(\hat e\_\theta)\\,\hat e\_\theta.$$
+
+Il reste à exprimer ces deux vecteurs avec les vecteurs coordonnés&nbsp;:
+<ul>
+<li>$\partial/\partial r$ est la vitesse d'un point qui s'éloigne de l'origine à la vitesse $1$, à $\theta$ fixé. C'est $\hat e_r$, et $\mathrm{d}f(\hat e_r) = \partial f/\partial r$&nbsp;;</li>
+<li>$\partial/\partial\theta$ est la vitesse d'un point qui tourne à la vitesse angulaire $1$, à $r$ fixé. Il parcourt un cercle de rayon $r$ à la vitesse $r$&nbsp;: $\partial/\partial\theta$ est de longueur $r$, et $\hat e_\theta = \frac{1}{r}\,\partial/\partial\theta$. Par linéarité de $\mathrm{d}f$, $\mathrm{d}f(\hat e_\theta) = \frac{1}{r}\,\mathrm{d}f(\partial/\partial\theta) = \frac{1}{r}\,\partial f/\partial\theta$.</li>
+</ul>
+On obtient
 
 $$\vec\nabla f = \frac{\partial f}{\partial r}\\,\hat e\_r + \frac{1}{r}\frac{\partial f}{\partial\theta}\\,\hat e\_\theta.$$
 
-Le $1/r$ de cette formule vient de la métrique, source de tous les facteurs des coordonnées curvilignes. Quand une grandeur est naturellement un mesureur (une variation, une force dérivant d'un potentiel, un travail), on n'a pas besoin d'elle.
+C'est la métrique $g = \mathrm{d}r^2 + r^2\\,\mathrm{d}\theta^2$ qui dit que $\partial/\partial\theta$ est de longueur $r$ ($g(\partial\_\theta, \partial\_\theta) = r^2$). Le même calcul, sans passer par les vecteurs unitaires, donne dans un système de coordonnées quelconque les composantes $(\vec\nabla f)^i = g^{ij}\\,\partial f/\partial q^j$, où $(g^{ij})$ est la matrice inverse de la matrice $(g\_{ij})$ de la métrique. Ici $(g\_{ij}) = \mathrm{diag}(1, r^2)$, donc $\vec\nabla f = \frac{\partial f}{\partial r}\\,\frac{\partial}{\partial r} + \frac{1}{r^2}\frac{\partial f}{\partial\theta}\\,\frac{\partial}{\partial\theta}$, qui est la formule précédente, puisque $\partial/\partial\theta = r\\,\hat e\_\theta$.
+
+Le $1/r$ de la formule du gradient vient de la métrique, source de tous les facteurs des coordonnées curvilignes. Quand une grandeur est naturellement un mesureur (une variation, une force dérivant d'un potentiel, un travail), on n'a pas besoin d'elle.
 
 ## Intégrer une 1-forme {#integrer}
 
-Le long d'un chemin $\gamma : [a, b] \to M$, on additionne les nombres que la 1-forme donne sur les petits déplacements&nbsp;:
+Un chemin est une suite de petits déplacements, et une 1-forme associe un nombre à chaque petit déplacement&nbsp;: on additionne ces nombres. Soit $\gamma : [a, b] \to M$ un chemin, c'est-à-dire une position $\gamma(t)$ à chaque instant $t$. Sa **vitesse** $\dot\gamma(t) = \mathrm{d}\gamma/\mathrm{d}t$ est la flèche tangente au chemin (en coordonnées, ses composantes sont les $\mathrm{d}q^i/\mathrm{d}t$). Découpons $[a, b]$ en $N$ pas de durée $\Delta t$. Entre les instants $t\_k$ et $t\_k + \Delta t$, le point se déplace, au premier ordre, de la flèche $\dot\gamma(t\_k)\\,\Delta t$ (vitesse fois durée). La 1-forme, prise au point $\gamma(t\_k)$, donne sur ce déplacement le nombre
+
+$$\alpha\_{\gamma(t\_k)}\big(\dot\gamma(t\_k)\\,\Delta t\big) = \alpha\_{\gamma(t\_k)}\big(\dot\gamma(t\_k)\big)\\,\Delta t,$$
+
+par linéarité de $\alpha\_{\gamma(t\_k)}$. La somme de ces nombres tend, quand les pas deviennent petits, vers l'intégrale de $\alpha$ le long de $\gamma$&nbsp;:
 
 $$\int\_\gamma \alpha = \int\_a^b \alpha\_{\gamma(t)}\big(\dot\gamma(t)\big)\\,\mathrm{d}t.$$
 
-C'est le nombre de lignes de $\alpha$ franchies par le chemin, comptées algébriquement. Pour la 1-forme travail d'une force, c'est le travail&nbsp;; pour la 1-forme associée à la vitesse d'un fluide, c'est la circulation. L'intégrale ne dépend pas du système de coordonnées, ni de la façon de paramétrer le chemin.
+La quantité $\alpha\_{\gamma(t)}\big(\dot\gamma(t)\big)$ est un nombre qui dépend de $t$&nbsp;: c'est le nombre de lignes de $\alpha$ franchies par unité de temps à l'instant $t$ (comme $\mathrm{d}f(\vec v)$ dans la section précédente). L'intégrale est l'aire sous son graphe, que la figure construit avec des rectangles.
+
+<div class="svg-container" style="display:flex;flex-wrap:wrap;gap:6px 10px;justify-content:center;align-items:flex-start;">
+<svg id="fw-map" viewBox="0 0 360 350" role="img" aria-label="Carte d'un champ de force F, dessiné par des flèches grises, et d'un chemin gamma qui va du point A au point B en passant par M. Le chemin est découpé en pas de même durée ; chaque pas est coloré en vert quand la force pousse dans le sens du mouvement et en orange quand elle s'y oppose. On peut déplacer A, M et B." style="flex:1 1 280px;max-width:360px;height:auto;touch-action:none;">
+<defs><marker id="fwf" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#94a3b8"/></marker>
+<marker id="fwe" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#334155"/></marker>
+<clipPath id="fw-mclip"><rect x="10" y="34" width="340" height="280"/></clipPath></defs>
+<rect x="10" y="34" width="340" height="280" fill="#f5f8fa" stroke="#cbd5e1" stroke-width="1"/>
+<g id="fw-field" clip-path="url(#fw-mclip)"></g>
+<g clip-path="url(#fw-mclip)"><path id="fw-gam" d="M0,0" fill="none" stroke="#334155" stroke-width="1" marker-end="url(#fwe)"/>
+<path id="fw-pos" d="M0,0" fill="none" stroke="#006C65" stroke-width="3.6" stroke-linecap="butt"/>
+<path id="fw-neg" d="M0,0" fill="none" stroke="#C2770B" stroke-width="3.6" stroke-linecap="butt"/>
+<g id="fw-dots"></g></g>
+<circle id="fw-ha" cx="0" cy="0" r="15" fill="#334155" fill-opacity="0.001"/>
+<circle id="fw-hm" cx="0" cy="0" r="15" fill="#334155" fill-opacity="0.001"/>
+<circle id="fw-hb" cx="0" cy="0" r="15" fill="#334155" fill-opacity="0.001"/>
+<circle id="fw-a" cx="0" cy="0" r="5.5" fill="#334155" stroke="#fff" stroke-width="1.6" pointer-events="none"/>
+<circle id="fw-m" cx="0" cy="0" r="4" fill="#fff" stroke="#334155" stroke-width="1.6" pointer-events="none"/>
+<circle id="fw-b" cx="0" cy="0" r="5.5" fill="#334155" stroke="#fff" stroke-width="1.6" pointer-events="none"/>
+<text id="fw-la" x="0" y="0" font-size="14" font-style="italic" fill="#334155" font-family="Georgia,'Times New Roman',serif">A</text>
+<text id="fw-lb" x="0" y="0" font-size="14" font-style="italic" fill="#334155" font-family="Georgia,'Times New Roman',serif">B</text>
+<text x="10" y="26" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">champ de force <tspan font-weight="bold" font-style="normal">F</tspan> (gris) et chemin <tspan font-style="italic">γ</tspan></text>
+<text x="10" y="332" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">vert : <tspan font-weight="bold" font-style="normal">F</tspan> pousse dans le sens du mouvement ; orange : s'y oppose</text>
+<text x="10" y="347" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">glissez <tspan font-style="italic">A</tspan>, <tspan font-style="italic">B</tspan> et le point blanc du chemin</text>
+</svg>
+<svg id="fw-gr" viewBox="0 0 360 350" role="img" aria-label="Graphe de la puissance de la force le long du chemin, en fonction du temps entre 0 et 1. Des rectangles de largeur égale à la durée d'un pas ont pour hauteur la valeur au début du pas ; leur aire totale est la somme de Riemann, qui se rapproche de l'aire sous la courbe quand le nombre de pas augmente." style="flex:1 1 280px;max-width:360px;height:auto;">
+<defs><clipPath id="fw-gclip"><rect x="40" y="40" width="310" height="230"/></clipPath></defs>
+<rect x="40" y="40" width="310" height="230" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+<g clip-path="url(#fw-gclip)"><line x1="40" y1="155" x2="350" y2="155" stroke="#94a3b8" stroke-width="1"/>
+<path id="fw-rp" d="M0,0" fill="#006C65" fill-opacity="0.3" stroke="#006C65" stroke-width="1"/>
+<path id="fw-rn" d="M0,0" fill="#C2770B" fill-opacity="0.3" stroke="#C2770B" stroke-width="1"/>
+<path id="fw-cur" d="M0,0" fill="none" stroke="#334155" stroke-width="2"/></g>
+<text x="40" y="26" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">α(γ̇(<tspan font-style="italic">t</tspan>)) en fonction de <tspan font-style="italic">t</tspan> (la puissance <tspan font-weight="bold" font-style="normal">F</tspan>·γ̇)</text>
+<text x="40" y="288" font-size="12" text-anchor="middle" fill="#64748b" font-family="Georgia,'Times New Roman',serif">0</text>
+<text x="350" y="288" font-size="12" text-anchor="middle" fill="#64748b" font-family="Georgia,'Times New Roman',serif">1</text>
+<text x="195" y="288" font-size="12" text-anchor="middle" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">temps t</text>
+<text id="fw-r1" x="40" y="312" font-size="13.5" fill="#004D80" font-family="Georgia,'Times New Roman',serif"></text>
+<text id="fw-r2" x="40" y="331" font-size="13.5" fill="#334155" font-family="Georgia,'Times New Roman',serif"></text>
+</svg>
+<div style="flex:1 1 100%;display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:center;align-items:center;margin:2px 0 6px;font-size:0.92em;">
+<label style="display:inline-flex;align-items:center;gap:8px;margin:0;font-weight:normal;"><span>nombre de pas <i>N</i></span> <input type="range" class="fig-range" id="fw-n" min="2" max="40" step="1" value="8" style="width:140px;margin:0;"> <span id="fw-nv" style="min-width:2em;">8</span></label>
+</div>
+</div>
+<script>
+(function () {
+  var F = window.FG, svg = F.$('fw-map'); if (!svg) return;
+  var S = 34, OX = 10, OY = 314, i, j;
+  function X(x) { return OX + S * x; } function Y(y) { return OY - S * y; }
+  function TX(t) { return 40 + 310 * t; }
+  function Fx(x, y) { return [0.45 * (y - 4) - 1.2, -0.45 * (x - 5)]; }
+  var fg = F.$('fw-field');
+  for (i = 1; i <= 9; i += 2) for (j = 1; j <= 7; j += 2) { var f = Fx(i, j), k = 0.2; F.el('line', { x1: X(i - k * f[0]), y1: Y(j - k * f[1]), x2: X(i + k * f[0]), y2: Y(j + k * f[1]), stroke: '#94a3b8', 'stroke-width': 1.6, 'marker-end': 'url(#fwf)' }, fg); }
+  var A = [1.2, 1.5], M = [4.3, 6.0], B = [8.6, 2.2], N = 8, dots = [];
+  for (i = 0; i <= 40; i++) dots.push(F.el('circle', { r: 2.6, fill: '#fff', stroke: '#334155', 'stroke-width': 1.2, visibility: 'hidden' }, F.$('fw-dots')));
+  function pos(t) { var C = [2 * M[0] - (A[0] + B[0]) / 2, 2 * M[1] - (A[1] + B[1]) / 2], u = 1 - t; return [u * u * A[0] + 2 * t * u * C[0] + t * t * B[0], u * u * A[1] + 2 * t * u * C[1] + t * t * B[1]]; }
+  function vit(t) { var C = [2 * M[0] - (A[0] + B[0]) / 2, 2 * M[1] - (A[1] + B[1]) / 2]; return [2 * (1 - t) * (C[0] - A[0]) + 2 * t * (B[0] - C[0]), 2 * (1 - t) * (C[1] - A[1]) + 2 * t * (B[1] - C[1])]; }
+  function g(t) { var q = pos(t), f = Fx(q[0], q[1]), w = vit(t); return f[0] * w[0] + f[1] * w[1]; }
+  function sg(x) { return (x >= 0 ? '+' : '') + F.fmt(x, 2); }
+  function draw() {
+    var d = '', dp = '', dn = '', t, q, k, m, gs = [], gmax = 1, ex = 0, rs = 0, rp = '', rn = '', dc = '';
+    for (i = 0; i <= 40; i++) { t = i / 40; q = pos(t); d += (i ? 'L' : 'M') + X(q[0]).toFixed(1) + ',' + Y(q[1]).toFixed(1); }
+    F.$('fw-gam').setAttribute('d', d);
+    for (i = 0; i <= 400; i++) { t = i / 400; gmax = Math.max(gmax, Math.abs(g(t)) * 1.08); }
+    for (i = 0; i < 400; i++) ex += g((i + 0.5) / 400) / 400;
+    var sc = 105 / gmax;
+    for (k = 0; k < N; k++) {
+      var t0 = k / N, g0 = g(t0), seg = '';
+      rs += g0 / N;
+      for (m = 0; m <= 6; m++) { q = pos(t0 + m / 6 / N); seg += (m ? 'L' : 'M') + X(q[0]).toFixed(1) + ',' + Y(q[1]).toFixed(1); }
+      if (g0 >= 0) dp += seg; else dn += seg;
+      var x0 = TX(t0), x1 = TX(t0 + 1 / N), y1 = 155 - g0 * sc, r = 'M' + x0.toFixed(1) + ',155L' + x0.toFixed(1) + ',' + y1.toFixed(1) + 'L' + x1.toFixed(1) + ',' + y1.toFixed(1) + 'L' + x1.toFixed(1) + ',155Z';
+      if (g0 >= 0) rp += r; else rn += r;
+      q = pos(t0); F.put(dots[k], { cx: X(q[0]), cy: Y(q[1]), visibility: 'visible' });
+    }
+    for (k = N; k <= 40; k++) dots[k].setAttribute('visibility', 'hidden');
+    F.$('fw-pos').setAttribute('d', dp || 'M0,0'); F.$('fw-neg').setAttribute('d', dn || 'M0,0');
+    F.$('fw-rp').setAttribute('d', rp || 'M0,0'); F.$('fw-rn').setAttribute('d', rn || 'M0,0');
+    for (i = 0; i <= 80; i++) { t = i / 80; dc += (i ? 'L' : 'M') + TX(t).toFixed(1) + ',' + (155 - g(t) * sc).toFixed(1); }
+    F.$('fw-cur').setAttribute('d', dc);
+    [['fw-a', 'fw-ha', A], ['fw-m', 'fw-hm', M], ['fw-b', 'fw-hb', B]].forEach(function (e) { F.put(F.$(e[0]), { cx: X(e[2][0]), cy: Y(e[2][1]) }); F.put(F.$(e[1]), { cx: X(e[2][0]), cy: Y(e[2][1]) }); });
+    F.put(F.$('fw-la'), { x: X(A[0]) - 18, y: Y(A[1]) + 18 }); F.put(F.$('fw-lb'), { x: X(B[0]) + 9, y: Y(B[1]) + 18 });
+    F.$('fw-nv').textContent = N;
+    F.$('fw-r1').textContent = 'somme des rectangles (N = ' + N + ') : ' + sg(rs);
+    F.$('fw-r2').textContent = 'intégrale (limite N → ∞) : ' + sg(ex);
+  }
+  [['fw-ha', A], ['fw-hm', M], ['fw-hb', B]].forEach(function (e) { F.drag(svg, F.$(e[0]), function (q) { e[1][0] = F.clamp((q.x - OX) / S, 0.4, 9.6); e[1][1] = F.clamp((OY - q.y) / S, 0.4, 7.8); draw(); }); });
+  F.$('fw-n').addEventListener('input', function () { N = parseInt(this.value, 10); draw(); });
+  draw();
+})();
+</script>
+<p class="legende">Le champ de force $\vec F$ (flèches grises) et un chemin $\gamma$ de $A$ à $B$, découpé en $N$ pas de même durée. À droite, le graphe de $t \mapsto \alpha\big(\dot\gamma(t)\big) = \vec F\cdot\dot\gamma$ (la puissance de la force). Chaque rectangle a pour largeur $\Delta t = 1/N$ et pour hauteur la valeur au début du pas, donc pour aire $\alpha(\dot\gamma(t_k))\Delta t$&nbsp;; vert quand la force pousse dans le sens du mouvement, orange quand elle s'y oppose. La somme des aires se rapproche de l'intégrale quand $N$ augmente.</p>
+
+En coordonnées, $\alpha = \alpha\_i\\,\mathrm{d}q^i$ donne $\alpha(\dot\gamma) = \alpha\_i\\,\mathrm{d}q^i/\mathrm{d}t$, et l'on retrouve l'intégrale curviligne usuelle&nbsp;: $\int\_\gamma (P\\,\mathrm{d}x + Q\\,\mathrm{d}y) = \int\_a^b \big(P\\,\dot x + Q\\,\dot y\big)\\,\mathrm{d}t$.
+
+L'intégrale ne dépend pas du système de coordonnées&nbsp;: le nombre $\alpha(\dot\gamma)\\,\mathrm{d}t$ est défini sans lui. Elle ne dépend pas non plus de la façon de parcourir le chemin. Si l'on reparamètre $\tilde\gamma(s) = \gamma\big(\varphi(s)\big)$ avec $\varphi$ croissante, la vitesse est multipliée par $\varphi'(s)$, et le changement de variable $t = \varphi(s)$ donne $\int \alpha\big(\dot{\tilde\gamma}(s)\big)\\,\mathrm{d}s = \int \alpha\big(\dot\gamma(t)\big)\\,\mathrm{d}t$&nbsp;: un chemin parcouru deux fois plus vite franchit les mêmes lignes. En revanche, parcourir le chemin en sens inverse change le signe.
+
+**Travail d'une force.** Une force $\vec F$ qui s'exerce sur un point matériel lui fournit, pendant un petit déplacement $\vec u$, le travail $\vec F\cdot\vec u$. Cette quantité est linéaire en $\vec u$&nbsp;: c'est une 1-forme $\omega\_F = \vec F\cdot(\ \cdot\ )$, la **1-forme travail**. Ses composantes sont les valeurs sur les vecteurs de base. En coordonnées cartésiennes, $\omega\_F = F\_x\\,\mathrm{d}x + F\_y\\,\mathrm{d}y + F\_z\\,\mathrm{d}z$&nbsp;; en polaires, $\omega\_F(\partial/\partial r) = F\_r$ et $\omega\_F(\partial/\partial\theta) = \vec F\cdot r\hat e\_\theta = rF\_\theta$, donc $\omega\_F = F\_r\\,\mathrm{d}r + rF\_\theta\\,\mathrm{d}\theta$. Le long d'une trajectoire $\gamma$,
+
+$$W = \int\_\gamma \omega\_F = \int\_a^b \vec F\big(\gamma(t)\big)\cdot\dot\gamma(t)\\,\mathrm{d}t.$$
+
+Le nombre $\vec F\cdot\dot\gamma$ est la puissance de la force, ce que montre le graphe de la figure&nbsp;: le travail est l'intégrale de la puissance. Il est positif sur les portions où la force pousse dans le sens du mouvement, négatif sur celles où elle s'y oppose, et nul sur celles où elle est perpendiculaire à la trajectoire (comme la force magnétique sur une charge).
+
+**Circulation d'un fluide.** Soit $\vec u(\vec r)$ le champ des vitesses d'un fluide, c'est-à-dire la vitesse du fluide en chaque point. La 1-forme associée est $\vec u\cdot(\ \cdot\ ) = u\_x\\,\mathrm{d}x + u\_y\\,\mathrm{d}y + u\_z\\,\mathrm{d}z$, qui à un petit déplacement $\vec w$ associe $\vec u\cdot\vec w$. Sur un chemin fermé $\gamma$, son intégrale est la **circulation**
+
+$$\Gamma = \oint\_\gamma \vec u\cdot\mathrm{d}\vec r = \int\_a^b \vec u\big(\gamma(t)\big)\cdot\dot\gamma(t)\\,\mathrm{d}t.$$
+
+Elle mesure combien le fluide tourne le long de la boucle&nbsp;: c'est la composante de la vitesse du fluide le long de la boucle, additionnée sur toute sa longueur. Pour un fluide en rotation d'ensemble à la vitesse angulaire $\Omega$, $\vec u = \Omega(-y, x)$, soit la 1-forme $\Omega(-y\\,\mathrm{d}x + x\\,\mathrm{d}y) = \Omega r^2\\,\mathrm{d}\theta$. Sur le cercle $\gamma(t) = R(\cos t, \sin t)$, $t \in [0, 2\pi]$, la vitesse est $\dot\gamma = R(-\sin t, \cos t)$ et $\vec u\cdot\dot\gamma = \Omega R^2$, donc $\Gamma = 2\pi\Omega R^2$&nbsp;: le double du produit de $\Omega$ par l'aire du disque. Un écoulement dont la vitesse dérive d'un potentiel, $\vec u = \vec\nabla\varphi$, a au contraire une circulation nulle sur toute boucle, puisque sa 1-forme est $\mathrm{d}\varphi$ (voir ci-dessous). Le lien général entre circulation et rotation du champ est le théorème de Stokes, de la [section sur la différentielle extérieure](#stokes).
 
 Pour $\alpha = \mathrm{d}f$, compter les lignes de niveau franchies revient à lire la différence d'altitude entre l'arrivée et le départ&nbsp;:
 
 $$\int\_\gamma \mathrm{d}f = f(B) - f(A).$$
 
-Le résultat ne dépend que des extrémités $A$ et $B$ du chemin&nbsp;: c'est le théorème fondamental de l'analyse. Une 1-forme qui est la différentielle d'une fonction est dite **exacte**. Le travail d'une force dérivant d'un potentiel est exact (la force est conservative)&nbsp;; celui d'une force de frottement, qui dépend du chemin, ne l'est pas.
+Le résultat ne dépend que des extrémités $A$ et $B$ du chemin&nbsp;: c'est le théorème fondamental de l'analyse. Une 1-forme qui est la différentielle d'une fonction est dite **exacte**. Le travail d'une force dérivant d'un potentiel est exact (la force est conservative)&nbsp;; celui d'une force de frottement fluide $\vec F = -\lambda\dot\gamma$, qui vaut $-\lambda\int\|\dot\gamma\|^2\mathrm{d}t$ et dépend du chemin, ne l'est pas.
 
 ## Aires orientées&nbsp;: les 2-formes {#aires}
 
