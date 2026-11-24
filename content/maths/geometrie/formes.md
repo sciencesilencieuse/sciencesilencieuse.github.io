@@ -564,19 +564,19 @@ Ce que fait la figure est général. Les composantes d'un vecteur, qui disent «
 
 **Des mesureurs qui lisent les coefficients.** Parmi tous les mesureurs, certains sont particulièrement simples&nbsp;: ceux qui lisent un coefficient. Le mesureur $\varepsilon^1$ qui répond à la question «&nbsp;combien de $\vec e\_1$ contient ce vecteur&nbsp;?» est linéaire, et il est entièrement connu par ses valeurs sur la base&nbsp;: $\varepsilon^1(\vec e\_1) = 1$ et $\varepsilon^1(\vec e\_2) = 0$. De même pour $\varepsilon^2$. En résumé, $\varepsilon^i(\vec e\_j) = \delta^i\_j$ (le symbole de Kronecker $\delta^i\_j$ vaut $1$ si $i = j$ et $0$ sinon). Ces 1-formes forment la **base duale** de $(\vec e\_i)$. Elles lisent bien les coefficients&nbsp;: $\varepsilon^i(\vec v) = v^j\\,\varepsilon^i(\vec e\_j) = v^i$. Et toute 1-forme est une combinaison d'elles, $\alpha = \alpha\_i\\,\varepsilon^i$, car les deux membres prennent la même valeur $\alpha\_j$ sur chaque $\vec e\_j$. Les vecteurs s'écrivent donc $v^i\\,\vec e\_i$ et les mesureurs $\alpha\_i\\,\varepsilon^i$&nbsp;: deux espaces de même dimension, en miroir l'un de l'autre.
 
-**Le cas des coordonnées curvilignes.** Pour un système de coordonnées $(q^1, q^2)$ (par exemple $(r, \theta)$), la position est une fonction $\vec r(q^1, q^2)$. Les physiciens connaissent les vecteurs $\vec e\_i = \partial\vec r/\partial q^i$ (la page [De Newton à Hamilton](/physique/meca/hamilton/) les utilise). Ce sont de vrais vecteurs de base&nbsp;: $\vec e\_i$ est le déplacement du point quand $q^i$ augmente de $1$, les autres coordonnées restant fixes. C'est un vecteur tangent à la **courbe coordonnée** sur laquelle seule $q^i$ varie. Sa dimension est celle d'une longueur par unité de $q^i$&nbsp;: en polaires, $\vec e\_r$ vaut $1$ m par mètre et $\vec e\_\theta$ vaut $r$ mètres par radian.
+**Le cas des coordonnées curvilignes.** Un système de coordonnées $(q^1, q^2)$ (par exemple $(r, \theta)$) attribue ses coordonnées à chaque point, et réciproquement la position est une fonction $\vec r(q^1, q^2)$. Les coordonnées étant des fonctions de la position, on dispose déjà de mesureurs&nbsp;: leurs différentielles $\mathrm{d}q^i$. Pour un déplacement $\vec u$, le nombre $\mathrm{d}q^i(\vec u)$ est la variation de la coordonnée $q^i$&nbsp;; en coordonnées cartésiennes, $\mathrm{d}x(\vec u) = u\_x$. Ces mesureurs lisent des «&nbsp;combien&nbsp;», ce sont les candidats naturels pour la base duale. Il reste à trouver les vecteurs de référence correspondants.
 
-Un petit déplacement quelconque change les coordonnées de $\mathrm{d}q^1$ et $\mathrm{d}q^2$, et s'écrit,
+Faisons varier la seule coordonnée $q^i$, de $\delta$, les autres restant fixes&nbsp;: le point décrit la **courbe coordonnée** de $q^i$, et son vecteur position change, au premier ordre, de $\vec e\_i\\,\delta$ avec
 
-$$\mathrm{d}\vec r = \frac{\partial\vec r}{\partial q^i}\\,\mathrm{d}q^i = \vec e\_i\\,\mathrm{d}q^i.$$
+$$\vec e\_i = \frac{\partial\vec r}{\partial q^i}.$$
 
-Les composantes d'un déplacement dans la base $(\vec e\_i)$ sont donc les variations $\mathrm{d}q^i$ des coordonnées. Voici la dualité. Le mesureur «&nbsp;$i$-ième composante&nbsp;», qui à un déplacement $\vec u$ associe la variation de la coordonnée $q^i$, est la différentielle de la fonction $q^i(\vec r)$, notée $\mathrm{d}q^i$&nbsp;: $\mathrm{d}q^i(\vec u) = u^i$. C'est donc la base duale de $(\vec e\_i)$&nbsp;:
+Ce vecteur est tangent à la courbe coordonnée (c'est le $\vec e\_i$ de la page [De Newton à Hamilton](/physique/meca/hamilton/)), et sa dimension est celle d'une longueur par unité de $q^i$&nbsp;: en polaires, $\vec e\_r$ vaut $1$ m par mètre et $\vec e\_\theta$ vaut $r$ mètres par radian. Par construction, quand le point se déplace de $\vec e\_i$, la coordonnée $q^i$ augmente de $1$ et les autres ne changent pas&nbsp;:
 
-$$\mathrm{d}q^j(\vec e\_i) = \delta^j\_i,$$
+$$\mathrm{d}q^j(\vec e\_i) = \delta^j\_i.$$
 
-car, quand le point se déplace de $\vec e\_i$, la coordonnée $q^i$ augmente de $1$ et les autres ne changent pas.
+C'est la relation de dualité, et elle suffit à faire des $\vec e\_i$ une base. Si $c^i\\,\vec e\_i = \vec 0$, appliquer $\mathrm{d}q^j$ donne $c^j = 0$&nbsp;: les $n$ vecteurs sont indépendants, donc ils forment une base de l'espace de dimension $n$. Tout déplacement s'écrit ainsi $\vec u = u^i\\,\vec e\_i$, et appliquer $\mathrm{d}q^j$ aux deux membres donne $u^j = \mathrm{d}q^j(\vec u)$&nbsp;: les composantes d'un déplacement sont les variations des coordonnées, c'est-à-dire, pour un déplacement infinitésimal,
 
-Les $\vec e\_i$ forment bien une base. Si $c^i\\,\vec e\_i = \vec 0$, appliquer $\mathrm{d}q^j$ donne $c^j = 0$&nbsp;: les vecteurs sont indépendants, et deux vecteurs indépendants forment une base du plan (dans un espace de dimension $n$, $n$ vecteurs indépendants).
+$$\mathrm{d}\vec r = \vec e\_i\\,\mathrm{d}q^i.$$
 
 La figure suivante dessine ces objets pour un système de coordonnées curvilignes. Les lignes de $\mathrm{d}q^j$ sont les courbes coordonnées $q^j = \text{cste}$, avec un écart de $1$ entre deux lignes. Le vecteur $\vec e\_i$ longe les courbes $q^j = \text{cste}$ avec $j \neq i$, donc n'en franchit aucune, et il franchit une ligne de $\mathrm{d}q^i$.
 
