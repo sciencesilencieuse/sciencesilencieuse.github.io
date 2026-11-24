@@ -283,7 +283,7 @@ Les composantes du pas et celles de la «&nbsp;pente&nbsp;» changent d'un arpen
 
 ## Le mesureur $\mathrm{d}f$ : une pile de lignes {#fleches}
 
-Précisons l'objet que A et B ont en commun. On repère les points de l'espace par un vecteur position $\vec r$, tracé depuis une origine quelconque. Un petit déplacement à partir du point $P$ est un vecteur $\vec u$, de dimension une longueur&nbsp;: il mène de $P$ au point de vecteur position $\vec r + \vec u$. Pour $\vec u$ petit, la variation d'une fonction $f$ est proportionnelle à $\vec u$ (c'est un développement de Taylor à l'ordre un)&nbsp;:
+Précisons l'objet que A et B ont en commun. On repère les points de l'espace par un vecteur position $\vec r$, tracé depuis une origine quelconque. Un petit déplacement à partir du point $P$ est un vecteur $\vec u$&nbsp;: il mène de $P$ au point de vecteur position $\vec r + \vec u$. Pour $\vec u$ petit, la variation d'une fonction $f$ est proportionnelle à $\vec u$ (c'est un développement de Taylor à l'ordre un)&nbsp;:
 
 $$f(\vec r + \vec u) - f(\vec r) \simeq \mathrm{d}f\_P(\vec u).$$
 
@@ -365,7 +365,7 @@ Soit $E$ un espace vectoriel réel (ici, l'espace des petits déplacements à pa
 
 </div>
 
-**Le long d'un mouvement.** Un point mobile a pour vecteur position $\vec r(t)$ et pour vitesse $\vec v = \mathrm{d}\vec r/\mathrm{d}t$&nbsp;: un vecteur de dimension une longueur divisée par un temps. Pendant la durée $\mathrm{d}t$, il se déplace de $\mathrm{d}\vec r = \vec v\\,\mathrm{d}t$, et la fonction varie de $\mathrm{d}f(\vec v\\,\mathrm{d}t) = \mathrm{d}f(\vec v)\\,\mathrm{d}t$, par linéarité. Un randonneur qui lit son altimètre en marchant voit donc l'indication $f\big(\vec r(t)\big)$ varier au rythme
+**Le long d'un mouvement.** Un point mobile a pour vecteur position $\vec r(t)$ et pour vitesse $\vec v = \mathrm{d}\vec r/\mathrm{d}t$. Pendant la durée $\mathrm{d}t$, il se déplace de $\mathrm{d}\vec r = \vec v\\,\mathrm{d}t$, et la fonction varie de $\mathrm{d}f(\vec v\\,\mathrm{d}t) = \mathrm{d}f(\vec v)\\,\mathrm{d}t$, par linéarité. Un randonneur qui lit son altimètre en marchant voit donc l'indication $f\big(\vec r(t)\big)$ varier au rythme
 
 $$\frac{\mathrm{d}}{\mathrm{d}t}f\big(\vec r(t)\big) = \mathrm{d}f(\vec v).$$
 
@@ -566,7 +566,7 @@ Ce que fait la figure est général. Les composantes d'un vecteur, qui disent «
 
 **Le cas des coordonnées curvilignes.** Pour un système de coordonnées $(q^1, q^2)$ (par exemple $(r, \theta)$), la position est une fonction $\vec r(q^1, q^2)$. Les physiciens connaissent les vecteurs $\vec e\_i = \partial\vec r/\partial q^i$ (la page [De Newton à Hamilton](/physique/meca/hamilton/) les utilise). Ce sont de vrais vecteurs de base&nbsp;: $\vec e\_i$ est le déplacement du point quand $q^i$ augmente de $1$, les autres coordonnées restant fixes. C'est un vecteur tangent à la **courbe coordonnée** sur laquelle seule $q^i$ varie. Sa dimension est celle d'une longueur par unité de $q^i$&nbsp;: en polaires, $\vec e\_r$ vaut $1$ m par mètre et $\vec e\_\theta$ vaut $r$ mètres par radian.
 
-Un petit déplacement quelconque change les coordonnées de $\mathrm{d}q^1$ et $\mathrm{d}q^2$, et s'écrit, par la formule habituelle de la mécanique,
+Un petit déplacement quelconque change les coordonnées de $\mathrm{d}q^1$ et $\mathrm{d}q^2$, et s'écrit,
 
 $$\mathrm{d}\vec r = \frac{\partial\vec r}{\partial q^i}\\,\mathrm{d}q^i = \vec e\_i\\,\mathrm{d}q^i.$$
 
