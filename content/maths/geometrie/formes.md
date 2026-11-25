@@ -1263,6 +1263,48 @@ quel que soit $R$&nbsp;: c'est le théorème d'Ampère. Si $B$ était la différ
 <div class="encadre-titre">Aharonov–Bohm&nbsp;: un potentiel qu'on ne peut pas jeter</div>
 <p>Hors d'un solénoïde très long, de flux magnétique $\Phi$, le champ $\vec B$ est nul, mais pas le potentiel vecteur&nbsp;: on peut le prendre égal à $A = \frac{\Phi}{2\pi}\,\mathrm{d}\theta$, la 1-forme du fil, à un facteur près. Elle est fermée, puisque $\mathrm{d}A = B = 0$, et pourtant elle n'est pas exacte&nbsp;: $\oint A = \Phi \neq 0$ sur toute boucle qui entoure le solénoïde. Aucune fonction $\Lambda$ ne vérifie $A = \mathrm{d}\Lambda$ sur toute la région extérieure, si bien qu'on ne peut pas supprimer $A$ par un changement de jauge.</p>
 <p>En mécanique quantique, la fonction d'onde d'une particule de charge $q$ qui suit un chemin $\gamma$ est déphasée de $\frac{q}{\hbar}\int_\gamma A$. Deux faisceaux qui contournent le solénoïde par ses deux côtés ont un déphasage relatif $\frac{q}{\hbar}\oint A = \frac{q\Phi}{\hbar}$, que la figure d'interférence révèle, alors que les particules ne traversent aucune région où $\vec B \neq \vec 0$. Prévu par Ehrenberg et Siday en 1949, puis par Aharonov et Bohm en 1959, l'effet a été observé par Chambers en 1960. Ce que la physique mesure est la circulation de $A$, c'est-à-dire la partie «&nbsp;fermée mais pas exacte&nbsp;» de $A$, et non $A$ lui-même.</p>
+<div class="svg-container">
+<svg id="fa-svg" viewBox="0 0 600 300" role="img" aria-label="Schéma de l'expérience d'interférence d'Aharonov et Bohm. Une source d'électrons éclaire un mur percé de deux fentes. Les deux faisceaux contournent par le haut et par le bas un solénoïde qui contient un flux magnétique, et se recombinent sur un écran où l'on observe des franges. Le champ magnétique est nul sur les trajets des électrons, mais le potentiel vecteur circule autour du solénoïde. Quand on fait varier le flux, les franges se déplacent, et la figure est identique quand le flux augmente d'un quantum h/q." style="width:100%;max-width:600px;height:auto;">
+<defs><marker id="fam" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="9" markerHeight="9" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#970E53"/></marker></defs>
+<circle cx="40" cy="150" r="7" fill="#334155"/>
+<text x="40" y="176" font-size="15" text-anchor="middle" fill="#475569" font-family="Georgia,'Times New Roman',serif">source</text>
+<text x="40" y="190" font-size="15" text-anchor="middle" fill="#475569" font-family="Georgia,'Times New Roman',serif">d'électrons</text>
+<line x1="47" y1="150" x2="106" y2="110" stroke="#94a3b8" stroke-width="1.2"/>
+<line x1="47" y1="150" x2="106" y2="190" stroke="#94a3b8" stroke-width="1.2"/>
+<rect x="105" y="30" width="7" height="75" fill="#475569"/>
+<rect x="105" y="115" width="7" height="70" fill="#475569"/>
+<rect x="105" y="195" width="7" height="75" fill="#475569"/>
+<text x="108" y="22" font-size="15" text-anchor="middle" fill="#475569" font-family="Georgia,'Times New Roman',serif">deux fentes</text>
+<path d="M112,110 Q260,40 520,150" fill="none" stroke="#004D80" stroke-width="2.2"/>
+<path d="M112,190 Q260,260 520,150" fill="none" stroke="#C2770B" stroke-width="2.2"/>
+<text x="330" y="68" font-size="15" fill="#004D80" font-style="italic" font-family="Georgia,'Times New Roman',serif">chemin 1</text>
+<text x="330" y="244" font-size="15" fill="#C2770B" font-style="italic" font-family="Georgia,'Times New Roman',serif">chemin 2</text>
+<circle cx="260" cy="150" r="24" fill="#FBE1DE" stroke="#970E53" stroke-width="1.8"/>
+<text x="260" y="156" font-size="20" text-anchor="middle" fill="#970E53" font-weight="bold" font-family="Georgia,'Times New Roman',serif">B</text>
+<path d="M299.5,135.6 A42,42 0 1 0 299.5,164.4" fill="none" stroke="#970E53" stroke-width="1.6" stroke-dasharray="3 3" marker-end="url(#fam)"/>
+<text x="316" y="155" font-size="15" fill="#970E53" font-family="Georgia,'Times New Roman',serif">A circule, B = 0 ici</text>
+<line x1="520" y1="40" x2="520" y2="260" stroke="#334155" stroke-width="3"/>
+<text x="520" y="278" font-size="15" text-anchor="middle" fill="#475569" font-family="Georgia,'Times New Roman',serif">écran</text>
+<path id="fa-ref" d="M0,0" fill="none" stroke="#94a3b8" stroke-width="1.4" stroke-dasharray="3 3"/>
+<path id="fa-cur" d="M0,0" fill="none" stroke="#970E53" stroke-width="2"/>
+<text x="560" y="34" font-size="14" text-anchor="middle" fill="#475569" font-family="Georgia,'Times New Roman',serif">intensité</text>
+</svg>
+<div style="display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:center;align-items:center;margin:2px 0 6px;font-size:0.92em;">
+<label style="display:inline-flex;align-items:center;gap:8px;margin:0;font-weight:normal;"><span>flux <i>&Phi;</i> / <i>&Phi;</i><sub>0</sub></span> <input type="range" class="fig-range" id="fa-f" min="0" max="2" step="0.05" value="0.5" style="width:140px;margin:0;"> <span id="fa-fv" style="min-width:2.6em;">0,50</span></label>
+<span id="fa-dl-t">déphasage <i>qΦ/ħ</i> = <span id="fa-dl">3,14 rad</span></span>
+</div>
+</div>
+<script>
+(function () {
+  var F = window.FG, svg = F.$('fa-svg'); if (!svg) return;
+  function curve(delta) { var d = '', y; for (y = 50; y <= 250; y += 2) { var I = (1 + Math.cos(2 * Math.PI * (y - 150) / 40 + delta)) / 2; d += (y > 50 ? 'L' : 'M') + (534 + 50 * I).toFixed(1) + ',' + y; } return d; }
+  F.$('fa-ref').setAttribute('d', curve(0));
+  function draw() { var f = parseFloat(F.$('fa-f').value), delta = 2 * Math.PI * f; F.$('fa-cur').setAttribute('d', curve(delta)); F.$('fa-fv').textContent = F.fmt(f, 2); F.$('fa-dl').textContent = F.fmt(delta, 2) + ' rad'; }
+  F.$('fa-f').addEventListener('input', draw);
+  draw();
+})();
+</script>
+<p class="legende">Schéma de l'expérience. Le flux $\Phi$ du solénoïde est confiné&nbsp;: les électrons ne traversent jamais de région où $\vec B \neq \vec 0$, mais le potentiel vecteur circule autour. Les franges de l'écran se déplacent avec $\Phi$ (courbe rouge, la courbe grise en tirets est la figure sans flux), et la figure est identique chaque fois que $\Phi$ augmente de $\Phi_0 = h/q$.</p>
 </div>
 
 <div class="encadre">
