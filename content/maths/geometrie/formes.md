@@ -776,9 +776,9 @@ où $\alpha$ est prise au point $\vec r(t)$. Le nombre $\alpha\big(\vec v(t)\big
 
 Prenons la 1-forme la plus concrète de la physique, **le travail d'une force**. Une force $\vec F$ fournit à un point matériel, pour un petit déplacement $\vec u$, le travail $\vec F\cdot\vec u$, linéaire en $\vec u$&nbsp;: c'est une 1-forme, $\omega\_F = \vec F\cdot(\ \cdot\ )$. Appliquée à un déplacement $\mathrm{d}\vec r$, elle donne un travail (en joules)&nbsp;; appliquée à la vitesse, $\omega\_F(\vec v) = \vec F\cdot\vec v$ est la puissance de la force (en watts). Le travail sur le chemin est la somme des travaux élémentaires, que l'on peut écrire de trois façons&nbsp;:
 
-$$W = \int\_\gamma \omega\_F = \int\_\gamma \vec F\cdot\mathrm{d}\vec r = \int\_a^b \omega\_F(\vec v)\\,\mathrm{d}t = \int\_a^b \vec F\big(\vec r(t)\big)\cdot\vec v(t)\\,\mathrm{d}t.$$
+$$W = \int\_\gamma \omega\_F = \int\_a^b \omega\_F(\vec v)\\,\mathrm{d}t = \int\_a^b \vec F\big(\vec r(t)\big)\cdot\vec v(t)\\,\mathrm{d}t.$$
 
-Le $\mathrm{d}t$ n'apparaît qu'avec la puissance (des watts fois des secondes donnent des joules)&nbsp;: $\int\_\gamma\omega\_F$ somme déjà des travaux, puisque $\omega\_F$ est appliquée à des déplacements $\mathrm{d}\vec r$. La figure construit cette intégrale avec des rectangles.
+La figure construit cette intégrale avec des rectangles.
 
 <div class="svg-container" style="display:flex;flex-wrap:wrap;gap:6px 10px;justify-content:center;align-items:flex-start;">
 <svg id="fw-map" viewBox="0 0 360 350" role="img" aria-label="Carte d'un champ de force F, dessiné par des flèches grises, et d'un chemin gamma qui va du point A au point B en passant par M. Le chemin est découpé en pas de même durée ; chaque pas est coloré en vert quand la force pousse dans le sens du mouvement et en orange quand elle s'y oppose. On peut déplacer A, M et B." style="flex:1 1 280px;max-width:360px;height:auto;touch-action:none;">
