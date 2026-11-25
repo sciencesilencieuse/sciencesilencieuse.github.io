@@ -382,7 +382,7 @@ Comment dessiner un mesureur&nbsp;? Traçons les lignes où $f$ vaut $f(P)$, $f(
   F.responsive(svg, 400);
 })();
 </script>
-<p class="legende">Une colline à deux sommets. En $P$, la différentielle $\mathrm{d}V$ est la pile de lignes magenta (valeurs de $V$ séparées de $\Delta = 0{,}4$, comme sur la carte, vues de très près). La flèche bleue franchit un nombre de lignes qui est la valeur de $\mathrm{d}V$ sur elle. Doubler la flèche double ce nombre&nbsp;; la retourner change son signe.</p>
+<p class="legende">Une colline à deux sommets. En $P$, la différentielle $\mathrm{d}V$ est la pile de lignes magenta (valeurs de $V$ séparées de $\Delta = 0{,}4$, comme sur la carte, vues de très près). Le vecteur bleu franchit un nombre de lignes qui est la valeur de $\mathrm{d}V$ sur lui. Doubler le vecteur double ce nombre&nbsp;; le retourner change son signe.</p>
 
 <div id="def">
 
@@ -499,7 +499,7 @@ Les 1-formes ne sont pas toutes des différentielles de fonctions (le travail d'
 
 A et B n'ont pas choisi les mêmes vecteurs de référence&nbsp;: A prend un mètre sur chaque axe, B un kilomètre sur l'axe $x$. Comment les nombres d'un vecteur, et ceux d'un mesureur, changent-ils pour un choix quelconque&nbsp;?
 
-**Repérer un vecteur.** On choisit deux vecteurs de référence $(\vec e\_1, \vec e\_2)$, pas forcément perpendiculaires ni de même longueur (par exemple les axes $\hat e\_x$, $\hat e\_y$). Un vecteur $\vec v$ (déplacement, vitesse, force&hellip;) s'écrit alors de façon unique, par la règle du parallélogramme&nbsp;: $\vec v = v^1\vec e\_1 + v^2\vec e\_2$[^einstein]. Les $v^i$ sont ses **composantes**&nbsp;: combien de $\vec e\_1$, combien de $\vec e\_2$.
+**Repérer un vecteur.** On choisit deux vecteurs de référence $(\vec e\_1, \vec e\_2)$ non colinéaires, pas forcément perpendiculaires ni de même longueur (les axes $\hat e\_x$, $\hat e\_y$ en sont un cas particulier). Un vecteur $\vec v$ (déplacement, vitesse, force&hellip;) s'écrit alors de façon unique, par la règle du parallélogramme&nbsp;: $\vec v = v^1\vec e\_1 + v^2\vec e\_2$[^einstein]. Les $v^i$ sont ses **composantes**&nbsp;: combien de $\vec e\_1$, combien de $\vec e\_2$.
 
 **Repérer un mesureur.** Un mesureur $\alpha$ est linéaire&nbsp;: il est connu par ses valeurs sur les vecteurs de référence, $\alpha\_i = \alpha(\vec e\_i)$, le nombre de lignes franchies par $\vec e\_i$ (pour une altitude, la pente le long de l'axe $i$). Par linéarité, la valeur de $\alpha$ sur un vecteur quelconque est
 
@@ -583,7 +583,7 @@ Le produit ne change pas&nbsp;: $\alpha\_1 v^1 = 0{,}3 \times 10 = 300 \times 0{
   F.responsive(svg, 398);
 })();
 </script>
-<p class="legende">Un même vecteur $\vec v$ (bleu) et une même 1-forme $\alpha$ (lignes magenta), exprimées dans une base $(\vec e_1, \vec e_2)$ que l'on peut déformer. Les coefficients $v^i$ de la décomposition (parallélogramme) et les nombres de lignes $\alpha_i$ franchies par les vecteurs de base varient en sens contraires quand on change la longueur ou l'angle des vecteurs de base (le curseur de longueur reproduit le changement d'unité de l'arpenteur B), mais le nombre de lignes franchies par $\vec v$ ne change pas. Les points sur les flèches marquent les lignes franchies.</p>
+<p class="legende">Un même vecteur $\vec v$ (bleu) et une même 1-forme $\alpha$ (lignes magenta), exprimées dans une base $(\vec e_1, \vec e_2)$ que l'on peut déformer. Les composantes $v^i$ de la décomposition (parallélogramme) et les nombres de lignes $\alpha_i$ franchies par les vecteurs de base varient en sens contraires quand on change la longueur ou l'angle des vecteurs de base (le curseur de longueur reproduit le changement d'unité de l'arpenteur B), mais le nombre de lignes franchies par $\vec v$ ne change pas. Les points sur les flèches marquent les lignes franchies.</p>
 
 Ce que fait la figure est général. Les composantes d'un vecteur («&nbsp;combien de&nbsp;» vecteurs de base) varient à l'inverse de la base&nbsp;: elles sont **contravariantes**, avec l'indice en haut. Celles d'un mesureur («&nbsp;combien par&nbsp;» vecteur de base) varient comme la base&nbsp;: elles sont **covariantes**, avec l'indice en bas. Leur rencontre, $\alpha\_i\\,v^i$, est un nombre indépendant de la base.
 
@@ -752,7 +752,7 @@ Appliquons cette formule aux coordonnées polaires $(r, \theta)$&nbsp;: $\mathrm
   F.responsive(svg, 402);
 })();
 </script>
-<p class="legende">Les lignes de $\mathrm{d}r$ sont des cercles équidistants, celles de $\mathrm{d}\theta$ des rayons séparés de $\Delta\theta = 15°$. Une flèche franchit $\mathrm{d}r(\vec v) = v_r$ cercles et $\mathrm{d}\theta(\vec v) = v_\theta/r$ radians, soit $v_\theta/(r\Delta\theta)$ rayons ($v_r$ et $v_\theta$ sont les composantes de $\vec v$ sur les vecteurs unitaires radial et orthoradial). À distance $r$, deux rayons voisins sont écartés de $r\Delta\theta$&nbsp;: plus on s'éloigne, moins la même flèche en franchit.</p>
+<p class="legende">Les lignes de $\mathrm{d}r$ sont des cercles équidistants, celles de $\mathrm{d}\theta$ des rayons séparés de $\Delta\theta = 15°$. Un vecteur franchit $\mathrm{d}r(\vec v) = v_r$ cercles et $\mathrm{d}\theta(\vec v) = v_\theta/r$ radians, soit $v_\theta/(r\Delta\theta)$ rayons ($v_r$ et $v_\theta$ sont les composantes de $\vec v$ sur les vecteurs unitaires radial et orthoradial). À distance $r$, deux rayons voisins sont écartés de $r\Delta\theta$&nbsp;: plus on s'éloigne, moins le même vecteur en franchit.</p>
 
 Le facteur $1/r$ est donc dans l'objet $\mathrm{d}\theta$ lui-même&nbsp;: les rayons divergent. C'est une propriété géométrique, que le dessin montre, et la formule de $\mathrm{d}f$ n'a pas besoin de la répéter. Physiquement, un cycliste qui roule à la vitesse $v$ sur un rond-point de rayon $r$ balaye l'angle $v/r$ par seconde&nbsp;: à vitesse égale, plus le cercle est grand, moins l'angle change.
 
@@ -933,9 +933,9 @@ On en fabrique à partir de deux 1-formes $\alpha$ et $\beta$&nbsp;: leur **prod
 
 $$(\alpha\wedge\beta)(\vec u, \vec v) = \alpha(\vec u)\\,\beta(\vec v) - \alpha(\vec v)\\,\beta(\vec u).$$
 
-Elle est bien linéaire en chaque flèche, et antisymétrique&nbsp;: échanger $\vec u$ et $\vec v$ change le signe, de même qu'échanger $\alpha$ et $\beta$. Donc $\beta\wedge\alpha = -\alpha\wedge\beta$, et $\alpha\wedge\alpha = 0$.
+Elle est bien linéaire en chaque vecteur, et antisymétrique&nbsp;: échanger $\vec u$ et $\vec v$ change le signe, de même qu'échanger $\alpha$ et $\beta$. Donc $\beta\wedge\alpha = -\alpha\wedge\beta$, et $\alpha\wedge\alpha = 0$.
 
-Prenons $\alpha = \mathrm{d}x$ et $\beta = \mathrm{d}y$. La valeur de $\mathrm{d}x$ sur une flèche est sa composante selon $x$ ($\mathrm{d}x(\vec u) = u\_x$, voir la section [Deux sortes de composantes](#composantes)), donc
+Prenons $\alpha = \mathrm{d}x$ et $\beta = \mathrm{d}y$. La valeur de $\mathrm{d}x$ sur un vecteur est sa composante selon $x$ ($\mathrm{d}x(\vec u) = u\_x$, voir la section [Deux sortes de composantes](#composantes)), donc
 
 $$\mathrm{d}x\wedge\mathrm{d}y\\,(\vec u, \vec v) = u\_x v\_y - u\_y v\_x.$$
 
@@ -997,7 +997,7 @@ C'est le déterminant des deux vecteurs, l'aire orientée du parallélogramme qu
   F.responsive(svg, 402);
 })();
 </script>
-<p class="legende">Le quadrillage représente $\mathrm{d}x\wedge\mathrm{d}y$. Le parallélogramme construit sur $\vec u$ et $\vec v$ balaie un certain nombre de carreaux, positif si l'on tourne de $\vec u$ vers $\vec v$ dans le sens direct, négatif sinon. Échanger les deux flèches change le signe.</p>
+<p class="legende">Le quadrillage représente $\mathrm{d}x\wedge\mathrm{d}y$. Le parallélogramme construit sur $\vec u$ et $\vec v$ balaie un certain nombre de carreaux, positif si l'on tourne de $\vec u$ vers $\vec v$ dans le sens direct, négatif sinon. Échanger les deux vecteurs change le signe.</p>
 
 **Changer de variables.** Que devient $\mathrm{d}x\wedge\mathrm{d}y$ en coordonnées polaires&nbsp;? Écrivons d'abord $\mathrm{d}x$ et $\mathrm{d}y$ avec $\mathrm{d}r$ et $\mathrm{d}\theta$. Les fonctions $x = r\cos\theta$ et $y = r\sin\theta$ dépendent de $(r, \theta)$, et la formule $\mathrm{d}f = \frac{\partial f}{\partial q^i}\\,\mathrm{d}q^i$ de la section [Deux sortes de composantes](#composantes) donne
 
@@ -1168,7 +1168,7 @@ Pourquoi est-ce vrai&nbsp;? On découpe $D$ en petites cases. La circulation de 
 </script>
 <p class="legende">La 1-forme $\alpha = x\,\mathrm{d}y$ a pour différentielle extérieure $\mathrm{d}\alpha = \mathrm{d}x\wedge\mathrm{d}y$, dont l'intégrale sur le rectangle est son aire, $6$. Plus le découpage est fin, plus les arêtes intérieures (grises) se compensent par paires, et la somme sur les cases coïncide avec la circulation sur le bord (bleu).</p>
 
-**Stokes en physique.** Pour un fluide, la circulation autour d'une petite boucle est le «&nbsp;tour&nbsp;» que ferait une petite roue à aubes posée dans l'écoulement, et la formule de Stokes dit que la circulation sur un grand circuit est la somme de ces tours sur la surface qu'il borde. Elle contient trois lois de l'électromagnétisme&nbsp;: Ampère, $\oint\vec B\cdot\mathrm{d}\vec r = \mu\_0 I$ (la circulation de $\vec B$ est le courant enlacé)&nbsp;; Faraday, $\oint\vec E\cdot\mathrm{d}\vec r = -\mathrm{d}\Phi\_B/\mathrm{d}t$ (la tension induite dans un circuit est l'opposé de la variation du flux à travers lui)&nbsp;; et, avec la divergence, Gauss, $\oint\vec E\cdot\mathrm{d}\vec S = Q/\varepsilon\_0$.
+**Stokes en physique.** Pour un fluide, la circulation autour d'une petite boucle est le «&nbsp;tour&nbsp;» que ferait une petite roue à aubes posée dans l'écoulement, et la formule de Stokes dit que la circulation sur un grand circuit est la somme de ces tours sur la surface qu'il borde. Sous forme intégrale, des lois de l'électromagnétisme en sont des cas&nbsp;: Ampère, $\oint\vec B\cdot\mathrm{d}\vec r = \mu\_0 I$ (la circulation de $\vec B$ est le courant enlacé)&nbsp;; Faraday, $\oint\vec E\cdot\mathrm{d}\vec r = -\mathrm{d}\Phi\_B/\mathrm{d}t$ (la tension induite dans un circuit est l'opposé de la variation du flux à travers lui)&nbsp;; et, pour la divergence, Gauss, $\oint\vec E\cdot\mathrm{d}\vec S = Q/\varepsilon\_0$.
 
 Ce seul énoncé contient des résultats qu'on apprend séparément&nbsp;: en dimension $1$, c'est le théorème fondamental de l'analyse, $\int\_a^b\mathrm{d}f = f(b) - f(a)$, rappelé plus haut&nbsp;; en dimension $2$, la formule de Green&nbsp;; en dimension $3$, le théorème du rotationnel (Stokes-Kelvin) et celui de la divergence (Ostrogradski). Le dictionnaire avec le calcul vectoriel est&nbsp;:
 
@@ -1248,22 +1248,22 @@ Une forme $\alpha$ est **fermée** si $\mathrm{d}\alpha = 0$. Toute forme exacte
 
 **Le champ magnétique d'un fil.** Un fil rectiligne infini, parcouru par un courant $I$, crée un champ orthoradial $\vec B = \frac{\mu\_0 I}{2\pi r}\\,\hat e\_\theta$. La 1-forme associée, celle dont l'intégrale est la circulation $\oint\vec B\cdot\mathrm{d}\vec r$, se lit sur les vecteurs de base&nbsp;: $\vec B\cdot\vec e\_r = 0$ et $\vec B\cdot\vec e\_\theta = \frac{\mu\_0 I}{2\pi r}\\,r = \frac{\mu\_0 I}{2\pi}$, donc
 
-$$B = \frac{\mu\_0 I}{2\pi}\\,\mathrm{d}\theta.$$
+$$\vec B^\flat = \frac{\mu\_0 I}{2\pi}\\,\mathrm{d}\theta.$$
 
 Le $1/r$ du champ est celui des rayons de $\mathrm{d}\theta$ qui divergent&nbsp;; la 1-forme, elle, a un coefficient constant.
 
-**Elle est fermée.** En cartésiennes, $B = P\\,\mathrm{d}x + Q\\,\mathrm{d}y$ avec $P = -\frac{\mu\_0 I}{2\pi}\frac{y}{x^2 + y^2}$ et $Q = \frac{\mu\_0 I}{2\pi}\frac{x}{x^2 + y^2}$. Hors du fil, $\frac{\partial Q}{\partial x} = \frac{\mu\_0 I}{2\pi}\frac{y^2 - x^2}{(x^2 + y^2)^2} = \frac{\partial P}{\partial y}$, donc $\mathrm{d}B = 0$&nbsp;: c'est $\vec\nabla\times\vec B = \vec 0$, puisqu'il n'y a pas de courant hors du fil.
+**Elle est fermée.** En cartésiennes, $\vec B^\flat = P\\,\mathrm{d}x + Q\\,\mathrm{d}y$ avec $P = -\frac{\mu\_0 I}{2\pi}\frac{y}{x^2 + y^2}$ et $Q = \frac{\mu\_0 I}{2\pi}\frac{x}{x^2 + y^2}$. Hors du fil, $\frac{\partial Q}{\partial x} = \frac{\mu\_0 I}{2\pi}\frac{y^2 - x^2}{(x^2 + y^2)^2} = \frac{\partial P}{\partial y}$, donc $\mathrm{d}\vec B^\flat = 0$&nbsp;: c'est $\vec\nabla\times\vec B = \vec 0$, puisqu'il n'y a pas de courant hors du fil.
 
 **Elle n'est pas exacte.** La circulation sur un cercle de rayon $R$ autour du fil vaut
 
 $$\oint\vec B\cdot\mathrm{d}\vec r = \frac{\mu\_0 I}{2\pi}\oint\mathrm{d}\theta = \mu\_0 I,$$
 
-quel que soit $R$&nbsp;: c'est le théorème d'Ampère. Si $B$ était la différentielle d'une fonction $\varphi$, sa circulation serait la différence de $\varphi$ entre l'arrivée et le départ de la boucle, donc nulle sur toute boucle fermée. Le candidat naturel est $\varphi = \frac{\mu\_0 I}{2\pi}\\,\theta$, mais il n'est pas défini sur tout le plan privé du fil&nbsp;: il augmente de $\mu\_0 I$ à chaque tour.
+quel que soit $R$&nbsp;: c'est le théorème d'Ampère. Si $\vec B^\flat$ était la différentielle d'une fonction $\varphi$, sa circulation serait la différence de $\varphi$ entre l'arrivée et le départ de la boucle, donc nulle sur toute boucle fermée. Le candidat naturel est $\varphi = \frac{\mu\_0 I}{2\pi}\\,\theta$, mais il n'est pas défini sur tout le plan privé du fil&nbsp;: il augmente de $\mu\_0 I$ à chaque tour.
 
-**Pourquoi fermée ne suffit pas.** Sur un domaine sans trou (un demi-plan par exemple), $\theta$ est une fonction ordinaire et $B = \mathrm{d}\big(\frac{\mu\_0 I}{2\pi}\theta\big)$ est exacte&nbsp;: c'est le lemme de Poincaré. Le théorème de Stokes explique l'obstruction globale. Une boucle qui borde un disque $D$ contenu dans le domaine où $\mathrm{d}B = 0$ a une circulation $\int\_D\mathrm{d}B = 0$. Une boucle autour du fil ne borde aucun disque du plan privé du fil&nbsp;: le disque contiendrait le fil, là où $B$ n'est pas défini (et où $\vec\nabla\times\vec B = \mu\_0\vec\jmath \neq \vec 0$). Une circulation non nulle détecte le trou, c'est-à-dire le courant enfermé.
+**Pourquoi fermée ne suffit pas.** Sur un domaine sans trou (un demi-plan par exemple), $\theta$ est une fonction ordinaire et $\vec B^\flat = \mathrm{d}\big(\frac{\mu\_0 I}{2\pi}\theta\big)$ est exacte&nbsp;: c'est le lemme de Poincaré. Le théorème de Stokes explique l'obstruction globale. Une boucle qui borde un disque $D$ contenu dans le domaine où $\mathrm{d}\vec B^\flat = 0$ a une circulation $\int\_D\mathrm{d}\vec B^\flat = 0$. Une boucle autour du fil ne borde aucun disque du plan privé du fil&nbsp;: le disque contiendrait le fil, là où le champ n'est pas défini (et où $\vec\nabla\times\vec B = \mu\_0\vec\jmath \neq \vec 0$). Une circulation non nulle détecte le trou, c'est-à-dire le courant enfermé.
 
-<div class="encadre">
-<div class="encadre-titre">Aharonov–Bohm&nbsp;: un potentiel qu'on ne peut pas jeter</div>
+<details class="encadre">
+<summary class="encadre-titre">Aharonov–Bohm&nbsp;: un potentiel qu'on ne peut pas jeter</summary>
 <p>Hors d'un solénoïde très long, de flux magnétique $\Phi$, le champ $\vec B$ est nul, mais pas le potentiel vecteur&nbsp;: on peut le prendre égal à $A = \frac{\Phi}{2\pi}\,\mathrm{d}\theta$, la 1-forme du fil, à un facteur près. Elle est fermée, puisque $\mathrm{d}A = B = 0$, et pourtant elle n'est pas exacte&nbsp;: $\oint A = \Phi \neq 0$ sur toute boucle qui entoure le solénoïde. Aucune fonction $\Lambda$ ne vérifie $A = \mathrm{d}\Lambda$ sur toute la région extérieure, si bien qu'on ne peut pas supprimer $A$ par un changement de jauge.</p>
 <p>En mécanique quantique, la fonction d'onde d'une particule de charge $q$ qui suit un chemin $\gamma$ est déphasée de $\frac{q}{\hbar}\int_\gamma A$. Deux faisceaux qui contournent le solénoïde par ses deux côtés ont un déphasage relatif $\frac{q}{\hbar}\oint A = \frac{q\Phi}{\hbar}$, que la figure d'interférence révèle, alors que les particules ne traversent aucune région où $\vec B \neq \vec 0$. Prévu par Ehrenberg et Siday en 1949, puis par Aharonov et Bohm en 1959, l'effet a été observé par Chambers en 1960. Ce que la physique mesure est la circulation de $A$, c'est-à-dire la partie «&nbsp;fermée mais pas exacte&nbsp;» de $A$, et non $A$ lui-même.</p>
 <div class="svg-container">
@@ -1308,7 +1308,7 @@ quel que soit $R$&nbsp;: c'est le théorème d'Ampère. Si $B$ était la différ
 })();
 </script>
 <p class="legende">Schéma de l'expérience. Le flux $\Phi$ du solénoïde est confiné&nbsp;: les électrons ne traversent jamais de région où $\vec B \neq \vec 0$, mais le potentiel vecteur circule autour. Les franges de l'écran se déplacent avec $\Phi$ (courbe rouge, la courbe grise en tirets est la figure sans flux), et la figure est identique chaque fois que $\Phi$ augmente de $\Phi_0 = h/q$.</p>
-</div>
+</details>
 
 <details class="encadre">
 <summary class="encadre-titre">Compter les trous avec des formes</summary>
@@ -1316,8 +1316,8 @@ quel que soit $R$&nbsp;: c'est le théorème d'Ampère. Si $B$ était la différ
 <p>Le théorème de Stokes montre pourquoi. Deux boucles qu'on peut déformer l'une dans l'autre sans franchir de trou bordent ensemble une surface où la forme est fermée, et donnent la même circulation&nbsp;: c'est pourquoi la circulation de $\mathrm{d}\theta$ vaut $2\pi$ sur tout cercle autour de l'origine, quel que soit son rayon, et même sur une boucle tordue. Une boucle qui entoure un trou ne peut pas être réduite à un point, et son intégrale mesure ce que le trou contient (le courant du fil, le flux du solénoïde). L'encadré suivant est le miroir de cette idée&nbsp;: les cycles, bords de rien, forment l'homologie, et les formes fermées modulo les formes exactes forment la cohomologie.</p>
 </details>
 
-<div class="encadre">
-<div class="encadre-titre">Wheeler et le bord d'un bord</div>
+<details class="encadre">
+<summary class="encadre-titre">Wheeler et le bord d'un bord</summary>
 <p>Dans <em>Gravitation</em> (1973), Misner, Thorne et Wheeler consacrent le chapitre 15 à une idée que Wheeler reprend dans <em>A Journey into Gravity and Spacetime</em> : l'équation d'Einstein $G = 8\pi T$ devient intelligible à partir d'un principe qui tient en une phrase, <em>le bord d'un bord est vide</em>, $\partial\partial = 0$. Il se vérifie en toute dimension :</p>
 <ul>
 <li>en dimension $1$, le bord d'un segment $[A, B]$ est formé de ses deux extrémités, $B - A$ ; un point n'a pas de bord ;</li>
@@ -1435,7 +1435,7 @@ quel que soit $R$&nbsp;: c'est le théorème d'Ampère. Si $B$ était la différ
 </div>
 <p>Ce principe est le miroir géométrique de $\mathrm{d}\circ\mathrm{d} = 0$. Le théorème de Stokes, appliqué deux fois, donne $\int_{\partial\partial D}\alpha = \int_{\partial D}\mathrm{d}\alpha = \int_D\mathrm{d}\mathrm{d}\alpha$. Comme $\partial\partial D$ est vide, le membre de gauche est nul pour toute région $D$, donc $\mathrm{d}\mathrm{d}\alpha = 0$.</p>
 <p>Wheeler en tire la conservation de l'énergie-impulsion. Le tenseur d'Einstein $G$ est ce qu'il appelle le <em>moment de rotation</em>, une mesure de la courbure d'un petit cube d'espace-temps. L'équation d'Einstein dit que le moment de rotation associé à un cube à trois dimensions est $8\pi$ fois l'énergie-impulsion qu'il contient. Or le bord d'un bloc d'espace-temps à quatre dimensions est formé de huit de ces cubes, et, comme le bord d'un bord est vide, la somme de leurs moments de rotation est automatiquement nulle. C'est l'identité de Bianchi contractée, $\nabla_\mu G^{\mu\nu} = 0$. L'équation $G = 8\pi T$ entraîne alors $\nabla_\mu T^{\mu\nu} = 0$ : la conservation n'est pas une hypothèse ajoutée, c'est une identité géométrique, du même type que $B = \mathrm{d}A \Rightarrow \mathrm{d}B = 0$ en électromagnétisme.</p>
-</div>
+</details>
 
 ## Application&nbsp;: retour sur les moments {#hamilton}
 
@@ -1455,13 +1455,13 @@ En coordonnées polaires, la métrique est $g = \mathrm{d}r^2 + r^2\\,\mathrm{d}
 
 $$p = m\left(\dot r\\,\mathrm{d}r + r^2\dot\theta\\,\mathrm{d}\theta\right),$$
 
-de sorte que $p\_r = m\dot r$ et $p\_\theta = mr^2\dot\theta$ se lisent sans calcul. Le $r^2$ de $p\_\theta$ vient de la métrique, qui convertit la flèche en mesureur. La différence de dimension entre $p\_r$ et $p\_\theta$ vient de ce que $\mathrm{d}r$ mesure des longueurs et $\mathrm{d}\theta$ des radians.
+de sorte que $p\_r = m\dot r$ et $p\_\theta = mr^2\dot\theta$ se lisent sans calcul. Le $r^2$ de $p\_\theta$ vient de la métrique, qui convertit le vecteur en mesureur. La différence de dimension entre $p\_r$ et $p\_\theta$ vient de ce que $\mathrm{d}r$ mesure des longueurs et $\mathrm{d}\theta$ des radians.
 
-Pourquoi un mesureur plutôt qu'une flèche&nbsp;? Parce que le moment mesure comment l'énergie cinétique $T(\vec v) = \frac{1}{2}m\\,g(\vec v, \vec v)$ varie quand on change la vitesse&nbsp;:
+Pourquoi un mesureur plutôt qu'un vecteur&nbsp;? Parce que le moment mesure comment l'énergie cinétique $T(\vec v) = \frac{1}{2}m\\,g(\vec v, \vec v)$ varie quand on change la vitesse&nbsp;:
 
 $$p(\delta\vec v) = \frac{\mathrm{d}}{\mathrm{d}\varepsilon}\\,T(\vec v + \varepsilon\\,\delta\vec v)\Big|\_{\varepsilon=0} = m\\,g(\vec v, \delta\vec v).$$
 
-C'est la dérivée d'une fonction par rapport à une flèche, donc une 1-forme.
+C'est la dérivée d'une fonction par rapport à un vecteur, donc une 1-forme.
 
 ### L'espace des phases et sa forme symplectique
 
@@ -1537,7 +1537,7 @@ On écrit aussi $\iota\_{X\_H}\omega = \mathrm{d}H$, où $\iota\_X\omega$ est la
   F.responsive(svg, 396);
 })();
 </script>
-<p class="legende">Espace des phases du pendule, $H = \frac{p^2}{2} - \cos q$. Au point $P$, le champ hamiltonien $X_H$ (orange) est tangent à la courbe de niveau de $H$. Pour n'importe quelle flèche $\vec Y$ (bleu), l'aire orientée du parallélogramme construit sur $X_H$ et $\vec Y$ est égale à la valeur de $\mathrm{d}H$ sur $\vec Y$&nbsp;: c'est la définition de $X_H$.</p>
+<p class="legende">Espace des phases du pendule, $H = \frac{p^2}{2} - \cos q$. Au point $P$, le champ hamiltonien $X_H$ (orange) est tangent à la courbe de niveau de $H$. Pour n'importe quel vecteur $\vec Y$ (bleu), l'aire orientée du parallélogramme construit sur $X_H$ et $\vec Y$ est égale à la valeur de $\mathrm{d}H$ sur $\vec Y$&nbsp;: c'est la définition de $X_H$.</p>
 
 **Les équations de Hamilton.** Pour un degré de liberté, écrivons $X\_H = (X\_q, X\_p)$ et $\vec Y = (Y\_q, Y\_p)$. Alors $\omega(X\_H, \vec Y) = X\_q Y\_p - X\_p Y\_q$ et $\mathrm{d}H(\vec Y) = \frac{\partial H}{\partial q}Y\_q + \frac{\partial H}{\partial p}Y\_p$. L'égalité doit être vraie pour tout $\vec Y$, ce qui identifie les coefficients de $Y\_p$ et de $Y\_q$&nbsp;:
 
@@ -1647,7 +1647,7 @@ Le contenu géométrique de l'égalité $\mathrm{d}T\wedge\mathrm{d}S = \mathrm{
 
 ## Application&nbsp;: l'électromagnétisme {#maxwell}
 
-Le champ électrique est un mesureur de déplacements&nbsp;: le travail par unité de charge le long d'un chemin est $\int\_\gamma E$, avec la 1-forme $E = E\_x\\,\mathrm{d}x + E\_y\\,\mathrm{d}y + E\_z\\,\mathrm{d}z$. Le champ magnétique intervient par son **flux** à travers une surface orientée, c'est-à-dire par une grandeur qui prend deux flèches (les côtés d'un petit parallélogramme) et donne un nombre&nbsp;: c'est une 2-forme,
+Le champ électrique est un mesureur de déplacements&nbsp;: le travail par unité de charge le long d'un chemin est $\int\_\gamma E$, avec la 1-forme $E = E\_x\\,\mathrm{d}x + E\_y\\,\mathrm{d}y + E\_z\\,\mathrm{d}z$. Le champ magnétique intervient par son **flux** à travers une surface orientée, c'est-à-dire par une grandeur qui prend deux vecteurs (les côtés d'un petit parallélogramme) et donne un nombre&nbsp;: c'est une 2-forme,
 
 $$B = B\_x\\,\mathrm{d}y\wedge\mathrm{d}z + B\_y\\,\mathrm{d}z\wedge\mathrm{d}x + B\_z\\,\mathrm{d}x\wedge\mathrm{d}y.$$
 
