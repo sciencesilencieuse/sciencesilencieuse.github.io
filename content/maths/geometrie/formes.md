@@ -17,11 +17,20 @@ weight = 7
     border-radius:10px;
     padding:5px 20px 5px 20px;
 }
-#axiom
+.encadre
 {
-    background-color:#E5F3E0;
-    border-radius:10px;
-    padding:5px 20px 5px 20px;
+    max-width: 40rem;
+    margin: 1.4em auto;
+    border: 2px solid #006C65;
+    border-radius: 12px;
+    background: #F3F8F7;
+    padding: 0.6em 1.3em 0.4em 1.3em;
+}
+.encadre-titre
+{
+    font-weight: bold;
+    color: #006C65;
+    margin-bottom: 0.3em;
 }
 .svg-container {
     position: relative;
@@ -1224,19 +1233,16 @@ quel que soit $R$&nbsp;: c'est le théorème d'Ampère. Si $B$ était la différ
 
 **Pourquoi fermée ne suffit pas.** Sur un domaine sans trou (un demi-plan par exemple), $\theta$ est une fonction ordinaire et $B = \mathrm{d}\big(\frac{\mu\_0 I}{2\pi}\theta\big)$ est exacte&nbsp;: c'est le lemme de Poincaré. Le théorème de Stokes explique l'obstruction globale. Une boucle qui borde un disque $D$ contenu dans le domaine où $\mathrm{d}B = 0$ a une circulation $\int\_D\mathrm{d}B = 0$. Une boucle autour du fil ne borde aucun disque du plan privé du fil&nbsp;: le disque contiendrait le fil, là où $B$ n'est pas défini (et où $\vec\nabla\times\vec B = \mu\_0\vec\jmath \neq \vec 0$). Une circulation non nulle détecte le trou, c'est-à-dire le courant enfermé.
 
-<div id="axiom">
-
-**Le bord d'un bord est vide**
-
-Wheeler fait de cette identité géométrique, $\partial\partial = 0$, le principe central pour comprendre l'équation d'Einstein $G = 8\pi T$ (dans *Gravitation*, avec Misner et Thorne, chapitre 15, et dans *A Journey into Gravity and Spacetime*). Elle se vérifie en toute dimension&nbsp;:
-
-- en dimension $1$, le bord d'un segment $[A, B]$ est formé de ses deux extrémités, $B - A$&nbsp;; un point n'a pas de bord&nbsp;;
-- en dimension $2$, le bord d'un carré est formé de $4$ arêtes orientées. Chaque sommet est l'arrivée d'une arête et le départ de la suivante&nbsp;: le bord du bord est vide&nbsp;;
-- en dimension $3$, le bord d'un cube est formé de $6$ faces. Chaque arête appartient à deux faces, qui la parcourent en sens opposés&nbsp;;
-- en dimension $4$, le bord d'un hypercube est formé de $8$ cubes. Chacune des $24$ faces carrées appartient à deux cubes, avec des orientations opposées.
-
-Dans chaque cas, une «&nbsp;face du bord&nbsp;» est partagée par deux cellules voisines qui la parcourent en sens opposés, et les contributions se compensent. C'est le mécanisme de la preuve du théorème de Stokes, où les arêtes intérieures se compensent par paires.
-
+<div class="encadre">
+<div class="encadre-titre">Wheeler et le bord d'un bord</div>
+<p>Dans <em>Gravitation</em> (1973), Misner, Thorne et Wheeler consacrent le chapitre 15 à une idée que Wheeler reprend dans <em>A Journey into Gravity and Spacetime</em> : l'équation d'Einstein $G = 8\pi T$ devient intelligible à partir d'un principe qui tient en une phrase, <em>le bord d'un bord est vide</em>, $\partial\partial = 0$. Il se vérifie en toute dimension :</p>
+<ul>
+<li>en dimension $1$, le bord d'un segment $[A, B]$ est formé de ses deux extrémités, $B - A$ ; un point n'a pas de bord ;</li>
+<li>en dimension $2$, le bord d'un carré est formé de $4$ arêtes orientées. Chaque sommet est l'arrivée d'une arête et le départ de la suivante ;</li>
+<li>en dimension $3$, le bord d'un cube est formé de $6$ faces. Chaque arête appartient à deux faces, qui la parcourent en sens opposés ;</li>
+<li>en dimension $4$, le bord d'un hypercube est formé de $8$ cubes. Chacune des $24$ faces carrées appartient à deux cubes, avec des orientations opposées.</li>
+</ul>
+<p>Dans chaque cas, une « face du bord » est partagée par deux cellules voisines qui la parcourent en sens opposés, et les contributions se compensent. C'est le mécanisme de la preuve du théorème de Stokes, où les arêtes intérieures s'annulent par paires.</p>
 <div class="svg-container" style="display:flex;flex-wrap:wrap;gap:8px 10px;justify-content:center;align-items:flex-start;">
 <svg viewBox="0 0 220 250" role="img" aria-label="Un carré dont le bord est formé de quatre arêtes orientées dans le sens direct. À chaque sommet, une arête arrive et la suivante repart : le bord du bord est vide." style="flex:1 1 190px;max-width:235px;height:auto;">
 <defs><marker id="fbm1" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#006C65"/></marker></defs>
@@ -1344,11 +1350,8 @@ Dans chaque cas, une «&nbsp;face du bord&nbsp;» est partagée par deux cellule
 <text x="110" y="234" font-size="10.5" fill="#475569" text-anchor="middle" font-weight="normal" font-style="normal" font-family="Georgia,'Times New Roman',serif">24 faces, chacune dans 2 cubes.</text>
 </svg>
 </div>
-
-Ce principe est le miroir géométrique de $\mathrm{d}\circ\mathrm{d} = 0$. Pour une région $D$ et une forme $\alpha$, le théorème de Stokes appliqué deux fois donne $\int\_{\partial\partial D}\alpha = \int\_{\partial D}\mathrm{d}\alpha = \int\_D\mathrm{d}\mathrm{d}\alpha$. Comme $\partial\partial D$ est vide, le membre de gauche est nul pour tout $D$&nbsp;; donc $\mathrm{d}\mathrm{d}\alpha = 0$.
-
-**Le lien avec la gravitation.** Le tenseur d'Einstein $G$ est ce que Wheeler appelle le **moment de rotation**, une mesure de la courbure d'un petit cube d'espace-temps. L'équation d'Einstein dit que le moment de rotation associé à un cube à trois dimensions est $8\pi$ fois l'énergie-impulsion qu'il contient. Le bord d'un bloc d'espace-temps à quatre dimensions est formé de huit de ces cubes. Comme le bord d'un bord est vide, la somme de leurs moments de rotation est automatiquement nulle&nbsp;: c'est l'identité de Bianchi contractée, $\nabla\_\mu G^{\mu\nu} = 0$. L'équation $G = 8\pi T$ entraîne alors $\nabla\_\mu T^{\mu\nu} = 0$&nbsp;: la conservation de l'énergie-impulsion n'est pas une hypothèse ajoutée, c'est une identité géométrique. C'est le même type de mécanisme que $B = \mathrm{d}A \Rightarrow \mathrm{d}B = 0$ en électromagnétisme.
-
+<p>Ce principe est le miroir géométrique de $\mathrm{d}\circ\mathrm{d} = 0$. Le théorème de Stokes, appliqué deux fois, donne $\int_{\partial\partial D}\alpha = \int_{\partial D}\mathrm{d}\alpha = \int_D\mathrm{d}\mathrm{d}\alpha$. Comme $\partial\partial D$ est vide, le membre de gauche est nul pour toute région $D$, donc $\mathrm{d}\mathrm{d}\alpha = 0$.</p>
+<p>Wheeler en tire la conservation de l'énergie-impulsion. Le tenseur d'Einstein $G$ est ce qu'il appelle le <em>moment de rotation</em>, une mesure de la courbure d'un petit cube d'espace-temps. L'équation d'Einstein dit que le moment de rotation associé à un cube à trois dimensions est $8\pi$ fois l'énergie-impulsion qu'il contient. Or le bord d'un bloc d'espace-temps à quatre dimensions est formé de huit de ces cubes, et, comme le bord d'un bord est vide, la somme de leurs moments de rotation est automatiquement nulle. C'est l'identité de Bianchi contractée, $\nabla_\mu G^{\mu\nu} = 0$. L'équation $G = 8\pi T$ entraîne alors $\nabla_\mu T^{\mu\nu} = 0$ : la conservation n'est pas une hypothèse ajoutée, c'est une identité géométrique, du même type que $B = \mathrm{d}A \Rightarrow \mathrm{d}B = 0$ en électromagnétisme.</p>
 </div>
 
 ## Application&nbsp;: retour sur les moments {#hamilton}
