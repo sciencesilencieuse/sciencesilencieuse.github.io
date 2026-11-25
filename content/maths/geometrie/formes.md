@@ -664,7 +664,7 @@ C'est la règle de dérivation en chaîne, et elle garde la même forme d'un sys
 
 ## La différentielle et les coordonnées polaires {#polaires}
 
-Appliquons cette formule aux coordonnées polaires $(r, \theta)$&nbsp;: $\mathrm{d}f = \frac{\partial f}{\partial r}\\,\mathrm{d}r + \frac{\partial f}{\partial\theta}\\,\mathrm{d}\theta$. Aucun facteur $1/r$&nbsp;: la formule est exactement celle des coordonnées cartésiennes. Où est passé le $1/r$ des manuels, celui de la première section&nbsp;? Dans le dessin.
+Appliquons cette formule aux coordonnées polaires $(r, \theta)$&nbsp;: $\mathrm{d}f = \frac{\partial f}{\partial r}\\,\mathrm{d}r + \frac{\partial f}{\partial\theta}\\,\mathrm{d}\theta$. Aucun facteur $1/r$&nbsp;: la formule est exactement celle des coordonnées cartésiennes. Où est passé le $1/r$&nbsp;? Dans le dessin.
 
 <div class="svg-container">
 <svg id="f3-svg" viewBox="0 0 600 345" role="img" aria-label="Le plan en coordonnées polaires. Les cercles r = constante sont les lignes de niveau de la forme dr, les rayons theta = constante sont celles de la forme d theta. Une flèche partant du point P franchit un certain nombre de cercles et de rayons : ce sont les valeurs de dr et de d theta sur cette flèche. Les rayons s'écartent quand on s'éloigne de l'origine. On peut déplacer P et la pointe de la flèche." style="width:100%;max-width:600px;height:auto;touch-action:none;">
