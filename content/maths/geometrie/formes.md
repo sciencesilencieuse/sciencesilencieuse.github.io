@@ -32,6 +32,16 @@ weight = 7
     color: #006C65;
     margin-bottom: 0.3em;
 }
+details.encadre > summary
+{
+    display: list-item;
+    cursor: pointer;
+    list-style: disclosure-closed inside;
+}
+details.encadre[open] > summary
+{
+    list-style-type: disclosure-open;
+}
 .svg-container {
     position: relative;
     margin-left: auto;
@@ -244,7 +254,6 @@ Les composantes du pas sont divisées par $1000$ et celles de la «&nbsp;pente&n
 <text id="fg-ok" x="400" y="242" font-size="14" font-weight="bold" fill="#970E53" font-family="Georgia,'Times New Roman',serif"></text>
 <text x="400" y="266" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">flèches grise et orange : « gradient =</text>
 <text x="400" y="281" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">(∂V/∂x, ∂V/∂y) » appliqué par A et par B</text>
-<text x="400" y="322" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">glissez <tspan font-style="italic">P</tspan> et la pointe du pas</text>
 </svg>
 <div style="display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:center;align-items:center;margin:2px 0 6px;font-size:0.92em;">
 <label style="display:inline-flex;align-items:center;gap:8px;margin:0;font-weight:normal;"><span>unité de B sur l'axe <i>x</i> (en mètres)</span> <input type="range" class="fig-range" id="fg-l" min="0.25" max="4" step="0.05" value="3" style="width:120px;margin:0;"> <span id="fg-lv" style="min-width:2.6em;">3,00</span></label>
@@ -308,7 +317,7 @@ $$f(\vec r + \vec u) - f(\vec r) \simeq \mathrm{d}f\_P(\vec u).$$
 
 Le membre de droite est l'application linéaire de $\vec u$ qui approche le mieux la variation de $f$&nbsp;: c'est la **différentielle** de $f$ en $P$. Précisément, $\mathrm{d}f\_P(\vec u) = \frac{\mathrm{d}}{\mathrm{d}\varepsilon}f(\vec r + \varepsilon\vec u)\big|\_{\varepsilon = 0}$ ($\varepsilon$ est sans dimension), et le résultat a les unités de $f$. En coordonnées cartésiennes, $\mathrm{d}f(\vec u) = \frac{\partial f}{\partial x}u\_x + \frac{\partial f}{\partial y}u\_y$.
 
-Comment dessiner un mesureur&nbsp;? Traçons les lignes où $f$ vaut $f(P)$, $f(P) + \Delta$, $f(P) + 2\Delta$, et ainsi de suite (pour une altitude, les courbes de niveau). De très près, elles se redressent en droites parallèles et équidistantes. Un déplacement partant de $P$ franchit un certain nombre de ces lignes&nbsp;: c'est la valeur de $\mathrm{d}f$ sur ce vecteur, en unités de $\Delta$ (négative quand on descend). Une application linéaire des vecteurs vers les nombres se dessine donc comme **une pile de lignes**.
+Comment dessiner un mesureur&nbsp;? Traçons les lignes où $f$ vaut $f(P)$, $f(P) + \Delta$, $f(P) + 2\Delta$, et ainsi de suite (pour une altitude, les courbes de niveau). De très près, elles se redressent en droites parallèles et équidistantes. Un déplacement partant de $P$ franchit un certain nombre de ces lignes&nbsp;: c'est la valeur de $\mathrm{d}f$ sur ce vecteur, en unités de $\Delta$ (négative quand on descend). Une application linéaire des vecteurs vers les nombres se dessine donc comme **une pile de lignes**. Comme sur une carte de randonnée, plus les lignes sont serrées, plus la pente est forte, et un déplacement qui longe une ligne ne change pas la valeur de $f$.
 
 <div class="svg-container">
 <svg id="f1-svg" viewBox="0 0 600 345" role="img" aria-label="Carte de courbes de niveau d'une colline à deux sommets. En un point P, la différentielle de l'altitude est dessinée comme une pile de lignes parallèles et équidistantes. Une flèche partant de P franchit un certain nombre de ces lignes : c'est la valeur de la différentielle sur cette flèche. On peut déplacer P et la pointe de la flèche." style="width:100%;max-width:600px;height:auto;touch-action:none;">
@@ -336,7 +345,6 @@ Comment dessiner un mesureur&nbsp;? Traçons les lignes où $f$ vaut $f(P)$, $f(
 <text x="400" y="223" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif">franchies par le vecteur :</text>
 <text id="f1-n" x="400" y="258" font-size="26" font-weight="bold" fill="#970E53" font-family="Georgia,'Times New Roman',serif">0</text>
 <text id="f1-s" x="400" y="280" font-size="12.5" fill="#475569" font-family="Georgia,'Times New Roman',serif"></text>
-<text x="400" y="320" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">glissez <tspan font-style="italic">P</tspan> et la pointe du vecteur</text>
 </svg>
 </div>
 <script>
@@ -411,7 +419,6 @@ C'est la règle de dérivation en chaîne, que les physiciens écrivent $\mathrm
 <text id="fc-lg" x="0" y="0" font-size="14" font-style="italic" fill="#C2770B" font-family="Georgia,'Times New Roman',serif">γ</text>
 <text x="10" y="26" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">carte : courbes de niveau de <tspan font-style="italic">f</tspan></text>
 <text x="10" y="332" font-size="12" fill="#970E53" font-family="Georgia,'Times New Roman',serif" font-style="italic">magenta : la forme d<tspan font-style="italic">f</tspan> en <tspan font-style="italic">P</tspan> (pile de lignes)</text>
-<text x="10" y="347" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">glissez <tspan font-style="italic">P</tspan> et la pointe du vecteur</text>
 </svg>
 <svg id="fc-gr" viewBox="0 0 360 350" role="img" aria-label="Graphe de la valeur de f le long de la trajectoire en fonction du temps t, entre -1 et 1 seconde. Des lignes horizontales marquent les niveaux de la carte. La droite bleue est la tangente à la courbe en t = 0 ; sa pente est la valeur de la différentielle de f sur le vecteur vitesse v. La courbe change avec la courbure de la trajectoire, pas la tangente." style="flex:1 1 280px;max-width:360px;height:auto;">
 <defs><clipPath id="fc-gclip"><rect x="40" y="40" width="310" height="230"/></clipPath></defs>
@@ -502,7 +509,7 @@ $$\alpha(\vec v) = \alpha\_1 v^1 + \alpha\_2 v^2 = \alpha\_i\\, v^i.$$
 
 **Changer de référence.** Allonger $\vec e\_1$ d'un facteur $\lambda$ (B le fait, avec $\lambda = 1000$) divise $v^1$ par $\lambda$, puisqu'il faut moins de $\vec e\_1$ pour le même déplacement ($\Delta x$ passe de $10$ m à $0{,}01$ km), et multiplie $\alpha\_1$ par $\lambda$, puisqu'un pas plus long franchit plus de lignes ($\partial V/\partial x$ passe de $0{,}3$ à $300$).
 
-Le produit ne change pas&nbsp;: $\alpha\_1 v^1 = 0{,}3 \times 10 = 300 \times 0{,}01 = 3$&nbsp;m. C'est l'analyse dimensionnelle&nbsp;: $v^1$ compte des «&nbsp;kilomètres&nbsp;», $\alpha\_1$ des «&nbsp;mètres par kilomètre&nbsp;», et l'unité se simplifie. La figure fait de même avec des changements de base quelconques (angle, longueur).
+Le produit ne change pas&nbsp;: $\alpha\_1 v^1 = 0{,}3 \times 10 = 300 \times 0{,}01 = 3$&nbsp;m. C'est l'analyse dimensionnelle&nbsp;: $v^1$ compte des «&nbsp;kilomètres&nbsp;», $\alpha\_1$ des «&nbsp;mètres par kilomètre&nbsp;», et l'unité se simplifie. Le travail $-P\\,\mathrm{d}V$ d'un gaz en est un autre exemple&nbsp;: passer des m$^3$ aux litres multiplie $\mathrm{d}V$ par $1000$ et divise $P$ par $1000$, et le produit reste le même travail, en joules. La figure fait de même avec des changements de base quelconques (angle, longueur).
 
 <div class="svg-container">
 <svg id="f2-svg" viewBox="0 0 600 345" role="img" aria-label="Un vecteur v et une forme alpha, dessinée comme une pile de lignes, exprimés dans une base oblique (e1, e2). Les composantes du vecteur sont les coefficients de sa décomposition ; celles de la forme sont les nombres de lignes franchies par chaque vecteur de base. En changeant la base, les deux jeux de composantes varient en sens contraire, mais le nombre de lignes franchies par v ne change pas." style="width:100%;max-width:600px;height:auto;touch-action:none;">
@@ -531,7 +538,6 @@ Le produit ne change pas&nbsp;: $\alpha\_1 v^1 = 0{,}3 \times 10 = 300 \times 0{
 <text x="398" y="186" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">nombre de lignes franchies par v</text>
 <text id="f2-tp" x="398" y="212" font-size="15.5" font-weight="bold" fill="#970E53" font-family="Georgia,'Times New Roman',serif"></text>
 <text id="f2-tn" x="398" y="236" font-size="12.5" fill="#006C65" font-family="Georgia,'Times New Roman',serif" font-style="italic">inchangé quand on change de base</text>
-<text x="398" y="322" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">glissez la pointe de v</text>
 </svg>
 <div style="display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:center;align-items:center;margin:2px 0 6px;font-size:0.92em;">
 <label style="display:inline-flex;align-items:center;gap:8px;margin:0;font-weight:normal;"><span>angle entre <b>e</b><sub>1</sub> et <b>e</b><sub>2</sub></span> <input type="range" class="fig-range" id="f2-a" min="30" max="150" step="1" value="70" style="width:120px;margin:0;"> <span id="f2-av" style="min-width:2.6em;">70°</span></label>
@@ -633,7 +639,6 @@ La figure suivante dessine ces objets pour un système de coordonnées curvilign
 <text id="fd-b1" x="398" y="206" font-size="14.5" fill="#334155" font-family="Georgia,'Times New Roman',serif"></text>
 <text id="fd-b2" x="398" y="228" font-size="14.5" fill="#334155" font-family="Georgia,'Times New Roman',serif"></text>
 <text id="fd-b3" x="398" y="256" font-size="14.5" fill="#334155" font-family="Georgia,'Times New Roman',serif"></text>
-<text x="398" y="322" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">glissez <tspan font-style="italic">P</tspan> et la pointe de v</text>
 </svg>
 </div>
 <script>
@@ -713,7 +718,6 @@ Appliquons cette formule aux coordonnées polaires $(r, \theta)$&nbsp;: $\mathrm
 <text x="402" y="223" font-size="12.5" fill="#475569" font-family="Georgia,'Times New Roman',serif">s'éloigne de l'origine : à distance</text>
 <text x="402" y="240" font-size="12.5" fill="#475569" font-family="Georgia,'Times New Roman',serif"><tspan font-style="italic">r</tspan>, deux rayons voisins sont</text>
 <text id="f3-sp" x="402" y="257" font-size="12.5" fill="#475569" font-family="Georgia,'Times New Roman',serif"></text>
-<text x="402" y="322" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">glissez <tspan font-style="italic">P</tspan> et la pointe du vecteur</text>
 </svg>
 </div>
 <script>
@@ -750,13 +754,13 @@ Appliquons cette formule aux coordonnées polaires $(r, \theta)$&nbsp;: $\mathrm
 </script>
 <p class="legende">Les lignes de $\mathrm{d}r$ sont des cercles équidistants, celles de $\mathrm{d}\theta$ des rayons séparés de $\Delta\theta = 15°$. Une flèche franchit $\mathrm{d}r(\vec v) = v_r$ cercles et $\mathrm{d}\theta(\vec v) = v_\theta/r$ radians, soit $v_\theta/(r\Delta\theta)$ rayons ($v_r$ et $v_\theta$ sont les composantes de $\vec v$ sur les vecteurs unitaires radial et orthoradial). À distance $r$, deux rayons voisins sont écartés de $r\Delta\theta$&nbsp;: plus on s'éloigne, moins la même flèche en franchit.</p>
 
-Le facteur $1/r$ est donc dans l'objet $\mathrm{d}\theta$ lui-même&nbsp;: les rayons divergent. C'est une propriété géométrique, que le dessin montre, et la formule de $\mathrm{d}f$ n'a pas besoin de la répéter.
+Le facteur $1/r$ est donc dans l'objet $\mathrm{d}\theta$ lui-même&nbsp;: les rayons divergent. C'est une propriété géométrique, que le dessin montre, et la formule de $\mathrm{d}f$ n'a pas besoin de la répéter. Physiquement, un cycliste qui roule à la vitesse $v$ sur un rond-point de rayon $r$ balaye l'angle $v/r$ par seconde&nbsp;: à vitesse égale, plus le cercle est grand, moins l'angle change.
 
-**Et le gradient&nbsp;?** Le $1/r$ des manuels apparaît dans $\vec\nabla f = \frac{\partial f}{\partial r}\\,\hat e\_r + \frac{1}{r}\frac{\partial f}{\partial\theta}\\,\hat e\_\theta$, car le gradient est un vecteur (la direction de plus forte pente) alors que $\mathrm{d}f$ est un mesureur. Pour passer de l'un à l'autre, il faut une **métrique** $g$, qui mesure longueurs et angles et associe à chaque vecteur $\vec u$ la 1-forme $g(\vec u, \cdot)$ (avec le produit scalaire usuel, $\vec u\cdot(\ \cdot\ )$). Le gradient est le vecteur $\vec\nabla f$ tel que $g(\vec\nabla f, \cdot) = \mathrm{d}f$, c'est-à-dire
+**Et le gradient&nbsp;?** Le $1/r$ des manuels apparaît dans $\vec\nabla f = \frac{\partial f}{\partial r}\\,\hat e\_r + \frac{1}{r}\frac{\partial f}{\partial\theta}\\,\hat e\_\theta$, car le gradient est un vecteur (la direction de plus forte pente) alors que $\mathrm{d}f$ est un mesureur. Pour passer de l'un à l'autre, il faut une **métrique** $g$, c'est-à-dire un produit scalaire $g(\vec u, \vec v)$ qui mesure longueurs et angles (pour la métrique euclidienne usuelle, $g(\vec u, \vec v) = \vec u\cdot\vec v$). À chaque vecteur $\vec u$, elle associe une 1-forme, notée $\vec u^\flat$ («&nbsp;$\vec u$ bémol&nbsp;»), qui à un vecteur $\vec v$ associe le nombre $g(\vec u, \vec v)$. Le gradient est le vecteur dont la 1-forme associée est $\mathrm{d}f$, $(\vec\nabla f)^\flat = \mathrm{d}f$, c'est-à-dire
 
-$$g\big(\vec\nabla f, \vec u\big) = \mathrm{d}f(\vec u)\quad\text{pour tout vecteur }\vec u.$$
+$$g\big(\vec\nabla f, \vec v\big) = \mathrm{d}f(\vec v)\quad\text{pour tout vecteur }\vec v.$$
 
-Avec le produit scalaire usuel, $\vec\nabla f\cdot\vec u = \mathrm{d}f(\vec u)$&nbsp;: la composante de $\vec\nabla f$ sur un vecteur unitaire (un pas d'une unité de longueur) est la variation de $f$ pour ce pas, c'est-à-dire la pente dans cette direction.
+Avec le produit scalaire usuel, $\vec\nabla f\cdot\vec v = \mathrm{d}f(\vec v)$&nbsp;: la composante de $\vec\nabla f$ sur un vecteur unitaire (un pas d'une unité de longueur) est la variation de $f$ pour ce pas, c'est-à-dire la pente dans cette direction.
 
 Pour trouver $\vec\nabla f$ en coordonnées polaires, décomposons-le sur les vecteurs unitaires $\hat e\_r$ et $\hat e\_\theta$, qui sont orthogonaux et de longueur $1$. La composante de $\vec\nabla f$ sur chacun d'eux est son produit scalaire avec celui-ci, c'est-à-dire la valeur de $\mathrm{d}f$ sur celui-ci&nbsp;:
 
@@ -789,7 +793,7 @@ $$\int\_\gamma \alpha = \int\_a^b \alpha\big(\vec v(t)\big)\\,\mathrm{d}t,$$
 
 où $\alpha$ est prise au point $\vec r(t)$. Le nombre $\alpha\big(\vec v(t)\big)$ est le nombre de lignes de $\alpha$ franchies par unité de temps&nbsp;; multiplié par $\mathrm{d}t$, c'est celui du déplacement $\mathrm{d}\vec r = \vec v\\,\mathrm{d}t$, et l'intégrale est l'aire sous le graphe.
 
-Prenons la 1-forme la plus concrète de la physique, **le travail d'une force**. Une force $\vec F$ fournit à un point matériel, pour un petit déplacement $\vec u$, le travail $\vec F\cdot\vec u$, linéaire en $\vec u$&nbsp;: c'est une 1-forme, $\omega\_F = \vec F\cdot(\ \cdot\ )$. Appliquée à un déplacement $\mathrm{d}\vec r$, elle donne un travail (en joules)&nbsp;; appliquée à la vitesse, $\omega\_F(\vec v) = \vec F\cdot\vec v$ est la puissance de la force (en watts). Le travail sur le chemin est la somme des travaux élémentaires, que l'on peut écrire de trois façons&nbsp;:
+Prenons la 1-forme la plus concrète de la physique, **le travail d'une force**. Une force $\vec F$ fournit à un point matériel, pour un petit déplacement $\vec u$, le travail $\vec F\cdot\vec u$, linéaire en $\vec u$&nbsp;: c'est une 1-forme, $\omega\_F = \vec F^\flat$, définie par $\omega\_F(\vec u) = \vec F\cdot\vec u$. Appliquée à un déplacement $\mathrm{d}\vec r$, elle donne un travail (en joules)&nbsp;; appliquée à la vitesse, $\omega\_F(\vec v) = \vec F\cdot\vec v$ est la puissance de la force (en watts). Le travail sur le chemin est la somme des travaux élémentaires, que l'on peut écrire de trois façons&nbsp;:
 
 $$W = \int\_\gamma \omega\_F = \int\_a^b \omega\_F(\vec v)\\,\mathrm{d}t = \int\_a^b \vec F\big(\vec r(t)\big)\cdot\vec v(t)\\,\mathrm{d}t.$$
 
@@ -816,7 +820,6 @@ La figure construit cette intégrale avec des rectangles.
 <text id="fw-lb" x="0" y="0" font-size="14" font-style="italic" fill="#334155" font-family="Georgia,'Times New Roman',serif">B</text>
 <text x="10" y="26" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">champ de force <tspan font-weight="bold" font-style="normal">F</tspan> (gris) et chemin <tspan font-style="italic">γ</tspan></text>
 <text x="10" y="332" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">vert : <tspan font-weight="bold" font-style="normal">F</tspan> pousse dans le sens du mouvement ; orange : s'y oppose</text>
-<text x="10" y="347" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">glissez <tspan font-style="italic">A</tspan>, <tspan font-style="italic">B</tspan> et le point blanc du chemin</text>
 </svg>
 <svg id="fw-gr" viewBox="0 0 360 350" role="img" aria-label="Graphe de la puissance de la force le long du chemin, en fonction du temps entre 0 et 1. Des rectangles de largeur égale à la durée d'un pas ont pour hauteur la valeur au début du pas ; leur aire totale est la somme de Riemann, qui se rapproche de l'aire sous la courbe quand le nombre de pas augmente." style="flex:1 1 280px;max-width:360px;height:auto;">
 <defs><clipPath id="fw-gclip"><rect x="40" y="40" width="310" height="230"/></clipPath></defs>
@@ -897,7 +900,7 @@ $$\int\_\gamma \mathrm{d}f = f(B) - f(A).$$
 
 Le résultat ne dépend que des extrémités $A$ et $B$&nbsp;: c'est le théorème fondamental de l'analyse. Une 1-forme qui est la différentielle d'une fonction est dite **exacte**. Le travail d'une force dérivant d'un potentiel, $\omega\_F = -\mathrm{d}V$, est exact&nbsp;: $W = V(A) - V(B)$, et la force est conservative. Celui d'un frottement fluide $\vec F = -\lambda\vec v$ vaut $-\lambda\int\|\vec v\|^2\mathrm{d}t$ et dépend du chemin&nbsp;: il n'est pas exact. C'est aussi le cas de la force de la figure&nbsp;: déplacer le point $M$ change l'intégrale, $A$ et $B$ restant fixes.
 
-**Circulation d'un fluide.** Soit $\vec w(\vec r)$ le champ des vitesses d'un fluide. La 1-forme associée est $\vec w\cdot(\ \cdot\ ) = w\_x\\,\mathrm{d}x + w\_y\\,\mathrm{d}y + w\_z\\,\mathrm{d}z$, et son intégrale sur un chemin fermé $\gamma$ est la **circulation**
+**Circulation d'un fluide.** Soit $\vec w(\vec r)$ le champ des vitesses d'un fluide. La 1-forme associée est $\vec w^\flat = w\_x\\,\mathrm{d}x + w\_y\\,\mathrm{d}y + w\_z\\,\mathrm{d}z$, et son intégrale sur un chemin fermé $\gamma$ est la **circulation**
 
 $$\Gamma = \oint\_\gamma \vec w\cdot\mathrm{d}\vec r = \int\_a^b \vec w\big(\vec r(t)\big)\cdot\vec v(t)\\,\mathrm{d}t.$$
 
@@ -907,7 +910,7 @@ Pour l'écrire en polaires, on lit ses composantes, c'est-à-dire ses valeurs su
 
 $$\vec w\cdot\vec e\_r = \Omega r\\,\hat e\_\theta\cdot\hat e\_r = 0,\qquad \vec w\cdot\vec e\_\theta = \Omega r\\,\hat e\_\theta\cdot r\hat e\_\theta = \Omega r^2.$$
 
-La 1-forme est donc $\vec w\cdot(\ \cdot\ ) = \Omega r^2\\,\mathrm{d}\theta$&nbsp;: les lignes de $\mathrm{d}\theta$ sont les rayons, et le fluide les croise d'autant plus vite qu'on s'éloigne de l'axe. Sur le cercle de rayon $R$, $r = R$ est constant, donc $\mathrm{d}r = 0$, et il ne reste que
+La 1-forme est donc $\vec w^\flat = \Omega r^2\\,\mathrm{d}\theta$&nbsp;: les lignes de $\mathrm{d}\theta$ sont les rayons, et le fluide les croise d'autant plus vite qu'on s'éloigne de l'axe. Sur le cercle de rayon $R$, $r = R$ est constant, donc $\mathrm{d}r = 0$, et il ne reste que
 
 $$\Gamma = \oint \Omega R^2\\,\mathrm{d}\theta = \Omega R^2\int\_0^{2\pi}\mathrm{d}\theta = 2\pi\Omega R^2,$$
 
@@ -915,12 +918,12 @@ le double de $\Omega$ fois l'aire du disque. Le calcul en cartésiennes donne le
 
 Si la vitesse dérive d'un potentiel, $\vec w = \vec\nabla\varphi$, la 1-forme est $\mathrm{d}\varphi$, exacte, et la circulation est nulle sur toute boucle. Le lien général entre circulation et rotation du champ est le théorème de Stokes ([section sur la différentielle extérieure](#stokes)).
 
-<div class="encadre">
-<div class="encadre-titre">Le théorème de circulation de Kelvin</div>
+<details class="encadre">
+<summary class="encadre-titre">Le théorème de circulation de Kelvin</summary>
 <p>Dans un fluide parfait, la circulation autour d'un circuit fermé entraîné par l'écoulement ne change pas au cours du temps. Les formes en donnent une démonstration de quelques lignes. Soit $\gamma(t)$ un circuit formé de particules du fluide, et $\Gamma(t) = \oint_{\gamma(t)}\vec w\cdot\mathrm{d}\vec r$ sa circulation. Elle varie pour deux raisons.</p>
 <p>D'abord, la vitesse de chaque particule change&nbsp;: cela donne $\oint\frac{D\vec w}{Dt}\cdot\mathrm{d}\vec r$ (la dérivée est celle qui suit la particule). Pour un fluide dont la pression ne dépend que de la densité, soumis à une force dérivant d'un potentiel $\Phi$, l'équation d'Euler s'écrit $\frac{D\vec w}{Dt} = -\vec\nabla(h + \Phi)$, où $h$ est l'enthalpie par unité de masse. Cette intégrale est donc celle de la forme exacte $-\mathrm{d}(h + \Phi)$ sur une boucle fermée&nbsp;: elle est nulle. Ensuite, le circuit se déforme&nbsp;: deux particules voisines s'écartent de leur différence de vitesse, donc $\mathrm{d}\vec r$ varie de $\mathrm{d}\vec w$. Cela donne $\oint\vec w\cdot\mathrm{d}\vec w = \oint\mathrm{d}\big(\tfrac12|\vec w|^2\big)$, encore une forme exacte, donc encore nulle.</p>
 <p>Les deux termes sont des circulations de formes exactes, donc $\mathrm{d}\Gamma/\mathrm{d}t = 0$. Un écoulement dont la circulation est nulle sur tout circuit (un écoulement irrotationnel) le reste&nbsp;; et la circulation d'un tourbillon se conserve en le suivant. La viscosité, une pression qui dépend aussi de la température ou une force non conservative cassent l'exactitude des formes ci-dessus&nbsp;: c'est là que la vorticité peut se créer.</p>
-</div>
+</details>
 
 ## Aires orientées&nbsp;: les 2-formes {#aires}
 
@@ -961,7 +964,6 @@ C'est le déterminant des deux vecteurs, l'aire orientée du parallélogramme qu
 <text x="402" y="177" font-size="12.5" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">en nombre de carreaux</text>
 <text id="f5-f" x="402" y="214" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif"></text>
 <text id="f5-f2" x="402" y="234" font-size="13" fill="#334155" font-family="Georgia,'Times New Roman',serif"></text>
-<text x="402" y="318" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">glissez les pointes de u et v</text>
 </svg>
 <div style="margin:2px 0 6px;"><button type="button" class="fig-btn" id="f5-sw">Échanger u et v</button></div>
 </div>
@@ -1075,20 +1077,20 @@ Le jacobien de la transformation, ici le facteur $r$, apparaît sans qu'on calcu
 
 **Intégrer une 2-forme.** Comme pour une 1-forme le long d'un chemin, on découpe une surface $D$ en petits parallélogrammes, construits sur des couples de petits déplacements $(\vec u\_k, \vec v\_k)$, et l'on additionne les nombres $\omega(\vec u\_k, \vec v\_k)$&nbsp;: c'est $\int\_D\omega$. Pour $\omega = h\\,\mathrm{d}x\wedge\mathrm{d}y$, on retrouve l'intégrale double usuelle $\iint h\\,\mathrm{d}x\\,\mathrm{d}y$&nbsp;; en polaires, $\omega = h\\,r\\,\mathrm{d}r\wedge\mathrm{d}\theta$ donne $\iint h\\,r\\,\mathrm{d}r\\,\mathrm{d}\theta$, avec le facteur $r$ de la figure.
 
-<div class="encadre">
-<div class="encadre-titre">L'intégrale de Gauss en un tour de polaires</div>
+<details class="encadre">
+<summary class="encadre-titre">L'intégrale de Gauss en un tour de polaires</summary>
 <p>La fonction $e^{-x^2}$ n'a pas de primitive élémentaire, et pourtant $I = \int_{-\infty}^{+\infty}e^{-x^2}\mathrm{d}x$ se calcule en passant par son carré. Le produit de deux intégrales est l'intégrale de la 2-forme $e^{-x^2}e^{-y^2}\,\mathrm{d}x\wedge\mathrm{d}y$ sur le plan&nbsp;: $I^2 = \iint e^{-(x^2 + y^2)}\,\mathrm{d}x\wedge\mathrm{d}y$. En polaires, $\mathrm{d}x\wedge\mathrm{d}y = r\,\mathrm{d}r\wedge\mathrm{d}\theta$, d'où</p>
 <p>$$I^2 = \int_0^{2\pi}\mathrm{d}\theta\int_0^{+\infty}e^{-r^2}\,r\,\mathrm{d}r = 2\pi\cdot\frac{1}{2} = \pi, \qquad I = \sqrt{\pi}.$$</p>
 <p>Le facteur $r$ de l'élément d'aire rend la primitive élémentaire, puisque $r\,\mathrm{d}r = \frac{1}{2}\mathrm{d}(r^2)$&nbsp;; sans lui, $\int e^{-r^2}\mathrm{d}r$ ne l'est pas. Cette intégrale normalise la distribution de Maxwell–Boltzmann des vitesses, et la gaussienne de la mécanique quantique.</p>
-</div>
+</details>
 
-En dimension $3$, une 2-forme mesure des petites surfaces orientées&nbsp;: on la dessine comme un champ de **tubes**, et sa valeur sur une surface est le nombre de tubes qu'elle traverse. C'est la notion de **flux**.
+En dimension $3$, une 2-forme mesure des petites surfaces orientées&nbsp;: on la dessine comme un champ de **tubes**, et sa valeur sur une surface est le nombre de tubes qu'elle traverse. C'est la notion de **flux**. Pour un fluide de vitesse $\vec w$, le débit à travers une surface est le nombre de tubes de courant qui la traversent&nbsp;; pour le champ magnétique, le flux (en webers) est le nombre de tubes de champ&nbsp;; et le courant $I$ d'un fil est le nombre de tubes de courant qui traversent sa section.
 
-<div class="encadre">
-<div class="encadre-titre">Où est passé le produit vectoriel&nbsp;?</div>
-<p>Le produit vectoriel $\vec a\times\vec b$ de deux vecteurs est perpendiculaire aux deux, et sa norme est l'aire du parallélogramme qu'ils engendrent. Les formes disent d'où il sort. L'objet naturel est la 2-forme $a^\flat\wedge b^\flat$, où $a^\flat = \vec a\cdot(\ \cdot\ )$ est la 1-forme associée à $\vec a$. Ses composantes sur $\mathrm{d}y\wedge\mathrm{d}z$, $\mathrm{d}z\wedge\mathrm{d}x$ et $\mathrm{d}x\wedge\mathrm{d}y$ sont $a_yb_z - a_zb_y$, $a_zb_x - a_xb_z$ et $a_xb_y - a_yb_x$&nbsp;: ce sont les trois composantes du produit vectoriel.</p>
-<p>En dimension $3$, une 2-forme a trois composantes, comme un vecteur&nbsp;; la métrique et l'orientation (l'opérateur $\star$ de Hodge) permettent de l'identifier à un vecteur, et c'est ce vecteur qu'on appelle $\vec a\times\vec b$. Cela explique deux faits familiers. Le produit vectoriel n'existe qu'en dimension $3$, parce qu'en dimension $n$ une 2-forme a $n(n-1)/2$ composantes, nombre qui vaut $n$ seulement pour $n = 3$. Et c'est un pseudovecteur&nbsp;: sa définition fait intervenir l'orientation, donc il change de sens quand on inverse l'orientation de l'espace (comme le champ magnétique, qui est une 2-forme).</p>
-</div>
+<details class="encadre">
+<summary class="encadre-titre">Où est passé le produit vectoriel&nbsp;?</summary>
+<p>Le produit vectoriel $\vec a\times\vec b$ de deux vecteurs est perpendiculaire aux deux, et sa norme est l'aire du parallélogramme qu'ils engendrent. Les formes disent d'où il sort. L'objet naturel est la 2-forme $a^\flat\wedge b^\flat$, où $a^\flat$ est la 1-forme associée à $\vec a$, définie par $a^\flat(\vec u) = \vec a\cdot\vec u$. Ses composantes sur $\mathrm{d}y\wedge\mathrm{d}z$, $\mathrm{d}z\wedge\mathrm{d}x$ et $\mathrm{d}x\wedge\mathrm{d}y$ sont $a_yb_z - a_zb_y$, $a_zb_x - a_xb_z$ et $a_xb_y - a_yb_x$&nbsp;: ce sont les trois composantes du produit vectoriel.</p>
+<p>En dimension $3$, une 2-forme a trois composantes, comme un vecteur&nbsp;; la métrique et l'orientation (l'opérateur $\star$ de Hodge, utilisé ici avant d'être défini&nbsp;: sa définition est donnée plus bas, dans la section <a href='#maxwell'>sur l'électromagnétisme</a>) permettent de l'identifier à un vecteur, et c'est ce vecteur qu'on appelle $\vec a\times\vec b$. Cela explique deux faits familiers. Le produit vectoriel n'existe qu'en dimension $3$, parce qu'en dimension $n$ une 2-forme a $n(n-1)/2$ composantes, nombre qui vaut $n$ seulement pour $n = 3$. Et c'est un pseudovecteur&nbsp;: sa définition fait intervenir l'orientation, donc il change de sens quand on inverse l'orientation de l'espace (comme le champ magnétique, qui est une 2-forme).</p>
+</details>
 
 ## La différentielle extérieure et le théorème de Stokes {#stokes}
 
@@ -1166,19 +1168,21 @@ Pourquoi est-ce vrai&nbsp;? On découpe $D$ en petites cases. La circulation de 
 </script>
 <p class="legende">La 1-forme $\alpha = x\,\mathrm{d}y$ a pour différentielle extérieure $\mathrm{d}\alpha = \mathrm{d}x\wedge\mathrm{d}y$, dont l'intégrale sur le rectangle est son aire, $6$. Plus le découpage est fin, plus les arêtes intérieures (grises) se compensent par paires, et la somme sur les cases coïncide avec la circulation sur le bord (bleu).</p>
 
+**Stokes en physique.** Pour un fluide, la circulation autour d'une petite boucle est le «&nbsp;tour&nbsp;» que ferait une petite roue à aubes posée dans l'écoulement, et la formule de Stokes dit que la circulation sur un grand circuit est la somme de ces tours sur la surface qu'il borde. Elle contient trois lois de l'électromagnétisme&nbsp;: Ampère, $\oint\vec B\cdot\mathrm{d}\vec r = \mu\_0 I$ (la circulation de $\vec B$ est le courant enlacé)&nbsp;; Faraday, $\oint\vec E\cdot\mathrm{d}\vec r = -\mathrm{d}\Phi\_B/\mathrm{d}t$ (la tension induite dans un circuit est l'opposé de la variation du flux à travers lui)&nbsp;; et, avec la divergence, Gauss, $\oint\vec E\cdot\mathrm{d}\vec S = Q/\varepsilon\_0$.
+
 Ce seul énoncé contient des résultats qu'on apprend séparément&nbsp;: en dimension $1$, c'est le théorème fondamental de l'analyse, $\int\_a^b\mathrm{d}f = f(b) - f(a)$, rappelé plus haut&nbsp;; en dimension $2$, la formule de Green&nbsp;; en dimension $3$, le théorème du rotationnel (Stokes-Kelvin) et celui de la divergence (Ostrogradski). Le dictionnaire avec le calcul vectoriel est&nbsp;:
 
 - $\mathrm{d}$ sur une fonction&nbsp;: le gradient&nbsp;;
 - $\mathrm{d}$ sur une 1-forme&nbsp;: le rotationnel&nbsp;;
 - $\mathrm{d}$ sur une 2-forme (en dimension $3$)&nbsp;: la divergence.
 
-Et $\mathrm{d}\circ\mathrm{d} = 0$ résume à elle seule deux identités, $\vec\nabla\times(\vec\nabla f) = \vec 0$ et $\vec\nabla\cdot(\vec\nabla\times\vec A) = 0$.
+Et $\mathrm{d}\circ\mathrm{d} = 0$ résume à elle seule deux identités, $\vec\nabla\times(\vec\nabla f) = \vec 0$ et $\vec\nabla\cdot(\vec\nabla\times\vec A) = 0$. Pour traduire une forme en vecteur (le rotationnel, par exemple, est une 2-forme), il faut en plus la métrique et l'opérateur $\star$ de Hodge, défini dans la section sur l'[électromagnétisme](#maxwell).
 
-<div class="encadre">
-<div class="encadre-titre">Une histoire de formes et de théorèmes</div>
+<details class="encadre">
+<summary class="encadre-titre">Une histoire de formes et de théorèmes</summary>
 <p>Le théorème de Stokes n'est pas de Stokes. Gauss en démontre des cas particuliers vers 1813, et Ostrogradski en donne la forme générale pour la divergence dans les années 1820, devant l'Académie des sciences de Paris. Pour la version plane, que l'on attribue à Green, le mathématicien et historien Victor Katz relève qu'elle apparaît sans démonstration dans une note de Cauchy de 1846. Quant à la version pour la circulation, elle naît d'une lettre de lord Kelvin à Stokes en 1850&nbsp;: Stokes la pose en 1854 comme question à l'examen du prix Smith de Cambridge, et son nom reste attaché à la formule.</p>
 <p>Les formes ont une histoire parallèle. Pfaff, en 1814-1815, étudie les expressions $a_i\,\mathrm{d}x^i$ et leurs formes normales&nbsp;: c'est le «&nbsp;problème de Pfaff&nbsp;». Grassmann introduit en 1844 l'algèbre extérieure, avec sa règle d'anticommutation. Élie Cartan, en 1899, reprend le problème de Pfaff et donne à la différentielle extérieure sa forme actuelle, qui ne dépend d'aucun choix de coordonnées. Les théorèmes de Gauss, Green et Stokes, appris séparément, deviennent alors une seule formule, $\int_{\partial D}\alpha = \int_D\mathrm{d}\alpha$.</p>
-</div>
+</details>
 
 ### Le rotationnel en coordonnées polaires
 
@@ -1215,7 +1219,6 @@ Une forme $\alpha$ est **fermée** si $\mathrm{d}\alpha = 0$. Toute forme exacte
 <text id="f4-t" x="388" y="190" font-size="12.5" fill="#475569" font-family="Georgia,'Times New Roman',serif"></text>
 <text id="f4-t2" x="388" y="207" font-size="12.5" fill="#475569" font-family="Georgia,'Times New Roman',serif"></text>
 <text id="f4-t3" x="388" y="224" font-size="12.5" fill="#475569" font-family="Georgia,'Times New Roman',serif"></text>
-<text x="388" y="282" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">glissez la boucle</text>
 </svg>
 </div>
 <script>
@@ -1232,7 +1235,7 @@ Une forme $\alpha$ est **fermée** si $\mathrm{d}\alpha = 0$. Toute forme exacte
     F.$('f4-r').textContent = inside ? '= 24 rayons franchis dans le même sens' : '= autant de rayons dans chaque sens';
     F.$('f4-t').textContent = inside ? 'La boucle entoure O : dθ n\'est pas la' : 'La boucle n\'entoure pas O : la circulation';
     F.$('f4-t2').textContent = inside ? 'différentielle d\'une fonction du plan privé' : 'est nulle, comme pour une différentielle.';
-    F.$('f4-t3').textContent = inside ? 'de O (θ saute de 2π au tour).' : 'Déplacez la boucle autour de O.';
+    F.$('f4-t3').textContent = inside ? 'de O (θ saute de 2π au tour).' : '';
     F.$('f4-loop').setAttribute('stroke', inside ? '#970E53' : '#004D80'); F.$('f4-arr').setAttribute('stroke', inside ? '#970E53' : '#004D80');
     svg.setAttribute('data-vals', w.toFixed(4));
   }
@@ -1307,11 +1310,11 @@ quel que soit $R$&nbsp;: c'est le théorème d'Ampère. Si $B$ était la différ
 <p class="legende">Schéma de l'expérience. Le flux $\Phi$ du solénoïde est confiné&nbsp;: les électrons ne traversent jamais de région où $\vec B \neq \vec 0$, mais le potentiel vecteur circule autour. Les franges de l'écran se déplacent avec $\Phi$ (courbe rouge, la courbe grise en tirets est la figure sans flux), et la figure est identique chaque fois que $\Phi$ augmente de $\Phi_0 = h/q$.</p>
 </div>
 
-<div class="encadre">
-<div class="encadre-titre">Compter les trous avec des formes</div>
+<details class="encadre">
+<summary class="encadre-titre">Compter les trous avec des formes</summary>
 <p>Le plan privé d'un point porte une forme fermée non exacte, $\mathrm{d}\theta$. Le plan privé de deux points en porte deux indépendantes, l'une pour chaque trou&nbsp;; un disque ou le plan entier n'en portent aucune. Le nombre de formes fermées non exactes indépendantes d'un domaine ne dépend donc que de sa topologie&nbsp;: c'est un nombre de «&nbsp;trous&nbsp;». C'est le point de départ de la cohomologie de de Rham, développée par Georges de Rham dans les années 1930.</p>
 <p>Le théorème de Stokes montre pourquoi. Deux boucles qu'on peut déformer l'une dans l'autre sans franchir de trou bordent ensemble une surface où la forme est fermée, et donnent la même circulation&nbsp;: c'est pourquoi la circulation de $\mathrm{d}\theta$ vaut $2\pi$ sur tout cercle autour de l'origine, quel que soit son rayon, et même sur une boucle tordue. Une boucle qui entoure un trou ne peut pas être réduite à un point, et son intégrale mesure ce que le trou contient (le courant du fil, le flux du solénoïde). L'encadré suivant est le miroir de cette idée&nbsp;: les cycles, bords de rien, forment l'homologie, et les formes fermées modulo les formes exactes forment la cohomologie.</p>
-</div>
+</details>
 
 <div class="encadre">
 <div class="encadre-titre">Wheeler et le bord d'un bord</div>
@@ -1444,9 +1447,9 @@ Dans des coordonnées $(q^i)$ quelconques, la vitesse est un **vecteur** $\vec v
 
 ### Le moment est une 1-forme
 
-La masse, ou plus généralement la métrique $g$ de l'espace des configurations, transforme une flèche en mesureur&nbsp;: $\vec v \mapsto m\\,g(\vec v, \cdot)$. C'est l'**isomorphisme musical** qui «&nbsp;abaisse un indice&nbsp;», noté $\flat$, le passage du gradient pris dans l'autre sens (de la flèche vers le mesureur). Le moment est le résultat&nbsp;:
+La masse, ou plus généralement la métrique $g$ de l'espace des configurations, transforme un vecteur en mesureur&nbsp;: c'est la même opération que pour le gradient, prise dans l'autre sens, de $\vec v$ vers $\vec v^\flat$ (l'**isomorphisme musical** qui «&nbsp;abaisse un indice&nbsp;»). Le moment est le résultat&nbsp;:
 
-$$p = m\\,g(\vec v, \cdot) = m\\,g\_{ij}\\,\dot q^j\\,\mathrm{d}q^i, \qquad p\_i = m\\,g\_{ij}\\,\dot q^j.$$
+$$p = m\\,\vec v^\flat,\quad\text{c'est-à-dire}\quad p(\delta\vec v) = m\\,g(\vec v, \delta\vec v),\qquad p = m\\,g\_{ij}\\,\dot q^j\\,\mathrm{d}q^i,\quad p\_i = m\\,g\_{ij}\\,\dot q^j.$$
 
 En coordonnées polaires, la métrique est $g = \mathrm{d}r^2 + r^2\\,\mathrm{d}\theta^2$, et
 
@@ -1474,7 +1477,7 @@ Pour un degré de liberté, c'est l'aire orientée $u\_q v\_p - u\_p v\_q$ du pl
 
 $$\omega(X\_H, \vec Y) = \mathrm{d}H(\vec Y).$$
 
-On écrit aussi $\iota\_{X\_H}\omega = \mathrm{d}H$, où $\iota\_X\omega = \omega(X, \cdot)$ est le **produit intérieur**.
+On écrit aussi $\iota\_{X\_H}\omega = \mathrm{d}H$, où $\iota\_X\omega$ est la 1-forme $\vec Y \mapsto \omega(X, \vec Y)$ (le **produit intérieur**).
 
 <div class="svg-container">
 <svg id="f8-svg" viewBox="0 0 600 345" role="img" aria-label="L'espace des phases du pendule, avec les courbes de niveau de H. En un point P, le champ hamiltonien X_H est tangent à la courbe de niveau. Pour toute flèche Y partant de P, l'aire orientée du parallélogramme construit sur X_H et Y est égale au nombre dH(Y) de lignes de niveau de H franchies par Y : le champ X_H est défini par cette égalité. On peut déplacer P et la pointe de Y." style="width:100%;max-width:600px;height:auto;touch-action:none;">
@@ -1501,7 +1504,6 @@ On écrit aussi $\iota\_{X\_H}\omega = \mathrm{d}H$, où $\iota\_X\omega = \omeg
 <text id="f8-b" x="396" y="204" font-size="23" font-weight="bold" fill="#970E53" font-family="Georgia,'Times New Roman',serif"></text>
 <text x="396" y="244" font-size="12.5" fill="#475569" font-family="Georgia,'Times New Roman',serif">Ces deux nombres sont égaux, pour</text>
 <text x="396" y="261" font-size="12.5" fill="#475569" font-family="Georgia,'Times New Roman',serif">toute flèche <tspan font-weight="bold">Y</tspan> : cela définit <tspan font-style="italic">X</tspan><tspan dy="4" font-size="10">H</tspan><tspan dy="-4">.</tspan></text>
-<text x="396" y="322" font-size="12" fill="#64748b" font-family="Georgia,'Times New Roman',serif" font-style="italic">glissez P et la pointe de Y</text>
 </svg>
 </div>
 <script>
@@ -1543,7 +1545,7 @@ $$X\_q = \frac{\partial H}{\partial p}, \qquad X\_p = -\frac{\partial H}{\partia
 
 Ce sont les équations de Hamilton. Le champ $X\_H$ est la «&nbsp;pente tournée d'un quart de tour&nbsp;» de $\mathrm{d}H$, la rotation étant celle que définit $\omega$, et le mouvement est le flot de $X\_H$. Trois propriétés s'en déduisent.
 
-**$H$ est conservée.** $\mathrm{d}H(X\_H) = \omega(X\_H, X\_H) = 0$, par antisymétrie de $\omega$. Le point de l'espace des phases ne traverse aucune ligne de niveau de $H$&nbsp;: il suit la courbe de niveau, ce que la figure montre, puisque $X\_H$ y est tangent à la courbe de niveau.
+**$H$ est conservée.** $\mathrm{d}H(X\_H) = \omega(X\_H, X\_H) = 0$, par antisymétrie de $\omega$. Le point de l'espace des phases ne traverse aucune ligne de niveau de $H$&nbsp;: il suit la courbe de niveau, ce que la figure montre, puisque $X\_H$ y est tangent à la courbe de niveau. Pour le pendule de la figure, les courbes de niveau fermées sont les oscillations, et les courbes ouvertes les rotations complètes.
 
 **Liouville&nbsp;: les aires sont conservées.** Pour un degré de liberté, la divergence du champ $X\_H = \big(\frac{\partial H}{\partial p}, -\frac{\partial H}{\partial q}\big)$ est $\frac{\partial^2 H}{\partial q\\,\partial p} - \frac{\partial^2 H}{\partial p\\,\partial q} = 0$&nbsp;: le fluide des points de l'espace des phases est incompressible, et l'aire d'une région que le flot transporte ne change pas. En général, la formule de Cartan donne la variation de $\omega$ le long du flot,
 
@@ -1555,11 +1557,11 @@ car $\mathrm{d}\omega = 0$ et $\mathrm{d}\circ\mathrm{d} = 0$. Pour plusieurs de
 
 **Transformations canoniques.** Si $p\\,\mathrm{d}q - P\\,\mathrm{d}Q = \mathrm{d}F$ (fonction génératrice), la différentielle extérieure de cette égalité donne $\mathrm{d}p\wedge\mathrm{d}q = \mathrm{d}P\wedge\mathrm{d}Q$&nbsp;: la transformation conserve $\omega$.
 
-<div class="encadre">
-<div class="encadre-titre">Liouville, Gibbs et l'entropie</div>
+<details class="encadre">
+<summary class="encadre-titre">Liouville, Gibbs et l'entropie</summary>
 <p>Le théorème de Liouville est le socle de la mécanique statistique. Un ensemble statistique est un nuage de points de l'espace des phases&nbsp;; en évoluant, le nuage change de forme mais pas de volume, puisque le flot hamiltonien conserve $\omega$. Toute densité qui ne dépend que de $H$, comme la densité canonique $\rho \propto e^{-H/kT}$, est constante le long du flot et se déplace avec un volume conservé&nbsp;: elle est donc stationnaire. Gibbs en fait en 1902 la base de sa mécanique statistique.</p>
 <p>La même conservation interdit de comprimer le nuage. Effacer un bit, c'est ramener deux régions de l'espace des phases à une seule, de volume moitié&nbsp;; comme le volume total est conservé, l'environnement doit compenser en voyant son volume accessible au moins doubler, ce qui coûte au moins $kT\ln 2$ de chaleur. C'est le principe de Landauer, traité dans la page <a href='/physique/phistat/landauer/'>Information</a>.</p>
-</div>
+</details>
 
 ### Ce que les formes ne font pas disparaître
 
@@ -1637,11 +1639,11 @@ Le contenu géométrique de l'égalité $\mathrm{d}T\wedge\mathrm{d}S = \mathrm{
 
 **La chaleur n'est pas une différentielle.** La 1-forme $\delta Q = T\\,\mathrm{d}S$ a pour différentielle extérieure $\mathrm{d}T\wedge\mathrm{d}S$, non nulle en général&nbsp;: elle n'est pas fermée, donc pas exacte, et la chaleur n'est pas une fonction d'état. En revanche $\delta Q/T = \mathrm{d}S$ est exacte&nbsp;: $1/T$ est un facteur intégrant.
 
-<div class="encadre">
-<div class="encadre-titre">Carathéodory et le second principe</div>
+<details class="encadre">
+<summary class="encadre-titre">Carathéodory et le second principe</summary>
 <p>En 1909, Constantin Carathéodory refonde la thermodynamique sans machine thermique ni notion première de chaleur. Il part du premier principe, qui définit sur l'espace des états la 1-forme de Pfaff $\delta Q = \mathrm{d}U + P\,\mathrm{d}V$, et d'un postulat d'inaccessibilité adiabatique&nbsp;: dans tout voisinage d'un état, il existe des états qu'aucune transformation adiabatique ne peut atteindre. Un théorème sur les formes de Pfaff traduit ce postulat en une propriété d'intégrabilité de $\delta Q_{\mathrm{rev}}$&nbsp;: la forme admet un facteur intégrant, d'où l'existence d'une température absolue $T$ et d'une entropie $S$ telles que $\delta Q_{\mathrm{rev}} = T\,\mathrm{d}S$.</p>
 <p>Pour deux variables d'état, comme $(S, V)$ dans cette page, toute forme de Pfaff admet localement un facteur intégrant, et le résultat ne dit rien de plus. À partir de trois variables, c'est une condition (celle de Frobenius, $\alpha\wedge\mathrm{d}\alpha = 0$), que le postulat de Carathéodory impose. L'entropie apparaît alors comme la fonction dont les surfaces de niveau sont les états reliés par des transformations adiabatiques réversibles.</p>
-</div>
+</details>
 
 ## Application&nbsp;: l'électromagnétisme {#maxwell}
 
@@ -1651,9 +1653,31 @@ $$B = B\_x\\,\mathrm{d}y\wedge\mathrm{d}z + B\_y\\,\mathrm{d}z\wedge\mathrm{d}x 
 
 La distinction entre vecteur et pseudovecteur devient celle entre 1-forme et 2-forme&nbsp;: un pseudovecteur est une 2-forme qu'on a identifiée à un vecteur grâce à l'orientation et à la métrique de l'espace.
 
+### L'opérateur de Hodge
+
+Les équations de Maxwell relient les champs à leurs sources, et pour les écrire il faut un outil de plus. Le champ électrique a deux visages&nbsp;: une 1-forme (la pile de surfaces équipotentielles, dont la circulation est une tension) et, pour la loi de Gauss, une 2-forme (les tubes de champ, dont le flux est une charge). Le passage de l'une à l'autre se fait avec la métrique de l'espace, par l'**opérateur de Hodge** $\star$, qui transforme une $k$-forme en une $(n-k)$-forme en dimension $n$.
+
+En dimension $3$, dans des axes orthonormés et pour une orientation donnée, il est défini par
+
+$$\star\mathrm{d}x = \mathrm{d}y\wedge\mathrm{d}z,\qquad \star\mathrm{d}y = \mathrm{d}z\wedge\mathrm{d}x,\qquad \star\mathrm{d}z = \mathrm{d}x\wedge\mathrm{d}y,$$
+
+et inversement $\star(\mathrm{d}y\wedge\mathrm{d}z) = \mathrm{d}x$, etc., ainsi que $\star 1 = \mathrm{d}x\wedge\mathrm{d}y\wedge\mathrm{d}z$. Le sens est géométrique&nbsp;: les lignes de $\mathrm{d}x$ sont les plans $x = \text{cste}$, et la 2-forme $\star\mathrm{d}x = \mathrm{d}y\wedge\mathrm{d}z$ a pour tubes les droites parallèles à l'axe $x$. L'opérateur $\star$ remplace une pile de plans par les tubes qui leur sont perpendiculaires.
+
+En dimension $2$, $\star\mathrm{d}x = \mathrm{d}y$ et $\star\mathrm{d}y = -\mathrm{d}x$&nbsp;: $\star$ fait tourner d'un quart de tour la pile de lignes. C'est la rotation que l'on rencontre dans le champ hamiltonien $X\_H$, la «&nbsp;pente tournée d'un quart de tour&nbsp;». En coordonnées polaires, $\star\mathrm{d}r = r\\,\mathrm{d}\theta$ et $\star\mathrm{d}\theta = -\mathrm{d}r/r$&nbsp;: $\star$ dépend de la métrique, qui fait de $\mathrm{d}r$ et de $r\\,\mathrm{d}\theta$ les deux 1-formes «&nbsp;de longueur $1$&nbsp;» (et non de $\mathrm{d}\theta$).
+
+Dans tous les cas, on peut le définir par l'égalité $\alpha\wedge\star\beta = g(\alpha, \beta)\\,\mathrm{vol}$, où $g(\alpha, \beta)$ est le produit scalaire de $\alpha$ et $\beta$ (induit par la métrique) et $\mathrm{vol}$ la forme volume. Cette définition vaut en toute dimension, dans tout système de coordonnées, et aussi en espace-temps, avec la métrique de Minkowski. Voici ce qu'il permet de faire&nbsp;:
+
+- le produit vectoriel, $\vec a\times\vec b = \big(\star(a^\flat\wedge b^\flat)\big)^\sharp$, où $\sharp$ est l'opération inverse de $\flat$ (elle associe à une 1-forme le vecteur correspondant)&nbsp;;
+- le calcul vectoriel, $\vec\nabla f = (\mathrm{d}f)^\sharp$, $\vec\nabla\times\vec A = \big(\star\mathrm{d}A^\flat\big)^\sharp$, $\vec\nabla\cdot\vec A = \star\mathrm{d}\star A^\flat$ et $\Delta f = \star\mathrm{d}\star\mathrm{d}f$&nbsp;;
+- la loi de Gauss, $\mathrm{d}\star E = \rho/\varepsilon\_0$ (avec $\rho$ la 3-forme densité de charge)&nbsp;: le flux de $E$ à travers une surface fermée, c'est-à-dire le nombre de tubes de champ qui la traversent, est la charge intérieure divisée par $\varepsilon\_0$.
+
+La différentielle extérieure $\mathrm{d}$ n'utilise pas la métrique, alors que $\star$ l'utilise&nbsp;: c'est la raison pour laquelle $\mathrm{d}B = 0$ est indépendante de la géométrie, et pas la loi de Gauss.
+
+### Les équations de Maxwell
+
 Les équations de Maxwell s'écrivent alors sans aucune coordonnée. Avec un potentiel $A$ (une 1-forme), $B = \mathrm{d}A$, donc $\mathrm{d}B = 0$&nbsp;: c'est $\vec\nabla\cdot\vec B = 0$, le flux de $B$ à travers toute surface fermée est nul, les tubes de $B$ ne se terminent nulle part. L'équation de Faraday s'écrit $\mathrm{d}E = -\partial\_t B$.
 
-En relativité, $E$ et $B$ se fondent en une seule 2-forme $F$ de l'espace-temps, et les quatre équations de Maxwell se réduisent à deux&nbsp;: $\mathrm{d}F = 0$ (les deux équations sans source) et $\mathrm{d}\star F = J$ (celles avec sources, où $J$ est la 3-forme courant). L'opérateur $\star$ (dualité de Hodge) utilise la métrique, alors que $\mathrm{d}F = 0$ n'en utilise aucune&nbsp;: la moitié des équations de Maxwell est indépendante de la géométrie de l'espace-temps.
+En relativité, $E$ et $B$ se fondent en une seule 2-forme $F$ de l'espace-temps, et les quatre équations de Maxwell se réduisent à deux&nbsp;: $\mathrm{d}F = 0$ (les deux équations sans source) et $\mathrm{d}\star F = J$ (celles avec sources, où $J$ est la 3-forme courant). L'opérateur $\star$ (dualité de Hodge, défini plus haut) agit ici sur les 2-formes de l'espace-temps&nbsp;: $\star F$ est la 2-forme duale de $F$, où les rôles de $E$ et de $B$ sont échangés (au signe près). Il utilise la métrique, alors que $\mathrm{d}F = 0$ n'en utilise aucune&nbsp;: la moitié des équations de Maxwell est indépendante de la géométrie de l'espace-temps.
 
 <br>
 
