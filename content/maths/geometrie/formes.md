@@ -886,7 +886,17 @@ Le résultat ne dépend que des extrémités $A$ et $B$&nbsp;: c'est le théorè
 
 $$\Gamma = \oint\_\gamma \vec w\cdot\mathrm{d}\vec r = \int\_a^b \vec w\big(\vec r(t)\big)\cdot\vec v(t)\\,\mathrm{d}t.$$
 
-Elle mesure combien le fluide tourne le long de la boucle. Pour une rotation d'ensemble de vitesse angulaire $\Omega$, $\vec w = \Omega(-y, x)$, soit la 1-forme $\Omega(-y\\,\mathrm{d}x + x\\,\mathrm{d}y) = \Omega r^2\\,\mathrm{d}\theta$. Sur le cercle $\vec r(t) = R(\cos t, \sin t)$, $t \in [0, 2\pi]$, la vitesse est $\vec v = R(-\sin t, \cos t)$ et $\vec w\cdot\vec v = \Omega R^2$, donc $\Gamma = 2\pi\Omega R^2$&nbsp;: le double de $\Omega$ fois l'aire du disque.
+Elle mesure combien le fluide tourne le long de la boucle. Prenons une rotation d'ensemble, de vitesse angulaire $\Omega$&nbsp;: la vitesse du fluide est orthoradiale, de norme $\Omega r$, soit $\vec w = \Omega r\\,\hat e\_\theta = \Omega(-y, x)$ en coordonnées cartésiennes. Sa 1-forme est donc $\Omega(-y\\,\mathrm{d}x + x\\,\mathrm{d}y)$ en cartésiennes.
+
+Pour l'écrire en polaires, on lit ses composantes, c'est-à-dire ses valeurs sur les vecteurs de base (comme pour la 1-forme travail)&nbsp;:
+
+$$\vec w\cdot\vec e\_r = \Omega r\\,\hat e\_\theta\cdot\hat e\_r = 0,\qquad \vec w\cdot\vec e\_\theta = \Omega r\\,\hat e\_\theta\cdot r\hat e\_\theta = \Omega r^2.$$
+
+La 1-forme est donc $\vec w\cdot(\ \cdot\ ) = \Omega r^2\\,\mathrm{d}\theta$&nbsp;: les lignes de $\mathrm{d}\theta$ sont les rayons, et le fluide les croise d'autant plus vite qu'on s'éloigne de l'axe. Sur le cercle de rayon $R$, $r = R$ est constant, donc $\mathrm{d}r = 0$, et il ne reste que
+
+$$\Gamma = \oint \Omega R^2\\,\mathrm{d}\theta = \Omega R^2\int\_0^{2\pi}\mathrm{d}\theta = 2\pi\Omega R^2,$$
+
+le double de $\Omega$ fois l'aire du disque. Le calcul en cartésiennes donne le même résultat&nbsp;: sur $\vec r(t) = R(\cos t, \sin t)$, la vitesse est $\vec v = R(-\sin t, \cos t)$, $\vec w\cdot\vec v = \Omega R^2$, et $\int\_0^{2\pi}\Omega R^2\\,\mathrm{d}t = 2\pi\Omega R^2$.
 
 Si la vitesse dérive d'un potentiel, $\vec w = \vec\nabla\varphi$, la 1-forme est $\mathrm{d}\varphi$, exacte, et la circulation est nulle sur toute boucle. Le lien général entre circulation et rotation du champ est le théorème de Stokes ([section sur la différentielle extérieure](#stokes)).
 
