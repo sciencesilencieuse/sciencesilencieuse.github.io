@@ -17,6 +17,12 @@ weight = 7
     border-radius:10px;
     padding:5px 20px 5px 20px;
 }
+#axiom
+{
+    background-color:#E5F3E0;
+    border-radius:10px;
+    padding:5px 20px 5px 20px;
+}
 .svg-container {
     position: relative;
     margin-left: auto;
@@ -1202,7 +1208,148 @@ Une forme $\alpha$ est **fermée** si $\mathrm{d}\alpha = 0$. Toute forme exacte
 </script>
 <p class="legende">Les rayons sont les lignes de $\mathrm{d}\theta$. Une boucle qui entoure l'origine franchit tous les rayons dans le même sens, et la circulation vaut $2\pi$&nbsp;; une boucle qui ne l'entoure pas les franchit autant de fois dans un sens que dans l'autre, et la circulation est nulle.</p>
 
-La circulation du champ magnétique autour d'un fil rectiligne parcouru par un courant $I$, $B = \frac{\mu\_0 I}{2\pi}\\,\mathrm{d}\theta$, en est l'exemple physique&nbsp;: le champ est fermé hors du fil, sa circulation vaut $\mu\_0 I$ (théorème d'Ampère), et il n'est pas le gradient d'un potentiel scalaire.
+**Le champ magnétique d'un fil.** Un fil rectiligne infini, parcouru par un courant $I$, crée un champ orthoradial $\vec B = \frac{\mu\_0 I}{2\pi r}\\,\hat e\_\theta$. La 1-forme associée, celle dont l'intégrale est la circulation $\oint\vec B\cdot\mathrm{d}\vec r$, se lit sur les vecteurs de base&nbsp;: $\vec B\cdot\vec e\_r = 0$ et $\vec B\cdot\vec e\_\theta = \frac{\mu\_0 I}{2\pi r}\\,r = \frac{\mu\_0 I}{2\pi}$, donc
+
+$$B = \frac{\mu\_0 I}{2\pi}\\,\mathrm{d}\theta.$$
+
+Le $1/r$ du champ est celui des rayons de $\mathrm{d}\theta$ qui divergent&nbsp;; la 1-forme, elle, a un coefficient constant.
+
+**Elle est fermée.** En cartésiennes, $B = P\\,\mathrm{d}x + Q\\,\mathrm{d}y$ avec $P = -\frac{\mu\_0 I}{2\pi}\frac{y}{x^2 + y^2}$ et $Q = \frac{\mu\_0 I}{2\pi}\frac{x}{x^2 + y^2}$. Hors du fil, $\frac{\partial Q}{\partial x} = \frac{\mu\_0 I}{2\pi}\frac{y^2 - x^2}{(x^2 + y^2)^2} = \frac{\partial P}{\partial y}$, donc $\mathrm{d}B = 0$&nbsp;: c'est $\vec\nabla\times\vec B = \vec 0$, puisqu'il n'y a pas de courant hors du fil.
+
+**Elle n'est pas exacte.** La circulation sur un cercle de rayon $R$ autour du fil vaut
+
+$$\oint\vec B\cdot\mathrm{d}\vec r = \frac{\mu\_0 I}{2\pi}\oint\mathrm{d}\theta = \mu\_0 I,$$
+
+quel que soit $R$&nbsp;: c'est le théorème d'Ampère. Si $B$ était la différentielle d'une fonction $\varphi$, sa circulation serait la différence de $\varphi$ entre l'arrivée et le départ de la boucle, donc nulle sur toute boucle fermée. Le candidat naturel est $\varphi = \frac{\mu\_0 I}{2\pi}\\,\theta$, mais il n'est pas défini sur tout le plan privé du fil&nbsp;: il augmente de $\mu\_0 I$ à chaque tour.
+
+**Pourquoi fermée ne suffit pas.** Sur un domaine sans trou (un demi-plan par exemple), $\theta$ est une fonction ordinaire et $B = \mathrm{d}\big(\frac{\mu\_0 I}{2\pi}\theta\big)$ est exacte&nbsp;: c'est le lemme de Poincaré. Le théorème de Stokes explique l'obstruction globale. Une boucle qui borde un disque $D$ contenu dans le domaine où $\mathrm{d}B = 0$ a une circulation $\int\_D\mathrm{d}B = 0$. Une boucle autour du fil ne borde aucun disque du plan privé du fil&nbsp;: le disque contiendrait le fil, là où $B$ n'est pas défini (et où $\vec\nabla\times\vec B = \mu\_0\vec\jmath \neq \vec 0$). Une circulation non nulle détecte le trou, c'est-à-dire le courant enfermé.
+
+<div id="axiom">
+
+**Le bord d'un bord est vide**
+
+Wheeler fait de cette identité géométrique, $\partial\partial = 0$, le principe central pour comprendre l'équation d'Einstein $G = 8\pi T$ (dans *Gravitation*, avec Misner et Thorne, chapitre 15, et dans *A Journey into Gravity and Spacetime*). Elle se vérifie en toute dimension&nbsp;:
+
+- en dimension $1$, le bord d'un segment $[A, B]$ est formé de ses deux extrémités, $B - A$&nbsp;; un point n'a pas de bord&nbsp;;
+- en dimension $2$, le bord d'un carré est formé de $4$ arêtes orientées. Chaque sommet est l'arrivée d'une arête et le départ de la suivante&nbsp;: le bord du bord est vide&nbsp;;
+- en dimension $3$, le bord d'un cube est formé de $6$ faces. Chaque arête appartient à deux faces, qui la parcourent en sens opposés&nbsp;;
+- en dimension $4$, le bord d'un hypercube est formé de $8$ cubes. Chacune des $24$ faces carrées appartient à deux cubes, avec des orientations opposées.
+
+Dans chaque cas, une «&nbsp;face du bord&nbsp;» est partagée par deux cellules voisines qui la parcourent en sens opposés, et les contributions se compensent. C'est le mécanisme de la preuve du théorème de Stokes, où les arêtes intérieures se compensent par paires.
+
+<div class="svg-container" style="display:flex;flex-wrap:wrap;gap:8px 10px;justify-content:center;align-items:flex-start;">
+<svg viewBox="0 0 220 250" role="img" aria-label="Un carré dont le bord est formé de quatre arêtes orientées dans le sens direct. À chaque sommet, une arête arrive et la suivante repart : le bord du bord est vide." style="flex:1 1 190px;max-width:235px;height:auto;">
+<defs><marker id="fbm1" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#006C65"/></marker></defs>
+<text x="110" y="16" font-size="11.5" fill="#334155" text-anchor="middle" font-weight="bold" font-style="normal" font-family="Georgia,'Times New Roman',serif">2 dimensions : un carré</text>
+<rect x="62" y="50" width="90" height="90" fill="#E5F3E0" stroke="none"/>
+<line x1="62" y1="140" x2="152" y2="140" stroke="#006C65" stroke-width="2.2"/>
+<line x1="102.0" y1="140.0" x2="112.0" y2="140.0" stroke="#006C65" stroke-width="2.4" marker-end="url(#fbm1)"/>
+<line x1="152" y1="140" x2="152" y2="50" stroke="#006C65" stroke-width="2.2"/>
+<line x1="152.0" y1="100.0" x2="152.0" y2="90.0" stroke="#006C65" stroke-width="2.4" marker-end="url(#fbm1)"/>
+<line x1="152" y1="50" x2="62" y2="50" stroke="#006C65" stroke-width="2.2"/>
+<line x1="112.0" y1="50.0" x2="102.0" y2="50.0" stroke="#006C65" stroke-width="2.4" marker-end="url(#fbm1)"/>
+<line x1="62" y1="50" x2="62" y2="140" stroke="#006C65" stroke-width="2.2"/>
+<line x1="62.0" y1="90.0" x2="62.0" y2="100.0" stroke="#006C65" stroke-width="2.4" marker-end="url(#fbm1)"/>
+<circle cx="62" cy="140" r="3.2" fill="#334155"/>
+<text x="52" y="154" font-size="11" fill="#334155" text-anchor="start" font-weight="bold" font-style="italic" font-family="Georgia,'Times New Roman',serif">A</text>
+<circle cx="152" cy="140" r="3.2" fill="#334155"/>
+<text x="158" y="154" font-size="11" fill="#334155" text-anchor="start" font-weight="bold" font-style="italic" font-family="Georgia,'Times New Roman',serif">B</text>
+<circle cx="152" cy="50" r="3.2" fill="#334155"/>
+<text x="158" y="44" font-size="11" fill="#334155" text-anchor="start" font-weight="bold" font-style="italic" font-family="Georgia,'Times New Roman',serif">C</text>
+<circle cx="62" cy="50" r="3.2" fill="#334155"/>
+<text x="52" y="44" font-size="11" fill="#334155" text-anchor="start" font-weight="bold" font-style="italic" font-family="Georgia,'Times New Roman',serif">D</text>
+<text x="110" y="192" font-size="10.5" fill="#475569" text-anchor="middle" font-weight="normal" font-style="normal" font-family="Georgia,'Times New Roman',serif">Bord : 4 arêtes. À chaque sommet,</text>
+<text x="110" y="206" font-size="10.5" fill="#475569" text-anchor="middle" font-weight="normal" font-style="normal" font-family="Georgia,'Times New Roman',serif">une arête arrive, la suivante repart :</text>
+<text x="110" y="220" font-size="10.5" fill="#970E53" text-anchor="middle" font-weight="bold" font-style="normal" font-family="Georgia,'Times New Roman',serif">(B−A) + (C−B) + (D−C) + (A−D) = 0</text>
+<text x="110" y="234" font-size="10.5" fill="#475569" text-anchor="middle" font-weight="normal" font-style="normal" font-family="Georgia,'Times New Roman',serif">le bord du bord est vide.</text>
+</svg>
+<svg viewBox="0 0 220 250" role="img" aria-label="Le patron d'un cube : six carrés, chacun parcouru dans le sens direct vu de l'extérieur. Chaque arête commune à deux carrés est parcourue en sens opposés par les deux carrés ; les arêtes du pourtour se recollent deux à deux en pliant le patron." style="flex:1 1 190px;max-width:235px;height:auto;">
+<defs><marker id="fbm2" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="userSpaceOnUse" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,1 L9,5 L0,9 Z" fill="#006C65"/></marker></defs>
+<text x="110" y="16" font-size="11.5" fill="#334155" text-anchor="middle" font-weight="bold" font-style="normal" font-family="Georgia,'Times New Roman',serif">3 dimensions : un cube</text>
+<rect x="56" y="34" width="38" height="38" fill="#E5F3E0" stroke="#334155" stroke-width="1"/>
+<line x1="70.0" y1="66.0" x2="80.0" y2="66.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<line x1="88.0" y1="58.0" x2="88.0" y2="48.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<line x1="80.0" y1="40.0" x2="70.0" y2="40.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<line x1="62.0" y1="48.0" x2="62.0" y2="58.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<rect x="18" y="72" width="38" height="38" fill="#E5F3E0" stroke="#334155" stroke-width="1"/>
+<line x1="32.0" y1="104.0" x2="42.0" y2="104.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<line x1="50.0" y1="96.0" x2="50.0" y2="86.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<line x1="42.0" y1="78.0" x2="32.0" y2="78.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<line x1="24.0" y1="86.0" x2="24.0" y2="96.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<rect x="56" y="72" width="38" height="38" fill="#E5F3E0" stroke="#334155" stroke-width="1"/>
+<line x1="70.0" y1="104.0" x2="80.0" y2="104.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<line x1="88.0" y1="96.0" x2="88.0" y2="86.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<line x1="80.0" y1="78.0" x2="70.0" y2="78.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<line x1="62.0" y1="86.0" x2="62.0" y2="96.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<rect x="94" y="72" width="38" height="38" fill="#E5F3E0" stroke="#334155" stroke-width="1"/>
+<line x1="108.0" y1="104.0" x2="118.0" y2="104.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<line x1="126.0" y1="96.0" x2="126.0" y2="86.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<line x1="118.0" y1="78.0" x2="108.0" y2="78.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<line x1="100.0" y1="86.0" x2="100.0" y2="96.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<rect x="132" y="72" width="38" height="38" fill="#E5F3E0" stroke="#334155" stroke-width="1"/>
+<line x1="146.0" y1="104.0" x2="156.0" y2="104.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<line x1="164.0" y1="96.0" x2="164.0" y2="86.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<line x1="156.0" y1="78.0" x2="146.0" y2="78.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<line x1="138.0" y1="86.0" x2="138.0" y2="96.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<rect x="56" y="110" width="38" height="38" fill="#E5F3E0" stroke="#334155" stroke-width="1"/>
+<line x1="70.0" y1="142.0" x2="80.0" y2="142.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<line x1="88.0" y1="134.0" x2="88.0" y2="124.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<line x1="80.0" y1="116.0" x2="70.0" y2="116.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<line x1="62.0" y1="124.0" x2="62.0" y2="134.0" stroke="#006C65" stroke-width="1.6" marker-end="url(#fbm2)"/>
+<text x="110" y="192" font-size="10.5" fill="#475569" text-anchor="middle" font-weight="normal" font-style="normal" font-family="Georgia,'Times New Roman',serif">Bord : 6 faces. Une arête commune à</text>
+<text x="110" y="206" font-size="10.5" fill="#475569" text-anchor="middle" font-weight="normal" font-style="normal" font-family="Georgia,'Times New Roman',serif">deux faces est parcourue en sens opposés :</text>
+<text x="110" y="220" font-size="10.5" fill="#970E53" text-anchor="middle" font-weight="bold" font-style="normal" font-family="Georgia,'Times New Roman',serif">les contributions se compensent.</text>
+<text x="110" y="234" font-size="10.5" fill="#475569" text-anchor="middle" font-weight="normal" font-style="normal" font-family="Georgia,'Times New Roman',serif">Le pourtour se recolle par paires.</text>
+</svg>
+<svg viewBox="0 0 220 250" role="img" aria-label="Un hypercube en dimension quatre, dessiné comme un cube dans un cube. Son bord est formé de huit cubes : le cube intérieur, le cube extérieur et six troncs de pyramide. Le cube intérieur (en vert) et le tronc au-dessus de lui (en orange) se touchent par une face carrée, parcourue en sens opposés par les deux cubes." style="flex:1 1 190px;max-width:235px;height:auto;">
+<text x="110" y="16" font-size="11.5" fill="#334155" text-anchor="middle" font-weight="bold" font-style="normal" font-family="Georgia,'Times New Roman',serif">4 dimensions : un hypercube</text>
+<polygon points="82.0,86.5 99.4,74.9 138.0,74.9 138.0,113.5 120.6,125.1 82.0,125.1" fill="#006C65" fill-opacity="0.28" stroke="none"/>
+<polygon points="43.3,67.8 84.7,40.2 176.7,40.2 138.0,74.9 120.6,86.5 82.0,86.5" fill="#C2770B" fill-opacity="0.28" stroke="none"/>
+<line x1="43.3" y1="159.8" x2="84.7" y2="132.2" stroke="#475569" stroke-width="1.3"/>
+<line x1="43.3" y1="159.8" x2="43.3" y2="67.8" stroke="#475569" stroke-width="1.3"/>
+<line x1="43.3" y1="159.8" x2="135.3" y2="159.8" stroke="#475569" stroke-width="1.3"/>
+<line x1="84.7" y1="132.2" x2="84.7" y2="40.2" stroke="#475569" stroke-width="1.3"/>
+<line x1="84.7" y1="132.2" x2="176.7" y2="132.2" stroke="#475569" stroke-width="1.3"/>
+<line x1="43.3" y1="67.8" x2="84.7" y2="40.2" stroke="#475569" stroke-width="1.3"/>
+<line x1="43.3" y1="67.8" x2="135.3" y2="67.8" stroke="#475569" stroke-width="1.3"/>
+<line x1="84.7" y1="40.2" x2="176.7" y2="40.2" stroke="#475569" stroke-width="1.3"/>
+<line x1="135.3" y1="159.8" x2="176.7" y2="132.2" stroke="#475569" stroke-width="1.3"/>
+<line x1="135.3" y1="159.8" x2="135.3" y2="67.8" stroke="#475569" stroke-width="1.3"/>
+<line x1="176.7" y1="132.2" x2="176.7" y2="40.2" stroke="#475569" stroke-width="1.3"/>
+<line x1="135.3" y1="67.8" x2="176.7" y2="40.2" stroke="#475569" stroke-width="1.3"/>
+<line x1="82.0" y1="125.1" x2="99.4" y2="113.5" stroke="#475569" stroke-width="1.3"/>
+<line x1="82.0" y1="125.1" x2="82.0" y2="86.5" stroke="#475569" stroke-width="1.3"/>
+<line x1="82.0" y1="125.1" x2="120.6" y2="125.1" stroke="#475569" stroke-width="1.3"/>
+<line x1="99.4" y1="113.5" x2="99.4" y2="74.9" stroke="#475569" stroke-width="1.3"/>
+<line x1="99.4" y1="113.5" x2="138.0" y2="113.5" stroke="#475569" stroke-width="1.3"/>
+<line x1="82.0" y1="86.5" x2="99.4" y2="74.9" stroke="#475569" stroke-width="1.3"/>
+<line x1="82.0" y1="86.5" x2="120.6" y2="86.5" stroke="#475569" stroke-width="1.3"/>
+<line x1="99.4" y1="74.9" x2="138.0" y2="74.9" stroke="#475569" stroke-width="1.3"/>
+<line x1="120.6" y1="125.1" x2="138.0" y2="113.5" stroke="#475569" stroke-width="1.3"/>
+<line x1="120.6" y1="125.1" x2="120.6" y2="86.5" stroke="#475569" stroke-width="1.3"/>
+<line x1="138.0" y1="113.5" x2="138.0" y2="74.9" stroke="#475569" stroke-width="1.3"/>
+<line x1="120.6" y1="86.5" x2="138.0" y2="74.9" stroke="#475569" stroke-width="1.3"/>
+<line x1="82.0" y1="125.1" x2="43.3" y2="159.8" stroke="#94a3b8" stroke-width="1"/>
+<line x1="99.4" y1="113.5" x2="84.7" y2="132.2" stroke="#94a3b8" stroke-width="1"/>
+<line x1="82.0" y1="86.5" x2="43.3" y2="67.8" stroke="#94a3b8" stroke-width="1"/>
+<line x1="99.4" y1="74.9" x2="84.7" y2="40.2" stroke="#94a3b8" stroke-width="1"/>
+<line x1="120.6" y1="125.1" x2="135.3" y2="159.8" stroke="#94a3b8" stroke-width="1"/>
+<line x1="138.0" y1="113.5" x2="176.7" y2="132.2" stroke="#94a3b8" stroke-width="1"/>
+<line x1="120.6" y1="86.5" x2="135.3" y2="67.8" stroke="#94a3b8" stroke-width="1"/>
+<line x1="138.0" y1="74.9" x2="176.7" y2="40.2" stroke="#94a3b8" stroke-width="1"/>
+<polygon points="82.0,86.5 99.4,74.9 138.0,74.9 120.6,86.5" fill="none" stroke="#970E53" stroke-width="2.6"/>
+<text x="110" y="192" font-size="10.5" fill="#475569" text-anchor="middle" font-weight="normal" font-style="normal" font-family="Georgia,'Times New Roman',serif">Bord : 8 cubes (vert et orange :</text>
+<text x="110" y="206" font-size="10.5" fill="#475569" text-anchor="middle" font-weight="normal" font-style="normal" font-family="Georgia,'Times New Roman',serif">deux d'entre eux, qui se touchent</text>
+<text x="110" y="220" font-size="10.5" fill="#970E53" text-anchor="middle" font-weight="bold" font-style="normal" font-family="Georgia,'Times New Roman',serif">par la face en rouge, vue en sens opposés).</text>
+<text x="110" y="234" font-size="10.5" fill="#475569" text-anchor="middle" font-weight="normal" font-style="normal" font-family="Georgia,'Times New Roman',serif">24 faces, chacune dans 2 cubes.</text>
+</svg>
+</div>
+
+Ce principe est le miroir géométrique de $\mathrm{d}\circ\mathrm{d} = 0$. Pour une région $D$ et une forme $\alpha$, le théorème de Stokes appliqué deux fois donne $\int\_{\partial\partial D}\alpha = \int\_{\partial D}\mathrm{d}\alpha = \int\_D\mathrm{d}\mathrm{d}\alpha$. Comme $\partial\partial D$ est vide, le membre de gauche est nul pour tout $D$&nbsp;; donc $\mathrm{d}\mathrm{d}\alpha = 0$.
+
+**Le lien avec la gravitation.** Le tenseur d'Einstein $G$ est ce que Wheeler appelle le **moment de rotation**, une mesure de la courbure d'un petit cube d'espace-temps. L'équation d'Einstein dit que le moment de rotation associé à un cube à trois dimensions est $8\pi$ fois l'énergie-impulsion qu'il contient. Le bord d'un bloc d'espace-temps à quatre dimensions est formé de huit de ces cubes. Comme le bord d'un bord est vide, la somme de leurs moments de rotation est automatiquement nulle&nbsp;: c'est l'identité de Bianchi contractée, $\nabla\_\mu G^{\mu\nu} = 0$. L'équation $G = 8\pi T$ entraîne alors $\nabla\_\mu T^{\mu\nu} = 0$&nbsp;: la conservation de l'énergie-impulsion n'est pas une hypothèse ajoutée, c'est une identité géométrique. C'est le même type de mécanisme que $B = \mathrm{d}A \Rightarrow \mathrm{d}B = 0$ en électromagnétisme.
+
+</div>
 
 ## Application&nbsp;: retour sur les moments {#hamilton}
 
