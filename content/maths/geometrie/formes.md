@@ -915,6 +915,13 @@ le double de $\Omega$ fois l'aire du disque. Le calcul en cartésiennes donne le
 
 Si la vitesse dérive d'un potentiel, $\vec w = \vec\nabla\varphi$, la 1-forme est $\mathrm{d}\varphi$, exacte, et la circulation est nulle sur toute boucle. Le lien général entre circulation et rotation du champ est le théorème de Stokes ([section sur la différentielle extérieure](#stokes)).
 
+<div class="encadre">
+<div class="encadre-titre">Le théorème de circulation de Kelvin</div>
+<p>Dans un fluide parfait, la circulation autour d'un circuit fermé entraîné par l'écoulement ne change pas au cours du temps. Les formes en donnent une démonstration de quelques lignes. Soit $\gamma(t)$ un circuit formé de particules du fluide, et $\Gamma(t) = \oint_{\gamma(t)}\vec w\cdot\mathrm{d}\vec r$ sa circulation. Elle varie pour deux raisons.</p>
+<p>D'abord, la vitesse de chaque particule change&nbsp;: cela donne $\oint\frac{D\vec w}{Dt}\cdot\mathrm{d}\vec r$ (la dérivée est celle qui suit la particule). Pour un fluide dont la pression ne dépend que de la densité, soumis à une force dérivant d'un potentiel $\Phi$, l'équation d'Euler s'écrit $\frac{D\vec w}{Dt} = -\vec\nabla(h + \Phi)$, où $h$ est l'enthalpie par unité de masse. Cette intégrale est donc celle de la forme exacte $-\mathrm{d}(h + \Phi)$ sur une boucle fermée&nbsp;: elle est nulle. Ensuite, le circuit se déforme&nbsp;: deux particules voisines s'écartent de leur différence de vitesse, donc $\mathrm{d}\vec r$ varie de $\mathrm{d}\vec w$. Cela donne $\oint\vec w\cdot\mathrm{d}\vec w = \oint\mathrm{d}\big(\tfrac12|\vec w|^2\big)$, encore une forme exacte, donc encore nulle.</p>
+<p>Les deux termes sont des circulations de formes exactes, donc $\mathrm{d}\Gamma/\mathrm{d}t = 0$. Un écoulement dont la circulation est nulle sur tout circuit (un écoulement irrotationnel) le reste&nbsp;; et la circulation d'un tourbillon se conserve en le suivant. La viscosité, une pression qui dépend aussi de la température ou une force non conservative cassent l'exactitude des formes ci-dessus&nbsp;: c'est là que la vorticité peut se créer.</p>
+</div>
+
 ## Aires orientées&nbsp;: les 2-formes {#aires}
 
 Un mesureur à une flèche est une 1-forme. Pour une surface, la brique élémentaire est un petit parallélogramme construit sur deux petits déplacements $\vec u$ et $\vec v$, et l'on cherche un mesureur qui lui associe un nombre, par exemple son aire. Doubler $\vec u$ double l'aire, et accoler deux parallélogrammes de même côté $\vec v$ additionne leurs aires&nbsp;: le mesureur est **linéaire** en chaque vecteur. Échanger $\vec u$ et $\vec v$ retourne l'orientation&nbsp;: il est **antisymétrique** (deux vecteurs parallèles donnent une aire nulle). Un tel mesureur, linéaire en chaque vecteur et antisymétrique, est une **2-forme**.
@@ -1068,7 +1075,20 @@ Le jacobien de la transformation, ici le facteur $r$, apparaît sans qu'on calcu
 
 **Intégrer une 2-forme.** Comme pour une 1-forme le long d'un chemin, on découpe une surface $D$ en petits parallélogrammes, construits sur des couples de petits déplacements $(\vec u\_k, \vec v\_k)$, et l'on additionne les nombres $\omega(\vec u\_k, \vec v\_k)$&nbsp;: c'est $\int\_D\omega$. Pour $\omega = h\\,\mathrm{d}x\wedge\mathrm{d}y$, on retrouve l'intégrale double usuelle $\iint h\\,\mathrm{d}x\\,\mathrm{d}y$&nbsp;; en polaires, $\omega = h\\,r\\,\mathrm{d}r\wedge\mathrm{d}\theta$ donne $\iint h\\,r\\,\mathrm{d}r\\,\mathrm{d}\theta$, avec le facteur $r$ de la figure.
 
+<div class="encadre">
+<div class="encadre-titre">L'intégrale de Gauss en un tour de polaires</div>
+<p>La fonction $e^{-x^2}$ n'a pas de primitive élémentaire, et pourtant $I = \int_{-\infty}^{+\infty}e^{-x^2}\mathrm{d}x$ se calcule en passant par son carré. Le produit de deux intégrales est l'intégrale de la 2-forme $e^{-x^2}e^{-y^2}\,\mathrm{d}x\wedge\mathrm{d}y$ sur le plan&nbsp;: $I^2 = \iint e^{-(x^2 + y^2)}\,\mathrm{d}x\wedge\mathrm{d}y$. En polaires, $\mathrm{d}x\wedge\mathrm{d}y = r\,\mathrm{d}r\wedge\mathrm{d}\theta$, d'où</p>
+<p>$$I^2 = \int_0^{2\pi}\mathrm{d}\theta\int_0^{+\infty}e^{-r^2}\,r\,\mathrm{d}r = 2\pi\cdot\frac{1}{2} = \pi, \qquad I = \sqrt{\pi}.$$</p>
+<p>Le facteur $r$ de l'élément d'aire rend la primitive élémentaire, puisque $r\,\mathrm{d}r = \frac{1}{2}\mathrm{d}(r^2)$&nbsp;; sans lui, $\int e^{-r^2}\mathrm{d}r$ ne l'est pas. Cette intégrale normalise la distribution de Maxwell–Boltzmann des vitesses, et la gaussienne de la mécanique quantique.</p>
+</div>
+
 En dimension $3$, une 2-forme mesure des petites surfaces orientées&nbsp;: on la dessine comme un champ de **tubes**, et sa valeur sur une surface est le nombre de tubes qu'elle traverse. C'est la notion de **flux**.
+
+<div class="encadre">
+<div class="encadre-titre">Où est passé le produit vectoriel&nbsp;?</div>
+<p>Le produit vectoriel $\vec a\times\vec b$ de deux vecteurs est perpendiculaire aux deux, et sa norme est l'aire du parallélogramme qu'ils engendrent. Les formes disent d'où il sort. L'objet naturel est la 2-forme $a^\flat\wedge b^\flat$, où $a^\flat = \vec a\cdot(\ \cdot\ )$ est la 1-forme associée à $\vec a$. Ses composantes sur $\mathrm{d}y\wedge\mathrm{d}z$, $\mathrm{d}z\wedge\mathrm{d}x$ et $\mathrm{d}x\wedge\mathrm{d}y$ sont $a_yb_z - a_zb_y$, $a_zb_x - a_xb_z$ et $a_xb_y - a_yb_x$&nbsp;: ce sont les trois composantes du produit vectoriel.</p>
+<p>En dimension $3$, une 2-forme a trois composantes, comme un vecteur&nbsp;; la métrique et l'orientation (l'opérateur $\star$ de Hodge) permettent de l'identifier à un vecteur, et c'est ce vecteur qu'on appelle $\vec a\times\vec b$. Cela explique deux faits familiers. Le produit vectoriel n'existe qu'en dimension $3$, parce qu'en dimension $n$ une 2-forme a $n(n-1)/2$ composantes, nombre qui vaut $n$ seulement pour $n = 3$. Et c'est un pseudovecteur&nbsp;: sa définition fait intervenir l'orientation, donc il change de sens quand on inverse l'orientation de l'espace (comme le champ magnétique, qui est une 2-forme).</p>
+</div>
 
 ## La différentielle extérieure et le théorème de Stokes {#stokes}
 
@@ -1154,6 +1174,12 @@ Ce seul énoncé contient des résultats qu'on apprend séparément&nbsp;: en di
 
 Et $\mathrm{d}\circ\mathrm{d} = 0$ résume à elle seule deux identités, $\vec\nabla\times(\vec\nabla f) = \vec 0$ et $\vec\nabla\cdot(\vec\nabla\times\vec A) = 0$.
 
+<div class="encadre">
+<div class="encadre-titre">Une histoire de formes et de théorèmes</div>
+<p>Le théorème de Stokes n'est pas de Stokes. Gauss en démontre des cas particuliers vers 1813, et Ostrogradski en donne la forme générale pour la divergence dans les années 1820, devant l'Académie des sciences de Paris. Pour la version plane, que l'on attribue à Green, le mathématicien et historien Victor Katz relève qu'elle apparaît sans démonstration dans une note de Cauchy de 1846. Quant à la version pour la circulation, elle naît d'une lettre de lord Kelvin à Stokes en 1850&nbsp;: Stokes la pose en 1854 comme question à l'examen du prix Smith de Cambridge, et son nom reste attaché à la formule.</p>
+<p>Les formes ont une histoire parallèle. Pfaff, en 1814-1815, étudie les expressions $a_i\,\mathrm{d}x^i$ et leurs formes normales&nbsp;: c'est le «&nbsp;problème de Pfaff&nbsp;». Grassmann introduit en 1844 l'algèbre extérieure, avec sa règle d'anticommutation. Élie Cartan, en 1899, reprend le problème de Pfaff et donne à la différentielle extérieure sa forme actuelle, qui ne dépend d'aucun choix de coordonnées. Les théorèmes de Gauss, Green et Stokes, appris séparément, deviennent alors une seule formule, $\int_{\partial D}\alpha = \int_D\mathrm{d}\alpha$.</p>
+</div>
+
 ### Le rotationnel en coordonnées polaires
 
 Soit $A = A\_x\\,\mathrm{d}x + A\_y\\,\mathrm{d}y = A\_r\\,\mathrm{d}r + A\_\theta\\,\mathrm{d}\theta$ une 1-forme (par exemple le travail d'une force). La différentielle extérieure se calcule de la même façon dans les deux systèmes&nbsp;:
@@ -1232,6 +1258,18 @@ $$\oint\vec B\cdot\mathrm{d}\vec r = \frac{\mu\_0 I}{2\pi}\oint\mathrm{d}\theta 
 quel que soit $R$&nbsp;: c'est le théorème d'Ampère. Si $B$ était la différentielle d'une fonction $\varphi$, sa circulation serait la différence de $\varphi$ entre l'arrivée et le départ de la boucle, donc nulle sur toute boucle fermée. Le candidat naturel est $\varphi = \frac{\mu\_0 I}{2\pi}\\,\theta$, mais il n'est pas défini sur tout le plan privé du fil&nbsp;: il augmente de $\mu\_0 I$ à chaque tour.
 
 **Pourquoi fermée ne suffit pas.** Sur un domaine sans trou (un demi-plan par exemple), $\theta$ est une fonction ordinaire et $B = \mathrm{d}\big(\frac{\mu\_0 I}{2\pi}\theta\big)$ est exacte&nbsp;: c'est le lemme de Poincaré. Le théorème de Stokes explique l'obstruction globale. Une boucle qui borde un disque $D$ contenu dans le domaine où $\mathrm{d}B = 0$ a une circulation $\int\_D\mathrm{d}B = 0$. Une boucle autour du fil ne borde aucun disque du plan privé du fil&nbsp;: le disque contiendrait le fil, là où $B$ n'est pas défini (et où $\vec\nabla\times\vec B = \mu\_0\vec\jmath \neq \vec 0$). Une circulation non nulle détecte le trou, c'est-à-dire le courant enfermé.
+
+<div class="encadre">
+<div class="encadre-titre">Aharonov–Bohm&nbsp;: un potentiel qu'on ne peut pas jeter</div>
+<p>Hors d'un solénoïde très long, de flux magnétique $\Phi$, le champ $\vec B$ est nul, mais pas le potentiel vecteur&nbsp;: on peut le prendre égal à $A = \frac{\Phi}{2\pi}\,\mathrm{d}\theta$, la 1-forme du fil, à un facteur près. Elle est fermée, puisque $\mathrm{d}A = B = 0$, et pourtant elle n'est pas exacte&nbsp;: $\oint A = \Phi \neq 0$ sur toute boucle qui entoure le solénoïde. Aucune fonction $\Lambda$ ne vérifie $A = \mathrm{d}\Lambda$ sur toute la région extérieure, si bien qu'on ne peut pas supprimer $A$ par un changement de jauge.</p>
+<p>En mécanique quantique, la fonction d'onde d'une particule de charge $q$ qui suit un chemin $\gamma$ est déphasée de $\frac{q}{\hbar}\int_\gamma A$. Deux faisceaux qui contournent le solénoïde par ses deux côtés ont un déphasage relatif $\frac{q}{\hbar}\oint A = \frac{q\Phi}{\hbar}$, que la figure d'interférence révèle, alors que les particules ne traversent aucune région où $\vec B \neq \vec 0$. Prévu par Ehrenberg et Siday en 1949, puis par Aharonov et Bohm en 1959, l'effet a été observé par Chambers en 1960. Ce que la physique mesure est la circulation de $A$, c'est-à-dire la partie «&nbsp;fermée mais pas exacte&nbsp;» de $A$, et non $A$ lui-même.</p>
+</div>
+
+<div class="encadre">
+<div class="encadre-titre">Compter les trous avec des formes</div>
+<p>Le plan privé d'un point porte une forme fermée non exacte, $\mathrm{d}\theta$. Le plan privé de deux points en porte deux indépendantes, l'une pour chaque trou&nbsp;; un disque ou le plan entier n'en portent aucune. Le nombre de formes fermées non exactes indépendantes d'un domaine ne dépend donc que de sa topologie&nbsp;: c'est un nombre de «&nbsp;trous&nbsp;». C'est le point de départ de la cohomologie de de Rham, développée par Georges de Rham dans les années 1930.</p>
+<p>Le théorème de Stokes montre pourquoi. Deux boucles qu'on peut déformer l'une dans l'autre sans franchir de trou bordent ensemble une surface où la forme est fermée, et donnent la même circulation&nbsp;: c'est pourquoi la circulation de $\mathrm{d}\theta$ vaut $2\pi$ sur tout cercle autour de l'origine, quel que soit son rayon, et même sur une boucle tordue. Une boucle qui entoure un trou ne peut pas être réduite à un point, et son intégrale mesure ce que le trou contient (le courant du fil, le flux du solénoïde). L'encadré suivant est le miroir de cette idée&nbsp;: les cycles, bords de rien, forment l'homologie, et les formes fermées modulo les formes exactes forment la cohomologie.</p>
+</div>
 
 <div class="encadre">
 <div class="encadre-titre">Wheeler et le bord d'un bord</div>
@@ -1388,11 +1426,13 @@ $$\omega = \mathrm{d}q^i\wedge\mathrm{d}p\_i = \mathrm{d}q^1\wedge\mathrm{d}p\_1
 
 Pour un degré de liberté, c'est l'aire orientée $u\_q v\_p - u\_p v\_q$ du plan $(q, p)$, l'«&nbsp;aire&nbsp;» de la page [De Newton à Hamilton](/physique/meca/hamilton/). Pour plusieurs degrés de liberté, c'est la somme des aires orientées des projections sur chaque plan $(q^i, p\_i)$. C'est la **forme symplectique**. Elle est, au signe près, la différentielle d'une 1-forme canonique, la 1-forme de Liouville $\Theta = p\_i\\,\mathrm{d}q^i$&nbsp;: $\omega = -\mathrm{d}\Theta$ (les auteurs qui posent $\omega = \mathrm{d}p\wedge\mathrm{d}q$, comme Arnold, ont le signe opposé).
 
-### Hamilton, Liouville et Noether en une ligne
+### Hamilton, Liouville et Noether, pas à pas
 
-Pour une fonction $H$, le **champ hamiltonien** $X\_H$ est la flèche définie par $\iota\_{X\_H}\omega = \mathrm{d}H$, où $\iota\_X\omega = \omega(X, \cdot)$ est le **produit intérieur**. Autrement dit, pour toute flèche $\vec Y$,
+**Le problème.** L'énergie $H$ est une fonction de l'espace des phases, donc $\mathrm{d}H$ est un mesureur, une pile de lignes (les courbes de niveau de $H$). Le mouvement, lui, est un champ de vecteurs&nbsp;: en chaque point, la vitesse $(\dot q, \dot p)$. Comment passer de $\mathrm{d}H$ à un vecteur&nbsp;? Pour le gradient, il fallait une métrique. Ici, la 2-forme $\omega$ joue ce rôle&nbsp;: on cherche le vecteur $X\_H$, le **champ hamiltonien**, tel que pour tout vecteur $\vec Y$
 
 $$\omega(X\_H, \vec Y) = \mathrm{d}H(\vec Y).$$
+
+On écrit aussi $\iota\_{X\_H}\omega = \mathrm{d}H$, où $\iota\_X\omega = \omega(X, \cdot)$ est le **produit intérieur**.
 
 <div class="svg-container">
 <svg id="f8-svg" viewBox="0 0 600 345" role="img" aria-label="L'espace des phases du pendule, avec les courbes de niveau de H. En un point P, le champ hamiltonien X_H est tangent à la courbe de niveau. Pour toute flèche Y partant de P, l'aire orientée du parallélogramme construit sur X_H et Y est égale au nombre dH(Y) de lignes de niveau de H franchies par Y : le champ X_H est défini par cette égalité. On peut déplacer P et la pointe de Y." style="width:100%;max-width:600px;height:auto;touch-action:none;">
@@ -1455,15 +1495,29 @@ $$\omega(X\_H, \vec Y) = \mathrm{d}H(\vec Y).$$
 </script>
 <p class="legende">Espace des phases du pendule, $H = \frac{p^2}{2} - \cos q$. Au point $P$, le champ hamiltonien $X_H$ (orange) est tangent à la courbe de niveau de $H$. Pour n'importe quelle flèche $\vec Y$ (bleu), l'aire orientée du parallélogramme construit sur $X_H$ et $\vec Y$ est égale à la valeur de $\mathrm{d}H$ sur $\vec Y$&nbsp;: c'est la définition de $X_H$.</p>
 
-Dans les coordonnées $(q, p)$, cette égalité donne $X\_H = \left(\frac{\partial H}{\partial p}, -\frac{\partial H}{\partial q}\right)$&nbsp;: ce sont les équations de Hamilton. Le champ $X\_H$ est la «&nbsp;pente tournée d'un quart de tour&nbsp;» de $\mathrm{d}H$, la rotation étant celle que définit $\omega$.
+**Les équations de Hamilton.** Pour un degré de liberté, écrivons $X\_H = (X\_q, X\_p)$ et $\vec Y = (Y\_q, Y\_p)$. Alors $\omega(X\_H, \vec Y) = X\_q Y\_p - X\_p Y\_q$ et $\mathrm{d}H(\vec Y) = \frac{\partial H}{\partial q}Y\_q + \frac{\partial H}{\partial p}Y\_p$. L'égalité doit être vraie pour tout $\vec Y$, ce qui identifie les coefficients de $Y\_p$ et de $Y\_q$&nbsp;:
 
-Les propriétés fondamentales se lisent alors sans calcul&nbsp;:
-<ul>
-<li><b>Conservation de $H$.</b> $\mathrm{d}H(X_H) = \omega(X_H, X_H) = 0$, par antisymétrie de $\omega$.</li>
-<li><b>Théorème de Liouville.</b> Le flot de $X_H$ conserve $\omega$. La formule de Cartan donne la variation de $\omega$ le long du flot, $\mathcal{L}_{X_H}\omega = \mathrm{d}(\iota_{X_H}\omega) + \iota_{X_H}\mathrm{d}\omega = \mathrm{d}(\mathrm{d}H) + 0 = 0$, car $\mathrm{d}\omega = 0$ et $\mathrm{d}\circ\mathrm{d} = 0$. Les aires (et, pour plusieurs degrés de liberté, les volumes) sont conservées.</li>
-<li><b>Crochet de Poisson et théorème de Noether.</b> Le crochet $\{G, H\} = \omega(X_G, X_H)$ est antisymétrique par construction. Comme $\mathrm{d}G(X_H) = \omega(X_G, X_H)$, c'est la variation de $G$ le long du flot de $H$&nbsp;: $G$ est conservée si et seulement si $\{G, H\} = 0$, c'est-à-dire si $H$ est invariant par le flot de $G$ (car $\mathrm{d}H(X_G) = -\{G, H\}$).</li>
-<li><b>Transformations canoniques.</b> Si $p\,\mathrm{d}q - P\,\mathrm{d}Q = \mathrm{d}F$ (fonction génératrice), la différentielle extérieure de cette égalité donne $\mathrm{d}p\wedge\mathrm{d}q = \mathrm{d}P\wedge\mathrm{d}Q$&nbsp;: la transformation conserve $\omega$.</li>
-</ul>
+$$X\_q = \frac{\partial H}{\partial p}, \qquad X\_p = -\frac{\partial H}{\partial q}.$$
+
+Ce sont les équations de Hamilton. Le champ $X\_H$ est la «&nbsp;pente tournée d'un quart de tour&nbsp;» de $\mathrm{d}H$, la rotation étant celle que définit $\omega$, et le mouvement est le flot de $X\_H$. Trois propriétés s'en déduisent.
+
+**$H$ est conservée.** $\mathrm{d}H(X\_H) = \omega(X\_H, X\_H) = 0$, par antisymétrie de $\omega$. Le point de l'espace des phases ne traverse aucune ligne de niveau de $H$&nbsp;: il suit la courbe de niveau, ce que la figure montre, puisque $X\_H$ y est tangent à la courbe de niveau.
+
+**Liouville&nbsp;: les aires sont conservées.** Pour un degré de liberté, la divergence du champ $X\_H = \big(\frac{\partial H}{\partial p}, -\frac{\partial H}{\partial q}\big)$ est $\frac{\partial^2 H}{\partial q\\,\partial p} - \frac{\partial^2 H}{\partial p\\,\partial q} = 0$&nbsp;: le fluide des points de l'espace des phases est incompressible, et l'aire d'une région que le flot transporte ne change pas. En général, la formule de Cartan donne la variation de $\omega$ le long du flot,
+
+$$\mathcal{L}\_{X\_H}\omega = \mathrm{d}(\iota\_{X\_H}\omega) + \iota\_{X\_H}\mathrm{d}\omega = \mathrm{d}(\mathrm{d}H) + 0 = 0,$$
+
+car $\mathrm{d}\omega = 0$ et $\mathrm{d}\circ\mathrm{d} = 0$. Pour plusieurs degrés de liberté, ce sont les volumes qui sont conservés.
+
+**Noether&nbsp;: symétrie et conservation.** Une autre fonction $G$ de l'espace des phases engendre un champ $X\_G$, donc un flot. La variation de $G$ le long du flot de $H$ est $\mathrm{d}G(X\_H) = \omega(X\_G, X\_H)$, notée $\\{G, H\\}$ (le **crochet de Poisson**, antisymétrique). Si $G$ est conservée, $\\{G, H\\} = 0$, ce qui signifie aussi $\mathrm{d}H(X\_G) = -\\{G, H\\} = 0$&nbsp;: $H$ est invariante le long du flot de $G$. Une quantité conservée engendre donc une symétrie de $H$, et réciproquement. Exemple&nbsp;: pour $G = p$, $X\_G = (1, 0)$, et son flot translate $q$ à $p$ fixé. $H$ est invariante par cette translation si $\partial H/\partial q = 0$, et c'est précisément la condition pour que $\dot p = -\partial H/\partial q$ soit nul&nbsp;: l'invariance par translation entraîne la conservation de la quantité de mouvement. (Pour le moment cinétique, le flot est une rotation.)
+
+**Transformations canoniques.** Si $p\\,\mathrm{d}q - P\\,\mathrm{d}Q = \mathrm{d}F$ (fonction génératrice), la différentielle extérieure de cette égalité donne $\mathrm{d}p\wedge\mathrm{d}q = \mathrm{d}P\wedge\mathrm{d}Q$&nbsp;: la transformation conserve $\omega$.
+
+<div class="encadre">
+<div class="encadre-titre">Liouville, Gibbs et l'entropie</div>
+<p>Le théorème de Liouville est le socle de la mécanique statistique. Un ensemble statistique est un nuage de points de l'espace des phases&nbsp;; en évoluant, le nuage change de forme mais pas de volume, puisque le flot hamiltonien conserve $\omega$. Toute densité qui ne dépend que de $H$, comme la densité canonique $\rho \propto e^{-H/kT}$, est constante le long du flot et se déplace avec un volume conservé&nbsp;: elle est donc stationnaire. Gibbs en fait en 1902 la base de sa mécanique statistique.</p>
+<p>La même conservation interdit de comprimer le nuage. Effacer un bit, c'est ramener deux régions de l'espace des phases à une seule, de volume moitié&nbsp;; comme le volume total est conservé, l'environnement doit compenser en voyant son volume accessible au moins doubler, ce qui coûte au moins $kT\ln 2$ de chaleur. C'est le principe de Landauer, traité dans la page <a href='/physique/phistat/landauer/'>Information</a>.</p>
+</div>
 
 ### Ce que les formes ne font pas disparaître
 
@@ -1541,6 +1595,12 @@ Le contenu géométrique de l'égalité $\mathrm{d}T\wedge\mathrm{d}S = \mathrm{
 
 **La chaleur n'est pas une différentielle.** La 1-forme $\delta Q = T\\,\mathrm{d}S$ a pour différentielle extérieure $\mathrm{d}T\wedge\mathrm{d}S$, non nulle en général&nbsp;: elle n'est pas fermée, donc pas exacte, et la chaleur n'est pas une fonction d'état. En revanche $\delta Q/T = \mathrm{d}S$ est exacte&nbsp;: $1/T$ est un facteur intégrant.
 
+<div class="encadre">
+<div class="encadre-titre">Carathéodory et le second principe</div>
+<p>En 1909, Constantin Carathéodory refonde la thermodynamique sans machine thermique ni notion première de chaleur. Il part du premier principe, qui définit sur l'espace des états la 1-forme de Pfaff $\delta Q = \mathrm{d}U + P\,\mathrm{d}V$, et d'un postulat d'inaccessibilité adiabatique&nbsp;: dans tout voisinage d'un état, il existe des états qu'aucune transformation adiabatique ne peut atteindre. Un théorème sur les formes de Pfaff traduit ce postulat en une propriété d'intégrabilité de $\delta Q_{\mathrm{rev}}$&nbsp;: la forme admet un facteur intégrant, d'où l'existence d'une température absolue $T$ et d'une entropie $S$ telles que $\delta Q_{\mathrm{rev}} = T\,\mathrm{d}S$.</p>
+<p>Pour deux variables d'état, comme $(S, V)$ dans cette page, toute forme de Pfaff admet localement un facteur intégrant, et le résultat ne dit rien de plus. À partir de trois variables, c'est une condition (celle de Frobenius, $\alpha\wedge\mathrm{d}\alpha = 0$), que le postulat de Carathéodory impose. L'entropie apparaît alors comme la fonction dont les surfaces de niveau sont les états reliés par des transformations adiabatiques réversibles.</p>
+</div>
+
 ## Application&nbsp;: l'électromagnétisme {#maxwell}
 
 Le champ électrique est un mesureur de déplacements&nbsp;: le travail par unité de charge le long d'un chemin est $\int\_\gamma E$, avec la 1-forme $E = E\_x\\,\mathrm{d}x + E\_y\\,\mathrm{d}y + E\_z\\,\mathrm{d}z$. Le champ magnétique intervient par son **flux** à travers une surface orientée, c'est-à-dire par une grandeur qui prend deux flèches (les côtés d'un petit parallélogramme) et donne un nombre&nbsp;: c'est une 2-forme,
@@ -1557,4 +1617,6 @@ En relativité, $E$ et $B$ se fondent en une seule 2-forme $F$ de l'espace-temps
 
 > Needham, T., <i>Visual Differential Geometry and Forms</i>, Princeton University Press (2021)&nbsp;: un traitement très visuel, dans l'esprit des figures de cette page.<br><br>
 Misner, C. W., Thorne, K. S., Wheeler, J. A., <i>Gravitation</i>, W. H. Freeman (1973), chapitres 2 à 4&nbsp;: les 1-formes comme piles de lignes, et l'électromagnétisme en formes.<br><br>
+Katz, V. J., «&nbsp;The History of Stokes' Theorem&nbsp;», <i>Mathematics Magazine</i> 52 (1979), p.&nbsp;146-156&nbsp;: l'histoire des théorèmes de Gauss, Green et Stokes.<br><br>
+Aharonov, Y., Bohm, D., «&nbsp;Significance of Electromagnetic Potentials in the Quantum Theory&nbsp;», <i>Physical Review</i> 115 (1959), p.&nbsp;485.<br><br>
 Dray, T., Manogue, C. A., <i>The Geometry of Vector Calculus</i>, Oregon State University (en ligne)&nbsp;: le calcul vectoriel des physiciens reconstruit à partir des différentielles.
