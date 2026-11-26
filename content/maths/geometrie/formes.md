@@ -208,7 +208,7 @@ window.FG = (function () {
 })();
 </script>
 
-## Le gradient, et ce qu'il ne dit pas {#gradient}
+## Le gradient {#gradient}
 
 Sur une colline d'altitude $V(x, y)$, le gradient est la flèche qui pointe vers la plus forte montée, et dont la longueur est la pente. La recette est familière&nbsp;: dans des axes orthonormés, ses composantes sont les dérivées partielles, $\vec\nabla V = (\partial V/\partial x,\ \partial V/\partial y)$, et elle sert à prévoir ce que lit un instrument. Pour un petit déplacement $\Delta\vec r$, l'altitude varie de
 
@@ -315,7 +315,7 @@ Précisons l'objet que A et B ont en commun. On repère les points par un vecteu
 
 $$f(\vec r + \vec u) - f(\vec r) \simeq \mathrm{d}f\_P(\vec u).$$
 
-Le membre de droite est l'application linéaire de $\vec u$ qui approche le mieux la variation de $f$&nbsp;: c'est la **différentielle** de $f$ en $P$. Précisément, $\mathrm{d}f\_P(\vec u) = \frac{\mathrm{d}}{\mathrm{d}\varepsilon}f(\vec r + \varepsilon\vec u)\big|\_{\varepsilon = 0}$ ($\varepsilon$ est sans dimension), et le résultat a les unités de $f$. En coordonnées cartésiennes, $\mathrm{d}f(\vec u) = \frac{\partial f}{\partial x}u\_x + \frac{\partial f}{\partial y}u\_y$.
+Le membre de droite est l'application linéaire de $\vec u$ qui approche le mieux la variation de $f$&nbsp;: c'est la **différentielle** de $f$ en $P$. Précisément, $\mathrm{d}f\_P(\vec u) = \frac{\mathrm{d}}{\mathrm{d}\varepsilon}f(\vec r + \varepsilon\vec u)\big|\_{\varepsilon = 0}$ ($\varepsilon$ est sans dimension). En coordonnées cartésiennes, $\mathrm{d}f(\vec u) = \frac{\partial f}{\partial x}u\_x + \frac{\partial f}{\partial y}u\_y$.
 
 Comment dessiner un mesureur&nbsp;? Traçons les lignes où $f$ vaut $f(P)$, $f(P) + \Delta$, $f(P) + 2\Delta$, et ainsi de suite (pour une altitude, les courbes de niveau). De très près, elles se redressent en droites parallèles et équidistantes. Un déplacement partant de $P$ franchit un certain nombre de ces lignes&nbsp;: c'est la valeur de $\mathrm{d}f$ sur ce vecteur, en unités de $\Delta$ (négative quand on descend). Une application linéaire des vecteurs vers les nombres se dessine donc comme **une pile de lignes**. Comme sur une carte de randonnée, plus les lignes sont serrées, plus la pente est forte, et un déplacement qui longe une ligne ne change pas la valeur de $f$.
 
@@ -495,7 +495,7 @@ La **forme** $\mathrm{d}f\_P$ n'est ni l'un ni l'autre&nbsp;: c'est l'applicatio
 
 Les 1-formes ne sont pas toutes des différentielles de fonctions (le travail d'une force de frottement n'en est pas une, voir [Intégrer une 1-forme](#integrer)), mais ce sont les plus familières.
 
-## Deux sortes de composantes, sans dictionnaire {#composantes}
+## Deux sortes de composantes {#composantes}
 
 A et B n'ont pas choisi les mêmes vecteurs de référence&nbsp;: A prend un mètre sur chaque axe, B un kilomètre sur l'axe $x$. Comment les nombres d'un vecteur, et ceux d'un mesureur, changent-ils pour un choix quelconque&nbsp;?
 
@@ -1681,8 +1681,5 @@ En relativité, $E$ et $B$ se fondent en une seule 2-forme $F$ de l'espace-temps
 
 <br>
 
-> Needham, T., <i>Visual Differential Geometry and Forms</i>, Princeton University Press (2021)&nbsp;: un traitement très visuel, dans l'esprit des figures de cette page.<br><br>
-Misner, C. W., Thorne, K. S., Wheeler, J. A., <i>Gravitation</i>, W. H. Freeman (1973), chapitres 2 à 4&nbsp;: les 1-formes comme piles de lignes, et l'électromagnétisme en formes.<br><br>
-Katz, V. J., «&nbsp;The History of Stokes' Theorem&nbsp;», <i>Mathematics Magazine</i> 52 (1979), p.&nbsp;146-156&nbsp;: l'histoire des théorèmes de Gauss, Green et Stokes.<br><br>
-Aharonov, Y., Bohm, D., «&nbsp;Significance of Electromagnetic Potentials in the Quantum Theory&nbsp;», <i>Physical Review</i> 115 (1959), p.&nbsp;485.<br><br>
-Dray, T., Manogue, C. A., <i>The Geometry of Vector Calculus</i>, Oregon State University (en ligne)&nbsp;: le calcul vectoriel des physiciens reconstruit à partir des différentielles.
+> <b>Needham</b>, T., <i>Visual Differential Geometry and Forms</i>, Princeton University Press (2021)&nbsp;: un traitement très visuel, dans l'esprit des figures de cette page.<br>
+<b>Misner</b>, C. W., <b>Thorne</b>, K. S., <b>Wheeler</b>, J. A., <i>Gravitation</i>, W. H. Freeman (1973), chapitres 2 à 4&nbsp;: les 1-formes comme piles de lignes, et l'électromagnétisme en formes.<br>
