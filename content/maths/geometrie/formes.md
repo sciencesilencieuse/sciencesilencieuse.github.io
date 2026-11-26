@@ -61,6 +61,39 @@ details.encadre[open] > summary::before
 {
     content: "\25BE\00A0";
 }
+.exercice
+{
+    max-width: 40rem;
+    margin: 1.4em auto;
+    border: 2px solid #6B4FA0;
+    border-radius: 12px;
+    background: #F6F3FA;
+    padding: 0.6em 1.3em 0.4em 1.3em;
+}
+.exercice-titre
+{
+    font-weight: bold;
+    color: #6B4FA0;
+    margin-bottom: 0.3em;
+}
+details.exercice > summary
+{
+    display: block;
+    cursor: pointer;
+    list-style: none;
+}
+details.exercice > summary::-webkit-details-marker
+{
+    display: none;
+}
+details.exercice > summary::before
+{
+    content: "\25B8\00A0";
+}
+details.exercice[open] > summary::before
+{
+    content: "\25BE\00A0";
+}
 .svg-container {
     position: relative;
     margin-left: auto;
@@ -1911,6 +1944,44 @@ $$\mathrm{d}F = 0,\qquad \mathrm{d}\star F = J.$$
 L'équation $\mathrm{d}B = 0$ est $\vec\nabla\cdot\vec B = 0$&nbsp;: le flux de $B$ à travers toute surface fermée est nul, les tubes de $B$ ne se terminent nulle part.
 
 En relativité, $E$ et $B$ se fondent en une seule 2-forme $F$ de l'espace-temps, et les quatre équations de Maxwell se réduisent à deux&nbsp;: $\mathrm{d}F = 0$ (les deux équations sans source) et $\mathrm{d}\star F = J$ (celles avec sources, où $J$ est la 3-forme courant). L'opérateur $\star$ agit ici sur les 2-formes de l'espace-temps&nbsp;: $\star F$ est la 2-forme duale de $F$, où les rôles de $E$ et de $B$ sont échangés (au signe près). Il utilise la métrique, alors que $\mathrm{d}F = 0$ n'en utilise aucune&nbsp;: la moitié des équations de Maxwell est indépendante de la géométrie de l'espace-temps.
+
+
+<details class="exercice">
+<summary class="exercice-titre">Exercice&nbsp;: le flux d'une charge ponctuelle à travers une surface quelconque</summary>
+<p><b>Énoncé.</b> Une charge $q$ est placée à l'origine et crée le champ $\vec E = \frac{q}{4\pi\varepsilon_0 r^2}\,\hat e_r$. Montrer que son flux à travers toute surface fermée $S$ qui entoure l'origine vaut $q/\varepsilon_0$.</p>
+<p><b>Résolution traditionnelle.</b> Pour une sphère centrée en $O$, le champ est normal à la surface et uniforme, donc le flux vaut $E\cdot 4\pi r^2 = q/\varepsilon_0$. Pour une surface quelconque, on ne peut plus intégrer directement&nbsp;: il faut la paramétrer et écrire sa normale (pour un cube de côté $2a$, une face donne $$\frac{q}{4\pi\varepsilon_0}\iint\frac{a\,\mathrm dx\,\mathrm dy}{(x^2 + y^2 + a^2)^{3/2}},$$ une intégrale qui n'est pas immédiate). On passe donc par le théorème de la divergence. Il faut d'abord connaître la divergence en coordonnées sphériques, $\vec\nabla\cdot\vec E = \frac{1}{r^2}\frac{\partial (r^2 E_r)}{\partial r}$ (une formule qu'on retient ou qu'on redémontre), qui est nulle pour $r \neq 0$. Mais $\vec E$ n'est pas défini en $O$, et on ne peut pas appliquer le théorème à l'intérieur de $S$. On retire donc une petite boule centrée en $O$, on applique le théorème à la région comprise entre les deux surfaces (avec des normales bien orientées), et l'on conclut que le flux à travers $S$ est celui à travers la petite sphère.</p>
+<p><b>Avec les formes.</b></p>
+<ol>
+<li>Le flux est $\int_S \star E^\flat$. Dans le repère orthonormé $(\mathrm dr,\ r\,\mathrm d\theta,\ r\sin\theta\,\mathrm d\varphi)$, $\star\mathrm dr = r\,\mathrm d\theta\wedge r\sin\theta\,\mathrm d\varphi$, donc
+$$\star E^\flat = \frac{q}{4\pi\varepsilon_0 r^2}\,r^2\sin\theta\,\mathrm d\theta\wedge\mathrm d\varphi = \frac{q}{4\pi\varepsilon_0}\,\sin\theta\,\mathrm d\theta\wedge\mathrm d\varphi.$$
+Le $r^2$ disparaît de lui-même.</li>
+<li>Cette 2-forme est fermée&nbsp;: sa différentielle n'aurait de terme qu'en $\mathrm dr\wedge\mathrm d\theta\wedge\mathrm d\varphi$, de coefficient $\partial_r(\cdot) = 0$, puisqu'elle ne dépend pas de $r$. Aucune formule de divergence n'est nécessaire&nbsp;: $\mathrm d\star E^\flat = 0$ hors de l'origine.</li>
+<li>Soit $S_\varepsilon$ une petite sphère centrée en $O$ et $D$ la région comprise entre $S_\varepsilon$ et $S$. Le théorème de Stokes donne $\int_S\star E^\flat - \int_{S_\varepsilon}\star E^\flat = \int_D\mathrm d\star E^\flat = 0$.</li>
+<li>Sur $S_\varepsilon$, $$\int_{S_\varepsilon}\star E^\flat = \frac{q}{4\pi\varepsilon_0}\int_0^{\pi}\sin\theta\,\mathrm d\theta\int_0^{2\pi}\mathrm d\varphi = \frac{q}{\varepsilon_0}.$$ Donc le flux à travers $S$ vaut $q/\varepsilon_0$.</li>
+</ol>
+<div class="svg-container">
+<svg viewBox="0 0 420 320" role="img" aria-label="Une charge au centre, entourée d'une petite sphère et d'une surface fermée quelconque. Un même cône d'angle solide découpe un morceau de chaque surface : le même nombre de tubes de champ les traverse, donc le flux est le même." style="width:100%;max-width:420px;height:auto;">
+<path d="M325.5,160.0L328.6,153.8L331.2,147.3L333.1,140.5L334.2,133.6L334.5,126.6L334.0,119.7L332.5,113.0L330.2,106.5L326.9,100.4L322.8,94.9L318.0,89.9L312.4,85.6L306.2,82.1L299.6,79.3L292.7,77.3L285.5,76.1L278.3,75.7L271.1,75.9L264.1,76.7L257.4,77.9L251.0,79.6L245.0,81.5L239.4,83.5L234.2,85.4L229.5,87.2L225.1,88.8L221.1,89.9L217.3,90.7L213.6,90.9L210.0,90.5L206.3,89.7L202.5,88.3L198.3,86.4L193.9,84.2L189.0,81.7L183.7,79.0L177.9,76.3L171.6,73.7L164.8,71.3L157.6,69.3L150.2,67.8L142.4,67.0L134.6,66.9L126.8,67.6L119.2,69.2L111.9,71.6L105.0,75.0L98.8,79.2L93.2,84.2L88.5,89.9L84.8,96.2L82.0,103.0L80.3,110.2L79.6,117.6L79.9,125.1L81.2,132.6L83.4,140.0L86.5,147.0L90.2,153.7L94.5,160.0L99.2,165.8L104.2,171.1L109.4,175.9L114.5,180.3L119.6,184.2L124.5,187.8L129.1,191.1L133.3,194.2L137.1,197.2L140.5,200.1L143.5,203.2L146.1,206.4L148.4,209.9L150.4,213.6L152.3,217.7L154.1,222.0L156.0,226.7L158.0,231.6L160.1,236.8L162.6,242.1L165.5,247.4L168.8,252.6L172.5,257.7L176.7,262.5L181.4,266.9L186.5,270.8L191.9,274.1L197.7,276.6L203.8,278.5L210.0,279.5L216.3,279.7L222.5,279.0L228.6,277.6L234.5,275.4L240.1,272.5L245.4,268.9L250.3,264.9L254.7,260.4L258.7,255.7L262.4,250.7L265.6,245.6L268.5,240.5L271.1,235.5L273.5,230.5L275.8,225.8L278.1,221.3L280.4,217.0L282.8,212.9L285.4,208.9L288.2,205.1L291.2,201.4L294.5,197.6L298.1,193.8L301.9,189.9L305.9,185.7L310.0,181.3L314.1,176.5L318.2,171.4L322.0,165.9L325.5,160.0Z" fill="#FDF6EC" stroke="#C2770B" stroke-width="2.2"/>
+<circle cx="210" cy="160" r="42" fill="#EEF4FA" stroke="#004D80" stroke-width="2.2"/>
+<polygon points="333.1,115.2 332.1,111.6 330.9,108.2 329.4,104.8 327.6,101.6 325.7,98.5 323.4,95.6 321.0,92.8 318.3,90.2 315.4,87.8 312.4,85.6 309.2,83.6 305.8,81.9 302.3,80.3 298.7,79.0 295.0,77.9 291.3,77.0 287.4,76.4 283.6,75.9 279.7,75.7 275.9,75.7 235.9,126.9 236.8,127.6 237.7,128.4 238.5,129.2 239.4,130.0 240.2,130.8 241.0,131.7 241.8,132.6 242.5,133.5 243.3,134.4 244.0,135.3 244.7,136.3 245.3,137.2 245.9,138.2 246.5,139.3 247.1,140.3 247.6,141.3 248.1,142.4 248.6,143.5 249.1,144.5 249.5,145.6" fill="#970E53" fill-opacity="0.22" stroke="none"/>
+<line x1="210" y1="160" x2="340.6" y2="112.5" stroke="#970E53" stroke-width="1.4" stroke-dasharray="4 3"/>
+<line x1="210" y1="160" x2="280.8" y2="69.3" stroke="#970E53" stroke-width="1.4" stroke-dasharray="4 3"/>
+<circle cx="210" cy="160" r="5" fill="#334155"/>
+<text x="204.0" y="180.0" font-size="15" fill="#334155" text-anchor="end" font-style="italic" font-weight="normal" font-family="Georgia,'Times New Roman',serif">q</text>
+<text x="180.0" y="230.0" font-size="15" fill="#004D80" text-anchor="start" font-style="normal" font-weight="normal" font-family="Georgia,'Times New Roman',serif"><tspan font-style="italic">S</tspan><tspan font-size="10" dy="4">&#949;</tspan></text>
+<text x="318.0" y="235.0" font-size="15" fill="#C2770B" text-anchor="start" font-style="normal" font-weight="normal" font-family="Georgia,'Times New Roman',serif"><tspan font-style="italic">S</tspan></text>
+<text x="292.0" y="22.0" font-size="13" fill="#970E53" text-anchor="start" font-style="italic" font-weight="normal" font-family="Georgia,'Times New Roman',serif">même angle solide</text>
+</svg>
+</div>
+<p class="legende">Un même cône d'angle solide découpe un morceau de la petite sphère et un morceau de la surface $S$&nbsp;: les tubes de champ qui traversent l'un traversent l'autre, et les flux sont égaux.</p>
+<p><b>Ce que le formalisme apporte.</b></p>
+<ul>
+<li>Le calcul n'utilise que trois outils du formalisme, $\star$ dans un repère orthonormé, $\mathrm d$ et le théorème de Stokes. Aucune formule de divergence à retenir, et l'argument de la boule retirée devient une simple application de Stokes.</li>
+<li>La 2-forme $\sin\theta\,\mathrm d\theta\wedge\mathrm d\varphi$ est l'élément d'angle solide. Le flux à travers une surface ne dépend donc que de l'angle solide sous lequel la charge la voit&nbsp;: les six faces d'un cube centré sur la charge voient chacune un sixième de $4\pi$, et portent chacune le flux $q/(6\varepsilon_0)$, sans aucune intégrale.</li>
+<li>La structure est celle de $\mathrm d\theta$ pour le fil&nbsp;: la forme $\star E^\flat$ est fermée mais pas exacte sur l'espace privé de l'origine (si $\star E^\flat = \mathrm d\beta$, Stokes donnerait un flux nul sur la sphère). La charge joue le rôle du trou. En dimension $2$, pour un fil chargé, $\star E^\flat = \frac{\lambda}{2\pi\varepsilon_0}\mathrm d\theta$ est exactement la forme du champ magnétique du fil.</li>
+<li>Le même calcul démontre le théorème de Gauss pour la gravitation de Newton, dont le champ varie aussi en $1/r^2$.</li>
+</ul>
+</details>
 
 <br>
 
