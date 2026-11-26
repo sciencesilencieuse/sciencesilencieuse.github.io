@@ -1955,7 +1955,9 @@ En relativité, $E$ et $B$ se fondent en une seule 2-forme $F$ de l'espace-temps
 <li>Le flux est $\int_S \star E^\flat$. Dans le repère orthonormé $(\mathrm dr,\ r\,\mathrm d\theta,\ r\sin\theta\,\mathrm d\varphi)$, $\star\mathrm dr = r\,\mathrm d\theta\wedge r\sin\theta\,\mathrm d\varphi$, donc
 $$\star E^\flat = \frac{q}{4\pi\varepsilon_0 r^2}\,r^2\sin\theta\,\mathrm d\theta\wedge\mathrm d\varphi = \frac{q}{4\pi\varepsilon_0}\,\sin\theta\,\mathrm d\theta\wedge\mathrm d\varphi.$$
 Le $r^2$ disparaît de lui-même.</li>
-<li>Cette 2-forme est fermée&nbsp;: sa différentielle n'aurait de terme qu'en $\mathrm dr\wedge\mathrm d\theta\wedge\mathrm d\varphi$, de coefficient $\partial_r(\cdot) = 0$, puisqu'elle ne dépend pas de $r$. Aucune formule de divergence n'est nécessaire&nbsp;: $\mathrm d\star E^\flat = 0$ hors de l'origine.</li>
+<li>Cette 2-forme est fermée. Écrivons-la $\omega = f(\theta)\,\mathrm d\theta\wedge\mathrm d\varphi$, avec $f(\theta) = \frac{q}{4\pi\varepsilon_0}\sin\theta$. Sa différentielle s'obtient en différentiant le coefficient&nbsp;:
+$$\mathrm d\omega = \mathrm df\wedge\mathrm d\theta\wedge\mathrm d\varphi = \Big(\frac{\partial f}{\partial r}\,\mathrm dr + \frac{\partial f}{\partial\theta}\,\mathrm d\theta + \frac{\partial f}{\partial\varphi}\,\mathrm d\varphi\Big)\wedge\mathrm d\theta\wedge\mathrm d\varphi.$$
+Le deuxième terme contient $\mathrm d\theta\wedge\mathrm d\theta = 0$ et le troisième $\mathrm d\varphi\wedge\mathrm d\varphi = 0$ (antisymétrie). Reste le terme en $\mathrm dr$, dont le coefficient $\partial f/\partial r$ est nul, puisque $f$ ne dépend que de $\theta$. Donc $\mathrm d\omega = 0$ hors de l'origine, sans aucune formule de divergence.</li>
 <li>Soit $S_\varepsilon$ une petite sphère centrée en $O$ et $D$ la région comprise entre $S_\varepsilon$ et $S$. Le théorème de Stokes donne $\int_S\star E^\flat - \int_{S_\varepsilon}\star E^\flat = \int_D\mathrm d\star E^\flat = 0$.</li>
 <li>Sur $S_\varepsilon$, $$\int_{S_\varepsilon}\star E^\flat = \frac{q}{4\pi\varepsilon_0}\int_0^{\pi}\sin\theta\,\mathrm d\theta\int_0^{2\pi}\mathrm d\varphi = \frac{q}{\varepsilon_0}.$$ Donc le flux à travers $S$ vaut $q/\varepsilon_0$.</li>
 </ol>
@@ -1967,10 +1969,10 @@ Le $r^2$ disparaît de lui-même.</li>
 <line x1="210" y1="160" x2="340.6" y2="112.5" stroke="#970E53" stroke-width="1.4" stroke-dasharray="4 3"/>
 <line x1="210" y1="160" x2="280.8" y2="69.3" stroke="#970E53" stroke-width="1.4" stroke-dasharray="4 3"/>
 <circle cx="210" cy="160" r="5" fill="#334155"/>
-<text x="204.0" y="180.0" font-size="15" fill="#334155" text-anchor="end" font-style="italic" font-weight="normal" font-family="Georgia,'Times New Roman',serif">q</text>
-<text x="180.0" y="230.0" font-size="15" fill="#004D80" text-anchor="start" font-style="normal" font-weight="normal" font-family="Georgia,'Times New Roman',serif"><tspan font-style="italic">S</tspan><tspan font-size="10" dy="4">&#949;</tspan></text>
-<text x="318.0" y="235.0" font-size="15" fill="#C2770B" text-anchor="start" font-style="normal" font-weight="normal" font-family="Georgia,'Times New Roman',serif"><tspan font-style="italic">S</tspan></text>
-<text x="292.0" y="22.0" font-size="13" fill="#970E53" text-anchor="start" font-style="italic" font-weight="normal" font-family="Georgia,'Times New Roman',serif">même angle solide</text>
+<text x="200.0" y="180.0" font-size="15" fill="#334155" text-anchor="end" font-style="italic" font-weight="normal" font-family="Georgia,'Times New Roman',serif">q</text>
+<text x="174.6" y="199.4" font-size="16" fill="#004D80" text-anchor="end" font-style="normal" font-weight="normal" font-family="Georgia,'Times New Roman',serif"><tspan font-style="italic">S</tspan><tspan font-size="10" dy="4">&#949;</tspan></text>
+<text x="284.0" y="238.6" font-size="16" fill="#C2770B" text-anchor="start" font-style="normal" font-weight="normal" font-family="Georgia,'Times New Roman',serif"><tspan font-style="italic">S</tspan></text>
+<text x="333.4" y="66.3" font-size="13" fill="#970E53" text-anchor="middle" font-style="italic" font-weight="normal" font-family="Georgia,'Times New Roman',serif">même angle solide</text>
 </svg>
 </div>
 <p class="legende">Un même cône d'angle solide découpe un morceau de la petite sphère et un morceau de la surface $S$&nbsp;: les tubes de champ qui traversent l'un traversent l'autre, et les flux sont égaux.</p>
@@ -1981,6 +1983,40 @@ Le $r^2$ disparaît de lui-même.</li>
 <li>La structure est celle de $\mathrm d\theta$ pour le fil&nbsp;: la forme $\star E^\flat$ est fermée mais pas exacte sur l'espace privé de l'origine (si $\star E^\flat = \mathrm d\beta$, Stokes donnerait un flux nul sur la sphère). La charge joue le rôle du trou. En dimension $2$, pour un fil chargé, $\star E^\flat = \frac{\lambda}{2\pi\varepsilon_0}\mathrm d\theta$ est exactement la forme du champ magnétique du fil.</li>
 <li>Le même calcul démontre le théorème de Gauss pour la gravitation de Newton, dont le champ varie aussi en $1/r^2$.</li>
 </ul>
+</details>
+
+<details class="exercice">
+<summary class="exercice-titre">Exercice&nbsp;: potentiel, jauge et conservation de la charge, en tenseurs et en formes</summary>
+<p><b>Énoncé.</b> Le champ électromagnétique dérive d'un potentiel $A$. Montrer (1) que les équations de Maxwell sans source sont satisfaites automatiquement, (2) que le champ est inchangé par un changement de jauge, (3) que la charge est conservée. On compare le formalisme tensoriel (indices d'espace-temps $\mu, \nu, \lambda$) et celui des formes.</p>
+<p><b>1. Équations sans source.</b></p>
+<ul>
+<li><em>Tenseurs.</em> $F_{\mu\nu} = \partial_\mu A_\nu - \partial_\nu A_\mu$, et il faut montrer que $\partial_\lambda F_{\mu\nu} + \partial_\mu F_{\nu\lambda} + \partial_\nu F_{\lambda\mu} = 0$. En développant, on obtient six termes, $\partial_\lambda\partial_\mu A_\nu - \partial_\lambda\partial_\nu A_\mu + \partial_\mu\partial_\nu A_\lambda - \partial_\mu\partial_\lambda A_\nu + \partial_\nu\partial_\lambda A_\mu - \partial_\nu\partial_\mu A_\lambda$, qui s'annulent deux à deux parce que les dérivées secondes commutent.</li>
+<li><em>Formes.</em> $F = \mathrm dA$, donc $\mathrm dF = \mathrm d\mathrm dA = 0$.</li>
+</ul>
+<p><b>2. Invariance de jauge.</b></p>
+<ul>
+<li><em>Tenseurs.</em> Avec $A_\mu \to A_\mu + \partial_\mu\chi$, $F_{\mu\nu}$ varie de $\partial_\mu\partial_\nu\chi - \partial_\nu\partial_\mu\chi = 0$.</li>
+<li><em>Formes.</em> Avec $A \to A + \mathrm d\chi$, $F$ varie de $\mathrm d\mathrm d\chi = 0$.</li>
+</ul>
+<p><b>3. Conservation de la charge.</b></p>
+<ul>
+<li><em>Tenseurs.</em> Les équations avec sources s'écrivent $\partial_\mu F^{\mu\nu} = J^\nu$. Appliquons $\partial_\nu$&nbsp;: $\partial_\nu J^\nu = \partial_\nu\partial_\mu F^{\mu\nu}$. Cette quantité change de signe quand on échange les deux indices muets, puisque $F^{\nu\mu} = -F^{\mu\nu}$, alors que $\partial_\nu\partial_\mu$ est symétrique&nbsp;: elle est égale à son opposé, donc nulle. Ainsi $\partial_\nu J^\nu = 0$.</li>
+<li><em>Formes.</em> $\mathrm d\star F = J$, donc $\mathrm dJ = \mathrm d\mathrm d\star F = 0$. En composantes, avec $J = \rho\,\mathrm dx\wedge\mathrm dy\wedge\mathrm dz - j_x\,\mathrm dt\wedge\mathrm dy\wedge\mathrm dz - j_y\,\mathrm dt\wedge\mathrm dz\wedge\mathrm dx - j_z\,\mathrm dt\wedge\mathrm dx\wedge\mathrm dy$, on trouve
+$$\mathrm dJ = \Big(\frac{\partial\rho}{\partial t} + \vec\nabla\cdot\vec\jmath\Big)\,\mathrm dt\wedge\mathrm dx\wedge\mathrm dy\wedge\mathrm dz,$$
+c'est-à-dire l'équation de continuité.</li>
+</ul>
+<p><b>4. Espace-temps courbe.</b></p>
+<ul>
+<li><em>Tenseurs.</em> Les dérivées partielles deviennent des dérivées covariantes $\nabla_\mu$, avec des symboles de Christoffel. Il faut montrer que ceux-ci disparaissent de l'équation sans source (ils sont symétriques en leurs indices bas, donc s'annulent dans l'antisymétrisation), et que $\nabla_\mu F^{\mu\nu} = \frac{1}{\sqrt{-g}}\partial_\mu\big(\sqrt{-g}\,F^{\mu\nu}\big)$ pour obtenir la conservation de la charge.</li>
+<li><em>Formes.</em> Rien ne change&nbsp;: $\mathrm dF = 0$, $\mathrm d\star F = J$ et $\mathrm dJ = 0$ s'écrivent et se démontrent de la même façon. La différentielle extérieure n'utilise ni métrique ni connexion, et la métrique n'intervient que dans $\star$.</li>
+</ul>
+<p><b>Ce que le formalisme apporte.</b></p>
+<ul>
+<li>Les indices disparaissent, et une seule identité, $\mathrm d\circ\mathrm d = 0$, remplace trois arguments distincts (la commutation des dérivées secondes aux points 1 et 2, une symétrie contre une antisymétrie au point 3).</li>
+<li>Les équations gardent la même forme dans tout système de coordonnées et sur toute variété. Dans le formalisme tensoriel, le passage à l'espace-temps courbe ajoute des symboles de Christoffel et des identités à démontrer.</li>
+<li>La structure se lit&nbsp;: $F$ est exacte, donc fermée&nbsp;; $J$ est exacte, donc fermée&nbsp;; la conservation de la charge est une identité géométrique, de même nature que le bord d'un bord vide.</li>
+</ul>
+<p><b>Limite.</b> Les formes ne décrivent que les tenseurs antisymétriques. Pour les tenseurs symétriques (la métrique, le tenseur énergie-impulsion), le formalisme tensoriel reste nécessaire.</p>
 </details>
 
 <br>
