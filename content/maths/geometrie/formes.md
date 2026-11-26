@@ -28,6 +28,39 @@ weight = 7
 .bloc-prop > .bloc-titre::before { content: "Propriété ("; }
 .bloc-theo > .bloc-titre::before { content: "Théorème ("; }
 .bloc-titre::after { content: ")"; }
+.encadre
+{
+    max-width: 40rem;
+    margin: 1.4em auto;
+    border: 2px solid #006C65;
+    border-radius: 12px;
+    background: #F3F8F7;
+    padding: 0.6em 1.3em 0.4em 1.3em;
+}
+.encadre-titre
+{
+    font-weight: bold;
+    color: #006C65;
+    margin-bottom: 0.3em;
+}
+details.encadre > summary
+{
+    display: block;
+    cursor: pointer;
+    list-style: none;
+}
+details.encadre > summary::-webkit-details-marker
+{
+    display: none;
+}
+details.encadre > summary::before
+{
+    content: "\25B8\00A0";
+}
+details.encadre[open] > summary::before
+{
+    content: "\25BE\00A0";
+}
 .svg-container {
     position: relative;
     margin-left: auto;
