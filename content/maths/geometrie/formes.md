@@ -18,15 +18,15 @@ weight = 7
     font-weight: bold;
     margin-bottom: 0.3em;
 }
-.bloc-def { border-color: #004D80; background: #EEF4FA; counter-increment: bdef; }
-.bloc-prop { border-color: #C2770B; background: #FDF6EC; counter-increment: bprop; }
-.bloc-theo { border-color: #970E53; background: #FBF1F5; counter-increment: btheo; }
+.bloc-def { border-color: #004D80; background: #EEF4FA; }
+.bloc-prop { border-color: #C2770B; background: #FDF6EC; }
+.bloc-theo { border-color: #970E53; background: #FBF1F5; }
 .bloc-def > .bloc-titre { color: #004D80; }
 .bloc-prop > .bloc-titre { color: #C2770B; }
 .bloc-theo > .bloc-titre { color: #970E53; }
-.bloc-def > .bloc-titre::before { content: "Définition " counter(bdef) " ("; }
-.bloc-prop > .bloc-titre::before { content: "Propriété " counter(bprop) " ("; }
-.bloc-theo > .bloc-titre::before { content: "Théorème " counter(btheo) " ("; }
+.bloc-def > .bloc-titre::before { content: "Définition ("; }
+.bloc-prop > .bloc-titre::before { content: "Propriété ("; }
+.bloc-theo > .bloc-titre::before { content: "Théorème ("; }
 .bloc-titre::after { content: ")"; }
 .svg-container {
     position: relative;
