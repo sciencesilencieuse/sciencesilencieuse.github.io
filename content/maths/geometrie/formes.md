@@ -2012,7 +2012,7 @@ c'est-à-dire l'équation de continuité.</li>
 </ul>
 <p><b>Ce que le formalisme apporte.</b></p>
 <ul>
-<li>Les indices disparaissent, et une seule identité, $\mathrm d\circ\mathrm d = 0$, remplace trois arguments distincts (la commutation des dérivées secondes aux points 1 et 2, une symétrie contre une antisymétrie au point 3).</li>
+<li>Les indices disparaissent. En tenseurs, on utilise deux fois la commutation des dérivées secondes (points 1 et 2) et une fois l'annulation d'une contraction symétrique-antisymétrique (point 3), chaque fois avec le détail des indices&nbsp;; en formes, ces arguments sont regroupés une fois pour toutes dans $\mathrm d\circ\mathrm d = 0$.</li>
 <li>Les équations gardent la même forme dans tout système de coordonnées et sur toute variété. Dans le formalisme tensoriel, le passage à l'espace-temps courbe ajoute des symboles de Christoffel et des identités à démontrer.</li>
 <li>La structure se lit&nbsp;: $F$ est exacte, donc fermée&nbsp;; $J$ est exacte, donc fermée&nbsp;; la conservation de la charge est une identité géométrique, de même nature que le bord d'un bord vide.</li>
 </ul>
