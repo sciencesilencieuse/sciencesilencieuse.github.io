@@ -150,6 +150,14 @@ details.solution > summary
     box-shadow: none;
     background: none;
 }
+h2
+{
+color:#970E53 !important;
+}
+h3
+{
+color:#004D80 !important;
+}
 </style>
 
 # Numération
@@ -270,7 +278,7 @@ Le système vigésimal (ou vicésimal, base 20) existe au Bhoutan en langue dzon
 <details class="encadre" open>
 <summary class="encadre-titre">Les chiffres de Kaktovik</summary>
 <p>Toutes les langues eskimo-aléoutes d'Alaska et du Canada utilisent un système vigésimal pour compter. Les chiffres arabes, qui ont été conçus pour un système décimal, sont inadéquats pour l'iñupiaq et les autres langues inuites. Pour remédier à ce problème, des élèves d'une école de Kaktovik, en Alaska, ont inventé en 1994 un système de chiffres en base 20, qui s'est répandu parmi les Iñupiat en Alaska et a été envisagé au Canada. Ces chiffres ont été ajoutés à la norme Unicode en 2022 (version 15).</p>
-<div class="figure-centree"><img src="/base20.png" style="width:320px;max-width:100%;" alt="Les chiffres de Kaktovik, de 0 à 19"></div>
+<div class="figure-centree" style="width:320px;max-width:100%;border-radius:10px;"><img src="/base20.png" style="width:320px;max-width:100%;border-radius:10px;" alt="Les chiffres de Kaktovik, de 0 à 19"></div>
 <p>La forme des chiffres reflète la structure quinaire-vigésimale. Chaque chiffre est formé de barres et de traits&nbsp;: une barre en haut vaut 5 et un trait vertical vaut 1. Les chiffres 1 à 4 sont de 1 à 4 traits, 5 est une barre, 6 à 9 une barre surmontant de 1 à 4 traits, 10 deux barres, 15 trois barres. Un chiffre se lit donc au premier coup d'œil comme «&nbsp;nombre de cinq, plus nombre d'unités&nbsp;».</p>
 </details>
 
@@ -280,7 +288,7 @@ Le système sexagésimal (base 60) était utilisé pour la numération babylonie
 
 Les chiffres et nombres mésopotamiens de 1 à 59&nbsp;:
 
-<div class="figure-centree"><img src="/mesopot.png" style="width:400px;max-width:100%;" alt="Les chiffres cunéiformes mésopotamiens de 1 à 59"></div>
+<div class="figure-centree" style="width:500px;max-width:100%;"><img src="/mesopot.png" style="width:400px;max-width:100%;" alt="Les chiffres cunéiformes mésopotamiens de 1 à 59"></div>
 
 > Source : Wikipédia
 
@@ -373,8 +381,3 @@ La base 3 est donc la meilleure, 5&nbsp;% devant la base 2 (les bases 2 et 4 son
 </details>
 </details>
 
-## Pour aller plus loin {#plus-loin}
-
-- [Positional notation](https://en.wikipedia.org/wiki/Positional_notation) (Wikipedia)&nbsp;: écriture positionnelle, bases non entières, fractions.
-- [Kaktovik numerals](https://en.wikipedia.org/wiki/Kaktovik_numerals) (Wikipedia)&nbsp;: l'histoire des chiffres inventés par les élèves de Kaktovik.
-- [Radix economy](https://en.wikipedia.org/wiki/Radix_economy) (Wikipedia)&nbsp;: le coût d'écriture selon la base et le ternaire.
