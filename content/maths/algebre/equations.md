@@ -6,48 +6,204 @@ chapter = false
 +++
 
 <style>
-h2 {
-  text-align: center;
+mjx-container[display="true"] { max-width:100%; overflow-x:auto; overflow-y:hidden; }
+h2
+{
+color:#970E53 !important;
 }
-table {
-  border-collapse: collapse;
-  border: 0;
+h3
+{
+color:#004D80 !important;
 }
-td, th {
-  border-collapse: collapse;
-  text-align: center;
-  vertical-align: middle;
+.bloc
+{
+    max-width: 40rem;
+    margin: 1.4em auto;
+    border: 2px solid;
+    border-radius: 12px;
+    padding: 0.6em 1.3em 0.4em 1.3em;
 }
- #gris {
-     border: 0;
-  }
-</style>
-
-
-
-<style>
- #correc
-  {
+.bloc-titre
+{
+    font-weight: bold;
+    margin-bottom: 0.3em;
+}
+.bloc-def { border-color: #004D80; background: #EEF4FA; }
+.bloc-prop { border-color: #C2770B; background: #FDF6EC; }
+.bloc-theo { border-color: #970E53; background: #FBF1F5; }
+.bloc-preuve { border-color: #64748B; background: #F1F5F9; }
+.bloc-def > .bloc-titre { color: #004D80; }
+.bloc-prop > .bloc-titre { color: #C2770B; }
+.bloc-theo > .bloc-titre { color: #970E53; }
+.bloc-preuve > .bloc-titre { color: #475569; }
+.encadre
+{
+    max-width: 40rem;
+    margin: 1.4em auto;
+    border: 2px solid #006C65;
+    border-radius: 12px;
+    background: #F3F8F7;
+    padding: 0.6em 1.3em 0.4em 1.3em;
+}
+.encadre-titre
+{
+    font-weight: bold;
     color: #006C65;
-    border-left: solid 10px #C7DDDC;
-  }
- #comm
-  {
+    margin-bottom: 0.3em;
+}
+details.encadre > summary
+{
+    display: block;
+    cursor: pointer;
+    list-style: none;
+}
+details.encadre > summary::-webkit-details-marker
+{
+    display: none;
+}
+details.encadre > summary::before
+{
+    content: "\25B8\00A0";
+}
+details.encadre[open] > summary::before
+{
+    content: "\25BE\00A0";
+}
+.exercice
+{
+    max-width: 40rem;
+    margin: 1.4em auto;
+    border: 2px solid #6B4FA0;
+    border-radius: 12px;
+    background: #F6F3FA;
+    padding: 0.6em 1.3em 0.4em 1.3em;
+}
+.exercice-titre
+{
+    font-weight: bold;
+    color: #6B4FA0;
+    margin-bottom: 0.3em;
+}
+details.exercice > summary
+{
+    display: block;
+    cursor: pointer;
+    list-style: none;
+}
+details.exercice > summary::-webkit-details-marker
+{
+    display: none;
+}
+details.exercice > summary::before
+{
+    content: "\25B8\00A0";
+}
+details.exercice[open] > summary::before
+{
+    content: "\25BE\00A0";
+}
+details.solution > summary
+{
+    cursor: pointer;
+    color: #6B4FA0;
+    font-style: italic;
+}
+.fig
+{
+    max-width: 40rem;
+    margin: 1.4em auto;
+    text-align: center;
+}
+.fig > svg
+{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+}
+.fig canvas
+{
+    display: block;
+    margin: 0.4em auto;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 8px;
+}
+.fig-ctl
+{
+    margin: 0.4em 0 0.2em;
+    text-align: center;
+}
+.fig-ctl label
+{
+    display: block;
+}
+.fig-ctl input[type="range"]
+{
+    display: block;
+    margin: 0.3em auto;
+    width: min(16em, 100%);
+    accent-color: #004D80;
+}
+.fig-ctl select
+{
+    font-size: 1em;
+    padding: 0.1em 0.4em;
+    max-width: 100%;
+}
+.fig-ctl button
+{
+    font-size: 0.9em;
+    padding: 0.1em 0.7em;
+    margin: 0.15em 0.1em;
+    border: 2px solid #004D80;
+    border-radius: 8px;
+    background: #EEF4FA;
     color: #004D80;
-    border-left: solid 10px #B3CAD9;
-  }
- #commsum
-  {
-    color: #004D80;
-  }
- #correcsum
-  {
-    color: #006C65;
-  }
+    cursor: pointer;
+}
+.fig-ctl .coef
+{
+    display: inline-block;
+    margin: 0.1em 0.25em;
+}
+.fig-ctl .coef input
+{
+    width: 3.8em;
+    font-size: 0.95em;
+    text-align: center;
+}
+.fig-val
+{
+    font-size: 0.95em;
+    color: #334155;
+    margin: 0.2em 0;
+}
+.tbl
+{
+    border-collapse: collapse;
+    border: none;
+    margin: 0.8em auto;
+    font-size: 0.95em;
+    max-width: 100%;
+}
+.tbl td, .tbl th
+{
+    border: 1px solid #C7DDDC;
+    padding: 0.3em 0.7em;
+    text-align: center;
+}
+.tbl th
+{
+    background: #EEF4FA;
+}
 </style>
-
 
 # Équations
+
+Résoudre une équation polynomiale, c'est trouver les nombres qui annulent un polynôme. On a su le faire pour le premier et le second degré dès l'Antiquité, pour les degrés trois et quatre à la Renaissance, avant de se heurter au cinquième degré, puis de passer au calcul approché. Cette page suit cette histoire, avec des figures pour manipuler les racines. Trois vidéos pour commencer&nbsp;:
 
 <div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
 {{<youtube WPc-Hj2O_Os>}}
@@ -65,15 +221,520 @@ td, th {
 {{<youtube _Hk1F35MLr4>}}
 </div>
 
-<br>
-
-Jusque-là, rien de bien folichon... Mais si on libère la variable de nos polynômes en lui permettant de se balader dans l'espace des complexes, tout devient plus sympa. Déjà, plus d'histoires de 0, 1 ou 2 solutions pour un polynôme de degré 2... En complexe, un polynôme de degré 2 a toujours 2 solutions. C'est quand même plus propre comme ça. Et d'ailleurs, un polynôme de degré n a toujours n racines et peut donc se factoriser en n polynômes de degré 1. C'est le **théorème fondamental de l'algèbre**. 
+Jusque-là, rien de bien folichon... Mais si on libère la variable de nos polynômes en lui permettant de se balader dans l'espace des complexes, tout devient plus sympa. Déjà, plus d'histoires de 0, 1 ou 2 solutions pour un polynôme de degré 2... En complexe, un polynôme de degré 2 a toujours 2 solutions. C'est quand même plus propre comme ça. Et d'ailleurs, un polynôme de degré n a toujours n racines et peut donc se factoriser en n polynômes de degré 1. C'est le **théorème fondamental de l'algèbre**.
 
 {{% notice type="note" round="true" %}}
 [Jolie série de vidéos](https://www.youtube.com/playlist?list=PLiaHhY2iBX9g6KIvZ_703G3KJXapKkNaF) sur les complexes.
 {{% /notice %}}
 
+<div class="bloc bloc-def">
+<div class="bloc-titre">Équation polynomiale et racine</div>
 
+Un **polynôme** de degré $n$ est une expression $P(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0$ où $a_n \neq 0$. Une **racine** de $P$ est un nombre $r$ tel que $P(r) = 0$. Résoudre l'**équation** $P(x) = 0$, c'est trouver toutes ses racines. On distingue les racines réelles et les racines complexes, et l'on compte une racine **multiple** autant de fois que sa multiplicité.
 
+</div>
 
+## Le second degré
 
+Pour $ax + b = 0$ avec $a \neq 0$, la solution est $x = -\frac{b}{a}$. Le second degré est le premier cas où la forme de la solution dépend des coefficients.
+
+<div class="bloc bloc-theo">
+<div class="bloc-titre">Équation du second degré</div>
+
+Soit $a x^2 + b x + c = 0$ avec $a \neq 0$, et $\Delta = b^2 - 4ac$ son **discriminant**.
+
+- Si $\Delta > 0$, il y a deux racines réelles $x_{\pm} = \dfrac{-b \pm \sqrt{\Delta}}{2a}$.
+- Si $\Delta = 0$, il y a une racine double $x = -\dfrac{b}{2a}$.
+- Si $\Delta < 0$, il n'y a pas de racine réelle, mais deux racines complexes conjuguées $x_{\pm} = \dfrac{-b \pm \mathrm{i}\sqrt{-\Delta}}{2a}$.
+
+</div>
+
+<div class="bloc bloc-preuve">
+<div class="bloc-titre">Démonstration (forme canonique)</div>
+
+On met $a$ en facteur et l'on complète le carré&nbsp;:
+$$a x^2 + b x + c = a\left[\left(x + \frac{b}{2a}\right)^2 - \frac{\Delta}{4a^2}\right].$$
+L'équation s'écrit alors $\left(x + \frac{b}{2a}\right)^2 = \frac{\Delta}{4a^2}$. Ce carré vaut un nombre positif ou nul quand $\Delta \ge 0$, d'où les racines réelles. Quand $\Delta < 0$, le membre de droite est négatif et il faut un nombre dont le carré est négatif&nbsp;: $\mathrm{i}\sqrt{-\Delta}$ convient, ce qui donne les racines complexes.
+
+</div>
+
+Dans la figure suivante, on fait varier les coefficients. À gauche, la parabole $y = ax^2 + bx + c$&nbsp;; à droite, le plan complexe où se placent les racines. Quand la parabole ne coupe plus l'axe des abscisses, les deux racines quittent l'axe réel et se placent de part et d'autre, à des positions conjuguées.
+
+<div class="fig">
+<p class="fig-ctl"><label for="sd-a">$a$ = <span id="sd-av"></span></label><input type="range" id="sd-a" min="-2" max="2" step="0.1" value="1"></p>
+<p class="fig-ctl"><label for="sd-b">$b$ = <span id="sd-bv"></span></label><input type="range" id="sd-b" min="-6" max="6" step="0.1" value="1"></p>
+<p class="fig-ctl"><label for="sd-c">$c$ = <span id="sd-cv"></span></label><input type="range" id="sd-c" min="-6" max="6" step="0.1" value="2"></p>
+<svg id="sd-svg" viewBox="0 0 460 250" role="img" aria-label="Une parabole et, à côté, les racines de l'équation dans le plan complexe"></svg>
+<p class="fig-val" id="sd-val"></p>
+</div>
+<script>
+(function () {
+  var sa = document.getElementById('sd-a'), sb = document.getElementById('sd-b'), sc = document.getElementById('sd-c');
+  var svg = document.getElementById('sd-svg'), out = document.getElementById('sd-val');
+  var LX = 10, LY = 20, RX = 250, S = 200, U = 20;
+  function fr(x, d) { if (Math.abs(x) < 0.5 * Math.pow(10, -d)) { x = 0; } return x.toFixed(d).replace('.', ',').replace('-', '−'); }
+  function T(x, y, t, col, anc, sz) { return '<text x="' + x + '" y="' + y + '" font-size="' + (sz || 12) + '" text-anchor="' + (anc || 'middle') + '" fill="' + col + '" font-family="Georgia,serif" font-style="italic">' + t + '</text>'; }
+  function dessiner() {
+    var a = parseFloat(sa.value); if (Math.abs(a) < 0.05) { a = 0.1; }
+    var b = parseFloat(sb.value), c = parseFloat(sc.value), D = b * b - 4 * a * c;
+    document.getElementById('sd-av').textContent = fr(a, 1); document.getElementById('sd-bv').textContent = fr(b, 1); document.getElementById('sd-cv').textContent = fr(c, 1);
+    var h = '<defs><clipPath id="sd-cl"><rect x="' + LX + '" y="' + LY + '" width="' + S + '" height="' + S + '"/></clipPath></defs>';
+    h += '<rect x="' + LX + '" y="' + LY + '" width="' + S + '" height="' + S + '" fill="#F8FAFC" stroke="#CBD5E1"/>';
+    h += '<rect x="' + RX + '" y="' + LY + '" width="' + S + '" height="' + S + '" fill="#F8FAFC" stroke="#CBD5E1"/>';
+    var cx = LX + S / 2, cy = LY + S / 2, rx = RX + S / 2;
+    h += '<line x1="' + LX + '" y1="' + cy + '" x2="' + (LX + S) + '" y2="' + cy + '" stroke="#94A3B8"/><line x1="' + cx + '" y1="' + LY + '" x2="' + cx + '" y2="' + (LY + S) + '" stroke="#94A3B8"/>';
+    h += '<line x1="' + RX + '" y1="' + cy + '" x2="' + (RX + S) + '" y2="' + cy + '" stroke="#94A3B8"/><line x1="' + rx + '" y1="' + LY + '" x2="' + rx + '" y2="' + (LY + S) + '" stroke="#94A3B8"/>';
+    var i, d = '';
+    for (i = -5; i <= 5; i++) {
+      h += '<line x1="' + (cx + i * U) + '" y1="' + (cy - 3) + '" x2="' + (cx + i * U) + '" y2="' + (cy + 3) + '" stroke="#94A3B8"/><line x1="' + (rx + i * U) + '" y1="' + (cy - 3) + '" x2="' + (rx + i * U) + '" y2="' + (cy + 3) + '" stroke="#94A3B8"/><line x1="' + (rx - 3) + '" y1="' + (cy + i * U) + '" x2="' + (rx + 3) + '" y2="' + (cy + i * U) + '" stroke="#94A3B8"/>';
+      if (i !== 0 && i % 2 === 0) { h += T(cx + i * U, cy + 15, i, '#64748B', 'middle', 10) + T(rx + i * U, cy + 15, i, '#64748B', 'middle', 10); }
+    }
+    for (i = 0; i <= 200; i++) { var x = -5 + i * 0.05, y = a * x * x + b * x + c; d += (i ? 'L' : 'M') + (cx + x * U).toFixed(1) + ',' + (cy - y * 10).toFixed(1); }
+    h += '<path d="' + d + '" fill="none" stroke="#004D80" stroke-width="2.4" clip-path="url(#sd-cl)"/>';
+    h += T(LX + 4, LY + S - 6, 'y = ax² + bx + c', '#004D80', 'start', 11) + T(RX + S - 4, LY + 12, 'plan complexe', '#475569', 'end', 11) + T(RX + S - 4, cy - 4, 'Re', '#64748B', 'end', 10) + T(rx + 4, LY + 22, 'Im', '#64748B', 'start', 10);
+    var txt;
+    function pt(re, im, col) {
+      var X = rx + re * U, Y = cy - im * U;
+      if (Math.abs(re) <= 5.2 && Math.abs(im) <= 5.2) { return '<circle cx="' + X.toFixed(1) + '" cy="' + Y.toFixed(1) + '" r="5" fill="' + col + '" stroke="#fff" stroke-width="1.2"/>'; }
+      return '';
+    }
+    if (D >= 0) {
+      var r1 = (-b - Math.sqrt(D)) / (2 * a), r2 = (-b + Math.sqrt(D)) / (2 * a);
+      [r1, r2].forEach(function (r) { if (Math.abs(r) <= 5.2) { h += '<circle cx="' + (cx + r * U).toFixed(1) + '" cy="' + cy + '" r="5" fill="#C2770B" stroke="#fff" stroke-width="1.2"/>'; } h += pt(r, 0, '#C2770B'); });
+      txt = D > 0 ? 'Δ = ' + fr(D, 2) + ' &gt; 0 : deux racines réelles, x = ' + fr(r1, 3) + ' et x = ' + fr(r2, 3) : 'Δ = 0 : une racine double, x = ' + fr(r1, 3);
+    } else {
+      var re = -b / (2 * a), im = Math.sqrt(-D) / (2 * Math.abs(a));
+      h += pt(re, im, '#970E53') + pt(re, -im, '#970E53');
+      txt = 'Δ = ' + fr(D, 2) + ' &lt; 0 : pas de racine réelle, deux racines complexes ' + fr(re, 3) + ' ± ' + fr(im, 3) + ' i';
+    }
+    svg.innerHTML = h;
+    out.innerHTML = txt;
+  }
+  [sa, sb, sc].forEach(function (e) { e.addEventListener('input', dessiner); });
+  dessiner();
+})();
+</script>
+
+<div class="bloc bloc-prop">
+<div class="bloc-titre">Relations de Viète</div>
+
+Si $x_1$ et $x_2$ sont les racines (réelles ou complexes) de $a x^2 + b x + c = 0$, alors
+$$x_1 + x_2 = -\frac{b}{a}, \qquad x_1 x_2 = \frac{c}{a}.$$
+Plus généralement, pour un polynôme $P(x) = a_n (x - x_1)(x - x_2)\cdots(x - x_n)$, la somme des racines vaut $-\frac{a_{n-1}}{a_n}$ et leur produit $(-1)^n\frac{a_0}{a_n}$.
+
+</div>
+
+En effet, $a(x - x_1)(x - x_2) = a x^2 - a(x_1 + x_2)x + a x_1 x_2$, et l'on identifie les coefficients. Ces relations permettent de trouver deux nombres à partir de leur somme $s$ et de leur produit $p$&nbsp;: ce sont les racines de $x^2 - s x + p = 0$.
+
+<details class="encadre">
+<summary class="encadre-titre">Babylone, al-Khwârizmî, Viète</summary>
+<p>Des tablettes mésopotamiennes d'environ $1800$ av. J.-C. (comme BM 13901) contiennent des problèmes équivalents à des équations du second degré, résolus en complétant le carré, sans notation littérale. Vers $825$, al-Khwârizmî a écrit à Bagdad un traité sur la résolution des équations, <i>al-jabr wa-l-muqābala</i> («&nbsp;la restauration et la réduction&nbsp;»), qui a donné son nom à l'algèbre (et le sien à l'algorithme). Il ne disposait pas des nombres négatifs&nbsp;: il traitait séparément les différents cas d'équations. François Viète a introduit en $1591$ l'usage de lettres pour les inconnues et pour les coefficients, ce qui a permis d'écrire des formules générales et de découvrir des relations comme celles qui portent son nom.</p>
+</details>
+
+## Le troisième et le quatrième degré : Cardan et Ferrari
+
+Pour le second degré, la formule ne mobilise que des racines carrées. Pour le troisième degré, il faut des racines cubiques, et la formule met en jeu des nombres complexes dans un cas où toutes les racines sont réelles.
+
+<div class="bloc bloc-theo">
+<div class="bloc-titre">Formule de Cardan</div>
+
+Soit l'équation $t^3 + p t + q = 0$ avec $p$ et $q$ réels, et $D = \dfrac{q^2}{4} + \dfrac{p^3}{27}$. On pose
+$$u^3 = -\frac{q}{2} + \sqrt{D}, \qquad v = -\frac{p}{3u}.$$
+Alors les trois racines sont $t_0 = u + v$, $t_1 = \omega u + \omega^2 v$ et $t_2 = \omega^2 u + \omega v$, où $\omega = \mathrm{e}^{2\mathrm{i}\pi/3}$. Si $D > 0$, il y a une racine réelle et deux complexes conjuguées&nbsp;; si $D = 0$, une racine est multiple&nbsp;; si $D < 0$, il y a trois racines réelles distinctes.
+
+</div>
+
+<div class="bloc bloc-preuve">
+<div class="bloc-titre">Démonstration de la formule de Cardan</div>
+
+On cherche $t$ sous la forme $t = u + v$. Alors $t^3 = u^3 + v^3 + 3uv(u + v)$, c'est-à-dire $t^3 - 3uvt - (u^3 + v^3) = 0$. Cette équation est celle de départ si $uv = -\frac{p}{3}$ et $u^3 + v^3 = -q$. Les nombres $u^3$ et $v^3$ ont donc pour somme $-q$ et pour produit $(uv)^3 = -\frac{p^3}{27}$&nbsp;: ce sont les racines de $z^2 + q z - \frac{p^3}{27} = 0$, soit $-\frac{q}{2} \pm \sqrt{D}$. Les deux autres racines se déduisent des deux autres racines cubiques de l'unité, qui multiplient $u$ par $\omega$ et $v$ par $\omega^2$ (pour que $uv$ reste égal à $-\frac{p}{3}$).
+
+</div>
+
+Une équation générale $a x^3 + b x^2 + c x + d = 0$ se ramène à ce cas par le changement de variable $x = t - \frac{b}{3a}$, qui supprime le terme en $x^2$ (on obtient $p = \frac{3ac - b^2}{3a^2}$ et $q = \frac{2b^3 - 9abc + 27a^2 d}{27a^3}$).
+
+Dans la figure suivante, on choisit $p$ et $q$. À gauche, la courbe $y = t^3 + pt + q$&nbsp;; à droite, les trois racines dans le plan complexe. Le texte donne les valeurs intermédiaires de la formule.
+
+<div class="fig">
+<p class="fig-ctl"><label for="cd-p">$p$ = <span id="cd-pv"></span></label><input type="range" id="cd-p" min="-20" max="20" step="0.5" value="-15"></p>
+<p class="fig-ctl"><label for="cd-q">$q$ = <span id="cd-qv"></span></label><input type="range" id="cd-q" min="-20" max="20" step="0.5" value="-4"></p>
+<p class="fig-ctl"><button type="button" data-cd="-15,-4">t³ = 15t + 4 (Bombelli)</button><button type="button" data-cd="3,-4">t³ + 3t = 4</button><button type="button" data-cd="1,1">t³ + t + 1 = 0</button><button type="button" data-cd="-3,2">t³ − 3t + 2 = 0 (racine double)</button></p>
+<svg id="cd-svg" viewBox="0 0 460 250" role="img" aria-label="Courbe d'un polynôme de degré 3 et ses trois racines dans le plan complexe"></svg>
+<p class="fig-val" id="cd-val"></p>
+</div>
+<script>
+(function () {
+  var sp = document.getElementById('cd-p'), sq = document.getElementById('cd-q'), svg = document.getElementById('cd-svg'), out = document.getElementById('cd-val');
+  var LX = 10, LY = 20, RX = 250, S = 200, U = 20;
+  function fr(x, d) { if (Math.abs(x) < 0.5 * Math.pow(10, -d)) { x = 0; } return x.toFixed(d).replace('.', ',').replace('-', '−'); }
+  function cx(z, d) { var r = fr(z[0], d), i = fr(Math.abs(z[1]), d); if (Math.abs(z[1]) < 0.5 * Math.pow(10, -d)) { return r; } return r + (z[1] < 0 ? ' − ' : ' + ') + i + ' i'; }
+  function mul(a, b) { return [a[0] * b[0] - a[1] * b[1], a[0] * b[1] + a[1] * b[0]]; }
+  function add(a, b) { return [a[0] + b[0], a[1] + b[1]]; }
+  function div(a, b) { var d = b[0] * b[0] + b[1] * b[1]; return [(a[0] * b[0] + a[1] * b[1]) / d, (a[1] * b[0] - a[0] * b[1]) / d]; }
+  function cbrt(z) {
+    if (Math.abs(z[1]) < 1e-12) { return [Math.cbrt(z[0]), 0]; }
+    var r = Math.cbrt(Math.hypot(z[0], z[1])), th = Math.atan2(z[1], z[0]) / 3;
+    return [r * Math.cos(th), r * Math.sin(th)];
+  }
+  function T(x, y, t, col, anc, sz) { return '<text x="' + x + '" y="' + y + '" font-size="' + (sz || 12) + '" text-anchor="' + (anc || 'middle') + '" fill="' + col + '" font-family="Georgia,serif" font-style="italic">' + t + '</text>'; }
+  function dessiner() {
+    var p = parseFloat(sp.value), q = parseFloat(sq.value), D = q * q / 4 + p * p * p / 27;
+    document.getElementById('cd-pv').textContent = fr(p, 1); document.getElementById('cd-qv').textContent = fr(q, 1);
+    var sD = D >= 0 ? [Math.sqrt(D), 0] : [0, Math.sqrt(-D)];
+    var u3 = [-q / 2 + sD[0], sD[1]];
+    if (Math.hypot(u3[0], u3[1]) < 1e-9) { u3 = [-q / 2 - sD[0], -sD[1]]; }
+    var u = cbrt(u3), v = Math.hypot(u[0], u[1]) < 1e-9 ? [0, 0] : div([-p / 3, 0], u);
+    var w = [-0.5, Math.sqrt(3) / 2], w2 = [-0.5, -Math.sqrt(3) / 2];
+    var roots = [add(u, v), add(mul(w, u), mul(w2, v)), add(mul(w2, u), mul(w, v))];
+    var h = '<defs><clipPath id="cd-cl"><rect x="' + LX + '" y="' + LY + '" width="' + S + '" height="' + S + '"/></clipPath></defs>';
+    h += '<rect x="' + LX + '" y="' + LY + '" width="' + S + '" height="' + S + '" fill="#F8FAFC" stroke="#CBD5E1"/><rect x="' + RX + '" y="' + LY + '" width="' + S + '" height="' + S + '" fill="#F8FAFC" stroke="#CBD5E1"/>';
+    var cx0 = LX + S / 2, cy = LY + S / 2, rx = RX + S / 2, i, d = '';
+    h += '<line x1="' + LX + '" y1="' + cy + '" x2="' + (LX + S) + '" y2="' + cy + '" stroke="#94A3B8"/><line x1="' + cx0 + '" y1="' + LY + '" x2="' + cx0 + '" y2="' + (LY + S) + '" stroke="#94A3B8"/><line x1="' + RX + '" y1="' + cy + '" x2="' + (RX + S) + '" y2="' + cy + '" stroke="#94A3B8"/><line x1="' + rx + '" y1="' + LY + '" x2="' + rx + '" y2="' + (LY + S) + '" stroke="#94A3B8"/>';
+    for (i = -5; i <= 5; i++) { h += '<line x1="' + (cx0 + i * U) + '" y1="' + (cy - 3) + '" x2="' + (cx0 + i * U) + '" y2="' + (cy + 3) + '" stroke="#94A3B8"/><line x1="' + (rx + i * U) + '" y1="' + (cy - 3) + '" x2="' + (rx + i * U) + '" y2="' + (cy + 3) + '" stroke="#94A3B8"/><line x1="' + (rx - 3) + '" y1="' + (cy + i * U) + '" x2="' + (rx + 3) + '" y2="' + (cy + i * U) + '" stroke="#94A3B8"/>'; if (i !== 0 && i % 2 === 0) { h += T(cx0 + i * U, cy + 15, i, '#64748B', 'middle', 10) + T(rx + i * U, cy + 15, i, '#64748B', 'middle', 10); } }
+    for (i = 0; i <= 200; i++) { var x = -5 + i * 0.05, y = x * x * x + p * x + q; d += (i ? 'L' : 'M') + (cx0 + x * U).toFixed(1) + ',' + (cy - y * 3).toFixed(1); }
+    h += '<path d="' + d + '" fill="none" stroke="#004D80" stroke-width="2.4" clip-path="url(#cd-cl)"/>';
+    h += T(LX + 4, LY + S - 6, 'y = t³ + pt + q', '#004D80', 'start', 11) + T(RX + S - 4, LY + 12, 'plan complexe', '#475569', 'end', 11);
+    roots.forEach(function (z) {
+      var reel = Math.abs(z[1]) < 1e-6;
+      if (reel && Math.abs(z[0]) <= 5.2) { h += '<circle cx="' + (cx0 + z[0] * U).toFixed(1) + '" cy="' + cy + '" r="5" fill="#C2770B" stroke="#fff" stroke-width="1.2"/>'; }
+      if (Math.abs(z[0]) <= 5.2 && Math.abs(z[1]) <= 5.2) { h += '<circle cx="' + (rx + z[0] * U).toFixed(1) + '" cy="' + (cy - z[1] * U).toFixed(1) + '" r="5" fill="' + (reel ? '#C2770B' : '#970E53') + '" stroke="#fff" stroke-width="1.2"/>'; }
+    });
+    svg.innerHTML = h;
+    out.innerHTML = 'D = ' + fr(D, 2) + (D > 1e-9 ? ' &gt; 0 : une racine réelle' : D < -1e-9 ? ' &lt; 0 : trois racines réelles' : ' = 0 : racine multiple') + '<br>u³ = ' + cx(u3, 3) + ' &nbsp; u = ' + cx(u, 3) + ' &nbsp; v = ' + cx(v, 3) + '<br>racines : ' + roots.map(function (z) { return cx(z, 3); }).join(' &nbsp;;&nbsp; ');
+  }
+  [sp, sq].forEach(function (e) { e.addEventListener('input', dessiner); });
+  Array.prototype.forEach.call(document.querySelectorAll('button[data-cd]'), function (b) {
+    b.addEventListener('click', function () { var v = b.getAttribute('data-cd').split(','); sp.value = v[0]; sq.value = v[1]; dessiner(); });
+  });
+  dessiner();
+})();
+</script>
+
+Le cas $t^3 = 15t + 4$ est celui de Bombelli (1572). On vérifie à la main que $t = 4$ est une racine ($64 = 60 + 4$), et pourtant la formule donne $D = 2^2 + \frac{(-15)^3}{27} = -121 < 0$, donc $u^3 = 2 + \sqrt{-121} = 2 + 11\mathrm{i}$. Bombelli a remarqué que $(2 + \mathrm{i})^3 = 2 + 11\mathrm{i}$, donc $u = 2 + \mathrm{i}$ et $v = 2 - \mathrm{i}$, et $t = u + v = 4$&nbsp;: les parties imaginaires se compensent. C'est le <b>casus irreducibilis</b>&nbsp;: pour obtenir un résultat réel avec la formule, il faut passer par les nombres complexes, ce qui est l'une des raisons historiques de leur acceptation.
+
+<details class="encadre">
+<summary class="encadre-titre">Del Ferro, Tartaglia, Cardan et Ferrari : une querelle de priorité</summary>
+<p>Scipione del Ferro, à Bologne, a résolu vers $1515$ les équations du type $x^3 + px = q$, et a gardé le secret. Niccolò Tartaglia l'a retrouvée en $1535$, à l'occasion d'un défi public. Girolamo Cardan lui a arraché la formule en lui promettant de ne pas la divulguer, puis l'a publiée en $1545$ dans l'<i>Ars Magna</i>, en citant ses sources, ce qui a déclenché une longue querelle. Dans le même livre figure la résolution du quatrième degré, due à Lodovico Ferrari, l'élève de Cardan. Les nombres négatifs n'étaient pas encore acceptés, ce qui obligeait à distinguer une douzaine de cas pour le troisième degré.</p>
+</details>
+
+<details class="encadre">
+<summary class="encadre-titre">Ferrari : ramener le quatrième degré au troisième</summary>
+<p>Une équation du quatrième degré se ramène à $x^4 + p x^2 + q x + r = 0$ par un changement de variable. Ferrari l'écrit $x^4 = -p x^2 - q x - r$ et ajoute un paramètre $y$ des deux côtés&nbsp;:
+$$\left(x^2 + \frac{p}{2} + y\right)^2 = 2y\,x^2 - q x + \left(\frac{p}{2} + y\right)^2 - r.$$
+Le membre de droite est un polynôme du second degré en $x$&nbsp;; c'est un carré parfait quand son discriminant est nul, ce qui donne l'équation $q^2 = 8y\left[\left(\frac{p}{2} + y\right)^2 - r\right]$, du troisième degré en $y$ (la «&nbsp;résolvante&nbsp;»). On la résout par la formule de Cardan, puis l'équation de départ devient $(\text{carré})^2 = (\text{carré})^2$, c'est-à-dire deux équations du second degré.</p>
+</details>
+
+<table class="tbl">
+<tr><th>degré</th><th>formule en radicaux</th><th>date</th></tr>
+<tr><td>1</td><td>$x = -\frac{b}{a}$</td><td>Antiquité</td></tr>
+<tr><td>2</td><td>discriminant</td><td>Antiquité, ~1800 av. J.-C.</td></tr>
+<tr><td>3</td><td>Cardan</td><td>1545</td></tr>
+<tr><td>4</td><td>Ferrari</td><td>1545</td></tr>
+<tr><td>$\ge 5$</td><td>aucune en général</td><td>Abel, 1824</td></tr>
+</table>
+
+## Le cinquième degré : Abel, Ruffini et Galois
+
+Après les degrés trois et quatre, on a cherché pendant près de trois siècles une formule pour le degré cinq. La réponse a été négative.
+
+<div class="bloc bloc-theo">
+<div class="bloc-titre">Théorème d'Abel-Ruffini</div>
+
+Il n'existe pas de formule générale qui exprime les racines d'une équation polynomiale de degré $n \ge 5$ à partir de ses coefficients avec les seules opérations $+$, $-$, $\times$, $\div$ et les extractions de racines (les «&nbsp;radicaux&nbsp;»).
+
+</div>
+
+Paolo Ruffini en a proposé une preuve en 1799, jugée incomplète, et Niels Henrik Abel en a donné une preuve complète en 1824. Il ne dit pas que les équations de degré cinq n'ont pas de racines (le théorème fondamental de l'algèbre en garantit cinq), ni qu'aucune n'est exprimable avec des radicaux&nbsp;: $x^5 - 1 = 0$ ou $x^5 - 2 = 0$ le sont. Il dit qu'aucune formule ne vaut pour toutes.
+
+<div class="bloc bloc-def">
+<div class="bloc-titre">Résolubilité par radicaux (Galois)</div>
+
+Évariste Galois (1830-1832) a associé à chaque équation un groupe fini de permutations de ses racines, son **groupe de Galois**. L'équation est résoluble par radicaux si et seulement si ce groupe est **résoluble** (on peut le construire par une suite de groupes dont les quotients successifs sont commutatifs). Le groupe de toutes les permutations de $n$ objets, $S_n$, est résoluble pour $n \le 4$ et ne l'est plus pour $n \ge 5$.
+
+</div>
+
+Le groupe de Galois d'une équation «&nbsp;générique&nbsp;» de degré $n$ est $S_n$, d'où l'impossibilité pour $n \ge 5$. Un exemple concret est $x^5 - x - 1 = 0$, dont le groupe de Galois est $S_5$&nbsp;: aucune expression à base de radicaux ne donne sa racine réelle, qui vaut environ $1{,}1673$. Le groupe $A_5$ des permutations paires de cinq objets, de $60$ éléments, est le plus petit groupe non commutatif sans sous-groupe distingué non trivial («&nbsp;simple&nbsp;»)&nbsp;; c'est aussi le groupe des rotations de l'icosaèdre. Voir la page sur les <a href="../groupes/">groupes</a>.
+
+<details class="encadre">
+<summary class="encadre-titre">Résoudre le cinquième degré malgré tout</summary>
+<p>L'impossibilité ne concerne que les radicaux. En 1858, Charles Hermite a montré qu'on peut résoudre l'équation générale du cinquième degré avec des fonctions elliptiques, après l'avoir ramenée à la forme $x^5 - x + a = 0$ (forme de Bring-Jerrard). Et l'on peut toujours calculer les racines avec autant de décimales qu'on veut, par des méthodes numériques comme celle de la section suivante. Le théorème d'Abel est aussi une réussite de la méthode de Galois&nbsp;: pour comprendre une équation, on étudie la symétrie de ses racines, ce qui est à l'origine de la théorie des groupes.</p>
+</details>
+
+## Le théorème fondamental de l'algèbre
+
+<div class="bloc bloc-theo">
+<div class="bloc-titre">Théorème de d'Alembert-Gauss</div>
+
+Tout polynôme non constant à coefficients complexes admet au moins une racine complexe. Par conséquent, un polynôme de degré $n$ s'écrit
+$$P(z) = a_n (z - z_1)(z - z_2)\cdots(z - z_n),$$
+où $z_1, \dots, z_n$ sont ses $n$ racines complexes, comptées avec leur multiplicité.
+
+</div>
+
+Le résultat a été énoncé par d'Alembert en 1746, et démontré avec une rigueur croissante par Gauss, dont la thèse de 1799 donne la première preuve, et par Argand en 1806. Il fait des nombres complexes un corps «&nbsp;algébriquement clos&nbsp;»&nbsp;: aucune équation polynomiale n'oblige à inventer de nouveaux nombres.
+
+<details class="encadre">
+<summary class="encadre-titre">Pourquoi y a-t-il toujours une racine&nbsp;?</summary>
+<p>Voici l'idée de la preuve d'Argand. Quand $|z|$ est grand, $|P(z)|$ est grand (c'est le terme de plus haut degré qui domine), donc la fonction $z \mapsto |P(z)|$ atteint un minimum en un point $z_0$. Supposons $P(z_0) \neq 0$. Au voisinage de $z_0$, $P(z) \approx P(z_0) + c\,(z - z_0)^k$, où $c \neq 0$ et $k \ge 1$ est le premier degré non nul du développement. On peut choisir la direction de $z - z_0$ (en tournant dans le plan complexe) pour que le terme correctif soit de signe opposé à $P(z_0)$, ce qui fait baisser $|P|$ en dessous de sa valeur minimale. Cette contradiction montre que $P(z_0) = 0$.</p>
+</details>
+
+<div class="bloc bloc-prop">
+<div class="bloc-titre">Racines conjuguées</div>
+
+Si les coefficients de $P$ sont réels et si $z$ est une racine, alors son conjugué $\overline{z}$ est aussi une racine, avec la même multiplicité. Ainsi, les racines non réelles d'un polynôme réel vont par paires conjuguées, et un polynôme réel de degré impair a au moins une racine réelle.
+
+</div>
+
+La raison est que $P(\overline{z}) = \overline{P(z)}$ quand les coefficients sont réels. Il en résulte que tout polynôme réel se factorise en polynômes réels de degré $1$ et $2$ (un facteur du second degré $(z - w)(z - \overline{w})$ pour chaque paire de racines conjuguées).
+
+<div class="bloc bloc-def">
+<div class="bloc-titre">Racines de l'unité</div>
+
+Les solutions de $z^n = 1$ sont les $n$ nombres $\mathrm{e}^{2\mathrm{i}k\pi/n}$ pour $k = 0, 1, \dots, n - 1$, les **racines $n$-ièmes de l'unité**. Ce sont les sommets d'un polygone régulier à $n$ côtés inscrit dans le cercle unité, et leur somme est nulle pour $n \ge 2$.
+
+</div>
+
+On le voit avec les relations de Viète&nbsp;: dans $z^n - 1$, le coefficient de $z^{n-1}$ est nul, donc la somme des racines l'est aussi. Les racines de l'unité sont aussi à la base de la transformée de Fourier rapide (voir <a href="../fft/">FFT et polynômes</a>) et des entiers algébriques (voir <a href="../../arithmetique/complexes/">les complexes</a>).
+
+### Explorateur de racines
+
+Dans la figure suivante, on choisit un polynôme à coefficients réels, de degré au plus $6$. Le plan complexe montre ses racines, calculées numériquement (méthode de Durand-Kerner). Les racines réelles sont en orange, les autres en rose, et le cercle pointillé est le cercle unité. En changeant un coefficient, on voit les racines bouger&nbsp;: elles se rencontrent sur l'axe réel puis quittent l'axe par paires conjuguées.
+
+<div class="fig">
+<p class="fig-ctl"><label>Degré&nbsp;: <select id="ex-deg"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option></select></label></p>
+<p class="fig-ctl" id="ex-coef"></p>
+<p class="fig-ctl"><button type="button" data-ex="1,0,1">x²+1</button><button type="button" data-ex="1,0,0,-1">x³−1</button><button type="button" data-ex="1,0,0,0,1">x⁴+1</button><button type="button" data-ex="1,0,0,0,-1,-1">x⁵−x−1</button><button type="button" data-ex="1,-6,11,-6">(x−1)(x−2)(x−3)</button><button type="button" data-ex="1,0,0,0,0,0,-1">x⁶−1</button></p>
+<svg id="ex-svg" viewBox="0 0 460 330" role="img" aria-label="Racines complexes d'un polynôme à coefficients réels"></svg>
+<p class="fig-val" id="ex-val"></p>
+</div>
+<script>
+(function () {
+  var sel = document.getElementById('ex-deg'), box = document.getElementById('ex-coef'), svg = document.getElementById('ex-svg'), out = document.getElementById('ex-val');
+  var coefs = [1, 0, 0, -1], ins = [];
+  function fr(x, d) { if (Math.abs(x) < 0.5 * Math.pow(10, -d)) { x = 0; } return x.toFixed(d).replace('.', ',').replace('-', '−'); }
+  function sup(n) { return n === 0 ? '' : n === 1 ? 'x' : 'x<sup>' + n + '</sup>'; }
+  function construire() {
+    var d = parseInt(sel.value, 10), i; box.innerHTML = ''; ins = [];
+    for (i = 0; i <= d; i++) {
+      var lab = document.createElement('label'); lab.className = 'coef';
+      lab.innerHTML = (sup(d - i) || '1') + ' <input type="number" step="0.5" value="' + (coefs[i] !== undefined ? coefs[i] : 0) + '">';
+      box.appendChild(lab); ins.push(lab.querySelector('input'));
+      lab.querySelector('input').addEventListener('input', dessiner);
+    }
+  }
+  function racines(c) {
+    var n = c.length - 1; if (n < 1) { return []; }
+    var a = c.map(function (v) { return v / c[0]; }), R = 1 + Math.max.apply(null, a.slice(1).map(Math.abs)), z = [], k, it, i, j;
+    for (k = 0; k < n; k++) { var th = 2 * Math.PI * k / n + 0.4; z.push([0.5 * Math.min(R, 3) * Math.cos(th), 0.5 * Math.min(R, 3) * Math.sin(th)]); }
+    for (it = 0; it < 600; it++) {
+      var md = 0;
+      for (i = 0; i < n; i++) {
+        var pr = 1, pi = 0, nr, ni;
+        for (j = 1; j <= n; j++) { nr = pr * z[i][0] - pi * z[i][1] + a[j]; ni = pr * z[i][1] + pi * z[i][0]; pr = nr; pi = ni; }
+        var dr = 1, di = 0;
+        for (j = 0; j < n; j++) { if (j === i) { continue; } var xr = z[i][0] - z[j][0], xi = z[i][1] - z[j][1]; nr = dr * xr - di * xi; ni = dr * xi + di * xr; dr = nr; di = ni; }
+        var den = dr * dr + di * di; if (den < 1e-300) { continue; }
+        var qr = (pr * dr + pi * di) / den, qi = (pi * dr - pr * di) / den;
+        z[i][0] -= qr; z[i][1] -= qi; md = Math.max(md, Math.hypot(qr, qi));
+      }
+      if (md < 1e-15) { break; }
+    }
+    return z.map(function (w) { return [Math.abs(w[0]) < 1e-7 ? 0 : w[0], Math.abs(w[1]) < 1e-6 ? 0 : w[1]]; });
+  }
+  function cx(z) { var r = fr(z[0], 3); if (z[1] === 0) { return r; } return r + (z[1] < 0 ? ' − ' : ' + ') + fr(Math.abs(z[1]), 3) + ' i'; }
+  function dessiner() {
+    var c = ins.map(function (e) { var v = parseFloat(e.value); return isFinite(v) ? v : 0; });
+    coefs = c.slice();
+    while (c.length > 1 && c[0] === 0) { c.shift(); }
+    var z = racines(c), m = 1.5, i;
+    z.forEach(function (w) { m = Math.max(m, 1.25 * Math.hypot(w[0], w[1])); });
+    m = Math.min(m, 40);
+    var X0 = 80, Y0 = 15, S = 300, sc = S / (2 * m), cxp = X0 + S / 2, cyp = Y0 + S / 2, h = '<rect x="' + X0 + '" y="' + Y0 + '" width="' + S + '" height="' + S + '" fill="#F8FAFC" stroke="#CBD5E1"/>';
+    h += '<line x1="' + X0 + '" y1="' + cyp + '" x2="' + (X0 + S) + '" y2="' + cyp + '" stroke="#94A3B8"/><line x1="' + cxp + '" y1="' + Y0 + '" x2="' + cxp + '" y2="' + (Y0 + S) + '" stroke="#94A3B8"/>';
+    h += '<circle cx="' + cxp + '" cy="' + cyp + '" r="' + sc + '" fill="none" stroke="#94A3B8" stroke-dasharray="4 4"/>';
+    var step = m > 12 ? 10 : m > 6 ? 5 : m > 3 ? 2 : 1;
+    for (i = -Math.floor(m / step) * step; i <= m; i += step) { if (i !== 0) { h += '<line x1="' + (cxp + i * sc) + '" y1="' + (cyp - 3) + '" x2="' + (cxp + i * sc) + '" y2="' + (cyp + 3) + '" stroke="#94A3B8"/><text x="' + (cxp + i * sc) + '" y="' + (cyp + 15) + '" font-size="10" text-anchor="middle" fill="#64748B" font-family="Georgia,serif">' + i + '</text><line x1="' + (cxp - 3) + '" y1="' + (cyp - i * sc) + '" x2="' + (cxp + 3) + '" y2="' + (cyp - i * sc) + '" stroke="#94A3B8"/><text x="' + (cxp + 8) + '" y="' + (cyp - i * sc + 3) + '" font-size="10" fill="#64748B" font-family="Georgia,serif">' + i + 'i</text>'; } }
+    h += '<text x="' + (X0 + S - 4) + '" y="' + (cyp - 5) + '" font-size="11" text-anchor="end" fill="#64748B" font-family="Georgia,serif" font-style="italic">Re</text><text x="' + (cxp - 6) + '" y="' + (Y0 + 12) + '" font-size="11" text-anchor="end" fill="#64748B" font-family="Georgia,serif" font-style="italic">Im</text>';
+    z.forEach(function (w) { h += '<circle cx="' + (cxp + w[0] * sc).toFixed(1) + '" cy="' + (cyp - w[1] * sc).toFixed(1) + '" r="5.5" fill="' + (w[1] === 0 ? '#C2770B' : '#970E53') + '" stroke="#fff" stroke-width="1.4"/>'; });
+    svg.innerHTML = h;
+    if (c.length < 2) { out.textContent = 'Polynôme constant : pas de racine.'; return; }
+    var n = c.length - 1, s = [0, 0], p = [1, 0];
+    z.forEach(function (w) { s[0] += w[0]; s[1] += w[1]; p = [p[0] * w[0] - p[1] * w[1], p[0] * w[1] + p[1] * w[0]]; });
+    out.innerHTML = 'degré ' + n + ', racines : ' + z.map(cx).join(' &nbsp;;&nbsp; ') + '<br>somme = ' + fr(s[0], 3) + ' &nbsp; −a<sub>n−1</sub>/a<sub>n</sub> = ' + fr(-(c[1] || 0) / c[0], 3) + ' &nbsp; produit = ' + fr(p[0], 3) + ' &nbsp; (−1)<sup>n</sup>a<sub>0</sub>/a<sub>n</sub> = ' + fr((n % 2 ? -1 : 1) * c[n] / c[0], 3);
+  }
+  sel.addEventListener('change', function () { construire(); dessiner(); });
+  Array.prototype.forEach.call(document.querySelectorAll('button[data-ex]'), function (b) {
+    b.addEventListener('click', function () { coefs = b.getAttribute('data-ex').split(',').map(Number); sel.value = coefs.length - 1; construire(); dessiner(); });
+  });
+  construire(); dessiner();
+})();
+</script>
+
+## Calculer quand les formules ne suffisent plus : la méthode de Newton
+
+Même quand une formule existe, elle est souvent peu pratique, et pour le degré cinq ou plus elle n'existe pas. On calcule alors les racines par approximations successives.
+
+<div class="bloc bloc-def">
+<div class="bloc-titre">Méthode de Newton</div>
+
+Pour résoudre $f(x) = 0$, on part d'une valeur $x_0$ proche d'une racine et l'on construit
+$$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}.$$
+Géométriquement, $x_{n+1}$ est l'abscisse du point où la **tangente** à la courbe en $x_n$ coupe l'axe des abscisses.
+
+</div>
+
+<div class="bloc bloc-prop">
+<div class="bloc-titre">Convergence quadratique</div>
+
+Si $r$ est une racine simple de $f$ ($f(r) = 0$ et $f'(r) \neq 0$), et si $x_0$ est assez proche de $r$, alors la suite $(x_n)$ converge vers $r$, et l'erreur est élevée au carré à chaque pas&nbsp;: $|x_{n+1} - r| \le C|x_n - r|^2$.
+
+</div>
+
+Le nombre de décimales exactes double environ à chaque itération. Pour $f(x) = x^2 - 2$, la méthode donne $x_{n+1} = \frac{1}{2}\left(x_n + \frac{2}{x_n}\right)$, la méthode de Héron (ou «&nbsp;babylonienne&nbsp;») pour $\sqrt{2}$&nbsp;: de $x_0 = 1$, on obtient $\frac{3}{2}$, $\frac{17}{12}$, $\frac{577}{408} \approx 1{,}41421569$, qui est exact à $6$ décimales. Dans la figure suivante, on choisit une équation et un point de départ, puis on déroule les itérations&nbsp;: chaque tangente (en rose) donne le point suivant.
+
+<div class="fig">
+<p class="fig-ctl"><label>Équation&nbsp;: <select id="nw-p"><option value="0">x³ − 2x − 5 = 0 (l'exemple de Newton, 1669)</option><option value="1">x² − 2 = 0</option><option value="2">x³ − x − 1 = 0</option></select></label></p>
+<p class="fig-ctl"><label for="nw-x">Point de départ x₀ = <span id="nw-xv"></span></label><input type="range" id="nw-x" min="1" max="3.4" step="0.1" value="3"></p>
+<p class="fig-ctl"><button type="button" id="nw-1">Itération suivante</button><button type="button" id="nw-5">+ 5 itérations</button><button type="button" id="nw-0">Recommencer</button></p>
+<svg id="nw-svg" viewBox="0 0 460 260" role="img" aria-label="La méthode de Newton : tangentes successives à la courbe"></svg>
+<p class="fig-val" id="nw-val"></p>
+</div>
+<script>
+(function () {
+  var P = [
+    { f: function (x) { return x * x * x - 2 * x - 5; }, d: function (x) { return 3 * x * x - 2; }, x0: 1, x1: 3.4, y0: -8, y1: 32, dep: 3, pas: 0.1, nom: 'x³ − 2x − 5' },
+    { f: function (x) { return x * x - 2; }, d: function (x) { return 2 * x; }, x0: 0.3, x1: 3, y0: -2.5, y1: 7, dep: 3, pas: 0.1, nom: 'x² − 2' },
+    { f: function (x) { return x * x * x - x - 1; }, d: function (x) { return 3 * x * x - 1; }, x0: 0.7, x1: 2.2, y0: -2, y1: 8, dep: 2, pas: 0.1, nom: 'x³ − x − 1' }
+  ];
+  var sp = document.getElementById('nw-p'), sx = document.getElementById('nw-x'), svg = document.getElementById('nw-svg'), out = document.getElementById('nw-val'), xv = document.getElementById('nw-xv');
+  var it = [];
+  function fr(x, d) { return x.toFixed(d).replace('.', ','); }
+  function cur() { return P[parseInt(sp.value, 10)]; }
+  function racine(p) { var x = p.dep, i; for (i = 0; i < 80; i++) { x -= p.f(x) / p.d(x); } return x; }
+  function reset() { var p = cur(); it = [parseFloat(sx.value)]; dessiner(); }
+  function regler() { var p = cur(); sx.min = p.x0; sx.max = p.x1; sx.step = p.pas; sx.value = p.dep; reset(); }
+  function suivant() { var p = cur(), x = it[it.length - 1], d = p.d(x); if (!isFinite(d) || Math.abs(d) < 1e-12 || it.length > 40) { return; } it.push(x - p.f(x) / d); }
+  function dessiner() {
+    var p = cur(), X0 = 40, X1 = 450, Y0 = 20, Y1 = 225, i, h = '';
+    xv.textContent = fr(parseFloat(sx.value), 1);
+    function px(x) { return X0 + (x - p.x0) / (p.x1 - p.x0) * (X1 - X0); }
+    function py(y) { return Y1 - (y - p.y0) / (p.y1 - p.y0) * (Y1 - Y0); }
+    h += '<defs><clipPath id="nw-cl"><rect x="' + X0 + '" y="' + Y0 + '" width="' + (X1 - X0) + '" height="' + (Y1 - Y0) + '"/></clipPath></defs><rect x="' + X0 + '" y="' + Y0 + '" width="' + (X1 - X0) + '" height="' + (Y1 - Y0) + '" fill="#F8FAFC" stroke="#CBD5E1"/>';
+    h += '<g clip-path="url(#nw-cl)"><line x1="' + X0 + '" y1="' + py(0).toFixed(1) + '" x2="' + X1 + '" y2="' + py(0).toFixed(1) + '" stroke="#64748B" stroke-width="1.2"/>';
+    var d = '';
+    for (i = 0; i <= 200; i++) { var x = p.x0 + (p.x1 - p.x0) * i / 200; d += (i ? 'L' : 'M') + px(x).toFixed(1) + ',' + py(p.f(x)).toFixed(1); }
+    h += '<path d="' + d + '" fill="none" stroke="#004D80" stroke-width="2.4"/>';
+    var r = racine(p);
+    for (i = 0; i < it.length; i++) {
+      var xi = it[i], yi = p.f(xi), last = i === it.length - 1, col = last ? '#970E53' : '#E2A8C2';
+      h += '<line x1="' + px(xi).toFixed(1) + '" y1="' + py(0).toFixed(1) + '" x2="' + px(xi).toFixed(1) + '" y2="' + py(yi).toFixed(1) + '" stroke="#94A3B8" stroke-dasharray="3 3"/>';
+      if (!last) { h += '<line x1="' + px(xi).toFixed(1) + '" y1="' + py(yi).toFixed(1) + '" x2="' + px(it[i + 1]).toFixed(1) + '" y2="' + py(0).toFixed(1) + '" stroke="' + col + '" stroke-width="1.6"/>'; }
+      h += '<circle cx="' + px(xi).toFixed(1) + '" cy="' + py(0).toFixed(1) + '" r="' + (last ? 5 : 3.5) + '" fill="' + (last ? '#970E53' : '#C2770B') + '" stroke="#fff"/>';
+    }
+    h += '</g>';
+    h += '<circle cx="' + px(r).toFixed(1) + '" cy="' + py(0).toFixed(1) + '" r="4" fill="none" stroke="#006C65" stroke-width="2"/>';
+    [Math.ceil(p.x0), Math.ceil(p.x0) + 1, Math.ceil(p.x0) + 2].forEach(function (t) { if (t <= p.x1) { h += '<text x="' + px(t).toFixed(1) + '" y="' + (Y1 + 15) + '" font-size="11" text-anchor="middle" fill="#334155" font-family="Georgia,serif">' + t + '</text>'; } });
+    svg.innerHTML = h;
+    var rows = it.slice(0, 9).map(function (x, k) { return 'x<sub>' + k + '</sub> = ' + fr(x, 10) + ' (erreur ' + Math.abs(x - r).toExponential(1).replace('.', ',').replace('e-', ' × 10⁻').replace('e+', ' × 10') + ')'; });
+    out.innerHTML = 'racine ≈ ' + fr(r, 10) + (it.length > 9 ? '<br>… ' : '<br>') + rows.slice(Math.max(0, rows.length - 3)).join('<br>');
+  }
+  sp.addEventListener('change', regler);
+  sx.addEventListener('input', reset);
+  document.getElementById('nw-1').addEventListener('click', function () { suivant(); dessiner(); });
+  document.getElementById('nw-5').addEventListener('click', function () { for (var k = 0; k < 5; k++) { suivant(); } dessiner(); });
+  document.getElementById('nw-0').addEventListener('click', reset);
+  regler();
+})();
+</script>
+
+<details class="encadre">
+<summary class="encadre-titre">Newton, Raphson et l'équation du cinquième degré</summary>
+<p>Isaac Newton a présenté la méthode vers $1669$ sur l'équation $y^3 - 2y - 5 = 0$, qui est devenue l'exemple classique, et John Wallis l'a publiée en $1685$. Joseph Raphson en a donné en $1690$ une version simplifiée, la forme itérative que l'on utilise aujourd'hui. Cette méthode calcule sans difficulté les racines du quintique $x^5 - x - 1 = 0$, dont le théorème d'Abel dit qu'aucune formule n'exprime la racine&nbsp;: le calcul numérique ne se soucie pas de la résolubilité par radicaux.</p>
+</details>
+
+### Quand Newton hésite : les bassins fractals
+
+Dans le plan complexe, la méthode de Newton s'applique au même titre. Chaque racine attire les points de départ qui convergent vers elle, son **bassin d'attraction**. Pour $z^2 - 1$, la frontière entre les deux bassins est une droite. Pour le troisième degré, Arthur Cayley a posé en 1879 la question de la forme des bassins, et c'est à partir des années 1980 que les ordinateurs en ont révélé la structure fractale&nbsp;: la frontière est une courbe infiniment découpée, où les trois bassins se touchent en chaque point.
+
+Dans la figure suivante, chaque point du plan est coloré selon la racine vers laquelle la méthode de Newton converge quand on part de ce point, et plus sombre quand la convergence est lente. Les points en noir ne convergent pas&nbsp;: pour $z^3 - 2z + 2$, le point $0$ est attiré par un cycle $0 \to 1 \to 0$ et n'atteint jamais de racine.
+
+<div class="fig">
+<p class="fig-ctl"><label>Polynôme&nbsp;: <select id="nf-p"><option value="0">z³ − 1</option><option value="1">z⁴ − 1</option><option value="2">z⁵ − 1</option><option value="3">z³ − 2z + 2 (un cycle de période 2)</option><option value="4">z⁵ − z − 1 (aucune formule)</option></select></label></p>
+<canvas id="nf-cv" width="280" height="280" role="img" aria-label="Bassins d'attraction de la méthode de Newton dans le plan complexe"></canvas>
+<p class="fig-val">Les points colorés convergent vers une racine (même couleur pour les points qui vont vers la même racine). Le plan représenté est le carré $[-2 ; 2] \times [-2 ; 2]$.</p>
+</div>
+<script>
+(function () {
+  var cv = document.getElementById('nf-cv'), sel = document.getElementById('nf-p'), ctx = cv.getContext('2d'), W = 280;
+  var POL = [[1, 0, 0, -1], [1, 0, 0, 0, -1], [1, 0, 0, 0, 0, -1], [1, 0, -2, 2], [1, 0, 0, 0, -1, -1]];
+  var PAL = [[0, 77, 128], [194, 119, 11], [151, 14, 83], [0, 108, 101], [107, 79, 160]];
+  function racines(c) {
+    var n = c.length - 1, a = c.map(function (v) { return v / c[0]; }), z = [], k, it, i, j;
+    for (k = 0; k < n; k++) { var th = 2 * Math.PI * k / n + 0.4; z.push([1.2 * Math.cos(th), 1.2 * Math.sin(th)]); }
+    for (it = 0; it < 500; it++) {
+      for (i = 0; i < n; i++) {
+        var pr = 1, pi = 0, nr, ni;
+        for (j = 1; j <= n; j++) { nr = pr * z[i][0] - pi * z[i][1] + a[j]; ni = pr * z[i][1] + pi * z[i][0]; pr = nr; pi = ni; }
+        var dr = 1, di = 0;
+        for (j = 0; j < n; j++) { if (j === i) { continue; } var xr = z[i][0] - z[j][0], xi = z[i][1] - z[j][1]; nr = dr * xr - di * xi; ni = dr * xi + di * xr; dr = nr; di = ni; }
+        var den = dr * dr + di * di; if (den < 1e-300) { continue; }
+        z[i][0] -= (pr * dr + pi * di) / den; z[i][1] -= (pi * dr - pr * di) / den;
+      }
+    }
+    return z;
+  }
+  function dessiner() {
+    var c = POL[parseInt(sel.value, 10)], n = c.length - 1, R = 2, r = racines(c), img = ctx.createImageData(W, W), x, y, k, it;
+    var dc = []; for (k = 0; k < n; k++) { dc.push(c[k] * (n - k)); }
+    for (y = 0; y < W; y++) {
+      for (x = 0; x < W; x++) {
+        var zr = -R + 2 * R * (x + 0.5) / W, zi = R - 2 * R * (y + 0.5) / W, idx = -1, its = 0;
+        for (it = 0; it < 60; it++) {
+          var pr = c[0], pi = 0, qr = dc[0], qi = 0, t;
+          for (k = 1; k <= n; k++) { t = pr * zr - pi * zi + c[k]; pi = pr * zi + pi * zr; pr = t; }
+          for (k = 1; k < n; k++) { t = qr * zr - qi * zi + dc[k]; qi = qr * zi + qi * zr; qr = t; }
+          var den = qr * qr + qi * qi; if (den < 1e-20) { break; }
+          var sr = (pr * qr + pi * qi) / den, si = (pi * qr - pr * qi) / den;
+          zr -= sr; zi -= si;
+          if (sr * sr + si * si < 1e-14) { var best = 1e9, b = 0; for (k = 0; k < n; k++) { var dd = (zr - r[k][0]) * (zr - r[k][0]) + (zi - r[k][1]) * (zi - r[k][1]); if (dd < best) { best = dd; b = k; } } idx = b; its = it; break; }
+        }
+        var o = 4 * (y * W + x);
+        if (idx < 0) { img.data[o] = 0; img.data[o + 1] = 0; img.data[o + 2] = 0; }
+        else { var f = Math.max(0.25, 1 - its / 22), col = PAL[idx % PAL.length]; img.data[o] = col[0] * f + 255 * (1 - f) * 0.0; img.data[o + 1] = col[1] * f; img.data[o + 2] = col[2] * f; }
+        img.data[o + 3] = 255;
+      }
+    }
+    ctx.putImageData(img, 0, 0);
+  }
+  sel.addEventListener('change', dessiner);
+  dessiner();
+})();
+</script>
+
+Sur un exemple aussi simple que $z^3 - 1$, trois bassins se partagent le plan et leurs frontières, très découpées, signifient qu'un point de départ à peine différent peut conduire à une autre racine. C'est un exemple de **sensibilité aux conditions initiales** dans un système pourtant très simple (voir la page sur le <a href="../../../physique/chaos/">chaos</a>).
+
+## Exercices
+
+<details class="exercice">
+<summary class="exercice-titre">Quatre exercices</summary>
+<p><b>1.</b> Résoudre dans $\mathbb{C}$ l'équation $2x^2 - 3x + 5 = 0$. Vérifier avec les relations de Viète.</p>
+<details class="solution">
+<summary>Solution</summary>
+<p>$\Delta = 9 - 40 = -31 < 0$, donc $x_{\pm} = \frac{3 \pm \mathrm{i}\sqrt{31}}{4}$. La somme des racines vaut $\frac{6}{4} = \frac{3}{2} = -\frac{b}{a}$ et le produit $\frac{9 + 31}{16} = \frac{40}{16} = \frac{5}{2} = \frac{c}{a}$.</p>
+</details>
+<p><b>2.</b> Trouver deux nombres dont la somme vaut $10$ et le produit $24$.</p>
+<details class="solution">
+<summary>Solution</summary>
+<p>Ce sont les racines de $x^2 - 10x + 24 = 0$, de discriminant $100 - 96 = 4$, soit $x = \frac{10 \pm 2}{2}$&nbsp;: $4$ et $6$.</p>
+</details>
+<p><b>3.</b> Montrer que $\sqrt[3]{2 + \sqrt{5}} + \sqrt[3]{2 - \sqrt{5}} = 1$.</p>
+<details class="solution">
+<summary>Solution</summary>
+<p>Posons $t = u + v$ avec $u = \sqrt[3]{2 + \sqrt{5}}$ et $v = \sqrt[3]{2 - \sqrt{5}}$. On a $u^3 + v^3 = 4$ et $uv = \sqrt[3]{4 - 5} = -1$, donc $t^3 = u^3 + v^3 + 3uv\,t = 4 - 3t$, c'est-à-dire $t^3 + 3t - 4 = 0$, soit $(t - 1)(t^2 + t + 4) = 0$. Le second facteur a pour discriminant $-15 < 0$, donc la seule racine réelle est $t = 1$. (On reconnaît la formule de Cardan pour $p = 3$ et $q = -4$.)</p>
+</details>
+<p><b>4.</b> Appliquer deux itérations de la méthode de Newton à $f(x) = x^2 - 3$ en partant de $x_0 = 2$.</p>
+<details class="solution">
+<summary>Solution</summary>
+<p>$x_{n+1} = x_n - \frac{x_n^2 - 3}{2x_n} = \frac{1}{2}\left(x_n + \frac{3}{x_n}\right)$. Donc $x_1 = \frac{1}{2}\left(2 + \frac{3}{2}\right) = \frac{7}{4} = 1{,}75$ et $x_2 = \frac{1}{2}\left(\frac{7}{4} + \frac{12}{7}\right) = \frac{97}{56} \approx 1{,}7321429$. On a $\sqrt{3} \approx 1{,}7320508$&nbsp;: l'erreur passe de $0{,}27$ à $0{,}018$ puis à $9{,}2 \times 10^{-5}$.</p>
+</details>
+</details>

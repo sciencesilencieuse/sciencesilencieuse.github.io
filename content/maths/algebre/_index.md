@@ -17,7 +17,16 @@ L'algèbre (de l'arabe الجبر, al-jabr, signifiant reconstruction ou réunio
 <span class="math-illus" aria-hidden="true"><img src="/illus/presequations.svg" alt=""></span>
 <h3><a href="./equations/">Équations</a></h3>
 </div>
-<div class="carte-texte">Ce que deviennent les équations polynomiales quand on laisse la variable se promener dans les complexes.</div>
+<div class="carte-texte">Des équations du second degré à la méthode de Newton&nbsp;: Cardan, Abel et Galois, les racines dans le plan complexe.</div>
+<div class="theme-subgroup">
+<div class="link-list">
+  <a href="./equations/#le-second-degré" class="math-btn">Second degré</a>
+  <a href="./equations/#le-troisième-et-le-quatrième-degré--cardan-et-ferrari" class="math-btn">Cardan et Ferrari</a>
+  <a href="./equations/#le-cinquième-degré--abel-ruffini-et-galois" class="math-btn">Abel et Galois</a>
+  <a href="./equations/#le-théorème-fondamental-de-lalgèbre" class="math-btn">Théorème fondamental</a>
+  <a href="./equations/#calculer-quand-les-formules-ne-suffisent-plus--la-méthode-de-newton" class="math-btn">Newton</a>
+</div>
+</div>
 </div>
 
 <div class="math-card c-orange">
