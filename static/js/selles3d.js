@@ -42,7 +42,7 @@ function etiquette(texte, taille, couleur, italique) {
 }
 
 function creerSurface(hote, { label, elev = 24, azim = 28, ratio = 0.8 }) {
-  const S = creerScene(hote, { ratio, hMax: 540, label });
+  const S = creerScene(hote, { ratio, hMax: 540, label, manip: true });
   if (!S) return null;
   const groupe = new THREE.Group();
   S.scene.add(groupe);
@@ -94,7 +94,13 @@ function creerSurface(hote, { label, elev = 24, azim = 28, ratio = 0.8 }) {
     g.setAttribute('color', new THREE.Float32BufferAttribute(coul, 3));
     g.setIndex(idx);
     g.computeVertexNormals();
-    const surf = new THREE.Mesh(g, new THREE.MeshStandardMaterial({ vertexColors: true, side: THREE.DoubleSide, roughness: 0.6, metalness: 0 }));
+    // ombrage léger « cuit » dans les couleurs (la teinte reste celle de l'échelle Spectral, sans éclairage qui la délave)
+    const nor = g.attributes.normal.array, cc = g.attributes.color.array, lum = new THREE.Vector3(-0.4, 0.85, 0.5).normalize();
+    for (let k = 0; k < nor.length; k += 3) {
+      const f = 0.9 + 0.13 * Math.abs(nor[k] * lum.x + nor[k + 1] * lum.y + nor[k + 2] * lum.z);
+      cc[k] = Math.min(1, cc[k] * f); cc[k + 1] = Math.min(1, cc[k + 1] * f); cc[k + 2] = Math.min(1, cc[k + 2] * f);
+    }
+    const surf = new THREE.Mesh(g, new THREE.MeshBasicMaterial({ vertexColors: true, side: THREE.DoubleSide }));
     groupe.add(surf);
 
     // quadrillage fin
@@ -148,24 +154,24 @@ function creerSurface(hote, { label, elev = 24, azim = 28, ratio = 0.8 }) {
     if (premiere) { S.cadrer(boite, cible, e, a); premiere = false; }
   }
 
-  function vue(elevation, azimut) { e = elevation; a = azimut; S.cadrer(boite, cible, e, a); }
+  function vue(elevation, azimut) { e = elevation; a = azimut; S.orienter(e, a); }
   return { S, dessiner, vue, elev, azim };
 }
 
-/* Curseurs de rotation pour les écrans tactiles (la rotation au doigt est désactivée pour ne pas bloquer le défilement) */
+/* Mode d'emploi et bouton de retour à la vue de départ.
+   Souris : glisser tourne, molette zoome, double-clic revient à la vue de départ.
+   Doigt : un doigt tourne la surface, deux doigts zooment (la figure capte les gestes ; pour
+   faire défiler la page, on touche en dehors d'elle). */
 function commandesTactiles(root, surface) {
-  if (!surface.S.tactile) {
-    const astuce = document.createElement('span');
-    astuce.className = 'anim-astuce';
-    astuce.textContent = 'Glisser pour tourner la surface, double-clic pour revenir à la vue de départ';
-    root.querySelector('.anim-ctrl').appendChild(astuce);
-    return;
-  }
   const ctrl = root.querySelector('.anim-ctrl');
-  ctrl.insertAdjacentHTML('beforeend', '<label>Azimut <input type="range" min="-180" max="180" step="1" value="' + surface.azim + '" data-k="az"></label><label>Élévation <input type="range" min="5" max="80" step="1" value="' + surface.elev + '" data-k="el"></label>');
-  const az = ctrl.querySelector('[data-k="az"]'), el = ctrl.querySelector('[data-k="el"]');
-  const f = () => surface.vue(parseFloat(el.value), parseFloat(az.value));
-  az.addEventListener('input', f); el.addEventListener('input', f);
+  ctrl.insertAdjacentHTML('beforeend', '<button type="button" class="sec" data-k="reset">Vue de départ</button>');
+  ctrl.querySelector('[data-k="reset"]').addEventListener('click', () => surface.S.vueInitiale());
+  const astuce = document.createElement('span');
+  astuce.className = 'anim-astuce';
+  astuce.textContent = surface.S.tactile
+    ? 'Un doigt : tourner. Deux doigts : zoomer. Pour faire défiler la page, touchez en dehors de la figure.'
+    : 'Glisser : tourner. Molette : zoomer. Double-clic : vue de départ.';
+  ctrl.appendChild(astuce);
 }
 
 const GRILLE = (a, b, n) => Array.from({ length: n + 1 }, (_, i) => a + (b - a) * i / n);

@@ -213,7 +213,7 @@ L'inégalité est claire&nbsp;: pour tous $i$ et $j$, $\min_{j'} a_{ij'} \le a_{
 <div class="bloc bloc-def">
 <div class="bloc-titre">Point col</div>
 
-Le jeu est **stable** quand $\underline{V} = \overline{V}$. Il possède alors un **point col** (ou point-selle) $(i^*, j^*)$&nbsp;: le gain $a_{i^*j^*}$ est à la fois le plus petit de sa ligne et le plus grand de sa colonne. Aucun joueur n'est incité à changer de stratégie, et la valeur commune $V = a_{i^*j^*}$ est la **valeur du jeu**.
+Le jeu est **stable** quand $\underline{V} = \overline{V}$. Il possède alors un **point col** (ou point-selle) $(i^{\ast}, j^{\ast})$&nbsp;: le gain $a_{i^{\ast}j^{\ast}}$ est à la fois le plus petit de sa ligne et le plus grand de sa colonne. Aucun joueur n'est incité à changer de stratégie, et la valeur commune $V = a_{i^{\ast}j^{\ast}}$ est la **valeur du jeu**.
 
 </div>
 
@@ -244,7 +244,7 @@ $$V(p, q) = p q a + p(1-q) b + (1-p) q c + (1-p)(1-q) d.$$
 <div class="bloc bloc-theo">
 <div class="bloc-titre">Minimax (von Neumann, 1928)</div>
 
-Pour tout jeu à somme nulle fini à deux joueurs, il existe des stratégies mixtes optimales pour les deux joueurs, telles que Bleu, en choisissant $p^*$, s'assure un gain espéré au moins égal à un nombre $V$, et Rouge, en choisissant $q^*$, s'assure de ne pas perdre plus de $V$&nbsp;:
+Pour tout jeu à somme nulle fini à deux joueurs, il existe des stratégies mixtes optimales pour les deux joueurs, telles que Bleu, en choisissant $p^{\ast}$, s'assure un gain espéré au moins égal à un nombre $V$, et Rouge, en choisissant $q^{\ast}$, s'assure de ne pas perdre plus de $V$&nbsp;:
 $$\max_p \min_q V(p, q) = \min_q \max_p V(p, q) = V.$$
 
 </div>
@@ -271,15 +271,15 @@ Le gain pour les deux au point minimax est alors $V(p=1/4,q=1/2) = 4,5$.
 <div class="bloc-titre">Stratégies optimales d'un jeu 2 × 2 sans point col</div>
 
 Pour la matrice de gains $\begin{pmatrix} a & b \\\\ c & d \end{pmatrix}$ sans point col, avec $\Delta = a - b - c + d \neq 0$, les stratégies mixtes optimales et la valeur du jeu sont
-$$p^* = \frac{d - c}{\Delta}, \qquad q^* = \frac{d - b}{\Delta}, \qquad V = \frac{ad - bc}{\Delta}.$$
+$$p^{\ast} = \frac{d - c}{\Delta}, \qquad q^{\ast} = \frac{d - b}{\Delta}, \qquad V = \frac{ad - bc}{\Delta}.$$
 
 </div>
 
-On les obtient en annulant les dérivées partielles de $V(p, q)$&nbsp;: $\frac{\partial V}{\partial q} = p(a - b) + (1 - p)(c - d) = 0$ donne $p^*$, et $\frac{\partial V}{\partial p} = q(a - c) + (1 - q)(b - d) = 0$ donne $q^*$. Pour la matrice précédente ($a = 3$, $b = 6$, $c = 5$, $d = 4$), $\Delta = -4$, donc $p^* = \frac{4 - 5}{-4} = \frac{1}{4}$, $q^* = \frac{4 - 6}{-4} = \frac{1}{2}$ et $V = \frac{12 - 30}{-4} = 4{,}5$.
+On les obtient en annulant les dérivées partielles de $V(p, q)$&nbsp;: $\frac{\partial V}{\partial q} = p(a - b) + (1 - p)(c - d) = 0$ donne $p^{\ast}$, et $\frac{\partial V}{\partial p} = q(a - c) + (1 - q)(b - d) = 0$ donne $q^{\ast}$. Pour la matrice précédente ($a = 3$, $b = 6$, $c = 5$, $d = 4$), $\Delta = -4$, donc $p^{\ast} = \frac{4 - 5}{-4} = \frac{1}{4}$, $q^{\ast} = \frac{4 - 6}{-4} = \frac{1}{2}$ et $V = \frac{12 - 30}{-4} = 4{,}5$.
 
 <details class="encadre">
 <summary class="encadre-titre">L'optimum rend l'adversaire indifférent</summary>
-<p>Dans la figure précédente, la ligne bleue suit le gain de Bleu quand il fait varier $p$ alors que Rouge joue sa stratégie optimale $q^* = \frac{1}{2}$. La ligne est horizontale&nbsp;: quelle que soit la valeur de $p$, Bleu gagne $4{,}5$. De même, la ligne rouge est horizontale. À l'équilibre, chaque joueur choisit ses probabilités pour que <b>l'autre ne puisse tirer aucun avantage de sa propre stratégie</b>. C'est pourquoi une stratégie mixte optimale ne se déduit pas des gains du joueur lui-même, mais de ceux de son adversaire. Dans la surface, cela se lit par une pente nulle dans les deux directions au point col.</p>
+<p>Dans la figure précédente, la ligne bleue suit le gain de Bleu quand il fait varier $p$ alors que Rouge joue sa stratégie optimale $q^{\ast} = \frac{1}{2}$. La ligne est horizontale&nbsp;: quelle que soit la valeur de $p$, Bleu gagne $4{,}5$. De même, la ligne rouge est horizontale. À l'équilibre, chaque joueur choisit ses probabilités pour que <b>l'autre ne puisse tirer aucun avantage de sa propre stratégie</b>. C'est pourquoi une stratégie mixte optimale ne se déduit pas des gains du joueur lui-même, mais de ceux de son adversaire. Dans la surface, cela se lit par une pente nulle dans les deux directions au point col.</p>
 </details>
 
 ### Retour à la guerre froide
@@ -331,12 +331,12 @@ Il n'y a pas de point col (les gains minimaux des lignes valent $-1$, les gains 
 <p><b>1.</b> Résoudre le jeu de matrice de gains $\begin{pmatrix} 2 & 5 \\ 4 & 3 \end{pmatrix}$ (point col éventuel, sinon stratégies mixtes optimales et valeur).</p>
 <details class="solution">
 <summary>Solution</summary>
-<p>Les gains minimaux des lignes sont $2$ et $3$ (maximin $3$), les gains maximaux des colonnes sont $4$ et $5$ (minimax $4$). Comme $3 < 4$, il n'y a pas de point col. Avec $\Delta = 2 - 5 - 4 + 3 = -4$&nbsp;: $p^* = \frac{3 - 4}{-4} = \frac{1}{4}$, $q^* = \frac{3 - 5}{-4} = \frac{1}{2}$ et $V = \frac{6 - 20}{-4} = 3{,}5$.</p>
+<p>Les gains minimaux des lignes sont $2$ et $3$ (maximin $3$), les gains maximaux des colonnes sont $4$ et $5$ (minimax $4$). Comme $3 < 4$, il n'y a pas de point col. Avec $\Delta = 2 - 5 - 4 + 3 = -4$&nbsp;: $p^{\ast} = \frac{3 - 4}{-4} = \frac{1}{4}$, $q^{\ast} = \frac{3 - 5}{-4} = \frac{1}{2}$ et $V = \frac{6 - 20}{-4} = 3{,}5$.</p>
 </details>
 <p><b>2.</b> À «&nbsp;pile ou face&nbsp;», Bleu gagne $1$ si les deux joueurs montrent le même côté et perd $1$ sinon. Quelle est la stratégie optimale&nbsp;? Quelle est la valeur du jeu&nbsp;?</p>
 <details class="solution">
 <summary>Solution</summary>
-<p>La matrice est $\begin{pmatrix} 1 & -1 \\ -1 & 1 \end{pmatrix}$, sans point col (maximin $-1$, minimax $1$). $\Delta = 4$, donc $p^* = \frac{1 - (-1)}{4} = \frac{1}{2}$, $q^* = \frac{1}{2}$ et $V = \frac{1 - 1}{4} = 0$. Chaque joueur doit jouer pile ou face au hasard, et le jeu est équitable.</p>
+<p>La matrice est $\begin{pmatrix} 1 & -1 \\ -1 & 1 \end{pmatrix}$, sans point col (maximin $-1$, minimax $1$). $\Delta = 4$, donc $p^{\ast} = \frac{1 - (-1)}{4} = \frac{1}{2}$, $q^{\ast} = \frac{1}{2}$ et $V = \frac{1 - 1}{4} = 0$. Chaque joueur doit jouer pile ou face au hasard, et le jeu est équitable.</p>
 </details>
 <p><b>3.</b> Montrer que $\underline{V} \le \overline{V}$ pour toute matrice de gains.</p>
 <details class="solution">

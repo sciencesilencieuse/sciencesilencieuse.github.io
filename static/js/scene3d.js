@@ -29,8 +29,10 @@ export async function boucle(cond, r, corps, attente) {
 
 export const couleur = c => new THREE.Color(`rgb(${c.join(',')})`);
 
-/* hote : élément qui reçoit le canevas ; ratio : hauteur / largeur ; hMax : hauteur maximale */
-export function creerScene(hote, { ratio = 0.62, hMax = 480, label = '' } = {}) {
+/* hote : élément qui reçoit le canevas ; ratio : hauteur / largeur ; hMax : hauteur maximale ;
+   manip : rotation ET zoom à la souris (molette) comme au doigt (un doigt glissé horizontalement
+   tourne la scène, la page défile toujours verticalement ; deux doigts zooment et inclinent) */
+export function creerScene(hote, { ratio = 0.62, hMax = 480, label = '', manip = false } = {}) {
   let renderer;
   try { renderer = new THREE.WebGLRenderer({ antialias: true }); }
   catch (e) {
@@ -85,9 +87,23 @@ export function creerScene(hote, { ratio = 0.62, hMax = 480, label = '' } = {}) 
   function placer() {
     if (!vue) return;
     const { boite, cible, dir } = vue;
-    camera.position.copy(cible).addScaledVector(dir, distance(boite, cible, dir));
+    const d = distance(boite, cible, dir);
+    camera.position.copy(cible).addScaledVector(dir, d);
     camera.lookAt(cible);
-    if (controles) { controles.target.copy(cible); controles.update(); }
+    if (controles) {
+      controles.target.copy(cible);
+      if (manip) { controles.minDistance = d * 0.3; controles.maxDistance = d * 2.2; }
+      controles.update();
+    }
+  }
+  /* change l'orientation de la caméra en gardant sa distance (donc le zoom en cours) */
+  function orienter(elevation, azimut) {
+    if (!vue) return;
+    const e = THREE.MathUtils.degToRad(elevation), a = THREE.MathUtils.degToRad(azimut);
+    const d = camera.position.distanceTo(vue.cible);
+    camera.position.copy(vue.cible).add(new THREE.Vector3(Math.sin(a) * Math.cos(e), Math.sin(e), Math.cos(a) * Math.cos(e)).multiplyScalar(d));
+    camera.lookAt(vue.cible);
+    if (controles) { controles.target.copy(vue.cible); controles.update(); }
   }
   /* boite : ce qui doit tenir à l'écran ; cible : point visé ; elevation, azimut en degrés
      (azimut 0 : on regarde dans le sens des z décroissants, comme la caméra par défaut de VPython) */
@@ -110,9 +126,14 @@ export function creerScene(hote, { ratio = 0.62, hMax = 480, label = '' } = {}) 
 
   // ---------------------------------------------------------------- rotation à la souris
   let controles = null;
-  if (window.matchMedia && window.matchMedia('(pointer: fine)').matches) {
+  const pointeurFin = !!(window.matchMedia && window.matchMedia('(pointer: fine)').matches);
+  if (pointeurFin || manip) {
     controles = new OrbitControls(camera, cv);
-    Object.assign(controles, { enableZoom: false, enablePan: false, enableDamping: true, dampingFactor: 0.12, rotateSpeed: 0.7, maxPolarAngle: Math.PI * 0.49 });
+    Object.assign(controles, { enableZoom: manip, enablePan: false, enableDamping: true, dampingFactor: 0.12, rotateSpeed: 0.7, maxPolarAngle: manip ? Math.PI * 0.96 : Math.PI * 0.49 });
+    if (manip) {
+      controles.zoomSpeed = 0.8;
+      controles.touches = { ONE: THREE.TOUCH.ROTATE, TWO: THREE.TOUCH.DOLLY_ROTATE };
+    }
     cv.style.cursor = 'grab';
     cv.addEventListener('pointerdown', () => { cv.style.cursor = 'grabbing'; });
     window.addEventListener('pointerup', () => { cv.style.cursor = 'grab'; });
@@ -147,5 +168,5 @@ export function creerScene(hote, { ratio = 0.62, hMax = 480, label = '' } = {}) 
   new IntersectionObserver(e => { visible = e[0].isIntersecting; if (visible) tourner(); }, { rootMargin: '100px' }).observe(cv);
   taille(); tourner();
 
-  return { scene, camera, renderer, cadrer, vueInitiale: placer, tactile: !controles };
+  return { scene, camera, renderer, cadrer, orienter, vueInitiale: placer, tactile: !pointeurFin };
 }
