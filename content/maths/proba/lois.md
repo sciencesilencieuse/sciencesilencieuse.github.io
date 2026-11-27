@@ -153,6 +153,23 @@ details.solution > summary
     color: #004D80;
     cursor: pointer;
 }
+.tbl
+{
+    border-collapse: collapse;
+    margin: 0.6em auto;
+    font-size: 0.95em;
+}
+.tbl td, .tbl th
+{
+    border-bottom: 1px solid #C7DDDC;
+    padding: 0.2em 0.6em;
+    text-align: right;
+}
+.tbl th
+{
+    text-align: left;
+    font-weight: normal;
+}
 .fig-val
 {
     font-size: 0.95em;
@@ -388,16 +405,7 @@ ia, ib = intervalle(n, p, seuil)
 print(f"\nL'intervalle de fluctuation au seuil de {seuil * 100:.1f} % (probabilité de {proba_intervalle * 100:.1f} %) pour une proportion p = {p * 100:.1f} % dans un échantillon de taille {n} est :\n[{(ia / n) * 100:.1f} % ; {(ib / n) * 100:.1f} %]\n(soit entre {ia} et {ib} individus)")
 {{< /runpython >}}
 
-On pourra vérifier l'intervalle graphiquement avec l'applet GeoGebra suivant.
-
-<div style="max-width: 800px; margin: 0 auto;">
-  <iframe
-    src="https://www.geogebra.org/material/iframe/id/w8q2tjvn/width/800/height/700/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false"
-    title="Intervalle de fluctuation et loi binomiale"
-    style="width: 100%; aspect-ratio: 8 / 7; border: 0;"
-    scrolling="no">
-  </iframe>
-</div>
+On peut vérifier l'intervalle graphiquement avec la figure précédente, qui indique l'intervalle de fluctuation pour le seuil choisi.
 
 <details class="exercice">
 <summary class="exercice-titre">Le dé est-il pipé&nbsp;?</summary>
@@ -575,7 +583,7 @@ $$P\left(a \le \frac{X_n - np}{\sqrt{np(1-p)}} \le b\right) \longrightarrow \int
 
 </div>
 
-On le voit dans la figure de la loi binomiale ci-dessus&nbsp;: en cochant la case «&nbsp;courbe en cloche&nbsp;», la gaussienne de même espérance et de même écart-type épouse les barres dès que $n$ est assez grand (et $p$ pas trop proche de $0$ ou de $1$). C'est ce qui justifie l'intervalle de fluctuation asymptotique $p \pm 1{,}96\sqrt{\frac{p(1-p)}{n}}$. On peut à nouveau tirer profit de l'applet GeoGebra qui précède pour obtenir des intervalles de fluctuation.
+On le voit dans la figure de la loi binomiale ci-dessus&nbsp;: en cochant la case «&nbsp;courbe en cloche&nbsp;», la gaussienne de même espérance et de même écart-type épouse les barres dès que $n$ est assez grand (et $p$ pas trop proche de $0$ ou de $1$). C'est ce qui justifie l'intervalle de fluctuation asymptotique $p \pm 1{,}96\sqrt{\frac{p(1-p)}{n}}$.
 
 <details class="encadre">
 <summary class="encadre-titre">Pourquoi la gaussienne est-elle partout&nbsp;?</summary>
@@ -592,3 +600,326 @@ On le voit dans la figure de la loi binomiale ci-dessus&nbsp;: en cochant la cas
 <p>Une marge de $\pm 1$ point s'écrit $\frac{1}{\sqrt{n}} = 0{,}01$, soit $n = 10\,000$ personnes.</p>
 </details>
 </details>
+
+
+## Loi de Poisson
+
+### Compter des événements rares
+
+La loi binomiale compte les succès parmi un nombre $n$ d'essais connu. Mais il arrive qu'on compte des événements qui surviennent à des instants ou à des endroits aléatoires, sans qu'aucun nombre d'essais ne s'impose&nbsp;: les désintégrations d'un échantillon radioactif, les appels reçus par un standard, les coquilles d'un livre, les gouttes de pluie sur un carrelage. On connaît seulement une valeur moyenne. La loi de Poisson décrit ces comptages.
+
+<div class="bloc bloc-def">
+<div class="bloc-titre">Loi de Poisson</div>
+
+Soit $\lambda > 0$. Une variable aléatoire $X$ à valeurs entières suit la **loi de Poisson** de paramètre $\lambda$, notée $\mathcal{P}(\lambda)$, si pour tout entier $k \ge 0$,
+$$P(X = k) = \mathrm{e}^{-\lambda}\frac{\lambda^k}{k!}.$$
+
+</div>
+
+<div class="bloc bloc-prop">
+<div class="bloc-titre">Espérance et variance de la loi de Poisson</div>
+
+Si $X$ suit $\mathcal{P}(\lambda)$, alors $E(X) = V(X) = \lambda$, donc $\sigma(X) = \sqrt{\lambda}$.
+
+</div>
+
+Le paramètre $\lambda$ est donc le nombre moyen d'événements, et la fluctuation typique autour de cette moyenne vaut $\sqrt{\lambda}$. L'égalité de l'espérance et de la variance caractérise les comptages de Poisson&nbsp;: un comptage dont la variance est très différente de la moyenne n'est pas poissonnien.
+
+<details class="encadre">
+<summary class="encadre-titre">Le calcul de l'espérance et de la variance</summary>
+<p>Avec $\sum_{k \ge 0} \frac{\lambda^k}{k!} = \mathrm{e}^{\lambda}$, on a $E(X) = \sum_{k \ge 1} k\,\mathrm{e}^{-\lambda}\frac{\lambda^k}{k!} = \lambda\,\mathrm{e}^{-\lambda}\sum_{k \ge 1}\frac{\lambda^{k-1}}{(k-1)!} = \lambda$. De même, $E\big(X(X-1)\big) = \sum_{k \ge 2} k(k-1)\,\mathrm{e}^{-\lambda}\frac{\lambda^k}{k!} = \lambda^2$, donc $E(X^2) = \lambda^2 + \lambda$ et $V(X) = E(X^2) - E(X)^2 = \lambda$.</p>
+</details>
+
+### De la binomiale à la loi de Poisson
+
+<div class="bloc bloc-theo">
+<div class="bloc-titre">Loi des événements rares</div>
+
+Soit $X_n$ une variable de loi $\mathcal{B}(n, p_n)$ avec $np_n \to \lambda$ quand $n \to +\infty$. Alors, pour tout entier $k$,
+$$P(X_n = k) \longrightarrow \mathrm{e}^{-\lambda}\frac{\lambda^k}{k!}.$$
+
+</div>
+
+Quand on a un très grand nombre d'essais ($n$ grand) dont chacun réussit très rarement ($p$ petit), le nombre de succès ne dépend plus que du produit $\lambda = np$. Bortkiewicz parlait de «&nbsp;loi des petits nombres&nbsp;». En pratique, l'approximation est excellente dès que $n \ge 30$ et $p \le 0{,}1$.
+
+<div class="bloc bloc-preuve">
+<div class="bloc-titre">Démonstration de la loi des événements rares</div>
+
+Prenons $p = \frac{\lambda}{n}$. Alors
+$$P(X_n = k) = \frac{n(n-1)\cdots(n-k+1)}{k!}\left(\frac{\lambda}{n}\right)^k\left(1 - \frac{\lambda}{n}\right)^{n-k} = \frac{\lambda^k}{k!}\ A_n B_n C_n,$$
+où $A_n = \frac{n(n-1)\cdots(n-k+1)}{n^k}$, $B_n = \left(1 - \frac{\lambda}{n}\right)^{n}$ et $C_n = \left(1 - \frac{\lambda}{n}\right)^{-k}$. Le facteur $A_n$ est un produit de $k$ termes $\frac{n-j}{n}$ qui tendent tous vers $1$. Le facteur $B_n$ tend vers $\mathrm{e}^{-\lambda}$&nbsp;: c'est la limite classique qui définit l'exponentielle. Le facteur $C_n$ tend vers $1$, puisque $k$ est fixé. Le produit tend donc vers $\mathrm{e}^{-\lambda}\frac{\lambda^k}{k!}$.
+
+</div>
+
+Prenons $p = \frac{\lambda}{n}$. Alors
+$$P(X_n = k) = \frac{n(n-1)\cdots(n-k+1)}{k!}\left(\frac{\lambda}{n}\right)^k\left(1 - \frac{\lambda}{n}\right)^{n-k} = \frac{\lambda^k}{k!}\cdot\underbrace{\frac{n(n-1)\cdots(n-k+1)}{n^k}}\_{\to1}\cdot\underbrace{\left(1 - \frac{\lambda}{n}\right)^{n}}\_{\to\mathrm{e}^{-\lambda}}\cdot\underbrace{\left(1 - \frac{\lambda}{n}\right)^{-k}}\_{\to1}.$$
+Le premier facteur est un produit de $k$ termes qui tendent vers $1$, le deuxième est la limite classique qui définit l'exponentielle, et le dernier tend vers $1$ puisque $k$ est fixé. Le produit tend donc vers $\mathrm{e}^{-\lambda}\frac{\lambda^k}{k!}$.
+
+</div>
+
+Dans la figure suivante, les barres sont la loi $\mathcal{P}(\lambda)$ et les points la loi binomiale $\mathcal{B}(n, \frac{\lambda}{n})$, de même moyenne $\lambda$. Quand on augmente $n$ à $\lambda$ fixé, les points se posent sur les barres.
+
+<div class="fig">
+<p class="fig-ctl"><label for="po-l">Moyenne $\lambda$&nbsp;: <span id="po-lv"></span></label><input type="range" id="po-l" min="0.5" max="20" step="0.1" value="3"></p>
+<p class="fig-ctl"><label for="po-n">Nombre d'essais $n$ de la binomiale&nbsp;: <span id="po-nv"></span></label><input type="range" id="po-n" min="2" max="200" step="1" value="10"></p>
+<svg id="po-svg" viewBox="0 0 460 230" role="img" aria-label="Loi de Poisson en barres et loi binomiale de même moyenne en points"></svg>
+<p class="fig-val" id="po-val"></p>
+</div>
+<script>
+(function () {
+  var sl = document.getElementById('po-l'), sn = document.getElementById('po-n'), svg = document.getElementById('po-svg'), out = document.getElementById('po-val');
+  var lv = document.getElementById('po-lv'), nv = document.getElementById('po-nv'), lf = [0], i;
+  for (i = 1; i <= 400; i++) { lf.push(lf[i - 1] + Math.log(i)); }
+  function pp(l, k) { return Math.exp(-l + k * Math.log(l) - lf[k]); }
+  function pb(n, p, k) { return k > n ? 0 : Math.exp(lf[n] - lf[k] - lf[n - k] + k * Math.log(p) + (n - k) * Math.log(1 - p)); }
+  function fr(x, d) { return x.toFixed(d).replace('.', ','); }
+  function dessiner() {
+    var l = parseFloat(sl.value), n = parseInt(sn.value, 10), p = l / n, ok = p < 0.99, k, mx = 0;
+    lv.textContent = fr(l, 1); nv.textContent = n;
+    var K = Math.min(60, Math.ceil(l + 6 * Math.sqrt(l) + 4)), A = [], Bn = [];
+    for (k = 0; k <= K; k++) { A.push(pp(l, k)); Bn.push(ok ? pb(n, p, k) : 0); mx = Math.max(mx, A[k], Bn[k]); }
+    var X0 = 30, X1 = 448, Y0 = 195, Y1 = 14, bw = (X1 - X0) / (K + 1), h = '<line x1="' + X0 + '" y1="' + Y0 + '" x2="' + X1 + '" y2="' + Y0 + '" stroke="#64748B" stroke-width="1.2"/>';
+    function ys(v) { return Y0 - (Y0 - Y1) * v / (mx * 1.1); }
+    for (k = 0; k <= K; k++) {
+      h += '<rect x="' + (X0 + k * bw + 0.5).toFixed(1) + '" y="' + ys(A[k]).toFixed(1) + '" width="' + Math.max(0.6, bw - 1).toFixed(1) + '" height="' + (Y0 - ys(A[k])).toFixed(1) + '" fill="#006C65" fill-opacity="0.6"/>';
+      if (ok) { h += '<circle cx="' + (X0 + (k + 0.5) * bw).toFixed(1) + '" cy="' + ys(Bn[k]).toFixed(1) + '" r="' + Math.min(4.2, Math.max(2, bw / 3)).toFixed(1) + '" fill="#C2770B" stroke="#fff" stroke-width="0.8"/>'; }
+    }
+    var st = 1, ca = [1, 2, 5, 10, 20];
+    for (i = 0; i < ca.length; i++) { st = ca[i]; if (K / st <= 10) { break; } }
+    for (k = 0; k <= K; k += st) { h += '<text x="' + (X0 + (k + 0.5) * bw).toFixed(1) + '" y="' + (Y0 + 16) + '" font-size="12" text-anchor="middle" fill="#334155" font-family="Georgia,serif">' + k + '</text>'; }
+    h += '<text x="' + X1 + '" y="' + (Y0 + 32) + '" font-size="12" text-anchor="end" fill="#334155" font-family="Georgia,serif" font-style="italic">k</text>';
+    svg.innerHTML = h;
+    var tv = 0;
+    if (ok) { for (k = 0; k <= 400; k++) { tv += Math.abs(pp(l, k) - pb(n, p, k)); } tv /= 2; }
+    out.innerHTML = ok ? '<span style="color:#006C65">barres : Poisson</span> &nbsp; <span style="color:#C2770B">points : binomiale B(' + n + ' ; ' + fr(p, 3) + ')</span><br>écart entre les deux lois (distance en variation) : <b>' + fr(tv, 4) + '</b>' : 'Il faut n > λ pour que p = λ/n soit une probabilité.';
+  }
+  sl.addEventListener('input', dessiner); sn.addEventListener('input', dessiner);
+  dessiner();
+})();
+</script>
+
+### Pourquoi la radioactivité est poissonnienne
+
+Un échantillon contient $N$ noyaux identiques, dont chacun a une probabilité $p = \frac{\Delta t}{\tau}$, très petite, de se désintégrer pendant un intervalle $\Delta t$ très court devant la durée de vie moyenne $\tau$, indépendamment des autres. Le nombre de désintégrations observées pendant $\Delta t$ suit donc la loi binomiale $\mathcal{B}(N, p)$ avec $N$ immense et $p$ minuscule, c'est-à-dire, d'après le théorème précédent, une loi de Poisson de paramètre $\lambda = Np = \frac{N\Delta t}{\tau}$, le produit du taux moyen de désintégrations par la durée de comptage. Trois conséquences pour qui compte des événements&nbsp;:
+
+- **L'incertitude d'un comptage.** Si l'on a compté $N_c$ événements, la fluctuation typique est $\sqrt{N_c}$, soit une incertitude relative de $\frac{1}{\sqrt{N_c}}$. Pour mesurer un taux à 1&nbsp;% près, il faut compter $10000$ événements&nbsp;; pour le mesurer deux fois plus précisément, il faut compter quatre fois plus longtemps.
+- **Le bruit de comptage** (ou bruit de grenaille, *shot noise*). Les photons reçus par un capteur, les électrons qui franchissent une jonction arrivent de façon indépendante et suivent la même loi&nbsp;: le rapport signal sur bruit d'une image plafonne à $\sqrt{N_c}$, quelle que soit la qualité de l'électronique.
+- **Une vérification expérimentale.** Rutherford et Geiger ont compté en 1910 les scintillations produites par les particules $\alpha$ d'une source de polonium sur plus de $2600$ intervalles de $7{,}5$ s, avec une moyenne d'environ $3{,}9$ particules par intervalle. La fréquence observée de chaque valeur $k$ suivait la loi de Poisson, ce que le mathématicien Harry Bateman a établi dans un appendice du même article.
+
+### Le processus de Poisson et la loi exponentielle
+
+Supposons que des événements indépendants se produisent à un taux moyen constant $\Gamma$ (par seconde, par exemple). Le nombre d'événements dans un intervalle de durée $t$ suit la loi $\mathcal{P}(\Gamma t)$. En particulier, la probabilité qu'il n'y en ait aucun pendant $t$ est $\mathrm{e}^{-\Gamma t}$, et c'est aussi la probabilité que le temps d'attente $T$ du premier événement dépasse $t$. On vient de décrire une nouvelle loi, à densité.
+
+<div class="bloc bloc-def">
+<div class="bloc-titre">Loi exponentielle</div>
+
+Soit $\Gamma > 0$. Une variable aléatoire $T$ suit la **loi exponentielle** de paramètre $\Gamma$ si elle a pour densité $f(t) = \Gamma\mathrm{e}^{-\Gamma t}$ pour $t \ge 0$, c'est-à-dire si $P(T > t) = \mathrm{e}^{-\Gamma t}$. Son espérance est $E(T) = \frac{1}{\Gamma}$ et son écart-type aussi.
+
+</div>
+
+<div class="bloc bloc-prop">
+<div class="bloc-titre">Absence de mémoire</div>
+
+Si $T$ suit une loi exponentielle, alors pour tous $s, t \ge 0$,
+$$P(T > s + t \mid T > s) = P(T > t).$$
+
+</div>
+
+En effet, $P(T > s + t \mid T > s) = \frac{\mathrm{e}^{-\Gamma(s+t)}}{\mathrm{e}^{-\Gamma s}} = \mathrm{e}^{-\Gamma t}$. Le temps déjà attendu ne renseigne pas sur le temps qui reste&nbsp;: un noyau radioactif ne vieillit pas. Un noyau qui a survécu un milliard d'années a la même probabilité de se désintégrer dans la seconde qui vient qu'un noyau tout juste formé. La durée de vie moyenne est $\tau = \frac{1}{\Gamma}$, et la **demi-vie** $t_{1/2}$, définie par $\mathrm{e}^{-\Gamma t_{1/2}} = \frac{1}{2}$, vaut $t_{1/2} = \frac{\ln 2}{\Gamma} = \tau \ln 2 \approx 0{,}69\tau$.
+
+<details class="encadre">
+<summary class="encadre-titre">Le paradoxe de l'autobus</summary>
+<p>Des autobus passent à un arrêt à des instants de Poisson, en moyenne toutes les $10$ minutes. Un voyageur arrive à un instant quelconque. Combien attend-il en moyenne&nbsp;? On répond souvent $5$ minutes, par symétrie. Mais l'absence de mémoire dit que le temps d'attente suit une loi exponentielle de moyenne $10$ minutes, quel que soit le moment d'arrivée. Le voyageur a plus de chances de tomber dans un long intervalle entre deux autobus que dans un court&nbsp;: l'intervalle dans lequel il se trouve dure en moyenne $20$ minutes, deux fois plus que l'intervalle typique. C'est le paradoxe de l'inspection, qui se retrouve pour les files d'attente, les pannes et les temps de réponse.</p>
+</details>
+
+### Quelques propriétés utiles
+
+<div class="bloc bloc-prop">
+<div class="bloc-titre">Somme de lois de Poisson</div>
+
+Si $X$ et $Y$ sont indépendantes, de lois $\mathcal{P}(\lambda_1)$ et $\mathcal{P}(\lambda_2)$, alors $X + Y$ suit $\mathcal{P}(\lambda_1 + \lambda_2)$.
+
+</div>
+
+Pour deux sources radioactives indépendantes, par exemple, le comptage total est encore poissonnien, de moyenne la somme des moyennes. Inversement, si chaque événement n'est détecté qu'avec une probabilité $\varepsilon$ (le rendement d'un détecteur), le nombre d'événements détectés suit $\mathcal{P}(\varepsilon\lambda)$&nbsp;: un tri au hasard d'un comptage de Poisson reste poissonnien.
+
+<details class="encadre">
+<summary class="encadre-titre">La preuve de l'additivité</summary>
+<p>Pour tout entier $n \ge 0$, $P(X + Y = n) = \sum_{k=0}^{n} \mathrm{e}^{-\lambda_1}\frac{\lambda_1^k}{k!}\,\mathrm{e}^{-\lambda_2}\frac{\lambda_2^{n-k}}{(n-k)!} = \frac{\mathrm{e}^{-(\lambda_1 + \lambda_2)}}{n!}\sum_{k=0}^{n}\binom{n}{k}\lambda_1^k\lambda_2^{n-k} = \mathrm{e}^{-(\lambda_1 + \lambda_2)}\frac{(\lambda_1 + \lambda_2)^n}{n!}$, par la formule du binôme.</p>
+</details>
+
+Quand $\lambda$ est grand, la loi de Poisson ressemble à une loi normale d'espérance $\lambda$ et de variance $\lambda$. Cela se voit en déplaçant le curseur $\lambda$ de la figure précédente, et cela découle du théorème de de Moivre-Laplace.
+
+### Des événements au hasard ne sont pas régulièrement espacés
+
+Des événements indépendants ne se répartissent pas uniformément&nbsp;: le hasard fabrique des paquets et des vides. Dans la figure suivante, on lance $N$ points au hasard sur un carré découpé en $100$ cases, et l'on compte les points par case. Le nombre de points par case suit une loi de Poisson de paramètre $\lambda = \frac{N}{100}$&nbsp;: les barres montrent la répartition observée des cases, les points orange la répartition attendue.
+
+<div class="fig">
+<p class="fig-ctl"><label for="pp-n">Nombre de points $N$&nbsp;: <span id="pp-nv"></span></label><input type="range" id="pp-n" min="20" max="400" step="10" value="100"></p>
+<p class="fig-ctl"><button type="button" id="pp-b">Nouveau tirage</button></p>
+<svg id="pp-svg" viewBox="0 0 460 246" role="img" aria-label="Points tirés au hasard sur un carré de cent cases, et histogramme du nombre de points par case"></svg>
+<p class="fig-val" id="pp-val"></p>
+</div>
+<script>
+(function () {
+  var sl = document.getElementById('pp-n'), svg = document.getElementById('pp-svg'), out = document.getElementById('pp-val'), nv = document.getElementById('pp-nv');
+  var pts = [], G = 10;
+  function fr(x, d) { return x.toFixed(d).replace('.', ','); }
+  function tirer() { var N = parseInt(sl.value, 10); pts = []; for (var i = 0; i < N; i++) { pts.push([Math.random(), Math.random()]); } dessiner(); }
+  function fact(k) { var f = 1; for (var i = 2; i <= k; i++) { f *= i; } return f; }
+  function dessiner() {
+    var N = pts.length, lam = N / (G * G), cnt = [], i, k;
+    nv.textContent = N;
+    for (i = 0; i < G * G; i++) { cnt.push(0); }
+    pts.forEach(function (p) { cnt[Math.floor(p[1] * G) * G + Math.floor(p[0] * G)]++; });
+    var cs = 20, ox = 10, oy = 12, mxc = Math.max.apply(null, cnt), h = '';
+    for (i = 0; i < G * G; i++) {
+      var cx = ox + (i % G) * cs, cy = oy + Math.floor(i / G) * cs;
+      h += '<rect x="' + cx + '" y="' + cy + '" width="' + cs + '" height="' + cs + '" fill="' + (cnt[i] === 0 ? '#FDF6EC' : '#006C65') + '" fill-opacity="' + (cnt[i] === 0 ? 1 : Math.min(0.55, 0.08 + 0.1 * cnt[i])) + '" stroke="#CBD5E1" stroke-width="0.8"/>';
+    }
+    pts.forEach(function (p) { h += '<circle cx="' + (ox + p[0] * G * cs).toFixed(1) + '" cy="' + (oy + p[1] * G * cs).toFixed(1) + '" r="1.9" fill="#334155"/>'; });
+    var K = Math.max(mxc, Math.ceil(lam + 3 * Math.sqrt(lam))) + 1, hist = [], ex = [], my = 0;
+    for (k = 0; k <= K; k++) { hist.push(0); ex.push(G * G * Math.exp(-lam) * Math.pow(lam, k) / fact(k)); }
+    cnt.forEach(function (c) { hist[c]++; });
+    for (k = 0; k <= K; k++) { my = Math.max(my, hist[k], ex[k]); }
+    var X0 = 250, X1 = 450, Y0 = 205, Y1 = 20, bw = (X1 - X0) / (K + 1);
+    function ys(v) { return Y0 - (Y0 - Y1) * v / (my * 1.1); }
+    h += '<line x1="' + X0 + '" y1="' + Y0 + '" x2="' + X1 + '" y2="' + Y0 + '" stroke="#64748B" stroke-width="1.2"/>';
+    for (k = 0; k <= K; k++) {
+      h += '<rect x="' + (X0 + k * bw + 0.5).toFixed(1) + '" y="' + ys(hist[k]).toFixed(1) + '" width="' + Math.max(0.6, bw - 1).toFixed(1) + '" height="' + (Y0 - ys(hist[k])).toFixed(1) + '" fill="#004D80" fill-opacity="0.6"/>';
+      h += '<circle cx="' + (X0 + (k + 0.5) * bw).toFixed(1) + '" cy="' + ys(ex[k]).toFixed(1) + '" r="3.4" fill="#C2770B" stroke="#fff" stroke-width="0.8"/>';
+      if (K <= 14 || k % 2 === 0) { h += '<text x="' + (X0 + (k + 0.5) * bw).toFixed(1) + '" y="' + (Y0 + 15) + '" font-size="11" text-anchor="middle" fill="#334155" font-family="Georgia,serif">' + k + '</text>'; }
+    }
+    h += '<text x="' + X1 + '" y="' + (Y0 + 30) + '" font-size="11" text-anchor="end" fill="#334155" font-family="Georgia,serif" font-style="italic">points par case</text>';
+    h += '<text x="' + X0 + '" y="' + (Y1 - 6) + '" font-size="11" fill="#334155" font-family="Georgia,serif" font-style="italic">nombre de cases</text>';
+    svg.innerHTML = h;
+    out.innerHTML = 'λ = ' + fr(lam, 2) + ' points par case en moyenne &nbsp; cases vides : ' + hist[0] + ' (attendu ' + fr(ex[0], 1) + ') &nbsp; case la plus peuplée : ' + mxc + ' points';
+  }
+  sl.addEventListener('input', tirer);
+  document.getElementById('pp-b').addEventListener('click', tirer);
+  tirer();
+})();
+</script>
+
+### Deux exemples historiques
+
+<details class="encadre">
+<summary class="encadre-titre">Les coups de pied de cheval de l'armée prussienne</summary>
+<p>Ladislaus von Bortkiewicz, dans <i>Das Gesetz der kleinen Zahlen</i> (1898), a étudié le nombre de soldats tués par un coup de sabot de cheval dans $14$ corps de cavalerie prussiens pendant $20$ ans, soit $280$ observations «&nbsp;corps-année&nbsp;». Il y a eu $196$ morts au total, soit $\lambda = 0{,}70$ par corps et par an. La loi de Poisson de paramètre $0{,}70$ décrit remarquablement les données&nbsp;:</p>
+<table class="tbl">
+<tr><th>morts par corps et par an</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+<tr><th>corps-années observés</th><td>144</td><td>91</td><td>32</td><td>11</td><td>2</td></tr>
+<tr><th>attendu avec $\mathcal{P}(0{,}70)$</th><td>139,0</td><td>97,3</td><td>34,1</td><td>7,9</td><td>1,4</td></tr>
+</table>
+</details>
+
+<details class="encadre">
+<summary class="encadre-titre">Les bombes volantes sur Londres</summary>
+<p>En 1946, l'actuaire R. D. Clarke a découpé le sud de Londres en $576$ carrés de $0{,}25$ km$^2$ et compté les impacts de bombes volantes de 1944&nbsp;: $537$ impacts, soit $\lambda \approx 0{,}93$ par carré. On pouvait craindre que les impacts soient dirigés vers certains quartiers, ou au contraire dispersés avec régularité. Les données suivent la loi de Poisson&nbsp;:</p>
+<table class="tbl">
+<tr><th>impacts par carré</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5 et plus</td></tr>
+<tr><th>carrés observés</th><td>229</td><td>211</td><td>93</td><td>35</td><td>7</td><td>1</td></tr>
+<tr><th>attendu avec $\mathcal{P}(0{,}93)$</th><td>226,7</td><td>211,4</td><td>98,5</td><td>30,6</td><td>7,1</td><td>1,6</td></tr>
+</table>
+<p>Les impacts se répartissent donc au hasard, et les «&nbsp;grappes&nbsp;» de plusieurs impacts dans un même carré, qui semblent signaler une cible, sont aussi celles que prévoit le hasard (comme les cases peuplées de la figure ci-dessus).</p>
+</details>
+
+### Où rencontre-t-on la loi de Poisson&nbsp;?
+
+<details class="encadre">
+<summary class="encadre-titre">Un inventaire d'applications</summary>
+<ul>
+<li><b>Téléphonie et files d'attente.</b> Agner Krarup Erlang a modélisé en 1909 les appels reçus par un central téléphonique de Copenhague par un processus de Poisson, ce qui a fondé la théorie des files d'attente. On l'utilise encore pour dimensionner des centres d'appels, des caisses, des serveurs.</li>
+<li><b>Comptage de cellules.</b> Dans un hémocytomètre (une lame quadrillée), le nombre de cellules par carré suit une loi de Poisson. William Gosset, dit «&nbsp;Student&nbsp;», l'a vérifié en 1907 avec des cellules de levure, ce qui permet d'estimer l'erreur d'un comptage.</li>
+<li><b>Astronomie et imagerie.</b> Le nombre de photons reçus par un pixel pendant la pose suit une loi de Poisson, ce qui impose le bruit de grenaille ($\sqrt{N_c}$), limite fondamentale du rapport signal sur bruit.</li>
+<li><b>Assurance.</b> Le nombre de sinistres d'un portefeuille par an est modélisé par une loi de Poisson, ce qui donne les premiers modèles de la ruine d'une compagnie d'assurance.</li>
+<li><b>Informatique et réseaux.</b> Les arrivées de requêtes sur un serveur ou de paquets sur un lien, quand elles viennent de nombreux utilisateurs indépendants.</li>
+<li><b>Sport.</b> Le nombre de buts marqués par une équipe dans un match de football est souvent modélisé par une loi de Poisson, dont le paramètre dépend de la force des équipes.</li>
+<li><b>Physique des particules.</b> Les muons cosmiques qui traversent un détecteur, les événements rares recherchés dans un collisionneur.</li>
+</ul>
+<p>Une condition limite l'usage de la loi de Poisson&nbsp;: les événements doivent être indépendants et de taux constant. Quand ils arrivent par salves (épidémies, séismes qui provoquent des répliques, pannes en cascade), la variance dépasse la moyenne, et on utilise des lois plus dispersées, comme la loi binomiale négative.</p>
+</details>
+
+<details class="exercice">
+<summary class="exercice-titre">Trois exercices sur la loi de Poisson</summary>
+<p><b>1.</b> Un compteur enregistre en moyenne $3$ particules par seconde. Quelle est la probabilité de n'en enregistrer aucune pendant une seconde&nbsp;? D'en enregistrer au moins deux&nbsp;?</p>
+<details class="solution">
+<summary>Solution</summary>
+<p>Le nombre de particules suit $\mathcal{P}(3)$. $P(X = 0) = \mathrm{e}^{-3} \approx 0{,}050$. $P(X \ge 2) = 1 - P(X = 0) - P(X = 1) = 1 - \mathrm{e}^{-3}(1 + 3) \approx 0{,}80$.</p>
+</details>
+<p><b>2.</b> Combien de temps faut-il compter pour mesurer ce taux avec une incertitude relative de $1\ \%$&nbsp;?</p>
+<details class="solution">
+<summary>Solution</summary>
+<p>Il faut $N_c$ comptages tels que $\frac{1}{\sqrt{N_c}} = 0{,}01$, soit $N_c = 10\,000$, ce qui, à $3$ comptages par seconde, représente environ $3300$ secondes, soit près d'une heure.</p>
+</details>
+<p><b>3.</b> Un livre de $400$ pages contient $200$ coquilles réparties au hasard. Quelle est la proportion de pages sans coquille&nbsp;? Et de pages qui en contiennent au moins deux&nbsp;?</p>
+<details class="solution">
+<summary>Solution</summary>
+<p>Il y a en moyenne $\lambda = 0{,}5$ coquille par page. $P(X = 0) = \mathrm{e}^{-0{,}5} \approx 0{,}61$, soit environ $243$ pages sans coquille. $P(X \ge 2) = 1 - \mathrm{e}^{-0{,}5}(1 + 0{,}5) \approx 0{,}09$, soit environ $36$ pages qui en contiennent au moins deux.</p>
+</details>
+</details>
+
+## Autres lois : un petit bestiaire
+
+Les lois de ce chapitre ne sont pas isolées&nbsp;: elles se déduisent les unes des autres. La figure suivante en montre quelques liens, et les listes qui suivent donnent pour chaque loi le contexte où elle apparaît et une application.
+
+<div class="fig">
+<svg id="re-svg" viewBox="0 0 480 330" role="img" aria-label="Schéma des liens entre lois usuelles : Bernoulli, binomiale, géométrique, Poisson, exponentielle, gamma, normale, khi-deux et Student" style="max-width:480px;">
+<defs><marker id="re-fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748B"/></marker></defs>
+<g stroke="#64748B" stroke-width="1.5" fill="none" marker-end="url(#re-fl)">
+<line x1="190" y1="30" x2="112" y2="30"/>
+<line x1="290" y1="30" x2="368" y2="30"/>
+<line x1="420" y1="45" x2="420" y2="105"/>
+<line x1="395" y1="45" x2="272" y2="105"/>
+<line x1="290" y1="120" x2="368" y2="120"/>
+<line x1="240" y1="135" x2="240" y2="195"/>
+<line x1="60" y1="45" x2="210" y2="198"/>
+<line x1="240" y1="225" x2="240" y2="285"/>
+<line x1="420" y1="135" x2="420" y2="195"/>
+<line x1="420" y1="225" x2="420" y2="285"/>
+</g>
+<g font-family="Georgia,serif" font-size="14" text-anchor="middle">
+<g fill="#EEF4FA" stroke="#004D80" stroke-width="1.6"><rect x="190" y="15" width="100" height="30" rx="8"/><rect x="370" y="15" width="100" height="30" rx="8"/><rect x="10" y="15" width="100" height="30" rx="8"/><rect x="190" y="105" width="100" height="30" rx="8"/><rect x="370" y="105" width="100" height="30" rx="8"/></g>
+<g fill="#FDF6EC" stroke="#C2770B" stroke-width="1.6"><rect x="190" y="195" width="100" height="30" rx="8"/><rect x="190" y="285" width="100" height="30" rx="8"/><rect x="370" y="195" width="100" height="30" rx="8"/><rect x="370" y="285" width="100" height="30" rx="8"/></g>
+<g fill="#334155"><text x="240" y="35">Bernoulli</text><text x="420" y="35">Binomiale</text><text x="60" y="35">Géométrique</text><text x="240" y="125">Poisson</text><text x="420" y="125">Normale</text><text x="240" y="215">Exponentielle</text><text x="240" y="305">Gamma</text><text x="420" y="215">Khi-deux</text><text x="420" y="305">Student</text></g>
+</g>
+<g font-family="Georgia,serif" font-size="11" fill="#475569" font-style="italic" text-anchor="middle">
+<text x="151" y="22">1<tspan dy="-4" font-size="8">er</tspan><tspan dy="4"> succès</tspan></text>
+<text x="329" y="22">somme de n</text>
+<text x="428" y="82" text-anchor="start">n grand</text>
+<text x="300" y="90" text-anchor="end">n grand, p petit</text>
+<text x="329" y="112">λ grand</text>
+<text x="248" y="163" text-anchor="start">temps entre</text>
+<text x="248" y="176" text-anchor="start">événements</text>
+<text x="140" y="150" text-anchor="end">version continue</text>
+<text x="248" y="258" text-anchor="start">somme de k</text>
+<text x="412" y="168" text-anchor="end">somme de carrés</text>
+<text x="412" y="258" text-anchor="end">avec une normale</text>
+</g>
+</svg>
+</div>
+
+### Lois discrètes
+
+- **Uniforme discrète** sur $\lbrace 1, \dots, r \rbrace$, avec $E = \frac{r+1}{2}$. *Contexte et application*&nbsp;: toutes les valeurs sont équiprobables, comme pour un dé équilibré, un tirage au sort ou un générateur pseudo-aléatoire.
+- **Géométrique** $\mathcal{G}(p)$, avec $P(X = k) = (1-p)^{k-1}p$ et $E = \frac{1}{p}$. *Contexte et application*&nbsp;: rang du premier succès dans une suite d'épreuves de Bernoulli. Il faut en moyenne $6$ lancers pour obtenir un premier $6$. Comme l'exponentielle dont elle est la version discrète, elle n'a pas de mémoire. On l'utilise pour les temps d'attente en unités discrètes et pour la fiabilité d'un système qui peut tomber en panne à chaque cycle.
+- **Hypergéométrique** $\mathcal{H}(N, K, n)$, avec $P(X = k) = \dfrac{\binom{K}{k}\binom{N-K}{n-k}}{\binom{N}{n}}$ et $E = \frac{nK}{N}$. *Contexte et application*&nbsp;: nombre d'objets d'un type donné quand on tire $n$ objets **sans remise** parmi $N$, dont $K$ sont du type voulu. Elle sert au contrôle de qualité, au loto, aux sondages sur de petites populations et à l'estimation d'effectifs par capture-recapture. Quand $N$ est très grand devant $n$, elle se confond avec la loi binomiale.
+- **Binomiale négative** (nombre d'échecs avant le $r$-ième succès). *Contexte et application*&nbsp;: comptages plus dispersés que Poisson (variance supérieure à la moyenne), comme le nombre de cas dans une épidémie, les réclamations d'assurance ou les comptages en écologie.
+- **Zipf** (loi de puissance discrète), avec $P(X = k) \propto \frac{1}{k^s}$. *Contexte et application*&nbsp;: la fréquence du $k$-ième mot le plus utilisé d'un texte décroît comme $\frac{1}{k}$, et la même loi décrit la taille des villes ou le trafic des sites web. Une loi de puissance a une queue épaisse&nbsp;: les valeurs extrêmes y sont bien plus fréquentes que dans une loi normale.
+- **Benford**, avec $P(\text{premier chiffre} = d) = \log_{10}\big(1 + \frac{1}{d}\big)$, soit 30&nbsp;% pour le chiffre 1 et 5&nbsp;% pour le chiffre 9. *Contexte et application*&nbsp;: grandeurs qui s'étalent sur plusieurs ordres de grandeur (populations, prix, constantes physiques). Les comptables légistes s'en servent pour repérer les chiffres truqués, que l'on distribue spontanément de façon uniforme.
+
+### Lois continues
+
+- **Uniforme** sur $[a, b]$, avec $E = \frac{a+b}{2}$ et $V = \frac{(b-a)^2}{12}$. *Contexte et application*&nbsp;: aucune valeur n'est privilégiée. Pour une lecture d'instrument à $\pm\Delta$ près, l'incertitude-type vaut $\frac{\Delta}{\sqrt{3}}$ (voir <a href="../../stat/ecarttype/">écart-type expérimental</a>). C'est aussi la loi de départ de la simulation (voir <a href="../../stat/montecarlo/">Monte Carlo</a>).
+- **Exponentielle** $\mathcal{E}(\Gamma)$, avec $E = \frac{1}{\Gamma}$. *Contexte et application*&nbsp;: temps d'attente entre deux événements d'un processus de Poisson, durée de vie sans vieillissement, désintégration radioactive, durée entre deux appels.
+- **Gamma** (ou d'Erlang, pour un paramètre de forme entier $k$), avec $E = \frac{k}{\Gamma}$. *Contexte et application*&nbsp;: temps d'attente du $k$-ième événement d'un processus de Poisson, somme de $k$ exponentielles indépendantes. Files d'attente, fiabilité de systèmes avec $k$ étapes.
+- **Normale** $\mathcal{N}(\mu, \sigma^2)$. *Contexte et application*&nbsp;: somme de nombreuses petites contributions indépendantes (théorème central limite), erreurs de mesure, grandeurs biologiques comme la taille.
+- **Log-normale**&nbsp;: $\ln X$ suit une loi normale. *Contexte et application*&nbsp;: produit de nombreux facteurs aléatoires indépendants, ce qui rend positives et dissymétriques la taille de grains, les revenus, les durées de réparation, les concentrations de polluants.
+- **Weibull** $\mathcal{W}(k, \lambda)$. *Contexte et application*&nbsp;: durées de vie et fiabilité. Avec $k < 1$, le risque de panne décroît avec l'âge (mortalité infantile), avec $k = 1$ on retrouve l'exponentielle, avec $k > 1$ il croît (usure). Elle décrit aussi la vitesse du vent, d'où son usage en énergie éolienne.
+- **Khi-deux** $\chi^2(\nu)$&nbsp;: somme de $\nu$ carrés de variables normales centrées réduites indépendantes. *Contexte et application*&nbsp;: test d'adéquation de Pearson (une loi décrit-elle des données&nbsp;?), test d'indépendance, estimation d'une variance, et le $\chi^2$ qu'on minimise dans un ajustement par moindres carrés (voir <a href="../../stat/testhyp/">test d'hypothèse</a>).
+- **Student** $t(\nu)$&nbsp;: rapport d'une normale à la racine d'un khi-deux normalisé. *Contexte et application*&nbsp;: moyenne d'un petit échantillon quand l'écart-type est inconnu, intervalles de confiance et tests sur de petits effectifs. Gosset l'a introduite en 1908 sous le pseudonyme de Student, pour le contrôle de qualité à la brasserie Guinness.
+- **Cauchy** (ou de Lorentz). *Contexte et application*&nbsp;: rapport de deux variables normales centrées indépendantes, profil des raies spectrales élargies par la durée de vie des états, résonances. Elle n'a **ni espérance ni variance**&nbsp;: la moyenne de $n$ tirages suit la même loi qu'un seul tirage, et la moyenner n'améliore rien.
+- **Maxwell-Boltzmann**. *Contexte et application*&nbsp;: dans un gaz à l'équilibre, chaque composante de la vitesse d'une molécule suit une loi normale de moyenne nulle et de variance $\frac{k_B T}{m}$, et la norme de la vitesse suit la loi de Maxwell. C'est le modèle de la distribution des vitesses moléculaires.
+- **Pareto** (loi de puissance continue). *Contexte et application*&nbsp;: queue épaisse, comme la répartition des richesses (la règle des $80/20$), la taille des villes ou des entreprises.
+- **Bêta** $\mathrm{Beta}(a, b)$, sur $[0, 1]$. *Contexte et application*&nbsp;: incertitude sur une proportion inconnue, mise à jour par la règle de Bayes (voir <a href="../../stat/bayes/">inférence bayésienne</a>).
+- **Valeurs extrêmes** (Gumbel, Fréchet, Weibull). *Contexte et application*&nbsp;: loi du maximum d'un grand nombre de variables indépendantes, à la manière dont la loi normale décrit leur somme. Crues centennales, vents maximaux, séismes, dimensionnement d'ouvrages.

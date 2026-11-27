@@ -17,13 +17,15 @@ Les **probabilités** sont des calculs a priori, visant à prédire les issues d
 <span class="math-illus" aria-hidden="true"><img src="/illus/preslois.svg" alt=""></span>
 <h3><a href="./lois/">Variables et lois</a></h3>
 </div>
-<div class="carte-texte">Les lois de probabilité usuelles, du discret au continu.</div>
+<div class="carte-texte">Les lois de probabilité usuelles, du discret au continu, de la binomiale à Poisson et au-delà.</div>
 <div class="theme-subgroup">
 <div class="link-list">
   <a href="./lois/#variable-aléatoire-espérance-et-variance" class="math-btn">Espérance et variance</a>
   <a href="./lois/#loi-binomiale" class="math-btn">Binomiale</a>
   <a href="./lois/#densité-de-probabilités" class="math-btn">Densité de probabilité</a>
   <a href="./lois/#loi-normale" class="math-btn">Normale</a>
+  <a href="./lois/#loi-de-poisson" class="math-btn">Poisson</a>
+  <a href="./lois/#autres-lois-un-petit-bestiaire" class="math-btn">Autres lois</a>
 </div>
 </div>
 </div>
