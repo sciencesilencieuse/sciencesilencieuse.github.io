@@ -1340,10 +1340,4 @@ La taille $\sqrt{x}$ est celle des fluctuations d'une marche aléatoire de $x$ p
 
 **Le prix du millénaire.** Le règlement de l'Institut Clay exige une publication dans une revue à comité de lecture, puis un délai de deux ans pendant lequel la solution doit être largement acceptée.
 
-**Sources.**
-<ul>
-<li><a href="https://www.scientificamerican.com/article/the-ai-riemann-hypothesis-proof-is-almost-certainly-true-independent-mathematicians-attest/">Scientific American, 21 novembre 2026</a>&nbsp;: vérification indépendante et communiqué du Lean FRO et de la Mathlib Initiative.</li>
-<li><a href="https://thenextweb.com/news/anthropic-alpoge-claude-riemann-hypothesis-proof-lean">The Next Web</a>&nbsp;: l'annonce, les réactions, la démonstration de Masullo.</li>
-<li><a href="https://startupfortune.com/lean-groups-certify-claude-assisted-riemann-hypothesis-proof-from-anthropic/">Startup Fortune</a>&nbsp;: les vérifications par <i>comparator</i> et <i>con-leche</i>, le règlement de l'Institut Clay.</li>
-<li><a href="https://officechai.com/ai/anthropic-researchers-use-claude-to-shrink-riemann-hypothesis-proof-from-17-4-million-lines-of-lean-to-76000/">OfficeChai</a>&nbsp;: la version réduite de Sernau.</li>
-</ul>
+
