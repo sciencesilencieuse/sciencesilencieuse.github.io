@@ -109,12 +109,18 @@ details.solution > summary
     color: #6B4FA0;
     font-style: italic;
 }
+.jeu-tab-wrap
+{
+    width: 500px;
+    max-width: 100%;
+    margin: 1em auto;
+    overflow-x: auto;
+}
 .jeu-tab
 {
     border-collapse: collapse;
-    margin: 1em auto;
-    width: 500px;
-    max-width: 100%;
+    margin: 0;
+    width: 100%;
     table-layout: fixed;
 }
 .jeu-tab th, .jeu-tab td
@@ -130,6 +136,10 @@ details.solution > summary
 .jeu-tab th.b1 { background: #82BFFC; }
 .jeu-tab th.b2 { background: #5CA1FD; }
 .jeu-tab td { background: #FEFEFE; }
+@media (max-width: 480px)
+{
+    .jeu-tab th, .jeu-tab td { font-size: 1.05em; padding: 0.55em 0.15em; }
+}
 .jeu-tab td.jeu-res { background: #E6F2F1; border: 3px solid #006C65; font-weight: bold; }
 .selle-legende
 {
@@ -165,6 +175,16 @@ details.solution > summary
     border: none;
     background: transparent;
 }
+.anim[data-anim="labo-jeu"]
+{
+    max-width: 100%;
+    overflow-x: auto;
+}
+@media (max-width: 480px)
+{
+    .jeu-matrice input[type="number"] { width: 3.4em; }
+    .jeu-matrice th, .jeu-matrice td { padding: 0.2em 0.25em; }
+}
 .jeu-resultat
 {
     max-width: 40rem;
@@ -196,11 +216,13 @@ Listons les stratégies possibles pour les Bleus et les Rouges&nbsp;:
 - R1 : attaquer le bombardier le mieux protégé
 - R2 : attaquer le bombardier le moins bien protégé
 
+<div class="jeu-tab-wrap">
 <table class="jeu-tab" aria-label="Matrice de gains : B1 contre R1 80, B1 contre R2 100, B2 contre R1 100, B2 contre R2 60">
 <tr><th></th><th class="r1">R1</th><th class="r2">R2</th></tr>
 <tr><th class="b1">B1</th><td>80</td><td>100</td></tr>
 <tr><th class="b2">B2</th><td>100</td><td>60</td></tr>
 </table>
+</div>
 
 La matrice de gains ci-dessus peut s'interpréter ainsi&nbsp;: les chances de survie du bombardier le mieux protégé sont de 80&nbsp;% s'il est attaqué (et de 100&nbsp;% s'il ne l'est pas...) alors que le moins bien protégé n'a que 60&nbsp;% de chances de s'en sortir (et 100&nbsp;% si on le laisse tranquille).
 
@@ -219,11 +241,13 @@ La stratégie optimale pour deux joueurs rationnels va consister à minimiser le
 
 Si une stratégie unique permet d'arriver à cette fin, sans que le joueur soit jamais motivé à changer de stratégie lors d'un prochain tour, on dit qu'il joue une **stratégie pure**. C'est le cas dans l'exemple suivant&nbsp;:
 
+<div class="jeu-tab-wrap">
 <table class="jeu-tab" aria-label="Matrice de gains : B1 contre R1 6, B1 contre R2 5, B2 contre R1 3, B2 contre R2 4">
 <tr><th></th><th class="r1">R1</th><th class="r2">R2</th></tr>
 <tr><th class="b1">B1</th><td>6</td><td class="jeu-res">5</td></tr>
 <tr><th class="b2">B2</th><td>3</td><td>4</td></tr>
 </table>
+</div>
 
 Bleu est incité à choisir la stratégie B1 pour maximiser ses gains minimums réalisables&nbsp;: dans le pire des cas, il recevra 5 alors qu'avec la stratégie B2, il recevrait au pire 3...<br>
 Si Rouge joue sa première stratégie, il perd au pire 6 alors qu'avec la seconde, il perd au pire 5. Donc Rouge va jouer la seconde stratégie.
@@ -258,11 +282,13 @@ La surface $z = x^2 - y^2$ est l'exemple type. L'origine y est un point col&nbsp
 
 Changeons de matrice de gain&nbsp;:
 
+<div class="jeu-tab-wrap">
 <table class="jeu-tab" aria-label="Matrice de gains : B1 contre R1 3, B1 contre R2 6, B2 contre R1 5, B2 contre R2 4">
 <tr><th></th><th class="r1">R1</th><th class="r2">R2</th></tr>
 <tr><th class="b1">B1</th><td>3</td><td>6</td></tr>
 <tr><th class="b2">B2</th><td>5</td><td>4</td></tr>
 </table>
+</div>
 
 Pour maximiser le gain minimal, Bleu choisit la stratégie B2 ($4>3$) alors que pour minimiser le gain maximal pour Bleu, Rouge choisit la stratégie R1 ($5<6$). On remarque que le plus grand gain minimal sur une rangée ($4$) est maintenant différent du plus petit gain maximal sur une colonne ($5$). La conséquence est que maintenant, chacun des deux joueurs est incité à changer sa stratégie. Si Rouge passe de la stratégie R1 à R2 par exemple, il réduit le gain de Bleu de $5$ à $4$ (en imaginant que Bleu ait bien choisi la stratégie B2). Mais alors, Bleu est tenté de passer de la stratégie B2 à B1 pour passer d'un gain de $4$ à un gain de $6$. Et ainsi de suite...
 
@@ -321,11 +347,13 @@ On les obtient en annulant les dérivées partielles de $V(p, q)$&nbsp;: $\frac{
 
 Revenons maintenant à notre problème de guerre froide.
 
+<div class="jeu-tab-wrap">
 <table class="jeu-tab" aria-label="Matrice de gains : B1 contre R1 80, B1 contre R2 100, B2 contre R1 100, B2 contre R2 60">
 <tr><th></th><th class="r1">R1</th><th class="r2">R2</th></tr>
 <tr><th class="b1">B1</th><td>80</td><td>100</td></tr>
 <tr><th class="b2">B2</th><td>100</td><td>60</td></tr>
 </table>
+</div>
 
 Il n'y a clairement pas de point col pour des stratégies pures puisque le plus grand minimum pour les lignes est $80$ alors que le plus petit maximum pour les colonnes est $100$. Il faut donc jouer des stratégies mixtes.
 
