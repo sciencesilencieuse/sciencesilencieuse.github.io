@@ -170,6 +170,15 @@ details.solution > summary
     text-align: left;
     font-weight: normal;
 }
+.tbl tr:first-child th
+{
+    font-weight: bold;
+    vertical-align: bottom;
+}
+.tbl tr:first-child th:not(:first-child)
+{
+    text-align: right;
+}
 .fig-val
 {
     font-size: 0.95em;
@@ -806,20 +815,27 @@ Des événements indépendants ne se répartissent pas uniformément&nbsp;: le h
 <details class="encadre">
 <summary class="encadre-titre">Les coups de pied de cheval de l'armée prussienne</summary>
 <p>Ladislaus von Bortkiewicz, dans <i>Das Gesetz der kleinen Zahlen</i> (1898), a étudié le nombre de soldats tués par un coup de sabot de cheval dans $14$ corps de cavalerie prussiens pendant $20$ ans, soit $280$ observations «&nbsp;corps-année&nbsp;». Il y a eu $196$ morts au total, soit $\lambda = 0{,}70$ par corps et par an. La loi de Poisson de paramètre $0{,}70$ décrit remarquablement les données&nbsp;:</p>
-<table class="tbl">
-<tr><th>morts par corps et par an</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
-<tr><th>corps-années observés</th><td>144</td><td>91</td><td>32</td><td>11</td><td>2</td></tr>
-<tr><th>attendu avec $\mathcal{P}(0{,}70)$</th><td>139,0</td><td>97,3</td><td>34,1</td><td>7,9</td><td>1,4</td></tr>
+<table class="tbl" style="max-width:100%;">
+<tr><th>morts par corps et par an</th><th>observé</th><th>attendu, $\mathcal{P}(0{,}70)$</th></tr>
+<tr><th>0</th><td>144</td><td>139,0</td></tr>
+<tr><th>1</th><td>91</td><td>97,3</td></tr>
+<tr><th>2</th><td>32</td><td>34,1</td></tr>
+<tr><th>3</th><td>11</td><td>7,9</td></tr>
+<tr><th>4</th><td>2</td><td>1,4</td></tr>
 </table>
 </details>
 
 <details class="encadre">
 <summary class="encadre-titre">Les bombes volantes sur Londres</summary>
 <p>En 1946, l'actuaire R. D. Clarke a découpé le sud de Londres en $576$ carrés de $0{,}25$ km$^2$ et compté les impacts de bombes volantes de 1944&nbsp;: $537$ impacts, soit $\lambda \approx 0{,}93$ par carré. On pouvait craindre que les impacts soient dirigés vers certains quartiers, ou au contraire dispersés avec régularité. Les données suivent la loi de Poisson&nbsp;:</p>
-<table class="tbl">
-<tr><th>impacts par carré</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5 et plus</td></tr>
-<tr><th>carrés observés</th><td>229</td><td>211</td><td>93</td><td>35</td><td>7</td><td>1</td></tr>
-<tr><th>attendu avec $\mathcal{P}(0{,}93)$</th><td>226,7</td><td>211,4</td><td>98,5</td><td>30,6</td><td>7,1</td><td>1,6</td></tr>
+<table class="tbl" style="max-width:100%;">
+<tr><th>impacts par carré</th><th>carrés observés</th><th>attendu, $\mathcal{P}(0{,}93)$</th></tr>
+<tr><th>0</th><td>229</td><td>226,7</td></tr>
+<tr><th>1</th><td>211</td><td>211,4</td></tr>
+<tr><th>2</th><td>93</td><td>98,5</td></tr>
+<tr><th>3</th><td>35</td><td>30,6</td></tr>
+<tr><th>4</th><td>7</td><td>7,1</td></tr>
+<tr><th>5 et plus</th><td>1</td><td>1,6</td></tr>
 </table>
 <p>Les impacts se répartissent donc au hasard, et les «&nbsp;grappes&nbsp;» de plusieurs impacts dans un même carré, qui semblent signaler une cible, sont aussi celles que prévoit le hasard (comme les cases peuplées de la figure ci-dessus).</p>
 </details>
