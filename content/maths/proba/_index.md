@@ -25,7 +25,7 @@ Les **probabilités** sont des calculs a priori, visant à prédire les issues d
   <a href="./lois/#densité-de-probabilités" class="math-btn">Densité de probabilité</a>
   <a href="./lois/#loi-normale" class="math-btn">Normale</a>
   <a href="./lois/#loi-de-poisson" class="math-btn">Poisson</a>
-  <a href="./lois/#autres-lois-un-petit-bestiaire" class="math-btn">Autres lois</a>
+  <a href="./lois/#autres-lois" class="math-btn">Autres lois</a>
 </div>
 </div>
 </div>

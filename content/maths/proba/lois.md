@@ -859,7 +859,7 @@ Des événements indépendants ne se répartissent pas uniformément&nbsp;: le h
 </details>
 </details>
 
-## Autres lois : un petit bestiaire
+## Autres lois : un petit bestiaire {#autres-lois}
 
 Les lois de ce chapitre ne sont pas isolées&nbsp;: elles se déduisent les unes des autres. La figure suivante en montre quelques liens, et les listes qui suivent donnent pour chaque loi le contexte où elle apparaît et une application.
 
