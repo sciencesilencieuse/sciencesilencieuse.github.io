@@ -25,10 +25,6 @@ mjx-container[display="true"] { max-width:100%; overflow-x:auto; overflow-y:hidd
 .bloc-def > .bloc-titre { color: #004D80; }
 .bloc-prop > .bloc-titre { color: #C2770B; }
 .bloc-theo > .bloc-titre { color: #970E53; }
-.bloc-def > .bloc-titre::before { content: "Définition ("; }
-.bloc-prop > .bloc-titre::before { content: "Propriété ("; }
-.bloc-theo > .bloc-titre::before { content: "Théorème ("; }
-.bloc-titre::after { content: ")"; }
 .encadre
 {
     max-width: 40rem;
@@ -173,7 +169,7 @@ $$2026 = 2 \times 1000 + 0 \times 100 + 2 \times 10 + 6.$$
 C'est la **numération de position**&nbsp;: la valeur d'un chiffre dépend de sa place. Rien n'oblige à regrouper par dix. Si l'on regroupe par $b$, on obtient la numération en base $b$.
 
 <div class="bloc bloc-theo">
-<div class="bloc-titre">écriture en base b</div>
+<div class="bloc-titre">Écriture en base b</div>
 
 Soit $b \ge 2$ un entier. Tout entier naturel $n \ge 1$ s'écrit de manière unique sous la forme
 
@@ -307,7 +303,7 @@ La numération de position s'étend à droite de la virgule, avec des puissances
 Mais le développement s'arrête ou non selon la base. En base 10, $\frac{1}{3} = 0{,}333\dots$ ne s'arrête jamais, alors qu'en base 3, $\frac{1}{3} = 0{,}1$.
 
 <div class="bloc bloc-prop">
-<div class="bloc-titre">développement fini d'une fraction</div>
+<div class="bloc-titre">Développement fini d'une fraction</div>
 
 Soit $\frac{p}{q}$ une fraction irréductible et $b \ge 2$ un entier. Elle s'écrit avec un nombre fini de chiffres après la virgule en base $b$ si et seulement si tout facteur premier de $q$ divise $b$.
 

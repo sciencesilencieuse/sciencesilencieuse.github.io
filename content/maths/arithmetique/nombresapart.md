@@ -6,6 +6,18 @@ weight = 3
 
 <style>
 mjx-container[display="true"] { max-width:100%; overflow-x:auto; overflow-y:hidden; }
+h2
+{
+color:#970E53 !important;
+}
+h2 a
+{
+color: inherit !important;
+}
+h3
+{
+color:#004D80 !important;
+}
 .bloc
 {
     max-width: 40rem;
@@ -27,11 +39,6 @@ mjx-container[display="true"] { max-width:100%; overflow-x:auto; overflow-y:hidd
 .bloc-prop > .bloc-titre { color: #C2770B; }
 .bloc-theo > .bloc-titre { color: #970E53; }
 .bloc-preuve > .bloc-titre { color: #475569; }
-.bloc-def > .bloc-titre::before { content: "Définition ("; }
-.bloc-prop > .bloc-titre::before { content: "Propriété ("; }
-.bloc-theo > .bloc-titre::before { content: "Théorème ("; }
-.bloc-preuve > .bloc-titre::before { content: "Preuve ("; }
-.bloc-titre::after { content: ")"; }
 .encadre
 {
     max-width: 40rem;
@@ -187,14 +194,14 @@ Les nombres premiers, l'algorithme d'Euclide, les fractions continues, le nombre
 Les nombres premiers sont en quelque sorte les atomes des nombres, les objets primordiaux.
 
 <div class="bloc bloc-def">
-<div class="bloc-titre">nombre premier</div>
+<div class="bloc-titre">Nombre premier</div>
 
 Un entier $p \ge 2$ est **premier** si ses seuls diviseurs positifs sont $1$ et $p$. Un entier $n \ge 2$ qui n'est pas premier est dit **composé**.
 
 </div>
 
 <div class="bloc bloc-theo">
-<div class="bloc-titre">théorème fondamental de l'arithmétique</div>
+<div class="bloc-titre">Théorème fondamental de l'arithmétique</div>
 
 Tout entier $n \ge 2$ s'écrit comme un produit de nombres premiers, et cette écriture est unique à l'ordre des facteurs près.
 
@@ -205,7 +212,7 @@ Par exemple, $2026 = 2 \times 1013$, avec $2$ et $1013$ premiers. Les nombres pr
 ### Il y en a une infinité
 
 <div class="bloc bloc-theo">
-<div class="bloc-titre">Euclide</div>
+<div class="bloc-titre">Infinité des nombres premiers</div>
 
 Il existe une infinité de nombres premiers.
 
@@ -214,7 +221,7 @@ Il existe une infinité de nombres premiers.
 Euclide en a donné un joli exemple de démonstration par l'absurde.
 
 <div class="bloc bloc-preuve">
-<div class="bloc-titre">infinité des nombres premiers</div>
+<div class="bloc-titre">Démonstration d'Euclide</div>
 
 Supposons qu'il existe un nombre fini de nombres premiers et dressons-en la liste complète $p_1, \dots, p_r$. Multiplions entre eux tous les nombres de cette liste et ajoutons $1$ au résultat pour obtenir le nombre
 $$n = p_1 p_2 \cdots p_r + 1.$$
@@ -258,14 +265,14 @@ Et cette vidéo explique une propriété de prime abord étonnante&nbsp;: si on 
 C'est l'un des plus anciens algorithmes connus. Sa formulation est simplissime, mais sa puissance est redoutable. Il calcule le plus grand diviseur commun de deux entiers sans en chercher la décomposition en facteurs premiers.
 
 <div class="bloc bloc-def">
-<div class="bloc-titre">pgcd</div>
+<div class="bloc-titre">Plus grand commun diviseur (pgcd)</div>
 
 Soit $a$ et $b$ deux entiers naturels non tous deux nuls. Leur **plus grand commun diviseur**, noté $\operatorname{pgcd}(a, b)$ (ou $a \wedge b$), est le plus grand entier qui divise à la fois $a$ et $b$.
 
 </div>
 
 <div class="bloc bloc-prop">
-<div class="bloc-titre">la clé de l'algorithme</div>
+<div class="bloc-titre">Pgcd et division euclidienne</div>
 
 Soit $a$ et $b$ deux entiers, avec $b \ge 1$, et $r$ le reste de la division euclidienne de $a$ par $b$ ($a = bq + r$, $0 \le r < b$). Alors
 $$\operatorname{pgcd}(a, b) = \operatorname{pgcd}(b, r).$$
@@ -306,7 +313,7 @@ C'est l'identité de Bézout&nbsp;: pour tous entiers $a$ et $b$, il existe des 
 Quand $a$ et $b$ sont deux nombres consécutifs de la suite de Fibonacci. On définit cette suite par $F_0 = 0$, $F_1 = 1$ et $F_{n+2} = F_{n+1} + F_n$&nbsp;: $0, 1, 1, 2, 3, 5, 8, 13, 21, \dots$ Par exemple, pour $\operatorname{pgcd}(8, 5)$&nbsp;: $8 = 1 \times 5 + 3$, $5 = 1 \times 3 + 2$, $3 = 1 \times 2 + 1$, $2 = 2 \times 1 + 0$, soit quatre divisions pour de petits nombres, avec des quotients tous égaux à $1$ (sauf le dernier).
 
 <div class="bloc bloc-theo">
-<div class="bloc-titre">Lamé, 1844</div>
+<div class="bloc-titre">Lamé (1844)</div>
 
 Si l'algorithme d'Euclide appliqué à $a > b \ge 1$ effectue $n$ divisions, alors $b \ge F_{n+1}$ et $a \ge F_{n+2}$. Par conséquent, le nombre de divisions est au plus d'environ $4{,}8$ fois le nombre de chiffres décimaux de $b$.
 
@@ -323,7 +330,7 @@ Bref, l'étude de la complexité de l'algorithme d'Euclide fait intervenir le no
 Une fraction continue écrit un nombre comme un entier plus l'inverse d'un entier plus l'inverse d'un entier, et ainsi de suite.
 
 <div class="bloc bloc-def">
-<div class="bloc-titre">fraction continue</div>
+<div class="bloc-titre">Fraction continue</div>
 
 Soit $a_0 \in \mathbb{Z}$ et $a_1, a_2, \dots$ des entiers strictement positifs. On note
 $$[a_0; a_1, a_2, \dots] = a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cfrac{1}{\ddots}}}.$$
@@ -384,7 +391,7 @@ Un nombre est rationnel si et seulement si son développement s'arrête, et l'al
 Les réduites sont les meilleures approximations rationnelles, au sens suivant.
 
 <div class="bloc bloc-prop">
-<div class="bloc-titre">qualité des réduites</div>
+<div class="bloc-titre">Qualité des réduites</div>
 
 Soit $x$ un irrationnel et $\frac{p_n}{q_n}$ ses réduites. Alors
 $$\left| x - \frac{p_n}{q_n} \right| < \frac{1}{q_n q_{n+1}} < \frac{1}{q_n^2}.$$
@@ -394,9 +401,13 @@ Inversement, si une fraction $\frac{p}{q}$ vérifie $\left| x - \frac{p}{q} \rig
 
 Plus un quotient partiel est grand, plus la réduite précédente est précise. Pour $\pi = [3; 7, 15, 1, 292, \dots]$, le grand quotient $292$ explique la qualité de la réduite qui le précède&nbsp;:
 
-| réduite de $\pi$ | $3$ | $\frac{22}{7}$ | $\frac{333}{106}$ | $\frac{355}{113}$ | $\frac{103993}{33102}$ |
-|:---|:---:|:---:|:---:|:---:|:---:|
-| erreur | $1{,}4 \times 10^{-1}$ | $1{,}3 \times 10^{-3}$ | $8{,}3 \times 10^{-5}$ | $2{,}7 \times 10^{-7}$ | $5{,}8 \times 10^{-10}$ |
+| réduite de $\pi$ | erreur |
+|:---:|:---:|
+| $3$ | $1{,}4 \times 10^{-1}$ |
+| $\frac{22}{7}$ | $1{,}3 \times 10^{-3}$ |
+| $\frac{333}{106}$ | $8{,}3 \times 10^{-5}$ |
+| $\frac{355}{113}$ | $2{,}7 \times 10^{-7}$ |
+| $\frac{103993}{33102}$ | $5{,}8 \times 10^{-10}$ |
 
 Les fractions continues permettent ainsi d'enquêter visuellement sur le degré de rationalité d'un nombre irrationnel en déterminant les fractions successives qui l'approximent le mieux. Elles rendent plus transparents les différents compromis qu'on est amené à faire pour tenter de caler des nombres carrés dans des nombres ronds du fait de périodicités incompatibles. On explique ainsi les calendriers, les almanachs d'éclipses et les 12 notes de musique.
 
@@ -415,7 +426,7 @@ Les fractions continues nous ont aussi été utiles pour l'étude de la complexi
 Le nombre d'or est une sorte de tarte à la crème des mathématiques. D'infinies élucubrations lui font tenir un rôle quasi mystique. On ne peut nier cependant qu'il apparaît parfois dans des endroits étonnants. Reste seulement à démystifier sa présence.
 
 <div class="bloc bloc-def">
-<div class="bloc-titre">nombre d'or</div>
+<div class="bloc-titre">Nombre d'or</div>
 
 Le **nombre d'or** est la racine positive de l'équation $x^2 = x + 1$&nbsp;:
 $$\varphi = \frac{1 + \sqrt{5}}{2} \approx 1{,}618.$$
@@ -426,7 +437,7 @@ En divisant l'équation par $x$, on obtient $x = 1 + \frac{1}{x}$, qu'on peut r�
 $$F_n = \frac{\varphi^n - \left(-\frac{1}{\varphi}\right)^n}{\sqrt{5}}.$$
 
 <div class="bloc bloc-theo">
-<div class="bloc-titre">Hurwitz, 1891</div>
+<div class="bloc-titre">Hurwitz (1891)</div>
 
 Pour tout irrationnel $x$, il existe une infinité de fractions $\frac{p}{q}$ telles que $\left| x - \frac{p}{q} \right| < \frac{1}{\sqrt{5} q^2}$. La constante $\sqrt{5}$ ne peut pas être remplacée par un nombre plus grand, et le nombre d'or le montre.
 
@@ -517,10 +528,3 @@ Pourquoi l'ordre produit-il toujours $\frac{1}{k!}$, et pas autre chose&nbsp;? P
 <p>Comme le développement se répète, $x = 1 + \frac{1}{x}$, donc $x^2 = x + 1$ et $x > 0$&nbsp;: $x = \varphi$. Les rapports valent $\frac{1}{1} = 1$, $\frac{2}{1} = 2$, $\frac{3}{2} = 1{,}5$, $\frac{5}{3} \approx 1{,}667$, $\frac{8}{5} = 1{,}6$, $\frac{13}{8} = 1{,}625$, $\frac{21}{13} \approx 1{,}615$&nbsp;: ils oscillent de part et d'autre de $\varphi \approx 1{,}618$ en s'en rapprochant.</p>
 </details>
 </details>
-
-## Pour aller plus loin {#plus-loin}
-
-- [Euclidean algorithm](https://en.wikipedia.org/wiki/Euclidean_algorithm) (Wikipédia)&nbsp;: preuves, complexité, théorème de Lamé.
-- [Continued fraction](https://en.wikipedia.org/wiki/Continued_fraction) (Wikipédia)&nbsp;: réduites, quotients partiels, développements de $\pi$, $\mathrm{e}$ et des nombres quadratiques.
-- [Hurwitz's theorem](https://en.wikipedia.org/wiki/Hurwitz%27s_theorem_(number_theory)) (Wikipédia)&nbsp;: le nombre d'or comme nombre le plus mal approchable.
-- G. H. Hardy et E. M. Wright, *An Introduction to the Theory of Numbers*, chapitres 10 et 11&nbsp;: fractions continues et approximation.
