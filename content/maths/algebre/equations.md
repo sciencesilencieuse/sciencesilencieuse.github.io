@@ -164,6 +164,17 @@ details.solution > summary
     color: #004D80;
     cursor: pointer;
 }
+.fig-ctl select.sel-seul
+{
+    display: block;
+    margin: 0.3em auto;
+    text-align-last: center;
+}
+.fig-val.note
+{
+    font-size: 0.85em;
+    color: #64748B;
+}
 .fig-ctl .coef
 {
     display: inline-block;
@@ -203,29 +214,7 @@ details.solution > summary
 
 # Équations
 
-Résoudre une équation polynomiale, c'est trouver les nombres qui annulent un polynôme. On a su le faire pour le premier et le second degré dès l'Antiquité, pour les degrés trois et quatre à la Renaissance, avant de se heurter au cinquième degré, puis de passer au calcul approché. Cette page suit cette histoire, avec des figures pour manipuler les racines. Trois vidéos pour commencer&nbsp;:
-
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube WPc-Hj2O_Os>}}
-</div>
-
-<br>
-
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube tLwoouhIXyM>}}
-</div>
-
-<br>
-
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube _Hk1F35MLr4>}}
-</div>
-
-Jusque-là, rien de bien folichon... Mais si on libère la variable de nos polynômes en lui permettant de se balader dans l'espace des complexes, tout devient plus sympa. Déjà, plus d'histoires de 0, 1 ou 2 solutions pour un polynôme de degré 2... En complexe, un polynôme de degré 2 a toujours 2 solutions. C'est quand même plus propre comme ça. Et d'ailleurs, un polynôme de degré n a toujours n racines et peut donc se factoriser en n polynômes de degré 1. C'est le **théorème fondamental de l'algèbre**.
-
-{{% notice type="note" round="true" %}}
-[Jolie série de vidéos](https://www.youtube.com/playlist?list=PLiaHhY2iBX9g6KIvZ_703G3KJXapKkNaF) sur les complexes.
-{{% /notice %}}
+Résoudre une équation polynomiale, c'est trouver les nombres qui annulent un polynôme. On a su le faire pour le premier et le second degré dès l'Antiquité, pour les degrés trois et quatre à la Renaissance, avant de se heurter au cinquième degré, puis de passer au calcul approché. Cette page suit cette histoire. Elle commence par le premier degré (équations, puis inéquations), poursuit avec le second degré, d'abord dans les nombres réels, puis dans les nombres complexes, et monte ensuite vers les degrés supérieurs, avec des figures pour manipuler les racines.
 
 <div class="bloc bloc-def">
 <div class="bloc-titre">Équation polynomiale et racine</div>
@@ -234,18 +223,106 @@ Un **polynôme** de degré $n$ est une expression $P(x) = a_n x^n + a_{n-1} x^{n
 
 </div>
 
-## Le second degré
+## Le premier degré
 
-Pour $ax + b = 0$ avec $a \neq 0$, la solution est $x = -\frac{b}{a}$. Le second degré est le premier cas où la forme de la solution dépend des coefficients.
+### Équations du premier degré
 
 <div class="bloc bloc-theo">
-<div class="bloc-titre">Équation du second degré</div>
+<div class="bloc-titre">Équation du premier degré</div>
+
+Soit $a x + b = 0$ avec $a \neq 0$. Elle a une unique solution&nbsp;:
+$$x = -\frac{b}{a}.$$
+(Si $a = 0$, l'équation n'a aucune solution quand $b \neq 0$, et tous les réels pour solutions quand $b = 0$.)
+
+</div>
+
+Pour résoudre, on «&nbsp;isole l'inconnue&nbsp;»&nbsp;: on fait la même opération des deux côtés de l'égalité (retrancher $b$, puis diviser par $a$), comme on garde une balance en équilibre en ajoutant ou en retirant la même masse des deux plateaux. Par exemple, $3x + 6 = 0$ donne $3x = -6$, soit $x = -2$.
+
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+{{<youtube WPc-Hj2O_Os>}}
+</div>
+
+### Inéquations du premier degré
+
+Une inéquation remplace l'égalité par un ordre ($<$, $\le$, $>$, $\ge$). On ne cherche plus un nombre, mais un ensemble de nombres, le plus souvent un intervalle. On procède comme pour l'équation, avec une précaution&nbsp;: **multiplier ou diviser par un nombre négatif renverse le sens de l'inégalité**.
+
+<div class="bloc bloc-prop">
+<div class="bloc-titre">Signe de ax + b</div>
+
+Pour $a \neq 0$, le nombre $a x + b$ s'annule en $x = -\frac{b}{a}$, il a le signe de $a$ à droite de cette valeur, et le signe opposé à gauche.
+
+<table class="tbl">
+<tr><th>$x$</th><td>$-\infty$</td><td>$-\frac{b}{a}$</td><td>$+\infty$</td></tr>
+<tr><th>$a x + b$ si $a > 0$</th><td>$-$</td><td>$0$</td><td>$+$</td></tr>
+<tr><th>$a x + b$ si $a < 0$</th><td>$+$</td><td>$0$</td><td>$-$</td></tr>
+</table>
+
+</div>
+
+En effet, $a x + b > 0$ équivaut à $a x > -b$, puis à $x > -\frac{b}{a}$ si $a > 0$ ou à $x < -\frac{b}{a}$ si $a < 0$ (on a divisé par un nombre négatif). Par exemple, $-2x + 6 \ge 0$ équivaut à $-2x \ge -6$, donc à $x \le 3$, soit l'intervalle $]-\infty\ ; 3]$.
+
+Dans la figure suivante, on règle $a$ et $b$ et l'on choisit l'inégalité. La droite $y = a x + b$ est tracée et l'ensemble des solutions apparaît en vert sur l'axe des abscisses.
+
+<div class="fig">
+<p class="fig-ctl"><label for="in-a">$a$ = <span id="in-av"></span></label><input type="range" id="in-a" min="-3" max="3" step="0.5" value="-2"></p>
+<p class="fig-ctl"><label for="in-b">$b$ = <span id="in-bv"></span></label><input type="range" id="in-b" min="-6" max="6" step="0.5" value="6"></p>
+<p class="fig-ctl"><label for="in-s">Inégalité&nbsp;:</label><select id="in-s" class="sel-seul"><option value="gt">a x + b &gt; 0</option><option value="ge" selected>a x + b ≥ 0</option><option value="lt">a x + b &lt; 0</option><option value="le">a x + b ≤ 0</option></select></p>
+<svg id="in-svg" viewBox="0 0 460 205" role="img" aria-label="Une droite et l'ensemble des x où elle est positive ou négative"></svg>
+<p class="fig-val" id="in-val"></p>
+</div>
+<script>
+(function () {
+  var sa = document.getElementById('in-a'), sb = document.getElementById('in-b'), ss = document.getElementById('in-s'), svg = document.getElementById('in-svg'), out = document.getElementById('in-val');
+  var X0 = 30, X1 = 440, Y0 = 15, Y1 = 185, U = (X1 - X0) / 12, cx = (X0 + X1) / 2, cy = (Y0 + Y1) / 2, V = 14;
+  function fr(x, d) { if (Math.abs(x) < 0.5 * Math.pow(10, -d)) { x = 0; } return x.toFixed(d).replace('.', ',').replace('-', '−'); }
+  function dessiner() {
+    var a = parseFloat(sa.value), b = parseFloat(sb.value), s = ss.value, i, h = '';
+    document.getElementById('in-av').textContent = fr(a, 1); document.getElementById('in-bv').textContent = fr(b, 1);
+    h += '<defs><clipPath id="in-cl"><rect x="' + X0 + '" y="' + Y0 + '" width="' + (X1 - X0) + '" height="' + (Y1 - Y0) + '"/></clipPath></defs><rect x="' + X0 + '" y="' + Y0 + '" width="' + (X1 - X0) + '" height="' + (Y1 - Y0) + '" fill="#F8FAFC" stroke="#CBD5E1"/>';
+    h += '<line x1="' + X0 + '" y1="' + cy + '" x2="' + X1 + '" y2="' + cy + '" stroke="#64748B"/><line x1="' + cx + '" y1="' + Y0 + '" x2="' + cx + '" y2="' + Y1 + '" stroke="#64748B"/>';
+    for (i = -6; i <= 6; i++) { h += '<line x1="' + (cx + i * U) + '" y1="' + (cy - 3) + '" x2="' + (cx + i * U) + '" y2="' + (cy + 3) + '" stroke="#64748B"/>'; if (i !== 0 && i % 2 === 0) { h += '<text x="' + (cx + i * U) + '" y="' + (cy + 15) + '" font-size="11" text-anchor="middle" fill="#475569" font-family="Georgia,serif">' + i + '</text>'; } }
+    var pos = s === 'gt' || s === 'ge', large = s === 'ge' || s === 'le', txt, r = null;
+    if (Math.abs(a) > 1e-9) {
+      r = -b / a;
+      var vers = (a > 0) === pos ? 'droite' : 'gauche', xa = Math.max(-6, Math.min(6, r)), ex = vers === 'droite' ? 6 : -6;
+      h += '<line x1="' + (cx + xa * U) + '" y1="' + cy + '" x2="' + (cx + ex * U) + '" y2="' + cy + '" stroke="#006C65" stroke-width="7" stroke-linecap="butt" opacity="0.75"/>';
+      var rr = fr(r, 2).replace(',00', '').replace(/(,\d)0$/, '$1');
+      txt = vers === 'droite' ? 'x ' + (large ? '≥' : '>') + ' ' + rr + ' , soit ' + (large ? '[' : ']') + rr + ' ; +∞[' : 'x ' + (large ? '≤' : '<') + ' ' + rr + ' , soit ]−∞ ; ' + rr + (large ? ']' : '[');
+    } else {
+      var vrai = pos ? (large ? b >= 0 : b > 0) : (large ? b <= 0 : b < 0);
+      if (vrai) { h += '<line x1="' + X0 + '" y1="' + cy + '" x2="' + X1 + '" y2="' + cy + '" stroke="#006C65" stroke-width="7" opacity="0.75"/>'; }
+      txt = a === 0 ? (vrai ? 'a = 0 : l\'inégalité est toujours vraie, tous les réels sont solutions' : 'a = 0 : l\'inégalité est fausse, aucune solution') : '';
+    }
+    var d = '';
+    for (i = 0; i <= 200; i++) { var x = -6 + 12 * i / 200; d += (i ? 'L' : 'M') + (cx + x * U).toFixed(1) + ',' + (cy - (a * x + b) * V / 2).toFixed(1); }
+    h += '<path d="' + d + '" fill="none" stroke="#004D80" stroke-width="2.4" clip-path="url(#in-cl)"/>';
+    if (r !== null && Math.abs(r) <= 6) { h += '<circle cx="' + (cx + r * U).toFixed(1) + '" cy="' + cy + '" r="5" fill="' + (large ? '#006C65' : '#fff') + '" stroke="#006C65" stroke-width="2"/>'; }
+    svg.innerHTML = h;
+    out.innerHTML = (a !== 0 ? 'Solutions de ' + ss.options[ss.selectedIndex].text.replace('a x + b', 'ax + b') + ' : ' : '') + txt;
+  }
+  [sa, sb, ss].forEach(function (e) { e.addEventListener('input', dessiner); e.addEventListener('change', dessiner); });
+  dessiner();
+})();
+</script>
+
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+{{<youtube tLwoouhIXyM>}}
+</div>
+
+## Le second degré
+
+### Dans les réels : le discriminant
+
+Pour un polynôme du second degré $a x^2 + b x + c$, la méthode de la balance ne suffit plus, puisque l'inconnue apparaît deux fois (en $x$ et en $x^2$). On se ramène à un carré.
+
+<div class="bloc bloc-theo">
+<div class="bloc-titre">Équation du second degré dans les réels</div>
 
 Soit $a x^2 + b x + c = 0$ avec $a \neq 0$, et $\Delta = b^2 - 4ac$ son **discriminant**.
 
-- Si $\Delta > 0$, il y a deux racines réelles $x_{\pm} = \dfrac{-b \pm \sqrt{\Delta}}{2a}$.
-- Si $\Delta = 0$, il y a une racine double $x = -\dfrac{b}{2a}$.
-- Si $\Delta < 0$, il n'y a pas de racine réelle, mais deux racines complexes conjuguées $x_{\pm} = \dfrac{-b \pm \mathrm{i}\sqrt{-\Delta}}{2a}$.
+- Si $\Delta > 0$, il y a deux solutions réelles $x_{\pm} = \dfrac{-b \pm \sqrt{\Delta}}{2a}$.
+- Si $\Delta = 0$, il y a une solution double $x = -\dfrac{b}{2a}$.
+- Si $\Delta < 0$, il n'y a aucune solution réelle.
 
 </div>
 
@@ -254,11 +331,52 @@ Soit $a x^2 + b x + c = 0$ avec $a \neq 0$, et $\Delta = b^2 - 4ac$ son **discri
 
 On met $a$ en facteur et l'on complète le carré&nbsp;:
 $$a x^2 + b x + c = a\left[\left(x + \frac{b}{2a}\right)^2 - \frac{\Delta}{4a^2}\right].$$
-L'équation s'écrit alors $\left(x + \frac{b}{2a}\right)^2 = \frac{\Delta}{4a^2}$. Ce carré vaut un nombre positif ou nul quand $\Delta \ge 0$, d'où les racines réelles. Quand $\Delta < 0$, le membre de droite est négatif et il faut un nombre dont le carré est négatif&nbsp;: $\mathrm{i}\sqrt{-\Delta}$ convient, ce qui donne les racines complexes.
+L'équation s'écrit alors $\left(x + \frac{b}{2a}\right)^2 = \frac{\Delta}{4a^2}$. Un carré de réel est positif ou nul&nbsp;: si $\Delta > 0$, on extrait la racine carrée et l'on obtient deux solutions&nbsp;; si $\Delta = 0$, il n'y en a qu'une&nbsp;; si $\Delta < 0$, le membre de droite est négatif et aucun réel ne convient.
 
 </div>
 
-Dans la figure suivante, on fait varier les coefficients. À gauche, la parabole $y = ax^2 + bx + c$&nbsp;; à droite, le plan complexe où se placent les racines. Quand la parabole ne coupe plus l'axe des abscisses, les deux racines quittent l'axe réel et se placent de part et d'autre, à des positions conjuguées.
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+{{<youtube _Hk1F35MLr4>}}
+</div>
+
+La forme canonique donne aussi le signe du trinôme, donc la solution des inéquations du second degré.
+
+<div class="bloc bloc-prop">
+<div class="bloc-titre">Signe d'un trinôme du second degré</div>
+
+Soit $T(x) = a x^2 + b x + c$ avec $a \neq 0$.
+
+- Si $\Delta > 0$, de racines $x_1 < x_2$, $T(x)$ a le signe de $a$ à l'extérieur de $[x_1 ; x_2]$ et le signe opposé à l'intérieur.
+- Si $\Delta = 0$, $T(x)$ a le signe de $a$ partout, sauf en la racine double où il s'annule.
+- Si $\Delta < 0$, $T(x)$ a le signe de $a$ pour tout réel $x$.
+
+</div>
+
+On le voit sur la parabole $y = T(x)$, tournée vers le haut si $a > 0$ et vers le bas si $a < 0$&nbsp;: elle est au-dessus de l'axe des abscisses là où $T > 0$. Par exemple, $x^2 - 3x + 2 < 0$ a pour discriminant $1$ et pour racines $1$ et $2$, avec $a = 1 > 0$&nbsp;: le trinôme est négatif entre les racines, d'où la solution $]1 ; 2[$.
+
+<details class="encadre">
+<summary class="encadre-titre">Babylone, al-Khwârizmî, Viète</summary>
+<p>Des tablettes mésopotamiennes d'environ $1800$ av. J.-C. (comme BM 13901) contiennent des problèmes équivalents à des équations du second degré, résolus en complétant le carré, sans notation littérale. Vers $825$, al-Khwârizmî a écrit à Bagdad un traité sur la résolution des équations, <i>al-jabr wa-l-muqābala</i> («&nbsp;la restauration et la réduction&nbsp;»), qui a donné son nom à l'algèbre (et le sien à l'algorithme). Il ne disposait pas des nombres négatifs&nbsp;: il traitait séparément les différents cas d'équations. François Viète a introduit en $1591$ l'usage de lettres pour les inconnues et pour les coefficients, ce qui a permis d'écrire des formules générales et de découvrir des relations comme celles qui portent son nom.</p>
+</details>
+
+### Dans les complexes : quand le discriminant est négatif
+
+Jusque-là, rien de bien folichon... Mais si on libère la variable de nos polynômes en lui permettant de se balader dans l'espace des complexes, tout devient plus sympa. Déjà, plus d'histoires de 0, 1 ou 2 solutions pour un polynôme de degré 2... En complexe, un polynôme de degré 2 a toujours 2 solutions. C'est quand même plus propre comme ça. Et d'ailleurs, un polynôme de degré n a toujours n racines et peut donc se factoriser en n polynômes de degré 1. C'est le **théorème fondamental de l'algèbre**.
+
+{{% notice type="note" round="true" %}}
+[Jolie série de vidéos](https://www.youtube.com/playlist?list=PLiaHhY2iBX9g6KIvZ_703G3KJXapKkNaF) sur les complexes.
+{{% /notice %}}
+
+<div class="bloc bloc-theo">
+<div class="bloc-titre">Équation du second degré dans les complexes</div>
+
+Soit $a x^2 + b x + c = 0$ avec $a \neq 0$ et $\Delta = b^2 - 4ac$. Dans $\mathbb{C}$, l'équation a toujours deux racines (confondues si $\Delta = 0$)&nbsp;:
+$$x_{\pm} = \frac{-b \pm \delta}{2a}, \qquad \text{où } \delta^2 = \Delta.$$
+Si les coefficients sont réels et $\Delta < 0$, on prend $\delta = \mathrm{i}\sqrt{-\Delta}$, et les deux racines sont **complexes conjuguées**&nbsp;: $x_{\pm} = \dfrac{-b \pm \mathrm{i}\sqrt{-\Delta}}{2a}$.
+
+</div>
+
+La démonstration est la même, avec une racine carrée complexe quand $\Delta$ est négatif&nbsp;: le nombre $\mathrm{i}\sqrt{-\Delta}$ a pour carré $-(-\Delta) = \Delta$. Dans la figure suivante, on fait varier les coefficients. À gauche, la parabole $y = ax^2 + bx + c$&nbsp;; à droite, le plan complexe où se placent les racines. Quand la parabole ne coupe plus l'axe des abscisses, les deux racines quittent l'axe réel et se placent de part et d'autre, à des positions conjuguées.
 
 <div class="fig">
 <p class="fig-ctl"><label for="sd-a">$a$ = <span id="sd-av"></span></label><input type="range" id="sd-a" min="-2" max="2" step="0.1" value="1"></p>
@@ -325,11 +443,6 @@ Plus généralement, pour un polynôme $P(x) = a_n (x - x_1)(x - x_2)\cdots(x - 
 </div>
 
 En effet, $a(x - x_1)(x - x_2) = a x^2 - a(x_1 + x_2)x + a x_1 x_2$, et l'on identifie les coefficients. Ces relations permettent de trouver deux nombres à partir de leur somme $s$ et de leur produit $p$&nbsp;: ce sont les racines de $x^2 - s x + p = 0$.
-
-<details class="encadre">
-<summary class="encadre-titre">Babylone, al-Khwârizmî, Viète</summary>
-<p>Des tablettes mésopotamiennes d'environ $1800$ av. J.-C. (comme BM 13901) contiennent des problèmes équivalents à des équations du second degré, résolus en complétant le carré, sans notation littérale. Vers $825$, al-Khwârizmî a écrit à Bagdad un traité sur la résolution des équations, <i>al-jabr wa-l-muqābala</i> («&nbsp;la restauration et la réduction&nbsp;»), qui a donné son nom à l'algèbre (et le sien à l'algorithme). Il ne disposait pas des nombres négatifs&nbsp;: il traitait séparément les différents cas d'équations. François Viète a introduit en $1591$ l'usage de lettres pour les inconnues et pour les coefficients, ce qui a permis d'écrire des formules générales et de découvrir des relations comme celles qui portent son nom.</p>
-</details>
 
 ## Le troisième et le quatrième degré : Cardan et Ferrari
 
@@ -593,7 +706,7 @@ Si $r$ est une racine simple de $f$ ($f(r) = 0$ et $f'(r) \neq 0$), et si $x_0$ 
 Le nombre de décimales exactes double environ à chaque itération. Pour $f(x) = x^2 - 2$, la méthode donne $x_{n+1} = \frac{1}{2}\left(x_n + \frac{2}{x_n}\right)$, la méthode de Héron (ou «&nbsp;babylonienne&nbsp;») pour $\sqrt{2}$&nbsp;: de $x_0 = 1$, on obtient $\frac{3}{2}$, $\frac{17}{12}$, $\frac{577}{408} \approx 1{,}41421569$, qui est exact à $6$ décimales. Dans la figure suivante, on choisit une équation et un point de départ, puis on déroule les itérations&nbsp;: chaque tangente (en rose) donne le point suivant.
 
 <div class="fig">
-<p class="fig-ctl"><label>Équation&nbsp;: <select id="nw-p"><option value="0">x³ − 2x − 5 = 0 (l'exemple de Newton, 1669)</option><option value="1">x² − 2 = 0</option><option value="2">x³ − x − 1 = 0</option></select></label></p>
+<p class="fig-ctl"><label for="nw-p">Équation&nbsp;:</label><select id="nw-p" class="sel-seul"><option value="0">x³ − 2x − 5 = 0 (l'exemple de Newton, 1669)</option><option value="1">x² − 2 = 0</option><option value="2">x³ − x − 1 = 0</option></select></p>
 <p class="fig-ctl"><label for="nw-x">Point de départ x₀ = <span id="nw-xv"></span></label><input type="range" id="nw-x" min="1" max="3.4" step="0.1" value="3"></p>
 <p class="fig-ctl"><button type="button" id="nw-1">Itération suivante</button><button type="button" id="nw-5">+ 5 itérations</button><button type="button" id="nw-0">Recommencer</button></p>
 <svg id="nw-svg" viewBox="0 0 460 260" role="img" aria-label="La méthode de Newton : tangentes successives à la courbe"></svg>
@@ -659,55 +772,119 @@ Dans le plan complexe, la méthode de Newton s'applique au même titre. Chaque r
 Dans la figure suivante, chaque point du plan est coloré selon la racine vers laquelle la méthode de Newton converge quand on part de ce point, et plus sombre quand la convergence est lente. Les points en noir ne convergent pas&nbsp;: pour $z^3 - 2z + 2$, le point $0$ est attiré par un cycle $0 \to 1 \to 0$ et n'atteint jamais de racine.
 
 <div class="fig">
-<p class="fig-ctl"><label>Polynôme&nbsp;: <select id="nf-p"><option value="0">z³ − 1</option><option value="1">z⁴ − 1</option><option value="2">z⁵ − 1</option><option value="3">z³ − 2z + 2 (un cycle de période 2)</option><option value="4">z⁵ − z − 1 (aucune formule)</option></select></label></p>
-<canvas id="nf-cv" width="280" height="280" role="img" aria-label="Bassins d'attraction de la méthode de Newton dans le plan complexe"></canvas>
-<p class="fig-val">Les points colorés convergent vers une racine (même couleur pour les points qui vont vers la même racine). Le plan représenté est le carré $[-2 ; 2] \times [-2 ; 2]$.</p>
+<p class="fig-ctl"><label for="nf-p">Polynôme&nbsp;:</label><select id="nf-p" class="sel-seul"><option value="0">z³ − 1</option><option value="1">z⁴ − 1</option><option value="2">z⁵ − 1</option><option value="3">z³ − 2z + 2 (un cycle de période 2)</option><option value="4">z⁵ − z − 1 (aucune formule)</option></select></p>
+<canvas id="nf-cv" width="300" height="300" role="img" aria-label="Bassins d'attraction de la méthode de Newton dans le plan complexe, que l'on peut déplacer et agrandir" style="touch-action:none;cursor:grab;"></canvas>
+<p class="fig-ctl"><button type="button" id="nf-zp">Zoom +</button><button type="button" id="nf-zm">Zoom −</button><button type="button" id="nf-r">Vue initiale</button></p>
+<p class="fig-val" id="nf-val"></p>
+<p class="fig-val note">Glisser pour déplacer, molette ou pincement pour zoomer (la figure est recalculée à chaque changement de vue). Sur téléphone, pour faire défiler la page, touchez en dehors de la figure.</p>
 </div>
 <script>
 (function () {
-  var cv = document.getElementById('nf-cv'), sel = document.getElementById('nf-p'), ctx = cv.getContext('2d'), W = 280;
+  var cv = document.getElementById('nf-cv'), sel = document.getElementById('nf-p'), ctx = cv.getContext('2d'), W = 300, out = document.getElementById('nf-val');
+  var tmp = document.createElement('canvas'), tctx = tmp.getContext('2d');
   var POL = [[1, 0, 0, -1], [1, 0, 0, 0, -1], [1, 0, 0, 0, 0, -1], [1, 0, -2, 2], [1, 0, 0, 0, -1, -1]];
-  var PAL = [[0, 77, 128], [194, 119, 11], [151, 14, 83], [0, 108, 101], [107, 79, 160]];
-  function racines(c) {
-    var n = c.length - 1, a = c.map(function (v) { return v / c[0]; }), z = [], k, it, i, j;
-    for (k = 0; k < n; k++) { var th = 2 * Math.PI * k / n + 0.4; z.push([1.2 * Math.cos(th), 1.2 * Math.sin(th)]); }
+  var PAL = [[92, 160, 222], [247, 177, 89], [226, 120, 170], [102, 200, 176], [170, 150, 225]], GRIS = [150, 155, 170];
+  var c, dc, n, roots, cx = 0, cy = 0, R = 2, version = 0, ptrs = {};
+  function racines(p) {
+    var m = p.length - 1, a = p.map(function (v) { return v / p[0]; }), z = [], k, it, i, j;
+    for (k = 0; k < m; k++) { var th = 2 * Math.PI * k / m + 0.4; z.push([1.2 * Math.cos(th), 1.2 * Math.sin(th)]); }
     for (it = 0; it < 500; it++) {
-      for (i = 0; i < n; i++) {
+      for (i = 0; i < m; i++) {
         var pr = 1, pi = 0, nr, ni;
-        for (j = 1; j <= n; j++) { nr = pr * z[i][0] - pi * z[i][1] + a[j]; ni = pr * z[i][1] + pi * z[i][0]; pr = nr; pi = ni; }
+        for (j = 1; j <= m; j++) { nr = pr * z[i][0] - pi * z[i][1] + a[j]; ni = pr * z[i][1] + pi * z[i][0]; pr = nr; pi = ni; }
         var dr = 1, di = 0;
-        for (j = 0; j < n; j++) { if (j === i) { continue; } var xr = z[i][0] - z[j][0], xi = z[i][1] - z[j][1]; nr = dr * xr - di * xi; ni = dr * xi + di * xr; dr = nr; di = ni; }
+        for (j = 0; j < m; j++) { if (j === i) { continue; } var xr = z[i][0] - z[j][0], xi = z[i][1] - z[j][1]; nr = dr * xr - di * xi; ni = dr * xi + di * xr; dr = nr; di = ni; }
         var den = dr * dr + di * di; if (den < 1e-300) { continue; }
         z[i][0] -= (pr * dr + pi * di) / den; z[i][1] -= (pi * dr - pr * di) / den;
       }
     }
     return z;
   }
-  function dessiner() {
-    var c = POL[parseInt(sel.value, 10)], n = c.length - 1, R = 2, r = racines(c), img = ctx.createImageData(W, W), x, y, k, it;
-    var dc = []; for (k = 0; k < n; k++) { dc.push(c[k] * (n - k)); }
-    for (y = 0; y < W; y++) {
-      for (x = 0; x < W; x++) {
-        var zr = -R + 2 * R * (x + 0.5) / W, zi = R - 2 * R * (y + 0.5) / W, idx = -1, its = 0;
-        for (it = 0; it < 60; it++) {
-          var pr = c[0], pi = 0, qr = dc[0], qi = 0, t;
-          for (k = 1; k <= n; k++) { t = pr * zr - pi * zi + c[k]; pi = pr * zi + pi * zr; pr = t; }
-          for (k = 1; k < n; k++) { t = qr * zr - qi * zi + dc[k]; qi = qr * zi + qi * zr; qr = t; }
-          var den = qr * qr + qi * qi; if (den < 1e-20) { break; }
-          var sr = (pr * qr + pi * qi) / den, si = (pi * qr - pr * qi) / den;
-          zr -= sr; zi -= si;
-          if (sr * sr + si * si < 1e-14) { var best = 1e9, b = 0; for (k = 0; k < n; k++) { var dd = (zr - r[k][0]) * (zr - r[k][0]) + (zi - r[k][1]) * (zi - r[k][1]); if (dd < best) { best = dd; b = k; } } idx = b; its = it; break; }
-        }
-        var o = 4 * (y * W + x);
-        if (idx < 0) { img.data[o] = 0; img.data[o + 1] = 0; img.data[o + 2] = 0; }
-        else { var f = Math.max(0.25, 1 - its / 22), col = PAL[idx % PAL.length]; img.data[o] = col[0] * f + 255 * (1 - f) * 0.0; img.data[o + 1] = col[1] * f; img.data[o + 2] = col[2] * f; }
-        img.data[o + 3] = 255;
+  function choisir() {
+    c = POL[parseInt(sel.value, 10)]; n = c.length - 1; dc = []; for (var k = 0; k < n; k++) { dc.push(c[k] * (n - k)); }
+    roots = racines(c); cx = 0; cy = 0; R = 2; rendre();
+  }
+  function couleur(zr, zi, maxit) {
+    var it, k, t;
+    for (it = 0; it < maxit; it++) {
+      var pr = c[0], pi = 0, qr = dc[0], qi = 0;
+      for (k = 1; k <= n; k++) { t = pr * zr - pi * zi + c[k]; pi = pr * zi + pi * zr; pr = t; }
+      for (k = 1; k < n; k++) { t = qr * zr - qi * zi + dc[k]; qi = qr * zi + qi * zr; qr = t; }
+      var den = qr * qr + qi * qi; if (den < 1e-30) { break; }
+      var sr = (pr * qr + pi * qi) / den, si = (pi * qr - pr * qi) / den;
+      zr -= sr; zi -= si;
+      if (sr * sr + si * si < 1e-18) {
+        var best = 1e18, b = 0;
+        for (k = 0; k < n; k++) { var dd = (zr - roots[k][0]) * (zr - roots[k][0]) + (zi - roots[k][1]) * (zi - roots[k][1]); if (dd < best) { best = dd; b = k; } }
+        var f = 1 - 0.22 * Math.min(1, it / 16), p = PAL[b % PAL.length];
+        return [p[0] * f + 255 * (1 - f), p[1] * f + 255 * (1 - f), p[2] * f + 255 * (1 - f)];
       }
     }
-    ctx.putImageData(img, 0, 0);
+    return GRIS;
   }
-  sel.addEventListener('change', dessiner);
-  dessiner();
+  /* trois passes : un aperçu grossier presque instantané, puis des définitions plus fines ; une passe est abandonnée si la vue a changé */
+  var SUP = '⁰¹²³⁴⁵⁶⁷⁸⁹';
+  function sci(x) {
+    if (x === 0) { return '0'; }
+    var e = Math.floor(Math.log10(Math.abs(x)));
+    if (e >= -3 && e < 4) { return x.toPrecision(3).replace('.', ',').replace(/,?0+$/, function (m) { return m.indexOf(',') >= 0 ? '' : m; }); }
+    var m = x / Math.pow(10, e), s = String(Math.abs(e)).split('').map(function (d) { return SUP[d]; }).join('');
+    return m.toPrecision(2).replace('.', ',') + ' × 10' + (e < 0 ? '⁻' : '') + s;
+  }
+  function rendre() {
+    var v = ++version, passes = [60, 150, W], maxit = R < 0.05 ? 120 : 60;
+    out.innerHTML = 'zoom × ' + sci(2 / R) + ' &nbsp; centre ' + sci(cx) + ' ' + (cy < 0 ? '−' : '+') + ' ' + sci(Math.abs(cy)) + ' i';
+    function passe(k) {
+      if (v !== version || k >= passes.length) { return; }
+      var res = passes[k], img = new ImageData(res, res), y = 0, cr = cx, ci = cy, rr = R;
+      function bloc() {
+        if (v !== version) { return; }
+        var fin = Math.min(res, y + Math.max(4, Math.round(6000 / res))), x, o, col;
+        for (; y < fin; y++) {
+          for (x = 0; x < res; x++) {
+            col = couleur(cr + rr * (2 * (x + 0.5) / res - 1), ci - rr * (2 * (y + 0.5) / res - 1), maxit);
+            o = 4 * (y * res + x); img.data[o] = col[0]; img.data[o + 1] = col[1]; img.data[o + 2] = col[2]; img.data[o + 3] = 255;
+          }
+        }
+        if (y < res) { setTimeout(bloc, 0); return; }
+        tmp.width = res; tmp.height = res; tctx.putImageData(img, 0, 0);
+        ctx.imageSmoothingEnabled = res >= W; ctx.drawImage(tmp, 0, 0, res, res, 0, 0, W, W);
+        setTimeout(function () { passe(k + 1); }, 0);
+      }
+      bloc();
+    }
+    passe(0);
+  }
+  function zoomer(s, ux, uy) {
+    var nR = Math.max(1e-9, Math.min(6, R * s)); s = nR / R;
+    var zr = cx + R * ux, zi = cy - R * uy;
+    R = nR; cx = zr - R * ux; cy = zi + R * uy; rendre();
+  }
+  function rel(e) { var r = cv.getBoundingClientRect(); return [(e.clientX - r.left) / r.width * 2 - 1, (e.clientY - r.top) / r.height * 2 - 1]; }
+  cv.addEventListener('wheel', function (e) { e.preventDefault(); var u = rel(e); zoomer(e.deltaY < 0 ? 1 / 1.3 : 1.3, u[0], u[1]); }, { passive: false });
+  cv.addEventListener('pointerdown', function (e) { cv.setPointerCapture(e.pointerId); ptrs[e.pointerId] = [e.clientX, e.clientY]; cv.style.cursor = 'grabbing'; });
+  cv.addEventListener('pointermove', function (e) {
+    if (!ptrs[e.pointerId]) { return; }
+    var ids = Object.keys(ptrs), old = ptrs[e.pointerId], nw = [e.clientX, e.clientY], r = cv.getBoundingClientRect();
+    if (ids.length === 1) {
+      cx -= (nw[0] - old[0]) / r.width * 2 * R; cy += (nw[1] - old[1]) / r.height * 2 * R; rendre();
+    } else {
+      var oid = ids.filter(function (k) { return k !== String(e.pointerId); })[0], o = ptrs[oid];
+      var d0 = Math.hypot(old[0] - o[0], old[1] - o[1]), d1 = Math.hypot(nw[0] - o[0], nw[1] - o[1]);
+      var m0 = [(old[0] + o[0]) / 2, (old[1] + o[1]) / 2], m1 = [(nw[0] + o[0]) / 2, (nw[1] + o[1]) / 2];
+      cx -= (m1[0] - m0[0]) / r.width * 2 * R; cy += (m1[1] - m0[1]) / r.height * 2 * R;
+      if (d1 > 5 && d0 > 5) { zoomer(d0 / d1, (m1[0] - r.left) / r.width * 2 - 1, (m1[1] - r.top) / r.height * 2 - 1); } else { rendre(); }
+    }
+    ptrs[e.pointerId] = nw;
+  });
+  function fin(e) { delete ptrs[e.pointerId]; cv.style.cursor = 'grab'; }
+  cv.addEventListener('pointerup', fin); cv.addEventListener('pointercancel', fin);
+  cv.addEventListener('dblclick', function (e) { var u = rel(e); zoomer(0.5, u[0], u[1]); });
+  document.getElementById('nf-zp').addEventListener('click', function () { zoomer(0.5, 0, 0); });
+  document.getElementById('nf-zm').addEventListener('click', function () { zoomer(2, 0, 0); });
+  document.getElementById('nf-r').addEventListener('click', function () { cx = 0; cy = 0; R = 2; rendre(); });
+  sel.addEventListener('change', choisir);
+  choisir();
 })();
 </script>
 
