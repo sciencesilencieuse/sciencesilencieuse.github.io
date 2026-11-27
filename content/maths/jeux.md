@@ -136,6 +136,7 @@ details.solution > summary
 .jeu-tab th.b1 { background: #82BFFC; }
 .jeu-tab th.b2 { background: #5CA1FD; }
 .jeu-tab td { background: #FEFEFE; }
+.jeu-tab th:empty { background: transparent !important; border: none !important; }
 @media (max-width: 480px)
 {
     .jeu-tab th, .jeu-tab td { font-size: 1.05em; padding: 0.55em 0.15em; }
@@ -166,6 +167,7 @@ details.solution > summary
 .jeu-matrice th.jr { background: #FECACA; font-weight: bold; }
 .jeu-matrice th.jm { font-size: 0.85em; color: #64748B; }
 .jeu-matrice td { background: #FFFFFF; border: 1px solid #CBD5E1; }
+.jeu-matrice th:empty, .jeu-matrice td:empty { background: transparent !important; border: none !important; }
 .jeu-matrice td.jeu-col { border: 3px solid #006C65; background: #E6F2F1; }
 .jeu-matrice input[type="number"]
 {
