@@ -20,6 +20,7 @@ Les **probabilités** sont des calculs a priori, visant à prédire les issues d
 <div class="carte-texte">Les lois de probabilité usuelles, du discret au continu.</div>
 <div class="theme-subgroup">
 <div class="link-list">
+  <a href="./lois/#variable-aléatoire-espérance-et-variance" class="math-btn">Espérance et variance</a>
   <a href="./lois/#loi-binomiale" class="math-btn">Binomiale</a>
   <a href="./lois/#densité-de-probabilités" class="math-btn">Densité de probabilité</a>
   <a href="./lois/#loi-normale" class="math-btn">Normale</a>
