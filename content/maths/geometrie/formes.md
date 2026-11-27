@@ -187,7 +187,7 @@ Ce formalisme apporte trois choses&nbsp;:
 <li>Un seul théorème, celui de Stokes, contient le théorème fondamental de l'analyse, la formule de Green et celle de la divergence.</li>
 </ol>
 
-Les calculs se font toujours dans un système de coordonnées, mais grâce aux formes, les formules gardent la même tête d'un système à l'autre. On part d'un objet familier&nbsp;: le gradient. Les définitions (en bleu), les propriétés (en orange) et les théorèmes (en rose) sont encadrés, et les prolongements (en vert) sont repliables.
+Les calculs se font toujours dans un système de coordonnées, mais grâce aux formes, les formules gardent la même tête d'un système à l'autre. On part d'un objet familier&nbsp;: le gradient.
 
 <script>
 window.FG = (function () {
