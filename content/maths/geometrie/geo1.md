@@ -116,6 +116,8 @@ details.solution > summary
 }
 .fig > svg
 {
+    display: block;
+    margin: 0 auto;
     width: 100%;
     max-width: 440px;
     height: auto;
@@ -126,10 +128,17 @@ details.solution > summary
 }
 .fig-ctl
 {
-    margin: 0.3em 0;
+    margin: 0.4em 0 0.2em;
+    text-align: center;
+}
+.fig-ctl label
+{
+    display: block;
 }
 .fig-ctl input[type="range"]
 {
+    display: block;
+    margin: 0.3em auto;
     width: min(16em, 100%);
     accent-color: #004D80;
 }
@@ -137,7 +146,7 @@ details.solution > summary
 {
     font-size: 0.95em;
     color: #334155;
-    margin: 0.3em 0;
+    margin: 0.2em 0;
 }
 .photo
 {
@@ -155,7 +164,7 @@ details.solution > summary
 
 # Le triangle
 
-Trois résultats classiques structurent la géométrie du triangle. Pythagore relie les longueurs des côtés quand un angle est droit. Thalès relie les longueurs quand deux triangles ont un sommet commun et deux côtés parallèles. La droite d'Euler relie trois points remarquables du triangle, qui sont toujours alignés. Chacun s'accompagne ici d'une figure à manipuler.
+Trois résultats classiques structurent la géométrie du triangle. Pythagore relie les longueurs des côtés quand un angle est droit. Thalès relie les longueurs quand deux triangles ont un sommet commun et deux côtés parallèles. La droite d'Euler relie trois points remarquables du triangle, qui sont toujours alignés. Sur une sphère enfin, la somme des angles d'un triangle dépasse $180°$, et cet excès mesure l'aire. Chaque résultat s'accompagne d'une figure à manipuler, d'une démonstration ou d'une vidéo.
 
 ## Pythagore
 
@@ -344,8 +353,8 @@ On part d'un triangle rectangle isocèle dont les côtés de l'angle droit valen
 La longueur vient du théorème de Pythagore. Si $h_n$ est l'hypoténuse du $n$-ième triangle, le suivant a pour côtés de l'angle droit $1$ et $h_n$, donc $h_{n+1}^2 = h_n^2 + 1$. Avec $h_1^2 = 1^2 + 1^2 = 2$, on obtient $h_n^2 = n + 1$.
 
 <div class="fig">
-<p class="fig-ctl"><label for="sp-n">Nombre de triangles&nbsp;:</label> <input type="range" id="sp-n" min="1" max="16" step="1" value="12"> <span id="sp-val"></span></p>
-<svg id="sp-svg" viewBox="-215 -215 430 430" role="img" aria-label="La spirale de Théodore formée de triangles rectangles successifs" style="max-width:420px;"></svg>
+<p class="fig-ctl"><label for="sp-n">Nombre de triangles&nbsp;: <span id="sp-val"></span></label><input type="range" id="sp-n" min="1" max="16" step="1" value="12"></p>
+<svg id="sp-svg" viewBox="-142 -108 351 286" role="img" aria-label="La spirale de Théodore formée de triangles rectangles successifs" style="max-width:420px;"></svg>
 </div>
 <script>
 (function () {
@@ -603,3 +612,49 @@ Deux vidéos sur la droite d'Euler&nbsp;:
 {{< youtube-plus id="8kK9Lj2QUxI" ratio="16x9" width="800px" rounded=true shadow=true >}}
 
 {{< youtube-plus id="2EEoidiLtFM" ratio="16x9" width="800px" rounded=true shadow=true >}}
+
+## Triangle sphérique
+
+Dans le plan, la somme des angles d'un triangle vaut $180°$. Que devient ce résultat quand on trace un triangle sur une sphère comme la Terre&nbsp;?
+
+<div class="bloc bloc-def">
+<div class="bloc-titre">Triangle sphérique</div>
+
+Sur une sphère, les «&nbsp;droites&nbsp;» sont les **grands cercles** (les cercles dont le centre est celui de la sphère). Un **triangle sphérique** est formé de trois points joints deux à deux par des arcs de grand cercle, qui sont les plus courts chemins sur la sphère. Ses angles sont les angles entre ces arcs.
+
+</div>
+
+Un exemple suffit à voir que la somme des angles change&nbsp;: partons du pôle Nord, descendons le long du méridien $0°$ jusqu'à l'équateur, longeons l'équateur d'un quart de tour vers l'est, puis remontons le long du méridien $90°$ est jusqu'au pôle. Le triangle obtenu a **trois angles droits**, soit $270°$. Il couvre un huitième de la sphère.
+
+<div class="bloc bloc-theo">
+<div class="bloc-titre">Formule de Girard</div>
+
+Soit un triangle sphérique d'angles $\alpha$, $\beta$, $\gamma$ (en radians) tracé sur une sphère de rayon $R$. Sa somme d'angles dépasse $\pi$, et son aire est proportionnelle à cet **excès sphérique** $E = \alpha + \beta + \gamma - \pi$&nbsp;:
+$$\mathcal{A} = R^2 (\alpha + \beta + \gamma - \pi).$$
+
+</div>
+
+Pour le triangle aux trois angles droits, $E = 3 \times \frac{\pi}{2} - \pi = \frac{\pi}{2}$, donc $\mathcal{A} = \frac{\pi R^2}{2}$, soit un huitième de l'aire $4\pi R^2$ de la sphère, comme attendu. Pour la Terre ($R \approx 6371$ km), cela fait environ $6{,}4 \times 10^7$ km$^2$.
+
+La vidéo suivante démontre cette formule, qui est une incursion très jolie en géométrie non euclidienne.
+
+{{< youtube-plus id="-N-DvHc2Lhs" ratio="4x3" width="640px" rounded=true shadow=true >}}
+
+<div class="bloc bloc-preuve">
+<div class="bloc-titre">Démonstration par les lunes</div>
+
+Une **lune** d'angle $\theta$ est la région de la sphère comprise entre deux demi-grands cercles qui joignent deux points antipodaux. Son aire est la fraction $\frac{\theta}{2\pi}$ de l'aire de la sphère, soit $2\theta R^2$. Les trois grands cercles qui portent les côtés du triangle $T$ découpent la sphère en huit triangles. Considérons les trois lunes d'angles $\alpha$, $\beta$, $\gamma$ qui contiennent $T$, et leurs trois images par antipodie, qui contiennent le triangle antipodal $T'$. Ces six lunes recouvrent chacun des six autres triangles une fois, et $T$ et $T'$ chacun trois fois. La somme de leurs aires vaut donc $4\pi R^2 + 2\mathcal{A} + 2\mathcal{A}$, puisque $T$ et $T'$ ont la même aire $\mathcal{A}$. Or cette somme vaut aussi $2 \times 2(\alpha + \beta + \gamma)R^2$, d'où $4(\alpha + \beta + \gamma)R^2 = 4\pi R^2 + 4\mathcal{A}$, c'est-à-dire la formule de Girard.
+
+</div>
+
+<details class="encadre">
+<summary class="encadre-titre">Trois géométries, trois sommes d'angles</summary>
+<p>Le signe de l'excès dit si la surface est courbée, et dans quel sens. Sur une surface de courbure constante $K$, un triangle d'angles $\alpha$, $\beta$, $\gamma$ a pour aire $\mathcal{A}$ avec
+$$\alpha + \beta + \gamma - \pi = K\,\mathcal{A}.$$</p>
+<ul>
+<li><b>Plan</b> ($K = 0$)&nbsp;: la somme des angles vaut exactement $\pi$, quelle que soit l'aire.</li>
+<li><b>Sphère de rayon $R$</b> ($K = \frac{1}{R^2} > 0$)&nbsp;: la somme dépasse $\pi$, et l'excès est l'aire divisée par $R^2$&nbsp;: c'est la formule de Girard.</li>
+<li><b>Plan hyperbolique</b> ($K < 0$)&nbsp;: la somme est inférieure à $\pi$, et le défaut $\pi - (\alpha + \beta + \gamma)$ est proportionnel à l'aire.</li>
+</ul>
+<p>Pour un petit triangle, l'excès est minuscule&nbsp;: sur la Terre, un triangle de $1$ km$^2$ a un excès de $\frac{1}{R^2} \approx 2{,}5 \times 10^{-8}$ rad, soit $5$ millièmes de seconde d'arc. C'est pourquoi la géométrie du plan convient aux petites figures. Gauss a mesuré, dans le cadre de la triangulation du Hanovre, le triangle Hohenhagen–Brocken–Inselsberg, de côtés environ $69$, $85$ et $107$ km (environ $2900$ km$^2$), dont l'excès vaut environ $15$ secondes d'arc. On raconte souvent qu'il cherchait à tester si l'espace est euclidien&nbsp;; les historiens en doutent. Cette relation entre somme des angles et courbure est un cas particulier du théorème de Gauss-Bonnet.</p>
+</details>

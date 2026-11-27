@@ -26,6 +26,7 @@ Géométrie et physique sont intimement liées. Le développement de la géomét
   <a href="./geo1/#escargot-de-pythagore" class="math-btn">Escargot de Pythagore</a>
   <a href="./geo1/#thalès" class="math-btn">Thalès</a>
   <a href="./geo1/#droite-deuler" class="math-btn">Droite d'Euler</a>
+  <a href="./geo1/#triangle-sphérique" class="math-btn">Triangle sphérique</a>
 </div>
 </div>
 </div>
