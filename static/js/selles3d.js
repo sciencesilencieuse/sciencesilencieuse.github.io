@@ -7,7 +7,7 @@
                          <div class="anim" data-anim="selle2"></div> (V = 4 + 2p + q − 4pq)
                          <div class="anim" data-anim="selle3"></div> (V = 60 + 40p + 40q − 60pq)
                          <div class="anim" data-anim="labo-jeu"></div> (matrice au choix)  */
-import { THREE, creerScene } from './scene3d.js';
+import { THREE, creerScene } from './scene3d.js?manip=2';   // version dans l'URL : le navigateur ne ressert pas un ancien socle sans rotation tactile
 
 const L = 4;                                     // côté du cube dans lequel la surface est inscrite
 const BLEU = '#1D4ED8', ROUGE = '#DC2626';
