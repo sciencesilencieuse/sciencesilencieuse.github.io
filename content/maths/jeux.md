@@ -118,6 +118,7 @@ details.solution > summary
 }
 .jeu-tab
 {
+    border: none;
     border-collapse: collapse;
     margin: 0;
     width: 100%;
@@ -152,6 +153,7 @@ details.solution > summary
 }
 .jeu-matrice
 {
+    border: none;
     border-collapse: separate;
     border-spacing: 3px;
     margin: 1em auto 0.4em auto;
