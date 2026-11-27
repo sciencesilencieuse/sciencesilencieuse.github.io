@@ -36,10 +36,11 @@ Géométrie et physique sont intimement liées. Le développement de la géomét
 <span class="math-illus" aria-hidden="true"><img src="/illus/prescercle.svg" alt=""></span>
 <h3><a href="./geo2/">Cercle et triangle</a></h3>
 </div>
-<div class="carte-texte">Trigonométrie, loi des sinus et mesure du méridien, angles inscrits.</div>
+<div class="carte-texte">Trigonométrie, lois des cosinus et des sinus, mesure du méridien, angles inscrits.</div>
 <div class="theme-subgroup">
 <div class="link-list">
   <a href="./geo2/#trigonométrie" class="math-btn">Trigonométrie</a>
+  <a href="./geo2/#loi-des-cosinus-et-loi-des-sinus" class="math-btn">Lois des cosinus et des sinus</a>
   <a href="./geo2/#théorème-de-langle-inscrit-et-de-langle-au-centre" class="math-btn">Angle inscrit et angle au centre</a>
 </div>
 </div>

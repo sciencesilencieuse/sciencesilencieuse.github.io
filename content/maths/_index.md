@@ -102,6 +102,7 @@ td, th {
   <a href="./geometrie/geo1/#thalès" class="math-btn">Thalès</a>
   <a href="./geometrie/geo1/#droite-deuler" class="math-btn">Euler</a>
   <a href="./geometrie/geo2/#trigonométrie" class="math-btn">Trigonométrie</a>
+  <a href="./geometrie/geo2/#loi-des-cosinus-et-loi-des-sinus" class="math-btn">Cosinus et sinus</a>
   <a href="./geometrie/geo2/#théorème-de-langle-inscrit-et-de-langle-au-centre" class="math-btn">Angle inscrit</a>
 </div>
 </div>
