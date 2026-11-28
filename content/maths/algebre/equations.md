@@ -1136,21 +1136,21 @@ Dans le plan complexe, la méthode de Newton s'applique au même titre. Chaque r
 
 Dans la figure suivante, chaque point du plan est coloré selon la racine vers laquelle la méthode de Newton converge quand on part de ce point, et plus sombre quand la convergence est lente. Les points en noir ne convergent pas&nbsp;: pour $z^3 - 2z + 2$, le point $0$ est attiré par un cycle $0 \to 1 \to 0$ et n'atteint jamais de racine.
 
-<div class="fig">
+<div class="fig" style="max-width:46rem">
 <div class="fig-titre">Bassins d'attraction de la méthode de Newton</div>
 <p class="fig-ctl"><label for="nf-p">Polynôme&nbsp;:</label><select id="nf-p" class="sel-seul"><option value="0">z³ − 1</option><option value="1">z⁴ − 1</option><option value="2">z⁵ − 1</option><option value="3">z³ − 2z + 2 (un cycle de période 2)</option><option value="4">z⁵ − z − 1 (aucune formule)</option></select></p>
-<canvas id="nf-cv" width="420" height="420" role="img" aria-label="Bassins d'attraction de la méthode de Newton dans le plan complexe, que l'on peut déplacer et agrandir à volonté" style="touch-action:none;cursor:grab;"></canvas>
+<canvas id="nf-cv" width="420" height="420" role="img" aria-label="Bassins d'attraction de la méthode de Newton dans le plan complexe, que l'on peut déplacer et agrandir à volonté" style="touch-action:none;cursor:grab;width:min(100%,680px,86vh);max-width:none;"></canvas>
 <p class="fig-ctl"><button type="button" id="nf-pl">Plonger ▶</button><button type="button" id="nf-zp">Zoom +</button><button type="button" id="nf-zm">Zoom −</button><button type="button" id="nf-r">Vue initiale</button></p>
 <p class="fig-val" id="nf-val"></p>
-<p class="fig-val note">Glisser pour déplacer (avec inertie), molette ou pincement pour zoomer, double-clic pour plonger vers un point. Le bouton « Plonger » zoome sans fin vers un point de la frontière entre les bassins.</p>
+<p class="fig-val note">Glisser pour déplacer (avec inertie), molette ou pincement pour zoomer, double-clic pour plonger vers un point. Le bouton « Plonger » zoome vers un point de la frontière entre les bassins, jusqu'à la limite de précision des nombres à virgule flottante (environ 16 chiffres significatifs, soit un grossissement de l'ordre de 10¹² à 10¹⁴).</p>
 </div>
 <script>
 (function () {
   var cv = document.getElementById('nf-cv'), sel = document.getElementById('nf-p'), ctx = cv.getContext('2d'), out = document.getElementById('nf-val'), btnPl = document.getElementById('nf-pl');
-  var T = 128, R0 = 3, LMAX = 34, W = 420;
+  var T = 128, R0 = 3, LMAX = 50, W = 420;
   var POL = [[1, 0, 0, -1], [1, 0, 0, 0, -1], [1, 0, 0, 0, 0, -1], [1, 0, -2, 2], [1, 0, 0, 0, -1, -1]];
-  var CIBLE = [[0, 0], [0, 0], [0, 0], [0.8164965809, 0], [0.6687403050, 0]];
-  var PAL = [[92, 160, 222], [247, 177, 89], [226, 120, 170], [102, 200, 176], [170, 150, 225]], GRIS = [150, 155, 170];
+  var CIBLE = [[0, 0], [0, 0], [0, 0], [Math.sqrt(2 / 3), 0], [Math.pow(0.2, 0.25), 0]];
+  var PAL = [[26, 105, 150], [168, 48, 110], [206, 142, 40], [38, 128, 120], [128, 100, 180]], GRIS = [100, 116, 139];
   /* calcul d'une tuile : même code dans un Worker (fil séparé, pour que le glissé reste fluide) ou, à défaut, dans la page */
   var SRC = 'function tile(m){var T=m.T,side=m.side,x0=m.x0,y0=m.y0,data=new Uint8ClampedArray(T*T*4),c=m.c,dc=m.dc,n=c.length-1,roots=m.roots,pal=m.pal,gris=m.gris,maxit=m.maxit,x,y,it,k,t;' +
     'for(y=0;y<T;y++){for(x=0;x<T;x++){var zr=x0+side*(x+0.5)/T,zi=y0-side*(y+0.5)/T,col=gris;' +
@@ -1160,7 +1160,7 @@ Dans la figure suivante, chaque point du plan est coloré selon la racine vers l
     'var den=qr*qr+qi*qi;if(den<1e-30){break;}' +
     'var sr=(pr*qr+pi*qi)/den,si=(pi*qr-pr*qi)/den;zr-=sr;zi-=si;' +
     'if(sr*sr+si*si<1e-18){var best=1e18,b=0;for(k=0;k<n;k++){var dd=(zr-roots[k][0])*(zr-roots[k][0])+(zi-roots[k][1])*(zi-roots[k][1]);if(dd<best){best=dd;b=k;}}' +
-    'var f=1-0.22*Math.min(1,it/16),p=pal[b%pal.length];col=[p[0]*f+255*(1-f),p[1]*f+255*(1-f),p[2]*f+255*(1-f)];break;}}' +
+    'var f=1-0.42*Math.min(1,it/18),p=pal[b%pal.length];col=[p[0]*f+255*(1-f),p[1]*f+255*(1-f),p[2]*f+255*(1-f)];break;}}' +
     'var o=4*(y*T+x);data[o]=col[0];data[o+1]=col[1];data[o+2]=col[2];data[o+3]=255;}}return data;}';
   var tileLocal = new Function(SRC + ';return tile;')();
   var workers = [], nW = Math.max(1, Math.min(3, (navigator.hardwareConcurrency || 2) - 1));
@@ -1253,9 +1253,11 @@ Dans la figure suivante, chaque point du plan est coloré selon la racine vers l
     var m = x / Math.pow(10, e), s = String(Math.abs(e)).split('').map(function (d) { return SUP[d]; }).join('');
     return m.toPrecision(2).replace('.', ',') + ' × 10' + (e < 0 ? '⁻' : '') + s;
   }
-  function legende() { out.innerHTML = 'zoom × ' + sci(R0 / R) + ' &nbsp; centre ' + sci(cx) + ' ' + (cy < 0 ? '−' : '+') + ' ' + sci(Math.abs(cy)) + ' i'; }
+  function legende() { out.innerHTML = 'zoom × ' + sci(R0 / R) + ' &nbsp; centre ' + sci(cx) + ' ' + (cy < 0 ? '−' : '+') + ' ' + sci(Math.abs(cy)) + ' i' + (R <= rmin() * 1.01 ? '<br>Limite atteinte : les nombres à virgule flottante (64 bits) ne distinguent plus deux pixels voisins.' : ''); }
+  /* plus petit rayon utilisable : en dessous, deux pixels voisins correspondent à des nombres flottants (64 bits) presque identiques */
+  function rmin() { return Math.max(1e-14, 1.7e-15 * W * Math.max(Math.abs(cx), Math.abs(cy))); }
   function borner() {
-    R = Math.max(2e-10, Math.min(R0, R)); tR = Math.max(2e-10, Math.min(R0, tR));
+    var m = rmin(); R = Math.max(m, Math.min(R0, R)); tR = Math.max(m, Math.min(R0, tR));
     cx = Math.max(-R0 + R, Math.min(R0 - R, cx)); cy = Math.max(-R0 + R, Math.min(R0 - R, cy));
   }
   function planifier() { if (!dtmp) { dtmp = requestAnimationFrame(image); } }
@@ -1266,7 +1268,7 @@ Dans la figure suivante, chaque point du plan est coloré selon la racine vers l
     dernier = t;
     if (plonge) {
       var cb = CIBLE[pid]; cx += (cb[0] - cx) * (1 - Math.pow(0.93, k)); cy += (cb[1] - cy) * (1 - Math.pow(0.93, k)); R *= Math.pow(0.985, k); tR = R; vivant = true;
-      if (R <= 2.5e-10) { plonge = false; btnPl.textContent = 'Plonger ▶'; }
+      if (R <= rmin() * 1.001) { plonge = false; btnPl.textContent = 'Plonger ▶'; }
     } else if (go) {
       var f = 1 - Math.pow(0.88, k);
       R *= Math.exp(Math.log(go.R / R) * f); cx += (go.cx - cx) * f; cy += (go.cy - cy) * f; tR = R; vivant = true;
@@ -1285,7 +1287,7 @@ Dans la figure suivante, chaque point du plan est coloré selon la racine vers l
   }
   function zoomerVers(s, ux, uy) {
     if (!anc || Math.abs(anc.ux - ux) > 0.02 || Math.abs(anc.uy - uy) > 0.02 || Math.abs(Math.log(tR / R)) < 1e-3) { anc = { ux: ux, uy: uy, zr: cx + R * ux, zi: cy - R * uy }; tR = R; }
-    tR = Math.max(2e-10, Math.min(R0, tR * s)); go = null; plonge = false; btnPl.textContent = 'Plonger ▶'; planifier();
+    tR = Math.max(rmin(), Math.min(R0, tR * s)); go = null; plonge = false; btnPl.textContent = 'Plonger ▶'; planifier();
   }
   function rel(e) { var r = cv.getBoundingClientRect(); return [(e.clientX - r.left) / r.width * 2 - 1, (e.clientY - r.top) / r.height * 2 - 1]; }
   cv.addEventListener('wheel', function (e) { e.preventDefault(); var u = rel(e); zoomerVers(e.deltaY < 0 ? 1 / 1.3 : 1.3, u[0], u[1]); }, { passive: false });
@@ -1303,7 +1305,7 @@ Dans la figure suivante, chaque point du plan est coloré selon la racine vers l
       cx -= (m1[0] - m0[0]) / r.width * 2 * R; cy += (m1[1] - m0[1]) / r.height * 2 * R;
       if (d1 > 5 && d0 > 5) {
         var ux = (m1[0] - r.left) / r.width * 2 - 1, uy = (m1[1] - r.top) / r.height * 2 - 1, zr = cx + R * ux, zi = cy - R * uy;
-        R = Math.max(2e-10, Math.min(R0, R * d0 / d1)); cx = zr - R * ux; cy = zi + R * uy; tR = R;
+        R = Math.max(rmin(), Math.min(R0, R * d0 / d1)); cx = zr - R * ux; cy = zi + R * uy; tR = R;
       }
       borner(); sale = true; demander(); planifier();
     }
