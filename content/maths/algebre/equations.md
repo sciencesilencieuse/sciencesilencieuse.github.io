@@ -210,7 +210,198 @@ details.solution > summary
 {
     background: #EEF4FA;
 }
+.fig
+{
+    background: #FAFCFE;
+    border: 1px solid #D5DFEA;
+    border-radius: 14px;
+    padding: 0.7em 0.9em 0.8em;
+    box-shadow: 0 1px 3px rgba(15, 40, 80, 0.08);
+}
+.fig-titre
+{
+    font-weight: bold;
+    color: #004D80;
+    font-size: 0.95em;
+    letter-spacing: 0.01em;
+    margin: 0 0 0.35em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #E3EAF2;
+}
+.fig > svg
+{
+    background: #fff;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.fig canvas
+{
+    border: 1px solid #E2E8F0;
+    box-sizing: border-box;
+}
+.fig-ctl label
+{
+    color: #334155;
+}
+.fig-ctl .badge, .badge
+{
+    display: inline-block;
+    min-width: 2.6em;
+    padding: 0 0.55em;
+    border-radius: 999px;
+    background: #E2EEF9;
+    color: #004D80;
+    font-weight: bold;
+    font-variant-numeric: tabular-nums;
+}
+.fig-ctl input[type="range"]
+{
+    height: 1.4em;
+    cursor: pointer;
+}
+.fig-ctl input[type="number"], .fig-ctl select
+{
+    border: 1px solid #B6C4D4;
+    border-radius: 8px;
+    background: #fff;
+    color: #1E293B;
+    padding: 0.2em 0.4em;
+    box-shadow: inset 0 1px 2px rgba(15, 40, 80, 0.06);
+}
+.fig-ctl input[type="number"]:focus, .fig-ctl select:focus
+{
+    outline: 2px solid #7FB0DB;
+    outline-offset: 1px;
+}
+.fig-ctl button
+{
+    border: 1px solid #9DB8D3;
+    border-radius: 999px;
+    background: #fff;
+    color: #004D80;
+    padding: 0.2em 0.9em;
+    margin: 0.2em 0.15em;
+    box-shadow: 0 1px 2px rgba(15, 40, 80, 0.1);
+    transition: background 0.15s, border-color 0.15s, transform 0.05s;
+}
+.fig-ctl button:hover
+{
+    background: #E8F1FA;
+    border-color: #004D80;
+}
+.fig-ctl button:active
+{
+    transform: translateY(1px);
+    box-shadow: none;
+}
+.fig-ctl button:focus-visible
+{
+    outline: 2px solid #7FB0DB;
+    outline-offset: 2px;
+}
+.fig-val
+{
+    background: #fff;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    padding: 0.4em 0.8em;
+    margin: 0.55em auto 0.2em;
+    max-width: 34rem;
+}
+.fig-val:empty
+{
+    display: none;
+}
+.fig-val.note
+{
+    background: none;
+    border: none;
+    padding: 0.1em 0.4em;
+}
+.sysaff
+{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    column-gap: 0.28em;
+    row-gap: 0.15em;
+    margin: 0.5em auto 0.7em;
+    padding: 0.35em 0.9em;
+    width: fit-content;
+    max-width: 100%;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.3em;
+    background: #fff;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+}
+.sysaff .acc
+{
+    grid-row: 1 / span 2;
+    font-size: 2.9em;
+    font-weight: 100;
+    line-height: 1;
+    color: #94A3B8;
+    margin-right: 0.1em;
+}
+.sysaff i
+{
+    font-style: italic;
+}
+.sysaff .tr
+{
+    white-space: nowrap;
+}
+.sysaff .a { justify-self: end; }
+.sysaff .c { justify-self: start; }
+.rel
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25em 0.3em;
+    max-width: 30rem;
+    margin: 0.35em auto;
+    padding: 0.3em 0.6em;
+    border-left: 5px solid var(--c);
+    border-radius: 8px;
+    background: #fff;
+    border-top: 1px solid #E2E8F0;
+    border-right: 1px solid #E2E8F0;
+    border-bottom: 1px solid #E2E8F0;
+}
+.rel .relnum
+{
+    font-weight: bold;
+    color: var(--c);
+    margin-right: 0.3em;
+}
+.rel .coef
+{
+    margin: 0;
+}
+.rel .coef input
+{
+    width: 3.6em;
+}
+.rel select
+{
+    font-size: 1.05em;
+}
 </style>
+
+<script>
+window.grilleSvg = function (x0, y0, w, h, cx, cy, dx, dy) {
+  var s = '', k, p;
+  if (dx >= 6) { for (k = Math.ceil((x0 - cx) / dx); cx + k * dx <= x0 + w + 0.01; k++) { p = (cx + k * dx).toFixed(1); s += '<line x1="' + p + '" y1="' + y0 + '" x2="' + p + '" y2="' + (y0 + h) + '" stroke="#E6ECF3"/>'; } }
+  if (dy >= 6) { for (k = Math.ceil((y0 - cy) / dy); cy + k * dy <= y0 + h + 0.01; k++) { p = (cy + k * dy).toFixed(1); s += '<line x1="' + x0 + '" y1="' + p + '" x2="' + (x0 + w) + '" y2="' + p + '" stroke="#E6ECF3"/>'; } }
+  return s;
+};
+</script>
 
 # Équations
 
@@ -260,8 +451,9 @@ En effet, $a x + b > 0$ équivaut à $a x > -b$, puis à $x > -\frac{b}{a}$ si $
 Dans la figure suivante, on règle $a$ et $b$ et l'on choisit l'inégalité. La droite $y = a x + b$ est tracée et l'ensemble des solutions apparaît en vert sur l'axe des abscisses.
 
 <div class="fig">
-<p class="fig-ctl"><label for="in-a">$a$ = <span id="in-av"></span></label><input type="range" id="in-a" min="-3" max="3" step="0.5" value="-2"></p>
-<p class="fig-ctl"><label for="in-b">$b$ = <span id="in-bv"></span></label><input type="range" id="in-b" min="-6" max="6" step="0.5" value="6"></p>
+<div class="fig-titre">Signe de $a x + b$</div>
+<p class="fig-ctl"><label for="in-a">$a$ = <span id="in-av" class="badge"></span></label><input type="range" id="in-a" min="-3" max="3" step="0.5" value="-2"></p>
+<p class="fig-ctl"><label for="in-b">$b$ = <span id="in-bv" class="badge"></span></label><input type="range" id="in-b" min="-6" max="6" step="0.5" value="6"></p>
 <p class="fig-ctl"><label for="in-s">Inégalité&nbsp;:</label><select id="in-s" class="sel-seul"><option value="gt">a x + b &gt; 0</option><option value="ge" selected>a x + b ≥ 0</option><option value="lt">a x + b &lt; 0</option><option value="le">a x + b ≤ 0</option></select></p>
 <svg id="in-svg" viewBox="0 0 460 205" role="img" aria-label="Une droite et l'ensemble des x où elle est positive ou négative"></svg>
 <p class="fig-val" id="in-val"></p>
@@ -274,7 +466,7 @@ Dans la figure suivante, on règle $a$ et $b$ et l'on choisit l'inégalité. La 
   function dessiner() {
     var a = parseFloat(sa.value), b = parseFloat(sb.value), s = ss.value, i, h = '';
     document.getElementById('in-av').textContent = fr(a, 1); document.getElementById('in-bv').textContent = fr(b, 1);
-    h += '<defs><clipPath id="in-cl"><rect x="' + X0 + '" y="' + Y0 + '" width="' + (X1 - X0) + '" height="' + (Y1 - Y0) + '"/></clipPath></defs><rect x="' + X0 + '" y="' + Y0 + '" width="' + (X1 - X0) + '" height="' + (Y1 - Y0) + '" fill="#F8FAFC" stroke="#CBD5E1"/>';
+    h += '<defs><clipPath id="in-cl"><rect x="' + X0 + '" y="' + Y0 + '" width="' + (X1 - X0) + '" height="' + (Y1 - Y0) + '"/></clipPath></defs><rect x="' + X0 + '" y="' + Y0 + '" width="' + (X1 - X0) + '" height="' + (Y1 - Y0) + '" fill="#F8FAFC" stroke="#CBD5E1"/>' + grilleSvg(X0, Y0, X1 - X0, Y1 - Y0, cx, cy, U, V);
     h += '<line x1="' + X0 + '" y1="' + cy + '" x2="' + X1 + '" y2="' + cy + '" stroke="#64748B"/><line x1="' + cx + '" y1="' + Y0 + '" x2="' + cx + '" y2="' + Y1 + '" stroke="#64748B"/>';
     for (i = -6; i <= 6; i++) { h += '<line x1="' + (cx + i * U) + '" y1="' + (cy - 3) + '" x2="' + (cx + i * U) + '" y2="' + (cy + 3) + '" stroke="#64748B"/>'; if (i !== 0 && i % 2 === 0) { h += '<text x="' + (cx + i * U) + '" y="' + (cy + 15) + '" font-size="11" text-anchor="middle" fill="#475569" font-family="Georgia,serif">' + i + '</text>'; } }
     var pos = s === 'gt' || s === 'ge', large = s === 'ge' || s === 'le', txt, r = null;
@@ -342,8 +534,10 @@ Pour savoir de quel côté de la droite est le demi-plan, on teste un point, par
 Dans la figure suivante, on entre les coefficients de deux relations $a x + b y \mathrel{\square} c$ et l'on choisit le symbole $=$, $\le$, $<$, $\ge$ ou $>$. Les droites sont tracées (en pointillés quand l'inégalité est stricte). Pour des équations, le point d'intersection est marqué&nbsp;; pour des inéquations, chaque demi-plan est teinté (en bleu et en rose) et leur intersection, l'ensemble des solutions, apparaît en vert.
 
 <div class="fig">
-<p class="fig-ctl"><span class="coef" style="color:#1D4ED8">(1)</span><span class="coef"><input type="number" step="0.5" value="1" id="sy-a1" aria-label="a1"> x</span> +<span class="coef"><input type="number" step="0.5" value="1" id="sy-b1" aria-label="b1"> y</span><select id="sy-o1" aria-label="symbole de la première relation"><option value="eq" selected>=</option><option value="le">≤</option><option value="lt">&lt;</option><option value="ge">≥</option><option value="gt">&gt;</option></select><span class="coef"><input type="number" step="0.5" value="3" id="sy-c1" aria-label="c1"></span></p>
-<p class="fig-ctl"><span class="coef" style="color:#DC2626">(2)</span><span class="coef"><input type="number" step="0.5" value="1" id="sy-a2" aria-label="a2"> x</span> +<span class="coef"><input type="number" step="0.5" value="-1" id="sy-b2" aria-label="b2"> y</span><select id="sy-o2" aria-label="symbole de la seconde relation"><option value="eq" selected>=</option><option value="le">≤</option><option value="lt">&lt;</option><option value="ge">≥</option><option value="gt">&gt;</option></select><span class="coef"><input type="number" step="0.5" value="1" id="sy-c2" aria-label="c2"></span></p>
+<div class="fig-titre">Systèmes de deux relations linéaires</div>
+<div class="sysaff" id="sy-aff" aria-live="polite"></div>
+<p class="rel" style="--c:#1D4ED8"><span class="relnum">(1)</span><span class="coef"><input type="number" step="0.5" value="1" id="sy-a1" aria-label="a1"> <i>x</i></span> +<span class="coef"><input type="number" step="0.5" value="1" id="sy-b1" aria-label="b1"> <i>y</i></span><select id="sy-o1" aria-label="symbole de la première relation"><option value="eq" selected>=</option><option value="le">≤</option><option value="lt">&lt;</option><option value="ge">≥</option><option value="gt">&gt;</option></select><span class="coef"><input type="number" step="0.5" value="3" id="sy-c1" aria-label="c1"></span></p>
+<p class="rel" style="--c:#DC2626"><span class="relnum">(2)</span><span class="coef"><input type="number" step="0.5" value="1" id="sy-a2" aria-label="a2"> <i>x</i></span> +<span class="coef"><input type="number" step="0.5" value="-1" id="sy-b2" aria-label="b2"> <i>y</i></span><select id="sy-o2" aria-label="symbole de la seconde relation"><option value="eq" selected>=</option><option value="le">≤</option><option value="lt">&lt;</option><option value="ge">≥</option><option value="gt">&gt;</option></select><span class="coef"><input type="number" step="0.5" value="1" id="sy-c2" aria-label="c2"></span></p>
 <p class="fig-ctl"><button type="button" data-sy="1,1,eq,3,1,-1,eq,1">solution unique</button><button type="button" data-sy="1,1,eq,3,1,1,eq,5">droites parallèles</button><button type="button" data-sy="1,1,eq,3,2,2,eq,6">droites confondues</button><button type="button" data-sy="1,1,le,3,1,-1,ge,1">deux demi-plans</button><button type="button" data-sy="1,1,le,1,1,1,ge,3">région vide</button><button type="button" data-sy="1,1,eq,3,1,-1,le,1">équation et inéquation</button></p>
 <svg id="sy-svg" viewBox="0 0 330 320" role="img" aria-label="Deux droites, ou deux demi-plans, et leur intersection" style="max-width:340px;"></svg>
 <p class="fig-val" id="sy-val"></p>
@@ -356,6 +550,22 @@ Dans la figure suivante, on entre les coefficients de deux relations $a x + b y 
   var M = 6, S = 300, X0 = 15, Y0 = 10, U = S / (2 * M);
   var SYM = { eq: '=', le: '≤', lt: '<', ge: '≥', gt: '>' };
   function fr(x, d) { if (Math.abs(x) < 0.5 * Math.pow(10, -d)) { x = 0; } var s = x.toFixed(d); if (s.indexOf('.') >= 0) { s = s.replace(/0+$/, '').replace(/\.$/, ''); } return s.replace('.', ',').replace('-', '−'); }
+  var aff = document.getElementById('sy-aff');
+  function cf(v, lettre, premier) {
+    var s = v < 0 ? '−' : '+', a = Math.abs(v), nombre = Math.abs(a - 1) < 1e-9 ? '' : fr(a, 3);
+    if (a < 1e-12) { return premier ? ['', ''] : ['', '']; }
+    return [premier ? (v < 0 ? '−' : '') : s, nombre + '<i>' + lettre + '</i>'];
+  }
+  function afficher(a1, b1, c1, s1, a2, b2, c2, s2) {
+    var h = '<span class="acc">{</span>';
+    [[a1, b1, c1, s1, '#1D4ED8'], [a2, b2, c2, s2, '#DC2626']].forEach(function (L) {
+      var ta = cf(L[0], 'x', true), tb, sig = '', terme;
+      if (ta[1] === '') { tb = cf(L[1], 'y', true); if (tb[1] === '') { tb = ['', '0']; } h += '<span class="a tr" style="color:' + L[4] + '"></span><span class="tr" style="color:' + L[4] + '"></span><span class="tr" style="color:' + L[4] + '">' + (tb[0] ? tb[0] : '') + tb[1] + '</span>'; }
+      else { tb = cf(L[1], 'y', false); h += '<span class="a tr" style="color:' + L[4] + '">' + ta[0] + ta[1] + '</span><span class="tr" style="color:' + L[4] + '">' + tb[0] + '</span><span class="tr" style="color:' + L[4] + '">' + tb[1] + '</span>'; }
+      h += '<span class="tr" style="color:' + L[4] + '">' + SYM[L[3]] + '</span><span class="c tr" style="color:' + L[4] + '">' + fr(L[2], 3) + '</span>';
+    });
+    aff.innerHTML = h;
+  }
   function px(x) { return X0 + (x + M) * U; }
   function py(y) { return Y0 + (M - y) * U; }
   function bon(a, b, c, op, p) { var v = a * p[0] + b * p[1] - c; return op === 'le' || op === 'lt' ? c - a * p[0] - b * p[1] : v; }
@@ -389,7 +599,7 @@ Dans la figure suivante, on entre les coefficients de deux relations $a x + b y 
   function dessiner() {
     var a1 = parseFloat(el.a1.value) || 0, b1 = parseFloat(el.b1.value) || 0, c1 = parseFloat(el.c1.value) || 0, a2 = parseFloat(el.a2.value) || 0, b2 = parseFloat(el.b2.value) || 0, c2 = parseFloat(el.c2.value) || 0;
     var s1 = o1.value, s2 = o2.value, h = '', i, carre = [[-M, -M], [M, -M], [M, M], [-M, M]];
-    h += '<rect x="' + X0 + '" y="' + Y0 + '" width="' + S + '" height="' + S + '" fill="#F8FAFC" stroke="#CBD5E1"/>';
+    h += '<rect x="' + X0 + '" y="' + Y0 + '" width="' + S + '" height="' + S + '" fill="#F8FAFC" stroke="#CBD5E1"/>' + grilleSvg(X0, Y0, S, S, X0 + S / 2, Y0 + S / 2, U, U);
     var ineq1 = s1 !== 'eq', ineq2 = s2 !== 'eq', H1 = ineq1 ? coupe(carre, a1, b1, c1, s1) : null, H2 = ineq2 ? coupe(carre, a2, b2, c2, s2) : null;
     if (H1 && H1.length) { h += '<polygon points="' + pts(H1) + '" fill="#1D4ED8" fill-opacity="0.12"/>'; }
     if (H2 && H2.length) { h += '<polygon points="' + pts(H2) + '" fill="#DC2626" fill-opacity="0.12"/>'; }
@@ -430,6 +640,7 @@ Dans la figure suivante, on entre les coefficients de deux relations $a x + b y 
         }
       }
     }
+    afficher(a1, b1, c1, s1, a2, b2, c2, s2);
     svg.innerHTML = '<defs><clipPath id="sy-cl"><rect x="' + X0 + '" y="' + Y0 + '" width="' + S + '" height="' + S + '"/></clipPath></defs>' + h;
     out.innerHTML = txt;
   }
@@ -519,9 +730,10 @@ Si les coefficients sont réels et $\Delta < 0$, on prend $\delta = \mathrm{i}\s
 La démonstration est la même, avec une racine carrée complexe quand $\Delta$ est négatif&nbsp;: le nombre $\mathrm{i}\sqrt{-\Delta}$ a pour carré $-(-\Delta) = \Delta$. Dans la figure suivante, on fait varier les coefficients. À gauche, la parabole $y = ax^2 + bx + c$&nbsp;; à droite, le plan complexe où se placent les racines. Quand la parabole ne coupe plus l'axe des abscisses, les deux racines quittent l'axe réel et se placent de part et d'autre, à des positions conjuguées.
 
 <div class="fig">
-<p class="fig-ctl"><label for="sd-a">$a$ = <span id="sd-av"></span></label><input type="range" id="sd-a" min="-2" max="2" step="0.1" value="1"></p>
-<p class="fig-ctl"><label for="sd-b">$b$ = <span id="sd-bv"></span></label><input type="range" id="sd-b" min="-6" max="6" step="0.1" value="1"></p>
-<p class="fig-ctl"><label for="sd-c">$c$ = <span id="sd-cv"></span></label><input type="range" id="sd-c" min="-6" max="6" step="0.1" value="2"></p>
+<div class="fig-titre">Les racines de $a x^2 + b x + c$</div>
+<p class="fig-ctl"><label for="sd-a">$a$ = <span id="sd-av" class="badge"></span></label><input type="range" id="sd-a" min="-2" max="2" step="0.1" value="1"></p>
+<p class="fig-ctl"><label for="sd-b">$b$ = <span id="sd-bv" class="badge"></span></label><input type="range" id="sd-b" min="-6" max="6" step="0.1" value="1"></p>
+<p class="fig-ctl"><label for="sd-c">$c$ = <span id="sd-cv" class="badge"></span></label><input type="range" id="sd-c" min="-6" max="6" step="0.1" value="2"></p>
 <svg id="sd-svg" viewBox="0 0 460 250" role="img" aria-label="Une parabole et, à côté, les racines de l'équation dans le plan complexe"></svg>
 <p class="fig-val" id="sd-val"></p>
 </div>
@@ -537,8 +749,8 @@ La démonstration est la même, avec une racine carrée complexe quand $\Delta$ 
     var b = parseFloat(sb.value), c = parseFloat(sc.value), D = b * b - 4 * a * c;
     document.getElementById('sd-av').textContent = fr(a, 1); document.getElementById('sd-bv').textContent = fr(b, 1); document.getElementById('sd-cv').textContent = fr(c, 1);
     var h = '<defs><clipPath id="sd-cl"><rect x="' + LX + '" y="' + LY + '" width="' + S + '" height="' + S + '"/></clipPath></defs>';
-    h += '<rect x="' + LX + '" y="' + LY + '" width="' + S + '" height="' + S + '" fill="#F8FAFC" stroke="#CBD5E1"/>';
-    h += '<rect x="' + RX + '" y="' + LY + '" width="' + S + '" height="' + S + '" fill="#F8FAFC" stroke="#CBD5E1"/>';
+    h += '<rect x="' + LX + '" y="' + LY + '" width="' + S + '" height="' + S + '" fill="#F8FAFC" stroke="#CBD5E1"/>' + grilleSvg(LX, LY, S, S, LX + S / 2, LY + S / 2, U, U);
+    h += '<rect x="' + RX + '" y="' + LY + '" width="' + S + '" height="' + S + '" fill="#F8FAFC" stroke="#CBD5E1"/>' + grilleSvg(RX, LY, S, S, RX + S / 2, LY + S / 2, U, U);
     var cx = LX + S / 2, cy = LY + S / 2, rx = RX + S / 2;
     h += '<line x1="' + LX + '" y1="' + cy + '" x2="' + (LX + S) + '" y2="' + cy + '" stroke="#94A3B8"/><line x1="' + cx + '" y1="' + LY + '" x2="' + cx + '" y2="' + (LY + S) + '" stroke="#94A3B8"/>';
     h += '<line x1="' + RX + '" y1="' + cy + '" x2="' + (RX + S) + '" y2="' + cy + '" stroke="#94A3B8"/><line x1="' + rx + '" y1="' + LY + '" x2="' + rx + '" y2="' + (LY + S) + '" stroke="#94A3B8"/>';
@@ -609,8 +821,9 @@ Une équation générale $a x^3 + b x^2 + c x + d = 0$ se ramène à ce cas par 
 Dans la figure suivante, on choisit $p$ et $q$. À gauche, la courbe $y = t^3 + pt + q$&nbsp;; à droite, les trois racines dans le plan complexe. Le texte donne les valeurs intermédiaires de la formule.
 
 <div class="fig">
-<p class="fig-ctl"><label for="cd-p">$p$ = <span id="cd-pv"></span></label><input type="range" id="cd-p" min="-20" max="20" step="0.5" value="-15"></p>
-<p class="fig-ctl"><label for="cd-q">$q$ = <span id="cd-qv"></span></label><input type="range" id="cd-q" min="-20" max="20" step="0.5" value="-4"></p>
+<div class="fig-titre">Les racines de $t^3 + p t + q$</div>
+<p class="fig-ctl"><label for="cd-p">$p$ = <span id="cd-pv" class="badge"></span></label><input type="range" id="cd-p" min="-20" max="20" step="0.5" value="-15"></p>
+<p class="fig-ctl"><label for="cd-q">$q$ = <span id="cd-qv" class="badge"></span></label><input type="range" id="cd-q" min="-20" max="20" step="0.5" value="-4"></p>
 <p class="fig-ctl"><button type="button" data-cd="-15,-4">t³ = 15t + 4 (Bombelli)</button><button type="button" data-cd="3,-4">t³ + 3t = 4</button><button type="button" data-cd="1,1">t³ + t + 1 = 0</button><button type="button" data-cd="-3,2">t³ − 3t + 2 = 0 (racine double)</button></p>
 <svg id="cd-svg" viewBox="0 0 460 250" role="img" aria-label="Courbe d'un polynôme de degré 3 et ses trois racines dans le plan complexe"></svg>
 <p class="fig-val" id="cd-val"></p>
@@ -640,7 +853,7 @@ Dans la figure suivante, on choisit $p$ et $q$. À gauche, la courbe $y = t^3 + 
     var w = [-0.5, Math.sqrt(3) / 2], w2 = [-0.5, -Math.sqrt(3) / 2];
     var roots = [add(u, v), add(mul(w, u), mul(w2, v)), add(mul(w2, u), mul(w, v))];
     var h = '<defs><clipPath id="cd-cl"><rect x="' + LX + '" y="' + LY + '" width="' + S + '" height="' + S + '"/></clipPath></defs>';
-    h += '<rect x="' + LX + '" y="' + LY + '" width="' + S + '" height="' + S + '" fill="#F8FAFC" stroke="#CBD5E1"/><rect x="' + RX + '" y="' + LY + '" width="' + S + '" height="' + S + '" fill="#F8FAFC" stroke="#CBD5E1"/>';
+    h += '<rect x="' + LX + '" y="' + LY + '" width="' + S + '" height="' + S + '" fill="#F8FAFC" stroke="#CBD5E1"/><rect x="' + RX + '" y="' + LY + '" width="' + S + '" height="' + S + '" fill="#F8FAFC" stroke="#CBD5E1"/>' + grilleSvg(LX, LY, S, S, LX + S / 2, LY + S / 2, U, U) + grilleSvg(RX, LY, S, S, RX + S / 2, LY + S / 2, U, U);
     var cx0 = LX + S / 2, cy = LY + S / 2, rx = RX + S / 2, i, d = '';
     h += '<line x1="' + LX + '" y1="' + cy + '" x2="' + (LX + S) + '" y2="' + cy + '" stroke="#94A3B8"/><line x1="' + cx0 + '" y1="' + LY + '" x2="' + cx0 + '" y2="' + (LY + S) + '" stroke="#94A3B8"/><line x1="' + RX + '" y1="' + cy + '" x2="' + (RX + S) + '" y2="' + cy + '" stroke="#94A3B8"/><line x1="' + rx + '" y1="' + LY + '" x2="' + rx + '" y2="' + (LY + S) + '" stroke="#94A3B8"/>';
     for (i = -5; i <= 5; i++) { h += '<line x1="' + (cx0 + i * U) + '" y1="' + (cy - 3) + '" x2="' + (cx0 + i * U) + '" y2="' + (cy + 3) + '" stroke="#94A3B8"/><line x1="' + (rx + i * U) + '" y1="' + (cy - 3) + '" x2="' + (rx + i * U) + '" y2="' + (cy + 3) + '" stroke="#94A3B8"/><line x1="' + (rx - 3) + '" y1="' + (cy + i * U) + '" x2="' + (rx + 3) + '" y2="' + (cy + i * U) + '" stroke="#94A3B8"/>'; if (i !== 0 && i % 2 === 0) { h += T(cx0 + i * U, cy + 15, i, '#64748B', 'middle', 10) + T(rx + i * U, cy + 15, i, '#64748B', 'middle', 10); } }
@@ -754,6 +967,7 @@ On le voit avec les relations de Viète&nbsp;: dans $z^n - 1$, le coefficient de
 Dans la figure suivante, on choisit un polynôme à coefficients réels, de degré au plus $6$. Le plan complexe montre ses racines, calculées numériquement (méthode de Durand-Kerner). Les racines réelles sont en orange, les autres en rose, et le cercle pointillé est le cercle unité. En changeant un coefficient, on voit les racines bouger&nbsp;: elles se rencontrent sur l'axe réel puis quittent l'axe par paires conjuguées.
 
 <div class="fig">
+<div class="fig-titre">Explorateur de racines</div>
 <p class="fig-ctl"><label>Degré&nbsp;: <select id="ex-deg"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option></select></label></p>
 <p class="fig-ctl" id="ex-coef"></p>
 <p class="fig-ctl"><button type="button" data-ex="1,0,1">x²+1</button><button type="button" data-ex="1,0,0,-1">x³−1</button><button type="button" data-ex="1,0,0,0,1">x⁴+1</button><button type="button" data-ex="1,0,0,0,-1,-1">x⁵−x−1</button><button type="button" data-ex="1,-6,11,-6">(x−1)(x−2)(x−3)</button><button type="button" data-ex="1,0,0,0,0,0,-1">x⁶−1</button></p>
@@ -802,7 +1016,7 @@ Dans la figure suivante, on choisit un polynôme à coefficients réels, de degr
     var z = racines(c), m = 1.5, i;
     z.forEach(function (w) { m = Math.max(m, 1.25 * Math.hypot(w[0], w[1])); });
     m = Math.min(m, 40);
-    var X0 = 80, Y0 = 15, S = 300, sc = S / (2 * m), cxp = X0 + S / 2, cyp = Y0 + S / 2, h = '<rect x="' + X0 + '" y="' + Y0 + '" width="' + S + '" height="' + S + '" fill="#F8FAFC" stroke="#CBD5E1"/>';
+    var X0 = 80, Y0 = 15, S = 300, sc = S / (2 * m), cxp = X0 + S / 2, cyp = Y0 + S / 2, h = '<rect x="' + X0 + '" y="' + Y0 + '" width="' + S + '" height="' + S + '" fill="#F8FAFC" stroke="#CBD5E1"/>' + grilleSvg(X0, Y0, S, S, X0 + S / 2, Y0 + S / 2, sc * (m > 12 ? 10 : m > 6 ? 5 : m > 3 ? 2 : 1), sc * (m > 12 ? 10 : m > 6 ? 5 : m > 3 ? 2 : 1));
     h += '<line x1="' + X0 + '" y1="' + cyp + '" x2="' + (X0 + S) + '" y2="' + cyp + '" stroke="#94A3B8"/><line x1="' + cxp + '" y1="' + Y0 + '" x2="' + cxp + '" y2="' + (Y0 + S) + '" stroke="#94A3B8"/>';
     h += '<circle cx="' + cxp + '" cy="' + cyp + '" r="' + sc + '" fill="none" stroke="#94A3B8" stroke-dasharray="4 4"/>';
     var step = m > 12 ? 10 : m > 6 ? 5 : m > 3 ? 2 : 1;
@@ -846,8 +1060,9 @@ Si $r$ est une racine simple de $f$ ($f(r) = 0$ et $f'(r) \neq 0$), et si $x_0$ 
 Le nombre de décimales exactes double environ à chaque itération. Pour $f(x) = x^2 - 2$, la méthode donne $x_{n+1} = \frac{1}{2}\left(x_n + \frac{2}{x_n}\right)$, la méthode de Héron (ou «&nbsp;babylonienne&nbsp;») pour $\sqrt{2}$&nbsp;: de $x_0 = 1$, on obtient $\frac{3}{2}$, $\frac{17}{12}$, $\frac{577}{408} \approx 1{,}41421569$, qui est exact à $6$ décimales. Dans la figure suivante, on choisit une équation et un point de départ, puis on déroule les itérations&nbsp;: chaque tangente (en rose) donne le point suivant.
 
 <div class="fig">
+<div class="fig-titre">La méthode de Newton pas à pas</div>
 <p class="fig-ctl"><label for="nw-p">Équation&nbsp;:</label><select id="nw-p" class="sel-seul"><option value="0">x³ − 2x − 5 = 0 (l'exemple de Newton, 1669)</option><option value="1">x² − 2 = 0</option><option value="2">x³ − x − 1 = 0</option></select></p>
-<p class="fig-ctl"><label for="nw-x">Point de départ x₀ = <span id="nw-xv"></span></label><input type="range" id="nw-x" min="1" max="3.4" step="0.1" value="3"></p>
+<p class="fig-ctl"><label for="nw-x">Point de départ x₀ = <span id="nw-xv" class="badge"></span></label><input type="range" id="nw-x" min="1" max="3.4" step="0.1" value="3"></p>
 <p class="fig-ctl"><button type="button" id="nw-1">Itération suivante</button><button type="button" id="nw-5">+ 5 itérations</button><button type="button" id="nw-0">Recommencer</button></p>
 <svg id="nw-svg" viewBox="0 0 460 260" role="img" aria-label="La méthode de Newton : tangentes successives à la courbe"></svg>
 <p class="fig-val" id="nw-val"></p>
@@ -872,7 +1087,7 @@ Le nombre de décimales exactes double environ à chaque itération. Pour $f(x) 
     xv.textContent = fr(parseFloat(sx.value), 1);
     function px(x) { return X0 + (x - p.x0) / (p.x1 - p.x0) * (X1 - X0); }
     function py(y) { return Y1 - (y - p.y0) / (p.y1 - p.y0) * (Y1 - Y0); }
-    h += '<defs><clipPath id="nw-cl"><rect x="' + X0 + '" y="' + Y0 + '" width="' + (X1 - X0) + '" height="' + (Y1 - Y0) + '"/></clipPath></defs><rect x="' + X0 + '" y="' + Y0 + '" width="' + (X1 - X0) + '" height="' + (Y1 - Y0) + '" fill="#F8FAFC" stroke="#CBD5E1"/>';
+    h += '<defs><clipPath id="nw-cl"><rect x="' + X0 + '" y="' + Y0 + '" width="' + (X1 - X0) + '" height="' + (Y1 - Y0) + '"/></clipPath></defs><rect x="' + X0 + '" y="' + Y0 + '" width="' + (X1 - X0) + '" height="' + (Y1 - Y0) + '" fill="#F8FAFC" stroke="#CBD5E1"/>' + grilleSvg(X0, Y0, X1 - X0, Y1 - Y0, px(0), py(0), px(1) - px(0), (py(0) - py((p.y1 - p.y0) / 8))) ;
     h += '<g clip-path="url(#nw-cl)"><line x1="' + X0 + '" y1="' + py(0).toFixed(1) + '" x2="' + X1 + '" y2="' + py(0).toFixed(1) + '" stroke="#64748B" stroke-width="1.2"/>';
     var d = '';
     for (i = 0; i <= 200; i++) { var x = p.x0 + (p.x1 - p.x0) * i / 200; d += (i ? 'L' : 'M') + px(x).toFixed(1) + ',' + py(p.f(x)).toFixed(1); }
@@ -912,21 +1127,40 @@ Dans le plan complexe, la méthode de Newton s'applique au même titre. Chaque r
 Dans la figure suivante, chaque point du plan est coloré selon la racine vers laquelle la méthode de Newton converge quand on part de ce point, et plus sombre quand la convergence est lente. Les points en noir ne convergent pas&nbsp;: pour $z^3 - 2z + 2$, le point $0$ est attiré par un cycle $0 \to 1 \to 0$ et n'atteint jamais de racine.
 
 <div class="fig">
+<div class="fig-titre">Bassins d'attraction de la méthode de Newton</div>
 <p class="fig-ctl"><label for="nf-p">Polynôme&nbsp;:</label><select id="nf-p" class="sel-seul"><option value="0">z³ − 1</option><option value="1">z⁴ − 1</option><option value="2">z⁵ − 1</option><option value="3">z³ − 2z + 2 (un cycle de période 2)</option><option value="4">z⁵ − z − 1 (aucune formule)</option></select></p>
-<canvas id="nf-cv" width="400" height="400" role="img" aria-label="Bassins d'attraction de la méthode de Newton dans le plan complexe, que l'on peut déplacer et agrandir" style="touch-action:none;cursor:grab;"></canvas>
-<p class="fig-ctl"><button type="button" id="nf-zp">Zoom +</button><button type="button" id="nf-zm">Zoom −</button><button type="button" id="nf-r">Vue initiale</button></p>
+<canvas id="nf-cv" width="420" height="420" role="img" aria-label="Bassins d'attraction de la méthode de Newton dans le plan complexe, que l'on peut déplacer et agrandir à volonté" style="touch-action:none;cursor:grab;"></canvas>
+<p class="fig-ctl"><button type="button" id="nf-pl">Plonger ▶</button><button type="button" id="nf-zp">Zoom +</button><button type="button" id="nf-zm">Zoom −</button><button type="button" id="nf-r">Vue initiale</button></p>
 <p class="fig-val" id="nf-val"></p>
-<p class="fig-val note">Glisser pour déplacer, molette ou pincement pour zoomer (la figure est recalculée dès que le mouvement s'arrête). Sur téléphone, pour faire défiler la page, touchez en dehors de la figure.</p>
+<p class="fig-val note">Glisser pour déplacer (avec inertie), molette ou pincement pour zoomer, double-clic pour plonger vers un point. Le bouton « Plonger » zoome sans fin vers un point de la frontière entre les bassins. Sur téléphone, pour faire défiler la page, touchez en dehors de la figure.</p>
 </div>
 <script>
 (function () {
-  var cv = document.getElementById('nf-cv'), sel = document.getElementById('nf-p'), ctx = cv.getContext('2d'), W = 400, out = document.getElementById('nf-val');
-  var tmp = document.createElement('canvas'), tctx = tmp.getContext('2d'), buf = document.createElement('canvas'), bctx = buf.getContext('2d');
-  buf.width = W; buf.height = W;
+  var cv = document.getElementById('nf-cv'), sel = document.getElementById('nf-p'), ctx = cv.getContext('2d'), out = document.getElementById('nf-val'), btnPl = document.getElementById('nf-pl');
+  var T = 128, R0 = 3, LMAX = 34, W = 420;
   var POL = [[1, 0, 0, -1], [1, 0, 0, 0, -1], [1, 0, 0, 0, 0, -1], [1, 0, -2, 2], [1, 0, 0, 0, -1, -1]];
+  var CIBLE = [[0, 0], [0, 0], [0, 0], [0.8164965809, 0], [0.6687403050, 0]];
   var PAL = [[92, 160, 222], [247, 177, 89], [226, 120, 170], [102, 200, 176], [170, 150, 225]], GRIS = [150, 155, 170];
-  var c, dc, n, roots, cx = 0, cy = 0, R = 2, version = 0, ptrs = {}, bv = { ok: false, cx: 0, cy: 0, R: 2 }, minuteur = null;
-  ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
+  /* calcul d'une tuile : même code dans un Worker (fil séparé, pour que le glissé reste fluide) ou, à défaut, dans la page */
+  var SRC = 'function tile(m){var T=m.T,side=m.side,x0=m.x0,y0=m.y0,data=new Uint8ClampedArray(T*T*4),c=m.c,dc=m.dc,n=c.length-1,roots=m.roots,pal=m.pal,gris=m.gris,maxit=m.maxit,x,y,it,k,t;' +
+    'for(y=0;y<T;y++){for(x=0;x<T;x++){var zr=x0+side*(x+0.5)/T,zi=y0-side*(y+0.5)/T,col=gris;' +
+    'for(it=0;it<maxit;it++){var pr=c[0],pi=0,qr=dc[0],qi=0;' +
+    'for(k=1;k<=n;k++){t=pr*zr-pi*zi+c[k];pi=pr*zi+pi*zr;pr=t;}' +
+    'for(k=1;k<n;k++){t=qr*zr-qi*zi+dc[k];qi=qr*zi+qi*zr;qr=t;}' +
+    'var den=qr*qr+qi*qi;if(den<1e-30){break;}' +
+    'var sr=(pr*qr+pi*qi)/den,si=(pi*qr-pr*qi)/den;zr-=sr;zi-=si;' +
+    'if(sr*sr+si*si<1e-18){var best=1e18,b=0;for(k=0;k<n;k++){var dd=(zr-roots[k][0])*(zr-roots[k][0])+(zi-roots[k][1])*(zi-roots[k][1]);if(dd<best){best=dd;b=k;}}' +
+    'var f=1-0.22*Math.min(1,it/16),p=pal[b%pal.length];col=[p[0]*f+255*(1-f),p[1]*f+255*(1-f),p[2]*f+255*(1-f)];break;}}' +
+    'var o=4*(y*T+x);data[o]=col[0];data[o+1]=col[1];data[o+2]=col[2];data[o+3]=255;}}return data;}';
+  var tileLocal = new Function(SRC + ';return tile;')();
+  var workers = [], nW = Math.max(1, Math.min(3, (navigator.hardwareConcurrency || 2) - 1));
+  try {
+    var url = URL.createObjectURL(new Blob([SRC + ';onmessage=function(e){var d=tile(e.data.m);postMessage({key:e.data.key,data:d},[d.buffer]);};'], { type: 'text/javascript' }));
+    for (var w = 0; w < nW; w++) { var wk = new Worker(url); wk.onmessage = recu; wk.onerror = function () { workers = []; }; workers.push(wk); }
+  } catch (err) { workers = []; }
+  var c, dc, n, roots, pid = 0, cache = new Map(), enVol = {}, nVol = 0, file = [];
+  var cx = 0, cy = 0, R = R0, tR = R0, anc = null, vx = 0, vy = 0, go = null, plonge = false, sale = true, dernier = 0, derLegende = 0, ptrs = {}, dtmp = 0;
+  var SUP = '⁰¹²³⁴⁵⁶⁷⁸⁹';
   function racines(p) {
     var m = p.length - 1, a = p.map(function (v) { return v / p[0]; }), z = [], k, it, i, j;
     for (k = 0; k < m; k++) { var th = 2 * Math.PI * k / m + 0.4; z.push([1.2 * Math.cos(th), 1.2 * Math.sin(th)]); }
@@ -943,96 +1177,143 @@ Dans la figure suivante, chaque point du plan est coloré selon la racine vers l
     return z;
   }
   function choisir() {
-    c = POL[parseInt(sel.value, 10)]; n = c.length - 1; dc = []; for (var k = 0; k < n; k++) { dc.push(c[k] * (n - k)); }
-    roots = racines(c); cx = 0; cy = 0; R = 2; bv.ok = false; rendre();
+    pid = parseInt(sel.value, 10); c = POL[pid]; n = c.length - 1; dc = []; for (var k = 0; k < n; k++) { dc.push(c[k] * (n - k)); }
+    roots = racines(c); cache.clear(); file = []; plonge = false; btnPl.textContent = 'Plonger ▶';
+    cx = 0; cy = 0; R = R0; tR = R0; anc = null; vx = vy = 0; go = null; sale = true; demander(); planifier();
   }
-  function couleur(zr, zi, maxit) {
-    var it, k, t;
-    for (it = 0; it < maxit; it++) {
-      var pr = c[0], pi = 0, qr = dc[0], qi = 0;
-      for (k = 1; k <= n; k++) { t = pr * zr - pi * zi + c[k]; pi = pr * zi + pi * zr; pr = t; }
-      for (k = 1; k < n; k++) { t = qr * zr - qi * zi + dc[k]; qi = qr * zi + qi * zr; qr = t; }
-      var den = qr * qr + qi * qi; if (den < 1e-30) { break; }
-      var sr = (pr * qr + pi * qi) / den, si = (pi * qr - pr * qi) / den;
-      zr -= sr; zi -= si;
-      if (sr * sr + si * si < 1e-18) {
-        var best = 1e18, b = 0;
-        for (k = 0; k < n; k++) { var dd = (zr - roots[k][0]) * (zr - roots[k][0]) + (zi - roots[k][1]) * (zi - roots[k][1]); if (dd < best) { best = dd; b = k; } }
-        var f = 1 - 0.22 * Math.min(1, it / 16), p = PAL[b % PAL.length];
-        return [p[0] * f + 255 * (1 - f), p[1] * f + 255 * (1 - f), p[2] * f + 255 * (1 - f)];
+  function cle(L, i, j) { return pid + '|' + L + '|' + i + '|' + j; }
+  function recu(e) {
+    var d = e.data, parts = d.key.split('|'); delete enVol[d.key]; nVol--;
+    if (parseInt(parts[0], 10) === pid) { var cc = document.createElement('canvas'); cc.width = T; cc.height = T; cc.getContext('2d').putImageData(new ImageData(d.data, T, T), 0, 0); cache.set(d.key, cc); sale = true; }
+    pomper(); planifier();
+  }
+  function envoyer(t) {
+    var key = cle(t.L, t.i, t.j), side = 2 * R0 / Math.pow(2, t.L);
+    var m = { T: T, side: side, x0: -R0 + t.i * side, y0: R0 - t.j * side, c: c, dc: dc, roots: roots, pal: PAL, gris: GRIS, maxit: Math.min(220, 60 + 4 * t.L) };
+    enVol[key] = true; nVol++;
+    if (workers.length) { workers[nVol % workers.length].postMessage({ key: key, m: m }); }
+    else { setTimeout(function () { recu({ data: { key: key, data: tileLocal(m) } }); }, 0); }
+  }
+  function pomper() { var cap = Math.max(2, workers.length * 2); while (nVol < cap && file.length) { var t = file.shift(), key = cle(t.L, t.i, t.j); if (!cache.has(key) && !enVol[key]) { envoyer(t); } } }
+  function niveau() { var l = Math.ceil(Math.log2((W / (2 * R)) * (2 * R0 / T))); return Math.max(0, Math.min(LMAX, l)); }
+  function plage(L, marge) {
+    var side = 2 * R0 / Math.pow(2, L), N = Math.pow(2, L) - 1;
+    var i0 = Math.floor((cx - R + R0) / side) - marge, i1 = Math.floor((cx + R + R0) / side) + marge, j0 = Math.floor((R0 - (cy + R)) / side) - marge, j1 = Math.floor((R0 - (cy - R)) / side) + marge;
+    return [Math.max(0, i0), Math.min(N, i1), Math.max(0, j0), Math.min(N, j1)];
+  }
+  /* quelles tuiles faut-il ? la vue au niveau L, et des niveaux plus grossiers (avec une marge) pour qu'aucun bord ne soit jamais vide */
+  function demander() {
+    var L = niveau(), liste = [], l, i, j, pr;
+    for (l = Math.max(0, L - 6); l <= L; l++) {
+      pr = plage(l, l < L ? 1 : 0);
+      for (i = pr[0]; i <= pr[1]; i++) {
+        for (j = pr[2]; j <= pr[3]; j++) {
+          if (!cache.has(cle(l, i, j)) && !enVol[cle(l, i, j)]) {
+            var side = 2 * R0 / Math.pow(2, l), dx = -R0 + (i + 0.5) * side - cx, dy = R0 - (j + 0.5) * side - cy;
+            liste.push({ L: l, i: i, j: j, d: l * 1e3 + Math.hypot(dx, dy) / side });
+          }
+        }
       }
     }
-    return GRIS;
+    liste.sort(function (a, b) { return a.d - b.d; }); file = liste; pomper();
   }
-  var SUP = '⁰¹²³⁴⁵⁶⁷⁸⁹';
+  function purger() {
+    if (cache.size < 900) { return; }
+    var it = cache.keys(), k, g = 0;
+    while (cache.size > 700 && (k = it.next()).done === false) { if (parseInt(k.value.split('|')[1], 10) > 3) { cache.delete(k.value); g++; } }
+  }
+  function dessiner() {
+    var L = niveau(), l, i, j, pr, k, tcv;
+    ctx.fillStyle = '#EEF2F7'; ctx.fillRect(0, 0, W, W); ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
+    for (l = 0; l <= L; l++) {
+      pr = plage(l, 0);
+      var side = 2 * R0 / Math.pow(2, l), ds = side / (2 * R) * W;
+      for (i = pr[0]; i <= pr[1]; i++) {
+        for (j = pr[2]; j <= pr[3]; j++) {
+          tcv = cache.get(cle(l, i, j)); if (!tcv) { continue; }
+          ctx.drawImage(tcv, ((-R0 + i * side) - (cx - R)) / (2 * R) * W, ((cy + R) - (R0 - j * side)) / (2 * R) * W, ds + 0.7, ds + 0.7);
+        }
+      }
+    }
+  }
   function sci(x) {
     if (x === 0) { return '0'; }
     var e = Math.floor(Math.log10(Math.abs(x)));
-    if (e >= -3 && e < 4) { return x.toPrecision(3).replace('.', ',').replace(/,?0+$/, function (m) { return m.indexOf(',') >= 0 ? '' : m; }); }
+    if (e >= -3 && e < 4) { return String(Number(x.toPrecision(3))).replace('.', ','); }
     var m = x / Math.pow(10, e), s = String(Math.abs(e)).split('').map(function (d) { return SUP[d]; }).join('');
     return m.toPrecision(2).replace('.', ',') + ' × 10' + (e < 0 ? '⁻' : '') + s;
   }
-  function legende() { out.innerHTML = 'zoom × ' + sci(2 / R) + ' &nbsp; centre ' + sci(cx) + ' ' + (cy < 0 ? '−' : '+') + ' ' + sci(Math.abs(cy)) + ' i'; }
-  /* Pendant un mouvement, on ne recalcule rien : on déplace et on agrandit, avec lissage, la dernière image complète.
-     Le calcul net ne commence qu'après une courte pause, et remplace l'image d'un coup quand il est fini. */
-  function afficherTransforme() {
-    ctx.fillStyle = '#EEF2F7'; ctx.fillRect(0, 0, W, W);
-    if (!bv.ok) { return; }
-    var s = bv.R / R, dx = ((bv.cx - bv.R) - (cx - R)) / (2 * R) * W, dy = ((cy + R) - (bv.cy + bv.R)) / (2 * R) * W;
-    ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
-    ctx.drawImage(buf, dx, dy, W * s, W * s);
+  function legende() { out.innerHTML = 'zoom × ' + sci(R0 / R) + ' &nbsp; centre ' + sci(cx) + ' ' + (cy < 0 ? '−' : '+') + ' ' + sci(Math.abs(cy)) + ' i'; }
+  function borner() {
+    R = Math.max(2e-10, Math.min(R0, R)); tR = Math.max(2e-10, Math.min(R0, tR));
+    cx = Math.max(-R0 + R, Math.min(R0 - R, cx)); cy = Math.max(-R0 + R, Math.min(R0 - R, cy));
   }
-  function bouger() { version++; legende(); afficherTransforme(); clearTimeout(minuteur); minuteur = setTimeout(rendre, 90); }
-  function rendre() {
-    var v = ++version, maxit = R < 0.05 ? 120 : 60, res = W, cr = cx, ci = cy, rr = R, img = new ImageData(res, res), y = 0;
-    legende();
-    if (!bv.ok) { afficherTransforme(); }
-    function bloc() {
-      if (v !== version) { return; }
-      var fin = Math.min(res, y + 10), x, o, col;
-      for (; y < fin; y++) {
-        for (x = 0; x < res; x++) {
-          col = couleur(cr + rr * (2 * (x + 0.5) / res - 1), ci - rr * (2 * (y + 0.5) / res - 1), maxit);
-          o = 4 * (y * res + x); img.data[o] = col[0]; img.data[o + 1] = col[1]; img.data[o + 2] = col[2]; img.data[o + 3] = 255;
-        }
-      }
-      if (y < res) { setTimeout(bloc, 0); return; }
-      tmp.width = res; tmp.height = res; tctx.putImageData(img, 0, 0);
-      ctx.imageSmoothingEnabled = false; ctx.drawImage(tmp, 0, 0);
-      bctx.drawImage(tmp, 0, 0); bv = { ok: true, cx: cr, cy: ci, R: rr };
+  function planifier() { if (!dtmp) { dtmp = requestAnimationFrame(image); } }
+  /* une image : on fait avancer le zoom lissé, l'inertie, le plongeon, puis on dessine ce qu'on a (jamais de vide : les tuiles grossières servent d'aperçu) */
+  function image(t) {
+    dtmp = 0;
+    var dt = dernier ? Math.min(0.05, (t - dernier) / 1000) : 0.016, k = dt * 60, vivant = false, avant = cx + '|' + cy + '|' + R;
+    dernier = t;
+    if (plonge) {
+      var cb = CIBLE[pid]; cx += (cb[0] - cx) * (1 - Math.pow(0.93, k)); cy += (cb[1] - cy) * (1 - Math.pow(0.93, k)); R *= Math.pow(0.985, k); tR = R; vivant = true;
+      if (R <= 2.5e-10) { plonge = false; btnPl.textContent = 'Plonger ▶'; }
+    } else if (go) {
+      var f = 1 - Math.pow(0.88, k);
+      R *= Math.exp(Math.log(go.R / R) * f); cx += (go.cx - cx) * f; cy += (go.cy - cy) * f; tR = R; vivant = true;
+      if (Math.abs(Math.log(go.R / R)) < 1e-3 && Math.hypot(go.cx - cx, go.cy - cy) < 1e-4 * R) { R = go.R; cx = go.cx; cy = go.cy; go = null; }
+    } else {
+      if (anc && Math.abs(Math.log(tR / R)) > 1e-4) {
+        R *= Math.exp(Math.log(tR / R) * (1 - Math.pow(0.78, k))); cx = anc.zr - R * anc.ux; cy = anc.zi + R * anc.uy; vivant = true;
+      } else { anc = null; }
+      if (Math.abs(vx) + Math.abs(vy) > 1e-4 * R && !Object.keys(ptrs).length) { cx += vx * k; cy += vy * k; var fr = Math.pow(0.92, k); vx *= fr; vy *= fr; vivant = true; } else if (!Object.keys(ptrs).length) { vx = vy = 0; }
     }
-    bloc();
+    borner();
+    if (avant !== cx + '|' + cy + '|' + R) { sale = true; demander(); }
+    purger();
+    if (sale) { dessiner(); sale = false; if (t - derLegende > 120) { legende(); derLegende = t; } }
+    if (vivant || nVol > 0 || file.length) { planifier(); } else { dernier = 0; legende(); }
   }
-  function zoomer(s, ux, uy) {
-    var nR = Math.max(1e-9, Math.min(6, R * s));
-    var zr = cx + R * ux, zi = cy - R * uy;
-    R = nR; cx = zr - R * ux; cy = zi + R * uy; bouger();
+  function zoomerVers(s, ux, uy) {
+    if (!anc || Math.abs(anc.ux - ux) > 0.02 || Math.abs(anc.uy - uy) > 0.02 || Math.abs(Math.log(tR / R)) < 1e-3) { anc = { ux: ux, uy: uy, zr: cx + R * ux, zi: cy - R * uy }; tR = R; }
+    tR = Math.max(2e-10, Math.min(R0, tR * s)); go = null; plonge = false; btnPl.textContent = 'Plonger ▶'; planifier();
   }
   function rel(e) { var r = cv.getBoundingClientRect(); return [(e.clientX - r.left) / r.width * 2 - 1, (e.clientY - r.top) / r.height * 2 - 1]; }
-  cv.addEventListener('wheel', function (e) { e.preventDefault(); var u = rel(e); zoomer(e.deltaY < 0 ? 1 / 1.25 : 1.25, u[0], u[1]); }, { passive: false });
-  cv.addEventListener('pointerdown', function (e) { cv.setPointerCapture(e.pointerId); ptrs[e.pointerId] = [e.clientX, e.clientY]; cv.style.cursor = 'grabbing'; });
+  cv.addEventListener('wheel', function (e) { e.preventDefault(); var u = rel(e); zoomerVers(e.deltaY < 0 ? 1 / 1.3 : 1.3, u[0], u[1]); }, { passive: false });
+  cv.addEventListener('pointerdown', function (e) { cv.setPointerCapture(e.pointerId); ptrs[e.pointerId] = [e.clientX, e.clientY]; cv.style.cursor = 'grabbing'; vx = vy = 0; go = null; anc = null; tR = R; plonge = false; btnPl.textContent = 'Plonger ▶'; });
   cv.addEventListener('pointermove', function (e) {
     if (!ptrs[e.pointerId]) { return; }
     var ids = Object.keys(ptrs), old = ptrs[e.pointerId], nw = [e.clientX, e.clientY], r = cv.getBoundingClientRect();
     if (ids.length === 1) {
-      cx -= (nw[0] - old[0]) / r.width * 2 * R; cy += (nw[1] - old[1]) / r.height * 2 * R; bouger();
+      var dx = -(nw[0] - old[0]) / r.width * 2 * R, dy = (nw[1] - old[1]) / r.height * 2 * R;
+      cx += dx; cy += dy; vx = 0.6 * vx + 0.4 * dx; vy = 0.6 * vy + 0.4 * dy; borner(); sale = true; demander(); planifier();
     } else {
       var oid = ids.filter(function (k) { return k !== String(e.pointerId); })[0], o = ptrs[oid];
       var d0 = Math.hypot(old[0] - o[0], old[1] - o[1]), d1 = Math.hypot(nw[0] - o[0], nw[1] - o[1]);
       var m0 = [(old[0] + o[0]) / 2, (old[1] + o[1]) / 2], m1 = [(nw[0] + o[0]) / 2, (nw[1] + o[1]) / 2];
       cx -= (m1[0] - m0[0]) / r.width * 2 * R; cy += (m1[1] - m0[1]) / r.height * 2 * R;
-      if (d1 > 5 && d0 > 5) { zoomer(d0 / d1, (m1[0] - r.left) / r.width * 2 - 1, (m1[1] - r.top) / r.height * 2 - 1); } else { bouger(); }
+      if (d1 > 5 && d0 > 5) {
+        var ux = (m1[0] - r.left) / r.width * 2 - 1, uy = (m1[1] - r.top) / r.height * 2 - 1, zr = cx + R * ux, zi = cy - R * uy;
+        R = Math.max(2e-10, Math.min(R0, R * d0 / d1)); cx = zr - R * ux; cy = zi + R * uy; tR = R;
+      }
+      borner(); sale = true; demander(); planifier();
     }
     ptrs[e.pointerId] = nw;
   });
-  function fin(e) { delete ptrs[e.pointerId]; cv.style.cursor = 'grab'; }
+  function fin(e) { delete ptrs[e.pointerId]; cv.style.cursor = 'grab'; planifier(); }
   cv.addEventListener('pointerup', fin); cv.addEventListener('pointercancel', fin);
-  cv.addEventListener('dblclick', function (e) { var u = rel(e); zoomer(0.5, u[0], u[1]); });
-  document.getElementById('nf-zp').addEventListener('click', function () { zoomer(0.5, 0, 0); });
-  document.getElementById('nf-zm').addEventListener('click', function () { zoomer(2, 0, 0); });
-  document.getElementById('nf-r').addEventListener('click', function () { cx = 0; cy = 0; R = 2; bouger(); });
+  cv.addEventListener('dblclick', function (e) { var u = rel(e); zoomerVers(0.2, u[0], u[1]); });
+  document.getElementById('nf-zp').addEventListener('click', function () { zoomerVers(0.4, 0, 0); });
+  document.getElementById('nf-zm').addEventListener('click', function () { zoomerVers(2.5, 0, 0); });
+  document.getElementById('nf-r').addEventListener('click', function () { plonge = false; btnPl.textContent = 'Plonger ▶'; anc = null; go = { cx: 0, cy: 0, R: R0 }; planifier(); });
+  btnPl.addEventListener('click', function () { plonge = !plonge; go = null; anc = null; btnPl.textContent = plonge ? 'Arrêter ■' : 'Plonger ▶'; planifier(); });
   sel.addEventListener('change', choisir);
-  choisir();
+  function taille() {
+    var cw = cv.clientWidth || 420, dpr = Math.min(2, window.devicePixelRatio || 1), nw = Math.round(cw * dpr);
+    if (nw !== W) { W = nw; cv.width = W; cv.height = W; sale = true; demander(); planifier(); }
+  }
+  if (window.ResizeObserver) { new ResizeObserver(taille).observe(cv); }
+  W = Math.round((cv.clientWidth || 420) * Math.min(2, window.devicePixelRatio || 1)); cv.width = W; cv.height = W;
+  choisir(); demander();
 })();
 </script>
 
