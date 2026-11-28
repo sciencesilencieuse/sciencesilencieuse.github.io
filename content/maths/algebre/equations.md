@@ -214,7 +214,7 @@ details.solution > summary
 
 # Équations
 
-Résoudre une équation polynomiale, c'est trouver les nombres qui annulent un polynôme. On a su le faire pour le premier et le second degré dès l'Antiquité, pour les degrés trois et quatre à la Renaissance, avant de se heurter au cinquième degré, puis de passer au calcul approché. Cette page suit cette histoire. Elle commence par le premier degré (équations, puis inéquations), poursuit avec le second degré, d'abord dans les nombres réels, puis dans les nombres complexes, et monte ensuite vers les degrés supérieurs, avec des figures pour manipuler les racines.
+Résoudre une équation polynomiale, c'est trouver les nombres qui annulent un polynôme. On a su le faire pour le premier et le second degré dès l'Antiquité, pour les degrés trois et quatre à la Renaissance, avant de se heurter au cinquième degré, puis de passer au calcul approché. Cette page suit cette histoire. Elle commence par le premier degré (équations, inéquations, systèmes), poursuit avec le second degré, d'abord dans les nombres réels, puis dans les nombres complexes, et monte ensuite vers les degrés supérieurs, avec des figures pour manipuler les racines.
 
 <div class="bloc bloc-def">
 <div class="bloc-titre">Équation polynomiale et racine</div>
@@ -237,10 +237,6 @@ $$x = -\frac{b}{a}.$$
 </div>
 
 Pour résoudre, on «&nbsp;isole l'inconnue&nbsp;»&nbsp;: on fait la même opération des deux côtés de l'égalité (retrancher $b$, puis diviser par $a$), comme on garde une balance en équilibre en ajoutant ou en retirant la même masse des deux plateaux. Par exemple, $3x + 6 = 0$ donne $3x = -6$, soit $x = -2$.
-
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube WPc-Hj2O_Os>}}
-</div>
 
 ### Inéquations du premier degré
 
@@ -301,6 +297,150 @@ Dans la figure suivante, on règle $a$ et $b$ et l'on choisit l'inégalité. La 
     out.innerHTML = (a !== 0 ? 'Solutions de ' + ss.options[ss.selectedIndex].text.replace('a x + b', 'ax + b') + ' : ' : '') + txt;
   }
   [sa, sb, ss].forEach(function (e) { e.addEventListener('input', dessiner); e.addEventListener('change', dessiner); });
+  dessiner();
+})();
+</script>
+
+<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+{{<youtube WPc-Hj2O_Os>}}
+</div>
+
+### Systèmes de deux équations ou inéquations linéaires
+
+Avec deux inconnues $x$ et $y$, une équation linéaire $a x + b y = c$ est l'équation d'une **droite** du plan. Résoudre un système de deux telles équations, c'est chercher les points communs aux deux droites. Une inéquation $a x + b y \le c$ décrit au contraire un **demi-plan**&nbsp;: tout un côté d'une droite.
+
+<div class="bloc bloc-theo">
+<div class="bloc-titre">Système de deux équations linéaires</div>
+
+Soit le système
+$$\begin{cases} a_1 x + b_1 y = c_1 \\\\ a_2 x + b_2 y = c_2 \end{cases}$$
+et $D = a_1 b_2 - a_2 b_1$ son **déterminant**.
+
+- Si $D \neq 0$, les deux droites se coupent en un point, et le système a une **unique solution**&nbsp;: $x = \dfrac{c_1 b_2 - c_2 b_1}{D}$ et $y = \dfrac{a_1 c_2 - a_2 c_1}{D}$ (formules de Cramer).
+- Si $D = 0$, les droites sont parallèles. Elles sont soit distinctes, et le système n'a **aucune solution**, soit confondues, et il en a **une infinité**.
+
+</div>
+
+<div class="bloc bloc-preuve">
+<div class="bloc-titre">Démonstration (combinaison linéaire)</div>
+
+On multiplie la première équation par $b_2$ et la seconde par $b_1$, puis on soustrait pour éliminer $y$&nbsp;: $(a_1 b_2 - a_2 b_1)x = c_1 b_2 - c_2 b_1$. De même, en éliminant $x$, on trouve $(a_1 b_2 - a_2 b_1)y = a_1 c_2 - a_2 c_1$. Quand $D \neq 0$, on divise par $D$&nbsp;; quand $D = 0$, les membres de gauche sont nuls, et le système est impossible ou indéterminé selon que les membres de droite sont non nuls ou nuls.
+
+</div>
+
+On résout en pratique par **substitution** (on exprime $y$ en fonction de $x$ dans une équation, puis on remplace dans l'autre) ou par **combinaison linéaire** (comme ci-dessus). Par exemple, $x + y = 3$ et $x - y = 1$ donnent en les additionnant $2x = 4$, soit $x = 2$ puis $y = 1$ (la formule de Cramer confirme&nbsp;: $D = -2$, $x = \frac{-4}{-2} = 2$). Ces opérations sont celles de la méthode du pivot de Gauss, qui traite de la même façon des systèmes de $n$ équations (voir <a href="../lineaire/">l'algèbre linéaire</a>).
+
+<div class="bloc bloc-prop">
+<div class="bloc-titre">Système d'inéquations</div>
+
+Chaque inéquation $a x + b y \le c$ (ou $\ge$, $<$, $>$) a pour solutions un **demi-plan**, délimité par la droite $a x + b y = c$ (qui lui appartient si l'inégalité est large, et non si elle est stricte). L'ensemble des solutions d'un système d'inéquations est l'**intersection** des demi-plans&nbsp;: une région du plan, convexe, qui peut être un polygone, une région non bornée, ou être vide.
+
+</div>
+
+Pour savoir de quel côté de la droite est le demi-plan, on teste un point, par exemple l'origine (si $c \neq 0$)&nbsp;: elle vérifie $a x + b y \le c$ quand $0 \le c$. Par exemple, $x + y \le 3$ et $x - y \ge 1$ définissent la région située en dessous de la première droite et au-dessous de la seconde, dont le sommet est le point $(2 ; 1)$ solution du système d'équations correspondant.
+
+Dans la figure suivante, on entre les coefficients de deux relations $a x + b y \mathrel{\square} c$ et l'on choisit le symbole $=$, $\le$, $<$, $\ge$ ou $>$. Les droites sont tracées (en pointillés quand l'inégalité est stricte). Pour des équations, le point d'intersection est marqué&nbsp;; pour des inéquations, chaque demi-plan est teinté (en bleu et en rose) et leur intersection, l'ensemble des solutions, apparaît en vert.
+
+<div class="fig">
+<p class="fig-ctl"><span class="coef" style="color:#1D4ED8">(1)</span><span class="coef"><input type="number" step="0.5" value="1" id="sy-a1" aria-label="a1"> x</span> +<span class="coef"><input type="number" step="0.5" value="1" id="sy-b1" aria-label="b1"> y</span><select id="sy-o1" aria-label="symbole de la première relation"><option value="eq" selected>=</option><option value="le">≤</option><option value="lt">&lt;</option><option value="ge">≥</option><option value="gt">&gt;</option></select><span class="coef"><input type="number" step="0.5" value="3" id="sy-c1" aria-label="c1"></span></p>
+<p class="fig-ctl"><span class="coef" style="color:#DC2626">(2)</span><span class="coef"><input type="number" step="0.5" value="1" id="sy-a2" aria-label="a2"> x</span> +<span class="coef"><input type="number" step="0.5" value="-1" id="sy-b2" aria-label="b2"> y</span><select id="sy-o2" aria-label="symbole de la seconde relation"><option value="eq" selected>=</option><option value="le">≤</option><option value="lt">&lt;</option><option value="ge">≥</option><option value="gt">&gt;</option></select><span class="coef"><input type="number" step="0.5" value="1" id="sy-c2" aria-label="c2"></span></p>
+<p class="fig-ctl"><button type="button" data-sy="1,1,eq,3,1,-1,eq,1">solution unique</button><button type="button" data-sy="1,1,eq,3,1,1,eq,5">droites parallèles</button><button type="button" data-sy="1,1,eq,3,2,2,eq,6">droites confondues</button><button type="button" data-sy="1,1,le,3,1,-1,ge,1">deux demi-plans</button><button type="button" data-sy="1,1,le,1,1,1,ge,3">région vide</button><button type="button" data-sy="1,1,eq,3,1,-1,le,1">équation et inéquation</button></p>
+<svg id="sy-svg" viewBox="0 0 330 320" role="img" aria-label="Deux droites, ou deux demi-plans, et leur intersection" style="max-width:340px;"></svg>
+<p class="fig-val" id="sy-val"></p>
+</div>
+<script>
+(function () {
+  var ids = ['a1', 'b1', 'c1', 'a2', 'b2', 'c2'], el = {}, svg = document.getElementById('sy-svg'), out = document.getElementById('sy-val');
+  ids.forEach(function (k) { el[k] = document.getElementById('sy-' + k); });
+  var o1 = document.getElementById('sy-o1'), o2 = document.getElementById('sy-o2');
+  var M = 6, S = 300, X0 = 15, Y0 = 10, U = S / (2 * M);
+  var SYM = { eq: '=', le: '≤', lt: '<', ge: '≥', gt: '>' };
+  function fr(x, d) { if (Math.abs(x) < 0.5 * Math.pow(10, -d)) { x = 0; } var s = x.toFixed(d); if (s.indexOf('.') >= 0) { s = s.replace(/0+$/, '').replace(/\.$/, ''); } return s.replace('.', ',').replace('-', '−'); }
+  function px(x) { return X0 + (x + M) * U; }
+  function py(y) { return Y0 + (M - y) * U; }
+  function bon(a, b, c, op, p) { var v = a * p[0] + b * p[1] - c; return op === 'le' || op === 'lt' ? c - a * p[0] - b * p[1] : v; }
+  function coupe(P, a, b, c, op) {
+    if (Math.abs(a) + Math.abs(b) < 1e-12) { return (op === 'le' || op === 'lt' ? 0 <= c : 0 >= c) ? P : []; }
+    var R = [], i, n = P.length;
+    for (i = 0; i < n; i++) {
+      var A = P[i], B = P[(i + 1) % n], ga = bon(a, b, c, op, A), gb = bon(a, b, c, op, B);
+      if (ga >= -1e-12) { R.push(A); }
+      if ((ga > 1e-12 && gb < -1e-12) || (ga < -1e-12 && gb > 1e-12)) { var t = ga / (ga - gb); R.push([A[0] + t * (B[0] - A[0]), A[1] + t * (B[1] - A[1])]); }
+    }
+    return R;
+  }
+  function aire(P) { var s = 0, i; for (i = 0; i < P.length; i++) { var A = P[i], B = P[(i + 1) % P.length]; s += A[0] * B[1] - B[0] * A[1]; } return Math.abs(s) / 2; }
+  function pts(P) { return P.map(function (p) { return px(p[0]).toFixed(1) + ',' + py(p[1]).toFixed(1); }).join(' '); }
+  function segDroite(a, b, c) {
+    if (Math.abs(a) + Math.abs(b) < 1e-12) { return null; }
+    var n2 = a * a + b * b, p = [a * c / n2, b * c / n2], d = [-b, a], T = 40;
+    return [[p[0] - T * d[0], p[1] - T * d[1]], [p[0] + T * d[0], p[1] + T * d[1]]];
+  }
+  function droiteDansCarre(a, b, c) {
+    var s = segDroite(a, b, c); if (!s) { return null; }
+    var P = [[-M, -M], [M, -M], [M, M], [-M, M]], t0 = -1e9, t1 = 1e9, n2 = a * a + b * b, p = [a * c / n2, b * c / n2], d = [-b, a], k;
+    for (k = 0; k < 2; k++) {
+      if (Math.abs(d[k]) < 1e-12) { if (p[k] < -M || p[k] > M) { return null; } continue; }
+      var ta = (-M - p[k]) / d[k], tb = (M - p[k]) / d[k]; t0 = Math.max(t0, Math.min(ta, tb)); t1 = Math.min(t1, Math.max(ta, tb));
+    }
+    if (t0 > t1) { return null; }
+    return [[p[0] + t0 * d[0], p[1] + t0 * d[1]], [p[0] + t1 * d[0], p[1] + t1 * d[1]]];
+  }
+  function dessiner() {
+    var a1 = parseFloat(el.a1.value) || 0, b1 = parseFloat(el.b1.value) || 0, c1 = parseFloat(el.c1.value) || 0, a2 = parseFloat(el.a2.value) || 0, b2 = parseFloat(el.b2.value) || 0, c2 = parseFloat(el.c2.value) || 0;
+    var s1 = o1.value, s2 = o2.value, h = '', i, carre = [[-M, -M], [M, -M], [M, M], [-M, M]];
+    h += '<rect x="' + X0 + '" y="' + Y0 + '" width="' + S + '" height="' + S + '" fill="#F8FAFC" stroke="#CBD5E1"/>';
+    var ineq1 = s1 !== 'eq', ineq2 = s2 !== 'eq', H1 = ineq1 ? coupe(carre, a1, b1, c1, s1) : null, H2 = ineq2 ? coupe(carre, a2, b2, c2, s2) : null;
+    if (H1 && H1.length) { h += '<polygon points="' + pts(H1) + '" fill="#1D4ED8" fill-opacity="0.12"/>'; }
+    if (H2 && H2.length) { h += '<polygon points="' + pts(H2) + '" fill="#DC2626" fill-opacity="0.12"/>'; }
+    var inter = null;
+    if (ineq1 && ineq2) { inter = coupe(coupe(carre, a1, b1, c1, s1), a2, b2, c2, s2); if (inter.length) { h += '<polygon points="' + pts(inter) + '" fill="#006C65" fill-opacity="0.4"/>'; } }
+    h += '<line x1="' + px(-M) + '" y1="' + py(0) + '" x2="' + px(M) + '" y2="' + py(0) + '" stroke="#64748B"/><line x1="' + px(0) + '" y1="' + py(-M) + '" x2="' + px(0) + '" y2="' + py(M) + '" stroke="#64748B"/>';
+    for (i = -M + 1; i < M; i++) { if (i !== 0) { h += '<line x1="' + px(i) + '" y1="' + (py(0) - 3) + '" x2="' + px(i) + '" y2="' + (py(0) + 3) + '" stroke="#64748B"/><line x1="' + (px(0) - 3) + '" y1="' + py(i) + '" x2="' + (px(0) + 3) + '" y2="' + py(i) + '" stroke="#64748B"/>'; if (i % 2 === 0) { h += '<text x="' + px(i) + '" y="' + (py(0) + 15) + '" font-size="10" text-anchor="middle" fill="#475569" font-family="Georgia,serif">' + i + '</text><text x="' + (px(0) + 6) + '" y="' + (py(i) + 3) + '" font-size="10" fill="#475569" font-family="Georgia,serif">' + i + '</text>'; } } }
+    function trait(a, b, c, op, col) {
+      var d = droiteDansCarre(a, b, c); if (!d) { return ''; }
+      return '<line x1="' + px(d[0][0]).toFixed(1) + '" y1="' + py(d[0][1]).toFixed(1) + '" x2="' + px(d[1][0]).toFixed(1) + '" y2="' + py(d[1][1]).toFixed(1) + '" stroke="' + col + '" stroke-width="2.4"' + (op === 'lt' || op === 'gt' ? ' stroke-dasharray="6 5"' : '') + '/>';
+    }
+    h += trait(a1, b1, c1, s1, '#1D4ED8') + trait(a2, b2, c2, s2, '#DC2626');
+    var D = a1 * b2 - a2 * b1, txt = '', sol = null;
+    if (Math.abs(D) > 1e-9) { sol = [(c1 * b2 - c2 * b1) / D, (a1 * c2 - a2 * c1) / D]; }
+    if (sol && Math.abs(sol[0]) <= M && Math.abs(sol[1]) <= M) { h += '<circle cx="' + px(sol[0]).toFixed(1) + '" cy="' + py(sol[1]).toFixed(1) + '" r="5" fill="' + (!ineq1 && !ineq2 ? '#006C65' : '#fff') + '" stroke="#006C65" stroke-width="2"/>'; }
+    /* ensemble des solutions */
+    if (!ineq1 && !ineq2) {
+      var deg1 = Math.abs(a1) + Math.abs(b1) < 1e-12, deg2 = Math.abs(a2) + Math.abs(b2) < 1e-12;
+      if (sol) { txt = 'D = ' + fr(D, 2) + ' ≠ 0 : une unique solution, (x ; y) = (' + fr(sol[0], 3) + ' ; ' + fr(sol[1], 3) + ')'; }
+      else if (deg1 && deg2) { txt = (Math.abs(c1) < 1e-12 && Math.abs(c2) < 1e-12) ? 'tout le plan est solution' : 'aucune solution'; }
+      else if (deg1 || deg2) { var okc = deg1 ? Math.abs(c1) < 1e-12 : Math.abs(c2) < 1e-12; txt = okc ? 'une relation est toujours vraie : les solutions sont tous les points de la droite de l\'autre relation (une infinité)' : 'une relation est impossible : aucune solution'; }
+      else if (Math.abs(a1 * c2 - a2 * c1) < 1e-9 && Math.abs(b1 * c2 - b2 * c1) < 1e-9) { txt = 'D = 0, droites confondues : une infinité de solutions (tous les points de la droite)'; h += '<g opacity="0.45">' + trait(a1, b1, c1, 'eq', '#006C65').replace('stroke-width="2.4"', 'stroke-width="9"') + '</g>'; }
+      else { txt = 'D = 0, droites parallèles et distinctes : aucune solution'; }
+    } else if (ineq1 && ineq2) {
+      var A = inter.length > 2 ? aire(inter) : 0;
+      txt = A > 1e-6 ? 'intersection des deux demi-plans : région non vide' + (sol ? ', de sommet (' + fr(sol[0], 3) + ' ; ' + fr(sol[1], 3) + ')' : '') + (inter.some(function (p) { return Math.abs(p[0]) >= M - 1e-9 || Math.abs(p[1]) >= M - 1e-9; }) ? ' (elle sort de la fenêtre : région non bornée)' : '') : (inter.length ? 'les demi-plans ne se rencontrent que le long d\'une droite ou en un point' : 'les demi-plans n\'ont aucun point commun : aucune solution');
+    } else {
+      var e = ineq1 ? [a2, b2, c2] : [a1, b1, c1], q = ineq1 ? [a1, b1, c1, s1] : [a2, b2, c2, s2], dd = droiteDansCarre(e[0], e[1], e[2]);
+      if (Math.abs(e[0]) + Math.abs(e[1]) < 1e-12) { txt = 'l\'équation 0 = c est ' + (Math.abs(e[2]) < 1e-12 ? 'toujours vraie : les solutions forment le demi-plan' : 'impossible : aucune solution'); }
+      else {
+        var n2 = e[0] * e[0] + e[1] * e[1], p0 = [e[0] * e[2] / n2, e[1] * e[2] / n2], dv = [-e[1], e[0]], g0 = bon(q[0], q[1], q[2], q[3], p0), g1 = q[3] === 'le' || q[3] === 'lt' ? -(q[0] * dv[0] + q[1] * dv[1]) : q[0] * dv[0] + q[1] * dv[1], t0 = -1e9, t1 = 1e9;
+        if (Math.abs(g1) < 1e-12) { if (g0 < 0) { t0 = 1; t1 = 0; } } else { var t = -g0 / g1; if (g1 > 0) { t0 = t; } else { t1 = t; } }
+        if (t0 > t1) { txt = 'aucune solution : la droite est entièrement hors du demi-plan'; }
+        else {
+          var seg = [[p0[0] + Math.max(t0, -40) * dv[0], p0[1] + Math.max(t0, -40) * dv[1]], [p0[0] + Math.min(t1, 40) * dv[0], p0[1] + Math.min(t1, 40) * dv[1]]];
+          h += '<line x1="' + px(seg[0][0]).toFixed(1) + '" y1="' + py(seg[0][1]).toFixed(1) + '" x2="' + px(seg[1][0]).toFixed(1) + '" y2="' + py(seg[1][1]).toFixed(1) + '" stroke="#006C65" stroke-width="7" opacity="0.6" clip-path="url(#sy-cl)"/>';
+          txt = 'les solutions sont les points de la droite (' + (ineq1 ? '2' : '1') + ') qui sont dans le demi-plan (' + (ineq1 ? '1' : '2') + ') : une demi-droite ou toute la droite';
+        }
+      }
+    }
+    svg.innerHTML = '<defs><clipPath id="sy-cl"><rect x="' + X0 + '" y="' + Y0 + '" width="' + S + '" height="' + S + '"/></clipPath></defs>' + h;
+    out.innerHTML = txt;
+  }
+  ids.forEach(function (k) { el[k].addEventListener('input', dessiner); });
+  [o1, o2].forEach(function (s) { s.addEventListener('change', dessiner); });
+  Array.prototype.forEach.call(document.querySelectorAll('button[data-sy]'), function (b) {
+    b.addEventListener('click', function () {
+      var v = b.getAttribute('data-sy').split(',');
+      el.a1.value = v[0]; el.b1.value = v[1]; o1.value = v[2]; el.c1.value = v[3]; el.a2.value = v[4]; el.b2.value = v[5]; o2.value = v[6]; el.c2.value = v[7]; dessiner();
+    });
+  });
   dessiner();
 })();
 </script>
@@ -773,18 +913,20 @@ Dans la figure suivante, chaque point du plan est coloré selon la racine vers l
 
 <div class="fig">
 <p class="fig-ctl"><label for="nf-p">Polynôme&nbsp;:</label><select id="nf-p" class="sel-seul"><option value="0">z³ − 1</option><option value="1">z⁴ − 1</option><option value="2">z⁵ − 1</option><option value="3">z³ − 2z + 2 (un cycle de période 2)</option><option value="4">z⁵ − z − 1 (aucune formule)</option></select></p>
-<canvas id="nf-cv" width="300" height="300" role="img" aria-label="Bassins d'attraction de la méthode de Newton dans le plan complexe, que l'on peut déplacer et agrandir" style="touch-action:none;cursor:grab;"></canvas>
+<canvas id="nf-cv" width="400" height="400" role="img" aria-label="Bassins d'attraction de la méthode de Newton dans le plan complexe, que l'on peut déplacer et agrandir" style="touch-action:none;cursor:grab;"></canvas>
 <p class="fig-ctl"><button type="button" id="nf-zp">Zoom +</button><button type="button" id="nf-zm">Zoom −</button><button type="button" id="nf-r">Vue initiale</button></p>
 <p class="fig-val" id="nf-val"></p>
-<p class="fig-val note">Glisser pour déplacer, molette ou pincement pour zoomer (la figure est recalculée à chaque changement de vue). Sur téléphone, pour faire défiler la page, touchez en dehors de la figure.</p>
+<p class="fig-val note">Glisser pour déplacer, molette ou pincement pour zoomer (la figure est recalculée dès que le mouvement s'arrête). Sur téléphone, pour faire défiler la page, touchez en dehors de la figure.</p>
 </div>
 <script>
 (function () {
-  var cv = document.getElementById('nf-cv'), sel = document.getElementById('nf-p'), ctx = cv.getContext('2d'), W = 300, out = document.getElementById('nf-val');
-  var tmp = document.createElement('canvas'), tctx = tmp.getContext('2d');
+  var cv = document.getElementById('nf-cv'), sel = document.getElementById('nf-p'), ctx = cv.getContext('2d'), W = 400, out = document.getElementById('nf-val');
+  var tmp = document.createElement('canvas'), tctx = tmp.getContext('2d'), buf = document.createElement('canvas'), bctx = buf.getContext('2d');
+  buf.width = W; buf.height = W;
   var POL = [[1, 0, 0, -1], [1, 0, 0, 0, -1], [1, 0, 0, 0, 0, -1], [1, 0, -2, 2], [1, 0, 0, 0, -1, -1]];
   var PAL = [[92, 160, 222], [247, 177, 89], [226, 120, 170], [102, 200, 176], [170, 150, 225]], GRIS = [150, 155, 170];
-  var c, dc, n, roots, cx = 0, cy = 0, R = 2, version = 0, ptrs = {};
+  var c, dc, n, roots, cx = 0, cy = 0, R = 2, version = 0, ptrs = {}, bv = { ok: false, cx: 0, cy: 0, R: 2 }, minuteur = null;
+  ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
   function racines(p) {
     var m = p.length - 1, a = p.map(function (v) { return v / p[0]; }), z = [], k, it, i, j;
     for (k = 0; k < m; k++) { var th = 2 * Math.PI * k / m + 0.4; z.push([1.2 * Math.cos(th), 1.2 * Math.sin(th)]); }
@@ -802,7 +944,7 @@ Dans la figure suivante, chaque point du plan est coloré selon la racine vers l
   }
   function choisir() {
     c = POL[parseInt(sel.value, 10)]; n = c.length - 1; dc = []; for (var k = 0; k < n; k++) { dc.push(c[k] * (n - k)); }
-    roots = racines(c); cx = 0; cy = 0; R = 2; rendre();
+    roots = racines(c); cx = 0; cy = 0; R = 2; bv.ok = false; rendre();
   }
   function couleur(zr, zi, maxit) {
     var it, k, t;
@@ -822,7 +964,6 @@ Dans la figure suivante, chaque point du plan est coloré selon la racine vers l
     }
     return GRIS;
   }
-  /* trois passes : un aperçu grossier presque instantané, puis des définitions plus fines ; une passe est abandonnée si la vue a changé */
   var SUP = '⁰¹²³⁴⁵⁶⁷⁸⁹';
   function sci(x) {
     if (x === 0) { return '0'; }
@@ -831,49 +972,56 @@ Dans la figure suivante, chaque point du plan est coloré selon la racine vers l
     var m = x / Math.pow(10, e), s = String(Math.abs(e)).split('').map(function (d) { return SUP[d]; }).join('');
     return m.toPrecision(2).replace('.', ',') + ' × 10' + (e < 0 ? '⁻' : '') + s;
   }
+  function legende() { out.innerHTML = 'zoom × ' + sci(2 / R) + ' &nbsp; centre ' + sci(cx) + ' ' + (cy < 0 ? '−' : '+') + ' ' + sci(Math.abs(cy)) + ' i'; }
+  /* Pendant un mouvement, on ne recalcule rien : on déplace et on agrandit, avec lissage, la dernière image complète.
+     Le calcul net ne commence qu'après une courte pause, et remplace l'image d'un coup quand il est fini. */
+  function afficherTransforme() {
+    ctx.fillStyle = '#EEF2F7'; ctx.fillRect(0, 0, W, W);
+    if (!bv.ok) { return; }
+    var s = bv.R / R, dx = ((bv.cx - bv.R) - (cx - R)) / (2 * R) * W, dy = ((cy + R) - (bv.cy + bv.R)) / (2 * R) * W;
+    ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(buf, dx, dy, W * s, W * s);
+  }
+  function bouger() { version++; legende(); afficherTransforme(); clearTimeout(minuteur); minuteur = setTimeout(rendre, 90); }
   function rendre() {
-    var v = ++version, passes = [60, 150, W], maxit = R < 0.05 ? 120 : 60;
-    out.innerHTML = 'zoom × ' + sci(2 / R) + ' &nbsp; centre ' + sci(cx) + ' ' + (cy < 0 ? '−' : '+') + ' ' + sci(Math.abs(cy)) + ' i';
-    function passe(k) {
-      if (v !== version || k >= passes.length) { return; }
-      var res = passes[k], img = new ImageData(res, res), y = 0, cr = cx, ci = cy, rr = R;
-      function bloc() {
-        if (v !== version) { return; }
-        var fin = Math.min(res, y + Math.max(4, Math.round(6000 / res))), x, o, col;
-        for (; y < fin; y++) {
-          for (x = 0; x < res; x++) {
-            col = couleur(cr + rr * (2 * (x + 0.5) / res - 1), ci - rr * (2 * (y + 0.5) / res - 1), maxit);
-            o = 4 * (y * res + x); img.data[o] = col[0]; img.data[o + 1] = col[1]; img.data[o + 2] = col[2]; img.data[o + 3] = 255;
-          }
+    var v = ++version, maxit = R < 0.05 ? 120 : 60, res = W, cr = cx, ci = cy, rr = R, img = new ImageData(res, res), y = 0;
+    legende();
+    if (!bv.ok) { afficherTransforme(); }
+    function bloc() {
+      if (v !== version) { return; }
+      var fin = Math.min(res, y + 10), x, o, col;
+      for (; y < fin; y++) {
+        for (x = 0; x < res; x++) {
+          col = couleur(cr + rr * (2 * (x + 0.5) / res - 1), ci - rr * (2 * (y + 0.5) / res - 1), maxit);
+          o = 4 * (y * res + x); img.data[o] = col[0]; img.data[o + 1] = col[1]; img.data[o + 2] = col[2]; img.data[o + 3] = 255;
         }
-        if (y < res) { setTimeout(bloc, 0); return; }
-        tmp.width = res; tmp.height = res; tctx.putImageData(img, 0, 0);
-        ctx.imageSmoothingEnabled = res >= W; ctx.drawImage(tmp, 0, 0, res, res, 0, 0, W, W);
-        setTimeout(function () { passe(k + 1); }, 0);
       }
-      bloc();
+      if (y < res) { setTimeout(bloc, 0); return; }
+      tmp.width = res; tmp.height = res; tctx.putImageData(img, 0, 0);
+      ctx.imageSmoothingEnabled = false; ctx.drawImage(tmp, 0, 0);
+      bctx.drawImage(tmp, 0, 0); bv = { ok: true, cx: cr, cy: ci, R: rr };
     }
-    passe(0);
+    bloc();
   }
   function zoomer(s, ux, uy) {
-    var nR = Math.max(1e-9, Math.min(6, R * s)); s = nR / R;
+    var nR = Math.max(1e-9, Math.min(6, R * s));
     var zr = cx + R * ux, zi = cy - R * uy;
-    R = nR; cx = zr - R * ux; cy = zi + R * uy; rendre();
+    R = nR; cx = zr - R * ux; cy = zi + R * uy; bouger();
   }
   function rel(e) { var r = cv.getBoundingClientRect(); return [(e.clientX - r.left) / r.width * 2 - 1, (e.clientY - r.top) / r.height * 2 - 1]; }
-  cv.addEventListener('wheel', function (e) { e.preventDefault(); var u = rel(e); zoomer(e.deltaY < 0 ? 1 / 1.3 : 1.3, u[0], u[1]); }, { passive: false });
+  cv.addEventListener('wheel', function (e) { e.preventDefault(); var u = rel(e); zoomer(e.deltaY < 0 ? 1 / 1.25 : 1.25, u[0], u[1]); }, { passive: false });
   cv.addEventListener('pointerdown', function (e) { cv.setPointerCapture(e.pointerId); ptrs[e.pointerId] = [e.clientX, e.clientY]; cv.style.cursor = 'grabbing'; });
   cv.addEventListener('pointermove', function (e) {
     if (!ptrs[e.pointerId]) { return; }
     var ids = Object.keys(ptrs), old = ptrs[e.pointerId], nw = [e.clientX, e.clientY], r = cv.getBoundingClientRect();
     if (ids.length === 1) {
-      cx -= (nw[0] - old[0]) / r.width * 2 * R; cy += (nw[1] - old[1]) / r.height * 2 * R; rendre();
+      cx -= (nw[0] - old[0]) / r.width * 2 * R; cy += (nw[1] - old[1]) / r.height * 2 * R; bouger();
     } else {
       var oid = ids.filter(function (k) { return k !== String(e.pointerId); })[0], o = ptrs[oid];
       var d0 = Math.hypot(old[0] - o[0], old[1] - o[1]), d1 = Math.hypot(nw[0] - o[0], nw[1] - o[1]);
       var m0 = [(old[0] + o[0]) / 2, (old[1] + o[1]) / 2], m1 = [(nw[0] + o[0]) / 2, (nw[1] + o[1]) / 2];
       cx -= (m1[0] - m0[0]) / r.width * 2 * R; cy += (m1[1] - m0[1]) / r.height * 2 * R;
-      if (d1 > 5 && d0 > 5) { zoomer(d0 / d1, (m1[0] - r.left) / r.width * 2 - 1, (m1[1] - r.top) / r.height * 2 - 1); } else { rendre(); }
+      if (d1 > 5 && d0 > 5) { zoomer(d0 / d1, (m1[0] - r.left) / r.width * 2 - 1, (m1[1] - r.top) / r.height * 2 - 1); } else { bouger(); }
     }
     ptrs[e.pointerId] = nw;
   });
@@ -882,7 +1030,7 @@ Dans la figure suivante, chaque point du plan est coloré selon la racine vers l
   cv.addEventListener('dblclick', function (e) { var u = rel(e); zoomer(0.5, u[0], u[1]); });
   document.getElementById('nf-zp').addEventListener('click', function () { zoomer(0.5, 0, 0); });
   document.getElementById('nf-zm').addEventListener('click', function () { zoomer(2, 0, 0); });
-  document.getElementById('nf-r').addEventListener('click', function () { cx = 0; cy = 0; R = 2; rendre(); });
+  document.getElementById('nf-r').addEventListener('click', function () { cx = 0; cy = 0; R = 2; bouger(); });
   sel.addEventListener('change', choisir);
   choisir();
 })();
@@ -893,23 +1041,28 @@ Sur un exemple aussi simple que $z^3 - 1$, trois bassins se partagent le plan et
 ## Exercices
 
 <details class="exercice">
-<summary class="exercice-titre">Quatre exercices</summary>
-<p><b>1.</b> Résoudre dans $\mathbb{C}$ l'équation $2x^2 - 3x + 5 = 0$. Vérifier avec les relations de Viète.</p>
+<summary class="exercice-titre">Cinq exercices</summary>
+<p><b>1.</b> Résoudre le système $2x + 3y = 7$, $x - y = 1$, puis dire à quoi correspond géométriquement la solution.</p>
+<details class="solution">
+<summary>Solution</summary>
+<p>De la seconde équation, $x = y + 1$. En remplaçant dans la première, $2(y + 1) + 3y = 7$, soit $5y = 5$, donc $y = 1$ et $x = 2$. Le déterminant vaut $D = 2 \times (-1) - 1 \times 3 = -5 \neq 0$&nbsp;: les deux droites sont sécantes, et la solution $(2 ; 1)$ est leur point d'intersection. Vérification&nbsp;: $2 \times 2 + 3 \times 1 = 7$ et $2 - 1 = 1$.</p>
+</details>
+<p><b>2.</b> Résoudre dans $\mathbb{C}$ l'équation $2x^2 - 3x + 5 = 0$. Vérifier avec les relations de Viète.</p>
 <details class="solution">
 <summary>Solution</summary>
 <p>$\Delta = 9 - 40 = -31 < 0$, donc $x_{\pm} = \frac{3 \pm \mathrm{i}\sqrt{31}}{4}$. La somme des racines vaut $\frac{6}{4} = \frac{3}{2} = -\frac{b}{a}$ et le produit $\frac{9 + 31}{16} = \frac{40}{16} = \frac{5}{2} = \frac{c}{a}$.</p>
 </details>
-<p><b>2.</b> Trouver deux nombres dont la somme vaut $10$ et le produit $24$.</p>
+<p><b>3.</b> Trouver deux nombres dont la somme vaut $10$ et le produit $24$.</p>
 <details class="solution">
 <summary>Solution</summary>
 <p>Ce sont les racines de $x^2 - 10x + 24 = 0$, de discriminant $100 - 96 = 4$, soit $x = \frac{10 \pm 2}{2}$&nbsp;: $4$ et $6$.</p>
 </details>
-<p><b>3.</b> Montrer que $\sqrt[3]{2 + \sqrt{5}} + \sqrt[3]{2 - \sqrt{5}} = 1$.</p>
+<p><b>4.</b> Montrer que $\sqrt[3]{2 + \sqrt{5}} + \sqrt[3]{2 - \sqrt{5}} = 1$.</p>
 <details class="solution">
 <summary>Solution</summary>
 <p>Posons $t = u + v$ avec $u = \sqrt[3]{2 + \sqrt{5}}$ et $v = \sqrt[3]{2 - \sqrt{5}}$. On a $u^3 + v^3 = 4$ et $uv = \sqrt[3]{4 - 5} = -1$, donc $t^3 = u^3 + v^3 + 3uv\,t = 4 - 3t$, c'est-à-dire $t^3 + 3t - 4 = 0$, soit $(t - 1)(t^2 + t + 4) = 0$. Le second facteur a pour discriminant $-15 < 0$, donc la seule racine réelle est $t = 1$. (On reconnaît la formule de Cardan pour $p = 3$ et $q = -4$.)</p>
 </details>
-<p><b>4.</b> Appliquer deux itérations de la méthode de Newton à $f(x) = x^2 - 3$ en partant de $x_0 = 2$.</p>
+<p><b>5.</b> Appliquer deux itérations de la méthode de Newton à $f(x) = x^2 - 3$ en partant de $x_0 = 2$.</p>
 <details class="solution">
 <summary>Solution</summary>
 <p>$x_{n+1} = x_n - \frac{x_n^2 - 3}{2x_n} = \frac{1}{2}\left(x_n + \frac{3}{x_n}\right)$. Donc $x_1 = \frac{1}{2}\left(2 + \frac{3}{2}\right) = \frac{7}{4} = 1{,}75$ et $x_2 = \frac{1}{2}\left(\frac{7}{4} + \frac{12}{7}\right) = \frac{97}{56} \approx 1{,}7321429$. On a $\sqrt{3} \approx 1{,}7320508$&nbsp;: l'erreur passe de $0{,}27$ à $0{,}018$ puis à $9{,}2 \times 10^{-5}$.</p>
