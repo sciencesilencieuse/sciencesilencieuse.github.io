@@ -382,15 +382,28 @@ details.solution > summary
 }
 .rel .coef
 {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25em;
     margin: 0;
+    line-height: 1;
+}
+.rel .coef input, .rel select
+{
+    box-sizing: border-box;
+    height: 2.1em;
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.2;
+    vertical-align: middle;
 }
 .rel .coef input
 {
-    width: 3.6em;
+    width: 3.8em;
 }
 .rel select
 {
-    font-size: 1.05em;
+    padding: 0 0.3em;
 }
 </style>
 
@@ -470,32 +483,33 @@ Dans la figure suivante, on règle $a$ et $b$ et l'on choisit l'inégalité. La 
     h += '<line x1="' + X0 + '" y1="' + cy + '" x2="' + X1 + '" y2="' + cy + '" stroke="#64748B"/><line x1="' + cx + '" y1="' + Y0 + '" x2="' + cx + '" y2="' + Y1 + '" stroke="#64748B"/>';
     for (i = -6; i <= 6; i++) { h += '<line x1="' + (cx + i * U) + '" y1="' + (cy - 3) + '" x2="' + (cx + i * U) + '" y2="' + (cy + 3) + '" stroke="#64748B"/>'; if (i !== 0 && i % 2 === 0) { h += '<text x="' + (cx + i * U) + '" y="' + (cy + 15) + '" font-size="11" text-anchor="middle" fill="#475569" font-family="Georgia,serif">' + i + '</text>'; } }
     var pos = s === 'gt' || s === 'ge', large = s === 'ge' || s === 'le', txt, r = null;
+    function nt(x) { return fr(x, 2).replace(',00', '').replace(/(,\d)0$/, '$1'); }
+    var SYMS = { gt: '&gt;', ge: '≥', lt: '&lt;', le: '≤' };
+    var expr = a === 0 ? nt(b) : (a === 1 ? '' : a === -1 ? '−' : nt(a)) + 'x' + (b === 0 ? '' : (b < 0 ? ' − ' : ' + ') + nt(Math.abs(b)));
     if (Math.abs(a) > 1e-9) {
       r = -b / a;
       var vers = (a > 0) === pos ? 'droite' : 'gauche', xa = Math.max(-6, Math.min(6, r)), ex = vers === 'droite' ? 6 : -6;
       h += '<line x1="' + (cx + xa * U) + '" y1="' + cy + '" x2="' + (cx + ex * U) + '" y2="' + cy + '" stroke="#006C65" stroke-width="7" stroke-linecap="butt" opacity="0.75"/>';
       var rr = fr(r, 2).replace(',00', '').replace(/(,\d)0$/, '$1');
-      txt = vers === 'droite' ? 'x ' + (large ? '≥' : '>') + ' ' + rr + ' , soit ' + (large ? '[' : ']') + rr + ' ; +∞[' : 'x ' + (large ? '≤' : '<') + ' ' + rr + ' , soit ]−∞ ; ' + rr + (large ? ']' : '[');
+      txt = vers === 'droite' ? 'x ' + (large ? '≥' : '>') + ' ' + rr + ', soit ' + (large ? '[' : ']') + rr + ' ; +∞[' : 'x ' + (large ? '≤' : '<') + ' ' + rr + ', soit ]−∞ ; ' + rr + (large ? ']' : '[');
     } else {
       var vrai = pos ? (large ? b >= 0 : b > 0) : (large ? b <= 0 : b < 0);
       if (vrai) { h += '<line x1="' + X0 + '" y1="' + cy + '" x2="' + X1 + '" y2="' + cy + '" stroke="#006C65" stroke-width="7" opacity="0.75"/>'; }
-      txt = a === 0 ? (vrai ? 'a = 0 : l\'inégalité est toujours vraie, tous les réels sont solutions' : 'a = 0 : l\'inégalité est fausse, aucune solution') : '';
+      txt = a === 0 ? (vrai ? 'a = 0, et ' + nt(b) + ' ' + SYMS[s] + ' 0 est vraie : tous les réels sont solutions' : 'a = 0, et ' + nt(b) + ' ' + SYMS[s] + ' 0 est fausse : aucune solution') : '';
     }
     var d = '';
     for (i = 0; i <= 200; i++) { var x = -6 + 12 * i / 200; d += (i ? 'L' : 'M') + (cx + x * U).toFixed(1) + ',' + (cy - (a * x + b) * V / 2).toFixed(1); }
     h += '<path d="' + d + '" fill="none" stroke="#004D80" stroke-width="2.4" clip-path="url(#in-cl)"/>';
     if (r !== null && Math.abs(r) <= 6) { h += '<circle cx="' + (cx + r * U).toFixed(1) + '" cy="' + cy + '" r="5" fill="' + (large ? '#006C65' : '#fff') + '" stroke="#006C65" stroke-width="2"/>'; }
     svg.innerHTML = h;
-    out.innerHTML = (a !== 0 ? 'Solutions de ' + ss.options[ss.selectedIndex].text.replace('a x + b', 'ax + b') + ' : ' : '') + txt;
+    out.innerHTML = (a !== 0 ? 'Solutions de ' + expr + ' ' + SYMS[s] + ' 0 : ' : '') + txt;
   }
   [sa, sb, ss].forEach(function (e) { e.addEventListener('input', dessiner); e.addEventListener('change', dessiner); });
   dessiner();
 })();
 </script>
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube WPc-Hj2O_Os>}}
-</div>
+{{< youtube-plus id="WPc-Hj2O_Os" ratio="16x9" width="800px" rounded=true shadow=true >}}
 
 ### Systèmes de deux équations ou inéquations linéaires
 
@@ -656,9 +670,7 @@ Dans la figure suivante, on entre les coefficients de deux relations $a x + b y 
 })();
 </script>
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube tLwoouhIXyM>}}
-</div>
+{{< youtube-plus id="tLwoouhIXyM" ratio="16x9" width="800px" rounded=true shadow=true >}}
 
 ## Le second degré
 
@@ -686,9 +698,7 @@ L'équation s'écrit alors $\left(x + \frac{b}{2a}\right)^2 = \frac{\Delta}{4a^2
 
 </div>
 
-<div style="position:relative; width:800px; max-width: 100%; margin-left: auto;margin-right: auto;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-{{<youtube _Hk1F35MLr4>}}
-</div>
+{{< youtube-plus id="_Hk1F35MLr4" ratio="16x9" width="800px" rounded=true shadow=true >}}
 
 La forme canonique donne aussi le signe du trinôme, donc la solution des inéquations du second degré.
 
