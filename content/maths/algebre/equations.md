@@ -1142,7 +1142,7 @@ Dans la figure suivante, chaque point du plan est coloré selon la racine vers l
 <canvas id="nf-cv" width="420" height="420" role="img" aria-label="Bassins d'attraction de la méthode de Newton dans le plan complexe, que l'on peut déplacer et agrandir à volonté" style="touch-action:none;cursor:grab;"></canvas>
 <p class="fig-ctl"><button type="button" id="nf-pl">Plonger ▶</button><button type="button" id="nf-zp">Zoom +</button><button type="button" id="nf-zm">Zoom −</button><button type="button" id="nf-r">Vue initiale</button></p>
 <p class="fig-val" id="nf-val"></p>
-<p class="fig-val note">Glisser pour déplacer (avec inertie), molette ou pincement pour zoomer, double-clic pour plonger vers un point. Le bouton « Plonger » zoome sans fin vers un point de la frontière entre les bassins. Sur téléphone, pour faire défiler la page, touchez en dehors de la figure.</p>
+<p class="fig-val note">Glisser pour déplacer (avec inertie), molette ou pincement pour zoomer, double-clic pour plonger vers un point. Le bouton « Plonger » zoome sans fin vers un point de la frontière entre les bassins.</p>
 </div>
 <script>
 (function () {
